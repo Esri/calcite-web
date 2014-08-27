@@ -2,6 +2,10 @@
 // Shorthand clearfix  mixins. From Bourbon.io
 //************************************************************************//
 
+%clearfix {
+  @include clearfix();
+}
+
 @mixin clearfix {
   &:after {
     content:"";
