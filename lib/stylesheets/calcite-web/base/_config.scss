@@ -1,0 +1,22 @@
+// Config
+// user configurable options, variables, etc
+// all config values should use !default if they can be overwritten
+
+//## Sample KSS Style Comment
+//
+//KSS should be written directly (in Markdown) above the sass that it documents.
+//
+//Below, you can list all the modifier classes and pseudo classes.
+//
+//If there are no modifiers, just write 'No Modifiers'.
+//
+//.modifier-1   - Written description of modifier-1
+//.modifier-2   - Written description of modifier-2
+//:hover        - Written description of hover style
+//
+//Styleguide 1.1
+.sample-class {
+  .modifier-1 {}
+  .modifier-2 {}
+  &:hover {}
+}
