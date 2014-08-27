@@ -65,7 +65,7 @@ module.exports = function(grunt) {
 
   // Build the doc site and generate dist folder
   grunt.registerTask('build', [
-
+    'middleman:build'
   ]);
 
   // Deploy doc site to github pages
@@ -73,7 +73,9 @@ module.exports = function(grunt) {
     if (grunt.option('message')) {
       grunt.config.set('gh-pages.options.message', grunt.option('message'));
     }
-    grunt.task.run(['gh-pages']);
+    grunt.task.run([
+      'gh-pages'
+    ]);
   });
 
   // Default task starts up a dev environment
