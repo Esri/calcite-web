@@ -1,0 +1,67 @@
+//## Calcite Color Pallete
+//
+//An extensive set of color variables are set up inside of config.
+//Color names are generally semantic and simple, making them very easy to remember.
+//Color variables are references like any other sass variable:
+//
+//```css
+//.element-to-style{
+//  color: $gray;
+//}
+//```
+//
+//If there are no modifiers, just write 'No Modifiers'.
+//
+// No Modifiers
+//
+//Styleguide 1.x
+
+// Neutrals
+$white:                 hsl(0, 0, 100); //#FFFFFF
+$off-white:             hsl(0, 0, 98);  //#F9F9F9
+$lightest-gray:         hsl(0, 0, 93);  //#EDEDED
+$lighter-gray:          hsl(0, 0, 80);  //#CCCCCC
+$light-gray:            hsl(0, 0, 65);  //#A6A6A6
+$gray:                  hsl(0, 0, 50);  //#808080
+$dark-gray:             hsl(0, 0, 35);  //#595959
+$darker-gray:           hsl(0, 0, 20);  //#333333
+$darkest-gray:          hsl(0, 0, 12);  //#1F1F1F
+$off-black:             hsl(0, 0, 2);   //#050505
+$black:                 hsl(0, 0, 0);   //#000000
+
+// Blues
+$lightest-blue:         #E1F0FB;
+$lighter-blue:          #D1E9F9;
+$light-blue:            #7FBBDF;
+$blue:                  #0079C1;
+$dark-blue:             #005E95;
+
+// Greens
+$light-green:           #9BC29D;
+$green:                 #68AA67;
+$dark-green:            #5B945A;
+
+// Reds
+$light-red:             #E5A894;
+$red:                   #C96B4B;
+$dark-red:              #C7552E;
+
+// Oranges
+$light-orange:          #F7CB92;
+$orange:                #EEAA5A;
+$dark-orange:           #E89D48;
+
+// Yellows
+$light-yellow:          #EFE498;
+$yellow:                #E5D255;
+$dark-yellow:           #D9C44C;
+
+// Purples
+$light-purple:          #C5BDDD;
+$purple:                #9182BD;
+$dark-purple:           #7C6CA8;
+
+// Browns
+$light-brown:           #D3B490;
+$brown:                 #B88A55;
+$dark-brown:            #A67947;

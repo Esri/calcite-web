@@ -1,0 +1,55 @@
+// Leader Trailer Classes
+
+
+%leader-half  { margin-top:    0.5 * $baseline; }
+%trailer-half { margin-bottom: 0.5 * $baseline; }
+
+@for $i from 0 through $vertical-range {
+  %leader-#{$i}          { margin-top:     $i * $baseline; }
+  %trailer-#{$i}         { margin-bottom:  $i * $baseline; }
+  %padding-leader-#{$i}  { padding-top:    $i * $baseline; }
+  %padding-trailer-#{$i} { padding-bottom: $i * $baseline; }
+}
+
+@mixin responsive-leader-trailer() {
+  @if $fold-grid == true {
+    // Medium
+    @media screen and (max-width: $medium - 1) {
+      @for $i from 0 through $vertical-range {
+        .#{$medium-class}-leader-#{$i}          { margin-top:     $i * $baseline; }
+        .#{$medium-class}-trailer-#{$i}         { margin-bottom:  $i * $baseline; }
+        .#{$medium-class}-padding-leader-#{$i}  { padding-top:    $i * $baseline; }
+        .#{$medium-class}-padding-trailer-#{$i} { padding-bottom: $i * $baseline; }
+      }
+    }
+
+    // Small
+    @media screen and (max-width: $small - 1) {
+      @for $i from 0 through $vertical-range {
+        .#{$small-class}-leader-#{$i}          { margin-top:     $i * $baseline; }
+        .#{$small-class}-trailer-#{$i}         { margin-bottom:  $i * $baseline; }
+        .#{$small-class}-padding-leader-#{$i}  { padding-top:    $i * $baseline; }
+        .#{$small-class}-padding-trailer-#{$i} { padding-bottom: $i * $baseline; }
+      }
+    }
+  }
+}
+
+@mixin leader-trailer() {
+
+  .leader-half  { @extend %leader-half; }
+  .trailer-half { @extend %trailer-half; }
+
+  @for $i from 0 through $vertical-range {
+    .leader-#{$i}          { @extend %leader-#{$i}          ;}
+    .trailer-#{$i}         { @extend %trailer-#{$i}         ;}
+    .padding-leader-#{$i}  { @extend %padding-leader-#{$i}  ;}
+    .padding-trailer-#{$i} { @extend %padding-trailer-#{$i} ;}
+  }
+
+  @include responsive-leader-trailer();
+}
+
+@if $include-grid == true {
+  @include leader-trailer();
+}

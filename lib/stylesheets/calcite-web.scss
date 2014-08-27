@@ -1,24 +1,34 @@
+// Custom Build
+
+// Sass Output
+$include-colors: true !default;
+$include-utils: true !default;
+
+// CSS Output
+$include-grid: true !default;
+
 // Base
-// initial setup: config, reset...
+// initial setup: config, color pallete, reset...
 @import "calcite-web/base/config";
+@import "calcite-web/base/colors";
 @import "calcite-web/base/reset";
 
 // Base Utils
 // Micro-Framework adpated from Compass and Bourbon
 // Provides basic prefixing and standard mixins
 @import "calcite-web/base/utils/appearance";
-@import "calcite-web/base/utils/background-image";
-@import "calcite-web/base/utils/background";
-@import "calcite-web/base/utils/border-radius";
 @import "calcite-web/base/utils/box-sizing";
 @import "calcite-web/base/utils/calc";
 @import "calcite-web/base/utils/clearfix";
 @import "calcite-web/base/utils/prefixer";
+@import "calcite-web/base/utils/responsive";
 @import "calcite-web/base/utils/transform";
 @import "calcite-web/base/utils/transition";
+@import "calcite-web/base/utils/visibility";
 
 // Layout
 // structural level styles: grid, helper classes...
+@import "calcite-web/grid/grid";
 
 // Type
 // typographic styles: font-families, element styles, modifiers...
@@ -31,3 +41,5 @@
 
 // Javascript
 // patterns requiring javascript: tabs, modals, carousels...
+
+

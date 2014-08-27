@@ -20,3 +20,43 @@
   .modifier-2 {}
   &:hover {}
 }
+
+//
+// Grid Config Options
+//
+
+// Breakpoints
+$small:                    480px    !default;
+$medium:                   860px    !default;
+$large:                    1280px   !default;
+
+// Grid Settings
+$vw-ratio:                 0.9;
+$container-width:          $vw-ratio * 100vw     !default;
+$container-min:            0        !default;
+$container-max:            $large * $vw-ratio !default;
+$column-gutter:            1rem     !default;
+
+// Grid Fallback Options
+$ie8-support:              false    !default;
+$column-gutter-fallback:   20px     !default;
+$container-width-fallback: 960px    !default;
+
+// Folding Grid Options
+$fold-grid:                true     !default;
+
+// Large
+$large-class:              'column' !default;
+$large-column-count:       24       !default;
+
+// Medium
+$medium-class:             'tablet' !default;
+$medium-column-count:      12       !default;
+
+// Small
+$small-class:              'phone'  !default;
+$small-column-count:       6        !default;
+
+// Vertical Rhythm
+$baseline:                 1.5rem   !default;
+$vertical-range:           6        !default;
