@@ -1,7 +1,21 @@
 // Base
-// initial setup: config, reset, mixins...
+// initial setup: config, reset...
 @import "calcite-web/base/config";
 @import "calcite-web/base/reset";
+
+// Base Utils
+// Micro-Framework adpated from Compass and Bourbon
+// Provides basic prefixing and standard mixins
+@import "calcite-web/base/utils/appearance";
+@import "calcite-web/base/utils/background-image";
+@import "calcite-web/base/utils/background";
+@import "calcite-web/base/utils/border-radius";
+@import "calcite-web/base/utils/box-sizing";
+@import "calcite-web/base/utils/calc";
+@import "calcite-web/base/utils/clearfix";
+@import "calcite-web/base/utils/prefixer";
+@import "calcite-web/base/utils/transform";
+@import "calcite-web/base/utils/transition";
 
 // Layout
 // structural level styles: grid, helper classes...
