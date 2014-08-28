@@ -49,13 +49,12 @@
   } @else {
     .pre-#{$n} {
         @include pre($n, $large-column-count);
-      }
-      [class*="column-"] .pre-#{$n}:first-child {
-        @include pre-calc($n, $large-column-count);
-      }
-      .post-#{$n} {
-        @include post($n, $large-column-count);
-      }
+    }
+    [class*="column-"] .pre-#{$n}:first-child {
+      @include pre-calc($n, $large-column-count);
+    }
+    .post-#{$n} {
+      @include post($n, $large-column-count);
     }
   }
 }
