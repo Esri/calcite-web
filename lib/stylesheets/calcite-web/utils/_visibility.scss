@@ -1,0 +1,10 @@
+// Show
+@mixin show() {
+  visibility: visible;
+}
+
+// Hide
+@mixin hide() {
+  display: none !important;
+  visibility: hidden;
+}

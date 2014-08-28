@@ -1,13 +1,53 @@
+// ┌──────────────┐
+// │ CUSTOM BUILD │
+// └──────────────┘
+
+// Sass Output
+$include-colors:                true    !default;
+$include-utils:                 true    !default;
+
+// CSS Output
+$include-grid:                  true    !default;
+  $fold-grid:                   true    !default;
+
+$include-type:                  true    !default;
+  $include-header-family:       true    !default;
+  $include-body-family:         true    !default;
+  $include-secondary-family:    true    !default;
+  $include-code-family:         true    !default;
+  $include-type-defaults:       true    !default;
+
+
+// ┌──────────────┐
+// │ CALCITE WEB  │
+// └──────────────┘
+
 // Base
-// initial setup: config, reset, mixins...
+// initial setup: config, color pallete, reset...
 @import "calcite-web/base/config";
+@import "calcite-web/base/colors";
 @import "calcite-web/base/reset";
+
+// Utils
+// Micro-Framework adpated from Compass and Bourbon
+// Provides basic prefixing and standard mixins
+@import "calcite-web/utils/appearance";
+@import "calcite-web/utils/box-sizing";
+@import "calcite-web/utils/calc";
+@import "calcite-web/utils/clearfix";
+@import "calcite-web/utils/prefixer";
+@import "calcite-web/utils/responsive";
+@import "calcite-web/utils/transform";
+@import "calcite-web/utils/transition";
+@import "calcite-web/utils/visibility";
 
 // Layout
 // structural level styles: grid, helper classes...
+@import "calcite-web/grid/viewport-grid";
 
 // Type
 // typographic styles: font-families, element styles, modifiers...
+@import "calcite-web/type/type-cabinet";
 
 // Components
 // small pieces: buttons, icons, tables...
@@ -17,3 +57,5 @@
 
 // Javascript
 // patterns requiring javascript: tabs, modals, carousels...
+
+

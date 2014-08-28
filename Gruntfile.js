@@ -11,7 +11,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     // Middleman configuration so grunt can run middleman
-    middleman: {
+    'middleman': {
       options: {
         useBundle: true
       },
@@ -38,7 +38,7 @@ module.exports = function(grunt) {
     },
 
     // Watch files
-    watch: {
+    'watch': {
       scripts: {
         files: ['lib/**/*.js'],
         tasks: [
@@ -59,7 +59,8 @@ module.exports = function(grunt) {
 
   // Run a development environment
   grunt.registerTask('dev', [
-
+    'middleman:server',
+    'watch'
   ]);
 
   // Build the doc site and generate dist folder

@@ -1,0 +1,44 @@
+// Show Hide Helper Classes
+%show-column { @include show(); }
+%hide-column { @include hide(); }
+
+@mixin include-show-hide(){
+  .show-column { @extend %show-column; }
+  .show-column { @extend %hide-column; }
+}
+
+@mixin responsive-show-hide(){
+  @if $fold-grid == true {
+    // Large
+    @media screen and (min-width: $medium) {
+      .#{$small-class}-hide   {@include show();}
+      .#{$medium-class}-hide  {@include show();}
+      .#{$small-class}-show   {@include hide();}
+      .#{$medium-class}-show  {@include hide();}
+      .#{$medium-class}-only  {@include hide();}
+    }
+
+    // Medium
+    @media screen and (max-width: $medium - 1) and (min-width: $small) {
+      .#{$small-class}-hide   {@include show();}
+      .#{$medium-class}-hide  {@include hide();}
+      .#{$small-class}-show   {@include hide();}
+      .#{$medium-class}-show  {@include show();}
+      .#{$medium-class}-only  {@include show();}
+    }
+
+    // Small
+    @media screen and (max-width: $small - 1) {
+      .#{$small-class}-hide   {@include hide();}
+      .#{$medium-class}-hide  {@include hide();}
+      .#{$small-class}-show   {@include show();}
+      .#{$medium-class}-show  {@include show();}
+      .#{$medium-class}-only  {@include hide();}
+    }
+  }
+}
+
+@if $include-grid == true {
+  @include include-show-hide();
+  @include responsive-show-hide();
+}

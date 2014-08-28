@@ -1,0 +1,7 @@
+//************************************************************************//
+// Shorthand appearance mixins. From Bourbon.io
+//************************************************************************//
+
+@mixin appearance ($value) {
+  @include prefixer(appearance, $value, webkit moz ms o spec);
+}
