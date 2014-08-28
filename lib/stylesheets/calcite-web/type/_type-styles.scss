@@ -1,7 +1,8 @@
 // ┌────────────────┐
 // │ Default Styles │
 // └────────────────┘
-@if $include-type == true && $include-type-defaults == true {
+@if $include-type == true {
+@if $include-type-defaults == true {
   html {
     font-size: 18px;
   }
@@ -122,4 +123,5 @@
   mark {
     padding: 0 0.1em 0.1em;
   }
+}
 }
