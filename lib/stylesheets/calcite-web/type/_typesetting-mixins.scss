@@ -1,0 +1,34 @@
+@mixin tracking($n) {
+  letter-spacing: $n * 0.001em;
+}
+
+@mixin leading($n) {
+  line-height: $n * $baseline;
+}
+
+@mixin word-spacing($n) {
+  // 1000 - em
+  // 500  - en
+  // 333  - thick
+  // 250  - mid
+  // 200  - thin
+  // 166  - hair
+  word-spacing: $n * 0.001em;
+}
+
+@mixin hanging-indent ($indent) {
+  padding-left: $indent;
+  text-indent: -$indent;
+}
+.hanging-indent {
+  @include hanging-indent($indent);
+}
+
+@mixin overflow-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.overflow-ellipsis {
+  @include overflow-ellipsis;
+}

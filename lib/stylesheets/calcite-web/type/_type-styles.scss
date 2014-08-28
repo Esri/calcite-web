@@ -1,0 +1,125 @@
+// ┌────────────────┐
+// │ Default Styles │
+// └────────────────┘
+@if $include-type == true && $include-type-defaults == true {
+  html {
+    font-size: 18px;
+  }
+
+  @if $include-body-family == true {
+    body {
+      @extend .body-face;
+      @include font-size(0);
+      line-height: $baseline;
+
+      -webkit-font-feature-settings: "kern";
+         -moz-font-feature-settings: "kern";
+              font-feature-settings: "kern";
+      font-kerning: normal;
+
+      text-rendering: optimizeLegibility;
+
+       -moz-font-feature-settings : 'liga= 1','calt=0';
+       -moz-font-feature-settings : "liga" 1,"calt" 0;
+       -webkit-font-feature-settings : "liga" 1,"calt" 0;
+       -ms-font-feature-settings : 'liga= 1','calt=0';
+       -o-font-feature-settings : "liga" 1,"calt" 0;
+       font-feature-settings : "liga" 1,"calt" 0;
+    }
+    dl {
+      dt {
+        @extend .body-bold;
+      }
+      dd {
+        margin-left: 0;
+        margin-bottom: $baseline;
+      }
+    }
+
+  }
+
+  @if $include-header-family == true {
+    h1    {@include font-size(5);}
+    h2    {@include font-size(4);}
+    h3    {@include font-size(3);}
+    h4    {@include font-size(2);}
+    h5    {@include font-size(1); @extend .header-bold;}
+    h6    {@include font-size(0); @extend .header-bold;}
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @extend .header-face;
+      margin-bottom: 0.5*$baseline;
+    }
+  }
+
+  @if $include-code-family == true {
+    code, kbd, pre, samp {
+      font-family: $code-family;
+    }
+
+    code {
+      white-space: pre;
+    }
+
+    pre {
+      white-space: pre;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      code {
+        display: block;
+        overflow: auto;
+        word-wrap: normal;
+      }
+    }
+  }
+
+  p,
+  ul,
+  ol,
+  dl,
+  blockquote {
+    margin-top: 0;
+    margin-bottom: $baseline;
+  }
+
+  blockquote {
+    margin: 0;
+  }
+
+  blockquote,
+  blockquote p {
+    @include font-size(1);
+  }
+
+  ul, ol {
+    padding: 0;
+    list-style-position: inside;
+    ul, ol {
+      padding-left: $baseline;
+    }
+  }
+
+  sub,
+  sup {
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+
+  sup {
+    top: -0.5em;
+  }
+
+  sub {
+    bottom: -0.25em;
+  }
+
+  mark {
+    padding: 0 0.1em 0.1em;
+  }
+}
