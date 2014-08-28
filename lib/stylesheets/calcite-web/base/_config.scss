@@ -74,21 +74,17 @@ $baseline:   1.5rem                           !default;
 $indent:     1em                              !default;
 
 // Font Families
-$header-family:    'Avenir Next W01', 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
-$body-family:      'Frutiger W01', "Lucida Grande", "Segoe UI", "Arial", sans-serif !default;
-$secondary-family: 'Kepler W08 Caption', Georgia, serif !default;
-$code-family:        "Consolas", "Andale Mono", "Lucida Console", "Monaco", "Courier New", Courier, monospace !default;
-
-
 
 // Header Weights
 $header-tracking: 0                           !default;
-$header-family: 'Helvetica Neue',
+$header-family: 'Avenir Next W01',
+                'Avenir Next',
+                'Avenir',
+                'Helvetica Neue',
                 'Helvetica',
                 'Arial',
                 sans-serif                    !default;
 
-$header-thin: false                           !default;
 $header-thin: false                           !default;
 $header-light: 300, 400                       !default;
 $header-regular: 400, 600                     !default;
@@ -99,12 +95,12 @@ $header-black: false                          !default;
 
 // Body Weights
 $body-tracking: 30                            !default;
-$body-family: "Lucida Grande",
+$body-family: 'Frutiger W01',
+              "Lucida Grande",
               "Segoe UI",
               "Arial",
               sans-serif                      !default;
 
-$body-thin: false                             !default;
 $body-thin: false                             !default;
 $body-light: false                            !default;
 $body-regular: 400, 700                       !default;
@@ -115,10 +111,10 @@ $body-black: false                            !default;
 
 // Secondary Weights
 $secondary-tracking: 10                       !default;
-$secondary-family: Georgia,
+$secondary-family: 'ITC Charter W01',
+                   Georgia,
                    serif                      !default;
 
-$secondary-thin: false                        !default;
 $secondary-thin: false                        !default;
 $secondary-light: false                       !default;
 $secondary-regular: 400, 700                  !default;
@@ -137,7 +133,6 @@ $code-family: "Consolas",
               Courier,
               monospace                       !default;
 
-$code-thin: false                             !default;
 $code-thin: false                             !default;
 $code-light: false                            !default;
 $code-regular: 400, 400                       !default;
