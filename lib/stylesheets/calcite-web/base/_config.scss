@@ -26,38 +26,38 @@
 // └─────────────┘
 
 // Breakpoints
-$small:                    480px    !default;
-$medium:                   860px    !default;
-$large:                    1280px   !default;
+$small:                    480px              !default;
+$medium:                   860px              !default;
+$large:                    1280px             !default;
 
 // Grid Settings
 $vw-ratio:                 0.9;
-$container-width:          $vw-ratio * 100vw     !default;
-$container-min:            0        !default;
+$container-width:          $vw-ratio * 100vw  !default;
+$container-min:            0                  !default;
 $container-max:            $large * $vw-ratio !default;
-$column-gutter:            1rem     !default;
+$column-gutter:            1rem               !default;
 
 // Grid Fallback Options
-$ie8-support:              false    !default;
-$column-gutter-fallback:   20px     !default;
-$container-width-fallback: 960px    !default;
+$ie8-support:              false              !default;
+$column-gutter-fallback:   20px               !default;
+$container-width-fallback: 960px              !default;
 
 // Folding Grid Options
 
 // Large
-$large-class:              'column' !default;
-$large-column-count:       24       !default;
+$large-class:              'column'           !default;
+$large-column-count:       24                 !default;
 
 // Medium
-$medium-class:             'tablet' !default;
-$medium-column-count:      12       !default;
+$medium-class:             'tablet'           !default;
+$medium-column-count:      12                 !default;
 
 // Small
-$small-class:              'phone'  !default;
-$small-column-count:       6        !default;
+$small-class:              'phone'            !default;
+$small-column-count:       6                  !default;
 
 // Vertical Rhythm
-$vertical-range:           6        !default;
+$vertical-range:           6                  !default;
 
 // ┌─────────────┐
 // │ TYPE CONFIG │
@@ -67,63 +67,76 @@ $vertical-range:           6        !default;
 $golden-ratio:     1.618;
 
 // Structural
-$ratio:      $golden-ratio          !default;
-$body-size:  1rem                   !default;
-$small-size: 0.75rem                !default;
-$baseline:   1.5rem                 !default;
-$indent:     1em                    !default;
+$ratio:      $golden-ratio                    !default;
+$body-size:  1rem                             !default;
+$small-size: 0.75rem                          !default;
+$baseline:   1.5rem                           !default;
+$indent:     1em                              !default;
 
 // Font Families
 
 // Header Weights
-$header-tracking: 0           !default;
+$header-tracking: 0                           !default;
+$header-family: 'Helvetica Neue',
+                'Helvetica',
+                'Arial',
+                sans-serif                    !default;
 
-$header-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
-$header-thin: false                 !default;
-$header-thin: false                 !default;
-$header-light: 300, 400             !default;
-$header-regular: 400, 600           !default;
-$header-medium: false               !default;
-$header-demi: false                 !default;
-$header-bold: 600, 600              !default;
-$header-black: false                !default;
+$header-thin: false                           !default;
+$header-thin: false                           !default;
+$header-light: 300, 400                       !default;
+$header-regular: 400, 600                     !default;
+$header-medium: false                         !default;
+$header-demi: false                           !default;
+$header-bold: 600, 600                        !default;
+$header-black: false                          !default;
 
 // Body Weights
-$body-tracking: 30            !default;
+$body-tracking: 30                            !default;
+$body-family: "Lucida Grande",
+              "Segoe UI",
+              "Arial",
+              sans-serif                      !default;
 
-$body-family: "Lucida Grande", "Segoe UI", "Arial", sans-serif !default;
-$body-thin: false                   !default;
-$body-thin: false                   !default;
-$body-light: false                  !default;
-$body-regular: 400, 700             !default;
-$body-medium: false                 !default;
-$body-demi: false                   !default;
-$body-bold: 700, 700                !default;
-$body-black: false                  !default;
+$body-thin: false                             !default;
+$body-thin: false                             !default;
+$body-light: false                            !default;
+$body-regular: 400, 700                       !default;
+$body-medium: false                           !default;
+$body-demi: false                             !default;
+$body-bold: 700, 700                          !default;
+$body-black: false                            !default;
 
 // Secondary Weights
-$secondary-tracking: 10       !default;
+$secondary-tracking: 10                       !default;
+$secondary-family: Georgia,
+                   serif                      !default;
 
-$secondary-family: Georgia, serif !default;
-$secondary-thin: false              !default;
-$secondary-thin: false              !default;
-$secondary-light: false             !default;
-$secondary-regular: 400, 700        !default;
-$secondary-medium: false            !default;
-$secondary-demi: false              !default;
-$secondary-bold: 700, 700           !default;
-$secondary-black: false             !default;
+$secondary-thin: false                        !default;
+$secondary-thin: false                        !default;
+$secondary-light: false                       !default;
+$secondary-regular: 400, 700                  !default;
+$secondary-medium: false                      !default;
+$secondary-demi: false                        !default;
+$secondary-bold: 700, 700                     !default;
+$secondary-black: false                       !default;
 
 // Code Weights
-$code-tracking: 0             !default;
+$code-tracking: 0                             !default;
+$code-family: "Consolas",
+              "Andale Mono",
+              "Lucida Console",
+              "Monaco",
+              "Courier New",
+              Courier,
+              monospace                       !default;
 
-$code-family: "Consolas", "Andale Mono", "Lucida Console", "Monaco", "Courier New", Courier, monospace !default;
-$code-thin: false                  !default;
-$code-thin: false                  !default;
-$code-light: false                 !default;
-$code-regular: 400, 400            !default;
-$code-medium: false                !default;
-$code-demi: false                  !default;
-$code-bold: false                  !default;
-$code-black: false                 !default;
+$code-thin: false                             !default;
+$code-thin: false                             !default;
+$code-light: false                            !default;
+$code-regular: 400, 400                       !default;
+$code-medium: false                           !default;
+$code-demi: false                             !default;
+$code-bold: false                             !default;
+$code-black: false                            !default;
 
