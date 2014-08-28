@@ -65,15 +65,21 @@ $vertical-range:           6                  !default;
 
 // Scale
 $golden-ratio:     1.618;
-
+$major-third :     1.25 ;
 // Structural
-$ratio:      $golden-ratio                    !default;
+$ratio:      $major-third                     !default;
 $body-size:  1rem                             !default;
 $small-size: 0.75rem                          !default;
 $baseline:   1.5rem                           !default;
 $indent:     1em                              !default;
 
 // Font Families
+$header-family:    'Avenir Next W01', 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$body-family:      'Frutiger W01', "Lucida Grande", "Segoe UI", "Arial", sans-serif !default;
+$secondary-family: 'Kepler W08 Caption', Georgia, serif !default;
+$code-family:        "Consolas", "Andale Mono", "Lucida Console", "Monaco", "Courier New", Courier, monospace !default;
+
+
 
 // Header Weights
 $header-tracking: 0                           !default;
