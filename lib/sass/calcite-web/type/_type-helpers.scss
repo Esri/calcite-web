@@ -15,13 +15,20 @@
   text-align: center;
 }
 
+%text--left {
+  text-align: left;
+}
+
+%text--right {
+  text-align: right;
+}
 
 %text--large {
   @include font-size(1);
 }
 
 %text--light {
-  oapcity: 0.8;
+  opacity: 0.66;
 }
 
 %text--overflow-ellipsis {
@@ -50,6 +57,17 @@
 }
 
 @if $include-type == true and $include-type-defaults == true {
+
+  .text--rule              {@extend %text--rule;}
+  .text--inline            {@extend %text--inline;}
+  .text--center            {@extend %text--center;}
+  .text--left              {@extend %text--left;}
+  .text--right             {@extend %text--right;}
+  .text--large             {@extend %text--large;}
+  .text--light             {@extend %text--light;}
+  .text--overflow-ellipsis {@extend %text--overflow-ellipsis;}
+
+
   @each $color in $color-set {
     $name: nth($color, 1);
     $value: nth($color, 2);
