@@ -24,8 +24,10 @@ Markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, {
 
 # initialize kss to parse doc
 before do
-  Styleguide ||= Kss::Parser.new("lib/stylesheets/calcite-web/")
+  Styleguide ||= Kss::Parser.new("lib/sass/calcite-web/")
 end
+
+
 
 # helpers
 helpers do
@@ -121,10 +123,10 @@ activate :directory_indexes
 set :source, "docs/source"
 set :build_dir, "docs/build"
 set :partials_dir, "partials"
-set :css_dir, "assets/stylesheets"
-set :images_dir, "assets/images"
+set :css_dir, "assets/css"
+set :images_dir, "assets/img"
 set :fonts_dir, "assets/fonts"
-set :js_dir, "assets/javascripts"
+set :js_dir, "assets/js"
 
 # build settings for middleman
 configure :build do

@@ -1,6 +1,6 @@
 # find the 'lib' directory and also the stylesheets directory
 base_directory  = File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib'))
-stylesheets_path = File.join(base_directory, 'stylesheets')
+stylesheets_path = File.join(base_directory, 'sass')
 
 # if using compass, register as a compass extension
 if (defined? Compass)
