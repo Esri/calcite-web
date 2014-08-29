@@ -2,29 +2,188 @@
 // │ Gruntfile   │
 // └─────────────┘
 // Grunt wraps several tasks to ease development
-// runs middleman, deploys the site, and builds new versions of the framework
+// runs middleman, deploys the site, and tags new releases
+
+// To draft a release, add GitHub credentials to user.js
+var fs = require('fs');
+var user = function(){};
+
+if (fs.existsSync('./user.js')) {
+  user = require('./user.js');
+}
+
+// Gets current version description from CHANGELOG.md
+function findVersion(log) {
+  var newVersion = log.split('## v')[1];
+  var description = newVersion.substring(5,newVersion.length);
+  return description;
+}
+
+// Javascript banner
+var banner = '/* <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
+                '*  <%= pkg.homepage %>\n' +
+                '*  Copyright (c) <%= grunt.template.today("yyyy") %> Environmental Systems Research Institute, Inc.\n' +
+                '*  Apache 2.0 License */\n';
 
 module.exports = function(grunt) {
+
+  var currentVersion = 'v' + grunt.file.readJSON('package.json').version;
+  var log = grunt.file.read('CHANGELOG.md');
+  var description = findVersion(log);
 
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    // Middleman configuration so grunt can run middleman
-    'middleman': {
-      options: {
-        useBundle: true
-      },
-      server: {
+    // Make grunt run middleman
+    'shell': {
+      serve: {
+        command: 'bundle exec middleman server',
         options: {
-          command: 'server'
+          async: true
         }
       },
       build: {
+        command: 'bundle exec middleman build --clean',
         options: {
-          command: 'build',
-          clean: true
+          async: false
         }
+      }
+    },
+
+    // Watch files
+    'watch': {
+      scripts: {
+        files: ['lib/js/calcite-web.js'],
+        tasks: [
+          'concat:doc',
+          'jshint'
+        ]
+      },
+      images: {
+        files: ['lib/img/**/*'],
+        tasks: [
+          'newer:imagemin:doc'
+        ]
+      }
+    },
+
+    // Check Javascript for errors
+    'jshint': {
+      all: ['lib/js/calcite-web.js']
+    },
+
+    // Build CSS files to dist
+    'sass': {
+      expanded: {
+        options: {
+          style: 'expanded',
+          sourcemap: 'none'
+        },
+        files: {
+          'dist/css/calcite-web.css': 'lib/sass/calcite-web.scss'
+        }
+      },
+      minified: {
+        options: {
+          style: 'compressed',
+          sourcemap: 'none'
+        },
+        files: {
+          'dist/css/calcite-web.min.css': 'lib/sass/calcite-web.scss'
+        }
+      }
+    },
+
+    // Build minified Javascript file to dist
+    'uglify': {
+      options: {
+        mangle: false,
+        banner: banner
+      },
+      dist: {
+        files: {
+          'dist/js/calcite-web.min.js': ['lib/js/calcite-web.js']
+        }
+      }
+    },
+
+    // Copy SASS files to dist
+    'copy': {
+      sass: {
+        expand: true,
+        cwd: 'lib/',
+        src: ['sass/**/*'],
+        dest: 'dist/'
+      },
+    },
+
+    // Copy Javascript to dist and doc
+    'concat': {
+      options: {
+        banner: banner
+      },
+      dist: {
+        files: {
+          'dist/js/calcite-web.js': 'lib/js/calcite-web.js'
+        }
+      },
+      doc: {
+        files: {
+          'dist/js/calcite-web.js': 'lib/js/calcite-web.js'
+        }
+      }
+    },
+
+    // Optimize images and icons for dist and doc
+    'imagemin': {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'lib/',
+          src: ['img/**/*.{png,jpg,svg}'],
+          dest: 'dist/'
+        }]
+      },
+      doc: {
+        files: [{
+          expand: true,
+          cwd: 'lib/',
+          src: ['img/**/*.{png,jpg,svg}'],
+          dest: 'docs/source/assets/'
+        }]
+      }
+    },
+
+    // Make a zip file of the dist folder
+    'compress': {
+      main: {
+        options: {
+          archive: 'calcite-web.zip'
+        },
+        files: [
+          {
+            src: ['dist/**'],
+            dest: './'
+          },
+        ]
+      }
+    },
+
+    // Bump the version on GitHub
+    'github-release': {
+      options: {
+        repository: 'ArcGIS/calcite-web',
+        auth: user(),
+        release: {
+          tag_name: currentVersion,
+          name: currentVersion,
+          body: description,
+          prerelease: true
+        }
+      },
+      files: {
+        src: ['calcite-web.zip']
       }
     },
 
@@ -37,17 +196,17 @@ module.exports = function(grunt) {
       src: ['**']
     },
 
-    // Watch files
-    'watch': {
-      scripts: {
-        files: ['lib/**/*.js'],
-        tasks: [
-          'copy:docs-js',
-          'copy:docs-images',
-          'copy:docs-fonts'
-        ]
-      }
+    // Runs tasks concurrently, speeding up Grunt
+    'concurrent': {
+      prepublish: [
+        'sass',
+        'uglify',
+        'copy',
+        'concat:dist',
+        'newer:imagemin:dist'
+      ]
     }
+
   });
 
   // load all grunt modules
@@ -59,24 +218,41 @@ module.exports = function(grunt) {
 
   // Run a development environment
   grunt.registerTask('dev', [
-    'middleman:server',
+    'shell:serve',
+    'newer:imagemin:doc',
+    'concat:doc',
     'watch'
   ]);
 
-  // Build the doc site and generate dist folder
-  grunt.registerTask('build', [
-    'middleman:build'
+  // Test calcite-web.js
+  grunt.registerTask('test', [
+    'jshint'
   ]);
 
-  // Deploy doc site to github pages
+  // Build a dist folder with all assets
+  grunt.registerTask('prepublish', [
+    'concurrent:prepublish'
+  ]);
+
+  // Build and deploy doc site to github pages
   grunt.registerTask('deploy', 'Deploy documentation to github pages', function(n) {
     if (grunt.option('message')) {
       grunt.config.set('gh-pages.options.message', grunt.option('message'));
     }
     grunt.task.run([
+      'newer:imagemin:doc',
+      'concat:doc',
+      'shell:build',
       'gh-pages'
     ]);
   });
+
+  // Release a new version of the framework
+  grunt.registerTask('release', [
+    'prepublish',
+    'compress',
+    'github-release'
+  ]);
 
   // Default task starts up a dev environment
   grunt.registerTask('default', ['dev']);
