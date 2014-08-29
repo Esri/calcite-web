@@ -18,6 +18,7 @@ $include-type:                  true    !default;
   $include-type-defaults:       true    !default;
 
 
+
 // ┌──────────────┐
 // │ CALCITE WEB  │
 // └──────────────┘
@@ -27,6 +28,21 @@ $include-type:                  true    !default;
 @import "calcite-web/base/config";
 @import "calcite-web/base/colors";
 @import "calcite-web/base/reset";
+
+// ┌──────────────┐
+// │ COLOR MAP    │
+// └──────────────┘
+$color-set: (
+  'green' $green,
+  'blue' $blue,
+  'purple' $purple,
+  'orange' $orange,
+  'brown' $brown,
+  'white' $white,
+  'gray' $gray,
+  'dark-gray' $dark-gray,
+  'red' $red
+);
 
 // Utils
 // Micro-Framework adpated from Compass and Bourbon

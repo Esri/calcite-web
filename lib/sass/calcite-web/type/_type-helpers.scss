@@ -1,0 +1,60 @@
+// ┌───────────────────────────┐
+// │  Compostision Helpers     │
+// └───────────────────────────┘
+
+%text--rule {
+  border-bottom: 1px solid $light-gray;
+}
+
+%text--inline {
+  display: inline;
+}
+
+
+%text--center {
+  text-align: center;
+}
+
+
+%text--large {
+  @include font-size(1);
+}
+
+%text--light {
+  oapcity: 0.8;
+}
+
+%text--overflow-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+%text--show-visited-links  {}
+
+%list--inline {}
+
+%list--bulleted {}
+
+%list--compact {}
+
+%list--numbered {}
+
+//generate color classes
+@each $color in $color-set {
+  $name: nth($color, 1);
+  $value: nth($color, 2);
+  %text--#{$name} {
+    color: $value;
+  }
+}
+
+@if $include-type == true and $include-type-defaults == true {
+  @each $color in $color-set {
+    $name: nth($color, 1);
+    $value: nth($color, 2);
+    .text--#{$name} {
+      @extend %text--#{$name};
+    }
+  }
+}
