@@ -25,8 +25,8 @@ $include-type:                  true    !default;
 
 // Base
 // initial setup: config, color pallete, reset...
-@import "calcite-web/base/config";
 @import "calcite-web/base/colors";
+@import "calcite-web/base/config";
 @import "calcite-web/base/reset";
 
 // ┌──────────────┐
@@ -39,6 +39,7 @@ $color-set: (
   'orange' $orange,
   'brown' $brown,
   'white' $white,
+  'light-gray' $light-gray,
   'gray' $gray,
   'dark-gray' $dark-gray,
   'red' $red

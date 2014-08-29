@@ -10,7 +10,6 @@
   display: inline;
 }
 
-
 %text--center {
   text-align: center;
 }
@@ -56,8 +55,43 @@
   }
 }
 
+@each $color in $color-set {
+  $name: nth($color, 1);
+  $value: nth($color, 2);
+  %link--#{$name} {
+    color: $value;
+  }
+}
+
+%on-dark {
+  @extend %text--white;
+  a {
+    @extend %link--light-gray;
+      &:hover {
+        color: $lighter-gray;
+      }
+  }
+}
+
 @if $include-type == true and $include-type-defaults == true {
 
+  @each $color in $color-set {
+    $name: nth($color, 1);
+    .text--#{$name} {
+      @extend %text--#{$name};
+    }
+  }
+
+  @each $color in $color-set {
+    $name: nth($color, 1);
+    $value: nth($color, 2);
+    .link--#{$name} a, a.link--#{$name} {
+      @extend %link--#{$name};
+      &:hover {
+        color: rgba($value, 0.66);
+      }
+    }
+  }
   .text--rule              {@extend %text--rule;}
   .text--inline            {@extend %text--inline;}
   .text--center            {@extend %text--center;}
@@ -66,13 +100,5 @@
   .text--large             {@extend %text--large;}
   .text--light             {@extend %text--light;}
   .text--overflow-ellipsis {@extend %text--overflow-ellipsis;}
-
-
-  @each $color in $color-set {
-    $name: nth($color, 1);
-    $value: nth($color, 2);
-    .text--#{$name} {
-      @extend %text--#{$name};
-    }
-  }
+  .on-dark                 {@extend %on-dark;}
 }
