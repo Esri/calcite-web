@@ -85,10 +85,11 @@
   @each $color in $color-set {
     $name: nth($color, 1);
     $value: nth($color, 2);
+    $light-value: nth($color, 3);
     .link--#{$name} a, a.link--#{$name} {
       @extend %link--#{$name};
       &:hover {
-        color: rgba($value, 0.66);
+        color: $light-value;
       }
     }
   }
@@ -100,5 +101,5 @@
   .text--large             {@extend %text--large;}
   .text--light             {@extend %text--light;}
   .text--overflow-ellipsis {@extend %text--overflow-ellipsis;}
-  .on-dark                 {@extend %on-dark;}
+  .on-dark                  {@extend %on-dark;}
 }
