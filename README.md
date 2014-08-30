@@ -32,14 +32,13 @@ That will give you everything including sass utilities. You will also need to co
 
 ## Installing
 
-First, be sure you have Node, Grunt, Ruby, and Bundler. Next, install project dependencies:
+First, be sure you have Node and Grunt. Next, install project dependencies:
 
 1. `npm install` to install javascript dependencies.
-2. `bundle install` to install ruby dependencies
 
 ## Development
 
-To run a dev environment, just type `grunt`. You should have a copy of the documentation site live at `localhost:4567`.
+To run a dev environment, just type `grunt`. You should have a copy of the documentation site live at `localhost:3000`.
 
 As you develop features and fix bugs, be sure to write notes in `CHANGELOG.md`.
 

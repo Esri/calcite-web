@@ -35,16 +35,16 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    // Make grunt run middleman
+    // Make grunt run press
     'shell': {
       serve: {
-        command: 'bundle exec middleman server',
+        command: 'node node_modules/press/bin/press.js server',
         options: {
           async: true
         }
       },
       build: {
-        command: 'bundle exec middleman build --clean',
+        command: 'node node_modules/press/bin/press.js',
         options: {
           async: false
         }
