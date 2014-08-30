@@ -17,6 +17,7 @@ $include-type:                  true    !default;
   $include-code-family:         true    !default;
   $include-type-defaults:       true    !default;
 
+$include-button:                true    !default;
 
 
 // ┌──────────────┐
@@ -33,16 +34,16 @@ $include-type:                  true    !default;
 // │ COLOR MAP    │
 // └──────────────┘
 $color-set: (
-  'green' $green,
-  'blue' $blue,
-  'purple' $purple,
-  'orange' $orange,
-  'brown' $brown,
-  'white' $white,
-  'light-gray' $light-gray,
-  'gray' $gray,
-  'dark-gray' $dark-gray,
-  'red' $red
+  'green' $green $light-green,
+  'blue' $blue $light-blue,
+  'purple' $purple $light-purple,
+  'orange' $orange $light-orange,
+  'brown' $brown $light-brown,
+  'white' $white $white,
+  'light-gray' $light-gray $lighter-gray,
+  'gray' $gray $light-gray,
+  'dark-gray' $dark-gray $gray,
+  'red' $red $light-red
 );
 
 // Utils
@@ -68,6 +69,7 @@ $color-set: (
 
 // Components
 // small pieces: buttons, icons, tables...
+@import "calcite-web/components/button";
 
 // Patterns
 // complete interfaces: header, footer, banner...
