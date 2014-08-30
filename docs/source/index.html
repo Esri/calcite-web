@@ -2,20 +2,19 @@
 title: Homepage
 ---
 
-<%# a sample styleguide block with modifier classes %>
-<% styleguide "1.1" do %>
-  <div class="$modifier_class">Sample Component</div>
-<% end %>
 
- <div class="container grid-example leader-1">
-    <h1>Avenir Next</h1>
-    <p>
-      Frutiger
-    </p>
-    <p class="secondary-face">
-      Charter
-    </p>
- </div>
+{% extends "_layout" %}
+{% block content %}
+
+<div class="container grid-example leader-1">
+  <h1>Avenir Next</h1>
+  <p>
+    Frutiger
+  </p>
+  <p class="secondary-face">
+    Charter
+  </p>
+</div>
 
 <!-- TEST -->
  <div class="container grid-example leader-1">
@@ -311,3 +310,5 @@ title: Homepage
      <div class="column-1"><span>1</span></div>
    </div>
  </div>
+
+{% endblock %}
