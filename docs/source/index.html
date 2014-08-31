@@ -1,6 +1,8 @@
 ---
 title: "Index Page"
 description: "Should process index.html correctly"
+data:
+  - kss
 ---
 
 {% extends "_layout" %}
@@ -15,6 +17,10 @@ description: "Should process index.html correctly"
     Charter
   </p>
 </div>
+
+{% styleguide kss.section('1.1') %}
+  <h1 class="$modifier_class">Hey man</h1>
+{% endstyleguide %}
 
 <!-- TEST -->
  <div class="container grid-example leader-1">
