@@ -1,17 +1,23 @@
+var pressKSS = require('press-kss');
+var styleguide = require('press-kss/styleguide');
+
 function config(press) {
   press.global('config', {
     environment: 'dev'
   });
 
-  press.global('rootUrl', 'http://site.com');
-
   //press.ignore('ignore-me.html');
 
-  //press.collection('blog', 'posts/**/*');
-
   press.layout('**/*', 'layouts/_layout:content');
-  //press.layout('posts/**/*', 'layouts/_post:post');
 
+  press.use(pressKSS({
+    sassDir: 'lib/sass/',
+    markdown: true
+  }));
+
+  press.use(styleguide({
+    template: 'partials/_styleguide_block.html'
+  }));
 }
 
 config.options = {
