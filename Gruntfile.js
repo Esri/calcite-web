@@ -37,12 +37,6 @@ module.exports = function(grunt) {
 
     // Make grunt run press
     'shell': {
-      serve: {
-        command: 'node node_modules/press/bin/press.js server',
-        options: {
-          async: true
-        }
-      },
       build: {
         command: 'node node_modules/press/bin/press.js',
         options: {
