@@ -1,0 +1,55 @@
+@import "github";
+@import "calcite-web";
+
+// TEST
+.grid-example [class*="column-"] {
+  span {
+    width: 100%;
+    display: block;
+    color: $white;
+    background-color: rgba(blue, 0.6);
+    font-family: monospace;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin-top: 1em;
+    text-align: center;
+  }
+}
+
+.nested-demo [class*="column-"] {
+  [class*="column-"] {
+    span {
+      background-color: rgba(blue, 0.4);
+    }
+    [class*="column-"] {
+      span {
+        background-color: rgba(blue, 0.2);
+      }
+      [class*="column-"] {
+        span {
+          background-color: rgba(blue, 0.1);
+        }
+      }
+    }
+  }
+}
+
+.gridlines {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -10;
+  div {
+  height: 100vh;
+  }
+  span {
+  @include box-sizing(border-box);
+  height: 100vh;
+  width: 100%;
+  display: inline-block;
+  background-color: rgba($gray, 0.05);
+  border: 1px solid $lighter-gray;
+  }
+}
