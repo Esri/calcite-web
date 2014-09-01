@@ -273,9 +273,11 @@ module.exports = function(grunt) {
       grunt.config.set('gh-pages.options.message', grunt.option('message'));
     }
     grunt.task.run([
+      'shell:build',
       'newer:imagemin:doc',
       'concat:doc',
-      'shell:build',
+      'sass:doc',
+      'copy:doc',
       'gh-pages'
     ]);
   });
