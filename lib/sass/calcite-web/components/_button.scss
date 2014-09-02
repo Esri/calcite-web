@@ -25,7 +25,7 @@
     color: $white;
   }
 
-  &:disabled, &.disabled {
+  &:disabled, &.btn--is-disabled {
     background-color: $dark-blue !important;
     cursor: default !important;
     pointer-events: none;
@@ -36,6 +36,7 @@
     }
   }
 }
+
   %btn--transparent {
     background: none;
     color: $link-color;

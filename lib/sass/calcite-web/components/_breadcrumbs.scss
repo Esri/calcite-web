@@ -16,13 +16,13 @@
   }
 
   &:before {
+    @include font-size(-1);
     content: "\74";
     width: auto;
     height: auto;
     margin: 0;
     padding-right: 0.75em;
     color: $light-gray;
-    font-size: 0.75em;
     background: transparent;
   }
   &:first-child {
