@@ -21,17 +21,17 @@
   }
 
   &:hover {
-    background-color: $light-blue;
+    background-color: $dark-blue;
     color: $white;
   }
 
   &:disabled, &.disabled {
-    background-color: rgba($blue, 0.66) !important;
+    background-color: $dark-blue !important;
     cursor: default !important;
     pointer-events: none;
     color: $light-gray;
     &:hover {
-      background-color: rgba($blue, 0.66) !important;
+      background-color: $dark-blue !important;
       color: $light-gray;
     }
   }
