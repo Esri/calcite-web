@@ -18,6 +18,7 @@ $include-type:                  true    !default;
   $include-type-defaults:       true    !default;
 
 $include-button:                true    !default;
+$include-breadcrumbs:           true    !default;
 
 
 // ┌──────────────┐
@@ -34,16 +35,16 @@ $include-button:                true    !default;
 // │ COLOR MAP    │
 // └──────────────┘
 $color-set: (
-  'green' $green $light-green,
-  'blue' $blue $light-blue,
-  'purple' $purple $light-purple,
-  'orange' $orange $light-orange,
-  'brown' $brown $light-brown,
-  'white' $white $white,
-  'light-gray' $light-gray $lighter-gray,
-  'gray' $gray $light-gray,
-  'dark-gray' $dark-gray $gray,
-  'red' $red $light-red
+  'green' $green $dark-green,
+  'blue' $blue $dark-blue,
+  'purple' $purple $dark-purple,
+  'orange' $orange $dark-orange,
+  'brown' $brown $dark-brown,
+  'white' $white $lightest-gray,
+  'light-gray' $light-gray $gray,
+  'gray' $gray $dark-gray,
+  'dark-gray' $dark-gray $darker-gray,
+  'red' $red $dark-red
 );
 
 // Utils
