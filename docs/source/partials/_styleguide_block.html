@@ -1,0 +1,18 @@
+{{section.description()}}
+
+<h4>Modifiers</h4>
+
+<div class="styleguide-modifiers">
+  <div class="styleguide-modifier-example">
+    {{ html | replace("$modifier_class", "") }}
+    <code class="modifier-name">default</code>
+  </div>
+ {% for modifier in section.modifiers() %}
+    <div class="styleguide-modifier-example">
+       {{ html | replace("$modifier_class", modifier.className()) }}
+      <code class="modifier-name"> {{modifier.name()}} </code>
+    </div>
+  {% endfor %}
+</div>
+
+<pre class="styleguide-element styleguide-sample"><code class="html">{{ code }}</code></pre>

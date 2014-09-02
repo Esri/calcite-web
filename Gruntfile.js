@@ -35,18 +35,22 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    // Make grunt run middleman
+    // Make grunt run press
     'shell': {
-      serve: {
-        command: 'bundle exec middleman server',
-        options: {
-          async: true
-        }
-      },
       build: {
-        command: 'bundle exec middleman build --clean',
+        command: 'node node_modules/press/bin/press.js',
         options: {
           async: false
+        }
+      }
+    },
+
+    // Run a development server
+    'connect': {
+      server: {
+        options: {
+          port: 8888,
+          base: 'docs/build'
         }
       }
     },
@@ -57,13 +61,23 @@ module.exports = function(grunt) {
         files: ['lib/js/calcite-web.js'],
         tasks: [
           'concat:doc',
+          'copy:doc',
           'jshint'
         ]
       },
       images: {
         files: ['lib/img/**/*'],
         tasks: [
-          'newer:imagemin:doc'
+          'newer:imagemin:doc',
+          'copy:doc'
+        ]
+      },
+      sass: {
+        files: ['lib/sass/**/*', 'docs/source/assets/css/**/*', 'docs/source/**/*.{html,md}'],
+        tasks: [
+          'shell:build',
+          'sass:doc',
+          'copy:doc'
         ]
       }
     },
@@ -92,6 +106,16 @@ module.exports = function(grunt) {
         files: {
           'dist/css/calcite-web.min.css': 'lib/sass/calcite-web.scss'
         }
+      },
+      doc: {
+        options: {
+          style: 'expanded',
+          sourcemap: 'none',
+          loadPath: 'lib/sass/'
+        },
+        files: {
+          'docs/build/assets/css/all.css': 'docs/source/assets/css/all.scss'
+        }
       }
     },
 
@@ -108,7 +132,7 @@ module.exports = function(grunt) {
       }
     },
 
-    // Copy SASS files to dist
+    // Copy SASS files to dist, doc assets to build
     'copy': {
       sass: {
         expand: true,
@@ -116,6 +140,12 @@ module.exports = function(grunt) {
         src: ['sass/**/*'],
         dest: 'dist/'
       },
+      doc: {
+        expand: true,
+        cwd: 'docs/source/',
+        src: ['assets/img/**/*', 'assets/js/**/*'],
+        dest: 'docs/build/'
+      }
     },
 
     // Copy Javascript to dist and doc
@@ -130,7 +160,7 @@ module.exports = function(grunt) {
       },
       doc: {
         files: {
-          'dist/js/calcite-web.js': 'lib/js/calcite-web.js'
+          'docs/source/assets/js/libs/calcite-web.js': 'lib/js/calcite-web.js'
         }
       }
     },
@@ -218,9 +248,12 @@ module.exports = function(grunt) {
 
   // Run a development environment
   grunt.registerTask('dev', [
-    'shell:serve',
+    'connect:server',
+    'shell:build',
     'newer:imagemin:doc',
     'concat:doc',
+    'sass:doc',
+    'copy:doc',
     'watch'
   ]);
 
@@ -240,9 +273,11 @@ module.exports = function(grunt) {
       grunt.config.set('gh-pages.options.message', grunt.option('message'));
     }
     grunt.task.run([
+      'shell:build',
       'newer:imagemin:doc',
       'concat:doc',
-      'shell:build',
+      'sass:doc',
+      'copy:doc',
       'gh-pages'
     ]);
   });

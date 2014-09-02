@@ -28,18 +28,48 @@ Then in your project's sass file, just import it:
 
 That will give you everything including sass utilities. You will also need to copy over the javascript and image assets to your static folder (see above).
 
+## NPM
+
+To install Calcite Web with npm, type:
+
+```
+npm install --save-dev git://github.com/ArcGIS/calcite-web.git
+```
+
+You can also use a specific release by appending the version number to the end:
+
+```
+npm install --save-dev git://github.com/ArcGIS/calcite-web.git#v0.0.1
+```
+
+Then, if you're using sass, be sure to add `node_modules/calcite-web/dist/sass/` to your load path. If you're using `grunt-contrib-sass` you add that like this:
+
+```
+'sass': {
+  target: {
+    options: {
+      loadPath: 'node_modules/calcite-web/dist/sass/'
+    },
+    files: {
+      'path/to.css': 'path/to.scss'
+    }
+  }
+}
+```
+
+Then in your main `.scss` file, you can just require the framework: `@import "calcite-web";`.
+
 # Contributing to Calcite-Web
 
 ## Installing
 
-First, be sure you have Node, Grunt, Ruby, and Bundler. Next, install project dependencies:
+First, be sure you have Node and Grunt. Next, install project dependencies:
 
 1. `npm install` to install javascript dependencies.
-2. `bundle install` to install ruby dependencies
 
 ## Development
 
-To run a dev environment, just type `grunt`. You should have a copy of the documentation site live at `localhost:4567`.
+To run a dev environment, just type `grunt`. You should have a copy of the documentation site live at `localhost:8888`.
 
 As you develop features and fix bugs, be sure to write notes in `CHANGELOG.md`.
 
