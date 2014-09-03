@@ -23,7 +23,7 @@ This is probably the easiest way. If you're looking to get up and running quickl
 To install Calcite-Web as a ruby gem, add a reference to your the gem to your Gemfile:
 
 ```
-gem "tailcoat", :git => "https://github.com/ArcGIS/calcite-web.git", :tag => "v0.0.0"
+gem "calcite-web", :git => "https://github.com/ArcGIS/calcite-web.git", :tag => "v0.0.0"
 ```
 
 Be sure to use the most up to date tag.
