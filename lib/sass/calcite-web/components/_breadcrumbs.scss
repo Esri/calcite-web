@@ -1,0 +1,41 @@
+//## Breadcrumbs
+//
+//A very simple default has been provided for styling breadcrumbs. Just add a class of "breadcrumbs" to a ul, and css does the rest.
+//
+//.full-width   - makes the breadcrumbs full-width and gives a border bottom. Use below a `navigation-bar`.
+//
+//Styleguide 3.8
+
+%breadcumb {
+  display: inline;
+  padding-right: 0.25em;
+  padding-left: 0;
+  color: $light-gray;
+  &:hover {
+    color: $light-blue;
+  }
+
+  &:before {
+    @include font-size(-1);
+    content: "\74";
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding-right: 0.75em;
+    color: $light-gray;
+    background: transparent;
+  }
+  &:first-child {
+    &:before {
+      content: "";
+      display: none;
+    }
+  }
+  &:last-child {
+    color: $dark-gray;
+  }
+}
+
+@if $include-breadcrumbs == true {
+  .breadcrumb {@extend %breadcrumb}
+}

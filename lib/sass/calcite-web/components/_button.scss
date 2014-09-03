@@ -1,0 +1,124 @@
+//## Buttons
+//
+//Buttons are created by adding a class of ```.btn``` to either a ```<button>``` or ```<a>``` element.
+//
+//Styleguide x.x
+
+%btn {
+  position: relative;
+  display: inline-block;
+  padding: .4em .9em .4em;
+  color: $white;
+  border: none;
+  background-color: $blue;
+  @include box-sizing(border-box);
+  @include transition(all 0.05s linear);
+  cursor: pointer;
+  @if $include-type {
+    @include font-size(-1);
+    font-family: $header-family;
+    font-weight: 300;
+  }
+
+  &:hover {
+    background-color: $dark-blue;
+    color: $white;
+  }
+
+  &:disabled, &.btn--is-disabled {
+    background-color: $dark-blue !important;
+    cursor: default !important;
+    pointer-events: none;
+    color: $light-gray;
+    &:hover {
+      background-color: $dark-blue !important;
+      color: $light-gray;
+    }
+  }
+}
+
+  %btn--transparent {
+    background: none;
+    color: $link-color;
+    &:hover {
+      color: $link-hover;
+      background: none;
+    }
+  }
+
+  %btn--clear {
+    color: $blue;
+    background: transparent;
+    border: 1px solid $blue;
+    &:hover {
+      color: $white;
+      background: $blue;
+    }
+  }
+
+    %btn--clear--gray {
+      background: none;
+      color: $gray;
+      border: 1px solid $gray;
+      &:hover {
+        color: $white;
+        background: $gray;
+      }
+    }
+    %btn--clear--white {
+      background: none;
+      color: $white;
+      border: 1px solid $white;
+      &:hover {
+        color: $gray;
+        background: $white;
+      }
+    }
+
+  %btn--small {
+    @include font-size(-2);
+    padding: .3em .8em .3em;
+  }
+
+  %btn--large {
+    @include font-size(0);
+    padding: .5em 1em .5em;
+  }
+
+  %btn--fill {
+    width: 100%;
+    text-align: center;
+  }
+
+  @each $color in $color-set {
+    $name: nth($color, 1);
+    $value: nth($color, 2);
+    $light-value: nth($color, 3);
+    %btn--#{$name} {
+      background-color: $value;
+      &:hover {
+        background-color: $light-value;
+      }
+    }
+  }
+
+@if $include-button == true {
+  .btn { @extend %btn;}
+  .btn--transparent {@extend %btn--transparent;}
+  .btn--clear {@extend %btn--clear;}
+  .btn--clear--gray {@extend %btn--clear--gray;}
+  .btn--clear--white {@extend %btn--clear--white;}
+  .btn--small {@extend %btn--small;}
+  .btn--large {@extend %btn--large;}
+  .btn--fill {@extend %btn--fill;}
+
+  @each $color in $color-set {
+    $name: nth($color, 1);
+    $value: nth($color, 2);
+    $light-value: nth($color, 3);
+    .btn--#{$name} {
+      @extend %btn--#{$name};
+    }
+  }
+}
+

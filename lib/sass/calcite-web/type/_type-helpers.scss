@@ -1,0 +1,105 @@
+// ┌───────────────────────────┐
+// │  Composition Helpers      │
+// └───────────────────────────┘
+
+%text--rule {
+  border-bottom: 1px solid $light-gray;
+}
+
+%text--inline {
+  display: inline;
+}
+
+%text--center {
+  text-align: center;
+}
+
+%text--left {
+  text-align: left;
+}
+
+%text--right {
+  text-align: right;
+}
+
+%text--large {
+  @include font-size(1);
+}
+
+%text--light {
+  opacity: 0.66;
+}
+
+%text--overflow-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+%text--show-visited-links  {}
+
+%list--inline {}
+
+%list--bulleted {}
+
+%list--compact {}
+
+%list--numbered {}
+
+//generate color classes
+@each $color in $color-set {
+  $name: nth($color, 1);
+  $value: nth($color, 2);
+  %text--#{$name} {
+    color: $value;
+  }
+}
+
+@each $color in $color-set {
+  $name: nth($color, 1);
+  $value: nth($color, 2);
+  %link--#{$name} {
+    color: $value;
+  }
+}
+
+%on-dark {
+  @extend %text--white;
+  a {
+    @extend %link--light-gray;
+      &:hover {
+        color: $lighter-gray;
+      }
+  }
+}
+
+@if $include-type == true and $include-type-defaults == true {
+
+  @each $color in $color-set {
+    $name: nth($color, 1);
+    .text--#{$name} {
+      @extend %text--#{$name};
+    }
+  }
+
+  @each $color in $color-set {
+    $name: nth($color, 1);
+    $value: nth($color, 2);
+    $light-value: nth($color, 3);
+    .link--#{$name} a, a.link--#{$name} {
+      @extend %link--#{$name};
+      &:hover {
+        color: $light-value;
+      }
+    }
+  }
+  .text--rule              {@extend %text--rule;}
+  .text--inline            {@extend %text--inline;}
+  .text--center            {@extend %text--center;}
+  .text--left              {@extend %text--left;}
+  .text--right             {@extend %text--right;}
+  .text--large             {@extend %text--large;}
+  .text--light             {@extend %text--light;}
+  .text--overflow-ellipsis {@extend %text--overflow-ellipsis;}
+  .on-dark                  {@extend %on-dark;}
+}
