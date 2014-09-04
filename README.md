@@ -71,9 +71,10 @@ Then in your main `.scss` file, you can just require the framework: `@import "ca
 
 ## Installing
 
-First, be sure you have Node and Grunt. Next, install project dependencies:
+If you don't have Node yet, [install it here](http://nodejs.org/). Then install the project's dependencies:
 
-1. `npm install` to install javascript dependencies.
+1. `npm install -g grunt-cli` to install Grunt.
+2. `npm install` to install javascript dependencies.
 
 ## Development
 
