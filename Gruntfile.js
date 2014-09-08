@@ -38,7 +38,7 @@ module.exports = function(grunt) {
     // Make grunt run press
     'shell': {
       build: {
-        command: 'node node_modules/press/bin/press.js',
+        command: 'acetate',
         options: {
           async: false
         }
