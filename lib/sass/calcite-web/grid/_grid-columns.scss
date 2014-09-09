@@ -33,6 +33,10 @@
   margin-right: -($column-gutter / 2);
 }
 
+%row {
+  @include column-base();
+}
+
 @mixin responsive-column() {
 
   @if $fold-grid == true {
@@ -123,6 +127,9 @@
     @extend %last-column;
   }
 
+  .row {
+    @extend %row;
+  }
   @include responsive-column();
 }
 
