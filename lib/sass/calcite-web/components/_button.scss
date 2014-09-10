@@ -25,7 +25,7 @@
     color: $white;
   }
 
-  &:disabled, &.btn--is-disabled {
+  &:disabled, &.btn-is-disabled {
     background-color: $dark-blue !important;
     cursor: default !important;
     pointer-events: none;
@@ -37,7 +37,7 @@
   }
 }
 
-  %btn--transparent {
+  %btn-transparent {
     background: none;
     color: $link-color;
     &:hover {
@@ -46,7 +46,7 @@
     }
   }
 
-  %btn--clear {
+  %btn-clear {
     color: $blue;
     background: transparent;
     border: 1px solid $blue;
@@ -56,7 +56,7 @@
     }
   }
 
-    %btn--clear--gray {
+    %btn-clear-gray {
       background: none;
       color: $gray;
       border: 1px solid $gray;
@@ -65,7 +65,7 @@
         background: $gray;
       }
     }
-    %btn--clear--white {
+    %btn-clear-white {
       background: none;
       color: $white;
       border: 1px solid $white;
@@ -75,17 +75,17 @@
       }
     }
 
-  %btn--small {
+  %btn-small {
     @include font-size(-2);
     padding: .3em .8em .3em;
   }
 
-  %btn--large {
+  %btn-large {
     @include font-size(0);
     padding: .5em 1em .5em;
   }
 
-  %btn--fill {
+  %btn-fill {
     width: 100%;
     text-align: center;
   }
@@ -94,7 +94,7 @@
     $name: nth($color, 1);
     $value: nth($color, 2);
     $light-value: nth($color, 3);
-    %btn--#{$name} {
+    %btn-#{$name} {
       background-color: $value;
       &:hover {
         background-color: $light-value;
@@ -104,20 +104,20 @@
 
 @if $include-button == true {
   .btn { @extend %btn;}
-  .btn--transparent {@extend %btn--transparent;}
-  .btn--clear {@extend %btn--clear;}
-  .btn--clear--gray {@extend %btn--clear--gray;}
-  .btn--clear--white {@extend %btn--clear--white;}
-  .btn--small {@extend %btn--small;}
-  .btn--large {@extend %btn--large;}
-  .btn--fill {@extend %btn--fill;}
+  .btn-transparent {@extend %btn-transparent;}
+  .btn-clear {@extend %btn-clear;}
+  .btn-clear-gray {@extend %btn-clear-gray;}
+  .btn-clear-white {@extend %btn-clear-white;}
+  .btn-small {@extend %btn-small;}
+  .btn-large {@extend %btn-large;}
+  .btn-fill {@extend %btn-fill;}
 
   @each $color in $color-set {
     $name: nth($color, 1);
     $value: nth($color, 2);
     $light-value: nth($color, 3);
-    .btn--#{$name} {
-      @extend %btn--#{$name};
+    .btn-#{$name} {
+      @extend %btn-#{$name};
     }
   }
 }
