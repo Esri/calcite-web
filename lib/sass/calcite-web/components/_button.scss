@@ -15,7 +15,7 @@
   @include transition(all 0.05s linear);
   cursor: pointer;
   @if $include-type {
-    @include font-size(-1);
+    @include font-size(-2);
     font-family: $header-family;
     font-weight: 300;
   }
