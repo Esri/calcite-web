@@ -35,22 +35,31 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    // Rebuild site with Acetate
     'acetate': {
+      // Rebuild site with Acetate
       build: {
         config: 'acetate.conf.js'
       },
-    },
-
-    // Run a development server
-    'connect': {
+      // Run a development server with Acetate
       server: {
+        config: 'acetate.conf.js',
         options: {
-          port: 8888,
-          base: 'docs/build'
+          watch: true,
+          server: true,
+          port: 8888
         }
       }
     },
+
+    // Run a development server
+    // 'connect': {
+    //   server: {
+    //     options: {
+    //       port: 8888,
+    //       base: 'docs/build'
+    //     }
+    //   }
+    // },
 
     // Watch files
     'watch': {
@@ -72,7 +81,6 @@ module.exports = function(grunt) {
       sass: {
         files: ['lib/sass/**/*', 'docs/source/assets/css/**/*', 'docs/source/**/*.{html,md}'],
         tasks: [
-          'acetate',
           'sass:doc',
           'copy:doc'
         ]
@@ -245,8 +253,9 @@ module.exports = function(grunt) {
 
   // Run a development environment
   grunt.registerTask('dev', [
-    'connect:server',
-    'acetate',
+    // 'connect:server',
+    // 'acetate',
+    'acetate:server',
     'newer:imagemin:doc',
     'concat:doc',
     'sass:doc',
@@ -270,7 +279,8 @@ module.exports = function(grunt) {
       grunt.config.set('gh-pages.options.message', grunt.option('message'));
     }
     grunt.task.run([
-      'acetate',
+      // 'acetate',
+      'acetate:build',
       'newer:imagemin:doc',
       'concat:doc',
       'sass:doc',

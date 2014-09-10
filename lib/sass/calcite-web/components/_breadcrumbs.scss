@@ -6,36 +6,29 @@
 //
 //Styleguide 3.8
 
-%breadcumb {
-  display: inline;
-  padding-right: 0.25em;
-  padding-left: 0;
-  color: $light-gray;
-  &:hover {
-    color: $light-blue;
-  }
+%breadcrumbs {
+  @extend .header-face;
+  @include font-size(-1);
+  color: $dark-gray;
+}
+  %crumb {
+    color: $dark-gray;
+    &:after {
+      @include font-size(-4);
+      // content: $rtri;
+      content: "▶";
+      padding: 0 0.75em;
+    }
 
-  &:before {
-    @include font-size(-1);
-    content: "\74";
-    width: auto;
-    height: auto;
-    margin: 0;
-    padding-right: 0.75em;
-    color: $light-gray;
-    background: transparent;
-  }
-  &:first-child {
-    &:before {
-      content: "";
-      display: none;
+    &.is-active {
+      color: $type-color;
+      &:after {
+        content: none;
+      }
     }
   }
-  &:last-child {
-    color: $dark-gray;
-  }
-}
 
 @if $include-breadcrumbs == true {
-  .breadcrumb {@extend %breadcrumb}
+  .breadcrumbs {@extend %breadcrumbs;}
+    .crumb {@extend %crumb};
 }

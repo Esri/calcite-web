@@ -2,11 +2,15 @@
 
 Begin foundational sass for the framework.
 
+### Modified
+- New grayscale color values
+
 ### Added
 - Colors
 - Type Styles
 - Grid
 - Sass Utils
+- Breadcrumbs
 
 ## v0.0.0
 
