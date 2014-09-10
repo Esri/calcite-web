@@ -37,6 +37,12 @@
   }
 }
 
+  %btn-arrow {
+    &:after {
+      content: " →";
+    }
+  }
+
   %btn-transparent {
     background: none;
     color: $link-color;
@@ -104,6 +110,7 @@
 
 @if $include-button == true {
   .btn { @extend %btn;}
+  .btn-arrow {@extend %btn-arrow;}
   .btn-transparent {@extend %btn-transparent;}
   .btn-clear {@extend %btn-clear;}
   .btn-clear-gray {@extend %btn-clear-gray;}
