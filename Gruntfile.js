@@ -81,7 +81,6 @@ module.exports = function(grunt) {
       sass: {
         files: ['lib/sass/**/*', 'docs/source/assets/css/**/*', 'docs/source/**/*.{html,md}'],
         tasks: [
-          'acetate',
           'sass:doc',
           'copy:doc'
         ]
