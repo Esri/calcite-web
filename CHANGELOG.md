@@ -7,6 +7,7 @@ Begin foundational sass for the framework.
 - Type Styles
 - Grid
 - Sass Utils
+- Breadcrumbs
 
 ## v0.0.0
 
