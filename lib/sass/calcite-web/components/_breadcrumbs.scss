@@ -14,10 +14,10 @@
   %crumb {
     color: $dark-gray;
     &:after {
-      @include font-size(-4);
-      // content: $rtri;
-      content: "▶";
-      padding: 0 0.75em;
+      @include font-size(-3);
+      content: "»";
+      padding: 0 0.5em 0 0.75em;
+      vertical-align: 0.125em;
     }
 
     &.is-active {
