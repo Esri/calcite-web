@@ -53,7 +53,7 @@
     h5,
     h6 {
       @extend .header-face;
-      margin-bottom: 0.5*$baseline;
+      margin: $baseline 0 $baseline/2 0;
     }
   }
 
@@ -99,6 +99,7 @@
   a {
     color: $link-color;
     text-decoration: none;
+    @include transition(color 150ms linear);
     &:hover, &:focus {
       color: $link-hover;
     }

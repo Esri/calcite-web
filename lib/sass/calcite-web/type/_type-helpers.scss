@@ -30,7 +30,7 @@
   opacity: 0.66;
 }
 
-%text-overflow-ellipsis {
+%text-ellipsis {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -63,7 +63,7 @@
   }
 }
 
-%on-dark {
+%text-on-dark {
   @extend %text-white;
   a {
     @extend %link-light-gray;
@@ -100,6 +100,6 @@
   .text-right             {@extend %text-right;}
   .text-large             {@extend %text-large;}
   .text-light             {@extend %text-light;}
-  .text-overflow-ellipsis {@extend %text-overflow-ellipsis;}
-  .on-dark                  {@extend %on-dark;}
+  .text-ellipsis          {@extend %text-ellipsis;}
+  .text-on-dark           {@extend %text-on-dark;}
 }
