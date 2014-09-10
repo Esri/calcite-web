@@ -23,7 +23,7 @@
   color: $lightest-gray;
   @include font-size(-2);
   background-color: rgba(0, 0, 0, .5);
-  @include transition((background-color 150ms linear, color 150ms linear));
+  @include transition(background-color 150ms linear, color 150ms linear);
   &:hover, &:focus {
     background-color: rgba(0, 0, 0, .3);
     color: $white;
