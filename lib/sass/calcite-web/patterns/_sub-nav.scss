@@ -1,0 +1,35 @@
+.sub-nav {
+  background-color: $lightest-gray;
+}
+
+.sub-nav-title {
+  display: inline-block;
+  float: left;
+  line-height: 1.25;
+  @extend .header-light;
+}
+
+.sub-nav-list {
+  width: 100%;
+  margin-top: $baseline/2;
+  float: left;
+}
+
+.sub-nav-link {
+  padding: .25em .75em;
+  margin: 0 .25em 0 0;
+  float: left;
+  font-family: $header-family;
+  color: $lightest-gray;
+  @include font-size(-2);
+  background-color: rgba(0, 0, 0, .5);
+  @include transition((background-color 150ms linear, color 150ms linear));
+  &:hover, &:focus {
+    background-color: rgba(0, 0, 0, .3);
+    color: $white;
+  }
+  &.is-active {
+    background-color: $white;
+    color: $dark-gray;
+  }
+}
