@@ -8,11 +8,9 @@
 
 %breadcrumbs {
   @extend .header-face;
-  @include font-size(-1);
-  color: $dark-gray;
+  @include font-size(-3);
 }
   %crumb {
-    color: $dark-gray;
     &:after {
       @include font-size(-3);
       content: "»";
@@ -21,7 +19,7 @@
     }
 
     &.is-active {
-      color: $type-color;
+      font-weight: 600;
       &:after {
         content: none;
       }
