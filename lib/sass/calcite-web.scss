@@ -19,6 +19,7 @@ $include-type:                  true    !default;
 
 $include-button:                true    !default;
 $include-breadcrumbs:           true    !default;
+$include-tooltip:               true    !default;
 
 
 // ┌──────────────┐
@@ -67,6 +68,7 @@ $color-set: (
 // small pieces: buttons, icons, tables...
 @import "calcite-web/components/button";
 @import "calcite-web/components/breadcrumbs";
+@import "calcite-web/components/tooltip";
 
 // Patterns
 // complete interfaces: header, footer, banner...
