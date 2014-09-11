@@ -3,6 +3,8 @@
 
 %leader-half  { margin-top:    0.5 * $baseline; }
 %trailer-half { margin-bottom: 0.5 * $baseline; }
+%padding-leader-half  { padding-top:    0.5 * $baseline; }
+%padding-trailer-half { padding-bottom: 0.5 * $baseline; }
 
 @for $i from 0 through $vertical-range {
   %leader-#{$i}          { margin-top:     $i * $baseline; }
@@ -39,6 +41,8 @@
 
   .leader-half  { @extend %leader-half; }
   .trailer-half { @extend %trailer-half; }
+  .padding-leader-half  { @extend %padding-leader-half; }
+  .padding-trailer-half { @extend %padding-trailer-half; }
 
   @for $i from 0 through $vertical-range {
     .leader-#{$i}          { @extend %leader-#{$i}          ;}

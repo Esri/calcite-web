@@ -1,176 +1,151 @@
-@import url(http://fast.fonts.net/t/1.css?apiType=css&projectid=9431e9a5-7a6d-4b5f-82be-4d935972de5a);
-
-// ┌───────────┐
-// │ Headers   │
-// └───────────┘
-
-@font-face {
-  font-family:"Avenir Next W01_n3";
-  src:url("http://fast.fonts.net/dv2/2/0ecef829-586e-426d-a633-4c8a8c926769.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
+@import url(/t/1.css?apiType=css&projectid=9431e9a5-7a6d-4b5f-82be-4d935972de5a);
+@font-face{
+font-family:"Avenir Next W01_n3";
+src:url("/dv2/2/0ecef829-586e-426d-a633-4c8a8c926769.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
 }
-
-@font-face {
-  font-family:"Avenir Next W01";
-  src:url("http://fast.fonts.net/dv2/2/0ecef829-586e-426d-a633-4c8a8c926769.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
-  font-weight:300;font-style:normal;
+@font-face{
+font-family:"Avenir Next W01";
+src:url("/dv2/2/0ecef829-586e-426d-a633-4c8a8c926769.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
+font-weight:300;font-style:normal;
 }
-
-@font-face {
-  font-family:"Avenir Next W01";
-  src:url("http://fast.fonts.net/dv2/2/0ecef829-586e-426d-a633-4c8a8c926769.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a");
-  src:url("http://fast.fonts.net/dv2/3/f401df6f-54eb-406c-b46a-90b9451c598d.woff?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("woff"),url("http://fast.fonts.net/dv2/1/276fe25e-e430-4376-b33c-705dd77b3dba.ttf?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("truetype"),url("http://fast.fonts.net/dv2/11/869dc33b-3685-4d74-a51c-82b435579093.svg?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a#869dc33b-3685-4d74-a51c-82b435579093") format("svg");
-  font-weight:300;font-style:normal;
+@font-face{
+font-family:"Avenir Next W01";
+src:url("/dv2/2/0ecef829-586e-426d-a633-4c8a8c926769.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a");
+src:url("/dv2/3/f401df6f-54eb-406c-b46a-90b9451c598d.woff?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("woff"),url("/dv2/1/276fe25e-e430-4376-b33c-705dd77b3dba.ttf?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("truetype"),url("/dv2/11/869dc33b-3685-4d74-a51c-82b435579093.svg?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a#869dc33b-3685-4d74-a51c-82b435579093") format("svg");
+font-weight:300;font-style:normal;
 }
-
-@font-face {
-  font-family:"Avenir Next W01_n4";
-  src:url("http://fast.fonts.net/dv2/2/e9167238-3b3f-4813-a04a-a384394eed42.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
+@font-face{
+font-family:"Avenir Next W01_n4";
+src:url("/dv2/2/e9167238-3b3f-4813-a04a-a384394eed42.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
 }
-
-@font-face {
-  font-family:"Avenir Next W01";
-  src:url("http://fast.fonts.net/dv2/2/e9167238-3b3f-4813-a04a-a384394eed42.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
-  font-weight:400;font-style:normal;
+@font-face{
+font-family:"Avenir Next W01";
+src:url("/dv2/2/e9167238-3b3f-4813-a04a-a384394eed42.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
+font-weight:400;font-style:normal;
 }
-
-@font-face {
-  font-family:"Avenir Next W01";
-  src:url("http://fast.fonts.net/dv2/2/e9167238-3b3f-4813-a04a-a384394eed42.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a");
-  src:url("http://fast.fonts.net/dv2/3/1e9892c0-6927-4412-9874-1b82801ba47a.woff?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("woff"),url("http://fast.fonts.net/dv2/1/46cf1067-688d-4aab-b0f7-bd942af6efd8.ttf?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("truetype"),url("http://fast.fonts.net/dv2/11/52a192b1-bea5-4b48-879f-107f009b666f.svg?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a#52a192b1-bea5-4b48-879f-107f009b666f") format("svg");
-  font-weight:400;font-style:normal;
+@font-face{
+font-family:"Avenir Next W01";
+src:url("/dv2/2/e9167238-3b3f-4813-a04a-a384394eed42.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a");
+src:url("/dv2/3/1e9892c0-6927-4412-9874-1b82801ba47a.woff?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("woff"),url("/dv2/1/46cf1067-688d-4aab-b0f7-bd942af6efd8.ttf?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("truetype"),url("/dv2/11/52a192b1-bea5-4b48-879f-107f009b666f.svg?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a#52a192b1-bea5-4b48-879f-107f009b666f") format("svg");
+font-weight:400;font-style:normal;
 }
-
-@font-face {
-  font-family:"Avenir Next W01_n7";
-  src:url("http://fast.fonts.net/dv2/2/12d643f2-3899-49d5-a85b-ff430f5fad15.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
+@font-face{
+font-family:"Avenir Next W01_n5";
+src:url("/dv2/2/1a7c9181-cd24-4943-a9d9-d033189524e0.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
 }
-
-@font-face {
-  font-family:"Avenir Next W01";
-  src:url("http://fast.fonts.net/dv2/2/12d643f2-3899-49d5-a85b-ff430f5fad15.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
-  font-weight:700;font-style:normal;
+@font-face{
+font-family:"Avenir Next W01";
+src:url("/dv2/2/1a7c9181-cd24-4943-a9d9-d033189524e0.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
+font-weight:500;font-style:normal;
 }
-
-@font-face {
-  font-family:"Avenir Next W01";
-  src:url("http://fast.fonts.net/dv2/2/12d643f2-3899-49d5-a85b-ff430f5fad15.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a");
-  src:url("http://fast.fonts.net/dv2/3/91b50bbb-9aa1-4d54-9159-ec6f19d14a7c.woff?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("woff"),url("http://fast.fonts.net/dv2/1/a0f4c2f9-8a42-4786-ad00-fce42b57b148.ttf?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("truetype"),url("http://fast.fonts.net/dv2/11/99affa9a-a5e9-4559-bd07-20cf0071852d.svg?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a#99affa9a-a5e9-4559-bd07-20cf0071852d") format("svg");
-  font-weight:700;font-style:normal;
+@font-face{
+font-family:"Avenir Next W01";
+src:url("/dv2/2/1a7c9181-cd24-4943-a9d9-d033189524e0.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a");
+src:url("/dv2/3/f26faddb-86cc-4477-a253-1e1287684336.woff?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("woff"),url("/dv2/1/63a74598-733c-4d0c-bd91-b01bffcd6e69.ttf?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("truetype"),url("/dv2/11/a89d6ad1-a04f-4a8f-b140-e55478dbea80.svg?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a#a89d6ad1-a04f-4a8f-b140-e55478dbea80") format("svg");
+font-weight:500;font-style:normal;
 }
-
-// ┌───────────┐
-// │ Body      │
-// └───────────┘
-
-@font-face {
-  font-family:"Frutiger W01_n4";
-  src:url("http://fast.fonts.net/dv2/2/af97a512-f55a-4f61-b2ce-659c883930fc.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
+@font-face{
+font-family:"Avenir Next W01_n6";
+src:url("/dv2/2/12d643f2-3899-49d5-a85b-ff430f5fad15.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
 }
-
-@font-face {
-  font-family:"Frutiger W01";
-  src:url("http://fast.fonts.net/dv2/2/af97a512-f55a-4f61-b2ce-659c883930fc.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
-  font-weight:400;font-style:normal;
+@font-face{
+font-family:"Avenir Next W01";
+src:url("/dv2/2/12d643f2-3899-49d5-a85b-ff430f5fad15.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
+font-weight:600;font-style:normal;
 }
-
-@font-face {
-  font-family:"Frutiger W01";
-  src:url("http://fast.fonts.net/dv2/2/af97a512-f55a-4f61-b2ce-659c883930fc.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a");
-  src:url("http://fast.fonts.net/dv2/3/3fbbd6b1-cfa7-4ff0-97ea-af1b2c489f15.woff?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("woff"),url("http://fast.fonts.net/dv2/1/076311f8-a01b-4389-a5eb-334a62e62d45.ttf?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("truetype"),url("http://fast.fonts.net/dv2/11/c59a36ab-4ef8-4ee1-a2f8-48aa79d4f877.svg?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a#c59a36ab-4ef8-4ee1-a2f8-48aa79d4f877") format("svg");
-  font-weight:400;font-style:normal;
+@font-face{
+font-family:"Avenir Next W01";
+src:url("/dv2/2/12d643f2-3899-49d5-a85b-ff430f5fad15.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a");
+src:url("/dv2/3/91b50bbb-9aa1-4d54-9159-ec6f19d14a7c.woff?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("woff"),url("/dv2/1/a0f4c2f9-8a42-4786-ad00-fce42b57b148.ttf?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("truetype"),url("/dv2/11/99affa9a-a5e9-4559-bd07-20cf0071852d.svg?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a#99affa9a-a5e9-4559-bd07-20cf0071852d") format("svg");
+font-weight:600;font-style:normal;
 }
-
-@font-face {
-  font-family:"Frutiger W01_i4";
-  src:url("http://fast.fonts.net/dv2/2/fcbab1a3-9659-4b39-8479-cc1f50d18f55.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
+@font-face{
+font-family:"Frutiger W01_n4";
+src:url("/dv2/2/af97a512-f55a-4f61-b2ce-659c883930fc.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
 }
-
-@font-face {
-  font-family:"Frutiger W01";
-  src:url("http://fast.fonts.net/dv2/2/fcbab1a3-9659-4b39-8479-cc1f50d18f55.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
-  font-weight:400;font-style:italic;
+@font-face{
+font-family:"Frutiger W01";
+src:url("/dv2/2/af97a512-f55a-4f61-b2ce-659c883930fc.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
+font-weight:400;font-style:normal;
 }
-
-@font-face {
-  font-family:"Frutiger W01";
-  src:url("http://fast.fonts.net/dv2/2/fcbab1a3-9659-4b39-8479-cc1f50d18f55.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a");
-  src:url("http://fast.fonts.net/dv2/3/e2ade8a9-bd48-45e7-95e6-9dc917ba4f74.woff?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("woff"),url("http://fast.fonts.net/dv2/1/19fe9614-8825-4e7d-b8c3-230d2561e0e2.ttf?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("truetype"),url("http://fast.fonts.net/dv2/11/c2f8e3aa-1c1a-49ee-9ec7-30f61a5e96d3.svg?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a#c2f8e3aa-1c1a-49ee-9ec7-30f61a5e96d3") format("svg");
-  font-weight:400;font-style:italic;
+@font-face{
+font-family:"Frutiger W01";
+src:url("/dv2/2/af97a512-f55a-4f61-b2ce-659c883930fc.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a");
+src:url("/dv2/3/3fbbd6b1-cfa7-4ff0-97ea-af1b2c489f15.woff?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("woff"),url("/dv2/1/076311f8-a01b-4389-a5eb-334a62e62d45.ttf?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("truetype"),url("/dv2/11/c59a36ab-4ef8-4ee1-a2f8-48aa79d4f877.svg?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a#c59a36ab-4ef8-4ee1-a2f8-48aa79d4f877") format("svg");
+font-weight:400;font-style:normal;
 }
-
-@font-face {
-  font-family:"Frutiger W01_n7";
-  src:url("http://fast.fonts.net/dv2/2/fbd7c0fb-f004-4e83-81d2-1d400413a873.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
+@font-face{
+font-family:"Frutiger W01_i4";
+src:url("/dv2/2/fcbab1a3-9659-4b39-8479-cc1f50d18f55.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
 }
-
-@font-face {
-  font-family:"Frutiger W01";
-  src:url("http://fast.fonts.net/dv2/2/fbd7c0fb-f004-4e83-81d2-1d400413a873.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
-  font-weight:700;font-style:normal;
+@font-face{
+font-family:"Frutiger W01";
+src:url("/dv2/2/fcbab1a3-9659-4b39-8479-cc1f50d18f55.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
+font-weight:400;font-style:italic;
 }
-
-@font-face {
-  font-family:"Frutiger W01";
-  src:url("http://fast.fonts.net/dv2/2/fbd7c0fb-f004-4e83-81d2-1d400413a873.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a");
-  src:url("http://fast.fonts.net/dv2/3/9aa32a81-1124-4c43-b3db-15bfb1f7aed2.woff?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("woff"),url("http://fast.fonts.net/dv2/1/6faffbf4-f8e8-4817-b24b-a390e166be7e.ttf?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("truetype"),url("http://fast.fonts.net/dv2/11/fc09de64-de25-425e-90dc-a0cae29b02c4.svg?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a#fc09de64-de25-425e-90dc-a0cae29b02c4") format("svg");
-  font-weight:700;font-style:normal;
+@font-face{
+font-family:"Frutiger W01";
+src:url("/dv2/2/fcbab1a3-9659-4b39-8479-cc1f50d18f55.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a");
+src:url("/dv2/3/e2ade8a9-bd48-45e7-95e6-9dc917ba4f74.woff?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("woff"),url("/dv2/1/19fe9614-8825-4e7d-b8c3-230d2561e0e2.ttf?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("truetype"),url("/dv2/11/c2f8e3aa-1c1a-49ee-9ec7-30f61a5e96d3.svg?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a#c2f8e3aa-1c1a-49ee-9ec7-30f61a5e96d3") format("svg");
+font-weight:400;font-style:italic;
 }
-
-// ┌───────────┐
-// │ Secondary │
-// └───────────┘
-
-@font-face {
-  font-family:"ITC Charter W01_R4";
-  src:url("http://fast.fonts.net/dv2/2/bd4a6c95-033c-41f0-9510-2de2be19ebc6.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
+@font-face{
+font-family:"Frutiger W01_n7";
+src:url("/dv2/2/fbd7c0fb-f004-4e83-81d2-1d400413a873.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
 }
-
-@font-face {
-  font-family:"ITC Charter W01";
-  src:url("http://fast.fonts.net/dv2/2/bd4a6c95-033c-41f0-9510-2de2be19ebc6.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
-  font-weight:400;font-style:Regular;
+@font-face{
+font-family:"Frutiger W01";
+src:url("/dv2/2/fbd7c0fb-f004-4e83-81d2-1d400413a873.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
+font-weight:700;font-style:normal;
 }
-
-@font-face {
-  font-family:"ITC Charter W01";
-  src:url("http://fast.fonts.net/dv2/2/bd4a6c95-033c-41f0-9510-2de2be19ebc6.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a");
-  src:url("http://fast.fonts.net/dv2/3/fcf607e0-9726-46de-99a0-3d80440fcad0.woff?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("woff"),url("http://fast.fonts.net/dv2/1/3a077c2d-60d8-4c1e-947f-64cd5c57b382.ttf?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("truetype"),url("http://fast.fonts.net/dv2/11/da20fd94-cdae-454e-a5d9-e1790eeaf24b.svg?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a#da20fd94-cdae-454e-a5d9-e1790eeaf24b") format("svg");
-  font-weight:400;font-style:Regular;
+@font-face{
+font-family:"Frutiger W01";
+src:url("/dv2/2/fbd7c0fb-f004-4e83-81d2-1d400413a873.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a");
+src:url("/dv2/3/9aa32a81-1124-4c43-b3db-15bfb1f7aed2.woff?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("woff"),url("/dv2/1/6faffbf4-f8e8-4817-b24b-a390e166be7e.ttf?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("truetype"),url("/dv2/11/fc09de64-de25-425e-90dc-a0cae29b02c4.svg?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a#fc09de64-de25-425e-90dc-a0cae29b02c4") format("svg");
+font-weight:700;font-style:normal;
 }
-
-@font-face {
-  font-family:"ITC Charter W01_I4";
-  src:url("http://fast.fonts.net/dv2/2/ba84e803-3903-4d83-bec4-16b23ae8ad1d.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
+@font-face{
+font-family:"ITC Charter W01_n4";
+src:url("/dv2/2/bd4a6c95-033c-41f0-9510-2de2be19ebc6.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
 }
-
-@font-face {
-  font-family:"ITC Charter W01";
-  src:url("http://fast.fonts.net/dv2/2/ba84e803-3903-4d83-bec4-16b23ae8ad1d.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
-  font-weight:400;font-style:Italic;
+@font-face{
+font-family:"ITC Charter W01";
+src:url("/dv2/2/bd4a6c95-033c-41f0-9510-2de2be19ebc6.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
+font-weight:400;font-style:normal;
 }
-
-@font-face {
-  font-family:"ITC Charter W01";
-  src:url("http://fast.fonts.net/dv2/2/ba84e803-3903-4d83-bec4-16b23ae8ad1d.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a");
-  src:url("http://fast.fonts.net/dv2/3/c17e88a4-2bac-4c58-8aea-2345de107ef7.woff?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("woff"),url("http://fast.fonts.net/dv2/1/67daed65-8aec-4c77-9664-ca53f35c3734.ttf?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("truetype"),url("http://fast.fonts.net/dv2/11/c46a8071-15d2-4934-89bc-7e0db806414d.svg?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a#c46a8071-15d2-4934-89bc-7e0db806414d") format("svg");
-  font-weight:400;font-style:Italic;
+@font-face{
+font-family:"ITC Charter W01";
+src:url("/dv2/2/bd4a6c95-033c-41f0-9510-2de2be19ebc6.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a");
+src:url("/dv2/3/fcf607e0-9726-46de-99a0-3d80440fcad0.woff?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("woff"),url("/dv2/1/3a077c2d-60d8-4c1e-947f-64cd5c57b382.ttf?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("truetype"),url("/dv2/11/da20fd94-cdae-454e-a5d9-e1790eeaf24b.svg?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a#da20fd94-cdae-454e-a5d9-e1790eeaf24b") format("svg");
+font-weight:400;font-style:normal;
 }
-
-@font-face {
-  font-family:"ITC Charter W01_B7";
-  src:url("http://fast.fonts.net/dv2/2/65803b4f-d9d0-4ddb-a9a5-9ab6ee15827e.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
+@font-face{
+font-family:"ITC Charter W01_i4";
+src:url("/dv2/2/ba84e803-3903-4d83-bec4-16b23ae8ad1d.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
 }
-
-@font-face {
-  font-family:"ITC Charter W01";
-  src:url("http://fast.fonts.net/dv2/2/65803b4f-d9d0-4ddb-a9a5-9ab6ee15827e.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
-  font-weight:700;font-style:Bold;
+@font-face{
+font-family:"ITC Charter W01";
+src:url("/dv2/2/ba84e803-3903-4d83-bec4-16b23ae8ad1d.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
+font-weight:400;font-style:italic;
 }
-
-@font-face {
-  font-family:"ITC Charter W01";
-  src:url("http://fast.fonts.net/dv2/2/65803b4f-d9d0-4ddb-a9a5-9ab6ee15827e.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a");
-  src:url("http://fast.fonts.net/dv2/3/10deb463-297b-4976-8a13-f9a98d7ea6de.woff?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("woff"),url("http://fast.fonts.net/dv2/1/143c464c-244f-4c8e-a5f2-c28f78f092fc.ttf?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("truetype"),url("http://fast.fonts.net/dv2/11/2214883f-2c66-4e68-9fc8-3641bd9200ca.svg?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a#2214883f-2c66-4e68-9fc8-3641bd9200ca") format("svg");
-  font-weight:700;font-style:Bold;
+@font-face{
+font-family:"ITC Charter W01";
+src:url("/dv2/2/ba84e803-3903-4d83-bec4-16b23ae8ad1d.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a");
+src:url("/dv2/3/c17e88a4-2bac-4c58-8aea-2345de107ef7.woff?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("woff"),url("/dv2/1/67daed65-8aec-4c77-9664-ca53f35c3734.ttf?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("truetype"),url("/dv2/11/c46a8071-15d2-4934-89bc-7e0db806414d.svg?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a#c46a8071-15d2-4934-89bc-7e0db806414d") format("svg");
+font-weight:400;font-style:italic;
 }
-
+@font-face{
+font-family:"ITC Charter W01_n7";
+src:url("/dv2/2/65803b4f-d9d0-4ddb-a9a5-9ab6ee15827e.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
+}
+@font-face{
+font-family:"ITC Charter W01";
+src:url("/dv2/2/65803b4f-d9d0-4ddb-a9a5-9ab6ee15827e.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("eot");
+font-weight:700;font-style:normal;
+}
+@font-face{
+font-family:"ITC Charter W01";
+src:url("/dv2/2/65803b4f-d9d0-4ddb-a9a5-9ab6ee15827e.eot?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a");
+src:url("/dv2/3/10deb463-297b-4976-8a13-f9a98d7ea6de.woff?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("woff"),url("/dv2/1/143c464c-244f-4c8e-a5f2-c28f78f092fc.ttf?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("truetype"),url("/dv2/11/2214883f-2c66-4e68-9fc8-3641bd9200ca.svg?d44f19a684109620e484147ea690e818ee8d0f94c8efc5f31894b34456dd6eba45b7199fe6a76b3f16243440c93c58e473c2b02ad5244cba2c4f7ba3b91d2e05b3bce074c230ba&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a#2214883f-2c66-4e68-9fc8-3641bd9200ca") format("svg");
+font-weight:700;font-style:normal;
+}

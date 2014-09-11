@@ -13,3 +13,7 @@
 %clearfix {
   @include clearfix();
 }
+
+.clearfix {
+  @extend %clearfix;
+}

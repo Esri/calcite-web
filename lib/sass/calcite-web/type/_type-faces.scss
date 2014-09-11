@@ -1,398 +1,156 @@
+%header-tracking { @include tracking($header-tracking);}
+%body-tracking { @include tracking($body-tracking);}
+%secondary-tracking { @include tracking($secondary-tracking);}
+%code-tracking { @include tracking($code-tracking);}
+
+@mixin header-light() {
+  @extend %header-tracking;
+  font-family: $header-family; font-weight: nth($header-light, 1); font-style: normal;
+  b, strong {font-weight: nth($header-light, 2);}
+
+  @media (-webkit-max-device-pixel-ratio: 1), (max-resolution: 72dpi) {
+    font-weight: 400;
+    b, strong {
+      font-weight: 500;
+    }
+  }
+}
+
+@mixin header-light-italic() {
+  @extend %header-tracking;
+  font-family: $header-family; font-weight: nth($header-light, 1); font-style: italic;
+  b, strong {font-weight: nth($header-light, 2);}
+  @media (-webkit-max-device-pixel-ratio: 1), (max-resolution: 72dpi) {
+    font-weight: 400;
+    b, strong {font-weight: 500;}
+
+  }
+}
+
+@mixin header-face() {
+  @extend %header-tracking;
+  font-family: $header-family; font-weight: nth($header-regular, 1); font-style: normal;
+  b, strong {font-weight: nth($header-regular, 2);}
+}
+@mixin header-italic() {
+  @extend %header-tracking;
+  font-family: $header-family; font-weight: nth($header-regular, 1); font-style: italic;
+  b, strong {font-weight: nth($header-regular, 2);}
+}
+@mixin header-demi() {
+  @extend %header-tracking;
+  font-family: $header-family; font-weight: nth($header-demi, 1); font-style: normal;
+  b, strong {font-weight: nth($header-demi, 2);}
+}
+@mixin header-demi-italic() {
+  @extend %header-tracking;
+  font-family: $header-family; font-weight: nth($header-demi, 1); font-style: italic;
+  b, strong {font-weight: nth($header-demi, 2);}
+}
+@mixin header-bold() {
+  @extend %header-tracking;
+  font-family: $header-family; font-weight: nth($header-bold, 1); font-style: normal;
+  b, strong {font-weight: nth($header-bold, 2);}
+}
+@mixin header-bold-italic() {
+  @extend %header-tracking;
+  font-family: $header-family; font-weight: nth($header-bold, 1); font-style: italic;
+  b, strong {font-weight: nth($header-bold, 2);}
+}
+
+@mixin body-face() {
+  @extend %body-tracking;
+  font-family: $body-family; font-weight: nth($body-regular, 1); font-style: normal;
+  b, strong {font-weight: nth($body-regular, 2);}
+}
+@mixin body-italic() {
+  @extend %body-tracking;
+  font-family: $body-family; font-weight: nth($body-regular, 1); font-style: italic;
+  b, strong {font-weight: nth($body-regular, 2);}
+}
+@mixin body-bold() {
+  @extend %body-tracking;
+  font-family: $body-family; font-weight: nth($body-bold, 1); font-style: normal;
+  b, strong {font-weight: nth($body-bold, 2);}
+}
+@mixin body-bold-italic() {
+  @extend %body-tracking;
+  font-family: $body-family; font-weight: nth($body-bold, 1); font-style: italic;
+  b, strong {font-weight: nth($body-bold, 2);}
+}
+
+@mixin secondary-face() {
+  @extend %secondary-tracking;
+  font-family: $secondary-family; font-weight: nth($secondary-regular, 1); font-style: normal;
+  b, strong {font-weight: nth($secondary-regular, 2);}
+}
+@mixin secondary-italic() {
+  @extend %secondary-tracking;
+  font-family: $secondary-family; font-weight: nth($secondary-regular, 1); font-style: italic;
+  b, strong {font-weight: nth($secondary-regular, 2);}
+}
+@mixin secondary-bold() {
+  @extend %secondary-tracking;
+  font-family: $secondary-family; font-weight: nth($secondary-bold, 1); font-style: normal;
+  b, strong {font-weight: nth($secondary-bold, 2);}
+}
+@mixin secondary-bold-italic() {
+  @extend %secondary-tracking;
+  font-family: $secondary-family; font-weight: nth($secondary-bold, 1); font-style: italic;
+  b, strong {font-weight: nth($secondary-bold, 2);}
+}
+@mixin code-face() {
+  @extend %code-tracking;
+  font-family: $code-family; font-weight: nth($code-regular, 1); font-style: normal;
+  b, strong {font-weight: nth($code-regular, 2);}
+}
+@mixin code-italic() {
+  @extend %code-tracking;
+  font-family: $code-family; font-weight: nth($code-regular, 1); font-style: italic;
+  b, strong {font-weight: nth($code-regular, 2);}
+}
+
 @if $include-type == true {
   // ┌────────────────┐
   // │ Header Classes │
   // └────────────────┘
+
   @if $include-header-family == true {
-    %header-tracking {
-      @include tracking($header-tracking);
-    }
-
-    @if $header-thin {
-      .header-thin {
-        @extend %header-tracking;
-        font-family: $header-family; font-weight: nth($header-thin, 1); font-style: normal;
-        b, strong {font-weight: nth($header-thin, 2);}
-      }
-      .header-thin-italic {
-        @extend %header-tracking;
-        font-family: $header-family; font-weight: nth($header-thin, 1); font-style: italic;
-        b, strong {font-weight: nth($header-thin, 2);}
-      }
-    }
-
-    @if $header-light {
-      .header-light {
-        @extend %header-tracking;
-        font-family: $header-family; font-weight: nth($header-light, 1); font-style: normal;
-        b, strong {font-weight: nth($header-light, 2);}
-      }
-      .header-light-italic {
-        @extend %header-tracking;
-        font-family: $header-family; font-weight: nth($header-light, 1); font-style: italic;
-        b, strong {font-weight: nth($header-light, 2);}
-      }
-    }
-
-    @if $header-regular {
-      .header-face {
-        @extend %header-tracking;
-        font-family: $header-family; font-weight: nth($header-regular, 1); font-style: normal;
-        b, strong {font-weight: nth($header-regular, 2);}
-      }
-      .header-italic {
-        @extend %header-tracking;
-        font-family: $header-family; font-weight: nth($header-regular, 1); font-style: italic;
-        b, strong {font-weight: nth($header-regular, 2);}
-      }
-    }
-
-    @if $header-medium {
-      .header-medium {
-        @extend %header-tracking;
-        font-family: $header-family; font-weight: nth($header-medium, 1); font-style: normal;
-        b, strong {font-weight: nth($header-medium, 2);}
-      }
-      .header-medium-italic {
-        @extend %header-tracking;
-        font-family: $header-family; font-weight: nth($header-medium, 1); font-style: italic;
-        b, strong {font-weight: nth($header-medium, 2);}
-      }
-    }
-
-    @if $header-demi {
-      .header-demi {
-        @extend %header-tracking;
-        font-family: $header-family; font-weight: nth($header-demi, 1); font-style: normal;
-        b, strong {font-weight: nth($header-demi, 2);}
-      }
-      .header-demi-italic {
-        @extend %header-tracking;
-        font-family: $header-family; font-weight: nth($header-demi, 1); font-style: italic;
-        b, strong {font-weight: nth($header-demi, 2);}
-      }
-    }
-
-    @if $header-bold {
-      .header-bold {
-        @extend %header-tracking;
-        font-family: $header-family; font-weight: nth($header-bold, 1); font-style: normal;
-        b, strong {font-weight: nth($header-bold, 2);}
-      }
-      .header-bold-italic {
-        @extend %header-tracking;
-        font-family: $header-family; font-weight: nth($header-bold, 1); font-style: italic;
-        b, strong {font-weight: nth($header-bold, 2);}
-      }
-    }
-
-    @if $header-black {
-      .header-black {
-        @extend %header-tracking;
-        font-family: $header-family; font-weight: nth($header-black, 1); font-style: normal;
-        b, strong {font-weight: nth($header-black, 2);}
-      }
-      .header-black-italic {
-        @extend %header-tracking;
-        font-family: $header-family; font-weight: nth($header-black, 1); font-style: italic;
-        b, strong {font-weight: nth($header-black, 2);}
-      }
-    }
+    .header-light {@include header-light();}
+    .header-light-italic {@include header-light-italic();}
+    .header-face {@include header-face();}
+    .header-italic {@include header-italic();}
+    .header-demi {@include header-demi();}
+    .header-demi-italic {@include header-demi-italic();}
+    .header-bold {@include header-bold();}
+    .header-bold-italic {@include header-bold-italic();}
   }
 
   // ┌──────────────┐
   // │ Body Classes │
   // └──────────────┘
   @if $include-body-family == true {
-    %body-tracking {
-      @include tracking($body-tracking);
-    }
-    @if $header-thin {
-      .body-thin {
-        @extend %body-tracking;
-        font-family: $body-family; font-weight: nth($body-thin, 1); font-style: normal;
-        b, strong {font-weight: nth($body-thin, 2);}
-      }
-      .body-thin-italic {
-        @extend %body-tracking;
-        font-family: $body-family; font-weight: nth($body-thin, 1); font-style: italic;
-        b, strong {font-weight: nth($body-thin, 2);}
-      }
-    }
-
-    @if $body-light {
-      .body-light {
-        @extend %body-tracking;
-        font-family: $body-family; font-weight: nth($body-light, 1); font-style: normal;
-        b, strong {font-weight: nth($body-light, 2);}
-      }
-      .body-light-italic {
-        @extend %body-tracking;
-        font-family: $body-family; font-weight: nth($body-light, 1); font-style: italic;
-        b, strong {font-weight: nth($body-light, 2);}
-      }
-    }
-
-    @if $body-regular {
-      .body-face {
-        @extend %body-tracking;
-        font-family: $body-family; font-weight: nth($body-regular, 1); font-style: normal;
-        b, strong {font-weight: nth($body-regular, 2);}
-      }
-      .body-italic {
-        @extend %body-tracking;
-        font-family: $body-family; font-weight: nth($body-regular, 1); font-style: italic;
-        b, strong {font-weight: nth($body-regular, 2);}
-      }
-    }
-
-    @if $body-medium {
-      .body-medium {
-        @extend %body-tracking;
-        font-family: $body-family; font-weight: nth($body-medium, 1); font-style: normal;
-        b, strong {font-weight: nth($body-medium, 2);}
-      }
-      .body-medium-italic {
-        @extend %body-tracking;
-        font-family: $body-family; font-weight: nth($body-medium, 1); font-style: italic;
-        b, strong {font-weight: nth($body-medium, 2);}
-      }
-    }
-
-    @if $body-demi {
-      .body-demi {
-        @extend %body-tracking;
-        font-family: $body-family; font-weight: nth($body-demi, 1); font-style: normal;
-        b, strong {font-weight: nth($body-demi, 2);}
-      }
-      .body-demi-italic {
-        @extend %body-tracking;
-        font-family: $body-family; font-weight: nth($body-demi, 1); font-style: italic;
-        b, strong {font-weight: nth($body-demi, 2);}
-      }
-    }
-
-    @if $body-bold {
-      .body-bold {
-        @extend %body-tracking;
-        font-family: $body-family; font-weight: nth($body-bold, 1); font-style: normal;
-        b, strong {font-weight: nth($body-bold, 2);}
-      }
-      .body-bold-italic {
-        @extend %body-tracking;
-        font-family: $body-family; font-weight: nth($body-bold, 1); font-style: italic;
-        b, strong {font-weight: nth($body-bold, 2);}
-      }
-    }
-
-    @if $body-black {
-      .body-black {
-        @extend %body-tracking;
-        font-family: $body-family; font-weight: nth($body-black, 1); font-style: normal;
-        b, strong {font-weight: nth($body-black, 2);}
-      }
-      .body-black-italic {
-        @extend %body-tracking;
-        font-family: $body-family; font-weight: nth($body-black, 1); font-style: italic;
-        b, strong {font-weight: nth($body-black, 2);}
-      }
-    }
+    .body-face {@include body-face();}
+    .body-italic {@include body-italic();}
+    .body-bold {@include body-bold();}
+    .body-bold-italic {@include body-bold-italic();}
   }
 
   // ┌───────────────────┐
   // │ Secondary Classes │
   // └───────────────────┘
   @if $include-secondary-family == true {
-    %secondary-tracking {
-      @include tracking($secondary-tracking);
-    }
-    @if $secondary-thin {
-      .secondary-thin {
-        @extend %secondary-tracking;
-        font-family: $secondary-family; font-weight: nth($secondary-thin, 1); font-style: normal;
-        b, strong {font-weight: nth($secondary-thin, 2);}
-      }
-      .secondary-thin-italic {
-        @extend %secondary-tracking;
-        font-family: $secondary-family; font-weight: nth($secondary-thin, 1); font-style: italic;
-        b, strong {font-weight: nth($secondary-thin, 2);}
-      }
-    }
-
-    @if $secondary-light {
-      .secondary-light {
-        @extend %secondary-tracking;
-        font-family: $secondary-family; font-weight: nth($secondary-light, 1); font-style: normal;
-        b, strong {font-weight: nth($secondary-light, 2);}
-      }
-      .secondary-light-italic {
-        @extend %secondary-tracking;
-        font-family: $secondary-family; font-weight: nth($secondary-light, 1); font-style: italic;
-        b, strong {font-weight: nth($secondary-light, 2);}
-      }
-    }
-
-    @if $secondary-regular {
-      .secondary-face {
-        @extend %secondary-tracking;
-        font-family: $secondary-family; font-weight: nth($secondary-regular, 1); font-style: normal;
-        b, strong {font-weight: nth($secondary-regular, 2);}
-      }
-      .secondary-italic {
-        @extend %secondary-tracking;
-        font-family: $secondary-family; font-weight: nth($secondary-regular, 1); font-style: italic;
-        b, strong {font-weight: nth($secondary-regular, 2);}
-      }
-    }
-
-    @if $secondary-medium {
-      .secondary-medium {
-        @extend %secondary-tracking;
-        font-family: $secondary-family; font-weight: nth($secondary-medium, 1); font-style: normal;
-        b, strong {font-weight: nth($secondary-medium, 2);}
-      }
-      .secondary-medium-italic {
-        @extend %secondary-tracking;
-        font-family: $secondary-family; font-weight: nth($secondary-medium, 1); font-style: italic;
-        b, strong {font-weight: nth($secondary-medium, 2);}
-      }
-    }
-
-    @if $secondary-demi {
-      .secondary-demi {
-        @extend %secondary-tracking;
-        font-family: $secondary-family; font-weight: nth($secondary-demi, 1); font-style: normal;
-        b, strong {font-weight: nth($secondary-demi, 2);}
-      }
-      .secondary-demi-italic {
-        @extend %secondary-tracking;
-        font-family: $secondary-family; font-weight: nth($secondary-demi, 1); font-style: italic;
-        b, strong {font-weight: nth($secondary-demi, 2);}
-      }
-    }
-
-    @if $secondary-bold {
-      .secondary-bold {
-        @extend %secondary-tracking;
-        font-family: $secondary-family; font-weight: nth($secondary-bold, 1); font-style: normal;
-        b, strong {font-weight: nth($secondary-bold, 2);}
-      }
-      .secondary-bold-italic {
-        @extend %secondary-tracking;
-        font-family: $secondary-family; font-weight: nth($secondary-bold, 1); font-style: italic;
-        b, strong {font-weight: nth($secondary-bold, 2);}
-      }
-    }
-
-    @if $secondary-black {
-      .secondary-black {
-        @extend %secondary-tracking;
-        font-family: $secondary-family; font-weight: nth($secondary-black, 1); font-style: normal;
-        b, strong {font-weight: nth($secondary-black, 2);}
-      }
-      .secondary-black-italic {
-        @extend %secondary-tracking;
-        font-family: $secondary-family; font-weight: nth($secondary-black, 1); font-style: italic;
-        b, strong {font-weight: nth($secondary-black, 2);}
-      }
-    }
+    .secondary-face {@include secondary-face();}
+    .secondary-italic {@include secondary-italic();}
+    .secondary-bold {@include secondary-bold();}
+    .secondary-bold-italic {@include secondary-bold-italic();}
   }
 
   // ┌──────────────┐
   // │ Code Classes │
   // └──────────────┘
   @if $include-header-family == true {
-    %code-tracking {
-      @include tracking($code-tracking);
-    }
-    @if $code-thin {
-      .code-thin {
-        @extend %code-tracking;
-        font-family: $code-family; font-weight: nth($code-thin, 1); font-style: normal;
-        b, strong {font-weight: nth($code-thin, 2);}
-      }
-      .code-thin-italic {
-        @extend %code-tracking;
-        font-family: $code-family; font-weight: nth($code-thin, 1); font-style: italic;
-        b, strong {font-weight: nth($code-thin, 2);}
-      }
-    }
-
-    @if $code-light {
-      .code-light {
-        @extend %code-tracking;
-        font-family: $code-family; font-weight: nth($code-light, 1); font-style: normal;
-        b, strong {font-weight: nth($code-light, 2);}
-      }
-      .code-light-italic {
-        @extend %code-tracking;
-        font-family: $code-family; font-weight: nth($code-light, 1); font-style: italic;
-        b, strong {font-weight: nth($code-light, 2);}
-      }
-    }
-
-    @if $code-regular {
-      .code-face {
-        @extend %code-tracking;
-        font-family: $code-family; font-weight: nth($code-regular, 1); font-style: normal;
-        b, strong {font-weight: nth($code-regular, 2);}
-      }
-      .code-italic {
-        @extend %code-tracking;
-        font-family: $code-family; font-weight: nth($code-regular, 1); font-style: italic;
-        b, strong {font-weight: nth($code-regular, 2);}
-      }
-    }
-
-    @if $code-medium {
-      .code-medium {
-        @extend %code-tracking;
-        font-family: $code-family; font-weight: nth($code-medium, 1); font-style: normal;
-        b, strong {font-weight: nth($code-medium, 2);}
-      }
-      .code-medium-italic {
-        @extend %code-tracking;
-        font-family: $code-family; font-weight: nth($code-medium, 1); font-style: italic;
-        b, strong {font-weight: nth($code-medium, 2);}
-      }
-    }
-
-    @if $code-demi {
-      .code-demi {
-        @extend %code-tracking;
-        font-family: $code-family; font-weight: nth($code-demi, 1); font-style: normal;
-        b, strong {font-weight: nth($code-demi, 2);}
-      }
-      .code-demi-italic {
-        @extend %code-tracking;
-        font-family: $code-family; font-weight: nth($code-demi, 1); font-style: italic;
-        b, strong {font-weight: nth($code-demi, 2);}
-      }
-    }
-
-    @if $code-bold {
-      .code-bold {
-        @extend %code-tracking;
-        font-family: $code-family; font-weight: nth($code-bold, 1); font-style: normal;
-        b, strong {font-weight: nth($code-bold, 2);}
-      }
-      .code-bold-italic {
-        @extend %code-tracking;
-        font-family: $code-family; font-weight: nth($code-bold, 1); font-style: italic;
-        b, strong {font-weight: nth($code-bold, 2);}
-      }
-    }
-
-    @if $code-black {
-      .code-black {
-        @extend %code-tracking;
-        font-family: $code-family; font-weight: nth($code-black, 1); font-style: normal;
-        b, strong {font-weight: nth($code-black, 2);}
-      }
-      .code-black-italic {
-        @extend %code-tracking;
-        font-family: $code-family; font-weight: nth($code-black, 1); font-style: italic;
-        b, strong {font-weight: nth($code-black, 2);}
-      }
-    }
+    .code-face {@include code-face();}
+    .code-italic {@include code-italic();}
   }
 }
