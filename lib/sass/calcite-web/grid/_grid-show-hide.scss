@@ -1,10 +1,6 @@
-// Show Hide Helper Classes
-%show-column { @include show(); }
-%hide-column { @include hide(); }
-
 @mixin include-show-hide(){
-  .show-column { @extend %show-column; }
-  .show-column { @extend %hide-column; }
+  .show-column { @include show(); }
+  .show-column { @include hide(); }
 }
 
 @mixin responsive-show-hide(){
