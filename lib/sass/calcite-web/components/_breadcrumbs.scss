@@ -6,11 +6,11 @@
 //
 //Styleguide 3.8
 
-%breadcrumbs {
+@mixin breadcrumbs() {
   @extend .header-face;
   @include font-size(-3);
 }
-  %crumb {
+  @mixin crumb() {
     &:after {
       @include font-size(-3);
       content: "»";
@@ -27,6 +27,6 @@
   }
 
 @if $include-breadcrumbs == true {
-  .breadcrumbs {@extend %breadcrumbs;}
-    .crumb {@extend %crumb};
+  .breadcrumbs {@include breadcrumbs();}
+    .crumb {@include crumb();}
 }

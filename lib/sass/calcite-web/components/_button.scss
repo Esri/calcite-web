@@ -4,7 +4,7 @@
 //
 //Styleguide x.x
 
-%btn {
+@mixin btn() {
   position: relative;
   display: inline-block;
   padding: .4em .9em .4em;
@@ -38,13 +38,13 @@
   }
 }
 
-  %btn-arrow {
+  @mixin btn-arrow() {
     &:after {
       content: " →";
     }
   }
 
-  %btn-transparent {
+  @mixin btn-transparent() {
     background: none;
     color: $link-color;
     &:hover {
@@ -53,7 +53,7 @@
     }
   }
 
-  %btn-clear {
+  @mixin btn-clear() {
     color: $blue;
     background: transparent;
     border: 1px solid $blue;
@@ -63,7 +63,7 @@
     }
   }
 
-    %btn-clear-gray {
+    @mixin btn-clear-gray() {
       background: none;
       color: $gray;
       border: 1px solid $gray;
@@ -72,7 +72,7 @@
         background: $gray;
       }
     }
-    %btn-clear-white {
+    @mixin btn-clear-white() {
       background: none;
       color: $white;
       border: 1px solid $white;
@@ -82,17 +82,17 @@
       }
     }
 
-  %btn-small {
+  @mixin btn-small() {
     @include font-size(-2);
     padding: .3em .8em .3em;
   }
 
-  %btn-large {
+  @mixin btn-large() {
     @include font-size(0);
     padding: .5em 1em .5em;
   }
 
-  %btn-fill {
+  @mixin btn-fill() {
     width: 100%;
     text-align: center;
   }
@@ -101,7 +101,7 @@
     $name: nth($color, 1);
     $value: nth($color, 2);
     $light-value: nth($color, 3);
-    %btn-#{$name} {
+    @mixin btn-#{$name}() {
       background-color: $value;
       &:hover {
         background-color: $light-value;
@@ -110,22 +110,22 @@
   }
 
 @if $include-button == true {
-  .btn { @extend %btn;}
-  .btn-arrow {@extend %btn-arrow;}
-  .btn-transparent {@extend %btn-transparent;}
-  .btn-clear {@extend %btn-clear;}
-  .btn-clear-gray {@extend %btn-clear-gray;}
-  .btn-clear-white {@extend %btn-clear-white;}
-  .btn-small {@extend %btn-small;}
-  .btn-large {@extend %btn-large;}
-  .btn-fill {@extend %btn-fill;}
+  .btn { @include %btn();}
+  .btn-arrow {@include %btn-arrow();}
+  .btn-transparent {@include %btn-transparent();}
+  .btn-clear {@include %btn-clear();}
+  .btn-clear-gray {@include %btn-clear-gray();}
+  .btn-clear-white {@include %btn-clear-white();}
+  .btn-small {@include %btn-small();}
+  .btn-large {@include %btn-large();}
+  .btn-fill {@include %btn-fill();}
 
   @each $color in $color-set {
     $name: nth($color, 1);
     $value: nth($color, 2);
     $light-value: nth($color, 3);
     .btn-#{$name} {
-      @extend %btn-#{$name};
+      @include %btn-#{$name}();
     }
   }
 }
