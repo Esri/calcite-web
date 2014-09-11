@@ -97,6 +97,19 @@
     text-align: center;
   }
 
+  @mixin btn-grouped() {
+    float: left;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $dark-blue;
+    border-left-color: transparent;
+    &:first-of-type {
+      border-left-color: $dark-blue;
+    }
+    &:last-of-type {
+      float: none;
+    }
+  }
 
   @mixin btn-color($value, $light-value) {
     background-color: $value;
@@ -105,17 +118,6 @@
     }
   }
 
-  // @each $color in $color-set {
-  //   $name: nth($color, 1);
-  //   $value: nth($color, 2);
-  //   $light-value: nth($color, 3);
-  //   @mixin btn-#{$name}() {
-  //     background-color: $value;
-  //     &:hover {
-  //       background-color: $light-value;
-  //     }
-  //   }
-  // }
 
 @if $include-button == true {
   .btn { @include btn();}
@@ -127,6 +129,7 @@
   .btn-small {@include btn-small();}
   .btn-large {@include btn-large();}
   .btn-fill {@include btn-fill();}
+  .btn-grouped {@include btn-grouped();}
 
   @each $color in $color-set {
     $name: nth($color, 1);
@@ -134,6 +137,9 @@
     $light-value: nth($color, 3);
     .btn-#{$name} {
       @include btn-color($value, $light-value);
+    }
+    .btn-#{$name}.btn-grouped {
+      border-color: $light-value;
     }
   }
 }
