@@ -46,6 +46,20 @@
 
 %list-numbered {}
 
+@mixin floor-light($whatever){
+
+}
+
+.retina-medium {
+  @media (-webkit-max-device-pixel-ratio: 1),
+  (max-resolution: 72dpi) {
+    font-weight: 400;
+    strong, b {
+      font-weight: 500;
+    }
+  }
+}
+
 //generate color classes
 @each $color in $color-set {
   $name: nth($color, 1);
