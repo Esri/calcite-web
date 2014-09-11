@@ -1,5 +1,21 @@
-//## Top Nav
-//
-// Primary Top Header Nav
-//
-//Styleguide x.x
+.top-nav {
+  @extend .header-light;
+  padding: $baseline*.75 0;
+}
+
+.top-nav-title {
+  @include font-size(2);
+  @extend .link-off-black;
+  float: left;
+  padding-right: $baseline*2;
+}
+
+.top-nav-list {
+  @extend .header-light;
+  line-height: 1.75em;
+}
+
+.top-nav-link {
+  margin-right: 1em;
+  @extend .link-off-black;
+}

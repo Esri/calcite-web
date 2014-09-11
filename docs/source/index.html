@@ -9,14 +9,22 @@ data:
 
 {% block content %}
 
-<div class="container">
-  <nav class="breadcrumbs">
-    <a href="#" class="crumb">Thing</a>
-    <span class="crumb">Thing</span>
-    <a href="#" class="crumb">Thing</a>
-    <a href="#" class="crumb">Thing</a>
-    <a href="#" class="crumb is-active">Current</a>
+<!-- side-nav pattern -->
+<aside class="side-nav column-6">
+  <h4 class="side-nav-title">Title of Section</h4>
+  <nav>
+    <a href="#" class="side-nav-link">First Link</a>
+    <a href="#" class="side-nav-link">Second Link</a>
+    <a href="#" class="side-nav-link">Third Link</a>
+    <a href="#" class="side-nav-link">Fourth Link</a>
   </nav>
-</div>
+  <h4 class="side-nav-title">Title of Second Section</h4>
+  <nav>
+    <a href="#" class="side-nav-link">First Link</a>
+    <a href="#" class="side-nav-link">Second Link</a>
+    <a href="#" class="side-nav-link">Third Link</a>
+    <a href="#" class="side-nav-link">Fourth Link</a>
+  </nav>
+</aside>
 
 {% endblock %}
