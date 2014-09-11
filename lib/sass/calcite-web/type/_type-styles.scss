@@ -55,6 +55,13 @@
       @extend .header-face;
       margin: $baseline 0 $baseline/2 0;
     }
+
+    h1.header-light,
+    h2.header-light,
+    h3.header-light {
+      font-weight: nth($header-light, 1);
+      b, strong {font-weight: nth($header-light, 2);}
+    }
   }
 
   @if $include-code-family == true {
