@@ -85,8 +85,11 @@
   color: $value;
 }
 
-@mixin link-color($value) {
+@mixin link-color($value, $light-value) {
   color: $value;
+  &:hover {
+    color: $light-value;
+  }
 }
 
 @if $include-type == true and $include-type-defaults == true {
@@ -104,10 +107,7 @@
     $value: nth($color, 2);
     $light-value: nth($color, 3);
     .link-#{$name} a, a.link-#{$name} {
-      @include link-color($value);
-      &:hover {
-        color: $light-value;
-      }
+      @include link-color($value, $light-value);
     }
   }
   .text-rule              {@include text-rule();}
