@@ -14,6 +14,7 @@
   @include box-sizing(border-box);
   @include transition(all 0.05s linear);
   cursor: pointer;
+  white-space: nowrap;
   @if $include-type {
     @include font-size(-1);
     font-family: $header-family;
@@ -36,6 +37,12 @@
     }
   }
 }
+
+  %btn-arrow {
+    &:after {
+      content: " →";
+    }
+  }
 
   %btn-transparent {
     background: none;
@@ -104,6 +111,7 @@
 
 @if $include-button == true {
   .btn { @extend %btn;}
+  .btn-arrow {@extend %btn-arrow;}
   .btn-transparent {@extend %btn-transparent;}
   .btn-clear {@extend %btn-clear;}
   .btn-clear-gray {@extend %btn-clear-gray;}

@@ -20,16 +20,19 @@
   .modifier-2 {}
   &:hover {}
 }
+
 // ┌─────────────┐
-// │ LINK COLORS │
+// │ UI DEFAULTS │
 // └─────────────┘
-$link-color: $blue;
-$link-hover: $light-blue;
+$transition: 150ms linear !default;
 
 // ┌─────────────┐
 // │ TYPE COLORS │
 // └─────────────┘
-$type-color: $off-black;
+$type-color: $off-black  !default;
+$link-color: $blue       !default;
+$link-hover: $light-blue !default;
+
 // ┌─────────────┐
 // │ GRID CONFIG │
 // └─────────────┘

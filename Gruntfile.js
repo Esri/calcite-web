@@ -84,6 +84,14 @@ module.exports = function(grunt) {
           'sass:doc',
           'copy:doc'
         ]
+      },
+      layouts: {
+        files: ['docs/source/layouts/**/*.{html,md}'],
+        tasks: [
+          'acetate:build',
+          'sass:doc',
+          'copy:doc'
+        ]
       }
     },
 

@@ -35,6 +35,7 @@ $include-breadcrumbs:           true    !default;
 // │ COLOR MAP    │
 // └──────────────┘
 $color-set: (
+  'red' $red $dark-red,
   'green' $green $dark-green,
   'blue' $blue $dark-blue,
   'purple' $purple $dark-purple,
@@ -44,7 +45,9 @@ $color-set: (
   'light-gray' $light-gray $gray,
   'gray' $gray $dark-gray,
   'dark-gray' $dark-gray $darker-gray,
-  'red' $red $dark-red
+  'darker-gray' $darker-gray $darkest-gray,
+  'darkest-gray' $darkest-gray $off-black,
+  'off-black' $off-black $black
 );
 
 // Utils
@@ -75,8 +78,15 @@ $color-set: (
 
 // Patterns
 // complete interfaces: header, footer, banner...
+@import "calcite-web/patterns/top-nav";
+@import "calcite-web/patterns/sub-nav";
+@import "calcite-web/patterns/third-nav";
+@import "calcite-web/patterns/side-nav";
 
 // Javascript
 // patterns requiring javascript: tabs, modals, carousels...
 
+// Modifiers
+// modifier classes override standard styles
+@import 'calcite-web/type/type-helpers';
 

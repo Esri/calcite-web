@@ -31,37 +31,69 @@
   </head>
 
   <body>
-  <!-- Top Nav Pattern
-    Bake in simple responsive breaks, and document how to override
-  -->
-  <header class="top-nav">
-    <div class="container">
-      <a href="#" class="top-nav-title">Arc<strong>GIS</strong> for Developers</a>
-      <nav class="top-nav-list">
-        <a class="top-nav-link" href="/page-1">Plans</a>
-        <a class="top-nav-link is-active" href="/page-2">Features</a>
-        <a class="top-nav-link" href="/page-3">Documentation</a>
-        <a class="top-nav-link" href="/page-4">Support</a>
-      </nav>
-      <!-- Site Search Pattern Plugs in Here -->
-      <!-- Sign in / User Components Plug in Here -->
-    </div>
-  </header>
-  <!-- End Top Nav Pattern -->
 
+    <!-- Top Nav Pattern-->
+    <header class="top-nav">
+      <div class="container">
+        <a href="#" class="top-nav-title">Calcite <strong>Web</strong></a>
+        <nav class="top-nav-list">
+          <a class="top-nav-link" href="/page-1">Plans</a>
+          <a class="top-nav-link is-active" href="/page-2">Features</a>
+          <a class="top-nav-link" href="/page-3">Documentation</a>
+          <a class="top-nav-link" href="/page-4">Support</a>
+        </nav>
+        <!-- Site Search Pattern-->
+        <!-- Sign in / User Menu Patterns-->
+      </div>
+    </header>
 
-<!-- Site Search Pattern -->
-<!-- <div class="site-search">
-  <form action="/search/" class="site-search">
-    <input class="site-search-input js-seach-toggle is-active" type="search" name="q" placeholder="Search">
-    <button type="submit" class="site-search-button">Go</button>
-  </form>
-</div> -->
+    <!-- Secondary Nav Pattern -->
+    <header class="sub-nav">
+      <div class="container">
 
+<!--         <nav class="breadcrumbs link-white text-light-gray padding-leader-1">
+          <a href="#" class="crumb">Thing</a>
+          <span class="crumb">Thing</span>
+          <a href="#" class="crumb">Thing</a>
+          <a href="#" class="crumb">Thing</a>
+          <a href="#" class="crumb is-active">Current</a>
+        </nav> -->
 
+        <h1 class="sub-nav-title"><a href="#" class="link-white">Page Title</a></h1>
+        <a href="#" class="btn btn-orange btn-arrow right leader-1">Call to Action</a>
+        <nav class="sub-nav-list">
+          <a class="sub-nav-link" href="/page-1">Plans</a>
+          <a class="sub-nav-link is-active" href="/page-2">Features</a>
+          <a class="sub-nav-link" href="/page-3">Documentation</a>
+          <a class="sub-nav-link" href="/page-4">Support</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Third Nav Pattern -->
+    <header class="third-nav">
+      <div class="container">
+        <nav>
+          <a class="third-nav-link" href="/page-1">In Page Link</a>
+          <a class="third-nav-link is-active" href="/page-2">Active Link</a>
+          <a class="third-nav-link" href="/page-3">Another</a>
+          <a class="third-nav-link" href="/page-4">And Another</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Site Search Pattern -->
+    <!-- <div class="site-search">
+      <form action="/search/" class="site-search">
+        <input class="site-search-input js-seach-toggle is-active" type="search" name="q" placeholder="Search">
+        <button type="submit" class="site-search-button">Go</button>
+      </form>
+    </div> -->
 
     <!-- content of each page will go here -->
-    {% block content %}{% endblock %}
+    <div class="container leader-1">
+      {% block content %}{% endblock %}
+    </div>
 
     <!-- javascript for site and framework -->
     {% block footer %}
