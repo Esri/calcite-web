@@ -99,7 +99,7 @@
   a {
     color: $link-color;
     text-decoration: none;
-    @include transition(color 150ms linear);
+    @include transition(color $transition);
     &:hover, &:focus {
       color: $link-hover;
     }
