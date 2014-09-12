@@ -14,35 +14,38 @@
     display: inline-block;
   }
 
-    .tooltip-content {
-      position: absolute;
-      left: -6em;
-      width: 12em;
-      padding: $baseline/4 $baseline/2;
-      display: block;
-      @include font-size(-1);
-      @extend .header-face;
-      text-align: center;
-      background-color: $transparent-black;
-      color: $off-white;
-      pointer-events: none;
-      opacity: 0;
-      @include transition(all, $transition);
-      @include transform(translate3d(0, 4px, 0));
-    }
+  .tooltip:before {
+    content: attr(data-message);
+    position: absolute;
+    top: $baseline;
+    left: -6em;
+    width: 12em;
+    padding: $baseline/4 $baseline/2;
+    display: block;
+    @include font-size(-1);
+    @extend .header-face;
+    text-align: center;
+    background-color: $transparent-black;
+    color: $off-white;
+    pointer-events: none;
+    opacity: 0;
+    @include transition(all, $transition);
+    @include transform(translate3d(0, 4px, 0));
+  }
 
-    .tooltip-content-left {
-      left: 0;
-    }
+  .tooltip-left:before {
+    left: 0;
+  }
 
-    .tooltip-content-right {
-      left: auto;
-      right: 0;
-    }
+  .tooltip-right:before {
+    left: auto;
+    right: 0;
+  }
 
-    .tooltip:hover .tooltip-content {
-      @include transition(all, $transition);
-      @include transform(translate3d(0, 0, 0));
-      opacity: 1;
-    }
+  .tooltip:hover:before {
+    @include transition(all, $transition);
+    @include transform(translate3d(0, 0, 0));
+    opacity: 1;
+  }
+
 }
