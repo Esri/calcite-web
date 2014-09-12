@@ -51,6 +51,7 @@ $include-tooltip:               true    !default;
 @import "calcite-web/components/breadcrumbs";
 @import "calcite-web/components/tooltip";
 @import "calcite-web/components/alerts";
+@import "calcite-web/components/panel";
 
 // Patterns
 // complete interfaces: header, footer, banner...
@@ -67,4 +68,5 @@ $include-tooltip:               true    !default;
 // Modifiers
 // modifier classes override standard styles
 @import 'calcite-web/type/type-helpers';
+@import "calcite-web/grid/grid-leader-trailer-helpers";
 
