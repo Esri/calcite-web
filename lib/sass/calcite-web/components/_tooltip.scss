@@ -1,0 +1,45 @@
+@if $include-tooltip == true {
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+    %tooltip-content {
+      position: absolute;
+      display: block;
+      background-color: $transparent-black;
+      color: $off-white;
+      padding: $baseline/4 $baseline/2;
+      @include font-size(-1);
+      @extend .header-face;
+      text-align: center;
+      pointer-events: none;
+      opacity: 0;
+      @include transition(all, $transition);
+      @include transform(translate3d(0, 4px, 0));
+    }
+    .tooltip-content {
+      @extend %tooltip-content;
+      width: 12em;
+      left: -6em;
+    }
+
+    .tooltip-content-right {
+      @extend %tooltip-content;
+      width: 12em;
+      left: -13em;
+
+    }
+    .tooltip-content-left {
+      @extend %tooltip-content;
+      width: 12em;
+      right: -13em;
+    }
+
+    .tooltip:hover {
+      .tooltip-content, .tooltip-content-right, .tooltip-content-left  {
+        @include transition(all, $transition);
+        @include transform(translate3d(0, 0, 0));
+        opacity: 1;
+      }
+    }
+}

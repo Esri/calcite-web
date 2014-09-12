@@ -1,6 +1,6 @@
 // Column Mixin
 @mixin column($n) {
-  @extend %column-base;
+  @extend .column-base;
   width: ($n / $large-column-count) * $container-width - .01vw;
   max-width: ($n / $large-column-count) * $large-column-max;
 }

@@ -31,75 +31,125 @@
   </head>
 
   <body>
+    <div class="wrapper">
+      <!-- Top Nav Pattern-->
+      <header class="top-nav">
+        <div class="container">
+          <a href="#" class="top-nav-title">Calcite <strong>Web</strong></a>
+          <nav class="top-nav-list">
+            <a class="top-nav-link" href="/page-1">Plans</a>
+            <a class="top-nav-link is-active" href="/page-2">Features</a>
+            <a class="top-nav-link" href="/page-3">Documentation</a>
+            <a class="top-nav-link" href="/page-4">Support</a>
+          </nav>
+          <!-- Site Search Pattern-->
+          <!-- Sign in / User Menu Patterns-->
+        </div>
+      </header>
 
-    <!-- Top Nav Pattern-->
-    <header class="top-nav">
-      <div class="container">
-        <a href="#" class="top-nav-title">Calcite <strong>Web</strong></a>
-        <nav class="top-nav-list">
-          <a class="top-nav-link" href="/page-1">Plans</a>
-          <a class="top-nav-link is-active" href="/page-2">Features</a>
-          <a class="top-nav-link" href="/page-3">Documentation</a>
-          <a class="top-nav-link" href="/page-4">Support</a>
-        </nav>
-        <!-- Site Search Pattern-->
-        <!-- Sign in / User Menu Patterns-->
+      <!-- Secondary Nav Pattern -->
+      <header class="sub-nav">
+        <div class="container">
+
+  <!--         <nav class="breadcrumbs link-white text-light-gray padding-leader-1">
+            <a href="#" class="crumb">Thing</a>
+            <span class="crumb">Thing</span>
+            <a href="#" class="crumb">Thing</a>
+            <a href="#" class="crumb">Thing</a>
+            <a href="#" class="crumb is-active">Current</a>
+          </nav> -->
+
+          <h1 class="sub-nav-title"><a href="#" class="link-white">Page Title</a></h1>
+          <a href="#" class="btn btn-orange btn-arrow right leader-1">Call to Action</a>
+          <nav class="sub-nav-list">
+            <a class="sub-nav-link" href="/page-1">Plans</a>
+            <a class="sub-nav-link is-active" href="/page-2">Features</a>
+            <a class="sub-nav-link" href="/page-3">Documentation</a>
+            <a class="sub-nav-link" href="/page-4">Support</a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Third Nav Pattern -->
+      <header class="third-nav">
+        <div class="container">
+          <nav>
+            <a class="third-nav-link" href="/page-1">In Page Link</a>
+            <a class="third-nav-link is-active" href="/page-2">Active Link</a>
+            <a class="third-nav-link" href="/page-3">Another</a>
+            <a class="third-nav-link" href="/page-4">And Another</a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Site Search Pattern -->
+      <!-- <div class="site-search">
+        <form action="/search/" class="site-search">
+          <input class="site-search-input js-seach-toggle is-active" type="search" name="q" placeholder="Search">
+          <button type="submit" class="site-search-button">Go</button>
+        </form>
+      </div> -->
+
+      <!-- content of each page will go here -->
+      <div class="container leader-1">
+        {% block content %}{% endblock %}
       </div>
-    </header>
-
-    <!-- Secondary Nav Pattern -->
-    <header class="sub-nav">
-      <div class="container">
-
-<!--         <nav class="breadcrumbs link-white text-light-gray padding-leader-1">
-          <a href="#" class="crumb">Thing</a>
-          <span class="crumb">Thing</span>
-          <a href="#" class="crumb">Thing</a>
-          <a href="#" class="crumb">Thing</a>
-          <a href="#" class="crumb is-active">Current</a>
-        </nav> -->
-
-        <h1 class="sub-nav-title"><a href="#" class="link-white">Page Title</a></h1>
-        <a href="#" class="btn btn-orange btn-arrow right leader-1">Call to Action</a>
-        <nav class="sub-nav-list">
-          <a class="sub-nav-link" href="/page-1">Plans</a>
-          <a class="sub-nav-link is-active" href="/page-2">Features</a>
-          <a class="sub-nav-link" href="/page-3">Documentation</a>
-          <a class="sub-nav-link" href="/page-4">Support</a>
-        </nav>
-      </div>
-    </header>
-
-    <!-- Third Nav Pattern -->
-    <header class="third-nav">
-      <div class="container">
-        <nav>
-          <a class="third-nav-link" href="/page-1">In Page Link</a>
-          <a class="third-nav-link is-active" href="/page-2">Active Link</a>
-          <a class="third-nav-link" href="/page-3">Another</a>
-          <a class="third-nav-link" href="/page-4">And Another</a>
-        </nav>
-      </div>
-    </header>
-
-    <!-- Site Search Pattern -->
-    <!-- <div class="site-search">
-      <form action="/search/" class="site-search">
-        <input class="site-search-input js-seach-toggle is-active" type="search" name="q" placeholder="Search">
-        <button type="submit" class="site-search-button">Go</button>
-      </form>
-    </div> -->
-
-    <!-- content of each page will go here -->
-    <div class="container leader-1">
-      {% block content %}{% endblock %}
     </div>
 
-    <!-- javascript for site and framework -->
+      <!-- javascript for site and framework -->
     {% block footer %}
-      <script src="{{relativePath}}assets/js/libs/calcite-web.js"></script>
-      <script src="{{relativePath}}assets/js/all.js"></script>
-    {% endblock %}
+<!-- hey -->
+      <!-- Footer Pattern -->
+      <footer class="footer header-light">
+        <div class="container">
+            <nav class="column-6">
+              <h6>Arc<span>GIS</span></h6>
+              <ul class="list-bulleted">
+                <li><a href="http://www.arcgis.com/about/">Home</a></li>
+                <li><a href="http://www.arcgis.com/about/features.html">Features</a></li>
+                <li><a href="http://www.arcgis.com/about/pricing.html">Pricing</a></li>
+              </ul>
+            </nav>
+
+            <nav class="column-6">
+              <h6>Arc<span>GIS</span> for Developers</h6>
+              <ul>
+                <li><a href="/en/">Home</a></li>
+                <li><a href="/en/features/">Features</a></li>
+                <li><a href="http://blogs.esri.com/esri/arcgis/category/developer/">Blog</a></li>
+              </ul>
+            </nav>
+
+            <nav class="column-6">
+              <h6>About Esri</h6>
+              <ul>
+                <li><a href="http://www.esri.com/about-esri/">About Us</a></li>
+                <li><a href="http://www.esri.com/careers/">Careers</a></li>
+                <li><a href="http://blogs.esri.com/esri/esri-insider/">Insiders Blog</a></li>
+                <li><a href="http://www.esri.com/events/user-conference/index.html">User Conference</a></li>
+                <li><a href="http://www.esri.com/events/devsummit/index.html">Developer Summit</a></li>
+              </ul>
+            </nav>
+
+            <nav class="column-6">
+              <a class="esri-logo-footer" href="http://esri.com">Esri</a>
+              <section class="footer-social-nav">
+                <a class="icon-twitter" href="https://twitter.com/Esri/"></a>
+                <a class="icon-facebook" href="https://www.facebook.com/esrigis/"></a>
+                <a class="icon-github" href="http://esri.github.com/"></a>
+                <a class="icon-email" href="http://www.esri.com/about-esri/contact/"></a>
+              </section>
+            </nav>
+            <div class="column-24">
+              <p><small>© Copyright 2013 Environmental Systems Research Institute, Inc. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal/software-license">Legal</a></small></p>
+            </div>
+          </div>
+
+        </div>
+      </footer>
+    <script src="{{relativePath}}assets/js/libs/calcite-web.js"></script>
+    <script src="{{relativePath}}assets/js/all.js"></script>
+  {% endblock %}
 
   </body>
 

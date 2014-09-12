@@ -2,74 +2,93 @@
 // │  Composition Helpers      │
 // └───────────────────────────┘
 
-%text-rule {
+@mixin text-rule() {
   border-bottom: 1px solid $light-gray;
 }
 
-%text-inline {
+@mixin text-inline() {
   display: inline;
 }
 
-%text-center {
+@mixin text-center() {
   text-align: center;
 }
 
-%text-left {
+@mixin text-left() {
   text-align: left;
 }
 
-%text-right {
+@mixin text-right() {
   text-align: right;
 }
 
-%text-large {
+@mixin text-large() {
   @include font-size(1);
 }
 
-%text-light {
+@mixin text-light() {
   opacity: 0.66;
 }
 
-%text-ellipsis {
+@mixin text-ellipsis() {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-%text-show-visited-links  {}
+@mixin text-show-visited-links() {
 
-%list-inline {}
+}
 
-%list-bulleted {}
+@mixin list-bulleted() {
+  list-style-type: circle;
+}
 
-%list-compact {}
-
-%list-numbered {}
+@mixin list-numbered() {
+  counter-reset: li;
+  list-style: none;
+  position: relative;
+  padding-bottom: 1em;
+  & > li {
+    padding: 0.3em .25em .25em 2.5em;
+    position: relative;
+    margin-bottom: 0.75em;
+    &:before {
+      @include header-light();
+      content: counter(li);
+      counter-increment: li;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0.75em;
+      padding: 0 .5em 0 0;
+      color: $gray;
+      @include font-size(1);
+      line-height: 1.5*$baseline;
+      text-align: right;
+      border-right: 2px solid $lighter-gray;
+    }
+    &:after {
+      content: ".";
+      display: block;
+      clear: left;
+      visibility: hidden;
+      line-height: 0;
+      height: 0;
+    }
+  }
+}
 
 //generate color classes
-@each $color in $color-set {
-  $name: nth($color, 1);
-  $value: nth($color, 2);
-  %text-#{$name} {
-    color: $value;
-  }
+@mixin text-color($value) {
+  color: $value;
 }
 
-@each $color in $color-set {
-  $name: nth($color, 1);
-  $value: nth($color, 2);
-  %link-#{$name} {
-    color: $value;
-  }
-}
-
-%text-on-dark {
-  @extend %text-white;
-  a {
-    @extend %link-light-gray;
-      &:hover {
-        color: $lighter-gray;
-      }
+@mixin link-color($value, $light-value) {
+  color: $value;
+  &:hover {
+    color: $light-value;
   }
 }
 
@@ -77,8 +96,9 @@
 
   @each $color in $color-set {
     $name: nth($color, 1);
+    $value: nth($color, 2);
     .text-#{$name} {
-      @extend %text-#{$name};
+      @include text-color($value);
     }
   }
 
@@ -87,19 +107,17 @@
     $value: nth($color, 2);
     $light-value: nth($color, 3);
     .link-#{$name} a, a.link-#{$name} {
-      @extend %link-#{$name};
-      &:hover {
-        color: $light-value;
-      }
+      @include link-color($value, $light-value);
     }
   }
-  .text-rule              {@extend %text-rule;}
-  .text-inline            {@extend %text-inline;}
-  .text-center            {@extend %text-center;}
-  .text-left              {@extend %text-left;}
-  .text-right             {@extend %text-right;}
-  .text-large             {@extend %text-large;}
-  .text-light             {@extend %text-light;}
-  .text-ellipsis          {@extend %text-ellipsis;}
-  .text-on-dark           {@extend %text-on-dark;}
+  .text-rule              {@include text-rule();}
+  .text-inline            {@include text-inline();}
+  .text-center            {@include text-center();}
+  .text-left              {@include text-left();}
+  .text-right             {@include text-right();}
+  .text-large             {@include text-large();}
+  .text-light             {@include text-light();}
+  .text-ellipsis          {@include text-ellipsis();}
+  .list-numbered          {@include list-numbered();}
+  .list-bulleted          {@include list-bulleted();}
 }

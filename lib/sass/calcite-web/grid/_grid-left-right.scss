@@ -1,10 +1,10 @@
 // Left Right Helper Classes
-%left  { float: left  }
-%right { float: right }
+@mixin left()  { float: left  }
+@mixin right(){ float: right }
 
 @mixin include-left-right(){
-  .left  { @extend %left;  }
-  .right { @extend %right; }
+  .left  { @include left();  }
+  .right { @include right(); }
 }
 
 @mixin responsive-left-right(){

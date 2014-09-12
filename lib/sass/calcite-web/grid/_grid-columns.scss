@@ -1,6 +1,6 @@
 // @import "../legacy-support/ie8";
 
-%container {
+@mixin container() {
   @extend %clearfix;
   width: $container-width;
   max-width: $container-max;
@@ -26,14 +26,14 @@
   &:last-of-type { @extend %clearfix; }
 }
 
-%first-column {
+@mixin first-column() {
   margin-left: -($column-gutter/2);
 }
-%last-column {
+@mixin last-column() {
   margin-right: -($column-gutter / 2);
 }
 
-%row {
+@mixin row() {
   @include column-base();
 }
 
@@ -113,7 +113,7 @@
 // Columns Styles
 @mixin include-grid() {
   .container {
-    @extend %container;
+    @include container();
   }
 
   [class*="column-"] {
@@ -121,14 +121,14 @@
   }
 
   .first-column {
-    @extend %first-column;
+    @include first-column();
   }
   .last-column {
-    @extend %last-column;
+    @include last-column();
   }
 
   .row {
-    @extend %row;
+    @include row();
   }
   @include responsive-column();
 }

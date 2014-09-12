@@ -19,6 +19,7 @@ $include-type:                  true    !default;
 
 $include-button:                true    !default;
 $include-breadcrumbs:           true    !default;
+$include-tooltip:               true    !default;
 
 
 // ┌──────────────┐
@@ -53,15 +54,7 @@ $color-set: (
 // Utils
 // Micro-Framework adpated from Compass and Bourbon
 // Provides basic prefixing and standard mixins
-@import "calcite-web/utils/util-appearance";
-@import "calcite-web/utils/util-box-sizing";
-@import "calcite-web/utils/util-calc";
-@import "calcite-web/utils/util-clearfix";
-@import "calcite-web/utils/util-prefixer";
-@import "calcite-web/utils/util-responsive";
-@import "calcite-web/utils/util-transform";
-@import "calcite-web/utils/util-transition";
-@import "calcite-web/utils/util-visibility";
+@import "calcite-web/utils/utils";
 
 // Layout
 // structural level styles: grid, helper classes...
@@ -75,6 +68,7 @@ $color-set: (
 // small pieces: buttons, icons, tables...
 @import "calcite-web/components/button";
 @import "calcite-web/components/breadcrumbs";
+@import "calcite-web/components/tooltip";
 
 // Patterns
 // complete interfaces: header, footer, banner...
@@ -82,6 +76,7 @@ $color-set: (
 @import "calcite-web/patterns/sub-nav";
 @import "calcite-web/patterns/third-nav";
 @import "calcite-web/patterns/side-nav";
+@import "calcite-web/patterns/footer";
 
 // Javascript
 // patterns requiring javascript: tabs, modals, carousels...
