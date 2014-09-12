@@ -18,8 +18,12 @@
   @include text-color($off-white);
   background-color: $blue;
   position: relative;
+  display: none;
   a {
     @include link-color($off-white, $lighter-gray);
+  }
+  &.is-active {
+    display: block;
   }
 }
   .alert-red {
@@ -33,3 +37,4 @@
     position: absolute;
     right: $baseline/2;
   }
+
