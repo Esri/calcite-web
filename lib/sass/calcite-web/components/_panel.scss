@@ -1,0 +1,29 @@
+//## Panels
+//
+//Panels are used to call attention to copy, or create clear separation of content.
+//
+//```html
+// <div class="panel">
+//  <h4>Lorem Ipsum</h4>
+//  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+// </div>
+//
+//```
+//
+//Styleguide x.x
+
+.panel {
+  background-color: $lightest-gray;
+  border: 1px solid $light-gray;
+  padding: $baseline $baseline/2;
+}
+
+  .panel-dark {
+    background-color: $darkest-gray;
+    border: 1px solid $off-black;
+  }
+
+  .panel-white {
+    background-color: $white;
+    border: 1px solid $lightest-gray;
+  }
