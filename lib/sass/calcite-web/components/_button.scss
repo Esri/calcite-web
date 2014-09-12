@@ -25,18 +25,18 @@
     background-color: $dark-blue;
     color: $white;
   }
+}
 
-  &:disabled, &.btn-is-disabled {
-    background-color: $dark-blue !important;
-    cursor: default !important;
+  @mixin btn-disabled() {
+    background-color: $lightest-gray;
+    cursor: default;
     pointer-events: none;
-    color: $light-gray;
+    color: $gray;
     &:hover {
-      background-color: $dark-blue !important;
-      color: $light-gray;
+      background-color: $light-gray;
+      color: $gray;
     }
   }
-}
 
   @mixin btn-arrow() {
     &:after {
@@ -50,6 +50,14 @@
     &:hover {
       color: $link-hover;
       background: none;
+    }
+    &.btn-disabled {
+      background: none;
+      color: $gray;
+      &:hover {
+        color: $gray;
+        background: none;
+      }
     }
   }
 
@@ -130,6 +138,7 @@
   .btn-large {@include btn-large();}
   .btn-fill {@include btn-fill();}
   .btn-grouped {@include btn-grouped();}
+  .btn:disabled, .btn-disabled{@include btn-disabled();}
 
   @each $color in $color-set {
     $name: nth($color, 1);

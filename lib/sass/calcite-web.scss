@@ -32,25 +32,6 @@ $include-tooltip:               true    !default;
 @import "calcite-web/base/config";
 @import "calcite-web/base/reset";
 
-// ┌──────────────┐
-// │ COLOR MAP    │
-// └──────────────┘
-$color-set: (
-  'red' $red $dark-red,
-  'green' $green $dark-green,
-  'blue' $blue $dark-blue,
-  'purple' $purple $dark-purple,
-  'orange' $orange $dark-orange,
-  'brown' $brown $dark-brown,
-  'white' $white $lightest-gray,
-  'light-gray' $light-gray $gray,
-  'gray' $gray $dark-gray,
-  'dark-gray' $dark-gray $darker-gray,
-  'darker-gray' $darker-gray $darkest-gray,
-  'darkest-gray' $darkest-gray $off-black,
-  'off-black' $off-black $black
-);
-
 // Utils
 // Micro-Framework adpated from Compass and Bourbon
 // Provides basic prefixing and standard mixins
@@ -77,6 +58,7 @@ $color-set: (
 @import "calcite-web/patterns/sub-nav";
 @import "calcite-web/patterns/third-nav";
 @import "calcite-web/patterns/side-nav";
+@import "calcite-web/patterns/pagination";
 @import "calcite-web/patterns/footer";
 
 // Javascript
