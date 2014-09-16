@@ -44,18 +44,88 @@ data:
     <a href="#" class="crumb is-active">Current</a>
   </nav>
 
-  <div class="panel text-small leader-2">
-   <span>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</span>
-  </div>
+<!--   <form action="simplefancy" class="leader-4 trailer-4 clearfix">
+    <div class="row">
+      <div class="column-8 post-1">
+        <div class="field">
+          <label class="field-label" for="form-name">Name</label>
+          <input class="field-input" type="text" required placeholder="Name" id="form-name">
+        </div>
+      </div>
+      <div class="column-8">
+        <div class="field">
+          <label class="field-label" for="form-name">E-Mail</label>
+          <input class="field-input" type="email" required placeholder="E-mail" id="form-name">
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="column-16">
+        <div class="field">
+          <label class="field-label">Description</label>
+          <textarea required name="yeah" id="" rows="10" class="field-input"></textarea>
+        </div>
+      </div>
+    </div>
+  </form> -->
 
 
-  <div class="panel text-small panel-white leader-2">
-   <span>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</span>
-  </div>
+  <form action="display" class="leader-2 trailer-2">
+    <label>
+      Username
+      <input type="text" name="username" value="guest">
+    </label>
+    <label>
+      E-Mail
+      <input type="email" name="username" value="guest">
+    </label>
 
-  <div class="panel text-small panel-dark text-white leader-2">
-   <span>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</span>
-  </div>
+    <fieldset>
+      <legend>Cats?</legend>
+      <label>
+        <input type="checkbox" checked name="username" value="Yup">Yup
+      </label>
+      <label for="cats">
+        <input type="checkbox" name="username" value="So Many">So Many
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Too Many Cats?</legend>
+      <label>
+        <input type="radio" checked name="username" value="Oh yeah">Oh Yeah
+      </label>
+      <label for="">
+        <input type="radio" name="username" value="No way">No Way
+      </label>
+    </fieldset>
+
+    <fieldset class="clearfix">
+      <legend>Cat Information</legend>
+      <label>
+        Name
+        <input type="text" name="username" value="Chairman Meow?">
+      </label>
+      <label>
+        Color
+        <input type="text" name="username" value="Tortoishell?">
+      </label>
+      <label>
+        Personality Quirks
+        <textarea rows="6" placeholder="Hates laser dot ..."></textarea>
+      </label>
+    </fieldset>
+    <label>
+      Cat Snack
+      <select>
+        <option value="">Pick it</option>
+        <option value="eh">Tuna</option>
+        <option value="eh">Birds</option>
+        <option value="eh">Human Toes</option>
+      </select>
+    </label>
+  </form>
 
   <h2 class="leader-2">Tooltips</h2>
 
@@ -90,7 +160,7 @@ data:
 
   <h2 class="leader-2">Sample Long Form Elements</h2>
 
-  <p>The <code>content-area</code> class formats everything so it is more condusive to long-form reading. If you add the class to your wrapper element, all the elements below will inherit a set of styles giving everything proper spacing and line-length. The following elements are spaced properly:</p>
+  <p class="secondary-face">The <code>content-area</code> class formats everything so it is more condusive to long-form reading. If you add the class to your wrapper element, all the elements below will inherit a set of styles giving everything proper spacing and line-length. The following elements are spaced properly:</p>
 
   <ul class="list-bulleted">
     <li>Headers</li>
