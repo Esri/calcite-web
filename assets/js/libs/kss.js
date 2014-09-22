@@ -1,1 +1,50 @@
-(function(){var e;new(e=function(){function e(){var e,t,n,s,c,l,r,o,a,u,d,i;n=/(\:hover|\:disabled|\:active|\:visited|\:focus)/g;try{for(d=document.styleSheets,r=0,a=d.length;a>r;r++)if(l=d[r],l.href.indexOf(document.domain)>=0)for(t=[],i=l.cssRules,e=o=0,u=i.length;u>o;e=++o)c=i[e],c.type===CSSRule.STYLE_RULE&&n.test(c.selectorText)&&(s=function(e){return e.replace(/\:/g,".pseudo-class-")},this.insertRule(c.cssText.replace(n,s))),n.lastIndex=0}catch(h){}}return e.prototype.insertRule=function(e){var t,n;return t=document.getElementsByTagName("head")[0],n=document.createElement("style"),n.type="text/css",n.styleSheet?n.styleSheet.cssText=e:n.appendChild(document.createTextNode(e)),t.appendChild(n)},e}())}).call(this);
+(function() {
+  var KssStateGenerator;
+
+  KssStateGenerator = (function() {
+
+    function KssStateGenerator() {
+      var idx, idxs, pseudos, replaceRule, rule, stylesheet, _i, _j, _len, _len1, _ref, _ref1;
+      pseudos = /(\:hover|\:disabled|\:active|\:visited|\:focus)/g;
+      try {
+        _ref = document.styleSheets;
+        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+          stylesheet = _ref[_i];
+          if (stylesheet.href.indexOf(document.domain) >= 0) {
+            idxs = [];
+            _ref1 = stylesheet.cssRules;
+            for (idx = _j = 0, _len1 = _ref1.length; _j < _len1; idx = ++_j) {
+              rule = _ref1[idx];
+              if ((rule.type === CSSRule.STYLE_RULE) && pseudos.test(rule.selectorText)) {
+                replaceRule = function(matched, stuff) {
+                  return matched.replace(/\:/g, '.pseudo-class-');
+                };
+                this.insertRule(rule.cssText.replace(pseudos, replaceRule));
+              }
+              pseudos.lastIndex = 0;
+            }
+          }
+        }
+      } catch (_error) {}
+    }
+
+    KssStateGenerator.prototype.insertRule = function(rule) {
+      var headEl, styleEl;
+      headEl = document.getElementsByTagName('head')[0];
+      styleEl = document.createElement('style');
+      styleEl.type = 'text/css';
+      if (styleEl.styleSheet) {
+        styleEl.styleSheet.cssText = rule;
+      } else {
+        styleEl.appendChild(document.createTextNode(rule));
+      }
+      return headEl.appendChild(styleEl);
+    };
+
+    return KssStateGenerator;
+
+  })();
+
+  new KssStateGenerator;
+
+}).call(this);
