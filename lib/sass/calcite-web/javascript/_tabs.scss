@@ -1,0 +1,121 @@
+//## Tabs
+//
+//The framework includes a quick set of styles for a tabbed interface pattern. The full tab container will expand to fit its parent.
+//
+//As an added bonus, this component supports intelligently restricting the width of tabs if they get too long and numerous.
+//
+//<div class="js-tab-group">
+//  <nav class="tab-nav">
+//    <a class="tab-title is-active">Tab 1</a>
+//    <a class="tab-title">Tab 2</a>
+//    <a class="tab-title">Tab 3</a>
+//  </nav>
+//  <section class="tab-contents">
+//    <article class="tab-section is-active">
+//      <p>Tab 1 section</p>
+//    </article>
+//    <article class="tab-section">
+//      <p>Tab 2 section</p>
+//    </article>
+//    <article class="tab-section">
+//      <p>Tab 3 section</p>
+//    </article>
+//  </section>
+//</div>
+//
+//### Modifiers
+//
+//.gray         - current tab will have a gray background
+//.transparent  - only the current tab will have a border
+//
+//Styleguide 6.2
+
+
+@mixin tab-nav(){
+  @include clearfix();
+}
+
+@mixin tab-title() {
+  @include box-sizing(border-box);
+  @include font-size(-2);
+  @include transition(all, $transition);
+  padding: $baseline/4 $baseline/2;
+  float: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: $off-white;
+  border: 1px solid $lighter-gray;
+  border-left: none;
+  &:first-child {
+    border-left: 1px solid $lighter-gray;
+  }
+  &:hover {
+    background-color: mix($white, $off-white);
+  }
+  &.is-active {
+    border-bottom: 1px solid $white;
+    background-color: $white;
+    &:hover {
+      background-color: $white;
+    }
+  }
+}
+
+@mixin tab-contents() {
+  @include box-sizing(border-box);
+  border: 1px solid $lighter-gray;
+  margin-top: -1px;
+}
+
+@mixin tab-section() {
+  @include box-sizing(border-box);
+  background-color: $white;
+  display: none;
+  padding: 1rem;
+  overflow: auto;
+  &.is-active {
+    display: block;
+  }
+}
+
+@mixin tabs-gray() {
+  .tab-title    {
+    background-color: $white;
+    &.is-active {
+      background-color: $off-white;
+    }
+  }
+  .tab-section  {
+    background-color: $off-white;
+  }
+}
+
+@mixin tabs-transparent() {
+  .tab-title    {
+    background-color: transparent;
+    border: none;
+    &.is-active {
+      background-color: transparent;
+      border: 1px solid $lighter-gray;
+      border-bottom: 1px solid $white;
+    }
+  }
+  .tab-contents {
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+  }
+  .tab-section  {
+    background-color: transparent;
+  }
+}
+
+@if $include-tabs == true {
+  .tab-nav         { @include tab-nav()          ;}
+  .tab-title       { @include tab-title()        ;}
+  .tab-contents    { @include tab-contents()     ;}
+  .tab-section     { @include tab-section()      ;}
+  .tabs-gray       { @include tabs-gray()        ;}
+  .tabs-transparent{ @include tabs-transparent() ;}
+}
