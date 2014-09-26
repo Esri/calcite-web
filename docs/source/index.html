@@ -10,25 +10,44 @@ data:
 {% block content %}
 
 <!-- side-nav pattern -->
-<aside class="side-nav column-6">
-  <h4 class="side-nav-title">Title of Section</h4>
-  <nav>
-    <a href="#" class="side-nav-link">First Link</a>
-    <a href="#" class="side-nav-link">Second Link</a>
-    <a href="#" class="side-nav-link">Third Link</a>
-    <a href="#" class="side-nav-link">Fourth Link</a>
-  </nav>
-  <h4 class="side-nav-title">Title of Second Section</h4>
-  <nav>
-    <a href="#" class="side-nav-link">First Link</a>
-    <a href="#" class="side-nav-link">Second Link</a>
-    <a href="#" class="side-nav-link">Third Link</a>
-    <a href="#" class="side-nav-link">Fourth Link</a>
-  </nav>
-</aside>
+<div class="column-6">
+  <aside class="side-nav column-6">
+    <h4 class="side-nav-title">Title of Section</h4>
+    <nav>
+      <a href="#" class="side-nav-link">First Link</a>
+      <a href="#" class="side-nav-link">Second Link</a>
+      <a href="#" class="side-nav-link">Third Link</a>
+      <a href="#" class="side-nav-link">Fourth Link</a>
+    </nav>
+    <h4 class="side-nav-title">Title of Second Section</h4>
+    <nav>
+      <a href="#" class="side-nav-link">First Link</a>
+      <a href="#" class="side-nav-link">Second Link</a>
+      <a href="#" class="side-nav-link">Third Link</a>
+      <a href="#" class="side-nav-link">Fourth Link</a>
+    </nav>
+  </aside>
+
+  <aside class="js-accordion accordion column-6 leader-2">
+    <h4 class="accordion-title is-active">Title of Section</h4>
+    <div class="accordion-content is-active">
+      <p>Stuff!</p>
+    </div>
+
+    <h4 class="accordion-title">Title of Second Section</h4>
+    <div class="accordion-content">
+      <p>Stuff!</p>
+    </div>
+
+    <h4 class="accordion-title">Title of Third Section</h4>
+    <div class="accordion-content">
+      <p>Stuff!</p>
+    </div>
+  </aside>
+</div>
 
 <main class="column-17 pre-1">
-  <div class="js-modal modal-overlay is-active">
+  <div class="js-modal modal-overlay">
 
     <div class="container">
       <div class="row">
