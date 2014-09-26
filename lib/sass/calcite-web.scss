@@ -21,6 +21,7 @@ $include-button:                true    !default;
 $include-breadcrumbs:           true    !default;
 $include-tooltip:               true    !default;
 $include-tabs:                  true    !default;
+$include-modal:                 true    !default;
 
 
 // ┌──────────────┐
@@ -68,6 +69,7 @@ $include-tabs:                  true    !default;
 // Javascript
 // patterns requiring javascript: tabs, modals, carousels...
 @import "calcite-web/javascript/tabs";
+@import "calcite-web/javascript/modal";
 
 // Modifiers
 // modifier classes override standard styles
