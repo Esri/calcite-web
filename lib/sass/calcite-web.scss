@@ -9,6 +9,7 @@ $include-utils:                 true    !default;
 // CSS Output
 $include-grid:                  true    !default;
   $fold-grid:                   true    !default;
+  $block-grid:                  true    !default;
 
 $include-type:                  true    !default;
   $include-header-family:       true    !default;
@@ -44,6 +45,7 @@ $include-accordion:              true    !default;
 // Layout
 // structural level styles: grid, helper classes...
 @import "calcite-web/grid/viewport-grid";
+@import "calcite-web/grid/grid-block-groups";
 
 // Type
 // typographic styles: font-families, element styles, modifiers...
