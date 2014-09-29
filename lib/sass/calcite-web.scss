@@ -9,6 +9,7 @@ $include-utils:                 true    !default;
 // CSS Output
 $include-grid:                  true    !default;
   $fold-grid:                   true    !default;
+  $block-grid:                  true    !default;
 
 $include-type:                  true    !default;
   $include-header-family:       true    !default;
@@ -20,6 +21,10 @@ $include-type:                  true    !default;
 $include-button:                true    !default;
 $include-breadcrumbs:           true    !default;
 $include-tooltip:               true    !default;
+$include-tabs:                  true    !default;
+$include-modal:                 true    !default;
+$include-accordion:              true    !default;
+
 
 
 // ┌──────────────┐
@@ -32,25 +37,6 @@ $include-tooltip:               true    !default;
 @import "calcite-web/base/config";
 @import "calcite-web/base/reset";
 
-// ┌──────────────┐
-// │ COLOR MAP    │
-// └──────────────┘
-$color-set: (
-  'red' $red $dark-red,
-  'green' $green $dark-green,
-  'blue' $blue $dark-blue,
-  'purple' $purple $dark-purple,
-  'orange' $orange $dark-orange,
-  'brown' $brown $dark-brown,
-  'white' $white $lightest-gray,
-  'light-gray' $light-gray $gray,
-  'gray' $gray $dark-gray,
-  'dark-gray' $dark-gray $darker-gray,
-  'darker-gray' $darker-gray $darkest-gray,
-  'darkest-gray' $darkest-gray $off-black,
-  'off-black' $off-black $black
-);
-
 // Utils
 // Micro-Framework adpated from Compass and Bourbon
 // Provides basic prefixing and standard mixins
@@ -59,6 +45,7 @@ $color-set: (
 // Layout
 // structural level styles: grid, helper classes...
 @import "calcite-web/grid/viewport-grid";
+@import "calcite-web/grid/grid-block-groups";
 
 // Type
 // typographic styles: font-families, element styles, modifiers...
@@ -69,6 +56,10 @@ $color-set: (
 @import "calcite-web/components/button";
 @import "calcite-web/components/breadcrumbs";
 @import "calcite-web/components/tooltip";
+@import "calcite-web/components/alerts";
+@import "calcite-web/components/panel";
+@import "calcite-web/components/tables";
+@import "calcite-web/components/form";
 
 // Patterns
 // complete interfaces: header, footer, banner...
@@ -76,12 +67,17 @@ $color-set: (
 @import "calcite-web/patterns/sub-nav";
 @import "calcite-web/patterns/third-nav";
 @import "calcite-web/patterns/side-nav";
+@import "calcite-web/patterns/pagination";
 @import "calcite-web/patterns/footer";
 
 // Javascript
 // patterns requiring javascript: tabs, modals, carousels...
+@import "calcite-web/javascript/tabs";
+@import "calcite-web/javascript/modal";
+@import "calcite-web/javascript/accordion";
 
 // Modifiers
 // modifier classes override standard styles
 @import 'calcite-web/type/type-helpers';
+@import "calcite-web/grid/grid-leader-trailer-helpers";
 

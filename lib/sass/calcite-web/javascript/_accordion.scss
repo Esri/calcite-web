@@ -1,0 +1,39 @@
+
+@mixin accordion(){
+  @extend .side-nav;
+}
+
+  @mixin accordion-title() {
+    @extend .side-nav-title;
+    @include transition(all, $transition);
+    &:before {
+      content: $rtri;
+      padding-right: 0.5em;
+      @include font-size(-6);
+    }
+    &.is-active {
+      &:before {
+        content: $dstri;
+        @include font-size(0);
+      }
+    }
+    &:hover {
+      @include transition(all, $transition);
+      background-color: $lightest-gray;
+    }
+  }
+  @mixin accordion-content() {
+    display: none;
+    padding: $baseline/3;
+    &.is-active {
+      display: block;
+      border-top: 1px solid $lightest-gray;
+    }
+  }
+
+
+@if $include-accordion == true {
+  .accordion {@include accordion();}
+  .accordion-title {@include accordion-title();}
+  .accordion-content {@include accordion-content();}
+}

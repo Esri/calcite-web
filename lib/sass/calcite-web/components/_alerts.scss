@@ -1,0 +1,37 @@
+//## Alerts
+//
+//Alerts can be used to notify users about events on a page or in a web applicaiton. They automatically fill their parent containers and support the `.icon-*` classes for adding icons to messages.
+//
+//.alert-red              - Success
+//.alert-green                - Error
+//
+//Styleguide 3.7
+
+.alert {
+  @extend .header-light;
+  @include font-size(-1);
+  padding: $baseline/4 $baseline/2;
+  @include text-color($off-white);
+  background-color: $blue;
+  position: relative;
+  display: none;
+  border-bottom: 1px solid $white;
+  a {
+    @include link-color($off-white, $lighter-gray);
+  }
+  &.is-active {
+    display: block;
+  }
+}
+  .alert-red {
+    background-color: $red;
+  }
+  .alert-green {
+    background-color: $green;
+  }
+
+  .alert-close {
+    position: absolute;
+    right: $baseline/2;
+  }
+

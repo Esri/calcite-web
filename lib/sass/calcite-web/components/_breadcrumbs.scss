@@ -11,15 +11,13 @@
 @mixin breadcrumbs() {
   @extend .header-face;
   @include font-size(-2);
-  color: $dark-gray;
+  @include text-color($dark-gray);
   a {
-    color: $darker-gray;
-    &:hover {
-      color: $off-black;
-    }
+    @include link-color($dark-gray, $darker-gray);
   }
 }
   @mixin crumb() {
+
     &:after {
       @include font-size(-3);
       content: "/";

@@ -1,0 +1,75 @@
+// Forms
+
+
+// Float label
+// .field {
+//   position: relative;
+//   padding-bottom: $baseline;
+//   margin-bottom: $baseline;
+// }
+
+//   .field-label {
+//     display: block;
+//     position: absolute;
+//     @extend .header-light;
+//     @include font-size(-3);
+//     color: $dark-gray;
+//     padding: $baseline/4 $baseline/2;
+//     line-height: $baseline;
+//     z-index: -1;
+//     @include transition(all $transition);
+//   }
+
+//   .field-input {
+//     display: block;
+//     height: $baseline;
+//     width: 100%;
+
+//     @include box-sizing(border-box);
+//     // @include transition(all $transition);
+//     @include font-size(-1);
+//     padding: 0.75*$baseline $baseline/2;
+//     border: 1px solid $light-gray;
+//     outline: none;
+//     outline-offset: 0;
+
+//     &:valid {
+//       position: relative;
+//       top: 1.25*$baseline;
+//       margin-top: -1.25*$baseline;
+//       margin-bottom: 1.25*$baseline;
+
+//     }
+//   }
+
+form {
+  @extend %clearfix;
+}
+
+fieldset {
+  @extend %clearfix;
+  @include box-sizing(border-box);
+  border: none;
+  margin-bottom: $baseline;
+  position: relative;
+  display: block;
+}
+
+input, select, textarea {
+  @include box-sizing(border-box);
+  display: block;
+  width: 100%;
+  outline: none;
+  outline-offset: 0;
+}
+
+label {
+  display: inline-block;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  margin: 0;
+  width: auto;
+  padding: 0;
+  float: left;
+}
