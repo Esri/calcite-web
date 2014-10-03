@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
 
     <!-- Use title from page frontmatter -->
-    <title>Index Page | Calcite Web</title>
+    <title>Calcite Web | Esri Patterns | Esri Design Patterns</title>
 
     <!-- Link to favicon -->
     <link rel="shortcut icon" href="/img/favicon.ico">
@@ -35,12 +35,12 @@
       <!-- Top Nav Pattern-->
       <header class="top-nav">
         <div class="container">
-          <a href="#" class="top-nav-title">Calcite <strong>Web</strong></a>
+          <a href="#" class="top-nav-title">Esri Design Patterns</a>
           <nav class="top-nav-list">
-            <a class="top-nav-link" href="/page-1">Plans</a>
-            <a class="top-nav-link is-active" href="/page-2">Features</a>
-            <a class="top-nav-link" href="/page-3">Documentation</a>
-            <a class="top-nav-link" href="/page-4">Support</a>
+            <a class="top-nav-link" href="#">Branding</a>
+            <a class="top-nav-link is-active" href="">Web</a>
+            <a class="top-nav-link" href="#">Mobile</a>
+            <a class="top-nav-link" href="#">Presentations</a>
           </nav>
           <!-- Site Search Pattern-->
           <!-- Sign in / User Menu Patterns-->
@@ -51,13 +51,12 @@
       <header class="sub-nav">
         <div class="container">
 
-          <h1 class="sub-nav-title"><a href="#" class="link-white">Page Title</a></h1>
+          <h1 class="sub-nav-title"><a href="" class="link-white">Web</a></h1>
           <a href="#" class="btn btn-orange btn-arrow right leader-1">Call to Action</a>
           <nav class="sub-nav-list">
-            <a class="sub-nav-link" href="/page-1">Plans</a>
-            <a class="sub-nav-link is-active" href="/page-2">Features</a>
-            <a class="sub-nav-link" href="/page-3">Documentation</a>
-            <a class="sub-nav-link" href="/page-4">Support</a>
+            <a class="sub-nav-link is-active" href="">Calcite Web</a>
+            <a class="sub-nav-link" href="#">Calcite Dojo</a>
+            <a class="sub-nav-link" href="#">Calcite Bootstrap</a>
           </nav>
         </div>
       </header>
@@ -66,10 +65,13 @@
       <header class="third-nav">
         <div class="container">
           <nav>
-            <a class="third-nav-link" href="/page-1">In Page Link</a>
-            <a class="third-nav-link is-active" href="/page-2">Active Link</a>
-            <a class="third-nav-link" href="/page-3">Another</a>
-            <a class="third-nav-link" href="/page-4">And Another</a>
+            <a class="third-nav-link is-active" href="">Get Started</a>
+            <a class="third-nav-link" href="type">Type</a>
+            <a class="third-nav-link" href="grid">Grid</a>
+            <a class="third-nav-link" href="components">Components</a>
+            <a class="third-nav-link" href="patterns">Patterns</a>
+            <a class="third-nav-link" href="sass">Sass</a>
+            <a class="third-nav-link" href="javascript">JavaScript</a>
           </nav>
         </div>
       </header>
@@ -87,96 +89,114 @@
         
 
 <!-- side-nav pattern -->
-<aside class="side-nav column-6">
-  <h4 class="side-nav-title">Title of Section</h4>
-  <nav>
-    <a href="#" class="side-nav-link">First Link</a>
-    <a href="#" class="side-nav-link">Second Link</a>
-    <a href="#" class="side-nav-link">Third Link</a>
-    <a href="#" class="side-nav-link">Fourth Link</a>
-  </nav>
-  <h4 class="side-nav-title">Title of Second Section</h4>
-  <nav>
-    <a href="#" class="side-nav-link">First Link</a>
-    <a href="#" class="side-nav-link">Second Link</a>
-    <a href="#" class="side-nav-link">Third Link</a>
-    <a href="#" class="side-nav-link">Fourth Link</a>
-  </nav>
-</aside>
+<div class="column-6">
+  <aside class="side-nav column-6">
+    <h4 class="side-nav-title">Get Started</h4>
+    <nav>
+      <a href="#static-files" class="side-nav-link">Static Files</a>
+      <a href="#ruby-gem" class="side-nav-link">Ruby Gem</a>
+      <a href="#npm" class="side-nav-link">NPM</a>
+    </nav>
+    <h4 class="side-nav-title">Contributing</h4>
+    <nav>
+      <a href="#installing" class="side-nav-link">Install</a>
+      <a href="#development" class="side-nav-link">Development</a>
+      <a href="#releasing-a-new-version" class="side-nav-link">Versioning</a>
+      <a href="#updating-the-documentation-site" class="side-nav-link">Deploying the Documentation</a>
+    </nav>
+  </aside>
+</div>
 
 <main class="column-17 pre-1">
 
-  <h2>Breadcrumbs</h2>
+<h1 id="calcite-web">Calcite-Web</h1>
+<p>Calcite Web is a CSS framework built in SASS. It also includes a small, vanilla JavaScript library that allows you to have interactive patterns in your site like tabs, modals, etc. Calcite Web is a web-adaptation of the Calcite framework that was developed for ArcGIS Pro. The idea is to have designs be consistent, but also embrace the characteristics that make each medium unique.</p>
+<p>Calcite Web was built <em>for</em> developers. It is meant to be flexible enough that you can accomplish 80% of your website with the default patterns. If you use Calcite Web as a Sass library, you&#39;ll also get a set of very helpful mixins to help you make new patterns and components that fit in with the Calcite methodology and aesthetic.</p>
+<h1 id="using-calcite-web">Using Calcite-Web</h1>
+<p>There are two main ways to use Calcite-Web: copying static files into your project and installing via a package manager. Obviously, installing as a Sass library will give you the most power, but whatever your flavor, we probably have you covered.</p>
+<h2 id="static-files">Static Files</h2>
+<p>This is probably the easiest way, but you won&#39;t get any of the helpful Sass mixins. If you&#39;re looking to get up and running quickly, just <a href="https://github.com/ArcGIS/calcite-web/releases">download the latest release</a> and move the zipped files to wherever you keep your assets (CSS, JavaScript, images). Be sure to use <a href="http://arcgis.github.io/calcite-web/">the documentation site</a> to copy and paste patterns, components, and even a sample html boilerplate.</p>
+<p>When used statically, one very helpful thing to know is that Calcite Web comes bundled with several modifier classes. For example, if you need to add some margin to the top of an element, instead of writing a class and adding it yourself, you can use the built in <code>leader-X</code> class:</p>
+<pre><code>&lt;<span class="hljs-operator">div</span> class=<span class="hljs-string">"leader-3"</span>&gt;
+  This <span class="hljs-keyword">item</span> will <span class="hljs-built_in">get</span> <span class="hljs-constant">three</span> <span class="hljs-string">'lines'</span> <span class="hljs-operator">of</span> margin <span class="hljs-keyword">at</span> <span class="hljs-operator">the</span> top.
+&lt;/<span class="hljs-operator">div</span>&gt;
+</code></pre><p>This will keep spacing consistent and you won&#39;t have to write any CSS! There are modifier classes for virtually everything: padding, margin, text-color, background-color, etc. Be sure to visit the other links and read up on what is possible.</p>
+<h2 id="ruby-gem">Ruby Gem</h2>
+<p>To install Calcite-Web as a ruby gem, add a reference to your the gem to your Gemfile:</p>
+<pre><code>gem <span class="hljs-string">"calcite-web"</span>, <span class="hljs-symbol">:git</span> =&gt; <span class="hljs-string">"https://github.com/ArcGIS/calcite-web.git"</span>, <span class="hljs-symbol">:tag</span> =&gt; <span class="hljs-string">"v0.0.0"</span>
+</code></pre><p>Be sure to use the most up to date tag.</p>
+<p>Then in your project&#39;s sass file, just import it:</p>
+<pre><code><span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-string">"calcite-web"</span></span>;
+</code></pre><p>That will give you everything including sass utilities. You will also need to copy over the javascript and image assets to your static folder (see above).</p>
+<p>Calcite Web has a built in library of mixins that cover everything from animation to font-size. To be sure you&#39;re building your site in the easiest way (and the most visually consistent way) read up on everything that&#39;s available on the <a href="./sass">SASS Page</a>.</p>
+<h2 id="npm">NPM</h2>
+<p>To install Calcite Web with npm, type:</p>
+<pre><code>npm install --save-dev git://github<span class="hljs-preprocessor">.com</span>/ArcGIS/calcite-web<span class="hljs-preprocessor">.git</span>
+</code></pre><p>You can also use a specific release by appending the version number to the end:</p>
+<pre><code>npm install --save-dev git://github<span class="hljs-preprocessor">.com</span>/ArcGIS/calcite-web<span class="hljs-preprocessor">.git</span><span class="hljs-preprocessor">#v0.0.1</span>
+</code></pre><p>Then, if you&#39;re using sass, be sure to add <code>node_modules/calcite-web/dist/sass/</code> to your load path. If you&#39;re using <code>grunt-contrib-sass</code> you add that like this:</p>
+<pre><code><span class="hljs-string">'sass'</span>: {
+  target: {
+    options: {
+      loadPath: <span class="hljs-string">'node_modules/calcite-web/dist/sass/'</span>
+    },
+    <span class="hljs-built_in">files</span>: {
+      <span class="hljs-string">'path/to.css'</span>: <span class="hljs-string">'path/to.scss'</span>
+    }
+  }
+}
+</code></pre><p>Then in your main <code>.scss</code> file, you can just require the framework: <code>@import &quot;calcite-web&quot;;</code>. Everything mentioned about mixins above in the Ruby gem section applies to the Node module as well, so scroll up a bit and learn more about how Calcite Web functions as a Sass library;</p>
+<h1 id="contributing-to-calcite-web">Contributing to Calcite-Web</h1>
+<h2 id="installing">Installing</h2>
+<p>If you don&#39;t have Node yet, <a href="http://nodejs.org/">install it here</a>. Then install the project&#39;s dependencies:</p>
+<ol>
+<li><code>npm install -g grunt-cli</code> to install Grunt.</li>
+<li><code>npm install</code> to install javascript dependencies.</li>
+</ol>
+<h2 id="development">Development</h2>
+<p>To run a dev environment, just type <code>grunt</code>. You should have a copy of the documentation site live at <code>localhost:8888</code>.</p>
+<p>As you develop features and fix bugs, be sure to write notes in <code>CHANGELOG.md</code>.</p>
+<h1 id="releasing-a-new-version">Releasing a New Version</h1>
+<p>Calcite-Web uses SemVer (Semantic Versioning) for its releases. This means that version numbers are basically formatted like <code>MAJOR.MINOR.PATCH</code>. If you&#39;re well aquainted with SemVer you should skip to &#39;Bumping the Version&#39; below.</p>
+<h4 id="major">Major</h4>
+<p>Breaking changes are signified with a new <strong>first</strong> number. For example, moving from 1.0.0 to 2.0.0 implies breaking changes.</p>
+<h4 id="minor">Minor</h4>
+<p>New components, new helper classes, or substantial visual changes to existing components and patterns are <em>minor releases</em>. These are signified by the second number changing. So from 1.1.2 to 1.2.0 there are minor changes.</p>
+<h4 id="patches">Patches</h4>
+<p>The final number signifies patches such as fixing a pattern or component in a certain browser, or fixing an existing bug. Small changes to the documentation site and the tooling around the Calcite-Web library are also considered patches.</p>
+<h2 id="bumping-the-version">Bumping the Version</h2>
+<ol>
+<li>Change the version number in <code>package.json</code> to the desired version number.</li>
+<li>Write a description of the changes, additions, and bug fixes in <code>CHANGELOG.md</code>.</li>
+<li>Make sure <code>ArcGIS/calcite-web</code> is up-to-date with your changes.</li>
+<li>Create a <code>user.js</code> file with your GitHub credentials.</li>
+<li>Run <code>grunt release</code></li>
+</ol>
+<p>The <code>user.js</code> file should look something like this:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> user = {
+  user: <span class="hljs-string">'yourUsername'</span>,
+  password: <span class="hljs-string">'yourPassword'</span>
+};
 
-  <nav class="breadcrumbs padding-leader-1">
-    <a href="#" class="crumb">Thing</a>
-    <span class="crumb">Thing</span>
-    <a href="#" class="crumb">Thing</a>
-    <a href="#" class="crumb">Thing</a>
-    <a href="#" class="crumb is-active">Current</a>
-  </nav>
+module.exports = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+  <span class="hljs-keyword">return</span> user;
+}
+</code></pre>
+<h1 id="updating-the-documentation-site">Updating the Documentation Site</h1>
+<p>To update the documentation site, just make sure you have push access to the <code>ArcGIS/calcite-web</code> repo and type <code>grunt deploy</code>. This will build the site and deploy to gh-pages.</p>
+<p>The site should be updated at <a href="http://arcgis.github.io/calcite-web/">http://arcgis.github.io/calcite-web/</a> in just a few moments.</p>
 
-  <h2 class="leader-2">Tooltips</h2>
 
-  <div class="column-17 trailer-1">
-    <div class="tooltip" data-message="This is the message of the tooltip">
-      <span class="icon-help">?</span>
-    </div>
-  </div>
-
-  <div class="column-17 trailer-1">
-    <div class="tooltip tooltip-left" data-message="This is the message of the tooltip">
-      <span class="icon-help">?</span>
-    </div>
-  </div>
-
-  <div class="column-17 trailer-1">
-    <div class="tooltip tooltip-right" data-message="This is the message of the tooltip">
-      <span class="icon-help">?</span>
-    </div>
-  </div>
-
-  <h2>Button Groups</h2>
-
-  <nav class="leader-1">
-    <a href="#" class="btn btn-grouped">One</a>
-    <a href="#" class="btn btn-grouped">Two</a>
-    <a href="#" class="btn btn-grouped">Three</a>
-  </nav>
-
-  <h2 class="leader-2">Sample Long Form Elements</h2>
-
-  <p>The <code>content-area</code> class formats everything so it is more condusive to long-form reading. If you add the class to your wrapper element, all the elements below will inherit a set of styles giving everything proper spacing and line-length. The following elements are spaced properly:</p>
-
-  <ul class="list-bulleted">
-    <li>Headers</li>
-    <li>Images</li>
-    <li>Lists</li>
-    <li>Tables</li>
-    <li>Horizontal Rules</li>
-    <li>Code Blocks</li>
-  </ul>
-
-  <h3>How to use it:</h3>
-
-  <ol class="list-numbered">
-    <li>add the <code>content-area</code> class</li>
-    <li>write some markup</li>
-    <li>enjoy.</li>
-  </ol>
-  <h2>Content Area</h2>
-  <p class="trailer-3">
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-  </p>
 </main>
 
 
       </div>
+
     </div>
 
-      <!-- javascript for site and framework -->
+
     
-<!-- hey -->
+
       <!-- Footer Pattern -->
       <footer class="footer header-light">
         <div class="container">
@@ -225,9 +245,11 @@
 
         </div>
       </footer>
-    <script src="assets/js/libs/calcite-web.js"></script>
-    <script src="assets/js/all.js"></script>
-  
+
+      <script src="assets/js/libs/calcite-web.js"></script>
+      <script src="assets/js/all.js"></script>
+
+    
 
   </body>
 
