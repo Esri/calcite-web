@@ -1,0 +1,58 @@
+---
+title: Calcite Web | Esri Patterns
+description: Quickly build beautiful, consistent websites with the Calcite Web Framework
+data:
+  - kss
+---
+
+{% extends "_layout" %}
+
+{% block content %}
+
+<!-- side-nav pattern -->
+<div class="column-6">
+  <aside class="side-nav column-6">
+    <h4 class="side-nav-title">Type</h4>
+    <nav>
+      <a href="#" class="side-nav-link">font-size</a>
+      <a href="#" class="side-nav-link">font-face</a>
+    </nav>
+    <h4 class="side-nav-title">Layout</h4>
+    <nav>
+      <a href="#" class="side-nav-link">show</a>
+      <a href="#" class="side-nav-link">hide</a>
+      <a href="#" class="side-nav-link">leader</a>
+      <a href="#" class="side-nav-link">trailer</a>
+    </nav>
+    <h4 class="side-nav-title">Grid</h4>
+    <nav>
+      <a href="#" class="side-nav-link">column</a>
+      <a href="#" class="side-nav-link">container</a>
+      <a href="#" class="side-nav-link">block-group</a>
+    </nav>
+  </aside>
+</div>
+
+<main class="column-17 pre-1">
+
+{% markdown %}
+
+# SASS
+
+Using Calcite Web as a SASS library is very powerful. After you successfully import the library (see [the getting started page]({{relativepath}})) you can fully customize and use all of the Calcite Web Framework.
+
+## Custom Build
+
+Calcite comes with the ability to only generate the css you actually need for your project.
+
+## Configuration
+
+You can configure quite a bit in Calcite Web including grid settings, typography defaults, etc.
+
+
+
+{% endmarkdown %}
+
+</main>
+
+{% endblock %}

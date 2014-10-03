@@ -1,6 +1,6 @@
 ---
-title: "Index Page"
-description: "Should process index.html correctly"
+title: Calcite Web | Esri Patterns
+description: Quickly build beautiful, consistent websites with the Calcite Web Framework
 data:
   - kss
 ---
@@ -12,266 +12,158 @@ data:
 <!-- side-nav pattern -->
 <div class="column-6">
   <aside class="side-nav column-6">
-    <h4 class="side-nav-title">Title of Section</h4>
+    <h4 class="side-nav-title">Get Started</h4>
     <nav>
-      <a href="#" class="side-nav-link">First Link</a>
-      <a href="#" class="side-nav-link">Second Link</a>
-      <a href="#" class="side-nav-link">Third Link</a>
-      <a href="#" class="side-nav-link">Fourth Link</a>
+      <a href="#static-files" class="side-nav-link">Static Files</a>
+      <a href="#ruby-gem" class="side-nav-link">Ruby Gem</a>
+      <a href="#npm" class="side-nav-link">NPM</a>
     </nav>
-    <h4 class="side-nav-title">Title of Second Section</h4>
+    <h4 class="side-nav-title">Contributing</h4>
     <nav>
-      <a href="#" class="side-nav-link">First Link</a>
-      <a href="#" class="side-nav-link">Second Link</a>
-      <a href="#" class="side-nav-link">Third Link</a>
-      <a href="#" class="side-nav-link">Fourth Link</a>
+      <a href="#installing" class="side-nav-link">Install</a>
+      <a href="#development" class="side-nav-link">Development</a>
+      <a href="#releasing-a-new-version" class="side-nav-link">Versioning</a>
+      <a href="#updating-the-documentation-site" class="side-nav-link">Deploying the Documentation</a>
     </nav>
-  </aside>
-
-  <aside class="js-accordion accordion column-6 leader-2">
-    <h4 class="accordion-title is-active">Title of Section</h4>
-    <div class="accordion-content is-active">
-      <p>Stuff!</p>
-    </div>
-
-    <h4 class="accordion-title">Title of Second Section</h4>
-    <div class="accordion-content">
-      <p>Stuff!</p>
-    </div>
-
-    <h4 class="accordion-title">Title of Third Section</h4>
-    <div class="accordion-content">
-      <p>Stuff!</p>
-    </div>
   </aside>
 </div>
 
 <main class="column-17 pre-1">
 
-  <div class="block-group block-group-3-up">
-    <div class="block"><div class="panel trailer-half"></div> </div>
-    <div class="block"><div class="panel trailer-half"></div> </div>
-    <div class="block"><div class="panel trailer-half"></div> </div>
-    <div class="block"><div class="panel trailer-half"></div> </div>
-    <div class="block"><div class="panel trailer-half"></div> </div>
-    <div class="block"><div class="panel trailer-half"></div> </div>
-  </div>
+{% markdown %}
+# Calcite-Web
 
-  <div class="js-modal modal-overlay">
+Calcite Web is a CSS framework built in SASS. It also includes a small, vanilla JavaScript library that allows you to have interactive patterns in your site like tabs, modals, etc. Calcite Web is a web-adaptation of the Calcite framework that was developed for ArcGIS Pro. The idea is to have designs be consistent, but also embrace the characteristics that make each medium unique.
 
-    <div class="container">
-      <div class="row">
-        <div class="modal-content column-12 pre-6 leader-5">
-          <a class="js-modal-dismiss icon-close right" href="#"></a>
-          <h4>Modal!</h4>
-        </div>
-      </div>
-    </div>
+Calcite Web was built *for* developers. It is meant to be flexible enough that you can accomplish 80% of your website with the default patterns. If you use Calcite Web as a Sass library, you'll also get a set of very helpful mixins to help you make new patterns and components that fit in with the Calcite methodology and aesthetic.
 
-  </div>
+# Using Calcite-Web
 
-  <div class="tabs-transparent js-tab-group trailer-2">
-    <nav class="tab-nav">
-      <a class="tab-title is-active">Tab 1</a>
-      <a class="tab-title">Tab 2</a>
-      <a class="tab-title">Tab 3</a>
-    </nav>
-    <section class="tab-contents">
-      <article class="tab-section is-active">
-        <p>Tab 1 section</p>
-      </article>
-      <article class="tab-section">
-        <p>Tab 2 section</p>
-      </article>
-      <article class="tab-section">
-        <p>Tab 3 section</p>
-      </article>
-    </section>
-  </div>
+There are two main ways to use Calcite-Web: copying static files into your project and installing via a package manager. Obviously, installing as a Sass library will give you the most power, but whatever your flavor, we probably have you covered.
 
+## Static Files
 
-  <div class="alert alert-green link-yellow is-active">
-    Something Happened! <a>Link</a>
-    <a href="#" class="alert-close">thanks</a>
-  </div>
+This is probably the easiest way, but you won't get any of the helpful Sass mixins. If you're looking to get up and running quickly, just [download the latest release](https://github.com/ArcGIS/calcite-web/releases) and move the zipped files to wherever you keep your assets (CSS, JavaScript, images). Be sure to use [the documentation site](http://arcgis.github.io/calcite-web/) to copy and paste patterns, components, and even a sample html boilerplate.
 
-  <h2>Breadcrumbs</h2>
+When used statically, one very helpful thing to know is that Calcite Web comes bundled with several modifier classes. For example, if you need to add some margin to the top of an element, instead of writing a class and adding it yourself, you can use the built in `leader-X` class:
 
-  <nav class="breadcrumbs padding-leader-1">
-    <a href="#" class="crumb">Thing</a>
-    <span class="crumb">Thing</span>
-    <a href="#" class="crumb">Thing</a>
-    <a href="#" class="crumb">Thing</a>
-    <a href="#" class="crumb is-active">Current</a>
-  </nav>
+```
+<div class="leader-3">
+  This item will get three 'lines' of margin at the top.
+</div>
+```
 
-<!--   <form action="simplefancy" class="leader-4 trailer-4 clearfix">
-    <div class="row">
-      <div class="column-8 post-1">
-        <div class="field">
-          <label class="field-label" for="form-name">Name</label>
-          <input class="field-input" type="text" required placeholder="Name" id="form-name">
-        </div>
-      </div>
-      <div class="column-8">
-        <div class="field">
-          <label class="field-label" for="form-name">E-Mail</label>
-          <input class="field-input" type="email" required placeholder="E-mail" id="form-name">
-        </div>
-      </div>
+This will keep spacing consistent and you won't have to write any CSS! There are modifier classes for virtually everything: padding, margin, text-color, background-color, etc. Be sure to visit the other links and read up on what is possible.
 
-    </div>
-    <div class="row">
-      <div class="column-16">
-        <div class="field">
-          <label class="field-label">Description</label>
-          <textarea required name="yeah" id="" rows="10" class="field-input"></textarea>
-        </div>
-      </div>
-    </div>
-  </form> -->
+## Ruby Gem
 
+To install Calcite-Web as a ruby gem, add a reference to your the gem to your Gemfile:
 
-  <form action="display" class="leader-2 trailer-2">
-    <label>
-      Username
-      <input type="text" name="username" value="guest">
-    </label>
-    <label>
-      E-Mail
-      <input type="email" name="username" value="guest">
-    </label>
+```
+gem "calcite-web", :git => "https://github.com/ArcGIS/calcite-web.git", :tag => "v0.0.0"
+```
 
-    <fieldset>
-      <legend>Cats?</legend>
-      <label>
-        <input type="checkbox" checked name="username" value="Yup">Yup
-      </label>
-      <label for="cats">
-        <input type="checkbox" name="username" value="So Many">So Many
-      </label>
-    </fieldset>
+Be sure to use the most up to date tag.
 
-    <fieldset>
-      <legend>Too Many Cats?</legend>
-      <label>
-        <input type="radio" checked name="username" value="Oh yeah">Oh Yeah
-      </label>
-      <label for="">
-        <input type="radio" name="username" value="No way">No Way
-      </label>
-    </fieldset>
+Then in your project's sass file, just import it:
 
-    <fieldset class="clearfix">
-      <legend>Cat Information</legend>
-      <label>
-        Name
-        <input type="text" name="username" value="Chairman Meow?">
-      </label>
-      <label>
-        Color
-        <input type="text" name="username" value="Tortoishell?">
-      </label>
-      <label>
-        Personality Quirks
-        <textarea rows="6" placeholder="Hates laser dot ..."></textarea>
-      </label>
-    </fieldset>
-    <label>
-      Cat Snack
-      <select>
-        <option value="">Pick it</option>
-        <option value="eh">Tuna</option>
-        <option value="eh">Birds</option>
-        <option value="eh">Human Toes</option>
-      </select>
-    </label>
-  </form>
+```
+@import "calcite-web";
+```
 
-  <h2 class="leader-2">Tooltips</h2>
+That will give you everything including sass utilities. You will also need to copy over the javascript and image assets to your static folder (see above).
 
-  <div class="column-17 trailer-1">
-    <div class="tooltip" data-message="This is the message of the tooltip">
-      <span class="icon-help">?</span>
-    </div>
-  </div>
+Calcite Web has a built in library of mixins that cover everything from animation to font-size. To be sure you're building your site in the easiest way (and the most visually consistent way) read up on everything that's available on the [SASS Page](./sass).
 
-  <div class="column-17 trailer-1">
-    <div class="tooltip tooltip-left" data-message="This is the message of the tooltip">
-      <span class="icon-help">?</span>
-    </div>
-  </div>
+## NPM
 
-  <div class="column-17 trailer-1">
-    <div class="tooltip tooltip-right" data-message="This is the message of the tooltip">
-      <span class="icon-help">?</span>
-    </div>
-  </div>
+To install Calcite Web with npm, type:
 
-  <h2>Button Groups</h2>
+```
+npm install --save-dev git://github.com/ArcGIS/calcite-web.git
+```
 
-  <nav class="leader-1">
-    <a href="#" class="btn btn-grouped">One</a>
-    <a href="#" class="btn btn-grouped">Two</a>
-    <a href="#" class="btn btn-grouped">Three</a>
-  </nav>
+You can also use a specific release by appending the version number to the end:
 
-  <h2 class="leader-2">Sample Long Form Elements</h2>
+```
+npm install --save-dev git://github.com/ArcGIS/calcite-web.git#v0.0.1
+```
 
-  <p class="secondary-face">The <code>content-area</code> class formats everything so it is more condusive to long-form reading. If you add the class to your wrapper element, all the elements below will inherit a set of styles giving everything proper spacing and line-length. The following elements are spaced properly:</p>
+Then, if you're using sass, be sure to add `node_modules/calcite-web/dist/sass/` to your load path. If you're using `grunt-contrib-sass` you add that like this:
 
-  <ul class="list-bulleted">
-    <li>Headers</li>
-    <li>Images</li>
-    <li>Lists</li>
-    <li>Tables</li>
-    <li>Horizontal Rules</li>
-    <li>Code Blocks</li>
-  </ul>
+```
+'sass': {
+  target: {
+    options: {
+      loadPath: 'node_modules/calcite-web/dist/sass/'
+    },
+    files: {
+      'path/to.css': 'path/to.scss'
+    }
+  }
+}
+```
 
-  <h3>How to use it:</h3>
+Then in your main `.scss` file, you can just require the framework: `@import "calcite-web";`. Everything mentioned about mixins above in the Ruby gem section applies to the Node module as well, so scroll up a bit and learn more about how Calcite Web functions as a Sass library;
 
-  <ol class="list-numbered">
-    <li>add the <code>content-area</code> class</li>
-    <li>write some markup</li>
-    <li>enjoy.</li>
-  </ol>
-  <h2>Content Area</h2>
-  <p class="trailer-3">
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-  </p>
+# Contributing to Calcite-Web
 
-  <table>
-    <thead>
-      <tr>
-        <th> td </th>
-        <th> th </th>
-        <th> th </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td> 27 </td>
-        <td> 14 </td>
-        <td> 8  </td>
-      </tr>
-      <tr>
-        <td> 27 </td>
-        <td> 14 </td>
-        <td> 8  </td>
-      </tr>
-    </tbody>
-  </table>
+## Installing
 
-  <div class="text-center trailer-2">
-    <a href="#" class="btn btn-transparent btn-disabled">Previous</a>
-    <a href="#" class="btn">1</a>
-    <a href="#" class="btn btn-transparent">2</a>
-    <a href="#" class="btn btn-transparent">3</a>
-    <span class="header-light text-light-gray">...</span>
-    <a href="#" class="btn btn-transparent">20</a>
-    <a href="#" class="btn btn-transparent btn-arrow">Next</a>
-  </div>
+If you don't have Node yet, [install it here](http://nodejs.org/). Then install the project's dependencies:
+
+1. `npm install -g grunt-cli` to install Grunt.
+2. `npm install` to install javascript dependencies.
+
+## Development
+
+To run a dev environment, just type `grunt`. You should have a copy of the documentation site live at `localhost:8888`.
+
+As you develop features and fix bugs, be sure to write notes in `CHANGELOG.md`.
+
+# Releasing a New Version
+
+Calcite-Web uses SemVer (Semantic Versioning) for its releases. This means that version numbers are basically formatted like `MAJOR.MINOR.PATCH`. If you're well aquainted with SemVer you should skip to 'Bumping the Version' below.
+
+#### Major
+
+Breaking changes are signified with a new **first** number. For example, moving from 1.0.0 to 2.0.0 implies breaking changes.
+
+#### Minor
+
+New components, new helper classes, or substantial visual changes to existing components and patterns are *minor releases*. These are signified by the second number changing. So from 1.1.2 to 1.2.0 there are minor changes.
+
+#### Patches
+
+The final number signifies patches such as fixing a pattern or component in a certain browser, or fixing an existing bug. Small changes to the documentation site and the tooling around the Calcite-Web library are also considered patches.
+
+## Bumping the Version
+
+1. Change the version number in `package.json` to the desired version number.
+2. Write a description of the changes, additions, and bug fixes in `CHANGELOG.md`.
+3. Make sure `ArcGIS/calcite-web` is up-to-date with your changes.
+4. Create a `user.js` file with your GitHub credentials.
+5. Run `grunt release`
+
+The `user.js` file should look something like this:
+
+```js
+var user = {
+  user: 'yourUsername',
+  password: 'yourPassword'
+};
+
+module.exports = function () {
+  return user;
+}
+```
+
+# Updating the Documentation Site
+
+To update the documentation site, just make sure you have push access to the `ArcGIS/calcite-web` repo and type `grunt deploy`. This will build the site and deploy to gh-pages.
+
+The site should be updated at http://arcgis.github.io/calcite-web/ in just a few moments.
+{% endmarkdown %}
 
 </main>
 

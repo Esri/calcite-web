@@ -1,0 +1,62 @@
+---
+title: Calcite Web | Esri Patterns
+description: Quickly build beautiful, consistent websites with the Calcite Web Framework
+data:
+  - kss
+---
+
+{% extends "_layout" %}
+
+{% block content %}
+
+<!-- side-nav pattern -->
+<div class="column-6">
+  <aside class="side-nav column-6">
+    <h4 class="side-nav-title">Type</h4>
+    <nav>
+      <a href="#" class="side-nav-link">Overview</a>
+      <a href="#" class="side-nav-link">Typefaces</a>
+      <a href="#" class="side-nav-link">Weights</a>
+      <a href="#" class="side-nav-link">Styles</a>
+    </nav>
+    <h4 class="side-nav-title">Modifiers</h4>
+    <nav>
+      <a href="#" class="side-nav-link">Colors</a>
+      <a href="#" class="side-nav-link">Weights</a>
+      <a href="#" class="side-nav-link">Styles</a>
+      <a href="#" class="side-nav-link">Alignment</a>
+    </nav>
+  </aside>
+
+</div>
+
+<main class="column-17 pre-1">
+
+  <h2 class="leader-2">Sample Typography</h2>
+
+  <p>The <code>content-area</code> class formats everything so it is more condusive to long-form reading. If you add the class to your wrapper element, all the elements below will inherit a set of styles giving everything proper spacing and line-length. The following elements are spaced properly:</p>
+
+  <ul class="list-bulleted">
+    <li>Headers</li>
+    <li>Images</li>
+    <li>Lists</li>
+    <li>Tables</li>
+    <li>Horizontal Rules</li>
+    <li>Code Blocks</li>
+  </ul>
+
+  <h3>How to use it:</h3>
+
+  <ol class="list-numbered">
+    <li>add the <code>content-area</code> class</li>
+    <li>write some markup</li>
+    <li>enjoy.</li>
+  </ol>
+  <h2>Content Area</h2>
+  <p class="trailer-3">
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  </p>
+
+</main>
+
+{% endblock %}
