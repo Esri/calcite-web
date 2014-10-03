@@ -9,6 +9,9 @@
   @include font-size(-2);
   margin-right: $baseline * 0.75;
   &.is-active {
-    font-weight: 600;
+  font-weight: 400;
+    @media (-webkit-max-device-pixel-ratio: 1), (max-resolution: 72dpi) {
+      font-weight: 500;
+    }
   }
 }
