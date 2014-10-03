@@ -1,0 +1,191 @@
+---
+title: Calcite Web | Esri Patterns
+description: Quickly build beautiful, consistent websites with the Calcite Web Framework
+data:
+  - kss
+---
+
+{% extends "_layout" %}
+
+{% block content %}
+
+<!-- side-nav pattern -->
+<div class="column-6">
+  <aside class="side-nav column-6">
+    <h4 class="side-nav-title">Title of Section</h4>
+    <nav>
+      <a href="#alerts" class="side-nav-link">Alerts</a>
+      <a href="#breadcrumbs" class="side-nav-link">Breadcrumbs</a>
+      <a href="#tooltips" class="side-nav-link">Tooltips</a>
+      <a href="#buttons" class="side-nav-link">Buttons</a>
+      <a href="#button-groups" class="side-nav-link">Button Groups</a>
+      <a href="#tables" class="side-nav-link">Tables</a>
+    </nav>
+  </aside>
+</div>
+
+<main class="column-17 pre-1">
+
+  <h2 class="leader-2 trailer-1" id="alerts">Alerts</h2>
+
+  <div class="alert alert-green link-yellow is-active">
+    Something Happened! <a>Link</a>
+    <a href="#" class="alert-close">thanks</a>
+  </div>
+
+  <h2 class="leader-2 trailer-1" id="breadcrumbs">Breadcrumbs</h2>
+
+  <nav class="breadcrumbs padding-leader-1">
+    <a href="#" class="crumb">Thing</a>
+    <span class="crumb">Thing</span>
+    <a href="#" class="crumb">Thing</a>
+    <a href="#" class="crumb">Thing</a>
+    <a href="#" class="crumb is-active">Current</a>
+  </nav>
+
+<!--   <form action="simplefancy" class="leader-4 trailer-4 clearfix">
+    <div class="row">
+      <div class="column-8 post-1">
+        <div class="field">
+          <label class="field-label" for="form-name">Name</label>
+          <input class="field-input" type="text" required placeholder="Name" id="form-name">
+        </div>
+      </div>
+      <div class="column-8">
+        <div class="field">
+          <label class="field-label" for="form-name">E-Mail</label>
+          <input class="field-input" type="email" required placeholder="E-mail" id="form-name">
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="column-16">
+        <div class="field">
+          <label class="field-label">Description</label>
+          <textarea required name="yeah" id="" rows="10" class="field-input"></textarea>
+        </div>
+      </div>
+    </div>
+  </form> -->
+
+<!--
+  <form action="display" class="leader-2 trailer-2">
+    <label>
+      Username
+      <input type="text" name="username" value="guest">
+    </label>
+    <label>
+      E-Mail
+      <input type="email" name="username" value="guest">
+    </label>
+
+    <fieldset>
+      <legend>Cats?</legend>
+      <label>
+        <input type="checkbox" checked name="username" value="Yup">Yup
+      </label>
+      <label for="cats">
+        <input type="checkbox" name="username" value="So Many">So Many
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Too Many Cats?</legend>
+      <label>
+        <input type="radio" checked name="username" value="Oh yeah">Oh Yeah
+      </label>
+      <label for="">
+        <input type="radio" name="username" value="No way">No Way
+      </label>
+    </fieldset>
+
+    <fieldset class="clearfix">
+      <legend>Cat Information</legend>
+      <label>
+        Name
+        <input type="text" name="username" value="Chairman Meow?">
+      </label>
+      <label>
+        Color
+        <input type="text" name="username" value="Tortoishell?">
+      </label>
+      <label>
+        Personality Quirks
+        <textarea rows="6" placeholder="Hates laser dot ..."></textarea>
+      </label>
+    </fieldset>
+    <label>
+      Cat Snack
+      <select>
+        <option value="">Pick it</option>
+        <option value="eh">Tuna</option>
+        <option value="eh">Birds</option>
+        <option value="eh">Human Toes</option>
+      </select>
+    </label>
+  </form>
+-->
+
+  <h2 class="leader-2 trailer-1" id="tooltips">Tooltips</h2>
+
+  <div class="column-17 trailer-1">
+    <div class="tooltip" data-message="This is the message of the tooltip">
+      <span class="icon-help">?</span>
+    </div>
+  </div>
+
+  <div class="column-17 trailer-1">
+    <div class="tooltip tooltip-left" data-message="This is the message of the tooltip">
+      <span class="icon-help">?</span>
+    </div>
+  </div>
+
+  <div class="column-17 trailer-1">
+    <div class="tooltip tooltip-right" data-message="This is the message of the tooltip">
+      <span class="icon-help">?</span>
+    </div>
+  </div>
+
+  <h2 class="leader-2 trailer-1" id="buttons">Buttons</h2>
+
+  <a href="#" class="btn">Button</a>
+  <a href="#" class="btn btn-red">Red Button</a>
+  <a href="#" class="btn btn-green">Green Button</a>
+  <a href="#" class="btn btn-blue">Blue Button</a>
+
+  <h2 class="leader-2" id="button-groups">Button Groups</h2>
+
+  <nav class="leader-1">
+    <a href="#" class="btn btn-grouped">One</a>
+    <a href="#" class="btn btn-grouped">Two</a>
+    <a href="#" class="btn btn-grouped">Three</a>
+  </nav>
+
+  <h2 class="leader-2 trailer-1" id="tables">Tables</h2>
+
+  <table class="trailer-3">
+    <thead>
+      <tr>
+        <th> td </th>
+        <th> th </th>
+        <th> th </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> 27 </td>
+        <td> 14 </td>
+        <td> 8  </td>
+      </tr>
+      <tr>
+        <td> 27 </td>
+        <td> 14 </td>
+        <td> 8  </td>
+      </tr>
+    </tbody>
+  </table>
+
+</main>
+
+{% endblock %}
