@@ -12,6 +12,7 @@ Lots of foundational styles.
 - Modal
 - Accordion
 - Block Grid
+- Code Styles
 
 ### Fixes
 - Type Helpers Cascade Properly
