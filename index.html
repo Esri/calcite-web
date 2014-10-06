@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
 
     <!-- Use title from page frontmatter -->
-    <title>Calcite Web | Esri Patterns | Esri Design Patterns</title>
+    <title>Calcite Web | Esri Design Patterns</title>
 
     <!-- Link to favicon -->
     <link rel="shortcut icon" href="/img/favicon.ico">
@@ -66,12 +66,12 @@
         <div class="container">
           <nav>
             <a class="third-nav-link is-active" href="">Get Started</a>
-            <a class="third-nav-link" href="type">Type</a>
-            <a class="third-nav-link" href="grid">Grid</a>
-            <a class="third-nav-link" href="components">Components</a>
-            <a class="third-nav-link" href="patterns">Patterns</a>
-            <a class="third-nav-link" href="sass">Sass</a>
-            <a class="third-nav-link" href="javascript">JavaScript</a>
+            <a class="third-nav-link " href="type">Type</a>
+            <a class="third-nav-link " href="grid">Grid</a>
+            <a class="third-nav-link " href="components">Components</a>
+            <a class="third-nav-link " href="patterns">Patterns</a>
+            <a class="third-nav-link " href="sass">Sass</a>
+            <a class="third-nav-link " href="javascript">JavaScript</a>
           </nav>
         </div>
       </header>
@@ -117,35 +117,41 @@
 <h2 id="static-files">Static Files</h2>
 <p>This is probably the easiest way, but you won&#39;t get any of the helpful Sass mixins. If you&#39;re looking to get up and running quickly, just <a href="https://github.com/ArcGIS/calcite-web/releases">download the latest release</a> and move the zipped files to wherever you keep your assets (CSS, JavaScript, images). Be sure to use <a href="http://arcgis.github.io/calcite-web/">the documentation site</a> to copy and paste patterns, components, and even a sample html boilerplate.</p>
 <p>When used statically, one very helpful thing to know is that Calcite Web comes bundled with several modifier classes. For example, if you need to add some margin to the top of an element, instead of writing a class and adding it yourself, you can use the built in <code>leader-X</code> class:</p>
-<pre><code>&lt;<span class="hljs-operator">div</span> class=<span class="hljs-string">"leader-3"</span>&gt;
-  This <span class="hljs-keyword">item</span> will <span class="hljs-built_in">get</span> <span class="hljs-constant">three</span> <span class="hljs-string">'lines'</span> <span class="hljs-operator">of</span> margin <span class="hljs-keyword">at</span> <span class="hljs-operator">the</span> top.
-&lt;/<span class="hljs-operator">div</span>&gt;
-</code></pre><p>This will keep spacing consistent and you won&#39;t have to write any CSS! There are modifier classes for virtually everything: padding, margin, text-color, background-color, etc. Be sure to visit the other links and read up on what is possible.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"leader-3"</span>&gt;</span>
+  This item will get three 'lines' of margin at the top.
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p>This will keep spacing consistent and you won&#39;t have to write any CSS! There are modifier classes for virtually everything: padding, margin, text-color, background-color, etc. Be sure to visit the other links and read up on what is possible.</p>
 <h2 id="ruby-gem">Ruby Gem</h2>
 <p>To install Calcite-Web as a ruby gem, add a reference to your the gem to your Gemfile:</p>
-<pre><code>gem <span class="hljs-string">"calcite-web"</span>, <span class="hljs-symbol">:git</span> =&gt; <span class="hljs-string">"https://github.com/ArcGIS/calcite-web.git"</span>, <span class="hljs-symbol">:tag</span> =&gt; <span class="hljs-string">"v0.0.0"</span>
-</code></pre><p>Be sure to use the most up to date tag.</p>
+<pre><code class="lang-ruby">gem <span class="hljs-string">"calcite-web"</span>, <span class="hljs-symbol">:git</span> =&gt; <span class="hljs-string">"https://github.com/ArcGIS/calcite-web.git"</span>, <span class="hljs-symbol">:tag</span> =&gt; <span class="hljs-string">"v0.0.0"</span>
+</code></pre>
+<p>Be sure to use the most up to date tag.</p>
 <p>Then in your project&#39;s sass file, just import it:</p>
-<pre><code><span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-string">"calcite-web"</span></span>;
-</code></pre><p>That will give you everything including sass utilities. You will also need to copy over the javascript and image assets to your static folder (see above).</p>
+<pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-string">"calcite-web"</span>;</span>
+</code></pre>
+<p>That will give you everything including sass utilities. You will also need to copy over the javascript and image assets to your static folder (see above).</p>
 <p>Calcite Web has a built in library of mixins that cover everything from animation to font-size. To be sure you&#39;re building your site in the easiest way (and the most visually consistent way) read up on everything that&#39;s available on the <a href="./sass">SASS Page</a>.</p>
 <h2 id="npm">NPM</h2>
 <p>To install Calcite Web with npm, type:</p>
-<pre><code>npm install --save-dev git://github<span class="hljs-preprocessor">.com</span>/ArcGIS/calcite-web<span class="hljs-preprocessor">.git</span>
-</code></pre><p>You can also use a specific release by appending the version number to the end:</p>
-<pre><code>npm install --save-dev git://github<span class="hljs-preprocessor">.com</span>/ArcGIS/calcite-web<span class="hljs-preprocessor">.git</span><span class="hljs-preprocessor">#v0.0.1</span>
-</code></pre><p>Then, if you&#39;re using sass, be sure to add <code>node_modules/calcite-web/dist/sass/</code> to your load path. If you&#39;re using <code>grunt-contrib-sass</code> you add that like this:</p>
-<pre><code><span class="hljs-string">'sass'</span>: {
+<pre><code class="lang-bash">npm install --save-dev git://github.com/ArcGIS/calcite-web.git
+</code></pre>
+<p>You can also use a specific release by appending the version number to the end:</p>
+<pre><code class="lang-bash">npm install --save-dev git://github.com/ArcGIS/calcite-web.git<span class="hljs-comment">#v0.0.1</span>
+</code></pre>
+<p>Then, if you&#39;re using sass, be sure to add <code>node_modules/calcite-web/dist/sass/</code> to your load path. If you&#39;re using <code>grunt-contrib-sass</code> you add that like this:</p>
+<pre><code class="lang-js"><span class="hljs-string">'sass'</span>: {
   target: {
     options: {
       loadPath: <span class="hljs-string">'node_modules/calcite-web/dist/sass/'</span>
     },
-    <span class="hljs-built_in">files</span>: {
+    files: {
       <span class="hljs-string">'path/to.css'</span>: <span class="hljs-string">'path/to.scss'</span>
     }
   }
 }
-</code></pre><p>Then in your main <code>.scss</code> file, you can just require the framework: <code>@import &quot;calcite-web&quot;;</code>. Everything mentioned about mixins above in the Ruby gem section applies to the Node module as well, so scroll up a bit and learn more about how Calcite Web functions as a Sass library;</p>
+</code></pre>
+<p>Then in your main <code>.scss</code> file, you can just require the framework: <code>@import &quot;calcite-web&quot;;</code>. Everything mentioned about mixins above in the Ruby gem section applies to the Node module as well, so scroll up a bit and learn more about how Calcite Web functions as a Sass library;</p>
 <h1 id="contributing-to-calcite-web">Contributing to Calcite-Web</h1>
 <h2 id="installing">Installing</h2>
 <p>If you don&#39;t have Node yet, <a href="http://nodejs.org/">install it here</a>. Then install the project&#39;s dependencies:</p>
@@ -198,7 +204,7 @@ module.exports = <span class="hljs-function"><span class="hljs-keyword">function
     
 
       <!-- Footer Pattern -->
-      <footer class="footer header-light">
+      <footer class="footer header-light leader-3">
         <div class="container">
             <nav class="column-6">
               <h6>Arc<span>GIS</span></h6>
