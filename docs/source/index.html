@@ -1,5 +1,5 @@
 ---
-title: Calcite Web | Esri Patterns
+title: Calcite Web
 description: Quickly build beautiful, consistent websites with the Calcite Web Framework
 data:
   - kss
@@ -47,7 +47,7 @@ This is probably the easiest way, but you won't get any of the helpful Sass mixi
 
 When used statically, one very helpful thing to know is that Calcite Web comes bundled with several modifier classes. For example, if you need to add some margin to the top of an element, instead of writing a class and adding it yourself, you can use the built in `leader-X` class:
 
-```
+```html
 <div class="leader-3">
   This item will get three 'lines' of margin at the top.
 </div>
@@ -59,7 +59,7 @@ This will keep spacing consistent and you won't have to write any CSS! There are
 
 To install Calcite-Web as a ruby gem, add a reference to your the gem to your Gemfile:
 
-```
+```ruby
 gem "calcite-web", :git => "https://github.com/ArcGIS/calcite-web.git", :tag => "v0.0.0"
 ```
 
@@ -67,7 +67,7 @@ Be sure to use the most up to date tag.
 
 Then in your project's sass file, just import it:
 
-```
+```scss
 @import "calcite-web";
 ```
 
@@ -79,19 +79,19 @@ Calcite Web has a built in library of mixins that cover everything from animatio
 
 To install Calcite Web with npm, type:
 
-```
+```bash
 npm install --save-dev git://github.com/ArcGIS/calcite-web.git
 ```
 
 You can also use a specific release by appending the version number to the end:
 
-```
+```bash
 npm install --save-dev git://github.com/ArcGIS/calcite-web.git#v0.0.1
 ```
 
 Then, if you're using sass, be sure to add `node_modules/calcite-web/dist/sass/` to your load path. If you're using `grunt-contrib-sass` you add that like this:
 
-```
+```js
 'sass': {
   target: {
     options: {
