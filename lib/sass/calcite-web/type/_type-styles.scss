@@ -71,14 +71,22 @@
     }
 
     code {
+      padding: .25rem;
+      border-radius: 3px;
+      border: 1px solid $lightest-gray;
+      color: $darkest-gray;
+      background: $off-white;
       white-space: pre;
+      @include font-size(-2);
     }
 
     pre {
       white-space: pre;
       white-space: pre-wrap;
       word-wrap: break-word;
+      max-width: 100%;
       code {
+        padding: 1rem;
         display: block;
         overflow: auto;
         word-wrap: normal;

@@ -65,13 +65,13 @@
       <header class="third-nav">
         <div class="container">
           <nav>
-            <a class="third-nav-link is-active" href="{{relativePath}}">Get Started</a>
-            <a class="third-nav-link" href="{{relativePath}}type">Type</a>
-            <a class="third-nav-link" href="{{relativePath}}grid">Grid</a>
-            <a class="third-nav-link" href="{{relativePath}}components">Components</a>
-            <a class="third-nav-link" href="{{relativePath}}patterns">Patterns</a>
-            <a class="third-nav-link" href="{{relativePath}}sass">Sass</a>
-            <a class="third-nav-link" href="{{relativePath}}javascript">JavaScript</a>
+            <a class="third-nav-link {% if dest == 'index.html' %}is-active{% endif %}" href="{{relativePath}}">Get Started</a>
+            <a class="third-nav-link {% if dest == 'type/index.html' %}is-active{% endif %}" href="{{relativePath}}type">Type</a>
+            <a class="third-nav-link {% if dest == 'grid/index.html' %}is-active{% endif %}" href="{{relativePath}}grid">Grid</a>
+            <a class="third-nav-link {% if dest == 'components/index.html' %}is-active{% endif %}" href="{{relativePath}}components">Components</a>
+            <a class="third-nav-link {% if dest == 'patterns/index.html' %}is-active{% endif %}" href="{{relativePath}}patterns">Patterns</a>
+            <a class="third-nav-link {% if dest == 'sass/index.html' %}is-active{% endif %}" href="{{relativePath}}sass">Sass</a>
+            <a class="third-nav-link {% if dest == 'javascript/index.html' %}is-active{% endif %}" href="{{relativePath}}javascript">JavaScript</a>
           </nav>
         </div>
       </header>
@@ -95,7 +95,7 @@
     {% block footer %}
 
       <!-- Footer Pattern -->
-      <footer class="footer header-light">
+      <footer class="footer header-light leader-3">
         <div class="container">
             <nav class="column-6">
               <h6>Arc<span>GIS</span></h6>
