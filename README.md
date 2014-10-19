@@ -103,18 +103,7 @@ The final number signifies patches such as fixing a pattern or component in a ce
 1. Change the version number in `package.json` to the desired version number.
 2. Write a description of the changes, additions, and bug fixes in `CHANGELOG.md`.
 3. Make sure `ArcGIS/calcite-web` is up-to-date with your changes.
-4. Create a `user.js` file with your GitHub credentials:
-```js
-var user = {
-  user: 'yourUsername',
-  password: 'yourPassword'
-};
-
-module.exports = function () {
-  return user;
-}
-```
-5. Run `grunt release`
+5. Run `grunt release` and enter your userame and password in the command prompt.
 
 # Updating the Documentation Site
 
