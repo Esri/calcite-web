@@ -4,14 +4,6 @@
 // Grunt wraps several tasks to ease development
 // runs middleman, deploys the site, and tags new releases
 
-// To draft a release, add GitHub credentials to user.js
-var fs = require('fs');
-var user = function(){};
-
-if (fs.existsSync('./user.js')) {
-  user = require('./user.js');
-}
-
 // Gets current version description from CHANGELOG.md
 function findVersion(log) {
   var newVersion = log.split('## v')[1];
@@ -50,16 +42,6 @@ module.exports = function(grunt) {
         }
       }
     },
-
-    // Run a development server
-    // 'connect': {
-    //   server: {
-    //     options: {
-    //       port: 8888,
-    //       base: 'docs/build'
-    //     }
-    //   }
-    // },
 
     // Watch files
     'watch': {
@@ -213,11 +195,30 @@ module.exports = function(grunt) {
       }
     },
 
+    // Ask for GitHub username and password
+    'prompt': {
+      target: {
+        options: {
+          questions: [
+            {
+              config: 'github-release.options.auth.user',
+              type: 'input',
+              message: 'GitHub username:'
+            },
+            {
+              config: 'github-release.options.auth.password',
+              type: 'password',
+              message: 'GitHub password:'
+            }
+          ]
+        }
+      }
+    },
+
     // Bump the version on GitHub
     'github-release': {
       options: {
         repository: 'ArcGIS/calcite-web',
-        auth: user(),
         release: {
           tag_name: currentVersion,
           name: currentVersion,
@@ -261,8 +262,6 @@ module.exports = function(grunt) {
 
   // Run a development environment
   grunt.registerTask('dev', [
-    // 'connect:server',
-    // 'acetate',
     'acetate:server',
     'newer:imagemin:doc',
     'concat:doc',
@@ -287,7 +286,6 @@ module.exports = function(grunt) {
       grunt.config.set('gh-pages.options.message', grunt.option('message'));
     }
     grunt.task.run([
-      // 'acetate',
       'acetate:build',
       'newer:imagemin:doc',
       'concat:doc',
@@ -299,6 +297,7 @@ module.exports = function(grunt) {
 
   // Release a new version of the framework
   grunt.registerTask('release', [
+    'prompt',
     'prepublish',
     'compress',
     'github-release'

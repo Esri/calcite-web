@@ -1,3 +1,14 @@
+## v0.0.3
+Additional styles, beginning documentation site.
+
+### Modified
+- change color of border-bottom on third-nav
+- fixed font weight on active third nav link
+- adding structure for documentation
+
+### Added
+- `<code>` styles for code blocks and inline code
+
 ## v.0.0.2
 Lots of foundational styles.
 
