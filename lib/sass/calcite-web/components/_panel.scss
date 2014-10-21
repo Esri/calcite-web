@@ -29,7 +29,7 @@
   }
 
 
-@if $include-breadcrumbs == true {
+@if $include-panel == true {
   .panel {@include panel();}
     .panel-dark {@include panel-dark();}
     .panel-white {@include panel-white();}
