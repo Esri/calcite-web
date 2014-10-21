@@ -12,18 +12,25 @@
 //
 //Styleguide x.x
 
-.panel {
+@mixin panel() {
   background-color: $lightest-gray;
   border: 1px solid $light-gray;
   padding: $baseline $baseline/2;
 }
 
-  .panel-dark {
+  @mixin panel-dark() {
     background-color: $darkest-gray;
     border: 1px solid $off-black;
   }
 
-  .panel-white {
+  @mixin panel-white() {
     background-color: $white;
     border: 1px solid $lightest-gray;
   }
+
+
+@if $include-breadcrumbs == true {
+  .panel {@include panel();}
+    .panel-dark {@include panel-dark();}
+    .panel-white {@include panel-white();}
+}
