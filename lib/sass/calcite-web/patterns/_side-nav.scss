@@ -1,4 +1,4 @@
-.side-nav {
+@mixin side-nav() {
   @include box-sizing(border-box);
   padding: 0;
   border: 1px solid $lighter-gray;
@@ -6,39 +6,45 @@
   background-color: $white;
 }
 
-.side-nav-title {
-  margin: 0;
-  padding: $baseline/3;
-  @extend .header-face;
-  @include font-size(-1);
-  background-color: $off-white;
-  border-top: 1px solid $lightest-gray;
-  &:first-child {
-    border-top: none;
-  }
-}
-
-.side-nav-link {
-  display: block;
-  @include box-sizing(border-box);
-  padding: $baseline/3;
-  @include font-size(-2);
-  @extend .link-darker-gray;
-  background-color: $white;
-  border-top: 1px solid $lightest-gray;
-  @include transition(all $transition);
-  &:after {
-    content: "»";
-    opacity: 0;
-    float: right;
-    padding: 0 $baseline * 0.25;
-    @include transition(all $transition);
-    @include transform(translate3d(0,0,0));
-  }
-  &:hover {
-    &:after {
-      opacity: 1;
-      @include transform(translate3d(8px,0,0));
+  @mixin side-nav-title() {
+    margin: 0;
+    padding: $baseline/3;
+    @extend .header-face;
+    @include font-size(-1);
+    background-color: $off-white;
+    border-top: 1px solid $lightest-gray;
+    &:first-child {
+      border-top: none;
     }
   }
+
+  @mixin side-nav-link() {
+    display: block;
+    @include box-sizing(border-box);
+    padding: $baseline/3;
+    @include font-size(-2);
+    @extend .link-darker-gray;
+    background-color: $white;
+    border-top: 1px solid $lightest-gray;
+    @include transition(all $transition);
+    &:after {
+      content: "»";
+      opacity: 0;
+      float: right;
+      padding: 0 $baseline * 0.25;
+      @include transition(all $transition);
+      @include transform(translate3d(0,0,0));
+    }
+    &:hover {
+      &:after {
+        opacity: 1;
+        @include transform(translate3d(8px,0,0));
+      }
+    }
+  }
+
+@if $include-side-nav === true {
+  .side-nav {@include side-nav()}
+    .side-nav-title {@include side-nav-title()}
+    .side-nav-link {@include side-nav-link()}
 }

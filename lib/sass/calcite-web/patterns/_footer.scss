@@ -1,9 +1,14 @@
 $footer-height: 250px;
 
-.wrapper {
+@mixin wrapper() {
   min-height: calc(100% - $footer-height);
 }
 
-.footer {
+@mixin footer (){
   background-color: $off-white;
+}
+
+@if $include-footer == true {
+  .wrapper {@include wrapper()}
+  .footer {@include footer()}
 }

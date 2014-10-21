@@ -1,17 +1,23 @@
-.third-nav {
+@mixin third-nav() {
   @extend .header-light;
   border-bottom: 1px solid $lighter-gray;
   padding: $baseline/4 0;
 }
 
-.third-nav-link {
-  @extend .link-darkest-gray;
-  @include font-size(-2);
-  margin-right: $baseline * 0.75;
-  &.is-active {
-  font-weight: 400;
-    @media (-webkit-max-device-pixel-ratio: 1), (max-resolution: 72dpi) {
-      font-weight: 500;
+  @mixin third-nav-link() {
+    @extend .link-darkest-gray;
+    @include font-size(-2);
+    margin-right: $baseline * 0.75;
+    &.is-active {
+    font-weight: 400;
+      @media (-webkit-max-device-pixel-ratio: 1), (max-resolution: 72dpi) {
+        font-weight: 500;
+      }
     }
   }
+
+
+@if $include-third-nav === true {
+  .third-nav {@include third-nav();}
+    .third-nav-link {@include third-nav-link();}
 }
