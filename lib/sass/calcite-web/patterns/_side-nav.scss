@@ -43,7 +43,7 @@
     }
   }
 
-@if $include-side-nav === true {
+@if $include-side-nav == true {
   .side-nav {@include side-nav()}
     .side-nav-title {@include side-nav-title()}
     .side-nav-link {@include side-nav-link()}

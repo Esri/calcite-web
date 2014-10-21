@@ -35,7 +35,7 @@
   }
 
 
-@if $include-sub-nav === true {
+@if $include-sub-nav == true {
   .sub-nav {@include sub-nav();}
     .sub-nav-title {@include sub-nav-title();}
     .sub-nav-list {@include sub-nav-list();}

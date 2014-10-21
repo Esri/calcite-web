@@ -17,7 +17,7 @@
   }
 
 
-@if $include-third-nav === true {
+@if $include-third-nav == true {
   .third-nav {@include third-nav();}
     .third-nav-link {@include third-nav-link();}
 }

@@ -20,7 +20,7 @@
     @extend .link-off-black;
   }
 
-@if $include-top-nav === true {
+@if $include-top-nav == true {
   .top-nav {@include top-nav();}
     .top-nav-title {@include top-nav-title();}
     .top-nav-list {@include top-nav-list();}
