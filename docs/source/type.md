@@ -143,13 +143,21 @@ The `modular-scale($n)` behaves the same as the `font-size($n)` mixin, but retur
 Setting the max width of an article to a large multiple of the text size is a way to define a comfortable reading measure related to the proportional decisions of the content.
 
 ## Unicode Variables
+SASS Unicode variables provide a simple way to display unicode characters as content in css declarations.
 
 
+## Leading
+Leading is the space between lines in a text block. The `leading($n)` mixin accepts an integer, and sets the line height of the element to the integer times the standard baseline unit.
 
+## Tracking
+Tracking is the space between letters in a work. The `tracking($n)` mixin accepts an integer, and applies letterspacing to the element as fractions of 1/1000 of an em.
+`@include tracking(500)` will apply 1/2 em letterspacing.
+`@include tracking(166)` will apply a hairline em letterspacing.
 
-
-
-
+## Word Spacing
+Word spacing is - well - the space between words.  The `word-spacing($n)` mixin accepts an integer, and applies letterspacing to the element as fractions of 1/1000 of an em.
+`@include word-spacing(500)` will apply 1/2 em word spacing.
+`@include word-spacing(166)` will apply a hairline em word spacing.
 
 
 
