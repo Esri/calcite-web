@@ -5,6 +5,22 @@
 //
 //Styleguide x.x
 
+// UNDOCUMENTED. Background helpers for CLASSES
+@mixin text-inline() {
+  display: inline;
+}
+
+@mixin text-center() {
+  text-align: center;
+}
+
+@mixin text-left() {
+  text-align: left;
+}
+
+@mixin text-right() {
+  text-align: right;
+}
 
 // ### Text Rule
 // Adds a one pixel border bottom to the element. Will be expanded to take arguments for different type of rules?

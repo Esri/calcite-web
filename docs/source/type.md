@@ -85,31 +85,56 @@ Calcite Web provides a set of weights for each typeface. These are used by eithe
 ## Styles
 Proper care has been taken to ensure that all type systems used by Calcite avoid faux-bold and faux-italics styled by the browser.
 
+## Type Composition Helpers
+Adding the following classes lets you apply type styles while composing a page in html.
+
 ## SASS Type Composition Mixins
 Calcite web provides a suite of SASS mixins to assist with composing type. These mixins don't compile any css by themselves, but added in to CSS that you write will make the process of creating new designs easier.
 
-```
-.class {
-	@include ();
-}
-```
+### Text Inline
+Sets the display style of the element to inline
+
+### Text Center
+Centers the text.
+
+### Text Left
+Left aligns the text.
+
+### Text Right
+Right aligns the text,
 
 ### Text Rule
-Adds a one pixel border bottom to the element. Will be expanded to take arguments for different type of rules?
-```
-.class {
-	@include text-rule();
-}
-```
-No Modifiers
+Adds a one pixel border bottom to the element.
 
-### Text Inline
-Adds the inline property to the element.
-```
-.class {
-	@include text-inline();
-}
-```
+### Text Large
+Sets the font size of the element to one step of the typgraphic scale from the body size.
+
+### Text Small
+Sets the font size font of the elements to one step down the typographic scale from the body size.
+
+### Text Light
+Sets the opacity of the element to a standardized value.
+
+### Text Ellipsis
+Adds a set of styles to the element that will cause the any text overflow to be hidden, truncated with an ellipsis. Useful for long keeping long strings on text to a single line.
+
+### List Bulleted
+Adds the calcite styles for bulleted lists to an unordered list.
+
+### List Numbered
+Adds the calcite styles for large numbered lists to an ordered list. Useful for listing steps in a process.
+
+### Text Color
+Sets the text color of the element to the value entered.
+
+### Link Color
+Sets the color and hover color of the element to the given values.
+
+
+
+
+
+
 
 ### Text
 

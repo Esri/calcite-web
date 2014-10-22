@@ -1,8 +1,57 @@
-// ┌─────────────────────────────────┐
-// │  Composition Helpers Classes    │
-// └─────────────────────────────────┘
+//## Type Composition Helpers
+// Adding the following classes lets you apply type styles while composing a page in html.
+//
+// .text-rule      -  Sets the display style of the element to inline
+// .text-inline    -  Centers the text.
+// .text-center    -  Left aligns the text.
+// .text-left      -  Right aligns the text,
+// .text-right     -  Adds a one pixel border bottom to the element.
+// .text-large     -  Sets the font size of the element to one step of the
+// .text-small     -  Sets the font size font of the elements to one step down the
+// .text-light     -  Sets the opacity of the element to a standardized value.
+// .text-ellipsis  -  Adds a set of styles to the element that will cause the any text overflow to be hidden, truncated with an ellipsis. Useful for long keeping long strings on text to a single line.
+//
+//Styleguide x.x
 
-//generate color classes
+// ### Type Color
+// Sets the color of the element to any of the calcite colors available.
+//
+//.text-red          - Sets the color to red.
+//.text-green        - Sets the color to green.
+//.text-blue         - Sets the color to blue.
+//.text-purple       - Sets the color to purple.
+//.text-orange       - Sets the color to orange.
+//.text-brown        - Sets the color to brown.
+//.text-white        - Sets the color to white.
+//.text-light-gray   - Sets the color to light-gray.
+//.text-gray         - Sets the color to gray.
+//.text-dark-gray    - Sets the color to dark-gray.
+//.text-darker-gray  - Sets the color to darker-gray.
+//.text-darkest-gray - Sets the color to darkest-gray.
+//.text-off-black    - Sets the color to off-black.
+//
+// Styleguide x.x
+
+// ### Link Color
+// Sets the color of the element to any of the calcite colors available.
+//
+//.text-red          - Sets the color to red.
+//.text-green        - Sets the color to green.
+//.text-blue         - Sets the color to blue.
+//.text-purple       - Sets the color to purple.
+//.text-orange       - Sets the color to orange.
+//.text-brown        - Sets the color to brown.
+//.text-white        - Sets the color to white.
+//.text-light-gray   - Sets the color to light-gray.
+//.text-gray         - Sets the color to gray.
+//.text-dark-gray    - Sets the color to dark-gray.
+//.text-darker-gray  - Sets the color to darker-gray.
+//.text-darkest-gray - Sets the color to darkest-gray.
+//.text-off-black    - Sets the color to off-black.
+//
+// Styleguide x.x
+
+// DOCUMENTED IN TYPE COMP MIXINS
 @mixin text-color($value) {
   color: $value;
 }
