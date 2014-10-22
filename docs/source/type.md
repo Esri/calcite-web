@@ -130,21 +130,46 @@ Sets the text color of the element to the value entered.
 ### Link Color
 Sets the color and hover color of the element to the given values.
 
+## Font Size
+The Calcite Web type system uses a modular typographic scale to ensure a consistent tonal range within all text elements. This modular scale is created from the body size of the type, and a second, smaller size. These two type sizes anchor the scale, and using a precise ratio can be expanded to an entire set of sizes for all typographic needs.
+
+The `font-size($n)` mixin takes an integer, positive or negative, and sets all type within the element to the size defined by traversing that number of steps up or down the typographic scale.
+
+The `font-size($n)` mixin relies on the `modular-scale($n)` mixin to define the scale, and apply it to typographic elements.
+
+## Modular Scale
+The `modular-scale($n)` behaves the same as the `font-size($n)` mixin, but returns a raw rem value rather than css styles specific to type elements. This means that the `modular-scale($n)` mixin can be used to define heights, widths, padding, margins, or any other property of an element so that it adheres to the modular scale defined by the tyopgraphy.
+
+Setting the max width of an article to a large multiple of the text size is a way to define a comfortable reading measure related to the proportional decisions of the content.
 
 
 
 
 
 
-### Text
 
 
-# Type Modifiers
 
-## Colors
 
-## Weights
 
-## Styles
 
-## Alignment
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
