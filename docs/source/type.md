@@ -85,6 +85,35 @@ Calcite Web provides a set of weights for each typeface. These are used by eithe
 ## Styles
 Proper care has been taken to ensure that all type systems used by Calcite avoid faux-bold and faux-italics styled by the browser.
 
+## SASS Type Composition Mixins
+Calcite web provides a suite of SASS mixins to assist with composing type. These mixins don't compile any css by themselves, but added in to CSS that you write will make the process of creating new designs easier.
+
+```
+.class {
+	@include ();
+}
+```
+
+### Text Rule
+Adds a one pixel border bottom to the element. Will be expanded to take arguments for different type of rules?
+```
+.class {
+	@include text-rule();
+}
+```
+No Modifiers
+
+### Text Inline
+Adds the inline property to the element.
+```
+.class {
+	@include text-inline();
+}
+```
+
+### Text
+
+
 # Type Modifiers
 
 ## Colors
