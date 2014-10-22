@@ -1,21 +1,28 @@
-.top-nav {
+@mixin top-nav {
   @extend .header-light;
   padding: $baseline*.75 0;
 }
 
-.top-nav-title {
-  @include font-size(2);
-  @extend .link-off-black;
-  float: left;
-  padding-right: $baseline*2;
-}
+  @mixin top-nav-title {
+    @include font-size(2);
+    @extend .link-off-black;
+    float: left;
+    padding-right: $baseline*2;
+  }
 
-.top-nav-list {
-  @extend .header-light;
-  line-height: 1.75em;
-}
+  @mixin top-nav-list {
+    @extend .header-light;
+    line-height: 1.75em;
+  }
 
-.top-nav-link {
-  margin-right: 1em;
-  @extend .link-off-black;
+  @mixin top-nav-link {
+    margin-right: 1em;
+    @extend .link-off-black;
+  }
+
+@if $include-top-nav == true {
+  .top-nav {@include top-nav();}
+    .top-nav-title {@include top-nav-title();}
+    .top-nav-list {@include top-nav-list();}
+    .top-nav-link {@include top-nav-link();}
 }

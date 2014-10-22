@@ -1,11 +1,11 @@
-// ┌───────────────────────────┐
-// │  Composition Helpers      │
-// └───────────────────────────┘
+//## SASS Type Composition Mixins
+//
+//
+// No Modifiers
+//
+//Styleguide x.x
 
-@mixin text-rule() {
-  border-bottom: 1px solid $light-gray;
-}
-
+// UNDOCUMENTED. Background helpers for CLASSES
 @mixin text-inline() {
   display: inline;
 }
@@ -22,32 +22,94 @@
   text-align: right;
 }
 
+// ### Text Rule
+// Adds a one pixel border bottom to the element. Will be expanded to take arguments for different type of rules?
+// ```
+// .class {
+//   @include text-rule();
+// }
+// ```
+// No Modifiers
+@mixin text-rule() {
+  border-bottom: 1px solid $light-gray;
+}
+
+// ### Text Large
+// Sets the font size of the element to one step of the typgraphic scale from the body size.
+// ```
+// .class {
+//   @include text-large();
+// }
+// ```
+// No Modifiers
 @mixin text-large() {
   @include font-size(0);
 }
+
+// ### Text Small
+// Sets the font size font of the elements to one step down the typographic scale from the body size.
+// ```
+// .class {
+//   @include text-small();
+// }
+// ```
+// No Modifiers
 
 @mixin text-small() {
   @include font-size(-2);
 }
 
+// ### Text Light
+// Sets the opacity of the element to a standardized value.
+// ```
+// .class {
+//   @include text-light();
+// }
+// ```
+// No Modifers
 @mixin text-light() {
   opacity: 0.66;
 }
 
+// ### Text Ellipsis
+// Adds a set of styles to the element that will cause the any text overflow to be hidden, truncated with an ellipsis. Useful for long keeping long strings on text to a single line.
+// ```
+// .class {
+//   @include text-ellipsis();
+// }
+// ```
+// No Modifiers
 @mixin text-ellipsis() {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
+// UNDOCUMENTED. Also, useless right now.
 @mixin text-show-visited-links() {
 
 }
 
+// ### List Bulleted
+// Adds the calcite styles for bulleted lists to an unordered list.
+// ```
+// .class {
+//   @include list-bulleted();
+// }
+// ```
+// No Modifers
 @mixin list-bulleted() {
   list-style-type: circle;
 }
 
+// ### List Numbered
+// Adds the calcite styles for large numbered lists to an ordered list. Useful for listing steps in a process.
+// ```
+// .class {
+//   @include list-numbered();
+// }
+// ```
+// No Modifers
 @mixin list-numbered() {
   counter-reset: li;
   list-style: none;
@@ -84,11 +146,26 @@
   }
 }
 
-//generate color classes
+// ### Text Color
+// Sets the text color of the element to the value entered.
+// ```
+// .class {
+//   @include text-color($value);
+// }
+// ```
+// No Modifers
 @mixin text-color($value) {
   color: $value;
 }
 
+// ### Link Color
+// Sets the color and hover color of the element to the given values.
+// ```
+// .class {
+//   @include link-color($value, $hover-value);
+// }
+// ```
+// No Modifers
 @mixin link-color($value, $light-value) {
   color: $value;
   &:hover {

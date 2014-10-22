@@ -7,7 +7,7 @@
 //
 //Styleguide 3.12
 
-table {
+@mixin table() {
   width: 100%;
   background-color: $white;
   border-collapse: collapse;
@@ -48,7 +48,7 @@ table {
   }
 }
 
-  .table-blue {
+  @mixin table-blue() {
     border: 1px solid $blue;
 
     > thead {
@@ -72,7 +72,7 @@ table {
     }
   }
 
-  .table-plain {
+  @mixin table-plain() {
     border: none;
 
     > thead, > tfoot, th, td {
@@ -91,7 +91,7 @@ table {
     }
   }
 
-  .table-striped {
+  @mixin table-striped() {
     tr {
       &:nth-child(even){
           background-color: $off-white;
@@ -101,3 +101,11 @@ table {
       }
     }
   }
+
+
+@if $include-tables == true {
+  table {@include table();}
+    .table-blue {@include table-blue();}
+    .table-plain {@include table-plain();}
+    .table-striped {@include table-striped();}
+}

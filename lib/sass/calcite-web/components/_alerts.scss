@@ -7,7 +7,7 @@
 //
 //Styleguide 3.7
 
-.alert {
+@mixin alert() {
   @extend .header-light;
   @include font-size(-1);
   padding: $baseline/4 $baseline/2;
@@ -23,15 +23,22 @@
     display: block;
   }
 }
-  .alert-red {
+  @mixin alert-red() {
     background-color: $red;
   }
-  .alert-green {
+  @mixin alert-green() {
     background-color: $green;
   }
 
-  .alert-close {
+  @mixin alert-close() {
     position: absolute;
     right: $baseline/2;
   }
 
+
+@if $include-alerts == true {
+  .alert {@include alert();}
+    .alert-red {@include alert-red();}
+    .alert-green {@include alert-green();}
+    .alert-close {@include alert-close();}
+}

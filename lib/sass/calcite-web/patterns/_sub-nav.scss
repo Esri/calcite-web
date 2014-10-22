@@ -1,35 +1,43 @@
-.sub-nav {
+@mixin sub-nav() {
   background-color: $lightest-gray;
 }
 
-.sub-nav-title {
-  display: inline-block;
-  float: left;
-  line-height: 1.25;
-  @extend .header-light;
-}
-
-.sub-nav-list {
-  width: 100%;
-  margin-top: $baseline/2;
-  float: left;
-}
-
-.sub-nav-link {
-  padding: .25em .75em;
-  margin: 0 .25em 0 0;
-  float: left;
-  font-family: $header-family;
-  color: $lightest-gray;
-  @include font-size(-1);
-  background-color: $transparent-off-black;
-  @include transition(background-color $transition, color 150ms $transition);
-  &:hover, &:focus {
-    background-color: rgba(0, 0, 0, .3);
-    color: $white;
+  @mixin sub-nav-title() {
+    display: inline-block;
+    float: left;
+    line-height: 1.25;
+    @extend .header-light;
   }
-  &.is-active {
-    background-color: $white;
-    color: $off-black;
+
+  @mixin sub-nav-list() {
+    width: 100%;
+    margin-top: $baseline/2;
+    float: left;
   }
+
+  @mixin sub-nav-link() {
+    padding: .25em .75em;
+    margin: 0 .25em 0 0;
+    float: left;
+    font-family: $header-family;
+    color: $lightest-gray;
+    @include font-size(-1);
+    background-color: $transparent-off-black;
+    @include transition(background-color $transition, color 150ms $transition);
+    &:hover, &:focus {
+      background-color: rgba(0, 0, 0, .3);
+      color: $white;
+    }
+    &.is-active {
+      background-color: $white;
+      color: $off-black;
+    }
+  }
+
+
+@if $include-sub-nav == true {
+  .sub-nav {@include sub-nav();}
+    .sub-nav-title {@include sub-nav-title();}
+    .sub-nav-list {@include sub-nav-list();}
+    .sub-nav-link {@include sub-nav-link();}
 }
