@@ -142,7 +142,7 @@ The `modular-scale($n)` behaves the same as the `font-size($n)` mixin, but retur
 
 Setting the max width of an article to a large multiple of the text size is a way to define a comfortable reading measure related to the proportional decisions of the content.
 
-
+## Unicode Variables
 
 
 
