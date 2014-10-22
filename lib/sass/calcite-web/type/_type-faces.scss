@@ -1,8 +1,30 @@
+//## Typefaces
+//
+//We expose four sets of type families for use in Calcite Web; a Header Family, a Body Family, a Secondary Family, and a Code Family. Each of these type families have a set of weights and styles, defined by their application. For example, the Header Family has more weights than the Body family, reflecting its role as primary UI face, and heavy lifting header face.
+//The typographic pallete for Calcite Web differs slightly from the official Esri branding document. All typefaces are examined in detail below.
+//Calcite Web provides a set of weights for each typeface. These are used by either using the helper class in html, or the writing sass to include the mixin, or extending the helper class. The available weights for each face are below. Proper care has been taken to ensure that all type systems used by Calcite avoid faux-bold and faux-italics styled by the browser.
+//
+// No Modifiers
+//
+//Styleguide x.x
+
+
+//## Header Face
+//
+//[Avenir Next](http://www.fonts.com/font/linotype/avenir-next) is a recut of the classic Avenir typeface, by Adrian Frutiger and Akira Kobayashi. It has been reworked for use on the web, and contains more weights, styles, and other improvements. Avenir Next improves on Avenir in specifically web settings.
+// Applies the the header face, along with a set of smart weight interactions and typographic defaults, to an element.
+//
+//.header-light             - Avenir Next Light 300
+//.header-face              - Avenir Next Regular 400
+//.header-demi              - Avenir Next Semi-Bold 500
+//.header-bold              - Avenir Next Bold 600
+//
+//Styleguide x.x
+
 @mixin header-light() {
   @include tracking($header-tracking);
   font-family: $header-family; font-weight: nth($header-light, 1); font-style: normal;
   b, strong {font-weight: nth($header-light, 2);}
-
   @media (-webkit-max-device-pixel-ratio: 1), (max-resolution: 72dpi) {
     font-weight: 400;
     b, strong {
@@ -10,7 +32,6 @@
     }
   }
 }
-
 @mixin header-light-italic() {
   @include tracking($header-tracking);
   font-family: $header-family; font-weight: nth($header-light, 1); font-style: italic;
@@ -21,7 +42,6 @@
 
   }
 }
-
 @mixin header-face() {
   @include tracking($header-tracking);
   font-family: $header-family; font-weight: nth($header-regular, 1); font-style: normal;
@@ -53,6 +73,18 @@
   b, strong {font-weight: nth($header-bold, 2);}
 }
 
+
+//## Body Face
+//
+// While there is no official Esri brand typeface for long for applications, Calcite Web employs [Frutiger](http://www.fonts.com/font/linotype/frutiger?QueryFontType=Web) for this purpose. Frutiger evokes some of the stronger qualities of our default typefaces - Lucida Grande and Segoe UI - while presenting a consistent voice across platforms. Frutiger pairs remarkably well with Avenir, as they are both designed by Adrian Frutiger, with strong influences from Univers.
+//
+//.body-face                - Frutiger Regular 400
+//.body-italic              - Frutiger Regular Italic 400
+//.body-bold                - Frutiger Bold 700
+//.body-bold-italic         - Frutiger Bold Italic 700
+//
+// Styleguide x.x
+
 @mixin body-face() {
   @include tracking($body-tracking);
   font-family: $body-family; font-weight: nth($body-regular, 1); font-style: normal;
@@ -74,6 +106,17 @@
   b, strong {font-weight: nth($body-bold, 2);}
 }
 
+//## Secondary Face
+//
+// [ITC Charter](http://www.fonts.com/font/itc/itc-charter), designer by Mathew Carter, is used as a Serif alternative to the sans-serif body face. While usage should be sparse, Charter provides the opportunity to add variation and contrast to a pages pallete.
+//
+//.secondary-face           - ITC Charter Medium 400
+//.secondary-italic         - ITC Charter Medium Italic 400
+//.secondary-bold           - ITC Charter Bold 700
+//.secondary-bold-italic    - ITC Charter Bold Italic 700
+//
+// Styleguide x.x
+
 @mixin secondary-face() {
   @include tracking($secondary-tracking);
   font-family: $secondary-family; font-weight: nth($secondary-regular, 1); font-style: normal;
@@ -94,6 +137,16 @@
   font-family: $secondary-family; font-weight: nth($secondary-bold, 1); font-style: italic;
   b, strong {font-weight: nth($secondary-bold, 2);}
 }
+
+
+//## Code Face
+//
+// Designed by Microsoft's Lucas DeGroot, [Consolas](http://www.fonts.com/font/microsoft-corporation/consolas) is a clean, readable, and simple monospace face for documenting code blocks.
+//
+//.code-face                - Consolas 400
+//
+// Styleguide x.x
+
 @mixin code-face() {
   @include tracking($code-tracking);
   font-family: $code-family; font-weight: nth($code-regular, 1); font-style: normal;
