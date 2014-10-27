@@ -1,3 +1,11 @@
+## v0.0.4
+Documentation and small style additions.
+
+### Added
+- favicon
+- `img` tags now get max width of 100%
+- typography documentation
+
 ## v0.0.3
 Additional styles, beginning documentation site.
 
