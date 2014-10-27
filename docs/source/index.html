@@ -108,30 +108,38 @@ Then in your main `.scss` file, you can just require the framework: `@import "ca
 
 # Contributing to Calcite-Web
 
+
 ## Installing
 
 If you don't have Node yet, [install it here](http://nodejs.org/). Then install the project's dependencies:
 
 1. `npm install -g grunt-cli` to install Grunt.
-2. `npm install` to install javascript dependencies.
+2. `npm install` to install JavaScript dependencies.
 
 ## Development
 
-To run a dev environment, just type `grunt`. You should have a copy of the documentation site live at `localhost:8888`.
+To run a development environment, just type `grunt`. You should have a copy of the documentation site live at `localhost:8888`. As you develop features and fix bugs, be sure to write notes in `CHANGELOG.md`.
 
-As you develop features and fix bugs, be sure to write notes in `CHANGELOG.md`.
+## How We Use GitHub
+
+All the code for Calcite-Web lives [on GitHub](https://github.com/arcgis/calcite-web). We use the [fork and pull model](https://help.github.com/articles/using-pull-requests/) to manage contribution. To contribute, you should:
+
+1. Get a GitHub account.
+2. Get access to the repository if you don't have it already by emailing a contributor
+3. Fork the repository so you have your own copy.
+4. Open a pull-request
 
 # Releasing a New Version
 
-Calcite-Web uses SemVer (Semantic Versioning) for its releases. This means that version numbers are basically formatted like `MAJOR.MINOR.PATCH`. If you're well aquainted with SemVer you should skip to 'Bumping the Version' below.
+Calcite-Web uses SemVer (Semantic Versioning) for its releases. This means that version numbers are basically formatted like `MAJOR.MINOR.PATCH`. If you're well acquainted with SemVer you should skip to 'Bumping the Version' below.
 
 #### Major
 
-Breaking changes are signified with a new **first** number. For example, moving from 1.0.0 to 2.0.0 implies breaking changes.
+Breaking changes are signified with a new **first** number. For example, moving from `1.0.0` to `2.0.0` implies breaking changes.
 
 #### Minor
 
-New components, new helper classes, or substantial visual changes to existing components and patterns are *minor releases*. These are signified by the second number changing. So from 1.1.2 to 1.2.0 there are minor changes.
+New components, new helper classes, or substantial visual changes to existing components and patterns are *minor releases*. These are signified by the second number changing. So from `1.1.2` to `1.2.0` there are minor changes.
 
 #### Patches
 
@@ -142,21 +150,7 @@ The final number signifies patches such as fixing a pattern or component in a ce
 1. Change the version number in `package.json` to the desired version number.
 2. Write a description of the changes, additions, and bug fixes in `CHANGELOG.md`.
 3. Make sure `ArcGIS/calcite-web` is up-to-date with your changes.
-4. Create a `user.js` file with your GitHub credentials.
-5. Run `grunt release`
-
-The `user.js` file should look something like this:
-
-```js
-var user = {
-  user: 'yourUsername',
-  password: 'yourPassword'
-};
-
-module.exports = function () {
-  return user;
-}
-```
+4. Run `grunt release` and enter your GitHub username and password.
 
 # Updating the Documentation Site
 
