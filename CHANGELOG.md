@@ -1,3 +1,13 @@
+## v0.0.5
+Forms, type changes, more documentation.
+
+### Added
+- Form Styling
+- Responsive Tables
+
+### Modified
+- Change light header face from 300 to 400
+
 ## v0.0.4
 Documentation and small style additions.
 
