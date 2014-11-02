@@ -14,10 +14,13 @@
   border-spacing: 0;
   border: 1px solid $lighter-gray;
   text-align: left;
+  @include font-size(-2);
 
   > thead {
     background-color: $lightest-gray;
     border-bottom: 1px solid $lighter-gray;
+    @extend .header-face;
+    @include font-size(0);
   }
 
   > tfoot {
@@ -29,7 +32,7 @@
     font-weight: normal;
     border-left: 1px solid $lighter-gray;
     border-right: 1px solid $lighter-gray;
-    padding: $baseline/2;
+    padding: $baseline/3;
   }
 
   tr {
