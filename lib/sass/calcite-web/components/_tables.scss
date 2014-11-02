@@ -23,6 +23,11 @@
     @include font-size(0);
   }
 
+  > tbody {
+    overflow: auto;
+    width: 100%;
+  }
+
   > tfoot {
     background-color: $lightest-gray;
     border-top: 1px solid $lighter-gray;
@@ -49,6 +54,7 @@
     line-height: $baseline;
     padding: $baseline/4 $baseline/2;
   }
+
 }
 
   @mixin table-blue() {
@@ -105,8 +111,8 @@
     }
   }
 
-
 @if $include-tables == true {
+  .table-wrap { overflow: auto; }
   table {@include table();}
     .table-blue {@include table-blue();}
     .table-plain {@include table-plain();}

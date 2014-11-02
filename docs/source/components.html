@@ -43,89 +43,100 @@ data:
     <a href="#" class="crumb is-active">Current</a>
   </nav>
 
-<!--   <form action="simplefancy" class="leader-4 trailer-4 clearfix">
-    <div class="row">
-      <div class="column-8 post-1">
-        <div class="field">
-          <label class="field-label" for="form-name">Name</label>
-          <input class="field-input" type="text" required placeholder="Name" id="form-name">
-        </div>
-      </div>
-      <div class="column-8">
-        <div class="field">
-          <label class="field-label" for="form-name">E-Mail</label>
-          <input class="field-input" type="email" required placeholder="E-mail" id="form-name">
-        </div>
-      </div>
 
+
+
+  <h2 class="leader-2 trailer-1" id="forms">Forms</h2>
+
+  <h3>Text Inputs</h3>
+  <div class="block-group block-group-3-up">
+    <div class="block">
+      <label for="date">date</label>
+      <input type='date' id="date">
     </div>
-    <div class="row">
-      <div class="column-16">
-        <div class="field">
-          <label class="field-label">Description</label>
-          <textarea required name="yeah" id="" rows="10" class="field-input"></textarea>
-        </div>
-      </div>
+    <div class="block">
+      <label for="datetime">datetime</label>
+      <input type='datetime' id="datetime">
     </div>
-  </form> -->
+    <div class="block">
+      <label for="datetime-local">datetime-local</label>
+      <input type='datetime-local' id="datetime-local">
+    </div>
+    <div class="block">
+      <label for="email">email</label>
+      <input type='email' id="email">
+    </div>
+    <div class="block">
+      <label for="time">time</label>
+      <input type='time' id="time">
+    </div>
+    <div class="block">
+      <label for="week">week</label>
+      <input type='week' id="week">
+    </div>
+    <div class="block">
+      <label for="search">search</label>
+      <input type='search' id="search">
+    </div>
+    <div class="block">
+      <label for="tel">tel</label>
+      <input type='tel' id="tel">
+    </div>
+    <div class="block">
+      <label for="text">text</label>
+      <input type='text' id="text">
+    </div>
+    <div class="block">
+      <label for="url">url</label>
+      <input type='url' id="url">
+    </div>
+    <div class="block">
+      <label for="number">number</label>
+      <input type='number' id="number">
+    </div>
+    <div class="block">
+      <label for="password">password</label>
+      <input type='password' id="password">
+    </div>
+    <div class="block">
+      <label for="month">month</label>
+      <input type='month' id="month">
+    </div>
+  </div>
 
-<!--
-  <form action="display" class="leader-2 trailer-2">
-    <label>
-      Username
-      <input type="text" name="username" value="guest">
-    </label>
-    <label>
-      E-Mail
-      <input type="email" name="username" value="guest">
-    </label>
+  <h3>Button Inputs</h3>
 
-    <fieldset>
-      <legend>Cats?</legend>
-      <label>
-        <input type="checkbox" checked name="username" value="Yup">Yup
-      </label>
-      <label for="cats">
-        <input type="checkbox" name="username" value="So Many">So Many
-      </label>
-    </fieldset>
+  <label for="button">button</label>
+  <input type="button" value="button" id="button">
 
-    <fieldset>
-      <legend>Too Many Cats?</legend>
-      <label>
-        <input type="radio" checked name="username" value="Oh yeah">Oh Yeah
-      </label>
-      <label for="">
-        <input type="radio" name="username" value="No way">No Way
-      </label>
-    </fieldset>
+  <label for="file">file</label>
+  <input type="file" value="file" id="file">
 
-    <fieldset class="clearfix">
-      <legend>Cat Information</legend>
-      <label>
-        Name
-        <input type="text" name="username" value="Chairman Meow?">
-      </label>
-      <label>
-        Color
-        <input type="text" name="username" value="Tortoishell?">
-      </label>
-      <label>
-        Personality Quirks
-        <textarea rows="6" placeholder="Hates laser dot ..."></textarea>
-      </label>
-    </fieldset>
-    <label>
-      Cat Snack
-      <select>
-        <option value="">Pick it</option>
-        <option value="eh">Tuna</option>
-        <option value="eh">Birds</option>
-        <option value="eh">Human Toes</option>
-      </select>
-    </label>
-  </form>
--->
+  <label for="reset">reset</label>
+  <input type="reset" value="reset" id="reset">
+
+  <label for="submit">submit</label>
+  <input type="submit" value="submit" id="submit">
+
+  <h3>Selects</h3>
+  <select>
+    <option value="">Option 1</option>
+    <option value="">Option 2</option>
+    <option value="">Option 3</option>
+    <option value="">Option 4</option>
+  </select>
+
+  <h3>Checkboxes</h3>
+
+  <h3>Radio Buttons</h3>
+
+  <fieldset>
+    <legend>Radio Buttons</legend>
+    <input type="radio" name="color" value="blue" id="blue">
+    <label for="blue">Blue</label>
+    <label><input type="radio" name="color" value="red">Red</label>
+    <label><input type="radio" name="color" value="green">Green</label>
+  </fieldset>
 
   <h2 class="leader-2 trailer-1" id="tooltips">Tooltips</h2>
 
@@ -164,28 +175,67 @@ data:
 
   <h2 class="leader-2 trailer-1" id="tables">Tables</h2>
 
-  <table class="trailer-3">
-    <thead>
-      <tr>
-        <th> td </th>
-        <th> th </th>
-        <th> th </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td> 27 </td>
-        <td> 14 </td>
-        <td> 8  </td>
-      </tr>
-      <tr>
-        <td> 27 </td>
-        <td> 14 </td>
-        <td> 8  </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>To fix a large table breaking your layout (especially on mobile), apply a <code>table-wrap</code> class to a div that wraps your table. This will cause your table to horizontally scroll when it is too large for the layout.</p>
 
+  <div class="table-wrap" class="trailer-3">
+    <table>
+      <thead>
+        <tr>
+          <th> td </th>
+          <th> th </th>
+          <th> th </th>
+          <th> th </th>
+          <th> th </th>
+          <th> th </th>
+          <th> th </th>
+          <th> th </th>
+          <th> th </th>
+          <th> th </th>
+          <th> th </th>
+          <th> th </th>
+          <th> th </th>
+          <th> th </th>
+          <th> th </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td> 27 </td>
+          <td> 14 </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+        </tr>
+        <tr>
+          <td> 27 </td>
+          <td> 14 </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </main>
 
 {% endblock %}

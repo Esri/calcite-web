@@ -1,12 +1,14 @@
 ## v0.0.5
-Forms, type changes, more documentation.
+Forms, table improvements, type changes, more documentation.
 
 ### Added
 - Form Styling
-- Responsive Tables
+- `table-wrap` - prevents large tables from breaking layout
 
 ### Modified
 - Change light header face from 300 to 400
+- Change header font of tables to Avenir Next
+- Make tables more compact
 
 ## v0.0.4
 Documentation and small style additions.
