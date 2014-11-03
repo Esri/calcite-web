@@ -15,9 +15,28 @@
 // Applies the the header face, along with a set of smart weight interactions and typographic defaults, to an element.
 //
 //.header-light             - Avenir Next Light 300
+//.header-light-italic      - Avenir Next Light Italic 300
 //.header-face              - Avenir Next Regular 400
+//.header-face-italic       - Avenir Next Regular Italic 400
 //.header-demi              - Avenir Next Semi-Bold 500
+//.header-demi-italic       - Avenir Next Semi-Bold Italic 500
 //.header-bold              - Avenir Next Bold 600
+//.header-bold-italic       - Avenir Next Bold Italic 600
+//
+//Styleguide x.x
+
+//## Header Face Sass
+//
+// Including header typeface mixins in custom SASS styles will have the same effect including the classname in your markdown, or extending the class.
+//
+//@include header-light()             - .header-light
+//@include header-light-italic()      - .header-light-italic
+//@include header-face()              - .header-face
+//@include header-face-italic()       - .header-face-italic
+//@include header-demi()              - .header-demi
+//@include header-demi-italic()       - .header-demi-italic
+//@include header-bold()              - .header-bold
+//@include header-bold-italic()       - .header-bold-italic
 //
 //Styleguide x.x
 
@@ -74,6 +93,17 @@
 //
 // Styleguide x.x
 
+//## Body Face Sass
+//
+// Including body typeface mixins in custom SASS styles will have the same effect including the classname in your markdown, or extending the class.
+//
+//@include body-face()              - .body-face
+//@include body-face-italic()       - .body-face-italic
+//@include body-bold()              - .body-bold
+//@include body-bold-italic()       - .body-bold-italic
+//
+//Styleguide x.x
+
 @mixin body-face() {
   @include tracking($body-tracking);
   font-family: $body-family; font-weight: nth($body-regular, 1); font-style: normal;
@@ -106,6 +136,17 @@
 //
 // Styleguide x.x
 
+//## Seconday Face Sass
+//
+// Including secondary typeface mixins in custom SASS styles will have the same effect including the classname in your markdown, or extending the class.
+//
+//@include secondary-face()              - .secondary-face
+//@include secondary-face-italic()       - .secondary-face-italic
+//@include secondary-bold()              - .secondary-bold
+//@include secondary-bold-italic()       - .secondary-bold-italic
+//
+//Styleguide x.x
+
 @mixin secondary-face() {
   @include tracking($secondary-tracking);
   font-family: $secondary-family; font-weight: nth($secondary-regular, 1); font-style: normal;
@@ -135,6 +176,14 @@
 //.code-face                - Consolas 400
 //
 // Styleguide x.x
+
+//## Code Face Sass
+//
+// Including code typeface mixins in custom SASS styles will have the same effect including the classname in your markdown, or extending the class.
+//
+//@include code-face()              - .code-face
+//
+//Styleguide x.x
 
 @mixin code-face() {
   @include tracking($code-tracking);
