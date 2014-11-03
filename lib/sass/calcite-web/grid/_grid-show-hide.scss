@@ -1,7 +1,44 @@
+//## Show & Hide
+//Use the helper classes show and hide to show and hide elements from view. These are useful when you need to toggle visibility in Javascript. Use them with responsive show and hide and responsive columns for fast responsive layouts.
+//
+//#### SASS
+// ```
+//@include show();
+//@include hide();
+//```
+//
+//Styleguide x.x
+
 @mixin include-show-hide(){
   .show-column { @include show(); }
   .show-column { @include hide(); }
 }
+
+//## Responsive Show & Hide
+//
+//These convinience classes are meant to help with quick responsive layout. Below are the classes and what breakpoints they are visible on:
+//
+//| Helper Class | Visible on Phone | Visible on Tablet | Visible on Desktop |
+//| ------------ | ---------------- | ----------------- | ------------------ |
+//| phone-hide   | no               | yes               | yes                |
+//| tablet-hide  | no               | no                | yes                |
+//| phone-show   | yes              | no                | no                 |
+//| tablet-show  | yes              | yes               | no                 |
+//| tablet-only  | no               | yes               | no                 |
+//
+//#### Show Helpers
+//
+//Essentially, the show classes will show that breakpoint and the breakpoint below it. So if you'd like something to be visible only on a phone, you would use ```class="phone-show"```. If you used tablet show, the element would be visible on tablet and phone.
+//
+//#### Hide Helpers
+//
+//Hide helpers are very similar to show. A responsive hide class will hide that breakpoint and the breakpoint below it. So if you wanted something to be visible on only desktop, you could use ```class="tablet-hide"```, hiding the element on tablet and phone. Or if you wanted something to be hidden only on a phone, ```class="phone-hide"``` would hide it on the phone only.
+//
+//These helpers can be combined with [responsive columns](#section-1.1.4) and [responsive pre and post](#section-1.1.6) for a full responsive toolkit.
+//
+//No modifiers
+//
+//Styleguide x.x
 
 @mixin responsive-show-hide(){
   @if $fold-grid == true {

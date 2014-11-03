@@ -1,5 +1,16 @@
 // @import "../legacy-support/ie8";
 
+//## Container
+// Required for use with the grid system, wraps the layout with a maximum width and prepares the wrapping div for gridded columns.
+//
+// #### SASS
+//```
+//@include container();
+//```
+//No Modifiers
+//
+//Styleguide x.x
+
 @mixin container() {
   @extend %clearfix;
   width: $container-width;
@@ -10,6 +21,18 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+
+//## Column Base
+// No class needed. Mixin is required for creating custom column classes.
+//
+// #### SASS
+//```
+//@include column-base();
+//```
+//No Modifiers
+//
+//Styleguide x.x
 
 @mixin column-base() {
   @include box-sizing(border-box);
@@ -26,20 +49,44 @@
   &:last-of-type { @extend %clearfix; }
 }
 
+//## First Column
+//Applying `.first-column` class removes the gutter from the left of the column, allowing it to sit flush with the edge of the grid. Not always needed, but apply as a fix if the grid is unable to figure out first-column on its own.
+//
+//#### SASS
+//```
+//@include first-column();
+//```
+//
+//No Modifiers
+//
+//Styleguide x.x
+
 @mixin first-column() {
   margin-left: -($column-gutter/2);
 }
+
+//## Class
+//Applying `.last-column` class removes the gutter from the right of the column, allowing it to sit flush with the edge of the grid. Not always needed, but apply as a fix if the grid is unable to figure out last-column on its own.
+//
+//#### SASS
+//```
+//@include last-column();
+//```
+//
+//No Modifiers
+//
+//Styleguide x.x
+
 @mixin last-column() {
   margin-right: -($column-gutter / 2);
-}
-
-@mixin row() {
-  @include column-base();
 }
 
 @mixin responsive-column() {
 
   @if $fold-grid == true {
+
+
+
     // Large Columns
     @media screen and (min-width: $medium) {
       @for $n from 1 through $large-column-count {
@@ -53,7 +100,23 @@
       }
     }
 
-    // Medium Columns
+    //## Tablet Column
+    //Sets the width of element to a number of columns across the grid at the medium viewport size, plus gutters as appropriate.
+    //
+    //.tablet-column-1  - Applies 1 columns from 12 column grid.
+    //.tablet-column-2  - Applies 2 columns from 12 column grid.
+    //.tablet-column-3  - Applies 3 columns from 12 column grid.
+    //.tablet-column-4  - Applies 4 columns from 12 column grid.
+    //.tablet-column-5  - Applies 5 columns from 12 column grid.
+    //.tablet-column-6  - Applies 6 columns from 12 column grid.
+    //.tablet-column-7  - Applies 7 columns from 12 column grid.
+    //.tablet-column-8  - Applies 8 columns from 12 column grid.
+    //.tablet-column-9  - Applies 9 columns from 12 column grid.
+    //.tablet-column-10 - Applies 10 columns from 12 column grid.
+    //.tablet-column-11 - Applies 11 columns from 12 column grid.
+    //.tablet-column-12 - Applies 12 columns from 12 column grid.
+    //
+    // Styleguide x.x
     @media screen and (max-width: $medium - 1) {
       @for $n from 1 through $medium-column-count {
         .column-#{$n} {
@@ -73,7 +136,17 @@
       }
     }
 
-    // Small Columns
+    //## Phone Column
+    //Sets the width of element to a number of columns across the grid at the small viewport size, plus gutters as appropriate.
+    //
+    //.phone-column-1  - Applies 1 columns from 6 column grid.
+    //.phone-column-2  - Applies 2 columns from 6 column grid.
+    //.phone-column-3  - Applies 3 columns from 6 column grid.
+    //.phone-column-4  - Applies 4 columns from 6 column grid.
+    //.phone-column-5  - Applies 5 columns from 6 column grid.
+    //.phone-column-6  - Applies 6 columns from 6 column grid.
+    //
+    //Styleguide x.x
     @media screen and (max-width: $small - 1) {
       @for $n from 1 through $small-column-count {
         .column-#{$n}{
@@ -98,6 +171,36 @@
       }
     }
   } @else {
+    //## Column
+    //Sets the width of element to a number of columns across the grid, plus gutters as appropriate.
+    //
+    //.column-1  - Applies 1 columns from 24 column grid.
+    //.column-2  - Applies 2 columns from 24 column grid.
+    //.column-3  - Applies 3 columns from 24 column grid.
+    //.column-4  - Applies 4 columns from 24 column grid.
+    //.column-5  - Applies 5 columns from 24 column grid.
+    //.column-6  - Applies 6 columns from 24 column grid.
+    //.column-7  - Applies 7 columns from 24 column grid.
+    //.column-8  - Applies 8 columns from 24 column grid.
+    //.column-9  - Applies 9 columns from 24 column grid.
+    //.column-10 - Applies 10 columns from 24 column grid.
+    //.column-11 - Applies 11 columns from 24 column grid.
+    //.column-12 - Applies 12 columns from 24 column grid.
+    //.column-13 - Applies 13 columns from 24 column grid.
+    //.column-14 - Applies 14 columns from 24 column grid.
+    //.column-15 - Applies 15 columns from 24 column grid.
+    //.column-16 - Applies 16 columns from 24 column grid.
+    //.column-17 - Applies 17 columns from 24 column grid.
+    //.column-18 - Applies 18 columns from 24 column grid.
+    //.column-19 - Applies 19 columns from 24 column grid.
+    //.column-20 - Applies 20 columns from 24 column grid.
+    //.column-21 - Applies 21 columns from 24 column grid.
+    //.column-22 - Applies 22 columns from 24 column grid.
+    //.column-23 - Applies 23 columns from 24 column grid.
+    //.column-24 - Applies 24 columns from 24 column grid.
+    //
+    //Styleguide x.x
+
     @for $n from 1 through $large-column-count {
       .column-#{$n} {
         width: ($n / $large-column-count) * $container-width - .01vw;
@@ -127,9 +230,6 @@
     @include last-column();
   }
 
-  .row {
-    @include row();
-  }
   @include responsive-column();
 }
 
