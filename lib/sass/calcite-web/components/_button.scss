@@ -7,9 +7,9 @@
 @mixin btn() {
   position: relative;
   display: inline-block;
-  padding: .4em .9em .4em;
+  padding: $baseline/5 .9em;
   color: $white;
-  border: none;
+  border: 1px solid $dark-blue;
   background-color: $blue;
   @include box-sizing(border-box);
   @include transition(all 0.05s linear);
@@ -20,7 +20,6 @@
     font-family: $header-family;
     font-weight: 300;
   }
-
   &:hover {
     background-color: $dark-blue;
     color: $white;
@@ -107,9 +106,6 @@
 
   @mixin btn-grouped() {
     float: left;
-    border-width: 1px;
-    border-style: solid;
-    border-color: $dark-blue;
     border-left-color: transparent;
     &:first-of-type {
       border-left-color: $dark-blue;
@@ -119,10 +115,11 @@
     }
   }
 
-  @mixin btn-color($value, $light-value) {
+  @mixin btn-color($value, $dark-value) {
     background-color: $value;
+    border-color: $dark-value;
     &:hover {
-      background-color: $light-value;
+      background-color: $dark-value;
     }
   }
 

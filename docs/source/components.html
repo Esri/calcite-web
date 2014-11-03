@@ -21,6 +21,14 @@ data:
       <a href="#button-groups" class="side-nav-link">Button Groups</a>
       <a href="#tables" class="side-nav-link">Tables</a>
     </nav>
+    <h4 class="side-nav-title">Forms</h4>
+    <nav>
+      <a href="#text-inputs" class="side-nav-link">Text Inputs</a>
+      <a href="#button-inputs" class="side-nav-link">Button Inputs</a>
+      <a href="#selects" class="side-nav-link">Selects</a>
+      <a href="#checkboxes" class="side-nav-link">Checkboxes</a>
+      <a href="#radio-buttons" class="side-nav-link">Radio Buttons</a>
+    </nav>
   </aside>
 </div>
 
@@ -42,90 +50,6 @@ data:
     <a href="#" class="crumb">Thing</a>
     <a href="#" class="crumb is-active">Current</a>
   </nav>
-
-<!--   <form action="simplefancy" class="leader-4 trailer-4 clearfix">
-    <div class="row">
-      <div class="column-8 post-1">
-        <div class="field">
-          <label class="field-label" for="form-name">Name</label>
-          <input class="field-input" type="text" required placeholder="Name" id="form-name">
-        </div>
-      </div>
-      <div class="column-8">
-        <div class="field">
-          <label class="field-label" for="form-name">E-Mail</label>
-          <input class="field-input" type="email" required placeholder="E-mail" id="form-name">
-        </div>
-      </div>
-
-    </div>
-    <div class="row">
-      <div class="column-16">
-        <div class="field">
-          <label class="field-label">Description</label>
-          <textarea required name="yeah" id="" rows="10" class="field-input"></textarea>
-        </div>
-      </div>
-    </div>
-  </form> -->
-
-<!--
-  <form action="display" class="leader-2 trailer-2">
-    <label>
-      Username
-      <input type="text" name="username" value="guest">
-    </label>
-    <label>
-      E-Mail
-      <input type="email" name="username" value="guest">
-    </label>
-
-    <fieldset>
-      <legend>Cats?</legend>
-      <label>
-        <input type="checkbox" checked name="username" value="Yup">Yup
-      </label>
-      <label for="cats">
-        <input type="checkbox" name="username" value="So Many">So Many
-      </label>
-    </fieldset>
-
-    <fieldset>
-      <legend>Too Many Cats?</legend>
-      <label>
-        <input type="radio" checked name="username" value="Oh yeah">Oh Yeah
-      </label>
-      <label for="">
-        <input type="radio" name="username" value="No way">No Way
-      </label>
-    </fieldset>
-
-    <fieldset class="clearfix">
-      <legend>Cat Information</legend>
-      <label>
-        Name
-        <input type="text" name="username" value="Chairman Meow?">
-      </label>
-      <label>
-        Color
-        <input type="text" name="username" value="Tortoishell?">
-      </label>
-      <label>
-        Personality Quirks
-        <textarea rows="6" placeholder="Hates laser dot ..."></textarea>
-      </label>
-    </fieldset>
-    <label>
-      Cat Snack
-      <select>
-        <option value="">Pick it</option>
-        <option value="eh">Tuna</option>
-        <option value="eh">Birds</option>
-        <option value="eh">Human Toes</option>
-      </select>
-    </label>
-  </form>
--->
 
   <h2 class="leader-2 trailer-1" id="tooltips">Tooltips</h2>
 
@@ -164,27 +88,169 @@ data:
 
   <h2 class="leader-2 trailer-1" id="tables">Tables</h2>
 
-  <table class="trailer-3">
-    <thead>
-      <tr>
-        <th> td </th>
-        <th> th </th>
-        <th> th </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td> 27 </td>
-        <td> 14 </td>
-        <td> 8  </td>
-      </tr>
-      <tr>
-        <td> 27 </td>
-        <td> 14 </td>
-        <td> 8  </td>
-      </tr>
-    </tbody>
-  </table>
+  <p>To fix a large table breaking your layout (especially on mobile), apply a <code>table-wrap</code> class to a div that wraps your table. This will cause your table to horizontally scroll when it is too large for the layout.</p>
+
+  <div class="table-wrap" class="trailer-3">
+    <table>
+      <thead>
+        <tr>
+          <th> td </th>
+          <th> th </th>
+          <th> th </th>
+          <th> th </th>
+          <th> th </th>
+          <th> th </th>
+          <th> th </th>
+          <th> th </th>
+          <th> th </th>
+          <th> th </th>
+          <th> th </th>
+          <th> th </th>
+          <th> th </th>
+          <th> th </th>
+          <th> th </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td> 27 </td>
+          <td> 14 </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+        </tr>
+        <tr>
+          <td> 27 </td>
+          <td> 14 </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+          <td> 8  </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="leader-2 trailer-1" id="forms">Forms</h2>
+
+  <h3 id="text-inputs">Text Inputs</h3>
+  <div class="block-group block-group-3-up">
+    <div class="block">
+      <label>date
+        <input type='date'>
+      </label>
+    </div>
+    <div class="block">
+      <label>datetime
+        <input type='datetime'>
+      </label>
+    </div>
+    <div class="block">
+      <label>datetime-local
+        <input type='datetime-local'>
+      </label>
+    </div>
+    <div class="block">
+      <label>email
+        <input type='email' placeholder='placeholder text'>
+      </label>
+    </div>
+    <div class="block">
+      <label>time
+        <input type='time'>
+      </label>
+    </div>
+    <div class="block">
+      <label>week
+        <input type='week'>
+      </label>
+    </div>
+    <div class="block">
+      <label>search
+        <input type='search'>
+      </label>
+    </div>
+    <div class="block">
+      <label>tel
+        <input type='tel'>
+      </label>
+    </div>
+    <div class="block">
+      <label>text
+        <input type='text'>
+      </label>
+    </div>
+    <div class="block">
+      <label>url
+        <input type='url'>
+      </label>
+    </div>
+    <div class="block">
+      <label>number
+        <input type='number'>
+      </label>
+    </div>
+    <div class="block">
+      <label>password
+        <input type='password'>
+      </label>
+    </div>
+    <div class="block">
+      <label>month
+        <input type='month'>
+      </label>
+    </div>
+  </div>
+
+  <h3 id="button-inputs">Button Inputs</h3>
+
+  <input type="button" value="button" id="button">
+  <input type="file" value="file" id="file">
+  <input type="reset" value="reset" id="reset">
+  <input type="submit" value="submit" id="submit">
+
+  <h3 id="selects">Selects</h3>
+  <label>
+    Select Menu:
+    <select>
+      <option value="">Menu 1</option>
+      <option value="">Menu 2</option>
+      <option value="">Menu 3</option>
+      <option value="">Menu 4</option>
+    </select>
+  </label>
+
+  <h3 id="checkboxes">Checkboxes</h3>
+  <input type="checkbox" id="checkbox"><label for="checkbox">Check Box 1</label>
+  <input type="checkbox" id="checkbox2"><label for="checkbox2">Check Box 2</label>
+
+  <h3 id="radio-buttons">Radio Buttons</h3>
+
+  <fieldset>
+    <legend>Choose One Color</legend>
+    <input type="radio" name="color" value="blue" id="blue"><label for="blue">Blue</label>
+    <input type="radio" name="color" value="red" id="red"><label for="red">Red</label>
+    <input type="radio" name="color" value="green" id="green"><label for="green">Green</label>
+  </fieldset>
 
 </main>
 

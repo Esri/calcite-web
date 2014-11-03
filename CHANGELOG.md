@@ -1,3 +1,21 @@
+## v0.0.5
+Forms, table improvements, type changes, more documentation.
+
+### Added
+- Inputs
+- Selects
+- Radio Buttons
+- Checkboxes
+- Labels
+- Legends
+- `table-wrap` - prevents large tables from breaking layout
+- `input-error` - outlines an input in red for user feedback
+
+### Modified
+- Buttons have a one pixel stroke
+- Change header font of tables to Avenir Next
+- Make tables more compact
+
 ## v0.0.4
 Documentation and small style additions.
 
