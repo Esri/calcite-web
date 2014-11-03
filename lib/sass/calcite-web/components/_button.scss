@@ -18,7 +18,7 @@
   @if $include-type {
     @include font-size(-1);
     font-family: $header-family;
-    font-weight: 300;
+    font-weight: 400;
   }
   &:hover {
     background-color: $dark-blue;
@@ -46,6 +46,7 @@
   @mixin btn-transparent() {
     background: none;
     color: $link-color;
+    border: none;
     &:hover {
       color: $link-hover;
       background: none;

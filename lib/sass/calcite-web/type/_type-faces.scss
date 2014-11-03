@@ -25,22 +25,11 @@
   @include tracking($header-tracking);
   font-family: $header-family; font-weight: nth($header-light, 1); font-style: normal;
   b, strong {font-weight: nth($header-light, 2);}
-  @media (-webkit-max-device-pixel-ratio: 1), (max-resolution: 72dpi) {
-    font-weight: 400;
-    b, strong {
-      font-weight: 500;
-    }
-  }
 }
 @mixin header-light-italic() {
   @include tracking($header-tracking);
   font-family: $header-family; font-weight: nth($header-light, 1); font-style: italic;
   b, strong {font-weight: nth($header-light, 2);}
-  @media (-webkit-max-device-pixel-ratio: 1), (max-resolution: 72dpi) {
-    font-weight: 400;
-    b, strong {font-weight: 500;}
-
-  }
 }
 @mixin header-face() {
   @include tracking($header-tracking);
