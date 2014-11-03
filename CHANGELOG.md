@@ -12,6 +12,7 @@ Forms, table improvements, type changes, more documentation.
 - `input-error` - outlines an input in red for user feedback
 
 ### Modified
+- Nav patterns & Buttons no longer default to `.header-light` on retina.
 - Buttons have a one pixel stroke
 - Change header font of tables to Avenir Next
 - Make tables more compact
