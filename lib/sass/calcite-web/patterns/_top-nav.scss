@@ -1,5 +1,5 @@
 @mixin top-nav {
-  @extend .header-light;
+  @extend .header-face;
   padding: $baseline*.75 0;
 }
 
@@ -11,7 +11,7 @@
   }
 
   @mixin top-nav-list {
-    @extend .header-light;
+    @extend .header-face;
     line-height: 1.75em;
   }
 
