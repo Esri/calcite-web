@@ -1,47 +1,4 @@
 // Forms
-
-
-// Float label
-// .field {
-//   position: relative;
-//   padding-bottom: $baseline;
-//   margin-bottom: $baseline;
-// }
-
-//   .field-label {
-//     display: block;
-//     position: absolute;
-//     @extend .header-light;
-//     @include font-size(-3);
-//     color: $dark-gray;
-//     padding: $baseline/4 $baseline/2;
-//     line-height: $baseline;
-//     z-index: -1;
-//     @include transition(all $transition);
-//   }
-
-//   .field-input {
-//     display: block;
-//     height: $baseline;
-//     width: 100%;
-
-//     @include box-sizing(border-box);
-//     // @include transition(all $transition);
-//     @include font-size(-1);
-//     padding: 0.75*$baseline $baseline/2;
-//     border: 1px solid $light-gray;
-//     outline: none;
-//     outline-offset: 0;
-
-//     &:valid {
-//       position: relative;
-//       top: 1.25*$baseline;
-//       margin-top: -1.25*$baseline;
-//       margin-bottom: 1.25*$baseline;
-
-//     }
-//   }
-
 form {
   @extend %clearfix;
 }
@@ -61,15 +18,100 @@ input, select, textarea {
   width: 100%;
   outline: none;
   outline-offset: 0;
+  margin: $baseline*.25 0;
 }
 
-label {
+label, legend {
+  display: block;
+  @extend .header-light;
+  @include font-size(0);
+}
+
+// 'Text' inputs
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='email'],
+input[type='time'],
+input[type='week'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='url'],
+input[type='number'],
+input[type='password'],
+input[type='month'],
+textarea {
   display: inline-block;
+  padding: $baseline / 5;
+  @include font-size(-1);
+  @extend .header-face;
+  color: $darkest-gray;
+  border: 1px solid $light-gray;
+  border-radius: 0;
+  @include transition(border-color 150ms linear);
+  &:focus {
+    border-color: $blue;
+  }
+  &.input-error {
+    border-color: $red;
+  }
 }
 
-input[type="checkbox"], input[type="radio"] {
-  margin: 0;
-  width: auto;
-  padding: 0;
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='time'],
+input[type='week'],
+input[type='month'] {
+  max-height: $baseline * 1.5;
+}
+
+// 'Button' inputs
+input[type='button'],
+input[type='reset'],
+input[type='submit'],
+button {
+  @include btn();
+}
+
+// File Inputs
+input[type="file"]::-webkit-file-upload-button {
+  -webkit-appearance: none;
+  @include btn();
+}
+
+::-ms-browse {
+  @include btn();
+}
+
+input[type='radio'], input[type='checkbox'] {
   float: left;
+  width: auto;
+  margin: $baseline/4 $baseline/5 0 0;
+  & + label {
+    @include font-size(-1);
+    @extend .header-face;
+    color: $darkest-gray;
+  }
+}
+
+.label-checkmark {
+  @include font-size(-1);
+  @extend .header-face;
+  color: $darkest-gray;
+}
+
+// Select Menus
+select {
+  width: auto;
+  height: $baseline * 1.5;
+  @include font-size(-1);
+  @extend .header-face;
+  border-color: $light-gray;
+  background-color: $lightest-gray;
+}
+
+.input-error {
+  border-color: $red;
 }

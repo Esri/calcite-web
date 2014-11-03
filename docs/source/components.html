@@ -21,6 +21,14 @@ data:
       <a href="#button-groups" class="side-nav-link">Button Groups</a>
       <a href="#tables" class="side-nav-link">Tables</a>
     </nav>
+    <h4 class="side-nav-title">Forms</h4>
+    <nav>
+      <a href="#text-inputs" class="side-nav-link">Text Inputs</a>
+      <a href="#button-inputs" class="side-nav-link">Button Inputs</a>
+      <a href="#selects" class="side-nav-link">Selects</a>
+      <a href="#checkboxes" class="side-nav-link">Checkboxes</a>
+      <a href="#radio-buttons" class="side-nav-link">Radio Buttons</a>
+    </nav>
   </aside>
 </div>
 
@@ -42,101 +50,6 @@ data:
     <a href="#" class="crumb">Thing</a>
     <a href="#" class="crumb is-active">Current</a>
   </nav>
-
-
-
-
-  <h2 class="leader-2 trailer-1" id="forms">Forms</h2>
-
-  <h3>Text Inputs</h3>
-  <div class="block-group block-group-3-up">
-    <div class="block">
-      <label for="date">date</label>
-      <input type='date' id="date">
-    </div>
-    <div class="block">
-      <label for="datetime">datetime</label>
-      <input type='datetime' id="datetime">
-    </div>
-    <div class="block">
-      <label for="datetime-local">datetime-local</label>
-      <input type='datetime-local' id="datetime-local">
-    </div>
-    <div class="block">
-      <label for="email">email</label>
-      <input type='email' id="email">
-    </div>
-    <div class="block">
-      <label for="time">time</label>
-      <input type='time' id="time">
-    </div>
-    <div class="block">
-      <label for="week">week</label>
-      <input type='week' id="week">
-    </div>
-    <div class="block">
-      <label for="search">search</label>
-      <input type='search' id="search">
-    </div>
-    <div class="block">
-      <label for="tel">tel</label>
-      <input type='tel' id="tel">
-    </div>
-    <div class="block">
-      <label for="text">text</label>
-      <input type='text' id="text">
-    </div>
-    <div class="block">
-      <label for="url">url</label>
-      <input type='url' id="url">
-    </div>
-    <div class="block">
-      <label for="number">number</label>
-      <input type='number' id="number">
-    </div>
-    <div class="block">
-      <label for="password">password</label>
-      <input type='password' id="password">
-    </div>
-    <div class="block">
-      <label for="month">month</label>
-      <input type='month' id="month">
-    </div>
-  </div>
-
-  <h3>Button Inputs</h3>
-
-  <label for="button">button</label>
-  <input type="button" value="button" id="button">
-
-  <label for="file">file</label>
-  <input type="file" value="file" id="file">
-
-  <label for="reset">reset</label>
-  <input type="reset" value="reset" id="reset">
-
-  <label for="submit">submit</label>
-  <input type="submit" value="submit" id="submit">
-
-  <h3>Selects</h3>
-  <select>
-    <option value="">Option 1</option>
-    <option value="">Option 2</option>
-    <option value="">Option 3</option>
-    <option value="">Option 4</option>
-  </select>
-
-  <h3>Checkboxes</h3>
-
-  <h3>Radio Buttons</h3>
-
-  <fieldset>
-    <legend>Radio Buttons</legend>
-    <input type="radio" name="color" value="blue" id="blue">
-    <label for="blue">Blue</label>
-    <label><input type="radio" name="color" value="red">Red</label>
-    <label><input type="radio" name="color" value="green">Green</label>
-  </fieldset>
 
   <h2 class="leader-2 trailer-1" id="tooltips">Tooltips</h2>
 
@@ -236,6 +149,109 @@ data:
       </tbody>
     </table>
   </div>
+
+  <h2 class="leader-2 trailer-1" id="forms">Forms</h2>
+
+  <h3 id="text-inputs">Text Inputs</h3>
+  <div class="block-group block-group-3-up">
+    <div class="block">
+      <label>date
+        <input type='date'>
+      </label>
+    </div>
+    <div class="block">
+      <label>datetime
+        <input type='datetime'>
+      </label>
+    </div>
+    <div class="block">
+      <label>datetime-local
+        <input type='datetime-local'>
+      </label>
+    </div>
+    <div class="block">
+      <label>email
+        <input type='email' placeholder='placeholder text'>
+      </label>
+    </div>
+    <div class="block">
+      <label>time
+        <input type='time'>
+      </label>
+    </div>
+    <div class="block">
+      <label>week
+        <input type='week'>
+      </label>
+    </div>
+    <div class="block">
+      <label>search
+        <input type='search'>
+      </label>
+    </div>
+    <div class="block">
+      <label>tel
+        <input type='tel'>
+      </label>
+    </div>
+    <div class="block">
+      <label>text
+        <input type='text'>
+      </label>
+    </div>
+    <div class="block">
+      <label>url
+        <input type='url'>
+      </label>
+    </div>
+    <div class="block">
+      <label>number
+        <input type='number'>
+      </label>
+    </div>
+    <div class="block">
+      <label>password
+        <input type='password'>
+      </label>
+    </div>
+    <div class="block">
+      <label>month
+        <input type='month'>
+      </label>
+    </div>
+  </div>
+
+  <h3 id="button-inputs">Button Inputs</h3>
+
+  <input type="button" value="button" id="button">
+  <input type="file" value="file" id="file">
+  <input type="reset" value="reset" id="reset">
+  <input type="submit" value="submit" id="submit">
+
+  <h3 id="selects">Selects</h3>
+  <label>
+    Select Menu:
+    <select>
+      <option value="">Menu 1</option>
+      <option value="">Menu 2</option>
+      <option value="">Menu 3</option>
+      <option value="">Menu 4</option>
+    </select>
+  </label>
+
+  <h3 id="checkboxes">Checkboxes</h3>
+  <input type="checkbox" id="checkbox"><label for="checkbox">Check Box 1</label>
+  <input type="checkbox" id="checkbox2"><label for="checkbox2">Check Box 2</label>
+
+  <h3 id="radio-buttons">Radio Buttons</h3>
+
+  <fieldset>
+    <legend>Choose One Color</legend>
+    <input type="radio" name="color" value="blue" id="blue"><label for="blue">Blue</label>
+    <input type="radio" name="color" value="red" id="red"><label for="red">Red</label>
+    <input type="radio" name="color" value="green" id="green"><label for="green">Green</label>
+  </fieldset>
+
 </main>
 
 {% endblock %}

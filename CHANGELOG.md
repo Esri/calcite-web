@@ -2,11 +2,17 @@
 Forms, table improvements, type changes, more documentation.
 
 ### Added
-- Form Styling
+- Inputs
+- Selects
+- Radio Buttons
+- Checkboxes
+- Labels
+- Legends
 - `table-wrap` - prevents large tables from breaking layout
+- `input-error` - outlines an input in red for user feedback
 
 ### Modified
-- Change light header face from 300 to 400
+- Buttons have a one pixel stroke
 - Change header font of tables to Avenir Next
 - Make tables more compact
 
