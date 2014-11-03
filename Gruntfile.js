@@ -87,7 +87,8 @@ module.exports = function(grunt) {
       expanded: {
         options: {
           style: 'expanded',
-          sourcemap: 'none'
+          sourcemap: 'none',
+          require: './lib/list-files.rb'
         },
         files: {
           'dist/css/calcite-web.css': 'lib/sass/calcite-web.scss'
@@ -96,7 +97,8 @@ module.exports = function(grunt) {
       minified: {
         options: {
           style: 'compressed',
-          sourcemap: 'none'
+          sourcemap: 'none',
+          require: './lib/list-files.rb'
         },
         files: {
           'dist/css/calcite-web.min.css': 'lib/sass/calcite-web.scss'
@@ -106,7 +108,8 @@ module.exports = function(grunt) {
         options: {
           style: 'expanded',
           sourcemap: 'none',
-          loadPath: 'lib/sass/'
+          loadPath: 'lib/sass/',
+          require: './lib/list-files.rb'
         },
         files: {
           'docs/build/assets/css/all.css': 'docs/source/assets/css/all.scss'

@@ -23,6 +23,7 @@ $include-alerts:                      true    !default;
 $include-tables:                      true    !default;
 $include-panel:                       true    !default;
 $include-button:                      true    !default;
+$include-icons:                       true    !default;
 $include-breadcrumbs:                 true    !default;
 $include-tooltip:                     true    !default;
 
@@ -70,6 +71,7 @@ $include-accordion:                   true    !default;
 // small pieces: buttons, icons, tables...
 @import "calcite-web/components/button";
 @import "calcite-web/components/breadcrumbs";
+@import "calcite-web/components/icons";
 @import "calcite-web/components/tooltip";
 @import "calcite-web/components/alerts";
 @import "calcite-web/components/panel";
