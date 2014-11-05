@@ -2,163 +2,50 @@
 title: Calcite Web
 description: Quickly build beautiful, consistent websites with the Calcite Web Framework
 data:
-  - kss
+  - table_of_contents
 ---
 
 {% extends "_layout" %}
 
+
+<!-- Aside Col 6 -->
+{# Messy Ass duplicated code - blocks have no access to global scope variables. Annoying. #}
+{% block sidenav %}
+{% set section = '' %}
+{% for current in table_of_contents %}
+  {% if current.title == 'Get Started' %}
+    {% set section = current %}
+  {% endif %}
+{% endfor %}
+
+  {% for group in section.navigation %}
+    <h4 class="side-nav-title">{{ group.group }}</h4>
+    <nav>
+      {% for page in group.pages %}
+        <a href="/{{section.base}}#{{page.link}}" class="side-nav-link">{{page.title}}</a>
+      {% endfor %}
+    </nav>
+  {% endfor %}
+
+{% endblock %}
+
+<!-- Main Col 17 -->
+{# Messy Ass duplicated code - blocks have no access to global scope variables. Annoying. #}
 {% block content %}
+{% set section = '' %}
 
-<!-- side-nav pattern -->
-<div class="column-6">
-  <aside class="side-nav column-6">
-    <h4 class="side-nav-title">Get Started</h4>
-    <nav>
-      <a href="#static-files" class="side-nav-link">Static Files</a>
-      <a href="#ruby-gem" class="side-nav-link">Ruby Gem</a>
-      <a href="#npm" class="side-nav-link">NPM</a>
-    </nav>
-    <h4 class="side-nav-title">Contributing</h4>
-    <nav>
-      <a href="#installing" class="side-nav-link">Install</a>
-      <a href="#development" class="side-nav-link">Development</a>
-      <a href="#releasing-a-new-version" class="side-nav-link">Versioning</a>
-      <a href="#updating-the-documentation-site" class="side-nav-link">Deploying the Documentation</a>
-    </nav>
-  </aside>
-</div>
+{% for current in table_of_contents %}
+  {% if current.title == 'Get Started' %}
+    {% set section = current %}
+  {% endif %}
+{% endfor %}
 
-<main class="column-17 pre-1">
-
-{% markdown %}
-# Calcite-Web
-
-Calcite Web is a CSS framework built in SASS. It also includes a small, vanilla JavaScript library that allows you to have interactive patterns in your site like tabs, modals, etc. Calcite Web is a web-adaptation of the Calcite framework that was developed for ArcGIS Pro. The idea is to have designs be consistent, but also embrace the characteristics that make each medium unique.
-
-Calcite Web was built *for* developers. It is meant to be flexible enough that you can accomplish 80% of your website with the default patterns. If you use Calcite Web as a Sass library, you'll also get a set of very helpful mixins to help you make new patterns and components that fit in with the Calcite methodology and aesthetic.
-
-# Using Calcite-Web
-
-There are two main ways to use Calcite-Web: copying static files into your project and installing via a package manager. Obviously, installing as a Sass library will give you the most power, but whatever your flavor, we probably have you covered.
-
-## Static Files
-
-This is probably the easiest way, but you won't get any of the helpful Sass mixins. If you're looking to get up and running quickly, just [download the latest release](https://github.com/ArcGIS/calcite-web/releases) and move the zipped files to wherever you keep your assets (CSS, JavaScript, images). Be sure to use [the documentation site](http://arcgis.github.io/calcite-web/) to copy and paste patterns, components, and even a sample html boilerplate.
-
-When used statically, one very helpful thing to know is that Calcite Web comes bundled with several modifier classes. For example, if you need to add some margin to the top of an element, instead of writing a class and adding it yourself, you can use the built in `leader-X` class:
-
-```html
-<div class="leader-3">
-  This item will get three 'lines' of margin at the top.
-</div>
-```
-
-This will keep spacing consistent and you won't have to write any CSS! There are modifier classes for virtually everything: padding, margin, text-color, background-color, etc. Be sure to visit the other links and read up on what is possible.
-
-## Ruby Gem
-
-To install Calcite-Web as a ruby gem, add a reference to the gem to your Gemfile:
-
-```ruby
-gem "calcite-web", :git => "https://github.com/ArcGIS/calcite-web.git", :tag => "v0.0.0"
-```
-
-Be sure to use the most up to date tag.
-
-Then in your project's sass file, just import it:
-
-```scss
-@import "calcite-web";
-```
-
-That will give you everything including sass utilities. You will also need to copy over the javascript and image assets to your static folder (see above).
-
-Calcite Web has a built in library of mixins that cover everything from animation to font-size. To be sure you're building your site in the easiest way (and the most visually consistent way) read up on everything that's available on the [SASS Page](./sass).
-
-## NPM
-
-To install Calcite Web with npm, type:
-
-```bash
-npm install --save-dev git://github.com/ArcGIS/calcite-web.git
-```
-
-You can also use a specific release by appending the version number to the end:
-
-```bash
-npm install --save-dev git://github.com/ArcGIS/calcite-web.git#v0.0.1
-```
-
-Then, if you're using sass, be sure to add `node_modules/calcite-web/dist/sass/` to your load path. If you're using `grunt-contrib-sass` you add that like this:
-
-```js
-'sass': {
-  target: {
-    options: {
-      loadPath: 'node_modules/calcite-web/dist/sass/'
-    },
-    files: {
-      'path/to.css': 'path/to.scss'
-    }
-  }
-}
-```
-
-Then in your main `.scss` file, you can just require the framework: `@import "calcite-web";`. Everything mentioned about mixins above in the Ruby gem section applies to the Node module as well, so scroll up a bit and learn more about how Calcite Web functions as a Sass library;
-
-# Contributing to Calcite-Web
-
-
-## Installing
-
-If you don't have Node yet, [install it here](http://nodejs.org/). Then install the project's dependencies:
-
-1. `npm install -g grunt-cli` to install Grunt.
-2. `npm install` to install JavaScript dependencies.
-
-## Development
-
-To run a development environment, just type `grunt`. You should have a copy of the documentation site live at `localhost:8888`. As you develop features and fix bugs, be sure to write notes in `CHANGELOG.md`.
-
-## How We Use GitHub
-
-All the code for Calcite-Web lives [on GitHub](https://github.com/arcgis/calcite-web). We use the [fork and pull model](https://help.github.com/articles/using-pull-requests/) to manage contribution. To contribute, you should:
-
-1. Get a GitHub account.
-2. Get access to the repository if you don't have it already by emailing a contributor
-3. Fork the repository so you have your own copy.
-4. Open a pull-request
-
-# Releasing a New Version
-
-Calcite-Web uses SemVer (Semantic Versioning) for its releases. This means that version numbers are basically formatted like `MAJOR.MINOR.PATCH`. If you're well acquainted with SemVer you should skip to 'Bumping the Version' below.
-
-#### Major
-
-Breaking changes are signified with a new **first** number. For example, moving from `1.0.0` to `2.0.0` implies breaking changes.
-
-#### Minor
-
-New components, new helper classes, or substantial visual changes to existing components and patterns are *minor releases*. These are signified by the second number changing. So from `1.1.2` to `1.2.0` there are minor changes.
-
-#### Patches
-
-The final number signifies patches such as fixing a pattern or component in a certain browser, or fixing an existing bug. Small changes to the documentation site and the tooling around the Calcite-Web library are also considered patches.
-
-## Bumping the Version
-
-1. Change the version number in `package.json` to the desired version number.
-2. Write a description of the changes, additions, and bug fixes in `CHANGELOG.md`.
-3. Make sure `ArcGIS/calcite-web` is up-to-date with your changes.
-4. Run `grunt release` and enter your GitHub username and password.
-
-# Updating the Documentation Site
-
-To update the documentation site, just make sure you have push access to the `ArcGIS/calcite-web` repo and type `grunt deploy`. This will build the site and deploy to gh-pages.
-
-The site should be updated at http://arcgis.github.io/calcite-web/ in just a few moments.
-{% endmarkdown %}
-
-</main>
+  {% for group in section.navigation %}
+    {% for page in group.pages %}
+      <section>
+        {% markdown %}{% include '_' + page.link %}{% endmarkdown %}
+      </section>
+    {% endfor %}
+  {% endfor %}
 
 {% endblock %}
