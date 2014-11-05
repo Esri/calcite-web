@@ -52,7 +52,7 @@
         <div class="container">
 
           <h1 class="sub-nav-title"><a href="../" class="link-white">Web</a></h1>
-          <a href="#" class="btn btn-orange btn-arrow right leader-1">Call to Action</a>
+          <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-orange btn-arrow right leader-1">Latest Release</a>
           <nav class="sub-nav-list">
             <a class="sub-nav-link is-active" href="../">Calcite Web</a>
             <a class="sub-nav-link" href="#">Calcite Dojo</a>
@@ -86,59 +86,414 @@
 
       <!-- content of each page will go here -->
       <div class="container leader-1">
-        
+        <div class="column-6">
+          <aside class="side-nav column-6">
+            
 
-<!-- side-nav pattern -->
-<div class="column-6">
-  <aside class="side-nav column-6">
-    <h4 class="side-nav-title">Type</h4>
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+    <h4 class="side-nav-title">Typefaces</h4>
     <nav>
-      <a href="#" class="side-nav-link">Overview</a>
-      <a href="#" class="side-nav-link">Typefaces</a>
-      <a href="#" class="side-nav-link">Weights</a>
-      <a href="#" class="side-nav-link">Styles</a>
+      
+        <a href="/type#overview" class="side-nav-link">Overview</a>
+      
+        <a href="/type#header-face" class="side-nav-link">Header Face</a>
+      
+        <a href="/type#body-face" class="side-nav-link">Body Face</a>
+      
+        <a href="/type#secondary-face" class="side-nav-link">Secondary Face</a>
+      
+        <a href="/type#code-face" class="side-nav-link">Code Face</a>
+      
     </nav>
-    <h4 class="side-nav-title">Modifiers</h4>
+  
+    <h4 class="side-nav-title">Composition Helpers</h4>
     <nav>
-      <a href="#" class="side-nav-link">Colors</a>
-      <a href="#" class="side-nav-link">Weights</a>
-      <a href="#" class="side-nav-link">Styles</a>
-      <a href="#" class="side-nav-link">Alignment</a>
+      
+        <a href="/type#composition-helpers" class="side-nav-link">Overview</a>
+      
+        <a href="/type#text-large" class="side-nav-link">Large</a>
+      
+        <a href="/type#text-small" class="side-nav-link">Small</a>
+      
+        <a href="/type#text-light" class="side-nav-link">Light</a>
+      
+        <a href="/type#text-color" class="side-nav-link">Color</a>
+      
+        <a href="/type#link-color" class="side-nav-link">Link Color</a>
+      
+        <a href="/type#text-ellipsis" class="side-nav-link">Ellipsis</a>
+      
+        <a href="/type#text-rule" class="side-nav-link">Rule</a>
+      
+        <a href="/type#list-bulleted" class="side-nav-link">Bulleted List</a>
+      
+        <a href="/type#list-numbered" class="side-nav-link">Numbered List</a>
+      
     </nav>
-  </aside>
-
-</div>
-
-<main class="column-17 pre-1">
-
-  <h2 class="leader-2">Sample Typography</h2>
-
-  <p>The <code>content-area</code> class formats everything so it is more condusive to long-form reading. If you add the class to your wrapper element, all the elements below will inherit a set of styles giving everything proper spacing and line-length. The following elements are spaced properly:</p>
-
-  <ul class="list-bulleted">
-    <li>Headers</li>
-    <li>Images</li>
-    <li>Lists</li>
-    <li>Tables</li>
-    <li>Horizontal Rules</li>
-    <li>Code Blocks</li>
-  </ul>
-
-  <h3>How to use it:</h3>
-
-  <ol class="list-numbered">
-    <li>add the <code>content-area</code> class</li>
-    <li>write some markup</li>
-    <li>enjoy.</li>
-  </ol>
-  <h2>Content Area</h2>
-  <p class="trailer-3">
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-  </p>
-
-</main>
+  
+    <h4 class="side-nav-title">Composition Mixins</h4>
+    <nav>
+      
+        <a href="/type#composition-mixins" class="side-nav-link">Overview</a>
+      
+        <a href="/type#font-size" class="side-nav-link">Font Size</a>
+      
+        <a href="/type#tracking" class="side-nav-link">Tracking</a>
+      
+        <a href="/type#leading" class="side-nav-link">Leading</a>
+      
+        <a href="/type#word-spacing" class="side-nav-link">Word Spacing</a>
+      
+        <a href="/type#unicode-variables" class="side-nav-link">Unicode Variables</a>
+      
+        <a href="/type#modular-scale" class="side-nav-link">Modular Scale</a>
+      
+    </nav>
+  
 
 
+           </aside>
+        </div>
+        <main class="column-17 pre-1">
+          
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+    
+      <section class="trailer-2">
+        <h1 class="leader-0">Calcite Type System</h1>
+
+<p>The Calcite Type System uses a combination of mixins and helper classes to achieve a clear visual style, focusing primarily on simplifying typesetting processes. Using the mixins and classes properly will ensure that all properties are consistent, beautiful, and robust.</p>
+<h3 id="typefaces">Typefaces</h3>
+<p>We expose four sets of type families for use in Calcite Web; a Header Family, a Body Family, a Secondary Family, and a Code Family. Each of these type families have a set of weights and styles, defined by their application. For example, the Header Family has more weights than the Body family, reflecting its role as primary UI face, and heavy lifting header face.</p>
+<p>The typographic pallete for Calcite Web differs slightly from the official Esri branding document. All typefaces are examined in detail below.</p>
+<p>Calcite Web provides a set of weights for each typeface. These are used by either using the helper class in html, or the writing sass to include the mixin, or extending the helper class. The available weights for each face are below. Proper care has been taken to ensure that all type systems used by Calcite avoid faux-bold and faux-italics styled by the browser.</p>
+<h3 id="vertical-rhythym">Vertical Rhythym</h3>
+<p>Vertical rhythym is maintained in the Calcite Web Type System by the use of the <code>$baseline</code> variable. <code>$baseline</code> sets a standard and regular leading in relation to the body copy – 1.5rem. This variable is used for any measurement on the vertical axis in the page, including the <a href="/grid/#leader-and-trailer">leader and trailer grid helper classes</a> and padding for <a href="/components/#buttons">components like buttons</a> which use standard measurements like <code>3/$baseline</code> and <code>2/$baseline</code>.</p>
+<h3 id="proportional-scales">Proportional Scales</h3>
+<p>Text sizes are defined by a simple <a href="http://alistapart.com/article/more-meaningful-typography">modular scale</a>. The scale is defined by two base sizes for type - body at 1rem and small at 0.75rem - and extrapolates a series of larger type sizes based on a single ratio; 1.25, or a major third interval. All type sizes are <a href="http://snook.ca/archives/html_and_css/font-size-with-rem">set in rems</a>, which have <a href="http://caniuse.com/#feat=rem">more than accpetable browser support</a>. Rems are used type sizing and all vertical measurements, defined either by the <code>$baseline</code> variable or the <a href="#modular-scale">modular scale</a> and <a href="#font-size">font size</a> mixins. This prevents odd sizing issues with nested content, unpredictable results with scaling, and provides a solid anchor for determining sizes.</p>
+
+      </section>
+      <hr class="trailer-2">
+    
+      <section class="trailer-2">
+        <h2 id="header-face">Header Face</h2>
+<p><a href="http://www.fonts.com/font/linotype/avenir-next">Avenir Next</a> is a recut of the classic Avenir typeface, by Adrian Frutiger and Akira Kobayashi. It has been reworked for use on the web, and contains more weights, styles, and other improvements. Avenir Next improves on Avenir in specifically web settings.</p>
+<p>Applies the the header face, along with a set of smart weight interactions and typographic defaults, to an element.</p>
+<h3 id="avenir-next">Avenir Next</h3>
+<h2 class="type-sample"> Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</h2>
+<h2 class="type-sample"> Amazingly few discotheques provide jukeboxes.</h2>
+
+<h3 id="modifers">Modifers</h3>
+
+      </section>
+      <hr class="trailer-2">
+    
+      <section class="trailer-2">
+        <h2 id="body-face">Body Face</h2>
+<p>While there is no official Esri brand typeface for long for applications, Calcite Web employs <a href="http://www.fonts.com/font/linotype/frutiger?QueryFontType=Web">Frutiger</a> for this purpose. Frutiger evokes some of the stronger qualities of our default typefaces - Lucida Grande and Segoe UI - while presenting a consistent voice across platforms. Frutiger pairs remarkably well with Avenir, as they are both designed by Adrian Frutiger, with strong influences from Univers.</p>
+<h3 id="frutiger">Frutiger</h3>
+<p class="type-sample"> Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+<p class="type-sample"> Amazingly few discotheques provide jukeboxes.</p>
+
+<h3 id="modifers">Modifers</h3>
+
+      </section>
+      <hr class="trailer-2">
+    
+      <section class="trailer-2">
+        <h2 id="secondary-face">Secondary Face</h2>
+<p><a href="http://www.fonts.com/font/itc/itc-charter">ITC Charter</a>, designer by Mathew Carter, is used as a Serif alternative to the sans-serif body face. While usage should be sparse, Charter provides the opportunity to add variation and contrast to a pages pallete.</p>
+<h3 id="itc-charter">ITC Charter</h3>
+<h2 class="secondary-face type-sample"> Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</h2>
+<h2 class="secondary-face  type-sample"> Amazingly few discotheques provide jukeboxes.</h2>
+
+<h3 id="modifers">Modifers</h3>
+
+      </section>
+      <hr class="trailer-2">
+    
+      <section class="trailer-2">
+        <h2 id="code">Code</h2>
+<p>Designed by Microsoft&#39;s Lucas DeGroot, <a href="http://www.fonts.com/font/microsoft-corporation/consolas">Consolas</a> is a clean, readable, and simple monospace face for documenting code blocks.</p>
+<h3 id="consolas">Consolas</h3>
+<h2 class="code-face type-sample"> Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</h2>
+<h2 class="code-face  type-sample"> Amazingly few discotheques provide jukeboxes.</h2>
+
+<h3 id="modifers">Modifers</h3>
+
+      </section>
+      <hr class="trailer-2">
+    
+  
+    
+      <section class="trailer-2">
+        <h2 id="composition-helpers">Composition Helpers</h2>
+<p>Dats SASS, ass!</p>
+
+      </section>
+      <hr class="trailer-2">
+    
+      <section class="trailer-2">
+        <h3 id="text-large">Text Large</h3>
+<p>Sets the font size of the element to one step of the typgraphic scale from the body size.</p>
+<pre><code>.<span class="hljs-keyword">class</span> {
+  @<span class="hljs-preprocessor"><span class="hljs-keyword">include</span> text-large();</span>
+}
+</code></pre>
+      </section>
+      <hr class="trailer-2">
+    
+      <section class="trailer-2">
+        <h3 id="text-small">Text Small</h3>
+<p>Sets the font size font of the elements to one step down the typographic scale from the body size.</p>
+<pre><code>.<span class="hljs-keyword">class</span> {
+  @<span class="hljs-preprocessor"><span class="hljs-keyword">include</span> text-small();</span>
+}
+</code></pre>
+      </section>
+      <hr class="trailer-2">
+    
+      <section class="trailer-2">
+        <h3 id="text-light">Text Light</h3>
+<p>Sets the opacity of the element to a standardized value.</p>
+<pre><code>.<span class="hljs-keyword">class</span> {
+  @<span class="hljs-preprocessor"><span class="hljs-keyword">include</span> text-light();</span>
+}
+</code></pre>
+      </section>
+      <hr class="trailer-2">
+    
+      <section class="trailer-2">
+        <h3 id="type-color">Type Color</h3>
+<p>Sets the color of the element to any of the calcite colors available.</p>
+<ul>
+<li>.text-red          - Sets the color to red.</li>
+<li>.text-green        - Sets the color to green.</li>
+<li>.text-blue         - Sets the color to blue.</li>
+<li>.text-purple       - Sets the color to purple.</li>
+<li>.text-orange       - Sets the color to orange.</li>
+<li>.text-brown        - Sets the color to brown.</li>
+<li>.text-white        - Sets the color to white.</li>
+<li>.text-light-gray   - Sets the color to light-gray.</li>
+<li>.text-gray         - Sets the color to gray.</li>
+<li>.text-dark-gray    - Sets the color to dark-gray.</li>
+<li>.text-darker-gray  - Sets the color to darker-gray.</li>
+<li>.text-darkest-gray - Sets the color to darkest-gray.</li>
+<li>.text-off-black    - Sets the color to off-black.</li>
+</ul>
+
+      </section>
+      <hr class="trailer-2">
+    
+      <section class="trailer-2">
+        <h3 id="link-color">Link Color</h3>
+<p>Sets the color of links within the element, or the link itself, to available calcite colors.</p>
+<ul>
+<li>.link-red          - Sets the color to red.</li>
+<li>.link-green        - Sets the color to green.</li>
+<li>.link-blue         - Sets the color to blue.</li>
+<li>.link-purple       - Sets the color to purple.</li>
+<li>.link-orange       - Sets the color to orange.</li>
+<li>.link-brown        - Sets the color to brown.</li>
+<li>.link-white        - Sets the color to white.</li>
+<li>.link-light-gray   - Sets the color to light-gray.</li>
+<li>.link-gray         - Sets the color to gray.</li>
+<li>.link-dark-gray    - Sets the color to dark-gray.</li>
+<li>.link-darker-gray  - Sets the color to darker-gray.</li>
+<li>.link-darkest-gray - Sets the color to darkest-gray.</li>
+<li>.link-off-black    - Sets the color to off-black.</li>
+</ul>
+
+      </section>
+      <hr class="trailer-2">
+    
+      <section class="trailer-2">
+        <h3 id="text-ellipsis">Text Ellipsis</h3>
+<p>Adds a set of styles to the element that will cause the any text overflow to be hidden, truncated with an ellipsis. Useful for long keeping long strings on text to a single line.</p>
+<pre><code>.<span class="hljs-keyword">class</span> {
+  @<span class="hljs-preprocessor"><span class="hljs-keyword">include</span> text-ellipsis();</span>
+}
+</code></pre>
+      </section>
+      <hr class="trailer-2">
+    
+      <section class="trailer-2">
+        <h3 id="text-rule">Text Rule</h3>
+<p>Adds a one pixel border bottom to the element. Will be expanded to take arguments for different type of rules?</p>
+<pre><code>.<span class="hljs-keyword">class</span> {
+  @<span class="hljs-preprocessor"><span class="hljs-keyword">include</span> text-rule();</span>
+}
+</code></pre>
+      </section>
+      <hr class="trailer-2">
+    
+      <section class="trailer-2">
+        <h3 id="list-bulleted">List Bulleted</h3>
+<p>Adds the calcite styles for bulleted lists to an unordered list.</p>
+<pre><code>.<span class="hljs-keyword">class</span> {
+  @<span class="hljs-preprocessor"><span class="hljs-keyword">include</span> list-bulleted();</span>
+}
+</code></pre>
+      </section>
+      <hr class="trailer-2">
+    
+      <section class="trailer-2">
+        <h3 id="list-numbered">List Numbered</h3>
+<p>Adds the calcite styles for large numbered lists to an ordered list. Useful for listing steps in a process.</p>
+<pre><code>.<span class="hljs-keyword">class</span> {
+  @<span class="hljs-preprocessor"><span class="hljs-keyword">include</span> list-numbered();</span>
+}
+</code></pre>
+      </section>
+      <hr class="trailer-2">
+    
+  
+    
+      <section class="trailer-2">
+        <h2 id="composition-mixins">Composition Mixins</h2>
+<p>Dats SASS, ass!</p>
+
+      </section>
+      <hr class="trailer-2">
+    
+      <section class="trailer-2">
+        <h2 id="font-size">Font Size</h2>
+<p>The Calcite Web type system uses a modular typographic scale to ensure a consistent tonal range within all text elements. This modular scale is created from the body size of the type, and a second, smaller size. These two type sizes anchor the scale, and using a precise ratio can be expanded to an entire set of sizes for all typographic needs.
+The <code>font-size($n)</code> mixin takes an integer, positive or negative, and sets all type within the element to the size defined by traversing that number of steps up or down the typographic scale.
+The <code>font-size($n)</code> mixin relies on the <code>modular-scale($n)</code> mixin to define the scale, and apply it to typographic elements.</p>
+
+      </section>
+      <hr class="trailer-2">
+    
+      <section class="trailer-2">
+        <h2 id="tracking">Tracking</h2>
+<p>Tracking is the space between letters in a work. The <code>tracking($n)</code> mixin accepts an integer, and applies letterspacing to the element as fractions of 1/1000 of an em.
+<code>@include tracking(500)</code> will apply 1/2 em letterspacing.
+<code>@include tracking(166)</code> will apply a hairline em letterspacing.</p>
+
+      </section>
+      <hr class="trailer-2">
+    
+      <section class="trailer-2">
+        <h2 id="leading">Leading</h2>
+<p>Leading is the space between lines in a text block. The <code>leading($n)</code> mixin accepts an integer, and sets the line height of the element to the integer times the standard baseline unit.</p>
+
+      </section>
+      <hr class="trailer-2">
+    
+      <section class="trailer-2">
+        <h2 id="word-spacing">Word Spacing</h2>
+<p>Word spacing is - well - the space between words.  The <code>word-spacing($n)</code> mixin accepts an integer, and applies letterspacing to the element as fractions of 1/1000 of an em.
+<code>@include word-spacing(500)</code> will apply 1/2 em word spacing.
+<code>@include word-spacing(166)</code> will apply a hairline em word spacing.</p>
+
+      </section>
+      <hr class="trailer-2">
+    
+      <section class="trailer-2">
+        <h2 id="unicode-variables">Unicode Variables</h2>
+<p>SASS Unicode variables provide a simple way to display unicode characters as content in css declarations.</p>
+<ul>
+<li>$space        : space</li>
+<li>$nbsp         : non-breaking space</li>
+<li>$quot         : quotation mark</li>
+<li>$lsquo        : left single curly quote</li>
+<li>$rsquo        : right single curly quote</li>
+<li>$ldquo        : left double curly quote</li>
+<li>$rdquo        : right double curly quote</li>
+<li>$lsaquo       : left single angle quote (guillemet)</li>
+<li>$rsaquo       : right single angle quote (guillemet)</li>
+<li>$laquo        : left double angle quote (guillemet)</li>
+<li>$raquo        : right double angle quote (guillemet)</li>
+<li>$mdash        : em dash (mutton)</li>
+<li>$ndash        : en dash (nut)</li>
+<li>$hyphen       : hyphen</li>
+<li>$amp          : ampersand</li>
+<li>$gt           : greater than</li>
+<li>$lt           : less than</li>
+<li>$times        : times</li>
+<li>$bigtimes     : big times</li>
+<li>$checkmark    : checkmark</li>
+<li>$sect         : section sign</li>
+<li>$para         : pilcrow</li>
+<li>$middot       : interpoint (interpunct, midddot)</li>
+<li>$oslash       : slashed o</li>
+<li>$bull         : bullet</li>
+<li>$whibull      : white bullet</li>
+<li>$hellip       : horizontal ellipsis</li>
+<li>$vellip       : vertical ellipsis</li>
+<li>$midhellip    : midline horizontal ellipsis</li>
+<li>$utri         : up-pointing triangle</li>
+<li>$dtri         : down-pointing triangle</li>
+<li>$ltri         : left-pointing triangle</li>
+<li>$rtri         : right-pointing triangle</li>
+<li>$ustri        : up-pointing small triangle</li>
+<li>$dstri        : down-pointing small triangle</li>
+<li>$lstri        : left-pointing small triangle</li>
+<li>$rstri        : right-pointing small triangle</li>
+<li>$diamond      : diamond</li>
+<li>$fisheye      : fisheye</li>
+<li>$bullseye     : bullseye</li>
+<li>$circle       : circle</li>
+<li>$whitecircle  : white circle</li>
+<li>$square       : square</li>
+<li>$whitesquare  : white square</li>
+<li>$ssquare      : small square</li>
+<li>$swhitesquare : small white square</li>
+</ul>
+
+      </section>
+      <hr class="trailer-2">
+    
+      <section class="trailer-2">
+        <h2 id="modular-scale">Modular Scale</h2>
+<p>The <code>modular-scale($n)</code> behaves the same as the <code>font-size($n)</code> mixin, but returns a raw rem value rather than css styles specific to type elements. This means that the <code>modular-scale($n)</code> mixin can be used to define heights, widths, padding, margins, or any other property of an element so that it adheres to the modular scale defined by the tyopgraphy.
+Setting the max width of an article to a large multiple of the text size is a way to define a comfortable reading measure related to the proportional decisions of the content.</p>
+
+      </section>
+      <hr class="trailer-2">
+    
+  
+
+
+        </main>
       </div>
 
     </div>
@@ -147,7 +502,7 @@
     
 
       <!-- Footer Pattern -->
-      <footer class="footer header-light leader-3">
+      <footer class="footer header-face leader-3">
         <div class="container">
             <nav class="column-6">
               <h6>Arc<span>GIS</span></h6>
