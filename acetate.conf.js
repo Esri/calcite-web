@@ -1,5 +1,4 @@
-var acetateKSS = require('acetate-kss');
-var styleguide = require('acetate-kss/styleguide');
+var folder = require('acetate-folder');
 
 function config(acetate) {
   acetate.global('config', {
@@ -11,14 +10,7 @@ function config(acetate) {
   acetate.options.src = 'docs/source';
   acetate.options.dest = 'docs/build';
 
-  acetate.use(acetateKSS({
-    sassDir: 'lib/sass/',
-    markdown: true
-  }));
-
-  acetate.use(styleguide({
-    template: 'partials/_styleguide_block.html'
-  }));
+  acetate.use(folder());
 }
 
 module.exports = config;
