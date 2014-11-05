@@ -1,0 +1,52 @@
+---
+title: Calcite Web
+description: Quickly build beautiful, consistent websites with the Calcite Web Framework
+data:
+  - table_of_contents
+---
+
+{% extends "_layout" %}
+
+
+<!-- Aside Col 6 -->
+{# Messy Ass duplicated code - blocks have no access to global scope variables. Annoying. #}
+{% block sidenav %}
+{% set section = '' %}
+{% for current in table_of_contents %}
+  {% if current.title == 'Type' %}
+    {% set section = current %}
+  {% endif %}
+{% endfor %}
+
+  {% for group in section.navigation %}
+    <h4 class="side-nav-title">{{ group.group }}</h4>
+    <nav>
+      {% for page in group.pages %}
+        <a href="/{{section.base}}#{{page.link}}" class="side-nav-link">{{page.title}}</a>
+      {% endfor %}
+    </nav>
+  {% endfor %}
+
+{% endblock %}
+
+<!-- Main Col 17 -->
+{# Messy Ass duplicated code - blocks have no access to global scope variables. Annoying. #}
+{% block content %}
+{% set section = '' %}
+
+{% for current in table_of_contents %}
+  {% if current.title == 'Type' %}
+    {% set section = current %}
+  {% endif %}
+{% endfor %}
+
+  {% for group in section.navigation %}
+    {% for page in group.pages %}
+      <section class="trailer-2">
+        {% markdown %}{% include section.base + '/_' + page.link %}{% endmarkdown %}
+      </section>
+      <hr class="trailer-2">
+    {% endfor %}
+  {% endfor %}
+
+{% endblock %}
