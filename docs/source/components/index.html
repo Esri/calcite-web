@@ -13,7 +13,7 @@ data:
 {% block sidenav %}
 {% set section = '' %}
 {% for current in table_of_contents %}
-  {% if current.title == 'Get Started' %}
+  {% if current.title == 'Components' %}
     {% set section = current %}
   {% endif %}
 {% endfor %}
@@ -35,16 +35,17 @@ data:
 {% set section = '' %}
 
 {% for current in table_of_contents %}
-  {% if current.title == 'Get Started' %}
+  {% if current.title == 'Components' %}
     {% set section = current %}
   {% endif %}
 {% endfor %}
 
   {% for group in section.navigation %}
     {% for page in group.pages %}
-      <section>
-        {% markdown %}{% include '_' + page.link %}{% endmarkdown %}
+      <section class="trailer-2">
+        {% markdown %}{% include section.base + '/_' + page.link %}{% endmarkdown %}
       </section>
+      <hr class="trailer-2">
     {% endfor %}
   {% endfor %}
 
