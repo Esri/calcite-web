@@ -86,7 +86,14 @@
 
       <!-- content of each page will go here -->
       <div class="container leader-1">
-        {% block content %}{% endblock %}
+        <div class="column-6">
+          <aside class="side-nav column-6">
+            {% block sidenav %}{% endblock %}
+           </aside>
+        </div>
+        <main class="column-17 pre-1">
+          {% block content %}{% endblock %}
+        </main>
       </div>
 
     </div>
