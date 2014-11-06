@@ -105,6 +105,9 @@
             {% for page in group.pages %}
               <section class="trailer-2">
                 {% markdown %}{% include table_of_contents[section].base + '/_' + page.link %}{% endmarkdown %}
+                {% if page.modifiers %}
+                  {% sample 'docs/source/type/sample-code/_header-face.html', page.modifiers %}{% endsample %}
+                {% endif %}
               </section>
               <hr class="trailer-2">
             {% endfor %}
