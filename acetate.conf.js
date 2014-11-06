@@ -1,24 +1,16 @@
-var acetateKSS = require('acetate-kss');
-var styleguide = require('acetate-kss/styleguide');
+var folder = require('acetate-folder');
 
 function config(acetate) {
   acetate.global('config', {
     environment: 'dev',
   });
 
-  acetate.layout('**/*', 'layouts/_layout:content');
+  acetate.layout('**/*', 'layouts/_layout');
 
   acetate.options.src = 'docs/source';
   acetate.options.dest = 'docs/build';
 
-  acetate.use(acetateKSS({
-    sassDir: 'lib/sass/',
-    markdown: true
-  }));
-
-  acetate.use(styleguide({
-    template: 'partials/_styleguide_block.html'
-  }));
+  acetate.use(folder());
 }
 
 module.exports = config;
