@@ -2929,6 +2929,10 @@ mark {
   content: none;
 }
 
+.icon {
+  background-image: url("icon.png");
+}
+
 .tooltip {
   position: relative;
   display: inline-block;
@@ -4318,26 +4322,46 @@ select small, select sup, select sub {
   font-size: 2.86102rem;
 }
 
-.grid-example [class*="column-"] {
-  margin-top: 1em;
-}
 .grid-example [class*="column-"] span {
   width: 100%;
   display: block;
   color: white;
-  background-color: rgba(0, 121, 193, 0.6);
+  background-color: rgba(0, 0, 255, 0.6);
   font-family: monospace;
   padding-top: 2em;
   padding-bottom: 2em;
+  margin-top: 1em;
   text-align: center;
 }
 
 .nested-demo [class*="column-"] [class*="column-"] span {
-  background-color: rgba(0, 121, 193, 0.4);
+  background-color: rgba(0, 0, 255, 0.4);
 }
 .nested-demo [class*="column-"] [class*="column-"] [class*="column-"] span {
-  background-color: rgba(0, 121, 193, 0.2);
+  background-color: rgba(0, 0, 255, 0.2);
 }
 .nested-demo [class*="column-"] [class*="column-"] [class*="column-"] [class*="column-"] span {
-  background-color: rgba(0, 121, 193, 0.1);
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
+.gridlines {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -10;
+}
+.gridlines div {
+  height: 100vh;
+}
+.gridlines span {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100%;
+  display: inline-block;
+  background-color: rgba(199, 199, 199, 0.05);
+  border: 1px solid #e6e6e6;
 }
