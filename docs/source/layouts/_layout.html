@@ -39,7 +39,7 @@
           <nav class="top-nav-list">
             <a class="top-nav-link" href="#">Branding</a>
             <a class="top-nav-link is-active" href="{{relativePath}}">Web</a>
-            <a class="top-nav-link" href="#">Mobile</a>
+            <a class="top-nav-link" href="#">Mobileasdf</a>
             <a class="top-nav-link" href="#">Presentations</a>
           </nav>
           <!-- Site Search Pattern-->
@@ -86,18 +86,34 @@
 
       <!-- content of each page will go here -->
       <div class="container leader-1">
+
         <div class="column-6">
           <aside class="side-nav column-6">
-            {% block sidenav %}{% endblock %}
-           </aside>
+            {% for group in table_of_contents[section].navigation %}
+              <h4 class="side-nav-title">{{ group.group }}</h4>
+              <nav>
+                {% for page in group.pages %}
+                  <a href="/{{table_of_contents[section].base}}#{{page.link}}" class="side-nav-link">{{page.title}}</a>
+                {% endfor %}
+              </nav>
+            {% endfor %}
+          </aside>
         </div>
+
         <main class="column-17 pre-1">
-          {% block content %}{% endblock %}
+          {% for group in table_of_contents[section].navigation %}
+            {% for page in group.pages %}
+              <section class="trailer-2">
+                {% markdown %}{% include table_of_contents[section].base + '/_' + page.link %}{% endmarkdown %}
+              </section>
+              <hr class="trailer-2">
+            {% endfor %}
+          {% endfor %}
         </main>
+
       </div>
 
     </div>
-
 
     {% block footer %}
 
