@@ -35,48 +35,109 @@ type:
           link: header-face
         - title: "Body Face"
           link: body-face
+          modifers:
+            - body-face
+            - body-face-italic
+            - body-bold
+            - body-bold-italic
         - title: "Secondary Face"
           link: secondary-face
+          modifers:
+            - secondary-face
+            - secondary-face-italic
+            - secondary-bold
+            - secondary-bold-italic
         - title: "Code Face"
           link: code-face
+          modifers:
+            - code-face
     - group: "Composition Helpers"
       pages:
         - title: "Overview"
           link: composition-helpers
         - title: "Large"
           link: text-large
+          modifers:
+            - text-large
         - title: "Small"
           link: text-small
+          modifers:
+            - text-small
         - title: "Light"
           link: text-light
+          modifers:
+            - text-light
         - title: "Color"
           link: text-color
+          modifers:
+            - text-red
+            - text-green
+            - text-blue
+            - text-purple
+            - text-orange
+            - text-brown
+            - text-white
+            - text-light-gray
+            - text-gray
+            - text-dark-gray
+            - text-darker-gray
+            - text-darkest-gray
+            - text-off-black
         - title: "Link Color"
           link: link-color
+          modifers:
+            - link-red
+            - link-green
+            - link-blue
+            - link-purple
+            - link-orange
+            - link-brown
+            - link-white
+            - link-light-gray
+            - link-gray
+            - link-dark-gray
+            - link-darker-gray
+            - link-darkest-gray
+            - link-off-black
         - title: "Ellipsis"
           link: text-ellipsis
+          modifers:
+            - text-ellipsis
         - title: "Rule"
           link: text-rule
+          modifers:
+            - text-rule
         - title: "Bulleted List"
           link: list-bulleted
+          modifers:
+            - list-bulleted
         - title: "Numbered List"
           link: list-numbered
+          modifers:
+            - list-numbered
     - group: "Composition Mixins"
       pages:
         - title: "Overview"
           link: composition-mixins
+          modifers: true
         - title: "Font Size"
           link: font-size
+          modifers: true
         - title: "Tracking"
           link: tracking
+          modifers: true
         - title: "Leading"
           link: leading
+          modifers: true
         - title: "Word Spacing"
           link: word-spacing
+          modifers: true
         - title: "Unicode Variables"
           link: unicode-variables
+          modifers: true
         - title: "Modular Scale"
           link: modular-scale
+          modifers: true
 
 grid:
   title: "Grid"
