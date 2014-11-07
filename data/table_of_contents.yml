@@ -43,21 +43,20 @@ type:
             - header-bold-italic
         - title: "Body Face"
           link: body-face
-          modifers:
+          modifiers:
             - body-face
-            - body-face-italic
+            - body-italic
             - body-bold
-            - body-bold-italic
         - title: "Secondary Face"
           link: secondary-face
-          modifers:
+          modifiers:
             - secondary-face
-            - secondary-face-italic
+            - secondary-italic
             - secondary-bold
             - secondary-bold-italic
         - title: "Code Face"
           link: code-face
-          modifers:
+          modifiers:
             - code-face
     - group: "Composition Helpers"
       pages:
@@ -65,19 +64,19 @@ type:
           link: composition-helpers
         - title: "Large"
           link: text-large
-          modifers:
+          modifiers:
             - text-large
         - title: "Small"
           link: text-small
-          modifers:
+          modifiers:
             - text-small
         - title: "Light"
           link: text-light
-          modifers:
+          modifiers:
             - text-light
         - title: "Color"
           link: text-color
-          modifers:
+          modifiers:
             - text-red
             - text-green
             - text-blue
@@ -93,7 +92,7 @@ type:
             - text-off-black
         - title: "Link Color"
           link: link-color
-          modifers:
+          modifiers:
             - link-red
             - link-green
             - link-blue
@@ -109,44 +108,20 @@ type:
             - link-off-black
         - title: "Ellipsis"
           link: text-ellipsis
-          modifers:
+          modifiers:
             - text-ellipsis
         - title: "Rule"
           link: text-rule
-          modifers:
+          modifiers:
             - text-rule
         - title: "Bulleted List"
           link: list-bulleted
-          modifers:
+          modifiers:
             - list-bulleted
         - title: "Numbered List"
           link: list-numbered
-          modifers:
+          modifiers:
             - list-numbered
-    - group: "Composition Mixins"
-      pages:
-        - title: "Overview"
-          link: composition-mixins
-          modifers: true
-        - title: "Font Size"
-          link: font-size
-          modifers: true
-        - title: "Tracking"
-          link: tracking
-          modifers: true
-        - title: "Leading"
-          link: leading
-          modifers: true
-        - title: "Word Spacing"
-          link: word-spacing
-          modifers: true
-        - title: "Unicode Variables"
-          link: unicode-variables
-          modifers: true
-        - title: "Modular Scale"
-          link: modular-scale
-          modifers: true
-
 grid:
   title: "Grid"
   base: grid
@@ -234,6 +209,22 @@ sass:
       pages:
         - title: "Overview"
           link: sass-overview
+    - group: "Composition Mixins"
+      pages:
+        - title: "Overview"
+          link: composition-mixins
+        - title: "Font Size"
+          link: font-size
+        - title: "Tracking"
+          link: tracking
+        - title: "Leading"
+          link: leading
+        - title: "Word Spacing"
+          link: word-spacing
+        - title: "Unicode Variables"
+          link: unicode-variables
+        - title: "Modular Scale"
+          link: modular-scale
 
 javascript:
   title: "Javascript"
