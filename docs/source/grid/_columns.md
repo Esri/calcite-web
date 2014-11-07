@@ -4,38 +4,13 @@ A column is a constant unit of measure. The width of a column is dynamic, but al
 
 On large screens, 3 columns out of 24 is proportionally a small peice of screen real estate. On Phones, VW Grid will still leave the element at 3 columns wide -- only now it's proportionally more real estate, as 3/6 columns is more significant than 3/24.
 
-```html
-<div class="container grid-example leader-1">
-     <div class="column-1">1</div>
-     <div class="column-23">.column-23</div>
-     <div class="column-2">2</div>
-     <div class="column-22">.column-22</div>
-     <div class="column-3">3</div>
-     <div class="column-21">.column-21</div>
-     <div class="column-4">4</div>
-     <div class="column-20">.column-20</div>
-     <div class="column-5">.column-5</div>
-     <div class="column-19">.column-19</div>
-     <div class="column-6">.column-6</div>
-     <div class="column-18">.column-18</div>
-     <div class="column-7">.column-7</div>
-     <div class="column-17">.column-17</div>
-     <div class="column-8">.column-8</div>
-     <div class="column-16">.column-16</div>
-     <div class="column-9">.column-9</div>
-     <div class="column-15">.column-15</div>
-     <div class="column-10">.column-10</div>
-     <div class="column-14">.column-14</div>
-     <div class="column-11">.column-11</div>
-     <div class="column-13">.column-13</div>
-     <div class="column-12">.column-12</div>
-     <div class="column-12">.column-12</div>
- </div>
-```
+<!-- Gnarly Hacked Sample of Columns -->
 
+<!-- Closes out extant column and container divs -->
 </div>
 </div>
 
+<!-- Drops visualizable grid with columns across entire page -->
 <div class="container grid-example leader-1">
 	<div class="column-1"><span>1</span></div>
 	<div class="column-23"><span>.column-23</span></div>
@@ -63,5 +38,6 @@ On large screens, 3 columns out of 24 is proportionally a small peice of screen 
 	<div class="column-12"><span>.column-12</span></div>
 </div>
 
+<!-- Reopens container and column for the continuation of the doc. -->
 <div class="container">
 	<div class="column-15 pre-7">
