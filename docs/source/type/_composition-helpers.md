@@ -1,2 +1,2 @@
 ## Composition Helpers
-Dats SASS, ass!
+Calcite Web provides a set of html class helpers for basic type composition. The goal of these helpers is to provide a set of tools that allows for typographic treatments that differ from the default style set without writing additional css.
