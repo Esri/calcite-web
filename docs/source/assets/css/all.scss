@@ -13,6 +13,47 @@
   line-height: 1.15em;
 }
 
+// Modifier Classes
+.styleguide-modifiers {
+  @include clearfix();
+  background: $white;
+  .styleguide-modifier-example {
+    padding: .5em;
+    border-bottom: 1px solid $lightest-gray;
+    border-left: 1px solid $lightest-gray;
+    border-right: 1px solid $lightest-gray;
+    position: relative;
+    clear: both;
+    &:last-child {
+      border-bottom: none;
+    }
+    &:first-child {
+      border-top: 1px solid $lightest-gray;
+      border-radius: 6px 6px 0 0;
+      .modifier-name {
+        border-radius: 0 3px 0 3px;
+      }
+    }
+    .modifier-name {
+      border-radius: 0 0 0 3px;
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      @include font-size(-3);
+      padding-left: 3px;
+      padding-right: 3px;
+      z-index: 1;
+    }
+  }
+}
+
+.styleguide-modifiers + pre {
+  margin-top: 0;
+  code {
+    border-radius: 0 0 3px 3px;
+  }
+}
+
 // Grid Test Classes
 .grid-example [class*="column-"] {
   margin-top: 1em;
