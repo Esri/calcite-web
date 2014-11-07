@@ -1,5 +1,5 @@
 var folder = require('acetate-folder');
-var sample = require('./sample');
+var partial = require('acetate-partial');
 
 function config(acetate) {
   acetate.global('config', {
@@ -12,7 +12,7 @@ function config(acetate) {
   acetate.options.dest = 'docs/build';
 
   acetate.use(folder());
-  acetate.use(sample());
+  acetate.use(partial());
 }
 
 module.exports = config;
