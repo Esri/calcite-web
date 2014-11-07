@@ -39,7 +39,7 @@
           <nav class="top-nav-list">
             <a class="top-nav-link" href="#">Branding</a>
             <a class="top-nav-link is-active" href="{{relativePath}}">Web</a>
-            <a class="top-nav-link" href="#">Mobileasdf</a>
+            <a class="top-nav-link" href="#">Mobile</a>
             <a class="top-nav-link" href="#">Presentations</a>
           </nav>
           <!-- Site Search Pattern-->
@@ -106,7 +106,19 @@
               <section class="trailer-2">
                 {% markdown %}{% include table_of_contents[section].base + '/_' + page.link %}{% endmarkdown %}
                 {% if page.modifiers %}
-                  {% sample 'docs/source/type/sample-code/_header-face.html', page.modifiers %}{% endsample %}
+                  <div class="styleguide-modifiers">
+                    {% for modifier in page.modifiers %}
+                      <div class="styleguide-modifier-example">
+                        {% partial table_of_contents[section].base + '/sample-code/_' + page.link + '.html', class = modifier %}{% endpartial %}
+                        <code class="modifier-name">.{{ modifier }}</code>
+                      </div>
+                    {% endfor %}
+                  </div>
+{% markdown %}
+```
+{% partial table_of_contents[section].base + '/sample-code/_' + page.link + '.html', class = 'modifier-class' %}{% endpartial %}
+```
+{% endmarkdown %}
                 {% endif %}
               </section>
               <hr class="trailer-2">
