@@ -2617,6 +2617,11 @@ mark {
   padding: 0 0.1em 0.1em;
 }
 
+hr {
+  margin: 3rem 0;
+  border-top: 1px solid #f2f2f2;
+}
+
 .btn {
   position: relative;
   display: inline-block;
@@ -3398,7 +3403,7 @@ select {
   height: 2.25rem;
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  border-color: #d6d6d6;
+  border: 1px solid #d6d6d6;
   background-color: #f2f2f2;
 }
 select small, select sup, select sub {
@@ -4320,6 +4325,54 @@ select small, select sup, select sub {
 }
 .type-sample small, .type-sample sup, .type-sample sub {
   font-size: 2.86102rem;
+}
+
+.styleguide-modifiers {
+  background: white;
+}
+.styleguide-modifiers:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.styleguide-modifiers .styleguide-modifier-example {
+  padding: .5em;
+  border-bottom: 1px solid #f2f2f2;
+  border-left: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
+  position: relative;
+  clear: both;
+}
+.styleguide-modifiers .styleguide-modifier-example:last-child {
+  border-bottom: none;
+}
+.styleguide-modifiers .styleguide-modifier-example:first-child {
+  border-top: 1px solid #f2f2f2;
+  border-radius: 6px 6px 0 0;
+}
+.styleguide-modifiers .styleguide-modifier-example:first-child .modifier-name {
+  border-radius: 0 3px 0 3px;
+}
+.styleguide-modifiers .styleguide-modifier-example .modifier-name {
+  border-radius: 0 0 0 3px;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  padding-left: 3px;
+  padding-right: 3px;
+  z-index: 1;
+}
+.styleguide-modifiers .styleguide-modifier-example .modifier-name small, .styleguide-modifiers .styleguide-modifier-example .modifier-name sup, .styleguide-modifiers .styleguide-modifier-example .modifier-name sub {
+  font-size: 0.64rem;
+}
+
+.styleguide-modifiers + pre {
+  margin-top: 0;
+}
+.styleguide-modifiers + pre code {
+  border-radius: 0 0 3px 3px;
 }
 
 .grid-example [class*="column-"] span {
