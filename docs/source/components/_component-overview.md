@@ -37,13 +37,6 @@ Something Happened! <a>Link</a>
 </div>
 </div>
 
-<h2 class="leader-2 trailer-1" id="buttons">Buttons</h2>
-
-<a href="#" class="btn">Button</a>
-<a href="#" class="btn btn-red">Red Button</a>
-<a href="#" class="btn btn-green">Green Button</a>
-<a href="#" class="btn btn-blue">Blue Button</a>
-
 <h2 class="leader-2" id="button-groups">Button Groups</h2>
 
 <nav class="leader-1">
