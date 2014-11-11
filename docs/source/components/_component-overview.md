@@ -1,13 +1,6 @@
 <h1 class="trailer-0">Overview</h1>
 
 
-<h3 id="button-inputs">Button Inputs</h3>
-
-<input type="button" value="button" id="button">
-<input type="file" value="file" id="file">
-<input type="reset" value="reset" id="reset">
-<input type="submit" value="submit" id="submit">
-
 <h3 id="selects">Selects</h3>
 <label>
 Select Menu:
