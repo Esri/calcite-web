@@ -1,25 +1,6 @@
 <h1 class="trailer-0">Overview</h1>
 
 
-<h2 class="leader-2 trailer-1" id="tooltips">Tooltips</h2>
-
-<div class="column-17 trailer-1">
-<div class="tooltip" data-message="This is the message of the tooltip">
-  <span class="icon-help">?</span>
-</div>
-</div>
-
-<div class="column-17 trailer-1">
-<div class="tooltip tooltip-left" data-message="This is the message of the tooltip">
-  <span class="icon-help">?</span>
-</div>
-</div>
-
-<div class="column-17 trailer-1">
-<div class="tooltip tooltip-right" data-message="This is the message of the tooltip">
-  <span class="icon-help">?</span>
-</div>
-</div>
 
 <h2 class="leader-2 trailer-1" id="tables">Tables</h2>
 
