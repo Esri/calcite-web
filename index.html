@@ -20,7 +20,7 @@
     <!-- stylesheets -->
     
       <link rel="stylesheet" href="assets/css/all.css">
-      <link rel="stylesheet" href="http://fast.fonts.net/cssapi/3706abc4-0756-424b-b07b-1748122f85d8.css">
+      <!-- <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/9431e9a5-7a6d-4b5f-82be-4d935972de5a.css"/> -->
     
 
     <!--[if lt IE 9]>
@@ -68,6 +68,8 @@
             <a class="third-nav-link is-active" href="">Get Started</a>
             <a class="third-nav-link " href="type">Type</a>
             <a class="third-nav-link " href="grid">Grid</a>
+            <a class="third-nav-link " href="grid">Color</a>
+            <a class="third-nav-link " href="grid">Icons</a>
             <a class="third-nav-link " href="components">Components</a>
             <a class="third-nav-link " href="patterns">Patterns</a>
             <a class="third-nav-link " href="sass">Sass</a>
@@ -222,7 +224,7 @@
               <hr class="trailer-2">
             
               <section class="trailer-2">
-                <h1 id="releasing-a-new-version">Releasing a New Version</h1>
+                <h1 id="versioning">Versioning</h1>
 <p>Calcite-Web uses SemVer (Semantic Versioning) for its releases. This means that version numbers are basically formatted like <code>MAJOR.MINOR.PATCH</code>. If you&#39;re well acquainted with SemVer you should skip to &#39;Bumping the Version&#39; below.</p>
 <h4 id="major">Major</h4>
 <p>Breaking changes are signified with a new <strong>first</strong> number. For example, moving from <code>1.0.0</code> to <code>2.0.0</code> implies breaking changes.</p>
@@ -230,7 +232,7 @@
 <p>New components, new helper classes, or substantial visual changes to existing components and patterns are <em>minor releases</em>. These are signified by the second number changing. So from <code>1.1.2</code> to <code>1.2.0</code> there are minor changes.</p>
 <h4 id="patches">Patches</h4>
 <p>The final number signifies patches such as fixing a pattern or component in a certain browser, or fixing an existing bug. Small changes to the documentation site and the tooling around the Calcite-Web library are also considered patches.</p>
-<h2 id="bumping-the-version">Bumping the Version</h2>
+<h2 id="releasing-a-new-version">Releasing a New Version</h2>
 <ol>
 <li>Change the version number in <code>package.json</code> to the desired version number.</li>
 <li>Write a description of the changes, additions, and bug fixes in <code>CHANGELOG.md</code>.</li>
@@ -243,7 +245,7 @@
               <hr class="trailer-2">
             
               <section class="trailer-2">
-                <h1 id="updating-the-documentation-site">Updating the Documentation Site</h1>
+                <h1 id="deploy-the-documentation">Deploy the Documentation</h1>
 <p>To update the documentation site, just make sure you have push access to the <code>ArcGIS/calcite-web</code> repo and type <code>grunt deploy</code>. This will build the site and deploy to gh-pages.</p>
 <p>The site should be updated at <a href="http://arcgis.github.io/calcite-web/">http://arcgis.github.io/calcite-web/</a> in just a few moments.</p>
 

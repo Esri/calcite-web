@@ -20,7 +20,7 @@
     <!-- stylesheets -->
     
       <link rel="stylesheet" href="../assets/css/all.css">
-      <link rel="stylesheet" href="http://fast.fonts.net/cssapi/3706abc4-0756-424b-b07b-1748122f85d8.css">
+      <!-- <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/9431e9a5-7a6d-4b5f-82be-4d935972de5a.css"/> -->
     
 
     <!--[if lt IE 9]>
@@ -68,6 +68,8 @@
             <a class="third-nav-link " href="../">Get Started</a>
             <a class="third-nav-link " href="../type">Type</a>
             <a class="third-nav-link is-active" href="../grid">Grid</a>
+            <a class="third-nav-link " href="../grid">Color</a>
+            <a class="third-nav-link " href="../grid">Icons</a>
             <a class="third-nav-link " href="../components">Components</a>
             <a class="third-nav-link " href="../patterns">Patterns</a>
             <a class="third-nav-link " href="../sass">Sass</a>
@@ -134,12 +136,55 @@
             
               <section class="trailer-2">
                 <h1 class="leader-0">Calcite Grid System</h1>
+
+<p>The Calcite Grid System is based on an open source project from Esri PDX called <a href="http://esripdx.github.io/viewport-grid/">viewport grid</a>. This grid system is different from standard css grid systems in two key ways;</p>
+<ol>
+<li>Column widths are defined by the viewport size rather than percentage of their containers.</li>
+<li>Built-in smart defaults for responsive sizing puts less columns across the screen at smaller sizes, rather than smaller columns.</li>
+</ol>
+<p>These two principles mean that a column becomes standard unit of measurement, creating a constant and abstracted grid system that stands behind the content of a page rather than within it.</p>
+<h3 id="the-grid">The Grid</h3>
+<table>
+<thead>
+<tr>
+<th>Max Width</th>
+<th>Breakpoint</th>
+<th>No. Columns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1280px</td>
+<td>Desktop</td>
+<td>24</td>
+</tr>
+<tr>
+<td>860px</td>
+<td>Tablet</td>
+<td>12</td>
+</tr>
+<tr>
+<td>480px</td>
+<td>Phone</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+
                 
               </section>
               <hr class="trailer-2">
             
               <section class="trailer-2">
                 <h2 id="container">Container</h2>
+<p>The <code>.container</code> class is required to contain the grid. Using the  <a href="#column">column</a> classes without them being nested in a containing <code>div</code> will cause unexpected results.</p>
+<p>The container class applies a max width to the content it contains, and handles the columns relationship with the viewport window, preventing collusions with scroll bars or other exciting bugs.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"container"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-24"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">blockquote</span>&gt;</span>Contain the Columns<span class="hljs-tag">&lt;/<span class="hljs-title">blockquote</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
 
                 
               </section>
@@ -147,8 +192,44 @@
             
               <section class="trailer-2">
                 <h2 id="columns">Columns</h2>
-<p>In the VW Grid, a column is a constant unit of measure. The width of a column is dynamic, but always between a fixed range. Columns will never get too large or or too small. As the viewport get smaller, and the columns near the bottom of their range, VW Grid will simply put less columns on the page. By default, large screens hold 24 columns, medium tablet-sized screens hold 12, and phone-sized screens hold 6. VW Grid will fold columns at these breakpoints. That means an element that is 3 columns wide will always be 3 columns wide, no matter how big or small the screen.</p>
+<p>A column is a constant unit of measure. The width of a column is dynamic, but always between a fixed range. Columns will never get too large or or too small. As the viewport get smaller, and the columns near the bottom of their range, the Calcite Grid System will simply put less columns on the page. By default, large screens hold 24 columns, medium tablet-sized screens hold 12, and phone-sized screens hold 6. The grid will fold columns at these breakpoints. That means an element that is 3 columns wide will always be 3 columns wide, no matter how big or small the screen.</p>
 <p>On large screens, 3 columns out of 24 is proportionally a small peice of screen real estate. On Phones, VW Grid will still leave the element at 3 columns wide -- only now it&#39;s proportionally more real estate, as 3/6 columns is more significant than 3/24.</p>
+<!-- Gnarly Hacked Sample of Columns -->
+
+<p><!-- Closes out extant column and container divs -->
+</div>
+</div></p>
+<p><!-- Drops visualizable grid with columns across entire page --></p>
+<div class="container grid-example leader-1">
+    <div class="column-1"><span>1</span></div>
+    <div class="column-23"><span>.column-23</span></div>
+    <div class="column-2"><span>2</span></div>
+    <div class="column-22"><span>.column-22</span></div>
+    <div class="column-3"><span>3</span></div>
+    <div class="column-21"><span>.column-21</span></div>
+    <div class="column-4"><span>4</span></div>
+    <div class="column-20"><span>.column-20</span></div>
+    <div class="column-5"><span>.column-5</span></div>
+    <div class="column-19"><span>.column-19</span></div>
+    <div class="column-6"><span>.column-6</span></div>
+    <div class="column-18"><span>.column-18</span></div>
+    <div class="column-7"><span>.column-7</span></div>
+    <div class="column-17"><span>.column-17</span></div>
+    <div class="column-8"><span>.column-8</span></div>
+    <div class="column-16"><span>.column-16</span></div>
+    <div class="column-9"><span>.column-9</span></div>
+    <div class="column-15"><span>.column-15</span></div>
+    <div class="column-10"><span>.column-10</span></div>
+    <div class="column-14"><span>.column-14</span></div>
+    <div class="column-11"><span>.column-11</span></div>
+    <div class="column-13"><span>.column-13</span></div>
+    <div class="column-12"><span>.column-12</span></div>
+    <div class="column-12"><span>.column-12</span></div>
+</div>
+
+<p><!-- Reopens container and column for the continuation of the doc. --></p>
+<p><div class="container">
+    <div class="column-15 pre-7"></p>
 
                 
               </section>
@@ -157,6 +238,35 @@
               <section class="trailer-2">
                 <h2 id="responsive-columns">Responsive Columns</h2>
 <p>The width of elements can be explicitly defined for breakpoints where columns would normally fold by default. This can be done with the <code>phone-column-n</code> and <code>tablet-column-n</code> classes. For example, <code>.column-12</code> would default to the full 12/12 column width at a tablet size. Adding to the same element <code>.tablet-column-6</code> would prevent the default behavior, and at a tablet viewport, the element would be 6/12 columns.</p>
+<p></div></div></p>
+<p><div class="container grid-example">
+     <div class="column-24"><span>24</span></div>
+     <div class="column-1"><span>1</span></div>
+     <div class="column-1"><span>1</span></div>
+     <div class="column-1"><span>1</span></div>
+     <div class="column-1"><span>1</span></div>
+     <div class="column-1"><span>1</span></div>
+     <div class="column-1"><span>1</span></div>
+     <div class="column-1"><span>1</span></div>
+     <div class="column-1"><span>1</span></div>
+     <div class="column-1"><span>1</span></div>
+     <div class="column-1"><span>1</span></div>
+     <div class="column-1"><span>1</span></div>
+     <div class="column-1"><span>1</span></div>
+     <div class="column-1"><span>1</span></div>
+     <div class="column-1"><span>1</span></div>
+     <div class="column-1"><span>1</span></div>
+     <div class="column-1"><span>1</span></div>
+     <div class="column-1"><span>1</span></div>
+     <div class="column-1"><span>1</span></div>
+     <div class="column-1"><span>1</span></div>
+     <div class="column-1"><span>1</span></div>
+     <div class="column-1"><span>1</span></div>
+     <div class="column-1"><span>1</span></div>
+     <div class="column-1"><span>1</span></div>
+     <div class="column-1"><span>1</span></div>
+ </div></p>
+<p><div class="container"><div class="column-15 pre-7"></p>
 
                 
               </section>
@@ -164,10 +274,20 @@
             
               <section class="trailer-2">
                 <h2 id="nested-columns">Nested Columns</h2>
-<p>Contrary to other flexible-width grid systems, VW Grid columns do not change behavior when nested. Because a column is a constant measurement relative the size of the viewport, nested columns still span the same width as their non-nested counterparts. An element with <code>.column-6</code> nested within an element with <code>.column-12</code> is the same size as an un-nested <code>.column-6</code>. Further, clearing of the column-gutter is taken care of for you with <code>:first-child</code> and <code>:last-child</code> psuedo-selectors on all column classes.</p>
+<p>Contrary to other flexible-width grid systems, Calcite Grid columns do not change behavior when nested. Because a column is a constant measurement relative the size of the viewport, nested columns still span the same width as their non-nested counterparts. An element with <code>.column-6</code> nested within an element with <code>.column-12</code> is the same size as an un-nested <code>.column-6</code>. Further, clearing of the column-gutter is taken care of for you with <code>:first-child</code> and <code>:last-child</code> psuedo-selectors on all column classes.</p>
 <p>Column-folding behavior is almost entirely automatic with Viewport Grid. The only exception is gutter clearing behaviors on deeply nested items after column folding occurs - in some situations we can not know what columns are now first or last in their rows. This will cause the column to be inset from the edge of the container. The example below solves this by introducing <code>first-column</code> classes, along with <code>tablet-first-column</code> and <code>phone-first-column</code>.</p>
-<p>In this example, the more transparent the blue, the deepter the column is nested. There are four levels of nesting in this example.</p>
-
+<p>In this example, the more transparent the blue, the deeper the column is nested. There are four levels of nesting in this example.</p>
+<p></div></div><div class="container grid-example nested-demo"><div class="column-18 tablet-column-8">
+<span class="tablet-hide">.column-18</span><span class="tablet-show">.tablet-column-8</span><div class="column-4 tablet-column-4">
+<span class="tablet-hide">.column-4</span><span class="tablet-show">.tablet-column-4</span><div class="column-1 tablet-column-4"><span class="tablet-hide">1</span><span class="tablet-show">.tablet-column-4</span></div><div class="column-1 tablet-column-4 tablet-first-column"><span class="tablet-hide">1</span><span class="tablet-show">.tablet-column-4</span></div><div class="column-1 tablet-column-4 tablet-first-column"><span class="tablet-hide">1</span><span class="tablet-show">.tablet-column-4</span></div><div class="column-1 tablet-column-4 tablet-first-column"><span class="tablet-hide">1</span><span class="tablet-show">.tablet-column-4</span></div></div><div class="column-2 tablet-column-4 tablet-last-column phone-first-column"><span class="tablet-hide">2</span><span class="tablet-show">.tablet-column-4</span></div><div class="column-10 tablet-column-8 tablet-first-column">
+<span class="tablet-hide">10</span><span class="tablet-show">.tablet-column-8</span><div class="column-5 tablet-column-4">
+<span class="tablet-hide">.column-5</span><span class="tablet-show">.tablet-column-4</span></div><div class="column-5 tablet-column-4 phone-first-column">
+<span class="tablet-hide">.column-5</span><span class="tablet-show">.tablet-column-4</span><div class="column-2 tablet-column-4 phone-first-column">
+<span class="tablet-hide">2</span><span class="tablet-show">.tablet-column-4</span></div><div class="column-3 tablet-column-4 tablet-first-column phone-first-column">
+<span class="tablet-hide">.column-3</span><span class="tablet-show">.tablet-column-4</span></div></div></div><div class="column-1 tablet-column-4 tablet-first-column"><span class="tablet-hide">1</span><span class="tablet-show">.tablet-column-4</span></div><div class="column-1 tablet-column-5 tablet-first-column"><span class="tablet-hide">1</span><span class="tablet-show">.tablet-column-5</span></div></div><div class="column-6 tablet-column-4">
+<span class="tablet-hide">.column-6</span><span class="tablet-show">.tablet-column-4</span><div class="column-6 tablet-column-4">
+<span class="tablet-hide">.column-6</span><span class="tablet-show">.tablet-column-4</span><div class="column-4 tablet-column-2"><span class="tablet-hide">.column-4</span><span class="tablet-show">.tablet-column-2</span></div><div class="column-2 tablet-column-2"><span class="tablet-hide">2</span><span class="tablet-show">.tablet-column-2</span></div></div><div class="column-4 tablet-column-4 column-first tablet-first-column"><span class="tablet-hide first-column">.column-4</span><span class="tablet-show">.tablet-column-4</span></div></div></div><div class="container"></p>
+<div class="column-15 pre-7">
                 
               </section>
               <hr class="trailer-2">
@@ -176,6 +296,28 @@
                 <h2 id="rows">Rows</h2>
 <p>Because columns can now be nested without changing their behavior, we don&#39;t need rows, really. However, you still may find that a tall, narrow column with a short wide neighbor can cause float issues with subsequent columns.</p>
 <p>With this grid you can wrap the first two columns in a 24 column grid, which will act in the same manner as a row.</p>
+<p></div></div></p>
+<div class="container grid-example">
+<div class="column-2"><span>.column-2 With a lot of content, so it pushes down.</span></div>
+<div class="column-22"><span>.column-22</span></div>
+<div class="column-4"><span>.column-4</span></div>
+<div class="column-4"><span>.column-4</span></div>
+<div class="column-4"><span>.column-4</span></div>
+<div class="container"><div class="column-24"><div class="column-15 pre-7">
+
+The above set of column-4 divs are snapping up next to the very tall column-2 div. Wrapping each row of columns in a single div with a width of the row length creates proper row behevior.
+
+</div></div></div>
+<div class="column-24">
+<div class="column-2"><span>.column-2 With a lot of content, so it pushes down.</span></div>
+<div class="column-22 tablet-first-column"><span>.column-22</span></div>
+</div>
+<div class="column-4"><span>.column-4</span></div>
+<div class="column-4"><span>.column-4</span></div>
+<div class="column-4"><span>.column-4</span></div>
+</div>
+
+<p><div class="container"><div class="column-15 pre-7"></p>
 
                 
               </section>
@@ -183,6 +325,47 @@
             
               <section class="trailer-2">
                 <h2 id="block-groups">Block Groups</h2>
+<p>Block groups are designed to for quickly creating repeating rows of content, like a tile pattern or image gallery. Block groups are percentage based, so can subdivide columns. Block groups have the abillity to break the regular grid system, and thus should be used sparingly and with thought.</p>
+<p><!-- Closes out extant column and container divs -->
+</div>
+</div></p>
+<div class="container grid-example leader-1">
+<div class="block-group block-group-5-up">
+<div class="block"><span>.block</span></div>
+<div class="block"><span>.block</span></div>
+<div class="block"><span>.block</span></div>
+<div class="block"><span>.block</span></div>
+<div class="block"><span>.block</span></div>
+</div>
+<div class="block-group block-group-4-up">
+<div class="block"><span>.block</span></div>
+<div class="block"><span>.block</span></div>
+<div class="block"><span>.block</span></div>
+<div class="block"><span>.block</span></div>
+<div class="block"><span>.block</span></div>
+<div class="block"><span>.block</span></div>
+<div class="block"><span>.block</span></div>
+<div class="block"><span>.block</span></div>
+</div>
+<div class="block-group block-group-3-up">
+<div class="block"><span>.block</span></div>
+<div class="block"><span>.block</span></div>
+<div class="block"><span>.block</span></div>
+<div class="block"><span>.block</span></div>
+<div class="block"><span>.block</span></div>
+<div class="block"><span>.block</span></div>
+</div>
+<div class="block-group block-group-2-up">
+<div class="block"><span>.block</span></div>
+<div class="block"><span>.block</span></div>
+<div class="block"><span>.block</span></div>
+<div class="block"><span>.block</span></div>
+</div>
+</div>
+
+<p><!-- Reopens container and column for the continuation of the doc. --></p>
+<p><div class="container">
+    <div class="column-15 pre-7"></p>
 
                 
               </section>
@@ -190,6 +373,28 @@
             
               <section class="trailer-2">
                 <h2 id="responsive-block-groups">Responsive Block Groups</h2>
+<p>Block groups have responsive <code>tablet-</code> and <code>phone-</code> prefix classes. These allow the flow of content across repeating rows of content to be easily tweaked across viewport widths in scenarios where the default <a href="#columns">column resizing</a> or <a href="#responsive-columns">responsive column classes</a> would be to verbose or cumbersome.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"block-group block-group-4-up tablet-block-group-2-up phone-block-group-1-up"</span>&gt;</span>
+</code></pre>
+<p><!-- Closes out extant column and container divs -->
+</div>
+</div></p>
+<div class="container grid-example leader-1">
+<div class="block-group block-group-4-up tablet-block-group-2-up phone-block-group-1-up">
+<div class="block"><span>.block</span></div>
+<div class="block"><span>.block</span></div>
+<div class="block"><span>.block</span></div>
+<div class="block"><span>.block</span></div>
+<div class="block"><span>.block</span></div>
+<div class="block"><span>.block</span></div>
+<div class="block"><span>.block</span></div>
+<div class="block"><span>.block</span></div>
+</div>
+</div>
+
+<p><!-- Reopens container and column for the continuation of the doc. --></p>
+<p><div class="container">
+    <div class="column-15 pre-7"></p>
 
                 
               </section>
@@ -201,6 +406,22 @@
                 <h2 id="pre-and-post">Pre and Post</h2>
 <p>Pre and Post classes are used to move your columns laterally across the grid by defining how many columns they should be from their neighbors on either side.</p>
 <p>Pre and Post classes do not responsively fold. This prevents a <code>pre-5</code> from pushing content off the edge of the screen on phone sizes.</p>
+<p>Pre and post helpers are available from <code>.pre-1</code> and <code>.post-1</code> to <code>.pre-24</code> and <code>.post-24</code>.</p>
+<p><!-- Closes out extant column and container divs -->
+</div>
+</div></p>
+<div class="container grid-example leader-1">
+<div class="column-1"><span>col</span></div>
+<div class="column-2 pre-21 tablet-pre-9 phone-pre-3"><span>.pre-21</span></div>
+</div>
+<div class="container grid-example leader-1">
+<div class="column-2 post-21 tablet-post-9 phone-post-3"><span>.post-21ide</span></div>
+<div class="column-1"><span>col</span></div>
+</div>
+
+<p><!-- Reopens container and column for the continuation of the doc. --></p>
+<p><div class="container">
+    <div class="column-15 pre-7"></p>
 
                 
               </section>
@@ -208,14 +429,164 @@
             
               <section class="trailer-2">
                 <h2 id="leader-and-trailer">Leader and Trailer</h2>
-<p>Yup.</p>
+<p>The leader and trailer classes are designed for quick vertical adjustments with markup. The standard <code>leader-n</code> and <code>trailer-n</code> classes add top- and bottom-margin to the element, as multiples of the <code>$baseline</code> variable, or 1.5rem.</p>
+<p>The <code>padding-</code> prefix adds lines of padding instead of margin, and both classes can be used in conjunction.</p>
+<p>Clacite Web provides a <code>$vertical-range</code> variable that sets the maximum value of <code>n</code> for the <code>leader-n</code> and <code>trailer-n</code> classes at 6.</p>
 
+                
+                  <div class="styleguide-modifiers">
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="leader-0 panel">leader-0</div>
+                        <code class="modifier-name">.leader-0</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="leader-1 panel">leader-1</div>
+                        <code class="modifier-name">.leader-1</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="leader-2 panel">leader-2</div>
+                        <code class="modifier-name">.leader-2</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="leader-3 panel">leader-3</div>
+                        <code class="modifier-name">.leader-3</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="leader-4 panel">leader-4</div>
+                        <code class="modifier-name">.leader-4</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="leader-5 panel">leader-5</div>
+                        <code class="modifier-name">.leader-5</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="leader-6 panel">leader-6</div>
+                        <code class="modifier-name">.leader-6</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="trailer-0 panel">trailer-0</div>
+                        <code class="modifier-name">.trailer-0</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="trailer-1 panel">trailer-1</div>
+                        <code class="modifier-name">.trailer-1</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="trailer-2 panel">trailer-2</div>
+                        <code class="modifier-name">.trailer-2</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="trailer-3 panel">trailer-3</div>
+                        <code class="modifier-name">.trailer-3</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="trailer-4 panel">trailer-4</div>
+                        <code class="modifier-name">.trailer-4</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="trailer-5 panel">trailer-5</div>
+                        <code class="modifier-name">.trailer-5</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="trailer-6 panel">trailer-6</div>
+                        <code class="modifier-name">.trailer-6</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="padding-leader-0 panel">padding-leader-0</div>
+                        <code class="modifier-name">.padding-leader-0</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="padding-leader-1 panel">padding-leader-1</div>
+                        <code class="modifier-name">.padding-leader-1</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="padding-leader-2 panel">padding-leader-2</div>
+                        <code class="modifier-name">.padding-leader-2</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="padding-leader-3 panel">padding-leader-3</div>
+                        <code class="modifier-name">.padding-leader-3</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="padding-leader-4 panel">padding-leader-4</div>
+                        <code class="modifier-name">.padding-leader-4</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="padding-leader-5 panel">padding-leader-5</div>
+                        <code class="modifier-name">.padding-leader-5</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="padding-leader-6 panel">padding-leader-6</div>
+                        <code class="modifier-name">.padding-leader-6</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="padding-trailer-0 panel">padding-trailer-0</div>
+                        <code class="modifier-name">.padding-trailer-0</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="padding-trailer-1 panel">padding-trailer-1</div>
+                        <code class="modifier-name">.padding-trailer-1</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="padding-trailer-2 panel">padding-trailer-2</div>
+                        <code class="modifier-name">.padding-trailer-2</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="padding-trailer-3 panel">padding-trailer-3</div>
+                        <code class="modifier-name">.padding-trailer-3</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="padding-trailer-4 panel">padding-trailer-4</div>
+                        <code class="modifier-name">.padding-trailer-4</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="padding-trailer-5 panel">padding-trailer-5</div>
+                        <code class="modifier-name">.padding-trailer-5</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="padding-trailer-6 panel">padding-trailer-6</div>
+                        <code class="modifier-name">.padding-trailer-6</code>
+                      </div>
+                    
+                  </div>
+<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"modifier-class panel"</span>&gt;modifier-<span class="hljs-type">class</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
                 
               </section>
               <hr class="trailer-2">
             
               <section class="trailer-2">
                 <h2 id="first-and-last">First and Last</h2>
+<p>The <code>first</code> and <code>last</code> classes are used for
+aligning grid columns when the Grid System is unable to determine whivh columns are first or last in their rows. This will cause the column to be inset from the edge of the container. The example below solves this by introducing <code>first-column</code> and <code>last-column</code> classes, along with <code>tablet-first-column</code>, <code>phone-first-column</code>, <code>tablet-last-column</code>, and <code>phone-last-column</code>.</p>
 
                 
               </section>
@@ -223,6 +594,53 @@
             
               <section class="trailer-2">
                 <h2 id="show-and-hide">Show and Hide</h2>
+<p>These convinience classes are meant to help with quick responsive layout. Below are the classes and what breakpoints they are visible on:</p>
+<table>
+<thead>
+<tr>
+<th>Helper Class</th>
+<th>Visible on Phone</th>
+<th>Visible on Tablet</th>
+<th>Visible on Desktop</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>phone-hide</td>
+<td>no</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>tablet-hide</td>
+<td>no</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>phone-show</td>
+<td>yes</td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>tablet-show</td>
+<td>yes</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>tablet-only</td>
+<td>no</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="show-helpers">Show Helpers</h4>
+<p>Essentially, the show classes will show that breakpoint and the breakpoint below it. So if you&#39;d like something to be visible only on a phone, you would use <code>phone-show</code>. If you used tablet show, the element would be visible on tablet and phone.</p>
+<h4 id="hide-helpers">Hide Helpers</h4>
+<p>Hide helpers are very similar to show. A responsive hide class will hide that breakpoint and the breakpoint below it. So if you wanted something to be visible on only desktop, you could use <code>tablet-hide</code>, hiding the element on tablet and phone. Or if you wanted something to be hidden only on a phone, <code>phone-hide</code> would hide it on the phone only.</p>
 
                 
               </section>
@@ -230,6 +648,8 @@
             
               <section class="trailer-2">
                 <h2 id="left-and-right">Left and Right</h2>
+<p>Use a class of <code>right</code> on html elements to float elements to the right. Use a class of <code>left</code> on html elements to float elements to the left.</p>
+<p>Left and Right helpers have <code>tablet-</code> and <code>phone-</code> prefix classes for responsive control at breakpoints.</p>
 
                 
               </section>

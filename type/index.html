@@ -20,7 +20,7 @@
     <!-- stylesheets -->
     
       <link rel="stylesheet" href="../assets/css/all.css">
-      <link rel="stylesheet" href="http://fast.fonts.net/cssapi/3706abc4-0756-424b-b07b-1748122f85d8.css">
+      <!-- <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/9431e9a5-7a6d-4b5f-82be-4d935972de5a.css"/> -->
     
 
     <!--[if lt IE 9]>
@@ -68,6 +68,8 @@
             <a class="third-nav-link " href="../">Get Started</a>
             <a class="third-nav-link is-active" href="../type">Type</a>
             <a class="third-nav-link " href="../grid">Grid</a>
+            <a class="third-nav-link " href="../grid">Color</a>
+            <a class="third-nav-link " href="../grid">Icons</a>
             <a class="third-nav-link " href="../components">Components</a>
             <a class="third-nav-link " href="../patterns">Patterns</a>
             <a class="third-nav-link " href="../sass">Sass</a>
@@ -130,25 +132,6 @@
                 
               </nav>
             
-              <h4 class="side-nav-title">Composition Mixins</h4>
-              <nav>
-                
-                  <a href="/type#composition-mixins" class="side-nav-link">Overview</a>
-                
-                  <a href="/type#font-size" class="side-nav-link">Font Size</a>
-                
-                  <a href="/type#tracking" class="side-nav-link">Tracking</a>
-                
-                  <a href="/type#leading" class="side-nav-link">Leading</a>
-                
-                  <a href="/type#word-spacing" class="side-nav-link">Word Spacing</a>
-                
-                  <a href="/type#unicode-variables" class="side-nav-link">Unicode Variables</a>
-                
-                  <a href="/type#modular-scale" class="side-nav-link">Modular Scale</a>
-                
-              </nav>
-            
           </aside>
         </div>
 
@@ -159,10 +142,14 @@
                 <h1 class="leader-0">Calcite Type System</h1>
 
 <p>The Calcite Type System uses a combination of mixins and helper classes to achieve a clear visual style, focusing primarily on simplifying typesetting processes. Using the mixins and classes properly will ensure that all properties are consistent, beautiful, and robust.</p>
-<h2 id="typefaces">Typefaces</h2>
-<p>We expose four sets of type families for use in Calcite Web; a Header Family, a Body Family, a Secondary Family, and a Code Family. Each of these type families have a set of weights and styles, defined by their application. For example, the Header Family has more weights than the Body family, reflecting its role as primary UI face, and heavy lifting header face.
-The typographic pallete for Calcite Web differs slightly from the official Esri branding document. All typefaces are examined in detail below.
-Calcite Web provides a set of weights for each typeface. These are used by either using the helper class in html, or the writing sass to include the mixin, or extending the helper class. The available weights for each face are below. Proper care has been taken to ensure that all type systems used by Calcite avoid faux-bold and faux-italics styled by the browser.</p>
+<h3 id="typefaces">Typefaces</h3>
+<p>We expose four sets of type families for use in Calcite Web; a Header Family, a Body Family, a Secondary Family, and a Code Family. Each of these type families have a set of weights and styles, defined by their application. For example, the Header Family has more weights than the Body family, reflecting its role as primary UI face, and heavy lifting header face.</p>
+<p>The typographic pallete for Calcite Web differs slightly from the official Esri branding document. All typefaces are examined in detail below.</p>
+<p>Calcite Web provides a set of weights for each typeface. These are used by either using the helper class in html, or the writing sass to include the mixin, or extending the helper class. The available weights for each face are below. Proper care has been taken to ensure that all type systems used by Calcite avoid faux-bold and faux-italics styled by the browser.</p>
+<h3 id="vertical-rhythym">Vertical Rhythym</h3>
+<p>Vertical rhythym is maintained in the Calcite Web Type System by the use of the <code>$baseline</code> variable. <code>$baseline</code> sets a standard and regular leading in relation to the body copy – 1.5rem. This variable is used for any measurement on the vertical axis in the page, including the <a href="/grid/#leader-and-trailer">leader and trailer grid helper classes</a> and padding for <a href="/components/#buttons">components like buttons</a> which use standard measurements like <code>3/$baseline</code> and <code>2/$baseline</code>.</p>
+<h3 id="proportional-scales">Proportional Scales</h3>
+<p>Text sizes are defined by a simple <a href="http://alistapart.com/article/more-meaningful-typography">modular scale</a>. The scale is defined by two base sizes for type - body at 1rem and small at 0.75rem - and extrapolates a series of larger type sizes based on a single ratio; 1.25, or a major third interval. All type sizes are <a href="http://snook.ca/archives/html_and_css/font-size-with-rem">set in rems</a>, which have <a href="http://caniuse.com/#feat=rem">more than accpetable browser support</a>. Rems are used type sizing and all vertical measurements, defined either by the <code>$baseline</code> variable or the <a href="/sass/#modular-scale">modular scale</a> and <a href="/sass/#font-size">font size</a> mixins. This prevents odd sizing issues with nested content, unpredictable results with scaling, and provides a solid anchor for determining sizes.</p>
 
                 
               </section>
@@ -197,8 +184,8 @@ Calcite Web provides a set of weights for each typeface. These are used by eithe
                       </div>
                     
                       <div class="styleguide-modifier-example">
-                        <h1 class="header-face-italic">Amazingly few discotheques provide jukeboxes.</h1>
-                        <code class="modifier-name">.header-face-italic</code>
+                        <h1 class="header-italic">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.header-italic</code>
                       </div>
                     
                       <div class="styleguide-modifier-example">
@@ -233,6 +220,27 @@ Calcite Web provides a set of weights for each typeface. These are used by eithe
 <h3 id="modifers">Modifers</h3>
 
                 
+                  <div class="styleguide-modifiers">
+                    
+                      <div class="styleguide-modifier-example">
+                        <p class="body-face">Amazingly few discotheques provide jukeboxes.</p>
+                        <code class="modifier-name">.body-face</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p class="body-italic">Amazingly few discotheques provide jukeboxes.</p>
+                        <code class="modifier-name">.body-italic</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p class="body-bold">Amazingly few discotheques provide jukeboxes.</p>
+                        <code class="modifier-name">.body-bold</code>
+                      </div>
+                    
+                  </div>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>Amazingly few discotheques provide jukeboxes.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+</code></pre>
+                
               </section>
               <hr class="trailer-2">
             
@@ -245,6 +253,32 @@ Calcite Web provides a set of weights for each typeface. These are used by eithe
 
 <h3 id="modifers">Modifers</h3>
 
+                
+                  <div class="styleguide-modifiers">
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="secondary-face">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.secondary-face</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="secondary-italic">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.secondary-italic</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="secondary-bold">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.secondary-bold</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="secondary-bold-italic">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.secondary-bold-italic</code>
+                      </div>
+                    
+                  </div>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>Amazingly few discotheques provide jukeboxes.<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+</code></pre>
                 
               </section>
               <hr class="trailer-2">
@@ -259,6 +293,17 @@ Calcite Web provides a set of weights for each typeface. These are used by eithe
 <h3 id="modifers">Modifers</h3>
 
                 
+                  <div class="styleguide-modifiers">
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="code-face">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.code-face</code>
+                      </div>
+                    
+                  </div>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>Amazingly few discotheques provide jukeboxes.<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+</code></pre>
+                
               </section>
               <hr class="trailer-2">
             
@@ -266,7 +311,7 @@ Calcite Web provides a set of weights for each typeface. These are used by eithe
             
               <section class="trailer-2">
                 <h2 id="composition-helpers">Composition Helpers</h2>
-<p>Dats SASS, ass!</p>
+<p>Calcite Web provides a set of html class helpers for basic type composition. The goal of these helpers is to provide a set of tools that allows for typographic treatments that differ from the default style set without writing additional css.</p>
 
                 
               </section>
@@ -275,9 +320,17 @@ Calcite Web provides a set of weights for each typeface. These are used by eithe
               <section class="trailer-2">
                 <h3 id="text-large">Text Large</h3>
 <p>Sets the font size of the element to one step of the typgraphic scale from the body size.</p>
-<pre><code>.<span class="hljs-keyword">class</span> {
-  @<span class="hljs-preprocessor"><span class="hljs-keyword">include</span> text-large();</span>
-}
+
+                
+                  <div class="styleguide-modifiers">
+                    
+                      <div class="styleguide-modifier-example">
+                        <p class="text-large">Amazingly few discotheques provide jukeboxes.</p>
+                        <code class="modifier-name">.text-large</code>
+                      </div>
+                    
+                  </div>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>Amazingly few discotheques provide jukeboxes.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
 </code></pre>
                 
               </section>
@@ -286,9 +339,17 @@ Calcite Web provides a set of weights for each typeface. These are used by eithe
               <section class="trailer-2">
                 <h3 id="text-small">Text Small</h3>
 <p>Sets the font size font of the elements to one step down the typographic scale from the body size.</p>
-<pre><code>.<span class="hljs-keyword">class</span> {
-  @<span class="hljs-preprocessor"><span class="hljs-keyword">include</span> text-small();</span>
-}
+
+                
+                  <div class="styleguide-modifiers">
+                    
+                      <div class="styleguide-modifier-example">
+                        <p class="text-small">Amazingly few discotheques provide jukeboxes.</p>
+                        <code class="modifier-name">.text-small</code>
+                      </div>
+                    
+                  </div>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>Amazingly few discotheques provide jukeboxes.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
 </code></pre>
                 
               </section>
@@ -296,57 +357,177 @@ Calcite Web provides a set of weights for each typeface. These are used by eithe
             
               <section class="trailer-2">
                 <h3 id="text-light">Text Light</h3>
-<p>Sets the opacity of the element to a standardized value.</p>
-<pre><code>.<span class="hljs-keyword">class</span> {
-  @<span class="hljs-preprocessor"><span class="hljs-keyword">include</span> text-light();</span>
-}
+<p>Sets the opacity of the element to a standard 0.66. Can be used in conjunction with <a href="#text-color">text color</a> helpers to provide a range of options across a range of background colors.</p>
+
+                
+                  <div class="styleguide-modifiers">
+                    
+                      <div class="styleguide-modifier-example">
+                        <p class="text-light">Amazingly few discotheques provide jukeboxes.</p>
+                        <code class="modifier-name">.text-light</code>
+                      </div>
+                    
+                  </div>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>Amazingly few discotheques provide jukeboxes.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
 </code></pre>
                 
               </section>
               <hr class="trailer-2">
             
               <section class="trailer-2">
-                <h3 id="type-color">Type Color</h3>
-<p>Sets the color of the element to any of the calcite colors available.</p>
-<ul>
-<li>.text-red          - Sets the color to red.</li>
-<li>.text-green        - Sets the color to green.</li>
-<li>.text-blue         - Sets the color to blue.</li>
-<li>.text-purple       - Sets the color to purple.</li>
-<li>.text-orange       - Sets the color to orange.</li>
-<li>.text-brown        - Sets the color to brown.</li>
-<li>.text-white        - Sets the color to white.</li>
-<li>.text-light-gray   - Sets the color to light-gray.</li>
-<li>.text-gray         - Sets the color to gray.</li>
-<li>.text-dark-gray    - Sets the color to dark-gray.</li>
-<li>.text-darker-gray  - Sets the color to darker-gray.</li>
-<li>.text-darkest-gray - Sets the color to darkest-gray.</li>
-<li>.text-off-black    - Sets the color to off-black.</li>
-</ul>
+                <h3 id="text-color">Text Color</h3>
+<p>Sets the font color of the element to any of the <a href="/colors">Calcite colors</a> available.</p>
 
+                
+                  <div class="styleguide-modifiers">
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-red">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.text-red</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-green">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.text-green</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-blue">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.text-blue</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-purple">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.text-purple</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-orange">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.text-orange</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-brown">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.text-brown</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-white">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.text-white</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-light-gray">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.text-light-gray</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-gray">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.text-gray</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-dark-gray">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.text-dark-gray</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-darker-gray">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.text-darker-gray</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-darkest-gray">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.text-darkest-gray</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-off-black">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.text-off-black</code>
+                      </div>
+                    
+                  </div>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>Amazingly few discotheques provide jukeboxes.<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+</code></pre>
                 
               </section>
               <hr class="trailer-2">
             
               <section class="trailer-2">
                 <h3 id="link-color">Link Color</h3>
-<p>Sets the color of links within the element, or the link itself, to available calcite colors.</p>
-<ul>
-<li>.link-red          - Sets the color to red.</li>
-<li>.link-green        - Sets the color to green.</li>
-<li>.link-blue         - Sets the color to blue.</li>
-<li>.link-purple       - Sets the color to purple.</li>
-<li>.link-orange       - Sets the color to orange.</li>
-<li>.link-brown        - Sets the color to brown.</li>
-<li>.link-white        - Sets the color to white.</li>
-<li>.link-light-gray   - Sets the color to light-gray.</li>
-<li>.link-gray         - Sets the color to gray.</li>
-<li>.link-dark-gray    - Sets the color to dark-gray.</li>
-<li>.link-darker-gray  - Sets the color to darker-gray.</li>
-<li>.link-darkest-gray - Sets the color to darkest-gray.</li>
-<li>.link-off-black    - Sets the color to off-black.</li>
-</ul>
+<p>Sets the color of links within the element, or the link itself, to available <a href="/colors">Calcite colors.</a></p>
 
+                
+                  <div class="styleguide-modifiers">
+                    
+                      <div class="styleguide-modifier-example">
+                        <p>Amazingly few <a href="#" class="link-red">discotheques</a> provide <a href="#" class="link-red">jukeboxes.</a> </p>
+                        <code class="modifier-name">.link-red</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p>Amazingly few <a href="#" class="link-green">discotheques</a> provide <a href="#" class="link-green">jukeboxes.</a> </p>
+                        <code class="modifier-name">.link-green</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p>Amazingly few <a href="#" class="link-blue">discotheques</a> provide <a href="#" class="link-blue">jukeboxes.</a> </p>
+                        <code class="modifier-name">.link-blue</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p>Amazingly few <a href="#" class="link-purple">discotheques</a> provide <a href="#" class="link-purple">jukeboxes.</a> </p>
+                        <code class="modifier-name">.link-purple</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p>Amazingly few <a href="#" class="link-orange">discotheques</a> provide <a href="#" class="link-orange">jukeboxes.</a> </p>
+                        <code class="modifier-name">.link-orange</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p>Amazingly few <a href="#" class="link-brown">discotheques</a> provide <a href="#" class="link-brown">jukeboxes.</a> </p>
+                        <code class="modifier-name">.link-brown</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p>Amazingly few <a href="#" class="link-white">discotheques</a> provide <a href="#" class="link-white">jukeboxes.</a> </p>
+                        <code class="modifier-name">.link-white</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p>Amazingly few <a href="#" class="link-light-gray">discotheques</a> provide <a href="#" class="link-light-gray">jukeboxes.</a> </p>
+                        <code class="modifier-name">.link-light-gray</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p>Amazingly few <a href="#" class="link-gray">discotheques</a> provide <a href="#" class="link-gray">jukeboxes.</a> </p>
+                        <code class="modifier-name">.link-gray</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p>Amazingly few <a href="#" class="link-dark-gray">discotheques</a> provide <a href="#" class="link-dark-gray">jukeboxes.</a> </p>
+                        <code class="modifier-name">.link-dark-gray</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p>Amazingly few <a href="#" class="link-darker-gray">discotheques</a> provide <a href="#" class="link-darker-gray">jukeboxes.</a> </p>
+                        <code class="modifier-name">.link-darker-gray</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p>Amazingly few <a href="#" class="link-darkest-gray">discotheques</a> provide <a href="#" class="link-darkest-gray">jukeboxes.</a> </p>
+                        <code class="modifier-name">.link-darkest-gray</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p>Amazingly few <a href="#" class="link-off-black">discotheques</a> provide <a href="#" class="link-off-black">jukeboxes.</a> </p>
+                        <code class="modifier-name">.link-off-black</code>
+                      </div>
+                    
+                  </div>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Amazingly few <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>discotheques<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> provide <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>jukeboxes.<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+</code></pre>
                 
               </section>
               <hr class="trailer-2">
@@ -354,9 +535,17 @@ Calcite Web provides a set of weights for each typeface. These are used by eithe
               <section class="trailer-2">
                 <h3 id="text-ellipsis">Text Ellipsis</h3>
 <p>Adds a set of styles to the element that will cause the any text overflow to be hidden, truncated with an ellipsis. Useful for long keeping long strings on text to a single line.</p>
-<pre><code>.<span class="hljs-keyword">class</span> {
-  @<span class="hljs-preprocessor"><span class="hljs-keyword">include</span> text-ellipsis();</span>
-}
+
+                
+                  <div class="styleguide-modifiers">
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-ellipsis">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</h1>
+                        <code class="modifier-name">.text-ellipsis</code>
+                      </div>
+                    
+                  </div>
+<pre><code>&lt;h1 class="modifier-class"&gt;"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip <span class="hljs-keyword">ex</span> ea commodo consequat. Duis aute irure dolor <span class="hljs-keyword">in</span> reprehenderit <span class="hljs-keyword">in</span> voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt <span class="hljs-keyword">in</span> culpa qui officia deserunt mollit anim id est laborum&lt;/h1&gt;
 </code></pre>
                 
               </section>
@@ -364,10 +553,18 @@ Calcite Web provides a set of weights for each typeface. These are used by eithe
             
               <section class="trailer-2">
                 <h3 id="text-rule">Text Rule</h3>
-<p>Adds a one pixel border bottom to the element. Will be expanded to take arguments for different type of rules?</p>
-<pre><code>.<span class="hljs-keyword">class</span> {
-  @<span class="hljs-preprocessor"><span class="hljs-keyword">include</span> text-rule();</span>
-}
+<p>Adds a one pixel gray border bottom to the element.</p>
+
+                
+                  <div class="styleguide-modifiers">
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-rule">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.text-rule</code>
+                      </div>
+                    
+                  </div>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>Amazingly few discotheques provide jukeboxes.<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
 </code></pre>
                 
               </section>
@@ -375,10 +572,26 @@ Calcite Web provides a set of weights for each typeface. These are used by eithe
             
               <section class="trailer-2">
                 <h3 id="list-bulleted">List Bulleted</h3>
-<p>Adds the calcite styles for bulleted lists to an unordered list.</p>
-<pre><code>.<span class="hljs-keyword">class</span> {
-  @<span class="hljs-preprocessor"><span class="hljs-keyword">include</span> list-bulleted();</span>
-}
+<p>Adds the Calcite styles for bulleted lists to an unordered list.</p>
+
+                
+                  <div class="styleguide-modifiers">
+                    
+                      <div class="styleguide-modifier-example">
+                        <ul class="list-bulleted">
+  <li>Amazing</li>
+  <li>discotheques</li>
+  <li>jukeboxes</li>
+</ul>
+                        <code class="modifier-name">.list-bulleted</code>
+                      </div>
+                    
+                  </div>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Amazing<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>discotheques<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>jukeboxes<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
 </code></pre>
                 
               </section>
@@ -386,124 +599,27 @@ Calcite Web provides a set of weights for each typeface. These are used by eithe
             
               <section class="trailer-2">
                 <h3 id="list-numbered">List Numbered</h3>
-<p>Adds the calcite styles for large numbered lists to an ordered list. Useful for listing steps in a process.</p>
-<pre><code>.<span class="hljs-keyword">class</span> {
-  @<span class="hljs-preprocessor"><span class="hljs-keyword">include</span> list-numbered();</span>
-}
+<p>Adds the Calcite styles for large numbered lists to an ordered list. Useful for listing steps in a process.</p>
+
+                
+                  <div class="styleguide-modifiers">
+                    
+                      <div class="styleguide-modifier-example">
+                        <ol class="list-numbered">
+  <li>Amazing</li>
+  <li>discotheques</li>
+  <li>jukeboxes</li>
+</ol>
+                        <code class="modifier-name">.list-numbered</code>
+                      </div>
+                    
+                  </div>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">ol</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Amazing<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>discotheques<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>jukeboxes<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ol</span>&gt;</span>
 </code></pre>
-                
-              </section>
-              <hr class="trailer-2">
-            
-          
-            
-              <section class="trailer-2">
-                <h2 id="composition-mixins">Composition Mixins</h2>
-<p>Dats SASS, ass!</p>
-
-                
-              </section>
-              <hr class="trailer-2">
-            
-              <section class="trailer-2">
-                <h2 id="font-size">Font Size</h2>
-<p>The Calcite Web type system uses a modular typographic scale to ensure a consistent tonal range within all text elements. This modular scale is created from the body size of the type, and a second, smaller size. These two type sizes anchor the scale, and using a precise ratio can be expanded to an entire set of sizes for all typographic needs.
-The <code>font-size($n)</code> mixin takes an integer, positive or negative, and sets all type within the element to the size defined by traversing that number of steps up or down the typographic scale.
-The <code>font-size($n)</code> mixin relies on the <code>modular-scale($n)</code> mixin to define the scale, and apply it to typographic elements.</p>
-
-                
-              </section>
-              <hr class="trailer-2">
-            
-              <section class="trailer-2">
-                <h2 id="tracking">Tracking</h2>
-<p>Tracking is the space between letters in a work. The <code>tracking($n)</code> mixin accepts an integer, and applies letterspacing to the element as fractions of 1/1000 of an em.
-<code>@include tracking(500)</code> will apply 1/2 em letterspacing.
-<code>@include tracking(166)</code> will apply a hairline em letterspacing.</p>
-
-                
-              </section>
-              <hr class="trailer-2">
-            
-              <section class="trailer-2">
-                <h2 id="leading">Leading</h2>
-<p>Leading is the space between lines in a text block. The <code>leading($n)</code> mixin accepts an integer, and sets the line height of the element to the integer times the standard baseline unit.</p>
-
-                
-              </section>
-              <hr class="trailer-2">
-            
-              <section class="trailer-2">
-                <h2 id="word-spacing">Word Spacing</h2>
-<p>Word spacing is - well - the space between words.  The <code>word-spacing($n)</code> mixin accepts an integer, and applies letterspacing to the element as fractions of 1/1000 of an em.
-<code>@include word-spacing(500)</code> will apply 1/2 em word spacing.
-<code>@include word-spacing(166)</code> will apply a hairline em word spacing.</p>
-
-                
-              </section>
-              <hr class="trailer-2">
-            
-              <section class="trailer-2">
-                <h2 id="unicode-variables">Unicode Variables</h2>
-<p>SASS Unicode variables provide a simple way to display unicode characters as content in css declarations.</p>
-<ul>
-<li>$space        : space</li>
-<li>$nbsp         : non-breaking space</li>
-<li>$quot         : quotation mark</li>
-<li>$lsquo        : left single curly quote</li>
-<li>$rsquo        : right single curly quote</li>
-<li>$ldquo        : left double curly quote</li>
-<li>$rdquo        : right double curly quote</li>
-<li>$lsaquo       : left single angle quote (guillemet)</li>
-<li>$rsaquo       : right single angle quote (guillemet)</li>
-<li>$laquo        : left double angle quote (guillemet)</li>
-<li>$raquo        : right double angle quote (guillemet)</li>
-<li>$mdash        : em dash (mutton)</li>
-<li>$ndash        : en dash (nut)</li>
-<li>$hyphen       : hyphen</li>
-<li>$amp          : ampersand</li>
-<li>$gt           : greater than</li>
-<li>$lt           : less than</li>
-<li>$times        : times</li>
-<li>$bigtimes     : big times</li>
-<li>$checkmark    : checkmark</li>
-<li>$sect         : section sign</li>
-<li>$para         : pilcrow</li>
-<li>$middot       : interpoint (interpunct, midddot)</li>
-<li>$oslash       : slashed o</li>
-<li>$bull         : bullet</li>
-<li>$whibull      : white bullet</li>
-<li>$hellip       : horizontal ellipsis</li>
-<li>$vellip       : vertical ellipsis</li>
-<li>$midhellip    : midline horizontal ellipsis</li>
-<li>$utri         : up-pointing triangle</li>
-<li>$dtri         : down-pointing triangle</li>
-<li>$ltri         : left-pointing triangle</li>
-<li>$rtri         : right-pointing triangle</li>
-<li>$ustri        : up-pointing small triangle</li>
-<li>$dstri        : down-pointing small triangle</li>
-<li>$lstri        : left-pointing small triangle</li>
-<li>$rstri        : right-pointing small triangle</li>
-<li>$diamond      : diamond</li>
-<li>$fisheye      : fisheye</li>
-<li>$bullseye     : bullseye</li>
-<li>$circle       : circle</li>
-<li>$whitecircle  : white circle</li>
-<li>$square       : square</li>
-<li>$whitesquare  : white square</li>
-<li>$ssquare      : small square</li>
-<li>$swhitesquare : small white square</li>
-</ul>
-
-                
-              </section>
-              <hr class="trailer-2">
-            
-              <section class="trailer-2">
-                <h2 id="modular-scale">Modular Scale</h2>
-<p>The <code>modular-scale($n)</code> behaves the same as the <code>font-size($n)</code> mixin, but returns a raw rem value rather than css styles specific to type elements. This means that the <code>modular-scale($n)</code> mixin can be used to define heights, widths, padding, margins, or any other property of an element so that it adheres to the modular scale defined by the tyopgraphy.
-Setting the max width of an article to a large multiple of the text size is a way to define a comfortable reading measure related to the proportional decisions of the content.</p>
-
                 
               </section>
               <hr class="trailer-2">
