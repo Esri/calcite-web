@@ -1,15 +1,3 @@
----
-modifiers
-	- header-light
-	- header-light-italic
-	- header-face
-	- header-face-italic
-	- header-demi
-	- header-demi-italic
-	- header-bold
-	- header-bold-italic
----
-
 ## Header Face
 
 [Avenir Next](http://www.fonts.com/font/linotype/avenir-next) is a recut of the classic Avenir typeface, by Adrian Frutiger and Akira Kobayashi. It has been reworked for use on the web, and contains more weights, styles, and other improvements. Avenir Next improves on Avenir in specifically web settings.

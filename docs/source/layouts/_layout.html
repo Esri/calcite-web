@@ -20,7 +20,7 @@
     <!-- stylesheets -->
     {% block head %}
       <link rel="stylesheet" href="{{relativePath}}assets/css/all.css">
-      <link rel="stylesheet" href="http://fast.fonts.net/cssapi/3706abc4-0756-424b-b07b-1748122f85d8.css">
+      <!-- <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/9431e9a5-7a6d-4b5f-82be-4d935972de5a.css"/> -->
     {% endblock %}
 
     <!--[if lt IE 9]>
@@ -68,6 +68,8 @@
             <a class="third-nav-link {% if dest == 'index.html' %}is-active{% endif %}" href="{{relativePath}}">Get Started</a>
             <a class="third-nav-link {% if dest == 'type/index.html' %}is-active{% endif %}" href="{{relativePath}}type">Type</a>
             <a class="third-nav-link {% if dest == 'grid/index.html' %}is-active{% endif %}" href="{{relativePath}}grid">Grid</a>
+            <a class="third-nav-link {% if dest == 'color/index.html' %}is-active{% endif %}" href="{{relativePath}}grid">Color</a>
+            <a class="third-nav-link {% if dest == 'icons/index.html' %}is-active{% endif %}" href="{{relativePath}}grid">Icons</a>
             <a class="third-nav-link {% if dest == 'components/index.html' %}is-active{% endif %}" href="{{relativePath}}components">Components</a>
             <a class="third-nav-link {% if dest == 'patterns/index.html' %}is-active{% endif %}" href="{{relativePath}}patterns">Patterns</a>
             <a class="third-nav-link {% if dest == 'sass/index.html' %}is-active{% endif %}" href="{{relativePath}}sass">Sass</a>
