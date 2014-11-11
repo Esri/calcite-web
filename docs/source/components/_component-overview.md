@@ -1,21 +1,5 @@
 <h1 class="trailer-0">Overview</h1>
 
-<h2 class="leader-2 trailer-1" id="alerts">Alerts</h2>
-
-<div class="alert alert-green link-yellow is-active">
-Something Happened! <a>Link</a>
-<a href="#" class="alert-close">thanks</a>
-</div>
-
-<h2 class="leader-2 trailer-1" id="breadcrumbs">Breadcrumbs</h2>
-
-<nav class="breadcrumbs padding-leader-1">
-<a href="#" class="crumb">Thing</a>
-<span class="crumb">Thing</span>
-<a href="#" class="crumb">Thing</a>
-<a href="#" class="crumb">Thing</a>
-<a href="#" class="crumb is-active">Current</a>
-</nav>
 
 <h2 class="leader-2 trailer-1" id="tooltips">Tooltips</h2>
 
@@ -36,14 +20,6 @@ Something Happened! <a>Link</a>
   <span class="icon-help">?</span>
 </div>
 </div>
-
-<h2 class="leader-2" id="button-groups">Button Groups</h2>
-
-<nav class="leader-1">
-<a href="#" class="btn btn-grouped">One</a>
-<a href="#" class="btn btn-grouped">Two</a>
-<a href="#" class="btn btn-grouped">Three</a>
-</nav>
 
 <h2 class="leader-2 trailer-1" id="tables">Tables</h2>
 
