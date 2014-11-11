@@ -1,1 +1,4 @@
 ## First and Last
+
+The `first` and `last` classes are used for
+aligning grid columns when the Grid System is unable to determine whivh columns are first or last in their rows. This will cause the column to be inset from the edge of the container. The example below solves this by introducing `first-column` and `last-column` classes, along with `tablet-first-column`, `phone-first-column`, `tablet-last-column`, and `phone-last-column`.

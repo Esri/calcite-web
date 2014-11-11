@@ -25,8 +25,8 @@
 @mixin block-group() {
   font-family: monospace;
   letter-spacing: -.65em;
-  margin-left: -1em;
-  margin-right: -1em;
+  margin-left: -0.5*$column-gutter;
+  margin-right: -0.5*$column-gutter;
   text-align: left;
   display: block;
   &.center {
@@ -39,8 +39,8 @@
   display: inline-block;
   float: none;
   @include box-sizing(border-box);
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 0.5*$column-gutter;
+  padding-right: 0.5*$column-gutter;
   font-family: sans-serif;
   letter-spacing: normal;
   text-align: left;
