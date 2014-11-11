@@ -15,6 +15,7 @@
   border-spacing: 0;
   border: 1px solid $lighter-gray;
   text-align: left;
+  overflow: auto;
   @include font-size(-2);
 
   > thead {
@@ -113,7 +114,6 @@
   }
 
 @if $include-tables == true {
-  .table-wrap { overflow: auto; }
   table {@include table();}
     .table-blue {@include table-blue();}
     .table-plain {@include table-plain();}
