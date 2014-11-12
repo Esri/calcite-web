@@ -284,13 +284,40 @@ patterns:
   title: "Patterns"
   base: patterns
   navigation:
-    - group: "Patterns"
+    - group: "Markup"
       pages:
-        - title: "Overview"
+        - title: "Patterns"
           link: pattern-overview
+        - title: "Basic Page"
+          link: basic-html-page
+        - title: "Top Nav"
+          link: top-nav
+          modifiers: true
+        - title: "Sub Nav"
+          link: sub-nav
+          modifiers: true
+        - title: "Third Nav"
+          link: third-nav
+          modifiers: true
+        - title: "Side Nav"
+          link: side-nav
+          modifiers: true
+        - title: "Footer"
+          link: footer
+          modifiers: true
         - title: "Pagination"
           link: pagination
-
+          modifiers: true
+    - group: "Javascript Dependant"
+      pages:
+        - title: "Modals"
+          link: modals
+        - title: "Click Dropdowns"
+          link: click-dropdown
+        - title: "Tabs"
+          link: tabs
+        - title: "Accordions"
+          link: accordions
 sass:
   title: "Sass"
   base: sass
@@ -322,14 +349,6 @@ javascript:
   navigation:
     - group: "Javascript"
       pages:
-        - title: "Javscript Patterns"
+        - title: "Javscript"
           link: javascript-overview
-        - title: "Modals"
-          link: modals
-        - title: "Click Dropdowns"
-          link: click-dropdown
-        - title: "Tabs"
-          link: tabs
-        - title: "Accordions"
-          link: accordions
 
