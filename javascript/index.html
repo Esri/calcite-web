@@ -68,8 +68,8 @@
             <a class="third-nav-link " href="../">Get Started</a>
             <a class="third-nav-link " href="../type">Type</a>
             <a class="third-nav-link " href="../grid">Grid</a>
-            <a class="third-nav-link " href="../grid">Color</a>
-            <a class="third-nav-link " href="../grid">Icons</a>
+            <a class="third-nav-link " href="../color">Color</a>
+            <a class="third-nav-link " href="../icons">Icons</a>
             <a class="third-nav-link " href="../components">Components</a>
             <a class="third-nav-link " href="../patterns">Patterns</a>
             <a class="third-nav-link " href="../sass">Sass</a>
@@ -95,15 +95,14 @@
               <h4 class="side-nav-title">Javascript</h4>
               <nav>
                 
-                  <a href="/javascript#javascript-overview" class="side-nav-link">Javscript Patterns</a>
+                  <a href="/javascript#javascript-overview" class="side-nav-link">Javascript</a>
                 
-                  <a href="/javascript#modals" class="side-nav-link">Modals</a>
+              </nav>
+            
+              <h4 class="side-nav-title">Functions</h4>
+              <nav>
                 
-                  <a href="/javascript#click-dropdown" class="side-nav-link">Click Dropdowns</a>
-                
-                  <a href="/javascript#tabs" class="side-nav-link">Tabs</a>
-                
-                  <a href="/javascript#accordions" class="side-nav-link">Accordions</a>
+                  <a href="/javascript#dom-overview" class="side-nav-link">dom.</a>
                 
               </nav>
             
@@ -115,75 +114,81 @@
             
               <section class="trailer-2">
                 <h1 class="trailer-0">Calcite Javascript</h1>
-                
-              </section>
-              <hr class="trailer-2">
-            
-              <section class="trailer-2">
-                <h2 id="modals">Modals</h2>
-<div class="js-modal modal-overlay">
 
-<div class="container">
-  <div class="row">
-    <div class="modal-content column-12 pre-6 leader-5">
-      <a class="js-modal-dismiss icon-close right" href="#"></a>
-      <h4>Modal!</h4>
-    </div>
-  </div>
-</div>
-                
-              </section>
-              <hr class="trailer-2">
-            
-              <section class="trailer-2">
-                <h2 id="click-dropdown">Click Dropdown</h2>
+<p>Calcite-web.js is a small, super-light library that enables behaviors for <a href="/patterns/#javascript-dependant">javscript dependant patterns</a> and allows for dom node and class manipulation. Calcite-web.js can replace Jquery or Dojo for most basic tasks.</p>
 
                 
               </section>
               <hr class="trailer-2">
             
-              <section class="trailer-2">
-                <h2 id="tabs">Tabs</h2>
- <div class="tabs-transparent js-tab-group trailer-2">
-    <nav class="tab-nav">
-      <a class="tab-title is-active">Tab 1</a>
-      <a class="tab-title">Tab 2</a>
-      <a class="tab-title">Tab 3</a>
-    </nav>
-    <section class="tab-contents">
-      <article class="tab-section is-active">
-        <p>Tab 1 section</p>
-      </article>
-      <article class="tab-section">
-        <p>Tab 2 section</p>
-      </article>
-      <article class="tab-section">
-        <p>Tab 3 section</p>
-      </article>
-    </section>
-  </div>
-                
-              </section>
-              <hr class="trailer-2">
+          
             
               <section class="trailer-2">
-                <h2 id="accordions">Accordions</h2>
-  <aside class="js-accordion accordion">
-    <h4 class="accordion-title is-active">Title of Section</h4>
-    <div class="accordion-content is-active">
-      <p>Stuff!</p>
-    </div>
+                <h2 id="dom-overview">Dom Overview</h2>
+<p>The following functions allow for basic dom manipulation and traversal. These helpers are used by javascript-dependant patterns, and can be included in any custom javsacript in Calcite Web projects.</p>
+<table>
+<thead>
+<tr>
+<th>function</th>
+<th>action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dom.addEvent()</code></td>
+<td>Returns standard interaction event, later will add touch support.</td>
+</tr>
+<tr>
+<td><code>dom.removeEvent(el, event, fn)</code></td>
+<td>Add a callback function to an event on an element.</td>
+</tr>
+<tr>
+<td><code>dom.eventTarget(el, event, fn)</code></td>
+<td>Remove an event and its bindings.</td>
+</tr>
+<tr>
+<td><code>dom.preventDefault(event)</code></td>
+<td>Get the target element of an event.</td>
+</tr>
+<tr>
+<td><code>dom.stopPropagation(event)</code></td>
+<td>Prevent default behavior of an event.</td>
+</tr>
+<tr>
+<td><code>dom.hasClass(event)</code></td>
+<td>Stop and event from bubbling up the DOM tree. Returns boolean.</td>
+</tr>
+<tr>
+<td><code>dom.addClass(elem, className)</code></td>
+<td>Check if an element has a specific class.</td>
+</tr>
+<tr>
+<td><code>dom.removeClass(elem, classes)</code></td>
+<td>Add one or more classes to an element.</td>
+</tr>
+<tr>
+<td><code>dom.closest(elem, classes)</code></td>
+<td>Remove one or more classes from an element. Returns dom node.</td>
+</tr>
+<tr>
+<td><code>dom.getAttr(className, context)</code></td>
+<td>Returns closest element up the DOM tree matching a given class. Returns attribute string.</td>
+</tr>
+<tr>
+<td><code>dom.indexOf(obj, arr, offset)</code></td>
+<td>Return the index of an object in an array with optional offset. Returns number.</td>
+</tr>
+<tr>
+<td><code>dom.makeArray(object)</code></td>
+<td>Make an object into an array. Returns array.</td>
+</tr>
+<tr>
+<td><code>dom.isTouch()</code></td>
+<td>Detect touch, could be improved for more coverage. Returns boolean.</td>
+</tr>
+</tbody>
+</table>
 
-    <h4 class="accordion-title">Title of Second Section</h4>
-    <div class="accordion-content">
-      <p>Stuff!</p>
-    </div>
-
-    <h4 class="accordion-title">Title of Third Section</h4>
-    <div class="accordion-content">
-      <p>Stuff!</p>
-    </div>
-  </aside>
                 
               </section>
               <hr class="trailer-2">

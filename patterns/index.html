@@ -68,8 +68,8 @@
             <a class="third-nav-link " href="../">Get Started</a>
             <a class="third-nav-link " href="../type">Type</a>
             <a class="third-nav-link " href="../grid">Grid</a>
-            <a class="third-nav-link " href="../grid">Color</a>
-            <a class="third-nav-link " href="../grid">Icons</a>
+            <a class="third-nav-link " href="../color">Color</a>
+            <a class="third-nav-link " href="../icons">Icons</a>
             <a class="third-nav-link " href="../components">Components</a>
             <a class="third-nav-link is-active" href="../patterns">Patterns</a>
             <a class="third-nav-link " href="../sass">Sass</a>
@@ -92,12 +92,37 @@
         <div class="column-6">
           <aside class="side-nav column-6">
             
-              <h4 class="side-nav-title">Patterns</h4>
+              <h4 class="side-nav-title">Markup</h4>
               <nav>
                 
-                  <a href="/patterns#pattern-overview" class="side-nav-link">Overview</a>
+                  <a href="/patterns#pattern-overview" class="side-nav-link">Patterns</a>
+                
+                  <a href="/patterns#basic-html-page" class="side-nav-link">Basic Page</a>
+                
+                  <a href="/patterns#top-nav" class="side-nav-link">Top Nav</a>
+                
+                  <a href="/patterns#sub-nav" class="side-nav-link">Sub Nav</a>
+                
+                  <a href="/patterns#third-nav" class="side-nav-link">Third Nav</a>
+                
+                  <a href="/patterns#side-nav" class="side-nav-link">Side Nav</a>
+                
+                  <a href="/patterns#footer" class="side-nav-link">Footer</a>
                 
                   <a href="/patterns#pagination" class="side-nav-link">Pagination</a>
+                
+              </nav>
+            
+              <h4 class="side-nav-title">Javascript Dependant</h4>
+              <nav>
+                
+                  <a href="/patterns#modals" class="side-nav-link">Modals</a>
+                
+                  <a href="/patterns#click-dropdown" class="side-nav-link">Click Dropdowns</a>
+                
+                  <a href="/patterns#tabs" class="side-nav-link">Tabs</a>
+                
+                  <a href="/patterns#accordions" class="side-nav-link">Accordions</a>
                 
               </nav>
             
@@ -109,21 +134,425 @@
             
               <section class="trailer-2">
                 <h1 class="leader-0">Calcite Web Patterns</h1>
+
+<p>Patterns are specific UI schemes that use a collection of <a href="/components">components</a> and pattern-specific css to solve a common design problem. Patterns can either stand alone entirely as markup, or be dependent on <a href="/javscript">Javascript</a> to accomplish certain behaviors.</p>
+<p>To use a pattern, follow the structures defined in the sample code.</p>
+
+                
+              </section>
+              <hr class="trailer-2">
+            
+              <section class="trailer-2">
+                <h2 id="basic-html-page">Basic HTML Page</h2>
+<p>A basic starting point for an html page using Calcite Web might be something like this:</p>
+<pre><code class="lang-html"><span class="hljs-doctype">&lt;!doctype html&gt;</span>
+<span class="hljs-comment">&lt;!--[if lt IE 9]&gt;  &lt;html class="ie lt-ie9 ie8"&gt; &lt;![endif]--&gt;</span>
+<span class="hljs-comment">&lt;!--[if IE 9]&gt;     &lt;html class="ie ie9"&gt; &lt;![endif]--&gt;</span>
+<span class="hljs-comment">&lt;!--[if !IE]&gt;&lt;!--&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span> <span class="hljs-comment">&lt;!--&lt;![endif]--&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"utf-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"IE=edge,chrome=1"</span> <span class="hljs-attribute">http-equiv</span>=<span class="hljs-value">"X-UA-Compatible"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"viewport"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"width=device-width, user-scalable=no"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Calcite Web<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"shortcut icon"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/img/favicon.ico"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/css"</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/assets/stylesheets/calcite.css"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!--[if lt IE 9]&gt;
+      &lt;script src="/assets/javascripts/libs/selectivizr.js" type="text/javascript"&gt;&lt;/script&gt;
+      &lt;script src="/assets/javascripts/libs/html5shiv.js" type="text/javascript"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"wrapper"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"page"</span>&gt;</span>
+
+        <span class="hljs-comment">&lt;!-- header pattern --&gt;</span>
+
+        <span class="hljs-comment">&lt;!-- content of page --&gt;</span>
+
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+        <span class="hljs-comment">&lt;!-- footer pattern --&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/assets/javascripts/calcite.js"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre>
+
+                
+              </section>
+              <hr class="trailer-2">
+            
+              <section class="trailer-2">
+                <h2 id="top-navigation">Top Navigation</h2>
+<p>Top navigation is the primary, header level navigation for a web site. It contains the root level pages, user logins, and the site title.</p>
+
+                
+                  
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <header class="top-nav">
+  <div class="container">
+    <a href="#" class="top-nav-title">Calcite for Unicorns</a>
+    <nav class="top-nav-list">
+      <a class="top-nav-link" href="#">Plains</a>
+      <a class="top-nav-link is-active" href="#">Fields</a>
+      <a class="top-nav-link" href="#">Forests</a>
+      <a class="top-nav-link" href="#">Mountains</a>
+    </nav>
+  </div>
+</header>
+                    </div>
+                  </div>
+                  
+                  <div class="styleguide-modifiers">
+                    
+                  </div>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">header</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"top-nav"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"container"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"top-nav-title"</span>&gt;</span>Calcite for Unicorns<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"top-nav-list"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"top-nav-link"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Plains<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"top-nav-link is-active"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Fields<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"top-nav-link"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Forests<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"top-nav-link"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Mountains<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">header</span>&gt;</span>
+</code></pre>
+                
+              </section>
+              <hr class="trailer-2">
+            
+              <section class="trailer-2">
+                <h2 id="sub-navigation">Sub Navigation</h2>
+
+                
+                  
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <header class="sub-nav">
+  <div class="container">
+    <h1 class="sub-nav-title"><a href="#" class="link-white">Fields</a></h1>
+    <nav class="sub-nav-list">
+      <a class="sub-nav-link" href="#">Glens</a>
+      <a class="sub-nav-link" href="#">Dales</a>
+      <a class="sub-nav-link is-active" href="#">Meadows</a>
+    </nav>
+  </div>
+</header>
+                    </div>
+                  </div>
+                  
+                  <div class="styleguide-modifiers">
+                    
+                  </div>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">header</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-nav"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"container"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-nav-title"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"link-white"</span>&gt;</span>Fields<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-nav-list"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-nav-link"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Glens<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-nav-link"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Dales<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-nav-link is-active"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Meadows<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">header</span>&gt;</span>
+</code></pre>
+                
+              </section>
+              <hr class="trailer-2">
+            
+              <section class="trailer-2">
+                <h2 id="third-navigation">Third Navigation</h2>
+<p>Tertiary navigation is necessary only when the information architecture of the site requires three levels of hierarchy within pages. A breadcrumb component can also be used in this pattern.</p>
+
+                
+                  
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <header class="third-nav">
+  <div class="container">
+    <nav>
+      <a class="third-nav-link" href="#">Alpine</a>
+      <a class="third-nav-link" href="#">Coastal</a>
+      <a class="third-nav-link" href="#">Wetland</a>
+      <a class="third-nav-link" href="#">Grassland</a>
+      <a class="third-nav-link" href="#">Praire</a>
+    </nav>
+  </div>
+</header>
+                    </div>
+                  </div>
+                  
+                  <div class="styleguide-modifiers">
+                    
+                  </div>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">header</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"third-nav"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"container"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">nav</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"third-nav-link"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Alpine<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"third-nav-link"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Coastal<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"third-nav-link"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Wetland<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"third-nav-link"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Grassland<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"third-nav-link"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Praire<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">header</span>&gt;</span>
+</code></pre>
+                
+              </section>
+              <hr class="trailer-2">
+            
+              <section class="trailer-2">
+                <h2 id="side-navigation">Side Navigation</h2>
+<p>Sidebar can be used either for in-page navigation – like on this page – or for lists of articles unde a given topic.</p>
+
+                
+                  
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <aside class="side-nav">
+  <h4 class="side-nav-title">Sidenav Group</h4>
+  <nav>
+    <a href="#" class="side-nav-link">Agricultural</a>
+    <a href="#" class="side-nav-link">Transition</a>
+    <a href="#" class="side-nav-link">Perpetual</a>
+    <a href="#" class="side-nav-link">Cultural</a>
+  </nav>
+</aside>
+                    </div>
+                  </div>
+                  
+                  <div class="styleguide-modifiers">
+                    
+                  </div>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">aside</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"side-nav"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h4</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"side-nav-title"</span>&gt;</span>Sidenav Group<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"side-nav-link"</span>&gt;</span>Agricultural<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"side-nav-link"</span>&gt;</span>Transition<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"side-nav-link"</span>&gt;</span>Perpetual<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"side-nav-link"</span>&gt;</span>Cultural<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">aside</span>&gt;</span>
+</code></pre>
+                
+              </section>
+              <hr class="trailer-2">
+            
+              <section class="trailer-2">
+                <h2 id="footer">Footer</h2>
+<p>Standard footer for ArcGIS and Esri properties.</p>
+
+                
+                  
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <footer class="footer header-face leader-3">
+  <div class="container">
+    <nav class="column-6">
+      <h6>Arc<span>GIS</span></h6>
+      <ul class="list-bulleted">
+        <li><a href="http://www.arcgis.com/about/">Home</a></li>
+        <li><a href="http://www.arcgis.com/about/features.html">Features</a></li>
+        <li><a href="http://www.arcgis.com/about/pricing.html">Pricing</a></li>
+      </ul>
+    </nav>
+
+    <nav class="column-6">
+      <h6>Arc<span>GIS</span> for Developers</h6>
+      <ul>
+        <li><a href="/en/">Home</a></li>
+        <li><a href="/en/features/">Features</a></li>
+        <li><a href="http://blogs.esri.com/esri/arcgis/category/developer/">Blog</a></li>
+      </ul>
+    </nav>
+
+    <nav class="column-6">
+      <h6>About Esri</h6>
+      <ul>
+        <li><a href="http://www.esri.com/about-esri/">About Us</a></li>
+        <li><a href="http://www.esri.com/careers/">Careers</a></li>
+        <li><a href="http://blogs.esri.com/esri/esri-insider/">Insiders Blog</a></li>
+        <li><a href="http://www.esri.com/events/user-conference/index.html">User Conference</a></li>
+        <li><a href="http://www.esri.com/events/devsummit/index.html">Developer Summit</a></li>
+      </ul>
+    </nav>
+
+    <nav class="column-6">
+      <a class="esri-logo-footer" href="http://esri.com">Esri</a>
+      <section class="footer-social-nav">
+        <a class="icon-twitter" href="https://twitter.com/Esri/"></a>
+        <a class="icon-facebook" href="https://www.facebook.com/esrigis/"></a>
+        <a class="icon-github" href="http://esri.github.com/"></a>
+        <a class="icon-email" href="http://www.esri.com/about-esri/contact/"></a>
+      </section>
+    </nav>
+    <div class="column-24">
+      <p><small>© Copyright 2013 Environmental Systems Research Institute, Inc. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal/software-license">Legal</a></small></p>
+    </div>
+  </div>
+</footer>
+                    </div>
+                  </div>
+                  
+                  <div class="styleguide-modifiers">
+                    
+                  </div>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">footer</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"footer header-face leader-3"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"container"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-6"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">h6</span>&gt;</span>Arc<span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>GIS<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"list-bulleted"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.arcgis.com/about/"</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.arcgis.com/about/features.html"</span>&gt;</span>Features<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.arcgis.com/about/pricing.html"</span>&gt;</span>Pricing<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-6"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">h6</span>&gt;</span>Arc<span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>GIS<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> for Developers<span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/en/"</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/en/features/"</span>&gt;</span>Features<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://blogs.esri.com/esri/arcgis/category/developer/"</span>&gt;</span>Blog<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-6"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">h6</span>&gt;</span>About Esri<span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.esri.com/about-esri/"</span>&gt;</span>About Us<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.esri.com/careers/"</span>&gt;</span>Careers<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://blogs.esri.com/esri/esri-insider/"</span>&gt;</span>Insiders Blog<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.esri.com/events/user-conference/index.html"</span>&gt;</span>User Conference<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.esri.com/events/devsummit/index.html"</span>&gt;</span>Developer Summit<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-6"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"esri-logo-footer"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://esri.com"</span>&gt;</span>Esri<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"footer-social-nav"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-twitter"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"https://twitter.com/Esri/"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-facebook"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"https://www.facebook.com/esrigis/"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-github"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://esri.github.com/"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-email"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.esri.com/about-esri/contact/"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-24"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">small</span>&gt;</span>© Copyright 2013 Environmental Systems Research Institute, Inc. | <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.esri.com/legal/privacy"</span>&gt;</span>Privacy<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> | <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www.esri.com/legal/software-license"</span>&gt;</span>Legal<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">small</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">footer</span>&gt;</span>
+</code></pre>
                 
               </section>
               <hr class="trailer-2">
             
               <section class="trailer-2">
                 <h2 id="pagination">Pagination</h2>
-  <div class="text-center trailer-2">
-    <a href="#" class="btn btn-transparent btn-disabled">Previous</a>
-    <a href="#" class="btn">1</a>
-    <a href="#" class="btn btn-transparent">2</a>
-    <a href="#" class="btn btn-transparent">3</a>
-    <span class="header-light text-light-gray">...</span>
-    <a href="#" class="btn btn-transparent">20</a>
-    <a href="#" class="btn btn-transparent btn-arrow">Next</a>
+<p>Use the pagination pattern to navigation between pages of displayed content, either in a gallery or a search result view.</p>
+
+                
+                  
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <div class="text-center trailer-1 leader-1">
+  <a href="#" class="btn btn-transparent btn-disabled">Previous</a>
+  <a href="#" class="btn">1</a>
+  <a href="#" class="btn btn-transparent">2</a>
+  <a href="#" class="btn btn-transparent">3</a>
+  <span class="header-light text-light-gray">...</span>
+  <a href="#" class="btn btn-transparent">20</a>
+  <a href="#" class="btn btn-transparent btn-arrow">Next</a>
+</div>
+                    </div>
+                  </div>
+                  
+                  <div class="styleguide-modifiers">
+                    
+                  </div>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-center trailer-1 leader-1"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-transparent btn-disabled"</span>&gt;</span>Previous<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-transparent"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-transparent"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"header-light text-light-gray"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-transparent"</span>&gt;</span>20<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-transparent btn-arrow"</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+                
+              </section>
+              <hr class="trailer-2">
+            
+          
+            
+              <section class="trailer-2">
+                <h2 id="modals">Modals</h2>
+<div class="js-modal modal-overlay">
+
+<div class="container">
+  <div class="row">
+    <div class="modal-content column-12 pre-6 leader-5">
+      <a class="js-modal-dismiss icon-close right" href="#"></a>
+      <h4>Modal!</h4>
+    </div>
   </div>
+</div>
+                
+              </section>
+              <hr class="trailer-2">
+            
+              <section class="trailer-2">
+                <h2 id="click-dropdown">Click Dropdown</h2>
+
+                
+              </section>
+              <hr class="trailer-2">
+            
+              <section class="trailer-2">
+                <h2 id="tabs">Tabs</h2>
+ <div class="tabs-transparent js-tab-group trailer-2">
+    <nav class="tab-nav">
+      <a class="tab-title is-active">Tab 1</a>
+      <a class="tab-title">Tab 2</a>
+      <a class="tab-title">Tab 3</a>
+    </nav>
+    <section class="tab-contents">
+      <article class="tab-section is-active">
+        <p>Tab 1 section</p>
+      </article>
+      <article class="tab-section">
+        <p>Tab 2 section</p>
+      </article>
+      <article class="tab-section">
+        <p>Tab 3 section</p>
+      </article>
+    </section>
+  </div>
+                
+              </section>
+              <hr class="trailer-2">
+            
+              <section class="trailer-2">
+                <h2 id="accordions">Accordions</h2>
+  <aside class="js-accordion accordion">
+    <h4 class="accordion-title is-active">Title of Section</h4>
+    <div class="accordion-content is-active">
+      <p>Stuff!</p>
+    </div>
+
+    <h4 class="accordion-title">Title of Second Section</h4>
+    <div class="accordion-content">
+      <p>Stuff!</p>
+    </div>
+
+    <h4 class="accordion-title">Title of Third Section</h4>
+    <div class="accordion-content">
+      <p>Stuff!</p>
+    </div>
+  </aside>
                 
               </section>
               <hr class="trailer-2">
