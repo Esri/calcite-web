@@ -95,7 +95,7 @@
               <h4 class="side-nav-title">{{ group.group }}</h4>
               <nav>
                 {% for page in group.pages %}
-                  <a href="/{{table_of_contents[section].base}}#{{page.link}}" class="side-nav-link">{{page.title}}</a>
+                  <a href="{{relativePath}}/{{table_of_contents[section].base}}#{{page.link}}" class="side-nav-link">{{page.title}}</a>
                 {% endfor %}
               </nav>
             {% endfor %}
