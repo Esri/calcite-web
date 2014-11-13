@@ -1,1 +1,8 @@
-<h1>{{ colorset }}</h1>
+{% for color in colorset %}
+  <div class="column-17 trailer-1">
+    <div class="column-10 first-column color-sample {{ color }}"></div>
+    <div class="column-7">
+      <p class="leader-2"><code>${{ color }}</code></p>
+    </div>
+  </div>
+{% endfor %}
