@@ -1,0 +1,15 @@
+//************************************************************************//
+// Shorthand clearfix  mixins. From Bourbon.io
+//************************************************************************//
+
+@mixin overflow-auto() {
+  overflow: auto;
+}
+
+%overflow-auto {
+  @include clearfix();
+}
+
+.overflow-auto {
+  @extend %overflow-auto;
+}
