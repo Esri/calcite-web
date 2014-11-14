@@ -29,6 +29,7 @@
     color: $off-white;
     pointer-events: none;
     opacity: 0;
+    z-index: 4;
     @include transition(all, $transition);
     @include transform(translate3d(0, 4px, 0));
   }
