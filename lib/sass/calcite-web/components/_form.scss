@@ -108,7 +108,7 @@ select {
   height: $baseline * 1.5;
   @include font-size(-1);
   @extend .header-face;
-  border-color: $light-gray;
+  border: 1px solid $light-gray;
   background-color: $lightest-gray;
   @-moz-document url-prefix() {
     height: auto;

@@ -5,5 +5,3 @@ While there is no official Esri brand typeface for long for applications, Calcit
 ### Frutiger
 <p class="type-sample"> Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
 <p class="type-sample"> Amazingly few discotheques provide jukeboxes.</p>
-
-### Modifers

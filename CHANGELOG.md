@@ -1,5 +1,5 @@
 ## v0.0.5
-Forms, table improvements, type changes, more documentation.
+Forms, table improvements, type changes, in progress icon tooling, more documentation.
 
 ### Added
 - Inputs
@@ -15,6 +15,7 @@ Forms, table improvements, type changes, more documentation.
 - Nav patterns & Buttons no longer default to `.header-light` on retina.
 - Buttons have a one pixel stroke
 - Change header font of tables to Avenir Next
+- Changed body font to Frutiger Light
 - Make tables more compact
 
 ## v0.0.4
