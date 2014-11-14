@@ -13,6 +13,7 @@
   line-height: 1.15em;
 }
 
+
 // Modifier Classes
 .styleguide-modifiers {
   @include clearfix();
@@ -87,4 +88,95 @@
       }
     }
   }
+}
+
+// Color Sample Classes
+
+.color-sample {
+  width: 100%;
+  height: 5*$baseline;
+  &.white { background-color: $white; }
+  &.off-white { background-color: $off-white; }
+  &.lightest-gray { background-color: $lightest-gray; }
+  &.lighter-gray { background-color: $lighter-gray; }
+  &.light-gray { background-color: $light-gray; }
+  &.gray { background-color: $gray; }
+  &.dark-gray { background-color: $dark-gray; }
+  &.darker-gray { background-color: $darker-gray; }
+  &.darkest-gray { background-color: $darkest-gray; }
+  &.off-black { background-color: $off-black; }
+  &.black { background-color: $black; }
+  &.transparent-off-black { background-color: $transparent-off-black; }
+  &.transparent-black { background-color: $transparent-black; }
+  &.lightest-blue { background-color: $lightest-blue; }
+  &.lighter-blue { background-color: $lighter-blue; }
+  &.light-blue { background-color: $light-blue; }
+  &.blue { background-color: $blue; }
+  &.dark-blue { background-color: $dark-blue; }
+  &.light-green { background-color: $light-green; }
+  &.green { background-color: $green; }
+  &.dark-green { background-color: $dark-green; }
+  &.light-red { background-color: $light-red; }
+  &.red { background-color: $red; }
+  &.dark-red { background-color: $dark-red; }
+  &.light-orange { background-color: $light-orange; }
+  &.orange { background-color: $orange; }
+  &.dark-orange { background-color: $dark-orange; }
+  &.light-yellow { background-color: $light-yellow; }
+  &.yellow { background-color: $yellow; }
+  &.dark-yellow { background-color: $dark-yellow; }
+  &.light-purple { background-color: $light-purple; }
+  &.purple { background-color: $purple; }
+  &.dark-purple { background-color: $dark-purple; }
+  &.light-brown { background-color: $light-brown; }
+  &.brown { background-color: $brown; }
+  &.dark-brown { background-color: $dark-brown; }
+}
+
+.type-sample {
+  &.nbsp:before {content: $nbsp}
+  &.quot:before {content: $quot}
+  &.lsquo:before {content: $lsquo}
+  &.rsquo:before {content: $rsquo}
+  &.ldquo:before {content: $ldquo}
+  &.rdquo:before {content: $rdquo}
+  &.lsaquo:before {content: $lsaquo}
+  &.rsaquo:before {content: $rsaquo}
+  &.laquo:before {content: $laquo}
+  &.raquo:before {content: $raquo}
+  &.mdash:before {content: $mdash}
+  &.ndash:before {content: $ndash}
+  &.hyphen:before {content: $hyphen}
+  &.amp:before {content: $amp}
+  &.gt:before {content: $gt}
+  &.lt:before {content: $lt}
+  &.times:before {content: $times}
+  &.bigtimes:before {content: $bigtimes}
+  &.checkmark:before {content: $checkmark}
+  &.sect:before {content: $sect}
+  &.para:before {content: $para}
+  &.middot:before {content: $middot}
+  &.oslash:before {content: $oslash}
+  &.bull:before {content: $bull}
+  &.whibull:before {content: $whibull}
+  &.hellip:before {content: $hellip}
+  &.vellip:before {content: $vellip}
+  &.midhellip:before {content: $midhellip}
+  &.utri:before {content: $utri}
+  &.dtri:before {content: $dtri}
+  &.ltri:before {content: $ltri}
+  &.rtri:before {content: $rtri}
+  &.ustri:before {content: $ustri}
+  &.dstri:before {content: $dstri}
+  &.lstri:before {content: $lstri}
+  &.rstri:before {content: $rstri}
+  &.diamond:before {content: $diamond}
+  &.fisheye:before {content: $fisheye}
+  &.bullseye:before {content: $bullseye}
+  &.circle:before {content: $circle}
+  &.whitecircle:before {content: $whitecircle}
+  &.square:before {content: $square}
+  &.whitesquare:before {content: $whitesquare}
+  &.ssquare:before {content: $ssquare}
+  &.swhitesquare:before {content: $swhitesquare}
 }

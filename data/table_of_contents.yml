@@ -201,6 +201,57 @@ icons:
           link: color
           folder: 'lib/img/icons/vecticons/*.svg'
 
+color:
+  title: "Color"
+  base: color
+  navigation:
+    - group: "Palette"
+      pages:
+        - title: "Overview"
+          link: overview
+        - title: "Grayscale"
+          link: grayscale
+          colors:
+            - white
+            - off-white
+            - lightest-gray
+            - lighter-gray
+            - light-gray
+            - gray
+            - dark-gray
+            - darker-gray
+            - darkest-gray
+            - off-black
+            - black
+            - transparent-black
+            - transparent-off-black
+        - title: "UI Colors"
+          link: ui-colors
+          colors:
+            - lightest-blue
+            - lighter-blue
+            - light-blue
+            - blue
+            - dark-blue
+            - light-green
+            - green
+            - dark-green
+            - light-red
+            - red
+            - dark-red
+            - light-orange
+            - orange
+            - dark-orange
+            - light-yellow
+            - yellow
+            - dark-yellow
+            - light-purple
+            - purple
+            - dark-purple
+            - light-brown
+            - brown
+            - dark-brown
+
 components:
   title: "Components"
   base: components
@@ -209,42 +260,130 @@ components:
       pages:
         - title: "Overview"
           link: component-overview
-        - title: "Alerts"
-          link: alerts
-        - title: "Breadcrumbs"
-          link: breadcrumbs
-        - title: "Tooltips"
-          link: tooltips
         - title: "Buttons"
           link: buttons
+          modifiers:
+            - btn-arrow
+            - btn-transparent
+            - btn-clear
+            - btn-clear-gray
+            - btn-clear-white
+            - btn-small
+            - btn-large
+            - btn-fill
+            - btn-disabled
+            - btn-red
+            - btn-green
+            - btn-blue
+            - btn-purple
+            - btn-orange
+            - btn-brown
+            - btn-white
+            - btn-light-gray
+            - btn-gray
+            - btn-dark-gray
+            - btn-darker-gray
+            - btn-darkest-gray
+            - btn-off-black
         - title: "Button Groups"
           link: button-groups
+          modifiers:
+            - btn-grouped
+        - title: "Alerts"
+          link: alerts
+          modifiers:
+            - default
+            - alert-red
+            - alert-green
+        - title: "Breadcrumbs"
+          link: breadcrumbs
+          modifiers: true
+        - title: "Tooltips"
+          link: tooltips
+          modifiers:
+            - default
+            - tooltip-left
+            - tooltip-right
         - title: "Tables"
           link: tables
+          modifiers:
+            - default
+            - table-blue
+            - table-striped
+            - table-plain
     - group: "Forms"
       pages:
         - title: "Text Inputs"
           link: text-inputs
+          modifiers:
+            - date
+            - datetime
+            - datetime-local
+            - email
+            - time
+            - week
+            - search
+            - tel
+            - text
+            - url
+            - number
+            - password
+            - month
         - title: "Button Inputs"
           link: button-inputs
+          modifiers:
+            - button
+            - file
+            - reset
+            - submit
         - title: "Selects"
           link: selects
+          modifiers: true
         - title: "Checkboxes"
           link: checkboxes
+          modifiers: true
         - title: "Radio Buttons"
           link: radio-buttons
+          modifiers: true
 
 patterns:
   title: "Patterns"
   base: patterns
   navigation:
-    - group: "Patterns"
+    - group: "Markup"
       pages:
-        - title: "Overview"
+        - title: "Patterns"
           link: pattern-overview
+        - title: "Basic Page"
+          link: basic-html-page
+        - title: "Top Nav"
+          link: top-nav
+          modifiers: true
+        - title: "Sub Nav"
+          link: sub-nav
+          modifiers: true
+        - title: "Third Nav"
+          link: third-nav
+          modifiers: true
+        - title: "Side Nav"
+          link: side-nav
+          modifiers: true
+        - title: "Footer"
+          link: footer
+          modifiers: true
         - title: "Pagination"
           link: pagination
-
+          modifiers: true
+    - group: "Javascript Dependant"
+      pages:
+        - title: "Modals"
+          link: modals
+        - title: "Click Dropdowns"
+          link: click-dropdown
+        - title: "Tabs"
+          link: tabs
+        - title: "Accordions"
+          link: accordions
 sass:
   title: "Sass"
   base: sass
@@ -253,10 +392,8 @@ sass:
       pages:
         - title: "Overview"
           link: sass-overview
-    - group: "Composition Mixins"
+    - group: "Type Composition"
       pages:
-        - title: "Overview"
-          link: composition-mixins
         - title: "Font Size"
           link: font-size
         - title: "Tracking"
@@ -267,8 +404,62 @@ sass:
           link: word-spacing
         - title: "Unicode Variables"
           link: unicode-variables
+          variables:
+            - nbsp
+            - quot
+            - lsquo
+            - rsquo
+            - ldquo
+            - rdquo
+            - lsaquo
+            - rsaquo
+            - laquo
+            - raquo
+            - mdash
+            - ndash
+            - hyphen
+            - amp
+            - gt
+            - lt
+            - times
+            - bigtimes
+            - checkmark
+            - sect
+            - para
+            - middot
+            - oslash
+            - bull
+            - whibull
+            - hellip
+            - vellip
+            - midhellip
+            - utri
+            - dtri
+            - ltri
+            - rtri
+            - ustri
+            - dstri
+            - lstri
+            - rstri
+            - diamond
+            - fisheye
+            - bullseye
+            - circle
+            - whitecircle
+            - square
+            - whitesquare
+            - ssquare
+            - swhitesquare
         - title: "Modular Scale"
           link: modular-scale
+    - group: "Utillities"
+      pages:
+        - title: Utillity Mixins
+          link: utillity-mixins
+    - group: "Color Map"
+      pages:
+        - title: Color Map
+          link: color-map
 
 javascript:
   title: "Javascript"
@@ -276,14 +467,9 @@ javascript:
   navigation:
     - group: "Javascript"
       pages:
-        - title: "Javscript Patterns"
+        - title: "Javascript"
           link: javascript-overview
-        - title: "Modals"
-          link: modals
-        - title: "Click Dropdowns"
-          link: click-dropdown
-        - title: "Tabs"
-          link: tabs
-        - title: "Accordions"
-          link: accordions
-
+    - group: "Functions"
+      pages:
+        - title: "dom."
+          link: dom-overview
