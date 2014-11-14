@@ -1,5 +1,5 @@
 ## Block Groups
-Block groups are designed to for quickly creating repeating rows of content, like a tile pattern or image gallery. Block groups are percentage based, so can subdivide columns. Block groups have the abillity to break the regular grid system, and thus should be used sparingly and with thought.
+Block groups are designed for quickly creating gridded content, like a tile pattern or image gallery. Block groups are percentage based, so they can subdivide columns. Block groups have the abillity to break the regular grid system, and thus should be used sparingly and with thought.
 
 <!-- Closes out extant column and container divs -->
 </div>

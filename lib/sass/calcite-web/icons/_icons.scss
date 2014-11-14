@@ -1,0 +1,23 @@
+// Icons
+@mixin icons() {
+  // Basic Icon Styles
+  [class*="icon-"] {
+    &:before {
+      content: "";
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: transparent;
+      width: 2rem;
+      height: 2rem;
+      background-size: 100% 100%;
+    }
+  }
+
+  // Pass a file glob and iterate over it.
+  @each $filename in listFiles("lib/img/icons/calcite-large/*.svg") {.icon-#{$filename} { background-image: url('../img/icons/calcite-large/#{$filename}.svg'); }}
+}
+
+@if $include-icons == true {
+  @include icons();
+}

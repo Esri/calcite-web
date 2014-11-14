@@ -5,5 +5,3 @@
 ### ITC Charter
 <h2 class="secondary-face type-sample"> Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</h2>
 <h2 class="secondary-face  type-sample"> Amazingly few discotheques provide jukeboxes.</h2>
-
-### Modifers

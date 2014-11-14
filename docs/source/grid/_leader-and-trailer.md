@@ -1,6 +1,6 @@
 ## Leader and Trailer
 
-The leader and trailer classes are designed for quick vertical adjustments with markup. The standard `leader-n` and `trailer-n` classes add top- and bottom-margin to the element, as multiples of the `$baseline` variable, or 1.5rem.
+The leader and trailer classes are designed for quick vertical adjustments with markup. The standard `leader-n` and `trailer-n` classes add top and bottom margin to the element, as multiples of the `$baseline` variable, or 1.5rem.
 
 The `padding-` prefix adds lines of padding instead of margin, and both classes can be used in conjunction.
 
