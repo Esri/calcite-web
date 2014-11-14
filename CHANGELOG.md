@@ -17,6 +17,14 @@ Forms, table improvements, type changes, in progress icon tooling, more document
 - Change header font of tables to Avenir Next
 - Changed body font to Frutiger Light
 - Make tables more compact
+- javascript namespace changed from `C` to `calcite`
+- renamed `dom.makeArray()` function to `dom.nodeListToArray`
+- added `arr` and `browser` subsets to `calcite` functions
+- moved `isTouch()` from `dom` to `browser`
+- moved `indexOf` from `dom` to `arr`
+- fixed `hr` border
+- added some usage examples to JS doc
+- copy editing
 
 ## v0.0.4
 Documentation and small style additions.
