@@ -1,6 +1,6 @@
 <h1 id="javascript-overview" class="leader-0">Calcite JavaScript</h1>
 
-`calcite-web.js` is a lightweight and dependency-free library made to enabling behaviors for [JavaScript dependent patterns]({{relativePath}}patterns/#javascript-dependent). It also allows for [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) node and class manipulation. `calcite-web.js` can be used in place of jQuery, Dojo, or other large frameworks for a handful of common tasks.
+`calcite-web.js` is a lightweight and dependency-free library made to enable behaviors for [JavaScript dependent patterns]({{relativePath}}patterns/#javascript-dependent). It also allows for [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) node and class manipulation. `calcite-web.js` can be used in place of jQuery, Dojo, or other large frameworks for a handful of common tasks.
 
 | function | action |
 | -------- | ------ |
