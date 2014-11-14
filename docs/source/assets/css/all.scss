@@ -132,3 +132,51 @@
   &.brown { background-color: $brown; }
   &.dark-brown { background-color: $dark-brown; }
 }
+
+.type-sample {
+  &.nbsp:before {content: $nbsp}
+  &.quot:before {content: $quot}
+  &.lsquo:before {content: $lsquo}
+  &.rsquo:before {content: $rsquo}
+  &.ldquo:before {content: $ldquo}
+  &.rdquo:before {content: $rdquo}
+  &.lsaquo:before {content: $lsaquo}
+  &.rsaquo:before {content: $rsaquo}
+  &.laquo:before {content: $laquo}
+  &.raquo:before {content: $raquo}
+  &.mdash:before {content: $mdash}
+  &.ndash:before {content: $ndash}
+  &.hyphen:before {content: $hyphen}
+  &.amp:before {content: $amp}
+  &.gt:before {content: $gt}
+  &.lt:before {content: $lt}
+  &.times:before {content: $times}
+  &.bigtimes:before {content: $bigtimes}
+  &.checkmark:before {content: $checkmark}
+  &.sect:before {content: $sect}
+  &.para:before {content: $para}
+  &.middot:before {content: $middot}
+  &.oslash:before {content: $oslash}
+  &.bull:before {content: $bull}
+  &.whibull:before {content: $whibull}
+  &.hellip:before {content: $hellip}
+  &.vellip:before {content: $vellip}
+  &.midhellip:before {content: $midhellip}
+  &.utri:before {content: $utri}
+  &.dtri:before {content: $dtri}
+  &.ltri:before {content: $ltri}
+  &.rtri:before {content: $rtri}
+  &.ustri:before {content: $ustri}
+  &.dstri:before {content: $dstri}
+  &.lstri:before {content: $lstri}
+  &.rstri:before {content: $rstri}
+  &.diamond:before {content: $diamond}
+  &.fisheye:before {content: $fisheye}
+  &.bullseye:before {content: $bullseye}
+  &.circle:before {content: $circle}
+  &.whitecircle:before {content: $whitecircle}
+  &.square:before {content: $square}
+  &.whitesquare:before {content: $whitesquare}
+  &.ssquare:before {content: $ssquare}
+  &.swhitesquare:before {content: $swhitesquare}
+}

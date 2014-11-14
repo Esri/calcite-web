@@ -377,10 +377,8 @@ sass:
       pages:
         - title: "Overview"
           link: sass-overview
-    - group: "Composition Mixins"
+    - group: "Type Composition"
       pages:
-        - title: "Overview"
-          link: composition-mixins
         - title: "Font Size"
           link: font-size
         - title: "Tracking"
@@ -391,8 +389,62 @@ sass:
           link: word-spacing
         - title: "Unicode Variables"
           link: unicode-variables
+          variables:
+            - nbsp
+            - quot
+            - lsquo
+            - rsquo
+            - ldquo
+            - rdquo
+            - lsaquo
+            - rsaquo
+            - laquo
+            - raquo
+            - mdash
+            - ndash
+            - hyphen
+            - amp
+            - gt
+            - lt
+            - times
+            - bigtimes
+            - checkmark
+            - sect
+            - para
+            - middot
+            - oslash
+            - bull
+            - whibull
+            - hellip
+            - vellip
+            - midhellip
+            - utri
+            - dtri
+            - ltri
+            - rtri
+            - ustri
+            - dstri
+            - lstri
+            - rstri
+            - diamond
+            - fisheye
+            - bullseye
+            - circle
+            - whitecircle
+            - square
+            - whitesquare
+            - ssquare
+            - swhitesquare
         - title: "Modular Scale"
           link: modular-scale
+    - group: "Utillities"
+      pages:
+        - title: Utillity Mixins
+          link: utillity-mixins
+    - group: "Color Map"
+      pages:
+        - title: Color Map
+          link: color-map
 
 javascript:
   title: "Javascript"
