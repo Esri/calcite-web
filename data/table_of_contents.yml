@@ -374,7 +374,7 @@ patterns:
         - title: "Pagination"
           link: pagination
           modifiers: true
-    - group: "Javascript Dependant"
+    - group: "Javascript Dependent"
       pages:
         - title: "Modals"
           link: modals
@@ -462,14 +462,16 @@ sass:
           link: color-map
 
 javascript:
-  title: "Javascript"
+  title: "JavaScript"
   base: javascript
   navigation:
-    - group: "Javascript"
+    - group: "JavaScript"
       pages:
-        - title: "Javascript"
+        - title: "Overview"
           link: javascript-overview
-    - group: "Functions"
-      pages:
-        - title: "dom."
-          link: dom-overview
+        - title: "DOM Utilities"
+          link: dom-utilities
+        - title: "Array Manipulation"
+          link: array-manipulation
+        - title: "Browser Feature Detection"
+          link: browser-feature-detection

@@ -39,7 +39,7 @@ $include-sub-nav:                     true    !default;
 $include-third-nav:                   true    !default;
 $include-top-nav:                     true    !default;
 
-// Javascript Patterns
+// JavaScript Patterns
 $include-tabs:                        true    !default;
 $include-modal:                       true    !default;
 $include-accordion:                   true    !default;
