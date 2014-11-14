@@ -30,11 +30,11 @@ module.exports = function(grunt) {
     'acetate': {
       // Rebuild site with Acetate
       build: {
-        config: 'acetate.conf.js'
+        config: 'docs/acetate.conf.js'
       },
       // Run a development server with Acetate
       server: {
-        config: 'acetate.conf.js',
+        config: 'docs/acetate.conf.js',
         options: {
           watch: true,
           server: true,
