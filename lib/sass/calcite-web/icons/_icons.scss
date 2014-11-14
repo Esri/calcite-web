@@ -15,7 +15,9 @@
   }
 
   // Pass a file glob and iterate over it.
-  @each $filename in listFiles("lib/img/icons/calcite-large/*.svg") {.icon-#{$filename} { background-image: url('../img/icons/calcite-large/#{$filename}.svg'); }}
+  @each $filename in listFiles("lib/img/icons/calcite-large/*.svg") {
+    .icon-#{$filename}:before { background-image: url('../img/icons/calcite-large/#{$filename}.svg'); }
+  }
 }
 
 @if $include-icons == true {
