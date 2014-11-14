@@ -65,15 +65,45 @@
       <header class="third-nav">
         <div class="container">
           <nav>
-            <a class="third-nav-link is-active" href="">Get Started</a>
-            <a class="third-nav-link " href="type">Type</a>
-            <a class="third-nav-link " href="grid">Grid</a>
-            <a class="third-nav-link " href="color">Color</a>
-            <a class="third-nav-link " href="icons">Icons</a>
-            <a class="third-nav-link " href="components">Components</a>
-            <a class="third-nav-link " href="patterns">Patterns</a>
-            <a class="third-nav-link " href="sass">Sass</a>
-            <a class="third-nav-link " href="javascript">JavaScript</a>
+
+            
+              
+                <a href="" class="third-nav-link">Get Started</a>
+              
+            
+              
+                <a href="type" class="third-nav-link">Type</a>
+              
+            
+              
+                <a href="grid" class="third-nav-link">Grid</a>
+              
+            
+              
+                <a href="icons" class="third-nav-link">Icons</a>
+              
+            
+              
+                <a href="color" class="third-nav-link">Color</a>
+              
+            
+              
+                <a href="components" class="third-nav-link">Components</a>
+              
+            
+              
+                <a href="patterns" class="third-nav-link">Patterns</a>
+              
+            
+              
+                <a href="sass" class="third-nav-link">Sass</a>
+              
+            
+              
+                <a href="javascript" class="third-nav-link">JavaScript</a>
+              
+            
+
           </nav>
         </div>
       </header>
@@ -125,13 +155,20 @@
           
             
               <section class="trailer-2">
-                <h1 class="leader-0">Calcite-Web</h1>
+                <h1 class="leader-0">Calcite Web</h1>
 
-<p>Calcite Web is a CSS framework built in SASS. It also includes a small, vanilla JavaScript library that allows you to have interactive patterns in your site like tabs, modals, etc. Calcite Web is a web-adaptation of the Calcite framework that was developed for ArcGIS Pro. The idea is to have designs be consistent, but also embrace the characteristics that make each medium unique.</p>
+<p>Calcite Web is a CSS framework built with <a href="http://sass-lang.com/">Sass</a>. A dependency-free JavaScript library for use with interactive patterns like tabs and modals is also included.</p>
+<p>Calcite Web is a web adaptation of the desktop Calcite framework developed for ArcGIS Pro. The idea is to have designs be consistent, but also embrace the characteristics that make each medium unique.</p>
 <p>Calcite Web was built <em>for</em> developers. It is meant to be flexible enough that you can accomplish 80% of your website with the default patterns. If you use Calcite Web as a Sass library, you&#39;ll also get a set of very helpful mixins to help you make new patterns and components that fit in with the Calcite methodology and aesthetic.</p>
-<h1 id="using-calcite-web">Using Calcite-Web</h1>
-<p>There are two main ways to use Calcite-Web: copying static files into your project and installing via a package manager. Obviously, installing as a Sass library will give you the most power, but whatever your flavor, we probably have you covered.</p>
+<h1 id="using-calcite-web">Using Calcite Web</h1>
+<p>There are two main ways to use Calcite Web:</p>
+<ul>
+<li>(a) copying static files into your project</li>
+<li>(b) installing via a package manager</li>
+</ul>
+<p>Using this framework as a Sass library will give you the most power, but whatever your flavor, we probably have you covered.</p>
 
+                
                 
               </section>
               <hr class="trailer-2">
@@ -147,6 +184,7 @@
 <p>This will keep spacing consistent and you won&#39;t have to write any CSS! There are modifier classes for virtually everything: padding, margin, text-color, background-color, etc. Be sure to visit the other links and read up on what is possible.</p>
 
                 
+                
               </section>
               <hr class="trailer-2">
             
@@ -159,9 +197,10 @@
 <p>Then in your project&#39;s sass file, just import it:</p>
 <pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-string">"calcite-web"</span>;</span>
 </code></pre>
-<p>That will give you everything including sass utilities. You will also need to copy over the javascript and image assets to your static folder (see above).</p>
+<p>That will give you everything including sass utilities. You will also need to copy over the JavaScript and image assets to your static folder (see above).</p>
 <p>Calcite Web has a built in library of mixins that cover everything from animation to font-size. To be sure you&#39;re building your site in the easiest way (and the most visually consistent way) read up on everything that&#39;s available on the <a href="./sass">SASS Page</a>.</p>
 
+                
                 
               </section>
               <hr class="trailer-2">
@@ -189,6 +228,7 @@
 <p>Then in your main <code>.scss</code> file, you can just require the framework: <code>@import &quot;calcite-web&quot;;</code>. Everything mentioned about mixins above in the Ruby gem section applies to the Node module as well, so scroll up a bit and learn more about how Calcite Web functions as a Sass library;</p>
 
                 
+                
               </section>
               <hr class="trailer-2">
             
@@ -203,6 +243,7 @@
 <li><code>npm install</code> to install JavaScript dependencies.</li>
 </ol>
 
+                
                 
               </section>
               <hr class="trailer-2">
@@ -220,12 +261,13 @@
 </ol>
 
                 
+                
               </section>
               <hr class="trailer-2">
             
               <section class="trailer-2">
                 <h1 id="versioning">Versioning</h1>
-<p>Calcite-Web uses SemVer (Semantic Versioning) for its releases. This means that version numbers are basically formatted like <code>MAJOR.MINOR.PATCH</code>. If you&#39;re well acquainted with SemVer you should skip to &#39;Bumping the Version&#39; below.</p>
+<p>Calcite-Web uses SemVer (Semantic Versioning) for its releases. This means that version numbers are basically formatted like <code>MAJOR.MINOR.PATCH</code>. If you&#39;re well acquainted with SemVer you should skip to <a href="#releasing-a-new-version">releasing a new version</a> below.</p>
 <h4 id="major">Major</h4>
 <p>Breaking changes are signified with a new <strong>first</strong> number. For example, moving from <code>1.0.0</code> to <code>2.0.0</code> implies breaking changes.</p>
 <h4 id="minor">Minor</h4>
@@ -241,6 +283,7 @@
 </ol>
 
                 
+                
               </section>
               <hr class="trailer-2">
             
@@ -249,6 +292,7 @@
 <p>To update the documentation site, just make sure you have push access to the <code>ArcGIS/calcite-web</code> repo and type <code>grunt deploy</code>. This will build the site and deploy to gh-pages.</p>
 <p>The site should be updated at <a href="http://arcgis.github.io/calcite-web/">http://arcgis.github.io/calcite-web/</a> in just a few moments.</p>
 
+                
                 
               </section>
               <hr class="trailer-2">

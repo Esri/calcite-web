@@ -65,15 +65,45 @@
       <header class="third-nav">
         <div class="container">
           <nav>
-            <a class="third-nav-link " href="../">Get Started</a>
-            <a class="third-nav-link " href="../type">Type</a>
-            <a class="third-nav-link " href="../grid">Grid</a>
-            <a class="third-nav-link " href="../color">Color</a>
-            <a class="third-nav-link " href="../icons">Icons</a>
-            <a class="third-nav-link " href="../components">Components</a>
-            <a class="third-nav-link " href="../patterns">Patterns</a>
-            <a class="third-nav-link " href="../sass">Sass</a>
-            <a class="third-nav-link is-active" href="../javascript">JavaScript</a>
+
+            
+              
+                <a href="../" class="third-nav-link">Get Started</a>
+              
+            
+              
+                <a href="../type" class="third-nav-link">Type</a>
+              
+            
+              
+                <a href="../grid" class="third-nav-link">Grid</a>
+              
+            
+              
+                <a href="../icons" class="third-nav-link">Icons</a>
+              
+            
+              
+                <a href="../color" class="third-nav-link">Color</a>
+              
+            
+              
+                <a href="../components" class="third-nav-link">Components</a>
+              
+            
+              
+                <a href="../patterns" class="third-nav-link">Patterns</a>
+              
+            
+              
+                <a href="../sass" class="third-nav-link">Sass</a>
+              
+            
+              
+                <a href="../javascript" class="third-nav-link">JavaScript</a>
+              
+            
+
           </nav>
         </div>
       </header>
@@ -92,17 +122,16 @@
         <div class="column-6">
           <aside class="side-nav column-6">
             
-              <h4 class="side-nav-title">Javascript</h4>
+              <h4 class="side-nav-title">JavaScript</h4>
               <nav>
                 
-                  <a href="#javascript-overview" class="side-nav-link">Javascript</a>
+                  <a href="#javascript-overview" class="side-nav-link">Overview</a>
                 
-              </nav>
-            
-              <h4 class="side-nav-title">Functions</h4>
-              <nav>
+                  <a href="#dom-utilities" class="side-nav-link">DOM Utilities</a>
                 
-                  <a href="#dom-overview" class="side-nav-link">dom.</a>
+                  <a href="#array-manipulation" class="side-nav-link">Array Manipulation</a>
+                
+                  <a href="#browser-feature-detection" class="side-nav-link">Browser Feature Detection</a>
                 
               </nav>
             
@@ -113,19 +142,9 @@
           
             
               <section class="trailer-2">
-                <h1 class="trailer-0">Calcite Javascript</h1>
+                <h1 id="javascript-overview" class="leader-0">Calcite JavaScript</h1>
 
-<p>Calcite-web.js is a small, super-light library that enables behaviors for <a href="../patterns/#javascript-dependant">javscript dependant patterns</a> and allows for dom node and class manipulation. Calcite-web.js can replace Jquery or Dojo for most basic tasks.</p>
-
-                
-              </section>
-              <hr class="trailer-2">
-            
-          
-            
-              <section class="trailer-2">
-                <h2 id="dom-overview">Dom Overview</h2>
-<p>The following functions allow for basic dom manipulation and traversal. These helpers are used by javascript-dependant patterns, and can be included in any custom javsacript in Calcite Web projects.</p>
+<p><code>calcite-web.js</code> is a lightweight and dependency-free library made to enabling behaviors for <a href="../patterns/#javascript-dependent">JavaScript dependent patterns</a>. It also allows for <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">DOM</a> node and class manipulation. <code>calcite-web.js</code> can be used in place of jQuery, Dojo, or other large frameworks for a handful of common tasks.</p>
 <table>
 <thead>
 <tr>
@@ -135,60 +154,161 @@
 </thead>
 <tbody>
 <tr>
-<td><code>dom.addEvent()</code></td>
-<td>Returns standard interaction event, later will add touch support.</td>
+<td><code>calcite.dom.event()</code></td>
+<td>Returns standard interaction event (click). Touch support will be added soon.</td>
 </tr>
 <tr>
-<td><code>dom.removeEvent(el, event, fn)</code></td>
-<td>Add a callback function to an event on an element.</td>
+<td><code>calcite.dom.addEvent(domNode, event, fn)</code></td>
+<td>Adds a callback function to an event on an element.</td>
 </tr>
 <tr>
-<td><code>dom.eventTarget(el, event, fn)</code></td>
-<td>Remove an event and its bindings.</td>
+<td><code>calcite.dom.removeEvent(domNode, event, fn)</code></td>
+<td>Removes a callback function from an event on an element.</td>
 </tr>
 <tr>
-<td><code>dom.preventDefault(event)</code></td>
-<td>Get the target element of an event.</td>
+<td><code>calcite.dom.eventTarget()</code></td>
+<td>Returns the target element of an event.</td>
 </tr>
 <tr>
-<td><code>dom.stopPropagation(event)</code></td>
-<td>Prevent default behavior of an event.</td>
+<td><code>calcite.dom.preventDefault(event)</code></td>
+<td>Prevents default behavior of an event.</td>
 </tr>
 <tr>
-<td><code>dom.hasClass(event)</code></td>
-<td>Stop and event from bubbling up the DOM tree. Returns boolean.</td>
+<td><code>calcite.dom.stopPropagation(event)</code></td>
+<td>Stops an event from bubbling up the DOM tree.</td>
 </tr>
 <tr>
-<td><code>dom.addClass(elem, className)</code></td>
-<td>Check if an element has a specific class.</td>
+<td><code>calcite.dom.hasClass(event)</code></td>
+<td>Checks if an element has a specific class. Returns boolean.</td>
 </tr>
 <tr>
-<td><code>dom.removeClass(elem, classes)</code></td>
-<td>Add one or more classes to an element.</td>
+<td><code>calcite.dom.addClass(domNode, className)</code></td>
+<td>Adds one or more classes to an element.</td>
 </tr>
 <tr>
-<td><code>dom.closest(elem, classes)</code></td>
-<td>Remove one or more classes from an element. Returns dom node.</td>
+<td><code>calcite.dom.removeClass(domNode, classes)</code></td>
+<td>Removes one or more classes from an element.</td>
 </tr>
 <tr>
-<td><code>dom.getAttr(className, context)</code></td>
-<td>Returns closest element up the DOM tree matching a given class. Returns attribute string.</td>
+<td><code>calcite.dom.closest(domNode, classes)</code></td>
+<td>Returns closest element up the DOM tree matching a given class. Returns DOM node.</td>
 </tr>
 <tr>
-<td><code>dom.indexOf(obj, arr, offset)</code></td>
-<td>Return the index of an object in an array with optional offset. Returns number.</td>
+<td><code>calcite.dom.getAttr(className, context)</code></td>
+<td>Returns the value of an element&#39;s attribute.</td>
 </tr>
 <tr>
-<td><code>dom.makeArray(object)</code></td>
-<td>Make an object into an array. Returns array.</td>
+<td><code>calcite.dom.nodeListToArray(domNodeList)</code></td>
+<td>Takes a DOM node list and returns an array.</td>
 </tr>
 <tr>
-<td><code>dom.isTouch()</code></td>
-<td>Detect touch, could be improved for more coverage. Returns boolean.</td>
+<td><code>calcite.arr.indexOf(obj, arr, offset)</code></td>
+<td>Returns the index of an object in an array with optional offset. Returns number.</td>
+</tr>
+<tr>
+<td><code>calcite.dom.isTouch()</code></td>
+<td>Detects touch. Could be improved for more coverage. Returns boolean.</td>
 </tr>
 </tbody>
 </table>
 
+                
+                
+              </section>
+              <hr class="trailer-2">
+            
+              <section class="trailer-2">
+                <h1 id="dom-utilities">DOM utilities</h1>
+<p>The following functions allow for basic DOM manipulation and traversal. These helpers are used by JavaScript dependent patterns, and can be included in any custom JavaScript in Calcite Web projects.</p>
+<h2 id="events">events</h2>
+<h3 id="calcite-dom-event-">calcite.dom.event()</h3>
+<p>Returns interaction event for the current browser environment. Currently only returns <code>&#39;click&#39;</code>. Will be more useful when touch support is added.</p>
+<pre><code><span class="hljs-keyword">var</span> <span class="hljs-keyword">event</span> = calcite.dom.<span class="hljs-keyword">event</span>(); <span class="hljs-comment">// =&gt; 'click'</span>
+</code></pre><h3 id="calcite-dom-addevent-domnode-event-fn-">calcite.dom.addEvent(domNode, event, fn)</h3>
+<p>Adds a callback function to an event on an element.</p>
+<pre><code><span class="hljs-keyword">var</span> <span class="hljs-keyword">event</span> = calcite.dom.<span class="hljs-keyword">event</span>();
+<span class="hljs-keyword">var</span> node = document.getElementsByTagName(<span class="hljs-string">'body'</span>)[<span class="hljs-number">0</span>];
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> <span class="hljs-params">(<span class="hljs-keyword">event</span>)</span> <span class="hljs-comment">{
+  console.log('hola');
+}</span>;</span>
+
+calcite.dom.addEvent(node, <span class="hljs-keyword">event</span>, action); <span class="hljs-comment">// action will now fire when body is clicked</span>
+</code></pre><h3 id="calcite-dom-removeevent-domnode-event-fn-">calcite.dom.removeEvent(domNode, event, fn)</h3>
+<p>Removes a callback function from an event on an element.</p>
+<pre><code><span class="hljs-keyword">var</span> <span class="hljs-keyword">event</span> = calcite.dom.<span class="hljs-keyword">event</span>();
+<span class="hljs-keyword">var</span> node = document.getElementsByTagName(<span class="hljs-string">'body'</span>)[<span class="hljs-number">0</span>];
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> <span class="hljs-params">(<span class="hljs-keyword">event</span>)</span> <span class="hljs-comment">{
+  console.log('hola');
+}</span>;</span>
+
+calcite.dom.addEvent(node, <span class="hljs-keyword">event</span>, action); <span class="hljs-comment">// action will now fire when body is clicked</span>
+calcite.dom.removeEvent(node, <span class="hljs-keyword">event</span>, action); <span class="hljs-comment">// action has been removed from body click event</span>
+</code></pre><h3 id="calcite-dom-eventtarget-event-">calcite.dom.eventTarget(event)</h3>
+<p>Returns the target DOM node of an event.</p>
+<pre><code><span class="hljs-keyword">var</span> <span class="hljs-keyword">event</span> = calcite.dom.<span class="hljs-keyword">event</span>();
+<span class="hljs-keyword">var</span> node = document.getElementsByTagName(<span class="hljs-string">'body'</span>)[<span class="hljs-number">0</span>];
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> <span class="hljs-params">(<span class="hljs-keyword">event</span>)</span> <span class="hljs-comment">{
+  var target = calcite.dom.eventTarget(event);
+  console.log(target);
+}</span>;</span>
+
+calcite.dom.addEvent(node, <span class="hljs-keyword">event</span>, action);
+</code></pre><p>Clicking the body will now log the contents of the <code>&lt;body&gt;</code> DOM node.</p>
+<h3 id="calcite-dom-preventdefault-event-">calcite.dom.preventDefault(event)</h3>
+<p>Prevents default behavior of an event.</p>
+<pre><code><span class="hljs-keyword">var</span> <span class="hljs-keyword">event</span> = calcite.dom.<span class="hljs-keyword">event</span>();
+<span class="hljs-keyword">var</span> node = document.getElementsByTagName(<span class="hljs-string">'a'</span>)[<span class="hljs-number">0</span>];
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> <span class="hljs-params">(<span class="hljs-keyword">event</span>)</span> <span class="hljs-comment">{
+  calcite.dom.preventDefault(event);
+}</span>;</span>
+
+calcite.dom.addEvent(node, <span class="hljs-keyword">event</span>, action);
+</code></pre><p>This will prevent the first <code>&lt;a&gt;</code> DOM node in the document from performing its default behavior (sending the user to the link in its <code>href</code> attribute).</p>
+<h3 id="calcite-dom-stoppropagation-event-">calcite.dom.stopPropagation(event)</h3>
+<p>Stops an event from bubbling up the DOM tree. This is useful if events have been bound to both a parent DOM node and a child DOM node.</p>
+<pre><code><span class="hljs-keyword">var</span> <span class="hljs-keyword">event</span> = calcite.dom.<span class="hljs-keyword">event</span>();
+<span class="hljs-keyword">var</span> node = document.getElementsByTagName(<span class="hljs-string">'a'</span>)[<span class="hljs-number">0</span>];
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> <span class="hljs-params">(<span class="hljs-keyword">event</span>)</span> <span class="hljs-comment">{
+  calcite.dom.stopPropagation(event);
+}</span>;</span>
+
+calcite.dom.addEvent(node, <span class="hljs-keyword">event</span>, action);
+</code></pre><p>If, for example, the <code>&lt;body&gt;</code> DOM node also has a function bound to a click event, this will prevent a user&#39;s click from triggering it.</p>
+<h2 id="manipulation-traversal">manipulation &amp; traversal</h2>
+<h3 id="calcite-dom-hasclass-event-">calcite.dom.hasClass(event)</h3>
+<h3 id="calcite-dom-addclass-domnode-event-fn-">calcite.dom.addClass(domNode, event, fn)</h3>
+<h3 id="calcite-dom-removeclass-domnode-event-fn-">calcite.dom.removeClass(domNode, event, fn)</h3>
+<h3 id="calcite-dom-closest-domnode-classes-">calcite.dom.closest(domNode, classes)</h3>
+<h3 id="calcite-dom-getattr-classname-context-">calcite.dom.getAttr(className, context)</h3>
+<h3 id="calcite-dom-nodelisttoarray-domnodelist-">calcite.dom.nodeListToArray(domNodeList)</h3>
+
+                
+                
+              </section>
+              <hr class="trailer-2">
+            
+              <section class="trailer-2">
+                <h2 id="array-manipulation">Array manipulation</h2>
+<h3 id="calcite-arr-indexof-obj-arr-offset-">calcite.arr.indexOf(obj, arr, offset)</h3>
+<p>Returns the index of an object in an array with optional offset.</p>
+<pre><code><span class="hljs-keyword">var</span> <span class="hljs-keyword">list</span> = [<span class="hljs-string">'a'</span>,<span class="hljs-string">'b'</span>,<span class="hljs-string">'c'</span>];
+calcite.arr.indexOf(<span class="hljs-string">'b'</span>, <span class="hljs-keyword">list</span>); <span class="hljs-comment">// =&gt; 1</span>
+</code></pre>
+                
+                
+              </section>
+              <hr class="trailer-2">
+            
+              <section class="trailer-2">
+                <h2 id="browser-feature-detection">Browser feature detection</h2>
+<h3 id="calcite-dom-istouch-">calcite.dom.isTouch()</h3>
+
+                
                 
               </section>
               <hr class="trailer-2">

@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>  <html class="ie lt-ie9 ie8"> <![endif]-->
+<!--[if IE 9]>     <html class="ie ie9"> <![endif]-->
+<!--[if !IE]><!--> <html> <!--<![endif]-->
+  <head>
+
+    <!-- Set encoding -->
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <!-- Use title from page frontmatter -->
+    <title>Calcite Web | Esri Design Patterns</title>
+
+    <!-- Link to favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <!-- stylesheets -->
+    
+      <link rel="stylesheet" href="../assets/css/all.css">
+      <!-- <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/9431e9a5-7a6d-4b5f-82be-4d935972de5a.css"/> -->
+    
+
+    <!--[if lt IE 9]>
+      <script src="../assets/js/libs/selectivizr-min.js"></script>
+      <script src="../assets/js/libs/html5shiv.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- Top Nav Pattern-->
+      <header class="top-nav">
+        <div class="container">
+          <a href="#" class="top-nav-title">Esri Design Patterns</a>
+          <nav class="top-nav-list">
+            <a class="top-nav-link" href="#">Branding</a>
+            <a class="top-nav-link is-active" href="../">Web</a>
+            <a class="top-nav-link" href="#">Mobile</a>
+            <a class="top-nav-link" href="#">Presentations</a>
+          </nav>
+          <!-- Site Search Pattern-->
+          <!-- Sign in / User Menu Patterns-->
+        </div>
+      </header>
+
+      <!-- Secondary Nav Pattern -->
+      <header class="sub-nav">
+        <div class="container">
+
+          <h1 class="sub-nav-title"><a href="../" class="link-white">Web</a></h1>
+          <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-orange btn-arrow right leader-1">Latest Release</a>
+          <nav class="sub-nav-list">
+            <a class="sub-nav-link is-active" href="../">Calcite Web</a>
+            <a class="sub-nav-link" href="#">Calcite Dojo</a>
+            <a class="sub-nav-link" href="#">Calcite Bootstrap</a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Third Nav Pattern -->
+      <header class="third-nav">
+        <div class="container">
+          <nav>
+
+            
+              
+                <a href="../" class="third-nav-link">Get Started</a>
+              
+            
+              
+                <a href="../type" class="third-nav-link">Type</a>
+              
+            
+              
+                <a href="../grid" class="third-nav-link">Grid</a>
+              
+            
+              
+                <a href="../icons" class="third-nav-link">Icons</a>
+              
+            
+              
+                <a href="../color" class="third-nav-link">Color</a>
+              
+            
+              
+                <a href="../components" class="third-nav-link">Components</a>
+              
+            
+              
+                <a href="../patterns" class="third-nav-link">Patterns</a>
+              
+            
+              
+                <a href="../sass" class="third-nav-link">Sass</a>
+              
+            
+              
+                <a href="../javascript" class="third-nav-link">JavaScript</a>
+              
+            
+
+          </nav>
+        </div>
+      </header>
+
+      <!-- Site Search Pattern -->
+      <!-- <div class="site-search">
+        <form action="/search/" class="site-search">
+          <input class="site-search-input js-seach-toggle is-active" type="search" name="q" placeholder="Search">
+          <button type="submit" class="site-search-button">Go</button>
+        </form>
+      </div> -->
+
+      <!-- content of each page will go here -->
+      <div class="container leader-1">
+
+        <div class="column-6">
+          <aside class="side-nav column-6">
+            
+              <h4 class="side-nav-title">Icons Sets</h4>
+              <nav>
+                
+                  <a href="#overview" class="side-nav-link">Overview</a>
+                
+                  <a href="#font" class="side-nav-link">Icon Font</a>
+                
+                  <a href="#color" class="side-nav-link">Color Icons</a>
+                
+              </nav>
+            
+          </aside>
+        </div>
+
+        <main class="column-17 pre-1">
+          
+            
+              <section class="trailer-2">
+                <h2 id="overview">Overview</h2>
+<p>Icons in Calcite-Web come in two different flavors: one color and multi-color. The one color (or monochromatic) icon set is delivered as an icon font. The multi-color icons are delivered as a set of SVG icons with corresponsponding icon classes.</p>
+<p>Both sets can be called in the same way from your html. to display a download icon, for example:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-download"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+</code></pre>
+
+                
+                
+              </section>
+              <hr class="trailer-2">
+            
+              <section class="trailer-2">
+                <h2 id="icon-font">Icon Font</h2>
+<p>The monochromatic icon set is delivered as an icon font. Icon fonts have several advantages such as the ability to quickly change their color, and the fact that icon fonts size themselves to be proportional to the text you place them with.</p>
+<p>Monochromatic icons are generally &#39;interface&#39; icons, and are named after the <em>action</em> you&#39;d like to illustrate, instead of the <em>noun</em> the icon represents. For example, the delete icon has a class of <code>icon-delete</code> (the action) and not <code>icon-trash</code> (the noun). The reason for this is that if we decide another icon describes the action or idea better than the current one, we cna change it without breaking people&#39;s existing code.</p>
+
+                
+                  <h3 class="leader-2 trailer-1">Available Icon Font</h3>
+                  <div class="block-group block-group-4-up">
+                    
+                      <div class="block">
+                        <div class="icon-3d"></div>
+                        <p>3d</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-add-content"></div>
+                        <p>add-content</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-add-to-legend"></div>
+                        <p>add-to-legend</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-analysis"></div>
+                        <p>analysis</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-approved"></div>
+                        <p>approved</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-arrow-down"></div>
+                        <p>arrow-down</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-basemap"></div>
+                        <p>basemap</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-bookmark"></div>
+                        <p>bookmark</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-cancel"></div>
+                        <p>cancel</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-close"></div>
+                        <p>close</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-description"></div>
+                        <p>description</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-details"></div>
+                        <p>details</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-down"></div>
+                        <p>down</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-edit"></div>
+                        <p>edit</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-features-hosted"></div>
+                        <p>features-hosted</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-features"></div>
+                        <p>features</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-file-gray"></div>
+                        <p>file-gray</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-file"></div>
+                        <p>file</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-globe"></div>
+                        <p>globe</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-hide-in-legend"></div>
+                        <p>hide-in-legend</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-imagery"></div>
+                        <p>imagery</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-layer-download"></div>
+                        <p>layer-download</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-layer-export-to-file"></div>
+                        <p>layer-export-to-file</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-layer-export"></div>
+                        <p>layer-export</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-layer-zoom"></div>
+                        <p>layer-zoom</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-map-download"></div>
+                        <p>map-download</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-map-image"></div>
+                        <p>map-image</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-measure-distance"></div>
+                        <p>measure-distance</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-measure-point"></div>
+                        <p>measure-point</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-measure"></div>
+                        <p>measure</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-print"></div>
+                        <p>print</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-remove"></div>
+                        <p>remove</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-rename"></div>
+                        <p>rename</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-scale"></div>
+                        <p>scale</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-search"></div>
+                        <p>search</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-tiles"></div>
+                        <p>tiles</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-transparency"></div>
+                        <p>transparency</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-up"></div>
+                        <p>up</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-web-map-blue"></div>
+                        <p>web-map-blue</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-web-map"></div>
+                        <p>web-map</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-web-mapping-application-gray"></div>
+                        <p>web-mapping-application-gray</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-web-mapping-application"></div>
+                        <p>web-mapping-application</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-your-location"></div>
+                        <p>your-location</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-zoom-out"></div>
+                        <p>zoom-out</p>
+                      </div>
+                    
+                  </div>
+                
+                
+              </section>
+              <hr class="trailer-2">
+            
+              <section class="trailer-2">
+                <h2 id="color-icons">Color Icons</h2>
+<p>Color icons can&#39;t be delivered as an icon font, so they are delivered as basic SVG files. These icons generally describe specific tools, and are largely based on the official Calcite icon set used in Desktop.</p>
+<p>You cannot change the colors of these icons, but you can change the size. Full color icons are designed at specific sizes. You can use these sizes with size modifier classes. When you use <code>icon-small</code> you will automatically use the icon design that is specified for the smaller size. Often times the smaller icons are reduced visually with less detail so as to remain legible.</p>
+
+                
+                  <h3 class="leader-2 trailer-1">Available Color Icons</h3>
+                  <div class="block-group block-group-4-up">
+                    
+                      <div class="block">
+                        <div class="icon-3d"></div>
+                        <p>3d</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-add-content"></div>
+                        <p>add-content</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-add-to-legend"></div>
+                        <p>add-to-legend</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-analysis"></div>
+                        <p>analysis</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-approved"></div>
+                        <p>approved</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-arrow-down"></div>
+                        <p>arrow-down</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-basemap"></div>
+                        <p>basemap</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-bookmark"></div>
+                        <p>bookmark</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-cancel"></div>
+                        <p>cancel</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-close"></div>
+                        <p>close</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-description"></div>
+                        <p>description</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-details"></div>
+                        <p>details</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-down"></div>
+                        <p>down</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-edit"></div>
+                        <p>edit</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-features-hosted"></div>
+                        <p>features-hosted</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-features"></div>
+                        <p>features</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-file-gray"></div>
+                        <p>file-gray</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-file"></div>
+                        <p>file</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-globe"></div>
+                        <p>globe</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-hide-in-legend"></div>
+                        <p>hide-in-legend</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-imagery"></div>
+                        <p>imagery</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-layer-download"></div>
+                        <p>layer-download</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-layer-export-to-file"></div>
+                        <p>layer-export-to-file</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-layer-export"></div>
+                        <p>layer-export</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-layer-zoom"></div>
+                        <p>layer-zoom</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-map-download"></div>
+                        <p>map-download</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-map-image"></div>
+                        <p>map-image</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-measure-distance"></div>
+                        <p>measure-distance</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-measure-point"></div>
+                        <p>measure-point</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-measure"></div>
+                        <p>measure</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-print"></div>
+                        <p>print</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-remove"></div>
+                        <p>remove</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-rename"></div>
+                        <p>rename</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-scale"></div>
+                        <p>scale</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-search"></div>
+                        <p>search</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-tiles"></div>
+                        <p>tiles</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-transparency"></div>
+                        <p>transparency</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-up"></div>
+                        <p>up</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-web-map-blue"></div>
+                        <p>web-map-blue</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-web-map"></div>
+                        <p>web-map</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-web-mapping-application-gray"></div>
+                        <p>web-mapping-application-gray</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-web-mapping-application"></div>
+                        <p>web-mapping-application</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-your-location"></div>
+                        <p>your-location</p>
+                      </div>
+                    
+                      <div class="block">
+                        <div class="icon-zoom-out"></div>
+                        <p>zoom-out</p>
+                      </div>
+                    
+                  </div>
+                
+                
+              </section>
+              <hr class="trailer-2">
+            
+          
+        </main>
+
+      </div>
+
+    </div>
+
+    
+
+      <!-- Footer Pattern -->
+      <footer class="footer header-face leader-3">
+        <div class="container">
+            <nav class="column-6">
+              <h6>Arc<span>GIS</span></h6>
+              <ul class="list-bulleted">
+                <li><a href="http://www.arcgis.com/about/">Home</a></li>
+                <li><a href="http://www.arcgis.com/about/features.html">Features</a></li>
+                <li><a href="http://www.arcgis.com/about/pricing.html">Pricing</a></li>
+              </ul>
+            </nav>
+
+            <nav class="column-6">
+              <h6>Arc<span>GIS</span> for Developers</h6>
+              <ul>
+                <li><a href="/en/">Home</a></li>
+                <li><a href="/en/features/">Features</a></li>
+                <li><a href="http://blogs.esri.com/esri/arcgis/category/developer/">Blog</a></li>
+              </ul>
+            </nav>
+
+            <nav class="column-6">
+              <h6>About Esri</h6>
+              <ul>
+                <li><a href="http://www.esri.com/about-esri/">About Us</a></li>
+                <li><a href="http://www.esri.com/careers/">Careers</a></li>
+                <li><a href="http://blogs.esri.com/esri/esri-insider/">Insiders Blog</a></li>
+                <li><a href="http://www.esri.com/events/user-conference/index.html">User Conference</a></li>
+                <li><a href="http://www.esri.com/events/devsummit/index.html">Developer Summit</a></li>
+              </ul>
+            </nav>
+
+            <nav class="column-6">
+              <a class="esri-logo-footer" href="http://esri.com">Esri</a>
+              <section class="footer-social-nav">
+                <a class="icon-twitter" href="https://twitter.com/Esri/"></a>
+                <a class="icon-facebook" href="https://www.facebook.com/esrigis/"></a>
+                <a class="icon-github" href="http://esri.github.com/"></a>
+                <a class="icon-email" href="http://www.esri.com/about-esri/contact/"></a>
+              </section>
+            </nav>
+            <div class="column-24">
+              <p><small>© Copyright 2013 Environmental Systems Research Institute, Inc. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal/software-license">Legal</a></small></p>
+            </div>
+          </div>
+
+        </div>
+      </footer>
+
+      <script src="../assets/js/libs/calcite-web.js"></script>
+      <script src="../assets/js/all.js"></script>
+
+    
+
+  </body>
+
+</html>

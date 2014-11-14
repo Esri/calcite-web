@@ -4,47 +4,47 @@
 *  Apache 2.0 License */
 (function Calcite () {
 
-var C = {
-  version: '0.0.1'
+var calcite = {
+  version: '0.0.5'
 };
 
 // ┌───────────────┐
 // │ DOM utilities │
 // └───────────────┘
 
-var dom = C.utils = {};
+calcite.dom = {};
 
 // ┌──────────────────────┐
 // │ DOM event management │
 // └──────────────────────┘
 
 // returns standard interaction event, later will add touch support
-dom.event = function () {
+calcite.dom.event = function () {
   return "click";
 };
 
-// add a callback function to an event on an element
-dom.addEvent = function (el, event, fn) {
-  if (el.addEventListener) {
-    return el.addEventListener(event, fn, false);
+// add a callback function to an event on a DOM node
+calcite.dom.addEvent = function (domNode, event, fn) {
+  if (domNode.addEventListener) {
+    return domNode.addEventListener(event, fn, false);
   }
-  if (el.attachEvent) {
-    return el.attachEvent('on' + event, fn);
+  if (domNode.attachEvent) {
+    return domNode.attachEvent('on' + event, fn);
   }
 };
 
-// remove an event and its bindings
-dom.removeEvent = function (el, event, fn) {
-  if (el.removeEventListener) {
-    return el.removeEventListener(event, fn, false);
+// remove a specific function binding from a DOM node event
+calcite.dom.removeEvent = function (domNode, event, fn) {
+  if (domNode.removeEventListener) {
+    return domNode.removeEventListener(event, fn, false);
   }
-  if (el.detachEvent) {
-    return el.detachEvent('on' + event,  fn);
+  if (domNode.detachEvent) {
+    return domNode.detachEvent('on' + event,  fn);
   }
 };
 
 // get the target element of an event
-dom.eventTarget = function (event) {
+calcite.dom.eventTarget = function (event) {
   if (!event.target) {
     return event.srcElement;
   }
@@ -54,7 +54,7 @@ dom.eventTarget = function (event) {
 };
 
 // prevent default behavior of an event
-dom.preventDefault = function (event) {
+calcite.dom.preventDefault = function (event) {
   if (event.preventDefault) {
     return event.preventDefault();
   }
@@ -64,7 +64,7 @@ dom.preventDefault = function (event) {
 };
 
 // stop and event from bubbling up the DOM tree
-dom.stopPropagation = function (event) {
+calcite.dom.stopPropagation = function (event) {
   event = event || window.event;
   if (event.stopPropagation) {
     return event.stopPropagation();
@@ -79,9 +79,9 @@ dom.stopPropagation = function (event) {
 // └────────────────────┘
 
 // check if an element has a specific class
-dom.hasClass = function (elem, className) {
+calcite.dom.hasClass = function (domNode, className) {
   var exp = new RegExp(' ' + className + ' ');
-  if (exp.test(' ' + elem.className + ' ')) {
+  if (exp.test(' ' + domNode.className + ' ')) {
     return true;
   }
 
@@ -89,29 +89,29 @@ dom.hasClass = function (elem, className) {
 };
 
 // add one or more classes to an element
-dom.addClass = function (elem, classes) {
+calcite.dom.addClass = function (domNode, classes) {
   classes = classes.split(' ');
 
   for (var i = 0; i < classes.length; i++) {
-    if (!dom.hasClass(elem, classes[i])) {
-      elem.className += ' ' + classes[i];
+    if (!calcite.dom.hasClass(domNode, classes[i])) {
+      domNode.className += ' ' + classes[i];
     }
   }
 };
 
 // remove one or more classes from an element
-dom.removeClass = function (elem, classes) {
+calcite.dom.removeClass = function (domNode, classes) {
   classes = classes.split(' ');
 
   for (var i = 0; i < classes.length; i++) {
-    var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
+    var newClass = ' ' + domNode.className.replace( /[\t\r\n]/g, ' ') + ' ';
 
-    if (dom.hasClass(elem, classes[i])) {
+    if (calcite.dom.hasClass(domNode, classes[i])) {
       while (newClass.indexOf(' ' + classes[i] + ' ') >= 0) {
         newClass = newClass.replace(' ' + classes[i] + ' ', ' ');
       }
 
-      elem.className = newClass.replace(/^\s+|\s+$/g, '');
+      domNode.className = newClass.replace(/^\s+|\s+$/g, '');
     }
   }
 };
@@ -121,10 +121,10 @@ dom.removeClass = function (elem, classes) {
 // └───────────────┘
 
 // returns closest element up the DOM tree matching a given class
-dom.closest = function (className, context) {
+calcite.dom.closest = function (className, context) {
   var result, current;
   for (current = context; current; current = current.parentNode) {
-    if (current.nodeType === 1 && dom.hasClass(current, className)) {
+    if (current.nodeType === 1 && calcite.dom.hasClass(current, className)) {
       result = current;
       break;
     }
@@ -133,13 +133,13 @@ dom.closest = function (className, context) {
 };
 
 // get an attribute for an element
-dom.getAttr = function(el, attr) {
-  if (el.getAttribute) {
-    return el.getAttribute(attr);
+calcite.dom.getAttr = function(domNode, attr) {
+  if (domNode.getAttribute) {
+    return domNode.getAttribute(attr);
   }
 
   var result;
-  var attrs = el.attributes;
+  var attrs = domNode.attributes;
 
   for (var i = 0; i < attrs.length; i++) {
     if (attrs[i].nodeName === attr) {
@@ -150,12 +150,27 @@ dom.getAttr = function(el, attr) {
   return result;
 };
 
-// ┌───────────────┐
-// │ array helpers │
-// └───────────────┘
+// ┌───────────────────┐
+// │ object conversion │
+// └───────────────────┘
+
+// turn a domNodeList into an array
+calcite.dom.nodeListToArray = function (domNodeList) {
+  var array = [];
+  for (var i = 0; i < domNodeList.length; i++) {
+    array.push(domNodeList[i]);
+  }
+  return array;
+};
+
+// ┌────────────────────┐
+// │ array manipulation │
+// └────────────────────┘
+
+calcite.arr = {};
 
 // return the index of an object in an array with optional offset
-dom.indexOf = function (obj, arr, offset) {
+calcite.arr.indexOf = function (obj, arr, offset) {
   var i = offset || 0;
 
   if (arr.indexOf) {
@@ -171,31 +186,24 @@ dom.indexOf = function (obj, arr, offset) {
   return -1;
 };
 
-// make an object into an array
-dom.makeArray = function (object) {
-  var array = [];
-  for (var i = 0; i < object.length; i++) {
-    array.push(object[i]);
-  }
-  return array;
-};
-
-// ┌───────────────────┐
-// │ feature detection │
-// └───────────────────┘
+// ┌───────────────────────────┐
+// │ browser feature detection │
+// └───────────────────────────┘
 // detect features like touch, ie, etc.
 
+calcite.browser = {};
+
 // detect touch, could be improved for more coverage
-dom.isTouch = function () {
+calcite.browser.isTouch = function () {
   if (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0)) {
     return true;
   }
   return false;
 };
 
-// ┌───────────────┐
-// │ JS Patterns   │
-// └───────────────┘
+// ┌─────────────┐
+// │ JS Patterns │
+// └─────────────┘
 // javascript logic for ui patterns
 
 // ┌─────────┐
@@ -203,29 +211,28 @@ dom.isTouch = function () {
 // └─────────┘
 // description of the example
 
-C.example = function () {
-  // write any logic for the 'example' ui to function
-};
+// calcite.example = function () {
+//   // write any logic for the 'example' ui to function
+// };
 
-// ┌─────────────────────┐
-// │ Initialize Calcite  │
-// └─────────────────────┘
+// ┌────────────────────┐
+// │ Initialize Calcite │
+// └────────────────────┘
 // start up Calcite and attach all the patterns
 // optionally pass an array of patterns you'd like to watch
 
-C.init = function (patterns) {
-
+calcite.init = function (patterns) {
   if (patterns) {
     for (var i = 0; i < patterns.length; i++) {
-      H[patterns[i]]();
+      calcite[patterns[i]]();
     }
   } else {
-    H.tabs();
+    // calcite.tabs();
   }
 
   // add a touch class to the body
-  if ( dom.isTouch() ) {
-    dom.addClass(document.body, 'Calcite-touch');
+  if ( calcite.browser.isTouch() ) {
+    calcite.dom.addClass(document.body, 'calcite-touch');
   }
 };
 
@@ -234,30 +241,31 @@ C.init = function (patterns) {
 // └───────────────────┘
 // implementation borrowed from Leaflet
 
+// define calcite as a global variable, saving the original to restore later if needed
 function expose () {
-  var oldC = window.C;
+  var oldCalcite = window.calcite;
 
-  C.noConflict = function () {
-    window.C = oldC;
+  calcite.noConflict = function () {
+    window.calcite = oldCalcite;
     return this;
   };
 
-  window.C = C;
+  window.calcite = calcite;
 }
 
-// define Calcite for Node module pattern loaders, including Browserify
-if (typeof module === 'object' && typeof module.exports === 'object') {
-  module.exports = C;
-}
+// No NPM/AMD for now because it just causes issues
+// @TODO: bust them into AMD & NPM distros
 
-// define Calcite as an AMD module
-else if (typeof define === 'function' && define.amd) {
-  define(C);
-}
+// // define Calcite for CommonJS module pattern loaders (NPM, Browserify)
+// if (typeof module === 'object' && typeof module.exports === 'object') {
+//   module.exports = calcite;
+// }
 
-// define Calcite as a global H variable, saving the original H to restore later if needed
-else {
-  expose();
-}
+// // define Calcite as an AMD module
+// else if (typeof define === 'function' && define.amd) {
+//   define(calcite);
+// }
+
+expose();
 
 })();
