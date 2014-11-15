@@ -208,7 +208,7 @@
             
               <section class="trailer-2">
                 <h2 id="container">Container</h2>
-<p>The <code>.container</code> class is required to contain the grid. Using the  <a href="#column">column</a> classes without them being nested in a containing <code>div</code> will cause unexpected results.</p>
+<p>The <code>.container</code> class is required to contain the grid. Using the  <a href="#columns">column</a> classes without them being nested in a containing <code>div</code> will cause unexpected results.</p>
 <p>The container class applies a max width to the content it contains, and handles the columns relationship with the viewport window, preventing collusions with scroll bars or other exciting bugs.</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"container"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-24"</span>&gt;</span>
@@ -224,8 +224,8 @@
             
               <section class="trailer-2">
                 <h2 id="columns">Columns</h2>
-<p>A column is a constant unit of measure. The width of a column is dynamic, but always between a fixed range. Columns will never get too large or or too small. As the viewport get smaller, and the columns near the bottom of their range, the Calcite Grid System will simply put less columns on the page. By default, large screens hold 24 columns, medium tablet-sized screens hold 12, and phone-sized screens hold 6. The grid will fold columns at these breakpoints. That means an element that is 3 columns wide will always be 3 columns wide, no matter how big or small the screen.</p>
-<p>On large screens, 3 columns out of 24 is proportionally a small peice of screen real estate. On Phones, VW Grid will still leave the element at 3 columns wide -- only now it&#39;s proportionally more real estate, as 3/6 columns is more significant than 3/24.</p>
+<p>A column is a constant unit of measure. The width of a column is dynamic, but always between a fixed range. Columns will never get too large or or too small. As the viewport gets smaller, and the columns near the bottom of their range, the Calcite Grid System will simply put less columns on the page. By default, large screens hold 24 columns, medium tablet-sized screens hold 12, and phone-sized screens hold 6. The grid will fold columns at these breakpoints. That means an element that is 3 columns wide will always be 3 columns wide, no matter how big or small the screen.</p>
+<p>On large screens, 3 columns out of 24 is proportionally a small peice of screen real estate. On Phones, the Grid will  leave the element at 3 columns wide -- only now it&#39;s proportionally more real estate, as 3/6 columns is more significant than 3/24.</p>
 <!-- Gnarly Hacked Sample of Columns -->
 
 <p><!-- Closes out extant column and container divs -->
@@ -309,7 +309,7 @@
               <section class="trailer-2">
                 <h2 id="nested-columns">Nested Columns</h2>
 <p>Contrary to other flexible-width grid systems, Calcite Grid columns do not change behavior when nested. Because a column is a constant measurement relative the size of the viewport, nested columns still span the same width as their non-nested counterparts. An element with <code>.column-6</code> nested within an element with <code>.column-12</code> is the same size as an un-nested <code>.column-6</code>. Further, clearing of the column-gutter is taken care of for you with <code>:first-child</code> and <code>:last-child</code> psuedo-selectors on all column classes.</p>
-<p>Column-folding behavior is almost entirely automatic with Viewport Grid. The only exception is gutter clearing behaviors on deeply nested items after column folding occurs - in some situations we can not know what columns are now first or last in their rows. This will cause the column to be inset from the edge of the container. The example below solves this by introducing <code>first-column</code> classes, along with <code>tablet-first-column</code> and <code>phone-first-column</code>.</p>
+<p>Column-folding behavior is almost entirely automatic. The only exception is gutter clearing behaviors on deeply nested items after column folding occurs - in some situations we can not know what columns are now first or last in their rows. This will cause the column to be inset from the edge of the container. The example below solves this by introducing <code>first-column</code> classes, along with <code>tablet-first-column</code> and <code>phone-first-column</code>.</p>
 <p>In this example, the more transparent the blue, the deeper the column is nested. There are four levels of nesting in this example.</p>
 <p></div></div><div class="container grid-example nested-demo"><div class="column-18 tablet-column-8">
 <span class="tablet-hide">.column-18</span><span class="tablet-show">.tablet-column-8</span><div class="column-4 tablet-column-4">
@@ -443,7 +443,7 @@ The above set of column-4 divs are snapping up next to the very tall column-2 di
               <section class="trailer-2">
                 <h2 id="pre-and-post">Pre and Post</h2>
 <p>Pre and Post classes are used to move your columns laterally across the grid by defining how many columns they should be from their neighbors on either side.</p>
-<p>Pre and Post classes do not responsively fold. This prevents a <code>pre-5</code> from pushing content off the edge of the screen on phone sizes.</p>
+<p>Pre and Post classes do not responsively fold. This prevents a <code>pre-5</code> from pushing content off the edge of the screen on phone sizes. Responsive <code>tablet-</code> and <code>phone-</code> classes are exposed for defining pre and post behavior on breakpoints.</p>
 <p>Pre and post helpers are available from <code>.pre-1</code> and <code>.post-1</code> to <code>.pre-24</code> and <code>.post-24</code>.</p>
 <p><!-- Closes out extant column and container divs -->
 </div>

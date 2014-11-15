@@ -2531,11 +2531,7 @@ code {
   color: #575757;
   background: #fafafa;
   white-space: pre;
-  font-size: 0.8rem;
-  line-height: 1.5rem;
-}
-code small, code sup, code sub {
-  font-size: 0.75rem;
+  font-size: 0.85em;
 }
 
 pre {
@@ -2549,6 +2545,11 @@ pre code {
   display: block;
   overflow: auto;
   word-wrap: normal;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+}
+pre code small, pre code sup, pre code sub {
+  font-size: 0.75rem;
 }
 
 p,
@@ -2634,179 +2635,179 @@ hr {
   background-size: 100% 100%;
 }
 
-.icon-3d {
+.icon-3d:before {
   background-image: url("../img/icons/calcite-large/3d.svg");
 }
 
-.icon-add-content {
+.icon-add-content:before {
   background-image: url("../img/icons/calcite-large/add-content.svg");
 }
 
-.icon-add-to-legend {
+.icon-add-to-legend:before {
   background-image: url("../img/icons/calcite-large/add-to-legend.svg");
 }
 
-.icon-analysis {
+.icon-analysis:before {
   background-image: url("../img/icons/calcite-large/analysis.svg");
 }
 
-.icon-approved {
+.icon-approved:before {
   background-image: url("../img/icons/calcite-large/approved.svg");
 }
 
-.icon-arrow-down {
+.icon-arrow-down:before {
   background-image: url("../img/icons/calcite-large/arrow-down.svg");
 }
 
-.icon-basemap {
+.icon-basemap:before {
   background-image: url("../img/icons/calcite-large/basemap.svg");
 }
 
-.icon-bookmark {
+.icon-bookmark:before {
   background-image: url("../img/icons/calcite-large/bookmark.svg");
 }
 
-.icon-cancel {
+.icon-cancel:before {
   background-image: url("../img/icons/calcite-large/cancel.svg");
 }
 
-.icon-close {
+.icon-close:before {
   background-image: url("../img/icons/calcite-large/close.svg");
 }
 
-.icon-description {
+.icon-description:before {
   background-image: url("../img/icons/calcite-large/description.svg");
 }
 
-.icon-details {
+.icon-details:before {
   background-image: url("../img/icons/calcite-large/details.svg");
 }
 
-.icon-down {
+.icon-down:before {
   background-image: url("../img/icons/calcite-large/down.svg");
 }
 
-.icon-edit {
+.icon-edit:before {
   background-image: url("../img/icons/calcite-large/edit.svg");
 }
 
-.icon-features-hosted {
+.icon-features-hosted:before {
   background-image: url("../img/icons/calcite-large/features-hosted.svg");
 }
 
-.icon-features {
+.icon-features:before {
   background-image: url("../img/icons/calcite-large/features.svg");
 }
 
-.icon-file-gray {
+.icon-file-gray:before {
   background-image: url("../img/icons/calcite-large/file-gray.svg");
 }
 
-.icon-file {
+.icon-file:before {
   background-image: url("../img/icons/calcite-large/file.svg");
 }
 
-.icon-globe {
+.icon-globe:before {
   background-image: url("../img/icons/calcite-large/globe.svg");
 }
 
-.icon-hide-in-legend {
+.icon-hide-in-legend:before {
   background-image: url("../img/icons/calcite-large/hide-in-legend.svg");
 }
 
-.icon-imagery {
+.icon-imagery:before {
   background-image: url("../img/icons/calcite-large/imagery.svg");
 }
 
-.icon-layer-download {
+.icon-layer-download:before {
   background-image: url("../img/icons/calcite-large/layer-download.svg");
 }
 
-.icon-layer-export-to-file {
+.icon-layer-export-to-file:before {
   background-image: url("../img/icons/calcite-large/layer-export-to-file.svg");
 }
 
-.icon-layer-export {
+.icon-layer-export:before {
   background-image: url("../img/icons/calcite-large/layer-export.svg");
 }
 
-.icon-layer-zoom {
+.icon-layer-zoom:before {
   background-image: url("../img/icons/calcite-large/layer-zoom.svg");
 }
 
-.icon-map-download {
+.icon-map-download:before {
   background-image: url("../img/icons/calcite-large/map-download.svg");
 }
 
-.icon-map-image {
+.icon-map-image:before {
   background-image: url("../img/icons/calcite-large/map-image.svg");
 }
 
-.icon-measure-distance {
+.icon-measure-distance:before {
   background-image: url("../img/icons/calcite-large/measure-distance.svg");
 }
 
-.icon-measure-point {
+.icon-measure-point:before {
   background-image: url("../img/icons/calcite-large/measure-point.svg");
 }
 
-.icon-measure {
+.icon-measure:before {
   background-image: url("../img/icons/calcite-large/measure.svg");
 }
 
-.icon-print {
+.icon-print:before {
   background-image: url("../img/icons/calcite-large/print.svg");
 }
 
-.icon-remove {
+.icon-remove:before {
   background-image: url("../img/icons/calcite-large/remove.svg");
 }
 
-.icon-rename {
+.icon-rename:before {
   background-image: url("../img/icons/calcite-large/rename.svg");
 }
 
-.icon-scale {
+.icon-scale:before {
   background-image: url("../img/icons/calcite-large/scale.svg");
 }
 
-.icon-search {
+.icon-search:before {
   background-image: url("../img/icons/calcite-large/search.svg");
 }
 
-.icon-tiles {
+.icon-tiles:before {
   background-image: url("../img/icons/calcite-large/tiles.svg");
 }
 
-.icon-transparency {
+.icon-transparency:before {
   background-image: url("../img/icons/calcite-large/transparency.svg");
 }
 
-.icon-up {
+.icon-up:before {
   background-image: url("../img/icons/calcite-large/up.svg");
 }
 
-.icon-web-map-blue {
+.icon-web-map-blue:before {
   background-image: url("../img/icons/calcite-large/web-map-blue.svg");
 }
 
-.icon-web-map {
+.icon-web-map:before {
   background-image: url("../img/icons/calcite-large/web-map.svg");
 }
 
-.icon-web-mapping-application-gray {
+.icon-web-mapping-application-gray:before {
   background-image: url("../img/icons/calcite-large/web-mapping-application-gray.svg");
 }
 
-.icon-web-mapping-application {
+.icon-web-mapping-application:before {
   background-image: url("../img/icons/calcite-large/web-mapping-application.svg");
 }
 
-.icon-your-location {
+.icon-your-location:before {
   background-image: url("../img/icons/calcite-large/your-location.svg");
 }
 
-.icon-zoom-out {
+.icon-zoom-out:before {
   background-image: url("../img/icons/calcite-large/zoom-out.svg");
 }
 
