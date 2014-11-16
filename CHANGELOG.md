@@ -1,3 +1,11 @@
+## v0.0.6
+Working icon tooling
+
+### Added
+
+### Modified
+
+
 ## v0.0.5
 Forms, table improvements, type changes, in progress icon tooling, more documentation.
 
