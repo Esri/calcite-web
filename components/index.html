@@ -471,8 +471,12 @@
             
               <section class="trailer-2">
                 <h2 id="tables">Tables</h2>
-<p>Tables have beens styled by default. No extra classes are required, although there are some modifer classes available for specific flavors.</p>
-<p>By default, a large table breaking your layout will horizontally scroll when it is too large for the layout.</p>
+<p>Tables have been styled by default. No extra classes are required, although there are some modifer classes available for specific flavors.</p>
+<p>By default, a large table breaking your layout will horizontally scroll when it is too large for the layout. You can solve this problem by wrapping a table in a <code>&lt;div&gt;</code> with the <code>.overflow-auto</code> helper class:</p>
+<pre><code>&lt;div class=<span class="hljs-string">"overflow-auto"</span>&gt;
+  &lt;table&gt;<span class="hljs-keyword">...</span>&lt;/table&gt;
+&lt;/div&gt;
+</code></pre><p>This causes tables that are too wide for the layout to be constrained and scroll horizontally.</p>
 
                 
                 
@@ -710,9 +714,9 @@
                       
                     </div>
                   
-<pre><code>&lt;label&gt;modifier-<span class="hljs-keyword">class</span>
-  &lt;input <span class="hljs-keyword">type</span>=<span class="hljs-symbol">'modifier</span>-<span class="hljs-keyword">class</span>' placeholder=<span class="hljs-symbol">'placeholde</span>r'&gt;
-&lt;/label&gt;
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>modifier-class
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">'modifier-class'</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">'placeholder'</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
 </code></pre>
                 
               </section>
@@ -759,7 +763,7 @@
                       
                     </div>
                   
-<pre><code>&lt;input <span class="hljs-variable">type=</span><span class="hljs-string">"modifier-class"</span> <span class="hljs-variable">value=</span><span class="hljs-string">"modifier-class"</span> <span class="hljs-variable">id=</span><span class="hljs-string">"modifier-class"</span>&gt;
+<pre><code>&lt;input <span class="hljs-class"><span class="hljs-keyword">type</span>=</span><span class="hljs-string">"modifier-class"</span> <span class="hljs-keyword">value</span>=<span class="hljs-string">"modifier-class"</span> id=<span class="hljs-string">"modifier-class"</span>&gt;
 </code></pre>
                 
               </section>
@@ -848,12 +852,12 @@ Select Menu:
                   
 
                   
-<pre><code>&lt;fieldset&gt;
-  &lt;legend&gt;Choose One Color&lt;/legend&gt;
-  &lt;input <span class="hljs-variable">type=</span><span class="hljs-string">"radio"</span> <span class="hljs-variable">name=</span><span class="hljs-string">"color"</span> <span class="hljs-variable">value=</span><span class="hljs-string">"blue"</span> <span class="hljs-variable">id=</span><span class="hljs-string">"blue"</span>&gt;&lt;label <span class="hljs-variable">for=</span><span class="hljs-string">"blue"</span>&gt;Blue&lt;/label&gt;
-  &lt;input <span class="hljs-variable">type=</span><span class="hljs-string">"radio"</span> <span class="hljs-variable">name=</span><span class="hljs-string">"color"</span> <span class="hljs-variable">value=</span><span class="hljs-string">"red"</span> <span class="hljs-variable">id=</span><span class="hljs-string">"red"</span>&gt;&lt;label <span class="hljs-variable">for=</span><span class="hljs-string">"red"</span>&gt;Red&lt;/label&gt;
-  &lt;input <span class="hljs-variable">type=</span><span class="hljs-string">"radio"</span> <span class="hljs-variable">name=</span><span class="hljs-string">"color"</span> <span class="hljs-variable">value=</span><span class="hljs-string">"green"</span> <span class="hljs-variable">id=</span><span class="hljs-string">"green"</span>&gt;&lt;label <span class="hljs-variable">for=</span><span class="hljs-string">"green"</span>&gt;Green&lt;/label&gt;
-&lt;/fieldset&gt;
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>Choose One Color<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"color"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"blue"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"blue"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"blue"</span>&gt;</span>Blue<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"color"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"red"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"red"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"red"</span>&gt;</span>Red<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"color"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"green"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"green"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"green"</span>&gt;</span>Green<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span>
 </code></pre>
                 
               </section>

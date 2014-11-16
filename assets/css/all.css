@@ -200,6 +200,10 @@ img {
   clear: both;
 }
 
+.overflow-auto {
+  overflow: auto;
+}
+
 .container {
   width: 90vw;
   max-width: 1152px;
@@ -3143,6 +3147,7 @@ hr {
   color: #fafafa;
   pointer-events: none;
   opacity: 0;
+  z-index: 4;
   -webkit-transition: all, 150ms linear;
   transition: all, 150ms linear;
   -webkit-transform: translate3d(0, 4px, 0);

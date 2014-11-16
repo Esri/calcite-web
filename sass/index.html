@@ -171,43 +171,43 @@
 <p>Using Calcite Web as a SASS library is very powerful. After you successfully import the library (see <a href="">the getting started page</a>) you can fully customize and use all of the Calcite Web Framework.</p>
 <h2 id="custom-build">Custom Build</h2>
 <p>Calcite comes with the ability to only generate the css you actually need for your project. Class generation is controlled by setting the following variables to <code>true</code> or <code>false</code>. Setting all of these variables to <code>false</code> will prevent Calcite Web from generating <strong>any</strong> css classes while still exposing the complete set of mixins.</p>
-<pre><code class="lang-scss"><span class="hljs-variable">$include-grid</span><span class="hljs-value">:                        true    !default;</span>
-  <span class="hljs-variable">$fold-grid</span><span class="hljs-value">:                         true    !default;</span>
-  <span class="hljs-variable">$block-grid</span><span class="hljs-value">:                        true    !default;</span>
+<pre><code class="lang-scss">$include-grid<span class="hljs-value">:                        true    !default;</span>
+  $fold-grid<span class="hljs-value">:                         true    !default;</span>
+  $<span class="hljs-value">block</span>-grid<span class="hljs-value">:                        true    !default;</span>
 
-<span class="hljs-variable">$include-type</span><span class="hljs-value">:                        true    !default;</span>
-  <span class="hljs-variable">$include-header-family</span><span class="hljs-value">:             true    !default;</span>
-  <span class="hljs-variable">$include-body-family</span><span class="hljs-value">:               true    !default;</span>
-  <span class="hljs-variable">$include-secondary-family</span><span class="hljs-value">:          true    !default;</span>
-  <span class="hljs-variable">$include-code-family</span><span class="hljs-value">:               true    !default;</span>
-  <span class="hljs-variable">$include-type-defaults</span><span class="hljs-value">:             true    !default;</span>
+$include-type<span class="hljs-value">:                        true    !default;</span>
+  $include-<span class="hljs-tag">header</span>-family<span class="hljs-value">:             true    !default;</span>
+  $include-<span class="hljs-tag">body</span>-family<span class="hljs-value">:               true    !default;</span>
+  $include-secondary-family<span class="hljs-value">:          true    !default;</span>
+  $include-<span class="hljs-tag">code</span>-family<span class="hljs-value">:               true    !default;</span>
+  $include-type-defaults<span class="hljs-value">:             true    !default;</span>
 
 <span class="hljs-comment">// Icons</span>
-<span class="hljs-variable">$include-icons</span><span class="hljs-value">:                       true    !default;</span>
-  <span class="hljs-variable">$include-one-color-icons</span><span class="hljs-value">:           true    !default;</span>
-  <span class="hljs-variable">$include-color-icons</span><span class="hljs-value">:               true    !default;</span>
+$include-icons<span class="hljs-value">:                       true    !default;</span>
+  $include-one-<span class="hljs-attribute">color</span>-icons<span class="hljs-value">:           true    !default;</span>
+  $include-<span class="hljs-attribute">color</span>-icons<span class="hljs-value">:               true    !default;</span>
 
 <span class="hljs-comment">// Components</span>
-<span class="hljs-variable">$include-alerts</span><span class="hljs-value">:                      true    !default;</span>
-<span class="hljs-variable">$include-tables</span><span class="hljs-value">:                      true    !default;</span>
-<span class="hljs-variable">$include-panel</span><span class="hljs-value">:                       true    !default;</span>
-<span class="hljs-variable">$include-button</span><span class="hljs-value">:                      true    !default;</span>
-<span class="hljs-variable">$include-breadcrumbs</span><span class="hljs-value">:                 true    !default;</span>
-<span class="hljs-variable">$include-tooltip</span><span class="hljs-value">:                     true    !default;</span>
+$include-alerts<span class="hljs-value">:                      true    !default;</span>
+$include-tables<span class="hljs-value">:                      true    !default;</span>
+$include-panel<span class="hljs-value">:                       true    !default;</span>
+$include-<span class="hljs-tag">button</span><span class="hljs-value">:                      true    !default;</span>
+$include-breadcrumbs<span class="hljs-value">:                 true    !default;</span>
+$include-tooltip<span class="hljs-value">:                     true    !default;</span>
 
 <span class="hljs-comment">// Patterns</span>
-<span class="hljs-variable">$include-footer</span><span class="hljs-value">:                      true    !default;</span>
-<span class="hljs-variable">$include-pagination</span><span class="hljs-value">:                  true    !default;</span>
-<span class="hljs-variable">$include-side-nav</span><span class="hljs-value">:                    true    !default;</span>
-<span class="hljs-variable">$include-sub-nav</span><span class="hljs-value">:                     true    !default;</span>
-<span class="hljs-variable">$include-third-nav</span><span class="hljs-value">:                   true    !default;</span>
-<span class="hljs-variable">$include-top-nav</span><span class="hljs-value">:                     true    !default;</span>
+$include-<span class="hljs-tag">footer</span><span class="hljs-value">:                      true    !default;</span>
+$include-pagination<span class="hljs-value">:                  true    !default;</span>
+$include-side-<span class="hljs-tag">nav</span><span class="hljs-value">:                    true    !default;</span>
+$include-<span class="hljs-tag">sub</span>-<span class="hljs-tag">nav</span><span class="hljs-value">:                     true    !default;</span>
+$include-third-<span class="hljs-tag">nav</span><span class="hljs-value">:                   true    !default;</span>
+$include-<span class="hljs-attribute">top</span>-<span class="hljs-tag">nav</span><span class="hljs-value">:                     true    !default;</span>
 
 <span class="hljs-comment">// JavaScript Patterns</span>
-<span class="hljs-variable">$include-tabs</span><span class="hljs-value">:                        true    !default;</span>
-<span class="hljs-variable">$include-modal</span><span class="hljs-value">:                       true    !default;</span>
-<span class="hljs-variable">$include-accordion</span><span class="hljs-value">:                   true    !default;</span>
-<span class="hljs-variable">$include-accordion</span><span class="hljs-value">:                   true    !default;</span>
+$include-tabs<span class="hljs-value">:                        true    !default;</span>
+$include-modal<span class="hljs-value">:                       true    !default;</span>
+$include-accordion<span class="hljs-value">:                   true    !default;</span>
+$include-accordion<span class="hljs-value">:                   true    !default;</span>
 </code></pre>
 <p>All classes are styled by mixins of the same name, meaning that the <code>btn</code> class is simply including the <code>btn()</code> mixin. You can style your own elements or classnames to match exactly of the existing classes by including these mixins.</p>
 <pre><code class="lang-scss"><span class="hljs-class">.my-button-class</span> {
@@ -216,7 +216,7 @@
 <span class="hljs-preprocessor">
 .my-colored-button-class</span> {</span>
   <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> btn</span>()
-  @<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> btn-color</span>(<span class="hljs-variable">$value</span>, <span class="hljs-variable">$hover-value</span>);</span>
+  @<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> btn-color</span>($value, $hover-value);</span>
 }
 </code></pre>
 
@@ -522,20 +522,20 @@ Setting the max width of an article to a large multiple of the text size is a wa
                 <h2 id="utillity-mixins">Utillity Mixins</h2>
 <p>Utillity mixins are used to construct complicated behaviors for <a href="components">components</a> and <a href="patterns">patterns</a>, provide baseline functionallity for doc elements, and take care of browser prefixing. The following mixins are available for use when using the Calcite Web sass library.</p>
 <p>Most utillity mixins are borrowed from <a href="http://bourbon.io/">Bourbon</a>. Where mixins share a name, they are the same code base.</p>
-<pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> appearance</span> (<span class="hljs-variable">$value</span>)
-@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> box-sizing</span> (<span class="hljs-variable">$box</span>)
-@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> calc</span>(<span class="hljs-variable">$property</span>, <span class="hljs-variable">$value</span>)
+<pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> appearance</span> ($value)
+@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> box-sizing</span> ($box)
+@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> calc</span>($property, $value)
 @<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> clearfix</span>()
-@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> prefixer</span> (<span class="hljs-variable">$property</span>, <span class="hljs-variable">$value</span>, <span class="hljs-variable">$prefixes</span>)
-@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> respond-to</span>(<span class="hljs-variable">$max</span>, <span class="hljs-variable">$mi</span>, <span class="hljs-variable">$type</span>)
-@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> transform</span>(<span class="hljs-variable">$property</span>)
-@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> transform-origin</span>(<span class="hljs-variable">$axes</span>)
-@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> transform-style</span> (<span class="hljs-variable">$style</span>)
-@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> transition</span> (<span class="hljs-variable">$value</span>)
-@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> transition-property</span> (<span class="hljs-variable">$value</span>)
-@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> transition-duration</span> (<span class="hljs-variable">$value</span>)
-@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> transition-timing-function</span> (<span class="hljs-variable">$value</span>)
-@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> transition-delay</span> (<span class="hljs-variable">$value</span>)
+@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> prefixer</span> ($property, $value, $prefixes)
+@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> respond-to</span>($max, $mi, $type)
+@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> transform</span>($property)
+@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> transform-origin</span>($axes)
+@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> transform-style</span> ($style)
+@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> transition</span> ($value)
+@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> transition-property</span> ($value)
+@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> transition-duration</span> ($value)
+@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> transition-timing-function</span> ($value)
+@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> transition-delay</span> ($value)
 @<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> show</span>()
 @<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> hide</span>()</span>
 </code></pre>
@@ -550,30 +550,30 @@ Setting the max width of an article to a large multiple of the text size is a wa
               <section class="trailer-2">
                 <h2 id="color-map">Color Map</h2>
 <p>The Color Map exposes a Sass object/array thing that can be used to iterate over UI colors.</p>
-<pre><code class="lang-scss"><span class="hljs-variable">$color-set</span><span class="hljs-value">: (
-  <span class="hljs-string">'red'</span>          <span class="hljs-variable">$red</span>          <span class="hljs-variable">$dark-red</span>,
-  <span class="hljs-string">'green'</span>        <span class="hljs-variable">$green</span>        <span class="hljs-variable">$dark-green</span>,
-  <span class="hljs-string">'blue'</span>         <span class="hljs-variable">$blue</span>         <span class="hljs-variable">$dark-blue</span>,
-  <span class="hljs-string">'purple'</span>       <span class="hljs-variable">$purple</span>       <span class="hljs-variable">$dark-purple</span>,
-  <span class="hljs-string">'orange'</span>       <span class="hljs-variable">$orange</span>       <span class="hljs-variable">$dark-orange</span>,
-  <span class="hljs-string">'brown'</span>        <span class="hljs-variable">$brown</span>        <span class="hljs-variable">$dark-brown</span>,
-  <span class="hljs-string">'white'</span>        <span class="hljs-variable">$white</span>        <span class="hljs-variable">$lightest-gray</span>,
-  <span class="hljs-string">'light-gray'</span>   <span class="hljs-variable">$light-gray</span>   <span class="hljs-variable">$gray</span>,
-  <span class="hljs-string">'gray'</span>         <span class="hljs-variable">$gray</span>         <span class="hljs-variable">$dark-gray</span>,
-  <span class="hljs-string">'dark-gray'</span>    <span class="hljs-variable">$dark-gray</span>    <span class="hljs-variable">$darker-gray</span>,
-  <span class="hljs-string">'darker-gray'</span>  <span class="hljs-variable">$darker-gray</span>  <span class="hljs-variable">$darkest-gray</span>,
-  <span class="hljs-string">'darkest-gray'</span> <span class="hljs-variable">$darkest-gray</span> <span class="hljs-variable">$off-black</span>,
-  <span class="hljs-string">'off-black'</span>    <span class="hljs-variable">$off-black</span>    <span class="hljs-variable">$black</span>
+<pre><code class="lang-scss">$<span class="hljs-attribute">color</span>-set<span class="hljs-value">: (
+  <span class="hljs-string">'red'</span>          $red          $dark-red,
+  <span class="hljs-string">'green'</span>        $green        $dark-green,
+  <span class="hljs-string">'blue'</span>         $blue         $dark-blue,
+  <span class="hljs-string">'purple'</span>       $purple       $dark-purple,
+  <span class="hljs-string">'orange'</span>       $orange       $dark-orange,
+  <span class="hljs-string">'brown'</span>        $brown        $dark-brown,
+  <span class="hljs-string">'white'</span>        $white        $lightest-gray,
+  <span class="hljs-string">'light-gray'</span>   $light-gray   $gray,
+  <span class="hljs-string">'gray'</span>         $gray         $dark-gray,
+  <span class="hljs-string">'dark-gray'</span>    $dark-gray    $darker-gray,
+  <span class="hljs-string">'darker-gray'</span>  $darker-gray  $darkest-gray,
+  <span class="hljs-string">'darkest-gray'</span> $darkest-gray $off-black,
+  <span class="hljs-string">'off-black'</span>    $off-black    $black
 );</span>
 </code></pre>
 <h3 id="usage">Usage</h3>
 <pre><code class="lang-scss">&lt;!-- Sass Generation of the `<span class="hljs-tag">link</span>-<span class="hljs-attribute">color</span>` helper classes --&gt;
-<span class="hljs-at_rule">@<span class="hljs-keyword">each</span> <span class="hljs-variable">$color</span><span class="hljs-preprocessor"> in</span> <span class="hljs-variable">$color-set</span> {</span>
-    <span class="hljs-variable">$name</span><span class="hljs-value">: <span class="hljs-function">nth</span>(<span class="hljs-variable">$color</span>, <span class="hljs-number">1</span>);</span>
-    <span class="hljs-variable">$value</span><span class="hljs-value">: <span class="hljs-function">nth</span>(<span class="hljs-variable">$color</span>, <span class="hljs-number">2</span>);</span>
-    <span class="hljs-variable">$light-value</span><span class="hljs-value">: <span class="hljs-function">nth</span>(<span class="hljs-variable">$color</span>, <span class="hljs-number">3</span>);</span>
-    <span class="hljs-class">.link-</span>#{<span class="hljs-variable">$name</span>} <span class="hljs-tag">a</span>, <span class="hljs-tag">a</span><span class="hljs-class">.link-</span>#{<span class="hljs-variable">$name</span>} {
-      <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> link-color</span>(<span class="hljs-variable">$value</span>, <span class="hljs-variable">$light-value</span>);</span>
+<span class="hljs-at_rule">@<span class="hljs-keyword">each</span> $color<span class="hljs-preprocessor"> in</span> $color-set {</span>
+    $name<span class="hljs-value">: nth($color, <span class="hljs-number">1</span>);</span>
+    $value<span class="hljs-value">: nth($color, <span class="hljs-number">2</span>);</span>
+    $light-value<span class="hljs-value">: nth($color, <span class="hljs-number">3</span>);</span>
+    <span class="hljs-class">.link-</span>#{$name} <span class="hljs-tag">a</span>, <span class="hljs-tag">a</span><span class="hljs-class">.link-</span>#{$name} {
+      <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> link-color</span>($value, $light-value);</span>
     }
   }
 </code></pre>
