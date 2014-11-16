@@ -169,7 +169,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: 'lib/',
-          src: ['img/**/*.{png,jpg,svg}'],
+          src: ['img/**/*.{png,jpg,svg,ico}'],
           dest: 'dist/'
         }]
       },
@@ -177,7 +177,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: 'lib/',
-          src: ['img/**/*.{png,jpg,svg}'],
+          src: ['img/**/*.{png,jpg,svg,ico}'],
           dest: 'docs/source/assets/'
         }]
       }
