@@ -1,3 +1,12 @@
+## v0.0.6
+Working icon tooling
+
+### Added
+- Button group support for all button styles
+
+### Modified
+- Disabled button style to look less clickable
+
 ## v0.0.5
 Forms, table improvements, type changes, in progress icon tooling, more documentation.
 
@@ -8,7 +17,7 @@ Forms, table improvements, type changes, in progress icon tooling, more document
 - Checkboxes
 - Labels
 - Legends
-- `table-wrap` - prevents large tables from breaking layout
+- `overflow-auto` - helper class can wrap elements that break layout
 - `input-error` - outlines an input in red for user feedback
 
 ### Modified
