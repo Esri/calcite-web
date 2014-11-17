@@ -2,9 +2,10 @@
 Working icon tooling
 
 ### Added
+- Button group support for all button styles
 
 ### Modified
-
+- Disabled button style to look less clickable
 
 ## v0.0.5
 Forms, table improvements, type changes, in progress icon tooling, more documentation.

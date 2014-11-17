@@ -24,6 +24,9 @@
     background-color: $dark-blue;
     color: $white;
   }
+  &.btn-grouped:first-of-type {
+    border-left: 1px solid $dark-blue;
+  }
 }
 
   @mixin btn-disabled() {
@@ -71,6 +74,9 @@
       background: $dark-blue;
       border-color: $dark-blue;
     }
+    &.btn-grouped:first-of-type {
+      border-left: 1px solid $blue;
+    }
   }
 
     @mixin btn-clear-gray() {
@@ -81,6 +87,9 @@
         color: $white;
         background: $gray;
       }
+      &.btn-grouped:first-of-type {
+        border-left: 1px solid $dark-gray;
+      }
     }
     @mixin btn-clear-white() {
       background: none;
@@ -89,6 +98,9 @@
       &:hover {
         color: $gray;
         background: $white;
+      }
+      &.btn-grouped:first-of-type {
+        border-left: 1px solid $white;
       }
     }
 
@@ -109,10 +121,7 @@
 
   @mixin btn-grouped() {
     float: left;
-    border-left-color: transparent;
-    &:first-of-type {
-      border-left-color: $dark-blue;
-    }
+    border-left: none;
     &:last-of-type {
       float: none;
     }
@@ -142,12 +151,12 @@
   @each $color in $color-set {
     $name: nth($color, 1);
     $value: nth($color, 2);
-    $light-value: nth($color, 3);
+    $dark-value: nth($color, 3);
     .btn-#{$name} {
-      @include btn-color($value, $light-value);
+      @include btn-color($value, $dark-value);
     }
-    .btn-#{$name}.btn-grouped {
-      border-color: $light-value;
+    .btn-#{$name}.btn-grouped:first-of-type {
+      border-left: 1px solid $dark-value;
     }
   }
 
