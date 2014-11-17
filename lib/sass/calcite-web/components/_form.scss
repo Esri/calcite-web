@@ -65,6 +65,9 @@ input[type='time'],
 input[type='week'],
 input[type='month'] {
   max-height: $baseline * 1.5;
+  &.input-error {
+    border-color: $red;
+  }
 }
 
 // 'Button' inputs
@@ -110,9 +113,6 @@ select {
   @extend .header-face;
   border: 1px solid $light-gray;
   background-color: $lightest-gray;
-  @-moz-document url-prefix() {
-    height: auto;
-  }
 }
 
 .input-error {
