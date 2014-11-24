@@ -73,8 +73,4 @@
   @else if $n < 2 {
     line-height: $baseline;
   }
-
-  small, sup, sub {
-    font-size: modular-scale($n - 1);
-  }
 }

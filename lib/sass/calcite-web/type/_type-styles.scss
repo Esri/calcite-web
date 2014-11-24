@@ -27,16 +27,6 @@
        -o-font-feature-settings : "liga" 1,"calt" 0;
        font-feature-settings : "liga" 1,"calt" 0;
     }
-    dl {
-      dt {
-        @extend .body-bold;
-      }
-      dd {
-        margin-left: 0;
-        margin-bottom: $baseline;
-      }
-    }
-
   }
 
   @if $include-header-family == true {
@@ -132,6 +122,10 @@
 
   ul {
     list-style-type: none;
+  }
+
+  small, sup, sub {
+    font-size: $ratio * 1em;
   }
 
   sub,
