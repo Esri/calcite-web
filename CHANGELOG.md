@@ -89,7 +89,6 @@ Begin foundational sass for the framework.
 - Sass Utils
 - Breadcrumbs
 
-
 ## v0.0.0
 
 ### Added
