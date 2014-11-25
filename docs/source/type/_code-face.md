@@ -1,4 +1,4 @@
-## Code
+## Code Face
 
 Designed by Microsoft's Lucas DeGroot, [Consolas](http://www.fonts.com/font/microsoft-corporation/consolas) is a clean, readable, and simple monospace face for documenting code blocks.
 

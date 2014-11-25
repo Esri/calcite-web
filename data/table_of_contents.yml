@@ -130,6 +130,8 @@ grid:
       pages:
         - title: "Overview"
           link: overview
+        - title: Configuration
+          link: configuration
         - title: "Container"
           link: container
         - title: "Columns"
@@ -316,19 +318,8 @@ components:
         - title: "Text Inputs"
           link: text-inputs
           modifiers:
-            - date
-            - datetime
-            - datetime-local
-            - email
-            - time
-            - week
-            - search
-            - tel
-            - text
-            - url
-            - number
-            - password
-            - month
+            - 'default'
+            - 'input-error'
         - title: "Button Inputs"
           link: button-inputs
           modifiers:
@@ -338,7 +329,9 @@ components:
             - submit
         - title: "Selects"
           link: selects
-          modifiers: true
+          modifiers:
+            - 'default'
+            - input-error
         - title: "Checkboxes"
           link: checkboxes
           modifiers: true
@@ -393,6 +386,12 @@ sass:
       pages:
         - title: "Overview"
           link: sass-overview
+    - group: "Variables"
+      pages:
+        - title: "Overview"
+          link: variables
+        - title: "Breakpoints"
+          link: breakpoints
     - group: "Type Composition"
       pages:
         - title: "Font Size"

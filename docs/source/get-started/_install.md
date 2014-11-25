@@ -1,4 +1,4 @@
-# Contributing to Calcite-Web
+# Contributing to Calcite Web
 
 ## Install
 

@@ -1,6 +1,6 @@
 # Versioning
 
-Calcite-Web uses SemVer (Semantic Versioning) for its releases. This means that version numbers are basically formatted like `MAJOR.MINOR.PATCH`. If you're well acquainted with SemVer you should skip to [releasing a new version](#releasing-a-new-version) below.
+Calcite Web uses SemVer (Semantic Versioning) for its releases. This means that version numbers are basically formatted like `MAJOR.MINOR.PATCH`. If you're well acquainted with SemVer you should skip to [releasing a new version](#releasing-a-new-version) below.
 
 #### Major
 
@@ -12,7 +12,7 @@ New components, new helper classes, or substantial visual changes to existing co
 
 #### Patches
 
-The final number signifies patches such as fixing a pattern or component in a certain browser, or fixing an existing bug. Small changes to the documentation site and the tooling around the Calcite-Web library are also considered patches.
+The final number signifies patches such as fixing a pattern or component in a certain browser, or fixing an existing bug. Small changes to the documentation site and the tooling around the Calcite Web library are also considered patches.
 
 ## Releasing a New Version
 
