@@ -221,7 +221,7 @@ module.exports = function(grunt) {
     // Bump the version on GitHub
     'github-release': {
       options: {
-        repository: 'ArcGIS/calcite-web',
+        repository: 'Esri/calcite-web',
         release: {
           tag_name: currentVersion,
           name: currentVersion,
@@ -238,7 +238,7 @@ module.exports = function(grunt) {
     'gh-pages': {
       options: {
         base: 'docs/build',
-        repo: 'https://github.com/ArcGIS/calcite-web.git'
+        repo: 'https://github.com/Esri/calcite-web.git'
       },
       src: ['**']
     },
