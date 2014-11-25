@@ -23,7 +23,7 @@
 //Styleguide 1.2
 
 @mixin block-group() {
-  font-family: monospace;
+  @extend .code-face;
   letter-spacing: -.65em;
   margin-left: -0.5*$column-gutter;
   margin-right: -0.5*$column-gutter;
@@ -35,13 +35,13 @@
 }
 
 @mixin block() {
+  @extend .body-face;
   position: relative;
   display: inline-block;
   float: none;
   @include box-sizing(border-box);
   padding-left: 0.5*$column-gutter;
   padding-right: 0.5*$column-gutter;
-  font-family: sans-serif;
   letter-spacing: normal;
   text-align: left;
   vertical-align: top;
