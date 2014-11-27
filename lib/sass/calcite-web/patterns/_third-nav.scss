@@ -12,10 +12,7 @@
       margin-left: $baseline * .5;
     }
     &.is-active {
-    font-weight: 400;
-      @media (-webkit-max-device-pixel-ratio: 1), (max-resolution: 72dpi) {
-        font-weight: 500;
-      }
+      @extend .header-bold;
     }
   }
 
