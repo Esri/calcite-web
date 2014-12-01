@@ -3,9 +3,11 @@ Working icon tooling
 
 ### Added
 - Button group support for all button styles
+- `.sign-in` class for sign in + sign out buttons in top nav
 
 ### Modified
 - Disabled button style to look less clickable
+- Tweak form styles
 
 ## v0.0.5
 Forms, table improvements, type changes, in progress icon tooling, more documentation.
