@@ -1,4 +1,4 @@
-## Utility Mixins
+# Utility Mixins
 
 Utility mixins are used to construct complicated behaviors for [components]({{RelativePath}}components) and [patterns]({{RelativePath}}patterns), provide baseline functionality for doc elements, and take care of browser prefixing.
 

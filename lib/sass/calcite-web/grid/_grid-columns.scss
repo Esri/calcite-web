@@ -37,7 +37,8 @@
 @mixin column-base() {
   @include box-sizing(border-box);
   width: $container-width;
-  padding: 0 $column-gutter / 2;
+  padding-left: $column-gutter / 2;
+  padding-right: $column-gutter / 2;
   margin: 0;
   float: left;
   [class*="column-"]:first-of-type {

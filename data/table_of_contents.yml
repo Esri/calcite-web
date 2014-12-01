@@ -253,6 +253,8 @@ color:
             - light-brown
             - brown
             - dark-brown
+        - title: "Type Colors"
+          link: type-colors
 
 components:
   title: "Components"
@@ -315,6 +317,10 @@ components:
             - table-plain
     - group: "Forms"
       pages:
+        - title: "Form Overview"
+          link: form-overview
+          modifiers:
+            - 'default'
         - title: "Text Inputs"
           link: text-inputs
           modifiers:
@@ -392,8 +398,13 @@ sass:
           link: variables
         - title: "Breakpoints"
           link: breakpoints
+        - title: "UI Variables"
+          link: "ui-variables"
+
     - group: "Type Composition"
       pages:
+        - title: "Type Composition"
+          link: type-composition
         - title: "Font Size"
           link: font-size
         - title: "Tracking"
