@@ -32,7 +32,7 @@
 
   <body>
     <div class="wrapper">
-      <!-- Top Nav Pattern-->
+      <!-- Logged Out Pattern-->
       <header class="top-nav">
         <div class="container">
           <a href="#" class="top-nav-title">Esri Design Patterns</a>
@@ -44,6 +44,10 @@
           </nav>
           <!-- Site Search Pattern-->
           <!-- Sign in / User Menu Patterns-->
+          <nav class="sign-in">
+            <a href="#" class="btn btn-small btn-clear">Sign Up</a>
+            <a href="#" class="btn btn-small btn-transparent">Sign In</a>
+          </nav>
         </div>
       </header>
 
@@ -107,7 +111,6 @@
           </nav>
         </div>
       </header>
-
       <!-- Site Search Pattern -->
       <!-- <div class="site-search">
         <form action="/search/" class="site-search">
@@ -126,6 +129,8 @@
               <nav>
                 
                   <a href="#overview" class="side-nav-link">Overview</a>
+                
+                  <a href="#configuration" class="side-nav-link">Configuration</a>
                 
                   <a href="#container" class="side-nav-link">Container</a>
                 
@@ -201,6 +206,53 @@
 </tbody>
 </table>
 
+                
+                
+              </section>
+              <hr class="trailer-2">
+            
+              <section class="trailer-2">
+                <h2 id="configuration">Configuration</h2>
+<p>If you are using Calcite Web as a SASS library, you can customize the grid with SASS variables. Below are the different settings you have access to and their default values:</p>
+<pre><code class="lang-scss"><span class="hljs-comment">// Breakpoints</span>
+$<span class="hljs-tag">small</span><span class="hljs-value">:                    <span class="hljs-number">480</span>px;</span>
+$<span class="hljs-value">medium</span><span class="hljs-value">:                   <span class="hljs-number">860</span>px;</span>
+$large<span class="hljs-value">:                    <span class="hljs-number">1280</span>px;</span>
+
+<span class="hljs-comment">// Grid Settings</span>
+$vw-ratio<span class="hljs-value">:                 <span class="hljs-number">0.9</span>;</span>
+$container-<span class="hljs-attribute">width</span><span class="hljs-value">:          $vw-ratio * <span class="hljs-number">100</span>vw;</span>
+$container-min<span class="hljs-value">:            <span class="hljs-number">0</span>;</span>
+$container-max<span class="hljs-value">:            $large * $vw-ratio;</span>
+$column-gutter<span class="hljs-value">:            <span class="hljs-number">1</span>rem;</span>
+
+<span class="hljs-comment">// Grid Fallback Options</span>
+$ie8-support<span class="hljs-value">:              false;</span>
+$column-gutter-fallback<span class="hljs-value">:   <span class="hljs-number">20</span>px;</span>
+$container-<span class="hljs-attribute">width</span>-fallback<span class="hljs-value">: <span class="hljs-number">960</span>px;</span>
+
+<span class="hljs-comment">// Folding Grid Options</span>
+
+<span class="hljs-comment">// Large</span>
+$large-class<span class="hljs-value">:              <span class="hljs-string">'column'</span>;</span>
+$large-<span class="hljs-attribute">column-count</span><span class="hljs-value">:       <span class="hljs-number">24</span>;</span>
+
+<span class="hljs-comment">// Medium</span>
+$<span class="hljs-value">medium</span>-class<span class="hljs-value">:             <span class="hljs-string">'tablet'</span>;</span>
+$<span class="hljs-value">medium</span>-<span class="hljs-attribute">column-count</span><span class="hljs-value">:      <span class="hljs-number">12</span>;</span>
+
+<span class="hljs-comment">// Small</span>
+$<span class="hljs-tag">small</span>-class<span class="hljs-value">:              <span class="hljs-string">'phone'</span>;</span>
+$<span class="hljs-tag">small</span>-<span class="hljs-attribute">column-count</span><span class="hljs-value">:       <span class="hljs-number">6</span>;</span>
+
+<span class="hljs-comment">// Vertical Rhythm</span>
+$vertical-range<span class="hljs-value">:           <span class="hljs-number">6</span>;</span>
+$<span class="hljs-value">baseline</span><span class="hljs-value">:                 <span class="hljs-number">1.5</span>rem;</span>
+</code></pre>
+<p>In your own project, you can override these values to create a custom, project-specific grid. For example, to use a 16 column grid instead of the default 24 columns, you would set the <code>$large-column-count</code> variable after importing the library:</p>
+<pre><code>@<span class="hljs-keyword">import</span> calcite<span class="hljs-attribute">-web</span>;
+<span class="hljs-variable">$large</span><span class="hljs-attribute">-column</span><span class="hljs-attribute">-count</span>: <span class="hljs-number">16</span>;
+</code></pre>
                 
                 
               </section>

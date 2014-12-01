@@ -160,7 +160,6 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
-  cursor: pointer;
   width: auto;
 }
 
@@ -219,7 +218,8 @@ img {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 90vw;
-  padding: 0 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   margin: 0;
   float: left;
 }
@@ -1921,7 +1921,7 @@ img {
     float: right;
   }
 }
-@media screen and (860px: min-width) {
+@media screen and (max-width: 860px) {
   .medium-block-group-1-up .block {
     width: 100%;
   }
@@ -1942,7 +1942,7 @@ img {
     width: 20%;
   }
 }
-@media screen and (480px: min-width) {
+@media screen and (max-width: 480px) {
   .small-block-group-1-up .block {
     width: 100%;
   }
@@ -1984,7 +1984,6 @@ img {
   box-sizing: border-box;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  font-family: sans-serif;
   letter-spacing: normal;
   text-align: left;
   vertical-align: top;
@@ -2218,7 +2217,7 @@ input[type='url'],
 input[type='number'],
 input[type='password'],
 input[type='month'],
-textarea, input[type='radio'] + label, input[type='checkbox'] + label, .label-checkmark, select, .top-nav, .top-nav-list, .third-nav, .side-nav, .accordion, .side-nav-title, .accordion-title {
+textarea, select, .top-nav, .top-nav-list, .third-nav, .side-nav, .accordion, .side-nav-title, .accordion-title {
   letter-spacing: 0em;
   font-family: "Avenir Next W01", "Avenir Next", "Avenir", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
@@ -2242,7 +2241,7 @@ input[type='url'] b,
 input[type='number'] b,
 input[type='password'] b,
 input[type='month'] b,
-textarea b, input[type='radio'] + label b, input[type='checkbox'] + label b, .label-checkmark b, select b, .top-nav b, .top-nav-list b, .third-nav b, .side-nav b, .accordion b, .side-nav-title b, .accordion-title b, .header-face strong, h1 strong,
+textarea b, select b, .top-nav b, .top-nav-list b, .third-nav b, .side-nav b, .accordion b, .side-nav-title b, .accordion-title b, .header-face strong, h1 strong,
 h2 strong,
 h3 strong,
 h4 strong,
@@ -2260,7 +2259,7 @@ input[type='url'] strong,
 input[type='number'] strong,
 input[type='password'] strong,
 input[type='month'] strong,
-textarea strong, input[type='radio'] + label strong, input[type='checkbox'] + label strong, .label-checkmark strong, select strong, .top-nav strong, .top-nav-list strong, .third-nav strong, .side-nav strong, .accordion strong, .side-nav-title strong, .accordion-title strong {
+textarea strong, select strong, .top-nav strong, .top-nav-list strong, .third-nav strong, .side-nav strong, .accordion strong, .side-nav-title strong, .accordion-title strong {
   font-weight: 500;
 }
 
@@ -2294,13 +2293,13 @@ textarea strong, input[type='radio'] + label strong, input[type='checkbox'] + la
   font-weight: 600;
 }
 
-.header-bold {
+.header-bold, .third-nav-link.is-active {
   letter-spacing: 0em;
   font-family: "Avenir Next W01", "Avenir Next", "Avenir", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
-.header-bold b, .header-bold strong {
+.header-bold b, .third-nav-link.is-active b, .header-bold strong, .third-nav-link.is-active strong {
   font-weight: 600;
 }
 
@@ -2314,13 +2313,13 @@ textarea strong, input[type='radio'] + label strong, input[type='checkbox'] + la
   font-weight: 600;
 }
 
-.body-face, body {
+.body-face, .block, body {
   letter-spacing: 0.03em;
   font-family: "Frutiger W01", "Lucida Grande", "Segoe UI", "Arial", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
-.body-face b, body b, .body-face strong, body strong {
+.body-face b, .block b, body b, .body-face strong, .block strong, body strong {
   font-weight: 700;
 }
 
@@ -2334,13 +2333,13 @@ textarea strong, input[type='radio'] + label strong, input[type='checkbox'] + la
   font-weight: 700;
 }
 
-.body-bold, dl dt {
+.body-bold {
   letter-spacing: 0.03em;
   font-family: "Frutiger W01", "Lucida Grande", "Segoe UI", "Arial", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
-.body-bold b, dl dt b, .body-bold strong, dl dt strong {
+.body-bold b, .body-bold strong {
   font-weight: 700;
 }
 
@@ -2435,59 +2434,33 @@ body {
   -o-font-feature-settings: "liga" 1,"calt" 0;
   font-feature-settings: "liga" 1,"calt" 0;
 }
-body small, body sup, body sub {
-  font-size: 0.8rem;
-}
-
-dl dd {
-  margin-left: 0;
-  margin-bottom: 1.5rem;
-}
 
 h1 {
   font-size: 1.83105rem;
   line-height: 3rem;
 }
-h1 small, h1 sup, h1 sub {
-  font-size: 1.5625rem;
-}
 
 h2 {
   font-size: 1.5625rem;
-}
-h2 small, h2 sup, h2 sub {
-  font-size: 1.46484rem;
 }
 
 h3 {
   font-size: 1.46484rem;
   line-height: 2.25rem;
 }
-h3 small, h3 sup, h3 sub {
-  font-size: 1.25rem;
-}
 
 h4 {
   font-size: 1.25rem;
-}
-h4 small, h4 sup, h4 sub {
-  font-size: 1.17188rem;
 }
 
 h5 {
   font-size: 1.17188rem;
   line-height: 1.5rem;
 }
-h5 small, h5 sup, h5 sub {
-  font-size: 1rem;
-}
 
 h6 {
   font-size: 1rem;
   line-height: 1.5rem;
-}
-h6 small, h6 sup, h6 sub {
-  font-size: 0.9375rem;
 }
 
 h1,
@@ -2552,9 +2525,6 @@ pre code {
   font-size: 0.8rem;
   line-height: 1.5rem;
 }
-pre code small, pre code sup, pre code sub {
-  font-size: 0.75rem;
-}
 
 p,
 ul,
@@ -2573,12 +2543,6 @@ blockquote,
 blockquote p {
   font-size: 1.17188rem;
   line-height: 1.5rem;
-}
-blockquote small, blockquote sup, blockquote sub,
-blockquote p small,
-blockquote p sup,
-blockquote p sub {
-  font-size: 1rem;
 }
 
 a {
@@ -2601,6 +2565,10 @@ ul ul, ul ol, ol ul, ol ol {
 
 ul {
   list-style-type: none;
+}
+
+small, sup, sub {
+  font-size: 1.25em;
 }
 
 sub,
@@ -2818,7 +2786,7 @@ hr {
 .btn {
   position: relative;
   display: inline-block;
-  padding: 0.3rem 0.9em;
+  padding: 0.3rem 0.9rem;
   color: white;
   border: 1px solid #005E95;
   background-color: #0079C1;
@@ -2834,12 +2802,12 @@ hr {
   font-family: "Avenir Next W01", "Avenir Next", "Avenir", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
 }
-.btn small, .btn sup, .btn sub {
-  font-size: 0.8rem;
-}
 .btn:hover {
   background-color: #005E95;
   color: white;
+}
+.btn.btn-grouped:first-of-type {
+  border-left: 1px solid #005E95;
 }
 
 .btn-arrow:after {
@@ -2867,21 +2835,28 @@ hr {
 .btn-clear {
   color: #0079C1;
   background: transparent;
-  border: 1px solid #0079C1;
+  border-color: #0079C1;
 }
 .btn-clear:hover {
   color: white;
-  background: #0079C1;
+  background: #005E95;
+  border-color: #005E95;
+}
+.btn-clear.btn-grouped:first-of-type {
+  border-left: 1px solid #0079C1;
 }
 
 .btn-clear-gray {
   background: none;
-  color: #c7c7c7;
-  border: 1px solid #c7c7c7;
+  color: #a3a3a3;
+  border-color: #a3a3a3;
 }
 .btn-clear-gray:hover {
   color: white;
   background: #c7c7c7;
+}
+.btn-clear-gray.btn-grouped:first-of-type {
+  border-left: 1px solid #a3a3a3;
 }
 
 .btn-clear-white {
@@ -2893,23 +2868,20 @@ hr {
   color: #c7c7c7;
   background: white;
 }
+.btn-clear-white.btn-grouped:first-of-type {
+  border-left: 1px solid white;
+}
 
 .btn-small {
   font-size: 0.8rem;
   line-height: 1.5rem;
-  padding: .3em .8em .3em;
-}
-.btn-small small, .btn-small sup, .btn-small sub {
-  font-size: 0.75rem;
+  padding: 0.225rem 0.675rem;
 }
 
 .btn-large {
   font-size: 1rem;
   line-height: 1.5rem;
-  padding: .5em 1em .5em;
-}
-.btn-large small, .btn-large sup, .btn-large sub {
-  font-size: 0.9375rem;
+  padding: .5rem 1rem .5rem;
 }
 
 .btn-fill {
@@ -2919,10 +2891,7 @@ hr {
 
 .btn-grouped {
   float: left;
-  border-left-color: transparent;
-}
-.btn-grouped:first-of-type {
-  border-left-color: #005E95;
+  border-left: none;
 }
 .btn-grouped:last-of-type {
   float: none;
@@ -2936,8 +2905,8 @@ hr {
   background-color: #C7552E;
 }
 
-.btn-red.btn-grouped {
-  border-color: #C7552E;
+.btn-red.btn-grouped:first-of-type {
+  border-left: 1px solid #C7552E;
 }
 
 .btn-green {
@@ -2948,8 +2917,8 @@ hr {
   background-color: #5B945A;
 }
 
-.btn-green.btn-grouped {
-  border-color: #5B945A;
+.btn-green.btn-grouped:first-of-type {
+  border-left: 1px solid #5B945A;
 }
 
 .btn-blue {
@@ -2960,8 +2929,8 @@ hr {
   background-color: #005E95;
 }
 
-.btn-blue.btn-grouped {
-  border-color: #005E95;
+.btn-blue.btn-grouped:first-of-type {
+  border-left: 1px solid #005E95;
 }
 
 .btn-purple {
@@ -2972,8 +2941,8 @@ hr {
   background-color: #7C6CA8;
 }
 
-.btn-purple.btn-grouped {
-  border-color: #7C6CA8;
+.btn-purple.btn-grouped:first-of-type {
+  border-left: 1px solid #7C6CA8;
 }
 
 .btn-orange {
@@ -2984,8 +2953,8 @@ hr {
   background-color: #E89D48;
 }
 
-.btn-orange.btn-grouped {
-  border-color: #E89D48;
+.btn-orange.btn-grouped:first-of-type {
+  border-left: 1px solid #E89D48;
 }
 
 .btn-brown {
@@ -2996,8 +2965,8 @@ hr {
   background-color: #A67947;
 }
 
-.btn-brown.btn-grouped {
-  border-color: #A67947;
+.btn-brown.btn-grouped:first-of-type {
+  border-left: 1px solid #A67947;
 }
 
 .btn-white {
@@ -3008,8 +2977,8 @@ hr {
   background-color: #f2f2f2;
 }
 
-.btn-white.btn-grouped {
-  border-color: #f2f2f2;
+.btn-white.btn-grouped:first-of-type {
+  border-left: 1px solid #f2f2f2;
 }
 
 .btn-light-gray {
@@ -3020,8 +2989,8 @@ hr {
   background-color: #c7c7c7;
 }
 
-.btn-light-gray.btn-grouped {
-  border-color: #c7c7c7;
+.btn-light-gray.btn-grouped:first-of-type {
+  border-left: 1px solid #c7c7c7;
 }
 
 .btn-gray {
@@ -3032,8 +3001,8 @@ hr {
   background-color: #a3a3a3;
 }
 
-.btn-gray.btn-grouped {
-  border-color: #a3a3a3;
+.btn-gray.btn-grouped:first-of-type {
+  border-left: 1px solid #a3a3a3;
 }
 
 .btn-dark-gray {
@@ -3044,8 +3013,8 @@ hr {
   background-color: #7d7d7d;
 }
 
-.btn-dark-gray.btn-grouped {
-  border-color: #7d7d7d;
+.btn-dark-gray.btn-grouped:first-of-type {
+  border-left: 1px solid #7d7d7d;
 }
 
 .btn-darker-gray {
@@ -3056,8 +3025,8 @@ hr {
   background-color: #575757;
 }
 
-.btn-darker-gray.btn-grouped {
-  border-color: #575757;
+.btn-darker-gray.btn-grouped:first-of-type {
+  border-left: 1px solid #575757;
 }
 
 .btn-darkest-gray {
@@ -3068,8 +3037,8 @@ hr {
   background-color: #404040;
 }
 
-.btn-darkest-gray.btn-grouped {
-  border-color: #404040;
+.btn-darkest-gray.btn-grouped:first-of-type {
+  border-left: 1px solid #404040;
 }
 
 .btn-off-black {
@@ -3080,12 +3049,13 @@ hr {
   background-color: #303030;
 }
 
-.btn-off-black.btn-grouped {
-  border-color: #303030;
+.btn-off-black.btn-grouped:first-of-type {
+  border-left: 1px solid #303030;
 }
 
 .btn:disabled, .btn-disabled {
-  background-color: #f2f2f2;
+  background-color: #fafafa;
+  border-color: #f2f2f2;
   cursor: default;
   pointer-events: none;
   color: #c7c7c7;
@@ -3100,9 +3070,6 @@ hr {
   line-height: 1.5rem;
   color: #a3a3a3;
 }
-.breadcrumbs small, .breadcrumbs sup, .breadcrumbs sub {
-  font-size: 0.75rem;
-}
 .breadcrumbs a {
   color: #a3a3a3;
 }
@@ -3116,9 +3083,6 @@ hr {
   content: "/";
   padding: 0 0.25em 0 0.5em;
   opacity: 0.5;
-}
-.crumb:after small, .crumb:after sup, .crumb:after sub {
-  font-size: 0.64rem;
 }
 .crumb.is-active {
   font-weight: 600;
@@ -3156,9 +3120,6 @@ hr {
   -o-transform: translate3d(0, 4px, 0);
   transform: translate3d(0, 4px, 0);
 }
-.tooltip:before small, .tooltip:before sup, .tooltip:before sub {
-  font-size: 0.8rem;
-}
 
 .tooltip-left:before {
   left: 0;
@@ -3189,9 +3150,6 @@ hr {
   position: relative;
   display: none;
   border-bottom: 1px solid white;
-}
-.alert small, .alert sup, .alert sub {
-  font-size: 0.8rem;
 }
 .alert a {
   color: #fafafa;
@@ -3243,17 +3201,11 @@ table {
   font-size: 0.8rem;
   line-height: 1.5rem;
 }
-table small, table sup, table sub {
-  font-size: 0.75rem;
-}
 table > thead {
   background-color: #f2f2f2;
   border-bottom: 1px solid #e6e6e6;
   font-size: 1rem;
   line-height: 1.5rem;
-}
-table > thead small, table > thead sup, table > thead sub {
-  font-size: 0.9375rem;
 }
 table > tbody {
   overflow: auto;
@@ -3332,7 +3284,6 @@ fieldset {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   border: none;
-  margin-bottom: 1.5rem;
   position: relative;
   display: block;
 }
@@ -3345,7 +3296,7 @@ input, select, textarea {
   width: 100%;
   outline: none;
   outline-offset: 0;
-  margin: 0.375rem 0;
+  margin: 0.375rem 0 0 0;
 }
 
 label, legend {
@@ -3353,8 +3304,20 @@ label, legend {
   font-size: 1rem;
   line-height: 1.5rem;
 }
-label small, label sup, label sub, legend small, legend sup, legend sub {
+
+legend {
+  margin-bottom: .1rem;
+}
+
+label, fieldset {
+  margin-bottom: 1.5rem;
+}
+
+fieldset label {
+  margin-bottom: 0;
   font-size: 0.9375rem;
+  line-height: 1.5rem;
+  color: #575757;
 }
 
 input[type='date'],
@@ -3380,48 +3343,6 @@ textarea {
   border-radius: 0;
   -webkit-transition: border-color 150ms linear;
   transition: border-color 150ms linear;
-}
-input[type='date'] small, input[type='date'] sup, input[type='date'] sub,
-input[type='datetime'] small,
-input[type='datetime'] sup,
-input[type='datetime'] sub,
-input[type='datetime-local'] small,
-input[type='datetime-local'] sup,
-input[type='datetime-local'] sub,
-input[type='email'] small,
-input[type='email'] sup,
-input[type='email'] sub,
-input[type='time'] small,
-input[type='time'] sup,
-input[type='time'] sub,
-input[type='week'] small,
-input[type='week'] sup,
-input[type='week'] sub,
-input[type='search'] small,
-input[type='search'] sup,
-input[type='search'] sub,
-input[type='tel'] small,
-input[type='tel'] sup,
-input[type='tel'] sub,
-input[type='text'] small,
-input[type='text'] sup,
-input[type='text'] sub,
-input[type='url'] small,
-input[type='url'] sup,
-input[type='url'] sub,
-input[type='number'] small,
-input[type='number'] sup,
-input[type='number'] sub,
-input[type='password'] small,
-input[type='password'] sup,
-input[type='password'] sub,
-input[type='month'] small,
-input[type='month'] sup,
-input[type='month'] sub,
-textarea small,
-textarea sup,
-textarea sub {
-  font-size: 0.8rem;
 }
 input[type='date']:focus,
 input[type='datetime']:focus,
@@ -3464,6 +3385,14 @@ input[type='week'],
 input[type='month'] {
   max-height: 2.25rem;
 }
+input[type='date'].input-error,
+input[type='datetime'].input-error,
+input[type='datetime-local'].input-error,
+input[type='time'].input-error,
+input[type='week'].input-error,
+input[type='month'].input-error {
+  border-color: #C96B4B;
+}
 
 input[type='button'],
 input[type='reset'],
@@ -3471,7 +3400,7 @@ input[type='submit'],
 button {
   position: relative;
   display: inline-block;
-  padding: 0.3rem 0.9em;
+  padding: 0.3rem 0.9rem;
   color: white;
   border: 1px solid #005E95;
   background-color: #0079C1;
@@ -3486,18 +3415,6 @@ button {
   line-height: 1.5rem;
   font-family: "Avenir Next W01", "Avenir Next", "Avenir", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
-}
-input[type='button'] small, input[type='button'] sup, input[type='button'] sub,
-input[type='reset'] small,
-input[type='reset'] sup,
-input[type='reset'] sub,
-input[type='submit'] small,
-input[type='submit'] sup,
-input[type='submit'] sub,
-button small,
-button sup,
-button sub {
-  font-size: 0.8rem;
 }
 input[type='button']:hover,
 input[type='reset']:hover,
@@ -3506,12 +3423,18 @@ button:hover {
   background-color: #005E95;
   color: white;
 }
+input[type='button'].btn-grouped:first-of-type,
+input[type='reset'].btn-grouped:first-of-type,
+input[type='submit'].btn-grouped:first-of-type,
+button.btn-grouped:first-of-type {
+  border-left: 1px solid #005E95;
+}
 
 input[type="file"]::-webkit-file-upload-button {
   -webkit-appearance: none;
   position: relative;
   display: inline-block;
-  padding: 0.3rem 0.9em;
+  padding: 0.3rem 0.9rem;
   color: white;
   border: 1px solid #005E95;
   background-color: #0079C1;
@@ -3526,19 +3449,19 @@ input[type="file"]::-webkit-file-upload-button {
   line-height: 1.5rem;
   font-family: "Avenir Next W01", "Avenir Next", "Avenir", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
-}
-input[type="file"]::-webkit-file-upload-button small, input[type="file"]::-webkit-file-upload-button sup, input[type="file"]::-webkit-file-upload-button sub {
-  font-size: 0.8rem;
 }
 input[type="file"]::-webkit-file-upload-button:hover {
   background-color: #005E95;
   color: white;
 }
+input[type="file"]::-webkit-file-upload-button.btn-grouped:first-of-type {
+  border-left: 1px solid #005E95;
+}
 
 ::-ms-browse {
   position: relative;
   display: inline-block;
-  padding: 0.3rem 0.9em;
+  padding: 0.3rem 0.9rem;
   color: white;
   border: 1px solid #005E95;
   background-color: #0079C1;
@@ -3554,35 +3477,21 @@ input[type="file"]::-webkit-file-upload-button:hover {
   font-family: "Avenir Next W01", "Avenir Next", "Avenir", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
 }
-::-ms-browse small, ::-ms-browse sup, ::-ms-browse sub {
-  font-size: 0.8rem;
-}
 ::-ms-browse:hover {
   background-color: #005E95;
   color: white;
+}
+::-ms-browse.btn-grouped:first-of-type {
+  border-left: 1px solid #005E95;
 }
 
 input[type='radio'], input[type='checkbox'] {
   float: left;
   width: auto;
-  margin: 0.375rem 0.3rem 0 0;
+  margin: .3rem .3rem 0 0;
 }
-input[type='radio'] + label, input[type='checkbox'] + label {
-  font-size: 0.9375rem;
-  line-height: 1.5rem;
-  color: #575757;
-}
-input[type='radio'] + label small, input[type='radio'] + label sup, input[type='radio'] + label sub, input[type='checkbox'] + label small, input[type='checkbox'] + label sup, input[type='checkbox'] + label sub {
-  font-size: 0.8rem;
-}
-
-.label-checkmark {
-  font-size: 0.9375rem;
-  line-height: 1.5rem;
-  color: #575757;
-}
-.label-checkmark small, .label-checkmark sup, .label-checkmark sub {
-  font-size: 0.8rem;
+input[type='radio']:focus, input[type='checkbox']:focus {
+  outline: 1px solid #0079C1;
 }
 
 select {
@@ -3593,14 +3502,10 @@ select {
   border: 1px solid #d6d6d6;
   background-color: #f2f2f2;
 }
-select small, select sup, select sub {
-  font-size: 0.8rem;
+select:focus {
+  border-color: #0079C1;
 }
-@-moz-document url-prefix() {
-  select {
-    height: auto;
-  }
-}
+
 .input-error {
   border-color: #C96B4B;
 }
@@ -3610,20 +3515,25 @@ select small, select sup, select sub {
 }
 
 .top-nav-title {
-  font-size: 1.25rem;
+  font-size: 1.17188rem;
+  line-height: 1.5rem;
   float: left;
   padding-right: 3rem;
 }
-.top-nav-title small, .top-nav-title sup, .top-nav-title sub {
-  font-size: 1.17188rem;
-}
 
 .top-nav-list {
+  float: left;
   line-height: 1.75em;
 }
 
 .top-nav-link {
   margin-right: 1em;
+}
+
+.sign-in {
+  float: right;
+  margin-top: -0.25rem;
+  margin-bottom: -1.5rem;
 }
 
 .sub-nav {
@@ -3654,9 +3564,6 @@ select small, select sup, select sub {
   -webkit-transition: background-color 150ms linear, color 150ms 150ms linear;
   transition: background-color 150ms linear, color 150ms 150ms linear;
 }
-.sub-nav-link small, .sub-nav-link sup, .sub-nav-link sub {
-  font-size: 0.8rem;
-}
 .sub-nav-link:hover, .sub-nav-link:focus {
   background-color: rgba(0, 0, 0, 0.3);
   color: white;
@@ -3676,19 +3583,8 @@ select small, select sup, select sub {
   line-height: 1.5rem;
   margin-right: 1.125rem;
 }
-.third-nav-link small, .third-nav-link sup, .third-nav-link sub {
-  font-size: 0.75rem;
-}
 .third-nav-link:first-of-type {
   margin-left: 0.75rem;
-}
-.third-nav-link.is-active {
-  font-weight: 400;
-}
-@media (-webkit-max-device-pixel-ratio: 1), (max-resolution: 72dpi) {
-  .third-nav-link.is-active {
-    font-weight: 500;
-  }
 }
 
 .side-nav, .accordion {
@@ -3708,9 +3604,6 @@ select small, select sup, select sub {
   background-color: #fafafa;
   border-top: 1px solid #f2f2f2;
 }
-.side-nav-title small, .accordion-title small, .side-nav-title sup, .accordion-title sup, .side-nav-title sub, .accordion-title sub {
-  font-size: 0.8rem;
-}
 .side-nav-title:first-child, .accordion-title:first-child {
   border-top: none;
 }
@@ -3727,9 +3620,6 @@ select small, select sup, select sub {
   border-top: 1px solid #f2f2f2;
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
-}
-.side-nav-link small, .side-nav-link sup, .side-nav-link sub {
-  font-size: 0.75rem;
 }
 .side-nav-link:after {
   content: "»";
@@ -3783,9 +3673,6 @@ select small, select sup, select sub {
   background-color: #fafafa;
   border: 1px solid #e6e6e6;
   border-left: none;
-}
-.tab-title small, .tab-title sup, .tab-title sub {
-  font-size: 0.75rem;
 }
 .tab-title:first-child {
   border-left: 1px solid #e6e6e6;
@@ -3889,16 +3776,10 @@ select small, select sup, select sub {
   font-size: 0.512rem;
   line-height: 1.5rem;
 }
-.accordion-title:before small, .accordion-title:before sup, .accordion-title:before sub {
-  font-size: 0.48rem;
-}
 .accordion-title.is-active:before {
   content: "▾";
   font-size: 1rem;
   line-height: 1.5rem;
-}
-.accordion-title.is-active:before small, .accordion-title.is-active:before sup, .accordion-title.is-active:before sub {
-  font-size: 0.9375rem;
 }
 .accordion-title:hover {
   -webkit-transition: all, 150ms linear;
@@ -4082,16 +3963,10 @@ select small, select sup, select sub {
   font-size: 1rem;
   line-height: 1.5rem;
 }
-.text-large small, .text-large sup, .text-large sub {
-  font-size: 0.9375rem;
-}
 
 .text-small {
   font-size: 0.8rem;
   line-height: 1.5rem;
-}
-.text-small small, .text-small sup, .text-small sub {
-  font-size: 0.75rem;
 }
 
 .text-light {
@@ -4137,9 +4012,6 @@ select small, select sup, select sub {
 }
 .list-numbered > li:before b, .list-numbered > li:before strong {
   font-weight: 400;
-}
-.list-numbered > li:before small, .list-numbered > li:before sup, .list-numbered > li:before sub {
-  font-size: 1rem;
 }
 .list-numbered > li:after {
   content: ".";
@@ -4517,9 +4389,6 @@ select small, select sup, select sub {
   font-size: 3.05176rem;
   line-height: 1.15em;
 }
-.type-sample small, .type-sample sup, .type-sample sub {
-  font-size: 2.86102rem;
-}
 
 .styleguide-modifiers {
   background: white;
@@ -4558,9 +4427,6 @@ select small, select sup, select sub {
   padding-right: 3px;
   z-index: 1;
 }
-.styleguide-modifiers .styleguide-modifier-example .modifier-name small, .styleguide-modifiers .styleguide-modifier-example .modifier-name sup, .styleguide-modifiers .styleguide-modifier-example .modifier-name sub {
-  font-size: 0.64rem;
-}
 
 .styleguide-modifiers + pre {
   margin-top: 0;
@@ -4598,6 +4464,7 @@ select small, select sup, select sub {
 .color-sample {
   width: 100%;
   height: 7.5rem;
+  padding-top: .5rem;
 }
 .color-sample.white {
   background-color: white;

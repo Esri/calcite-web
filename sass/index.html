@@ -32,7 +32,7 @@
 
   <body>
     <div class="wrapper">
-      <!-- Top Nav Pattern-->
+      <!-- Logged Out Pattern-->
       <header class="top-nav">
         <div class="container">
           <a href="#" class="top-nav-title">Esri Design Patterns</a>
@@ -44,6 +44,10 @@
           </nav>
           <!-- Site Search Pattern-->
           <!-- Sign in / User Menu Patterns-->
+          <nav class="sign-in">
+            <a href="#" class="btn btn-small btn-clear">Sign Up</a>
+            <a href="#" class="btn btn-small btn-transparent">Sign In</a>
+          </nav>
         </div>
       </header>
 
@@ -107,7 +111,6 @@
           </nav>
         </div>
       </header>
-
       <!-- Site Search Pattern -->
       <!-- <div class="site-search">
         <form action="/search/" class="site-search">
@@ -129,8 +132,21 @@
                 
               </nav>
             
+              <h4 class="side-nav-title">Variables</h4>
+              <nav>
+                
+                  <a href="#variables" class="side-nav-link">Overview</a>
+                
+                  <a href="#breakpoints" class="side-nav-link">Breakpoints</a>
+                
+                  <a href="#ui-variables" class="side-nav-link">UI Variables</a>
+                
+              </nav>
+            
               <h4 class="side-nav-title">Type Composition</h4>
               <nav>
+                
+                  <a href="#type-composition" class="side-nav-link">Type Composition</a>
                 
                   <a href="#font-size" class="side-nav-link">Font Size</a>
                 
@@ -228,6 +244,55 @@ $include-accordion<span class="hljs-value">:                   true    !default;
           
             
               <section class="trailer-2">
+                <h1 id="variables">Variables</h1>
+<p>Calcite Web comes with several variables. These variables represent project-standard configurations of different aspects. For example, <code>$baseline</code> can be used in your SASS to set a property to the default typographic baseline of Calcite Web.</p>
+<p>These variables can also be configured in your own project to change the library for project-specific applications.</p>
+<p>Below are all of the variables and a brief description of what they represent.</p>
+
+                
+                
+              </section>
+              <hr class="trailer-2">
+            
+              <section class="trailer-2">
+                <h2 id="breakpoints">Breakpoints</h2>
+<p>Calcite Web comes with several variables representing the default screen sizes.</p>
+<pre><code class="lang-scss"><span class="hljs-comment">// Breakpoints</span>
+$<span class="hljs-tag">small</span><span class="hljs-value">:  <span class="hljs-number">480</span>px  !default;</span>
+$<span class="hljs-value">medium</span><span class="hljs-value">: <span class="hljs-number">860</span>px  !default;</span>
+$large<span class="hljs-value">:  <span class="hljs-number">1280</span>px !default;</span>
+</code></pre>
+<p>In static classes, these breakpoints are often expressed as <code>phone-</code>, <code>tablet-</code>, <code>desktop-</code>.</p>
+
+                
+                
+              </section>
+              <hr class="trailer-2">
+            
+              <section class="trailer-2">
+                <h2 id="ui-variables">UI Variables</h2>
+<p>Currently there is only one variable regarding the UI:</p>
+<pre><code class="lang-scss">$<span class="hljs-attribute">transition</span><span class="hljs-value">: <span class="hljs-number">150</span>ms linear;</span>
+</code></pre>
+<p>This is the default transition speed and easing function used throughout the framework for motion effects.</p>
+
+                
+                
+              </section>
+              <hr class="trailer-2">
+            
+          
+            
+              <section class="trailer-2">
+                <h1 id="type-composition">Type Composition</h1>
+<p>Calcite Web has a helpful set of mixins for composing type. We recommend you use these mixins wherever possible when writing your own components as it will keep the visual proportions and styles in line with the rest of the framework.</p>
+
+                
+                
+              </section>
+              <hr class="trailer-2">
+            
+              <section class="trailer-2">
                 <h2 id="font-size">Font Size</h2>
 <p>The Calcite Web type system uses a modular typographic scale to ensure a consistent tonal range within all text elements. This modular scale is created from the body size of the type, and a second, smaller size. These two type sizes anchor the scale, and using a precise ratio can be expanded to an entire set of sizes for all typographic needs.</p>
 <p>The <code>font-size($n)</code> mixin takes an integer, positive or negative, and sets all type within the element to the size defined by traversing that number of steps up or down the typographic scale.</p>
@@ -274,233 +339,7 @@ $include-accordion<span class="hljs-value">:                   true    !default;
 <p>SASS Unicode variables provide a simple way to display unicode characters as content in css declarations.</p>
 <div class="block-group block-group-5-up">
 
-<div class="block trailer-1">
-<p class="type-sample nbsp"></p>
-<code>$nbsp</code>
 </div>
-
-<div class="block trailer-1">
-<p class="type-sample quot"></p>
-<code>$quot</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample lsquo"></p>
-<code>$lsquo</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample rsquo"></p>
-<code>$rsquo</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample ldquo"></p>
-<code>$ldquo</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample rdquo"></p>
-<code>$rdquo</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample lsaquo"></p>
-<code>$lsaquo</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample rsaquo"></p>
-<code>$rsaquo</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample laquo"></p>
-<code>$laquo</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample raquo"></p>
-<code>$raquo</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample mdash"></p>
-<code>$mdash</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample ndash"></p>
-<code>$ndash</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample hyphen"></p>
-<code>$hyphen</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample amp"></p>
-<code>$amp</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample gt"></p>
-<code>$gt</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample lt"></p>
-<code>$lt</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample times"></p>
-<code>$times</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample bigtimes"></p>
-<code>$bigtimes</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample checkmark"></p>
-<code>$checkmark</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample sect"></p>
-<code>$sect</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample para"></p>
-<code>$para</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample middot"></p>
-<code>$middot</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample oslash"></p>
-<code>$oslash</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample bull"></p>
-<code>$bull</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample whibull"></p>
-<code>$whibull</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample hellip"></p>
-<code>$hellip</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample vellip"></p>
-<code>$vellip</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample midhellip"></p>
-<code>$midhellip</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample utri"></p>
-<code>$utri</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample dtri"></p>
-<code>$dtri</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample ltri"></p>
-<code>$ltri</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample rtri"></p>
-<code>$rtri</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample ustri"></p>
-<code>$ustri</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample dstri"></p>
-<code>$dstri</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample lstri"></p>
-<code>$lstri</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample rstri"></p>
-<code>$rstri</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample diamond"></p>
-<code>$diamond</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample fisheye"></p>
-<code>$fisheye</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample bullseye"></p>
-<code>$bullseye</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample circle"></p>
-<code>$circle</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample whitecircle"></p>
-<code>$whitecircle</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample square"></p>
-<code>$square</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample whitesquare"></p>
-<code>$whitesquare</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample ssquare"></p>
-<code>$ssquare</code>
-</div>
-
-<div class="block trailer-1">
-<p class="type-sample swhitesquare"></p>
-<code>$swhitesquare</code>
-</div>
-
-<p></div></p>
-
                 
                 
               </section>
@@ -519,25 +358,154 @@ Setting the max width of an article to a large multiple of the text size is a wa
           
             
               <section class="trailer-2">
-                <h2 id="utillity-mixins">Utillity Mixins</h2>
-<p>Utillity mixins are used to construct complicated behaviors for <a href="components">components</a> and <a href="patterns">patterns</a>, provide baseline functionallity for doc elements, and take care of browser prefixing. The following mixins are available for use when using the Calcite Web sass library.</p>
-<p>Most utillity mixins are borrowed from <a href="http://bourbon.io/">Bourbon</a>. Where mixins share a name, they are the same code base.</p>
-<pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> appearance</span> ($value)
-@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> box-sizing</span> ($box)
-@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> calc</span>($property, $value)
-@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> clearfix</span>()
-@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> prefixer</span> ($property, $value, $prefixes)
-@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> respond-to</span>($max, $mi, $type)
-@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> transform</span>($property)
-@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> transform-origin</span>($axes)
-@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> transform-style</span> ($style)
-@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> transition</span> ($value)
-@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> transition-property</span> ($value)
-@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> transition-duration</span> ($value)
-@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> transition-timing-function</span> ($value)
-@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> transition-delay</span> ($value)
-@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> show</span>()
-@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> hide</span>()</span>
+                <h1 id="utility-mixins">Utility Mixins</h1>
+<p>Utility mixins are used to construct complicated behaviors for <a href="components">components</a> and <a href="patterns">patterns</a>, provide baseline functionality for doc elements, and take care of browser prefixing.</p>
+<p>Most utility mixins are borrowed from <a href="http://bourbon.io/">Bourbon</a>. Where mixins share a name, they are the same code base.</p>
+<p>Use the utility mixins inside the selector you with to apply the styles to, passing the arguments in if required. For example, to apply a clearfix to an element with the class <code>.my-div</code>, the use the following SASS:</p>
+<pre><code class="lang-scss"><span class="hljs-class">.my-div</span> {
+  <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> clearfix</span>();</span>
+}
+</code></pre>
+<p>If the mixin accepts arguments, pass them into the parenthesis:</p>
+<pre><code class="lang-scss"><span class="hljs-class">.my-div</span> {
+  <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> box-sizing</span>(border-box);</span>
+}
+</code></pre>
+<h4 id="quick-reference">Quick Reference</h4>
+<table>
+<thead>
+<tr>
+<th>Mixin</th>
+<th>Arguments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>appearance</code></td>
+<td><code>$value</code></td>
+</tr>
+<tr>
+<td><code>box-sizing</code></td>
+<td><code>$box</code></td>
+</tr>
+<tr>
+<td><code>calc</code></td>
+<td><code>$property, $value</code></td>
+</tr>
+<tr>
+<td><code>clearfix</code></td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>prefixer</code></td>
+<td><code>$property, $value, $prefixes</code></td>
+</tr>
+<tr>
+<td><code>respond-to</code></td>
+<td><code>$max, $mi, $type</code></td>
+</tr>
+<tr>
+<td><code>transform</code></td>
+<td><code>$property</code></td>
+</tr>
+<tr>
+<td><code>transform-origin</code></td>
+<td><code>$axes</code></td>
+</tr>
+<tr>
+<td><code>transform-style</code></td>
+<td><code>$style</code></td>
+</tr>
+<tr>
+<td><code>transition</code></td>
+<td><code>$value</code></td>
+</tr>
+<tr>
+<td><code>transition-property</code></td>
+<td><code>$value</code></td>
+</tr>
+<tr>
+<td><code>transition-duration</code></td>
+<td><code>$value</code></td>
+</tr>
+<tr>
+<td><code>transition-timing-function</code></td>
+<td><code>$value</code></td>
+</tr>
+<tr>
+<td><code>transition-delay</code></td>
+<td><code>$value</code></td>
+</tr>
+<tr>
+<td><code>show</code></td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>hide</code></td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<h4 id="appearance">Appearance</h4>
+<p>The <code>appearance</code> CSS property is used to display an element using a platform-native styling based on the operating system&#39;s theme. For example, to remove browser specific styling for a ui element, use:</p>
+<pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> appearance</span>(none);</span>
+</code></pre>
+<h4 id="box-sizing">Box-Sizing</h4>
+<p>Set the <code>box-sizing</code> property for all browsers (with browser prefixes):</p>
+<pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> box-sizing</span>(border-box);</span>
+</code></pre>
+<h4 id="calc">Calc</h4>
+<p>Shorthand for setting a property to use a <code>calc</code> value. Pass the property you&#39;d like to set, then the value you&#39;d like to use:</p>
+<pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> calc</span>(width, <span class="hljs-string">'100px - 10%'</span>);</span>
+</code></pre>
+<h4 id="clearfix">Clearfix</h4>
+<p>Applies the framework-standard clear for floated elements:</p>
+<pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> clearfix</span>();</span>
+</code></pre>
+<h4 id="prefixer">Prefixer</h4>
+<p>This is one of the most flexible mixins in the library. Use it to add browser prefixes to a property:</p>
+<pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> prefixer</span>(margin-end,<span class="hljs-preprocessor"> 5</span>%,<span class="hljs-preprocessor"> webkit</span><span class="hljs-preprocessor"> moz</span><span class="hljs-preprocessor"> spec</span>);</span>
+</code></pre>
+<p>In this way you can prefix any property. Adding the <code>spec</code> as the last argument will also output the property <em>without</em> a prefix.</p>
+<h4 id="respond-to">Respond To</h4>
+<p>The <code>respond-to</code> mixin adds media queries for use in responsive design. The mixin accepts three arguments: maximum size, minimum size, and type (screen, print, etc). You can pass just the first out of convenience. This mixin works well with the <a href="../sass#breakpoints">breakpoint variables</a>:</p>
+<pre><code class="lang-scss"><span class="hljs-class">.my-div</span> {
+  <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> respond-to</span>($small){</span>
+    <span class="hljs-attribute">padding</span><span class="hljs-value">: <span class="hljs-number">1</span>rem;</span>
+  }
+}
+</code></pre>
+<p>This will compile to the following css:</p>
+<pre><code class="lang-css"><span class="hljs-at_rule">@<span class="hljs-keyword">media</span> screen and (max-width: <span class="hljs-number">480</span>px) </span>{
+  <span class="hljs-class">.my-div</span> <span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">1</span>rem</span></span>;
+  <span class="hljs-rule">}</span></span>
+}
+</code></pre>
+<p>You can assemble more complicated media queries by using both min and max:</p>
+<pre><code>@include respond-to($large, $medium) { <span class="hljs-keyword">...</span> }
+</code></pre><p>This will add styles that only appear <em>between</em> the <code>$medium</code> and <code>$large</code> screen sizes.</p>
+<h4 id="transform">Transform</h4>
+<p>The CSS transform property lets you modify the coordinate space of the CSS visual formatting model. Using it, elements can be translated, rotated, scaled, and skewed according to the values set. <code>transform</code>, <code>transform-origin</code>, and <code>transform-style</code> all add the necessary browser prefixes for interacting with their respective transform properties.</p>
+<pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> transform</span>(<span class="hljs-function">translateY(<span class="hljs-number">50</span>px)</span>);</span>
+<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> transform</span>(<span class="hljs-function">scale(<span class="hljs-number">0.9</span>)</span><span class="hljs-preprocessor"> rotate</span>(-<span class="hljs-number">3</span>deg));</span>
+<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> transform-origin</span>(center<span class="hljs-preprocessor"> top</span>);</span>
+<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> transform-style</span>(preserve-<span class="hljs-number">3</span>d);</span>
+</code></pre>
+<h4 id="transition">Transition</h4>
+<p>This mixin provides a shorthand syntax and supports multiple transitions.</p>
+<pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> transition</span>(all<span class="hljs-preprocessor"> 2.0s</span><span class="hljs-preprocessor"> ease-in-out</span>);</span>
+<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> transition</span>(opacity<span class="hljs-preprocessor"> 1.0s</span><span class="hljs-preprocessor"> ease-in</span><span class="hljs-preprocessor"> 0s</span>,<span class="hljs-preprocessor"> width</span><span class="hljs-preprocessor"> 2.0s</span><span class="hljs-preprocessor"> ease-in</span><span class="hljs-preprocessor"> 2s</span>);</span>
+</code></pre>
+<p>To transition vendor-prefixed properties, e.g. <code>-webkit-transform</code> and <code>-moz-transform</code>, do not use the shorthand mixin. Instead, use the individual transition mixins:</p>
+<pre><code><span class="hljs-at_rule">@<span class="hljs-keyword">include</span> <span class="hljs-function">transition-property(transform)</span></span>;
+<span class="hljs-at_rule">@<span class="hljs-keyword">include</span> <span class="hljs-function">transition-duration(<span class="hljs-number">1.0</span>s)</span></span>;
+<span class="hljs-at_rule">@<span class="hljs-keyword">include</span> <span class="hljs-function">transition-timing-function(ease-in)</span></span>;
+<span class="hljs-at_rule">@<span class="hljs-keyword">include</span> <span class="hljs-function">transition-delay(<span class="hljs-number">0.5</span>s)</span></span>;
+</code></pre><h4 id="show-and-hide">Show and Hide</h4>
+<p>The show and hide mixins change the <code>visibility</code> property. This is useful for removing and adding elements at certain breakpoints or with certain class names. No arguments are passed.</p>
+<pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> show</span>();</span>
+<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> hide</span>();</span>
 </code></pre>
 
                 

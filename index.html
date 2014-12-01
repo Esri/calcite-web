@@ -32,7 +32,7 @@
 
   <body>
     <div class="wrapper">
-      <!-- Top Nav Pattern-->
+      <!-- Logged Out Pattern-->
       <header class="top-nav">
         <div class="container">
           <a href="#" class="top-nav-title">Esri Design Patterns</a>
@@ -44,6 +44,10 @@
           </nav>
           <!-- Site Search Pattern-->
           <!-- Sign in / User Menu Patterns-->
+          <nav class="sign-in">
+            <a href="#" class="btn btn-small btn-clear">Sign Up</a>
+            <a href="#" class="btn btn-small btn-transparent">Sign In</a>
+          </nav>
         </div>
       </header>
 
@@ -107,7 +111,6 @@
           </nav>
         </div>
       </header>
-
       <!-- Site Search Pattern -->
       <!-- <div class="site-search">
         <form action="/search/" class="site-search">
@@ -190,7 +193,7 @@
             
               <section class="trailer-2">
                 <h2 id="ruby-gem">Ruby Gem</h2>
-<p>To install Calcite-Web as a ruby gem, add a reference to the gem to your Gemfile:</p>
+<p>To install Calcite Web as a ruby gem, add a reference to the gem to your Gemfile:</p>
 <pre><code class="lang-ruby">gem <span class="hljs-string">"calcite-web"</span>, <span class="hljs-symbol">:git</span> =&gt; <span class="hljs-string">"https://github.com/ArcGIS/calcite-web.git"</span>, <span class="hljs-symbol">:tag</span> =&gt; <span class="hljs-string">"v0.0.0"</span>
 </code></pre>
 <p>Be sure to use the most up to date tag.</p>
@@ -235,7 +238,7 @@
           
             
               <section class="trailer-2">
-                <h1 id="contributing-to-calcite-web">Contributing to Calcite-Web</h1>
+                <h1 id="contributing-to-calcite-web">Contributing to Calcite Web</h1>
 <h2 id="install">Install</h2>
 <p>If you don&#39;t have Node yet, <a href="http://nodejs.org/">install it here</a>. Then install the project&#39;s dependencies:</p>
 <ol>
@@ -251,8 +254,8 @@
               <section class="trailer-2">
                 <h2 id="development">Development</h2>
 <p>To run a development environment, just type <code>grunt</code>. You should have a copy of the documentation site live at <code>localhost:8888</code>. As you develop features and fix bugs, be sure to write notes in <code>CHANGELOG.md</code>.</p>
-<h2 id="how-we-use-github">How We Use GitHub</h2>
-<p>All the code for Calcite-Web lives <a href="https://github.com/arcgis/calcite-web">on GitHub</a>. We use the <a href="https://help.github.com/articles/using-pull-requests/">fork and pull model</a> to manage contribution. To contribute, you should:</p>
+<h3 id="how-we-use-github">How We Use GitHub</h3>
+<p>All the code for Calcite Web lives <a href="https://github.com/arcgis/calcite-web">on GitHub</a>. We use the <a href="https://help.github.com/articles/using-pull-requests/">fork and pull model</a> to manage contribution. To contribute, you should:</p>
 <ol>
 <li>Get a GitHub account.</li>
 <li>Get access to the repository if you don&#39;t have it already by emailing a contributor</li>
@@ -267,13 +270,13 @@
             
               <section class="trailer-2">
                 <h1 id="versioning">Versioning</h1>
-<p>Calcite-Web uses SemVer (Semantic Versioning) for its releases. This means that version numbers are basically formatted like <code>MAJOR.MINOR.PATCH</code>. If you&#39;re well acquainted with SemVer you should skip to <a href="#releasing-a-new-version">releasing a new version</a> below.</p>
+<p>Calcite Web uses SemVer (Semantic Versioning) for its releases. This means that version numbers are basically formatted like <code>MAJOR.MINOR.PATCH</code>. If you&#39;re well acquainted with SemVer you should skip to <a href="#releasing-a-new-version">releasing a new version</a> below.</p>
 <h4 id="major">Major</h4>
 <p>Breaking changes are signified with a new <strong>first</strong> number. For example, moving from <code>1.0.0</code> to <code>2.0.0</code> implies breaking changes.</p>
 <h4 id="minor">Minor</h4>
 <p>New components, new helper classes, or substantial visual changes to existing components and patterns are <em>minor releases</em>. These are signified by the second number changing. So from <code>1.1.2</code> to <code>1.2.0</code> there are minor changes.</p>
 <h4 id="patches">Patches</h4>
-<p>The final number signifies patches such as fixing a pattern or component in a certain browser, or fixing an existing bug. Small changes to the documentation site and the tooling around the Calcite-Web library are also considered patches.</p>
+<p>The final number signifies patches such as fixing a pattern or component in a certain browser, or fixing an existing bug. Small changes to the documentation site and the tooling around the Calcite Web library are also considered patches.</p>
 <h2 id="releasing-a-new-version">Releasing a New Version</h2>
 <ol>
 <li>Change the version number in <code>package.json</code> to the desired version number.</li>
