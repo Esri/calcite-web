@@ -7,7 +7,6 @@ fieldset {
   @extend %clearfix;
   @include box-sizing(border-box);
   border: none;
-  margin-bottom: $baseline;
   position: relative;
   display: block;
 }
@@ -18,13 +17,27 @@ input, select, textarea {
   width: 100%;
   outline: none;
   outline-offset: 0;
-  margin: $baseline*.25 0;
+  margin: $baseline*.25 0 0 0;
 }
 
 label, legend {
   display: block;
   @extend .header-light;
   @include font-size(0);
+}
+
+legend {
+  margin-bottom: .1rem;
+}
+
+label, fieldset {
+  margin-bottom: $baseline;
+}
+
+fieldset label {
+  margin-bottom: 0;
+  @include font-size(-1);
+  color: $darkest-gray;
 }
 
 // 'Text' inputs
@@ -58,6 +71,7 @@ textarea {
   }
 }
 
+// 'Date' inputs
 input[type='date'],
 input[type='datetime'],
 input[type='datetime-local'],
@@ -88,21 +102,14 @@ input[type="file"]::-webkit-file-upload-button {
   @include btn();
 }
 
+// Radio Buttons and Checkboxes
 input[type='radio'], input[type='checkbox'] {
   float: left;
   width: auto;
-  margin: $baseline/4 $baseline/5 0 0;
-  & + label {
-    @include font-size(-1);
-    @extend .header-face;
-    color: $darkest-gray;
+  margin: .3rem .3rem 0 0;
+  &:focus {
+    outline: 1px solid $blue;
   }
-}
-
-.label-checkmark {
-  @include font-size(-1);
-  @extend .header-face;
-  color: $darkest-gray;
 }
 
 // Select Menus
@@ -113,6 +120,9 @@ select {
   @extend .header-face;
   border: 1px solid $light-gray;
   background-color: $lightest-gray;
+  &:focus {
+    border-color: $blue;
+  }
 }
 
 .input-error {
