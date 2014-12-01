@@ -7,7 +7,6 @@ fieldset {
   @extend %clearfix;
   @include box-sizing(border-box);
   border: none;
-  margin-bottom: $baseline;
   position: relative;
   display: block;
 }
@@ -25,6 +24,20 @@ label, legend {
   display: block;
   @extend .header-light;
   @include font-size(0);
+}
+
+legend {
+  margin-bottom: $baseline*.25;
+}
+
+label, fieldset {
+  margin-top: $baseline*.5;
+}
+
+fieldset label {
+  margin-top: 0;
+  @include font-size(-1);
+  color: $darkest-gray;
 }
 
 // 'Text' inputs
@@ -91,11 +104,9 @@ input[type="file"]::-webkit-file-upload-button {
 input[type='radio'], input[type='checkbox'] {
   float: left;
   width: auto;
-  margin: $baseline/4 $baseline/5 0 0;
-  & + label {
-    @include font-size(-1);
-    @extend .header-face;
-    color: $darkest-gray;
+  margin: .3rem .3rem 0 0;
+  &:focus {
+    border: 1px solid $blue;
   }
 }
 
@@ -113,6 +124,12 @@ select {
   @extend .header-face;
   border: 1px solid $light-gray;
   background-color: $lightest-gray;
+  &:focus {
+    border-color: $blue;
+  }
+  &.input-error {
+    border-color: $red;
+  }
 }
 
 .input-error {
