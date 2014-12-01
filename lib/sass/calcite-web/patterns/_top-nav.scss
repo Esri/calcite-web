@@ -4,13 +4,14 @@
 }
 
   @mixin top-nav-title {
-    @include font-size(2);
+    @include font-size(1);
     @extend .link-off-black;
     float: left;
     padding-right: $baseline*2;
   }
 
   @mixin top-nav-list {
+    float: left;
     @extend .header-face;
     line-height: 1.75em;
   }
@@ -20,9 +21,16 @@
     @extend .link-off-black;
   }
 
+@mixin sign-in {
+  float: right;
+  margin-top: -$baseline/6;
+  margin-bottom: -$baseline;
+}
+
 @if $include-top-nav == true {
   .top-nav {@include top-nav();}
     .top-nav-title {@include top-nav-title();}
     .top-nav-list {@include top-nav-list();}
     .top-nav-link {@include top-nav-link();}
+  .sign-in {@include sign-in();}
 }

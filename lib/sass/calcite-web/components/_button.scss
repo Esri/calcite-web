@@ -106,8 +106,7 @@
 
   @mixin btn-small() {
     @include font-size(-2);
-    padding: .3rem .8rem;
-    padding: $baseline/5 * .8533 .9em;
+    padding: $baseline/5*.75 .9rem*.75;
   }
 
   @mixin btn-large() {
