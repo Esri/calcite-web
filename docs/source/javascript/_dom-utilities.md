@@ -140,7 +140,6 @@ var nodes = document.querySelector('.child-element');
 
 function clickHandler (event) {
   var closestNode = dom.closest('parent-class', event.target);
-  console.log(closestElement);
 }
 
 for (var i = 0; i < nodes.length; i++) {
@@ -155,7 +154,6 @@ For a given element, get the value of a specific attribute.
 ```js
 var node = document.getElementsByTagName('input')[0];
 var value = calcite.dom.getAttr(node, 'value');
-console.log(value);
 ```
 
 ### calcite.dom.nodeListToArray(domNodeList)
