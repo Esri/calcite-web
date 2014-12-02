@@ -30,6 +30,7 @@ $include-panel:                       true    !default;
 $include-button:                      true    !default;
 $include-breadcrumbs:                 true    !default;
 $include-tooltip:                     true    !default;
+$include-loader:                      true    !default;
 
 // Patterns
 $include-footer:                      true    !default;
@@ -83,6 +84,7 @@ $include-accordion:                   true    !default;
 @import "calcite-web/components/panel";
 @import "calcite-web/components/tables";
 @import "calcite-web/components/form";
+@import "calcite-web/components/loader";
 
 // Patterns
 // complete interfaces: header, footer, banner...
