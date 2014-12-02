@@ -62,18 +62,14 @@ type:
       pages:
         - title: "Overview"
           link: composition-helpers
-        - title: "Large"
-          link: text-large
+        - title: "Text modifiers"
+          link: text-modifers
           modifiers:
             - text-large
-        - title: "Small"
-          link: text-small
-          modifiers:
             - text-small
-        - title: "Light"
-          link: text-light
-          modifiers:
             - text-light
+            - text-ellipsis
+            - text-rule
         - title: "Color"
           link: text-color
           modifiers:
@@ -106,14 +102,6 @@ type:
             - link-darker-gray
             - link-darkest-gray
             - link-off-black
-        - title: "Ellipsis"
-          link: text-ellipsis
-          modifiers:
-            - text-ellipsis
-        - title: "Rule"
-          link: text-rule
-          modifiers:
-            - text-rule
         - title: "Bulleted List"
           link: list-bulleted
           modifiers:
@@ -293,6 +281,10 @@ components:
           link: button-groups
           modifiers:
             - btn-grouped
+        - title: "Loader"
+          link: loader
+          modifiers:
+            - default
         - title: "Alerts"
           link: alerts
           modifiers:

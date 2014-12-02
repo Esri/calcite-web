@@ -1,0 +1,95 @@
+$width: 0.85rem;
+$height: 2rem;
+$zoom: 0.5rem;
+$spacing: 1.25rem;
+$speed: 0.8s;
+$delay: 0.16s;
+
+@mixin loader() {
+  display: none;
+  &.is-active {
+    display: block;
+  }
+}
+
+%loader-styles {
+  background: $light-blue;
+  -webkit-animation: load $speed infinite ease-in-out;
+  animation: load $speed infinite ease-in-out;
+  width: $width;
+  height: $height;
+}
+
+%loader-pseudoelements {
+  @extend %loader-styles;
+  position: absolute;
+  top: 0;
+  content: '';
+}
+
+@mixin loader-bars() {
+  @extend %loader-styles;
+  text-indent: -9999em;
+  margin: auto;
+  position: absolute;
+  right: 50%;
+  font-size: 11px;
+  -webkit-animation-delay: $delay;
+  animation-delay: $delay;
+
+  &:before{
+    @extend %loader-pseudoelements;
+    left: -$spacing;
+  }
+  &:after {
+    @extend %loader-pseudoelements;
+    left: $spacing;
+    -webkit-animation-delay: 2*$delay;
+    animation-delay: 2*$delay;
+  }
+}
+
+@mixin loader-text() {
+  text-align: center;
+  padding-top: 4rem;
+  @extend .header-face;
+  &:after {
+    content: $hellip;
+  }
+}
+
+@-webkit-keyframes load {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0 $light-blue;
+    background: $light-blue;
+    height: $height;
+  }
+  40% {
+    box-shadow: 0 -1*$zoom $blue;
+    background: $blue;
+    height: $height+$zoom;
+  }
+}
+@keyframes load {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0 $blue;
+    background: $light-blue;
+    height: $height;
+  }
+  40% {
+    box-shadow: 0 -1*$zoom $blue;
+    background: $blue;
+    height: $height+$zoom;
+  }
+}
+
+
+@if $include-loader == true {
+  .loader {@include loader();}
+    .loader-bars {@include loader-bars()}
+    .loader-text {@include loader-text()}
+}
