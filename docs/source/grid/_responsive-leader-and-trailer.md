@@ -1,4 +1,4 @@
-## Responsive Leader And Trailer
+## Responsive Leader and Trailer
 
 Leader and trailer classes also have additional responsive `tablet-` and `phone-` prefix classes. These allow you to add different amounts of space above and below an element at different screen sizes.
 
