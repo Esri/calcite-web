@@ -1,26 +1,8 @@
-//## Block Groups
-//
-//Block groups is a special-use grid system for displaying a grid of items that all have the same column width. For example, if you need to show a list of products with three products in each row, you could use the following html:
-//
-//```html
-//<div class="block-group block-group-3-up">
-//  <div class="block"></div>
-//  <div class="block"></div>
-//  ...
-//  <div class="block">/div>
-//</div>
-//```
-//
-//Block groups do not need to be cleared and do not need a row wrapper.
-//
-//.block-group-1-up  - display one item in each row
-//.block-group-2-up  - display two items in each row
-//.block-group-3-up  - display three items in each row
-//.block-group-4-up  - display four items in each row
-//.block-group-5-up  - display five items in each row
-//.center            - blocks are centered if there is not enough to fill the row
-//
-//Styleguide 1.2
+// ┌──────────────┐
+// │ Block Groups │
+// └──────────────┘
+//  ↳ http://esri.github.io/calcite-web/grid/#block-groups
+//  ↳ grid → _block-groups.md
 
 @mixin block-group() {
   font-family: monospace;
