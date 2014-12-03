@@ -13,11 +13,13 @@
   @mixin panel-dark() {
     background-color: $darkest-gray;
     border: 1px solid $off-black;
+    @extend .text-white;
   }
 
   @mixin panel-white() {
     background-color: $white;
     border: 1px solid $lightest-gray;
+    @extend .text-darker-gray;
   }
 
 

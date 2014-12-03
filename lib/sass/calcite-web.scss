@@ -67,7 +67,7 @@ $include-accordion:                   true    !default;
 // Layout
 // structural level styles: grid, helper classes...
 @import "calcite-web/grid/viewport-grid";
-@import "calcite-web/grid/grid-block-groups";
+@import "calcite-web/grid/block-groups";
 
 // Type
 // typographic styles: font-families, element styles, modifiers...
@@ -101,5 +101,5 @@ $include-accordion:                   true    !default;
 // Modifiers
 // modifier classes override standard styles
 @import 'calcite-web/type/type-helpers';
-@import "calcite-web/grid/grid-leader-trailer-helpers";
+@import "calcite-web/grid/leader-trailer";
 
