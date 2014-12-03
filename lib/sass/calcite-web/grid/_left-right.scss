@@ -1,21 +1,8 @@
-//## Responsive Left & Right
-//The `left` and `right` helper classes float elements - like columns - left or right. With `tablet-` and `phone-` prefixes, these helpers float elements only at the specified viewport width.
-//
-//#### SASS
-// ```
-// @include left();
-// @include right();
-//```
-//
-//.left         - Float element left.
-//.right        - Float element right at tablet viewport.
-//.tablet-left  - Float element left at tablet viewport.
-//.tablet-right - Float element right at tablet viewport.
-//.phone-left   - Float element left at phone viewport.
-//.phone-right  - Float element right at phone viewport.
-//
-//Styleguide x.x
-
+// ┌────────────────┐
+// │ Left and Right │
+// └────────────────┘
+//  ↳ http://esri.github.io/calcite-web/grid/#left-and-right
+//  ↳ grid → _left-and-right.md
 
 @mixin left()  { float: left  }
 @mixin right(){ float: right }
@@ -25,8 +12,10 @@
   .right { @include right(); }
 }
 
+// Responsive Left and Right
 @mixin responsive-left-right(){
   @if $fold-grid == true {
+
     // Medium
     @media screen and (max-width: $medium - 1) and (min-width: $small) {
       .#{$medium-class}-left   { float: left  }

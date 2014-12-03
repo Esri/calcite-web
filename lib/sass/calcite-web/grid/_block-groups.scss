@@ -37,26 +37,11 @@
   .#{$prefix}block-group-5-up .block { width: 20%; }
 }
 
-
-
-//## Responsive Block Groups
-//
-//Block groups can have different amounts of columns at different breakpoints. A common use case would be something like this:
-//
-//```html
-//<div class="block-group block-group-3-up tablet-block-group-2-up phone-block-group-1-up">
-//  <div class="block"></div>
-//  <div class="block"></div>
-//  ...
-//  <div class="block"></div>
-//</div>
-//```
-//
-//The above grid will have three columns in each row for desktop, two columns in each row for tablets, and one column for each row on phones.
-//
-//No Modifiers
-//
-//Styleguide 1.2.1
+// ┌─────────────────────────┐
+// │ Responsive Block Groups │
+// └─────────────────────────┘
+//  ↳ http://esri.github.io/calcite-web/grid/#responsive-block-groups
+//  ↳ grid → _responsive-block-groups.md
 
 @include respond-to($medium){
   @include _block-grid("medium-");

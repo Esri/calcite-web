@@ -15,7 +15,6 @@
   margin-left: auto;
 }
 
-
 // ┌─────────┐
 // │ Columns │
 // └─────────┘
@@ -38,6 +37,11 @@
   &:last-of-type { @extend %clearfix; }
 }
 
+// ┌────────────────┐
+// │ First and Last │
+// └────────────────┘
+//  ↳ http://esri.github.io/calcite-web/grid/#first-and-last
+//  ↳ grid → _first-and-last.md
 
 @mixin first-column() {
   margin-left: -($column-gutter/2);

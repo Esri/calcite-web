@@ -1,21 +1,13 @@
-//## Pre & Post
-//Use the .pre-xx and post-xx classes to add space before and after columns. Combined with the column-xx classes you can quickly layout pages.
-//
-//#### SASS
-// ```
-//@include pre($n);
-//@include post($n);
-//```
-//
-//Styleguide x.x
-
-//## Pre & Post
-//Much like columns, pre and post classes can be used with the tablet- and phone- prefixes to apply that pre or post only at certain screen sizes. The following html could create a twelve column div will have six columns of space to its left on desktops, two columns of space to it's left on tablets, and one column of space on phones. Resize to preview in your browser.
-//
-//Styleguide x.x
+// ┌──────────────┐
+// │ Pre and Post │
+// └──────────────┘
+//  ↳ http://esri.github.io/calcite-web/grid/#pre-and-post
+//  ↳ grid → _pre-and-post.md
 
 @mixin responsive-pre-post(){
+
   @if $fold-grid == true {
+
     // Small Columns
     @media screen and (max-width: $small - 1) {
       @for $n from 0 through $small-column-count {
@@ -74,6 +66,7 @@
 }
 
 @mixin fixed-pre-post(){
+
   // Fixed Pre and Post
   @media screen and (min-width: $large) {
     @for $n from 0 through $large-column-count {

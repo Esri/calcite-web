@@ -1,3 +1,8 @@
+// ┌────────────────┐
+// │ Leader Trailer │
+// └────────────────┘
+//  ↳ http://esri.github.io/calcite-web/grid/#leader-and-trailer
+//  ↳ grid → _leader-and-trailer.md
 
 @mixin leader-half()  { margin-top:    0.5 * $baseline; }
 @mixin trailer-half() { margin-bottom: 0.5 * $baseline; }
@@ -9,8 +14,10 @@
 @mixin padding-leader($n)  { padding-top:    $n * $baseline; }
 @mixin padding-trailer($n) { padding-bottom: $n * $baseline; }
 
+// Responsive Leader and Trailer
 @mixin responsive-leader-trailer() {
   @if $fold-grid == true {
+
     // Medium
     @media screen and (max-width: $medium - 1) {
       @for $i from 0 through $vertical-range {
@@ -20,6 +27,7 @@
         .#{$medium-class}-padding-trailer-#{$i} { padding-bottom: $i * $baseline; }
       }
     }
+
     // Small
     @media screen and (max-width: $small - 1) {
       @for $i from 0 through $vertical-range {
