@@ -22,24 +22,25 @@ If the mixin accepts arguments, pass them into the parenthesis:
 
 #### Quick Reference
 
-| Mixin                        | Arguments                      |
-| ---------------------------- | ------------------------------ |
-| `appearance`                 | `$value`                       |
-| `box-sizing`                 | `$box`                         |
-| `calc`                       | `$property, $value`            |
-| `clearfix`                   | none                           |
-| `prefixer`                   | `$property, $value, $prefixes` |
-| `respond-to`                 | `$max, $mi, $type`             |
-| `transform`                  | `$property`                    |
-| `transform-origin`           | `$axes`                        |
-| `transform-style`            | `$style`                       |
-| `transition`                 | `$value`                       |
-| `transition-property`        | `$value`                       |
-| `transition-duration`        | `$value`                       |
-| `transition-timing-function` | `$value`                       |
-| `transition-delay`           | `$value`                       |
-| `show`                       | none                           |
-| `hide`                       | none                           |
+| Mixin                                       | Arguments                      |
+| ------------------------------------------- | ------------------------------ |
+| [`appearance`](#appearance)                 | `$value`                       |
+| [`box-sizing`](#box-sizing)                 | `$box`                         |
+| [`box-shadow`](#box-shadow)                 | `$shadow`                      |
+| [`calc`](#calc)                             | `$property, $value`            |
+| [`clearfix`](#clearfix)                     | none                           |
+| [`prefixer`](#prefixer)                     | `$property, $value, $prefixes` |
+| [`respond-to`](#respond-to)                 | `$max, $mi, $type`             |
+| [`transform`](#transform)                   | `$property`                    |
+| [`transform-origin`](#transform)            | `$axes`                        |
+| [`transform-style`](#transform)             | `$style`                       |
+| [`transition`](#transition)                 | `$value`                       |
+| [`transition-property`](#transition)        | `$value`                       |
+| [`transition-duration`](#transition)        | `$value`                       |
+| [`transition-timing-function`](#transition) | `$value`                       |
+| [`transition-delay`](#transition)           | `$value`                       |
+| [`show`](#show-and-hide)                    | none                           |
+| [`hide`](#show-and-hide)                    | none                           |
 
 #### Appearance
 
@@ -55,6 +56,16 @@ Set the `box-sizing` property for all browsers (with browser prefixes):
 
 ```scss
 @include box-sizing(border-box);
+```
+
+Valid values are `content-box`, `border-box`, and `inherit`.
+
+#### Box-Shadow
+
+Set the `box-shadow` property for all browsers (with browser prefixes):
+
+```scss
+@include box-shadow(border-box);
 ```
 
 #### Calc
@@ -150,6 +161,3 @@ The show and hide mixins change the `visibility` property. This is useful for re
 @include show();
 @include hide();
 ```
-
-
-

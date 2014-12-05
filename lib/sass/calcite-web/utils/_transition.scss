@@ -1,4 +1,9 @@
-// Mixins for transitions
+// ┌────────────┐
+// │ Transition │
+// └────────────┘
+//  ↳ http://esri.github.io/calcite-web/sass/#transition
+//  ↳ components → _utility-mixins.md
+
 $transition-prefixes: webkit spec;
 
 @mixin transition ($value...) {

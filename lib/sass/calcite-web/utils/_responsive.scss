@@ -1,4 +1,9 @@
-// Respond To
+// ┌────────────┐
+// │ Respond-To │
+// └────────────┘
+//  ↳ http://esri.github.io/calcite-web/sass/#respond-to
+//  ↳ components → _utility-mixins.md
+
 @mixin respond-to($max: null, $min: null, $type: screen) {
   @if $max and $min {
     @media #{$type} and (max-width: $max) and (min-width: $min) {
