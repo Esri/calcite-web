@@ -63,13 +63,17 @@ type:
         - title: "Overview"
           link: composition-helpers
         - title: "Text modifiers"
-          link: text-modifers
+          link: text-modifiers
           modifiers:
             - text-large
             - text-small
             - text-light
             - text-ellipsis
             - text-rule
+            - text-inline
+            - text-center
+            - text-left
+            - text-right
         - title: "Color"
           link: text-color
           modifiers:
@@ -411,6 +415,8 @@ sass:
           link: type-composition
         - title: "Font Size"
           link: font-size
+        - title: "Modular Scale"
+          link: modular-scale
         - title: "Tracking"
           link: tracking
         - title: "Leading"
@@ -465,8 +471,6 @@ sass:
             - whitesquare
             - ssquare
             - swhitesquare
-        - title: "Modular Scale"
-          link: modular-scale
     - group: "Utilities"
       pages:
         - title: Utility Mixins

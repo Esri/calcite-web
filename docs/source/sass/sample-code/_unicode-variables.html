@@ -1,8 +1,10 @@
 <div class="block-group block-group-5-up">
 {% for variable in variableset %}
 <div class="block trailer-1">
-<p class="type-sample {{ variable }}"></p>
-<code>${{ variable }}</code>
+  <div class="panel panel-white">
+    <p class="type-sample text-center {{ variable }}"></p>
+    <p class="text-center trailer-0"><code>${{ variable }}</code></p>
+  </div>
 </div>
 {% endfor %}
 </div>

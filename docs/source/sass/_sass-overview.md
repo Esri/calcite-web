@@ -6,48 +6,48 @@ Using Calcite Web as a SASS library is very powerful. After you successfully imp
 
 Calcite comes with the ability to only generate the css you actually need for your project. Class generation is controlled by setting the following variables to `true` or `false`. Setting all of these variables to `false` will prevent Calcite Web from generating **any** css classes while still exposing the complete set of mixins.
 
-```scss
-$include-grid:                        true    !default;
-  $fold-grid:                         true    !default;
-  $block-grid:                        true    !default;
+For example, if didn't want to export the css for any of the type helpers, you would simply set the `$include-type` variable to false:
 
-$include-type:                        true    !default;
-  $include-header-family:             true    !default;
-  $include-body-family:               true    !default;
-  $include-secondary-family:          true    !default;
-  $include-code-family:               true    !default;
-  $include-type-defaults:             true    !default;
-
-// Icons
-$include-icons:                       true    !default;
-  $include-one-color-icons:           true    !default;
-  $include-color-icons:               true    !default;
-
-// Components
-$include-alerts:                      true    !default;
-$include-tables:                      true    !default;
-$include-panel:                       true    !default;
-$include-button:                      true    !default;
-$include-breadcrumbs:                 true    !default;
-$include-tooltip:                     true    !default;
-
-// Patterns
-$include-footer:                      true    !default;
-$include-pagination:                  true    !default;
-$include-side-nav:                    true    !default;
-$include-sub-nav:                     true    !default;
-$include-third-nav:                   true    !default;
-$include-top-nav:                     true    !default;
-
-// JavaScript Patterns
-$include-tabs:                        true    !default;
-$include-modal:                       true    !default;
-$include-accordion:                   true    !default;
-$include-accordion:                   true    !default;
+```
+@import "calcite-web";
+$include-type: false;
 ```
 
+Now in your project, you still have access to type mixins like `word-spacing()` and `tracking()` but your generated css file will have none of the generated static classes. Below are a list of all the configurable 'include' variables and a description of what they toggle on and off.
 
-All classes are styled by mixins of the same name, meaning that the `btn` class is simply including the `btn()` mixin. You can style your own elements or classnames to match exactly of the existing classes by including these mixins.
+| Variable                    | Description                                                              |
+| --------------------------- | ------------------------------------------------------------------------ |
+| `$include-grid`             | Everything grid related (viewport grid, block grid, and responsive grid) |
+| `$fold-grid`                | Responsive grid classes and media queries                                |
+| `$block-grid`               | Block grid classes and media queries                                     |
+| `$include-type`             | All type related classes                                                 |
+| `$include-header-family`    | Header family classes                                                    |
+| `$include-body-family`      | Body family classes                                                      |
+| `$include-secondary-family` | Secondary family classes                                                 |
+| `$include-code-family`      | Code family classes                                                      |
+| `$include-type-defaults`    | All default styles for type elements                                     |
+| `$include-icons`            | All icon sets, colors, and sizes                                         |
+| `$include-one-color-icons`  | The monochromatic icon set                                               |
+| `$include-color-icons`      | The full color icon set                                                  |
+| `$include-alerts`           | Alert styles and color modifier classes                                  |
+| `$include-tables`           | Table styles and modifier classes                                        |
+| `$include-panel`            | Panel styles and color modifier classes                                  |
+| `$include-button`           | Button styles and all modifier classes (size, colors, disabled, etc)     |
+| `$include-breadcrumbs`      | Breadcrumb styles and modifier classes                                   |
+| `$include-tooltip`          | Tooltip styles and modifier classes                                      |
+| `$include-footer`           | Footer styles                                                            |
+| `$include-pagination`       | Pagination styles                                                        |
+| `$include-side-nav`         | Side nav styles                                                          |
+| `$include-sub-nav`          | Sub Nav styles and modifiers                                             |
+| `$include-third-nav`        | Third nav styles and modifiers                                           |
+| `$include-top-nav`          | All top navigation elements, media queries, and encompassed patterns     |
+| `$include-tabs`             | Tab styles and modifier classes                                          |
+| `$include-modal`            | Modal styles                                                             |
+| `$include-accordion`        | Accordian styles                                                         |
+
+## Custom Selectors
+
+All classes are styled by mixins of the same name, meaning that the `btn` class is simply including the `btn()` mixin. You can style your own elements or classnames to match exactly that of the existing classes by including these mixins.
 
 ```scss
 .my-button-class {
@@ -59,3 +59,5 @@ All classes are styled by mixins of the same name, meaning that the `btn` class 
   @include btn-color($value, $hover-value);
 }
 ```
+
+In this manner you can extend the classnames of some other existing framework with the visual style of the Calcite Web framework.
