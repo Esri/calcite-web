@@ -65,16 +65,16 @@ $include-accordion:                   true    !default;
 // Provides basic prefixing and standard mixins
 @import "calcite-web/utils/utils";
 
-// Layout
-// structural level styles: grid, helper classes...
-@import "calcite-web/grid/viewport-grid";
-@import "calcite-web/grid/block-groups";
+// Grid
+// structural level styles: viewport grid, block group, helper classes...
+@import "calcite-web/grid/grid";
 
 // Type
 // typographic styles: font-families, element styles, modifiers...
 @import "calcite-web/type/type";
 
 // Icons
+// Multiple sets of icons, full color, monochrome
 @import "calcite-web/icons/icons";
 
 // Components
