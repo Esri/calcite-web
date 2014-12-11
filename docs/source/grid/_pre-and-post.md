@@ -15,7 +15,7 @@ Pre and post helpers are available from `.pre-1` and `.post-1` to `.pre-24` and 
 <div class="column-2 pre-21 tablet-pre-9 phone-pre-3"><span>.pre-21</span></div>
 </div>
 <div class="container grid-example leader-1">
-<div class="column-2 post-21 tablet-post-9 phone-post-3"><span>.post-21ide</span></div>
+<div class="column-2 post-21 tablet-post-9 phone-post-3"><span>.post-21</span></div>
 <div class="column-1"><span>col</span></div>
 </div>
 

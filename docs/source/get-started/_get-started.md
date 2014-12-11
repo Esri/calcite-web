@@ -1,4 +1,4 @@
-# Calcite Web
+<h1 class="leader-0" id="get-started">Calcite Web</h1>
 
 Calcite Web is a CSS framework built with [Sass](http://sass-lang.com/). A dependency-free JavaScript library for use with interactive patterns like tabs and modals is also included.
 

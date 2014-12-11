@@ -2,42 +2,26 @@
 
 If you are using Calcite Web as a SASS library, you can customize the grid with SASS variables. Below are the different settings you have access to and their default values:
 
-```scss
-// Breakpoints
-$small:                    480px;
-$medium:                   860px;
-$large:                    1280px;
+| Variable                    | Default              | Description                                       |
+| --------------------------- | ------------------   | ------------------------------------------------- |
+| `$small`                    | 480px                | Smallest (phone) breakpoint size in pixels        |
+| `$medium`                   | 860px                | Medium (tablet) breakpoint size in pixels         |
+| `$large`                    | 1280px               | Largest (desktop) breakdpoint size in pixels      |
+| `$vw-ratio`                 | 0.9                  | Amount of screen used by grid (0 - 1)             |
+| `$container-min`            | 0                    | Smallest size of container                        |
+| `$container-max`            | `$large * $vw-ratio` | Maximum size of the container                     |
+| `$column-gutter`            | 1rem                 | Space between columns                             |
+| `$ie8-support`              | false                | Whether you'd like to support Internet Explorer 8 |
+| `$column-gutter-fallback`   | 20px                 | Fallback for space between columns for IE8        |
+| `$container-width-fallback` | 960px                | Fixed container size                              |
+| `$large-class`              | column               | Prefix word desktop size columns                  |
+| `$large-column-count`       | 24                   | How many columns to use on the desktop breakpoint |
+| `$medium-class`             | tablet               | Prefix word for tablet breakpoint                 |
+| `$medium-column-count`      | 12                   | How many columns to use on tablet breakpoint      |
+| `$small-class`              | phone                | Prefix word for phone breakpoint                  |
+| `$small-column-count`       | 6                    | How many columns to use for phone breakpoint      |
+| `$vertical-range`           | 6                    | How many leader and trailer classes to generate   |
 
-// Grid Settings
-$vw-ratio:                 0.9;
-$container-width:          $vw-ratio * 100vw;
-$container-min:            0;
-$container-max:            $large * $vw-ratio;
-$column-gutter:            1rem;
-
-// Grid Fallback Options
-$ie8-support:              false;
-$column-gutter-fallback:   20px;
-$container-width-fallback: 960px;
-
-// Folding Grid Options
-
-// Large
-$large-class:              'column';
-$large-column-count:       24;
-
-// Medium
-$medium-class:             'tablet';
-$medium-column-count:      12;
-
-// Small
-$small-class:              'phone';
-$small-column-count:       6;
-
-// Vertical Rhythm
-$vertical-range:           6;
-$baseline:                 1.5rem;
-```
 
 In your own project, you can override these values to create a custom, project-specific grid. For example, to use a 16 column grid instead of the default 24 columns, you would set the `$large-column-count` variable after importing the library:
 
