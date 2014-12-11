@@ -15,14 +15,14 @@ Calcite Web has three main dependencies. If you already have these on your compu
 All the code for Calcite Web lives [on GitHub](https://github.com/esri/calcite-web). We use the [fork and pull model](https://help.github.com/articles/using-pull-requests/) to manage contribution.
 
 1. Fork the repository so you have your own copy (`your-username/calcite-web`)
-2. Clone the repo locally with `git clone https://github.com/your-username/calcite-web`
+2. Clone the repo locally with `git clone https://github.com/your-username/calcite-web.git`
 3. Move into the clone repo:  `cd calcite-web`
 4. Install project dependencies: `npm install`
 
 You should also add `Esri/calcite-web` as a remote at this point. We generally call this remote branch 'upstream':
 
 ```
-git remote add upstream https://github.com/Esri/calcite-web
+git remote add upstream https://github.com/Esri/calcite-web.git
 ```
 
 
