@@ -145,19 +145,11 @@
                 
                   <a href="#composition-helpers" class="side-nav-link">Overview</a>
                 
-                  <a href="#text-large" class="side-nav-link">Large</a>
-                
-                  <a href="#text-small" class="side-nav-link">Small</a>
-                
-                  <a href="#text-light" class="side-nav-link">Light</a>
+                  <a href="#text-modifiers" class="side-nav-link">Text modifiers</a>
                 
                   <a href="#text-color" class="side-nav-link">Color</a>
                 
                   <a href="#link-color" class="side-nav-link">Link Color</a>
-                
-                  <a href="#text-ellipsis" class="side-nav-link">Ellipsis</a>
-                
-                  <a href="#text-rule" class="side-nav-link">Rule</a>
                 
                   <a href="#list-bulleted" class="side-nav-link">Bulleted List</a>
                 
@@ -172,7 +164,7 @@
           
             
               <section class="trailer-2">
-                <h1 class="leader-0">Calcite Type System</h1>
+                <h1 class="leader-0" id="overview">Type</h1>
 
 <p>The Calcite Type System uses a combination of mixins and helper classes to achieve a clear visual style, focusing primarily on simplifying typesetting processes. Using the mixins and classes properly will ensure that all properties are consistent, beautiful, and robust.</p>
 <h3 id="typefaces">Typefaces</h3>
@@ -196,6 +188,13 @@
 <h3 id="avenir-next">Avenir Next</h3>
 <h2 class="type-sample"> Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</h2>
 <h2 class="type-sample"> Amazingly few discotheques provide jukeboxes.</h2>
+
+<p><h1>Amazingly few discotheques provide jukeboxes.</h1></p>
+<p><h2>Amazingly few discotheques provide jukeboxes.</h2></p>
+<p><h3>Amazingly few discotheques provide jukeboxes.</h3></p>
+<p><h4>Amazingly few discotheques provide jukeboxes.</h4></p>
+<p><h5>Amazingly few discotheques provide jukeboxes.</h5></p>
+<h6>Amazingly few discotheques provide jukeboxes.</h6>
                 
                 
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
@@ -369,8 +368,8 @@
               <hr class="trailer-2">
             
               <section class="trailer-2">
-                <h3 id="text-large">Text Large</h3>
-<p>Sets the font size of the element to one step of the typgraphic scale from the body size.</p>
+                <h2 id="text-modifiers">Text Modifiers</h2>
+<p>Build in classes that allow for quick customization and composition for a wide range of use cases.</p>
 
                 
                 
@@ -386,56 +385,44 @@
                           <code class="modifier-name">.text-large</code>
                         </div>
                       
-                    </div>
-                  
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>Amazingly few discotheques provide jukeboxes.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-</code></pre>
-                
-              </section>
-              <hr class="trailer-2">
-            
-              <section class="trailer-2">
-                <h3 id="text-small">Text Small</h3>
-<p>Sets the font size font of the elements to one step down the typographic scale from the body size.</p>
-
-                
-                
-                  <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-
-                  
-                    <div class="styleguide-modifiers">
-                      
                         <div class="styleguide-modifier-example">
                           <p class="text-small">Amazingly few discotheques provide jukeboxes.</p>
                           <code class="modifier-name">.text-small</code>
                         </div>
                       
-                    </div>
-                  
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>Amazingly few discotheques provide jukeboxes.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-</code></pre>
-                
-              </section>
-              <hr class="trailer-2">
-            
-              <section class="trailer-2">
-                <h3 id="text-light">Text Light</h3>
-<p>Sets the opacity of the element to a standard 0.66. Can be used in conjunction with <a href="#text-color">text color</a> helpers to provide a range of options across a range of background colors.</p>
-
-                
-                
-                  <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-
-                  
-                    <div class="styleguide-modifiers">
-                      
                         <div class="styleguide-modifier-example">
                           <p class="text-light">Amazingly few discotheques provide jukeboxes.</p>
                           <code class="modifier-name">.text-light</code>
+                        </div>
+                      
+                        <div class="styleguide-modifier-example">
+                          <p class="text-ellipsis">Amazingly few discotheques provide jukeboxes.</p>
+                          <code class="modifier-name">.text-ellipsis</code>
+                        </div>
+                      
+                        <div class="styleguide-modifier-example">
+                          <p class="text-rule">Amazingly few discotheques provide jukeboxes.</p>
+                          <code class="modifier-name">.text-rule</code>
+                        </div>
+                      
+                        <div class="styleguide-modifier-example">
+                          <p class="text-inline">Amazingly few discotheques provide jukeboxes.</p>
+                          <code class="modifier-name">.text-inline</code>
+                        </div>
+                      
+                        <div class="styleguide-modifier-example">
+                          <p class="text-center">Amazingly few discotheques provide jukeboxes.</p>
+                          <code class="modifier-name">.text-center</code>
+                        </div>
+                      
+                        <div class="styleguide-modifier-example">
+                          <p class="text-left">Amazingly few discotheques provide jukeboxes.</p>
+                          <code class="modifier-name">.text-left</code>
+                        </div>
+                      
+                        <div class="styleguide-modifier-example">
+                          <p class="text-right">Amazingly few discotheques provide jukeboxes.</p>
+                          <code class="modifier-name">.text-right</code>
                         </div>
                       
                     </div>
@@ -613,58 +600,6 @@
                     </div>
                   
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Amazingly few <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>discotheques<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> provide <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>jukeboxes.<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-</code></pre>
-                
-              </section>
-              <hr class="trailer-2">
-            
-              <section class="trailer-2">
-                <h3 id="text-ellipsis">Text Ellipsis</h3>
-<p>Adds a set of styles to the element that will cause the any text overflow to be hidden, truncated with an ellipsis. Useful for long keeping long strings on text to a single line.</p>
-
-                
-                
-                  <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-
-                  
-                    <div class="styleguide-modifiers">
-                      
-                        <div class="styleguide-modifier-example">
-                          <h1 class="text-ellipsis">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</h1>
-                          <code class="modifier-name">.text-ellipsis</code>
-                        </div>
-                      
-                    </div>
-                  
-<pre><code>&lt;h1 class="modifier-class"&gt;"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip <span class="hljs-keyword">ex</span> ea commodo consequat. Duis aute irure dolor <span class="hljs-keyword">in</span> reprehenderit <span class="hljs-keyword">in</span> voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt <span class="hljs-keyword">in</span> culpa qui officia deserunt mollit anim id est laborum&lt;/h1&gt;
-</code></pre>
-                
-              </section>
-              <hr class="trailer-2">
-            
-              <section class="trailer-2">
-                <h3 id="text-rule">Text Rule</h3>
-<p>Adds a one pixel gray border bottom to the element.</p>
-
-                
-                
-                  <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-
-                  
-                    <div class="styleguide-modifiers">
-                      
-                        <div class="styleguide-modifier-example">
-                          <h1 class="text-rule">Amazingly few discotheques provide jukeboxes.</h1>
-                          <code class="modifier-name">.text-rule</code>
-                        </div>
-                      
-                    </div>
-                  
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>Amazingly few discotheques provide jukeboxes.<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
 </code></pre>
                 
               </section>

@@ -125,10 +125,10 @@
         <div class="column-6">
           <aside class="side-nav column-6">
             
-              <h4 class="side-nav-title">Markup</h4>
+              <h4 class="side-nav-title">Patterns</h4>
               <nav>
                 
-                  <a href="#pattern-overview" class="side-nav-link">Patterns</a>
+                  <a href="#overview" class="side-nav-link">Overview</a>
                 
                   <a href="#basic-html-page" class="side-nav-link">Basic Page</a>
                 
@@ -146,7 +146,7 @@
                 
               </nav>
             
-              <h4 class="side-nav-title">Javascript Dependent</h4>
+              <h4 class="side-nav-title">Interactive Patterns</h4>
               <nav>
                 
                   <a href="#modals" class="side-nav-link">Modals</a>
@@ -166,7 +166,7 @@
           
             
               <section class="trailer-2">
-                <h1 class="leader-0">Calcite Web Patterns</h1>
+                <h1 class="leader-0" id="overview">Patterns</h1>
 
 <p>Patterns are specific UI schemes that use a collection of <a href="../components">components</a> and pattern-specific css to solve a common design problem. Patterns can either stand alone entirely as markup, or be dependent on <a href="../javscript">JavaScript</a> to accomplish certain behaviors.</p>
 <p>To use a pattern, follow the structures defined in the sample code.</p>
@@ -537,7 +537,7 @@
             
               <section class="trailer-2">
                 <h2 id="modals">Modals</h2>
-<p>Modals are cool!</p>
+<p>Modals are a useful pattern for showing important notices and dialogues to users. Modals take over the entire screen, so they should only be used sparingly for events that block the user&#39;s flow.</p>
 
                 
                 
@@ -546,36 +546,27 @@
                   
                     <div class="styleguide-modifiers">
                       <div class="styleguide-modifier-example">
-                        <a class="js-modal-show btn" data-modal="question" href="#">Show Modal</a>
-
-<div class="js-modal modal-overlay"></div>
-
-<div class="container">
-  <div class="row">
-    <div class="modal-content column-12 pre-6 leader-5">
-      <a class="js-modal-dismiss icon-close right" href="#"></a>
-      <h4>Modal!</h4>
-    </div>
+                        <div class="js-modal modal-overlay " data-modal="">
+  <div class="modal-content">
+    <a class="js-modal-toggle icon-close right" href="#"></a>
+    <h4>Modal!</h4>
   </div>
 </div>
 
+<a class="js-modal-toggle btn" data-modal="" href="#">Show Modal</a>
                       </div>
                     </div>
                   
 
                   
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-modal-show btn"</span> <span class="hljs-attribute">data-modal</span>=<span class="hljs-value">"question"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Show Modal<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-modal modal-overlay"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"container"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modal-content column-12 pre-6 leader-5"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-modal-dismiss icon-close right"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Modal!<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-modal modal-overlay modifier-class"</span> <span class="hljs-attribute">data-modal</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modal-content"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-modal-toggle icon-close right"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Modal!<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-modal-toggle btn"</span> <span class="hljs-attribute">data-modal</span>=<span class="hljs-value">"modifier-class"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Show Modal<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 </code></pre>
                 
               </section>

@@ -128,7 +128,7 @@
               <h4 class="side-nav-title">Sass</h4>
               <nav>
                 
-                  <a href="#sass-overview" class="side-nav-link">Overview</a>
+                  <a href="#overview" class="side-nav-link">Overview</a>
                 
               </nav>
             
@@ -150,6 +150,8 @@
                 
                   <a href="#font-size" class="side-nav-link">Font Size</a>
                 
+                  <a href="#modular-scale" class="side-nav-link">Modular Scale</a>
+                
                   <a href="#tracking" class="side-nav-link">Tracking</a>
                 
                   <a href="#leading" class="side-nav-link">Leading</a>
@@ -158,14 +160,12 @@
                 
                   <a href="#unicode-variables" class="side-nav-link">Unicode Variables</a>
                 
-                  <a href="#modular-scale" class="side-nav-link">Modular Scale</a>
-                
               </nav>
             
-              <h4 class="side-nav-title">Utillities</h4>
+              <h4 class="side-nav-title">Utilities</h4>
               <nav>
                 
-                  <a href="#utillity-mixins" class="side-nav-link">Utillity Mixins</a>
+                  <a href="#utility-mixins" class="side-nav-link">Utility Mixins</a>
                 
               </nav>
             
@@ -183,49 +183,135 @@
           
             
               <section class="trailer-2">
-                <h1 id="sass">SASS</h1>
-<p>Using Calcite Web as a SASS library is very powerful. After you successfully import the library (see <a href="">the getting started page</a>) you can fully customize and use all of the Calcite Web Framework.</p>
+                <h1 class="leader-0" id="overview">SASS</h1>
+
+<p>Using Calcite Web as a SASS library is very powerful. After you successfully import the library (see <a href="../">the getting started page</a> you can fully customize and use all of the Calcite Web Framework.</p>
 <h2 id="custom-build">Custom Build</h2>
 <p>Calcite comes with the ability to only generate the css you actually need for your project. Class generation is controlled by setting the following variables to <code>true</code> or <code>false</code>. Setting all of these variables to <code>false</code> will prevent Calcite Web from generating <strong>any</strong> css classes while still exposing the complete set of mixins.</p>
-<pre><code class="lang-scss">$include-grid<span class="hljs-value">:                        true    !default;</span>
-  $fold-grid<span class="hljs-value">:                         true    !default;</span>
-  $<span class="hljs-value">block</span>-grid<span class="hljs-value">:                        true    !default;</span>
-
-$include-type<span class="hljs-value">:                        true    !default;</span>
-  $include-<span class="hljs-tag">header</span>-family<span class="hljs-value">:             true    !default;</span>
-  $include-<span class="hljs-tag">body</span>-family<span class="hljs-value">:               true    !default;</span>
-  $include-secondary-family<span class="hljs-value">:          true    !default;</span>
-  $include-<span class="hljs-tag">code</span>-family<span class="hljs-value">:               true    !default;</span>
-  $include-type-defaults<span class="hljs-value">:             true    !default;</span>
-
-<span class="hljs-comment">// Icons</span>
-$include-icons<span class="hljs-value">:                       true    !default;</span>
-  $include-one-<span class="hljs-attribute">color</span>-icons<span class="hljs-value">:           true    !default;</span>
-  $include-<span class="hljs-attribute">color</span>-icons<span class="hljs-value">:               true    !default;</span>
-
-<span class="hljs-comment">// Components</span>
-$include-alerts<span class="hljs-value">:                      true    !default;</span>
-$include-tables<span class="hljs-value">:                      true    !default;</span>
-$include-panel<span class="hljs-value">:                       true    !default;</span>
-$include-<span class="hljs-tag">button</span><span class="hljs-value">:                      true    !default;</span>
-$include-breadcrumbs<span class="hljs-value">:                 true    !default;</span>
-$include-tooltip<span class="hljs-value">:                     true    !default;</span>
-
-<span class="hljs-comment">// Patterns</span>
-$include-<span class="hljs-tag">footer</span><span class="hljs-value">:                      true    !default;</span>
-$include-pagination<span class="hljs-value">:                  true    !default;</span>
-$include-side-<span class="hljs-tag">nav</span><span class="hljs-value">:                    true    !default;</span>
-$include-<span class="hljs-tag">sub</span>-<span class="hljs-tag">nav</span><span class="hljs-value">:                     true    !default;</span>
-$include-third-<span class="hljs-tag">nav</span><span class="hljs-value">:                   true    !default;</span>
-$include-<span class="hljs-attribute">top</span>-<span class="hljs-tag">nav</span><span class="hljs-value">:                     true    !default;</span>
-
-<span class="hljs-comment">// JavaScript Patterns</span>
-$include-tabs<span class="hljs-value">:                        true    !default;</span>
-$include-modal<span class="hljs-value">:                       true    !default;</span>
-$include-accordion<span class="hljs-value">:                   true    !default;</span>
-$include-accordion<span class="hljs-value">:                   true    !default;</span>
-</code></pre>
-<p>All classes are styled by mixins of the same name, meaning that the <code>btn</code> class is simply including the <code>btn()</code> mixin. You can style your own elements or classnames to match exactly of the existing classes by including these mixins.</p>
+<p>For example, if didn&#39;t want to export the css for any of the type helpers, you would simply set the <code>$include-type</code> variable to false:</p>
+<pre><code>@<span class="hljs-keyword">import</span> <span class="hljs-string">"calcite-web"</span>;
+<span class="hljs-variable">$include</span><span class="hljs-attribute">-type</span>: <span class="hljs-literal">false</span>;
+</code></pre><p>Now in your project, you still have access to type mixins like <code>word-spacing()</code> and <code>tracking()</code> but your generated css file will have none of the generated static classes. Below are a list of all the configurable &#39;include&#39; variables and a description of what they toggle on and off.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$include-grid</code></td>
+<td>Everything grid related (viewport grid, block grid, and responsive grid)</td>
+</tr>
+<tr>
+<td><code>$fold-grid</code></td>
+<td>Responsive grid classes and media queries</td>
+</tr>
+<tr>
+<td><code>$block-grid</code></td>
+<td>Block grid classes and media queries</td>
+</tr>
+<tr>
+<td><code>$include-type</code></td>
+<td>All type related classes</td>
+</tr>
+<tr>
+<td><code>$include-header-family</code></td>
+<td>Header family classes</td>
+</tr>
+<tr>
+<td><code>$include-body-family</code></td>
+<td>Body family classes</td>
+</tr>
+<tr>
+<td><code>$include-secondary-family</code></td>
+<td>Secondary family classes</td>
+</tr>
+<tr>
+<td><code>$include-code-family</code></td>
+<td>Code family classes</td>
+</tr>
+<tr>
+<td><code>$include-type-defaults</code></td>
+<td>All default styles for type elements</td>
+</tr>
+<tr>
+<td><code>$include-icons</code></td>
+<td>All icon sets, colors, and sizes</td>
+</tr>
+<tr>
+<td><code>$include-one-color-icons</code></td>
+<td>The monochromatic icon set</td>
+</tr>
+<tr>
+<td><code>$include-color-icons</code></td>
+<td>The full color icon set</td>
+</tr>
+<tr>
+<td><code>$include-alerts</code></td>
+<td>Alert styles and color modifier classes</td>
+</tr>
+<tr>
+<td><code>$include-tables</code></td>
+<td>Table styles and modifier classes</td>
+</tr>
+<tr>
+<td><code>$include-panel</code></td>
+<td>Panel styles and color modifier classes</td>
+</tr>
+<tr>
+<td><code>$include-button</code></td>
+<td>Button styles and all modifier classes (size, colors, disabled, etc)</td>
+</tr>
+<tr>
+<td><code>$include-breadcrumbs</code></td>
+<td>Breadcrumb styles and modifier classes</td>
+</tr>
+<tr>
+<td><code>$include-tooltip</code></td>
+<td>Tooltip styles and modifier classes</td>
+</tr>
+<tr>
+<td><code>$include-footer</code></td>
+<td>Footer styles</td>
+</tr>
+<tr>
+<td><code>$include-pagination</code></td>
+<td>Pagination styles</td>
+</tr>
+<tr>
+<td><code>$include-side-nav</code></td>
+<td>Side nav styles</td>
+</tr>
+<tr>
+<td><code>$include-sub-nav</code></td>
+<td>Sub Nav styles and modifiers</td>
+</tr>
+<tr>
+<td><code>$include-third-nav</code></td>
+<td>Third nav styles and modifiers</td>
+</tr>
+<tr>
+<td><code>$include-top-nav</code></td>
+<td>All top navigation elements, media queries, and encompassed patterns</td>
+</tr>
+<tr>
+<td><code>$include-tabs</code></td>
+<td>Tab styles and modifier classes</td>
+</tr>
+<tr>
+<td><code>$include-modal</code></td>
+<td>Modal styles</td>
+</tr>
+<tr>
+<td><code>$include-accordion</code></td>
+<td>Accordian styles</td>
+</tr>
+</tbody>
+</table>
+<h2 id="custom-selectors">Custom Selectors</h2>
+<p>All classes are styled by mixins of the same name, meaning that the <code>btn</code> class is simply including the <code>btn()</code> mixin. You can style your own elements or classnames to match exactly that of the existing classes by including these mixins.</p>
 <pre><code class="lang-scss"><span class="hljs-class">.my-button-class</span> {
   <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> btn</span>()
 }
@@ -235,6 +321,7 @@ $include-accordion<span class="hljs-value">:                   true    !default;
   @<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> btn-color</span>($value, $hover-value);</span>
 }
 </code></pre>
+<p>In this manner you can extend the classnames of some other existing framework with the visual style of the Calcite Web framework.</p>
 
                 
                 
@@ -296,6 +383,7 @@ $large<span class="hljs-value">:  <span class="hljs-number">1280</span>px !defau
                 <h2 id="font-size">Font Size</h2>
 <p>The Calcite Web type system uses a modular typographic scale to ensure a consistent tonal range within all text elements. This modular scale is created from the body size of the type, and a second, smaller size. These two type sizes anchor the scale, and using a precise ratio can be expanded to an entire set of sizes for all typographic needs.</p>
 <p>The <code>font-size($n)</code> mixin takes an integer, positive or negative, and sets all type within the element to the size defined by traversing that number of steps up or down the typographic scale.</p>
+<p>&#39;0&#39; represents the normal text size while &#39;-1&#39; is a type size smaller, and &#39;1&#39; is a type size larger. So if you&#39;d like to have a very large pull-quote or something of that nature, you could use <code>@include font-size(6)</code>. This means that the text you&#39;ve styled will be six steps up the typographic scale from the normal body size.</p>
 <p>The <code>font-size($n)</code> mixin relies on the <code>modular-scale($n)</code> mixin to define the scale, and apply it to typographic elements.</p>
 
                 
@@ -304,8 +392,18 @@ $large<span class="hljs-value">:  <span class="hljs-number">1280</span>px !defau
               <hr class="trailer-2">
             
               <section class="trailer-2">
+                <h2 id="modular-scale">Modular Scale</h2>
+<p>The <code>modular-scale($n)</code> behaves the same as the <code>font-size($n)</code> mixin, but returns a raw rem value rather than css styles specific to type elements. This means that the <code>modular-scale($n)</code> mixin can be used to define heights, widths, padding, margins, or any other property of an element so that it adheres to the modular scale defined by the typography.
+Setting the max width of an article to a large multiple of the text size is a way to define a comfortable reading measure related to the proportional decisions of the content.</p>
+
+                
+                
+              </section>
+              <hr class="trailer-2">
+            
+              <section class="trailer-2">
                 <h2 id="tracking">Tracking</h2>
-<p>Tracking is the space between letters in a work. The <code>tracking($n)</code> mixin accepts an integer, and applies letterspacing to the element as fractions of 1/1000 of an em.
+<p>Tracking is the space between letters in a word. The <code>tracking($n)</code> mixin accepts an integer, and applies letterspacing to the element as fractions of 1/1000 of an em.
 <code>@include tracking(500)</code> will apply 1/2 em letterspacing.
 <code>@include tracking(166)</code> will apply a hairline em letterspacing.</p>
 
@@ -325,9 +423,42 @@ $large<span class="hljs-value">:  <span class="hljs-number">1280</span>px !defau
             
               <section class="trailer-2">
                 <h2 id="word-spacing">Word Spacing</h2>
-<p>Word spacing is - well - the space between words.  The <code>word-spacing($n)</code> mixin accepts an integer, and applies letterspacing to the element as fractions of 1/1000 of an em.
-<code>@include word-spacing(500)</code> will apply 1/2 em word spacing.
-<code>@include word-spacing(166)</code> will apply a hairline em word spacing.</p>
+<p>Word spacing is - well - the space between words.  The <code>word-spacing($n)</code> mixin accepts an integer, and applies letterspacing to the element as fractions of 1/1000 of an em. If you&#39;re familiar with word-spacing in design programs like Adobe InDesign, the <code>word-spacing</code> mixin will immidiately feel fairly natural.</p>
+<p>While you can pass any integer to the mixin, below is a list of values you can pass to the <code>word-spacing</code> mixin to achieve well known typographic defaults:</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Number</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>em</td>
+<td><code>word-spacing(1000)</code></td>
+</tr>
+<tr>
+<td>en</td>
+<td><code>word-spacing(500)</code></td>
+</tr>
+<tr>
+<td>thick</td>
+<td><code>word-spacing(333)</code></td>
+</tr>
+<tr>
+<td>mid</td>
+<td><code>word-spacing(250)</code></td>
+</tr>
+<tr>
+<td>thin</td>
+<td><code>word-spacing(200)</code></td>
+</tr>
+<tr>
+<td>hair</td>
+<td><code>word-spacing(166)</code></td>
+</tr>
+</tbody>
+</table>
 
                 
                 
@@ -340,16 +471,6 @@ $large<span class="hljs-value">:  <span class="hljs-number">1280</span>px !defau
 <div class="block-group block-group-5-up">
 
 </div>
-                
-                
-              </section>
-              <hr class="trailer-2">
-            
-              <section class="trailer-2">
-                <h2 id="modular-scale">Modular Scale</h2>
-<p>The <code>modular-scale($n)</code> behaves the same as the <code>font-size($n)</code> mixin, but returns a raw rem value rather than css styles specific to type elements. This means that the <code>modular-scale($n)</code> mixin can be used to define heights, widths, padding, margins, or any other property of an element so that it adheres to the modular scale defined by the tyopgraphy.
-Setting the max width of an article to a large multiple of the text size is a way to define a comfortable reading measure related to the proportional decisions of the content.</p>
-
                 
                 
               </section>
@@ -381,67 +502,71 @@ Setting the max width of an article to a large multiple of the text size is a wa
 </thead>
 <tbody>
 <tr>
-<td><code>appearance</code></td>
+<td><a href="#appearance"><code>appearance</code></a></td>
 <td><code>$value</code></td>
 </tr>
 <tr>
-<td><code>box-sizing</code></td>
+<td><a href="#box-sizing"><code>box-sizing</code></a></td>
 <td><code>$box</code></td>
 </tr>
 <tr>
-<td><code>calc</code></td>
+<td><a href="#box-shadow"><code>box-shadow</code></a></td>
+<td><code>$shadow</code></td>
+</tr>
+<tr>
+<td><a href="#calc"><code>calc</code></a></td>
 <td><code>$property, $value</code></td>
 </tr>
 <tr>
-<td><code>clearfix</code></td>
+<td><a href="#clearfix"><code>clearfix</code></a></td>
 <td>none</td>
 </tr>
 <tr>
-<td><code>prefixer</code></td>
+<td><a href="#prefixer"><code>prefixer</code></a></td>
 <td><code>$property, $value, $prefixes</code></td>
 </tr>
 <tr>
-<td><code>respond-to</code></td>
+<td><a href="#respond-to"><code>respond-to</code></a></td>
 <td><code>$max, $mi, $type</code></td>
 </tr>
 <tr>
-<td><code>transform</code></td>
+<td><a href="#transform"><code>transform</code></a></td>
 <td><code>$property</code></td>
 </tr>
 <tr>
-<td><code>transform-origin</code></td>
+<td><a href="#transform"><code>transform-origin</code></a></td>
 <td><code>$axes</code></td>
 </tr>
 <tr>
-<td><code>transform-style</code></td>
+<td><a href="#transform"><code>transform-style</code></a></td>
 <td><code>$style</code></td>
 </tr>
 <tr>
-<td><code>transition</code></td>
+<td><a href="#transition"><code>transition</code></a></td>
 <td><code>$value</code></td>
 </tr>
 <tr>
-<td><code>transition-property</code></td>
+<td><a href="#transition"><code>transition-property</code></a></td>
 <td><code>$value</code></td>
 </tr>
 <tr>
-<td><code>transition-duration</code></td>
+<td><a href="#transition"><code>transition-duration</code></a></td>
 <td><code>$value</code></td>
 </tr>
 <tr>
-<td><code>transition-timing-function</code></td>
+<td><a href="#transition"><code>transition-timing-function</code></a></td>
 <td><code>$value</code></td>
 </tr>
 <tr>
-<td><code>transition-delay</code></td>
+<td><a href="#transition"><code>transition-delay</code></a></td>
 <td><code>$value</code></td>
 </tr>
 <tr>
-<td><code>show</code></td>
+<td><a href="#show-and-hide"><code>show</code></a></td>
 <td>none</td>
 </tr>
 <tr>
-<td><code>hide</code></td>
+<td><a href="#show-and-hide"><code>hide</code></a></td>
 <td>none</td>
 </tr>
 </tbody>
@@ -453,6 +578,11 @@ Setting the max width of an article to a large multiple of the text size is a wa
 <h4 id="box-sizing">Box-Sizing</h4>
 <p>Set the <code>box-sizing</code> property for all browsers (with browser prefixes):</p>
 <pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> box-sizing</span>(border-box);</span>
+</code></pre>
+<p>Valid values are <code>content-box</code>, <code>border-box</code>, and <code>inherit</code>.</p>
+<h4 id="box-shadow">Box-Shadow</h4>
+<p>Set the <code>box-shadow</code> property for all browsers (with browser prefixes):</p>
+<pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> box-shadow</span>(border-box);</span>
 </code></pre>
 <h4 id="calc">Calc</h4>
 <p>Shorthand for setting a property to use a <code>calc</code> value. Pass the property you&#39;d like to set, then the value you&#39;d like to use:</p>

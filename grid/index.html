@@ -170,9 +170,9 @@
           
             
               <section class="trailer-2">
-                <h1 class="leader-0">Calcite Grid System</h1>
+                <h1 class="leader-0" id="overview">Grid</h1>
 
-<p>The Calcite Grid System is based on an open source project from Esri PDX called <a href="http://esripdx.github.io/viewport-grid/">viewport grid</a>. This grid system is different from standard css grid systems in two key ways;</p>
+<p>The Calcite Grid System includes a full, responsive, and configurable grid with columns and a container and also a &#39;Block Group&#39; grid. The main grid is different from standard css grid systems in two key ways:</p>
 <ol>
 <li>Column widths are defined by the viewport size rather than percentage of their containers.</li>
 <li>Built-in smart defaults for responsive sizing puts less columns across the screen at smaller sizes, rather than smaller columns.</li>
@@ -214,41 +214,102 @@
               <section class="trailer-2">
                 <h2 id="configuration">Configuration</h2>
 <p>If you are using Calcite Web as a SASS library, you can customize the grid with SASS variables. Below are the different settings you have access to and their default values:</p>
-<pre><code class="lang-scss"><span class="hljs-comment">// Breakpoints</span>
-$<span class="hljs-tag">small</span><span class="hljs-value">:                    <span class="hljs-number">480</span>px;</span>
-$<span class="hljs-value">medium</span><span class="hljs-value">:                   <span class="hljs-number">860</span>px;</span>
-$large<span class="hljs-value">:                    <span class="hljs-number">1280</span>px;</span>
-
-<span class="hljs-comment">// Grid Settings</span>
-$vw-ratio<span class="hljs-value">:                 <span class="hljs-number">0.9</span>;</span>
-$container-<span class="hljs-attribute">width</span><span class="hljs-value">:          $vw-ratio * <span class="hljs-number">100</span>vw;</span>
-$container-min<span class="hljs-value">:            <span class="hljs-number">0</span>;</span>
-$container-max<span class="hljs-value">:            $large * $vw-ratio;</span>
-$column-gutter<span class="hljs-value">:            <span class="hljs-number">1</span>rem;</span>
-
-<span class="hljs-comment">// Grid Fallback Options</span>
-$ie8-support<span class="hljs-value">:              false;</span>
-$column-gutter-fallback<span class="hljs-value">:   <span class="hljs-number">20</span>px;</span>
-$container-<span class="hljs-attribute">width</span>-fallback<span class="hljs-value">: <span class="hljs-number">960</span>px;</span>
-
-<span class="hljs-comment">// Folding Grid Options</span>
-
-<span class="hljs-comment">// Large</span>
-$large-class<span class="hljs-value">:              <span class="hljs-string">'column'</span>;</span>
-$large-<span class="hljs-attribute">column-count</span><span class="hljs-value">:       <span class="hljs-number">24</span>;</span>
-
-<span class="hljs-comment">// Medium</span>
-$<span class="hljs-value">medium</span>-class<span class="hljs-value">:             <span class="hljs-string">'tablet'</span>;</span>
-$<span class="hljs-value">medium</span>-<span class="hljs-attribute">column-count</span><span class="hljs-value">:      <span class="hljs-number">12</span>;</span>
-
-<span class="hljs-comment">// Small</span>
-$<span class="hljs-tag">small</span>-class<span class="hljs-value">:              <span class="hljs-string">'phone'</span>;</span>
-$<span class="hljs-tag">small</span>-<span class="hljs-attribute">column-count</span><span class="hljs-value">:       <span class="hljs-number">6</span>;</span>
-
-<span class="hljs-comment">// Vertical Rhythm</span>
-$vertical-range<span class="hljs-value">:           <span class="hljs-number">6</span>;</span>
-$<span class="hljs-value">baseline</span><span class="hljs-value">:                 <span class="hljs-number">1.5</span>rem;</span>
-</code></pre>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$small</code></td>
+<td>480px</td>
+<td>Smallest (phone) breakpoint size in pixels</td>
+</tr>
+<tr>
+<td><code>$medium</code></td>
+<td>860px</td>
+<td>Medium (tablet) breakpoint size in pixels</td>
+</tr>
+<tr>
+<td><code>$large</code></td>
+<td>1280px</td>
+<td>Largest (desktop) breakdpoint size in pixels</td>
+</tr>
+<tr>
+<td><code>$vw-ratio</code></td>
+<td>0.9</td>
+<td>Amount of screen used by grid (0 - 1)</td>
+</tr>
+<tr>
+<td><code>$container-min</code></td>
+<td>0</td>
+<td>Smallest size of container</td>
+</tr>
+<tr>
+<td><code>$container-max</code></td>
+<td><code>$large * $vw-ratio</code></td>
+<td>Maximum size of the container</td>
+</tr>
+<tr>
+<td><code>$column-gutter</code></td>
+<td>1rem</td>
+<td>Space between columns</td>
+</tr>
+<tr>
+<td><code>$ie8-support</code></td>
+<td>false</td>
+<td>Whether you&#39;d like to support Internet Explorer 8</td>
+</tr>
+<tr>
+<td><code>$column-gutter-fallback</code></td>
+<td>20px</td>
+<td>Fallback for space between columns for IE8</td>
+</tr>
+<tr>
+<td><code>$container-width-fallback</code></td>
+<td>960px</td>
+<td>Fixed container size</td>
+</tr>
+<tr>
+<td><code>$large-class</code></td>
+<td>column</td>
+<td>Prefix word desktop size columns</td>
+</tr>
+<tr>
+<td><code>$large-column-count</code></td>
+<td>24</td>
+<td>How many columns to use on the desktop breakpoint</td>
+</tr>
+<tr>
+<td><code>$medium-class</code></td>
+<td>tablet</td>
+<td>Prefix word for tablet breakpoint</td>
+</tr>
+<tr>
+<td><code>$medium-column-count</code></td>
+<td>12</td>
+<td>How many columns to use on tablet breakpoint</td>
+</tr>
+<tr>
+<td><code>$small-class</code></td>
+<td>phone</td>
+<td>Prefix word for phone breakpoint</td>
+</tr>
+<tr>
+<td><code>$small-column-count</code></td>
+<td>6</td>
+<td>How many columns to use for phone breakpoint</td>
+</tr>
+<tr>
+<td><code>$vertical-range</code></td>
+<td>6</td>
+<td>How many leader and trailer classes to generate</td>
+</tr>
+</tbody>
+</table>
 <p>In your own project, you can override these values to create a custom, project-specific grid. For example, to use a 16 column grid instead of the default 24 columns, you would set the <code>$large-column-count</code> variable after importing the library:</p>
 <pre><code>@<span class="hljs-keyword">import</span> calcite<span class="hljs-attribute">-web</span>;
 <span class="hljs-variable">$large</span><span class="hljs-attribute">-column</span><span class="hljs-attribute">-count</span>: <span class="hljs-number">16</span>;
@@ -505,7 +566,7 @@ The above set of column-4 divs are snapping up next to the very tall column-2 di
 <div class="column-2 pre-21 tablet-pre-9 phone-pre-3"><span>.pre-21</span></div>
 </div>
 <div class="container grid-example leader-1">
-<div class="column-2 post-21 tablet-post-9 phone-post-3"><span>.post-21ide</span></div>
+<div class="column-2 post-21 tablet-post-9 phone-post-3"><span>.post-21</span></div>
 <div class="column-1"><span>col</span></div>
 </div>
 
@@ -523,6 +584,10 @@ The above set of column-4 divs are snapping up next to the very tall column-2 di
 <p>The leader and trailer classes are designed for quick vertical adjustments with markup. The standard <code>leader-n</code> and <code>trailer-n</code> classes add top and bottom margin to the element, as multiples of the <code>$baseline</code> variable, or 1.5rem.</p>
 <p>The <code>padding-</code> prefix adds lines of padding instead of margin, and both classes can be used in conjunction.</p>
 <p>Clacite Web provides a <code>$vertical-range</code> variable that sets the maximum value of <code>n</code> for the <code>leader-n</code> and <code>trailer-n</code> classes at 6.</p>
+<p>Leader and trailer classes also have additional responsive <code>tablet-</code> and <code>phone-</code> prefix classes. These allow you to add different amounts of space above and below an element at different screen sizes.</p>
+<p>For example, if you wanted an element to have 3 lines of margin above it on desktop, but that was too much on a phone, you could use responsive classes to specify that:</p>
+<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"leader-3 phone-leader-1"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre><p>These also apply to <code>padding-leader</code> and <code>padding-trailer</code></p>
 
                 
                 
@@ -749,8 +814,10 @@ aligning grid columns when the Grid System is unable to determine which columns 
               <section class="trailer-2">
                 <h2 id="left-and-right">Left and Right</h2>
 <p>Use a class of <code>right</code> on html elements to float elements to the right. Use a class of <code>left</code> on html elements to float elements to the left.</p>
-<p>Left and Right helpers have <code>tablet-</code> and <code>phone-</code> prefix classes for responsive control at breakpoints.</p>
-
+<p>Left and right classes also have additional responsive <code>tablet-</code> and <code>phone-</code> prefix classes. These allow you to float an element right on a large screen, but float it left when the screen is smaller.</p>
+<p>For example, if you wanted an element to float right on desktop, but left on a phone, you could use responsive right and left classes to specify that:</p>
+<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"right phone-left"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
                 
                 
               </section>

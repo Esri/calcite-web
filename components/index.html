@@ -128,13 +128,19 @@
               <h4 class="side-nav-title">Components</h4>
               <nav>
                 
-                  <a href="#component-overview" class="side-nav-link">Overview</a>
+                  <a href="#overview" class="side-nav-link">Overview</a>
                 
                   <a href="#buttons" class="side-nav-link">Buttons</a>
                 
                   <a href="#button-groups" class="side-nav-link">Button Groups</a>
                 
+                  <a href="#dropdowns" class="side-nav-link">Dropdowns</a>
+                
+                  <a href="#loader" class="side-nav-link">Loader</a>
+                
                   <a href="#alerts" class="side-nav-link">Alerts</a>
+                
+                  <a href="#panels" class="side-nav-link">Panels</a>
                 
                   <a href="#breadcrumbs" class="side-nav-link">Breadcrumbs</a>
                 
@@ -168,7 +174,7 @@
           
             
               <section class="trailer-2">
-                <h1 class="trailer-0">Overview</h1>
+                <h1 class="trailer-0" id="overview">Components</h1>
 
 <p>Components are reusable blocks that can be used across any part of a Calcite site. They can be used within <a href="../patterns/">patterns</a> or on their own.</p>
 
@@ -347,6 +353,126 @@
               <hr class="trailer-2">
             
               <section class="trailer-2">
+                <h2 id="dropdowns">Dropdowns</h2>
+<blockquote>
+<p>Dropdowns rely on the <code>calcite-web.js</code> JavaScript library for their functionality. See the <a href="../javascript/">JavaScript Documentation</a> for more information.</p>
+</blockquote>
+<p>Dropdowns are good for showing multiple options under a single call to action. For example, if you had a download button, and you needed the user to choose a format for the download, you could put several choices in a dropdown.</p>
+<p>Dropdowns differ from <code>select</code> elements in that they don&#39;t have a default state or a &#39;current&#39; state. Instead, they offer a jumping off point for a series of related actions.</p>
+
+                
+                
+                  <h3 class="leader-2 trailer-1">Modifiers</h3>
+
+                  
+
+                  
+                    <div class="styleguide-modifiers">
+                      
+                        <div class="styleguide-modifier-example">
+                          <div class="dropdown">
+  <!-- extends side-nav -->
+  <a href="#" class="btn dropdown-btn js-dropdown-toggle">Dropdown Select</a>
+  <!-- extends side-nav -->
+  <nav class="dropdown-menu default js-dropdown">
+    <!-- extends side-nav-link -->
+    <a href="#" class="dropdown-link">Option 1 that has a really long text.</a>
+    <a href="#" class="dropdown-link">Option 2</a>
+    <a href="#" class="dropdown-link">Option 3</a>
+    <a href="#" class="dropdown-link">Option 4</a>
+    <a href="#" class="dropdown-link">Option 5</a>
+  </nav>
+</div>
+                          <code class="modifier-name">.default</code>
+                        </div>
+                      
+                        <div class="styleguide-modifier-example">
+                          <div class="dropdown">
+  <!-- extends side-nav -->
+  <a href="#" class="btn dropdown-btn js-dropdown-toggle">Dropdown Select</a>
+  <!-- extends side-nav -->
+  <nav class="dropdown-menu dropdown-left js-dropdown">
+    <!-- extends side-nav-link -->
+    <a href="#" class="dropdown-link">Option 1 that has a really long text.</a>
+    <a href="#" class="dropdown-link">Option 2</a>
+    <a href="#" class="dropdown-link">Option 3</a>
+    <a href="#" class="dropdown-link">Option 4</a>
+    <a href="#" class="dropdown-link">Option 5</a>
+  </nav>
+</div>
+                          <code class="modifier-name">.dropdown-left</code>
+                        </div>
+                      
+                        <div class="styleguide-modifier-example">
+                          <div class="dropdown">
+  <!-- extends side-nav -->
+  <a href="#" class="btn dropdown-btn js-dropdown-toggle">Dropdown Select</a>
+  <!-- extends side-nav -->
+  <nav class="dropdown-menu dropdown-right js-dropdown">
+    <!-- extends side-nav-link -->
+    <a href="#" class="dropdown-link">Option 1 that has a really long text.</a>
+    <a href="#" class="dropdown-link">Option 2</a>
+    <a href="#" class="dropdown-link">Option 3</a>
+    <a href="#" class="dropdown-link">Option 4</a>
+    <a href="#" class="dropdown-link">Option 5</a>
+  </nav>
+</div>
+                          <code class="modifier-name">.dropdown-right</code>
+                        </div>
+                      
+                    </div>
+                  
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown"</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- extends side-nav --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn dropdown-btn js-dropdown-toggle"</span>&gt;</span>Dropdown Select<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- extends side-nav --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-menu modifier-class js-dropdown"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- extends side-nav-link --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-link"</span>&gt;</span>Option 1 that has a really long text.<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-link"</span>&gt;</span>Option 2<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-link"</span>&gt;</span>Option 3<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-link"</span>&gt;</span>Option 4<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-link"</span>&gt;</span>Option 5<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+                
+              </section>
+              <hr class="trailer-2">
+            
+              <section class="trailer-2">
+                <h2 id="loader">Loader</h2>
+<p>The loader element is a placeholder while content is being retreived or rendered. By default, the loader will display none and requires an <code>is-active</code> class to display.</p>
+
+                
+                
+                  <h3 class="leader-2 trailer-1">Modifiers</h3>
+
+                  
+
+                  
+                    <div class="styleguide-modifiers">
+                      
+                        <div class="styleguide-modifier-example">
+                          <div class="loader is-active padding-leader-3 padding-trailer-3">
+  <div class="loader-bars"></div>
+  <div class="loader-text">Loading</div>
+</div>
+                          <code class="modifier-name">.default</code>
+                        </div>
+                      
+                    </div>
+                  
+<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"loader is-active padding-leader-3 padding-trailer-3"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"loader-bars"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"loader-text"</span>&gt;Loading&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+                
+              </section>
+              <hr class="trailer-2">
+            
+              <section class="trailer-2">
                 <h2 id="alerts">Alerts</h2>
 <p>Alerts are used to inform users of state changes, errors, or successful actions. Alerts are only visible if they have the <code>is-active</code> class. Without as <code>is-active</code> class, the alert will be set to <code>display: none;</code></p>
 <p>Calcite does not manage alert classes be default - you will have to write your own JavaScript handlers for this.</p>
@@ -390,6 +516,54 @@
   Something Happened!
   &lt;<span class="hljs-operator">a</span> href=<span class="hljs-string">"#"</span> class=<span class="hljs-string">"alert-close"</span>&gt;<span class="hljs-built_in">close</span>&lt;/<span class="hljs-operator">a</span>&gt;
 &lt;/<span class="hljs-operator">div</span>&gt;
+</code></pre>
+                
+              </section>
+              <hr class="trailer-2">
+            
+              <section class="trailer-2">
+                <h2 id="panels">Panels</h2>
+<p>Panels are useful to draw attention to or contain certain text on a page. They are simple containers, which can be used to help guide users through the visual hierarchy of your design.</p>
+
+                
+                
+                  <h3 class="leader-2 trailer-1">Modifiers</h3>
+
+                  
+
+                  
+                    <div class="styleguide-modifiers">
+                      
+                        <div class="styleguide-modifier-example">
+                          <div class="panel panel">
+  <h4>This is a panel.</h4>
+  <p>Normal, dark, or white are the options</p>
+</div>
+                          <code class="modifier-name">.panel</code>
+                        </div>
+                      
+                        <div class="styleguide-modifier-example">
+                          <div class="panel panel-dark">
+  <h4>This is a panel.</h4>
+  <p>Normal, dark, or white are the options</p>
+</div>
+                          <code class="modifier-name">.panel-dark</code>
+                        </div>
+                      
+                        <div class="styleguide-modifier-example">
+                          <div class="panel panel-white">
+  <h4>This is a panel.</h4>
+  <p>Normal, dark, or white are the options</p>
+</div>
+                          <code class="modifier-name">.panel-white</code>
+                        </div>
+                      
+                    </div>
+                  
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"panel modifier-class"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>This is a panel.<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Normal, dark, or white are the options<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 </code></pre>
                 
               </section>
