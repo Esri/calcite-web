@@ -63,13 +63,17 @@ type:
         - title: "Overview"
           link: composition-helpers
         - title: "Text modifiers"
-          link: text-modifers
+          link: text-modifiers
           modifiers:
             - text-large
             - text-small
             - text-light
             - text-ellipsis
             - text-rule
+            - text-inline
+            - text-center
+            - text-left
+            - text-right
         - title: "Color"
           link: text-color
           modifiers:
@@ -180,7 +184,7 @@ icons:
   title: "Icons"
   base: icons
   navigation:
-    - group: "Icons Sets"
+    - group: "Icon Sets"
       pages:
         - title: "Overview"
           link: overview
@@ -251,7 +255,7 @@ components:
     - group: "Components"
       pages:
         - title: "Overview"
-          link: component-overview
+          link: overview
         - title: "Buttons"
           link: buttons
           modifiers:
@@ -281,6 +285,12 @@ components:
           link: button-groups
           modifiers:
             - btn-grouped
+        - title: "Dropdowns"
+          link: dropdowns
+          modifiers:
+            - default
+            - dropdown-left
+            - dropdown-right
         - title: "Loader"
           link: loader
           modifiers:
@@ -291,6 +301,12 @@ components:
             - default
             - alert-red
             - alert-green
+        - title: "Panels"
+          link: panels
+          modifiers:
+            - panel
+            - panel-dark
+            - panel-white
         - title: "Breadcrumbs"
           link: breadcrumbs
           modifiers: true
@@ -341,10 +357,10 @@ patterns:
   title: "Patterns"
   base: patterns
   navigation:
-    - group: "Markup"
+    - group: "Patterns"
       pages:
-        - title: "Patterns"
-          link: pattern-overview
+        - title: "Overview"
+          link: overview
         - title: "Basic Page"
           link: basic-html-page
         - title: "Top Nav"
@@ -365,7 +381,7 @@ patterns:
         - title: "Pagination"
           link: pagination
           modifiers: true
-    - group: "Javascript Dependent"
+    - group: "Interactive Patterns"
       pages:
         - title: "Modals"
           link: modals
@@ -383,7 +399,7 @@ sass:
     - group: "Sass"
       pages:
         - title: "Overview"
-          link: sass-overview
+          link: overview
     - group: "Variables"
       pages:
         - title: "Overview"
@@ -399,6 +415,8 @@ sass:
           link: type-composition
         - title: "Font Size"
           link: font-size
+        - title: "Modular Scale"
+          link: modular-scale
         - title: "Tracking"
           link: tracking
         - title: "Leading"
@@ -453,12 +471,10 @@ sass:
             - whitesquare
             - ssquare
             - swhitesquare
-        - title: "Modular Scale"
-          link: modular-scale
-    - group: "Utillities"
+    - group: "Utilities"
       pages:
-        - title: Utillity Mixins
-          link: utillity-mixins
+        - title: Utility Mixins
+          link: utility-mixins
     - group: "Color Map"
       pages:
         - title: Color Map
@@ -471,7 +487,7 @@ javascript:
     - group: "Interactive Patterns"
       pages:
         - title: "Overview"
-          link: javascript-overview
+          link: overview
     - group: "Utility Functions"
       pages:
         - title: "Overview"

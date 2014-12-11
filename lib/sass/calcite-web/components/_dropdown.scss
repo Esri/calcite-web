@@ -1,0 +1,49 @@
+// ┌───────────┐
+// │ Dropdowns │
+// └───────────┘
+//  ↳ http://esri.github.io/calcite-web/components/#dropdowns
+//  ↳ components → _dropdowns.md
+
+@mixin dropdown {
+  position: relative;
+}
+
+@mixin dropdown-btn {
+  content: $dtri;
+  padding-left: .75em;
+  @include font-size(-2);
+}
+
+@mixin dropdown-menu {
+  position: absolute;
+  min-width: 200px;
+  max-width: 300px;
+  margin-top: $baseline/4;
+  @include box-shadow($box-shadow);
+  @extend .side-nav;
+  z-index: 1000;
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+
+  &.downdown-align-right {
+    // align the dropdown with the left of the button
+  }
+  &.dropdown-align-left {
+    // align the dropdown with the right of the button
+  }
+}
+
+@if $include-dropdowns == true {
+  .dropdown { @include dropdown(); }
+  .dropdown-btn:after { @include dropdown-btn(); }
+  .dropdown-menu { @include dropdown-menu(); }
+  .dropdown-link {
+    @extend .side-nav-link;
+    clear: both;
+    white-space: nowrap;
+  }
+}
+

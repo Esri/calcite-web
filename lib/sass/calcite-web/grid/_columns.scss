@@ -1,0 +1,151 @@
+// ┌───────────┐
+// │ Container │
+// └───────────┘
+//  ↳ http://esri.github.io/calcite-web/grid/#container
+//  ↳ grid → _container.md
+
+@mixin container() {
+  @extend %clearfix;
+  width: $container-width;
+  max-width: $container-max;
+  min-width: $container-min;
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// ┌─────────┐
+// │ Columns │
+// └─────────┘
+//  ↳ http://esri.github.io/calcite-web/grid/#columns
+//  ↳ grid → _columns.md
+
+@mixin column-base() {
+  @include box-sizing(border-box);
+  width: $container-width;
+  padding-left: $column-gutter / 2;
+  padding-right: $column-gutter / 2;
+  margin: 0;
+  float: left;
+  [class*="column-"]:first-of-type {
+    margin-left: -$column-gutter / 2;
+  }
+  [class*="column-"]:last-of-type {
+    margin-right: -$column-gutter / 2;
+  }
+  &:last-of-type { @extend %clearfix; }
+}
+
+// ┌────────────────┐
+// │ First and Last │
+// └────────────────┘
+//  ↳ http://esri.github.io/calcite-web/grid/#first-and-last
+//  ↳ grid → _first-and-last.md
+
+@mixin first-column() {
+  margin-left: -($column-gutter/2);
+}
+
+@mixin last-column() {
+  margin-right: -($column-gutter / 2);
+}
+
+// ┌────────────────────┐
+// │ Responsive Columns │
+// └────────────────────┘
+//  ↳ http://esri.github.io/calcite-web/grid/#responsive-columns
+//  ↳ grid → _responsive-columns.md
+
+@mixin responsive-column() {
+
+  @if $fold-grid == true {
+
+    @media screen and (min-width: $medium) {
+      @for $n from 1 through $large-column-count {
+        .column-#{$n} {
+          width: ($n / $large-column-count) * $container-width - .01vw;
+          max-width: ($n / $large-column-count) * $container-max;
+          > .column-#{$n} {
+            margin-left: -($column-gutter/2);
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: $medium - 1) {
+      @for $n from 1 through $medium-column-count {
+        .column-#{$n} {
+          width: ($n / $medium-column-count) * $container-width - .01vw;
+        }
+      }
+      @for $n from 1 through $medium-column-count {
+        .#{$medium-class}-column-#{$n}  {
+          width: ($n / $medium-column-count) * $container-width - .01vw;
+        }
+      }
+      .#{$medium-class}-first-column {
+        margin-left: -($column-gutter / 2);
+      }
+      .#{$medium-class}-last-column {
+        margin-right: -($column-gutter / 2);
+      }
+    }
+
+    @media screen and (max-width: $small - 1) {
+      @for $n from 1 through $small-column-count {
+        .column-#{$n}{
+          width: ($n / $small-column-count) * $container-width - .01vw;
+        }
+      }
+      @for $n from 1 through $small-column-count {
+        .#{$medium-class}-column-#{$n}{
+          width: ($n / $small-column-count) * $container-width - .01vw;
+        }
+      }
+      @for $n from 1 through $small-column-count {
+       .#{$small-class}-column-#{$n} {
+          width: ($n / $small-column-count) * $container-width - .01vw;
+        }
+      }
+      .#{$small-class}-first-column {
+        margin-left: -($column-gutter / 2);
+      }
+      .#{$small-class}-last-column {
+        margin-right: -($column-gutter / 2);
+      }
+    }
+
+  } @else {
+
+    @for $n from 1 through $large-column-count {
+      .column-#{$n} {
+        width: ($n / $large-column-count) * $container-width - .01vw;
+        max-width: ($n / $large-column-count) * $container-max;
+        > .column-#{$n} {
+          margin-left: -($column-gutter/2);
+        }
+      }
+    }
+
+  }
+}
+
+@if $include-grid == true {
+  .container {
+    @include container();
+  }
+
+  [class*="column-"] {
+    @include column-base();
+  }
+
+  .first-column {
+    @include first-column();
+  }
+  .last-column {
+    @include last-column();
+  }
+
+  @include responsive-column();
+}

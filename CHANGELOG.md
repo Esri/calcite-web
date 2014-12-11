@@ -1,9 +1,12 @@
 ## v0.0.6
-Working icon tooling
+
+More documentation, new javascript components, working icon tooling prototype.
 
 ### Added
 - Button group support for all button styles
 - `.sign-in` class for sign in + sign out buttons in top nav
+- modals
+- dropdowns
 
 ### Modified
 - Disabled button style to look less clickable

@@ -1,22 +1,9 @@
-//## Calcite Color Pallete
-//
-//An extensive set of color variables are set up inside of config.
-//Color names are generally semantic and simple, making them very easy to remember.
-//Color variables are references like any other sass variable:
-//
-//```css
-//.element-to-style{
-//  color: $gray;
-//}
-//```
-//
-//If there are no modifiers, just write 'No Modifiers'.
-//
-// No Modifiers
-//
-//Styleguide 1.x
+// ┌───────────┐
+// │ Grayscale │
+// └───────────┘
+//  ↳ http://esri.github.io/calcite-web/color/#grayscale
+//  ↳ color → _grayscale.md
 
-// Neutrals
 $white:                 hsl(0, 0, 100);
 $off-white:             hsl(0, 0, 98);
 $lightest-gray:         hsl(0, 0, 95);
@@ -31,6 +18,12 @@ $black:                 hsl(0, 0, 19);
 
 $transparent-off-black: rgba(0, 0, 0, 0.45);
 $transparent-black:     rgba(0, 0, 0, 0.75);
+
+// ┌───────────┐
+// │ UI Colors │
+// └───────────┘
+//  ↳ http://esri.github.io/calcite-web/color/#ui-colors
+//  ↳ color → _ui-colors.md
 
 // Blues
 $lightest-blue:         #E1F0FB;
@@ -69,9 +62,11 @@ $light-brown:           #D3B490;
 $brown:                 #B88A55;
 $dark-brown:            #A67947;
 
-// ┌──────────────┐
-// │ COLOR MAP    │
-// └──────────────┘
+// ┌───────────┐
+// │ Color map │
+// └───────────┘
+//  ↳ esri.github.io/calcite-web/sass/#color-map
+//  ↳ color → _ui-colors.md
 
 $color-set: (
   'red'          $red          $dark-red,

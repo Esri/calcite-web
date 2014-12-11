@@ -1,0 +1,165 @@
+// ┌─────────────┐
+// │ Header Face │
+// └─────────────┘
+//  ↳ http://esri.github.io/calcite-web/type/#header-face
+//  ↳ type → _header-face.md
+
+@mixin header-light() {
+  @include tracking($header-tracking);
+  font-family: $header-family; font-weight: nth($header-light, 1); font-style: normal;
+  b, strong {font-weight: nth($header-light, 2);}
+}
+
+@mixin header-light-italic() {
+  @include tracking($header-tracking);
+  font-family: $header-family; font-weight: nth($header-light, 1); font-style: italic;
+  b, strong {font-weight: nth($header-light, 2);}
+}
+
+@mixin header-face() {
+  @include tracking($header-tracking);
+  font-family: $header-family; font-weight: nth($header-regular, 1); font-style: normal;
+  b, strong {font-weight: nth($header-regular, 2);}
+}
+
+@mixin header-italic() {
+  @include tracking($header-tracking);
+  font-family: $header-family; font-weight: nth($header-regular, 1); font-style: italic;
+  b, strong {font-weight: nth($header-regular, 2);}
+}
+
+@mixin header-demi() {
+  @include tracking($header-tracking);
+  font-family: $header-family; font-weight: nth($header-demi, 1); font-style: normal;
+  b, strong {font-weight: nth($header-demi, 2);}
+}
+
+@mixin header-demi-italic() {
+  @include tracking($header-tracking);
+  font-family: $header-family; font-weight: nth($header-demi, 1); font-style: italic;
+  b, strong {font-weight: nth($header-demi, 2);}
+}
+
+@mixin header-bold() {
+  @include tracking($header-tracking);
+  font-family: $header-family; font-weight: nth($header-bold, 1); font-style: normal;
+  b, strong {font-weight: nth($header-bold, 2);}
+}
+
+@mixin header-bold-italic() {
+  @include tracking($header-tracking);
+  font-family: $header-family; font-weight: nth($header-bold, 1); font-style: italic;
+  b, strong {font-weight: nth($header-bold, 2);}
+}
+
+// ┌───────────┐
+// │ Body Face │
+// └───────────┘
+//  ↳ http://esri.github.io/calcite-web/type/#body-face
+//  ↳ type → _body-face.md
+
+@mixin body-face() {
+  @include tracking($body-tracking);
+  font-family: $body-family; font-weight: nth($body-regular, 1); font-style: normal;
+  b, strong {font-weight: nth($body-regular, 2);}
+}
+
+@mixin body-italic() {
+  @include tracking($body-tracking);
+  font-family: $body-family; font-weight: nth($body-regular, 1); font-style: italic;
+  b, strong {font-weight: nth($body-regular, 2);}
+}
+
+@mixin body-bold() {
+  @include tracking($body-tracking);
+  font-family: $body-family; font-weight: nth($body-bold, 1); font-style: normal;
+  b, strong {font-weight: nth($body-bold, 2);}
+}
+
+@mixin body-bold-italic() {
+  @include tracking($body-tracking);
+  font-family: $body-family; font-weight: nth($body-bold, 1); font-style: italic;
+  b, strong {font-weight: nth($body-bold, 2);}
+}
+
+// ┌────────────────┐
+// │ Secondary Face │
+// └────────────────┘
+//  ↳ http://esri.github.io/calcite-web/type/#secondary-face
+//  ↳ type → _secondary-face.md
+
+@mixin secondary-face() {
+  @include tracking($secondary-tracking);
+  font-family: $secondary-family; font-weight: nth($secondary-regular, 1); font-style: normal;
+  b, strong {font-weight: nth($secondary-regular, 2);}
+}
+
+@mixin secondary-italic() {
+  @include tracking($secondary-tracking);
+  font-family: $secondary-family; font-weight: nth($secondary-regular, 1); font-style: italic;
+  b, strong {font-weight: nth($secondary-regular, 2);}
+}
+
+@mixin secondary-bold() {
+  @include tracking($secondary-tracking);
+  font-family: $secondary-family; font-weight: nth($secondary-bold, 1); font-style: normal;
+  b, strong {font-weight: nth($secondary-bold, 2);}
+}
+
+@mixin secondary-bold-italic() {
+  @include tracking($secondary-tracking);
+  font-family: $secondary-family; font-weight: nth($secondary-bold, 1); font-style: italic;
+  b, strong {font-weight: nth($secondary-bold, 2);}
+}
+
+
+// ┌───────────┐
+// │ Code Face │
+// └───────────┘
+//  ↳ http://esri.github.io/calcite-web/type/#code-face
+//  ↳ type → _code-face.md
+
+@mixin code-face() {
+  @include tracking($code-tracking);
+  font-family: $code-family; font-weight: nth($code-regular, 1); font-style: normal;
+  b, strong {font-weight: nth($code-regular, 2);}
+}
+
+@mixin code-italic() {
+  @include tracking($code-tracking);
+  font-family: $code-family; font-weight: nth($code-regular, 1); font-style: italic;
+  b, strong {font-weight: nth($code-regular, 2);}
+}
+
+@if $include-type == true {
+
+  @if $include-header-family == true {
+    .header-light {@include header-light();}
+    .header-light-italic {@include header-light-italic();}
+    .header-face {@include header-face();}
+    .header-italic {@include header-italic();}
+    .header-demi {@include header-demi();}
+    .header-demi-italic {@include header-demi-italic();}
+    .header-bold {@include header-bold();}
+    .header-bold-italic {@include header-bold-italic();}
+  }
+
+  @if $include-body-family == true {
+    .body-face {@include body-face();}
+    .body-italic {@include body-italic();}
+    .body-bold {@include body-bold();}
+    .body-bold-italic {@include body-bold-italic();}
+  }
+
+  @if $include-secondary-family == true {
+    .secondary-face {@include secondary-face();}
+    .secondary-italic {@include secondary-italic();}
+    .secondary-bold {@include secondary-bold();}
+    .secondary-bold-italic {@include secondary-bold-italic();}
+  }
+
+  @if $include-header-family == true {
+    .code-face {@include code-face();}
+    .code-italic {@include code-italic();}
+  }
+}

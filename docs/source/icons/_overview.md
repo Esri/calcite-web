@@ -1,4 +1,4 @@
-## Overview
+<h1 class="leader-0" id="overview">Icons</h1>
 
 Icons in Calcite Web come in two different flavors: one color and multi-color. The one color (or monochromatic) icon set is delivered as an icon font. The multi-color icons are delivered as a set of SVG icons with corresponsponding icon classes.
 

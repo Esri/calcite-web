@@ -1,0 +1,16 @@
+// ┌───────────────┐
+// │ Show and Hide │
+// └───────────────┘
+//  ↳ http://esri.github.io/calcite-web/sass/#show-and-hide
+//  ↳ components → _utility-mixins.md
+
+// Show
+@mixin show() {
+  visibility: visible;
+}
+
+// Hide
+@mixin hide() {
+  display: none !important;
+  visibility: hidden;
+}

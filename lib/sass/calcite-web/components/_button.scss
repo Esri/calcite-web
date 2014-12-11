@@ -1,13 +1,14 @@
-//## Buttons
-//
-//Buttons are created by adding a class of ```.btn``` to either a ```<button>``` or ```<a>``` element.
-//
-//Styleguide x.x
+// ┌─────────┐
+// │ Buttons │
+// └─────────┘
+//  ↳ http://esri.github.io/calcite-web/components/#buttons
+//  ↳ components → _buttons.md
 
 @mixin btn() {
   position: relative;
   display: inline-block;
   padding: $baseline/5 .9rem;
+  width: auto;
   color: $white;
   border: 1px solid $dark-blue;
   background-color: $blue;
@@ -20,7 +21,7 @@
     font-family: $header-family;
     font-weight: 400;
   }
-  &:hover {
+  &:hover, &:focus {
     background-color: $dark-blue;
     color: $white;
   }
@@ -160,6 +161,6 @@
     }
   }
 
-  .btn:disabled, .btn-disabled{@include btn-disabled();}
+  .btn:disabled, .btn-disabled, button[disabled] {@include btn-disabled();}
 }
 

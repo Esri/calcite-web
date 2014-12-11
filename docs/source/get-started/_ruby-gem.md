@@ -3,7 +3,7 @@
 To install Calcite Web as a ruby gem, add a reference to the gem to your Gemfile:
 
 ```ruby
-gem "calcite-web", :git => "https://github.com/ArcGIS/calcite-web.git", :tag => "v0.0.0"
+gem "calcite-web", :git => "https://github.com/ArcGIS/calcite-web.git", :tag => "v0.0.6"
 ```
 
 Be sure to use the most up to date tag.
