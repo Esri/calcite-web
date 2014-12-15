@@ -1,2 +1,3 @@
 ### Text Color
-Sets the font color of the element to any of the [Calcite colors]({{relativePath}}color) available.
+
+Sets the font color of the element to any of the [Calcite colors](../color) available.
