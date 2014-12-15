@@ -1,6 +1,6 @@
 # Utility Mixins
 
-Utility mixins are used to construct complicated behaviors for [components]({{RelativePath}}components) and [patterns]({{RelativePath}}patterns), provide baseline functionality for doc elements, and take care of browser prefixing.
+Utility mixins are used to construct complicated behaviors for [components](../components) and [patterns](../patterns), provide baseline functionality for doc elements, and take care of browser prefixing.
 
 Most utility mixins are borrowed from [Bourbon](http://bourbon.io/). Where mixins share a name, they are the same code base.
 
@@ -96,7 +96,7 @@ In this way you can prefix any property. Adding the `spec` as the last argument 
 
 #### Respond To
 
-The `respond-to` mixin adds media queries for use in responsive design. The mixin accepts three arguments: maximum size, minimum size, and type (screen, print, etc). You can pass just the first out of convenience. This mixin works well with the [breakpoint variables]({{relativePath}}sass#breakpoints):
+The `respond-to` mixin adds media queries for use in responsive design. The mixin accepts three arguments: maximum size, minimum size, and type (screen, print, etc). You can pass just the first out of convenience. This mixin works well with the [breakpoint variables](../sass#breakpoints):
 
 ```scss
 .my-div {
