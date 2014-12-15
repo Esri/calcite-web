@@ -20,7 +20,6 @@
     <!-- stylesheets -->
     {% block head %}
       <link rel="stylesheet" href="{{relativePath}}assets/css/all.css">
-      <!-- <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/9431e9a5-7a6d-4b5f-82be-4d935972de5a.css"/> -->
     {% endblock %}
 
     <!--[if lt IE 9]>
@@ -31,6 +30,27 @@
   </head>
 
   <body>
+    <div class="drawer">
+      <nav class="drawer-nav drawer-left"> <!-- drawer-right will put the drawer on the right side. -->
+
+        <aside class="side-nav">
+          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Esri Patterns</h2>
+          <div class="panel padding-trailer-half padding-leader-half">
+            <label class="trailer-0">
+              <!-- <span class="text-small">Search:</span> -->
+              <input type='search' placeholder='Search'>
+            </label>
+          </div>
+          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Branding</a>
+          <a href="{{relativePath}}" class="side-nav-link padding-trailer-half padding-leader-half">Web</a></a>
+          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Mobile</a>
+          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Presentations</a>
+        </aside>
+
+      </nav>
+    </div>
+
+
     <div class="wrapper">
       <!-- Logged Out Pattern-->
       <header class="top-nav">

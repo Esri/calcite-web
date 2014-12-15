@@ -48,7 +48,7 @@ $include-top-nav:                     true    !default;
 $include-tabs:                        true    !default;
 $include-modal:                       true    !default;
 $include-accordion:                   true    !default;
-$include-accordion:                   true    !default;
+$include-drawers:                     true    !default;
 
 // ┌──────────────┐
 // │ CALCITE WEB  │
@@ -99,6 +99,7 @@ $include-accordion:                   true    !default;
 @import "calcite-web/patterns/tabs";
 @import "calcite-web/patterns/modal";
 @import "calcite-web/patterns/accordion";
+@import "calcite-web/patterns/drawers";
 
 // Modifiers
 // modifier classes override standard styles
