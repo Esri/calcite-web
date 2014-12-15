@@ -1,4 +1,4 @@
-<h1 class="leader-0">Calcite Type System</h1>
+<h1 class="leader-0" id="overview">Type</h1>
 
 The Calcite Type System uses a combination of mixins and helper classes to achieve a clear visual style, focusing primarily on simplifying typesetting processes. Using the mixins and classes properly will ensure that all properties are consistent, beautiful, and robust.
 

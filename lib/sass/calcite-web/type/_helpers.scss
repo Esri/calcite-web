@@ -1,0 +1,35 @@
+// ┌───────────────────────┐
+// │ Static Helper Classes │
+// └───────────────────────┘
+
+@if $include-type == true and $include-type-defaults == true {
+
+  @each $color in $color-set {
+    $name: nth($color, 1);
+    $value: nth($color, 2);
+    .text-#{$name} {
+      @include text-color($value);
+    }
+  }
+
+  @each $color in $color-set {
+    $name: nth($color, 1);
+    $value: nth($color, 2);
+    $light-value: nth($color, 3);
+    .link-#{$name} a, a.link-#{$name} {
+      @include link-color($value, $light-value);
+    }
+  }
+
+  .text-rule              {@include text-rule();}
+  .text-inline            {@include text-inline();}
+  .text-center            {@include text-center();}
+  .text-left              {@include text-left();}
+  .text-right             {@include text-right();}
+  .text-large             {@include text-large();}
+  .text-small             {@include text-small();}
+  .text-light             {@include text-light();}
+  .text-ellipsis          {@include text-ellipsis();}
+  .list-numbered          {@include list-numbered();}
+  .list-bulleted          {@include list-bulleted();}
+}

@@ -1,0 +1,9 @@
+// ┌────────────┐
+// │ Appearance │
+// └────────────┘
+//  ↳ http://esri.github.io/calcite-web/sass/#appearance
+//  ↳ components → _utility-mixins.md
+
+@mixin appearance ($value) {
+  @include prefixer(appearance, $value, webkit moz ms o spec);
+}

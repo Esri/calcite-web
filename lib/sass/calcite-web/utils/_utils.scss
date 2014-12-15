@@ -1,10 +1,16 @@
-@import "util-appearance";
-@import "util-box-sizing";
-@import "util-calc";
-@import "util-clearfix";
-@import "util-overflow";
-@import "util-prefixer";
-@import "util-responsive";
-@import "util-transform";
-@import "util-transition";
-@import "util-visibility";
+// ┌────────────────┐
+// │ Utility Mixins │
+// └────────────────┘
+//  ↳ http://esri.github.io/calcite-web/sass/#utility-mixins
+//  ↳ components → _utility-mixins.md
+@import "appearance";
+@import "box-sizing";
+@import "box-shadow";
+@import "calc";
+@import "clearfix";
+@import "overflow";
+@import "prefixer";
+@import "responsive";
+@import "transform";
+@import "transition";
+@import "visibility";

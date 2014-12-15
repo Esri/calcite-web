@@ -1,104 +1,65 @@
-html {
-  overflow-y: scroll;
-  font-size: 100%;
-  height: 100%;
-  -webkit-text-size-adjust: 100%;
-     -moz-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+// ┌─────────────┐
+// │ Basic Reset │
+// └─────────────┘
+
+@mixin reset() {
+
+  // Always show vertical scroll bars, standardize type size
+  html {
+    overflow-y: scroll;
+    height: 100%;
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+       -moz-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+  }
+
+  // Make body full height
+  body {
+    min-height: 100%;
+    margin: 0;
+  }
+
+  // Reset HTML5 elements
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  nav,
+  section,
+  summary {
+    display: block;
+  }
+
+  audio,
+  canvas,
+  video {
+    display: inline-block;
+  }
+
+  audio:not([controls]) {
+    display: none;
+    height: 0;
+  }
+
+  [hidden] {
+    display: none;
+  }
+
+  svg:not(:root) {
+    overflow: hidden;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
-body {
-  height: 100%;
-  margin: 0;
-}
-
-// Reset HTML 5 Elements ---------------------------------------------------------------
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-nav,
-section,
-summary {
-  display: block;
-}
-
-audio,
-canvas,
-video {
-  display: inline-block;
-}
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-[hidden] {
-  display: none;
-}
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-// Form Reset --
-
-button,
-input,
-select,
-textarea {
-  margin: 0;
-  vertical-align: baseline;
-}
-
-button,
-input {
-  line-height: normal;
-}
-
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  width: auto;
-}
-
-
-input[type="search"] {
-  -webkit-appearance: textfield;
-}
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-button[disabled],
-input[disabled] {
-  cursor: default;
-}
-
-form, fieldset, legend {
-  margin: 0;
-  padding: 0;
-}
-
-// Constrain Large Images  ---------------------------------------------------------------
-
-img {
-  max-width: 100%;
-  height: auto;
+@if $include-reset == true {
+  @include reset();
 }
