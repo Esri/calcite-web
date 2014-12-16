@@ -44,11 +44,11 @@
 //  ↳ grid → _responsive-block-groups.md
 
 @include respond-to($medium){
-  @include _block-grid("medium-");
+  @include _block-grid($medium-class + '-');
 }
 
 @include respond-to($small){
-  @include _block-grid("small-");
+  @include _block-grid($small-class + '-');
 }
 
 @if $block-grid == true {
