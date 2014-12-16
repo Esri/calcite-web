@@ -114,22 +114,31 @@ layout: false
     </div>
   </header>
   <!--
-  ┌───────────┐
-  │ Searchbar │
-  └───────────┘
-   ↳ http://esri.github.io/calcite-web/patterns/#searchbar
-   ↳ patterns → _searchbar.md
+  ┌───────────────┐
+  │ Expanding Nav │
+  └───────────────┘
+   ↳ http://esri.github.io/calcite-web/patterns/#expanding-nav
+   ↳ patterns → _expanding-nav.md
   -->
-  <div class="search-bar is-active js-search-toggle">
+  <div class="expanding-nav is-active js-expanding-toggle padding-leader-1">
     <div class="container padding-trailer-half">
+
+    <!--
+    ┌───────────┐
+    │ Searchbar │
+    └───────────┘
+     ↳ http://esri.github.io/calcite-web/patterns/#searchbar
+     ↳ patterns → _searchbar.md
+    -->
     <form method="GET" action="/search/">
-      <label>Search Context:
+      <label>Search Calcite for Unicorns
         <div class="search-bar">
           <input type='search' placeholder='Search'>
           <button type="submit" class="search-submit icon-search"></button>
         </div>
       </label>
     </form>
+
     </div>
   </div>
   <!--

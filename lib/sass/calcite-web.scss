@@ -52,6 +52,7 @@ $include-tabs:                        true    !default;
 $include-modal:                       true    !default;
 $include-accordion:                   true    !default;
 $include-drawers:                     true    !default;
+$include-expanding-nav:               true    !default;
 
 // ┌──────────────┐
 // │ CALCITE WEB  │
@@ -97,6 +98,7 @@ $include-drawers:                     true    !default;
 // complete interfaces: header, footer, banner...
 @import "calcite-web/patterns/top-nav";
 @import "calcite-web/patterns/super-nav";
+@import "calcite-web/patterns/expanding-nav";
 @import "calcite-web/patterns/sub-nav";
 @import "calcite-web/patterns/third-nav";
 @import "calcite-web/patterns/toolbar";
