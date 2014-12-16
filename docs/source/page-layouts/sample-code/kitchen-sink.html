@@ -30,35 +30,105 @@ layout: false
   </head>
 
 <body>
+  <!--
+  ┌──────────┐
+  │ Supernav │
+  └──────────┘
+   ↳ http://esri.github.io/calcite-web/patterns/#super-nav
+   ↳ patterns → _super-nav.md
+   -->
 
-    <div class="drawer drawer-left js-drawer-toggle" data-drawer="top-nav">
-      <nav class="drawer-nav">
-        <aside class="side-nav">
-          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Esri Patterns</h2>
-          <div class="panel padding-trailer-half padding-leader-half">
-            <label class="trailer-0">
-              <input type='search' placeholder='Search'>
-            </label>
-          </div>
-          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Branding</a>
-          <a href="{{relativePath}}" class="side-nav-link padding-trailer-half padding-leader-half">Web</a></a>
-          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Mobile</a>
-          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Presentations</a>
-        </aside>
+  <nav class="super-nav is-active">
+    <div class="container">
+      <div class="block-group block-group-4-up phone-block-group-1-up text-large link-white text-center">
+        <div class="block">
+          <h5><a href="#">Arc<span class="strong">GIS<span> for Trolls</a></h5>
+        </div>
+        <div class="block">
+          <h5><a href="#">Arc<span class="strong">GIS<span> for Dwarfs</a></h5>
+        </div>
+        <div class="block">
+          <h5><a href="#">Arc<span class="strong">GIS<span> for Orcs</a></h5>
+        </div>
+        <div class="block">
+          <h5><a href="#">Arc<span class="strong">GIS<span> for Sloths</a></h5>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!--
+  ┌─────────┐
+  │ Drawers │
+  └─────────┘
+   ↳ http://esri.github.io/calcite-web/patterns/#drawers
+   ↳ patterns → _drawers.md
+  -->
+  <div class="drawer drawer-left js-drawer-toggle" data-drawer="top-nav">
+    <nav class="drawer-nav">
+      <aside class="side-nav">
+        <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Esri Patterns</h2>
+        <div class="panel padding-trailer-half padding-leader-half">
+          <label class="trailer-0">
+            <input type='search' placeholder='Search'>
+          </label>
+        </div>
+        <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Branding</a>
+        <a href="{{relativePath}}" class="side-nav-link padding-trailer-half padding-leader-half">Web</a></a>
+        <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Mobile</a>
+        <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Presentations</a>
+      </aside>
+    </nav>
+  </div>
+
+  <div class="drawer drawer-right js-drawer-toggle" data-drawer="user-nav">
+    <nav class="drawer-nav">
+      <aside class="side-nav">
+        <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Esri Patterns</h2>
+        <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Action</a>
+        <a href="{{relativePath}}" class="side-nav-link padding-trailer-half padding-leader-half">Action</a></a>
+        <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Action</a>
+        <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Action</a>
+      </aside>
+    </nav>
+  </div>
+
+  <div class="wrapper">
+    <!--
+    ┌────────┐
+    │ Topnav │
+    └────────┘
+     ↳ http://esri.github.io/calcite-web/patterns/#top-nav
+     ↳ patterns → _top-nav.md
+    -->
+    <header class="top-nav">
+    <div class="container">
+      <a href="#" class="top-nav-title">Calcite for Unicorns</a>
+      <nav class="top-nav-list">
+        <a class="top-nav-link" href="#">Plains</a>
+        <a class="top-nav-link is-active" href="#">Fields</a>
+        <a class="top-nav-link" href="#">Forests</a>
+        <a class="top-nav-link" href="#">Mountains</a>
       </nav>
     </div>
-
-    <div class="drawer drawer-right js-drawer-toggle" data-drawer="user-nav">
-      <nav class="drawer-nav">
-        <aside class="side-nav">
-          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Esri Patterns</h2>
-          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Action</a>
-          <a href="{{relativePath}}" class="side-nav-link padding-trailer-half padding-leader-half">Action</a></a>
-          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Action</a>
-          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Action</a>
-        </aside>
-      </nav>
+  </header>
+  <div class="container">
+    <div class="block-group block-group-4-up phone-block-group-1-up text-large">
+      <div class="block">
+        <h5><a href="#">Arc<span class="strong">GIS<span> for Trolls</a></h5>
+      </div>
+      <div class="block">
+        <h5><a href="#">Arc<span class="strong">GIS<span> for Dwarfs</a></h5>
+      </div>
+      <div class="block">
+        <h5><a href="#">Arc<span class="strong">GIS<span> for Orcs</a></h5>
+      </div>
+      <div class="block">
+        <h5><a href="#">Arc<span class="strong">GIS<span> for Sloths</a></h5>
+      </div>
     </div>
+  </div>
 
 </body>
 
