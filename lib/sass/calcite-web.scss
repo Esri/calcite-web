@@ -44,6 +44,8 @@ $include-sub-nav:                     true    !default;
 $include-third-nav:                   true    !default;
 $include-top-nav:                     true    !default;
 $include-super-nav:                   true    !default;
+$include-toolbar:                     true    !default;
+$include-search-bar:                  true    !default;
 
 // Javascript
 $include-tabs:                        true    !default;
@@ -96,6 +98,8 @@ $include-drawers:                     true    !default;
 @import "calcite-web/patterns/super-nav";
 @import "calcite-web/patterns/sub-nav";
 @import "calcite-web/patterns/third-nav";
+@import "calcite-web/patterns/toolbar";
+@import "calcite-web/patterns/search-bar";
 @import "calcite-web/patterns/side-nav";
 @import "calcite-web/patterns/footer";
 @import "calcite-web/patterns/tabs";

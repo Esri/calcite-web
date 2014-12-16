@@ -1,0 +1,17 @@
+// ┌───────────┐
+// │ Searchbar │
+// └───────────┘
+//  ↳ http://esri.github.io/calcite-web/patterns/#searchbar
+//  ↳ patterns → _searchbar.md
+@mixin search-bar() {
+  @include box-sizing(border-box);
+  padding: 0;
+  border: 1px solid $light-gray;
+  @extend .header-face;
+  background-color: $lighter-gray;
+}
+
+
+@if $include-search-bar == true {
+  .search-bar {@include search-bar()}
+}

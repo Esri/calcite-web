@@ -1,0 +1,17 @@
+// ┌────────┐
+// │ Inline │
+// └────────┘
+//  ↳ http://esri.github.io/calcite-web/sass/#inline
+//  ↳ components → _utility-mixins.md
+
+@mixin inline() {
+  display: inline-block;
+}
+
+%inline {
+  @include inline();
+}
+
+.inline {
+  @extend %inline;
+}
