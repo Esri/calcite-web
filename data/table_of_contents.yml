@@ -370,9 +370,6 @@ patterns:
         - title: "Top Nav"
           link: top-nav
           modifiers: true
-        - title: "Super Nav"
-          link: super-nav
-          modifiers: true
         - title: "Sub Nav"
           link: sub-nav
           modifiers: true
@@ -399,10 +396,16 @@ patterns:
           link: accordions
         - title: "Drawers"
           link: drawers
+    - group: "Top Nav Extentions"
+      pages:
+        - title: "Super Nav"
+          link: super-nav
+          modifiers:
+            - true
         - title: "Expanding Nav"
           link: expanding-nav
           modifiers:
-            - 'default'
+            - true
 sass:
   title: "Sass"
   base: sass

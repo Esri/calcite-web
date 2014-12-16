@@ -1,2 +1,2 @@
 ## Super Nav
-Super navigation is super dooper.
+Also known as a the Site Dropdown, the Super Nav is designed for use beneath the [Top Nav](top-nav) pattern. The super nav is used to transfer quickly between Arcgis.com subdomains, hence beind super to the top level heirarchy of the current site.
