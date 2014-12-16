@@ -43,6 +43,7 @@ $include-side-nav:                    true    !default;
 $include-sub-nav:                     true    !default;
 $include-third-nav:                   true    !default;
 $include-top-nav:                     true    !default;
+$include-super-nav:                   true    !default;
 
 // Javascript
 $include-tabs:                        true    !default;
@@ -92,6 +93,7 @@ $include-drawers:                     true    !default;
 // Patterns
 // complete interfaces: header, footer, banner...
 @import "calcite-web/patterns/top-nav";
+@import "calcite-web/patterns/super-nav";
 @import "calcite-web/patterns/sub-nav";
 @import "calcite-web/patterns/third-nav";
 @import "calcite-web/patterns/side-nav";

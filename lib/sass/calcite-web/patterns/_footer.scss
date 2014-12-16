@@ -1,7 +1,8 @@
 $footer-height: 250px;
 
 @mixin wrapper() {
-  min-height: calc(100% - $footer-height);
+  // min-height: calc(100% - $footer-height);
+  @include transform(translate3d(0,0,0));
 }
 
 @mixin footer (){
