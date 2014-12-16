@@ -122,42 +122,14 @@ layout: false
   -->
   <div class="search-bar is-active js-search-toggle">
     <div class="container padding-trailer-half">
-        <label class="padding-leader-1 trailer-1">
-          Search Calcite for Unicorns
-          <input type='search' placeholder='Search' class="padding-leader-half p[adding-trailer-half">
-        </label>
-
-<!--         <div class="dropdown inline">
-          <a href="#" class="pre-0 btn btn-transparent link-darker-gray dropdown-btn js-dropdown-toggle">Dropdown Select</a>
-          <nav class="dropdown-menu modifier-class js-dropdown">
-            <a href="#" class="dropdown-link">Option 1 that has a really long text.</a>
-            <a href="#" class="dropdown-link">Option 2</a>
-            <a href="#" class="dropdown-link">Option 3</a>
-            <a href="#" class="dropdown-link">Option 4</a>
-            <a href="#" class="dropdown-link">Option 5</a>
-          </nav>
-        </div>
-        <div class="dropdown inline">
-          <a href="#" class="btn btn-transparent link-darker-gray dropdown-btn js-dropdown-toggle">Dropdown Select</a>
-          <nav class="dropdown-menu modifier-class js-dropdown">
-            <a href="#" class="dropdown-link">Option 1 that has a really long text.</a>
-            <a href="#" class="dropdown-link">Option 2</a>
-            <a href="#" class="dropdown-link">Option 3</a>
-            <a href="#" class="dropdown-link">Option 4</a>
-            <a href="#" class="dropdown-link">Option 5</a>
-          </nav>
-        </div>
-        <div class="dropdown inline">
-          <a href="#" class="btn btn-transparent link-darker-gray dropdown-btn js-dropdown-toggle">Dropdown Select</a>
-          <nav class="dropdown-menu modifier-class js-dropdown">
-            <a href="#" class="dropdown-link">Option 1 that has a really long text.</a>
-            <a href="#" class="dropdown-link">Option 2</a>
-            <a href="#" class="dropdown-link">Option 3</a>
-            <a href="#" class="dropdown-link">Option 4</a>
-            <a href="#" class="dropdown-link">Option 5</a>
-          </nav>
-        </div> -->
-
+    <form method="GET" action="/search/">
+      <label>Search Context:
+        <span class="search-bar">
+          <input type='search' placeholder='Search'>
+          <button type="submit" class="search-submit icon-search"></button>
+        </span>
+      </label>
+    </form>
     </div>
   </div>
   <!--
