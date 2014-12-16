@@ -31,34 +31,6 @@ layout: false
 
 <body>
   <!--
-  ┌──────────┐
-  │ Supernav │
-  └──────────┘
-   ↳ http://esri.github.io/calcite-web/patterns/#super-nav
-   ↳ patterns → _super-nav.md
-   -->
-
-  <nav class="super-nav is-active">
-    <div class="container">
-      <div class="block-group block-group-4-up phone-block-group-1-up text-large link-white text-center">
-        <div class="block">
-          <h5><a href="#">Arc<span class="strong">GIS<span> for Trolls</a></h5>
-        </div>
-        <div class="block">
-          <h5><a href="#">Arc<span class="strong">GIS<span> for Dwarfs</a></h5>
-        </div>
-        <div class="block">
-          <h5><a href="#">Arc<span class="strong">GIS<span> for Orcs</a></h5>
-        </div>
-        <div class="block">
-          <h5><a href="#">Arc<span class="strong">GIS<span> for Sloths</a></h5>
-        </div>
-
-      </div>
-    </div>
-  </nav>
-
-  <!--
   ┌─────────┐
   │ Drawers │
   └─────────┘
@@ -94,6 +66,34 @@ layout: false
     </nav>
   </div>
 
+  <!--
+  ┌──────────┐
+  │ Supernav │
+  └──────────┘
+   ↳ http://esri.github.io/calcite-web/patterns/#super-nav
+   ↳ patterns → _super-nav.md
+   -->
+  <nav class="super-nav js-super-nav-toggle">
+    <div class="container">
+      <div class="block-group block-group-4-up phone-block-group-1-up text-large link-white text-center">
+        <div class="block">
+          <h5><a href="#">Arc<span class="strong">GIS<span> for Trolls</a></h5>
+        </div>
+        <div class="block">
+          <h5><a href="#">Arc<span class="strong">GIS<span> for Dwarfs</a></h5>
+        </div>
+        <div class="block">
+          <h5><a href="#">Arc<span class="strong">GIS<span> for Orcs</a></h5>
+        </div>
+        <div class="block">
+          <h5><a href="#">Arc<span class="strong">GIS<span> for Sloths</a></h5>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+
   <div class="wrapper">
     <!--
     ┌────────┐
@@ -113,23 +113,60 @@ layout: false
       </nav>
     </div>
   </header>
-  <div class="container">
-    <div class="block-group block-group-4-up phone-block-group-1-up text-large">
-      <div class="block">
-        <h5><a href="#">Arc<span class="strong">GIS<span> for Trolls</a></h5>
-      </div>
-      <div class="block">
-        <h5><a href="#">Arc<span class="strong">GIS<span> for Dwarfs</a></h5>
-      </div>
-      <div class="block">
-        <h5><a href="#">Arc<span class="strong">GIS<span> for Orcs</a></h5>
-      </div>
-      <div class="block">
-        <h5><a href="#">Arc<span class="strong">GIS<span> for Sloths</a></h5>
-      </div>
+  <!--
+  ┌────────┐
+  │ Subnav │
+  └────────┘
+   ↳ http://esri.github.io/calcite-web/patterns/#sub-nav
+   ↳ patterns → _sub-nav.md
+  -->
+  <header class="sub-nav">
+    <div class="container">
+      <h1 class="sub-nav-title"><a href="#" class="link-white">Fields</a></h1>
+      <nav class="sub-nav-list">
+        <a class="sub-nav-link" href="#">Glens</a>
+        <a class="sub-nav-link" href="#">Dales</a>
+        <a class="sub-nav-link is-active" href="#">Meadows</a>
+      </nav>
     </div>
-  </div>
+  </header>
+  <!--
+  ┌──────────┐
+  │ Thirdnav │
+  └──────────┘
+   ↳ http://esri.github.io/calcite-web/patterns/#third-nav
+   ↳ patterns → _third-nav.md
+  -->
+  <header class="third-nav">
+    <div class="container">
+      <nav>
+        <a class="third-nav-link" href="#">Alpine</a>
+        <a class="third-nav-link" href="#">Coastal</a>
+        <a class="third-nav-link" href="#">Wetland</a>
+        <a class="third-nav-link" href="#">Grassland</a>
+        <a class="third-nav-link" href="#">Praire</a>
+      </nav>
+    </div>
+  </header>
 
+  <div class="container leader-1">
+    <!--
+    ┌─────────┐
+    │ Sidenav │
+    └─────────┘
+     ↳ http://esri.github.io/calcite-web/patterns/#side-nav
+     ↳ patterns → _side-nav.md
+    -->
+    <aside class="side-nav column-6">
+      <h4 class="side-nav-title">Sidenav Group</h4>
+      <nav>
+        <a href="#" class="side-nav-link">Agricultural</a>
+        <a href="#" class="side-nav-link">Transition</a>
+        <a href="#" class="side-nav-link">Perpetual</a>
+        <a href="#" class="side-nav-link">Cultural</a>
+      </nav>
+    </aside>
+  </div>
 </body>
 
 </html>
