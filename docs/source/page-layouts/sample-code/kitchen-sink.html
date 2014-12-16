@@ -73,7 +73,7 @@ layout: false
    ↳ http://esri.github.io/calcite-web/patterns/#super-nav
    ↳ patterns → _super-nav.md
    -->
-  <nav class="super-nav js-super-nav-toggle is-active">
+  <nav class="super-nav js-super-nav-toggle">
     <div class="container">
       <div class="block-group block-group-4-up phone-block-group-1-up text-large link-white text-center">
         <div class="block">
@@ -120,37 +120,44 @@ layout: false
    ↳ http://esri.github.io/calcite-web/patterns/#searchbar
    ↳ patterns → _searchbar.md
   -->
-  <div class="search-bar">
-    <div class="container">
-      <div class="column-14">
-        <label class="padding-leader-1 trailer-half">
-          <input type='search' placeholder='Search'>
+  <div class="search-bar is-active js-search-toggle">
+    <div class="container padding-trailer-half">
+        <label class="padding-leader-1 trailer-1">
+          Search Calcite for Unicorns
+          <input type='search' placeholder='Search' class="padding-leader-half p[adding-trailer-half">
         </label>
-        <label class="inline">
-          <select class="modifier-class">
-            <option value="">All Thing 1</option>
-            <option value="">Menu 2</option>
-            <option value="">Menu 3</option>
-            <option value="">Menu 4</option>
-          </select>
-        </label>
-        <label class="inline">
-          <select class="modifier-class">
-            <option value="">All Thing 2</option>
-            <option value="">Menu 2</option>
-            <option value="">Menu 3</option>
-            <option value="">Menu 4</option>
-          </select>
-        </label>
-        <label class="inline">
-          <select class="modifier-class">
-            <option value="">All Thing 3</option>
-            <option value="">Menu 2</option>
-            <option value="">Menu 3</option>
-            <option value="">Menu 4</option>
-          </select>
-        </label>
-      </div>
+
+<!--         <div class="dropdown inline">
+          <a href="#" class="pre-0 btn btn-transparent link-darker-gray dropdown-btn js-dropdown-toggle">Dropdown Select</a>
+          <nav class="dropdown-menu modifier-class js-dropdown">
+            <a href="#" class="dropdown-link">Option 1 that has a really long text.</a>
+            <a href="#" class="dropdown-link">Option 2</a>
+            <a href="#" class="dropdown-link">Option 3</a>
+            <a href="#" class="dropdown-link">Option 4</a>
+            <a href="#" class="dropdown-link">Option 5</a>
+          </nav>
+        </div>
+        <div class="dropdown inline">
+          <a href="#" class="btn btn-transparent link-darker-gray dropdown-btn js-dropdown-toggle">Dropdown Select</a>
+          <nav class="dropdown-menu modifier-class js-dropdown">
+            <a href="#" class="dropdown-link">Option 1 that has a really long text.</a>
+            <a href="#" class="dropdown-link">Option 2</a>
+            <a href="#" class="dropdown-link">Option 3</a>
+            <a href="#" class="dropdown-link">Option 4</a>
+            <a href="#" class="dropdown-link">Option 5</a>
+          </nav>
+        </div>
+        <div class="dropdown inline">
+          <a href="#" class="btn btn-transparent link-darker-gray dropdown-btn js-dropdown-toggle">Dropdown Select</a>
+          <nav class="dropdown-menu modifier-class js-dropdown">
+            <a href="#" class="dropdown-link">Option 1 that has a really long text.</a>
+            <a href="#" class="dropdown-link">Option 2</a>
+            <a href="#" class="dropdown-link">Option 3</a>
+            <a href="#" class="dropdown-link">Option 4</a>
+            <a href="#" class="dropdown-link">Option 5</a>
+          </nav>
+        </div> -->
+
     </div>
   </div>
   <!--
@@ -160,9 +167,9 @@ layout: false
    ↳ http://esri.github.io/calcite-web/patterns/#toolbar
    ↳ patterns → _toolbar.md
   -->
-  <div class="toolbar padding-leader-3">
+<!--   <div class="toolbar padding-leader-3">
 
-  </div>
+  </div> -->
 
   <!--
   ┌────────┐
@@ -271,6 +278,9 @@ layout: false
       </div>
     </div>
   </footer>
+
+  <script src="{{relativePath}}assets/js/libs/calcite-web.js"></script>
+  <script src="{{relativePath}}assets/js/all.js"></script>
 </body>
 
 </html>

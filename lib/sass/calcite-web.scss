@@ -35,6 +35,7 @@ $include-breadcrumbs:                 true    !default;
 $include-tooltip:                     true    !default;
 $include-forms:                       true    !default;
 $include-loader:                      true    !default;
+$include-search-bar:                  true    !default;
 
 // Patterns
 $include-footer:                      true    !default;
@@ -45,7 +46,6 @@ $include-third-nav:                   true    !default;
 $include-top-nav:                     true    !default;
 $include-super-nav:                   true    !default;
 $include-toolbar:                     true    !default;
-$include-search-bar:                  true    !default;
 
 // Javascript
 $include-tabs:                        true    !default;
@@ -91,6 +91,7 @@ $include-drawers:                     true    !default;
 @import "calcite-web/components/table";
 @import "calcite-web/components/form";
 @import "calcite-web/components/loader";
+@import "calcite-web/components/search-bar";
 
 // Patterns
 // complete interfaces: header, footer, banner...
@@ -99,7 +100,6 @@ $include-drawers:                     true    !default;
 @import "calcite-web/patterns/sub-nav";
 @import "calcite-web/patterns/third-nav";
 @import "calcite-web/patterns/toolbar";
-@import "calcite-web/patterns/search-bar";
 @import "calcite-web/patterns/side-nav";
 @import "calcite-web/patterns/footer";
 @import "calcite-web/patterns/tabs";
