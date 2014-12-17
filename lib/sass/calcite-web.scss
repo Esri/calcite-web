@@ -64,6 +64,7 @@ $include-expanding-nav:               true    !default;
 @import "calcite-web/base/config";
 @import "calcite-web/base/reset";
 
+
 // Utils
 // Micro-Framework adpated from Compass and Bourbon
 // Provides basic prefixing and standard mixins
@@ -83,6 +84,7 @@ $include-expanding-nav:               true    !default;
 
 // Components
 // small pieces: buttons, icons, tables...
+@import "calcite-web/components/esri-logo";
 @import "calcite-web/components/button";
 @import "calcite-web/components/dropdown";
 @import "calcite-web/components/breadcrumbs";
