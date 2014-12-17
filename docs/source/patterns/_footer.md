@@ -1,2 +1,50 @@
 ## Footer
 Standard footer for ArcGIS and Esri properties.
+
+```
+<footer class="footer header-face leader-3">
+  <div class="container">
+    <nav class="column-6">
+      <h6>Arc<span>GIS</span></h6>
+      <ul class="list-bulleted">
+        <li><a href="http://www.arcgis.com/about/">Home</a></li>
+        <li><a href="http://www.arcgis.com/about/features.html">Features</a></li>
+        <li><a href="http://www.arcgis.com/about/pricing.html">Pricing</a></li>
+      </ul>
+    </nav>
+
+    <nav class="column-6">
+      <h6>Arc<span>GIS</span> for Developers</h6>
+      <ul>
+        <li><a href="/en/">Home</a></li>
+        <li><a href="/en/features/">Features</a></li>
+        <li><a href="http://blogs.esri.com/esri/arcgis/category/developer/">Blog</a></li>
+      </ul>
+    </nav>
+
+    <nav class="column-6">
+      <h6>About Esri</h6>
+      <ul>
+        <li><a href="http://www.esri.com/about-esri/">About Us</a></li>
+        <li><a href="http://www.esri.com/careers/">Careers</a></li>
+        <li><a href="http://blogs.esri.com/esri/esri-insider/">Insiders Blog</a></li>
+        <li><a href="http://www.esri.com/events/user-conference/index.html">User Conference</a></li>
+        <li><a href="http://www.esri.com/events/devsummit/index.html">Developer Summit</a></li>
+      </ul>
+    </nav>
+
+    <nav class="column-6 padding-leader-half">
+      <a class="esri-logo" href="http://esri.com"></a>
+      <section class="footer-social-nav">
+        <a class="icon-twitter" href="https://twitter.com/Esri/"></a>
+        <a class="icon-facebook" href="https://www.facebook.com/esrigis/"></a>
+        <a class="icon-github" href="http://esri.github.com/"></a>
+        <a class="icon-email" href="http://www.esri.com/about-esri/contact/"></a>
+      </section>
+    </nav>
+    <div class="column-24">
+      <p><small>© Copyright 2013 Environmental Systems Research Institute, Inc. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal/software-license">Legal</a></small></p>
+    </div>
+  </div>
+</footer>
+```
