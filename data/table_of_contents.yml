@@ -1,4 +1,4 @@
-"get-started":
+get-started":
   title: "Get Started"
   base: "get-started"
   navigation:
@@ -356,7 +356,13 @@ components:
         - title: "Radio Buttons"
           link: radio-buttons
           modifiers: true
-
+    - group: "Branding"
+      pages:
+        - title: "Esri Logo"
+          link: esri-logo
+          modifiers:
+            - 'default'
+            - 'esri-logo-reverse'
 patterns:
   title: "Patterns"
   base: patterns

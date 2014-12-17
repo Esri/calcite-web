@@ -1,0 +1,2 @@
+## Esri Logo
+A minimum buffer zone of 16px, 1em, or 20.5% clear space is always be maintained around the logo. Display of the logo should not be less than 78 x 28 pixels. This minimun size and buffer is part of the component.
