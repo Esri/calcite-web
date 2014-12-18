@@ -19,46 +19,79 @@
 
     <!-- stylesheets -->
     
-      <link rel="stylesheet" href="../../assets/css/all.css">
-      <!-- <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/9431e9a5-7a6d-4b5f-82be-4d935972de5a.css"/> -->
+      <link rel="stylesheet" href="../../../assets/css/all.css">
     
 
     <!--[if lt IE 9]>
-      <script src="../../assets/js/libs/selectivizr-min.js"></script>
-      <script src="../../assets/js/libs/html5shiv.js"></script>
+      <script src="../../../assets/js/libs/selectivizr-min.js"></script>
+      <script src="../../../assets/js/libs/html5shiv.js"></script>
     <![endif]-->
 
   </head>
 
   <body>
+    <!--
+    ┌─────────┐
+    │ Drawers │
+    └─────────┘
+     ↳ http://esri.github.io/calcite-web/patterns/#drawers
+     ↳ patterns → _drawers.md
+    -->
+    <div class="drawer drawer-left js-drawer-toggle" data-drawer="top-nav">
+      <nav class="drawer-nav">
+        <aside class="side-nav">
+          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Esri Patterns</h2>
+          <div class="panel padding-trailer-half padding-leader-half">
+            <label class="trailer-0">
+              <input type='search' placeholder='Search'>
+            </label>
+          </div>
+          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Branding</a>
+          <a href="../../../" class="side-nav-link padding-trailer-half padding-leader-half">Web</a></a>
+          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Mobile</a>
+          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Presentations</a>
+        </aside>
+      </nav>
+    </div>
+
     <div class="wrapper">
       <!-- Logged Out Pattern-->
       <header class="top-nav">
-        <div class="container">
-          <a href="#" class="top-nav-title">Esri Design Patterns</a>
+      <div class="container">
+        <div class="tablet-hide">
+          <a href="#" class="top-nav-title">Calcite for Unicorns</a>
           <nav class="top-nav-list">
-            <a class="top-nav-link" href="#">Branding</a>
-            <a class="top-nav-link is-active" href="../../">Web</a>
-            <a class="top-nav-link" href="#">Mobile</a>
-            <a class="top-nav-link" href="#">Presentations</a>
-          </nav>
-          <!-- Site Search Pattern-->
-          <!-- Sign in / User Menu Patterns-->
-          <nav class="sign-in">
-            <a href="#" class="btn btn-small btn-clear">Sign Up</a>
-            <a href="#" class="btn btn-small btn-transparent">Sign In</a>
+            <a class="top-nav-link" href="#">Plains</a>
+            <a class="top-nav-link is-active" href="#">Fields</a>
+            <a class="top-nav-link" href="#">Forests</a>
+            <a class="top-nav-link" href="#">Mountains</a>
           </nav>
         </div>
-      </header>
+        <div class="tablet-show">
+          <a href="#" class="top-nav-title js-drawer-toggle" data-drawer="top-nav">☰ Calcite for Unicorns</a>
+        </div>
+        <nav class="sign-in">
+          <a href="#" class="btn btn-small btn-clear">Sign Up</a>
+          <a href="#" class="btn btn-small btn-transparent">Sign In</a>
+        </nav>
+      </div>
+    </header>
 
       <!-- Secondary Nav Pattern -->
       <header class="sub-nav">
         <div class="container">
-
-          <h1 class="sub-nav-title"><a href="../../" class="link-white">Web</a></h1>
+          <h1 class="sub-nav-title"><a href="../../../" class="link-white">Web</a></h1>
           <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-orange btn-arrow right leader-1">Latest Release</a>
-          <nav class="sub-nav-list">
-            <a class="sub-nav-link is-active" href="../../">Calcite Web</a>
+          <div class="phone-show dropdown column-6 trailer-half js-dropdown-toggle">
+             <a href="#" class="link-white">Calcite Web &darr;</a>
+              <nav class="dropdown-menu js-dropdown sidenav">
+                <a class="side-nav-link is-active" href="../../../">Calcite Web</a>
+                <a class="side-nav-link" href="#">Calcite Dojo</a>
+                <a class="side-nav-link" href="#">Calcite Bootstrap</a>
+              </nav>
+          </div>
+          <nav class="sub-nav-list phone-hide">
+            <a class="sub-nav-link is-active" href="../../../">Calcite Web</a>
             <a class="sub-nav-link" href="#">Calcite Dojo</a>
             <a class="sub-nav-link" href="#">Calcite Bootstrap</a>
           </nav>
@@ -134,13 +167,13 @@
               </ul>
             </nav>
 
-            <nav class="column-6">
-              <a class="esri-logo-footer" href="http://esri.com">Esri</a>
+            <nav class="column-6 padding-leader-half">
+              <a class="esri-logo" href="http://esri.com"></a>
               <section class="footer-social-nav">
-                <a class="icon-twitter" href="https://twitter.com/Esri/"></a>
-                <a class="icon-facebook" href="https://www.facebook.com/esrigis/"></a>
-                <a class="icon-github" href="http://esri.github.com/"></a>
-                <a class="icon-email" href="http://www.esri.com/about-esri/contact/"></a>
+                <a class="icon-twitter" href="https://twitter.com/Esri/">T</a>
+                <a class="icon-facebook" href="https://www.facebook.com/esrigis/">F</a>
+                <a class="icon-github" href="http://esri.github.com/">G</a>
+                <a class="icon-email" href="http://www.esri.com/about-esri/contact/">E</a>
               </section>
             </nav>
             <div class="column-24">
@@ -151,8 +184,8 @@
         </div>
       </footer>
 
-      <script src="../../assets/js/libs/calcite-web.js"></script>
-      <script src="../../assets/js/all.js"></script>
+      <script src="../../../assets/js/libs/calcite-web.js"></script>
+      <script src="../../../assets/js/all.js"></script>
 
     
 

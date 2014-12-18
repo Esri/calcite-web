@@ -20,7 +20,6 @@
     <!-- stylesheets -->
     
       <link rel="stylesheet" href="../assets/css/all.css">
-      <!-- <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/9431e9a5-7a6d-4b5f-82be-4d935972de5a.css"/> -->
     
 
     <!--[if lt IE 9]>
@@ -31,33 +30,67 @@
   </head>
 
   <body>
+    <!--
+    ┌─────────┐
+    │ Drawers │
+    └─────────┘
+     ↳ http://esri.github.io/calcite-web/patterns/#drawers
+     ↳ patterns → _drawers.md
+    -->
+    <div class="drawer drawer-left js-drawer-toggle" data-drawer="top-nav">
+      <nav class="drawer-nav">
+        <aside class="side-nav">
+          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Esri Patterns</h2>
+          <div class="panel padding-trailer-half padding-leader-half">
+            <label class="trailer-0">
+              <input type='search' placeholder='Search'>
+            </label>
+          </div>
+          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Branding</a>
+          <a href="../" class="side-nav-link padding-trailer-half padding-leader-half">Web</a></a>
+          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Mobile</a>
+          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Presentations</a>
+        </aside>
+      </nav>
+    </div>
+
     <div class="wrapper">
       <!-- Logged Out Pattern-->
       <header class="top-nav">
-        <div class="container">
-          <a href="#" class="top-nav-title">Esri Design Patterns</a>
+      <div class="container">
+        <div class="tablet-hide">
+          <a href="#" class="top-nav-title">Calcite for Unicorns</a>
           <nav class="top-nav-list">
-            <a class="top-nav-link" href="#">Branding</a>
-            <a class="top-nav-link is-active" href="../">Web</a>
-            <a class="top-nav-link" href="#">Mobile</a>
-            <a class="top-nav-link" href="#">Presentations</a>
-          </nav>
-          <!-- Site Search Pattern-->
-          <!-- Sign in / User Menu Patterns-->
-          <nav class="sign-in">
-            <a href="#" class="btn btn-small btn-clear">Sign Up</a>
-            <a href="#" class="btn btn-small btn-transparent">Sign In</a>
+            <a class="top-nav-link" href="#">Plains</a>
+            <a class="top-nav-link is-active" href="#">Fields</a>
+            <a class="top-nav-link" href="#">Forests</a>
+            <a class="top-nav-link" href="#">Mountains</a>
           </nav>
         </div>
-      </header>
+        <div class="tablet-show">
+          <a href="#" class="top-nav-title js-drawer-toggle" data-drawer="top-nav">☰ Calcite for Unicorns</a>
+        </div>
+        <nav class="sign-in">
+          <a href="#" class="btn btn-small btn-clear">Sign Up</a>
+          <a href="#" class="btn btn-small btn-transparent">Sign In</a>
+        </nav>
+      </div>
+    </header>
 
       <!-- Secondary Nav Pattern -->
       <header class="sub-nav">
         <div class="container">
-
           <h1 class="sub-nav-title"><a href="../" class="link-white">Web</a></h1>
           <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-orange btn-arrow right leader-1">Latest Release</a>
-          <nav class="sub-nav-list">
+          <div class="phone-show dropdown column-6 trailer-half js-dropdown-toggle">
+             <a href="#" class="link-white">Calcite Web &darr;</a>
+              <nav class="dropdown-menu js-dropdown sidenav">
+                <a class="side-nav-link is-active" href="../">Calcite Web</a>
+                <a class="side-nav-link" href="#">Calcite Dojo</a>
+                <a class="side-nav-link" href="#">Calcite Bootstrap</a>
+              </nav>
+          </div>
+          <nav class="sub-nav-list phone-hide">
             <a class="sub-nav-link is-active" href="../">Calcite Web</a>
             <a class="sub-nav-link" href="#">Calcite Dojo</a>
             <a class="sub-nav-link" href="#">Calcite Bootstrap</a>
@@ -105,6 +138,10 @@
             
               
                 <a href="../javascript" class="third-nav-link">JavaScript</a>
+              
+            
+              
+                <a href="../page-layouts" class="third-nav-link">Layouts</a>
               
             
 
@@ -160,6 +197,19 @@
                   <a href="#show-and-hide" class="side-nav-link">Show & Hide</a>
                 
                   <a href="#left-and-right" class="side-nav-link">Left & Right</a>
+                
+                  <a href="#inline" class="side-nav-link">Inline</a>
+                
+              </nav>
+            
+              <h4 class="side-nav-title">Interactive Layout Helpers</h4>
+              <nav>
+                
+                  <a href="#interactive-layout-helpers" class="side-nav-link">Overview</a>
+                
+                  <a href="#scroll-show-and-hide" class="side-nav-link">Scroll Show & Hide</a>
+                
+                  <a href="#scroll-sticky" class="side-nav-link">Scroll Sticky</a>
                 
               </nav>
             
@@ -823,6 +873,45 @@ aligning grid columns when the Grid System is unable to determine which columns 
               </section>
               <hr class="trailer-2">
             
+              <section class="trailer-2">
+                <h2 id="inline">Inline</h2>
+<p>Adds <code>display: inline-block</code> to element.</p>
+
+                
+                
+              </section>
+              <hr class="trailer-2">
+            
+          
+            
+              <section class="trailer-2">
+                <h2 id="interactive-layout-helpers">Interactive Layout Helpers</h2>
+<p>JavaScript dependant helper classes that surface simple class-based hooks for common interactive layout patterns.</p>
+
+                
+                
+              </section>
+              <hr class="trailer-2">
+            
+              <section class="trailer-2">
+                <h2 id="scroll-show-and-hide">Scroll Show and Hide</h2>
+<p>Some layouts call for elements to appear or disapear as the user scrolls down the page. An element with the <code>scroll-show</code> class will appear when it reaches a point specified by the <code>data-show-top=x</code> attribute, appearing when it comes within the given value of the top of the screen.</p>
+<p>An element with the <code>scroll-hide</code> class will disappear when it reaches a point specified by the <code>data-hide-top=x</code> attribute, disappearing when the window scrolls past a given point.</p>
+
+                
+                
+              </section>
+              <hr class="trailer-2">
+            
+              <section class="trailer-2">
+                <h2 id="scroll-sticky">Scroll Sticky</h2>
+<p>Elements that become position fixed as they reach a certain position in the viewport are refered to as &#39;sticky&#39;. The <code>scroll-sticky</code> class takes an <code>data-stick-top=x</code> attribute that defines the point from the top of the window the sticky element will stick.</p>
+
+                
+                
+              </section>
+              <hr class="trailer-2">
+            
           
         </main>
 
@@ -864,13 +953,13 @@ aligning grid columns when the Grid System is unable to determine which columns 
               </ul>
             </nav>
 
-            <nav class="column-6">
-              <a class="esri-logo-footer" href="http://esri.com">Esri</a>
+            <nav class="column-6 padding-leader-half">
+              <a class="esri-logo" href="http://esri.com"></a>
               <section class="footer-social-nav">
-                <a class="icon-twitter" href="https://twitter.com/Esri/"></a>
-                <a class="icon-facebook" href="https://www.facebook.com/esrigis/"></a>
-                <a class="icon-github" href="http://esri.github.com/"></a>
-                <a class="icon-email" href="http://www.esri.com/about-esri/contact/"></a>
+                <a class="icon-twitter" href="https://twitter.com/Esri/">T</a>
+                <a class="icon-facebook" href="https://www.facebook.com/esrigis/">F</a>
+                <a class="icon-github" href="http://esri.github.com/">G</a>
+                <a class="icon-email" href="http://www.esri.com/about-esri/contact/">E</a>
               </section>
             </nav>
             <div class="column-24">

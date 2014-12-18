@@ -1,5 +1,5 @@
-/* calcite-web - v0.0.6 - 2014-12-11
-*  https://github.com/ArcGIS/calcite-web
+/* calcite-web - v0.0.6 - 2014-12-17
+*  https://github.com/esri/calcite-web
 *  Copyright (c) 2014 Environmental Systems Research Institute, Inc.
 *  Apache 2.0 License */
 (function Calcite () {
