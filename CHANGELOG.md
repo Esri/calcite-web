@@ -3,6 +3,7 @@
 More documentation, new javascript components, working icon tooling prototype.
 
 ### Added
+- inline helper class
 - drawers
 - expanding nav
 - search bar component
