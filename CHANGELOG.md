@@ -3,6 +3,7 @@
 ### Added
 
 ### Modified
+- Minor padding right compression on .top-nav-title
 
 ## v0.0.6
 
