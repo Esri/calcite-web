@@ -4,6 +4,7 @@
 
 ### Modified
 - Minor padding right compression on .top-nav-title
+- User nav now a real thing
 
 ## v0.0.6
 

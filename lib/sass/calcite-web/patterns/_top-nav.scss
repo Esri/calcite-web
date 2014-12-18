@@ -32,10 +32,52 @@
   margin-bottom: -$baseline;
 }
 
+@mixin user {
+  padding: 0.5rem;
+  content: $dtri;
+  @include font-size(-2);
+  height: $baseline;
+  z-index: 3;
+  @include clearfix();
+  margin-top: -0.25rem;
+  margin-bottom: -0.25rem;
+  border: 1px solid transparent;
+  &:hover, .is-active {
+    border: 1px solid $lightest-gray;
+    background-color: $off-white;
+  }
+}
+  @mixin user-image {
+    height: 2rem;
+    width: 2rem;
+    margin-top: -0.33rem;
+    pointer-events: none;
+    border-radius: 50%;
+    border: 1px solid $lightest-gray;
+  }
+  @mixin user-name {
+    float: right;
+    padding-left: 0.25*$baseline;
+    pointer-events: none;
+    z-index: 2;
+    &:after {
+      padding-left: 0.25*$baseline;
+      content: $dtri;
+    }
+  }
+  @mixin user-nav {
+    margin-top: 0.25*$baseline;
+  }
+
 @if $include-top-nav == true {
   .top-nav {@include top-nav();}
     .top-nav-title {@include top-nav-title();}
     .top-nav-list {@include top-nav-list();}
     .top-nav-link {@include top-nav-link();}
   .sign-in {@include sign-in();}
+  .user {@include user();}
+    .user-image {@include user-image();}
+    .user-name {@include user-name();}
+    .user-nav {@include user-nav();}
+
 }
