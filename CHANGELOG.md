@@ -1,3 +1,9 @@
+## v0.0.7
+
+### Added
+
+### Modified
+
 ## v0.0.6
 
 More documentation, new javascript components, working icon tooling prototype.
