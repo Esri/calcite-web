@@ -6,6 +6,7 @@
 @mixin third-nav() {
   @extend .header-face;
   border-bottom: 1px solid $lighter-gray;
+  background-color: $white;
   padding: $baseline/4 0;
   nav {
     margin-left: $baseline * .5;

@@ -110,10 +110,9 @@
       </header>
 
       <!-- Third Nav Pattern -->
-      <header class="third-nav">
+      <header class="third-nav js-sticky" data-top="0">
         <div class="container">
           <nav>
-
             {% for title, sec in table_of_contents %}
               {% if sec.base == "get-started" %}
                 <a href="{{relativePath}}" class="third-nav-link">{{ sec.title }}</a>
@@ -121,7 +120,6 @@
                 <a href="{{relativePath}}{{sec.base}}" class="third-nav-link">{{ sec.title }}</a>
               {% endif %}
             {% endfor %}
-
           </nav>
         </div>
       </header>
