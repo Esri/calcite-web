@@ -6,6 +6,7 @@
 - Minor padding right compression on .top-nav-title
 - User nav now a real thing
 - Broke dropdowns
+- Move from Sass to LibSass
 
 ## v0.0.6
 

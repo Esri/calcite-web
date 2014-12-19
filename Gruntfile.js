@@ -60,10 +60,10 @@ module.exports = function(grunt) {
           'copy:doc'
         ]
       },
-      sass: {
+      libsass: {
         files: ['lib/sass/**/*', 'docs/source/assets/css/**/*', 'docs/source/**/*.{html,md}'],
         tasks: [
-          'sass:doc',
+          'libsass:doc',
           'copy:doc'
         ]
       },
@@ -71,7 +71,7 @@ module.exports = function(grunt) {
         files: ['docs/source/layouts/**/*.{html,md}'],
         tasks: [
           'acetate:build',
-          'sass:doc',
+          'libsass:doc',
           'copy:doc'
         ]
       }
@@ -83,37 +83,25 @@ module.exports = function(grunt) {
     },
 
     // Build CSS files to dist
-    'sass': {
+    'libsass': {
+
+      options: {
+        loadPath: ['lib/sass/']
+      },
+
       expanded: {
-        options: {
-          style: 'expanded',
-          sourcemap: 'none',
-          require: './lib/list-files.rb'
-        },
-        files: {
-          'dist/css/calcite-web.css': 'lib/sass/calcite-web.scss'
-        }
+        src: 'lib/sass/calcite-web.scss',
+        dest: 'dist/css/calcite-web.css'
       },
+
       minified: {
-        options: {
-          style: 'compressed',
-          sourcemap: 'none',
-          require: './lib/list-files.rb'
-        },
-        files: {
-          'dist/css/calcite-web.min.css': 'lib/sass/calcite-web.scss'
-        }
+        src: 'lib/sass/calcite-web.scss',
+        dest: 'dist/css/calcite-web.min.css'
       },
+
       doc: {
-        options: {
-          style: 'expanded',
-          sourcemap: 'none',
-          loadPath: 'lib/sass/',
-          require: './lib/list-files.rb'
-        },
-        files: {
-          'docs/build/assets/css/all.css': 'docs/source/assets/css/all.scss'
-        }
+        src: 'docs/source/assets/css/all.scss',
+        dest: 'docs/build/assets/css/all.css'
       }
     },
 
@@ -130,9 +118,9 @@ module.exports = function(grunt) {
       }
     },
 
-    // Copy SASS files to dist, doc assets to build
+    // Copy libsass files to dist, doc assets to build
     'copy': {
-      sass: {
+      libsass: {
         expand: true,
         cwd: 'lib/',
         src: ['sass/**/*'],
@@ -246,7 +234,7 @@ module.exports = function(grunt) {
     // Runs tasks concurrently, speeding up Grunt
     'concurrent': {
       prepublish: [
-        'sass',
+        'libsass',
         'uglify',
         'copy',
         'concat:dist',
@@ -268,7 +256,7 @@ module.exports = function(grunt) {
     'acetate:server',
     'newer:imagemin:doc',
     'concat:doc',
-    'sass:doc',
+    'libsass:doc',
     'copy:doc',
     'watch'
   ]);
@@ -292,7 +280,7 @@ module.exports = function(grunt) {
       'acetate:build',
       'newer:imagemin:doc',
       'concat:doc',
-      'sass:doc',
+      'libsass:doc',
       'copy:doc',
       'gh-pages'
     ]);
