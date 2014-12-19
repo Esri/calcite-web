@@ -1,7 +1,7 @@
 @mixin modal-overlay() {
   display: none;
-  background: #000000;
-  background: rgba(0, 0, 0, 0.8);
+  background: $white;
+  background: $transparent-black;
   overflow-y: scroll;
   position: fixed;
   top: 0;
@@ -9,7 +9,6 @@
   left: 0;
   right: 0;
   z-index: 50;
-
   &.is-active {
     display: block;
   }
