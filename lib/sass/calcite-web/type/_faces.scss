@@ -12,7 +12,7 @@
 
 @mixin header-light-italic() {
   @include tracking($header-tracking);
-  font-family: $header-family; font-weight: 300); font-style: italic;
+  font-family: $header-family; font-weight: 300; font-style: italic;
   b, strong {font-weight: 400;}
 }
 
@@ -42,13 +42,13 @@
 
 @mixin header-bold() {
   @include tracking($header-tracking);
-  font-family: $header-family; font-weight: 600); font-style: normal;
+  font-family: $header-family; font-weight: 600; font-style: normal;
   b, strong {font-weight: 600;}
 }
 
 @mixin header-bold-italic() {
   @include tracking($header-tracking);
-  font-family: $header-family; font-weight: 600); font-style: italic;
+  font-family: $header-family; font-weight: 600; font-style: italic;
   b, strong {font-weight: 600;}
 }
 
