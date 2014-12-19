@@ -25,9 +25,6 @@
     background-color: $dark-blue;
     color: $white;
   }
-  &.btn-grouped:first-of-type {
-    border-left: 1px solid $dark-blue;
-  }
 }
 
   @mixin btn-disabled() {
@@ -75,9 +72,6 @@
       background: $dark-blue;
       border-color: $dark-blue;
     }
-    &.btn-grouped:first-of-type {
-      border-left: 1px solid $blue;
-    }
   }
 
     @mixin btn-clear-gray() {
@@ -88,9 +82,6 @@
         color: $white;
         background: $gray;
       }
-      &.btn-grouped:first-of-type {
-        border-left: 1px solid $dark-gray;
-      }
     }
     @mixin btn-clear-white() {
       background: none;
@@ -99,9 +90,6 @@
       &:hover {
         color: $gray;
         background: $white;
-      }
-      &.btn-grouped:first-of-type {
-        border-left: 1px solid $white;
       }
     }
 
@@ -122,7 +110,9 @@
 
   @mixin btn-grouped() {
     float: left;
-    border-left: none;
+    & + .btn-grouped {
+      border-left: none;
+    }
     &:last-of-type {
       float: none;
     }
@@ -149,17 +139,24 @@
   .btn-fill {@include btn-fill();}
   .btn-grouped {@include btn-grouped();}
 
-  @each $color in $color-set {
-    $name: nth($color, 1);
-    $value: nth($color, 2);
-    $dark-value: nth($color, 3);
-    .btn-#{$name} {
-      @include btn-color($value, $dark-value);
-    }
-    .btn-#{$name}.btn-grouped:first-of-type {
-      border-left: 1px solid $dark-value;
-    }
-  }
+  // .btn-#{$name}.btn-grouped:first-of-type {
+  //   border-left: 1px solid $dark-value;
+  // }
+
+  .btn-red         { @include btn-color($red, $dark-red);}
+  .btn-green       { @include btn-color($green, $dark-green);}
+  .btn-blue        { @include btn-color($blue, $dark-blue);}
+  .btn-purple      { @include btn-color($purple, $dark-purple);}
+  .btn-orange      { @include btn-color($orange, $dark-orange);}
+  .btn-brown       { @include btn-color($brown, $dark-brown);}
+  .btn-white       { @include btn-color($white, $lightest-gray);}
+  .btn-light-gray  { @include btn-color($light-gray, $gray);}
+  .btn-gray        { @include btn-color($gray, $dark-gray);}
+  .btn-dark-gray   { @include btn-color($dark-gray, $darker-gray);}
+  .btn-darker-gray { @include btn-color($darker-gray, $darkest-gray);}
+  .btn-darkest-gra { @include btn-color($darkest-gray, $off-black);}
+  .btn-off-black   { @include btn-color($off-black, $black);}
+
 
   .btn:disabled, .btn-disabled, button[disabled] {@include btn-disabled();}
 }
