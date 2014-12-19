@@ -7,15 +7,15 @@
 @mixin dropdown {
   position: relative;
   display: inline-block;
+  &.is-active .dropdown-menu {
+    display: block;
+  }
 }
 
 @mixin dropdown-btn {
   content: $dtri;
   padding-left: .75em;
   @include font-size(-2);
-  &.is-active .dropdown-menu {
-    display: block;
-  }
 }
 
 @mixin dropdown-menu {
