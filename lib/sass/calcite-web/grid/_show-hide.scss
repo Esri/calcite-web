@@ -45,4 +45,6 @@
 @if $include-grid == true {
   @include include-show-hide();
   @include responsive-show-hide();
+  .show {@include show();}
+  .hide {@include hide();}
 }
