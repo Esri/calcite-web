@@ -1,6 +1,9 @@
 ## v0.0.7
 
 ### Added
+- sticky scroll
+- sticky show
+- javscript for interactive patterns
 
 ### Modified
 - Minor padding right compression on .top-nav-title
