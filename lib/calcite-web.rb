@@ -2,8 +2,6 @@
 base_directory  = File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib'))
 stylesheets_path = File.join(base_directory, 'sass')
 
-require File.join(base_directory, 'list-files.rb')
-
 # if using compass, register as a compass extension
 if (defined? Compass)
   Compass::Frameworks.register('calcite-web', :stylesheets_directory => stylesheets_path)
