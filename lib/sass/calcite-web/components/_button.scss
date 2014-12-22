@@ -14,12 +14,11 @@
   background-color: $blue;
   @include box-sizing(border-box);
   @include transition(all 0.05s linear);
+  @include font-size(0);
   cursor: pointer;
   white-space: nowrap;
   @if $include-type {
-    @include font-size(-1);
     font-family: $header-family;
-    font-weight: 400;
   }
   &:hover, &:focus {
     background-color: $dark-blue;
@@ -99,7 +98,7 @@
   }
 
   @mixin btn-large() {
-    @include font-size(0);
+    @include font-size(1);
     padding: .5rem 1rem .5rem;
   }
 
