@@ -128,21 +128,16 @@
 
 
 @if $include-button == true {
-  .btn { @include btn();}
-  .btn-arrow {@include btn-arrow();}
-  .btn-transparent {@include btn-transparent();}
-  .btn-clear {@include btn-clear();}
-  .btn-clear-gray {@include btn-clear-gray();}
-  .btn-clear-white {@include btn-clear-white();}
-  .btn-small {@include btn-small();}
-  .btn-large {@include btn-large();}
-  .btn-fill {@include btn-fill();}
-  .btn-grouped {@include btn-grouped();}
-
-  // .btn-#{$name}.btn-grouped:first-of-type {
-  //   border-left: 1px solid $dark-value;
-  // }
-
+  .btn             { @include btn();}
+  .btn-arrow       { @include btn-arrow();}
+  .btn-transparent { @include btn-transparent();}
+  .btn-clear       { @include btn-clear();}
+  .btn-clear-gray  { @include btn-clear-gray();}
+  .btn-clear-white { @include btn-clear-white();}
+  .btn-small       { @include btn-small();}
+  .btn-large       { @include btn-large();}
+  .btn-fill        { @include btn-fill();}
+  .btn-grouped     { @include btn-grouped();}
   .btn-red         { @include btn-color($red, $dark-red);}
   .btn-green       { @include btn-color($green, $dark-green);}
   .btn-blue        { @include btn-color($blue, $dark-blue);}
