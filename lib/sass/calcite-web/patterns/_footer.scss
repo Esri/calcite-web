@@ -1,7 +1,12 @@
-$footer-height: 250px;
+// ┌────────┐
+// │ Footer │
+// └────────┘
+//  ↳ http://esri.github.io/calcite-web/patterns/#footer
+//  ↳ patterns → _footer.md
 
 @mixin wrapper() {
-  min-height: calc(100% - $footer-height);
+  // min-height: calc(100% - $footer-height);
+
 }
 
 @mixin footer (){

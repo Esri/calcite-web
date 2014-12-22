@@ -1,4 +1,4 @@
-"get-started":
+get-started:
   title: "Get Started"
   base: "get-started"
   navigation:
@@ -114,6 +114,10 @@ type:
           link: list-numbered
           modifiers:
             - list-numbered
+    - group: "Defaults"
+      pages:
+        - title: "Overview"
+          link: type-defaults
 grid:
   title: "Grid"
   base: grid
@@ -179,6 +183,16 @@ grid:
           link: show-and-hide
         - title: "Left & Right"
           link: left-and-right
+        - title: "Inline"
+          link: inline
+    - group: "Interactive Layout Helpers"
+      pages:
+        - title: "Overview"
+          link: interactive-layout-helpers
+        - title: "Scroll Show & Hide"
+          link: scroll-show-and-hide
+        - title: "Scroll Sticky"
+          link: scroll-sticky
 
 icons:
   title: "Icons"
@@ -329,6 +343,10 @@ components:
           link: form-overview
           modifiers:
             - 'default'
+        - title: "Search Bar"
+          link: search-bar
+          modifiers:
+            - 'default'
         - title: "Text Inputs"
           link: text-inputs
           modifiers:
@@ -352,7 +370,13 @@ components:
         - title: "Radio Buttons"
           link: radio-buttons
           modifiers: true
-
+    - group: "Branding"
+      pages:
+        - title: "Esri Logo"
+          link: esri-logo
+          modifiers:
+            - 'esri-logo'
+            - 'esri-logo-reverse'
 patterns:
   title: "Patterns"
   base: patterns
@@ -366,6 +390,14 @@ patterns:
         - title: "Top Nav"
           link: top-nav
           modifiers: true
+        - title: "User Sign In"
+          link: user-sign-in
+          modifiers:
+            - sign-in
+        - title: "User Nav"
+          link: user-nav
+          modifiers:
+            - user-nav
         - title: "Sub Nav"
           link: sub-nav
           modifiers: true
@@ -377,7 +409,6 @@ patterns:
           modifiers: true
         - title: "Footer"
           link: footer
-          modifiers: true
         - title: "Pagination"
           link: pagination
           modifiers: true
@@ -386,12 +417,22 @@ patterns:
         - title: "Modals"
           link: modals
           modifiers: true
-        - title: "Click Dropdowns"
-          link: click-dropdown
         - title: "Tabs"
           link: tabs
+          modifiers:
+            - 'tabs'
+            - 'tabs-gray'
+            - 'tabs-transparent'
         - title: "Accordions"
           link: accordions
+          modifiers:
+            - default
+        - title: "Drawers"
+          link: drawers
+        - title: "Expanding Nav"
+          link: expanding-nav
+          modifiers:
+            - true
 sass:
   title: "Sass"
   base: sass
@@ -499,3 +540,21 @@ javascript:
         - title: "Browser Feature Detection"
           link: browser-feature-detection
 
+layouts:
+  title: 'Layouts'
+  base: page-layouts
+  navigation:
+    - group: "Building Layouts"
+      pages:
+        - title: "Homepage"
+          link: homepage
+        - title: "Landing Page"
+          link: landing-page
+        - title: "Documentation"
+          link: documentation
+        - title: "Web App"
+          link: web-app
+        - title: "Fullscreen Map App"
+          link: fullscreen-map-app
+        - title: "Embedded Map App"
+          link: embedded-map-app

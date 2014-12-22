@@ -1,16 +1,23 @@
+// ┌──────────┐
+// │ Thirdnav │
+// └──────────┘
+//  ↳ http://esri.github.io/calcite-web/patterns/#third-nav
+//  ↳ patterns → _third-nav.md
 @mixin third-nav() {
   @extend .header-face;
   border-bottom: 1px solid $lighter-gray;
+  background-color: $white;
   padding: $baseline/4 0;
+  width: 100%;
+  nav {
+    margin-left: $baseline * .5;
+  }
 }
 
   @mixin third-nav-link() {
     @extend .link-darkest-gray;
     @include font-size(-2);
     margin-right: $baseline * 0.75;
-    &:first-of-type {
-      margin-left: $baseline * .5;
-    }
     &.is-active {
       @extend .header-bold;
     }

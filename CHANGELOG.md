@@ -1,8 +1,26 @@
+## v0.0.7
+
+### Added
+- sticky scroll
+- sticky show
+- javscript for interactive patterns
+
+### Modified
+- Minor padding right compression on .top-nav-title
+- User nav now a real thing
+- Move from Sass to LibSass
+
 ## v0.0.6
 
 More documentation, new javascript components, working icon tooling prototype.
 
 ### Added
+- inline helper class
+- drawers
+- expanding nav
+- search bar component
+- user login component
+- esri logo componenet
 - Button group support for all button styles
 - `.sign-in` class for sign in + sign out buttons in top nav
 - modals
@@ -11,6 +29,8 @@ More documentation, new javascript components, working icon tooling prototype.
 ### Modified
 - Disabled button style to look less clickable
 - Tweak form styles
+- tighten panel padding
+- nav patterns now responsive
 
 ## v0.0.5
 Forms, table improvements, type changes, in progress icon tooling, more documentation.

@@ -4,22 +4,19 @@
 
 @if $include-type == true and $include-type-defaults == true {
 
-  @each $color in $color-set {
-    $name: nth($color, 1);
-    $value: nth($color, 2);
-    .text-#{$name} {
-      @include text-color($value);
-    }
-  }
-
-  @each $color in $color-set {
-    $name: nth($color, 1);
-    $value: nth($color, 2);
-    $light-value: nth($color, 3);
-    .link-#{$name} a, a.link-#{$name} {
-      @include link-color($value, $light-value);
-    }
-  }
+  .link-red         { @include link-color($red, $dark-red);}
+  .link-green       { @include link-color($green, $dark-green);}
+  .link-blue        { @include link-color($blue, $dark-blue);}
+  .link-purple      { @include link-color($purple, $dark-purple);}
+  .link-orange      { @include link-color($orange, $dark-orange);}
+  .link-brown       { @include link-color($brown, $dark-brown);}
+  .link-white       { @include link-color($white, $lightest-gray);}
+  .link-light-gray  { @include link-color($light-gray, $gray);}
+  .link-gray        { @include link-color($gray, $dark-gray);}
+  .link-dark-gray   { @include link-color($dark-gray, $darker-gray);}
+  .link-darker-gray { @include link-color($darker-gray, $darkest-gray);}
+  .link-darkest-gra { @include link-color($darkest-gray, $off-black);}
+  .link-off-black   { @include link-color($off-black, $black);}
 
   .text-rule              {@include text-rule();}
   .text-inline            {@include text-inline();}
