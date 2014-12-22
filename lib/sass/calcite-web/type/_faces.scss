@@ -6,50 +6,50 @@
 
 @mixin header-light() {
   @include tracking($header-tracking);
-  font-family: $header-family; font-weight: nth($header-light, 1); font-style: normal;
-  b, strong {font-weight: nth($header-light, 2);}
+  font-family: $header-family; font-weight: 300; font-style: normal;
+  b, strong {font-weight: 400;}
 }
 
 @mixin header-light-italic() {
   @include tracking($header-tracking);
-  font-family: $header-family; font-weight: nth($header-light, 1); font-style: italic;
-  b, strong {font-weight: nth($header-light, 2);}
+  font-family: $header-family; font-weight: 300; font-style: italic;
+  b, strong {font-weight: 400;}
 }
 
 @mixin header-face() {
   @include tracking($header-tracking);
-  font-family: $header-family; font-weight: nth($header-regular, 1); font-style: normal;
-  b, strong {font-weight: nth($header-regular, 2);}
+  font-family: $header-family; font-weight: 400; font-style: normal;
+  b, strong {font-weight: 500;}
 }
 
 @mixin header-italic() {
   @include tracking($header-tracking);
-  font-family: $header-family; font-weight: nth($header-regular, 1); font-style: italic;
-  b, strong {font-weight: nth($header-regular, 2);}
+  font-family: $header-family; font-weight: 400; font-style: italic;
+  b, strong {font-weight: 500;}
 }
 
 @mixin header-demi() {
   @include tracking($header-tracking);
-  font-family: $header-family; font-weight: nth($header-demi, 1); font-style: normal;
-  b, strong {font-weight: nth($header-demi, 2);}
+  font-family: $header-family; font-weight: 500; font-style: normal;
+  b, strong {font-weight: 600;}
 }
 
 @mixin header-demi-italic() {
   @include tracking($header-tracking);
-  font-family: $header-family; font-weight: nth($header-demi, 1); font-style: italic;
-  b, strong {font-weight: nth($header-demi, 2);}
+  font-family: $header-family; font-weight: 500; font-style: italic;
+  b, strong {font-weight: 600;}
 }
 
 @mixin header-bold() {
   @include tracking($header-tracking);
-  font-family: $header-family; font-weight: nth($header-bold, 1); font-style: normal;
-  b, strong {font-weight: nth($header-bold, 2);}
+  font-family: $header-family; font-weight: 600; font-style: normal;
+  b, strong {font-weight: 600;}
 }
 
 @mixin header-bold-italic() {
   @include tracking($header-tracking);
-  font-family: $header-family; font-weight: nth($header-bold, 1); font-style: italic;
-  b, strong {font-weight: nth($header-bold, 2);}
+  font-family: $header-family; font-weight: 600; font-style: italic;
+  b, strong {font-weight: 600;}
 }
 
 // ┌───────────┐
@@ -60,26 +60,26 @@
 
 @mixin body-face() {
   @include tracking($body-tracking);
-  font-family: $body-family; font-weight: nth($body-regular, 1); font-style: normal;
-  b, strong {font-weight: nth($body-regular, 2);}
+  font-family: $body-family; font-weight: 300; font-style: normal;
+  b, strong {font-weight: 700;}
 }
 
 @mixin body-italic() {
   @include tracking($body-tracking);
-  font-family: $body-family; font-weight: nth($body-regular, 1); font-style: italic;
-  b, strong {font-weight: nth($body-regular, 2);}
+  font-family: $body-family; font-weight: 300; font-style: italic;
+  b, strong {font-weight: 700;}
 }
 
 @mixin body-bold() {
   @include tracking($body-tracking);
-  font-family: $body-family; font-weight: nth($body-bold, 1); font-style: normal;
-  b, strong {font-weight: nth($body-bold, 2);}
+  font-family: $body-family; font-weight: 700; font-style: normal;
+  b, strong {font-weight: 700;}
 }
 
 @mixin body-bold-italic() {
   @include tracking($body-tracking);
-  font-family: $body-family; font-weight: nth($body-bold, 1); font-style: italic;
-  b, strong {font-weight: nth($body-bold, 2);}
+  font-family: $body-family; font-weight: 700; font-style: italic;
+  b, strong {font-weight: 700;}
 }
 
 // ┌────────────────┐
@@ -90,26 +90,26 @@
 
 @mixin secondary-face() {
   @include tracking($secondary-tracking);
-  font-family: $secondary-family; font-weight: nth($secondary-regular, 1); font-style: normal;
-  b, strong {font-weight: nth($secondary-regular, 2);}
+  font-family: $secondary-family; font-weight: 400; font-style: normal;
+  b, strong {font-weight: 700;}
 }
 
 @mixin secondary-italic() {
   @include tracking($secondary-tracking);
-  font-family: $secondary-family; font-weight: nth($secondary-regular, 1); font-style: italic;
-  b, strong {font-weight: nth($secondary-regular, 2);}
+  font-family: $secondary-family; font-weight: 400; font-style: italic;
+  b, strong {font-weight: 700;}
 }
 
 @mixin secondary-bold() {
   @include tracking($secondary-tracking);
-  font-family: $secondary-family; font-weight: nth($secondary-bold, 1); font-style: normal;
-  b, strong {font-weight: nth($secondary-bold, 2);}
+  font-family: $secondary-family; font-weight: 700; font-style: normal;
+  b, strong {font-weight: 700;}
 }
 
 @mixin secondary-bold-italic() {
   @include tracking($secondary-tracking);
-  font-family: $secondary-family; font-weight: nth($secondary-bold, 1); font-style: italic;
-  b, strong {font-weight: nth($secondary-bold, 2);}
+  font-family: $secondary-family; font-weight: 700; font-style: italic;
+  b, strong {font-weight: 700;}
 }
 
 
@@ -121,14 +121,14 @@
 
 @mixin code-face() {
   @include tracking($code-tracking);
-  font-family: $code-family; font-weight: nth($code-regular, 1); font-style: normal;
-  b, strong {font-weight: nth($code-regular, 2);}
+  font-family: $code-family; font-weight: 400; font-style: normal;
+  b, strong {font-weight: 400;}
 }
 
 @mixin code-italic() {
   @include tracking($code-tracking);
-  font-family: $code-family; font-weight: nth($code-regular, 1); font-style: italic;
-  b, strong {font-weight: nth($code-regular, 2);}
+  font-family: $code-family; font-weight: 400; font-style: italic;
+  b, strong {font-weight: 400;}
 }
 
 @if $include-type == true {

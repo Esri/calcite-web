@@ -7,7 +7,7 @@
 
 @mixin drawer() {
   @include transform(translate3d(0,0,0));
-  @include transition($transition);
+  transition: -webkit-transform 300ms cubic-bezier(0.215, 0.440, 0.420, 0.880);
   background: $transparent-black;
   display: none;
   overflow: hidden;
@@ -24,7 +24,7 @@
     display: block;
     visibility: visible;
     background-color: $transparent-black;
-    @include transition($transition);
+    transition: -webkit-transform 300ms cubic-bezier(0.215, 0.440, 0.420, 0.880);
   }
 }
 
@@ -46,6 +46,7 @@
 
   @mixin drawer-left() {
     @include transform(translate3d(0,0,0));
+    transition: -webkit-transform 300ms cubic-bezier(0.215, 0.440, 0.420, 0.880);
     left: -$drawer-width;
   }
 
@@ -57,10 +58,14 @@
   @mixin drawer-right() {
     left: 100%;
     @include transform(translate3d(0,0,0));
+    transition: -webkit-transform 300ms cubic-bezier(0.215, 0.440, 0.420, 0.880);
+    .drawer-nav {
+      right: 0;
+    }
   }
 
   @mixin drawer-right-is-open() {
-    @include transform(translate3d(-$drawer-width,0,0));
+    @include transform(translate3d(-100%,0,0));
     transition: -webkit-transform 300ms cubic-bezier(0.215, 0.440, 0.420, 0.880);
   }
 

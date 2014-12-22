@@ -53,6 +53,7 @@ $include-modal:                       true    !default;
 $include-accordion:                   true    !default;
 $include-drawers:                     true    !default;
 $include-expanding-nav:               true    !default;
+$include-sticky:                      true    !default;
 
 // ┌──────────────┐
 // │ CALCITE WEB  │
@@ -80,7 +81,7 @@ $include-expanding-nav:               true    !default;
 
 // Icons
 // Multiple sets of icons, full color, monochrome
-@import "calcite-web/icons/icons";
+// @import "calcite-web/icons/icons";
 
 // Components
 // small pieces: buttons, icons, tables...
@@ -115,4 +116,3 @@ $include-expanding-nav:               true    !default;
 // modifier classes override standard styles
 @import 'calcite-web/type/helpers';
 @import "calcite-web/grid/leader-trailer";
-

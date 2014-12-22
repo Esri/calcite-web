@@ -2,6 +2,18 @@
 @mixin accordion(){
   @extend .side-nav;
 }
+  @mixin accordion-section() {
+    &.is-active {
+      .accordion-content {
+        display: block;
+        border-top: 1px solid $lightest-gray;
+      }
+      .accordion-title:before {
+        content: $dstri;
+        @include font-size(0);
+      }
+    }
+  }
 
   @mixin accordion-title() {
     @extend .side-nav-title;
@@ -11,12 +23,6 @@
       padding-right: 0.5em;
       @include font-size(-6);
     }
-    &.is-active {
-      &:before {
-        content: $dstri;
-        @include font-size(0);
-      }
-    }
     &:hover {
       @include transition(all, $transition);
       background-color: $lightest-gray;
@@ -25,15 +31,12 @@
   @mixin accordion-content() {
     display: none;
     padding: $baseline/3;
-    &.is-active {
-      display: block;
-      border-top: 1px solid $lightest-gray;
-    }
   }
 
 
 @if $include-accordion == true {
   .accordion {@include accordion();}
-  .accordion-title {@include accordion-title();}
-  .accordion-content {@include accordion-content();}
+    .accordion-section {@include accordion-section()};
+    .accordion-title {@include accordion-title();}
+    .accordion-content {@include accordion-content();}
 }

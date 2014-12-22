@@ -1,3 +1,15 @@
+## v0.0.7
+
+### Added
+- sticky scroll
+- sticky show
+- javscript for interactive patterns
+
+### Modified
+- Minor padding right compression on .top-nav-title
+- User nav now a real thing
+- Move from Sass to LibSass
+
 ## v0.0.6
 
 More documentation, new javascript components, working icon tooling prototype.

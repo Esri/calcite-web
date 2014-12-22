@@ -1,0 +1,8 @@
+@mixin is-sticky() {
+  position:fixed;
+  z-index: 10;
+}
+
+@if $include-sticky == true {
+  .is-sticky{ @include is-sticky(); }
+}
