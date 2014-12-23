@@ -57,26 +57,37 @@
     <div class="wrapper">
       <!-- Logged Out Pattern-->
       <header class="top-nav">
-      <div class="container">
-        <div class="tablet-hide">
-          <a href="#" class="top-nav-title">Calcite for Unicorns</a>
-          <nav class="top-nav-list">
-            <a class="top-nav-link" href="#">Plains</a>
-            <a class="top-nav-link is-active" href="#">Fields</a>
-            <a class="top-nav-link" href="#">Forests</a>
-            <a class="top-nav-link" href="#">Mountains</a>
+        <div class="container">
+          <div class="tablet-hide">
+            <a href="#" class="top-nav-title">Esri Patterns</a>
+            <nav class="top-nav-list">
+              <a class="top-nav-link" href="#">Branding</a>
+              <a class="top-nav-link is-active" href="#">Web</a>
+              <a class="top-nav-link" href="#">Mobile</a>
+              <a class="top-nav-link" href="#">Presentations</a>
+              <a class="top-nav-link js-expanding-toggle" data-expanding-nav="one" href="#">One</a>
+              <a class="top-nav-link js-expanding-toggle" data-expanding-nav="two" href="#">Two</a>
+            </nav>
+          </div>
+          <div class="tablet-show">
+            <a href="#" class="top-nav-title js-drawer-toggle" data-drawer="top-nav">☰ Esri Patterns</a>
+          </div>
+          <nav class="sign-in">
+            <a href="#" class="btn btn-small btn-clear">Sign Up</a>
+            <a href="#" class="btn btn-small btn-transparent">Sign In</a>
           </nav>
         </div>
-        <div class="tablet-show">
-          <a href="#" class="top-nav-title js-drawer-toggle" data-drawer="top-nav">☰ Calcite for Unicorns</a>
+      </header>
+      <div class="expanding-nav js-expanding padding-leader-1" data-expanding-nav="one">
+        <div class="container padding-trailer-half">
+          <h1>Expanding Nav One</h1>
         </div>
-        <nav class="sign-in">
-          <a href="#" class="btn btn-small btn-clear">Sign Up</a>
-          <a href="#" class="btn btn-small btn-transparent">Sign In</a>
-        </nav>
       </div>
-    </header>
-
+      <div class="expanding-nav js-expanding padding-leader-1" data-expanding-nav="two">
+        <div class="container padding-trailer-half">
+          <h1>Expanding Nav Two</h1>
+        </div>
+      </div>
       <!-- Secondary Nav Pattern -->
       <header class="sub-nav">
         <div class="container">
@@ -99,10 +110,9 @@
       </header>
 
       <!-- Third Nav Pattern -->
-      <header class="third-nav">
+      <header class="third-nav js-sticky" data-top="0">
         <div class="container">
           <nav>
-
             
               
                 <a href="../" class="third-nav-link">Get Started</a>
@@ -144,7 +154,6 @@
                 <a href="../page-layouts" class="third-nav-link">Layouts</a>
               
             
-
           </nav>
         </div>
       </header>
@@ -176,6 +185,9 @@
               </nav>
             
           </aside>
+          <div class="column-6 invisible js-sticky js-show" data-top="46">
+            <a href="#" class="btn btn-fill btn-clear">Back to Top</a>
+          </div>
         </div>
 
         <main class="column-17 pre-1">

@@ -57,26 +57,37 @@
     <div class="wrapper">
       <!-- Logged Out Pattern-->
       <header class="top-nav">
-      <div class="container">
-        <div class="tablet-hide">
-          <a href="#" class="top-nav-title">Calcite for Unicorns</a>
-          <nav class="top-nav-list">
-            <a class="top-nav-link" href="#">Plains</a>
-            <a class="top-nav-link is-active" href="#">Fields</a>
-            <a class="top-nav-link" href="#">Forests</a>
-            <a class="top-nav-link" href="#">Mountains</a>
+        <div class="container">
+          <div class="tablet-hide">
+            <a href="#" class="top-nav-title">Esri Patterns</a>
+            <nav class="top-nav-list">
+              <a class="top-nav-link" href="#">Branding</a>
+              <a class="top-nav-link is-active" href="#">Web</a>
+              <a class="top-nav-link" href="#">Mobile</a>
+              <a class="top-nav-link" href="#">Presentations</a>
+              <a class="top-nav-link js-expanding-toggle" data-expanding-nav="one" href="#">One</a>
+              <a class="top-nav-link js-expanding-toggle" data-expanding-nav="two" href="#">Two</a>
+            </nav>
+          </div>
+          <div class="tablet-show">
+            <a href="#" class="top-nav-title js-drawer-toggle" data-drawer="top-nav">☰ Esri Patterns</a>
+          </div>
+          <nav class="sign-in">
+            <a href="#" class="btn btn-small btn-clear">Sign Up</a>
+            <a href="#" class="btn btn-small btn-transparent">Sign In</a>
           </nav>
         </div>
-        <div class="tablet-show">
-          <a href="#" class="top-nav-title js-drawer-toggle" data-drawer="top-nav">☰ Calcite for Unicorns</a>
+      </header>
+      <div class="expanding-nav js-expanding padding-leader-1" data-expanding-nav="one">
+        <div class="container padding-trailer-half">
+          <h1>Expanding Nav One</h1>
         </div>
-        <nav class="sign-in">
-          <a href="#" class="btn btn-small btn-clear">Sign Up</a>
-          <a href="#" class="btn btn-small btn-transparent">Sign In</a>
-        </nav>
       </div>
-    </header>
-
+      <div class="expanding-nav js-expanding padding-leader-1" data-expanding-nav="two">
+        <div class="container padding-trailer-half">
+          <h1>Expanding Nav Two</h1>
+        </div>
+      </div>
       <!-- Secondary Nav Pattern -->
       <header class="sub-nav">
         <div class="container">
@@ -99,10 +110,9 @@
       </header>
 
       <!-- Third Nav Pattern -->
-      <header class="third-nav">
+      <header class="third-nav js-sticky" data-top="0">
         <div class="container">
           <nav>
-
             
               
                 <a href="../" class="third-nav-link">Get Started</a>
@@ -144,7 +154,6 @@
                 <a href="../page-layouts" class="third-nav-link">Layouts</a>
               
             
-
           </nav>
         </div>
       </header>
@@ -203,6 +212,9 @@
               </nav>
             
           </aside>
+          <div class="column-6 invisible js-sticky js-show" data-top="46">
+            <a href="#" class="btn btn-fill btn-clear">Back to Top</a>
+          </div>
         </div>
 
         <main class="column-17 pre-1">
@@ -622,27 +634,27 @@
                   
                     <div class="styleguide-modifiers">
                       <div class="styleguide-modifier-example">
-                        <div class="js-modal modal-overlay " data-modal="">
+                        <div class="js-modal modal-overlay " data-modal="foo">
   <div class="modal-content">
     <a class="js-modal-toggle icon-close right" href="#"></a>
     <h4>Modal!</h4>
   </div>
 </div>
 
-<a class="js-modal-toggle btn" data-modal="" href="#">Show Modal</a>
+<a class="js-modal-toggle btn" data-modal="foo" href="#">Show Modal</a>
                       </div>
                     </div>
                   
 
                   
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-modal modal-overlay modifier-class"</span> <span class="hljs-attribute">data-modal</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-modal modal-overlay modifier-class"</span> <span class="hljs-attribute">data-modal</span>=<span class="hljs-value">"foo"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modal-content"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-modal-toggle icon-close right"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Modal!<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-modal-toggle btn"</span> <span class="hljs-attribute">data-modal</span>=<span class="hljs-value">"modifier-class"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Show Modal<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-modal-toggle btn"</span> <span class="hljs-attribute">data-modal</span>=<span class="hljs-value">"foo"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Show Modal<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 </code></pre>
                 
               </section>
@@ -663,20 +675,20 @@
                     <div class="styleguide-modifiers">
                       
                         <div class="styleguide-modifier-example">
-                          <div class="tabs js-tab-group trailer-2">
+                          <div class="tabs tab-group trailer-2 js-tab-group">
   <nav class="tab-nav">
-    <a class="tab-title is-active">Tab 1</a>
-    <a class="tab-title">Tab 2</a>
-    <a class="tab-title">Tab 3</a>
+    <a class="tab-title is-active js-tab">Tab 1</a>
+    <a class="tab-title js-tab">Tab 2</a>
+    <a class="tab-title js-tab">Tab 3</a>
   </nav>
   <section class="tab-contents">
-    <article class="tab-section is-active">
+    <article class="tab-section js-tab-section is-active">
       <p>Tab 1 section</p>
     </article>
-    <article class="tab-section">
+    <article class="tab-section js-tab-section">
       <p>Tab 2 section</p>
     </article>
-    <article class="tab-section">
+    <article class="tab-section js-tab-section">
       <p>Tab 3 section</p>
     </article>
   </section>
@@ -685,20 +697,20 @@
                         </div>
                       
                         <div class="styleguide-modifier-example">
-                          <div class="tabs-gray js-tab-group trailer-2">
+                          <div class="tabs-gray tab-group trailer-2 js-tab-group">
   <nav class="tab-nav">
-    <a class="tab-title is-active">Tab 1</a>
-    <a class="tab-title">Tab 2</a>
-    <a class="tab-title">Tab 3</a>
+    <a class="tab-title is-active js-tab">Tab 1</a>
+    <a class="tab-title js-tab">Tab 2</a>
+    <a class="tab-title js-tab">Tab 3</a>
   </nav>
   <section class="tab-contents">
-    <article class="tab-section is-active">
+    <article class="tab-section js-tab-section is-active">
       <p>Tab 1 section</p>
     </article>
-    <article class="tab-section">
+    <article class="tab-section js-tab-section">
       <p>Tab 2 section</p>
     </article>
-    <article class="tab-section">
+    <article class="tab-section js-tab-section">
       <p>Tab 3 section</p>
     </article>
   </section>
@@ -707,20 +719,20 @@
                         </div>
                       
                         <div class="styleguide-modifier-example">
-                          <div class="tabs-transparent js-tab-group trailer-2">
+                          <div class="tabs-transparent tab-group trailer-2 js-tab-group">
   <nav class="tab-nav">
-    <a class="tab-title is-active">Tab 1</a>
-    <a class="tab-title">Tab 2</a>
-    <a class="tab-title">Tab 3</a>
+    <a class="tab-title is-active js-tab">Tab 1</a>
+    <a class="tab-title js-tab">Tab 2</a>
+    <a class="tab-title js-tab">Tab 3</a>
   </nav>
   <section class="tab-contents">
-    <article class="tab-section is-active">
+    <article class="tab-section js-tab-section is-active">
       <p>Tab 1 section</p>
     </article>
-    <article class="tab-section">
+    <article class="tab-section js-tab-section">
       <p>Tab 2 section</p>
     </article>
-    <article class="tab-section">
+    <article class="tab-section js-tab-section">
       <p>Tab 3 section</p>
     </article>
   </section>
@@ -730,20 +742,20 @@
                       
                     </div>
                   
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class js-tab-group trailer-2"</span>&gt;</span>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class tab-group trailer-2 js-tab-group"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-nav"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-title is-active"</span>&gt;</span>Tab 1<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-title"</span>&gt;</span>Tab 2<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-title"</span>&gt;</span>Tab 3<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-title is-active js-tab"</span>&gt;</span>Tab 1<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-title js-tab"</span>&gt;</span>Tab 2<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-title js-tab"</span>&gt;</span>Tab 3<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-contents"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">article</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-section is-active"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">article</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-section js-tab-section is-active"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Tab 1 section<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">article</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">article</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-section"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">article</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-section js-tab-section"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Tab 2 section<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">article</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">article</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-section"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">article</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-section js-tab-section"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Tab 3 section<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">article</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
@@ -768,19 +780,23 @@
                       
                         <div class="styleguide-modifier-example">
                           <aside class="js-accordion accordion">
-  <h4 class="accordion-title is-active">Title of Section</h4>
-  <div class="accordion-content is-active">
-    <p>Stuff!</p>
+  <div class="accordion-section is-active">
+    <h4 class="accordion-title ">Title of Section</h4>
+    <div class="accordion-content">
+      <p>Stuff!</p>
+    </div>
   </div>
-
-  <h4 class="accordion-title">Title of Second Section</h4>
-  <div class="accordion-content">
-    <p>Stuff!</p>
+  <div class="accordion-section">
+    <h4 class="accordion-title">Title of Second Section</h4>
+    <div class="accordion-content">
+      <p>Stuff!</p>
+    </div>
   </div>
-
-  <h4 class="accordion-title">Title of Third Section</h4>
-  <div class="accordion-content">
-    <p>Stuff!</p>
+  <div class="accordion-section">
+    <h4 class="accordion-title">Title of Third Section</h4>
+    <div class="accordion-content">
+      <p>Stuff!</p>
+    </div>
   </div>
 </aside>
                           <code class="modifier-name">.default</code>
@@ -789,19 +805,23 @@
                     </div>
                   
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">aside</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-accordion accordion"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">h4</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"accordion-title is-active"</span>&gt;</span>Title of Section<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"accordion-content is-active"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Stuff!<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"accordion-section is-active"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h4</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"accordion-title "</span>&gt;</span>Title of Section<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"accordion-content"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Stuff!<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-title">h4</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"accordion-title"</span>&gt;</span>Title of Second Section<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"accordion-content"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Stuff!<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"accordion-section"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h4</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"accordion-title"</span>&gt;</span>Title of Second Section<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"accordion-content"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Stuff!<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-title">h4</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"accordion-title"</span>&gt;</span>Title of Third Section<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"accordion-content"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Stuff!<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"accordion-section"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h4</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"accordion-title"</span>&gt;</span>Title of Third Section<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"accordion-content"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Stuff!<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">aside</span>&gt;</span>
 </code></pre>
