@@ -6,11 +6,15 @@
 
 // Show
 @mixin show() {
-  visibility: visible;
+  visibility: visible !important;
 }
 
 // Hide
 @mixin hide() {
   display: none !important;
   visibility: hidden;
+}
+
+@mixin invisible() {
+  visibility: hidden !important;
 }
