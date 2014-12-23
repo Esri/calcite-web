@@ -9,6 +9,7 @@
 - Minor padding right compression on .top-nav-title
 - User nav now a real thing
 - Move from Sass to LibSass
+- Embiggen Default Body Size
 
 ## v0.0.6
 
