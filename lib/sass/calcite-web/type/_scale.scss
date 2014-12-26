@@ -31,22 +31,14 @@
   }
 
   @if $increment < 0 {
-    @if $double-stranded {
-      $v2: ($v2 / $ratio);
-    }
-    @for $i from $increment through -1 {
-      @if $double-stranded and ($v1 / $ratio) < $v2 {
-        $value: $v2;
-        $v2: ($v2 / $ratio);
-      } @else {
-        $v1: ($v1 / $ratio);
-        $value: $v1;
-      }
-    }
+    $unit: $body-size/16;
+    $decriment: $increment * $unit;
+    $value: $body-size + $decriment;
   }
 
   @return $value;
 }
+
 
 
 // ┌───────────┐
@@ -57,6 +49,7 @@
 
 @mixin font-size($n) {
   font-size: modular-scale($n);
+  // font-size: from-scale($n);
 
   @if $n < 6 and $n > 4 {
     line-height: 2*$baseline;

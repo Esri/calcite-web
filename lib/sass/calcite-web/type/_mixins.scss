@@ -122,6 +122,15 @@
       height: 0;
     }
   }
+  .list-numbered {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    & > li {
+      &:before {
+        content: counter(li, lower-alpha);
+      }
+    }
+  }
 }
 
 // ┌────────────┐
