@@ -4,11 +4,15 @@
 - sticky scroll
 - sticky show
 - javscript for interactive patterns
+- invisible class
 
 ### Modified
 - Minor padding right compression on .top-nav-title
 - User nav now a real thing
 - Move from Sass to LibSass
+- Embiggen Default Body Size
+- Minor adjustments on font-size at values less than 0
+- alpha counters on nested ol
 
 ## v0.0.6
 

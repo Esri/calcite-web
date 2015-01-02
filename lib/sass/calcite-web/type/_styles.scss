@@ -9,7 +9,7 @@
   @if $include-body-family == true {
     body {
       @extend .body-face;
-      @include font-size(-1);
+      @include font-size(0);
       line-height: $baseline;
       color: $type-color;
 
@@ -80,7 +80,7 @@
         display: block;
         overflow: auto;
         word-wrap: normal;
-        @include font-size(-2);
+        @include font-size(-1);
       }
     }
   }
