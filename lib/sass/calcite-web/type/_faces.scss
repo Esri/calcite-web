@@ -91,25 +91,25 @@
 @mixin secondary-face() {
   @include tracking($secondary-tracking);
   font-family: $secondary-family; font-weight: 400; font-style: normal;
-  b, strong {font-weight: 700;}
+  b, strong {font-weight: 600;}
 }
 
 @mixin secondary-italic() {
   @include tracking($secondary-tracking);
   font-family: $secondary-family; font-weight: 400; font-style: italic;
-  b, strong {font-weight: 700;}
+  b, strong {font-weight: 600;}
 }
 
 @mixin secondary-bold() {
   @include tracking($secondary-tracking);
-  font-family: $secondary-family; font-weight: 700; font-style: normal;
-  b, strong {font-weight: 700;}
+  font-family: $secondary-family; font-weight: 600; font-style: normal;
+  b, strong {font-weight: 600;}
 }
 
 @mixin secondary-bold-italic() {
   @include tracking($secondary-tracking);
-  font-family: $secondary-family; font-weight: 700; font-style: italic;
-  b, strong {font-weight: 700;}
+  font-family: $secondary-family; font-weight: 600; font-style: italic;
+  b, strong {font-weight: 600;}
 }
 
 
