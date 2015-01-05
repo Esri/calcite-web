@@ -8,8 +8,8 @@ function config(acetate) {
 
   acetate.layout('**/*', 'layouts/_layout');
 
-  acetate.options.src = 'docs/source';
-  acetate.options.dest = 'docs/build';
+  acetate.src = 'docs/source';
+  acetate.dest = 'docs/build';
 
   acetate.use(folder());
   acetate.use(partial());

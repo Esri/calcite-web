@@ -3,10 +3,10 @@
 // └───────────────┘
 // Builds a json file with all site content
 
-yaml = require('js-yaml');
-fs   = require('fs');
-jf   = require('jsonfile');
-path = require('path');
+var fs   = require('fs');
+var jf   = require('jsonfile');
+var path = require('path');
+var yaml = require('js-yaml');
 
 var file = 'dist/content.json';
 var response = [];
@@ -61,3 +61,15 @@ for (var key in contents) {
 }
 
 jf.writeFileSync(file, response);
+
+
+// sort_order: higher-numbers are higher on page, overviews are 100, default 0
+// sort reponse into three keys: elements, color, icons
+
+// use this guid generator and add a guid to every item
+// function guid(){
+//   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+//       var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
+//       return v.toString(16);
+//   });
+// }
