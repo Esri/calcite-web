@@ -13,6 +13,7 @@
 - Embiggen Default Body Size
 - Minor adjustments on font-size at values less than 0
 - alpha counters on nested ol
+- ITC Charter to Kepler
 
 ## v0.0.6
 
