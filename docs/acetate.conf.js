@@ -1,4 +1,3 @@
-var folder = require('acetate-folder');
 var partial = require('acetate-partial');
 
 function config(acetate) {
@@ -17,7 +16,6 @@ function config(acetate) {
   acetate.src = 'source';
   acetate.dest = 'build';
 
-  acetate.use(folder());
   acetate.use(partial());
 }
 
