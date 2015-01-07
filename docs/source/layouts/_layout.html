@@ -155,17 +155,6 @@
             {% for page in group.pages %}
               <section class="trailer-2">
                 {% markdown %}{% include table_of_contents[section].base + '/_' + page.link %}{% endmarkdown %}
-                {% if page.folder %}
-                  <h3 class="leader-2 trailer-1">Available {{page.title}}</h3>
-                  <div class="block-group block-group-4-up">
-                    {% folder './lib/img/icons/calcite-large/*.svg' %}
-                      <div class="block">
-                        <div class="icon-FILENAME"></div>
-                        <p>FILENAME</p>
-                      </div>
-                    {% endfolder %}
-                  </div>
-                {% endif %}
                 {% if page.modifiers %}
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
 

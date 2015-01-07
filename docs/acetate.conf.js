@@ -1,4 +1,3 @@
-var folder = require('acetate-folder');
 var partial = require('acetate-partial');
 
 function config(acetate) {
@@ -8,10 +7,15 @@ function config(acetate) {
 
   acetate.layout('**/*', 'layouts/_layout');
 
+  acetate.metadata('**/index.html', {
+    data: {
+      table_of_contents: 'table_of_contents.yml'
+    }
+  });
+
   acetate.src = 'docs/source';
   acetate.dest = 'docs/build';
 
-  acetate.use(folder());
   acetate.use(partial());
 }
 
