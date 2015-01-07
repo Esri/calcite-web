@@ -8,8 +8,14 @@ function config(acetate) {
 
   acetate.layout('**/*', 'layouts/_layout');
 
-  acetate.src = 'docs/source';
-  acetate.dest = 'docs/build';
+  acetate.metadata('index.html', {
+    data: {
+      table_of_contents: 'table_of_contents.yml'
+    }
+  });
+
+  acetate.src = 'source';
+  acetate.dest = 'build';
 
   acetate.use(folder());
   acetate.use(partial());
