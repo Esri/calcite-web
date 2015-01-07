@@ -7,14 +7,14 @@ function config(acetate) {
 
   acetate.layout('**/*', 'layouts/_layout');
 
-  acetate.metadata('index.html', {
+  acetate.metadata('**/index.html', {
     data: {
       table_of_contents: 'table_of_contents.yml'
     }
   });
 
-  acetate.src = 'source';
-  acetate.dest = 'build';
+  acetate.src = 'docs/source';
+  acetate.dest = 'docs/build';
 
   acetate.use(partial());
 }
