@@ -4,10 +4,11 @@
 //  ↳ http://esri.github.io/calcite-web/patterns/#drawers
 //  ↳ patterns → _.md
 
+$drawer-transition: transform 300ms cubic-bezier(0.215, 0.440, 0.420, 0.880);
 
 @mixin drawer() {
   @include transform(translate3d(0,0,0));
-  transition: -webkit-transform 300ms cubic-bezier(0.215, 0.440, 0.420, 0.880);
+  @include transition-prefixed($drawer-transition);
   background: $transparent-black;
   display: none;
   overflow: hidden;
@@ -24,7 +25,7 @@
     display: block;
     visibility: visible;
     background-color: $transparent-black;
-    transition: -webkit-transform 300ms cubic-bezier(0.215, 0.440, 0.420, 0.880);
+    @include transition-prefixed($drawer-transition);
   }
 }
 
@@ -41,24 +42,24 @@
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     pointer-events: auto;
-    transition: -webkit-transform 300ms cubic-bezier(0.215, 0.440, 0.420, 0.880);
+    @include transition-prefixed($drawer-transition);
   }
 
   @mixin drawer-left() {
     @include transform(translate3d(0,0,0));
-    transition: -webkit-transform 300ms cubic-bezier(0.215, 0.440, 0.420, 0.880);
+    @include transition-prefixed($drawer-transition);
     left: -$drawer-width;
   }
 
   @mixin drawer-left-is-open() {
     @include transform(translate3d($drawer-width,0,0));
-    transition: -webkit-transform 300ms cubic-bezier(0.215, 0.440, 0.420, 0.880);
+    @include transition-prefixed($drawer-transition);
   }
 
   @mixin drawer-right() {
     left: 100%;
     @include transform(translate3d(0,0,0));
-    transition: -webkit-transform 300ms cubic-bezier(0.215, 0.440, 0.420, 0.880);
+    @include transition-prefixed($drawer-transition);
     .drawer-nav {
       right: 0;
     }
@@ -66,7 +67,7 @@
 
   @mixin drawer-right-is-open() {
     @include transform(translate3d(-100%,0,0));
-    transition: -webkit-transform 300ms cubic-bezier(0.215, 0.440, 0.420, 0.880);
+    @include transition-prefixed($drawer-transition);
   }
 
 @if $include-drawers == true {
@@ -74,6 +75,6 @@
   .drawer-nav {@include drawer-nav();}
   .drawer-left {@include drawer-left();}
   .drawer-right {@include drawer-right();}
-  .drawer-left.is-active {@include drawer-left-is-open()}
-  .drawer-right.is-active {@include drawer-right-is-open()}
+  .drawer-left.is-active {@include drawer-left-is-open();}
+  .drawer-right.is-active {@include drawer-right-is-open();}
 }
