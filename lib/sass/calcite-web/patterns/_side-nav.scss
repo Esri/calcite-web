@@ -8,6 +8,7 @@
   @include box-sizing(border-box);
   padding: 0;
   border: 1px solid $lighter-gray;
+  border-top: none;
   @extend .header-face;
   background-color: $white;
 }
@@ -18,10 +19,7 @@
     @extend .header-face;
     @include font-size(-1);
     background-color: $off-white;
-    border-top: 1px solid $lightest-gray;
-    &:first-child {
-      border-top: none;
-    }
+    border-top: 1px solid $lighter-gray;
   }
 
   @mixin side-nav-link() {
@@ -50,7 +48,7 @@
   }
 
 @if $include-side-nav == true {
-  .side-nav {@include side-nav()}
-    .side-nav-title {@include side-nav-title()}
-    .side-nav-link {@include side-nav-link()}
+  .side-nav {@include side-nav();}
+    .side-nav-title {@include side-nav-title();}
+    .side-nav-link {@include side-nav-link();}
 }

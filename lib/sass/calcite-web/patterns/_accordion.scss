@@ -17,6 +17,7 @@
 
   @mixin accordion-title() {
     @extend .side-nav-title;
+    cursor: pointer;
     @include transition(all, $transition);
     &:before {
       content: $rtri;
