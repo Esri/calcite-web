@@ -22,25 +22,26 @@ If the mixin accepts arguments, pass them into the parenthesis:
 
 #### Quick Reference
 
-| Mixin                                       | Arguments                      |
-| ------------------------------------------- | ------------------------------ |
-| [`appearance`](#appearance)                 | `$value`                       |
-| [`box-sizing`](#box-sizing)                 | `$box`                         |
-| [`box-shadow`](#box-shadow)                 | `$shadow`                      |
-| [`calc`](#calc)                             | `$property, $value`            |
-| [`clearfix`](#clearfix)                     | none                           |
-| [`prefixer`](#prefixer)                     | `$property, $value, $prefixes` |
-| [`respond-to`](#respond-to)                 | `$max, $mi, $type`             |
-| [`transform`](#transform)                   | `$property`                    |
-| [`transform-origin`](#transform)            | `$axes`                        |
-| [`transform-style`](#transform)             | `$style`                       |
-| [`transition`](#transition)                 | `$value`                       |
-| [`transition-property`](#transition)        | `$value`                       |
-| [`transition-duration`](#transition)        | `$value`                       |
-| [`transition-timing-function`](#transition) | `$value`                       |
-| [`transition-delay`](#transition)           | `$value`                       |
-| [`show`](#show-and-hide)                    | none                           |
-| [`hide`](#show-and-hide)                    | none                           |
+| Mixin                                         | Arguments                      |
+| --------------------------------------------- | ------------------------------ |
+| [`appearance`](#appearance)                   | `$value`                       |
+| [`box-sizing`](#box-sizing)                   | `$box`                         |
+| [`box-shadow`](#box-shadow)                   | `$shadow`                      |
+| [`calc`](#calc)                               | `$property, $value`            |
+| [`clearfix`](#clearfix)                       | none                           |
+| [`prefixer`](#prefixer)                       | `$property, $value, $prefixes` |
+| [`respond-to`](#respond-to)                   | `$max, $mi, $type`             |
+| [`transform`](#transform)                     | `$property`                    |
+| [`transform-origin`](#transform)              | `$axes`                        |
+| [`transform-style`](#transform)               | `$style`                       |
+| [`transition`](#transition)                   | `$value`                       |
+| [`transition-prefixed`](#transition-prefixed) | `$value`                       |
+| [`transition-property`](#transition)          | `$value`                       |
+| [`transition-duration`](#transition)          | `$value`                       |
+| [`transition-timing-function`](#transition)   | `$value`                       |
+| [`transition-delay`](#transition)             | `$value`                       |
+| [`show`](#show-and-hide)                      | none                           |
+| [`hide`](#show-and-hide)                      | none                           |
 
 #### Appearance
 
