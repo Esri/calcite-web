@@ -20,6 +20,7 @@
   background-color: $off-white;
   border: 1px solid $lighter-gray;
   border-left: none;
+  cursor: pointer;
   &:first-child {
     border-left: 1px solid $lighter-gray;
   }
@@ -57,6 +58,7 @@
     background-color: $white;
     &.is-active {
       background-color: $off-white;
+      border-bottom: 1px solid $off-white;
     }
   }
   .tab-section  {
@@ -67,10 +69,8 @@
 @mixin tabs-transparent() {
   .tab-title    {
     background-color: transparent;
-    border: none;
     &.is-active {
       background-color: transparent;
-      border: 1px solid $lighter-gray;
       border-bottom: 1px solid $white;
     }
   }
