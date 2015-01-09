@@ -15,7 +15,7 @@
     <title>{{title}} | Esri Design Patterns</title>
 
     <!-- Link to favicon -->
-    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="shortcut icon" href="{{relativePath}}assets/img/favicon.ico">
 
     <!-- stylesheets -->
     {% block head %}
@@ -37,7 +37,7 @@
      ↳ http://esri.github.io/calcite-web/patterns/#drawers
      ↳ patterns → _drawers.md
     -->
-    <div class="drawer drawer-left js-drawer-toggle" data-drawer="top-nav">
+    <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
       <nav class="drawer-nav">
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Esri Patterns</h2>
@@ -155,33 +155,48 @@
             {% for page in group.pages %}
               <section class="trailer-2">
                 {% markdown %}{% include table_of_contents[section].base + '/_' + page.link %}{% endmarkdown %}
+
                 {% if page.modifiers %}
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  {% if page.modifiers == true %}
-                    <div class="styleguide-modifiers">
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      {% include table_of_contents[section].base + '/sample-code/_' + page.link %}
+                    </div>
+                    {% for modifier in page.modifiers %}
                       <div class="styleguide-modifier-example">
-                        {% partial table_of_contents[section].base + '/sample-code/_' + page.link + '.html', class = modifier %}{% endpartial %}
+                        {% include table_of_contents[section].base + '/sample-code/_' + page.link %}
+                        <code class="modifier-name">.{{ modifier }}</code>
                       </div>
-                    </div>
-                  {% endif %}
-
-                  {% if page.modifiers.length %}
-                    <div class="styleguide-modifiers">
-                      {% for modifier in page.modifiers %}
-                        <div class="styleguide-modifier-example">
-                          {% partial table_of_contents[section].base + '/sample-code/_' + page.link + '.html', class = modifier %}{% endpartial %}
-                          <code class="modifier-name">.{{ modifier }}</code>
-                        </div>
-                      {% endfor %}
-                    </div>
-                  {% endif %}
+                    {% endfor %}
+                  </div>
 {% markdown %}
 ```
-{% partial table_of_contents[section].base + '/sample-code/_' + page.link + '.html', class = 'modifier-class' %}{% endpartial %}
+{% set modifier = "modifier-class" %}{% include table_of_contents[section].base + '/sample-code/_' + page.link %}
 ```
 {% endmarkdown %}
                 {% endif %}
+
+                {% if page.colors %}
+                  <div class="block-group block-group-1-up">
+                    {% for color in page.colors %}
+                      <div class="block color-sample {{ color }}">
+                        <code>${{ color }}</code>
+                      </div>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+
+                {% if page.variables %}
+                  <div class="block-group block-group-5-up">
+                    {% for variable in page.variables %}
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 {{variable}}"></p>
+                        <code>${{ variable }}</code>
+                      </div>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+
               </section>
               <hr class="trailer-2">
             {% endfor %}

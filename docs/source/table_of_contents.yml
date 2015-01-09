@@ -1,37 +1,37 @@
 get-started:
-  title: "Get Started"
-  base: "get-started"
+  title: 'Get Started'
+  base: 'get-started'
   navigation:
-    - group: "Get Started"
+    - group: 'Get Started'
       pages:
-        - title: "Overview"
+        - title: 'Overview'
           link: get-started
-        - title: "Static Files"
+        - title: 'Static Files'
           link: static-files
-        - title: "Ruby Gem"
+        - title: 'Ruby Gem'
           link: ruby-gem
-        - title: "NPM"
+        - title: 'NPM'
           link: npm
-    - group: "Contributing"
+    - group: 'Contributing'
       pages:
-        - title: "Install"
+        - title: 'Install'
           link: install
-        - title: "Development"
+        - title: 'Development'
           link: development
-        - title: "Versioning"
+        - title: 'Versioning'
           link: versioning
-        - title: "Deploying the Documentation"
+        - title: 'Deploying the Documentation'
           link: deploy-the-documentation
 
 type:
-  title: "Type"
+  title: 'Type'
   base: type
   navigation:
-    - group: "Typefaces"
+    - group: 'Typefaces'
       pages:
-        - title: "Overview"
+        - title: 'Overview'
           link: overview
-        - title: "Header Face"
+        - title: 'Header Face'
           link: header-face
           modifiers:
             - header-light
@@ -41,28 +41,28 @@ type:
             - header-demi
             - header-demi-italic
             - header-bold-italic
-        - title: "Body Face"
+        - title: 'Body Face'
           link: body-face
           modifiers:
             - body-face
             - body-italic
             - body-bold
-        - title: "Secondary Face"
+        - title: 'Secondary Face'
           link: secondary-face
           modifiers:
             - secondary-face
             - secondary-italic
             - secondary-bold
             - secondary-bold-italic
-        - title: "Code Face"
+        - title: 'Code Face'
           link: code-face
           modifiers:
             - code-face
-    - group: "Composition Helpers"
+    - group: 'Composition Helpers'
       pages:
-        - title: "Overview"
+        - title: 'Overview'
           link: composition-helpers
-        - title: "Text modifiers"
+        - title: 'Text modifiers'
           link: text-modifiers
           modifiers:
             - text-large
@@ -74,7 +74,7 @@ type:
             - text-center
             - text-left
             - text-right
-        - title: "Color"
+        - title: 'Color'
           link: text-color
           modifiers:
             - text-red
@@ -90,7 +90,7 @@ type:
             - text-darker-gray
             - text-darkest-gray
             - text-off-black
-        - title: "Link Color"
+        - title: 'Link Color'
           link: link-color
           modifiers:
             - link-red
@@ -106,47 +106,47 @@ type:
             - link-darker-gray
             - link-darkest-gray
             - link-off-black
-        - title: "Bulleted List"
+        - title: 'Bulleted List'
           link: list-bulleted
           modifiers:
             - list-bulleted
-        - title: "Numbered List"
+        - title: 'Numbered List'
           link: list-numbered
           modifiers:
             - list-numbered
-    - group: "Defaults"
+    - group: 'Defaults'
       pages:
-        - title: "Overview"
+        - title: 'Overview'
           link: type-defaults
 grid:
-  title: "Grid"
+  title: 'Grid'
   base: grid
   navigation:
-    - group: "Grid"
+    - group: 'Grid'
       pages:
-        - title: "Overview"
+        - title: 'Overview'
           link: overview
         - title: Configuration
           link: configuration
-        - title: "Container"
+        - title: 'Container'
           link: container
-        - title: "Columns"
+        - title: 'Columns'
           link: columns
-        - title: "Responsive Columns"
+        - title: 'Responsive Columns'
           link: responsive-columns
-        - title: "Nested Columns"
+        - title: 'Nested Columns'
           link: nested-columns
-        - title: "Rows"
+        - title: 'Rows'
           link: rows
-        - title: "Block Groups"
+        - title: 'Block Groups'
           link: block-groups
-        - title: "Responsive Block Groups"
+        - title: 'Responsive Block Groups'
           link: responsive-block-groups
-    - group: "Grid Helpers"
+    - group: 'Grid Helpers'
       pages:
-        - title: "Pre & Post"
+        - title: 'Pre & Post'
           link: pre-and-post
-        - title: "Leader & Trailer"
+        - title: 'Leader & Trailer'
           link: leader-and-trailer
           modifiers:
             - leader-0
@@ -177,47 +177,47 @@ grid:
             - padding-trailer-4
             - padding-trailer-5
             - padding-trailer-6
-        - title: "First & Last"
+        - title: 'First & Last'
           link: first-and-last
-        - title: "Show & Hide"
+        - title: 'Show & Hide'
           link: show-and-hide
-        - title: "Left & Right"
+        - title: 'Left & Right'
           link: left-and-right
-        - title: "Inline"
+        - title: 'Inline'
           link: inline
-    - group: "Interactive Layout Helpers"
+    - group: 'Interactive Layout Helpers'
       pages:
-        - title: "Overview"
+        - title: 'Overview'
           link: interactive-layout-helpers
-        - title: "Scroll Show & Hide"
+        - title: 'Scroll Show & Hide'
           link: scroll-show-and-hide
-        - title: "Scroll Sticky"
+        - title: 'Scroll Sticky'
           link: scroll-sticky
 
 icons:
-  title: "Icons"
+  title: 'Icons'
   base: icons
   navigation:
-    - group: "Icon Sets"
+    - group: 'Icon Sets'
       pages:
-        - title: "Overview"
+        - title: 'Overview'
           link: overview
-        - title: "Icon Font"
+        - title: 'Icon Font'
           link: font
           folder: 'lib/img/icons/calcite-large/*.svg'
-        - title: "Color Icons"
+        - title: 'Color Icons'
           link: color
           folder: 'lib/img/icons/vecticons/*.svg'
 
 color:
-  title: "Color"
+  title: 'Color'
   base: color
   navigation:
-    - group: "Palette"
+    - group: 'Palette'
       pages:
-        - title: "Overview"
+        - title: 'Overview'
           link: overview
-        - title: "Grayscale"
+        - title: 'Grayscale'
           link: grayscale
           colors:
             - white
@@ -233,7 +233,7 @@ color:
             - black
             - transparent-black
             - transparent-off-black
-        - title: "UI Colors"
+        - title: 'UI Colors'
           link: ui-colors
           colors:
             - lightest-blue
@@ -259,18 +259,18 @@ color:
             - light-brown
             - brown
             - dark-brown
-        - title: "Type Colors"
+        - title: 'Type Colors'
           link: type-colors
 
 components:
-  title: "Components"
+  title: 'Components'
   base: components
   navigation:
-    - group: "Components"
+    - group: 'Components'
       pages:
-        - title: "Overview"
+        - title: 'Overview'
           link: overview
-        - title: "Buttons"
+        - title: 'Buttons'
           link: buttons
           modifiers:
             - btn-arrow
@@ -295,176 +295,155 @@ components:
             - btn-darker-gray
             - btn-darkest-gray
             - btn-off-black
-        - title: "Button Groups"
+        - title: 'Button Groups'
           link: button-groups
-          modifiers:
-            - btn-grouped
-        - title: "Dropdowns"
+          modifiers: true
+        - title: 'Dropdowns'
           link: dropdowns
           modifiers:
-            - default
-            - dropdown-left
             - dropdown-right
-        - title: "Loader"
+        - title: 'Loader'
           link: loader
-          modifiers:
-            - default
-        - title: "Alerts"
+          modifiers: true
+        - title: 'Alerts'
           link: alerts
           modifiers:
-            - default
             - alert-red
             - alert-green
-        - title: "Panels"
+        - title: 'Panels'
           link: panels
           modifiers:
-            - panel
             - panel-dark
             - panel-white
-        - title: "Breadcrumbs"
+        - title: 'Breadcrumbs'
           link: breadcrumbs
           modifiers: true
-        - title: "Tooltips"
+        - title: 'Tooltips'
           link: tooltips
           modifiers:
-            - default
             - tooltip-left
             - tooltip-right
-        - title: "Tables"
+        - title: 'Tables'
           link: tables
           modifiers:
-            - default
             - table-blue
             - table-striped
             - table-plain
-    - group: "Forms"
+    - group: 'Forms'
       pages:
-        - title: "Form Overview"
+        - title: 'Form Overview'
           link: form-overview
-          modifiers:
-            - 'default'
-        - title: "Search Bar"
+          modifiers: true
+        - title: 'Search Bar'
           link: search-bar
-          modifiers:
-            - 'default'
-        - title: "Text Inputs"
+          modifiers: true
+        - title: 'Text Inputs'
           link: text-inputs
           modifiers:
-            - 'default'
             - 'input-error'
-        - title: "Button Inputs"
-          link: button-inputs
-          modifiers:
-            - button
-            - file
-            - reset
-            - submit
-        - title: "Selects"
+        - title: 'Selects'
           link: selects
           modifiers:
-            - 'default'
             - input-error
-        - title: "Checkboxes"
+        - title: 'Checkboxes'
           link: checkboxes
           modifiers: true
-        - title: "Radio Buttons"
+        - title: 'Radio Buttons'
           link: radio-buttons
           modifiers: true
-    - group: "Branding"
+    - group: 'Branding'
       pages:
-        - title: "Esri Logo"
+        - title: 'Esri Logo'
           link: esri-logo
           modifiers:
-            - 'esri-logo'
             - 'esri-logo-reverse'
 patterns:
-  title: "Patterns"
+  title: 'Patterns'
   base: patterns
   navigation:
-    - group: "Patterns"
+    - group: 'Patterns'
       pages:
-        - title: "Overview"
+        - title: 'Overview'
           link: overview
-        - title: "Basic Page"
+        - title: 'Basic Page'
           link: basic-html-page
-        - title: "Top Nav"
+        - title: 'Top Nav'
           link: top-nav
           modifiers: true
-        - title: "User Sign In"
+        - title: 'User Sign In'
           link: user-sign-in
           modifiers:
             - sign-in
-        - title: "User Nav"
+        - title: 'User Nav'
           link: user-nav
-          modifiers:
-            - user-nav
-        - title: "Sub Nav"
+          modifiers: true
+        - title: 'Sub Nav'
           link: sub-nav
           modifiers: true
-        - title: "Third Nav"
+        - title: 'Third Nav'
           link: third-nav
           modifiers: true
-        - title: "Side Nav"
+        - title: 'Side Nav'
           link: side-nav
           modifiers: true
-        - title: "Footer"
+        - title: 'Footer'
           link: footer
-        - title: "Pagination"
+        - title: 'Pagination'
           link: pagination
           modifiers: true
-    - group: "Interactive Patterns"
+    - group: 'Interactive Patterns'
       pages:
-        - title: "Modals"
+        - title: 'Modals'
           link: modals
           modifiers: true
-        - title: "Tabs"
+        - title: 'Tabs'
           link: tabs
           modifiers:
-            - 'tabs'
             - 'tabs-gray'
             - 'tabs-transparent'
-        - title: "Accordions"
+        - title: 'Accordions'
           link: accordions
+          modifiers: true
+        - title: 'Carousels'
+          link: carousel
           modifiers:
-            - default
-        - title: "Drawers"
+        - title: 'Drawers'
           link: drawers
-        - title: "Expanding Nav"
+        - title: 'Expanding Nav'
           link: expanding-nav
-          modifiers:
-            - true
+          modifiers: true
 sass:
-  title: "Sass"
+  title: 'Sass'
   base: sass
   navigation:
-    - group: "Sass"
+    - group: 'Sass'
       pages:
-        - title: "Overview"
+        - title: 'Overview'
           link: overview
-    - group: "Variables"
+    - group: 'Variables'
       pages:
-        - title: "Overview"
+        - title: 'Overview'
           link: variables
-        - title: "Breakpoints"
+        - title: 'Breakpoints'
           link: breakpoints
-        - title: "UI Variables"
-          link: "ui-variables"
+        - title: 'UI Variables'
+          link: 'ui-variables'
 
-    - group: "Type Composition"
+    - group: 'Type Composition'
       pages:
-        - title: "Type Composition"
+        - title: 'Type Composition'
           link: type-composition
-        - title: "Font Size"
+        - title: 'Font Size'
           link: font-size
-        - title: "Modular Scale"
+        - title: 'Modular Scale'
           link: modular-scale
-        - title: "Tracking"
+        - title: 'Tracking'
           link: tracking
-        - title: "Leading"
+        - title: 'Leading'
           link: leading
-        - title: "Word Spacing"
+        - title: 'Word Spacing'
           link: word-spacing
-        - title: "Unicode Variables"
+        - title: 'Unicode Variables'
           link: unicode-variables
           variables:
             - nbsp
@@ -512,49 +491,45 @@ sass:
             - whitesquare
             - ssquare
             - swhitesquare
-    - group: "Utilities"
+    - group: 'Utilities'
       pages:
         - title: Utility Mixins
           link: utility-mixins
-    - group: "Color Map"
-      pages:
-        - title: Color Map
-          link: color-map
 
 javascript:
-  title: "JavaScript"
+  title: 'JavaScript'
   base: javascript
   navigation:
-    - group: "Interactive Patterns"
+    - group: 'Interactive Patterns'
       pages:
-        - title: "Overview"
+        - title: 'Overview'
           link: overview
-    - group: "Utility Functions"
+    - group: 'Utility Functions'
       pages:
-        - title: "Overview"
+        - title: 'Overview'
           link: utility-functions
-        - title: "DOM Utilities"
+        - title: 'DOM Utilities'
           link: dom-utilities
-        - title: "Array Manipulation"
+        - title: 'Array Manipulation'
           link: array-manipulation
-        - title: "Browser Feature Detection"
+        - title: 'Browser Feature Detection'
           link: browser-feature-detection
 
 layouts:
   title: 'Layouts'
   base: page-layouts
   navigation:
-    - group: "Building Layouts"
+    - group: 'Building Layouts'
       pages:
-        - title: "Homepage"
+        - title: 'Homepage'
           link: homepage
-        - title: "Landing Page"
+        - title: 'Landing Page'
           link: landing-page
-        - title: "Documentation"
+        - title: 'Documentation'
           link: documentation
-        - title: "Web App"
+        - title: 'Web App'
           link: web-app
-        - title: "Fullscreen Map App"
+        - title: 'Fullscreen Map App'
           link: fullscreen-map-app
-        - title: "Embedded Map App"
+        - title: 'Embedded Map App'
           link: embedded-map-app

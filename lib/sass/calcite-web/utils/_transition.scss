@@ -10,6 +10,13 @@ $transition-prefixes: webkit spec;
   @include prefixer (transition, $value, $transition-prefixes);
 }
 
+@mixin transition-prefixed ($value...) {
+  -webkit-transition: -webkit-$value;
+     -moz-transition: -moz-$value;
+       -o-transition: -o-$value;
+          transition: $value;
+}
+
 @mixin transition-property ($value...) {
   @include prefixer (transition-property, $value, $transition-prefixes);
 }

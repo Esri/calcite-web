@@ -18,6 +18,20 @@
   .link-darkest-gray { @include link-color($darkest-gray, $off-black);}
   .link-off-black    { @include link-color($off-black, $black);}
 
+  .text-red          { color: $red; }
+  .text-green        { color: $green; }
+  .text-blue         { color: $blue; }
+  .text-purple       { color: $purple; }
+  .text-orange       { color: $orange; }
+  .text-brown        { color: $brown; }
+  .text-white        { color: $white; }
+  .text-light-gray   { color: $light-gray; }
+  .text-gray         { color: $gray; }
+  .text-dark-gray    { color: $dark-gray; }
+  .text-darker-gray  { color: $darker-gray; }
+  .text-darkest-gray { color: $darkest-gray; }
+  .text-off-black    { color: $off-black; }
+
   .text-rule              {@include text-rule();}
   .text-inline            {@include text-inline();}
   .text-center            {@include text-center();}
