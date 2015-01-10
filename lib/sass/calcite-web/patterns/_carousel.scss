@@ -10,13 +10,16 @@
 }
 
 .carousel-slides {
+  display: table;
+  height: 100%;
   width: 400%; // this gets set by calcite-js
   @include transform(translate3d(0,0,0));
   @include transition-prefixed(transform $transition);
 }
 
 .carousel-slide {
-  display: block;
-  width: 25%; // this gets set by calcite-js
+  display: table-cell;
+  width: 25%;
   float: left;
+  height: 300px;
 }
