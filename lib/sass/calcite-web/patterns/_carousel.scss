@@ -5,21 +5,43 @@
 //  ↳ patterns → _carousel.md
 
 .carousel {
-  width: 100%;
   overflow-x: hidden;
+  position: relative;
 }
 
 .carousel-slides {
-  display: table;
-  height: 100%;
-  width: 400%; // this gets set by calcite-js
   @include transform(translate3d(0,0,0));
   @include transition-prefixed(transform $transition);
 }
 
 .carousel-slide {
-  display: table-cell;
+  position: relative;
   width: 25%;
   float: left;
-  height: 300px;
+  height: 100%;
+}
+
+// Next and Prev Buttons
+.carousel-prev {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -$baseline/2;
+  width: $baseline;
+  height: $baseline;
+  text-align: center;
+  color: $white;
+  background: $transparent-black;
+  z-index: 10;
+}
+
+.carousel-next {
+  @extend .carousel-prev;
+  left: auto;
+  right: 0;
+}
+
+.is-first-slide.carousel-prev, .is-last-slide.carousel-next {
+  pointer-events: none;
+  opacity: 0.2;
 }
