@@ -145,7 +145,7 @@ This mixin provides a shorthand syntax and supports multiple transitions.
 @include transition(opacity 1.0s ease-in 0s, width 2.0s ease-in 2s);
 ```
 
-To transition vendor-prefixed properties, e.g. `-webkit-transform` and `-moz-transform`, do not use the shorthand mixin. Instead, use the individual transition mixins:
+Or you can use the individual transition properties:
 
 ```
 @include transition-property(transform);
@@ -153,6 +153,16 @@ To transition vendor-prefixed properties, e.g. `-webkit-transform` and `-moz-tra
 @include transition-timing-function(ease-in);
 @include transition-delay(0.5s);
 ```
+
+#### Transition Prefixed
+
+To transition vendor-prefixed properties, e.g. `-webkit-transform` and `-moz-transform`, there is an additional convinience `transition-prefixed()` mixin:
+
+```
+@include transition-prefixed(transform3d(0,0,0) 200ms linear);
+```
+
+This will generate vendor prefixed properties *and* values.
 
 #### Show and Hide
 
