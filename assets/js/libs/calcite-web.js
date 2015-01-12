@@ -1,6 +1,6 @@
-/* calcite-web - v0.0.6 - 2014-12-23
+/* calcite-web - v0.0.7 - 2015-01-12
 *  https://github.com/esri/calcite-web
-*  Copyright (c) 2014 Environmental Systems Research Institute, Inc.
+*  Copyright (c) 2015 Environmental Systems Research Institute, Inc.
 *  Apache 2.0 License */
 (function Calcite () {
 
@@ -9,18 +9,18 @@ var calcite = {
 };
 
 // ┌───────────────┐
-// │ DOM utilities │
+// │ DOM Utilities │
 // └───────────────┘
 
 calcite.dom = {};
 
 // ┌──────────────────────┐
-// │ DOM event management │
+// │ DOM Event Management │
 // └──────────────────────┘
 
 // returns standard interaction event, later will add touch support
 calcite.dom.event = function () {
-  return "click";
+  return 'click';
 };
 
 // add a callback function to an event on a DOM node
@@ -75,7 +75,7 @@ calcite.dom.stopPropagation = function (event) {
 };
 
 // ┌────────────────────┐
-// │ class manipulation │
+// │ Class Manipulation │
 // └────────────────────┘
 
 // check if an element has a specific class
@@ -117,7 +117,7 @@ calcite.dom.removeClass = function (domNode, classes) {
 };
 
 // ┌───────────────┐
-// │ DOM traversal │
+// │ DOM Traversal │
 // └───────────────┘
 
 // returns closest element up the DOM tree matching a given class
@@ -151,7 +151,7 @@ calcite.dom.getAttr = function(domNode, attr) {
 };
 
 // ┌───────────────────┐
-// │ object conversion │
+// │ Object Conversion │
 // └───────────────────┘
 
 // turn a domNodeList into an array
@@ -164,7 +164,7 @@ calcite.dom.nodeListToArray = function (domNodeList) {
 };
 
 // ┌────────────────────┐
-// │ array manipulation │
+// │ Array Manipulation │
 // └────────────────────┘
 
 calcite.arr = {};
@@ -187,7 +187,7 @@ calcite.arr.indexOf = function (obj, arr, offset) {
 };
 
 // ┌───────────────────────────┐
-// │ browser feature detection │
+// │ Browser Feature Detection │
 // └───────────────────────────┘
 // detect features like touch, ie, etc.
 
@@ -206,35 +206,126 @@ calcite.browser.isTouch = function () {
 // └─────────────┘
 // javascript logic for ui patterns
 
+function findElements (className) {
+  var elements = document.querySelectorAll(className);
+  if (elements.length) {
+    return calcite.dom.nodeListToArray(elements);
+  } else {
+    return false;
+  }
+}
+
+// remove 'is-active' class from every element in an array
+function removeActive (array) {
+  if (typeof array == 'object') {
+    array = calcite.dom.nodeListToArray(array);
+  }
+  array.forEach(function (item) {
+    calcite.dom.removeClass(item, 'is-active');
+  });
+}
+
+// remove 'is-active' from array, add to element
+function toggleActive (array, el) {
+  var isActive = calcite.dom.hasClass(el, 'is-active');
+  if (isActive) {
+    calcite.dom.removeClass(el, 'is-active');
+  } else {
+    removeActive(array);
+    calcite.dom.addClass(el, 'is-active');
+  }
+}
+
 // ┌───────────┐
-// │ ACCORDION │
+// │ Accordion │
 // └───────────┘
-// Collapsible accordion list
+// collapsible accordion list
 
 calcite.accordion = function () {
-  var accordions = document.querySelectorAll('.js-accordion');
+  var accordions = findElements('.js-accordion');
 
-  if (accordions.length > 0) {
-    for (var i = 0; i < accordions.length; i++) {
-      var children = accordions[i].children;
-      for (var j = 0; j < children.length; j++) {
-        calcite.dom.addEvent(children[j], calcite.dom.event(), toggleAccordion);
-      }
-    }
-  } else {
+  if (!accordions) {
     return;
+  }
+
+  for (var i = 0; i < accordions.length; i++) {
+    var children = accordions[i].children;
+    for (var j = 0; j < children.length; j++) {
+      calcite.dom.addEvent(children[j], calcite.dom.event(), toggleAccordion);
+    }
   }
 
   function toggleAccordion (event) {
     var parent = calcite.dom.closest('accordion-section', calcite.dom.eventTarget(event));
     var children = calcite.dom.closest('accordion', parent).children;
+    children = calcite.dom.nodeListToArray(children);
+    toggleActive(children, parent);
+  }
 
-    for (var i = 0; i < children.length; i++){
-      calcite.dom.removeClass(children[i], 'is-active');
+};
+
+// ┌──────────┐
+// │ Carousel │
+// └──────────┘
+// show carousel with any number of slides
+
+calcite.carousel = function () {
+
+  var carousels = findElements('.js-carousel');
+
+  if (!carousels) {
+    return;
+  }
+
+  for (var i = 0; i < carousels.length; i++) {
+
+    var carousel = carousels[i];
+    var wrapper = carousel.querySelectorAll('.carousel-slides')[0];
+    var slides = carousel.querySelectorAll('.carousel-slide');
+    var toggles = calcite.dom.nodeListToArray(carousel.querySelectorAll('.js-carousel-link'));
+
+    wrapper.style.width = slides.length * 100 + '%';
+
+    calcite.dom.addClass(slides[0], 'is-active');
+    calcite.dom.addClass(carousel, 'is-first-slide');
+
+    for (var k = 0; k < slides.length; k++) {
+      slides[k].style.width = 100 / slides.length + '%';
     }
 
-    calcite.dom.addClass(parent, 'is-active');
-}
+    for (var j = 0; j < toggles.length; j++) {
+      calcite.dom.addEvent(toggles[j], calcite.dom.event(), toggleSlide);
+    }
+
+  }
+
+  function toggleSlide (e) {
+    calcite.dom.preventDefault(e);
+    var link = calcite.dom.eventTarget(e);
+    var index = calcite.dom.getAttr(link, 'data-slide');
+    var carousel = calcite.dom.closest('carousel', link);
+    var current = carousel.querySelectorAll('.carousel-slide.is-active')[0];
+    var slides = carousel.querySelectorAll('.carousel-slide');
+    var wrapper = carousel.querySelectorAll('.carousel-slides')[0];
+
+    if (index == 'prev') {
+      index = calcite.arr.indexOf(current, slides);
+      if (index === 0) { index = 1; }
+    } else if (index == 'next') {
+      index = calcite.arr.indexOf(current, slides) + 2;
+      if (index > slides.length) { index = slides.length; }
+    }
+
+    calcite.dom.removeClass(carousel, 'is-first-slide is-last-slide');
+
+    if (index == slides.length) { calcite.dom.addClass(carousel, 'is-last-slide'); }
+    if (index == 1) { calcite.dom.addClass(carousel, 'is-first-slide'); }
+
+    removeActive(slides);
+    calcite.dom.addClass(slides[index - 1], 'is-active');
+    var offset = (index - 1)/slides.length * -100 + '%';
+    wrapper.style.transform= 'translate3d(' + offset + ',0,0)';
+  }
 
 };
 
@@ -245,10 +336,10 @@ calcite.accordion = function () {
 
 calcite.dropdown = function () {
 
-  var toggles = calcite.dom.nodeListToArray(document.querySelectorAll('.js-dropdown-toggle'));
-  var dropdowns = calcite.dom.nodeListToArray(document.querySelectorAll('.js-dropdown'));
+  var toggles = findElements('.js-dropdown-toggle');
+  var dropdowns = findElements('.js-dropdown');
 
-  if (dropdowns.length === 0) {
+  if (!dropdowns) {
     return;
   }
 
@@ -291,27 +382,11 @@ calcite.dropdown = function () {
 // show and hide drawers
 calcite.drawer = function () {
 
-  var toggles = calcite.dom.nodeListToArray(document.querySelectorAll('.js-drawer-toggle'));
-  var drawers = calcite.dom.nodeListToArray(document.querySelectorAll('.js-drawer'));
+  var toggles = findElements('.js-drawer-toggle');
+  var drawers = findElements('.js-drawer');
 
-  if (drawers.length === 0) {
+  if (!drawers) {
     return;
-  }
-
-  function closeAllDrawers () {
-    for (var i = 0; i < drawers.length; i++) {
-      calcite.dom.removeClass(drawers[i], 'is-active');
-    }
-  }
-
-  function toggleDrawer (drawer) {
-    var isActive = calcite.dom.hasClass(drawer, 'is-active');
-    if (isActive) {
-      calcite.dom.removeClass(drawer, 'is-active');
-    } else {
-      closeAllDrawers();
-      calcite.dom.addClass(drawer, 'is-active');
-    }
   }
 
   function bindToggle (toggle) {
@@ -322,7 +397,7 @@ calcite.drawer = function () {
         var drawer = drawers[i];
         var isTarget = calcite.dom.getAttr(drawers[i], 'data-drawer');
         if (target == isTarget) {
-         toggleDrawer(drawer);
+         toggleActive(drawers, drawer);
         }
       }
     });
@@ -331,7 +406,7 @@ calcite.drawer = function () {
   function bindDrawer (drawer) {
     calcite.dom.addEvent(drawer, calcite.dom.event(), function(event) {
       calcite.dom.preventDefault(event);
-      toggleDrawer(drawer);
+      toggleActive(drawers, drawer);
     });
   }
 
@@ -348,27 +423,11 @@ calcite.drawer = function () {
 // └───────────────┘
 // show and hide exanding nav located under topnav
 calcite.expandingNav = function () {
-  var toggles = calcite.dom.nodeListToArray(document.querySelectorAll('.js-expanding-toggle'));
-  var expanders = calcite.dom.nodeListToArray(document.querySelectorAll('.js-expanding'));
+  var toggles = findElements('.js-expanding-toggle');
+  var expanders = findElements('.js-expanding');
 
-  if (expanders.length === 0) {
+  if (!expanders) {
     return;
-  }
-
-  function closeAllExpanders () {
-    for (var i = 0; i < expanders.length; i++) {
-      calcite.dom.removeClass(expanders[i], 'is-active');
-    }
-  }
-
-  function toggleExpander (expander) {
-    var isActive = calcite.dom.hasClass(expander, 'is-active');
-    if (isActive) {
-      calcite.dom.removeClass(expander, 'is-active');
-    } else {
-      closeAllExpanders();
-      calcite.dom.addClass(expander, 'is-active');
-    }
   }
 
   function bindToggle (toggle) {
@@ -379,7 +438,7 @@ calcite.expandingNav = function () {
         var expander = expanders[i];
         var isTarget = calcite.dom.getAttr(expanders[i], 'data-expanding-nav');
         if (target == isTarget) {
-         toggleExpander(expander);
+         toggleActive(expanders, expander);
         }
       }
     });
@@ -397,27 +456,11 @@ calcite.expandingNav = function () {
 
 calcite.modal = function () {
 
-  var toggles = calcite.dom.nodeListToArray(document.querySelectorAll('.js-modal-toggle'));
-  var modals = calcite.dom.nodeListToArray(document.querySelectorAll('.js-modal'));
+  var toggles = findElements('.js-modal-toggle');
+  var modals = findElements('.js-modal');
 
-  if (modals.length === 0) {
+  if (!modals) {
     return;
-  }
-
-  function closeAllModals () {
-    for (var i = 0; i < modals.length; i++) {
-      calcite.dom.removeClass(modals[i], 'is-active');
-    }
-  }
-
-  function toggleModal (modal) {
-    var isActive = calcite.dom.hasClass(modal, 'is-active');
-    if (isActive) {
-      calcite.dom.removeClass(modal, 'is-active');
-    } else {
-      closeAllModals();
-      calcite.dom.addClass(modal, 'is-active');
-    }
   }
 
   function bindToggle (toggle) {
@@ -428,7 +471,7 @@ calcite.modal = function () {
         var modal = modals[i];
         var isTarget = calcite.dom.getAttr(modals[i], 'data-modal');
         if (target == isTarget) {
-         toggleModal(modal);
+         toggleActive(modals, modal);
         }
       }
     });
@@ -437,7 +480,7 @@ calcite.modal = function () {
   function bindModal (modal) {
     calcite.dom.addEvent(modal, calcite.dom.event(), function(event) {
       calcite.dom.preventDefault(event);
-      toggleModal(modal);
+      toggleActive(modals, modal);
     });
   }
 
@@ -451,193 +494,132 @@ calcite.modal = function () {
 
 
 // ┌──────┐
-// │ TABS │
+// │ Tabs │
 // └──────┘
 // tabbed content pane
 
 calcite.tabs = function () {
-  var tabs = document.querySelectorAll('.js-tab');
-  if (tabs.length > 0) {
-    // variables to be used in loops
-    var i, j, k, tab, group, tabsInGroup, percent;
-    var tabGroups = document.querySelectorAll('.js-tab-group');
+  var tabs = findElements('.js-tab');
+  var tabGroups = findElements('.js-tab-group');
 
-    // Attach the switchTab event to all tabs
-    for (i = 0; i < tabs.length; i++) {
-      tab = tabs[i];
-      calcite.dom.addEvent(tab, calcite.dom.event(), switchTab);
-    }
+  if (!tabs) {
+    return;
+  }
 
-    for (j = 0; j < tabGroups.length; j++) {
-      group = tabGroups[j];
-      tabsInGroup = group.querySelectorAll('.js-tab');
-      percent = 100 / tabsInGroup.length;
-
-      for (k = 0; k < tabsInGroup.length; k++){
-        tabsInGroup[k].style.maxWidth = percent + "%";
-      }
+  // set max width for each tab
+  for (var j = 0; j < tabGroups.length; j++) {
+    var tabsInGroup = tabGroups[j].querySelectorAll('.js-tab');
+    var percent = 100 / tabsInGroup.length;
+    for (var k = 0; k < tabsInGroup.length; k++){
+      tabsInGroup[k].style.maxWidth = percent + '%';
     }
   }
 
   function switchTab (event) {
     calcite.dom.preventDefault(event);
 
-    var tab;
-    var target = calcite.dom.eventTarget(event);
-    if (calcite.dom.hasClass(target, 'js-tab')) {
-      tab = target;
-    } else {
-      tab = calcite.dom.closest('js-tab', target);
-    }
-    var tabs = calcite.dom.closest('tab-nav', tab).querySelectorAll('.js-tab');
+    var tab = calcite.dom.closest('js-tab', calcite.dom.eventTarget(event));
+    var tabGroup = calcite.dom.closest('js-tab-group', tab);
+    var tabs = tabGroup.querySelectorAll('.js-tab');
+    var contents = tabGroup.querySelectorAll('.js-tab-section');
     var index = calcite.arr.indexOf(tab, tabs);
-    var contents = calcite.dom.closest('js-tab-group', tab).querySelectorAll('.js-tab-section');
 
-    for (var i = 0; i < tabs.length; i++){
-      calcite.dom.removeClass(tabs[i], 'is-active');
-      calcite.dom.removeClass(contents[i], 'is-active');
-    }
+    removeActive(tabs);
+    removeActive(contents);
 
     calcite.dom.addClass(tab, 'is-active');
     calcite.dom.addClass(contents[index], 'is-active');
   }
+
+  // attach the switchTab event to all tabs
+  for (var i = 0; i < tabs.length; i++) {
+    calcite.dom.addEvent(tabs[i], calcite.dom.event(), switchTab);
+  }
+
 };
 
-// ┌────────────────────┐
-// │ Scroll Visibillity │
-// └────────────────────┘
-// Hide or show elements based on scroll position
+// ┌────────────────┐
+// │ Scroll Effects │
+// └────────────────┘
+// hide, show, and make elements sticky based on scroll position
 
-calcite.scrollVisibillity = function () {
-  var shows = calcite.dom.nodeListToArray(document.querySelectorAll('.js-show'));
+calcite.scrollEffects = function () {
+  var shows = findElements('.js-show');
+  var stickies = findElements('.js-sticky');
 
-  if (shows.length === 0) {
+  if (!shows && !stickies) {
     return;
   }
 
-  var showItems = {};
+  var scrolls = shows.concat(stickies);
+  var scrollItems = [];
 
-  for (var j = 0; j < shows.length; j++) {
-    var top = shows[j].offsetTop;
-    if (shows[j].dataset.top) {
-      top = top - parseInt(shows[j].dataset.top, 0);
-    }
-    showItems[j] = {
+  for (var i = 0; i < scrolls.length; i++) {
+
+    var isSticky = i > shows.length - 1;
+
+    var item = {
       visible: false,
-      top: top
-    };
-  }
-
-  for (var i = 0; i < shows.length; i++) {
-    var elem = shows[i];
-    var item = showItems[i];
-    var isVisible = item.visible;
-    console.log(elem);
-    if (!isVisible) {
-      calcite.dom.addClass(elem, 'hide');
-      calcite.dom.removeClass(elem, 'show');
-      item.visible = false;
-    }
-  }
-
-  function handleShow(index, offset) {
-    var item = showItems[index];
-    var elem = shows[index];
-    var distance = item.top - offset;
-    var isVisible = item.visible;
-
-    if (distance < 1 && !isVisible) {
-      calcite.dom.removeClass(elem, 'hide');
-      calcite.dom.addClass(elem, 'show');
-      item.visible = true;
-    } else if (isVisible && offset < item.top){
-      calcite.dom.addClass(elem, 'hide');
-      calcite.dom.removeClass(elem, 'show');
-      item.visible = false;
-    }
-  }
-
-  if (window.addEventListener) {
-    window.addEventListener("scroll", function(evt) {
-      var offset = window.pageYOffset;
-      for (var j = 0; j < shows.length; j++) {
-        handleShow(j, offset);
-      }
-    });
-  }
-  if (window.attachEvent) {
-    window.attachEvent(on + "scroll", function(evt) {
-      var offset = window.pageYOffset;
-      for (var j = 0; j < shows.length; j++) {
-        handleShow(j, offset);
-      }
-    });
-  }
-};
-
-// ┌────────┐
-// │ STICKY │
-// └────────┘
-// Sticks things to the window
-
-calcite.sticky = function () {
-  var stickies = calcite.dom.nodeListToArray(document.querySelectorAll('.js-sticky'));
-
-  if (stickies === 0) {
-    return;
-  }
-
-  var stickyItems = {};
-
-  for (var i = 0; i < stickies.length; i++) {
-    var top = stickies[i].offsetTop;
-    if (stickies[i].dataset.top) {
-      top = top - parseInt(stickies[i].dataset.top, 0);
-    }
-    stickyItems[i] = {
-      active: false,
-      top: top,
-      shim: stickies[i].cloneNode('deep')
+      sticky: false,
+      top: scrolls[i].offsetTop,
+      shim: false
     };
 
+    if (scrolls[i].dataset.top) {
+      item.top = item.top - parseInt(scrolls[i].dataset.top, 0);
+    }
+
+    if (!isSticky) {
+      calcite.dom.addClass(scrolls[i], 'hide');
+    }
+
+    if (isSticky) {
+      item.shim = scrolls[i].cloneNode('deep');
+    }
+
+    scrollItems.push(item);
+
   }
 
-  function handleScroll(index, offset) {
-    var item = stickyItems[index];
-    var elem = stickies[index];
+  function handleScroll(item, elem, offset) {
     var parent = elem.parentNode;
     var distance = item.top - offset;
+    var isSticky = item.shim;
 
-    if (distance < 1 && !item.active) {
-      item.shim.style.visibility = 'hidden';
-      parent.insertBefore(item.shim, elem);
-      calcite.dom.addClass(elem, 'is-sticky');
-      item.active = true;
-      elem.style.top = elem.dataset.top + 'px';
-    } else if (item.active && offset < item.top){
-      parent.removeChild(item.shim);
-      calcite.dom.removeClass(elem, 'is-sticky');
-      elem.style.top = null;
-      item.active = false;
+    if (isSticky) {
+      if (distance < 1 && !item.active) {
+        item.shim.style.visibility = 'hidden';
+        parent.insertBefore(item.shim, elem);
+        calcite.dom.addClass(elem, 'is-sticky');
+        item.active = true;
+        elem.style.top = elem.dataset.top + 'px';
+      } else if (item.active && offset < item.top){
+        parent.removeChild(item.shim);
+        calcite.dom.removeClass(elem, 'is-sticky');
+        elem.style.top = null;
+        item.active = false;
+      }
+    }
+
+    if (!isSticky) {
+      if (distance < 1 && !item.visible) {
+        calcite.dom.removeClass(elem, 'hide');
+        calcite.dom.addClass(elem, 'show');
+        item.visible = true;
+      } else if (item.visible && offset < item.top){
+        calcite.dom.addClass(elem, 'hide');
+        calcite.dom.removeClass(elem, 'show');
+        item.visible = false;
+      }
     }
   }
 
-  if (window.addEventListener) {
-    window.addEventListener("scroll", function(evt) {
-      var offset = window.pageYOffset;
-      for (var i = 0; i < stickies.length; i++) {
-        handleScroll(i, offset);
-      }
-    });
-  }
-  if (window.attachEvent) {
-    window.attachEvent(on + "scroll", function(evt) {
-      var offset = window.pageYOffset;
-      for (var i = 0; i < stickies.length; i++) {
-        handleScroll(i, offset);
-      }
-    });
-  }
+  calcite.dom.addEvent(window, 'scroll', function(){
+    var offset = window.pageYOffset;
+    for (var j = 0; j < scrolls.length; j++) {
+      handleScroll(scrollItems[j], scrolls[j], offset);
+    }
+  });
 
 };
 
@@ -659,8 +641,8 @@ calcite.init = function (patterns) {
     calcite.expandingNav();
     calcite.tabs();
     calcite.accordion();
-    calcite.sticky();
-    calcite.scrollVisibillity();
+    calcite.carousel();
+    calcite.scrollEffects();
   }
 
   // add a touch class to the body
@@ -686,7 +668,7 @@ function expose () {
   window.calcite = calcite;
 }
 
-// No NPM/AMD for now because it just causes issues
+// no NPM/AMD for now because it just causes issues
 // @TODO: bust them into AMD & NPM distros
 
 // // define Calcite for CommonJS module pattern loaders (NPM, Browserify)

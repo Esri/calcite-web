@@ -15,7 +15,7 @@
     <title>Calcite Web | Esri Design Patterns</title>
 
     <!-- Link to favicon -->
-    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
 
     <!-- stylesheets -->
     
@@ -37,7 +37,7 @@
      ↳ http://esri.github.io/calcite-web/patterns/#drawers
      ↳ patterns → _drawers.md
     -->
-    <div class="drawer drawer-left js-drawer-toggle" data-drawer="top-nav">
+    <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
       <nav class="drawer-nav">
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Esri Patterns</h2>
@@ -198,7 +198,7 @@
               </nav>
             
           </aside>
-          <div class="column-6 invisible js-sticky js-show" data-top="46">
+          <div class="column-6 invisible js-sticky js-show tablet-hide" data-top="46">
             <a href="#" class="btn btn-fill btn-clear">Back to Top</a>
           </div>
         </div>
@@ -220,8 +220,13 @@
 </ul>
 <p>Using this framework as a Sass library will give you the most power, but whatever your flavor, we have you covered.</p>
 
+
                 
+
                 
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -236,8 +241,13 @@
 </code></pre>
 <p>This will keep spacing consistent and you won&#39;t have to write any CSS! There are modifier classes for virtually everything: padding, margin, text-color, background-color, etc. Be sure to read the documentation to learn what is possible.</p>
 
+
                 
+
                 
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -253,8 +263,13 @@
 <p>That will give you everything including sass utilities. You will also need to copy over the JavaScript and image assets to your static folder (see above).</p>
 <p>Calcite Web has a built in library of mixins that cover everything from animation to font-size. To be sure you&#39;re building your site in the easiest way (and the most visually consistent way) read up on everything that&#39;s available on the <a href="./sass">SASS Page</a>.</p>
 
+
                 
+
                 
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -281,8 +296,13 @@
 </code></pre>
 <p>Then in your main <code>.scss</code> file, you can just require the framework: <code>@import &quot;calcite-web&quot;;</code>. Everything mentioned about mixins above in the Ruby gem section applies to the Node module as well, so scroll up a bit and learn more about how Calcite Web functions as a Sass library;</p>
 
+
                 
+
                 
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -309,8 +329,13 @@
 <p>You should also add <code>Esri/calcite-web</code> as a remote at this point. We generally call this remote branch &#39;upstream&#39;:</p>
 <pre><code>git remote <span class="hljs-keyword">add</span> upstream https://github<span class="hljs-preprocessor">.com</span>/Esri/calcite-web<span class="hljs-preprocessor">.git</span>
 </code></pre>
+
                 
+
                 
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -327,8 +352,13 @@
 <li>Open a pull-request from your fork (<code>/your-username/calcite-web</code>) to the &#39;upstream&#39; fork (<code>/Esri/calcite-web</code>).</li>
 </ol>
 
+
                 
+
                 
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -349,8 +379,13 @@
 <li>Run <code>grunt release</code> and enter your GitHub username and password.</li>
 </ol>
 
+
                 
+
                 
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -359,8 +394,13 @@
 <p>To update the documentation site, just make sure you have push access to the <code>Esri/calcite-web</code> repository and type <code>grunt deploy</code>. This will build the site and deploy to gh-pages.</p>
 <p>The site should be updated at <a href="http://esri.github.io/calcite-web/">http://esri.github.io/calcite-web/</a> in just a few moments.</p>
 
+
                 
+
                 
+
+                
+
               </section>
               <hr class="trailer-2">
             

@@ -15,7 +15,7 @@
     <title>Calcite Web | Esri Design Patterns</title>
 
     <!-- Link to favicon -->
-    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
 
     <!-- stylesheets -->
     
@@ -37,7 +37,7 @@
      ↳ http://esri.github.io/calcite-web/patterns/#drawers
      ↳ patterns → _drawers.md
     -->
-    <div class="drawer drawer-left js-drawer-toggle" data-drawer="top-nav">
+    <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
       <nav class="drawer-nav">
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Esri Patterns</h2>
@@ -215,15 +215,8 @@
                 
               </nav>
             
-              <h4 class="side-nav-title">Color Map</h4>
-              <nav>
-                
-                  <a href="#color-map" class="side-nav-link">Color Map</a>
-                
-              </nav>
-            
           </aside>
-          <div class="column-6 invisible js-sticky js-show" data-top="46">
+          <div class="column-6 invisible js-sticky js-show tablet-hide" data-top="46">
             <a href="#" class="btn btn-fill btn-clear">Back to Top</a>
           </div>
         </div>
@@ -372,8 +365,13 @@
 </code></pre>
 <p>In this manner you can extend the classnames of some other existing framework with the visual style of the Calcite Web framework.</p>
 
+
                 
+
                 
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -385,8 +383,13 @@
 <p>These variables can also be configured in your own project to change the library for project-specific applications.</p>
 <p>Below are all of the variables and a brief description of what they represent.</p>
 
+
                 
+
                 
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -400,8 +403,13 @@ $large<span class="hljs-value">:  <span class="hljs-number">1280</span>px !defau
 </code></pre>
 <p>In static classes, these breakpoints are often expressed as <code>phone-</code>, <code>tablet-</code>, <code>desktop-</code>.</p>
 
+
                 
+
                 
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -418,8 +426,13 @@ $<span class="hljs-tag">footer</span>-<span class="hljs-attribute">height</span>
 <p><code>$drawer-width</code> controls the width of the hidden left and right drawers.</p>
 <p><code>$footer-height</code> controls the height of the footer.</p>
 
+
                 
+
                 
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -429,8 +442,13 @@ $<span class="hljs-tag">footer</span>-<span class="hljs-attribute">height</span>
                 <h1 id="type-composition">Type Composition</h1>
 <p>Calcite Web has a helpful set of mixins for composing type. We recommend you use these mixins wherever possible when writing your own components as it will keep the visual proportions and styles in line with the rest of the framework.</p>
 
+
                 
+
                 
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -441,8 +459,13 @@ $<span class="hljs-tag">footer</span>-<span class="hljs-attribute">height</span>
 <p>&#39;0&#39; represents the normal text size while &#39;-1&#39; is a type size smaller, and &#39;1&#39; is a type size larger. So if you&#39;d like to have a very large pull-quote or something of that nature, you could use <code>@include font-size(6)</code>. This means that the text you&#39;ve styled will be six steps up the typographic scale from the normal body size.</p>
 <p>The <code>font-size($n)</code> mixin relies on the <code>modular-scale($n)</code> mixin to define the scale, and apply it to typographic elements.</p>
 
+
                 
+
                 
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -451,8 +474,13 @@ $<span class="hljs-tag">footer</span>-<span class="hljs-attribute">height</span>
 <p>The <code>modular-scale($n)</code> behaves the same as the <code>font-size($n)</code> mixin, but returns a raw rem value rather than css styles specific to type elements. This means that the <code>modular-scale($n)</code> mixin can be used to define heights, widths, padding, margins, or any other property of an element so that it adheres to the modular scale defined by the typography.
 Setting the max width of an article to a large multiple of the text size is a way to define a comfortable reading measure related to the proportional decisions of the content.</p>
 
+
                 
+
                 
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -462,8 +490,13 @@ Setting the max width of an article to a large multiple of the text size is a wa
 <code>@include tracking(500)</code> will apply 1/2 em letterspacing.
 <code>@include tracking(166)</code> will apply a hairline em letterspacing.</p>
 
+
                 
+
                 
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -471,8 +504,13 @@ Setting the max width of an article to a large multiple of the text size is a wa
                 <h2 id="leading">Leading</h2>
 <p>Leading is the space between lines in a text block. The <code>leading($n)</code> mixin accepts an integer, and sets the line height of the element to the integer times the standard baseline unit.</p>
 
+
                 
+
                 
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -515,19 +553,256 @@ Setting the max width of an article to a large multiple of the text size is a wa
 </tbody>
 </table>
 
+
                 
+
                 
+
+                
+
               </section>
               <hr class="trailer-2">
             
               <section class="trailer-2">
                 <h2 id="unicode-variables">Unicode Variables</h2>
 <p>SASS Unicode variables provide a simple way to display unicode characters as content in css declarations.</p>
-<div class="block-group block-group-5-up">
 
-</div>
+
                 
+
                 
+
+                
+                  <div class="block-group block-group-5-up">
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 nbsp"></p>
+                        <code>$nbsp</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 quot"></p>
+                        <code>$quot</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 lsquo"></p>
+                        <code>$lsquo</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 rsquo"></p>
+                        <code>$rsquo</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 ldquo"></p>
+                        <code>$ldquo</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 rdquo"></p>
+                        <code>$rdquo</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 lsaquo"></p>
+                        <code>$lsaquo</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 rsaquo"></p>
+                        <code>$rsaquo</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 laquo"></p>
+                        <code>$laquo</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 raquo"></p>
+                        <code>$raquo</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 mdash"></p>
+                        <code>$mdash</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 ndash"></p>
+                        <code>$ndash</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 hyphen"></p>
+                        <code>$hyphen</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 amp"></p>
+                        <code>$amp</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 gt"></p>
+                        <code>$gt</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 lt"></p>
+                        <code>$lt</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 times"></p>
+                        <code>$times</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 bigtimes"></p>
+                        <code>$bigtimes</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 checkmark"></p>
+                        <code>$checkmark</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 sect"></p>
+                        <code>$sect</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 para"></p>
+                        <code>$para</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 middot"></p>
+                        <code>$middot</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 oslash"></p>
+                        <code>$oslash</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 bull"></p>
+                        <code>$bull</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 whibull"></p>
+                        <code>$whibull</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 hellip"></p>
+                        <code>$hellip</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 vellip"></p>
+                        <code>$vellip</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 midhellip"></p>
+                        <code>$midhellip</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 utri"></p>
+                        <code>$utri</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 dtri"></p>
+                        <code>$dtri</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 ltri"></p>
+                        <code>$ltri</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 rtri"></p>
+                        <code>$rtri</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 ustri"></p>
+                        <code>$ustri</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 dstri"></p>
+                        <code>$dstri</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 lstri"></p>
+                        <code>$lstri</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 rstri"></p>
+                        <code>$rstri</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 diamond"></p>
+                        <code>$diamond</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 fisheye"></p>
+                        <code>$fisheye</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 bullseye"></p>
+                        <code>$bullseye</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 circle"></p>
+                        <code>$circle</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 whitecircle"></p>
+                        <code>$whitecircle</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 square"></p>
+                        <code>$square</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 whitesquare"></p>
+                        <code>$whitesquare</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 ssquare"></p>
+                        <code>$ssquare</code>
+                      </div>
+                    
+                      <div class="block">
+                        <p class="type-sample trailer-0 leader-1 swhitesquare"></p>
+                        <code>$swhitesquare</code>
+                      </div>
+                    
+                  </div>
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -598,6 +873,10 @@ Setting the max width of an article to a large multiple of the text size is a wa
 </tr>
 <tr>
 <td><a href="#transition"><code>transition</code></a></td>
+<td><code>$value</code></td>
+</tr>
+<tr>
+<td><a href="#transition-prefixed"><code>transition-prefixed</code></a></td>
 <td><code>$value</code></td>
 </tr>
 <tr>
@@ -682,57 +961,28 @@ Setting the max width of an article to a large multiple of the text size is a wa
 <pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> transition</span>(all<span class="hljs-preprocessor"> 2.0s</span><span class="hljs-preprocessor"> ease-in-out</span>);</span>
 <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> transition</span>(opacity<span class="hljs-preprocessor"> 1.0s</span><span class="hljs-preprocessor"> ease-in</span><span class="hljs-preprocessor"> 0s</span>,<span class="hljs-preprocessor"> width</span><span class="hljs-preprocessor"> 2.0s</span><span class="hljs-preprocessor"> ease-in</span><span class="hljs-preprocessor"> 2s</span>);</span>
 </code></pre>
-<p>To transition vendor-prefixed properties, e.g. <code>-webkit-transform</code> and <code>-moz-transform</code>, do not use the shorthand mixin. Instead, use the individual transition mixins:</p>
+<p>Or you can use the individual transition properties:</p>
 <pre><code><span class="hljs-at_rule">@<span class="hljs-keyword">include</span> <span class="hljs-function">transition-property(transform)</span></span>;
 <span class="hljs-at_rule">@<span class="hljs-keyword">include</span> <span class="hljs-function">transition-duration(<span class="hljs-number">1.0</span>s)</span></span>;
 <span class="hljs-at_rule">@<span class="hljs-keyword">include</span> <span class="hljs-function">transition-timing-function(ease-in)</span></span>;
 <span class="hljs-at_rule">@<span class="hljs-keyword">include</span> <span class="hljs-function">transition-delay(<span class="hljs-number">0.5</span>s)</span></span>;
-</code></pre><h4 id="show-and-hide">Show and Hide</h4>
+</code></pre><h4 id="transition-prefixed">Transition Prefixed</h4>
+<p>To transition vendor-prefixed properties, e.g. <code>-webkit-transform</code> and <code>-moz-transform</code>, there is an additional convinience <code>transition-prefixed()</code> mixin:</p>
+<pre><code><span class="hljs-at_rule">@<span class="hljs-keyword">include</span> <span class="hljs-function">transition-prefixed(<span class="hljs-function">transform3d(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>)</span> <span class="hljs-number">200</span>ms linear)</span></span>;
+</code></pre><p>This will generate vendor prefixed properties <em>and</em> values.</p>
+<h4 id="show-and-hide">Show and Hide</h4>
 <p>The show and hide mixins change the <code>visibility</code> property. This is useful for removing and adding elements at certain breakpoints or with certain class names. No arguments are passed.</p>
 <pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> show</span>();</span>
 <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> hide</span>();</span>
 </code></pre>
 
-                
-                
-              </section>
-              <hr class="trailer-2">
-            
-          
-            
-              <section class="trailer-2">
-                <h2 id="color-map">Color Map</h2>
-<p>The Color Map exposes a Sass object/array thing that can be used to iterate over UI colors.</p>
-<pre><code class="lang-scss">$<span class="hljs-attribute">color</span>-set<span class="hljs-value">: (
-  <span class="hljs-string">'red'</span>          $red          $dark-red,
-  <span class="hljs-string">'green'</span>        $green        $dark-green,
-  <span class="hljs-string">'blue'</span>         $blue         $dark-blue,
-  <span class="hljs-string">'purple'</span>       $purple       $dark-purple,
-  <span class="hljs-string">'orange'</span>       $orange       $dark-orange,
-  <span class="hljs-string">'brown'</span>        $brown        $dark-brown,
-  <span class="hljs-string">'white'</span>        $white        $lightest-gray,
-  <span class="hljs-string">'light-gray'</span>   $light-gray   $gray,
-  <span class="hljs-string">'gray'</span>         $gray         $dark-gray,
-  <span class="hljs-string">'dark-gray'</span>    $dark-gray    $darker-gray,
-  <span class="hljs-string">'darker-gray'</span>  $darker-gray  $darkest-gray,
-  <span class="hljs-string">'darkest-gray'</span> $darkest-gray $off-black,
-  <span class="hljs-string">'off-black'</span>    $off-black    $black
-);</span>
-</code></pre>
-<h3 id="usage">Usage</h3>
-<pre><code class="lang-scss">&lt;!-- Sass Generation of the `<span class="hljs-tag">link</span>-<span class="hljs-attribute">color</span>` helper classes --&gt;
-<span class="hljs-at_rule">@<span class="hljs-keyword">each</span> $color<span class="hljs-preprocessor"> in</span> $color-set {</span>
-    $name<span class="hljs-value">: nth($color, <span class="hljs-number">1</span>);</span>
-    $value<span class="hljs-value">: nth($color, <span class="hljs-number">2</span>);</span>
-    $light-value<span class="hljs-value">: nth($color, <span class="hljs-number">3</span>);</span>
-    <span class="hljs-class">.link-</span>#{$name} <span class="hljs-tag">a</span>, <span class="hljs-tag">a</span><span class="hljs-class">.link-</span>#{$name} {
-      <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> link-color</span>($value, $light-value);</span>
-    }
-  }
-</code></pre>
 
                 
+
                 
+
+                
+
               </section>
               <hr class="trailer-2">
             

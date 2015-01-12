@@ -15,7 +15,7 @@
     <title>Calcite Web | Esri Design Patterns</title>
 
     <!-- Link to favicon -->
-    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
 
     <!-- stylesheets -->
     
@@ -37,7 +37,7 @@
      ↳ http://esri.github.io/calcite-web/patterns/#drawers
      ↳ patterns → _drawers.md
     -->
-    <div class="drawer drawer-left js-drawer-toggle" data-drawer="top-nav">
+    <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
       <nav class="drawer-nav">
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Esri Patterns</h2>
@@ -211,7 +211,7 @@
               </nav>
             
           </aside>
-          <div class="column-6 invisible js-sticky js-show" data-top="46">
+          <div class="column-6 invisible js-sticky js-show tablet-hide" data-top="46">
             <a href="#" class="btn btn-fill btn-clear">Back to Top</a>
           </div>
         </div>
@@ -232,8 +232,13 @@
 <h3 id="proportional-scales">Proportional Scales</h3>
 <p>Text sizes are defined by a simple <a href="http://alistapart.com/article/more-meaningful-typography">modular scale</a>. The scale is defined by two base sizes for type - body at 1rem and small at 0.75rem - and extrapolates a series of larger type sizes based on a single ratio; 1.25, or a major third interval. All type sizes are <a href="http://snook.ca/archives/html_and_css/font-size-with-rem">set in rems</a>, which have <a href="http://caniuse.com/#feat=rem">more than acceptable browser support</a>. Rems are used for type sizing and all vertical measurements, defined either by the <code>$baseline</code> variable or the <a href="../sass/#modular-scale">modular scale</a> and <a href="../sass/#font-size">font size</a> mixins. This prevents odd sizing issues with nested content, unpredictable results with scaling, and provides a solid anchor for determining sizes.</p>
 
+
                 
+
                 
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -251,55 +256,60 @@
 <p><h4>Amazingly few discotheques provide jukeboxes.</h4></p>
 <p><h5>Amazingly few discotheques provide jukeboxes.</h5></p>
 <h6>Amazingly few discotheques provide jukeboxes.</h6>
-                
+
+
+
                 
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-
-                  
-                    <div class="styleguide-modifiers">
-                      
-                        <div class="styleguide-modifier-example">
-                          <h1 class="header-light">Amazingly few discotheques provide jukeboxes.</h1>
-                          <code class="modifier-name">.header-light</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <h1 class="header-light-italic">Amazingly few discotheques provide jukeboxes.</h1>
-                          <code class="modifier-name">.header-light-italic</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <h1 class="header-face">Amazingly few discotheques provide jukeboxes.</h1>
-                          <code class="modifier-name">.header-face</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <h1 class="header-italic">Amazingly few discotheques provide jukeboxes.</h1>
-                          <code class="modifier-name">.header-italic</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <h1 class="header-demi">Amazingly few discotheques provide jukeboxes.</h1>
-                          <code class="modifier-name">.header-demi</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <h1 class="header-demi-italic">Amazingly few discotheques provide jukeboxes.</h1>
-                          <code class="modifier-name">.header-demi-italic</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <h1 class="header-bold-italic">Amazingly few discotheques provide jukeboxes.</h1>
-                          <code class="modifier-name">.header-bold-italic</code>
-                        </div>
-                      
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <h1 class="">Amazingly few discotheques provide jukeboxes.</h1>
                     </div>
-                  
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="header-light">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.header-light</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="header-light-italic">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.header-light-italic</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="header-face">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.header-face</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="header-italic">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.header-italic</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="header-demi">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.header-demi</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="header-demi-italic">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.header-demi-italic</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="header-bold-italic">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.header-bold-italic</code>
+                      </div>
+                    
+                  </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>Amazingly few discotheques provide jukeboxes.<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
 </code></pre>
                 
+
+                
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -309,78 +319,84 @@
 <h3 id="frutiger">Frutiger</h3>
 <p class="type-sample"> Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
 <p class="type-sample"> Amazingly few discotheques provide jukeboxes.</p>
-                
+
                 
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-
-                  
-                    <div class="styleguide-modifiers">
-                      
-                        <div class="styleguide-modifier-example">
-                          <p class="body-face">Amazingly few discotheques provide jukeboxes.</p>
-                          <code class="modifier-name">.body-face</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <p class="body-italic">Amazingly few discotheques provide jukeboxes.</p>
-                          <code class="modifier-name">.body-italic</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <p class="body-bold">Amazingly few discotheques provide jukeboxes.</p>
-                          <code class="modifier-name">.body-bold</code>
-                        </div>
-                      
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <p class="modifier-class">Amazingly few discotheques provide jukeboxes.</p>
                     </div>
-                  
+                    
+                      <div class="styleguide-modifier-example">
+                        <p class="body-face">Amazingly few discotheques provide jukeboxes.</p>
+                        <code class="modifier-name">.body-face</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p class="body-italic">Amazingly few discotheques provide jukeboxes.</p>
+                        <code class="modifier-name">.body-italic</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p class="body-bold">Amazingly few discotheques provide jukeboxes.</p>
+                        <code class="modifier-name">.body-bold</code>
+                      </div>
+                    
+                  </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>Amazingly few discotheques provide jukeboxes.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
 </code></pre>
                 
+
+                
+
+                
+
               </section>
               <hr class="trailer-2">
             
               <section class="trailer-2">
                 <h2 id="secondary-face">Secondary Face</h2>
-<p><a href="http://www.fonts.com/font/itc/itc-charter">ITC Charter</a>, designer by Mathew Carter, is used as a Serif alternative to the sans-serif body face. While usage should be sparse, Charter provides the opportunity to add variation and contrast to a pages pallete.</p>
-<h3 id="itc-charter">ITC Charter</h3>
+<p><a href="http://www.fonts.com/font/adobe/kepler">Kepler</a>, designer by  Robert Slimbach, is used as a Serif alternative to the sans-serif body face.</p>
+<h3 id="kepler">Kepler</h3>
 <h2 class="secondary-face type-sample"> Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</h2>
 <h2 class="secondary-face  type-sample"> Amazingly few discotheques provide jukeboxes.</h2>
-                
+
                 
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-
-                  
-                    <div class="styleguide-modifiers">
-                      
-                        <div class="styleguide-modifier-example">
-                          <h1 class="secondary-face">Amazingly few discotheques provide jukeboxes.</h1>
-                          <code class="modifier-name">.secondary-face</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <h1 class="secondary-italic">Amazingly few discotheques provide jukeboxes.</h1>
-                          <code class="modifier-name">.secondary-italic</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <h1 class="secondary-bold">Amazingly few discotheques provide jukeboxes.</h1>
-                          <code class="modifier-name">.secondary-bold</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <h1 class="secondary-bold-italic">Amazingly few discotheques provide jukeboxes.</h1>
-                          <code class="modifier-name">.secondary-bold-italic</code>
-                        </div>
-                      
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <h1 class="modifier-class">Amazingly few discotheques provide jukeboxes.</h1>
                     </div>
-                  
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="secondary-face">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.secondary-face</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="secondary-italic">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.secondary-italic</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="secondary-bold">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.secondary-bold</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="secondary-bold-italic">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.secondary-bold-italic</code>
+                      </div>
+                    
+                  </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>Amazingly few discotheques provide jukeboxes.<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
 </code></pre>
                 
+
+                
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -390,25 +406,29 @@
 <h3 id="consolas">Consolas</h3>
 <h2 class="code-face type-sample"> Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</h2>
 <h2 class="code-face  type-sample"> Amazingly few discotheques provide jukeboxes.</h2>
-                
+
+
                 
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-
-                  
-                    <div class="styleguide-modifiers">
-                      
-                        <div class="styleguide-modifier-example">
-                          <h1 class="code-face">Amazingly few discotheques provide jukeboxes.</h1>
-                          <code class="modifier-name">.code-face</code>
-                        </div>
-                      
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <h1 class="modifier-class">Amazingly few discotheques provide jukeboxes.</h1>
                     </div>
-                  
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="code-face">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.code-face</code>
+                      </div>
+                    
+                  </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>Amazingly few discotheques provide jukeboxes.<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
 </code></pre>
                 
+
+                
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -418,8 +438,13 @@
                 <h2 id="composition-helpers">Composition Helpers</h2>
 <p>Calcite Web provides a set of html class helpers for basic type composition. The goal of these helpers is to provide a set of tools that allows for typographic treatments that differ from the default style set without writing additional css.</p>
 
+
                 
+
                 
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -427,65 +452,68 @@
                 <h2 id="text-modifiers">Text Modifiers</h2>
 <p>Build in classes that allow for quick customization and composition for a wide range of use cases.</p>
 
-                
+
                 
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-
-                  
-                    <div class="styleguide-modifiers">
-                      
-                        <div class="styleguide-modifier-example">
-                          <p class="text-large">Amazingly few discotheques provide jukeboxes.</p>
-                          <code class="modifier-name">.text-large</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <p class="text-small">Amazingly few discotheques provide jukeboxes.</p>
-                          <code class="modifier-name">.text-small</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <p class="text-light">Amazingly few discotheques provide jukeboxes.</p>
-                          <code class="modifier-name">.text-light</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <p class="text-ellipsis">Amazingly few discotheques provide jukeboxes.</p>
-                          <code class="modifier-name">.text-ellipsis</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <p class="text-rule">Amazingly few discotheques provide jukeboxes.</p>
-                          <code class="modifier-name">.text-rule</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <p class="text-inline">Amazingly few discotheques provide jukeboxes.</p>
-                          <code class="modifier-name">.text-inline</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <p class="text-center">Amazingly few discotheques provide jukeboxes.</p>
-                          <code class="modifier-name">.text-center</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <p class="text-left">Amazingly few discotheques provide jukeboxes.</p>
-                          <code class="modifier-name">.text-left</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <p class="text-right">Amazingly few discotheques provide jukeboxes.</p>
-                          <code class="modifier-name">.text-right</code>
-                        </div>
-                      
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <p class="">Amazingly few discotheques provide jukeboxes.</p>
                     </div>
-                  
+                    
+                      <div class="styleguide-modifier-example">
+                        <p class="text-large">Amazingly few discotheques provide jukeboxes.</p>
+                        <code class="modifier-name">.text-large</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p class="text-small">Amazingly few discotheques provide jukeboxes.</p>
+                        <code class="modifier-name">.text-small</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p class="text-light">Amazingly few discotheques provide jukeboxes.</p>
+                        <code class="modifier-name">.text-light</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p class="text-ellipsis">Amazingly few discotheques provide jukeboxes.</p>
+                        <code class="modifier-name">.text-ellipsis</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p class="text-rule">Amazingly few discotheques provide jukeboxes.</p>
+                        <code class="modifier-name">.text-rule</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p class="text-inline">Amazingly few discotheques provide jukeboxes.</p>
+                        <code class="modifier-name">.text-inline</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p class="text-center">Amazingly few discotheques provide jukeboxes.</p>
+                        <code class="modifier-name">.text-center</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p class="text-left">Amazingly few discotheques provide jukeboxes.</p>
+                        <code class="modifier-name">.text-left</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p class="text-right">Amazingly few discotheques provide jukeboxes.</p>
+                        <code class="modifier-name">.text-right</code>
+                      </div>
+                    
+                  </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>Amazingly few discotheques provide jukeboxes.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
 </code></pre>
                 
+
+                
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -493,85 +521,88 @@
                 <h3 id="text-color">Text Color</h3>
 <p>Sets the font color of the element to any of the <a href="../color">Calcite colors</a> available.</p>
 
-                
+
                 
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-
-                  
-                    <div class="styleguide-modifiers">
-                      
-                        <div class="styleguide-modifier-example">
-                          <h1 class="text-red">Amazingly few discotheques provide jukeboxes.</h1>
-                          <code class="modifier-name">.text-red</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <h1 class="text-green">Amazingly few discotheques provide jukeboxes.</h1>
-                          <code class="modifier-name">.text-green</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <h1 class="text-blue">Amazingly few discotheques provide jukeboxes.</h1>
-                          <code class="modifier-name">.text-blue</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <h1 class="text-purple">Amazingly few discotheques provide jukeboxes.</h1>
-                          <code class="modifier-name">.text-purple</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <h1 class="text-orange">Amazingly few discotheques provide jukeboxes.</h1>
-                          <code class="modifier-name">.text-orange</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <h1 class="text-brown">Amazingly few discotheques provide jukeboxes.</h1>
-                          <code class="modifier-name">.text-brown</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <h1 class="text-white">Amazingly few discotheques provide jukeboxes.</h1>
-                          <code class="modifier-name">.text-white</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <h1 class="text-light-gray">Amazingly few discotheques provide jukeboxes.</h1>
-                          <code class="modifier-name">.text-light-gray</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <h1 class="text-gray">Amazingly few discotheques provide jukeboxes.</h1>
-                          <code class="modifier-name">.text-gray</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <h1 class="text-dark-gray">Amazingly few discotheques provide jukeboxes.</h1>
-                          <code class="modifier-name">.text-dark-gray</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <h1 class="text-darker-gray">Amazingly few discotheques provide jukeboxes.</h1>
-                          <code class="modifier-name">.text-darker-gray</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <h1 class="text-darkest-gray">Amazingly few discotheques provide jukeboxes.</h1>
-                          <code class="modifier-name">.text-darkest-gray</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <h1 class="text-off-black">Amazingly few discotheques provide jukeboxes.</h1>
-                          <code class="modifier-name">.text-off-black</code>
-                        </div>
-                      
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <h1 class="modifier-class">Amazingly few discotheques provide jukeboxes.</h1>
                     </div>
-                  
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-red">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.text-red</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-green">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.text-green</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-blue">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.text-blue</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-purple">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.text-purple</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-orange">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.text-orange</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-brown">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.text-brown</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-white">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.text-white</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-light-gray">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.text-light-gray</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-gray">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.text-gray</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-dark-gray">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.text-dark-gray</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-darker-gray">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.text-darker-gray</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-darkest-gray">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.text-darkest-gray</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <h1 class="text-off-black">Amazingly few discotheques provide jukeboxes.</h1>
+                        <code class="modifier-name">.text-off-black</code>
+                      </div>
+                    
+                  </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>Amazingly few discotheques provide jukeboxes.<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
 </code></pre>
                 
+
+                
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -579,85 +610,88 @@
                 <h3 id="link-color">Link Color</h3>
 <p>Sets the color of links within the element, or the link itself, to available <a href="../color">Calcite colors.</a></p>
 
-                
+
                 
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-
-                  
-                    <div class="styleguide-modifiers">
-                      
-                        <div class="styleguide-modifier-example">
-                          <p>Amazingly few <a href="#" class="link-red">discotheques</a> provide <a href="#" class="link-red">jukeboxes.</a> </p>
-                          <code class="modifier-name">.link-red</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <p>Amazingly few <a href="#" class="link-green">discotheques</a> provide <a href="#" class="link-green">jukeboxes.</a> </p>
-                          <code class="modifier-name">.link-green</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <p>Amazingly few <a href="#" class="link-blue">discotheques</a> provide <a href="#" class="link-blue">jukeboxes.</a> </p>
-                          <code class="modifier-name">.link-blue</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <p>Amazingly few <a href="#" class="link-purple">discotheques</a> provide <a href="#" class="link-purple">jukeboxes.</a> </p>
-                          <code class="modifier-name">.link-purple</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <p>Amazingly few <a href="#" class="link-orange">discotheques</a> provide <a href="#" class="link-orange">jukeboxes.</a> </p>
-                          <code class="modifier-name">.link-orange</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <p>Amazingly few <a href="#" class="link-brown">discotheques</a> provide <a href="#" class="link-brown">jukeboxes.</a> </p>
-                          <code class="modifier-name">.link-brown</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <p>Amazingly few <a href="#" class="link-white">discotheques</a> provide <a href="#" class="link-white">jukeboxes.</a> </p>
-                          <code class="modifier-name">.link-white</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <p>Amazingly few <a href="#" class="link-light-gray">discotheques</a> provide <a href="#" class="link-light-gray">jukeboxes.</a> </p>
-                          <code class="modifier-name">.link-light-gray</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <p>Amazingly few <a href="#" class="link-gray">discotheques</a> provide <a href="#" class="link-gray">jukeboxes.</a> </p>
-                          <code class="modifier-name">.link-gray</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <p>Amazingly few <a href="#" class="link-dark-gray">discotheques</a> provide <a href="#" class="link-dark-gray">jukeboxes.</a> </p>
-                          <code class="modifier-name">.link-dark-gray</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <p>Amazingly few <a href="#" class="link-darker-gray">discotheques</a> provide <a href="#" class="link-darker-gray">jukeboxes.</a> </p>
-                          <code class="modifier-name">.link-darker-gray</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <p>Amazingly few <a href="#" class="link-darkest-gray">discotheques</a> provide <a href="#" class="link-darkest-gray">jukeboxes.</a> </p>
-                          <code class="modifier-name">.link-darkest-gray</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <p>Amazingly few <a href="#" class="link-off-black">discotheques</a> provide <a href="#" class="link-off-black">jukeboxes.</a> </p>
-                          <code class="modifier-name">.link-off-black</code>
-                        </div>
-                      
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <p>Amazingly few <a href="#" class="modifier-class">discotheques</a> provide <a href="#" class="modifier-class">jukeboxes.</a> </p>
                     </div>
-                  
+                    
+                      <div class="styleguide-modifier-example">
+                        <p>Amazingly few <a href="#" class="link-red">discotheques</a> provide <a href="#" class="link-red">jukeboxes.</a> </p>
+                        <code class="modifier-name">.link-red</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p>Amazingly few <a href="#" class="link-green">discotheques</a> provide <a href="#" class="link-green">jukeboxes.</a> </p>
+                        <code class="modifier-name">.link-green</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p>Amazingly few <a href="#" class="link-blue">discotheques</a> provide <a href="#" class="link-blue">jukeboxes.</a> </p>
+                        <code class="modifier-name">.link-blue</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p>Amazingly few <a href="#" class="link-purple">discotheques</a> provide <a href="#" class="link-purple">jukeboxes.</a> </p>
+                        <code class="modifier-name">.link-purple</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p>Amazingly few <a href="#" class="link-orange">discotheques</a> provide <a href="#" class="link-orange">jukeboxes.</a> </p>
+                        <code class="modifier-name">.link-orange</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p>Amazingly few <a href="#" class="link-brown">discotheques</a> provide <a href="#" class="link-brown">jukeboxes.</a> </p>
+                        <code class="modifier-name">.link-brown</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p>Amazingly few <a href="#" class="link-white">discotheques</a> provide <a href="#" class="link-white">jukeboxes.</a> </p>
+                        <code class="modifier-name">.link-white</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p>Amazingly few <a href="#" class="link-light-gray">discotheques</a> provide <a href="#" class="link-light-gray">jukeboxes.</a> </p>
+                        <code class="modifier-name">.link-light-gray</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p>Amazingly few <a href="#" class="link-gray">discotheques</a> provide <a href="#" class="link-gray">jukeboxes.</a> </p>
+                        <code class="modifier-name">.link-gray</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p>Amazingly few <a href="#" class="link-dark-gray">discotheques</a> provide <a href="#" class="link-dark-gray">jukeboxes.</a> </p>
+                        <code class="modifier-name">.link-dark-gray</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p>Amazingly few <a href="#" class="link-darker-gray">discotheques</a> provide <a href="#" class="link-darker-gray">jukeboxes.</a> </p>
+                        <code class="modifier-name">.link-darker-gray</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p>Amazingly few <a href="#" class="link-darkest-gray">discotheques</a> provide <a href="#" class="link-darkest-gray">jukeboxes.</a> </p>
+                        <code class="modifier-name">.link-darkest-gray</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <p>Amazingly few <a href="#" class="link-off-black">discotheques</a> provide <a href="#" class="link-off-black">jukeboxes.</a> </p>
+                        <code class="modifier-name">.link-off-black</code>
+                      </div>
+                    
+                  </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Amazingly few <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>discotheques<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> provide <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>jukeboxes.<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
 </code></pre>
                 
+
+                
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -665,17 +699,25 @@
                 <h3 id="list-bulleted">List Bulleted</h3>
 <p>Adds the Calcite styles for bulleted lists to an unordered list.</p>
 
-                
+
                 
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-
-                  
-                    <div class="styleguide-modifiers">
-                      
-                        <div class="styleguide-modifier-example">
-                          <ul class="list-bulleted">
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <ul class="modifier-class">
+  <li>Amazing</li>
+  <li>discotheques</li>
+  <li>jukeboxes</li>
+  <ul class="modifier-class">
+    <li>Amazing</li>
+    <li>discotheques</li>
+    <li>jukeboxes</li>
+  </ul>
+</ul>
+                    </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <ul class="list-bulleted">
   <li>Amazing</li>
   <li>discotheques</li>
   <li>jukeboxes</li>
@@ -685,11 +727,10 @@
     <li>jukeboxes</li>
   </ul>
 </ul>
-                          <code class="modifier-name">.list-bulleted</code>
-                        </div>
-                      
-                    </div>
-                  
+                        <code class="modifier-name">.list-bulleted</code>
+                      </div>
+                    
+                  </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Amazing<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>discotheques<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
@@ -702,6 +743,11 @@
 <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
 </code></pre>
                 
+
+                
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -709,17 +755,27 @@
                 <h3 id="list-numbered">List Numbered</h3>
 <p>Adds the Calcite styles for large numbered lists to an ordered list. Useful for listing steps in a process.</p>
 
-                
+
                 
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-
-                  
-                    <div class="styleguide-modifiers">
-                      
-                        <div class="styleguide-modifier-example">
-                          <ol class="list-numbered">
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <ol class="modifier-class">
+  <li>Amazing</li>
+  <li>discotheques</li>
+  <li>
+    <p>jukeboxes</p>
+    <ol class="modifier-class">
+      <li>Amazing</li>
+      <li>discotheques</li>
+      <li>jukeboxes</li>
+    </ol>
+  </li>
+</ol>
+                    </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <ol class="list-numbered">
   <li>Amazing</li>
   <li>discotheques</li>
   <li>
@@ -731,11 +787,10 @@
     </ol>
   </li>
 </ol>
-                          <code class="modifier-name">.list-numbered</code>
-                        </div>
-                      
-                    </div>
-                  
+                        <code class="modifier-name">.list-numbered</code>
+                      </div>
+                    
+                  </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">ol</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Amazing<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>discotheques<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
@@ -750,6 +805,11 @@
 <span class="hljs-tag">&lt;/<span class="hljs-title">ol</span>&gt;</span>
 </code></pre>
                 
+
+                
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -779,8 +839,13 @@
 </blockquote>
 <p>Lorem ipsum paragraph with <strong>strong, bold text</strong> and <em>emphasis, italic text.</em></p>
 
+
                 
+
                 
+
+                
+
               </section>
               <hr class="trailer-2">
             

@@ -15,7 +15,7 @@
     <title>Calcite Web | Esri Design Patterns</title>
 
     <!-- Link to favicon -->
-    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
 
     <!-- stylesheets -->
     
@@ -37,7 +37,7 @@
      ↳ http://esri.github.io/calcite-web/patterns/#drawers
      ↳ patterns → _drawers.md
     -->
-    <div class="drawer drawer-left js-drawer-toggle" data-drawer="top-nav">
+    <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
       <nav class="drawer-nav">
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Esri Patterns</h2>
@@ -205,8 +205,6 @@
                 
                   <a href="#text-inputs" class="side-nav-link">Text Inputs</a>
                 
-                  <a href="#button-inputs" class="side-nav-link">Button Inputs</a>
-                
                   <a href="#selects" class="side-nav-link">Selects</a>
                 
                   <a href="#checkboxes" class="side-nav-link">Checkboxes</a>
@@ -223,7 +221,7 @@
               </nav>
             
           </aside>
-          <div class="column-6 invisible js-sticky js-show" data-top="46">
+          <div class="column-6 invisible js-sticky js-show tablet-hide" data-top="46">
             <a href="#" class="btn btn-fill btn-clear">Back to Top</a>
           </div>
         </div>
@@ -236,8 +234,13 @@
 
 <p>Components are reusable blocks that can be used across any part of a Calcite site. They can be used within <a href="../patterns/">patterns</a> or on their own.</p>
 
+
                 
+
                 
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -249,130 +252,133 @@
 <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-red btn-arrow"</span>&gt;</span>  Red Button with Arrow <span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
 </code></pre>
 
-                
+
                 
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-
-                  
-                    <div class="styleguide-modifiers">
-                      
-                        <div class="styleguide-modifier-example">
-                          <button class="btn btn-arrow"> btn-arrow </button>
-                          <code class="modifier-name">.btn-arrow</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <button class="btn btn-transparent"> btn-transparent </button>
-                          <code class="modifier-name">.btn-transparent</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <button class="btn btn-clear"> btn-clear </button>
-                          <code class="modifier-name">.btn-clear</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <button class="btn btn-clear-gray"> btn-clear-gray </button>
-                          <code class="modifier-name">.btn-clear-gray</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <button class="btn btn-clear-white"> btn-clear-white </button>
-                          <code class="modifier-name">.btn-clear-white</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <button class="btn btn-small"> btn-small </button>
-                          <code class="modifier-name">.btn-small</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <button class="btn btn-large"> btn-large </button>
-                          <code class="modifier-name">.btn-large</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <button class="btn btn-fill"> btn-fill </button>
-                          <code class="modifier-name">.btn-fill</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <button class="btn btn-disabled"> btn-disabled </button>
-                          <code class="modifier-name">.btn-disabled</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <button class="btn btn-red"> btn-red </button>
-                          <code class="modifier-name">.btn-red</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <button class="btn btn-green"> btn-green </button>
-                          <code class="modifier-name">.btn-green</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <button class="btn btn-blue"> btn-blue </button>
-                          <code class="modifier-name">.btn-blue</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <button class="btn btn-purple"> btn-purple </button>
-                          <code class="modifier-name">.btn-purple</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <button class="btn btn-orange"> btn-orange </button>
-                          <code class="modifier-name">.btn-orange</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <button class="btn btn-brown"> btn-brown </button>
-                          <code class="modifier-name">.btn-brown</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <button class="btn btn-white"> btn-white </button>
-                          <code class="modifier-name">.btn-white</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <button class="btn btn-light-gray"> btn-light-gray </button>
-                          <code class="modifier-name">.btn-light-gray</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <button class="btn btn-gray"> btn-gray </button>
-                          <code class="modifier-name">.btn-gray</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <button class="btn btn-dark-gray"> btn-dark-gray </button>
-                          <code class="modifier-name">.btn-dark-gray</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <button class="btn btn-darker-gray"> btn-darker-gray </button>
-                          <code class="modifier-name">.btn-darker-gray</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <button class="btn btn-darkest-gray"> btn-darkest-gray </button>
-                          <code class="modifier-name">.btn-darkest-gray</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <button class="btn btn-off-black"> btn-off-black </button>
-                          <code class="modifier-name">.btn-off-black</code>
-                        </div>
-                      
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <button class="btn "> btn  </button>
                     </div>
-                  
-<pre><code>&lt;button <span class="hljs-keyword">class</span>=<span class="hljs-string">"btn modifier-class"</span>&gt; modifier-<span class="hljs-class"><span class="hljs-keyword">class</span> &lt;/<span class="hljs-title">button</span>&gt;</span>
+                    
+                      <div class="styleguide-modifier-example">
+                        <button class="btn btn-arrow"> btn btn-arrow </button>
+                        <code class="modifier-name">.btn-arrow</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <button class="btn btn-transparent"> btn btn-transparent </button>
+                        <code class="modifier-name">.btn-transparent</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <button class="btn btn-clear"> btn btn-clear </button>
+                        <code class="modifier-name">.btn-clear</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <button class="btn btn-clear-gray"> btn btn-clear-gray </button>
+                        <code class="modifier-name">.btn-clear-gray</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <button class="btn btn-clear-white"> btn btn-clear-white </button>
+                        <code class="modifier-name">.btn-clear-white</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <button class="btn btn-small"> btn btn-small </button>
+                        <code class="modifier-name">.btn-small</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <button class="btn btn-large"> btn btn-large </button>
+                        <code class="modifier-name">.btn-large</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <button class="btn btn-fill"> btn btn-fill </button>
+                        <code class="modifier-name">.btn-fill</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <button class="btn btn-disabled"> btn btn-disabled </button>
+                        <code class="modifier-name">.btn-disabled</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <button class="btn btn-red"> btn btn-red </button>
+                        <code class="modifier-name">.btn-red</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <button class="btn btn-green"> btn btn-green </button>
+                        <code class="modifier-name">.btn-green</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <button class="btn btn-blue"> btn btn-blue </button>
+                        <code class="modifier-name">.btn-blue</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <button class="btn btn-purple"> btn btn-purple </button>
+                        <code class="modifier-name">.btn-purple</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <button class="btn btn-orange"> btn btn-orange </button>
+                        <code class="modifier-name">.btn-orange</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <button class="btn btn-brown"> btn btn-brown </button>
+                        <code class="modifier-name">.btn-brown</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <button class="btn btn-white"> btn btn-white </button>
+                        <code class="modifier-name">.btn-white</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <button class="btn btn-light-gray"> btn btn-light-gray </button>
+                        <code class="modifier-name">.btn-light-gray</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <button class="btn btn-gray"> btn btn-gray </button>
+                        <code class="modifier-name">.btn-gray</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <button class="btn btn-dark-gray"> btn btn-dark-gray </button>
+                        <code class="modifier-name">.btn-dark-gray</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <button class="btn btn-darker-gray"> btn btn-darker-gray </button>
+                        <code class="modifier-name">.btn-darker-gray</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <button class="btn btn-darkest-gray"> btn btn-darkest-gray </button>
+                        <code class="modifier-name">.btn-darkest-gray</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <button class="btn btn-off-black"> btn btn-off-black </button>
+                        <code class="modifier-name">.btn-off-black</code>
+                      </div>
+                    
+                  </div>
+<pre><code>&lt;button <span class="hljs-keyword">class</span>=<span class="hljs-string">"btn modifier-class"</span>&gt; btn modifier-<span class="hljs-class"><span class="hljs-keyword">class</span> &lt;/<span class="hljs-title">button</span>&gt;</span>
 </code></pre>
                 
+
+                
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -380,26 +386,19 @@
                 <h2 id="button-groups">Button Groups</h2>
 <p>Button groups are ... groups of buttons. The button group allows for sets of buttons to be directly adjacent to each other without borders or margins interfering.</p>
 
-                
+
                 
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-
-                  
-                    <div class="styleguide-modifiers">
-                      
-                        <div class="styleguide-modifier-example">
-                          <nav class="leader-1">
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <nav class="leader-1">
   <a href="#" class="btn btn-grouped">One</a>
   <a href="#" class="btn btn-grouped">Two</a>
   <a href="#" class="btn btn-grouped">Three</a>
 </nav>
-                          <code class="modifier-name">.btn-grouped</code>
-                        </div>
-                      
                     </div>
-                  
+                    
+                  </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"leader-1"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-grouped"</span>&gt;</span>One<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-grouped"</span>&gt;</span>Two<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -407,6 +406,11 @@
 <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
 </code></pre>
                 
+
+                
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -418,21 +422,16 @@
 <p>Dropdowns are good for showing multiple options under a single call to action. For example, if you had a download button, and you needed the user to choose a format for the download, you could put several choices in a dropdown.</p>
 <p>Dropdowns differ from <code>select</code> elements in that they don&#39;t have a default state or a &#39;current&#39; state. Instead, they offer a jumping off point for a series of related actions.</p>
 
-                
+
                 
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-
-                  
-                    <div class="styleguide-modifiers">
-                      
-                        <div class="styleguide-modifier-example">
-                          <div class="dropdown">
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <div class="dropdown">
   <!-- extends side-nav -->
   <a href="#" class="btn dropdown-btn js-dropdown-toggle">Dropdown Select</a>
   <!-- extends side-nav -->
-  <nav class="dropdown-menu default js-dropdown">
+  <nav class="dropdown-menu modifier-class js-dropdown">
     <!-- extends side-nav-link -->
     <a href="#" class="dropdown-link">Option 1 that has a really long text.</a>
     <a href="#" class="dropdown-link">Option 2</a>
@@ -441,28 +440,10 @@
     <a href="#" class="dropdown-link">Option 5</a>
   </nav>
 </div>
-                          <code class="modifier-name">.default</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <div class="dropdown">
-  <!-- extends side-nav -->
-  <a href="#" class="btn dropdown-btn js-dropdown-toggle">Dropdown Select</a>
-  <!-- extends side-nav -->
-  <nav class="dropdown-menu dropdown-left js-dropdown">
-    <!-- extends side-nav-link -->
-    <a href="#" class="dropdown-link">Option 1 that has a really long text.</a>
-    <a href="#" class="dropdown-link">Option 2</a>
-    <a href="#" class="dropdown-link">Option 3</a>
-    <a href="#" class="dropdown-link">Option 4</a>
-    <a href="#" class="dropdown-link">Option 5</a>
-  </nav>
-</div>
-                          <code class="modifier-name">.dropdown-left</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <div class="dropdown">
+                    </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="dropdown">
   <!-- extends side-nav -->
   <a href="#" class="btn dropdown-btn js-dropdown-toggle">Dropdown Select</a>
   <!-- extends side-nav -->
@@ -475,11 +456,10 @@
     <a href="#" class="dropdown-link">Option 5</a>
   </nav>
 </div>
-                          <code class="modifier-name">.dropdown-right</code>
-                        </div>
-                      
-                    </div>
-                  
+                        <code class="modifier-name">.dropdown-right</code>
+                      </div>
+                    
+                  </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown"</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- extends side-nav --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn dropdown-btn js-dropdown-toggle"</span>&gt;</span>Dropdown Select<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -495,6 +475,11 @@
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 </code></pre>
                 
+
+                
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -502,31 +487,29 @@
                 <h2 id="loader">Loader</h2>
 <p>The loader element is a placeholder while content is being retreived or rendered. By default, the loader will display none and requires an <code>is-active</code> class to display.</p>
 
-                
+
                 
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-
-                  
-                    <div class="styleguide-modifiers">
-                      
-                        <div class="styleguide-modifier-example">
-                          <div class="loader is-active padding-leader-3 padding-trailer-3">
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <div class="loader is-active padding-leader-3 padding-trailer-3">
   <div class="loader-bars"></div>
   <div class="loader-text">Loading</div>
 </div>
-                          <code class="modifier-name">.default</code>
-                        </div>
-                      
                     </div>
-                  
+                    
+                  </div>
 <pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"loader is-active padding-leader-3 padding-trailer-3"</span>&gt;
   &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"loader-bars"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
   &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"loader-text"</span>&gt;Loading&lt;/<span class="hljs-keyword">div</span>&gt;
 &lt;/<span class="hljs-keyword">div</span>&gt;
 </code></pre>
                 
+
+                
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -535,47 +518,45 @@
 <p>Alerts are used to inform users of state changes, errors, or successful actions. Alerts are only visible if they have the <code>is-active</code> class. Without as <code>is-active</code> class, the alert will be set to <code>display: none;</code></p>
 <p>Calcite does not manage alert classes be default - you will have to write your own JavaScript handlers for this.</p>
 
-                
+
                 
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-
-                  
-                    <div class="styleguide-modifiers">
-                      
-                        <div class="styleguide-modifier-example">
-                          <div class="alert default is-active">
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <div class="alert modifier-class is-active">
   Something Happened!
   <a href="#" class="alert-close">close</a>
 </div>
-                          <code class="modifier-name">.default</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <div class="alert alert-red is-active">
-  Something Happened!
-  <a href="#" class="alert-close">close</a>
-</div>
-                          <code class="modifier-name">.alert-red</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <div class="alert alert-green is-active">
-  Something Happened!
-  <a href="#" class="alert-close">close</a>
-</div>
-                          <code class="modifier-name">.alert-green</code>
-                        </div>
-                      
                     </div>
-                  
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="alert alert-red is-active">
+  Something Happened!
+  <a href="#" class="alert-close">close</a>
+</div>
+                        <code class="modifier-name">.alert-red</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="alert alert-green is-active">
+  Something Happened!
+  <a href="#" class="alert-close">close</a>
+</div>
+                        <code class="modifier-name">.alert-green</code>
+                      </div>
+                    
+                  </div>
 <pre><code>&lt;<span class="hljs-operator">div</span> class=<span class="hljs-string">"alert modifier-class is-active"</span>&gt;
   Something Happened!
   &lt;<span class="hljs-operator">a</span> href=<span class="hljs-string">"#"</span> class=<span class="hljs-string">"alert-close"</span>&gt;<span class="hljs-built_in">close</span>&lt;/<span class="hljs-operator">a</span>&gt;
 &lt;/<span class="hljs-operator">div</span>&gt;
 </code></pre>
                 
+
+                
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -583,47 +564,45 @@
                 <h2 id="panels">Panels</h2>
 <p>Panels are useful to draw attention to or contain certain text on a page. They are simple containers, which can be used to help guide users through the visual hierarchy of your design.</p>
 
-                
+
                 
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-
-                  
-                    <div class="styleguide-modifiers">
-                      
-                        <div class="styleguide-modifier-example">
-                          <div class="panel panel">
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <div class="panel modifier-class">
   <h4>This is a panel.</h4>
   <p>Normal, dark, or white are the options</p>
 </div>
-                          <code class="modifier-name">.panel</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <div class="panel panel-dark">
-  <h4>This is a panel.</h4>
-  <p>Normal, dark, or white are the options</p>
-</div>
-                          <code class="modifier-name">.panel-dark</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <div class="panel panel-white">
-  <h4>This is a panel.</h4>
-  <p>Normal, dark, or white are the options</p>
-</div>
-                          <code class="modifier-name">.panel-white</code>
-                        </div>
-                      
                     </div>
-                  
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="panel panel-dark">
+  <h4>This is a panel.</h4>
+  <p>Normal, dark, or white are the options</p>
+</div>
+                        <code class="modifier-name">.panel-dark</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="panel panel-white">
+  <h4>This is a panel.</h4>
+  <p>Normal, dark, or white are the options</p>
+</div>
+                        <code class="modifier-name">.panel-white</code>
+                      </div>
+                    
+                  </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"panel modifier-class"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>This is a panel.<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Normal, dark, or white are the options<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 </code></pre>
                 
+
+                
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -631,25 +610,21 @@
                 <h2 id="breadcrumbs">Breadcrumbs</h2>
 <p>Breadcrumbs are a set of links or spans inside of a <code>&lt;nav&gt;</code> element. The <code>crumb</code> class will take care of spacing, alignment, and icons. Normal <a href="../type/#text-color">text</a> and <a href="../type/#link-color">link</a> helpers can be applied to breadcrumbs to allow for a range of contexts.</p>
 
-                
+
                 
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-                    <div class="styleguide-modifiers">
-                      <div class="styleguide-modifier-example">
-                        <nav class="breadcrumbs">
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <nav class="breadcrumbs">
   <a href="#" class="crumb">Thing</a>
   <span class="crumb">Thing</span>
   <a href="#" class="crumb">Thing</a>
   <a href="#" class="crumb">Thing</a>
   <a href="#" class="crumb is-active">Current</a>
 </nav>
-                      </div>
                     </div>
-                  
-
-                  
+                    
+                  </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"breadcrumbs"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"crumb"</span>&gt;</span>Thing<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"crumb"</span>&gt;</span>Thing<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
@@ -659,6 +634,11 @@
 <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
 </code></pre>
                 
+
+                
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -666,43 +646,41 @@
                 <h2 id="tooltips">Tooltips</h2>
 <p>Tooltips use a <code>data-message</code> attribute to provide contextual help on hover. Tooltips can apply to any element.</p>
 
-                
+
                 
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-
-                  
-                    <div class="styleguide-modifiers">
-                      
-                        <div class="styleguide-modifier-example">
-                          <div class="tooltip default" data-message="This is the message of the tooltip">
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <div class="tooltip modifier-class" data-message="This is the message of the tooltip">
   <span class="icon-help">?</span>
 </div>
-                          <code class="modifier-name">.default</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <div class="tooltip tooltip-left" data-message="This is the message of the tooltip">
-  <span class="icon-help">?</span>
-</div>
-                          <code class="modifier-name">.tooltip-left</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <div class="tooltip tooltip-right" data-message="This is the message of the tooltip">
-  <span class="icon-help">?</span>
-</div>
-                          <code class="modifier-name">.tooltip-right</code>
-                        </div>
-                      
                     </div>
-                  
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="tooltip tooltip-left" data-message="This is the message of the tooltip">
+  <span class="icon-help">?</span>
+</div>
+                        <code class="modifier-name">.tooltip-left</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="tooltip tooltip-right" data-message="This is the message of the tooltip">
+  <span class="icon-help">?</span>
+</div>
+                        <code class="modifier-name">.tooltip-right</code>
+                      </div>
+                    
+                  </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tooltip modifier-class"</span> <span class="hljs-attribute">data-message</span>=<span class="hljs-value">"This is the message of the tooltip"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-help"</span>&gt;</span>?<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 </code></pre>
                 
+
+                
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -715,17 +693,12 @@
 &lt;/div&gt;
 </code></pre><p>This causes tables that are too wide for the layout to be constrained and scroll horizontally.</p>
 
-                
+
                 
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-
-                  
-                    <div class="styleguide-modifiers">
-                      
-                        <div class="styleguide-modifier-example">
-                          <table class="default">
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <table class="modifier-class">
   <thead>
     <tr>
       <th>Thing 1</th>
@@ -747,89 +720,87 @@
   </tbody>
 </table>
 
-                          <code class="modifier-name">.default</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <table class="table-blue">
-  <thead>
-    <tr>
-      <th>Thing 1</th>
-      <th>Thing 2</th>
-      <th>Thing 3</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-     <td>a</td>
-     <td>b</td>
-     <td>c</td>
-    </tr>
-    <tr>
-     <td>x</td>
-     <td>y</td>
-     <td>z</td>
-    </tr>
-  </tbody>
-</table>
-
-                          <code class="modifier-name">.table-blue</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <table class="table-striped">
-  <thead>
-    <tr>
-      <th>Thing 1</th>
-      <th>Thing 2</th>
-      <th>Thing 3</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-     <td>a</td>
-     <td>b</td>
-     <td>c</td>
-    </tr>
-    <tr>
-     <td>x</td>
-     <td>y</td>
-     <td>z</td>
-    </tr>
-  </tbody>
-</table>
-
-                          <code class="modifier-name">.table-striped</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <table class="table-plain">
-  <thead>
-    <tr>
-      <th>Thing 1</th>
-      <th>Thing 2</th>
-      <th>Thing 3</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-     <td>a</td>
-     <td>b</td>
-     <td>c</td>
-    </tr>
-    <tr>
-     <td>x</td>
-     <td>y</td>
-     <td>z</td>
-    </tr>
-  </tbody>
-</table>
-
-                          <code class="modifier-name">.table-plain</code>
-                        </div>
-                      
                     </div>
-                  
+                    
+                      <div class="styleguide-modifier-example">
+                        <table class="table-blue">
+  <thead>
+    <tr>
+      <th>Thing 1</th>
+      <th>Thing 2</th>
+      <th>Thing 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+     <td>a</td>
+     <td>b</td>
+     <td>c</td>
+    </tr>
+    <tr>
+     <td>x</td>
+     <td>y</td>
+     <td>z</td>
+    </tr>
+  </tbody>
+</table>
+
+                        <code class="modifier-name">.table-blue</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <table class="table-striped">
+  <thead>
+    <tr>
+      <th>Thing 1</th>
+      <th>Thing 2</th>
+      <th>Thing 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+     <td>a</td>
+     <td>b</td>
+     <td>c</td>
+    </tr>
+    <tr>
+     <td>x</td>
+     <td>y</td>
+     <td>z</td>
+    </tr>
+  </tbody>
+</table>
+
+                        <code class="modifier-name">.table-striped</code>
+                      </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <table class="table-plain">
+  <thead>
+    <tr>
+      <th>Thing 1</th>
+      <th>Thing 2</th>
+      <th>Thing 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+     <td>a</td>
+     <td>b</td>
+     <td>c</td>
+    </tr>
+    <tr>
+     <td>x</td>
+     <td>y</td>
+     <td>z</td>
+    </tr>
+  </tbody>
+</table>
+
+                        <code class="modifier-name">.table-plain</code>
+                      </div>
+                    
+                  </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
@@ -853,6 +824,11 @@
 <span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span>
 </code></pre>
                 
+
+                
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -863,17 +839,12 @@
 <p>The forms section provides basic styling of form elements in addition to a basic reset.</p>
 <p>Labels for form elements should describe what the field is, while placeholder text should describe the specifics about formatting or examples for the input text.</p>
 
-                
+
                 
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-
-                  
-                    <div class="styleguide-modifiers">
-                      
-                        <div class="styleguide-modifier-example">
-                          <form action="" method="post">
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <form action="" method="post">
 
   <label>
     Name:
@@ -934,11 +905,9 @@
   <button type="submit">Submit</button>
 
 </form>
-                          <code class="modifier-name">.default</code>
-                        </div>
-                      
                     </div>
-                  
+                    
+                  </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">action</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">method</span>=<span class="hljs-value">"post"</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
@@ -1002,23 +971,23 @@
 <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
 </code></pre>
                 
+
+                
+
+                
+
               </section>
               <hr class="trailer-2">
             
               <section class="trailer-2">
                 <h2 id="search-bar">Search Bar</h2>
 
-                
+
                 
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-
-                  
-                    <div class="styleguide-modifiers">
-                      
-                        <div class="styleguide-modifier-example">
-                          <form method="GET" action="/search/">
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <form method="GET" action="/search/">
   <label>Search Context:
     <div class="search-bar">
       <input type='search' placeholder='Search'>
@@ -1027,11 +996,9 @@
   </label>
 </form>
 
-                          <code class="modifier-name">.default</code>
-                        </div>
-                      
                     </div>
-                  
+                    
+                  </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">method</span>=<span class="hljs-value">"GET"</span> <span class="hljs-attribute">action</span>=<span class="hljs-value">"/search/"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Search Context:
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"search-bar"</span>&gt;</span>
@@ -1042,6 +1009,11 @@
 <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
 </code></pre>
                 
+
+                
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -1049,115 +1021,60 @@
                 <h2 id="text-inputs">Text Inputs</h2>
 <p>All text inputs are styled by default. They receive a 1px border, a CSS3 transition, and a very distinct :focus style which helps provide feedback to the user while they engage with a form. The size of the forms and buttons are calibrated to they can exist in-line to each other.</p>
 
-                
+
                 
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-
-                  
-                    <div class="styleguide-modifiers">
-                      
-                        <div class="styleguide-modifier-example">
-                          <label>Label Text
-  <input type='text' placeholder='placeholder' class="default">
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <label>Label Text
+  <input type='text' placeholder='placeholder' class="modifier-class">
 </label>
 
-                          <code class="modifier-name">.default</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <label>Label Text
+                    </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <label>Label Text
   <input type='text' placeholder='placeholder' class="input-error">
 </label>
 
-                          <code class="modifier-name">.input-error</code>
-                        </div>
-                      
-                    </div>
-                  
+                        <code class="modifier-name">.input-error</code>
+                      </div>
+                    
+                  </div>
 <pre><code>&lt;<span class="hljs-keyword">label</span>&gt;<span class="hljs-keyword">Label</span> Text
   &lt;input <span class="hljs-keyword">type</span>=<span class="hljs-attribute">'text</span>' placeholder=<span class="hljs-attribute">'placeholder</span>' class=<span class="hljs-string">"modifier-class"</span>&gt;
 &lt;/<span class="hljs-keyword">label</span>&gt;
 </code></pre>
                 
-              </section>
-              <hr class="trailer-2">
-            
-              <section class="trailer-2">
-                <h2 id="button-inputs">Button Inputs</h2>
-<p>Use button inputs for actionable items within a form.</p>
-<h3 id="types">Types</h3>
-<p><code>modifier-class</code> refers in this case to the input <code>type</code> attribute.</p>
 
                 
+
                 
-                  <h3 class="leader-2 trailer-1">Modifiers</h3>
 
-                  
-
-                  
-                    <div class="styleguide-modifiers">
-                      
-                        <div class="styleguide-modifier-example">
-                          <input type="button" value="button" id="button">
-
-                          <code class="modifier-name">.button</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <input type="file" value="file" id="file">
-
-                          <code class="modifier-name">.file</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <input type="reset" value="reset" id="reset">
-
-                          <code class="modifier-name">.reset</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <input type="submit" value="submit" id="submit">
-
-                          <code class="modifier-name">.submit</code>
-                        </div>
-                      
-                    </div>
-                  
-<pre><code>&lt;input <span class="hljs-class"><span class="hljs-keyword">type</span>=</span><span class="hljs-string">"modifier-class"</span> <span class="hljs-keyword">value</span>=<span class="hljs-string">"modifier-class"</span> id=<span class="hljs-string">"modifier-class"</span>&gt;
-</code></pre>
-                
               </section>
               <hr class="trailer-2">
             
               <section class="trailer-2">
                 <h2 id="selects">Selects</h2>
 
-                
+
                 
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-
-                  
-                    <div class="styleguide-modifiers">
-                      
-                        <div class="styleguide-modifier-example">
-                          <label>
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <label>
   Select Menu:
-  <select class="default">
+  <select class="modifier-class">
     <option value="">Menu 1</option>
     <option value="">Menu 2</option>
     <option value="">Menu 3</option>
     <option value="">Menu 4</option>
   </select>
 </label>
-                          <code class="modifier-name">.default</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <label>
+                    </div>
+                    
+                      <div class="styleguide-modifier-example">
+                        <label>
   Select Menu:
   <select class="input-error">
     <option value="">Menu 1</option>
@@ -1166,11 +1083,10 @@
     <option value="">Menu 4</option>
   </select>
 </label>
-                          <code class="modifier-name">.input-error</code>
-                        </div>
-                      
-                    </div>
-                  
+                        <code class="modifier-name">.input-error</code>
+                      </div>
+                    
+                  </div>
 <pre><code>&lt;label&gt;
   Select Menu:
   &lt;select <span class="hljs-keyword">class</span>=<span class="hljs-string">"modifier-class"</span>&gt;
@@ -1182,29 +1098,30 @@
 &lt;/label&gt;
 </code></pre>
                 
+
+                
+
+                
+
               </section>
               <hr class="trailer-2">
             
               <section class="trailer-2">
                 <h2 id="checkboxes">Checkboxes</h2>
 
-                
+
                 
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-                    <div class="styleguide-modifiers">
-                      <div class="styleguide-modifier-example">
-                        <fieldset>
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <fieldset>
   <legend>Checkbox Label:</legend>
   <label><input type="checkbox">Check Box 1</label>
   <label><input type="checkbox">Check Box 2</label>
 </fieldset>
-                      </div>
                     </div>
-                  
-
-                  
+                    
+                  </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>Checkbox Label:<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span>&gt;</span>Check Box 1<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
@@ -1212,30 +1129,31 @@
 <span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span>
 </code></pre>
                 
+
+                
+
+                
+
               </section>
               <hr class="trailer-2">
             
               <section class="trailer-2">
                 <h2 id="radio-buttons">Radio Buttons</h2>
 
-                
+
                 
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-                    <div class="styleguide-modifiers">
-                      <div class="styleguide-modifier-example">
-                        <fieldset>
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <fieldset>
   <legend>Choose One Color</legend>
   <label><input type="radio" name="color" value="blue">Blue</label>
   <label><input type="radio" name="color" value="red">Red</label>
   <label><input type="radio" name="color" value="green">Green</label>
 </fieldset>
-                      </div>
                     </div>
-                  
-
-                  
+                    
+                  </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>Choose One Color<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"color"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"blue"</span>&gt;</span>Blue<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
@@ -1244,6 +1162,11 @@
 <span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span>
 </code></pre>
                 
+
+                
+
+                
+
               </section>
               <hr class="trailer-2">
             
@@ -1254,30 +1177,28 @@
 <p>A minimum buffer zone of clear space is maintained around the logo. Display of the logo should not be less than 78 x 28 pixels. This minimun size and buffer is part of the component, designed to be as simple to use as possible.</p>
 <p>Use of the reverse logo should only be on top of dark backgrounds. Neither logo should be used on top of images, or altered in any way.</p>
 
-                
+
                 
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
-
-                  
-
-                  
-                    <div class="styleguide-modifiers">
-                      
-                        <div class="styleguide-modifier-example">
-                          <div class="esri-logo"></div>
-                          <code class="modifier-name">.esri-logo</code>
-                        </div>
-                      
-                        <div class="styleguide-modifier-example">
-                          <div class="esri-logo-reverse"></div>
-                          <code class="modifier-name">.esri-logo-reverse</code>
-                        </div>
-                      
+                  <div class="styleguide-modifiers">
+                    <div class="styleguide-modifier-example">
+                      <div class="esri-logo "></div>
                     </div>
-                  
-<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"modifier-class"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+                    
+                      <div class="styleguide-modifier-example">
+                        <div class="esri-logo esri-logo-reverse"></div>
+                        <code class="modifier-name">.esri-logo-reverse</code>
+                      </div>
+                    
+                  </div>
+<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"esri-logo modifier-class"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
 </code></pre>
                 
+
+                
+
+                
+
               </section>
               <hr class="trailer-2">
             
