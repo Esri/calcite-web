@@ -1,10 +1,14 @@
 ## v0.0.7
 
+Javascript, documentation, and more patterns.
+
 ### Added
 - sticky scroll
 - sticky show
 - javscript for interactive patterns
 - invisible class
+- carousel pattern
+- `transition-prefixed()` mixin
 
 ### Modified
 - Minor padding right compression on .top-nav-title
@@ -14,6 +18,10 @@
 - Minor adjustments on font-size at values less than 0
 - alpha counters on nested ol
 - ITC Charter to Kepler
+- Major rework of documentation tech stack
+
+### Removed
+- Color Map
 
 ## v0.0.6
 
