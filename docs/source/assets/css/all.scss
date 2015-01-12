@@ -24,6 +24,7 @@
     border-right: 1px solid $lightest-gray;
     position: relative;
     clear: both;
+    overflow-x: hidden;
     &:last-child {
       border-bottom: none;
     }
@@ -180,3 +181,21 @@
   &.ssquare:before {content: $ssquare}
   &.swhitesquare:before {content: $swhitesquare}
 }
+
+// slider backgrounds
+.carousel-slides {
+  height: 300px;
+}
+
+.carousel-slide {
+  background-position: center top;
+  background-size: cover;
+  @extend .text-white;
+}
+
+.carousel-slide:nth-child(1) { background-image: linear-gradient(to right, $red, $orange); }
+.carousel-slide:nth-child(2) { background-image: linear-gradient(to right, $green, $blue); }
+.carousel-slide:nth-child(3) { background-image: linear-gradient(to right, $orange, $red); }
+.carousel-slide:nth-child(4) { background-image: linear-gradient(to right, $purple, $green); }
+.carousel-slide:nth-child(5) { background-image: linear-gradient(to right, $yellow, $orange); }
+.carousel-slide:nth-child(6) { background-image: linear-gradient(to right, $blue, $yellow); }
