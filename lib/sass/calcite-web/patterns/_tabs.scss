@@ -69,8 +69,10 @@
 @mixin tabs-transparent() {
   .tab-title    {
     background-color: transparent;
+    border: 1px solid transparent;
     &.is-active {
       background-color: transparent;
+      border: 1px solid $lighter-gray;
       border-bottom: 1px solid $white;
     }
   }
