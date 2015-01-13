@@ -1,3 +1,17 @@
+## v0.0.8
+
+Sample page layouts, typography, browser testing.
+
+### Added
+- blog layout
+- homepage layout
+- documentation layout
+
+### Modified
+- Esri logo modified to fit in navigation better
+- Added animations to super navs
+- Browser tested elements
+
 ## v0.0.7
 
 Javascript, documentation, and more patterns.
