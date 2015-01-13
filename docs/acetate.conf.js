@@ -6,6 +6,7 @@ function config(acetate) {
   });
 
   acetate.layout('**/*', 'layouts/_layout');
+  acetate.layout('page-layouts/*.html', 'layouts/_blank:content');
 
   acetate.metadata('**/index.html', {
     data: {
