@@ -6,6 +6,7 @@ Sample page layouts, typography, browser testing.
 - blog layout
 - homepage layout
 - documentation layout
+- `.gutter-left-x` and `.gutter-right-x`
 
 ### Modified
 - Esri logo modified to fit in navigation better

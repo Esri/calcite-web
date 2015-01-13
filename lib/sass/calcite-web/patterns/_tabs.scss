@@ -46,7 +46,7 @@
   @include box-sizing(border-box);
   background-color: $white;
   display: none;
-  padding: 1rem;
+  padding: $baseline/2;
   overflow: auto;
   &.is-active {
     display: block;
@@ -81,6 +81,8 @@
   }
   .tab-section  {
     background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
