@@ -40,8 +40,9 @@ If the mixin accepts arguments, pass them into the parenthesis:
 | [`transition-duration`](#transition)          | `$value`                       |
 | [`transition-timing-function`](#transition)   | `$value`                       |
 | [`transition-delay`](#transition)             | `$value`                       |
-| [`show`](#show-and-hide)                      | none                           |
-| [`hide`](#show-and-hide)                      | none                           |
+| [`visible`](#visibility)                      | none                           |
+| [`invisible`](#visibility)                    | none                           |
+| [`hide`](#visibility)                         | none                           |
 
 #### Appearance
 
@@ -164,11 +165,12 @@ To transition vendor-prefixed properties, e.g. `-webkit-transform` and `-moz-tra
 
 This will generate vendor prefixed properties *and* values.
 
-#### Show and Hide
+#### Visibility
 
-The show and hide mixins change the `visibility` property. This is useful for removing and adding elements at certain breakpoints or with certain class names. No arguments are passed.
+The visibility mixins change the `visibility` property. This is useful for removing and adding elements at certain breakpoints or with certain class names. No arguments are passed. Invisible sets `visibility: hidden` on the object, leaving in the in document flow, but removing it from view. `hide()` will completely remove the item with `display:none`.
 
 ```scss
-@include show();
 @include hide();
+@include invisible();
+@include visible();
 ```
