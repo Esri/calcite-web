@@ -175,25 +175,271 @@ css:
   </aside>
   <main class="column-17 pre-1">
     <h2 class="js-show">hey</h2>
-    <h1>Guide</h1>
-    <ul class="list-bulleted">
-      <li><a href="#">What you get</a></li>
-    </ul>
+    <h1>Add a map to your app</h1>
+    <ol>
+      <li><a href="#">Add a map view to the user interface</a></li>
+      <li><a href="#">Connect the map view to the view controller</a></li>
+      <li><a href="#">Add content to the map view</a></li>
+      <li><a href="#">Respond to map actions</a></li>
+    </ol>
     <div class="tabs-transparent tab-group trailer-2 js-tab-group">
       <nav class="tab-nav">
         <a class="tab-title is-active js-tab">Swift</a>
         <a class="tab-title js-tab">Objective-C</a>
       </nav>
-      <section class="tab-contents padding-leader-half">
+      <section class="tab-contents">
         <article class="tab-section js-tab-section is-active">
-          <p id="GUID-ABDFD57E-0FCF-4426-A49C-D37BB1C96AE3">This guide describes how to build Mac  applications that incorporate capabilities such as mapping, geocoding, geoprocessing, and custom capabilities for use with  ArcGIS Online or your own on-premises ArcGIS servers. A great place to start developing once you've installed the SDK is to <a class="xref" href="/os-x/objective-c/guide/add-a-map-to-your-app.htm">add a map to your app</a> or browse the <a class="xref" href="../sample-code/index.html">samples</a>. For what's new in this release, see the <a class="xref" href="">Release notes</a>.</p><p id="GUID-FFAFD3AC-8799-4909-866F-95E0498C0C1B">With  ArcGIS Runtime SDK for OSX, you can build apps that:</p><ul purpose="ul" id="UL_FD7D85275F584E978CF27907BE76DE43"><li purpose="li" id="LI_82A2AC9DD7F340D4B3A09333F9310EBC">Add high performance mapping and GIS capabilities to your Mac apps.</li><li purpose="li" id="LI_7AD11EBBDB544950A13FC3667B390C66"> Reuse your existing  iOS programming logic. Just change the UI to target the Mac.</li><li purpose="li" id="LI_1DD5F848A77E4C058736E8BADF720615">Consume content and services from ArcGIS online or Portal for ArcGIS (using the Portal API).</li><li purpose="li" id="LI_57532F1DBD9743CA9A8BF3034A5D6562">Let your users  interactive with the map, control the geographic location, visualize the  data, find locations, query data, discover routes to new locations, add temporary and permanent data and perform a range of GIS analysis.</li><li purpose="li" id="LI_28E0E9005B52487084141D89F003D81E">Allow your users to work offline, fully disconnected from a network. They can can view, query, analyze and edit data offline usng a  local geodatabase. Then synchronize and changes back to the server when network connectivity is available again.</li><li purpose="li" id="LI_AD5E690EAB96461BBD9A50A8190B7FAE">Search for features or attributes in your GIS data and display the results.</li><li purpose="li" id="LI_0DA9DE3A5CEE455899416A99B585AC86">Perform blazing fast offline searches for locations (geocode and reverse geocode) and driving directions (routes).</li></ul><p></p>
-          <section class="section1 padded-anchor" id="ESRI_SECTION1_7F3CED9F5FC348CE9CF2EB8A745D690C" purpose="section1"><h2>What you get</h2><p id="GUID-8F863609-F048-46A6-86D4-B8EC0AAA310E"></p><ul purpose="ul" id="UL_705516B498E946EE9ECE7DB1CE483546"><li purpose="li" id="LI_4E869AC709824691855C950D4B46CDE8">A high performance native mapping API that provides convenient classes and uses common patterns to simplify app development using  the Apple <a class="xref" href="http://developer.apple.com/tools/xcode/">Xcode IDE</a>.</li><li purpose="li" id="LI_3690DDD7DD5346679684CA22B0BE2CDA">This developer guide  to help you learn how to use the API and create your own applications.</li><li purpose="li" id="LI_6FAC4AD9F3944BC29F6A9FBE28B00B81">Getting started information, such as <a class="xref" href="/os-x/objective-c/guide/install-and-setup.htm">Install and setup,</a> <a class="xref" href="/os-x/objective-c/guide/configure.htm">Configure my project,</a> <a class="xref" href="/os-x/objective-c/guide/add-a-map-to-your-app.htm">Tutorials</a> <a class="xref_bad" href="GUID-93704DFB-75B7-43BD-A103-6543653C22D2">Release notes,</a> and <a class="xref" href="/os-x/objective-c/guide/system-reqs.htm">System requirements.</a></li><li purpose="li" id="LI_9B10B6179BF444FB85C9D529E9DEA24A">A comprehensive online <a target="_blank" class="xref" href="../api-reference/index.htm">API reference</a> (also installed locally in the Xcode IDE).</li><li purpose="li" id="LI_45F9286007464BD3B19C9379F24AE4D6">Samples are provided in an interactive application available for download on ArcGIS.com at <a target="_blank" class="xref" href="http://www.arcgis.com/home/item.html?id=f64b2619be6444c69201780c43cbd5fb">OS X sample application</a>. These are also installed locally with the SDK to <span class="usertext">${HOME}/Library/SDKs/ArcGIS/OSX/Samples/ArcGISOSXSampleApplication.app</span>.</li><li purpose="li" id="LI_66AF5B59612342BB9B21799B359CE79D"><a target="_blank" class="xref" href="http://forums.arcgis.com/forums/229-ArcGIS-Runtime-SDK-for-OS-X/">Forum.</a></li><li purpose="li" id="LI_95790DD1079546F0A726A33F622EFCC9"><a target="_blank" class="xref" href="http://blogs.esri.com/esri/arcgis/tag/os-x/">Blog.</a></li></ul><p></p></section>
+          <h3>1. Add a map view to the user interface</h3>
+          <p>The first step to display a map in your application is to add a map view to your application's user interface. This map view acts as an empty placeholder to which you will later add map content.</p>
+
+          <p>The user interface of a Mac application is typically contained in nib files (.xib extension). The nib file contains all the UI components that need to display, and information about their styling, positioning, layout, and so on. Each Mac xib file typically has an associated Window contains code to respond to user interaction with the UI components, and optionally perform some setup and tear down tasks.</p>
+
+          <p>When you select this file in the MainMenu.xib file the <strong>Project Navigator</strong> pane on the left and the xib's UI contents are displayed in the Canvas section on the right. Between the <strong>Project Navigator</strong> and the <strong>Canvas</strong> lies the <strong>Dock</strong>, which provides a convenient list of all the UI components currently in the xib file. The rightmost section in Xcode is the <strong>Utility</strong> area, which contains the <strong>Inspector</strong> pane (top) and Library pane (bottom). The <strong>Inspector</strong> allows you to inspect and change properties of the UI components in the xib file, and the <strong>Library</strong> allows you to pick UI components to add to your project.</p>
+          <p>To add a map view, select a Custom View object from the <strong>Object Library</strong> in the <strong>Library</strong> pane, then drag and drop it on to the view shown in the <strong>Canvas.</strong></p>
+
+          <div class="panel trailer-2 leader-2">
+            <p class="trailer-0">The Library pane is located at the bottom right of the Xcode window. The screenshot below is for Xcode 6.1 but note that it is displayed in different ways depending on the version of Xcode. Make sure you have selected the Object Library that contains the Custom View.</p>
+          </div>
+
+          <p>This NSView object acts as a placeholder for the map that needs to display in the application. Resize the NSView, if necessary, for your application.</p>
+
+          <p>Before this NSView can display your map, change it to a map view. Do this by specifying AGSMapView as the class for this object in the <strong>Inspector.</strong></p>
+
+          <h3>2. Connect the map view to the view controller</h3>
+
+          <p>You have added a map view to the UI. Now connect it to the header file (AppDelegate.h) so it can be programmatically accessed.</p>
+
+          <p>To do this, enable the Assistant Editor so that the the header file (AppDelegate.h) displays alongside the Canvas. Locate the map view in the Canvas, then drag and drop it in the header file as shown in the Assistant Editor.</p>
+
+          <p>Upon doing so, Xcode automatically prompts for a name so that it can create an "outlet" connection from the view controller to the map view in the UI. In this topic, this outlet is called mapView.</p>
+
+          <p>If you try to build the application at this stage, you will get compile errors because your application contains a reference to the AGSMapView class that has not been defined yet. Import the ArcGIS.h header into your header file. You can now reference any class in the ArcGIS Runtime SDK for OS X.</p>
+
+          <pre><code>
+#import <Cocoa/Cocoa.h>
+
+//Import the header file for the ArcGIS framework
+#import <ArcGIS/ArcGIS.h>
+
+@interface AppDelegate : NSObject <NSApplicationDelegate>
+
+@property (assign) IBOutlet NSWindow *window;
+@property (strong) IBOutlet AGSMapView *mapView;
+...
+
+@end
+          </code></pre>
+
+          <h3>3. Add content to the map view</h3>
+          <p>You have added a map view to the UI and connected it to the code files. You can now add the map content and specify how the users interact with the map. This tutorial describes how you can add individual map layers to the map view. Remember, you can also display content by opening a preconfigured web map.</p>
+
+          <p>Select the AppDelegate.m implementation file in the Navigator. Open it in the source editor. Locate the applicationDidFinishLaunching method and add the code to create an instance of a tiled map service layer. Add this tiled layer to the map.</p>
+
+          <pre><code>
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+{
+ // Insert code here to initialize your application
+
+ //Create an instance of a tiled map service layer
+ AGSTiledMapServiceLayer *tiledLayer = [[AGSTiledMapServiceLayer alloc] initWithURL:[NSURL URLWithString:@"http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"]];
+
+ //Add it to the map view
+ [self.mapView addMapLayer:tiledLayer withName:@"Basemap Tiled Layer"];
+
+...
+}
+
+@end
+          </code></pre>
+          <p>If you build and run the application the map will display the content of the ArcGIS Online map service.</p>
+          <h3>4. Respond to map actions</h3>
+
+          <p>A map view informs its delegates when certain actions take place on the map, for instance, when a user taps the map. The map's delegates are responsible for responding to these actions. In addition, a map view also consults its delegates before performing certain actions, for example, displaying a callout. The delegate is responsible for instructing the map on what to do. This separation of responsibility between the map and its delegates is based on the delegation design pattern.</p>
+
+          <p>Depending on the actions you want to handle, set one of your classes as the map view's delegate. A map view has three types of delegates.</p>
+
+          <h4>Map view layer delegate</h4>
+
+          <p>The layer delegate is informed about layer related actions, such as when the map loads. Refer to the API reference documentation for the AGSMapViewLayerDelegate protocol to learn about the information conveyed to the layer delegate.</p>
+
+          <p>Any class wanting to serve as the layer delegate must adopt the AGSMapViewLayerDelegate protocol and implement the methods related to the actions it is interested in.</p>
+
+          <p>Any class wanting to serve as the layer delegate must adopt the AGSMapViewLayerDelegate protocol and implement the methods related to the actions it is interested in. First, adopt the AGSMapViewLayerDelegate protocol in the AppDelegate header file.</p>
+          <pre><code>
+@interface AppDelegate : NSObject <NSApplicationDelegate, AGSMapViewLayerDelegate>
+...
+@end
+Implement the mapViewDidLoad method in the AppDelegate.m file. This method is invoked when the map loads.
+
+#pragma mark AGSMapViewLayerDelegate methods
+
+-(void) mapViewDidLoad:(AGSMapView*)mapView {
+
+  // perform some function once the map has been loaded
+ ...
+}
+
+@end
+          </code></pre>
+Set the map view's <code>layerDelegate</code>.
+          <pre><code>
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+{
+ // Insert code here to initialize your application
+ // set the delegate for the map view
+
+ self.mapView.layerDelegate = self;
+
+ ...
+}
+
+@end
+          </code></pre>
+
+          <p>The touch delegate is informed about user interaction with the map, such as when a user taps, or taps and holds the map. Refer to the API reference documentation for the AGSMapViewTouchDelegate protocol to learn about the different actions conveyed to the touch delegate.</p>
+
+          The procedure for assigning a touch delegate is similar to the procedure described above for layer delegates: adopt the <p>delegate protocol (AGSMapViewTouchDelegate) in your class; implement the relevant methods of the protocol; set your class as the map view's touchDelegate.</p>
+
+
+          <p>The callout delegate is informed when the map performs, or is about to perform callout related actions, such as when it is about to display or dismiss a callout. Refer to the API reference documentation for the AGSMapViewCalloutDelegate protocol to learn about the different actions conveyed to the callout delegate.</p>
+
+          <p>The procedure for assigning a callout delegate is similar to the one described above for the layer and touch delegates.</p>
         </article>
         <article class="tab-section js-tab-section">
-          <p id="GUID-ABDFD57E-0FCF-4426-A49C-D37BB1C96AE3">This guide describes how to build Mac  applications that incorporate capabilities such as mapping, geocoding, geoprocessing, and custom capabilities for use with  ArcGIS Online or your own on-premises ArcGIS servers. A great place to start developing once you've installed the SDK is to <a class="xref" href="/os-x/objective-c/guide/add-a-map-to-your-app.htm">add a map to your app</a> or browse the <a class="xref" href="../sample-code/index.html">samples</a>. For what's new in this release, see the <a class="xref" href="">Release notes</a>.</p><p id="GUID-FFAFD3AC-8799-4909-866F-95E0498C0C1B">With  ArcGIS Runtime SDK for OSX, you can build apps that:</p><ul purpose="ul" id="UL_FD7D85275F584E978CF27907BE76DE43"><li purpose="li" id="LI_82A2AC9DD7F340D4B3A09333F9310EBC">Add high performance mapping and GIS capabilities to your Mac apps.</li><li purpose="li" id="LI_7AD11EBBDB544950A13FC3667B390C66"> Reuse your existing  iOS programming logic. Just change the UI to target the Mac.</li><li purpose="li" id="LI_1DD5F848A77E4C058736E8BADF720615">Consume content and services from ArcGIS online or Portal for ArcGIS (using the Portal API).</li><li purpose="li" id="LI_57532F1DBD9743CA9A8BF3034A5D6562">Let your users  interactive with the map, control the geographic location, visualize the  data, find locations, query data, discover routes to new locations, add temporary and permanent data and perform a range of GIS analysis.</li><li purpose="li" id="LI_28E0E9005B52487084141D89F003D81E">Allow your users to work offline, fully disconnected from a network. They can can view, query, analyze and edit data offline usng a  local geodatabase. Then synchronize and changes back to the server when network connectivity is available again.</li><li purpose="li" id="LI_AD5E690EAB96461BBD9A50A8190B7FAE">Search for features or attributes in your GIS data and display the results.</li><li purpose="li" id="LI_0DA9DE3A5CEE455899416A99B585AC86">Perform blazing fast offline searches for locations (geocode and reverse geocode) and driving directions (routes).</li></ul><p></p>
-          <section class="section1 padded-anchor" id="ESRI_SECTION1_7F3CED9F5FC348CE9CF2EB8A745D690C" purpose="section1"><h2>What you get</h2><p id="GUID-8F863609-F048-46A6-86D4-B8EC0AAA310E"></p><ul purpose="ul" id="UL_705516B498E946EE9ECE7DB1CE483546"><li purpose="li" id="LI_4E869AC709824691855C950D4B46CDE8">A high performance native mapping API that provides convenient classes and uses common patterns to simplify app development using  the Apple <a class="xref" href="http://developer.apple.com/tools/xcode/">Xcode IDE</a>.</li><li purpose="li" id="LI_3690DDD7DD5346679684CA22B0BE2CDA">This developer guide  to help you learn how to use the API and create your own applications.</li><li purpose="li" id="LI_6FAC4AD9F3944BC29F6A9FBE28B00B81">Getting started information, such as <a class="xref" href="/os-x/objective-c/guide/install-and-setup.htm">Install and setup,</a> <a class="xref" href="/os-x/objective-c/guide/configure.htm">Configure my project,</a> <a class="xref" href="/os-x/objective-c/guide/add-a-map-to-your-app.htm">Tutorials</a> <a class="xref_bad" href="GUID-93704DFB-75B7-43BD-A103-6543653C22D2">Release notes,</a> and <a class="xref" href="/os-x/objective-c/guide/system-reqs.htm">System requirements.</a></li><li purpose="li" id="LI_9B10B6179BF444FB85C9D529E9DEA24A">A comprehensive online <a target="_blank" class="xref" href="../api-reference/index.htm">API reference</a> (also installed locally in the Xcode IDE).</li><li purpose="li" id="LI_45F9286007464BD3B19C9379F24AE4D6">Samples are provided in an interactive application available for download on ArcGIS.com at <a target="_blank" class="xref" href="http://www.arcgis.com/home/item.html?id=f64b2619be6444c69201780c43cbd5fb">OS X sample application</a>. These are also installed locally with the SDK to <span class="usertext">${HOME}/Library/SDKs/ArcGIS/OSX/Samples/ArcGISOSXSampleApplication.app</span>.</li><li purpose="li" id="LI_66AF5B59612342BB9B21799B359CE79D"><a target="_blank" class="xref" href="http://forums.arcgis.com/forums/229-ArcGIS-Runtime-SDK-for-OS-X/">Forum.</a></li><li purpose="li" id="LI_95790DD1079546F0A726A33F622EFCC9"><a target="_blank" class="xref" href="http://blogs.esri.com/esri/arcgis/tag/os-x/">Blog.</a></li></ul><p></p></section>
+          <p>The primary way to display geographic information in your applications is through a map. This SDK contains a map view component that lets you view map layers from different map sources such as ArcGIS Server services, Bing Maps, Open Street Map, and so on, or open preconfigured web maps from ArcGIS Online or your Portal for ArcGIS.</p>
+
+          <p>The steps below guide you through displaying a map in your application. If you haven't already done so, configure your Xcode project then follow the steps below. In this tutorial a project named MyFirstMapApp has been created using Apple's Cocoa Application Xcode project template.</p>
+
+          <h3>1. Add a map view to the user interface</h3>
+
+          <p>The first step to display a map in your application is to add a map view to your application's user interface. This map view acts as an empty placeholder to which you will later add map content.</p>
+
+          <p>The user interface of a Mac application is typically contained in nib files (.xib extension). The nib file contains all the UI components that need to display, and information about their styling, positioning, layout, and so on. Each Mac xib file typically has an associated Window contains code to respond to user interaction with the UI components, and optionally perform some setup and tear down tasks.</p>
+
+          <p>When you select this file in the MainMenu.xib file the Project Navigator pane on the left and the xib's UI contents are displayed in the Canvas section on the right. Between the Project Navigator and the Canvas lies the Dock, which provides a convenient list of all the UI components currently in the xib file. The rightmost section in Xcode is the Utility area, which contains the Inspector pane (top) and Library pane (bottom). The Inspector allows you to inspect and change properties of the UI components in the xib file, and the Library allows you to pick UI components to add to your project.</p>
+
+          <p>To add a map view, select a Custom View object from the Object Library in the Library pane, then drag and drop it on to the view shown in the Canvas.</p>
+
+          <div class="panel leader-1 trailer-1">
+            <p class="trailer-0">The Library pane is located at the bottom right of the Xcode window. The screenshot below is for Xcode 6.1 but note that it is displayed in different ways depending on the version of Xcode. Make sure you have selected the Object Library that contains the Custom View.</p>
+          </div>
+
+          <p>This NSView object acts as a placeholder for the map that needs to display in the application. Resize the NSView, if necessary, for your application.</p>
+
+          <p>Before this NSView can display your map, change it to a map view. Do this by specifying AGSMapView as the class for this object in the Inspector.</p>
+
+          <p>Setting the AGSMapView class</p>
+
+          <h3>2. Connect the map view to the view controller</h3>
+
+          <p>You have added a map view to the UI. Now connect it to the header file (AppDelegate.h) so it can be programmatically accessed.</p>
+
+          <p>To do this, enable the Assistant Editor so that the the header file (AppDelegate.h) displays alongside the Canvas. Locate the map view in the Canvas, then drag and drop it in the header file as shown in the Assistant Editor.</p>
+
+          <p>Connect map view to window</p>
+
+          <p>Upon doing so, Xcode automatically prompts for a name so that it can create an "outlet" connection from the view controller to the map view in the UI. In this topic, this outlet is called mapView.</p>
+
+          <p>Set the map view name</p>
+
+          <p>If you try to build the application at this stage, you will get compile errors because your application contains a reference to the AGSMapView class that has not been defined yet. Import the ArcGIS.h header into your header file. You can now reference any class in the ArcGIS Runtime SDK for OS X.</p>
+          <pre><code></code></pre>
+#import <Cocoa/Cocoa.h>
+
+//Import the header file for the ArcGIS framework
+#import <ArcGIS/ArcGIS.h>
+
+@interface AppDelegate : NSObject <NSApplicationDelegate>
+
+@property (assign) IBOutlet NSWindow *window;
+@property (strong) IBOutlet AGSMapView *mapView;
+...
+
+@end
+          </code></pre>
+          <h3>3. Add content to the map view</h3>
+
+          <p>You have added a map view to the UI and connected it to the code files. You can now add the map content and specify how the users interact with the map. This tutorial describes how you can add individual map layers to the map view. Remember, you can also display content by opening a preconfigured web map.</p>
+
+          <p>Select the AppDelegate.m implementation file in the Navigator. Open it in the source editor. Locate the applicationDidFinishLaunching method and add the code to create an instance of a tiled map service layer. Add this tiled layer to the map.</p>
+            <pre><code>
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+{
+ // Insert code here to initialize your application
+
+ //Create an instance of a tiled map service layer
+ AGSTiledMapServiceLayer *tiledLayer = [[AGSTiledMapServiceLayer alloc] initWithURL:[NSURL URLWithString:@"http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"]];
+
+ //Add it to the map view
+ [self.mapView addMapLayer:tiledLayer withName:@"Basemap Tiled Layer"];
+
+...
+}
+
+@end
+          </code></pre>
+          <p>If you build and run the application the map will display the content of the ArcGIS Online map service.</p>
+
+          <p>Add a map to your app</p>
+
+          <h3>4. Respond to map actions</h3>
+
+          <p>A map view informs its delegates when certain actions take place on the map, for instance, when a user taps the map. The map's delegates are responsible for responding to these actions. In addition, a map view also consults its delegates before performing certain actions, for example, displaying a callout. The delegate is responsible for instructing the map on what to do. This separation of responsibility between the map and its delegates is based on the delegation design pattern.</p>
+
+          <p>Depending on the actions you want to handle, set one of your classes as the map view's delegate. A map view has three types of delegates.</p>
+
+          <p>Map view layer delegate</p>
+
+          The layer delegate is informed about layer related actions, such as when the map loads. Refer to the API reference <p>documentation for the AGSMapViewLayerDelegate protocol to learn about the information conveyed to the layer delegate.</p>
+
+          <p>Any class wanting to serve as the layer delegate must adopt the AGSMapViewLayerDelegate protocol and implement the methods related to the actions it is interested in.</p>
+
+          Any class wanting to serve as the layer delegate must adopt the AGSMapViewLayerDelegate protocol and implement the <p>methods related to the actions it is interested in. First, adopt the AGSMapViewLayerDelegate protocol in the AppDelegate header file.</p>
+          <pre><code>
+@interface AppDelegate : NSObject <NSApplicationDelegate, AGSMapViewLayerDelegate>
+...
+@end
+          </code></pre>
+          <p>Implement the mapViewDidLoad method in the AppDelegate.m file. This method is invoked when the map loads.</p>
+          <pre><code>
+#pragma mark AGSMapViewLayerDelegate methods
+
+-(void) mapViewDidLoad:(AGSMapView*)mapView {
+
+  // perform some function once the map has been loaded
+ ...
+}
+
+@end
+          </code></pre>
+          <p>Set the map view's layerDelegate.</p>
+          <pre><code>
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+{
+ // Insert code here to initialize your application
+ // set the delegate for the map view
+
+ self.mapView.layerDelegate = self;
+
+ ...
+}
+
+@end
+Map view touch delegate
+          </code></pre>
+          <p>The touch delegate is informed about user interaction with the map, such as when a user taps, or taps and holds the map. Refer to the API reference documentation for the AGSMapViewTouchDelegate protocol to learn about the different actions conveyed to the touch delegate.</p>
+
+          The procedure for assigning a touch delegate is similar to the procedure described above for layer delegates: adopt the <p>delegate protocol (AGSMapViewTouchDelegate) in your class; implement the relevant methods of the protocol; set your class as the map view's touchDelegate.</p>
+
+          <p>Map view callout delegate</p>
+
+          The callout delegate is informed when the map performs, or is about to perform callout related actions, such as when it <p>is about to display or dismiss a callout. Refer to the API reference documentation for the AGSMapViewCalloutDelegate protocol to learn about the different actions conveyed to the callout delegate.</p>
+
+          <p>The procedure for assigning a callout delegate is similar to the one described above for the layer and touch delegates.          </p>
         </article>
       </section>
     </div>
+    <hr>
+    <p class="right"><a href="#">Feedback on this topic?</a></p>
   </main>
 </div>
