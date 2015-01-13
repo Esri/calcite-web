@@ -18,9 +18,10 @@
     <link rel="shortcut icon" href="{{relativePath}}assets/img/favicon.ico">
 
     <!-- stylesheets -->
-    {% block head %}
-      <link rel="stylesheet" href="{{relativePath}}assets/css/all.css">
-    {% endblock %}
+    {% for name in css %}
+      <link rel="stylesheet" href="{{relativePath}}assets/css/{{name}}.css">
+    {% endfor %}
+
 
     <!--[if lt IE 9]>
       <script src="{{relativePath}}assets/js/libs/selectivizr-min.js"></script>
