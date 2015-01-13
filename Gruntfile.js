@@ -62,16 +62,8 @@ module.exports = function(grunt) {
         ]
       },
       libsass: {
-        files: ['lib/sass/**/*', 'docs/source/assets/css/**/*', 'docs/source/**/*.{html,md}'],
+        files: ['lib/sass/**/*', 'docs/source/assets/css/**/*'],
         tasks: [
-          'libsass:doc',
-          'copy:doc'
-        ]
-      },
-      layouts: {
-        files: ['docs/source/layouts/**/*.{html,md}'],
-        tasks: [
-          'acetate:build',
           'libsass:doc',
           'copy:doc'
         ]
@@ -95,14 +87,17 @@ module.exports = function(grunt) {
         dest: 'dist/css/calcite-web.css'
       },
 
-      minified: {
-        src: 'lib/sass/calcite-web.scss',
-        dest: 'dist/css/calcite-web.min.css'
+      doc: {
+        expand: true,
+        cwd: 'docs/source/assets/css',
+        src: ['**/*.scss'],
+        dest: 'docs/build/assets/css',
+        ext: '.css'
       },
 
-      doc: {
-        src: 'docs/source/assets/css/all.scss',
-        dest: 'docs/build/assets/css/all.css'
+      homepage: {
+        src: 'docs/source/assets/css/homepage.scss',
+        dest: 'docs/build/assets/css/homepage.css'
       }
     },
 

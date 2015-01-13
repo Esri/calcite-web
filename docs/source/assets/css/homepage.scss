@@ -1,0 +1,25 @@
+@import "calcite-web";
+
+.top-nav .esri-logo {
+  margin-top: -18px;
+  margin-bottom: -40px;
+}
+
+.carousel-slides {
+  height: 420px;
+}
+
+.carousel-slide {
+  background-position: center center;
+}
+
+.carousel-slide:nth-child(1) { background-image: url('http://www.esri.com/~/media/Images/carousel-images/home-rotators/arcgis-103.jpg'); }
+.carousel-slide:nth-child(2) { background-image: url('http://www.esri.com/~/media/Images/carousel-images/home-rotators/uc15-banner.jpg'); }
+.carousel-slide:nth-child(3) { background-image: url('http://www.esri.com/~/media/Images/carousel-images/home-rotators/3d-scene.jpg'); }
+.carousel-slide:nth-child(4) { background-image: url('http://www.esri.com/~/media/Images/carousel-images/home-rotators/geodesign-15.jpg'); }
+
+.banner-dots {
+  @include font-size(5);
+  margin-top: -3 * $baseline;
+  position: absolute;
+}
