@@ -32,15 +32,27 @@
   .text-darkest-gray { color: $darkest-gray; }
   .text-off-black    { color: $off-black; }
 
-  .text-rule              {@include text-rule();}
-  .text-inline            {@include text-inline();}
-  .text-center            {@include text-center();}
-  .text-left              {@include text-left();}
-  .text-right             {@include text-right();}
-  .text-large             {@include text-large();}
-  .text-small             {@include text-small();}
-  .text-light             {@include text-light();}
-  .text-ellipsis          {@include text-ellipsis();}
-  .list-numbered          {@include list-numbered();}
-  .list-bulleted          {@include list-bulleted();}
+  .text-rule         {@include text-rule();}
+  .text-inline       {@include text-inline();}
+  .text-center       {@include text-center();}
+  .text-left         {@include text-left();}
+  .text-right        {@include text-right();}
+  .text-light        {@include text-light();}
+  .text-ellipsis     {@include text-ellipsis();}
+  .list-numbered     {@include list-numbered();}
+  .list-bulleted     {@include list-bulleted();}
+
+  .font-size--3      { @include font-size(-3); }
+  .font-size--2      { @include font-size(-2); }
+  .font-size--1      { @include font-size(-1); }
+  .font-size-0       { @include font-size(0); }
+  .font-size-1       { @include font-size(1); }
+  .font-size-2       { @include font-size(2); }
+  .font-size-3       { @include font-size(3); }
+  .font-size-4       { @include font-size(4); }
+  .font-size-5       { @include font-size(5); }
+  .font-size-6       { @include font-size(6); }
+  .font-size-7       { @include font-size(7); }
+  .font-size-8       { @include font-size(8); }
+
 }

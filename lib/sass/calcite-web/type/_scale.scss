@@ -51,7 +51,7 @@
   font-size: modular-scale($n);
   // font-size: from-scale($n);
 
-  @if $n < 6 and $n > 4 {
+  @if $n < 9 and $n > 4 {
     line-height: 2*$baseline;
   }
   @else if $n < 4 and $n > 2 {

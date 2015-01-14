@@ -9,6 +9,7 @@ Sample page layouts, typography, browser testing.
 - homepage layout plz
 - documentation layout
 - api reference layout
+- `.font-size-x`
 - `.gutter-left-x` and `.gutter-right-x`
 
 ### Modified
