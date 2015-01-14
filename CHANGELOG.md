@@ -7,8 +7,9 @@ Sample page layouts, typography, browser testing.
 - added esri logo consensed class
 - blog layout plz
 - homepage layout plz
-- documentation layout plz
-- `.gutter-left-x` and `.gutter-right-x` plz
+- documentation layout
+- api reference layout
+- `.gutter-left-x` and `.gutter-right-x`
 
 ### Modified
 - Esri logo modified to fit in navigation better

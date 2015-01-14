@@ -4,15 +4,15 @@
 //  ↳ http://esri.github.io/calcite-web/grid/#gutter
 //  ↳ grid → _gutter.md
 
-@mixin gutter-left-quarter()  { padding-left:    $baseline/4; }
-@mixin gutter-right-quarter() { padding-right: $baseline/4; }
-@mixin gutter-left-third()    { padding-left:    $baseline/3; }
-@mixin gutter-right-third()   { padding-right: $baseline/3; }
-@mixin gutter-left-half()     { padding-left:    $baseline/2; }
-@mixin gutter-right-half()    { padding-right: $baseline/2; }
+@mixin gutter-left-quarter()  { padding-left:  $column-gutter/4; }
+@mixin gutter-right-quarter() { padding-right: $column-gutter/4; }
+@mixin gutter-left-third()    { padding-left:  $column-gutter/3; }
+@mixin gutter-right-third()   { padding-right: $column-gutter/3; }
+@mixin gutter-left-half()     { padding-left:  $column-gutter/2; }
+@mixin gutter-right-half()    { padding-right: $column-gutter/2; }
 
-@mixin gutter-left($n)     { padding-left:     $n * $baseline; }
-@mixin gutter-right($n)    { padding-right:  $n * $baseline; }
+@mixin gutter-left($n)        { padding-left:  $n * $column-gutter; }
+@mixin gutter-right($n)       { padding-right: $n * $column-gutter; }
 
 // Responsive gutter-left and gutter-right
 @mixin responsive-gutter() {
@@ -21,16 +21,16 @@
     // Medium
     @media screen and (max-width: $medium - 1) {
       @for $i from 0 through $horizontal-range {
-        .#{$medium-class}-gutter-left-#{$i}          { padding-left:     $i * $baseline; }
-        .#{$medium-class}-gutter-right-#{$i}         { padding-right:  $i * $baseline; }
+        .#{$medium-class}-gutter-left-#{$i}  { padding-left:     $i * $column-gutter; }
+        .#{$medium-class}-gutter-right-#{$i} { padding-right:  $i * $column-gutter; }
       }
     }
 
     // Small
     @media screen and (max-width: $small - 1) {
       @for $i from 0 through $horizontal-range {
-        .#{$small-class}-gutter-left-#{$i}          { padding-left:     $i * $baseline; }
-        .#{$small-class}-gutter-right-#{$i}         { padding-right:  $i * $baseline; }
+        .#{$small-class}-gutter-left-#{$i}  { padding-left:     $i * $column-gutter; }
+        .#{$small-class}-gutter-right-#{$i} { padding-right:  $i * $column-gutter; }
       }
     }
   }
@@ -38,12 +38,17 @@
 
 @if $include-grid == true {
 
+.gutter-left-quarter  { @include gutter-left-quarter(); }
+.gutter-right-quarter { @include gutter-right-quarter(); }
+.gutter-left-third    { @include gutter-left-third(); }
+.gutter-right-third   { @include gutter-right-third(); }
+
   .gutter-left-half  { @include gutter-left-half(); }
   .gutter-right-half { @include gutter-right-half(); }
 
   @for $i from 0 through $horizontal-range {
-    .gutter-left-#{$i}          { @include gutter-left($i)          ;}
-    .gutter-right-#{$i}         { @include gutter-right($i)         ;}
+    .gutter-left-#{$i}          { @include gutter-left($i)  ;}
+    .gutter-right-#{$i}         { @include gutter-right($i) ;}
   }
 
   @include responsive-gutter();

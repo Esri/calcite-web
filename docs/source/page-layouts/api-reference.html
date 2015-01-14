@@ -48,36 +48,40 @@ css:
 
 <div class="container">
   <div class="column-6">
-    <aside class="leader-1 js-accordion accordion column-6">
-      <div class="accordion-section is-active">
-        <h4 class="accordion-title">Routes</h4>
-        <nav class="accordion-content">
-          <a href="#" class="side-nav-link is-active">find</a>
-          <a href="#" class="side-nav-link">findAddressCandidates</a>
-          <a href="#" class="side-nav-link">geocodeAddresses</a>
-          <a href="#" class="side-nav-link">reverseGeocode</a>
-          <a href="#" class="side-nav-link">suggest</a>
-        </nav>
-      </div>
-      <div class="accordion-section">
-        <h4 class="accordion-title">Response</h4>
-        <nav class="accordion-content">
-          <a href="#" class="side-nav-link">Responses Overview</a>
-        </nav>
-      </div>
-    </aside>
 
-    <section class="js-sticky js-show column-6" data-top="46">
-      <div class="js-api-switcher">
-        <a href="#" class="btn btn-grouped btn-small btn-clear">↑</a>
-        <a href="#" class="btn btn-grouped btn-small btn-clear">Request URL</a>
-        <a href="#" class="btn btn-grouped btn-small btn-clear">↓</a>
-        <a href="#" class="btn btn-grouped btn-small btn-transparent">top</a>
+
+  <aside class="leader-1 js-accordion accordion column-6">
+    <div class="accordion-section is-active">
+      <h4 class="accordion-title">Routes</h4>
+      <nav class="accordion-content">
+        <a href="#" class="side-nav-link is-active">find</a>
+        <a href="#" class="side-nav-link">findAddressCandidates</a>
+        <a href="#" class="side-nav-link">geocodeAddresses</a>
+        <a href="#" class="side-nav-link">reverseGeocode</a>
+        <a href="#" class="side-nav-link">suggest</a>
+      </nav>
+    </div>
+    <div class="accordion-section">
+      <h4 class="accordion-title">Response</h4>
+      <nav class="accordion-content">
+        <a href="#" class="side-nav-link">Responses Overview</a>
+      </nav>
+    </div>
+  </aside>
+
+  <section class="sticky-nav scroll-stick scroll-show tablet-hide stuck visible" data-top="80">
+    <div class="section-menu">
+      <div class="btn-group">
+        <a href="#quick-reference" class="column-2 icon-arrow-up section-prev"></a>
+        <a href="#stops" class="column-20 section-name">Request URL</a>
+        <a href="#text" class="column-2 icon-arrow-down section-next"></a>
       </div>
-    </section>
+    </div>
+  </section>
   </div>
 
   <main class="column-17 pre-1">
+    <h2 class="js-show">hey</h2>
     <h1>find</h1>
     <hr class="leader-0 trailer-1">
     <nav class="trailer-0 block-group block-group-2-up">
@@ -105,7 +109,7 @@ css:
         <pre><code>http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/find?&lt;PARAMETERS&gt;</code></pre>
 
         <h3>Request Parameters</h3>
-        <table class="trailer-1">
+        <table>
           <thead>
             <tr>
               <td>attribute</td>
@@ -118,91 +122,91 @@ css:
           <tbody>
             <tr>
               <td><a href="#text">text</a></td>
-              <td><strong>required</strong></td>
+              <td>yes</td>
               <td>JSON</td>
               <td>string</td>
               <td>none</td>
             </tr>
             <tr>
               <td><a href="#f">f</a></td>
-              <td><strong>required</strong></td>
+              <td>yes</td>
               <td>'json', 'pjson'</td>
               <td>string</td>
               <td>'json'</td>
             </tr>
             <tr>
               <td><a href="#magicKey">magicKey</a></td>
-              <td></td>
+              <td>no</td>
               <td>Key from <a href="/rest/geocode/api-reference/geocoding-suggest.htm">suggest API</a></td>
               <td>string</td>
               <td>none</td>
             </tr>
             <tr>
               <td><a href="#magicKey">sourceCountry</a></td>
-              <td></td>
+              <td>no</td>
               <td><a href="/rest/geocode/api-reference/geocode-coverage.htm">country code or name</a></td>
               <td>string</td>
               <td>none</td>
             </tr>
             <tr>
               <td><a href="#bbox">bbox</a></td>
-              <td></td>
+              <td>no</td>
               <td>comma separated list or <a href="http://resources.arcgis.com/EN/HELP/REST/APIREF/geometry.html#envelope">JSON envelope</a></td>
               <td>string</td>
               <td>none</td>
             </tr>
             <tr>
               <td><a href="#location">location</a></td>
-              <td></td>
+              <td>no</td>
               <td>comma separated list or <a href="http://resources.arcgis.com/EN/HELP/REST/APIREF/GEOMETRY.HTML#point">JSON point</a></td>
               <td>string</td>
               <td>none</td>
             </tr>
             <tr>
               <td><a href="#distance">distance</a></td>
-              <td></td>
+              <td>no</td>
               <td>any number</td>
               <td>float</td>
               <td>none</td>
             </tr>
             <tr>
               <td><a href="#outSR">outSR</a></td>
-              <td></td>
+              <td>no</td>
               <td><a href="http://resources.arcgis.com/en/help/rest/apiref/pcs.html">WKID</a> or <a href="http://resources.arcgis.com/en/help/rest/apiref/geometry.html#http://resources.arcgis.com/en/help/rest/apiref/geometry.html/sr">JSON spatial reference</a></td>
               <td>string</td>
               <td>none</td>
             </tr>
             <tr>
               <td><a href="#category">category</a></td>
-              <td></td>
+              <td>no</td>
               <td>one or more <a href="/rest/geocode/api-reference/geocoding-category-filtering.htm">category values</a></td>
               <td>string</td>
               <td>none</td>
             </tr>
             <tr>
               <td><a href="#outFields">outFields</a></td>
-              <td></td>
+              <td>no</td>
               <td>comma separated list of <a href="/rest/geocode/api-reference/geocoding-service-output.htm#ESRI_SECTION1_42D7D3D0231241E9B656C01438209440">output fields</a></td>
               <td>string</td>
               <td>none</td>
             </tr>
             <tr>
               <td><a href="#maxLocations">maxLocations</a></td>
-              <td></td>
+              <td>no</td>
               <td>whole number 1 - 20</td>
               <td>integer</td>
               <td>1</td>
             </tr>
             <tr>
               <td><a href="#forStorage">forStorage</a></td>
-              <td></td>
+              <td>no</td>
               <td>true or false</td>
               <td>boolean</td>
               <td>false</td>
             </tr>
             <tr>
               <td><a href="#token">token</a></td>
-              <td></td>
+              <td>no</td>
               <td><a href="http://resources.arcgis.com/en/help/arcgis-rest-api/index.html#//02r300000268000000">Esri access token</a></td>
               <td>string</td>
               <td>none</td>
@@ -231,7 +235,7 @@ css:
 
       <section id="text" class="padded-anchor sticky-nav-item" data-title="text" data-top-offset="80" data-next="f" data-previous="request-url">
 
-        <table class="table-blue trailer-1">
+        <table class="table-blue">
           <thead>
             <tr>
               <th colspan="4"><span class="code-face">text</span></th>
@@ -270,7 +274,7 @@ css:
 
       <section id="f" class="leader-3 padded-anchor sticky-nav-item" data-title="f" data-top-offset="80" data-previous="text" data-next="magicKey">
 
-        <table class="table-blue trailer-1">
+        <table class="table-blue">
           <thead>
             <tr>
               <th colspan="4"><span class="code-face">f</span></th>
@@ -299,7 +303,7 @@ css:
 
       <section id="magicKey" class="leader-3 padded-anchor sticky-nav-item" data-title="magicKey" data-top-offset="80" data-previous="f">
 
-        <table class="table-blue trailer-1">
+        <table class="table-blue">
           <thead>
             <tr>
               <th colspan="4"><span class="code-face">magicKey</span></th>
