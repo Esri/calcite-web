@@ -3,14 +3,18 @@
 Sample page layouts, typography, browser testing.
 
 ### Added
-- blog layout
-- homepage layout
+- small accordion and tab padding tweaks
+- added esri logo consensed class
+- blog layout plz
+- homepage layout plz
 - documentation layout
+- api reference layout
+- `.gutter-left-x` and `.gutter-right-x`
 
 ### Modified
 - Esri logo modified to fit in navigation better
-- Added animations to super navs
-- Browser tested elements
+- Added animations to super navs plz
+- Browser tested elements plz
 
 ## v0.0.7
 

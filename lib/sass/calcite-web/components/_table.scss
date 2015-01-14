@@ -62,6 +62,10 @@
       border: none;
       border-bottom: 1px solid $blue;
       color: $white;
+      tr:nth-child(even) {
+        background-color: $lighter-blue;
+        color: $type-color;
+      }
     }
 
     > tfoot {

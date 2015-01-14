@@ -8,7 +8,7 @@
 
   @if $include-body-family == true {
     body {
-      @extend .body-face;
+      @include body-face();
       @include font-size(0);
       line-height: $baseline;
       color: $type-color;
