@@ -25,10 +25,12 @@ If the mixin accepts arguments, pass them into the parenthesis:
 | Mixin                                         | Arguments                      |
 | --------------------------------------------- | ------------------------------ |
 | [`appearance`](#appearance)                   | `$value`                       |
+| [`animation`](#animation)                     | `$animations...`               |
 | [`box-sizing`](#box-sizing)                   | `$box`                         |
 | [`box-shadow`](#box-shadow)                   | `$shadow`                      |
 | [`calc`](#calc)                               | `$property, $value`            |
 | [`clearfix`](#clearfix)                       | none                           |
+| [`keyframes`](#keyframes)                     | `$name`                        |
 | [`prefixer`](#prefixer)                       | `$property, $value, $prefixes` |
 | [`respond-to`](#respond-to)                   | `$max, $mi, $type`             |
 | [`transform`](#transform)                     | `$property`                    |
@@ -43,6 +45,27 @@ If the mixin accepts arguments, pass them into the parenthesis:
 | [`visible`](#visibility)                      | none                           |
 | [`invisible`](#visibility)                    | none                           |
 | [`hide`](#visibility)                         | none                           |
+
+#### Animation
+
+The animation mixin allows you to declare cross-browser animations. The mixin accepts
+
+```scss
+box:hover {
+  @include animation(scale 1.0s ease-in, slide 2.0s ease);
+}
+```
+
+Or, use individual animation mixins:
+
+```scss
+box:hover {
+  @include animation-name(scale, slide);
+  @include animation-duration(2s);
+  @include animation-timing-function(ease);
+  @include animation-iteration-count(infinite);
+}
+```
 
 #### Appearance
 
@@ -84,6 +107,25 @@ Applies the framework-standard clear for floated elements:
 
 ```scss
 @include clearfix();
+```
+
+#### Keyframes
+
+For creating animations, you can use the `keyframes` mixin. This mixin accepts an animation name. Then inside the mixin, write your animation as a content block:
+
+```scss
+@include keyframes(ANIMATION_NAME){
+  0%   { background-color: #ffccf2; }
+  100% { background-color: #ccffff; }
+};
+```
+
+Now you can use the [animation mixin](#animation) as a named animation like this:
+
+```
+.animation-class {
+  @include animation( @include animation(ANIMATION_NAME 200ms ease-in);)
+}
 ```
 
 #### Prefixer
