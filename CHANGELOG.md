@@ -1,3 +1,8 @@
+## v0.0.9
+
+### Modified
+- Clicking accordion sections toggles only that accordion section
+
 ## v0.0.8
 
 Sample page layouts, typography.
