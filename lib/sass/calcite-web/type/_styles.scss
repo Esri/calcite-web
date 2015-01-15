@@ -95,7 +95,11 @@
   }
 
   blockquote {
-    margin: 0;
+    margin: $baseline 0;
+    @include header-face();
+    @include gutter-left(1);
+    border-left: 3px solid $lighter-gray;
+    color: $darker-gray;
   }
 
   blockquote,
