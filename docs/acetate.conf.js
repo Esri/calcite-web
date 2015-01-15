@@ -14,8 +14,10 @@ function config(acetate) {
     }
   });
 
-  acetate.src = 'docs/source';
-  acetate.dest = 'docs/build';
+  acetate.src = 'source';
+  acetate.dest = 'build';
+
+  acetate.notFound = '404.html';
 
   acetate.use(partial());
 }
