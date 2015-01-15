@@ -216,7 +216,7 @@
               </nav>
             
           </aside>
-          <div class="column-6 invisible js-sticky js-show tablet-hide" data-top="46">
+          <div class="column-6 js-sticky scroll-show tablet-hide" data-top="46">
             <a href="#" class="btn btn-fill btn-clear">Back to Top</a>
           </div>
         </div>
@@ -836,6 +836,10 @@ Setting the max width of an article to a large multiple of the text size is a wa
 <td><code>$value</code></td>
 </tr>
 <tr>
+<td><a href="#animation"><code>animation</code></a></td>
+<td><code>$animations...</code></td>
+</tr>
+<tr>
 <td><a href="#box-sizing"><code>box-sizing</code></a></td>
 <td><code>$box</code></td>
 </tr>
@@ -850,6 +854,10 @@ Setting the max width of an article to a large multiple of the text size is a wa
 <tr>
 <td><a href="#clearfix"><code>clearfix</code></a></td>
 <td>none</td>
+</tr>
+<tr>
+<td><a href="#keyframes"><code>keyframes</code></a></td>
+<td><code>$name</code></td>
 </tr>
 <tr>
 <td><a href="#prefixer"><code>prefixer</code></a></td>
@@ -896,15 +904,33 @@ Setting the max width of an article to a large multiple of the text size is a wa
 <td><code>$value</code></td>
 </tr>
 <tr>
-<td><a href="#show-and-hide"><code>show</code></a></td>
+<td><a href="#visibility"><code>visible</code></a></td>
 <td>none</td>
 </tr>
 <tr>
-<td><a href="#show-and-hide"><code>hide</code></a></td>
+<td><a href="#visibility"><code>invisible</code></a></td>
+<td>none</td>
+</tr>
+<tr>
+<td><a href="#visibility"><code>hide</code></a></td>
 <td>none</td>
 </tr>
 </tbody>
 </table>
+<h4 id="animation">Animation</h4>
+<p>The animation mixin allows you to declare cross-browser animations. The mixin accepts</p>
+<pre><code class="lang-scss">box<span class="hljs-pseudo">:hover</span> {
+  <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> animation</span>(scale<span class="hljs-preprocessor"> 1.0s</span><span class="hljs-preprocessor"> ease-in</span>,<span class="hljs-preprocessor"> slide</span><span class="hljs-preprocessor"> 2.0s</span><span class="hljs-preprocessor"> ease</span>);</span>
+}
+</code></pre>
+<p>Or, use individual animation mixins:</p>
+<pre><code class="lang-scss">box<span class="hljs-pseudo">:hover</span> {
+  <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> animation-name</span>(scale,<span class="hljs-preprocessor"> slide</span>);</span>
+  <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> animation-duration</span>(<span class="hljs-number">2</span>s);</span>
+  <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> animation-timing-function</span>(ease);</span>
+  <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> animation-iteration-count</span>(infinite);</span>
+}
+</code></pre>
 <h4 id="appearance">Appearance</h4>
 <p>The <code>appearance</code> CSS property is used to display an element using a platform-native styling based on the operating system&#39;s theme. For example, to remove browser specific styling for a ui element, use:</p>
 <pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> appearance</span>(none);</span>
@@ -926,7 +952,18 @@ Setting the max width of an article to a large multiple of the text size is a wa
 <p>Applies the framework-standard clear for floated elements:</p>
 <pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> clearfix</span>();</span>
 </code></pre>
-<h4 id="prefixer">Prefixer</h4>
+<h4 id="keyframes">Keyframes</h4>
+<p>For creating animations, you can use the <code>keyframes</code> mixin. This mixin accepts an animation name. Then inside the mixin, write your animation as a content block:</p>
+<pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> keyframes</span>(ANIMATION_NAME){</span>
+  0%   { <span class="hljs-attribute">background-color</span><span class="hljs-value">: <span class="hljs-hexcolor">#ffccf2</span>;</span> }
+  100% { <span class="hljs-attribute">background-color</span><span class="hljs-value">: <span class="hljs-hexcolor">#ccffff</span>;</span> }
+};
+</code></pre>
+<p>Now you can use the <a href="#animation">animation mixin</a> as a named animation like this:</p>
+<pre><code>.animation-<span class="hljs-class"><span class="hljs-keyword">class</span> {</span>
+  <span class="hljs-variable">@include</span> animation( <span class="hljs-variable">@include</span> animation(<span class="hljs-constant">ANIMATION_NAME</span> <span class="hljs-number">200</span>ms ease-<span class="hljs-keyword">in</span>);)
+}
+</code></pre><h4 id="prefixer">Prefixer</h4>
 <p>This is one of the most flexible mixins in the library. Use it to add browser prefixes to a property:</p>
 <pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> prefixer</span>(margin-end,<span class="hljs-preprocessor"> 5</span>%,<span class="hljs-preprocessor"> webkit</span><span class="hljs-preprocessor"> moz</span><span class="hljs-preprocessor"> spec</span>);</span>
 </code></pre>
@@ -970,10 +1007,11 @@ Setting the max width of an article to a large multiple of the text size is a wa
 <p>To transition vendor-prefixed properties, e.g. <code>-webkit-transform</code> and <code>-moz-transform</code>, there is an additional convinience <code>transition-prefixed()</code> mixin:</p>
 <pre><code><span class="hljs-at_rule">@<span class="hljs-keyword">include</span> <span class="hljs-function">transition-prefixed(<span class="hljs-function">transform3d(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>)</span> <span class="hljs-number">200</span>ms linear)</span></span>;
 </code></pre><p>This will generate vendor prefixed properties <em>and</em> values.</p>
-<h4 id="show-and-hide">Show and Hide</h4>
-<p>The show and hide mixins change the <code>visibility</code> property. This is useful for removing and adding elements at certain breakpoints or with certain class names. No arguments are passed.</p>
-<pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> show</span>();</span>
-<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> hide</span>();</span>
+<h4 id="visibility">Visibility</h4>
+<p>The visibility mixins change the <code>visibility</code> property. This is useful for removing and adding elements at certain breakpoints or with certain class names. No arguments are passed. Invisible sets <code>visibility: hidden</code> on the object, leaving in the in document flow, but removing it from view. <code>hide()</code> will completely remove the item with <code>display:none</code>.</p>
+<pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> hide</span>();</span>
+<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> invisible</span>();</span>
+<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> visible</span>();</span>
 </code></pre>
 
 
