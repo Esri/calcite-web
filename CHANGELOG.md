@@ -1,12 +1,11 @@
 ## v0.0.8
 
-Sample page layouts, typography, browser testing.
+Sample page layouts, typography.
 
 ### Added
-- small accordion and tab padding tweaks
 - added esri logo consensed class
-- blog layout plz
-- homepage layout plz
+- blog layout
+- homepage layout
 - documentation layout
 - api reference layout
 - `.font-size-x`
@@ -14,8 +13,7 @@ Sample page layouts, typography, browser testing.
 
 ### Modified
 - Esri logo modified to fit in navigation better
-- Added animations to super navs plz
-- Browser tested elements plz
+- small accordion and tab padding tweaks
 
 ## v0.0.7
 
