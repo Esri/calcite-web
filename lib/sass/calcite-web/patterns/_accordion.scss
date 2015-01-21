@@ -1,3 +1,8 @@
+// ┌───────────┐
+// │ Accordion │
+// └───────────┘
+//  ↳ http://esri.github.io/calcite-web/patterns/#accordion
+//  ↳ patterns → _accordion.md
 
 @mixin accordion(){
   @extend .side-nav;
@@ -31,13 +36,12 @@
   }
   @mixin accordion-content() {
     display: none;
-    // padding: $baseline/3;
   }
 
 
 @if $include-accordion == true {
   .accordion {@include accordion();}
-    .accordion-section {@include accordion-section()};
+    .accordion-section {@include accordion-section();};
     .accordion-title {@include accordion-title();}
     .accordion-content {@include accordion-content();}
 }
