@@ -5,14 +5,33 @@
 // ↳ patterns → _expanding-nav.md
 
 @mixin expanding-nav(){
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: $lighter-gray;
-  box-shadow: inset $transparent-off-black 0px 0px 4px 0px;
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  @include transition(max-height $transition, opacity $transition);
   &.is-active {
-    display: block;
+    max-height: 100vh;
+    opacity: 1;
+  }
+}
+
+@mixin expanding-nav-menu {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  @include transition(opacity $transition);
+  &.is-active {
+    opacity: 1;
   }
 }
 
 @if $include-expanding-nav == true {
   .expanding-nav {@include expanding-nav();}
+  .expanding-nav-menu {@include expanding-nav-menu();}
 }
