@@ -20,18 +20,13 @@ A basic starting point for an html page using Calcite Web might be something lik
   </head>
   <body>
     <div class="wrapper">
-      <div class="page">
-
-        <!-- header pattern -->
-
+        <!-- header -->
         <!-- content of page -->
-
-      </div>
-
-        <!-- footer pattern -->
-
     </div>
-    <script src="/assets/javascripts/calcite.js" type="text/javascript"></script>
+    <div class="footer">
+      <!-- content of footer -->
+    </div>
+    <script src="/assets/javascripts/calcite-web.js"></script>
   </body>
 </html>
 ```
