@@ -1,14 +1,6 @@
-**CAUTION: UNDER ACTIVE DEVELOPMENT**
-
-![](https://camo.githubusercontent.com/4a7cf94aedbd23c13cc2d75fdc3b2af5c816c208/687474703a2f2f7374617469632e646967672e636f6d2f7374617469632f696d616765732f6469676765722e676966)
-
-(don't use this yet unless you really know what you're doing)
-
----
-
 # Calcite-Web
 
-Authoritative font-end development resources for Calcite design initiative. Includes extendable base components and styles, as well as a modular and efficient framework for Esri properties.
+Calcite Web is a web design framework that implements the Esri Brand Guidelines and Calcite design framework for browser-based properties and products. Calcite Web is written in [Sass](http://sass-lang.com/), and is compatible with both the standard Sass ruby gem and the [Libsass](http://libsass.org/) compiler. The project also includes a dependency-free JavaScript library for use with interactive patterns.
 
 # Using Calcite-Web
 
@@ -20,13 +12,13 @@ This is probably the easiest way. If you're looking to get up and running quickl
 
 ## Ruby Gem
 
-To install Calcite-Web as a ruby gem, add a reference to your the gem to your Gemfile:
+To install Calcite-Web as a ruby gem, reference the gem from your `Gemfile`:
 
 ```
-gem "calcite-web", :git => "https://github.com/Esri/calcite-web.git", :tag => "v0.0.0"
+gem "calcite-web", :git => "https://github.com/Esri/calcite-web.git", :tag => "current.tag.version"
 ```
 
-Be sure to use the most up to date tag.
+Be sure to use the replace `current.tag.version` with [the most up to date tag](https://github.com/Esri/calcite-web/releases).
 
 Then in your project's sass file, just import it:
 
@@ -34,20 +26,20 @@ Then in your project's sass file, just import it:
 @import "calcite-web";
 ```
 
-That will give you everything including sass utilities. You will also need to copy over the javascript and image assets to your static folder (see above).
+That will give you everything including sass utilities. You will also need to copy over the JavaScript and image assets to your static folder (see above).
 
 ## NPM
 
 To install Calcite Web with npm, type:
 
 ```
-npm install --save-dev git://github.com/Esri/calcite-web.git
+npm install --save-dev Esri/calcite-web
 ```
 
 You can also use a specific release by appending the version number to the end:
 
 ```
-npm install --save-dev git://github.com/Esri/calcite-web.git#v0.0.1
+npm install --save-dev Esri/calcite-web#v0.0.1
 ```
 
 Then, if you're using sass, be sure to add `node_modules/calcite-web/dist/sass/` to your load path. If you're using `grunt-contrib-sass` you add that like this:
@@ -138,29 +130,17 @@ To update the documentation site, just make sure you have push access to the `Es
 The site should be updated at http://esri.github.io/calcite-web/ in just a few moments.
 
 
+# Why Calcite Web?
 
-# Calcite Web - An Introduction
-
-Calcite Web is a web design framework that implements the Esri Brand Guidelines and Calcite design framework for browser-based properties and products. Calcite Web is written in [Sass](http://sass-lang.com/), using the [Libsass](http://libsass.org/) compiler. The project also includes a dependency-free JavaScript library for use with interactive patterns, and a css implementation of the framework for the simplest levels of use.
-
-The primary goal of Calcite Web is create a unified visual language for all *.esri.com and *.arcgis.com projects. The secondary goal of Calcite Web is to make it as easy, simple, and painless as possible to implement high quality design patterns in a way that is appropriate to both the project at hand, and the accepted, branded design strategies of Esri as a whole.
+The primary goal of Calcite Web is create a unified visual language for all *.esri.com and *.arcgis.com projects. The secondary goal of Calcite Web is to make it as easy as possible to implement high quality design patterns in a way that is appropriate to both the project at hand and the design strategies of Esri as a whole.
 
 Calcite Web was built for developers. It is meant to be flexible enough that you can accomplish 80% of your website with the default patterns writing only html markup. If you use Calcite Web as a Sass library, you'll also get a set of very helpful mixins to help you make new patterns and components that fit in with the Calcite methodology and aesthetic.
 
-## Using Calcite Web Statically
-This is the simplest way to use Calcite Web in a project. The static `.css` files distributed under Calcite Web – current in the [Github Repo](https://github.com/Esri/calcite-web) with a CDN is being planned for future releases – allow a developer to use the broad array of helper classes, components, patterns, and javascript classes documented at the [Calcite Web doc site](http://esri.github.io/calcite-web/). Branded assets, such as logos, icons, and fonts, are packaged in this system and will work by default.
-
-Using the Calcite Web static assets will allow the quick and painless creation of simple branded projects while writing the minimal amount of custom css possible.
-
-## Using Calcite Web Sass library
-Using the Calcite Web Sass library allows a developer to access a powerful array of mixins, variables, and helpers that facilitate the creation of custom component, patterns, or projects that are aesthetically in line with the Calcite visual language. All of the underlying styles that make Calcite Web a Calcite project are available as Sass variables and extendable classes. This includes a very wide array of typographic and grid tools.
-
-The Sass library will allow developers to create brand new design solutions for specific projects that are still in line and inherit from the primary Calcite vision.
-
 ## Calcite Web as a Framework Dependency
-Calcite Web has the abillity to exist exclusively as a Sass library, not generating a single line of css. Including the framework in this way may seem counter intuitive - the whole project would compile to an empty file - but allows for some powerful and meaningful applications. Using Calcite Web in this way allows for the creation of new frameworks or themes for any given structure that duplicates no stylistic code or decisions. This means that a project like Calclite for Dojo or Calcite for Bootstrap can each use different patterns of HTML markup to achieve components that are identical to their Calcite Web counterparts.
 
-For example, a Bootstrap button would simply extend the existing Calcite Web buttons instead of recreating the css that controls the styles like so:
+Calcite Web has the ability to exist exclusively as a Sass library, not generating a single line of CSS. Including the framework in this way may seem counter intuitive - the whole project would compile to an empty file - but allows for some powerful and meaningful applications. Using Calcite Web in this way allows for the creation of new frameworks or themes for any given structure that duplicates no stylistic code or decisions. This means that a project like Calcite for Dojo or Calcite for Bootstrap can each use different patterns of HTML markup to achieve components that are identical to their Calcite Web counterparts.
+
+For example, a Bootstrap button would simply extend the existing Calcite Web buttons instead of recreating the CSS that controls the styles like so:
 
 ```
 .btn {
@@ -172,10 +152,7 @@ For example, a Bootstrap button would simply extend the existing Calcite Web but
 ```
 
 ## Calcite Web vs. Other Frameworks
-Calcite Web, while still a CSS Framework, has some profound and subtle differneces from projects like [Bootstrap](http://getbootstrap.com/) or [Foundation](http://foundation.zurb.com/). Where Bootstrap and Foundation both aim to provide a robust set of patterns and utillities for the general, third party developer, Calcite Web **only** concerns itself with Esri projects. Calcite Web is not designed for a developer who is not directly working for Esri on Esri products or properties.
 
-Functionally this means any project using Calcite Web will look like it comes from Esri. This is ideal for our ecosystem of websites and products, while limiting with projects like [Open Data](https://opendata.arcgis.com/about) which have users and external organizations like [Data Driven Detroit](http://d3.d3.opendata.arcgis.com/) create their own branded experience within the project. [Story Maps](http://storymaps.arcgis.com/en/) is another project where the final user-facing product requires third party branding.
-
-For projects like these, using Calcite Web as a dependancy for something like Calcite for Bootstrap would be the best strategy. Each of these projects have aspects that are Esri branded, and need to fit within our aestheric and voice.
+Calcite Web, while still a CSS Framework, has some profound  differences from projects like [Bootstrap](http://getbootstrap.com/) or [Foundation](http://foundation.zurb.com/). Where Bootstrap and Foundation both aim to provide a robust set of patterns and utilities for the general, third party developer, Calcite Web **only** concerns itself with Esri projects. Calcite Web is not designed for a developer who is not directly working for Esri on Esri products or properties. In other words, every project created with Calcite Web will look like an Esri-branded site.
 
 
