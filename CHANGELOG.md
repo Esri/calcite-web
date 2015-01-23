@@ -16,6 +16,7 @@ Sample page layouts, typography, browser testing.
 - Esri logo modified to fit in navigation better
 - Added animations to super navs plz
 - Browser tested elements plz
+- Removed `preventDefault` from `bindDrawer()` function.
 
 ## v0.0.7
 
