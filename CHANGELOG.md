@@ -18,6 +18,9 @@ Sample page layouts, typography.
 
 ### Modified
 - Esri logo modified to fit in navigation better
+- Added animations to super navs plz
+- Browser tested elements plz
+- Removed `preventDefault` from `bindDrawer()` function.
 - small accordion and tab padding tweaks
 
 ## v0.0.7
