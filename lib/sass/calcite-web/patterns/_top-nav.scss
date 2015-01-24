@@ -18,7 +18,7 @@
   @mixin top-nav-list {
     float: left;
     @extend .header-face;
-    line-height: 1.75em;
+    line-height: 1.6em;
   }
 
   @mixin top-nav-link {
@@ -33,36 +33,27 @@
 }
 
 @mixin user {
-  padding: 0.5rem;
-  content: $dtri;
   @include font-size(-2);
-  height: $baseline;
   z-index: 3;
-  @include clearfix();
-  margin-top: -0.25rem;
-  margin-bottom: -0.25rem;
-  border: 1px solid transparent;
-  &:hover, .is-active {
-    border: 1px solid $lightest-gray;
-    background-color: $off-white;
-  }
+  cursor: pointer;
 }
   @mixin user-image {
-    height: 2rem;
-    width: 2rem;
-    margin-top: -0.33rem;
-    pointer-events: none;
+    float: left;
+    height: 1.7rem;
+    width: 1.7rem;
     border-radius: 50%;
     border: 1px solid $lightest-gray;
+    margin-top: -2px;
   }
   @mixin user-name {
-    float: right;
-    padding-left: 0.25*$baseline;
-    pointer-events: none;
     z-index: 2;
+    line-height: 2;
+    padding-left: 0.25*$baseline;
     &:after {
       padding-left: 0.25*$baseline;
       content: $dtri;
+      font-size: .5rem;
+      vertical-align: .1rem;
     }
   }
   @mixin user-nav {
