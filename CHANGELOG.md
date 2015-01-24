@@ -2,6 +2,14 @@
 
 ### Modified
 - Clicking accordion sections toggles only that accordion section
+- Expanding nav now animates and takes up full screen
+- Changed location of the `js-dropdown` class
+- Visual changes to user dropdown
+
+### Added
+- Blockquote styles
+- Sticky footer
+- Sub Nav documentation
 
 ## v0.0.8
 
