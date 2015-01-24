@@ -1,10 +1,12 @@
 ## Drawers
 The off-canvas "drawer" pattern is used primarily for top-level mobile navigation.
 
+<div class="btn js-drawer-toggle" data-drawer="top-nav">Open Drawer</div>
+
 ```
  <body>
   <!-- Mobile Nav Drawer -->
-    <div class="drawer drawer-left js-drawer-toggle" data-drawer="top-nav">
+    <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
       <nav class="drawer-nav">
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Esri Patterns</h2>
