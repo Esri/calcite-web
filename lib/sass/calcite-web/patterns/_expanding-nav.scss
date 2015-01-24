@@ -14,9 +14,13 @@
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  @include transition(max-height $transition, opacity $transition);
+  z-index: 40;
+  pointer-events: none;
+  @include transform(translate3d(0,-20px,0));
+  @include transition-prefixed(transform 400ms ease-out, opacity 400ms ease-out, max-height 400ms ease-out);
   &.is-active {
     max-height: 100vh;
+    @include transform(translate3d(0,0,0));
     opacity: 1;
   }
 }
@@ -24,6 +28,8 @@
 @mixin expanding-nav-menu {
   position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
   opacity: 0;
   @include transition(opacity $transition);
   &.is-active {
