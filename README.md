@@ -132,7 +132,7 @@ The site should be updated at http://esri.github.io/calcite-web/ in just a few m
 
 # Why Calcite Web?
 
-The primary goal of Calcite Web is create a unified visual language for all *.esri.com and *.arcgis.com projects. The secondary goal of Calcite Web is to make it as easy as possible to implement high quality design patterns in a way that is appropriate to both the project at hand and the design strategies of Esri as a whole.
+The primary goal of Calcite Web is create a unified visual language for all esri.com and arcgis.com projects. The secondary goal of Calcite Web is to make it as easy as possible to implement high quality design patterns in a way that is appropriate to both the project at hand and the design strategies of Esri as a whole.
 
 Calcite Web was built for developers. It is meant to be flexible enough that you can accomplish 80% of your website with the default patterns writing only html markup. If you use Calcite Web as a Sass library, you'll also get a set of very helpful mixins to help you make new patterns and components that fit in with the Calcite methodology and aesthetic.
 
