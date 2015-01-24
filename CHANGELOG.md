@@ -1,12 +1,16 @@
+## v0.0.9
+
+### Modified
+- Clicking accordion sections toggles only that accordion section
+
 ## v0.0.8
 
-Sample page layouts, typography, browser testing.
+Sample page layouts, typography.
 
 ### Added
-- small accordion and tab padding tweaks
 - added esri logo consensed class
-- blog layout plz
-- homepage layout plz
+- blog layout
+- homepage layout
 - documentation layout
 - api reference layout
 - `.font-size-x`
@@ -17,6 +21,7 @@ Sample page layouts, typography, browser testing.
 - Added animations to super navs plz
 - Browser tested elements plz
 - Removed `preventDefault` from `bindDrawer()` function.
+- small accordion and tab padding tweaks
 
 ## v0.0.7
 
