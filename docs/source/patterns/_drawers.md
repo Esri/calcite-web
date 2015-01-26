@@ -2,7 +2,9 @@
 
 The off-canvas "drawer" pattern is used primarily for top-level mobile navigation.
 
-<a href="#" class="btn js-drawer-toggle" data-drawer="top-nav">Open Drawer</a>
+<a href="#" class="btn js-drawer-toggle" data-drawer="top-nav">Open Left Drawer</a>
+
+<a href="#" class="btn js-drawer-toggle" data-drawer="right">Open Right Drawer</a>
 
 ```
  <body>
