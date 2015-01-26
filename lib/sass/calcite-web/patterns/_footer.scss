@@ -3,17 +3,20 @@
 // └────────┘
 //  ↳ http://esri.github.io/calcite-web/patterns/#footer
 //  ↳ patterns → _footer.md
-
-@mixin wrapper() {
-  // min-height: calc(100% - $footer-height);
-
-}
-
-@mixin footer (){
-  background-color: $off-white;
+@if $include-sticky-footer == true {
+  body {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+  }
+  .wrapper {
+    flex: 1 0 auto;
+  }
+  .footer {
+    flex: none;
+  }
 }
 
 @if $include-footer == true {
-  .wrapper {@include wrapper()}
-  .footer {@include footer()}
+  .footer  { background-color: $off-white; }
 }

@@ -2,79 +2,56 @@
 // │ Drawers │
 // └─────────┘
 //  ↳ http://esri.github.io/calcite-web/patterns/#drawers
-//  ↳ patterns → _.md
+//  ↳ patterns → _drawers.md
 
-$drawer-transition: transform 300ms cubic-bezier(0.215, 0.440, 0.420, 0.880);
+$transform-transition: transform 200ms cubic-bezier(0.215, 0.440, 0.420, 0.880);
+$opacity-transition: opacity 200ms linear;
 
 @mixin drawer() {
-  @include transform(translate3d(0,0,0));
-  @include transition-prefixed($drawer-transition);
-  background: $transparent-black;
-  display: none;
-  overflow: hidden;
   position: fixed;
-  visibility: hidden;
-  z-index: 1001;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  right: 0;
   top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  overflow: hidden;
+  opacity: 0;
+  background: $transparent-black;
+  @include transition(visibility 0ms linear 200ms, $opacity-transition);
+  z-index: 1001;
   &.is-active {
-    display: block;
     visibility: visible;
+    opacity: 1;
     background-color: $transparent-black;
-    @include transition-prefixed($drawer-transition);
+    @include transition-delay(0ms);
+    &.drawer-left .drawer-nav {
+      @include transform(translate3d($drawer-width,0,0));
+    }
+    &.drawer-right .drawer-nav {
+      @include transform(translate3d(-$drawer-width,0,0));
+    }
   }
 }
 
-  @mixin drawer-nav() {
-    width: $drawer-width;
-    background: $white;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 0;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    pointer-events: auto;
-    @include transition-prefixed($drawer-transition);
-  }
-
-  @mixin drawer-left() {
-    @include transform(translate3d(0,0,0));
-    @include transition-prefixed($drawer-transition);
-    left: -$drawer-width;
-  }
-
-  @mixin drawer-left-is-open() {
-    @include transform(translate3d($drawer-width,0,0));
-    @include transition-prefixed($drawer-transition);
-  }
-
-  @mixin drawer-right() {
-    left: 100%;
-    @include transform(translate3d(0,0,0));
-    @include transition-prefixed($drawer-transition);
-    .drawer-nav {
-      right: 0;
-    }
-  }
-
-  @mixin drawer-right-is-open() {
-    @include transform(translate3d(-100%,0,0));
-    @include transition-prefixed($drawer-transition);
-  }
+@mixin drawer-nav() {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: $drawer-width;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: $white;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  @include transform(translate3d(0,0,0));
+  @include transition-prefixed($transform-transition);
+}
 
 @if $include-drawers == true {
-.drawer {@include drawer();}
-  .drawer-nav {@include drawer-nav();}
-  .drawer-left {@include drawer-left();}
-  .drawer-right {@include drawer-right();}
-  .drawer-left.is-active {@include drawer-left-is-open();}
-  .drawer-right.is-active {@include drawer-right-is-open();}
+  .drawer { @include drawer();}
+  .drawer-nav { @include drawer-nav();}
+  .drawer-left .drawer-nav  { left: -$drawer-width; }
+  .drawer-right .drawer-nav { left: 100%; }
 }

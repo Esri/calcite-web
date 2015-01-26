@@ -18,5 +18,5 @@ The final number signifies patches such as fixing a pattern or component in a ce
 
 1. Change the version number in `package.json` to the desired version number.
 2. Write a description of the changes, additions, and bug fixes in `CHANGELOG.md`.
-3. Make sure `ArcGIS/calcite-web` is up-to-date with your changes.
+3. Make sure `Esri/calcite-web` is up-to-date with your changes.
 4. Run `grunt release` and enter your GitHub username and password.

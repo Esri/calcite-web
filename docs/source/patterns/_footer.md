@@ -1,5 +1,5 @@
 ## Footer
-Standard footer for ArcGIS and Esri properties.
+Standard footer for ArcGIS and Esri properties. The footer in Calcite Web is 'sticky' by default. This means that if the page doesn't have sufficient height, the footer will still hug the bottom of the screen. For this to work properly, you must use a `div` with a class of `wrapper`. See the [basic HTML page](#basic-html-page) for an example.
 
 ```
 <footer class="footer header-face leader-3">
