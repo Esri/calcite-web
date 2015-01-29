@@ -5,12 +5,12 @@
 //  ↳ patterns → _sub-nav.md
 
 
-
 @mixin sub-nav() {
   background-color: $lightest-gray;
 }
 
   @mixin sub-nav-title() {
+    margin-top: $baseline;
     display: inline-block;
     float: left;
     line-height: 1.25;
