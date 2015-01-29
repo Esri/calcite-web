@@ -33,8 +33,8 @@
     h1    {@include font-size(5);}
     h2    {@include font-size(4);}
     h3    {@include font-size(3);}
-    h4    {@include font-size(2);}
-    h5    {@include font-size(1);}
+    h4    {@include font-size(2); @extend .header-demi;}
+    h5    {@include font-size(1); @extend .header-demi;}
     h6    {@include font-size(0); @extend .header-demi;}
 
     h1,
@@ -44,7 +44,7 @@
     h5,
     h6 {
       @extend .header-face;
-      margin: $baseline 0 $baseline/2 0;
+      margin: $baseline 0;
     }
 
     h1.header-light,
@@ -119,8 +119,10 @@
   ul, ol {
     padding: 0;
     list-style-position: inside;
+    margin-bottom: $baseline;
     ul, ol {
       padding-left: $baseline;
+      margin: 0;
     }
   }
 
@@ -171,5 +173,9 @@
     @include font-size(-2);
     font-style: italic;
     color: $dark-gray;
+  }
+
+  table {
+    margin-bottom: $baseline;
   }
 }
