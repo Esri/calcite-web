@@ -182,6 +182,33 @@ module.exports = function(grunt) {
       }
     },
 
+    // Load AWS credentials from a json file located at aws.json
+    'aws': grunt.file.readJSON('aws.json'),
+
+    // Upload dist folder to s3
+    'aws_s3': {
+      options: {
+        accessKeyId: '<%= aws.id %>',
+        secretAccessKey: '<%= aws.secret %>',
+        region: 'us-west-1',
+        bucket: 'patterns.esri.com',
+        endpoint: 'https://s3-us-west-1.amazonaws.com',
+        params: {
+          ContentEncoding: 'gzip'
+        },
+      },
+      production: {
+        files: [
+          {
+            expand: true,
+            cwd: 'dist/',
+            src: ['**'],
+            dest: 'files/calcite-web/' + currentVersion + '/'
+          }
+        ]
+      }
+    },
+
     // Ask for GitHub username and password
     'prompt': {
       target: {
@@ -287,7 +314,8 @@ module.exports = function(grunt) {
     'prompt',
     'prepublish',
     'compress',
-    'github-release'
+    'github-release',
+    'aws_s3'
   ]);
 
   // Default task starts up a dev environment
