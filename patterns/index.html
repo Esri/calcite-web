@@ -54,6 +54,23 @@
       </nav>
     </div>
 
+    <div class="drawer drawer-right js-drawer" data-drawer="right">
+      <nav class="drawer-nav">
+        <aside class="side-nav">
+          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Esri Patterns</h2>
+          <div class="panel padding-trailer-half padding-leader-half">
+            <label class="trailer-0">
+              <input type='search' placeholder='Search'>
+            </label>
+          </div>
+          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Branding</a>
+          <a href="../" class="side-nav-link padding-trailer-half padding-leader-half">Web</a></a>
+          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Mobile</a>
+          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Presentations</a>
+        </aside>
+      </nav>
+    </div>
+
     <div class="wrapper">
       <!-- Logged Out Pattern-->
       <header class="top-nav">
@@ -78,15 +95,17 @@
           </nav>
         </div>
       </header>
-      <div class="expanding-nav js-expanding padding-leader-1" data-expanding-nav="one">
-        <div class="container padding-trailer-half">
-          <h1>Expanding Nav One</h1>
-        </div>
-      </div>
-      <div class="expanding-nav js-expanding padding-leader-1" data-expanding-nav="two">
-        <div class="container padding-trailer-half">
-          <h1>Expanding Nav Two</h1>
-        </div>
+      <div class="expanding-nav js-expanding">
+        <section class="expanding-nav-menu js-expanding-nav" data-expanding-nav="one">
+          <div class="container padding-trailer-half">
+            <h1>Expanding Nav One</h1>
+          </div>
+        </section>
+        <section class="expanding-nav-menu js-expanding-nav" data-expanding-nav="two">
+          <div class="container padding-trailer-half">
+            <h1>Expanding Nav Two</h1>
+          </div>
+        </section>
       </div>
       <!-- Secondary Nav Pattern -->
       <header class="sub-nav">
@@ -259,18 +278,13 @@
   <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"wrapper"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"page"</span>&gt;</span>
-
-        <span class="hljs-comment">&lt;!-- header pattern --&gt;</span>
-
+        <span class="hljs-comment">&lt;!-- header --&gt;</span>
         <span class="hljs-comment">&lt;!-- content of page --&gt;</span>
-
-      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-
-        <span class="hljs-comment">&lt;!-- footer pattern --&gt;</span>
-
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/assets/javascripts/calcite.js"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"footer"</span>&gt;</span>
+      <span class="hljs-comment">&lt;!-- content of footer --&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/assets/javascripts/calcite-web.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
 </code></pre>
@@ -408,7 +422,9 @@
               <hr class="trailer-2">
             
               <section class="trailer-2">
-                <h2 id="super-navigation">Super Navigation</h2>
+                <h2 id="sub-navigation">Sub Navigation</h2>
+<p>The &#39;Sub-Nav&#39; provides a second level of hierarchy to a site. While the top-nav includes the top-most level of navigation, the sub-nav includes navigation for sections nested inside that. The subnav has a tabbed navigation pattern, a title, and room for a call to action.</p>
+<p>You can also turn the sub-nav into a more graphically-driven banner by adding <code>padding-leader</code> and <code>padding-trailer</code> classes to the title, thereby increasing the vertical size of the sub-nav.</p>
 
 
                 
@@ -550,7 +566,7 @@
             
               <section class="trailer-2">
                 <h2 id="footer">Footer</h2>
-<p>Standard footer for ArcGIS and Esri properties.</p>
+<p>Standard footer for ArcGIS and Esri properties. The footer in Calcite Web is &#39;sticky&#39; by default. This means that if the page doesn&#39;t have sufficient height, the footer will still hug the bottom of the screen. For this to work properly, you must use a <code>div</code> with a class of <code>wrapper</code>. See the <a href="#basic-html-page">basic HTML page</a> for an example.</p>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">footer</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"footer header-face leader-3"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"container"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-6"</span>&gt;</span>
@@ -952,9 +968,11 @@
               <section class="trailer-2">
                 <h2 id="drawers">Drawers</h2>
 <p>The off-canvas &quot;drawer&quot; pattern is used primarily for top-level mobile navigation.</p>
+<p><a href="#" class="btn js-drawer-toggle" data-drawer="top-nav">Open Left Drawer</a></p>
+<p><a href="#" class="btn js-drawer-toggle" data-drawer="right">Open Right Drawer</a></p>
 <pre><code> <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
-  <span class="hljs-comment">&lt;!-- Mobile Nav Drawer --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"drawer drawer-left js-drawer-toggle"</span> <span class="hljs-attribute">data-drawer</span>=<span class="hljs-value">"top-nav"</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- Drawer --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"drawer drawer-left js-drawer"</span> <span class="hljs-attribute">data-drawer</span>=<span class="hljs-value">"top-nav"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"drawer-nav"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">aside</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"side-nav"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"side-nav-title padding-leader-half padding-trailer-half text-large"</span>&gt;</span>Esri Patterns<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
@@ -992,72 +1010,6 @@
 <p>The exanding nav pattern is designed for use beneath the <a href="top-nav">Top Nav</a> pattern. It can be used to create search, or the esri.com style Mega Nav Dropdown. Expanding navs are controlled by the <code>js-expanding-toggle</code> classes, which bind the javascript function to the element, and the <code>data-expanding-nav</code> attribute, which ties toggle controllers to specfific expanding navs.</p>
 
 
-                
-                  <h3 class="leader-2 trailer-1">Modifiers</h3>
-                  <div class="styleguide-modifiers">
-                    <div class="styleguide-modifier-example">
-                      <header class="top-nav">
-  <div class="container">
-    <a href="#" class="top-nav-title">Calcite for Unicorns</a>
-    <nav class="top-nav-list">
-      <a class="top-nav-link" href="#">Plains</a>
-      <a class="top-nav-link is-active" href="#">Fields</a>
-      <a class="top-nav-link" href="#">Forests</a>
-      <a class="top-nav-link" href="#">Mountains</a>
-    </nav>
-  </div>
-</header>
-<div class="expanding-nav is-active js-expanding-toggle" data-expanding-nav="foo">
-  <a href="#" class="js-expanding-toggle right" data-expanding-nav="foo">X</a>
-  <!--
-  ┌───────────┐
-  │ Searchbar │
-  └───────────┘
-   ↳ http://esri.github.io/calcite-web/patterns/#searchbar
-   ↳ patterns → _searchbar.md
-  -->
-  <form method="GET" action="/search/">
-    <label>Search Calcite for Unicorns
-      <div class="search-bar">
-        <input type='search' placeholder='Search'>
-        <button type="submit" class="search-submit icon-search"></button>
-      </div>
-    </label>
-  </form>
-</div>
-                    </div>
-                    
-                  </div>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">header</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"top-nav"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"container"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"top-nav-title"</span>&gt;</span>Calcite for Unicorns<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"top-nav-list"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"top-nav-link"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Plains<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"top-nav-link is-active"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Fields<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"top-nav-link"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Forests<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"top-nav-link"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Mountains<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">header</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"expanding-nav is-active js-expanding-toggle"</span> <span class="hljs-attribute">data-expanding-nav</span>=<span class="hljs-value">"foo"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-expanding-toggle right"</span> <span class="hljs-attribute">data-expanding-nav</span>=<span class="hljs-value">"foo"</span>&gt;</span>X<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-  <span class="hljs-comment">&lt;!--
-  ┌───────────┐
-  │ Searchbar │
-  └───────────┘
-   ↳ http://esri.github.io/calcite-web/patterns/#searchbar
-   ↳ patterns → _searchbar.md
-  --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">method</span>=<span class="hljs-value">"GET"</span> <span class="hljs-attribute">action</span>=<span class="hljs-value">"/search/"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Search Calcite for Unicorns
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"search-bar"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">'search'</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">'Search'</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"submit"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"search-submit icon-search"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-</code></pre>
                 
 
                 

@@ -1,11 +1,11 @@
-/* calcite-web - v0.0.8 - 2015-01-14
+/* calcite-web - v0.0.8 - 2015-01-30
 *  https://github.com/esri/calcite-web
 *  Copyright (c) 2015 Environmental Systems Research Institute, Inc.
 *  Apache 2.0 License */
 (function Calcite () {
 
 var calcite = {
-  version: '0.0.6'
+  version: '0.0.9'
 };
 
 // ┌───────────────┐
@@ -347,7 +347,7 @@ calcite.dropdown = function () {
 
   function closeAllDropdowns () {
     for (var i = 0; i < dropdowns.length; i++) {
-      calcite.dom.removeClass(dropdowns[i].parentElement, 'is-active');
+      calcite.dom.removeClass(dropdowns[i], 'is-active');
     }
   }
 
@@ -368,8 +368,8 @@ calcite.dropdown = function () {
   function bindDropdown (toggle) {
     calcite.dom.addEvent(toggle, calcite.dom.event(), function(event) {
       calcite.dom.preventDefault(event);
-      var parent = calcite.dom.eventTarget(event).parentElement;
-      toggleDropdown(parent);
+      var dropdown = calcite.dom.closest('js-dropdown', toggle);
+      toggleDropdown(dropdown);
     });
   }
 
@@ -407,7 +407,6 @@ calcite.drawer = function () {
 
   function bindDrawer (drawer) {
     calcite.dom.addEvent(drawer, calcite.dom.event(), function(event) {
-      calcite.dom.preventDefault(event);
       toggleActive(drawers, drawer);
     });
   }
@@ -435,14 +434,24 @@ calcite.expandingNav = function () {
   function bindToggle (toggle) {
     calcite.dom.addEvent(toggle, calcite.dom.event(), function(event) {
       calcite.dom.preventDefault(event);
-      var target = calcite.dom.getAttr(toggle, 'data-expanding-nav');
-      for (var i = 0; i < expanders.length; i++) {
-        var expander = expanders[i];
-        var isTarget = calcite.dom.getAttr(expanders[i], 'data-expanding-nav');
-        if (target == isTarget) {
-         toggleActive(expanders, expander);
+
+      var sectionName = calcite.dom.getAttr(toggle, 'data-expanding-nav');
+      var sections = document.querySelectorAll('.js-expanding-nav');
+      var section = document.querySelectorAll('.js-expanding-nav[data-expanding-nav="' + sectionName + '"]')[0];
+      var expander = calcite.dom.closest('js-expanding', section);
+      var isOpen = calcite.dom.hasClass(expander, 'is-active');
+      var shouldClose = calcite.dom.hasClass(section, 'is-active');
+
+      if (isOpen) {
+        if (shouldClose) {
+          calcite.dom.removeClass(expander, 'is-active');
         }
+        toggleActive(sections, section);
+      } else {
+        toggleActive(sections, section);
+        calcite.dom.addClass(expander, 'is-active');
       }
+
     });
   }
 
