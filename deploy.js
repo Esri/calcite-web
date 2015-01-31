@@ -19,7 +19,7 @@ function constructItem(content, meta) {
 
   var item = {
     _id: content.id,
-    title: content.title,
+    name: content.title,
     slug: content.link,
     tags: ['calcite-web', 'web', content.title, meta.group, meta.page, meta.page_slug],
     sort_order: meta.order,
@@ -77,12 +77,3 @@ for (var key in contents) {
 }
 
 jf.writeFileSync(file, response);
-
-module.exports.guid = function () {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-    var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
-    var id = v.toString(16);
-    console.log(id);
-    return id;
-  });
-};
