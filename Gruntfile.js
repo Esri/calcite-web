@@ -193,6 +193,7 @@ module.exports = function(grunt) {
         region: 'us-west-1',
         bucket: 'patterns.esri.com',
         endpoint: 'https://s3-us-west-1.amazonaws.com',
+        access: 'public-read',
         params: {
           ContentEncoding: 'gzip'
         },
