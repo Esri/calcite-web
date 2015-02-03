@@ -14,6 +14,7 @@ section
 - Blockquote styles
 - Sticky footer
 - Sub Nav documentation
+- Assets uploaded to s3 on release
 
 ## v0.0.8
 

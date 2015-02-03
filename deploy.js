@@ -9,6 +9,7 @@ var path = require('path');
 var yaml = require('js-yaml');
 
 var file = 'docs/build/content.json';
+var now = Date.now();
 var response = {
   elements: [],
   colors: []
@@ -21,7 +22,8 @@ function constructItem(content, meta) {
     title: content.title,
     slug: content.link,
     tags: ['calcite-web', 'web', content.title, meta.group, meta.page, meta.page_slug],
-    sort_order: meta.order
+    sort_order: meta.order,
+    LastModified: now
   }
 
   var markdownPath = path.join('docs', 'source', meta.page_slug, '_' + item.slug + '.md');
