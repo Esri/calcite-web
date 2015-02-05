@@ -9,6 +9,7 @@ section
 - Changed location of the `js-dropdown` class
 - Visual changes to user dropdown
 - Finessed default type styles for raw markdown
+- Modals are more in line with best-practices
 
 ### Added
 - Blockquote styles
