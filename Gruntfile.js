@@ -182,14 +182,9 @@ module.exports = function(grunt) {
       }
     },
 
-    // Load AWS credentials from a json file located at aws.json
-    'aws': grunt.file.readJSON('aws.json'),
-
     // Upload dist folder to s3
     'aws_s3': {
       options: {
-        accessKeyId: '<%= aws.id %>',
-        secretAccessKey: '<%= aws.secret %>',
         region: 'us-west-1',
         bucket: 'patterns.esri.com',
         endpoint: 'https://s3-us-west-1.amazonaws.com',
@@ -211,7 +206,7 @@ module.exports = function(grunt) {
 
     // Ask for GitHub username and password
     'prompt': {
-      target: {
+      github: {
         options: {
           questions: [
             {
@@ -223,6 +218,22 @@ module.exports = function(grunt) {
               config: 'github-release.options.auth.password',
               type: 'password',
               message: 'GitHub password:'
+            }
+          ]
+        }
+      },
+      aws: {
+        options: {
+          questions: [
+            {
+              config: 'aws_s3.options.options.accessKeyId',
+              type: 'input',
+              message: 'AWS Access ID:'
+            },
+            {
+              config: 'aws_s3.options.options.secretAccessKey',
+              type: 'input',
+              message: 'AWS Secret Access Key:'
             }
           ]
         }
@@ -311,10 +322,11 @@ module.exports = function(grunt) {
 
   // Release a new version of the framework
   grunt.registerTask('release', [
-    'prompt',
+    'prompt:github',
     'prepublish',
     'compress',
     'github-release',
+    'prompt:aws',
     'aws_s3'
   ]);
 
