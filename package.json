@@ -1,6 +1,6 @@
 {
   "name": "calcite-web",
-  "version": "0.0.9",
+  "version": "0.0.8",
   "description": "SASS & CSS Framework for Esri websites",
   "private": true,
   "homepage": "https://github.com/esri/calcite-web",
@@ -42,10 +42,12 @@
     "grunt-contrib-concat": "^0.5.0",
     "grunt-contrib-connect": "^0.8.0",
     "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-cssmin": "^0.11.0",
     "grunt-contrib-imagemin": "^0.8.1",
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-uglify": "^0.5.1",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-exec": "^0.4.6",
     "grunt-gh-pages": "^0.9.1",
     "grunt-github-releaser": "^0.1.17",
     "grunt-libsass": "~0.2.0",
@@ -53,6 +55,7 @@
     "grunt-prompt": "^1.2.1",
     "js-yaml": "^3.2.3",
     "jsonfile": "^2.0.0",
-    "matchdep": "^0.3.0"
+    "matchdep": "^0.3.0",
+    "s3": "^4.3.1"
   }
 }

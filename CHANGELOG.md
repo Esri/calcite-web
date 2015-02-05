@@ -13,6 +13,7 @@ Animations, bug fixes, and general cleanup.
 - Sticky footer
 - Sub Nav documentation
 - Assets uploaded to s3 on release
+- Deploy script works from grunt
 
 ## v0.0.8
 

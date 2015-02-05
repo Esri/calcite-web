@@ -8,7 +8,6 @@ var jf   = require('jsonfile');
 var path = require('path');
 var yaml = require('js-yaml');
 
-var file = 'docs/build/content.json';
 var now = Date.now();
 var response = {
   elements: [],
@@ -76,4 +75,4 @@ for (var key in contents) {
   counter++;
 }
 
-jf.writeFileSync(file, response);
+jf.writeFileSync('dist/content.json', response);
