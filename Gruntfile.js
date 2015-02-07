@@ -101,6 +101,15 @@ module.exports = function(grunt) {
       }
     },
 
+    // Create minified version of build css
+    'cssmin': {
+      target: {
+        files: {
+          'dist/css/calcite-web.min.css': ['dist/css/calcite-web.css']
+        }
+      }
+    },
+
     // Build minified Javascript file to dist
     'uglify': {
       options: {
@@ -193,18 +202,19 @@ module.exports = function(grunt) {
         region: 'us-west-1',
         bucket: 'patterns.esri.com',
         endpoint: 'https://s3-us-west-1.amazonaws.com',
-        params: {
-          ContentEncoding: 'gzip'
-        },
+        access: 'public-read',
+        gzip: true
       },
       production: {
         files: [
-          {
-            expand: true,
-            cwd: 'dist/',
-            src: ['**'],
-            dest: 'files/calcite-web/' + currentVersion + '/'
-          }
+          // Manually set content type (plugin was setting incorrectly).
+          {expand: true, cwd: 'dist/', src: ['**/*.js'],  dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'application/javascript'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.css'], dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'text/css'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.svg'], dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'image/svg+xml'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.ico'], dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'image/x-icon'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.jpg'], dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'image/jpg'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.json'],dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'application/javascript'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.map'], dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'application/javascript'}}
         ]
       }
     },
@@ -245,6 +255,11 @@ module.exports = function(grunt) {
       }
     },
 
+    // Create a JSON record of current documentation
+    'exec': {
+      deploy: 'node deploy'
+    },
+
     // Deploy doc site to gh-pages
     'gh-pages': {
       options: {
@@ -257,7 +272,7 @@ module.exports = function(grunt) {
     // Runs tasks concurrently, speeding up Grunt
     'concurrent': {
       prepublish: [
-        'libsass',
+        'sass',
         'uglify',
         'copy',
         'concat:dist',
@@ -273,6 +288,12 @@ module.exports = function(grunt) {
   // ┌─────────────┐
   // │ Grunt tasks │
   // └─────────────┘
+
+  // Build sass
+  grunt.registerTask('sass', [
+    'libsass',
+    'cssmin'
+  ]);
 
   // Run a development environment
   grunt.registerTask('dev', [
@@ -305,6 +326,7 @@ module.exports = function(grunt) {
       'concat:doc',
       'libsass:doc',
       'copy:doc',
+      'exec:deploy',
       'gh-pages'
     ]);
   });
@@ -313,6 +335,7 @@ module.exports = function(grunt) {
   grunt.registerTask('release', [
     'prompt',
     'prepublish',
+    'exec:deploy',
     'compress',
     'github-release',
     'aws_s3'
