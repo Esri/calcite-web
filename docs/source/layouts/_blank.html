@@ -32,12 +32,69 @@
 
   <body>
 
-    {% block content %}
+    {% block drawers %}
     {% endblock %}
 
+    <div class="wrapper">
+      {% block content %}
+      {% endblock %}
+    </div>
+
     {% block footer %}
-      <script src="{{relativePath}}assets/js/libs/calcite-web.js"></script>
-      <script src="{{relativePath}}assets/js/all.js"></script>
+    <!-- Footer Pattern -->
+    <footer class="footer leader-0">
+      <div class="container text-darker-gray link-dark-gray">
+        <div class="column-24 padding-leader-1"><a href="#" class="header-light">Esri Home</a></div>
+        <div class="block-group block-group-5-up column-24">
+          <div class="block">
+            <h6 class="header-light font-size--2">Understanding GIS</h6>
+            <ul class="font-size--3">
+              <li><a href="#" class="">What is GIS?</a></li>
+              <li><a href="#" class="">Map Book Gallery</a></li>
+              <li><a href="#" class="">Video Library</a></li>
+            </ul>
+          </div>
+          <div class="block">
+            <h6 class="header-light font-size--2">Company Information</h6>
+            <ul class="font-size--3">
+              <li><a href="#" class="">About Esri</a></li>
+              <li><a href="#" class="">Careers</a></li>
+              <li><a href="#" class="">Esri Insider Blog</a></li>
+              <li><a href="#" class="">Esri User Conference</a></li>
+              <li><a href="#" class="">Heartbleed Information</a></li>
+            </ul>
+          </div>
+          <div class="block">
+            <h6 class="header-light font-size--2">Services</h6>
+            <ul class="font-size--3">
+              <li><a href="#" class="">Professional Services</a></li>
+              <li><a href="#" class="">Project Services</a></li>
+              <li><a href="#" class="">Implementation Services</a></li>
+              <li><a href="#" class="">Premium Support Services</a></li>
+            </ul>
+          </div>
+          <div class="block">
+            <h6 class="header-light font-size--2">Partners</h6>
+            <ul class="font-size--3">
+              <li><a href="#" class="">Learn About Partners</a></li>
+              <li><a href="#" class="">Partner Directory</a></li>
+              <li><a href="#" class="">Hardware Promotions</a></li>
+            </ul>
+          </div>
+          <div class="block">
+            <h6 class="header-light font-size--2">Special Programs</h6>
+            <ul class="font-size--3">
+              <li><a href="#" class="">Nonprofit Program</a></li>
+              <li><a href="#" class="">ArcGIS for Home Use</a></li>
+              <li><a href="#" class="">Disaster Response</a></li>
+              <li><a href="#" class="">Esri-Sponsored Grants</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="{{relativePath}}assets/js/libs/calcite-web.js"></script>
+    <script src="{{relativePath}}assets/js/all.js"></script>
     {% endblock %}
 
   </body>
