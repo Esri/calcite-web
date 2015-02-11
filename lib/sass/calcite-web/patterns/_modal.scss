@@ -21,10 +21,15 @@
 
   @mixin modal-content() {
     @include box-sizing(border-box);
+    position: relative;
+    top: 45vh;
+    left: 50vw;
+    @include transform(translate3d(-50%, -50%, 0));
+    max-height: 80vh;
     z-index: 100;
     background: $off-white;
     border: 1px solid $lightest-gray;
-    padding: $baseline/2;
+    padding: $baseline;
     opacity: 1;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
