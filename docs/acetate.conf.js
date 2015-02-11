@@ -1,5 +1,3 @@
-var partial = require('acetate-partial');
-
 function config(acetate) {
   acetate.global('config', {
     environment: 'dev',
@@ -18,8 +16,6 @@ function config(acetate) {
   acetate.dest = 'build';
 
   acetate.notFound = '404.html';
-
-  acetate.use(partial());
 }
 
 module.exports = config;
