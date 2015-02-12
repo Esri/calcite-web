@@ -47,7 +47,7 @@
             </label>
           </div>
           <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Branding</a>
-          <a href="../" class="side-nav-link padding-trailer-half padding-leader-half">Web</a></a>
+          <a href="../" class="side-nav-link padding-trailer-half padding-leader-half">Web</a>
           <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Mobile</a>
           <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Presentations</a>
         </aside>
@@ -64,7 +64,7 @@
             </label>
           </div>
           <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Branding</a>
-          <a href="../" class="side-nav-link padding-trailer-half padding-leader-half">Web</a></a>
+          <a href="../" class="side-nav-link padding-trailer-half padding-leader-half">Web</a>
           <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Mobile</a>
           <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Presentations</a>
         </aside>
@@ -113,12 +113,12 @@
           <h1 class="sub-nav-title"><a href="../" class="link-white">Web</a></h1>
           <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-orange btn-arrow right leader-1">Latest Release</a>
           <div class="phone-show dropdown column-6 trailer-half js-dropdown-toggle">
-             <a href="#" class="link-white">Calcite Web &darr;</a>
-              <nav class="dropdown-menu js-dropdown sidenav">
-                <a class="side-nav-link is-active" href="../">Calcite Web</a>
-                <a class="side-nav-link" href="#">Calcite Dojo</a>
-                <a class="side-nav-link" href="#">Calcite Bootstrap</a>
-              </nav>
+            <a href="#" class="link-white">Calcite Web &darr;</a>
+            <nav class="dropdown-menu js-dropdown sidenav">
+              <a class="side-nav-link is-active" href="../">Calcite Web</a>
+              <a class="side-nav-link" href="#">Calcite Dojo</a>
+              <a class="side-nav-link" href="#">Calcite Bootstrap</a>
+            </nav>
           </div>
           <nav class="sub-nav-list phone-hide">
             <a class="sub-nav-link is-active" href="../">Calcite Web</a>
@@ -222,7 +222,17 @@
               <section class="trailer-2">
                 <h1 class="leader-0" id="overview">JavaScript</h1>
 
-<p>Calcite Web includes a small JavaScript library. <code>calcite-web.js</code> is a lightweight and dependency-free library made to enable behaviors for <a href="../patterns/#javascript-dependent">JavaScript dependent patterns</a>.</p>
+<p>Calcite Web includes a small JavaScript library. <code>calcite-web.js</code> is a lightweight and dependency-free library made to enable interactive behaviors for certain <a href="../patterns/">patterns</a> and <a href="../components">components</a>.</p>
+<p>Currently, the following components and patterns rely on <code>calcite-web.js</code>:</p>
+<ul>
+<li><a href="../components/#dropdowns">Dropdowns</a></li>
+<li><a href="../patterns/#modals">Modals</a></li>
+<li><a href="../patterns/#tabs">Tabs</a></li>
+<li><a href="../patterns/#accordions">Accordions</a></li>
+<li><a href="../patterns/#carousel">Carousels</a></li>
+<li><a href="../patterns/#drawers">Drawers</a></li>
+<li><a href="../patterns/#expanding-nav">Expanding Nav</a></li>
+</ul>
 <p>To use <code>calcite-web.js</code> simply <a href="../patterns#basic-html-page">include a reference to it in your html</a> and then run the <code>calcite.init()</code> method. For example, say your JavaScript was located in a file called <code>script.js</code>. You can bind all the JavaScript patterns from <code>script.js</code> like this:</p>
 <pre><code class="lang-js"><span class="hljs-comment">// On document ready</span>
 window.onload = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
@@ -487,57 +497,57 @@ calcite.arr.indexOf(<span class="hljs-string">'b'</span>, <span class="hljs-keyw
 
     
 
-      <!-- Footer Pattern -->
-      <footer class="footer header-face leader-3">
-        <div class="container">
-            <nav class="column-6">
-              <h6>Arc<span>GIS</span></h6>
-              <ul class="list-bulleted">
-                <li><a href="http://www.arcgis.com/about/">Home</a></li>
-                <li><a href="http://www.arcgis.com/about/features.html">Features</a></li>
-                <li><a href="http://www.arcgis.com/about/pricing.html">Pricing</a></li>
-              </ul>
-            </nav>
+    <!-- Footer Pattern -->
+    <footer class="footer header-face leader-3">
+      <div class="container">
+          <nav class="column-6">
+            <h6>Arc<span>GIS</span></h6>
+            <ul class="list-bulleted">
+              <li><a href="http://www.arcgis.com/about/">Home</a></li>
+              <li><a href="http://www.arcgis.com/about/features.html">Features</a></li>
+              <li><a href="http://www.arcgis.com/about/pricing.html">Pricing</a></li>
+            </ul>
+          </nav>
 
-            <nav class="column-6">
-              <h6>Arc<span>GIS</span> for Developers</h6>
-              <ul>
-                <li><a href="/en/">Home</a></li>
-                <li><a href="/en/features/">Features</a></li>
-                <li><a href="http://blogs.esri.com/esri/arcgis/category/developer/">Blog</a></li>
-              </ul>
-            </nav>
+          <nav class="column-6">
+            <h6>Arc<span>GIS</span> for Developers</h6>
+            <ul>
+              <li><a href="/en/">Home</a></li>
+              <li><a href="/en/features/">Features</a></li>
+              <li><a href="http://blogs.esri.com/esri/arcgis/category/developer/">Blog</a></li>
+            </ul>
+          </nav>
 
-            <nav class="column-6">
-              <h6>About Esri</h6>
-              <ul>
-                <li><a href="http://www.esri.com/about-esri/">About Us</a></li>
-                <li><a href="http://www.esri.com/careers/">Careers</a></li>
-                <li><a href="http://blogs.esri.com/esri/esri-insider/">Insiders Blog</a></li>
-                <li><a href="http://www.esri.com/events/user-conference/index.html">User Conference</a></li>
-                <li><a href="http://www.esri.com/events/devsummit/index.html">Developer Summit</a></li>
-              </ul>
-            </nav>
+          <nav class="column-6">
+            <h6>About Esri</h6>
+            <ul>
+              <li><a href="http://www.esri.com/about-esri/">About Us</a></li>
+              <li><a href="http://www.esri.com/careers/">Careers</a></li>
+              <li><a href="http://blogs.esri.com/esri/esri-insider/">Insiders Blog</a></li>
+              <li><a href="http://www.esri.com/events/user-conference/index.html">User Conference</a></li>
+              <li><a href="http://www.esri.com/events/devsummit/index.html">Developer Summit</a></li>
+            </ul>
+          </nav>
 
-            <nav class="column-6 padding-leader-half">
-              <a class="esri-logo" href="http://esri.com"></a>
-              <section class="footer-social-nav">
-                <a class="icon-twitter" href="https://twitter.com/Esri/">T</a>
-                <a class="icon-facebook" href="https://www.facebook.com/esrigis/">F</a>
-                <a class="icon-github" href="http://esri.github.com/">G</a>
-                <a class="icon-email" href="http://www.esri.com/about-esri/contact/">E</a>
-              </section>
-            </nav>
-            <div class="column-24">
-              <p><small>© Copyright 2013 Environmental Systems Research Institute, Inc. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal/software-license">Legal</a></small></p>
-            </div>
+          <nav class="column-6 padding-leader-half">
+            <a class="esri-logo" href="http://esri.com"></a>
+            <section class="footer-social-nav">
+              <a class="icon-twitter" href="https://twitter.com/Esri/">T</a>
+              <a class="icon-facebook" href="https://www.facebook.com/esrigis/">F</a>
+              <a class="icon-github" href="http://esri.github.com/">G</a>
+              <a class="icon-email" href="http://www.esri.com/about-esri/contact/">E</a>
+            </section>
+          </nav>
+          <div class="column-24">
+            <p><small>© Copyright 2013 Environmental Systems Research Institute, Inc. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal/software-license">Legal</a></small></p>
           </div>
-
         </div>
-      </footer>
 
-      <script src="../assets/js/libs/calcite-web.js"></script>
-      <script src="../assets/js/all.js"></script>
+      </div>
+    </footer>
+
+    <script src="../assets/js/libs/calcite-web.js"></script>
+    <script src="../assets/js/all.js"></script>
 
     
 

@@ -47,7 +47,7 @@
             </label>
           </div>
           <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Branding</a>
-          <a href="../" class="side-nav-link padding-trailer-half padding-leader-half">Web</a></a>
+          <a href="../" class="side-nav-link padding-trailer-half padding-leader-half">Web</a>
           <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Mobile</a>
           <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Presentations</a>
         </aside>
@@ -64,7 +64,7 @@
             </label>
           </div>
           <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Branding</a>
-          <a href="../" class="side-nav-link padding-trailer-half padding-leader-half">Web</a></a>
+          <a href="../" class="side-nav-link padding-trailer-half padding-leader-half">Web</a>
           <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Mobile</a>
           <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Presentations</a>
         </aside>
@@ -113,12 +113,12 @@
           <h1 class="sub-nav-title"><a href="../" class="link-white">Web</a></h1>
           <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-orange btn-arrow right leader-1">Latest Release</a>
           <div class="phone-show dropdown column-6 trailer-half js-dropdown-toggle">
-             <a href="#" class="link-white">Calcite Web &darr;</a>
-              <nav class="dropdown-menu js-dropdown sidenav">
-                <a class="side-nav-link is-active" href="../">Calcite Web</a>
-                <a class="side-nav-link" href="#">Calcite Dojo</a>
-                <a class="side-nav-link" href="#">Calcite Bootstrap</a>
-              </nav>
+            <a href="#" class="link-white">Calcite Web &darr;</a>
+            <nav class="dropdown-menu js-dropdown sidenav">
+              <a class="side-nav-link is-active" href="../">Calcite Web</a>
+              <a class="side-nav-link" href="#">Calcite Dojo</a>
+              <a class="side-nav-link" href="#">Calcite Bootstrap</a>
+            </nav>
           </div>
           <nav class="sub-nav-list phone-hide">
             <a class="sub-nav-link is-active" href="../">Calcite Web</a>
@@ -368,14 +368,6 @@
 </nav>
                     </div>
                     
-                      <div class="styleguide-modifier-example">
-                        <nav class="sign-in">
-  <a href="#" class="btn btn-small btn-clear">Sign Up</a>
-  <a href="#" class="btn btn-small btn-transparent">Sign In</a>
-</nav>
-                        <code class="modifier-name">.sign-in</code>
-                      </div>
-                    
                   </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sign-in"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-small btn-clear"</span>&gt;</span>Sign Up<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -394,23 +386,48 @@
               <section class="trailer-2">
                 <h2 id="user-nav">User Nav</h2>
 <p>Designed to be combined with the <a href="#user-nav">user sign in pattern</a> pattern on sites where a logged in portion is accessible.</p>
+<p>The user navigation element is just a <a href="../components/#dropdowns">dropdown</a> with a few special styles.</p>
 
 
                 
                   <h3 class="leader-2 trailer-1">Modifiers</h3>
                   <div class="styleguide-modifiers">
                     <div class="styleguide-modifier-example">
-                      <nav class="user-nav">
-  <a href="#" class="btn btn-small btn-clear">Sign Up</a>
-  <a href="#" class="btn btn-small btn-transparent">Sign In</a>
-</nav>
+                      <div class="dropdown js-dropdown right">
+
+  <div class="user js-dropdown-toggle">
+    <img src="http://f.cl.ly/items/0S1k2j2q3k3Q0d3g2i3J/a9d.jpg" alt="Sloth Aldrin" class="user-image ">
+    <span class="user-name">Sloth Aldrin</span>
+  </div>
+
+  <nav class="dropdown-menu dropdown-right user-nav">
+    <a href="#" class="dropdown-link">Account</a>
+    <a href="#" class="dropdown-link">Profile</a>
+    <a href="#" class="dropdown-link">Billing</a>
+    <a href="#" class="dropdown-link">Organizations</a>
+    <a href="#" class="dropdown-link">Groups</a>
+    <a href="#" class="dropdown-link">Log Out</a>
+  </nav>
+</div>
                     </div>
                     
                   </div>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"user-nav"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-small btn-clear"</span>&gt;</span>Sign Up<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-small btn-transparent"</span>&gt;</span>Sign In<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown js-dropdown right"</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"user js-dropdown-toggle"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://f.cl.ly/items/0S1k2j2q3k3Q0d3g2i3J/a9d.jpg"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"Sloth Aldrin"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"user-image "</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"user-name"</span>&gt;</span>Sloth Aldrin<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-menu dropdown-right user-nav"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-link"</span>&gt;</span>Account<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-link"</span>&gt;</span>Profile<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-link"</span>&gt;</span>Billing<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-link"</span>&gt;</span>Organizations<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-link"</span>&gt;</span>Groups<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-link"</span>&gt;</span>Log Out<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 </code></pre>
                 
 
@@ -667,7 +684,7 @@
             
               <section class="trailer-2">
                 <h2 id="modals">Modals</h2>
-<p>Modals are a useful pattern for showing important notices and dialogues to users. Modals take over the entire screen, so they should only be used sparingly for events that block the user&#39;s flow.</p>
+<p>Modals are meant to &quot;take over&quot; the screen and focus users attention on a dialog which presents the user with an opportunity to add, modify or create content. A modal should always be centered both vertically and horizontally within the browser window. When a modal is opened, the interface darkens and disables all other user interface elements in order to force a user to take an action required by their workflow.</p>
 
 
                 
@@ -675,9 +692,18 @@
                   <div class="styleguide-modifiers">
                     <div class="styleguide-modifier-example">
                       <div class="js-modal modal-overlay " data-modal="foo">
-  <div class="modal-content">
-    <a class="js-modal-toggle icon-close right" href="#"></a>
-    <h4>Modal!</h4>
+  <div class="modal-content column-12">
+    <a class="js-modal-toggle icon-close right" href="#">x</a>
+    <h3>Modal!</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <button class="btn right">okay</button>
+    <button class="btn-transparent right">cancel</button>
   </div>
 </div>
 
@@ -686,9 +712,18 @@
                     
                   </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-modal modal-overlay modifier-class"</span> <span class="hljs-attribute">data-modal</span>=<span class="hljs-value">"foo"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modal-content"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-modal-toggle icon-close right"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Modal!<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modal-content column-12"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-modal-toggle icon-close right"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>x<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Modal!<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn right"</span>&gt;</span>okay<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn-transparent right"</span>&gt;</span>cancel<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 
@@ -1028,57 +1063,57 @@
 
     
 
-      <!-- Footer Pattern -->
-      <footer class="footer header-face leader-3">
-        <div class="container">
-            <nav class="column-6">
-              <h6>Arc<span>GIS</span></h6>
-              <ul class="list-bulleted">
-                <li><a href="http://www.arcgis.com/about/">Home</a></li>
-                <li><a href="http://www.arcgis.com/about/features.html">Features</a></li>
-                <li><a href="http://www.arcgis.com/about/pricing.html">Pricing</a></li>
-              </ul>
-            </nav>
+    <!-- Footer Pattern -->
+    <footer class="footer header-face leader-3">
+      <div class="container">
+          <nav class="column-6">
+            <h6>Arc<span>GIS</span></h6>
+            <ul class="list-bulleted">
+              <li><a href="http://www.arcgis.com/about/">Home</a></li>
+              <li><a href="http://www.arcgis.com/about/features.html">Features</a></li>
+              <li><a href="http://www.arcgis.com/about/pricing.html">Pricing</a></li>
+            </ul>
+          </nav>
 
-            <nav class="column-6">
-              <h6>Arc<span>GIS</span> for Developers</h6>
-              <ul>
-                <li><a href="/en/">Home</a></li>
-                <li><a href="/en/features/">Features</a></li>
-                <li><a href="http://blogs.esri.com/esri/arcgis/category/developer/">Blog</a></li>
-              </ul>
-            </nav>
+          <nav class="column-6">
+            <h6>Arc<span>GIS</span> for Developers</h6>
+            <ul>
+              <li><a href="/en/">Home</a></li>
+              <li><a href="/en/features/">Features</a></li>
+              <li><a href="http://blogs.esri.com/esri/arcgis/category/developer/">Blog</a></li>
+            </ul>
+          </nav>
 
-            <nav class="column-6">
-              <h6>About Esri</h6>
-              <ul>
-                <li><a href="http://www.esri.com/about-esri/">About Us</a></li>
-                <li><a href="http://www.esri.com/careers/">Careers</a></li>
-                <li><a href="http://blogs.esri.com/esri/esri-insider/">Insiders Blog</a></li>
-                <li><a href="http://www.esri.com/events/user-conference/index.html">User Conference</a></li>
-                <li><a href="http://www.esri.com/events/devsummit/index.html">Developer Summit</a></li>
-              </ul>
-            </nav>
+          <nav class="column-6">
+            <h6>About Esri</h6>
+            <ul>
+              <li><a href="http://www.esri.com/about-esri/">About Us</a></li>
+              <li><a href="http://www.esri.com/careers/">Careers</a></li>
+              <li><a href="http://blogs.esri.com/esri/esri-insider/">Insiders Blog</a></li>
+              <li><a href="http://www.esri.com/events/user-conference/index.html">User Conference</a></li>
+              <li><a href="http://www.esri.com/events/devsummit/index.html">Developer Summit</a></li>
+            </ul>
+          </nav>
 
-            <nav class="column-6 padding-leader-half">
-              <a class="esri-logo" href="http://esri.com"></a>
-              <section class="footer-social-nav">
-                <a class="icon-twitter" href="https://twitter.com/Esri/">T</a>
-                <a class="icon-facebook" href="https://www.facebook.com/esrigis/">F</a>
-                <a class="icon-github" href="http://esri.github.com/">G</a>
-                <a class="icon-email" href="http://www.esri.com/about-esri/contact/">E</a>
-              </section>
-            </nav>
-            <div class="column-24">
-              <p><small>© Copyright 2013 Environmental Systems Research Institute, Inc. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal/software-license">Legal</a></small></p>
-            </div>
+          <nav class="column-6 padding-leader-half">
+            <a class="esri-logo" href="http://esri.com"></a>
+            <section class="footer-social-nav">
+              <a class="icon-twitter" href="https://twitter.com/Esri/">T</a>
+              <a class="icon-facebook" href="https://www.facebook.com/esrigis/">F</a>
+              <a class="icon-github" href="http://esri.github.com/">G</a>
+              <a class="icon-email" href="http://www.esri.com/about-esri/contact/">E</a>
+            </section>
+          </nav>
+          <div class="column-24">
+            <p><small>© Copyright 2013 Environmental Systems Research Institute, Inc. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal/software-license">Legal</a></small></p>
           </div>
-
         </div>
-      </footer>
 
-      <script src="../assets/js/libs/calcite-web.js"></script>
-      <script src="../assets/js/all.js"></script>
+      </div>
+    </footer>
+
+    <script src="../assets/js/libs/calcite-web.js"></script>
+    <script src="../assets/js/all.js"></script>
 
     
 

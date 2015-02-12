@@ -1306,12 +1306,12 @@ img {
   .header-italic b, .header-italic strong {
     font-weight: 500; }
 
-.header-demi, h6 {
+.header-demi, h4, h5, h6 {
   letter-spacing: 0em;
   font-family: 'Avenir Next W01', 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: 500;
   font-style: normal; }
-  .header-demi b, .header-demi h6, .header-demi strong, .header-demi h6 {
+  .header-demi b, .header-demi h4, .header-demi h5, .header-demi h6, .header-demi strong, .header-demi h4, .header-demi h5, .header-demi h6 {
     font-weight: 600; }
 
 .header-demi-italic {
@@ -1467,7 +1467,7 @@ h6 {
   line-height: 1.5rem; }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 1.5rem 0 0.75rem 0; }
+  margin: 0 0 1.5rem 0; }
 
 h1.header-light, h1.alert, h1.sub-nav-title, h2.header-light, h2.alert, h2.sub-nav-title, h3.header-light, h3.alert, h3.sub-nav-title {
   font-weight: 300; }
@@ -1490,7 +1490,8 @@ pre {
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
-  max-width: 100%; }
+  max-width: 100%;
+  margin-bottom: 1.5rem; }
   pre code {
     padding: 1rem;
     display: block;
@@ -1529,12 +1530,11 @@ a {
 
 ul, ol {
   padding: 0;
-  list-style-position: inside; }
+  list-style-position: inside;
+  margin-bottom: 1.5rem; }
   ul ul, ul ol, ol ul, ol ol {
-    padding-left: 1.5rem; }
-
-ul {
-  list-style-type: none; }
+    padding-left: 1.5rem;
+    margin: 0; }
 
 small, sup, sub {
   font-size: 0.8em; }
@@ -1571,6 +1571,9 @@ figcaption {
   line-height: 1.5rem;
   font-style: italic;
   color: #a3a3a3; }
+
+table {
+  margin-bottom: 1.5rem; }
 
 .esri-logo {
   margin: 0.375rem;
@@ -2357,6 +2360,7 @@ select {
   background-color: #f2f2f2; }
 
 .sub-nav-title {
+  margin-top: 1.5rem;
   display: inline-block;
   float: left;
   line-height: 1.25; }
@@ -2559,10 +2563,19 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  position: relative;
+  top: 45vh;
+  left: 50vw;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -ms-transform: translate3d(-50%, -50%, 0);
+  -o-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  max-height: 80vh;
   z-index: 100;
   background: #fafafa;
   border: 1px solid #f2f2f2;
-  padding: 0.75rem;
+  padding: 1.5rem;
   opacity: 1;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch; }
