@@ -61,25 +61,25 @@
 @mixin body-face() {
   @include tracking($body-tracking);
   font-family: $body-family; font-weight: 300; font-style: normal;
-  b, strong {font-weight: 700;}
+  b, strong {font-weight: 500;}
 }
 
 @mixin body-italic() {
   @include tracking($body-tracking);
   font-family: $body-family; font-weight: 300; font-style: italic;
-  b, strong {font-weight: 700;}
+  b, strong {font-weight: 500;}
 }
 
 @mixin body-bold() {
   @include tracking($body-tracking);
-  font-family: $body-family; font-weight: 700; font-style: normal;
-  b, strong {font-weight: 700;}
+  font-family: $body-family; font-weight: 500; font-style: normal;
+  b, strong {font-weight: 500;}
 }
 
 @mixin body-bold-italic() {
   @include tracking($body-tracking);
-  font-family: $body-family; font-weight: 700; font-style: italic;
-  b, strong {font-weight: 700;}
+  font-family: $body-family; font-weight: 500; font-style: italic;
+  b, strong {font-weight: 500;}
 }
 
 // ┌────────────────┐
