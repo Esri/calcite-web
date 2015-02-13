@@ -236,12 +236,12 @@ module.exports = function(grunt) {
         options: {
           questions: [
             {
-              config: 'aws_s3.options.options.accessKeyId',
+              config: 'aws_s3.options.accessKeyId',
               type: 'input',
               message: 'AWS Access ID:'
             },
             {
-              config: 'aws_s3.options.options.secretAccessKey',
+              config: 'aws_s3.options.secretAccessKey',
               type: 'input',
               message: 'AWS Secret Access Key:'
             }
@@ -326,6 +326,12 @@ module.exports = function(grunt) {
     'concurrent:prepublish'
   ]);
 
+  // Upload files to s3
+  grunt.registerTask('s3', [
+    'prompt:aws',
+    'aws_s3'
+  ]);
+
   // Build and deploy doc site to github pages
   grunt.registerTask('deploy', 'Deploy documentation to github pages', function(n) {
     if (grunt.option('message')) {
@@ -349,8 +355,7 @@ module.exports = function(grunt) {
     'exec:deploy',
     'compress',
     'github-release',
-    'prompt:aws',
-    'aws_s3'
+    's3'
   ]);
 
   // Default task starts up a dev environment
