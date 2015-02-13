@@ -1,6 +1,7 @@
 ## v0.0.10
 
-Browser Testing?
+### Modified
+- Change bold styles on body from Frutiger 65 to Frutiger 55
 
 ## v0.0.9
 
