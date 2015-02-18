@@ -5,26 +5,36 @@
 //  ↳ components → _alerts.md
 
 @mixin alert() {
-  @extend .header-light;
   @include font-size(-1);
-  padding: $baseline/4 $baseline/2;
-  @include text-color($off-white);
-  background-color: $blue;
+  padding: $baseline/2 $baseline/2;
+  @include text-color($dark-blue);
+  background-color: lighten($light-blue, 15%);
   position: relative;
   display: none;
-  border-bottom: 1px solid $white;
-  a {
-    @include link-color($off-white, $lighter-gray);
-  }
+  z-index: 100;
+  max-width: 40em;
+  border: 1px solid $blue;
+  @include box-shadow($box-shadow);
   &.is-active {
     display: block;
   }
-}
-  @mixin alert-red() {
-    background-color: $red;
+  a:hover {
+    color: $dark-blue;
   }
+}
+
+  @mixin alert-red() {
+    background-color: lighten($light-red, 15%);
+    @include text-color($dark-red);
+    @extend .link-red;
+    border-color: $light-red;
+  }
+
   @mixin alert-green() {
-    background-color: $green;
+    background-color: lighten($light-green, 15%);
+    @include text-color($dark-green);
+    @extend .link-green;
+    border-color: $light-green;
   }
 
   @mixin alert-close() {
