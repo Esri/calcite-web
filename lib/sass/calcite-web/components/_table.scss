@@ -110,6 +110,16 @@
         }
       }
     }
+    &.table-blue {
+      tr {
+        &:nth-child(even){
+            background-color: $lightest-blue;
+          td {
+            background-color: $lightest-blue;
+          }
+        }
+      }
+    }
   }
 
 @if $include-tables == true {
