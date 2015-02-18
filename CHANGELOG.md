@@ -2,6 +2,11 @@
 
 ### Modified
 - Change bold styles on body from Frutiger 65 to Frutiger 55
+- Alerts now are colored better, higher z-index, and subtle drop shadow
+- Sass now rendered with [grunt-sass](https://github.com/sindresorhus/grunt-sass)
+
+### Added
+- `.table-blue.table-striped`
 
 ## v0.0.9
 

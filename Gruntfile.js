@@ -64,7 +64,7 @@ module.exports = function(grunt) {
       libsass: {
         files: ['lib/sass/**/*', 'docs/source/assets/css/**/*'],
         tasks: [
-          'libsass:doc',
+          'sass:doc',
           'copy:doc'
         ]
       }
@@ -75,11 +75,11 @@ module.exports = function(grunt) {
       all: ['lib/js/calcite-web.js']
     },
 
-    // Build CSS files to dist
-    'libsass': {
+    // Build CSS files from SASS
+    sass: {
 
       options: {
-        loadPath: ['lib/sass/']
+        includePaths: ['lib/sass/']
       },
 
       expanded: {
@@ -96,10 +96,12 @@ module.exports = function(grunt) {
       },
 
       homepage: {
-        src: 'docs/source/assets/css/homepage.scss',
-        dest: 'docs/build/assets/css/homepage.css'
+        files: {
+          'docs/build/assets/css/homepage.css': 'docs/source/assets/css/homepage.scss'
+        }
       }
     },
+
 
     // Create minified version of build css
     'cssmin': {
@@ -283,7 +285,7 @@ module.exports = function(grunt) {
     // Runs tasks concurrently, speeding up Grunt
     'concurrent': {
       prepublish: [
-        'sass',
+        'scss',
         'uglify',
         'copy',
         'concat:dist',
@@ -301,8 +303,8 @@ module.exports = function(grunt) {
   // └─────────────┘
 
   // Build sass
-  grunt.registerTask('sass', [
-    'libsass',
+  grunt.registerTask('scss', [
+    'sass',
     'cssmin'
   ]);
 
@@ -311,7 +313,7 @@ module.exports = function(grunt) {
     'acetate:server',
     'newer:imagemin:doc',
     'concat:doc',
-    'libsass:doc',
+    'sass:doc',
     'copy:doc',
     'watch'
   ]);
@@ -341,7 +343,7 @@ module.exports = function(grunt) {
       'acetate:build',
       'newer:imagemin:doc',
       'concat:doc',
-      'libsass:doc',
+      'sass:doc',
       'copy:doc',
       'exec:deploy',
       'gh-pages'
