@@ -7,6 +7,7 @@ var fs   = require('fs');
 var jf   = require('jsonfile');
 var path = require('path');
 var yaml = require('js-yaml');
+var mark = require('marked');
 
 var now = Date.now();
 var response = {
@@ -28,7 +29,7 @@ function constructItem(content, meta) {
   var markdownPath = path.join('docs', 'source', meta.page_slug, '_' + item.slug + '.md');
   var markdown = fs.readFileSync(markdownPath, 'utf8');
 
-  item.description = JSON.stringify(markdown);
+  item.description = JSON.stringify(mark(markdown));
 
   if (content.modifiers) {
     item.modifiers = content.modifiers;
@@ -76,3 +77,4 @@ for (var key in contents) {
 }
 
 jf.writeFileSync('dist/content.json', response);
+jf.writeFileSync('docs/build/content.json', response);
