@@ -12,4 +12,4 @@ When used statically, one very helpful thing to know is that Calcite Web comes b
 </div>
 ```
 
-This will keep spacing consistent and you won't have to write any CSS! There are modifier classes for virtually everything: padding, margin, text-color, background-color, etc. Be sure to read [the documentation to learn](http://esri.github.io/calcite-web/grid/) what is possible.
+This will keep spacing consistent and you won't have to write any CSS! There are modifier classes for virtually everything: padding, margin, text-color, background-color, etc. Be sure to read [the documentation](http://esri.github.io/calcite-web/grid/) to learn what is possible.
