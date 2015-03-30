@@ -27,20 +27,21 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    // Running a development server
+    'connect': {
+      server: {
+        options: {
+          port: 8888,
+          hostname: 'local.arcgis.com',
+          base: 'docs/build'
+        }
+      }
+    },
+
     'acetate': {
       // Rebuild site with Acetate
       build: {
         config: 'docs/acetate.conf.js'
-      },
-      // Run a development server with Acetate
-      server: {
-        config: 'docs/acetate.conf.js',
-        options: {
-          watch: true,
-          server: true,
-          port: 8888,
-          host: '0.0.0.0'
-        }
       }
     },
 
@@ -67,8 +68,15 @@ module.exports = function(grunt) {
           'sass:doc',
           'copy:doc'
         ]
+      },
+      docs: {
+        files: ['docs/source/**'],
+        tasks: [
+          'acetate:build'
+        ]
       }
     },
+
 
     // Check Javascript for errors
     'jshint': {
@@ -310,11 +318,12 @@ module.exports = function(grunt) {
 
   // Run a development environment
   grunt.registerTask('dev', [
-    'acetate:server',
+    'acetate:build',
     'newer:imagemin:doc',
     'concat:doc',
     'sass:doc',
     'copy:doc',
+    'connect',
     'watch'
   ]);
 
