@@ -6,11 +6,9 @@
     font-size: 16px;
   }
 
-  @if $include-header-family == true {}
-
   @if $include-header-family == true {
     body {
-      @include header-face();
+      @include body-face();
       @include font-size(0);
       line-height: $baseline;
       color: $type-color;
@@ -29,7 +27,9 @@
        -o-font-feature-settings : "liga" 1,"calt" 0;
        font-feature-settings : "liga" 1,"calt" 0;
     }
+  }
 
+  @if $include-header-family == true {
     h1    {@include font-size(5);}
     h2    {@include font-size(4);}
     h3    {@include font-size(3);}
