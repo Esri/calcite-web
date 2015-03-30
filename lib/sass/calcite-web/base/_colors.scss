@@ -8,19 +8,19 @@
 //  ↳ color → _grayscale.md
 
 $white:                 hsl(0, 0, 100);
-$off-white:             hsl(0, 0, 98);
-$lightest-gray:         hsl(0, 0, 95);
-$lighter-gray:          hsl(0, 0, 90);
-$light-gray:            hsl(0, 0, 84);
-$gray:                  hsl(0, 0, 78);
-$dark-gray:             hsl(0, 0, 64);
-$darker-gray:           hsl(0, 0, 49);
-$darkest-gray:          hsl(0, 0, 34);
-$off-black:             hsl(0, 0, 25);
-$black:                 hsl(0, 0, 19);
+$off-white:             $Calcite_Gray_100;
+$lightest-gray:         $Calcite_Gray_250;
+$lighter-gray:          $Calcite_Gray_350;
+$light-gray:            $Calcite_Gray_400;
+$gray:                  $Calcite_Gray_450;
+$dark-gray:             $Calcite_Gray_500;
+$darker-gray:           $Calcite_Gray_550;
+$darkest-gray:          $Calcite_Gray_600;
+$off-black:             $Calcite_Gray_650;
+$black:                 $Calcite_Gray_700;
 
-$transparent-off-black: rgba(0, 0, 0, 0.45);
-$transparent-black:     rgba(0, 0, 0, 0.75);
+$transparent-off-black: rgba($Calcite_Gray_700, 0.45);
+$transparent-black:     rgba($Calcite_Gray_700, 0.75);
 
 // ┌───────────┐
 // │ UI Colors │
