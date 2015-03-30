@@ -40,16 +40,19 @@
     <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
       <nav class="drawer-nav">
         <aside class="side-nav">
-          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Esri Patterns</h2>
+          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
             <label class="trailer-0">
               <input type='search' placeholder='Search'>
             </label>
           </div>
-          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Branding</a>
-          <a href="{{relativePath}}" class="side-nav-link padding-trailer-half padding-leader-half">Web</a>
-          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Mobile</a>
-          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Presentations</a>
+            {% for title, sec in table_of_contents %}
+              {% if sec.base == "get-started" %}
+                <a href="{{relativePath}}" class="side-nav-link">{{ sec.title }}</a>
+              {% else %}
+                <a href="{{relativePath}}{{sec.base}}" class="side-nav-link">{{ sec.title }}</a>
+              {% endif %}
+            {% endfor %}
         </aside>
       </nav>
     </div>
@@ -57,16 +60,19 @@
     <div class="drawer drawer-right js-drawer" data-drawer="right">
       <nav class="drawer-nav">
         <aside class="side-nav">
-          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Esri Patterns</h2>
+          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
             <label class="trailer-0">
               <input type='search' placeholder='Search'>
             </label>
           </div>
-          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Branding</a>
-          <a href="{{relativePath}}" class="side-nav-link padding-trailer-half padding-leader-half">Web</a>
-          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Mobile</a>
-          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Presentations</a>
+            {% for title, sec in table_of_contents %}
+              {% if sec.base == "get-started" %}
+                <a href="{{relativePath}}" class="side-nav-link">{{ sec.title }}</a>
+              {% else %}
+                <a href="{{relativePath}}{{sec.base}}" class="side-nav-link">{{ sec.title }}</a>
+              {% endif %}
+            {% endfor %}
         </aside>
       </nav>
     </div>
@@ -76,7 +82,7 @@
       <header class="top-nav">
         <div class="container">
           <div class="tablet-hide">
-            <a href="#" class="top-nav-title">Esri Patterns</a>
+            <a href="#" class="top-nav-title">Calcite Web</a>
             <nav class="top-nav-list">
             {% for title, sec in table_of_contents %}
               {% if sec.base == "get-started" %}
@@ -88,12 +94,8 @@
             </nav>
           </div>
           <div class="tablet-show">
-            <a href="#" class="top-nav-title js-drawer-toggle" data-drawer="top-nav">☰ Esri Patterns</a>
+            <a href="#" class="top-nav-title js-drawer-toggle" data-drawer="top-nav">☰ Calcite Web</a>
           </div>
-          <nav class="sign-in">
-            <a href="#" class="btn btn-small btn-clear">Sign Up</a>
-            <a href="#" class="btn btn-small btn-transparent">Sign In</a>
-          </nav>
         </div>
       </header>
       <div class="expanding-nav js-expanding">
