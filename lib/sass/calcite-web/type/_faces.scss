@@ -55,30 +55,30 @@
 // ┌───────────┐
 // │ Body Face │
 // └───────────┘
-//  ↳ http://esri.github.io/calcite-web/type/#body-face
-//  ↳ type → _body-face.md
+//  ↳ http://esri.github.io/calcite-web/type/#content-face
+//  ↳ type → _content-face.md
 
-@mixin body-face() {
-  @include tracking($body-tracking);
-  font-family: $body-family; font-weight: 300; font-style: normal;
+@mixin content-face() {
+  @include tracking($content-tracking);
+  font-family: $content-family; font-weight: 300; font-style: normal;
   b, strong {font-weight: 500;}
 }
 
-@mixin body-italic() {
-  @include tracking($body-tracking);
-  font-family: $body-family; font-weight: 300; font-style: italic;
+@mixin content-italic() {
+  @include tracking($content-tracking);
+  font-family: $content-family; font-weight: 300; font-style: italic;
   b, strong {font-weight: 500;}
 }
 
-@mixin body-bold() {
-  @include tracking($body-tracking);
-  font-family: $body-family; font-weight: 500; font-style: normal;
+@mixin content-bold() {
+  @include tracking($content-tracking);
+  font-family: $content-family; font-weight: 500; font-style: normal;
   b, strong {font-weight: 500;}
 }
 
-@mixin body-bold-italic() {
-  @include tracking($body-tracking);
-  font-family: $body-family; font-weight: 500; font-style: italic;
+@mixin content-bold-italic() {
+  @include tracking($content-tracking);
+  font-family: $content-family; font-weight: 500; font-style: italic;
   b, strong {font-weight: 500;}
 }
 
@@ -144,11 +144,11 @@
     .header-bold-italic {@include header-bold-italic();}
   }
 
-  @if $include-body-family == true {
-    .body-face {@include body-face();}
-    .body-italic {@include body-italic();}
-    .body-bold {@include body-bold();}
-    .body-bold-italic {@include body-bold-italic();}
+  @if $include-content-family == true {
+    .content-face {@include content-face();}
+    .content-italic {@include content-italic();}
+    .content-bold {@include content-bold();}
+    .content-bold-italic {@include content-bold-italic();}
   }
 
   @if $include-secondary-family == true {

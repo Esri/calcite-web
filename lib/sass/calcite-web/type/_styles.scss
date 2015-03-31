@@ -7,9 +7,10 @@
   }
 
   @if $include-header-family == true {
+
     body {
-      @include body-face();
-      @include font-size(0);
+      @include header-light();
+      @include font-size(1);
       line-height: $baseline;
       color: $type-color;
 
@@ -27,15 +28,6 @@
        -o-font-feature-settings : "liga" 1,"calt" 0;
        font-feature-settings : "liga" 1,"calt" 0;
     }
-  }
-
-  @if $include-header-family == true {
-    h1    {@include font-size(5);}
-    h2    {@include font-size(4);}
-    h3    {@include font-size(3);}
-    h4    {@include font-size(2); @extend .header-demi;}
-    h5    {@include font-size(1); @extend .header-demi;}
-    h6    {@include font-size(0); @extend .header-demi;}
 
     h1,
     h2,
@@ -43,17 +35,24 @@
     h4,
     h5,
     h6 {
-      @extend .header-face;
+      // @extend .header-light;
       margin: 0 0 $baseline 0;
     }
 
-    h1.header-light,
-    h2.header-light,
-    h3.header-light {
-      font-weight: 300;
-      b, strong {font-weight: 400;}
-    }
+    h1 {@include font-size(5);}
+    h2 {@include font-size(4);}
+    h3 {@include font-size(3);}
+    h4 {@include font-size(2); @extend .header-face;}
+    h5 {@include font-size(1); @extend .header-face;}
+    h6 {@include font-size(0); @extend .header-face:}
+
   }
+  }
+
+
+  @if $include-content-family == true {
+  }
+
 
   @if $include-code-family == true {
     code, kbd, pre, samp {
