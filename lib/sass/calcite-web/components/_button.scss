@@ -18,7 +18,6 @@
   white-space: nowrap;
   @if $include-type {
     @include font-size(-1);
-    font-family: $header-family;
     font-weight: 400;
   }
   &:hover, &:focus {
