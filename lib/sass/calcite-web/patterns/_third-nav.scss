@@ -4,7 +4,7 @@
 //  ↳ http://esri.github.io/calcite-web/patterns/#third-nav
 //  ↳ patterns → _third-nav.md
 @mixin third-nav() {
-  @extend .header-face;
+  @extend .avenir-regular;
   border-bottom: 1px solid $lightest-gray;
   background-color: $white;
   padding: $baseline/4 0;
@@ -19,7 +19,7 @@
     @include font-size(-2);
     margin-right: $baseline * 0.75;
     &.is-active {
-      @extend .header-bold;
+      @extend .avenir-bold;
     }
   }
 

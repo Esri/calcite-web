@@ -21,7 +21,7 @@ Now in your project, you still have access to type mixins like `word-spacing()` 
 | `$fold-grid`                | Responsive grid classes and media queries                                |
 | `$block-grid`               | Block grid classes and media queries                                     |
 | `$include-type`             | All type related classes                                                 |
-| `$include-header-family`    | Header family classes                                                    |
+| `$include-avenir-family`    | Header family classes                                                    |
 | `$include-body-family`      | Body family classes                                                      |
 | `$include-secondary-family` | Secondary family classes                                                 |
 | `$include-code-family`      | Code family classes                                                      |

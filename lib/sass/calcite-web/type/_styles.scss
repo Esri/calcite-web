@@ -7,7 +7,7 @@
   }
 
   body {
-    @include header-light();
+    @include avenir-light();
     @include font-size(0);
     line-height: $baseline;
     color: $type-color;
@@ -33,7 +33,7 @@
   h4,
   h5,
   h6 {
-    @extend .header-light;
+    @extend .avenir-light;
     margin: 0 0 $baseline 0;
   }
 
@@ -84,7 +84,7 @@
 
   blockquote {
     margin: $baseline 0;
-    @include header-face();
+    @include avenir-regular();
     @include gutter-left(1);
     border-left: 3px solid $lighter-gray;
     color: $darker-gray;
