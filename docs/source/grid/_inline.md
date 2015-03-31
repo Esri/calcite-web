@@ -1,3 +1,3 @@
 ## Inline
 
-Adds `display: inline-block` to element.
+Adds `display: inline-block` to an element.
