@@ -3,9 +3,11 @@
 ### Modified
 - Alerts now are colored better, higher z-index, and subtle drop shadow
 - Sass now rendered with [grunt-sass](https://github.com/sindresorhus/grunt-sass)
+- Panels work with columns
 
 ### Added
 - `.table-blue.table-striped`
+- Additional panel options
 
 ## v0.0.10
 
