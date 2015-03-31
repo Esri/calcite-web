@@ -64,37 +64,36 @@ $delay: 0.16s;
   }
 }
 
-@-webkit-keyframes load {
-  0%,
-  80%,
-  100% {
-    box-shadow: 0 0 $light-blue;
-    background: $light-blue;
-    height: $height;
-  }
-  40% {
-    box-shadow: 0 -1*$zoom $blue;
-    background: $blue;
-    height: $height+$zoom;
-  }
-}
-@keyframes load {
-  0%,
-  80%,
-  100% {
-    box-shadow: 0 0 $blue;
-    background: $light-blue;
-    height: $height;
-  }
-  40% {
-    box-shadow: 0 -1*$zoom $blue;
-    background: $blue;
-    height: $height+$zoom;
-  }
-}
-
-
 @if $include-loader == true {
+  @-webkit-keyframes load {
+    0%,
+    80%,
+    100% {
+      box-shadow: 0 0 $light-blue;
+      background: $light-blue;
+      height: $height;
+    }
+    40% {
+      box-shadow: 0 -1*$zoom $blue;
+      background: $blue;
+      height: $height+$zoom;
+    }
+  }
+  @keyframes load {
+    0%,
+    80%,
+    100% {
+      box-shadow: 0 0 $blue;
+      background: $light-blue;
+      height: $height;
+    }
+    40% {
+      box-shadow: 0 -1*$zoom $blue;
+      background: $blue;
+      height: $height+$zoom;
+    }
+  }
+
   .loader {@include loader();}
     .loader-bars {@include loader-bars()}
     .loader-text {@include loader-text()}
