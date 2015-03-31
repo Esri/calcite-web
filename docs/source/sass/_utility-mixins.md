@@ -2,9 +2,9 @@
 
 Utility mixins are used to construct complicated behaviors for [components](../components) and [patterns](../patterns), provide baseline functionality for doc elements, and take care of browser prefixing.
 
-Most utility mixins are borrowed from [Bourbon](http://bourbon.io/). Where mixins share a name, they are the same code base.
+Most utility mixins are borrowed from [Bourbon](http://bourbon.io/). If mixins share a name, then they share the same code base.
 
-Use the utility mixins inside the selector you with to apply the styles to, passing the arguments in if required. For example, to apply a clearfix to an element with the class `.my-div`, the use the following SASS:
+Use the utility mixins inside the selector you wish to apply the styles to, passing the arguments in if required. For example, to apply a clearfix to an element with the class `.my-div`, the use the following Sass:
 
 ```scss
 .my-div {

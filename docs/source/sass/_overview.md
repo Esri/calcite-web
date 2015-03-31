@@ -1,12 +1,12 @@
 <h1 class="leader-0" id="overview">SASS</h1>
 
-Using Calcite Web as a SASS library is very powerful. After you successfully import the library (see [the getting started page](../) you can fully customize and use all of the Calcite Web Framework.
+Using Calcite Web as a Sass library is very powerful. After you successfully import the library (see [the getting started page](../) you can fully customize and use all of the Calcite Web Framework.
 
 ## Custom Build
 
 Calcite comes with the ability to only generate the css you actually need for your project. Class generation is controlled by setting the following variables to `true` or `false`. Setting all of these variables to `false` will prevent Calcite Web from generating **any** css classes while still exposing the complete set of mixins.
 
-For example, if didn't want to export the css for any of the type helpers, you would simply set the `$include-type` variable to false:
+For example, if didn't want to export the css for any of the type helpers, you would simply set the `$include-type` variable to `false;`
 
 ```
 @import "calcite-web";

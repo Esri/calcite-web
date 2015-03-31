@@ -10,4 +10,4 @@ By default, a large table breaking your layout will horizontally scroll when it 
 </div>
 ```
 
-This causes tables that are too wide for the layout to be constrained and scroll horizontally.
+Tables that are too wide for the layout will be constrained and scroll horizontally.

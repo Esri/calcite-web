@@ -12,8 +12,8 @@ These convenience classes are meant to help with quick responsive layout. Below 
 
 #### Show Helpers
 
-Essentially, the show classes will show that breakpoint and the breakpoint below it. So if you'd like something to be visible only on a phone, you would use `phone-show`. If you used tablet show, the element would be visible on tablet and phone.
+Essentially, the show classes will show that breakpoint and the breakpoint below it. So if you'd like something to be visible only on a phone, you would use `phone-show`. If you used `tablet-show`, the element would be visible on tablet and phone.
 
 #### Hide Helpers
 
-Hide helpers are very similar to show. A responsive hide class will hide that breakpoint and the breakpoint below it. So if you wanted something to be visible on only desktop, you could use `tablet-hide`, hiding the element on tablet and phone. Or if you wanted something to be hidden only on a phone, `phone-hide` would hide it on the phone only.
+Hide helpers are very similar to show helpers. A responsive hide class will hide that breakpoint and the breakpoint below it. So if you wanted something to be visible on only desktop, you could use `tablet-hide`, hiding the element on tablet and phone. Or if you wanted something to be hidden only on a phone, `phone-hide` would hide it on the phone only.
