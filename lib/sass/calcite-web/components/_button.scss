@@ -132,7 +132,6 @@
   .btn-arrow       { @include btn-arrow();}
   .btn-transparent { @include btn-transparent();}
   .btn-clear       { @include btn-clear();}
-  .btn-clear-gray  { @include btn-clear-gray();}
   .btn-clear-white { @include btn-clear-white();}
   .btn-small       { @include btn-small();}
   .btn-large       { @include btn-large();}
@@ -141,16 +140,7 @@
   .btn-red         { @include btn-color($red, $dark-red);}
   .btn-green       { @include btn-color($green, $dark-green);}
   .btn-blue        { @include btn-color($blue, $dark-blue);}
-  // .btn-purple      { @include btn-color($purple, $dark-purple);}
   .btn-orange      { @include btn-color($orange, $dark-orange);}
-  // .btn-brown       { @include btn-color($brown, $dark-brown);}
-  // .btn-white       { @include btn-color($white, $lightest-gray);}
-  // .btn-light-gray  { @include btn-color($light-gray, $gray);}
-  // .btn-gray        { @include btn-color($gray, $dark-gray);}
-  // .btn-dark-gray   { @include btn-color($dark-gray, $darker-gray);}
-  // .btn-darker-gray { @include btn-color($darker-gray, $darkest-gray);}
-  // .btn-darkest-gray { @include btn-color($darkest-gray, $off-black);}
-  // .btn-off-black   { @include btn-color($off-black, $black);}
 
 
   .btn:disabled, .btn-disabled, button[disabled] {@include btn-disabled();}
