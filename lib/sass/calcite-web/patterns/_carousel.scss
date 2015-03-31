@@ -4,43 +4,53 @@
 //  ↳ http://esri.github.io/calcite-web/patterns/#carousel
 //  ↳ patterns → _carousel.md
 
-.carousel {
+@mixin carousel() {
   overflow-x: hidden;
   position: relative;
 }
 
-.carousel-slides {
-  @include transform(translate3d(0,0,0));
-  @include transition-prefixed(transform $transition);
-}
+  @mixin carousel-slides() {
+    @include transform(translate3d(0,0,0));
+    @include transition-prefixed(transform $transition);
+  }
 
-.carousel-slide {
-  position: relative;
-  float: left;
-  height: 100%;
-}
+  @mixin carousel-slide() {
+    position: relative;
+    float: left;
+    height: 100%;
+  }
 
-// Next and Prev Buttons
-.carousel-prev {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  margin-top: -$baseline/2;
-  width: $baseline;
-  height: $baseline;
-  text-align: center;
-  color: $white;
-  background: $transparent-black;
-  z-index: 10;
-}
+  // Next and Prev Buttons
+  %carousel-button {
+    position: absolute;
+    top: 50%;
+    margin-top: -$baseline/2;
+    width: $baseline;
+    height: $baseline;
+    text-align: center;
+    color: $white;
+    background: $transparent-black;
+    z-index: 10;
+  }
 
-.carousel-next {
-  @extend .carousel-prev;
-  left: auto;
-  right: 0;
-}
+  @mixin carousel-prev() {
+    @extend %carousel-button;
+    left: 0;
+  }
 
-.is-first-slide.carousel-prev, .is-last-slide.carousel-next {
-  pointer-events: none;
-  opacity: 0.2;
+  @mixin carousel-next() {
+    @extend %carousel-button;
+    right: 0;
+  }
+
+@if $include-carousel == true {
+.carousel { @include carousel()}
+  .carousel-slides { @include carousel-slides()}
+  .carousel-slide { @include carousel-slide()}
+  .carousel-prev { @include carousel-prev()}
+  .carousel-next   { @include carousel-next()}
+    .is-first-slide.carousel-prev, .is-last-slide.carousel-next {
+      pointer-events: none;
+      opacity: 0.2;
+    }
 }
