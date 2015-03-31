@@ -8,5 +8,5 @@ $link-color: $blue;
 $link-hover: $light-blue;
 ```
 
-In writing SASS it's often easier to remember `$type-color` is the color of type than it is to remember the specific grayscale value that is the default for type.
+In writing Sass it's often easier to remember `$type-color` is the color of type than it is to remember the specific grayscale value that is the default for type.
 
