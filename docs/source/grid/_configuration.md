@@ -1,6 +1,6 @@
 ## Configuration
 
-If you are using Calcite Web as a SASS library, you can customize the grid with SASS variables. Below are the different settings you have access to and their default values:
+If you are using Calcite Web as a Sass library, you can customize the grid with Sass variables. Below are the different settings you have access to and their default values:
 
 | Variable                    | Default              | Description                                       |
 | --------------------------- | ------------------   | ------------------------------------------------- |
@@ -23,7 +23,7 @@ If you are using Calcite Web as a SASS library, you can customize the grid with 
 | `$vertical-range`           | 6                    | How many leader and trailer classes to generate   |
 
 
-In your own project, you can override these values to create a custom, project-specific grid. For example, to use a 16 column grid instead of the default 24 columns, you would set the `$large-column-count` variable after importing the library:
+You can override these values to create a custom, project-specific grid in your own project. For example, to use a 16 column grid instead of the default 24 columns, you would set the `$large-column-count` variable after importing the library:
 
 ```
 @import calcite-web;
