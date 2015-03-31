@@ -132,17 +132,15 @@
 }
 
 @if $include-type == true {
+  .header-light {@include header-light();}
+  .header-light-italic {@include header-light-italic();}
+  .header-face {@include header-face();}
+  .header-italic {@include header-italic();}
+  .header-demi {@include header-demi();}
+  .header-demi-italic {@include header-demi-italic();}
+  .header-bold {@include header-bold();}
+  .header-bold-italic {@include header-bold-italic();}
 
-  @if $include-header-family == true {
-    .header-light {@include header-light();}
-    .header-light-italic {@include header-light-italic();}
-    .header-face {@include header-face();}
-    .header-italic {@include header-italic();}
-    .header-demi {@include header-demi();}
-    .header-demi-italic {@include header-demi-italic();}
-    .header-bold {@include header-bold();}
-    .header-bold-italic {@include header-bold-italic();}
-  }
 
   @if $include-content-family == true {
     .content-face {@include content-face();}
