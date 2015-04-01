@@ -7,19 +7,19 @@
 @mixin side-nav() {
   @include box-sizing(border-box);
   padding: 0;
-  border: 1px solid $lighter-gray;
+  border: 1px solid $lightest-gray;
   border-top: none;
-  @extend .header-face;
+  @extend .avenir-regular;
   background-color: $white;
 }
 
   @mixin side-nav-title() {
     margin: 0;
     padding: $baseline/3;
-    @extend .header-face;
+    @extend .avenir-regular;
     @include font-size(-1);
     background-color: $off-white;
-    border-top: 1px solid $lighter-gray;
+    border-top: 1px solid $lightest-gray;
   }
 
   @mixin side-nav-link() {

@@ -14,9 +14,8 @@ $include-grid:                        true    !default;
   $block-grid:                        true    !default;
 
 $include-type:                        true    !default;
-  $include-header-family:             true    !default;
-  $include-body-family:               true    !default;
-  $include-secondary-family:          true    !default;
+  $include-content-family:            false   !default;
+  $include-secondary-family:          false    !default;
   $include-code-family:               true    !default;
   $include-type-defaults:             true    !default;
 
@@ -36,6 +35,7 @@ $include-tooltip:                     true    !default;
 $include-forms:                       true    !default;
 $include-loader:                      true    !default;
 $include-search-bar:                  true    !default;
+$include-logo:                        true    !default;
 
 // Patterns
 $include-footer:                      true    !default;
@@ -47,6 +47,7 @@ $include-third-nav:                   true    !default;
 $include-top-nav:                     true    !default;
 $include-super-nav:                   true    !default;
 $include-toolbar:                     true    !default;
+$include-carousel:                    true    !default;
 
 // Javascript
 $include-tabs:                        true    !default;

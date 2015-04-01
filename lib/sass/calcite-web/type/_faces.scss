@@ -1,84 +1,84 @@
 // ┌─────────────┐
 // │ Header Face │
 // └─────────────┘
-//  ↳ http://esri.github.io/calcite-web/type/#header-face
-//  ↳ type → _header-face.md
+//  ↳ http://esri.github.io/calcite-web/type/#avenir-regular
+//  ↳ type → _avenir-regular.md
 
-@mixin header-light() {
-  @include tracking($header-tracking);
-  font-family: $header-family; font-weight: 300; font-style: normal;
+@mixin avenir-light() {
+  @include tracking($avenir-tracking);
+  font-family: $avenir-family; font-weight: 300; font-style: normal;
   b, strong {font-weight: 400;}
 }
 
-@mixin header-light-italic() {
-  @include tracking($header-tracking);
-  font-family: $header-family; font-weight: 300; font-style: italic;
+@mixin avenir-light-italic() {
+  @include tracking($avenir-tracking);
+  font-family: $avenir-family; font-weight: 300; font-style: italic;
   b, strong {font-weight: 400;}
 }
 
-@mixin header-face() {
-  @include tracking($header-tracking);
-  font-family: $header-family; font-weight: 400; font-style: normal;
+@mixin avenir-regular() {
+  @include tracking($avenir-tracking);
+  font-family: $avenir-family; font-weight: 400; font-style: normal;
   b, strong {font-weight: 500;}
 }
 
-@mixin header-italic() {
-  @include tracking($header-tracking);
-  font-family: $header-family; font-weight: 400; font-style: italic;
+@mixin avenir-italic() {
+  @include tracking($avenir-tracking);
+  font-family: $avenir-family; font-weight: 400; font-style: italic;
   b, strong {font-weight: 500;}
 }
 
-@mixin header-demi() {
-  @include tracking($header-tracking);
-  font-family: $header-family; font-weight: 500; font-style: normal;
+@mixin avenir-demi() {
+  @include tracking($avenir-tracking);
+  font-family: $avenir-family; font-weight: 500; font-style: normal;
   b, strong {font-weight: 600;}
 }
 
-@mixin header-demi-italic() {
-  @include tracking($header-tracking);
-  font-family: $header-family; font-weight: 500; font-style: italic;
+@mixin avenir-demi-italic() {
+  @include tracking($avenir-tracking);
+  font-family: $avenir-family; font-weight: 500; font-style: italic;
   b, strong {font-weight: 600;}
 }
 
-@mixin header-bold() {
-  @include tracking($header-tracking);
-  font-family: $header-family; font-weight: 600; font-style: normal;
+@mixin avenir-bold() {
+  @include tracking($avenir-tracking);
+  font-family: $avenir-family; font-weight: 600; font-style: normal;
   b, strong {font-weight: 600;}
 }
 
-@mixin header-bold-italic() {
-  @include tracking($header-tracking);
-  font-family: $header-family; font-weight: 600; font-style: italic;
+@mixin avenir-bold-italic() {
+  @include tracking($avenir-tracking);
+  font-family: $avenir-family; font-weight: 600; font-style: italic;
   b, strong {font-weight: 600;}
 }
 
 // ┌───────────┐
 // │ Body Face │
 // └───────────┘
-//  ↳ http://esri.github.io/calcite-web/type/#body-face
-//  ↳ type → _body-face.md
+//  ↳ http://esri.github.io/calcite-web/type/#content-face
+//  ↳ type → _content-face.md
 
-@mixin body-face() {
-  @include tracking($body-tracking);
-  font-family: $body-family; font-weight: 300; font-style: normal;
+@mixin content-face() {
+  @include tracking($content-tracking);
+  font-family: $content-family; font-weight: 300; font-style: normal;
   b, strong {font-weight: 500;}
 }
 
-@mixin body-italic() {
-  @include tracking($body-tracking);
-  font-family: $body-family; font-weight: 300; font-style: italic;
+@mixin content-italic() {
+  @include tracking($content-tracking);
+  font-family: $content-family; font-weight: 300; font-style: italic;
   b, strong {font-weight: 500;}
 }
 
-@mixin body-bold() {
-  @include tracking($body-tracking);
-  font-family: $body-family; font-weight: 500; font-style: normal;
+@mixin content-bold() {
+  @include tracking($content-tracking);
+  font-family: $content-family; font-weight: 500; font-style: normal;
   b, strong {font-weight: 500;}
 }
 
-@mixin body-bold-italic() {
-  @include tracking($body-tracking);
-  font-family: $body-family; font-weight: 500; font-style: italic;
+@mixin content-bold-italic() {
+  @include tracking($content-tracking);
+  font-family: $content-family; font-weight: 500; font-style: italic;
   b, strong {font-weight: 500;}
 }
 
@@ -132,23 +132,21 @@
 }
 
 @if $include-type == true {
+  .avenir-light {@include avenir-light();}
+  .avenir-light-italic {@include avenir-light-italic();}
+  .avenir-regular {@include avenir-regular();}
+  .avenir-italic {@include avenir-italic();}
+  .avenir-demi {@include avenir-demi();}
+  .avenir-demi-italic {@include avenir-demi-italic();}
+  .avenir-bold {@include avenir-bold();}
+  .avenir-bold-italic {@include avenir-bold-italic();}
 
-  @if $include-header-family == true {
-    .header-light {@include header-light();}
-    .header-light-italic {@include header-light-italic();}
-    .header-face {@include header-face();}
-    .header-italic {@include header-italic();}
-    .header-demi {@include header-demi();}
-    .header-demi-italic {@include header-demi-italic();}
-    .header-bold {@include header-bold();}
-    .header-bold-italic {@include header-bold-italic();}
-  }
 
-  @if $include-body-family == true {
-    .body-face {@include body-face();}
-    .body-italic {@include body-italic();}
-    .body-bold {@include body-bold();}
-    .body-bold-italic {@include body-bold-italic();}
+  @if $include-content-family == true {
+    .content-face {@include content-face();}
+    .content-italic {@include content-italic();}
+    .content-bold {@include content-bold();}
+    .content-bold-italic {@include content-bold-italic();}
   }
 
   @if $include-secondary-family == true {
@@ -158,7 +156,7 @@
     .secondary-bold-italic {@include secondary-bold-italic();}
   }
 
-  @if $include-header-family == true {
+  @if $include-avenir-family == true {
     .code-face {@include code-face();}
     .code-italic {@include code-italic();}
   }

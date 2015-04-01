@@ -40,16 +40,19 @@
     <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
       <nav class="drawer-nav">
         <aside class="side-nav">
-          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Esri Patterns</h2>
+          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
             <label class="trailer-0">
               <input type='search' placeholder='Search'>
             </label>
           </div>
-          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Branding</a>
-          <a href="{{relativePath}}" class="side-nav-link padding-trailer-half padding-leader-half">Web</a>
-          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Mobile</a>
-          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Presentations</a>
+            {% for title, sec in table_of_contents %}
+              {% if sec.base == "get-started" %}
+                <a href="{{relativePath}}" class="side-nav-link">{{ sec.title }}</a>
+              {% else %}
+                <a href="{{relativePath}}{{sec.base}}" class="side-nav-link">{{ sec.title }}</a>
+              {% endif %}
+            {% endfor %}
         </aside>
       </nav>
     </div>
@@ -57,16 +60,19 @@
     <div class="drawer drawer-right js-drawer" data-drawer="right">
       <nav class="drawer-nav">
         <aside class="side-nav">
-          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Esri Patterns</h2>
+          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
             <label class="trailer-0">
               <input type='search' placeholder='Search'>
             </label>
           </div>
-          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Branding</a>
-          <a href="{{relativePath}}" class="side-nav-link padding-trailer-half padding-leader-half">Web</a>
-          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Mobile</a>
-          <a href="#" class="side-nav-link padding-trailer-half padding-leader-half">Presentations</a>
+            {% for title, sec in table_of_contents %}
+              {% if sec.base == "get-started" %}
+                <a href="{{relativePath}}" class="side-nav-link">{{ sec.title }}</a>
+              {% else %}
+                <a href="{{relativePath}}{{sec.base}}" class="side-nav-link">{{ sec.title }}</a>
+              {% endif %}
+            {% endfor %}
         </aside>
       </nav>
     </div>
@@ -76,23 +82,20 @@
       <header class="top-nav">
         <div class="container">
           <div class="tablet-hide">
-            <a href="#" class="top-nav-title">Esri Patterns</a>
+            <a href="#" class="top-nav-title">Calcite Web</a>
             <nav class="top-nav-list">
-              <a class="top-nav-link" href="#">Branding</a>
-              <a class="top-nav-link is-active" href="#">Web</a>
-              <a class="top-nav-link" href="#">Mobile</a>
-              <a class="top-nav-link" href="#">Presentations</a>
-              <a class="top-nav-link js-expanding-toggle" data-expanding-nav="one" href="#">One</a>
-              <a class="top-nav-link js-expanding-toggle" data-expanding-nav="two" href="#">Two</a>
+            {% for title, sec in table_of_contents %}
+              {% if sec.base == "get-started" %}
+                <a href="{{relativePath}}" class="top-nav-link">{{ sec.title }}</a>
+              {% else %}
+                <a href="{{relativePath}}{{sec.base}}" class="top-nav-link">{{ sec.title }}</a>
+              {% endif %}
+            {% endfor %}
             </nav>
           </div>
           <div class="tablet-show">
-            <a href="#" class="top-nav-title js-drawer-toggle" data-drawer="top-nav">☰ Esri Patterns</a>
+            <a href="#" class="top-nav-title js-drawer-toggle" data-drawer="top-nav">☰ Calcite Web</a>
           </div>
-          <nav class="sign-in">
-            <a href="#" class="btn btn-small btn-clear">Sign Up</a>
-            <a href="#" class="btn btn-small btn-transparent">Sign In</a>
-          </nav>
         </div>
       </header>
       <div class="expanding-nav js-expanding">
@@ -110,45 +113,11 @@
       <!-- Secondary Nav Pattern -->
       <header class="sub-nav">
         <div class="container">
-          <h1 class="sub-nav-title"><a href="{{relativePath}}" class="link-white">Web</a></h1>
+          <h1 class="sub-nav-title text-white">{{ table_of_contents[section].title }}</h1>
           <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-orange btn-arrow right leader-1">Latest Release</a>
-          <div class="phone-show dropdown column-6 trailer-half js-dropdown-toggle">
-            <a href="#" class="link-white">Calcite Web &darr;</a>
-            <nav class="dropdown-menu js-dropdown sidenav">
-              <a class="side-nav-link is-active" href="{{relativePath}}">Calcite Web</a>
-              <a class="side-nav-link" href="#">Calcite Dojo</a>
-              <a class="side-nav-link" href="#">Calcite Bootstrap</a>
-            </nav>
-          </div>
-          <nav class="sub-nav-list phone-hide">
-            <a class="sub-nav-link is-active" href="{{relativePath}}">Calcite Web</a>
-            <a class="sub-nav-link" href="#">Calcite Dojo</a>
-            <a class="sub-nav-link" href="#">Calcite Bootstrap</a>
-          </nav>
         </div>
       </header>
 
-      <!-- Third Nav Pattern -->
-      <header class="third-nav js-sticky" data-top="0">
-        <div class="container">
-          <nav>
-            {% for title, sec in table_of_contents %}
-              {% if sec.base == "get-started" %}
-                <a href="{{relativePath}}" class="third-nav-link">{{ sec.title }}</a>
-              {% else %}
-                <a href="{{relativePath}}{{sec.base}}" class="third-nav-link">{{ sec.title }}</a>
-              {% endif %}
-            {% endfor %}
-          </nav>
-        </div>
-      </header>
-      <!-- Site Search Pattern -->
-      <!-- <div class="site-search">
-        <form action="/search/" class="site-search">
-          <input class="site-search-input js-seach-toggle is-active" type="search" name="q" placeholder="Search">
-          <button type="submit" class="site-search-button">Go</button>
-        </form>
-      </div> -->
 
       <!-- content of each page will go here -->
       <div class="container leader-1">
@@ -169,7 +138,7 @@
           </div>
         </div>
 
-        <main class="column-17 pre-1">
+        <main class="column-17 pre-1 content-face">
           {% for group in table_of_contents[section].navigation %}
             {% for page in group.pages %}
               <section class="trailer-2">
@@ -229,7 +198,7 @@
     {% block footer %}
 
     <!-- Footer Pattern -->
-    <footer class="footer header-face leader-3">
+    <footer class="footer leader-3">
       <div class="container">
           <nav class="column-6">
             <h6>Arc<span>GIS</span></h6>

@@ -5,7 +5,7 @@
 //  ↳ components → _searchbar.md
 @mixin search-bar() {
   @include box-sizing(border-box);
-  @extend .header-face;
+  @extend .avenir-regular;
   position: relative;
   input[type="search"], input[type="text"] {
     padding-right: 4.25em;

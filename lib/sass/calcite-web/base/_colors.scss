@@ -1,3 +1,6 @@
+
+@import 'variables.scss';
+
 // ┌───────────┐
 // │ Grayscale │
 // └───────────┘
@@ -5,16 +8,16 @@
 //  ↳ color → _grayscale.md
 
 $white:                 hsl(0, 0, 100);
-$off-white:             hsl(0, 0, 98);
-$lightest-gray:         hsl(0, 0, 95);
-$lighter-gray:          hsl(0, 0, 90);
-$light-gray:            hsl(0, 0, 84);
-$gray:                  hsl(0, 0, 78);
-$dark-gray:             hsl(0, 0, 64);
-$darker-gray:           hsl(0, 0, 49);
-$darkest-gray:          hsl(0, 0, 34);
-$off-black:             hsl(0, 0, 25);
-$black:                 hsl(0, 0, 19);
+$off-white:             $Calcite_Gray_100;
+$lightest-gray:         $Calcite_Gray_200;
+$lighter-gray:          $Calcite_Gray_350;
+$light-gray:            $Calcite_Gray_400;
+$gray:                  $Calcite_Gray_450;
+$dark-gray:             $Calcite_Gray_500;
+$darker-gray:           $Calcite_Gray_550;
+$darkest-gray:          $Calcite_Gray_600;
+$off-black:             $Calcite_Gray_650;
+$black:                 $Calcite_Gray_700;
 
 $transparent-off-black: rgba(0, 0, 0, 0.45);
 $transparent-black:     rgba(0, 0, 0, 0.75);
@@ -26,38 +29,38 @@ $transparent-black:     rgba(0, 0, 0, 0.75);
 //  ↳ color → _ui-colors.md
 
 // Blues
-$lightest-blue:         #E1F0FB;
-$lighter-blue:          #D1E9F9;
-$light-blue:            #7FBBDF;
-$blue:                  #0079C1;
-$dark-blue:             #005E95;
+$lightest-blue:         $Calcite_Blue_100;
+$lighter-blue:          $Calcite_Blue_150;
+$light-blue:            $Calcite_Blue_250;
+$blue:                  $Calcite_Blue_400;
+$dark-blue:             $Calcite_Blue_450;
 
 // Greens
-$light-green:           #9BC29D;
-$green:                 #68AA67;
-$dark-green:            #5B945A;
+$light-green:           $Calcite_Green_150;
+$green:                 $Calcite_Green_250;
+$dark-green:            $Calcite_Green_400;
 
 // Reds
-$light-red:             #E5A894;
-$red:                   #C96B4B;
-$dark-red:              #C7552E;
+$light-red:             $Calcite_Red_150;
+$red:                   $Calcite_Red_250;
+$dark-red:              $Calcite_Red_400;
 
 // Oranges
-$light-orange:          #F7CB92;
-$orange:                #EEAA5A;
-$dark-orange:           #E89D48;
+$light-orange:          $Calcite_Orange_150;
+$orange:                $Calcite_Orange_200;
+$dark-orange:           $Calcite_Orange_350;
 
 // Yellows
-$light-yellow:          #EFE498;
-$yellow:                #E5D255;
-$dark-yellow:           #D9C44C;
+$light-yellow:          $Calcite_Yellow_150;
+$yellow:                $Calcite_Yellow_200;
+$dark-yellow:           $Calcite_Yellow_350;
 
 // Purples
-$light-purple:          #C5BDDD;
-$purple:                #9182BD;
-$dark-purple:           #7C6CA8;
+$light-purple:          $Calcite_Purple_150;
+$purple:                $Calcite_Purple_200;
+$dark-purple:           $Calcite_Purple_350;
 
 // Browns
-$light-brown:           #D3B490;
-$brown:                 #B88A55;
-$dark-brown:            #A67947;
+$light-brown:           $Calcite_Brown_150;
+$brown:                 $Calcite_Brown_250;
+$dark-brown:            $Calcite_Brown_400;

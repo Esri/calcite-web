@@ -42,15 +42,15 @@ type:
           link: overview
         - title: 'Header Face'
           id: '6918aafb-dbc4-4508-b73a-01cc4711af1d'
-          link: header-face
+          link: avenir-regular
           modifiers:
-            - header-light
-            - header-light-italic
-            - header-face
-            - header-italic
-            - header-demi
-            - header-demi-italic
-            - header-bold-italic
+            - avenir-light
+            - avenir-light-italic
+            - avenir-regular
+            - avenir-italic
+            - avenir-demi
+            - avenir-demi-italic
+            - avenir-bold-italic
         - title: 'Body Face'
           id: 'd8652d8a-f86e-4aae-be91-a0e496ca96fc'
           link: body-face
@@ -357,7 +357,6 @@ components:
             - btn-arrow
             - btn-transparent
             - btn-clear
-            - btn-clear-gray
             - btn-clear-white
             - btn-small
             - btn-large
@@ -366,16 +365,7 @@ components:
             - btn-red
             - btn-green
             - btn-blue
-            - btn-purple
             - btn-orange
-            - btn-brown
-            - btn-white
-            - btn-light-gray
-            - btn-gray
-            - btn-dark-gray
-            - btn-darker-gray
-            - btn-darkest-gray
-            - btn-off-black
         - title: 'Button Groups'
           id: 'd6b176ee-cc95-45f8-8db9-a3f557bac4d9'
           link: button-groups
@@ -399,8 +389,14 @@ components:
           id: '6c29e0a4-4e14-4c98-9edf-1d348ce6f553'
           link: panels
           modifiers:
-            - panel-dark
+            - panel-padded
+            - panel-bordered
             - panel-white
+            - panel-off-white
+            - panel-dark
+            - panel-dark-blue
+            - panel-blue
+            - panel-light-blue
         - title: 'Breadcrumbs'
           id: 'f6281457-56ae-4edd-bd23-149531e9a731'
           link: breadcrumbs

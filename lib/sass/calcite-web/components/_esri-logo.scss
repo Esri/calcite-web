@@ -31,7 +31,8 @@
 }
 
 
-
-.esri-logo {@include esri-logo();}
-.esri-logo-reverse {@include esri-logo-reverse();}
-.esri-logo-condensed {@include esri-logo-condensed();}
+@if $include-logo == true {
+  .esri-logo {@include esri-logo();}
+  .esri-logo-reverse {@include esri-logo-reverse();}
+  .esri-logo-condensed {@include esri-logo-condensed();}
+}

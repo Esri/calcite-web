@@ -98,7 +98,7 @@
     position: relative;
     margin-bottom: 0.75em;
     &:before {
-      @include header-light();
+      @include avenir-light();
       content: counter(li);
       counter-increment: li;
       position: absolute;

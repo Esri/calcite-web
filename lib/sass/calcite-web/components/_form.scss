@@ -26,7 +26,6 @@
 
   label, legend {
     display: block;
-    @extend .header-light;
     @include font-size(0);
     margin: 0 0 $baseline 0;
   }
@@ -70,7 +69,7 @@
     display: inline-block;
     padding: $baseline / 5;
     @include font-size(-1);
-    @extend .header-face;
+    @extend .avenir-regular;
     color: $darkest-gray;
     border: 1px solid $light-gray;
     border-radius: 0;
@@ -151,7 +150,7 @@
     width: auto;
     height: $baseline * 1.5;
     @include font-size(-1);
-    @extend .header-face;
+    @extend .avenir-regular;
     border: 1px solid $light-gray;
     background-color: $lightest-gray;
     &:focus {
