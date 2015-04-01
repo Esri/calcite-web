@@ -20,13 +20,23 @@ gem "calcite-web", :git => "https://github.com/Esri/calcite-web.git", :tag => "c
 
 Be sure to use the replace `current.tag.version` with [the most up to date tag](https://github.com/Esri/calcite-web/releases).
 
-Then in your project's sass file, just import it:
+This makes Calcite Web available as a Compass extension. To use Calcite Web, make sure you require the gem in your compass config file (usually found at `config/compass.rb`). an example config file might look like this:
+
+```ruby
+require 'calcite-web'
+
+css_dir = "stylesheets"
+sass_dir = "sass"
+```
+
+Then in your project's sass files, just import it:
 
 ```
 @import "calcite-web";
 ```
 
-That will give you everything including sass utilities. You will also need to copy over the JavaScript and image assets to your static folder (see above).
+That will give you everything including sass utilities. You will also need to copy over the JavaScript and image assets to your static folder (see above). If you're installing Calcite Web as a gem, it will automatically inc
+
 
 ## NPM
 

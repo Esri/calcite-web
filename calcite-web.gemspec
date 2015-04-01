@@ -12,5 +12,5 @@ Gem::Specification.new do |s|
   s.files       = ["lib/calcite-web.rb"]
   s.homepage    = package["homepage"]
 
-  s.add_dependency "sass", "~> 3.4.1"
+  s.add_dependency "compass", "~> 1.0.3"
 end
