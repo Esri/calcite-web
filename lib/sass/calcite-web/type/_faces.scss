@@ -156,8 +156,7 @@
     .secondary-bold-italic {@include secondary-bold-italic();}
   }
 
-  @if $include-avenir-family == true {
-    .code-face {@include code-face();}
-    .code-italic {@include code-italic();}
-  }
+  .code-face {@include code-face();}
+  .code-italic {@include code-italic();}
+
 }
