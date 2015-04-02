@@ -1,4 +1,4 @@
-## v0.0.11
+## 0.0.11
 
 ### Modified
 - Alerts now are colored better, higher z-index, and subtle drop shadow
@@ -13,12 +13,12 @@
 - `.table-blue.table-striped`
 - Additional panel options
 
-## v0.0.10
+## 0.0.10
 
 ### Modified
 - Change bold styles on body from Frutiger 65 to Frutiger 55
 
-## v0.0.9
+## 0.0.9
 
 Animations, bug fixes, and general cleanup.
 
@@ -38,7 +38,7 @@ section
 - Assets uploaded to s3 on release
 - Deploy script works from grunt
 
-## v0.0.8
+## 0.0.8
 
 Sample page layouts, typography.
 
@@ -56,7 +56,7 @@ Sample page layouts, typography.
 - Removed `preventDefault` from `bindDrawer()` function.
 - Small accordion and tab padding tweaks
 
-## v0.0.7
+## 0.0.7
 
 JavaScript, documentation, and more patterns.
 
@@ -81,7 +81,7 @@ JavaScript, documentation, and more patterns.
 ### Removed
 - Color Map
 
-## v0.0.6
+## 0.0.6
 
 More documentation, new JavaScript components, working icon tooling prototype.
 
@@ -103,7 +103,7 @@ More documentation, new JavaScript components, working icon tooling prototype.
 - Tighten panel padding
 - Nav patterns now responsive
 
-## v0.0.5
+## 0.0.5
 
 Forms, table improvements, type changes, in progress icon tooling, more documentation.
 
@@ -132,7 +132,7 @@ Forms, table improvements, type changes, in progress icon tooling, more document
 - Added some usage examples to JS doc
 - Copy editing
 
-## v0.0.4
+## 0.0.4
 
 Documentation and small style additions.
 
@@ -141,7 +141,7 @@ Documentation and small style additions.
 - `img` tags now get max width of 100%
 - Typography documentation
 
-## v0.0.3
+## 0.0.3
 
 Additional styles, beginning documentation site.
 
@@ -153,7 +153,7 @@ Additional styles, beginning documentation site.
 ### Added
 - `<code>` styles for code blocks and inline code
 
-## v.0.0.2
+## 0.0.2
 
 Lots of foundational styles.
 
@@ -175,7 +175,7 @@ Lots of foundational styles.
 - Leader-Trailer Helpers Cascade Properly
 - Grid troubles
 
-## v0.0.1
+## 0.0.1
 
 Begin foundational sass for the framework.
 
@@ -189,7 +189,7 @@ Begin foundational sass for the framework.
 - Sass Utils
 - Breadcrumbs
 
-## v0.0.0
+## 0.0.0
 
 ### Added
 - Documentation Site

@@ -4,13 +4,6 @@
 // Grunt wraps several tasks to ease development
 // runs middleman, deploys the site, and tags new releases
 
-// Gets current version description from CHANGELOG.md
-function findVersion(log) {
-  var newVersion = log.split('## v')[1];
-  var description = newVersion.substring(5,newVersion.length);
-  return description;
-}
-
 // Javascript banner
 var banner = '/* <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
                 '*  <%= pkg.homepage %>\n' +
@@ -18,10 +11,6 @@ var banner = '/* <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.toda
                 '*  Apache 2.0 License */\n';
 
 module.exports = function(grunt) {
-
-  var currentVersion = 'v' + grunt.file.readJSON('package.json').version;
-  var log = grunt.file.read('CHANGELOG.md');
-  var description = findVersion(log);
 
   // Project configuration.
   grunt.initConfig({
@@ -38,8 +27,8 @@ module.exports = function(grunt) {
       }
     },
 
+    // Rebuild site with Acetate
     'acetate': {
-      // Rebuild site with Acetate
       build: {
         config: 'docs/acetate.conf.js'
       }
@@ -224,24 +213,8 @@ module.exports = function(grunt) {
       }
     },
 
-    // Ask for GitHub username and password
+    // Ask for AWS ID and Key
     'prompt': {
-      github: {
-        options: {
-          questions: [
-            {
-              config: 'github-release.options.auth.user',
-              type: 'input',
-              message: 'GitHub username:'
-            },
-            {
-              config: 'github-release.options.auth.password',
-              type: 'password',
-              message: 'GitHub password:'
-            }
-          ]
-        }
-      },
       aws: {
         options: {
           questions: [
@@ -260,25 +233,10 @@ module.exports = function(grunt) {
       }
     },
 
-    // Bump the version on GitHub
-    'github-release': {
-      options: {
-        repository: 'Esri/calcite-web',
-        release: {
-          tag_name: currentVersion,
-          name: currentVersion,
-          body: description,
-          prerelease: true
-        }
-      },
-      files: {
-        src: ['calcite-web.zip']
-      }
-    },
-
-    // Create a JSON record of current documentation
+    // bin scripts
     'exec': {
-      deploy: 'node deploy'
+      deploy: 'node deploy',    // Create a JSON record of current documentation
+      release: 'bin/release.sh' // Create GitHub release that includes dist
     },
 
     // Deploy doc site to gh-pages
@@ -361,11 +319,10 @@ module.exports = function(grunt) {
 
   // Release a new version of the framework
   grunt.registerTask('release', [
-    'prompt:github',
     'prepublish',
     'exec:deploy',
     'compress',
-    'github-release',
+    'exec:release',
     's3'
   ]);
 
