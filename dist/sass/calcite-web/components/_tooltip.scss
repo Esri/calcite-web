@@ -1,0 +1,48 @@
+// ┌──────────┐
+// │ Tooltips │
+// └──────────┘
+//  ↳ http://esri.github.io/calcite-web/components/#tooltips
+//  ↳ components → _tooltips.md
+@if $include-tooltip {
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+
+  .tooltip:before {
+    content: attr(data-message);
+    position: absolute;
+    top: $baseline;
+    left: -6em;
+    width: 12em;
+    padding: $baseline/4 $baseline/2;
+    display: block;
+    @include font-size(-1);
+    @extend .avenir-regular;
+    text-align: center;
+    background-color: $transparent-black;
+    color: $off-white;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 4;
+    @include transition(all, $transition);
+    @include transform(translate3d(0, 4px, 0));
+  }
+
+  .tooltip-left:before {
+    left: 0;
+  }
+
+  .tooltip-right:before {
+    left: auto;
+    right: 0;
+  }
+
+  .tooltip:hover:before {
+    @include transition(all, $transition);
+    @include transform(translate3d(0, 0, 0));
+    opacity: 1;
+  }
+
+}
