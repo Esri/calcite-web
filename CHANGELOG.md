@@ -4,6 +4,10 @@
 - Alerts now are colored better, higher z-index, and subtle drop shadow
 - Sass now rendered with [grunt-sass](https://github.com/sindresorhus/grunt-sass)
 - Panels work with columns
+- Avenir Next Light is default body typeface
+- Avenir no longer variablized
+- `header-face` => `avenir-regular`
+- `body-face` => `content-face`
 
 ### Added
 - `.table-blue.table-striped`
