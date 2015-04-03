@@ -12,6 +12,7 @@
 ### Added
 - `.table-blue.table-striped`
 - Additional panel options
+- .gif fallback for loader component on ie9
 
 ## 0.0.10
 
