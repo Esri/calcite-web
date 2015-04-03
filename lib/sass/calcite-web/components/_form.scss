@@ -30,6 +30,18 @@
     margin: 0 0 $baseline 0;
   }
 
+  label.required {
+    &:after {
+      @include font-size(-3);
+      text-transform: uppercase;
+      content: "required";
+      color: $red;
+      position: absolute;
+      right: $baseline/3;
+      top: $baseline/3;
+    }
+  }
+
   legend {
     margin-bottom: .1rem;
   }
@@ -80,6 +92,23 @@
     }
     &.input-error {
       border-color: $red;
+      &:focus {
+        border-color: $blue;
+      }
+    }
+
+    &.input-warning {
+      border-color: $dark-yellow;
+      &:focus {
+        border-color: $blue;
+      }
+    }
+
+    &.input-success {
+      border-color: $green;
+      &:focus {
+        border-color: $blue;
+      }
     }
   }
 
@@ -160,6 +189,23 @@
 
   .input-error {
     border-color: $red;
+    &:focus {
+      border-color: $blue;
+    }
+  }
+
+  .input-warning {
+    border-color: $dark-yellow;
+    &:focus {
+      border-color: $blue;
+    }
+  }
+
+  .input-success {
+    border-color: $green;
+    &:focus {
+      border-color: $blue;
+    }
   }
 
 }

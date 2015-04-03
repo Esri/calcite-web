@@ -1,6 +1,7 @@
-## 0.0.11
+## 0.1.0
 
 ### Modified
+- `.container` class now `.grid-container`
 - Alerts now are colored better, higher z-index, and subtle drop shadow
 - Sass now rendered with [grunt-sass](https://github.com/sindresorhus/grunt-sass)
 - Panels work with columns
@@ -10,8 +11,16 @@
 - `body-face` => `content-face`
 
 ### Added
+- third nav hover state
+- `label.required`
+- `.input-warning`
+- `.input-success`
 - `.table-blue.table-striped`
 - Additional panel options
+- ie9 bugfixes
+	- .gif fallback for loader component
+	- transform2d for drawers, modals
+
 
 ## 0.0.10
 

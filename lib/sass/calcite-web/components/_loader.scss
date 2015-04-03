@@ -16,6 +16,7 @@ $delay: 0.16s;
   &.is-active {
     display: block;
   }
+
 }
 
 %loader-styles {
@@ -97,4 +98,28 @@ $delay: 0.16s;
   .loader {@include loader();}
     .loader-bars {@include loader-bars()}
     .loader-text {@include loader-text()}
+
+   .ie9 {
+    .loader-bars {
+      position: inherit;
+      background-color: transparent;
+      background-image: url('../img/loader-ie9.gif');
+      background-position: center top;
+      animation: none;
+      -webkit-animation-delay: none;
+      -webkit-animation: none;
+      width: 64px;
+      height: 64px;
+      &:before, &:after {
+        background: none;
+        animation: none;
+        -webkit-animation: none;
+        width: 0px;
+        height: 0px;
+      }
+    }
+    .loader-text {
+      padding-top: 2rem;
+    }
+   }
 }

@@ -38,4 +38,9 @@
 @if $include-modal == true {
   .modal-overlay { @include modal-overlay() ;}
   .modal-content { @include modal-content() ;}
+  .ie9 {
+    .modal-content {
+      -ms-transform:translate(-50%,-50%);
+    }
+  }
 }
