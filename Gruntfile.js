@@ -10,6 +10,8 @@ var banner = '/* <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.toda
                 '*  Copyright (c) <%= grunt.template.today("yyyy") %> Environmental Systems Research Institute, Inc.\n' +
                 '*  Apache 2.0 License */\n';
 
+var currentVersion = require('./package.json').version;
+
 module.exports = function(grunt) {
 
   // Project configuration.
