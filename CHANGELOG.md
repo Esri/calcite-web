@@ -11,6 +11,9 @@
 - `body-face` => `content-face`
 
 ### Added
+- `label.required`
+- `.input-warning`
+- `.input-success`
 - `.table-blue.table-striped`
 - Additional panel options
 - ie9 bugfixes
