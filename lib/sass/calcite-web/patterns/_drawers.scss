@@ -54,4 +54,17 @@ $opacity-transition: opacity 200ms linear;
   .drawer-nav { @include drawer-nav();}
   .drawer-left .drawer-nav  { left: -$drawer-width; }
   .drawer-right .drawer-nav { left: 100%; }
+
+  .ie9 {
+    .drawer {
+      &.is-active {
+        &.drawer-left .drawer-nav {
+          -ms-transform:translate($drawer-width,0);
+        }
+        &.drawer-right .drawer-nav {
+          -ms-transform:translate(-$drawer-width,0);
+        }
+      }
+    }
+  }
 }
