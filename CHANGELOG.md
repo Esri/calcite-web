@@ -11,6 +11,7 @@
 - `body-face` => `content-face`
 
 ### Added
+- third nav hover state
 - `label.required`
 - `.input-warning`
 - `.input-success`
