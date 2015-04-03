@@ -12,7 +12,10 @@
 ### Added
 - `.table-blue.table-striped`
 - Additional panel options
-- .gif fallback for loader component on ie9
+- ie9 bugfixes
+	- .gif fallback for loader component
+	- transform2d for drawers, modals
+
 
 ## 0.0.10
 
