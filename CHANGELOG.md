@@ -1,6 +1,7 @@
-## 0.0.11
+## 0.1.0
 
 ### Modified
+- `.container` class now `.grid-container`
 - Alerts now are colored better, higher z-index, and subtle drop shadow
 - Sass now rendered with [grunt-sass](https://github.com/sindresorhus/grunt-sass)
 - Panels work with columns
