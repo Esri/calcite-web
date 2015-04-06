@@ -237,7 +237,7 @@ module.exports = function(grunt) {
 
     // bin scripts
     'exec': {
-      deploy: 'node deploy',    // Create a JSON record of current documentation
+      deploy: 'node bin/deploy.js',    // Create a JSON record of current documentation
       release: 'bin/release.sh' // Create GitHub release that includes dist
     },
 
