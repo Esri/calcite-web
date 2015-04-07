@@ -1,3 +1,8 @@
+## 0.1.1
+
+### Added
+- Color dependency copied out of `node_modules` and into `lib` on on prepublish.
+
 ## 0.1.0
 
 ### Modified

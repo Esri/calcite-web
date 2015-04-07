@@ -75,7 +75,7 @@ module.exports = function(grunt) {
     },
 
     // Build CSS files from SASS
-    sass: {
+    'sass': {
 
       options: {
         includePaths: ['lib/sass/', 'node_modules/patterns-color/scss']
@@ -126,6 +126,12 @@ module.exports = function(grunt) {
 
     // Copy libsass files to dist, doc assets to build
     'copy': {
+      colors: {
+        expand: true,
+        cwd: 'node_modules/patterns-color/scss/',
+        src: ['variables.scss'],
+        dest: 'lib/sass/calcite-web/base'
+      },
       libsass: {
         expand: true,
         cwd: 'lib/',
