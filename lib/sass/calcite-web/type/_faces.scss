@@ -147,9 +147,6 @@
     .content-italic, .content-italic .block {@include content-italic();}
     .content-bold, .content-bold .block {@include content-bold();}
     .content-bold-italic, .content-bold-italic .block {@include content-bold-italic();}
-    @if $block-grid == true {
-
-    }
   }
 
   @if $include-secondary-family == true {
