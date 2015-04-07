@@ -236,9 +236,13 @@ module.exports = function(grunt) {
     },
 
     // bin scripts
-    'exec': {
-      deploy: 'node bin/deploy.js',    // Create a JSON record of current documentation
-      release: 'bin/release.sh' // Create GitHub release that includes dist
+    'shell': {
+      deploy: {
+        command: 'node bin/deploy.js',    // Create a JSON record of current documentation
+      },
+      release: {
+        command: 'bin/release.sh' // Create GitHub release that includes dist
+      }
     },
 
     // Deploy doc site to gh-pages
@@ -314,7 +318,7 @@ module.exports = function(grunt) {
       'concat:doc',
       'sass:doc',
       'copy:doc',
-      'exec:deploy',
+      'shell:deploy',
       'gh-pages'
     ]);
   });
@@ -322,9 +326,9 @@ module.exports = function(grunt) {
   // Release a new version of the framework
   grunt.registerTask('release', [
     'prepublish',
-    'exec:deploy',
+    'shell:deploy',
     'compress',
-    'exec:release',
+    'shell:release',
     's3'
   ]);
 
