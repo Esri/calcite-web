@@ -132,14 +132,14 @@
 }
 
 @if $include-type == true {
-  .avenir-light, .avenir-light .block {@include avenir-light();}
-  .avenir-light-italic, .avenir-light-italic .block {@include avenir-light-italic();}
-  .avenir-regular, .avenir-regular .block {@include avenir-regular();}
-  .avenir-italic, .avenir-italic .block {@include avenir-italic();}
-  .avenir-demi, .avenir-demi .block {@include avenir-demi();}
-  .avenir-demi-italic, .avenir-demi-italic .block {@include avenir-demi-italic();}
-  .avenir-bold, .avenir-bold .block {@include avenir-bold();}
-  .avenir-bold-italic, .avenir-bold-italic .block {@include avenir-bold-italic();}
+  .avenir-light {@include avenir-light();}
+  .avenir-light-italic {@include avenir-light-italic();}
+  .avenir-regular {@include avenir-regular();}
+  .avenir-italic {@include avenir-italic();}
+  .avenir-demi {@include avenir-demi();}
+  .avenir-demi-italic {@include avenir-demi-italic();}
+  .avenir-bold {@include avenir-bold();}
+  .avenir-bold-italic {@include avenir-bold-italic();}
 
 
   @if $include-content-family == true {
