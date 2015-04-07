@@ -1,7 +1,10 @@
 ## 0.1.1
 
 ### Added
-- Color dependency copied out of `node_modules` and into `lib` on on prepublish.
+- Color dependency copied out of `node_modules` and into `dist` on release.
+
+### Modified
+- `.block` extends new default typeface.
 
 ## 0.1.0
 
