@@ -1,0 +1,215 @@
+@mixin form() {
+
+  // ┌───────┐
+  // │ Forms │
+  // └───────┘
+  //  ↳ http://esri.github.io/calcite-web/components/#form-overview
+  //  ↳ components → _form-overview.md
+  form {
+    @extend %clearfix;
+    margin: 0;
+    padding: 0;
+  }
+
+  fieldset {
+    @extend %clearfix;
+    margin: 0 0 $baseline 0;
+    padding: 0;
+    border: none;
+    display: block;
+    label {
+      margin-bottom: 0;
+      @include font-size(-1);
+      color: $darkest-gray;
+    }
+  }
+
+  label, legend {
+    display: block;
+    @include font-size(0);
+    margin: 0 0 $baseline 0;
+  }
+
+  label.required {
+    &:after {
+      @include font-size(-3);
+      text-transform: uppercase;
+      content: "required";
+      color: $red;
+      position: absolute;
+      right: $baseline/3;
+      top: $baseline/3;
+    }
+  }
+
+  legend {
+    margin-bottom: .1rem;
+  }
+
+  input, select, textarea {
+    @include box-sizing(border-box);
+    display: block;
+    width: 100%;
+    outline: none;
+    outline-offset: 0;
+    vertical-align: baseline;
+    margin: $baseline*.25 0 0 0;
+    &[disabled] {
+      cursor: default;
+    }
+  }
+
+  // ┌─────────────┐
+  // │ Text Inputs │
+  // └─────────────┘
+  //  ↳ http://esri.github.io/calcite-web/components/#text-inputs
+  //  ↳ components → _text-inputs.md
+  input[type='date'],
+  input[type='datetime'],
+  input[type='datetime-local'],
+  input[type='email'],
+  input[type='time'],
+  input[type='week'],
+  input[type='search'],
+  input[type='tel'],
+  input[type='text'],
+  input[type='url'],
+  input[type='number'],
+  input[type='password'],
+  input[type='month'],
+  textarea {
+    display: inline-block;
+    padding: $baseline / 5;
+    @include font-size(-1);
+    @extend .avenir-regular;
+    color: $darkest-gray;
+    border: 1px solid $light-gray;
+    border-radius: 0;
+    @include transition(border-color 150ms linear);
+    -webkit-appearance: textfield;
+    &:focus {
+      border-color: $blue;
+    }
+    &.input-error {
+      border-color: $red;
+      &:focus {
+        border-color: $blue;
+      }
+    }
+
+    &.input-warning {
+      border-color: $dark-yellow;
+      &:focus {
+        border-color: $blue;
+      }
+    }
+
+    &.input-success {
+      border-color: $green;
+      &:focus {
+        border-color: $blue;
+      }
+    }
+  }
+
+  button::-moz-focus-inner,
+  input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+  // ┌─────────────┐
+  // │ Date Inputs │
+  // └─────────────┘
+  input[type='date'],
+  input[type='datetime'],
+  input[type='datetime-local'],
+  input[type='time'],
+  input[type='week'],
+  input[type='month'] {
+    max-height: $baseline * 1.5;
+    &.input-error {
+      border-color: $red;
+    }
+  }
+
+  // ┌───────────────┐
+  // │ Button Inputs │
+  // └───────────────┘
+  //  ↳ http://esri.github.io/calcite-web/components/#button-inputs
+  //  ↳ components → _button-inputs.md
+  input[type='button'],
+  input[type='reset'],
+  input[type='submit'],
+  button {
+    @include btn();
+  }
+
+  input[type="file"]::-webkit-file-upload-button {
+    -webkit-appearance: none;
+    @include btn();
+  }
+
+  ::-ms-browse {
+    @include btn();
+  }
+
+  // ┌────────────────────────────┐
+  // │ Checkboxes & Radio Buttons │
+  // └────────────────────────────┘
+  //  ↳ http://esri.github.io/calcite-web/components/#checkboxes
+  //  ↳ http://esri.github.io/calcite-web/components/#radio-buttons
+  //  ↳ components → _checkboxes.md
+  //  ↳ components → _radio-buttons.md
+  input[type='radio'], input[type='checkbox'] {
+    float: left;
+    width: auto;
+    margin: .3rem .3rem 0 .2rem;
+    &:focus {
+      outline: 1px solid $blue;
+    }
+  }
+
+  // ┌─────────┐
+  // │ Selects │
+  // └─────────┘
+  //  ↳ http://esri.github.io/calcite-web/components/#selects
+  //  ↳ components → _selects.md
+  select {
+    width: auto;
+    height: $baseline * 1.5;
+    @include font-size(-1);
+    @extend .avenir-regular;
+    border: 1px solid $light-gray;
+    background-color: $lightest-gray;
+    &:focus {
+      border-color: $blue;
+    }
+  }
+
+  .input-error {
+    border-color: $red;
+    &:focus {
+      border-color: $blue;
+    }
+  }
+
+  .input-warning {
+    border-color: $dark-yellow;
+    &:focus {
+      border-color: $blue;
+    }
+  }
+
+  .input-success {
+    border-color: $green;
+    &:focus {
+      border-color: $blue;
+    }
+  }
+
+}
+
+@if $include-forms == true {
+  @include form();
+}
