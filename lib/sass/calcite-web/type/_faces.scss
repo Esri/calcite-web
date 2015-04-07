@@ -143,20 +143,20 @@
 
 
   @if $include-content-family == true {
-    .content-face {@include content-face();}
-    .content-italic {@include content-italic();}
-    .content-bold {@include content-bold();}
-    .content-bold-italic {@include content-bold-italic();}
+    .content-face, .content-face .block {@include content-face();}
+    .content-italic, .content-italic .block {@include content-italic();}
+    .content-bold, .content-bold .block {@include content-bold();}
+    .content-bold-italic, .content-bold-italic .block {@include content-bold-italic();}
   }
 
   @if $include-secondary-family == true {
-    .secondary-face {@include secondary-face();}
-    .secondary-italic {@include secondary-italic();}
-    .secondary-bold {@include secondary-bold();}
-    .secondary-bold-italic {@include secondary-bold-italic();}
+    .secondary-face, .secondary-face .block {@include secondary-face();}
+    .secondary-italic, .secondary-italic .block {@include secondary-italic();}
+    .secondary-bold, .secondary-bold .block {@include secondary-bold();}
+    .secondary-bold-italic, .secondary-bold-italic .block {@include secondary-bold-italic();}
   }
 
-  .code-face {@include code-face();}
-  .code-italic {@include code-italic();}
+  .code-face, .code-face .block {@include code-face();}
+  .code-italic, .code-italic .block {@include code-italic();}
 
 }

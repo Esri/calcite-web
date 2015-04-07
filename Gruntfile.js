@@ -75,7 +75,7 @@ module.exports = function(grunt) {
     },
 
     // Build CSS files from SASS
-    sass: {
+    'sass': {
 
       options: {
         includePaths: ['lib/sass/', 'node_modules/patterns-color/scss']
