@@ -43,16 +43,12 @@ That will give you everything including sass utilities. You will also need to co
 To install Calcite Web with npm, type:
 
 ```
-npm install --save-dev Esri/calcite-web
+npm install --save-dev Esri/calcite-web#v0.1.2
 ```
 
-You can also use a specific release by appending the version number to the end:
+You must add the current version in order to get the `dist/` folder.
 
-```
-npm install --save-dev Esri/calcite-web#v0.0.1
-```
-
-Then, if you're using sass, be sure to add `node_modules/calcite-web/dist/sass/` to your load path. If you're using `grunt-contrib-sass` you add that like this:
+If you're using sass, be sure to add `node_modules/calcite-web/dist/sass/` to your load path. If you're using `grunt-contrib-sass` you add that like this:
 
 ```
 'sass': {
