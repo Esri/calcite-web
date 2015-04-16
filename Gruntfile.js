@@ -19,13 +19,16 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     // Running a development server
-    'connect': {
-      server: {
-        options: {
-          port: 8888,
-          hostname: 'local.arcgis.com',
-          base: 'docs/build'
-        }
+    'http-server': {
+      'dev': {
+        root: 'docs/build',
+        port: 8888,
+        host: 'local.arcgis.com',
+        cache: 0,
+        showDir : true,
+        autoIndex: true,
+        ext: 'html',
+        runInBackground: true
       }
     },
 
@@ -68,7 +71,6 @@ module.exports = function(grunt) {
       }
     },
 
-
     // Check Javascript for errors
     'jshint': {
       all: ['lib/js/calcite-web.js']
@@ -100,7 +102,6 @@ module.exports = function(grunt) {
         }
       }
     },
-
 
     // Create minified version of build css
     'cssmin': {
@@ -287,7 +288,7 @@ module.exports = function(grunt) {
     'concat:doc',
     'sass:doc',
     'copy:doc',
-    'connect',
+    'http-server',
     'watch'
   ]);
 
