@@ -18,10 +18,8 @@
       background-size: 100% 100%;
     }
   }
-
-  // Pass a file glob and iterate over it.
-  @each $filename in listFiles("lib/img/icons/calcite-large/*.svg") {
-    .icon-#{$filename}:before { background-image: url('../img/icons/calcite-large/#{$filename}.svg'); }
+  .icon-close {
+    content: "×"
   }
 }
 
