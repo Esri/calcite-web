@@ -4,6 +4,7 @@
 - tooltips use `aria-label` for tooltip text
 - Modify tooltip styles
 - Multi-line tooltips
+- Custom `select` style
 
 ### Removed
 - `label.required`
