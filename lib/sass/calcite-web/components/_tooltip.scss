@@ -11,7 +11,7 @@
   }
 
   .tooltip:before {
-    content: attr(data-message);
+    content: attr(aria-label);
     position: absolute;
     top: $baseline;
     left: -6em;
