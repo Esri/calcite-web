@@ -1,22 +1,22 @@
 <form action="" method="post">
 
-  <label class="required">
-    Name:
-    <input type="text" id="name" required/>
+  <label>
+    Name<span class="text-red">*</span>
+    <input type="text" id="name" required aria-required="true"/>
   </label>
 
   <label>
-    E-mail:
+    E-mail
     <input type="email"/>
   </label>
 
   <label>
-    Address:
+    Address
     <input type="text"/>
   </label>
 
   <label>
-    Card Type:
+    Card Type
     <select>
       <option value="">VISA</option>
       <option value="">Mastercard</option>
@@ -24,12 +24,12 @@
   </label>
 
   <label>
-    Credit Card Number:
+    Credit Card Number
     <input type=text pattern="[0-9]{13,16}">
   </label>
 
   <fieldset>
-    <legend>Email Preferences:</legend>
+    <legend>Email Preferences</legend>
     <label>
       <input type="checkbox"> Weekly Newsletter
     </label>
@@ -42,7 +42,7 @@
   </fieldset>
 
   <fieldset>
-    <legend>Gender:</legend>
+    <legend>Gender</legend>
     <label>
       <input type="radio" name="gender" value="male">Male
     </label>
@@ -52,7 +52,7 @@
   </fieldset>
 
   <label>
-    Message:
+    Message
     <textarea></textarea>
   </label>
 

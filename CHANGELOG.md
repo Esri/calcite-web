@@ -5,6 +5,9 @@
 - Modify tooltip styles
 - Multi-line tooltips
 
+### Removed
+- `label.required`
+
 ## 0.1.2
 
 ### Added

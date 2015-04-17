@@ -25,21 +25,10 @@
   }
 
   label, legend {
+    position: relative;
     display: block;
     @include font-size(0);
     margin: 0 0 $baseline 0;
-  }
-
-  label.required {
-    &:after {
-      @include font-size(-3);
-      text-transform: uppercase;
-      content: "required";
-      color: $red;
-      position: absolute;
-      right: $baseline/3;
-      top: $baseline/3;
-    }
   }
 
   legend {
