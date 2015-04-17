@@ -23,7 +23,7 @@ module.exports = function(grunt) {
       'dev': {
         root: 'docs/build',
         port: 8888,
-        host: 'local.arcgis.com',
+        host: '0.0.0.0',
         cache: 0,
         showDir : true,
         autoIndex: true,
