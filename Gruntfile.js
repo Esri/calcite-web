@@ -56,6 +56,12 @@ module.exports = function(grunt) {
           'copy:doc'
         ]
       },
+      icons: {
+        files: ['lib/img/icons/**/*.svg'],
+        tasks: [
+          'shell:icons'
+        ]
+      },
       libsass: {
         files: ['lib/sass/**/*', 'docs/source/assets/css/**/*'],
         tasks: [
@@ -238,11 +244,17 @@ module.exports = function(grunt) {
 
     // bin scripts
     'shell': {
+      guid: {
+        command: 'bin/guid.js',    // Generate a unique id for a new section
+      },
       deploy: {
-        command: 'node bin/deploy.js',    // Create a JSON record of current documentation
+        command: 'bin/deploy.js',  // Create a JSON record of current documentation
       },
       release: {
-        command: 'bin/release.sh' // Create GitHub release that includes dist
+        command: 'bin/release.sh'  // Create GitHub release that includes dist
+      },
+      icons: {
+        command: 'bin/icons.js'    // Create a sass file with all icons from icon folder
       }
     },
 
@@ -299,6 +311,7 @@ module.exports = function(grunt) {
 
   // Build a dist folder with all assets
   grunt.registerTask('prepublish', [
+    'shell:icons',
     'concurrent:prepublish'
   ]);
 
@@ -334,6 +347,6 @@ module.exports = function(grunt) {
   ]);
 
   // Default task starts up a dev environment
-  grunt.registerTask('default', ['dev']);
+  grunt.registerTask('default', ['prepublish', 'dev']);
 
 };
