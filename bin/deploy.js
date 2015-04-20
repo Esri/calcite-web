@@ -59,7 +59,7 @@ for (var key in contents) {
 
     var orderArray = []
 
-    for (var i = group.pages.length i > 0 i--) {
+    for (var i = group.pages.length; i > 0; i--) {
       orderArray.push(i)
     }
 
