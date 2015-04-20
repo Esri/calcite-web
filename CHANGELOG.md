@@ -1,3 +1,14 @@
+## 0.2.1
+
+### Changed
+- tooltips use `aria-label` for tooltip text
+- Modify tooltip styles
+- Multi-line tooltips
+- Custom `select` style
+
+### Removed
+- `label.required`
+
 ## 0.1.2
 
 ### Added
