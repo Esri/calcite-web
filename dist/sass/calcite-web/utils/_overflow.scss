@@ -1,0 +1,14 @@
+// ┌───────────────┐
+// │ Overflow Auto │
+// └───────────────┘
+@mixin overflow-auto() {
+  overflow: auto;
+}
+
+%overflow-auto {
+  @include overflow-auto();
+}
+
+.overflow-auto {
+  @extend %overflow-auto;
+}
