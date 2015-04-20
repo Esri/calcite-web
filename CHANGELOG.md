@@ -1,4 +1,4 @@
-## 0.2.1
+## 0.2.0
 
 ### Changed
 - tooltips use `aria-label` for tooltip text
