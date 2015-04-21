@@ -1,14 +1,15 @@
 ## Unreleased
 
-### Changed
+### Modified
 - `.footer` has default `padding-top`
 
 ### Fixed
-- Tooling for deploying and s3 integration
+- Fix tooling for deploy and s3
+- Fix problem with font loading
 
 ## 0.2.0
 
-### Changed
+### Modified
 - tooltips use `aria-label` for tooltip text
 - Modify tooltip styles
 - Multi-line tooltips
