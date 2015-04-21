@@ -1,4 +1,4 @@
-/* calcite-web - v0.0.11 - 2015-02-22
+/* calcite-web - v0.2.0 - 2015-04-21
 *  https://github.com/esri/calcite-web
 *  Copyright (c) 2015 Environmental Systems Research Institute, Inc.
 *  Apache 2.0 License */
@@ -320,8 +320,8 @@ calcite.carousel = function () {
 
     calcite.dom.removeClass(carousel, 'is-first-slide is-last-slide');
 
-    if (index == slides.length) { calcite.dom.addClass(carousel, 'is-last-slide'); }
-    if (index == 1) { calcite.dom.addClass(carousel, 'is-first-slide'); }
+    if (index == slides.length) { calcite.dom.addClass(carousel, 'is-last-slide');}
+    if (index == 1) { calcite.dom.addClass(carousel, 'is-first-slide');}
 
     removeActive(slides);
     calcite.dom.addClass(slides[index - 1], 'is-active');
@@ -337,10 +337,8 @@ calcite.carousel = function () {
 // show and hide dropdown menus
 
 calcite.dropdown = function () {
-
   var toggles = findElements('.js-dropdown-toggle');
   var dropdowns = findElements('.js-dropdown');
-
   if (!dropdowns) {
     return;
   }
@@ -566,9 +564,12 @@ calcite.sticky = function () {
   for (var i = 0; i < elements.length; i++) {
     var el = elements[i];
     var top = el.offsetTop;
-    if (el.dataset.top) {
-      top = top - parseInt(el.dataset.top, 0);
+    var dataTop = calcite.dom.getAttr(el, 'data-top');
+
+    if (dataTop) {
+      top = top - parseInt(dataTop, 0);
     }
+
     stickies.push({
       active: false,
       top: top,
@@ -581,13 +582,14 @@ calcite.sticky = function () {
     var elem = item.element;
     var parent = elem.parentNode;
     var distance = item.top - offset;
+    var dataTop = calcite.dom.getAttr(el, 'data-top');
 
     if (distance < 1 && !item.active) {
       item.shim.style.visiblity = 'hidden';
       parent.insertBefore(item.shim, elem);
       calcite.dom.addClass(elem, 'is-sticky');
       item.active = true;
-      elem.style.top = elem.dataset.top + 'px';
+      elem.style.top = dataTop + 'px';
     } else if (item.active && offset < item.top){
       parent.removeChild(item.shim);
       calcite.dom.removeClass(elem, 'is-sticky');
