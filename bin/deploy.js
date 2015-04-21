@@ -10,6 +10,7 @@ var path = require('path')
 var yaml = require('js-yaml')
 var mark = require('marked')
 var now = Date.now()
+var version = require('../package.json').version
 var response = {
   elements: [],
   colors: []
@@ -74,7 +75,7 @@ for (var key in contents) {
   counter++
 }
 
-jf.writeFileSync('dist/content.json', response)
-jf.writeFileSync('docs/build/content.json', response)
+jf.writeFileSync('dist/latest.json', response)
+jf.writeFileSync(path.join('dist/', 'v' + version + '.json'), response)
 
 process.exit(0)

@@ -211,13 +211,13 @@ module.exports = function(grunt) {
       production: {
         files: [
           // Manually set content type (plugin was setting incorrectly).
-          {expand: true, cwd: 'dist/', src: ['**/*.js'],  dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'application/javascript'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.css'], dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'text/css'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.svg'], dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'image/svg+xml'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.ico'], dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'image/x-icon'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.jpg'], dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'image/jpg'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.json'],dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'application/javascript'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.map'], dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'application/javascript'}}
+          {expand: true, cwd: 'dist/', src: ['**/*.js'],   dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'application/javascript'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.css'],  dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'text/css'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.svg'],  dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'image/svg+xml'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.ico'],  dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'image/x-icon'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.jpg'],  dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'image/jpg'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.map'],  dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'application/javascript'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.json'], dest: 'files/calcite-web/', params: {ContentType: 'application/javascript'}}
         ]
       }
     },
@@ -317,6 +317,8 @@ module.exports = function(grunt) {
 
   // Upload files to s3
   grunt.registerTask('s3', [
+    'prepublish',
+    'shell:deploy',
     'prompt:aws',
     'aws_s3'
   ]);
