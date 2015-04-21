@@ -1,0 +1,43 @@
+// ┌───────┐
+// │ Icons │
+// └───────┘
+//  ↳ http://esri.github.io/calcite-web/icons/
+//  ↳ icons → _overview.md
+
+@import "sets/calcite-large";
+@import "sets/calcite";
+@import "sets/vecticons";
+
+@mixin icons() {
+  // Basic Icon Styles
+  [class*="icon-"] {
+    &:before {
+      content: "";
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: transparent;
+      width: 2rem;
+      height: 2rem;
+      background-size: 100% 100%;
+    }
+  }
+  .icon-close {
+    content: "×"
+  }
+
+  @each $icon in $calcite-large-icons {
+    .calcite-large-#{$icon} { background-image: url('lib/sass/calcite-web/icons/calcite-large/#{$icon}.svg'); }
+  }
+  @each $icon in $calcite-icons {
+    .calcite-#{$icon} { background-image: url('lib/sass/calcite-web/icons/calcite/#{$icon}.svg'); }
+  }
+  @each $icon in $vecticons-icons {
+    .icon-#{$icon} { background-image: url('lib/sass/calcite-web/icons/vecticons/#{$icon}.svg'); }
+  }
+
+}
+
+@if $include-icons == true {
+  @include icons();
+}
