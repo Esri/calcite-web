@@ -1,3 +1,11 @@
+## Unreleased
+
+### Changed
+- `.footer` has default `padding-top`
+
+### Fixed
+- Tooling for deploying and s3 integration
+
 ## 0.2.0
 
 ### Changed

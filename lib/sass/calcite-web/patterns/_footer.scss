@@ -18,5 +18,8 @@
 }
 
 @if $include-footer == true {
-  .footer  { background-color: $off-white; }
+  .footer  {
+    background-color: $off-white;
+    padding-top: $baseline * 2;
+  }
 }
