@@ -1,3 +1,9 @@
+## Unreleased
+
+### Fixed
+- Set avenir face on buttons
+- use `https` for font imports
+
 ## 0.2.1
 
 ### Modified
