@@ -1,3 +1,8 @@
+## Unreleased
+
+### Fixed
+- Set avenir face on buttons
+
 ## 0.2.1
 
 ### Modified
