@@ -1,0 +1,18 @@
+{% extends "layouts/_layout" %}
+
+{% block subnav%}
+  <h1 class="sub-nav-title text-white">Styleguides</h1>
+  <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-orange btn-arrow right leader-1">Latest Release</a>
+  <nav class="sub-nav-list phone-hide">
+    <a class="sub-nav-link {% if src == 'styleguides/index.md' %}is-active{% endif %}" href="{{relativePath}}styleguides/">Overview</a>
+    <a class="sub-nav-link {% if src == 'styleguides/html.md' %}is-active{% endif %}" href="{{relativePath}}styleguides/html">HTML</a>
+    <a class="sub-nav-link {% if src == 'styleguides/css.md' %}is-active{% endif %}" href="{{relativePath}}styleguides/css">CSS</a>
+    <a class="sub-nav-link {% if src == 'styleguides/javascript.md' %}is-active{% endif %}" href="{{relativePath}}styleguides/javascript">JavaScript</a>
+  </nav>
+{% endblock %}
+
+{% block content %}
+  <main class="column-17 content-face">
+    {% block text %}{% endblock %}
+  </main>
+{% endblock %}
