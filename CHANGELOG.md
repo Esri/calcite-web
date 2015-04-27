@@ -1,8 +1,18 @@
-## Unreleased
+## 0.2.2
 
 ### Fixed
 - Set avenir face on buttons
 - use `https` for font imports
+- table rows now have the same `font-weight` as the body
+- selects have more right padding
+
+### Added
+- Tailcoat migration guide
+- Code style guides (CSS, HTML, JS)
+
+### Modified
+- Wrap navigation patterns in a `column-24`
+- Fix typography documentation
 
 ## 0.2.1
 
