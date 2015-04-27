@@ -81,116 +81,56 @@
       <!-- Logged Out Pattern-->
       <header class="top-nav">
         <div class="grid-container">
-          <div class="tablet-hide">
-            <a href="#" class="top-nav-title">Calcite Web</a>
-            <nav class="top-nav-list">
-            {% for title, sec in table_of_contents %}
-              {% if sec.base == "get-started" %}
-                <a href="{{relativePath}}" class="top-nav-link">{{ sec.title }}</a>
-              {% else %}
-                <a href="{{relativePath}}{{sec.base}}" class="top-nav-link">{{ sec.title }}</a>
-              {% endif %}
-            {% endfor %}
-            </nav>
-          </div>
-          <div class="tablet-show">
-            <a href="#" class="top-nav-title js-drawer-toggle" data-drawer="top-nav">☰ Calcite Web</a>
+          <div class="column-24">
+            <div class="tablet-hide">
+              <a href="{{relativePath}}" class="top-nav-title">Calcite Web</a>
+              <nav class="top-nav-list">
+              {% for title, sec in table_of_contents %}
+                {% if sec.base == "get-started" %}
+                  <a href="{{relativePath}}" class="top-nav-link">{{ sec.title }}</a>
+                {% else %}
+                  <a href="{{relativePath}}{{sec.base}}" class="top-nav-link">{{ sec.title }}</a>
+                {% endif %}
+              {% endfor %}
+              </nav>
+            </div>
+            <div class="tablet-show">
+              <a href="" class="top-nav-title js-drawer-toggle" data-drawer="top-nav">☰ Calcite Web</a>
+            </div>
           </div>
         </div>
       </header>
       <div class="expanding-nav js-expanding">
         <section class="expanding-nav-menu js-expanding-nav" data-expanding-nav="one">
           <div class="grid-container padding-trailer-half">
-            <h1>Expanding Nav One</h1>
+            <div class="column-24">
+              <h1>Expanding Nav One</h1>
+            </div>
           </div>
         </section>
         <section class="expanding-nav-menu js-expanding-nav" data-expanding-nav="two">
           <div class="grid-container padding-trailer-half">
-            <h1>Expanding Nav Two</h1>
+            <div class="column-24">
+              <h1>Expanding Nav Two</h1>
+            </div>
           </div>
         </section>
       </div>
       <!-- Secondary Nav Pattern -->
       <header class="sub-nav">
         <div class="grid-container">
-          <h1 class="sub-nav-title text-white">{{ table_of_contents[section].title }}</h1>
-          <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-orange btn-arrow right leader-1">Latest Release</a>
+          <div class="column-24">
+            {% block subnav%}
+              <h1 class="sub-nav-title text-white">{{title}}</h1>
+              <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-orange btn-arrow right leader-1">Latest Release</a>
+            {% endblock %}
+          </div>
         </div>
       </header>
 
-
       <!-- content of each page will go here -->
       <div class="grid-container leader-1">
-
-        <div class="column-6">
-          <aside class="side-nav column-6">
-            {% for group in table_of_contents[section].navigation %}
-              <h4 class="side-nav-title">{{ group.group }}</h4>
-              <nav>
-                {% for page in group.pages %}
-                  <a href="#{{page.link}}" class="side-nav-link">{{page.title}}</a>
-                {% endfor %}
-              </nav>
-            {% endfor %}
-          </aside>
-          <div class="column-6 js-sticky scroll-show tablet-hide" data-top="46">
-            <a href="#" class="btn btn-fill btn-clear">Back to Top</a>
-          </div>
-        </div>
-
-        <main class="column-17 pre-1 content-face">
-          {% for group in table_of_contents[section].navigation %}
-            {% for page in group.pages %}
-              <section class="trailer-2">
-                {% markdown %}{% include table_of_contents[section].base + '/_' + page.link %}{% endmarkdown %}
-
-                {% if page.modifiers %}
-                  <h3 class="leader-2 trailer-1">Modifiers</h3>
-                  <div class="styleguide-modifiers">
-                    <div class="styleguide-modifier-example">
-                      {% include table_of_contents[section].base + '/sample-code/_' + page.link %}
-                    </div>
-                    {% for modifier in page.modifiers %}
-                      <div class="styleguide-modifier-example">
-                        {% include table_of_contents[section].base + '/sample-code/_' + page.link %}
-                        <code class="modifier-name">.{{ modifier }}</code>
-                      </div>
-                    {% endfor %}
-                  </div>
-{% markdown %}
-```
-{% set modifier = "modifier-class" %}{% include table_of_contents[section].base + '/sample-code/_' + page.link %}
-```
-{% endmarkdown %}
-                {% endif %}
-
-                {% if page.colors %}
-                  <div class="block-group block-group-1-up">
-                    {% for color in page.colors %}
-                      <div class="block color-sample {{ color }}">
-                        <code>${{ color }}</code>
-                      </div>
-                    {% endfor %}
-                  </div>
-                {% endif %}
-
-                {% if page.variables %}
-                  <div class="block-group block-group-5-up">
-                    {% for variable in page.variables %}
-                      <div class="block">
-                        <p class="type-sample trailer-0 leader-1 {{variable}}"></p>
-                        <code>${{ variable }}</code>
-                      </div>
-                    {% endfor %}
-                  </div>
-                {% endif %}
-
-              </section>
-              <hr class="trailer-2">
-            {% endfor %}
-          {% endfor %}
-        </main>
-
+        {% block content%}{% endblock %}
       </div>
 
     </div>
@@ -201,20 +141,22 @@
     <footer class="footer leader-3">
       <div class="grid-container">
           <nav class="column-6">
-            <h6>Arc<span>GIS</span></h6>
-            <ul class="list-bulleted">
-              <li><a href="http://www.arcgis.com/about/">Home</a></li>
-              <li><a href="http://www.arcgis.com/about/features.html">Features</a></li>
-              <li><a href="http://www.arcgis.com/about/pricing.html">Pricing</a></li>
+            <h6>Styleguides</h6>
+            <ul>
+              <li><a href="{{relativePath}}styleguides/javascript/">JavaScript</a></li>
+              <li><a href="{{relativePath}}styleguides/css/">CSS</a></li>
+              <li><a href="{{relativePath}}styleguides/html/">HTML</a></li>
             </ul>
           </nav>
 
           <nav class="column-6">
-            <h6>Arc<span>GIS</span> for Developers</h6>
+            <h6>Resources</h6>
             <ul>
-              <li><a href="/en/">Home</a></li>
-              <li><a href="/en/features/">Features</a></li>
-              <li><a href="http://blogs.esri.com/esri/arcgis/category/developer/">Blog</a></li>
+              <li><a href="{{relativePath}}migration-guide/">Migration Guide</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/releases/">Releases</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/blob/master/CONTRIBUTING.md">Contributing</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/issues/">Issues</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/">GitHub</a></li>
             </ul>
           </nav>
 

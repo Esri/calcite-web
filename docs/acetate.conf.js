@@ -3,10 +3,10 @@ function config(acetate) {
     environment: 'dev',
   });
 
-  acetate.layout('**/*', 'layouts/_layout');
+  acetate.layout('**/*', 'layouts/_doc');
   acetate.layout('page-layouts/*.html', 'layouts/_blank:content');
 
-  acetate.metadata('**/index.html', {
+  acetate.metadata('**/*', {
     data: {
       table_of_contents: 'table_of_contents.yml'
     }
