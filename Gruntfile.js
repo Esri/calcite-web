@@ -192,7 +192,7 @@ module.exports = function(grunt) {
         },
         files: [
           {
-            src: ['dist/**'],
+            src: ['dist/**', '!dist/__MACOSX'],
             dest: './'
           },
         ]
