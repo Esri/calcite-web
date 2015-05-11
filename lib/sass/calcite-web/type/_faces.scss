@@ -7,13 +7,13 @@
 @mixin avenir-light() {
   @include tracking($avenir-tracking);
   font-family: $avenir-family; font-weight: 300; font-style: normal;
-  b, strong {font-weight: 400;}
+  b, strong {font-weight: 500;}
 }
 
 @mixin avenir-light-italic() {
   @include tracking($avenir-tracking);
   font-family: $avenir-family; font-weight: 300; font-style: italic;
-  b, strong {font-weight: 400;}
+  b, strong {font-weight: 500;}
 }
 
 @mixin avenir-regular() {
