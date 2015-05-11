@@ -14,3 +14,5 @@ There are two main ways to use Calcite Web:
 - (b) installing via a package manager
 
 Using this framework as a Sass library will give you the most power, but whatever your flavor, we have you covered.
+
+If you are migrating from Tailcoat, checkout the [migration guide]({{relativePath}}migration-guide/).

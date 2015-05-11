@@ -25,21 +25,10 @@
   }
 
   label, legend {
+    position: relative;
     display: block;
     @include font-size(0);
     margin: 0 0 $baseline 0;
-  }
-
-  label.required {
-    &:after {
-      @include font-size(-3);
-      text-transform: uppercase;
-      content: "required";
-      color: $red;
-      position: absolute;
-      right: $baseline/3;
-      top: $baseline/3;
-    }
   }
 
   legend {
@@ -176,15 +165,44 @@
   //  ↳ http://esri.github.io/calcite-web/components/#selects
   //  ↳ components → _selects.md
   select {
+    background-color: $off-white;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PGcgZmlsbD0iIzU5NTk1OSI+PHBhdGggZD0iTTU2Ljc1IDM3LjQ2NmMuNDI1LjQyNS41NTIgMS4wNjMuMzIyIDEuNjE4LS4yMy41NTUtLjc3LjkxNi0xLjM3Mi45MTZINi4zYy0uNiAwLTEuMTQzLS4zNjItMS4zNzItLjkxNy0uMjMtLjU1NS0uMTAzLTEuMTkzLjMyMi0xLjYxOGwyMy40NC0yMy40NGMxLjI3Ni0xLjI3NiAzLjM0My0xLjI3NiA0LjYyIDBsMjMuNDQgMjMuNDR6TTUuMjUgNjIuNTM0Yy0uNDI2LS40MjUtLjU1My0xLjA2My0uMzIzLTEuNjE4LjIzLS41NTUuNzctLjkxNiAxLjM3LS45MTZoNDkuNDA0Yy42MDIgMCAxLjE0My4zNiAxLjM3My45MTYuMjMuNTU1LjEwMyAxLjE5My0uMzIyIDEuNjE4TDMzLjMxIDg1Ljk3N2MtMS4yNzUgMS4yNzUtMy4zNDQgMS4yNzQtNC42MiAwTDUuMjUgNjIuNTM0eiIvPjwvZz48L3N2Zz4=');
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: .9rem;
+    display: block;
     width: auto;
-    height: $baseline * 1.5;
+    padding: $baseline/5 $baseline $baseline/5 $baseline/2;
     @include font-size(-1);
     @extend .avenir-regular;
+    color: $darkest-gray;
     border: 1px solid $light-gray;
-    background-color: $lightest-gray;
+    border-radius: 0;
+    @include transition(border-color 150ms linear);
+    -webkit-appearance: none;
     &:focus {
       border-color: $blue;
     }
+  }
+
+  /* Select Browser Hacks */
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    select::-ms-expand {
+      display: none;
+    }
+    select:focus::-ms-value {
+      background: transparent;
+      color: $darkest-gray;
+    }
+  }
+  @-moz-document url-prefix() {
+    select {
+      background-image: none;
+    }
+  }
+  select::-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 $darkest-gray;
   }
 
   .input-error {

@@ -9,6 +9,7 @@
   display: inline-block;
   padding: $baseline/5 .9rem;
   width: auto;
+  @include avenir-light();
   color: $white;
   border: 1px solid $dark-blue;
   background-color: $blue;
@@ -125,7 +126,6 @@
     }
   }
 
-
 @if $include-button == true {
   .btn             { @include btn();}
   .btn-arrow       { @include btn-arrow();}
@@ -140,8 +140,5 @@
   .btn-green       { @include btn-color($green, $dark-green);}
   .btn-blue        { @include btn-color($blue, $dark-blue);}
   .btn-orange      { @include btn-color($orange, $dark-orange);}
-
-
-  .btn:disabled, .btn-disabled, button[disabled] {@include btn-disabled();}
+  .btn:disabled, .btn-disabled, button[disabled] { @include btn-disabled(); }
 }
-

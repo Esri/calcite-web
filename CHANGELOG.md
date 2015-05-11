@@ -1,3 +1,39 @@
+## 0.2.2
+
+### Fixed
+- Set avenir face on buttons
+- use `https` for font imports
+- table rows now have the same `font-weight` as the body
+- selects have more right padding
+
+### Added
+- Tailcoat migration guide
+- Code style guides (CSS, HTML, JS)
+
+### Modified
+- Wrap navigation patterns in a `column-24`
+- Fix typography documentation
+
+## 0.2.1
+
+### Modified
+- `.footer` has default `padding-top`
+
+### Fixed
+- Fix tooling for deploy and s3
+- Fix problem with font loading
+
+## 0.2.0
+
+### Modified
+- tooltips use `aria-label` for tooltip text
+- Modify tooltip styles
+- Multi-line tooltips
+- Custom `select` style
+
+### Removed
+- `label.required`
+
 ## 0.1.2
 
 ### Added

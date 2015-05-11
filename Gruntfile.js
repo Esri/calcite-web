@@ -19,13 +19,16 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     // Running a development server
-    'connect': {
-      server: {
-        options: {
-          port: 8888,
-          hostname: 'local.arcgis.com',
-          base: 'docs/build'
-        }
+    'http-server': {
+      'dev': {
+        root: 'docs/build',
+        port: 8888,
+        host: '0.0.0.0',
+        cache: 0,
+        showDir : true,
+        autoIndex: true,
+        ext: 'html',
+        runInBackground: true
       }
     },
 
@@ -53,6 +56,12 @@ module.exports = function(grunt) {
           'copy:doc'
         ]
       },
+      icons: {
+        files: ['lib/img/icons/**/*.svg'],
+        tasks: [
+          'shell:icons'
+        ]
+      },
       libsass: {
         files: ['lib/sass/**/*', 'docs/source/assets/css/**/*'],
         tasks: [
@@ -67,7 +76,6 @@ module.exports = function(grunt) {
         ]
       }
     },
-
 
     // Check Javascript for errors
     'jshint': {
@@ -100,7 +108,6 @@ module.exports = function(grunt) {
         }
       }
     },
-
 
     // Create minified version of build css
     'cssmin': {
@@ -185,7 +192,7 @@ module.exports = function(grunt) {
         },
         files: [
           {
-            src: ['dist/**'],
+            src: ['dist/**', '!dist/__MACOSX'],
             dest: './'
           },
         ]
@@ -204,13 +211,13 @@ module.exports = function(grunt) {
       production: {
         files: [
           // Manually set content type (plugin was setting incorrectly).
-          {expand: true, cwd: 'dist/', src: ['**/*.js'],  dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'application/javascript'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.css'], dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'text/css'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.svg'], dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'image/svg+xml'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.ico'], dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'image/x-icon'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.jpg'], dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'image/jpg'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.json'],dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'application/javascript'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.map'], dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'application/javascript'}}
+          {expand: true, cwd: 'dist/', src: ['**/*.js'],   dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'application/javascript'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.css'],  dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'text/css'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.svg'],  dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'image/svg+xml'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.ico'],  dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'image/x-icon'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.jpg'],  dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'image/jpg'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.map'],  dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'application/javascript'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.json'], dest: 'files/calcite-web/', params: {ContentType: 'application/javascript'}}
         ]
       }
     },
@@ -237,11 +244,17 @@ module.exports = function(grunt) {
 
     // bin scripts
     'shell': {
+      guid: {
+        command: 'bin/guid.js',    // Generate a unique id for a new section
+      },
       deploy: {
-        command: 'node bin/deploy.js',    // Create a JSON record of current documentation
+        command: 'bin/deploy.js',  // Create a JSON record of current documentation
       },
       release: {
-        command: 'bin/release.sh' // Create GitHub release that includes dist
+        command: 'bin/release.sh'  // Create GitHub release that includes dist
+      },
+      icons: {
+        command: 'bin/icons.js'    // Create a sass file with all icons from icon folder
       }
     },
 
@@ -287,7 +300,7 @@ module.exports = function(grunt) {
     'concat:doc',
     'sass:doc',
     'copy:doc',
-    'connect',
+    'http-server',
     'watch'
   ]);
 
@@ -298,11 +311,14 @@ module.exports = function(grunt) {
 
   // Build a dist folder with all assets
   grunt.registerTask('prepublish', [
+    'shell:icons',
     'concurrent:prepublish'
   ]);
 
   // Upload files to s3
   grunt.registerTask('s3', [
+    'prepublish',
+    'shell:deploy',
     'prompt:aws',
     'aws_s3'
   ]);
@@ -333,6 +349,6 @@ module.exports = function(grunt) {
   ]);
 
   // Default task starts up a dev environment
-  grunt.registerTask('default', ['dev']);
+  grunt.registerTask('default', ['prepublish', 'dev']);
 
 };
