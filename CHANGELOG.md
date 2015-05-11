@@ -1,3 +1,8 @@
+## 0.2.3
+
+### Modified
+- Pair Avenir Demi with Avenir Light for default strong behavior
+
 ## 0.2.2
 
 ### Fixed
