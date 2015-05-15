@@ -1,7 +1,9 @@
 ## 0.2.3
 
 ### Modified
-- Pair Avenir Demi with Avenir Light for default strong behavior
+- Pair Avenir Demi with Avenir Light for default strong
+behavior
+- Clicking in drawer while drawer is open will not close drawer
 
 ## 0.2.2
 
