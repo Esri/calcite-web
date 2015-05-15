@@ -5,6 +5,9 @@
 behavior
 - Clicking in drawer while drawer is open will not close drawer
 
+### Fixed
+- fix dropdowns in IE9
+
 ## 0.2.2
 
 ### Fixed
