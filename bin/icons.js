@@ -4,6 +4,9 @@ var glob = require('glob')
 var fs = require('fs')
 var path = require('path')
 var format = require('util').format
+var mkdir = require('mkdirp')
+
+mkdir('lib/sass/calcite-web/icons/sets/')
 
 var sets = ['calcite', 'calcite-large', 'vecticons']
 
