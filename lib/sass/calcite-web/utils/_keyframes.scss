@@ -5,10 +5,10 @@
 //  ↳ components → _utility-mixins.md
 
 @mixin keyframes ($name) {
-  @-webkit-keyframes $name {
+  @-webkit-keyframes #{$name} {
     @content;
   }
-  @keyframes $name {
+  @keyframes #{$name} {
     @content;
   }
 }
