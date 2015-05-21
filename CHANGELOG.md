@@ -1,3 +1,8 @@
+## Unreleased
+
+### Fixed
+- Fixed interpolation of variables in the `keyframes` mixin
+
 ## 0.2.3
 
 ### Modified
