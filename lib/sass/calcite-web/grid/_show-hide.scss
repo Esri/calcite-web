@@ -13,8 +13,6 @@
       .#{$medium-class}-show  {@include hide();}
       .#{$medium-class}-only  {@include hide();}
       .#{$large-class}-hide   {@include hide();}
-      .#{$large-class}-show   {@include show();}
-      .#{$large-class}-only   {@include show();}
     }
 
     // Default
@@ -23,6 +21,7 @@
       .#{$medium-class}-show  {@include hide();}
       .#{$medium-class}-only  {@include hide();}
       .#{$large-class}-only   {@include hide();}
+      .#{$large-class}-show   {@include hide();}
     }
 
     // Medium
@@ -30,6 +29,7 @@
       .#{$medium-class}-hide  {@include hide();}
       .#{$small-class}-show   {@include hide();}
       .#{$large-class}-only   {@include hide();}
+      .#{$large-class}-show   {@include hide();}
     }
 
     // Small
@@ -38,6 +38,7 @@
       .#{$medium-class}-hide  {@include hide();}
       .#{$medium-class}-only  {@include hide();}
       .#{$large-class}-only   {@include hide();}
+      .#{$large-class}-show   {@include hide();}
     }
   }
 }
