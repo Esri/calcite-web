@@ -7,25 +7,33 @@
 @mixin responsive-pre-post(){
 
   @if $fold-grid == true {
-
     // Small Columns
-    @media screen and (max-width: $small - 1) {
-      @for $n from 0 through $small-column-count {
-        .#{$small-class}-pre-#{$n} {
-          @include pre($n, $small-column-count);
-        }
-        [class*="column-"] .#{$small-class}-pre-#{$n}:first-child {
-          @include pre-calc($n, $small-column-count);
-        }
-        .#{$small-class}-post-#{$n} {
-          @include post($n, $small-column-count);
-        }
+    @for $n from 0 through $small-column-count {
+      .#{$small-class}-pre-#{$n} {
+        @include pre($n, $small-column-count);
+      }
+      [class*="column-"] .#{$small-class}-pre-#{$n}:first-child {
+        @include pre-calc($n, $small-column-count);
+      }
+      .#{$small-class}-post-#{$n} {
+        @include post($n, $small-column-count);
       }
     }
 
     // Medium Columns
-    @media screen and (max-width: $medium - 1) {
+    @media screen and (min-width: $small) {
       @for $n from 0 through $medium-column-count {
+        .#{$small-class}-pre-#{$n} {
+          @include pre($n, $medium-column-count);
+        }
+        [class*="column-"] .#{$small-class}-pre-#{$n}:first-child {
+          @include pre-calc($n, $medium-column-count);
+        }
+        .#{$small-class}-post-#{$n} {
+          @include post($n, $medium-column-count);
+        }
+
+
         .#{$medium-class}-pre-#{$n} {
           @include pre($n, $medium-column-count);
         }
@@ -38,9 +46,68 @@
       }
     }
 
+
     // Large Columns
     @media screen and (min-width: $medium) {
+      @for $n from 0 through $default-column-count {
+        .#{$small-class}-pre-#{$n} {
+          @include pre($n, $default-column-count);
+        }
+        [class*="column-"] .#{$small-class}-pre-#{$n}:first-child {
+          @include pre-calc($n, $default-column-count);
+        }
+        .#{$small-class}-post-#{$n} {
+          @include post($n, $default-column-count);
+        }
+
+
+        .#{$medium-class}-pre-#{$n} {
+          @include pre($n, $default-column-count);
+        }
+        [class*="column-"] .#{$medium-class}-pre-#{$n}:first-child {
+          @include pre-calc($n, $default-column-count);
+        }
+        .#{$medium-class}-post-#{$n} {
+          @include post($n, $default-column-count);
+        }
+
+        .pre-#{$n} {
+          @include pre($n, $default-column-count);
+        }
+        [class*="column-"] .pre-#{$n}:first-child {
+          @include pre-calc($n, $default-column-count);
+        }
+        .post-#{$n} {
+          @include post($n, $default-column-count);
+        }
+      }
+    }
+
+
+    // Extra Large Pre and Post
+    @media screen and (min-width: $large) {
       @for $n from 0 through $large-column-count {
+        .#{$small-class}-pre-#{$n} {
+          @include pre($n, $large-column-count);
+        }
+        [class*="column-"] .#{$small-class}-pre-#{$n}:first-child {
+          @include pre-calc($n, $large-column-count);
+        }
+        .#{$small-class}-post-#{$n} {
+          @include post($n, $large-column-count);
+        }
+
+
+        .#{$medium-class}-pre-#{$n} {
+          @include pre($n, $large-column-count);
+        }
+        [class*="column-"] .#{$medium-class}-pre-#{$n}:first-child {
+          @include pre-calc($n, $large-column-count);
+        }
+        .#{$medium-class}-post-#{$n} {
+          @include post($n, $large-column-count);
+        }
+
         .pre-#{$n} {
           @include pre($n, $large-column-count);
         }
@@ -50,40 +117,50 @@
         .post-#{$n} {
           @include post($n, $large-column-count);
         }
+
+        .#{$large-class}-pre-#{$n} {
+          @include pre($n, $large-column-count);
+        }
+        [class*="column-"] .#{$large-class}-pre-#{$n}:first-child {
+          @include pre-calc($n, $large-column-count);
+        }
+        .#{$large-class}-post-#{$n} {
+          @include post($n, $large-column-count);
+        }
       }
     }
   } @else {
     .pre-#{$n} {
-        @include pre($n, $large-column-count);
+        @include pre($n, $default-column-count);
     }
     [class*="column-"] .pre-#{$n}:first-child {
-      @include pre-calc($n, $large-column-count);
+      @include pre-calc($n, $default-column-count);
     }
     .post-#{$n} {
-      @include post($n, $large-column-count);
+      @include post($n, $default-column-count);
     }
   }
 }
 
-@mixin fixed-pre-post(){
+// @mixin fixed-pre-post(){
 
-  // Fixed Pre and Post
-  @media screen and (min-width: $large) {
-    @for $n from 0 through $large-column-count {
-      .pre-#{$n}  {
-        margin-left: ($n / $large-column-count) * $container-max !important;
-      }
-      [class*="column-"] .pre-#{$n}:first-child {
-        $margin: ($n / $large-column-count) * $container-max;
-        $clear: $column-gutter / 2;
-        margin-left: calc(#{$margin} - #{$clear}) !important;
-      }
-      .post-#{$n} { margin-right: ($n / $large-column-count) * $container-max !important; }
-    }
-  }
-}
+//   // Fixed Pre and Post
+//   @media screen and (min-width: $large) {
+//     @for $n from 0 through $large-column-count {
+//       .pre-#{$n}  {
+//         margin-left: ($n / $large-column-count) * $container-max !important;
+//       }
+//       [class*="column-"] .pre-#{$n}:first-child {
+//         $margin: ($n / $large-column-count) * $container-max;
+//         $clear: $column-gutter / 2;
+//         margin-left: calc(#{$margin} - #{$clear}) !important;
+//       }
+//       .post-#{$n} { margin-right: ($n / $large-column-count) * $container-max !important; }
+//     }
+//   }
+// }
 
 @if $include-grid == true {
   @include responsive-pre-post();
-  @include fixed-pre-post();
+  // @include fixed-pre-post();
 }
