@@ -3,6 +3,16 @@
 ### Fixed
 - Fixed interpolation of variables in the `keyframes` mixin
 
+### Modifide
+- Increase large breakpoint to 1450px
+- add `extra-large-leader-n`
+	- trailer
+	- padding-leader
+	- padding-trailer
+- add `extra-large-column-n` to 36 columns
+- Remove `container-max` and `container-min`
+- `extra-large-hide` and `-only`
+
 ## 0.2.3
 
 ### Modified
