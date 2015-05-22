@@ -7,8 +7,6 @@
 @mixin grid-container() {
   @extend %clearfix;
   width: $container-width;
-  max-width: $container-max;
-  min-width: $container-min;
   padding-right: 0;
   padding-left: 0;
   margin-right: auto;
@@ -61,11 +59,34 @@
 
   @if $fold-grid == true {
 
-    @media screen and (min-width: $medium) {
+    // Extra Large Columns
+    @media screen and (min-width: $large) {
       @for $n from 1 through $large-column-count {
         .column-#{$n} {
-          width: ($n / $large-column-count) * $container-width - .01vw;
-          max-width: ($n / $large-column-count) * $container-max;
+          width: ($n / $large-column-count) * $container-width;
+          > .column-#{$n} {
+            margin-left: -($column-gutter/2);
+          }
+        }
+      }
+      @for $n from 1 through $large-column-count {
+        .#{$large-class}-column-#{$n}  {
+          width: ($n / $large-column-count) * $container-width;
+        }
+      }
+      .#{$large-class}-first-column {
+        margin-left: -($column-gutter / 2);
+      }
+      .#{$large-class}-last-column {
+        margin-right: -($column-gutter / 2);
+      }
+    }
+
+    // Large Columns
+    @media screen and (max-width: $large - 1) {
+      @for $n from 1 through $default-column-count {
+        .column-#{$n} {
+          width: ($n / $default-column-count) * $container-width;
           > .column-#{$n} {
             margin-left: -($column-gutter/2);
           }
@@ -73,15 +94,16 @@
       }
     }
 
+    // Medium Columns
     @media screen and (max-width: $medium - 1) {
       @for $n from 1 through $medium-column-count {
         .column-#{$n} {
-          width: ($n / $medium-column-count) * $container-width - .01vw;
+          width: ($n / $medium-column-count) * $container-width;
         }
       }
       @for $n from 1 through $medium-column-count {
         .#{$medium-class}-column-#{$n}  {
-          width: ($n / $medium-column-count) * $container-width - .01vw;
+          width: ($n / $medium-column-count) * $container-width;
         }
       }
       .#{$medium-class}-first-column {
@@ -92,20 +114,23 @@
       }
     }
 
+
+
+    // Small Columns
     @media screen and (max-width: $small - 1) {
       @for $n from 1 through $small-column-count {
         .column-#{$n}{
-          width: ($n / $small-column-count) * $container-width - .01vw;
+          width: ($n / $small-column-count) * $container-width;
         }
       }
       @for $n from 1 through $small-column-count {
         .#{$medium-class}-column-#{$n}{
-          width: ($n / $small-column-count) * $container-width - .01vw;
+          width: ($n / $small-column-count) * $container-width;
         }
       }
       @for $n from 1 through $small-column-count {
        .#{$small-class}-column-#{$n} {
-          width: ($n / $small-column-count) * $container-width - .01vw;
+          width: ($n / $small-column-count) * $container-width;
         }
       }
       .#{$small-class}-first-column {
@@ -118,10 +143,9 @@
 
   } @else {
 
-    @for $n from 1 through $large-column-count {
+    @for $n from 1 through $default-column-count {
       .column-#{$n} {
-        width: ($n / $large-column-count) * $container-width - .01vw;
-        max-width: ($n / $large-column-count) * $container-max;
+        width: ($n / $default-column-count) * $container-width;
         > .column-#{$n} {
           margin-left: -($column-gutter/2);
         }
