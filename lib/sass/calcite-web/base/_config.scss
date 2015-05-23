@@ -31,17 +31,15 @@ $large-icon-size:         4rem    !default; // .large icon size
 //  ↳ sass → _breakpoints.md
 $small:                    480px              !default;
 $medium:                   860px              !default;
-$large:                    1280px             !default;
+$large:                    1450px             !default;
 
 // ┌────────────────────┐
 // │ Grid Configuration │
 // └────────────────────┘
 //  ↳ http://esri.github.io/calcite-web/grid/#configuration
 //  ↳ grid → _configuration.md
-$vw-ratio:                 0.9;
+$vw-ratio:                 0.98;
 $container-width:          $vw-ratio * 100vw  !default;
-$container-min:            0                  !default;
-$container-max:            $large * $vw-ratio !default;
 $column-gutter:            1rem               !default;
 
 // Grid Fallback Options
@@ -49,9 +47,12 @@ $ie8-support:              false              !default;
 $column-gutter-fallback:   20px               !default;
 $container-width-fallback: 960px              !default;
 
-// Large
-$large-class:              'column'           !default;
-$large-column-count:       24                 !default;
+// Medium
+$large-class:             'large'            !default;
+$large-column-count:      36                 !default;
+
+// Default
+$default-column-count:     24                 !default;
 
 // Medium
 $medium-class:             'tablet'           !default;
