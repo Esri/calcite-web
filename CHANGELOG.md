@@ -1,9 +1,14 @@
-## Unreleased
+## 0.3.0
+
+### Improvements
+- Removed ~ 230 LOC from calcite-web.js
 
 ### Fixed
 - Fixed interpolation of variables in the `keyframes` mixin
+- Fixed modals always closing on any click if open
+- Document modals properly
 
-### Modifide
+### Modified
 - Increase large breakpoint to 1450px
 - add `extra-large-leader-n`
 	- trailer
@@ -12,6 +17,9 @@
 - add `extra-large-column-n` to 36 columns
 - Remove `container-max` and `container-min`
 - `extra-large-hide` and `-only`
+
+### Removed
+- remove carousel pattern (will be its own project)
 
 ## 0.2.3
 
