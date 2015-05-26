@@ -270,8 +270,6 @@
           
             <a href="#accordions" class="side-nav-link">Accordions</a>
           
-            <a href="#carousel" class="side-nav-link">Carousels</a>
-          
             <a href="#drawers" class="side-nav-link">Drawers</a>
           
             <a href="#expanding-nav" class="side-nav-link">Expanding Nav</a>
@@ -741,7 +739,9 @@
       
         <section class="trailer-2">
           <h2 id="modals">Modals</h2>
-<p>Modals are meant to &quot;take over&quot; the screen and focus users attention on a dialog which presents the user with an opportunity to add, modify or create content. A modal should always be centered both vertically and horizontally within the browser window. When a modal is opened, the interface darkens and disables all other user interface elements in order to force a user to take an action required by their workflow.</p>
+<p>Modals are meant to &quot;take over&quot; the screen and focus users attention on a dialog which presents the user with an opportunity to add, modify or create content. A modal should always be centered both vertically and horizontally within the browser window. When a modal is opened, the interface darkens and disables all other user interface elements in order to force a user to take an action required by their workflow. Two modals can&#39;t be open at once.</p>
+<p>To create a link or button that opens a modal, you must add a <code>js-modal-toggle</code> class to the element, along with a <code>data-modal</code> attribute specifying the name of the modal that should open. The modal should also get a <code>data-modal</code> attribute with the same name.</p>
+<p>Elements with the <code>js-modal-toggle</code> that are inside a modal don&#39;t need the <code>data-modal</code> attribute as they will just close the modal they are in.</p>
 
 
           
@@ -759,12 +759,12 @@
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-    <button class="btn right">okay</button>
-    <button class="btn-transparent right">cancel</button>
+    <button class="btn right js-modal-toggle">okay</button>
+    <button class="btn-transparent right js-modal-toggle">cancel</button>
   </div>
 </div>
 
-<a class="js-modal-toggle btn" data-modal="foo" href="#">Show Modal</a>
+<a class="js-modal-toggle btn" href="#" data-modal="foo">Show Modal</a>
 
               </div>
               
@@ -780,12 +780,12 @@
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn right"</span>&gt;</span>okay<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn-transparent right"</span>&gt;</span>cancel<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn right js-modal-toggle"</span>&gt;</span>okay<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn-transparent right js-modal-toggle"</span>&gt;</span>cancel<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-modal-toggle btn"</span> <span class="hljs-attribute">data-modal</span>=<span class="hljs-value">"foo"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Show Modal<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-modal-toggle btn"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">data-modal</span>=<span class="hljs-value">"foo"</span>&gt;</span>Show Modal<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 </code></pre>
           
 
@@ -951,103 +951,6 @@
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">aside</span>&gt;</span>
-</code></pre>
-          
-
-          
-
-          
-
-        </section>
-        <hr class="trailer-2">
-      
-        <section class="trailer-2">
-          <h2 id="carousel">Carousel</h2>
-<p>Calcite Web comes with a very lightweight carousel (or slider). We urge you to use carousels very sparingly as <a href="http://erikrunyon.com/2013/07/carousel-interaction-stats/">several</a> <a href="http://www.nngroup.com/articles/auto-forwarding/">reports</a> <a href="http://www.widerfunnel.com/conversion-rate-optimization/rotating-offers-the-scourge-of-home-page-design">show</a> that carousels can be detrimental to user experience.</p>
-<p>If you decide a carousel <em>is</em> the best experience for your use case, the Calcite Web carousel is very straightforward. Simply create a div with the class of <code>carousel</code> with any number of elements that have a class of <code>carousel-slide</code>. The carousel uses <a href="../javascript">calcite-web.js</a> for the interactive elements. For this reason you&#39;ll also need to add a class of <code>js-carousel</code> to add JavaScript functionality.</p>
-<p>Navigation for the carousel can be any link inside the carousel wrapper. Simply add a <code>js-carousel-link</code> class and a <code>data-slide</code> attribute with a number representing the slide number the link should navigate to. Numbering starts at 1.</p>
-<blockquote>
-<p>Note: it&#39;s recommended to set a height on the <code>carousel-slides</code> element to make sure it will fit your content vertically.</p>
-</blockquote>
-
-
-          
-            <h3 class="leader-2 trailer-1">Modifiers</h3>
-            <div class="styleguide-modifiers">
-              <div class="styleguide-modifier-example">
-                <section class="carousel js-carousel">
-
-  <!-- Option Left/Right Sliders -->
-  <a class="js-carousel-link carousel-prev" data-slide="prev">«</a>
-  <a class="js-carousel-link carousel-next" data-slide="next">»</a>
-
-  <!-- Slides -->
-  <div class="carousel-slides">
-    <div class="carousel-slide">
-      <h3 class="leader-2">Slide One</h3>
-    </div>
-    <div class="carousel-slide">
-      <h3 class="leader-2">Slide Two</h3>
-    </div>
-    <div class="carousel-slide">
-      <h3 class="leader-2">Slide Three</h3>
-    </div>
-    <div class="carousel-slide">
-      <h3 class="leader-2">Slide Four</h3>
-    </div>
-    <div class="carousel-slide">
-      <h3 class="leader-2">Slide Five</h3>
-    </div>
-  </div>
-
-  <!-- Optional Dotnav -->
-  <nav>
-    <a href="#" class="js-carousel-link" data-slide="1">&bull;</a>
-    <a href="#" class="js-carousel-link" data-slide="2">&bull;</a>
-    <a href="#" class="js-carousel-link" data-slide="3">&bull;</a>
-    <a href="#" class="js-carousel-link" data-slide="4">&bull;</a>
-    <a href="#" class="js-carousel-link" data-slide="5">&bull;</a>
-  </nav>
-
-</section>
-              </div>
-              
-            </div>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"carousel js-carousel"</span>&gt;</span>
-
-  <span class="hljs-comment">&lt;!-- Option Left/Right Sliders --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-carousel-link carousel-prev"</span> <span class="hljs-attribute">data-slide</span>=<span class="hljs-value">"prev"</span>&gt;</span>«<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-carousel-link carousel-next"</span> <span class="hljs-attribute">data-slide</span>=<span class="hljs-value">"next"</span>&gt;</span>»<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-
-  <span class="hljs-comment">&lt;!-- Slides --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"carousel-slides"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"carousel-slide"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"leader-2"</span>&gt;</span>Slide One<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"carousel-slide"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"leader-2"</span>&gt;</span>Slide Two<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"carousel-slide"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"leader-2"</span>&gt;</span>Slide Three<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"carousel-slide"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"leader-2"</span>&gt;</span>Slide Four<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"carousel-slide"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"leader-2"</span>&gt;</span>Slide Five<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-
-  <span class="hljs-comment">&lt;!-- Optional Dotnav --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">nav</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-carousel-link"</span> <span class="hljs-attribute">data-slide</span>=<span class="hljs-value">"1"</span>&gt;</span>&amp;bull;<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-carousel-link"</span> <span class="hljs-attribute">data-slide</span>=<span class="hljs-value">"2"</span>&gt;</span>&amp;bull;<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-carousel-link"</span> <span class="hljs-attribute">data-slide</span>=<span class="hljs-value">"3"</span>&gt;</span>&amp;bull;<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-carousel-link"</span> <span class="hljs-attribute">data-slide</span>=<span class="hljs-value">"4"</span>&gt;</span>&amp;bull;<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-carousel-link"</span> <span class="hljs-attribute">data-slide</span>=<span class="hljs-value">"5"</span>&gt;</span>&amp;bull;<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
-
-<span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
 </code></pre>
           
 
