@@ -1,8 +1,9 @@
-## Unreleased
+## 0.3.1
 
 ### Improvements
 - calcite-web.js patterns can be passed a specific dom node as context when they are initialized.
 - Updated JavaScript documentation
+- Proper registration as CommonJS module
 
 ## 0.3.0
 
