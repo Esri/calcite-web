@@ -2,6 +2,7 @@
 
 ### Added
 - Social media icons
+- `$image-path` variable for configuration of image folder
 
 ## 0.3.1
 
