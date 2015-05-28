@@ -1,3 +1,8 @@
+## Unreleased
+
+### Added
+- Social media icons
+
 ## 0.3.1
 
 ### Improvements
