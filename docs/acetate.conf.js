@@ -8,7 +8,8 @@ function config(acetate) {
 
   acetate.metadata('**/*', {
     data: {
-      table_of_contents: 'table_of_contents.yml'
+      table_of_contents: 'table_of_contents.yml',
+      icons: 'icons.json'
     }
   });
 

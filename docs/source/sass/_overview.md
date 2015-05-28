@@ -17,6 +17,7 @@ Now in your project, you still have access to type mixins like `word-spacing()` 
 
 | Variable                    | Description                                                              |
 | --------------------------- | ------------------------------------------------------------------------ |
+| `$image-path`               | Path from the generated css to your images folder. Default: '../img'     |
 | `$include-grid`             | Everything grid related (viewport grid, block grid, and responsive grid) |
 | `$fold-grid`                | Responsive grid classes and media queries                                |
 | `$block-grid`               | Block grid classes and media queries                                     |
