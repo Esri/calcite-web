@@ -3,6 +3,7 @@
 ### Added
 - Social media icons
 - `$image-path` variable for configuration of image folder
+- `calcite.toggleClass()` exposed on public calcite-web.js api
 
 ## 0.3.1
 

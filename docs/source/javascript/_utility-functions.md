@@ -12,7 +12,8 @@
 | [`calcite.stopPropagation(event)`](#calcite-stoppropagation-event-) | Stops an event from bubbling up the DOM tree. |
 | [`calcite.hasClass(event)`](#calcite-hasclass-node-class-) | Checks if an element has a specific class. Returns boolean. |
 | [`calcite.addClass(domNode, className)`](#calcite-addclass-domnode-classes-) | Adds one or more classes to an element. |
-| [`calcite.removeClass(domNode, classes)`](#calcite-removeclass-domnode-event-fn-) | Removes one or more classes from an element. |
+| [`calcite.removeClass(domNode, classes)`](#calcite-removeclass-domnode-classes-) | Removes one or more classes from an element. |
+| [`calcite.toggleClass(domNode, className)`](#calcite-toggleclass-domnode-classname-) | Toggles one class on an element. |
 | [`calcite.closest(domNode, classes)`](#calcite-closest-class-element-) | Returns closest element up the DOM tree matching a given class. Returns DOM node. |
 | [`calcite.getAttr(className, context)`](#calcite-getattr-element-attribute-) | Returns the value of an element's attribute. |
 | [`calcite.nodeListToArray(domNodeList)`](#calcite-nodelisttoarray-domnodelist-) | Takes a DOM node list and returns an array. |

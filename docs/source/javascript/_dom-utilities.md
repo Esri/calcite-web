@@ -122,13 +122,23 @@ var node = document.getElementById('test');
 calcite.addClass(node, 'apples bananas oranges');
 ```
 
-### calcite.removeClass(domNode, event, fn)
+### calcite.removeClass(domNode, classes)
 
 Removes one or more classes from an element. Like `addClass`, multiple classes should be separated with a space and passed as a single string:
 
 ```js
 var node = document.getElementById('test');
 calcite.removeClass(node, 'apples bananas oranges');
+```
+
+### calcite.toggleClass(domNode, className)
+
+Adds the class to the element if it doesn't have the class, otherwise, remove it:
+
+```js
+var node = document.querySelector('.test');
+calcite.toggleClass(node, 'test'); // remove test class
+calcite.toggleClass(node, 'test'); // add test class
 ```
 
 ### calcite.closest(class, element)
