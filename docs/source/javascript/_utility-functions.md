@@ -15,5 +15,4 @@
 | [`calcite.removeClass(domNode, classes)`](#calcite-removeclass-domnode-classes-) | Removes one or more classes from an element. |
 | [`calcite.toggleClass(domNode, className)`](#calcite-toggleclass-domnode-classname-) | Toggles one class on an element. |
 | [`calcite.closest(domNode, classes)`](#calcite-closest-class-element-) | Returns closest element up the DOM tree matching a given class. Returns DOM node. |
-| [`calcite.getAttr(className, context)`](#calcite-getattr-element-attribute-) | Returns the value of an element's attribute. |
 | [`calcite.nodeListToArray(domNodeList)`](#calcite-nodelisttoarray-domnodelist-) | Takes a DOM node list and returns an array. |

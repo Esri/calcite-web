@@ -5,6 +5,9 @@
 - `$image-path` variable for configuration of image folder
 - `calcite.toggleClass()` exposed on public calcite-web.js api
 
+### Breaking Changes
+- removed `calcite.getAttr()` as `Element.getAttribute()` support is IE8+
+
 ## 0.3.1
 
 ### Improvements
