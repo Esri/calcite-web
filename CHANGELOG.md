@@ -1,3 +1,8 @@
+## Unreleased
+
+### Modified
+- Updated Patterns Color dependency to v0.1.1
+
 ## 0.4.0
 
 ### Added
