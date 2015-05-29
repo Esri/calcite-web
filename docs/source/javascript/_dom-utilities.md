@@ -149,21 +149,12 @@ Searches up the DOM tree to find the closest parent element with a given class.
 var nodes = document.querySelector('.child-element');
 
 function clickHandler (event) {
-  var closestNode = dom.closest('parent-class', event.target);
+  var closestNode = calcite.closest('parent-class', event.target);
 }
 
 for (var i = 0; i < nodes.length; i++) {
-  dom.addEvent(nodes[i], dom.event(), clickHandler);
+  calcite.addEvent(nodes[i], calcite.click(), clickHandler);
 }
-```
-
-### calcite.getAttr(element, attribute)
-
-For a given element, get the value of a specific attribute.
-
-```js
-var node = document.querySelector('input');
-var value = calcite.getAttr(node, 'value');
 ```
 
 ### calcite.nodeListToArray(domNodeList)
