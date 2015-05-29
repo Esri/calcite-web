@@ -1,0 +1,125 @@
+// ┌──────────────┐
+// │ CUSTOM BUILD │
+// └──────────────┘
+
+// Image Path
+$image-path:                         '../img' !default;
+
+// Sass Output
+$include-colors:                      true    !default;
+$include-utils:                       true    !default;
+
+// CSS Output
+$include-reset:                       true    !default;
+
+$include-grid:                        true    !default;
+  $fold-grid:                         true    !default;
+  $block-grid:                        true    !default;
+
+$include-type:                        true    !default;
+  $include-content-family:            false   !default;
+  $include-secondary-family:          false    !default;
+  $include-code-family:               true    !default;
+  $include-type-defaults:             true    !default;
+
+// Icons
+$include-icons:                       true    !default;
+  $include-one-color-icons:           true    !default;
+  $include-color-icons:               true    !default;
+
+// Components
+$include-alerts:                      true    !default;
+$include-tables:                      true    !default;
+$include-panel:                       true    !default;
+$include-button:                      true    !default;
+$include-dropdowns:                   true    !default;
+$include-breadcrumbs:                 true    !default;
+$include-tooltip:                     true    !default;
+$include-forms:                       true    !default;
+$include-loader:                      true    !default;
+$include-search-bar:                  true    !default;
+$include-logo:                        true    !default;
+
+// Patterns
+$include-footer:                      true    !default;
+$include-sticky-footer:               true    !default;
+$include-pagination:                  true    !default;
+$include-side-nav:                    true    !default;
+$include-sub-nav:                     true    !default;
+$include-third-nav:                   true    !default;
+$include-top-nav:                     true    !default;
+$include-super-nav:                   true    !default;
+$include-toolbar:                     true    !default;
+$include-carousel:                    true    !default;
+
+// Javascript
+$include-tabs:                        true    !default;
+$include-modal:                       true    !default;
+$include-accordion:                   true    !default;
+$include-carousel:                    true    !default;
+$include-drawers:                     true    !default;
+$include-expanding-nav:               true    !default;
+$include-sticky:                      true    !default;
+
+// ┌──────────────┐
+// │ CALCITE WEB  │
+// └──────────────┘
+
+// Base
+// initial setup: config, color pallete, reset...
+@import "calcite-web/base/colors";
+@import "calcite-web/base/config";
+@import "calcite-web/base/reset";
+
+
+// Utils
+// Micro-Framework adpated from Compass and Bourbon
+// Provides basic prefixing and standard mixins
+@import "calcite-web/utils/utils";
+
+// Grid
+// structural level styles: viewport grid, block group, helper classes...
+@import "calcite-web/grid/grid";
+
+// Type
+// typographic styles: font-families, element styles, modifiers...
+@import "calcite-web/type/type";
+
+// Icons
+// Multiple sets of icons, full color, monochrome
+@import "calcite-web/icons/icons";
+
+// Components
+// small pieces: buttons, icons, tables...
+@import "calcite-web/components/esri-logo";
+@import "calcite-web/components/button";
+@import "calcite-web/components/dropdown";
+@import "calcite-web/components/breadcrumbs";
+@import "calcite-web/components/tooltip";
+@import "calcite-web/components/alert";
+@import "calcite-web/components/panel";
+@import "calcite-web/components/table";
+@import "calcite-web/components/form";
+@import "calcite-web/components/loader";
+@import "calcite-web/components/search-bar";
+
+// Patterns
+// complete interfaces: header, footer, banner...
+@import "calcite-web/patterns/top-nav";
+@import "calcite-web/patterns/super-nav";
+@import "calcite-web/patterns/expanding-nav";
+@import "calcite-web/patterns/sub-nav";
+@import "calcite-web/patterns/third-nav";
+@import "calcite-web/patterns/toolbar";
+@import "calcite-web/patterns/side-nav";
+@import "calcite-web/patterns/footer";
+@import "calcite-web/patterns/tabs";
+@import "calcite-web/patterns/modal";
+@import "calcite-web/patterns/accordion";
+@import "calcite-web/patterns/drawers";
+
+// Modifiers
+// modifier classes override standard styles
+@import 'calcite-web/type/helpers';
+@import "calcite-web/grid/leader-trailer";
+@import "calcite-web/grid/gutter-helpers";
