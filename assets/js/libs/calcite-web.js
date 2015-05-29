@@ -1,4 +1,4 @@
-/* calcite-web - v0.3.0 - 2015-05-26
+/* calcite-web - v0.4.0 - 2015-05-29
 *  https://github.com/esri/calcite-web
 *  Copyright (c) 2015 Environmental Systems Research Institute, Inc.
 *  Apache 2.0 License */
@@ -9,7 +9,7 @@
   // └────────────┘
   // define all public api methods (excluding patterns)
   var calcite = {
-    version: 'v0.2.2',
+    version: 'v0.4.0',
     click: click,
     addEvent: addEvent,
     removeEvent: removeEvent,
@@ -19,8 +19,8 @@
     hasClass: hasClass,
     addClass: addClass,
     removeClass: removeClass,
+    toggleClass: toggleClass,
     closest: closest,
-    getAttr: getAttr,
     nodeListToArray: nodeListToArray,
     init: init
   };
@@ -130,31 +130,9 @@
     return current;
   }
 
-  // get an attribute for an element
-  function getAttr (domNode, attr) {
-    if (domNode.getAttribute) {
-      return domNode.getAttribute(attr);
-    }
-
-    var result;
-    var attrs = domNode.attributes;
-
-    for (var i = 0; i < attrs.length; i++) {
-      if (attrs[i].nodeName === attr) {
-        result = attrs[i].nodeValue;
-      }
-    }
-
-    return result;
-  }
-
   // turn a domNodeList into an array
   function nodeListToArray (domNodeList) {
-    var array = [];
-    for (var i = 0; i < domNodeList.length; i++) {
-      array.push(domNodeList[i]);
-    }
-    return array;
+    return Array.prototype.slice.call(domNodeList);
   }
 
   // ┌─────────────┐
@@ -164,7 +142,7 @@
 
   // return an array of elements matching a query
   function findElements (query, domNode) {
-    var context = domNode || document
+    var context = domNode || document;
     var elements = context.querySelectorAll(query);
     return nodeListToArray(elements);
   }
@@ -247,7 +225,7 @@
     toggles.forEach(function (toggle) {
       addEvent(toggle, click(), function (e) {
         preventDefault(e);
-        var drawerId = getAttr(toggle, 'data-drawer');
+        var drawerId = toggle.getAttribute('data-drawer');
         var drawer = document.querySelector('.js-drawer[data-drawer="' + drawerId + '"');
         toggleActive(drawers, drawer);
       });
@@ -275,7 +253,7 @@
       addEvent(toggle, click(), function (e) {
         preventDefault(e);
 
-        var sectionId = getAttr(toggle, 'data-expanding-nav');
+        var sectionId = toggle.getAttribute('data-expanding-nav');
         var section = document.querySelector('.js-expanding-nav[data-expanding-nav="' + sectionId + '"]');
         var expander = closest('js-expanding', section);
         var isOpen = hasClass(expander, 'is-active');
@@ -304,7 +282,7 @@
       addEvent(toggle, click(), function (e) {
         preventDefault(e);
         var modal;
-        var modalId = getAttr(toggle, 'data-modal');
+        var modalId = toggle.getAttribute('data-modal');
         if (modalId) {
           modal = document.querySelector('.js-modal[data-modal="' + modalId + '"');
         } else {
@@ -370,7 +348,7 @@
     var elements = findElements('.js-sticky');
     var stickies = elements.map(function (el) {
       var offset = el.offsetTop;
-      var dataTop = getAttr(el, 'data-top') || 0;
+      var dataTop = el.getAttribute('data-top') || 0;
       return {
         active: false,
         top: offset - parseInt(dataTop, 0),
@@ -383,7 +361,7 @@
       var el = item.element;
       var parent = el.parentNode;
       var distance = item.top - offset;
-      var dataTop = getAttr(el, 'data-top');
+      var dataTop = el.getAttribute('data-top');
 
       if (distance < 1 && !item.active) {
         item.shim.style.visiblity = 'hidden';
@@ -414,7 +392,7 @@
   // start up Calcite and attach all the patterns
   // optionally pass an array of patterns you'd like to watch
   function init (patterns) {
-    patterns = patterns || ['accordion', 'dropdown', 'drawer', 'expandingNav', 'modal', 'tabs', 'sticky']
+    patterns = patterns || ['accordion', 'dropdown', 'drawer', 'expandingNav', 'modal', 'tabs', 'sticky'];
     patterns.forEach(function (pattern) {
       calcite[pattern]();
     });

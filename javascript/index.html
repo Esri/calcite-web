@@ -358,16 +358,16 @@ calcite.tabs(tabs)
 <td>Adds one or more classes to an element.</td>
 </tr>
 <tr>
-<td><a href="#calcite-removeclass-domnode-event-fn-"><code>calcite.removeClass(domNode, classes)</code></a></td>
+<td><a href="#calcite-removeclass-domnode-classes-"><code>calcite.removeClass(domNode, classes)</code></a></td>
 <td>Removes one or more classes from an element.</td>
+</tr>
+<tr>
+<td><a href="#calcite-toggleclass-domnode-classname-"><code>calcite.toggleClass(domNode, className)</code></a></td>
+<td>Toggles one class on an element.</td>
 </tr>
 <tr>
 <td><a href="#calcite-closest-class-element-"><code>calcite.closest(domNode, classes)</code></a></td>
 <td>Returns closest element up the DOM tree matching a given class. Returns DOM node.</td>
-</tr>
-<tr>
-<td><a href="#calcite-getattr-element-attribute-"><code>calcite.getAttr(className, context)</code></a></td>
-<td>Returns the value of an element&#39;s attribute.</td>
 </tr>
 <tr>
 <td><a href="#calcite-nodelisttoarray-domnodelist-"><code>calcite.nodeListToArray(domNodeList)</code></a></td>
@@ -469,27 +469,28 @@ console.log(isApple); <span class="hljs-comment">// true</span>
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> node = document.getElementById(<span class="hljs-string">'test'</span>);
 calcite.addClass(node, <span class="hljs-string">'apples bananas oranges'</span>);
 </code></pre>
-<h3 id="calcite-removeclass-domnode-event-fn-">calcite.removeClass(domNode, event, fn)</h3>
+<h3 id="calcite-removeclass-domnode-classes-">calcite.removeClass(domNode, classes)</h3>
 <p>Removes one or more classes from an element. Like <code>addClass</code>, multiple classes should be separated with a space and passed as a single string:</p>
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> node = document.getElementById(<span class="hljs-string">'test'</span>);
 calcite.removeClass(node, <span class="hljs-string">'apples bananas oranges'</span>);
+</code></pre>
+<h3 id="calcite-toggleclass-domnode-classname-">calcite.toggleClass(domNode, className)</h3>
+<p>Adds the class to the element if it doesn&#39;t have the class, otherwise, remove it:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> node = document.querySelector(<span class="hljs-string">'.test'</span>);
+calcite.toggleClass(node, <span class="hljs-string">'test'</span>); <span class="hljs-comment">// remove test class</span>
+calcite.toggleClass(node, <span class="hljs-string">'test'</span>); <span class="hljs-comment">// add test class</span>
 </code></pre>
 <h3 id="calcite-closest-class-element-">calcite.closest(class, element)</h3>
 <p>Searches up the DOM tree to find the closest parent element with a given class.</p>
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> nodes = document.querySelector(<span class="hljs-string">'.child-element'</span>);
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">clickHandler</span> <span class="hljs-params">(event)</span> {</span>
-  <span class="hljs-keyword">var</span> closestNode = dom.closest(<span class="hljs-string">'parent-class'</span>, event.target);
+  <span class="hljs-keyword">var</span> closestNode = calcite.closest(<span class="hljs-string">'parent-class'</span>, event.target);
 }
 
 <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; nodes.length; i++) {
-  dom.addEvent(nodes[i], dom.event(), clickHandler);
+  calcite.addEvent(nodes[i], calcite.click(), clickHandler);
 }
-</code></pre>
-<h3 id="calcite-getattr-element-attribute-">calcite.getAttr(element, attribute)</h3>
-<p>For a given element, get the value of a specific attribute.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> node = document.querySelector(<span class="hljs-string">'input'</span>);
-<span class="hljs-keyword">var</span> value = calcite.getAttr(node, <span class="hljs-string">'value'</span>);
 </code></pre>
 <h3 id="calcite-nodelisttoarray-domnodelist-">calcite.nodeListToArray(domNodeList)</h3>
 <p>Turn a node list (usually returned from a query) into an array.</p>
@@ -553,10 +554,10 @@ calcite.removeClass(node, <span class="hljs-string">'apples bananas oranges'</sp
           <nav class="column-6 padding-leader-half">
             <a class="esri-logo" href="http://esri.com"></a>
             <section class="footer-social-nav">
-              <a class="icon-twitter" href="https://twitter.com/Esri/">T</a>
-              <a class="icon-facebook" href="https://www.facebook.com/esrigis/">F</a>
-              <a class="icon-github" href="http://esri.github.com/">G</a>
-              <a class="icon-email" href="http://www.esri.com/about-esri/contact/">E</a>
+              <a class="icon-social-twitter" aria-label="Esri on Twitter"  href="https://twitter.com/Esri/"></a>
+              <a class="icon-social-facebook" aria-label="Esri on Facebook"  href="https://www.facebook.com/esrigis/"></a>
+              <a class="icon-social-github" aria-label="Esri on GitHub"  href="http://esri.github.com/"></a>
+              <a class="icon-social-contact" aria-label="Contact Esri"  href="http://www.esri.com/about-esri/contact/"></a>
             </section>
           </nav>
           <div class="column-24">
