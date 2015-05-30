@@ -8,7 +8,7 @@ var mkdir = require('mkdirp')
 
 mkdir('lib/sass/calcite-web/icons/sets/')
 
-var sets = ['calcite', 'calcite-large', 'vecticons', 'social']
+var sets = ['calcite', 'calcite-large', 'social']
 
 function comma (index, array) {
   var needsComma = index !== array.length - 1
