@@ -1,11 +1,15 @@
 ## Unreleased
 
-#### Added
+### Added
 - First version of icon font
+- `$font-path` variable for configuration of font folder
 
 ### Modified
 - Updated Patterns Color dependency to v0.1.1
 - Calcite color icons now referenced with `icon-calcite-` and `icon-calcite-large` icon classes
+
+### Removed
+- Removed vecticons in favor of icon font
 
 ## 0.4.0
 
