@@ -1,7 +1,11 @@
 ## Unreleased
 
+#### Added
+- First version of icon font
+
 ### Modified
 - Updated Patterns Color dependency to v0.1.1
+- Calcite color icons now referenced with `icon-calcite-` and `icon-calcite-large` icon classes
 
 ## 0.4.0
 
