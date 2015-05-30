@@ -69,6 +69,13 @@ module.exports = function(grunt) {
           'copy:doc'
         ]
       },
+      fonts: {
+        files: ['lib/fonts/**/*'],
+        tasks: [
+          'copy:fonts',
+          'copy:doc'
+        ]
+      },
       docs: {
         files: ['docs/source/**'],
         tasks: [
@@ -142,8 +149,14 @@ module.exports = function(grunt) {
       doc: {
         expand: true,
         cwd: 'docs/source/',
-        src: ['assets/img/**/*', 'assets/js/**/*'],
+        src: ['assets/img/**/*', 'assets/js/**/*', 'assets/fonts/**/*'],
         dest: 'docs/build/'
+      },
+      fonts: {
+        expand: true,
+        cwd: 'lib/',
+        src: ['fonts/**/*'],
+        dest: 'docs/source/assets/'
       }
     },
 
@@ -217,6 +230,10 @@ module.exports = function(grunt) {
           {expand: true, cwd: 'dist/', src: ['**/*.ico'],  dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'image/x-icon'}},
           {expand: true, cwd: 'dist/', src: ['**/*.jpg'],  dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'image/jpg'}},
           {expand: true, cwd: 'dist/', src: ['**/*.map'],  dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'application/javascript'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.eot'],  dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'application/vnd.ms-fontobject'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.woff'], dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'application/font-woff'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.otf'],  dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'application/font-sfnt'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.ttf'],  dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'application/font-sfnt'}},
           {expand: true, cwd: 'dist/', src: ['**/*.json'], dest: 'files/calcite-web/', params: {ContentType: 'application/javascript'}}
         ]
       }
