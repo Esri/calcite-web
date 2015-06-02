@@ -1,4 +1,4 @@
-## Unreleased
+## 0.5.0
 
 ### Added
 - First version of icon font
