@@ -2,8 +2,9 @@
 // │ CUSTOM BUILD │
 // └──────────────┘
 
-// Image Path
-$image-path:                         '../img' !default;
+// Asset Paths
+$image-path:                          '../img'   !default;
+$font-path:                           '../fonts' !default;
 
 // Sass Output
 $include-colors:                      true    !default;
@@ -24,8 +25,9 @@ $include-type:                        true    !default;
 
 // Icons
 $include-icons:                       true    !default;
-  $include-one-color-icons:           true    !default;
-  $include-color-icons:               true    !default;
+  $include-calcite-icons:             true    !default;
+  $include-social-icons:              true    !default;
+  $include-icon-font:                 true    !default;
 
 // Components
 $include-alerts:                      true    !default;
@@ -86,8 +88,10 @@ $include-sticky:                      true    !default;
 @import "calcite-web/type/type";
 
 // Icons
-// Multiple sets of icons, full color, monochrome
-@import "calcite-web/icons/icons";
+// Icon font, social icons, and calcite icons
+@import "calcite-web/icons/calcite";
+@import "calcite-web/icons/font";
+@import "calcite-web/icons/social";
 
 // Components
 // small pieces: buttons, icons, tables...
