@@ -2828,300 +2828,622 @@ figcaption {
 table {
   margin-bottom: 1.55rem; }
 
-[class*="icon-"]:before {
-  content: "";
+[class*="icon-calcite-"] {
+  width: 16px;
+  height: 16px;
   display: inline-block;
-  background-repeat: no-repeat;
-  background-position: center;
   background-color: transparent;
-  width: 2rem;
-  height: 2rem;
-  background-size: 100% 100%; }
+  background-repeat: no-repeat; }
 
-.icon-close {
-  content: "×"; }
+[class*="icon-calcite-large-"] {
+  width: 32px;
+  height: 32px; }
 
-.calcite-large-3d {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/3d.svg'); }
+.icon-calcite-large-3d {
+  background-image: url('../img/icons/calcite-large/3d.svg'); }
 
-.calcite-large-add-content {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/add-content.svg'); }
+.icon-calcite-large-add-content {
+  background-image: url('../img/icons/calcite-large/add-content.svg'); }
 
-.calcite-large-add-to-legend {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/add-to-legend.svg'); }
+.icon-calcite-large-add-to-legend {
+  background-image: url('../img/icons/calcite-large/add-to-legend.svg'); }
 
-.calcite-large-analysis {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/analysis.svg'); }
+.icon-calcite-large-analysis {
+  background-image: url('../img/icons/calcite-large/analysis.svg'); }
 
-.calcite-large-approved {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/approved.svg'); }
+.icon-calcite-large-approved {
+  background-image: url('../img/icons/calcite-large/approved.svg'); }
 
-.calcite-large-arrow-down {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/arrow-down.svg'); }
+.icon-calcite-large-arrow-down {
+  background-image: url('../img/icons/calcite-large/arrow-down.svg'); }
 
-.calcite-large-basemap {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/basemap.svg'); }
+.icon-calcite-large-basemap {
+  background-image: url('../img/icons/calcite-large/basemap.svg'); }
 
-.calcite-large-bookmark {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/bookmark.svg'); }
+.icon-calcite-large-bookmark {
+  background-image: url('../img/icons/calcite-large/bookmark.svg'); }
 
-.calcite-large-cancel {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/cancel.svg'); }
+.icon-calcite-large-cancel {
+  background-image: url('../img/icons/calcite-large/cancel.svg'); }
 
-.calcite-large-close {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/close.svg'); }
+.icon-calcite-large-close {
+  background-image: url('../img/icons/calcite-large/close.svg'); }
 
-.calcite-large-description {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/description.svg'); }
+.icon-calcite-large-description {
+  background-image: url('../img/icons/calcite-large/description.svg'); }
 
-.calcite-large-details {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/details.svg'); }
+.icon-calcite-large-details {
+  background-image: url('../img/icons/calcite-large/details.svg'); }
 
-.calcite-large-down {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/down.svg'); }
+.icon-calcite-large-down {
+  background-image: url('../img/icons/calcite-large/down.svg'); }
 
-.calcite-large-edit {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/edit.svg'); }
+.icon-calcite-large-edit {
+  background-image: url('../img/icons/calcite-large/edit.svg'); }
 
-.calcite-large-features-hosted {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/features-hosted.svg'); }
+.icon-calcite-large-features-hosted {
+  background-image: url('../img/icons/calcite-large/features-hosted.svg'); }
 
-.calcite-large-features {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/features.svg'); }
+.icon-calcite-large-features {
+  background-image: url('../img/icons/calcite-large/features.svg'); }
 
-.calcite-large-file-gray {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/file-gray.svg'); }
+.icon-calcite-large-file-gray {
+  background-image: url('../img/icons/calcite-large/file-gray.svg'); }
 
-.calcite-large-file {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/file.svg'); }
+.icon-calcite-large-file {
+  background-image: url('../img/icons/calcite-large/file.svg'); }
 
-.calcite-large-globe {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/globe.svg'); }
+.icon-calcite-large-globe {
+  background-image: url('../img/icons/calcite-large/globe.svg'); }
 
-.calcite-large-hide-in-legend {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/hide-in-legend.svg'); }
+.icon-calcite-large-hide-in-legend {
+  background-image: url('../img/icons/calcite-large/hide-in-legend.svg'); }
 
-.calcite-large-imagery {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/imagery.svg'); }
+.icon-calcite-large-imagery {
+  background-image: url('../img/icons/calcite-large/imagery.svg'); }
 
-.calcite-large-layer-download {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/layer-download.svg'); }
+.icon-calcite-large-layer-download {
+  background-image: url('../img/icons/calcite-large/layer-download.svg'); }
 
-.calcite-large-layer-export-to-file {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/layer-export-to-file.svg'); }
+.icon-calcite-large-layer-export-to-file {
+  background-image: url('../img/icons/calcite-large/layer-export-to-file.svg'); }
 
-.calcite-large-layer-export {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/layer-export.svg'); }
+.icon-calcite-large-layer-export {
+  background-image: url('../img/icons/calcite-large/layer-export.svg'); }
 
-.calcite-large-layer-zoom {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/layer-zoom.svg'); }
+.icon-calcite-large-layer-zoom {
+  background-image: url('../img/icons/calcite-large/layer-zoom.svg'); }
 
-.calcite-large-map-download {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/map-download.svg'); }
+.icon-calcite-large-map-download {
+  background-image: url('../img/icons/calcite-large/map-download.svg'); }
 
-.calcite-large-map-image {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/map-image.svg'); }
+.icon-calcite-large-map-image {
+  background-image: url('../img/icons/calcite-large/map-image.svg'); }
 
-.calcite-large-measure-distance {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/measure-distance.svg'); }
+.icon-calcite-large-measure-distance {
+  background-image: url('../img/icons/calcite-large/measure-distance.svg'); }
 
-.calcite-large-measure-point {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/measure-point.svg'); }
+.icon-calcite-large-measure-point {
+  background-image: url('../img/icons/calcite-large/measure-point.svg'); }
 
-.calcite-large-measure {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/measure.svg'); }
+.icon-calcite-large-measure {
+  background-image: url('../img/icons/calcite-large/measure.svg'); }
 
-.calcite-large-print {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/print.svg'); }
+.icon-calcite-large-print {
+  background-image: url('../img/icons/calcite-large/print.svg'); }
 
-.calcite-large-remove {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/remove.svg'); }
+.icon-calcite-large-remove {
+  background-image: url('../img/icons/calcite-large/remove.svg'); }
 
-.calcite-large-rename {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/rename.svg'); }
+.icon-calcite-large-rename {
+  background-image: url('../img/icons/calcite-large/rename.svg'); }
 
-.calcite-large-scale {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/scale.svg'); }
+.icon-calcite-large-scale {
+  background-image: url('../img/icons/calcite-large/scale.svg'); }
 
-.calcite-large-search {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/search.svg'); }
+.icon-calcite-large-search {
+  background-image: url('../img/icons/calcite-large/search.svg'); }
 
-.calcite-large-tiles {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/tiles.svg'); }
+.icon-calcite-large-tiles {
+  background-image: url('../img/icons/calcite-large/tiles.svg'); }
 
-.calcite-large-transparency {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/transparency.svg'); }
+.icon-calcite-large-transparency {
+  background-image: url('../img/icons/calcite-large/transparency.svg'); }
 
-.calcite-large-up {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/up.svg'); }
+.icon-calcite-large-up {
+  background-image: url('../img/icons/calcite-large/up.svg'); }
 
-.calcite-large-web-map-blue {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/web-map-blue.svg'); }
+.icon-calcite-large-web-map-blue {
+  background-image: url('../img/icons/calcite-large/web-map-blue.svg'); }
 
-.calcite-large-web-map {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/web-map.svg'); }
+.icon-calcite-large-web-map {
+  background-image: url('../img/icons/calcite-large/web-map.svg'); }
 
-.calcite-large-web-mapping-application-gray {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/web-mapping-application-gray.svg'); }
+.icon-calcite-large-web-mapping-application-gray {
+  background-image: url('../img/icons/calcite-large/web-mapping-application-gray.svg'); }
 
-.calcite-large-web-mapping-application {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/web-mapping-application.svg'); }
+.icon-calcite-large-web-mapping-application {
+  background-image: url('../img/icons/calcite-large/web-mapping-application.svg'); }
 
-.calcite-large-your-location {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/your-location.svg'); }
+.icon-calcite-large-your-location {
+  background-image: url('../img/icons/calcite-large/your-location.svg'); }
 
-.calcite-large-zoom-out {
-  background-image: url('lib/sass/calcite-web/icons/calcite-large/zoom-out.svg'); }
+.icon-calcite-large-zoom-out {
+  background-image: url('../img/icons/calcite-large/zoom-out.svg'); }
 
-.calcite-3d {
-  background-image: url('lib/sass/calcite-web/icons/calcite/3d.svg'); }
+.icon-calcite-3d {
+  background-image: url('../img/icons/calcite/3d.svg'); }
 
-.calcite-add-content {
-  background-image: url('lib/sass/calcite-web/icons/calcite/add-content.svg'); }
+.icon-calcite-add-content {
+  background-image: url('../img/icons/calcite/add-content.svg'); }
 
-.calcite-add-to-legend {
-  background-image: url('lib/sass/calcite-web/icons/calcite/add-to-legend.svg'); }
+.icon-calcite-add-to-legend {
+  background-image: url('../img/icons/calcite/add-to-legend.svg'); }
 
-.calcite-analysis {
-  background-image: url('lib/sass/calcite-web/icons/calcite/analysis.svg'); }
+.icon-calcite-analysis {
+  background-image: url('../img/icons/calcite/analysis.svg'); }
 
-.calcite-approved {
-  background-image: url('lib/sass/calcite-web/icons/calcite/approved.svg'); }
+.icon-calcite-approved {
+  background-image: url('../img/icons/calcite/approved.svg'); }
 
-.calcite-arrow-down {
-  background-image: url('lib/sass/calcite-web/icons/calcite/arrow-down.svg'); }
+.icon-calcite-arrow-down {
+  background-image: url('../img/icons/calcite/arrow-down.svg'); }
 
-.calcite-basemap {
-  background-image: url('lib/sass/calcite-web/icons/calcite/basemap.svg'); }
+.icon-calcite-basemap {
+  background-image: url('../img/icons/calcite/basemap.svg'); }
 
-.calcite-bookmark {
-  background-image: url('lib/sass/calcite-web/icons/calcite/bookmark.svg'); }
+.icon-calcite-bookmark {
+  background-image: url('../img/icons/calcite/bookmark.svg'); }
 
-.calcite-cancel {
-  background-image: url('lib/sass/calcite-web/icons/calcite/cancel.svg'); }
+.icon-calcite-cancel {
+  background-image: url('../img/icons/calcite/cancel.svg'); }
 
-.calcite-close {
-  background-image: url('lib/sass/calcite-web/icons/calcite/close.svg'); }
+.icon-calcite-close {
+  background-image: url('../img/icons/calcite/close.svg'); }
 
-.calcite-description {
-  background-image: url('lib/sass/calcite-web/icons/calcite/description.svg'); }
+.icon-calcite-description {
+  background-image: url('../img/icons/calcite/description.svg'); }
 
-.calcite-details {
-  background-image: url('lib/sass/calcite-web/icons/calcite/details.svg'); }
+.icon-calcite-details {
+  background-image: url('../img/icons/calcite/details.svg'); }
 
-.calcite-down {
-  background-image: url('lib/sass/calcite-web/icons/calcite/down.svg'); }
+.icon-calcite-down {
+  background-image: url('../img/icons/calcite/down.svg'); }
 
-.calcite-edit {
-  background-image: url('lib/sass/calcite-web/icons/calcite/edit.svg'); }
+.icon-calcite-edit {
+  background-image: url('../img/icons/calcite/edit.svg'); }
 
-.calcite-features-hosted {
-  background-image: url('lib/sass/calcite-web/icons/calcite/features-hosted.svg'); }
+.icon-calcite-features-hosted {
+  background-image: url('../img/icons/calcite/features-hosted.svg'); }
 
-.calcite-features {
-  background-image: url('lib/sass/calcite-web/icons/calcite/features.svg'); }
+.icon-calcite-features {
+  background-image: url('../img/icons/calcite/features.svg'); }
 
-.calcite-file-gray {
-  background-image: url('lib/sass/calcite-web/icons/calcite/file-gray.svg'); }
+.icon-calcite-file-gray {
+  background-image: url('../img/icons/calcite/file-gray.svg'); }
 
-.calcite-file {
-  background-image: url('lib/sass/calcite-web/icons/calcite/file.svg'); }
+.icon-calcite-file {
+  background-image: url('../img/icons/calcite/file.svg'); }
 
-.calcite-globe {
-  background-image: url('lib/sass/calcite-web/icons/calcite/globe.svg'); }
+.icon-calcite-globe {
+  background-image: url('../img/icons/calcite/globe.svg'); }
 
-.calcite-hide-in-legend {
-  background-image: url('lib/sass/calcite-web/icons/calcite/hide-in-legend.svg'); }
+.icon-calcite-hide-in-legend {
+  background-image: url('../img/icons/calcite/hide-in-legend.svg'); }
 
-.calcite-imagery {
-  background-image: url('lib/sass/calcite-web/icons/calcite/imagery.svg'); }
+.icon-calcite-imagery {
+  background-image: url('../img/icons/calcite/imagery.svg'); }
 
-.calcite-layer-download {
-  background-image: url('lib/sass/calcite-web/icons/calcite/layer-download.svg'); }
+.icon-calcite-layer-download {
+  background-image: url('../img/icons/calcite/layer-download.svg'); }
 
-.calcite-layer-export-to-file {
-  background-image: url('lib/sass/calcite-web/icons/calcite/layer-export-to-file.svg'); }
+.icon-calcite-layer-export-to-file {
+  background-image: url('../img/icons/calcite/layer-export-to-file.svg'); }
 
-.calcite-layer-export {
-  background-image: url('lib/sass/calcite-web/icons/calcite/layer-export.svg'); }
+.icon-calcite-layer-export {
+  background-image: url('../img/icons/calcite/layer-export.svg'); }
 
-.calcite-layer-zoom {
-  background-image: url('lib/sass/calcite-web/icons/calcite/layer-zoom.svg'); }
+.icon-calcite-layer-zoom {
+  background-image: url('../img/icons/calcite/layer-zoom.svg'); }
 
-.calcite-map-download {
-  background-image: url('lib/sass/calcite-web/icons/calcite/map-download.svg'); }
+.icon-calcite-map-download {
+  background-image: url('../img/icons/calcite/map-download.svg'); }
 
-.calcite-map-image {
-  background-image: url('lib/sass/calcite-web/icons/calcite/map-image.svg'); }
+.icon-calcite-map-image {
+  background-image: url('../img/icons/calcite/map-image.svg'); }
 
-.calcite-measure-distance {
-  background-image: url('lib/sass/calcite-web/icons/calcite/measure-distance.svg'); }
+.icon-calcite-measure-distance {
+  background-image: url('../img/icons/calcite/measure-distance.svg'); }
 
-.calcite-measure-point {
-  background-image: url('lib/sass/calcite-web/icons/calcite/measure-point.svg'); }
+.icon-calcite-measure-point {
+  background-image: url('../img/icons/calcite/measure-point.svg'); }
 
-.calcite-measure {
-  background-image: url('lib/sass/calcite-web/icons/calcite/measure.svg'); }
+.icon-calcite-measure {
+  background-image: url('../img/icons/calcite/measure.svg'); }
 
-.calcite-print {
-  background-image: url('lib/sass/calcite-web/icons/calcite/print.svg'); }
+.icon-calcite-print {
+  background-image: url('../img/icons/calcite/print.svg'); }
 
-.calcite-remove {
-  background-image: url('lib/sass/calcite-web/icons/calcite/remove.svg'); }
+.icon-calcite-remove {
+  background-image: url('../img/icons/calcite/remove.svg'); }
 
-.calcite-rename {
-  background-image: url('lib/sass/calcite-web/icons/calcite/rename.svg'); }
+.icon-calcite-rename {
+  background-image: url('../img/icons/calcite/rename.svg'); }
 
-.calcite-scale {
-  background-image: url('lib/sass/calcite-web/icons/calcite/scale.svg'); }
+.icon-calcite-scale {
+  background-image: url('../img/icons/calcite/scale.svg'); }
 
-.calcite-search {
-  background-image: url('lib/sass/calcite-web/icons/calcite/search.svg'); }
+.icon-calcite-search {
+  background-image: url('../img/icons/calcite/search.svg'); }
 
-.calcite-tiles {
-  background-image: url('lib/sass/calcite-web/icons/calcite/tiles.svg'); }
+.icon-calcite-tiles {
+  background-image: url('../img/icons/calcite/tiles.svg'); }
 
-.calcite-transparency {
-  background-image: url('lib/sass/calcite-web/icons/calcite/transparency.svg'); }
+.icon-calcite-transparency {
+  background-image: url('../img/icons/calcite/transparency.svg'); }
 
-.calcite-up {
-  background-image: url('lib/sass/calcite-web/icons/calcite/up.svg'); }
+.icon-calcite-up {
+  background-image: url('../img/icons/calcite/up.svg'); }
 
-.calcite-web-map-blue {
-  background-image: url('lib/sass/calcite-web/icons/calcite/web-map-blue.svg'); }
+.icon-calcite-web-map-blue {
+  background-image: url('../img/icons/calcite/web-map-blue.svg'); }
 
-.calcite-web-map {
-  background-image: url('lib/sass/calcite-web/icons/calcite/web-map.svg'); }
+.icon-calcite-web-map {
+  background-image: url('../img/icons/calcite/web-map.svg'); }
 
-.calcite-web-mapping-application-gray {
-  background-image: url('lib/sass/calcite-web/icons/calcite/web-mapping-application-gray.svg'); }
+.icon-calcite-web-mapping-application-gray {
+  background-image: url('../img/icons/calcite/web-mapping-application-gray.svg'); }
 
-.calcite-web-mapping-application {
-  background-image: url('lib/sass/calcite-web/icons/calcite/web-mapping-application.svg'); }
+.icon-calcite-web-mapping-application {
+  background-image: url('../img/icons/calcite/web-mapping-application.svg'); }
 
-.calcite-your-location {
-  background-image: url('lib/sass/calcite-web/icons/calcite/your-location.svg'); }
+.icon-calcite-your-location {
+  background-image: url('../img/icons/calcite/your-location.svg'); }
 
-.calcite-zoom-out {
-  background-image: url('lib/sass/calcite-web/icons/calcite/zoom-out.svg'); }
+.icon-calcite-zoom-out {
+  background-image: url('../img/icons/calcite/zoom-out.svg'); }
 
-.icon-announcement {
-  background-image: url('lib/sass/calcite-web/icons/vecticons/announcement.svg'); }
+@font-face {
+  font-family: 'calcite-ui';
+  src: url('../fonts/calcite-ui.eot?-v8piff');
+  src: url('../fonts/calcite-ui.eot?#iefix-v8piff') format('embedded-opentype'), url('../fonts/calcite-ui.ttf?-v8piff') format('truetype'), url('../fonts/calcite-ui.woff?-v8piff') format('woff'), url('../fonts/calcite-ui.svg?-v8piff#calcite-ui') format('svg');
+  font-weight: normal;
+  font-style: normal; }
 
-.icon-auth {
-  background-image: url('lib/sass/calcite-web/icons/vecticons/auth.svg'); }
+[class*="icon-ui-"] {
+  font-family: 'calcite-ui';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
-.icon-browser {
-  background-image: url('lib/sass/calcite-web/icons/vecticons/browser.svg'); }
+.icon-ui-green:before {
+  color: #5a9359; }
 
-.icon-checkmark {
-  background-image: url('lib/sass/calcite-web/icons/vecticons/checkmark.svg'); }
+.icon-ui-blue:before {
+  color: #3b8fc4; }
 
-.icon-close {
-  background-image: url('lib/sass/calcite-web/icons/vecticons/close.svg'); }
+.icon-ui-purple:before {
+  color: #9081bc; }
 
-.icon-data {
-  background-image: url('lib/sass/calcite-web/icons/vecticons/data.svg'); }
+.icon-ui-orange:before {
+  color: #eda959; }
+
+.icon-ui-gray:before {
+  color: #959595; }
+
+.icon-ui-red:before {
+  color: #c6542d; }
+
+.icon-ui-add-attachment:before {
+  content: "\e600"; }
+
+.icon-ui-add:before {
+  content: "\e601"; }
+
+.icon-ui-announcement:before {
+  content: "\e602"; }
+
+.icon-ui-applications:before {
+  content: "\e603"; }
+
+.icon-ui-attachment:before {
+  content: "\e604"; }
+
+.icon-ui-authorize:before {
+  content: "\e605"; }
+
+.icon-ui-basemap:before {
+  content: "\e606"; }
+
+.icon-ui-beginning:before {
+  content: "\e607"; }
+
+.icon-ui-browser:before {
+  content: "\e608"; }
+
+.icon-ui-calendar:before {
+  content: "\e609"; }
+
+.icon-ui-caution:before {
+  content: "\e60a"; }
+
+.icon-ui-chart:before {
+  content: "\e60b"; }
+
+.icon-ui-check-mark:before {
+  content: "\e60c"; }
+
+.icon-ui-checkbox-checked:before {
+  content: "\e60d"; }
+
+.icon-ui-checkbox-unchecked:before {
+  content: "\e60e"; }
+
+.icon-ui-circled-back-arrow:before {
+  content: "\e60f"; }
+
+.icon-ui-circled-bottom-arrow:before {
+  content: "\e610"; }
+
+.icon-ui-circled-close:before {
+  content: "\e611"; }
+
+.icon-ui-circled-down-arrow:before {
+  content: "\e612"; }
+
+.icon-ui-circled-forward-arrow:before {
+  content: "\e613"; }
+
+.icon-ui-circled-left-arrow:before {
+  content: "\e614"; }
+
+.icon-ui-circled-right-arrow:before {
+  content: "\e615"; }
+
+.icon-ui-circled-top-arrow:before {
+  content: "\e616"; }
+
+.icon-ui-circled-up-arrow:before {
+  content: "\e617"; }
+
+.icon-ui-close:before {
+  content: "\e618"; }
+
+.icon-ui-collection:before {
+  content: "\e619"; }
+
+.icon-ui-comment:before {
+  content: "\e61a"; }
+
+.icon-ui-configure-popup:before {
+  content: "\e61b"; }
+
+.icon-ui-dashboard:before {
+  content: "\e61c"; }
+
+.icon-ui-delete:before {
+  content: "\e61d"; }
+
+.icon-ui-deny:before {
+  content: "\e61e"; }
+
+.icon-ui-description:before {
+  content: "\e61f"; }
+
+.icon-ui-directions-negative:before {
+  content: "\e620"; }
+
+.icon-ui-directions:before {
+  content: "\e621"; }
+
+.icon-ui-documentation:before {
+  content: "\e622"; }
+
+.icon-ui-down-arrow:before {
+  content: "\e623"; }
+
+.icon-ui-download:before {
+  content: "\e624"; }
+
+.icon-ui-edit:before {
+  content: "\e625"; }
+
+.icon-ui-end:before {
+  content: "\e626"; }
+
+.icon-ui-environment-settings:before {
+  content: "\e627"; }
+
+.icon-ui-eraser:before {
+  content: "\e628"; }
+
+.icon-ui-error-negative:before {
+  content: "\e629"; }
+
+.icon-ui-error:before {
+  content: "\e62a"; }
+
+.icon-ui-experimental:before {
+  content: "\e62b"; }
+
+.icon-ui-feature-layer:before {
+  content: "\e62c"; }
+
+.icon-ui-filter:before {
+  content: "\e62d"; }
+
+.icon-ui-fixed-zoom-in:before {
+  content: "\e62e"; }
+
+.icon-ui-fixed-zoom-out:before {
+  content: "\e62f"; }
+
+.icon-ui-forward:before {
+  content: "\e630"; }
+
+.icon-ui-globe:before {
+  content: "\e631"; }
+
+.icon-ui-grant:before {
+  content: "\e632"; }
+
+.icon-ui-group:before {
+  content: "\e633"; }
+
+.icon-ui-home:before {
+  content: "\e634"; }
+
+.icon-ui-horizontal-drag-handle:before {
+  content: "\e635"; }
+
+.icon-ui-horizontal-drag:before {
+  content: "\e636"; }
+
+.icon-ui-key:before {
+  content: "\e637"; }
+
+.icon-ui-layers:before {
+  content: "\e638"; }
+
+.icon-ui-left:before {
+  content: "\e639"; }
+
+.icon-ui-link-external:before {
+  content: "\e63a"; }
+
+.icon-ui-link:before {
+  content: "\e63b"; }
+
+.icon-ui-list:before {
+  content: "\e63c"; }
+
+.icon-ui-loading:before {
+  content: "\e63d"; }
+
+.icon-ui-locate:before {
+  content: "\e63e"; }
+
+.icon-ui-mail:before {
+  content: "\e63f"; }
+
+.icon-ui-map-pin:before {
+  content: "\e640"; }
+
+.icon-ui-maps:before {
+  content: "\e641"; }
+
+.icon-ui-marketplace:before {
+  content: "\e642"; }
+
+.icon-ui-maximize:before {
+  content: "\e643"; }
+
+.icon-ui-media:before {
+  content: "\e644"; }
+
+.icon-ui-menu:before {
+  content: "\e645"; }
+
+.icon-ui-minimize:before {
+  content: "\e646"; }
+
+.icon-ui-mobile:before {
+  content: "\e647"; }
+
+.icon-ui-navigation:before {
+  content: "\e648"; }
+
+.icon-ui-notice:before {
+  content: "\e649"; }
+
+.icon-ui-pan:before {
+  content: "\e64a"; }
+
+.icon-ui-pause:before {
+  content: "\e64b"; }
+
+.icon-ui-phone:before {
+  content: "\e64c"; }
+
+.icon-ui-play:before {
+  content: "\e64d"; }
+
+.icon-ui-printer:before {
+  content: "\e64e"; }
+
+.icon-ui-question:before {
+  content: "\e64f"; }
+
+.icon-ui-radio-checked:before {
+  content: "\e650"; }
+
+.icon-ui-radio-unchecked:before {
+  content: "\e651"; }
+
+.icon-ui-refresh:before {
+  content: "\e652"; }
+
+.icon-ui-resend-invitation:before {
+  content: "\e653"; }
+
+.icon-ui-reverse:before {
+  content: "\e654"; }
+
+.icon-ui-review:before {
+  content: "\e655"; }
+
+.icon-ui-right:before {
+  content: "\e656"; }
+
+.icon-ui-rotate:before {
+  content: "\e657"; }
+
+.icon-ui-save:before {
+  content: "\e658"; }
+
+.icon-ui-search:before {
+  content: "\e659"; }
+
+.icon-ui-settings:before {
+  content: "\e65a"; }
+
+.icon-ui-share:before {
+  content: "\e65b"; }
+
+.icon-ui-sign-out:before {
+  content: "\e65c"; }
+
+.icon-ui-support:before {
+  content: "\e65d"; }
+
+.icon-ui-tag:before {
+  content: "\e65e"; }
+
+.icon-ui-up-down-arrows:before {
+  content: "\e660"; }
+
+.icon-ui-upload:before {
+  content: "\e661"; }
+
+.icon-ui-user:before {
+  content: "\e662"; }
+
+.icon-ui-vertical-drag-handle:before {
+  content: "\e663"; }
+
+.icon-ui-vertical-drag:before {
+  content: "\e664"; }
+
+.icon-ui-zoom-in:before {
+  content: "\e665"; }
+
+.icon-ui-zoom-out:before {
+  content: "\e666"; }
 
 [class*="icon-social-"] {
   background-color: #b2b2b2;
