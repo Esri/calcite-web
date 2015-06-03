@@ -9,59 +9,60 @@ $font-path:                           '../fonts' !default;
 // Sass Output
 $include-colors:                      true    !default;
 $include-utils:                       true    !default;
+$generate-css:                        true    !default;
 
 // CSS Output
-$include-reset:                       true    !default;
+$include-reset:                       $generate-css    !default;
 
-$include-grid:                        true    !default;
-  $fold-grid:                         true    !default;
-  $block-grid:                        true    !default;
+$include-grid:                        $generate-css    !default;
+  $fold-grid:                         $generate-css    !default;
+  $block-grid:                        $generate-css    !default;
 
-$include-type:                        true    !default;
+$include-type:                        $generate-css    !default;
   $include-content-family:            false   !default;
   $include-secondary-family:          false    !default;
-  $include-code-family:               true    !default;
-  $include-type-defaults:             true    !default;
+  $include-code-family:               $generate-css    !default;
+  $include-type-defaults:             $generate-css    !default;
 
 // Icons
-$include-icons:                       true    !default;
-  $include-calcite-icons:             true    !default;
-  $include-social-icons:              true    !default;
-  $include-icon-font:                 true    !default;
+$include-icons:                       $generate-css    !default;
+  $include-calcite-icons:             $generate-css    !default;
+  $include-social-icons:              $generate-css    !default;
+  $include-icon-font:                 $generate-css    !default;
 
 // Components
-$include-alerts:                      true    !default;
-$include-tables:                      true    !default;
-$include-panel:                       true    !default;
-$include-button:                      true    !default;
-$include-dropdowns:                   true    !default;
-$include-breadcrumbs:                 true    !default;
-$include-tooltip:                     true    !default;
-$include-forms:                       true    !default;
-$include-loader:                      true    !default;
-$include-search-bar:                  true    !default;
-$include-logo:                        true    !default;
+$include-alerts:                      $generate-css    !default;
+$include-tables:                      $generate-css    !default;
+$include-panel:                       $generate-css    !default;
+$include-button:                      $generate-css    !default;
+$include-dropdowns:                   $generate-css    !default;
+$include-breadcrumbs:                 $generate-css    !default;
+$include-tooltip:                     $generate-css    !default;
+$include-forms:                       $generate-css    !default;
+$include-loader:                      $generate-css    !default;
+$include-search-bar:                  $generate-css    !default;
+$include-logo:                        $generate-css    !default;
 
 // Patterns
-$include-footer:                      true    !default;
-$include-sticky-footer:               true    !default;
-$include-pagination:                  true    !default;
-$include-side-nav:                    true    !default;
-$include-sub-nav:                     true    !default;
-$include-third-nav:                   true    !default;
-$include-top-nav:                     true    !default;
-$include-super-nav:                   true    !default;
-$include-toolbar:                     true    !default;
-$include-carousel:                    true    !default;
+$include-footer:                      $generate-css    !default;
+$include-sticky-footer:               $generate-css    !default;
+$include-pagination:                  $generate-css    !default;
+$include-side-nav:                    $generate-css    !default;
+$include-sub-nav:                     $generate-css    !default;
+$include-third-nav:                   $generate-css    !default;
+$include-top-nav:                     $generate-css    !default;
+$include-super-nav:                   $generate-css    !default;
+$include-toolbar:                     $generate-css    !default;
+$include-carousel:                    $generate-css    !default;
 
 // Javascript
-$include-tabs:                        true    !default;
-$include-modal:                       true    !default;
-$include-accordion:                   true    !default;
-$include-carousel:                    true    !default;
-$include-drawers:                     true    !default;
-$include-expanding-nav:               true    !default;
-$include-sticky:                      true    !default;
+$include-tabs:                        $generate-css    !default;
+$include-modal:                       $generate-css    !default;
+$include-accordion:                   $generate-css    !default;
+$include-carousel:                    $generate-css    !default;
+$include-drawers:                     $generate-css    !default;
+$include-expanding-nav:               $generate-css    !default;
+$include-sticky:                      $generate-css    !default;
 
 // ┌──────────────┐
 // │ CALCITE WEB  │
