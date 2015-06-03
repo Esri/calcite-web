@@ -1,3 +1,13 @@
+## 0.5.1
+_unreleased_
+
+### Added
+- `.grid-full` for opt-in to 26 column system
+
+### Modified
+- Default grid behavior centers column-24 on large screen sizes
+- Changed edge padding back to .04vw from 0.01.vw
+
 ## 0.5.0
 
 ### Added

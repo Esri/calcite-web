@@ -11,6 +11,7 @@
   padding-left: 0;
   margin-right: auto;
   margin-left: auto;
+  box-sizing: border-box;
 }
 
 // ┌─────────┐
@@ -158,6 +159,17 @@
 @if $include-grid == true {
   .grid-container {
     @include grid-container();
+  }
+
+  @media screen and (min-width: $large) {
+    .grid-container {
+      padding-left: 15.33333333vw;
+      padding-right: 15.33333333vw;
+    }
+    .grid-full {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   [class*="column-"] {
