@@ -11,6 +11,7 @@
   padding-left: 0;
   margin-right: auto;
   margin-left: auto;
+  box-sizing: border-box;
 }
 
 // ┌─────────┐
@@ -158,6 +159,20 @@
 @if $include-grid == true {
   .grid-container {
     @include grid-container();
+  }
+
+  @media screen and (min-width: $large) {
+    .grid-container {
+      $diff: $large-column-count - $default-column-count;
+      $side: $diff / 2;
+      $margin: $side / $large-column-count * $container-width;
+      padding-left: $margin;
+      padding-right: $margin;
+    }
+    .grid-full {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   [class*="column-"] {
