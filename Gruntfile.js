@@ -73,6 +73,7 @@ module.exports = function(grunt) {
         files: ['lib/fonts/**/*'],
         tasks: [
           'copy:fonts',
+          'copy:fontsDist',
           'copy:doc'
         ]
       },
@@ -149,14 +150,20 @@ module.exports = function(grunt) {
       doc: {
         expand: true,
         cwd: 'docs/source/',
-        src: ['assets/img/**/*', 'assets/js/**/*', 'assets/fonts/**/*'],
+        src: ['assets/img/**/*', 'assets/js/**/*'],
         dest: 'docs/build/'
       },
       fonts: {
         expand: true,
         cwd: 'lib/',
         src: ['fonts/**/*'],
-        dest: 'docs/source/assets/'
+        dest: 'docs/build/assets/'
+      },
+      fontsDist: {
+        expand: true,
+        cwd: 'lib/',
+        src: ['fonts/**/*'],
+        dest: 'dist/'
       }
     },
 
@@ -317,6 +324,7 @@ module.exports = function(grunt) {
     'concat:doc',
     'sass:doc',
     'copy:doc',
+    'copy:fonts',
     'http-server',
     'watch'
   ]);
@@ -351,6 +359,7 @@ module.exports = function(grunt) {
       'concat:doc',
       'sass:doc',
       'copy:doc',
+      'copy:fonts',
       'shell:deploy',
       'gh-pages'
     ]);
