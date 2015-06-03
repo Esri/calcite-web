@@ -1,6 +1,10 @@
 ## 0.5.2
+
 ## Added
 - `calcite-web/scss/imports` for all sass with no css
+
+### Fixed
+- Fonts now included in dist
 
 ## 0.5.1
 
