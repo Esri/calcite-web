@@ -163,8 +163,10 @@
 
   @media screen and (min-width: $large) {
     .grid-container {
-      padding-left: 15.33333333vw;
-      padding-right: 15.33333333vw;
+      $diff: $large-column-count - $default-column-count;
+      $margin: $diff / $large-column-count * 50vw;
+      padding-left: $margin;
+      padding-right: $margin;
     }
     .grid-full {
       padding-left: 0;
