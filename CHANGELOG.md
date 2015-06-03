@@ -1,8 +1,8 @@
 ## 0.5.1
-_unreleased_
 
 ### Added
 - `.grid-full` for opt-in to 26 column system
+- Block groups to 8 up
 
 ### Modified
 - Default grid behavior centers column-24 on large screen sizes
