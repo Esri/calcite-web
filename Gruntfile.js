@@ -241,7 +241,18 @@ module.exports = function(grunt) {
           {expand: true, cwd: 'dist/', src: ['**/*.woff'], dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'application/font-woff'}},
           {expand: true, cwd: 'dist/', src: ['**/*.otf'],  dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'application/font-sfnt'}},
           {expand: true, cwd: 'dist/', src: ['**/*.ttf'],  dest: 'files/calcite-web/' + currentVersion + '/', params: {ContentType: 'application/font-sfnt'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.json'], dest: 'files/calcite-web/', params: {ContentType: 'application/javascript'}}
+          {expand: true, cwd: 'dist/', src: ['**/*.json'], dest: 'files/calcite-web/', params: {ContentType: 'application/javascript'}},
+          // Also upload to the 'latest' directory
+          {expand: true, cwd: 'dist/', src: ['**/*.js'],   dest: 'files/calcite-web/latest/', params: {ContentType: 'application/javascript'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.css'],  dest: 'files/calcite-web/latest/', params: {ContentType: 'text/css'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.svg'],  dest: 'files/calcite-web/latest/', params: {ContentType: 'image/svg+xml'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.ico'],  dest: 'files/calcite-web/latest/', params: {ContentType: 'image/x-icon'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.jpg'],  dest: 'files/calcite-web/latest/', params: {ContentType: 'image/jpg'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.map'],  dest: 'files/calcite-web/latest/', params: {ContentType: 'application/javascript'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.eot'],  dest: 'files/calcite-web/latest/', params: {ContentType: 'application/vnd.ms-fontobject'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.woff'], dest: 'files/calcite-web/latest/', params: {ContentType: 'application/font-woff'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.otf'],  dest: 'files/calcite-web/latest/', params: {ContentType: 'application/font-sfnt'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.ttf'],  dest: 'files/calcite-web/latest/', params: {ContentType: 'application/font-sfnt'}}
         ]
       }
     },
