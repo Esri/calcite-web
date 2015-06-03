@@ -1,3 +1,7 @@
+## 0.5.2
+## Added
+- `calcite-web/scss/imports` for all sass with no css
+
 ## 0.5.1
 
 ### Added
