@@ -1,0 +1,51 @@
+// ┌────────┐
+// │ Alerts │
+// └────────┘
+//  ↳ http://esri.github.io/calcite-web/components/#alerts
+//  ↳ components → _alerts.md
+
+@mixin alert() {
+  @include font-size(-1);
+  padding: $baseline/2 $baseline/2;
+  @include text-color($dark-blue);
+  background-color: lighten($light-blue, 15%);
+  position: relative;
+  display: none;
+  z-index: 100;
+  max-width: 40em;
+  border: 1px solid $blue;
+  @include box-shadow($box-shadow);
+  &.is-active {
+    display: block;
+  }
+  a:hover {
+    color: $dark-blue;
+  }
+}
+
+  @mixin alert-red() {
+    background-color: lighten($light-red, 15%);
+    @include text-color($dark-red);
+    @extend .link-red;
+    border-color: $light-red;
+  }
+
+  @mixin alert-green() {
+    background-color: lighten($light-green, 15%);
+    @include text-color($dark-green);
+    @extend .link-green;
+    border-color: $light-green;
+  }
+
+  @mixin alert-close() {
+    position: absolute;
+    right: $baseline/2;
+  }
+
+
+@if $include-alerts == true {
+  .alert {@include alert();}
+    .alert-red {@include alert-red();}
+    .alert-green {@include alert-green();}
+    .alert-close {@include alert-close();}
+}
