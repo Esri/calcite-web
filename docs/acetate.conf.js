@@ -1,23 +1,7 @@
-function config(acetate) {
-  acetate.global('config', {
-    environment: 'dev',
-  });
-
+module.exports = function (acetate) {
   acetate.layout('**/*', 'layouts/_doc');
   acetate.layout('page-layouts/*.html', 'layouts/_blank:content');
-
-  acetate.metadata('**/*', {
-    data: {
-      table_of_contents: 'table_of_contents.yml',
-      icons: 'icons.json',
-      font: 'icon-font.json'
-    }
-  });
-
-  acetate.src = 'source';
-  acetate.dest = 'build';
-
-  acetate.notFound = '404.html';
+  acetate.data('table_of_contents', 'table_of_contents.yml');
+  acetate.data('icons', 'icons.json');
+  acetate.data('font', 'icon-font.json');
 }
-
-module.exports = config;

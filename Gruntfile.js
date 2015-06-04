@@ -32,13 +32,6 @@ module.exports = function(grunt) {
       }
     },
 
-    // Rebuild site with Acetate
-    'acetate': {
-      build: {
-        config: 'docs/acetate.conf.js'
-      }
-    },
-
     // Watch files
     'watch': {
       scripts: {
@@ -80,7 +73,7 @@ module.exports = function(grunt) {
       docs: {
         files: ['docs/source/**'],
         tasks: [
-          'acetate:build'
+          'shell:acetate'
         ]
       }
     },
@@ -290,6 +283,9 @@ module.exports = function(grunt) {
       },
       icons: {
         command: 'bin/icons.js'    // Create a sass file with all icons from icon folder
+      },
+      acetate: {
+        command: 'npm run acetate' // build the docs site
       }
     },
 
@@ -330,7 +326,7 @@ module.exports = function(grunt) {
 
   // Run a development environment
   grunt.registerTask('dev', [
-    'acetate:build',
+    'shell:acetate',
     'newer:imagemin:doc',
     'concat:doc',
     'sass:doc',
@@ -365,7 +361,7 @@ module.exports = function(grunt) {
       grunt.config.set('gh-pages.options.message', grunt.option('message'));
     }
     grunt.task.run([
-      'acetate:build',
+      'shell:acetate',
       'newer:imagemin:doc',
       'concat:doc',
       'sass:doc',
