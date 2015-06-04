@@ -1,1 +1,0 @@
-<h1 class="trailer-0">Calcite Javascript</h1>

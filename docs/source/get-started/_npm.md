@@ -1,5 +1,3 @@
-## NPM
-
 To install Calcite Web with npm, type:
 
 ```bash

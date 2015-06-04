@@ -1,5 +1,3 @@
-## Type Colors
-
 Three basic colors are set for color in typography. It's not recommended to change these values, but they are provided for your reference.
 
 ```scss

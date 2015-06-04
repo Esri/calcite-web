@@ -1,5 +1,3 @@
-## Dropdowns
-
 > Dropdowns rely on the `calcite-web.js` JavaScript library for their functionality. See the [JavaScript Documentation](../javascript/) for more information.
 
 Dropdowns are good for showing multiple options under a single call to action. For example, if you had a download button, and you needed the user to choose a format for the download, you could put several choices in a dropdown.

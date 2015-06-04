@@ -1,5 +1,3 @@
-<h1 class="leader-0" id="overview">Grid</h1>
-
 The Calcite Grid System includes a full, responsive, and configurable grid with columns, a container, and a 'Block Group' grid. The main grid is different from standard css grid systems in two key ways:
 
 1. Column widths are defined by the viewport size rather than percentage of their containers.

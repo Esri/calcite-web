@@ -1,5 +1,3 @@
-# Versioning
-
 Calcite Web uses SemVer (Semantic Versioning) for its releases. This means that version numbers are basically formatted like `MAJOR.MINOR.PATCH`. If you're well acquainted with SemVer you should skip to [releasing a new version](#releasing-a-new-version) below.
 
 #### Major

@@ -1,5 +1,3 @@
-## Configuration
-
 If you are using Calcite Web as a Sass library, you can customize the grid with Sass variables. Below are the different settings you have access to and their default values:
 
 | Variable                    | Default              | Description                                       |

@@ -1,5 +1,3 @@
-## Static Files
-
 This is probably the easiest way, but you won't get any of the helpful Sass mixins. If you're looking to get up and running quickly, just [download the latest release](https://github.com/ArcGIS/calcite-web/releases) and move the zipped files to wherever you keep your assets (CSS, JavaScript, images). Be sure to use [the documentation site](http://esri.github.io/calcite-web/) to copy and paste patterns, components, and even a sample html boilerplate.
 
 *A CDN is being planned for future releases, allowing you to reference Calcite Web static assets on a server.*

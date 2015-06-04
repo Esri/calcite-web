@@ -1,5 +1,3 @@
-# Utility Functions
-
 `calcite-web.js` also has methods for [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) traversal and manipulation. If the needs of a project are not too complex it can be used in place of jQuery, Dojo, or other large frameworks.
 
 | function | action |

@@ -1,2 +1,1 @@
-## User Sign In
 Designed to be combined with the [top navigation](#top-nav) pattern on sites where a logged in portion is accessible. Once a use is logged in, it should be replaced with the [user navigation pattern](user-nav).

@@ -1,5 +1,3 @@
-<h1 class="leader-0" id="overview">JavaScript</h1>
-
 Calcite Web includes a small JavaScript library. `calcite-web.js` is a lightweight and dependency-free library made to enable interactive behaviors for certain [patterns](../patterns/) and [components](../components).
 
 Currently, the following components and patterns rely on `calcite-web.js`:

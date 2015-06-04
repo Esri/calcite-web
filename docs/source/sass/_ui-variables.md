@@ -1,5 +1,3 @@
-## UI Variables
-
 Controls specific aspects and behaviors across the UI.
 
 ```scss

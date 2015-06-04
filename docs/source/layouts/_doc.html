@@ -24,13 +24,14 @@
 
   <main class="column-17 pre-1 content-face">
     {% for group in data.table_of_contents[section].navigation %}
-
+      <h1 class="text-rule trailer-2">{{group.group}}</h1>
       {% for page in group.pages %}
-        <section class="trailer-2">
+        <section>
+          <h2 id="{{page.link}}">{{page.title}}</h2>
           {% markdown %}{% include data.table_of_contents[section].base + '/_' + page.link %}{% endmarkdown %}
 
           {% if page.modifiers %}
-            <h3 class="leader-2 trailer-1">Modifiers</h3>
+            <h3 class="leader-2">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
                 {% include data.table_of_contents[section].base + '/sample-code/_' + page.link %}
@@ -71,7 +72,7 @@
           {% endif %}
 
         </section>
-        <hr class="trailer-2">
+        <hr>
       {% endfor %}
     {% endfor %}
   </main>
