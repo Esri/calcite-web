@@ -3,6 +3,10 @@
 ### Fixed
 - Modals not blurry
 
+### Modified
+- `.text-rule` color is now the same as `<hr>`
+- `<hr>` elements now have slightly less margin top and bottom
+
 ## 0.5.2
 
 ### Added
