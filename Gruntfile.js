@@ -157,6 +157,10 @@ module.exports = function(grunt) {
         cwd: 'lib/',
         src: ['fonts/**/*'],
         dest: 'dist/'
+      },
+      changelog: {
+        src: ['CHANGELOG.md'],
+        dest: 'dist/'
       }
     },
 
