@@ -1,6 +1,16 @@
 ## 0.5.2
-## Added
+
+### Added
 - `calcite-web/scss/imports` for all sass with no css
+
+### Modified
+- Inputs have small inset box-shadow
+
+### Fixed
+- Fonts now included in dist
+
+### Improvements
+- Focus states for form controls now consistent
 
 ## 0.5.1
 
