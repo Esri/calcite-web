@@ -7,7 +7,7 @@ Monochromatic icons are generally 'interface' icons, and are named after the *ac
 Icons in the icon font will be scaled to the text size of whatever element you add the class to. Below are all of the icons available in the icon font.
 
 <div class="block-group block-group-3-up">
-{% for icon in font.icons %}
+{% for icon in data.font.icons %}
 <div class="block">
 <span href="" class="font-size-4 icon-ui-{{icon.properties.name}}" aria-label="{{icon.properties.name}}"></span>
 <p class="trailer-1"><code>.icon-ui-{{icon.properties.name}}</code></p>

@@ -1,14 +1,14 @@
 {% extends "layouts/_layout" %}
 
-{% block subnav%}
-  <h1 class="sub-nav-title text-white">{{ table_of_contents[section].title }}</h1>
+{% block subnav %}
+  <h1 class="sub-nav-title text-white">{{ data.table_of_contents[section].title }}</h1>
   <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-orange btn-arrow right leader-1">Latest Release</a>
 {% endblock %}
 
 {% block content %}
   <div class="column-6">
     <aside class="side-nav">
-      {% for group in table_of_contents[section].navigation %}
+      {% for group in data.table_of_contents[section].navigation %}
         <h4 class="side-nav-title">{{ group.group }}</h4>
         <nav>
           {% for page in group.pages %}
@@ -23,27 +23,28 @@
   </div>
 
   <main class="column-17 pre-1 content-face">
-    {% for group in table_of_contents[section].navigation %}
+    {% for group in data.table_of_contents[section].navigation %}
+
       {% for page in group.pages %}
         <section class="trailer-2">
-          {% markdown %}{% include table_of_contents[section].base + '/_' + page.link %}{% endmarkdown %}
+          {% markdown %}{% include data.table_of_contents[section].base + '/_' + page.link %}{% endmarkdown %}
 
           {% if page.modifiers %}
             <h3 class="leader-2 trailer-1">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
-                {% include table_of_contents[section].base + '/sample-code/_' + page.link %}
+                {% include data.table_of_contents[section].base + '/sample-code/_' + page.link %}
               </div>
               {% for modifier in page.modifiers %}
                 <div class="styleguide-modifier-example">
-                  {% include table_of_contents[section].base + '/sample-code/_' + page.link %}
+                  {% include data.table_of_contents[section].base + '/sample-code/_' + page.link %}
                   <code class="modifier-name">.{{ modifier }}</code>
                 </div>
               {% endfor %}
             </div>
 {% markdown %}
 ```
-{% set modifier = "modifier-class" %}{% include table_of_contents[section].base + '/sample-code/_' + page.link %}
+{% set modifier = "modifier-class" %}{% include data.table_of_contents[section].base + '/sample-code/_' + page.link %}
 ```
 {% endmarkdown %}
           {% endif %}
