@@ -1,3 +1,8 @@
+## Unreleased
+
+### Fixed
+- Modals not blurry
+
 ## 0.5.2
 
 ### Added
