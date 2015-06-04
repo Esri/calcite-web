@@ -249,7 +249,8 @@ module.exports = function(grunt) {
           {expand: true, cwd: 'dist/', src: ['**/*.eot'],  dest: 'files/calcite-web/latest/', params: {ContentType: 'application/vnd.ms-fontobject'}},
           {expand: true, cwd: 'dist/', src: ['**/*.woff'], dest: 'files/calcite-web/latest/', params: {ContentType: 'application/font-woff'}},
           {expand: true, cwd: 'dist/', src: ['**/*.otf'],  dest: 'files/calcite-web/latest/', params: {ContentType: 'application/font-sfnt'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.ttf'],  dest: 'files/calcite-web/latest/', params: {ContentType: 'application/font-sfnt'}}
+          {expand: true, cwd: 'dist/', src: ['**/*.ttf'],  dest: 'files/calcite-web/latest/', params: {ContentType: 'application/font-sfnt'}},
+          {expand: true, cwd: 'dist/', src: ['CHANGELOG.md'], dest: 'files/calcite-web/latest/', params: {ContentType: 'text/x-markdown'}}
         ]
       }
     },
