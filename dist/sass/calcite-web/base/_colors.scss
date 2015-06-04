@@ -1,0 +1,66 @@
+
+@import 'variables.scss';
+
+// ┌───────────┐
+// │ Grayscale │
+// └───────────┘
+//  ↳ http://esri.github.io/calcite-web/color/#grayscale
+//  ↳ color → _grayscale.md
+
+$white:                 hsl(0, 0, 100);
+$off-white:             $Calcite_Gray_100;
+$lightest-gray:         $Calcite_Gray_200;
+$lighter-gray:          $Calcite_Gray_350;
+$light-gray:            $Calcite_Gray_400;
+$gray:                  $Calcite_Gray_450;
+$dark-gray:             $Calcite_Gray_500;
+$darker-gray:           $Calcite_Gray_550;
+$darkest-gray:          $Calcite_Gray_600;
+$off-black:             $Calcite_Gray_650;
+$black:                 $Calcite_Gray_700;
+
+$transparent-off-black: rgba(0, 0, 0, 0.45);
+$transparent-black:     rgba(0, 0, 0, 0.75);
+
+// ┌───────────┐
+// │ UI Colors │
+// └───────────┘
+//  ↳ http://esri.github.io/calcite-web/color/#ui-colors
+//  ↳ color → _ui-colors.md
+
+// Blues
+$lightest-blue:         $Calcite_Blue_100;
+$lighter-blue:          $Calcite_Blue_150;
+$light-blue:            $Calcite_Blue_250;
+$blue:                  $Calcite_Blue_a200;
+$dark-blue:             $Calcite_Blue_a250;
+
+// Greens
+$light-green:           $Calcite_Green_150;
+$green:                 $Calcite_Green_250;
+$dark-green:            $Calcite_Green_a200;
+
+// Reds
+$light-red:             $Calcite_Red_150;
+$red:                   $Calcite_Red_250;
+$dark-red:              $Calcite_Red_a200;
+
+// Oranges
+$light-orange:          $Calcite_Orange_150;
+$orange:                $Calcite_Orange_200;
+$dark-orange:           $Calcite_Orange_a150;
+
+// Yellows
+$light-yellow:          $Calcite_Yellow_150;
+$yellow:                $Calcite_Yellow_200;
+$dark-yellow:           $Calcite_Yellow_a150;
+
+// Purples
+$light-purple:          $Calcite_Purple_150;
+$purple:                $Calcite_Purple_200;
+$dark-purple:           $Calcite_Purple_a150;
+
+// Browns
+$light-brown:           $Calcite_Brown_150;
+$brown:                 $Calcite_Brown_250;
+$dark-brown:            $Calcite_Brown_a200;
