@@ -108,10 +108,17 @@
     padding: 0;
     list-style-position: inside;
     margin-bottom: $baseline;
-    ul, ol {
-      padding-left: $baseline;
-      margin: 0;
-    }
+    margin-left: $baseline / 2;
+    @include font-size(-1);
+  }
+
+  li {
+    list-style-position: outside;
+    margin: $baseline/4 0 $baseline/4 1.5rem;
+  }
+
+  ul li {
+    list-style-type: circle;
   }
 
   small, sup, sub {
