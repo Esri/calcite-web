@@ -239,41 +239,63 @@
         <h4 class="side-nav-title">Typefaces</h4>
         <nav>
           
-            <a href="#overview" class="side-nav-link">Overview</a>
+            
+              <a href="#typefaces" class="side-nav-link">Overview</a>
+            
           
-            <a href="#avenir" class="side-nav-link">Avenir</a>
+            
+              <a href="#avenir" class="side-nav-link">Avenir</a>
+            
           
-            <a href="#frutiger" class="side-nav-link">Frutiger</a>
+            
+              <a href="#frutiger" class="side-nav-link">Frutiger</a>
+            
           
-            <a href="#kepler" class="side-nav-link">Kepler</a>
+            
+              <a href="#kepler" class="side-nav-link">Kepler</a>
+            
           
-            <a href="#code-face" class="side-nav-link">Code Face</a>
+            
+              <a href="#code-face" class="side-nav-link">Code Face</a>
+            
           
         </nav>
       
         <h4 class="side-nav-title">Composition Helpers</h4>
         <nav>
           
-            <a href="#composition-helpers" class="side-nav-link">Overview</a>
+            
+              <a href="#composition-helpers" class="side-nav-link">Overview</a>
+            
           
-            <a href="#text-modifiers" class="side-nav-link">Text modifiers</a>
+            
+              <a href="#text-modifiers" class="side-nav-link">Text modifiers</a>
+            
           
-            <a href="#text-size" class="side-nav-link">Sizes</a>
+            
+              <a href="#text-size" class="side-nav-link">Sizes</a>
+            
           
-            <a href="#text-color" class="side-nav-link">Color</a>
+            
+              <a href="#text-color" class="side-nav-link">Color</a>
+            
           
-            <a href="#link-color" class="side-nav-link">Link Color</a>
+            
+              <a href="#link-color" class="side-nav-link">Link Color</a>
+            
           
-            <a href="#list-bulleted" class="side-nav-link">Bulleted List</a>
-          
-            <a href="#list-numbered" class="side-nav-link">Numbered List</a>
+            
+              <a href="#list-numbered" class="side-nav-link">Numbered List</a>
+            
           
         </nav>
       
         <h4 class="side-nav-title">Defaults</h4>
         <nav>
           
-            <a href="#type-defaults" class="side-nav-link">Overview</a>
+            
+              <a href="#defaults" class="side-nav-link">Overview</a>
+            
           
         </nav>
       
@@ -285,18 +307,19 @@
 
   <main class="column-17 pre-1 content-face">
     
+      <h1 class="text-rule" id="typefaces">Typefaces</h1>
       
-        <section class="trailer-2">
-          <h1 class="leader-0" id="overview">Type</h1>
+        <section>
+          
 
-<p>The Calcite Type System uses a combination of mixins and helper classes to achieve a clear visual style, focusing primarily on simplifying typesetting processes. Using the mixins and classes properly will ensure that all properties are consistent, beautiful, and robust.</p>
-<h3 id="typefaces">Typefaces</h3>
+          <p>The Calcite Type System uses a combination of mixins and helper classes to achieve a clear visual style, focusing primarily on simplifying typesetting processes. Using the mixins and classes properly will ensure that all properties are consistent, beautiful, and robust.</p>
+<h3>Typefaces</h3>
 <p>We expose four sets of type families for use in Calcite Web; a Header Family, a Body Family, a Secondary Family, and a Code Family. Each of these type families have a set of weights and styles, defined by their application. For example, the Header Family has more weights than the Body family, reflecting its role as primary UI face, and heavy lifting header face.</p>
 <p>The typographic pallete for Calcite Web differs slightly from the official Esri branding document. All typefaces are examined in detail below.</p>
 <p>Calcite Web provides a set of weights for each typeface. These are used by either using the helper class in html, or writing sass to include the mixin, or extending the helper class. The available weights for each face are below. Proper care has been taken to ensure that all type systems used by Calcite avoid faux-bold and faux-italics styled by the browser.</p>
-<h3 id="vertical-rhythym">Vertical Rhythym</h3>
+<h3>Vertical Rhythym</h3>
 <p>Vertical rhythym is maintained in the Calcite Web Type System by the use of the <code>$baseline</code> variable. <code>$baseline</code> sets a standard and regular leading in relation to the body copy – 1.5rem. This variable is used for any measurement on the vertical axis in the page, including the <a href="../grid/#leader-and-trailer">leader and trailer grid helper classes</a> and padding for <a href="../components/#buttons">components like buttons</a> which use standard measurements like <code>3/$baseline</code> and <code>2/$baseline</code>.</p>
-<h3 id="proportional-scales">Proportional Scales</h3>
+<h3>Proportional Scales</h3>
 <p>Text sizes are defined by a simple <a href="http://alistapart.com/article/more-meaningful-typography">modular scale</a>. The scale is defined by two base sizes for type - body at 1rem and small at 0.75rem - and extrapolates a series of larger type sizes based on a single ratio; 1.25, or a major third interval. All type sizes are <a href="http://snook.ca/archives/html_and_css/font-size-with-rem">set in rems</a>, which have <a href="http://caniuse.com/#feat=rem">more than acceptable browser support</a>. Rems are used for type sizing and all vertical measurements, defined either by the <code>$baseline</code> variable or the <a href="../sass/#modular-scale">modular scale</a> and <a href="../sass/#font-size">font size</a> mixins. This prevents odd sizing issues with nested content, unpredictable results with scaling, and provides a solid anchor for determining sizes.</p>
 
 
@@ -307,27 +330,28 @@
           
 
         </section>
-        <hr class="trailer-2">
+        <hr>
       
-        <section class="trailer-2">
-          <h2 id="avenir">Avenir</h2>
-<p><a href="http://www.fonts.com/font/linotype/avenir-next">Avenir Next</a> is a recut of the classic Avenir typeface, by Adrian Frutiger and Akira Kobayashi. It has been reworked for use on the web, and contains more weights, styles, and other improvements. Avenir Next improves on Avenir in web-specific settings.</p>
+        <section>
+          
+            <h2 id="avenir">Avenir</h2>
+          
+
+          <p><a href="http://www.fonts.com/font/linotype/avenir-next">Avenir Next</a> is a recut of the classic Avenir typeface, by Adrian Frutiger and Akira Kobayashi. It has been reworked for use on the web, and contains more weights, styles, and other improvements. Avenir Next improves on Avenir in web-specific settings.</p>
 <p>Applies the the header face, along with a set of smart weight interactions and typographic defaults, to an element.</p>
-<h3 id="avenir-next">Avenir Next</h3>
+<h3>Avenir Next</h3>
 <h2 class="type-sample"> Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</h2>
 <h2 class="type-sample"> Amazingly few discotheques provide jukeboxes.</h2>
-
-<p><h1>Amazingly few discotheques provide jukeboxes.</h1></p>
-<p><h2>Amazingly few discotheques provide jukeboxes.</h2></p>
-<p><h3>Amazingly few discotheques provide jukeboxes.</h3></p>
-<p><h4>Amazingly few discotheques provide jukeboxes.</h4></p>
-<p><h5>Amazingly few discotheques provide jukeboxes.</h5></p>
+<h1>Amazingly few discotheques provide jukeboxes.</h1>
+<h2>Amazingly few discotheques provide jukeboxes.</h2>
+<h3>Amazingly few discotheques provide jukeboxes.</h3>
+<h4>Amazingly few discotheques provide jukeboxes.</h4>
+<h5>Amazingly few discotheques provide jukeboxes.</h5>
 <h6>Amazingly few discotheques provide jukeboxes.</h6>
 
 
-
           
-            <h3 class="leader-2 trailer-1">Modifiers</h3>
+            <h3 class="leader-2">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
                 <h1 class="">Amazingly few discotheques provide jukeboxes.</h1>
@@ -371,6 +395,7 @@
             </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>Amazingly few discotheques provide jukeboxes.<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
 </code></pre>
+
           
 
           
@@ -378,18 +403,21 @@
           
 
         </section>
-        <hr class="trailer-2">
+        <hr>
       
-        <section class="trailer-2">
-          <h2 id="frutiger">Frutiger</h2>
-<p>While there is no official Esri brand typeface for long form applications, Calcite Web employs <a href="http://www.fonts.com/font/linotype/frutiger?QueryFontType=Web">Frutiger</a> for this purpose. Frutiger evokes some of the stronger qualities of our default typefaces - Lucida Grande and Segoe UI - while presenting a consistent voice across platforms. Frutiger pairs remarkably well with Avenir, as they are both designed by Adrian Frutiger, with strong influences from Univers.</p>
-<h3 id="frutiger">Frutiger</h3>
+        <section>
+          
+            <h2 id="frutiger">Frutiger</h2>
+          
+
+          <p>While there is no official Esri brand typeface for long form applications, Calcite Web employs <a href="http://www.fonts.com/font/linotype/frutiger?QueryFontType=Web">Frutiger</a> for this purpose. Frutiger evokes some of the stronger qualities of our default typefaces - Lucida Grande and Segoe UI - while presenting a consistent voice across platforms. Frutiger pairs remarkably well with Avenir, as they are both designed by Adrian Frutiger, with strong influences from Univers.</p>
+<h3>Frutiger</h3>
 <p class="type-sample"> Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
 <p class="type-sample"> Amazingly few discotheques provide jukeboxes.</p>
 
 
           
-            <h3 class="leader-2 trailer-1">Modifiers</h3>
+            <h3 class="leader-2">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
                 <p class="modifier-class">Amazingly few discotheques provide jukeboxes.</p>
@@ -416,7 +444,9 @@
               
             </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>Amazingly few discotheques provide jukeboxes.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+
 </code></pre>
+
           
 
           
@@ -424,18 +454,21 @@
           
 
         </section>
-        <hr class="trailer-2">
+        <hr>
       
-        <section class="trailer-2">
-          <h2 id="kepler">Kepler</h2>
-<p><a href="http://www.fonts.com/font/adobe/kepler">Kepler</a>, designer by  Robert Slimbach, is used to add graphic interest to a page. For example, Kepler could be used for a large, stylized pull-quote on a marketing landing page. Kepler is the official secondary face of the Esri brand, and offers good counterpoint to both Avenir and Frutiger.</p>
-<h3 id="kepler">Kepler</h3>
+        <section>
+          
+            <h2 id="kepler">Kepler</h2>
+          
+
+          <p><a href="http://www.fonts.com/font/adobe/kepler">Kepler</a>, designer by  Robert Slimbach, is used to add graphic interest to a page. For example, Kepler could be used for a large, stylized pull-quote on a marketing landing page. Kepler is the official secondary face of the Esri brand, and offers good counterpoint to both Avenir and Frutiger.</p>
+<h3>Kepler</h3>
 <h2 class="secondary-face type-sample"> Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</h2>
 <h2 class="secondary-face  type-sample"> Amazingly few discotheques provide jukeboxes.</h2>
 
 
           
-            <h3 class="leader-2 trailer-1">Modifiers</h3>
+            <h3 class="leader-2">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
                 <h1 class="modifier-class">Amazingly few discotheques provide jukeboxes.</h1>
@@ -464,6 +497,7 @@
             </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>Amazingly few discotheques provide jukeboxes.<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
 </code></pre>
+
           
 
           
@@ -471,18 +505,21 @@
           
 
         </section>
-        <hr class="trailer-2">
+        <hr>
       
-        <section class="trailer-2">
-          <h2 id="code-face">Code Face</h2>
-<p>Designed by Microsoft&#39;s Lucas DeGroot, <a href="http://www.fonts.com/font/microsoft-corporation/consolas">Consolas</a> is a clean, readable, and simple monospace face for documenting code blocks.</p>
-<h3 id="consolas">Consolas</h3>
+        <section>
+          
+            <h2 id="code-face">Code Face</h2>
+          
+
+          <p>Designed by Microsoft's Lucas DeGroot, <a href="http://www.fonts.com/font/microsoft-corporation/consolas">Consolas</a> is a clean, readable, and simple monospace face for documenting code blocks.</p>
+<h3>Consolas</h3>
 <h2 class="code-face type-sample"> Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</h2>
 <h2 class="code-face  type-sample"> Amazingly few discotheques provide jukeboxes.</h2>
 
 
           
-            <h3 class="leader-2 trailer-1">Modifiers</h3>
+            <h3 class="leader-2">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
                 <h1 class="modifier-class">Amazingly few discotheques provide jukeboxes.</h1>
@@ -496,6 +533,7 @@
             </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>Amazingly few discotheques provide jukeboxes.<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
 </code></pre>
+
           
 
           
@@ -503,13 +541,15 @@
           
 
         </section>
-        <hr class="trailer-2">
+        <hr>
       
     
+      <h1 class="text-rule" id="composition-helpers">Composition Helpers</h1>
       
-        <section class="trailer-2">
-          <h2 id="composition-helpers">Composition Helpers</h2>
-<p>Calcite Web provides a set of html class helpers for basic type composition. The goal of these helpers is to provide a set of tools that allows for typographic treatments that differ from the default style set without writing additional css.</p>
+        <section>
+          
+
+          <p>Calcite Web provides a set of html class helpers for basic type composition. The goal of these helpers is to provide a set of tools that allows for typographic treatments that differ from the default style set without writing additional css.</p>
 
 
           
@@ -519,15 +559,18 @@
           
 
         </section>
-        <hr class="trailer-2">
+        <hr>
       
-        <section class="trailer-2">
-          <h2 id="text-modifiers">Text Modifiers</h2>
-<p>Build in classes that allow for quick customization and composition for a wide range of use cases.</p>
+        <section>
+          
+            <h2 id="text-modifiers">Text modifiers</h2>
+          
+
+          <p>Build in classes that allow for quick customization and composition for a wide range of use cases.</p>
 
 
           
-            <h3 class="leader-2 trailer-1">Modifiers</h3>
+            <h3 class="leader-2">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
                 <p class="">Amazingly few discotheques provide jukeboxes.</p>
@@ -571,6 +614,7 @@
             </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>Amazingly few discotheques provide jukeboxes.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
 </code></pre>
+
           
 
           
@@ -578,15 +622,18 @@
           
 
         </section>
-        <hr class="trailer-2">
+        <hr>
       
-        <section class="trailer-2">
-          <h2 id="text-size">Text Size</h2>
-<p>Helpers classes apply the <code>font-size($n)</code> <a href="/sass/#font-size">mixin</a> to an element. This allows for quick resizing of text elements up and down the <a href="/sass/#modular-scale">modular type size scale</a>.</p>
+        <section>
+          
+            <h2 id="text-size">Sizes</h2>
+          
+
+          <p>Helpers classes apply the <code>font-size($n)</code> <a href="/sass/#font-size">mixin</a> to an element. This allows for quick resizing of text elements up and down the <a href="/sass/#modular-scale">modular type size scale</a>.</p>
 
 
           
-            <h3 class="leader-2 trailer-1">Modifiers</h3>
+            <h3 class="leader-2">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
                 <p class="modifier-class">Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
@@ -655,6 +702,7 @@
             </div>
 <pre><code>&lt;p <span class="hljs-type">class</span>=<span class="hljs-string">"modifier-class"</span>&gt;Grumpy wizards make toxic brew <span class="hljs-keyword">for</span> <span class="hljs-keyword">the</span> evil Queen <span class="hljs-keyword">and</span> Jack.&lt;/p&gt;
 </code></pre>
+
           
 
           
@@ -662,15 +710,18 @@
           
 
         </section>
-        <hr class="trailer-2">
+        <hr>
       
-        <section class="trailer-2">
-          <h3 id="text-color">Text Color</h3>
-<p>Sets the font color of the element to any of the <a href="../color">Calcite colors</a> available.</p>
+        <section>
+          
+            <h2 id="text-color">Color</h2>
+          
+
+          <p>Sets the font color of the element to any of the <a href="../color">Calcite colors</a> available.</p>
 
 
           
-            <h3 class="leader-2 trailer-1">Modifiers</h3>
+            <h3 class="leader-2">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
                 <h1 class="modifier-class">Amazingly few discotheques provide jukeboxes.</h1>
@@ -744,6 +795,7 @@
             </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>Amazingly few discotheques provide jukeboxes.<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
 </code></pre>
+
           
 
           
@@ -751,15 +803,18 @@
           
 
         </section>
-        <hr class="trailer-2">
+        <hr>
       
-        <section class="trailer-2">
-          <h3 id="link-color">Link Color</h3>
-<p>Sets the color of links within the element, or the link itself, to available <a href="../color">Calcite colors.</a></p>
+        <section>
+          
+            <h2 id="link-color">Link Color</h2>
+          
+
+          <p>Sets the color of links within the element, or the link itself, to available <a href="../color">Calcite colors.</a></p>
 
 
           
-            <h3 class="leader-2 trailer-1">Modifiers</h3>
+            <h3 class="leader-2">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
                 <p>Amazingly few <a href="#" class="modifier-class">discotheques</a> provide <a href="#" class="modifier-class">jukeboxes.</a> </p>
@@ -833,62 +888,7 @@
             </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Amazingly few <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>discotheques<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> provide <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>jukeboxes.<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
 </code></pre>
-          
 
-          
-
-          
-
-        </section>
-        <hr class="trailer-2">
-      
-        <section class="trailer-2">
-          <h3 id="list-bulleted">List Bulleted</h3>
-<p>Adds the Calcite styles for bulleted lists to an unordered list.</p>
-
-
-          
-            <h3 class="leader-2 trailer-1">Modifiers</h3>
-            <div class="styleguide-modifiers">
-              <div class="styleguide-modifier-example">
-                <ul class="modifier-class">
-  <li>Amazing</li>
-  <li>discotheques</li>
-  <li>jukeboxes</li>
-  <ul class="modifier-class">
-    <li>Amazing</li>
-    <li>discotheques</li>
-    <li>jukeboxes</li>
-  </ul>
-</ul>
-              </div>
-              
-                <div class="styleguide-modifier-example">
-                  <ul class="list-bulleted">
-  <li>Amazing</li>
-  <li>discotheques</li>
-  <li>jukeboxes</li>
-  <ul class="list-bulleted">
-    <li>Amazing</li>
-    <li>discotheques</li>
-    <li>jukeboxes</li>
-  </ul>
-</ul>
-                  <code class="modifier-name">.list-bulleted</code>
-                </div>
-              
-            </div>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Amazing<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>discotheques<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>jukeboxes<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Amazing<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>discotheques<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>jukeboxes<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
-</code></pre>
           
 
           
@@ -896,15 +896,18 @@
           
 
         </section>
-        <hr class="trailer-2">
+        <hr>
       
-        <section class="trailer-2">
-          <h3 id="list-numbered">List Numbered</h3>
-<p>Adds the Calcite styles for large numbered lists to an ordered list. Useful for listing steps in a process.</p>
+        <section>
+          
+            <h2 id="list-numbered">Numbered List</h2>
+          
+
+          <p>Adds the Calcite styles for large numbered lists to an ordered list. Useful for listing steps in a process.</p>
 
 
           
-            <h3 class="leader-2 trailer-1">Modifiers</h3>
+            <h3 class="leader-2">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
                 <ol class="modifier-class">
@@ -951,6 +954,7 @@
   <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">ol</span>&gt;</span>
 </code></pre>
+
           
 
           
@@ -958,26 +962,33 @@
           
 
         </section>
-        <hr class="trailer-2">
+        <hr>
       
     
+      <h1 class="text-rule" id="defaults">Defaults</h1>
       
-        <section class="trailer-2">
-          <h2 id="type-defaults">Type Defaults</h2>
-<p>All default text elements are styled to facilitate smooth reading, simple flow, and appropriate proportions. This is a default paragraph. This is a default <a href="#">link</a>. Below is a sample of default type elements.</p>
-<h1 id="header-one">Header One</h1>
-<h2 id="header-two">Header Two</h2>
-<h3 id="header-three">Header Three</h3>
-<h4 id="header-four">Header Four</h4>
-<h5 id="header-five">Header Five</h5>
-<h6 id="header-six">Header Six</h6>
+        <section>
+          
+
+          <p>All default text elements are styled to facilitate smooth reading, simple flow, and appropriate proportions. This is a default paragraph. This is a default <a href="#">link</a>. Below is a sample of default type elements.</p>
+<h1>Header One</h1>
+<h2>Header Two</h2>
+<h3>Header Three</h3>
+<h4>Header Four</h4>
+<h5>Header Five</h5>
+<h6>Header Six</h6>
 <ol>
-<li>List One</li>
+<li>List One that is really long and will break to the next line, demonstrating that the left edges of the text are aligned.</li>
 <li>List Two</li>
 <li>List Three</li>
 </ol>
 <ul>
-<li>List Item</li>
+<li>List Item that is really long and will break to the next line, demonstrating that the left edges of the text are aligned.
+<ul>
+<li>sub list item</li>
+<li>sub list item</li>
+</ul>
+</li>
 <li>List Item</li>
 <li>List Item</li>
 </ul>
@@ -994,7 +1005,7 @@
           
 
         </section>
-        <hr class="trailer-2">
+        <hr>
       
     
   </main>

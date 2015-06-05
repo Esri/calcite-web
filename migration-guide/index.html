@@ -232,33 +232,31 @@
 
       <!-- content of each page will go here -->
       <div class="grid-container leader-1">
-        
-
-<div class="column-16">
+        <div class="column-16">
 <p>Migrating from Tailcoat to Calcite Web is fairly straightforward. Most of the structures and basic ideas between the two frameworks are quite similar. For example, while class names and recommended markup for something like the side navigation pattern have changed, there is still a like-for-like replacement for the tailcoat pattern. From a user experience perspective, almost all of the patterns and use cases covered in Tailcoat have simply been improved and reimplemented in Calcite Web.</p>
 <p>While it will not be trivial to update an entire code base to Calcite Web, it will be a fairly straight forward experience of updating class names and markup. Occasionally you will need to re-imagine a layout or pattern, but we have created Calcite Web with a fairly clear migration path in mind.</p>
-<h2 id="why-migrate-">Why Migrate?</h2>
+<h2>Why Migrate?</h2>
 <p>There are several reasons to migrate to Calcite Web.</p>
-<h4 id="visually-cohesive">Visually Cohesive</h4>
+<h4>Visually Cohesive</h4>
 <p>There is a large effort underway to improve and solidify the visual design of all websites and digital experiences at Esri. By using Calcite Web you are will be contributing to that effort and ultimately helping our customers.</p>
-<h4 id="accessible">Accessible</h4>
+<h4>Accessible</h4>
 <p>Calcite Web was created with accessibility in mind. We are undergoing a review for full 508 compliance and consider accessibility a hard requirement for a version one release.</p>
 <p>Because of this, when you use Calcite Web you will automatically be largely compliant with accessibility standards without doing any extra work.</p>
-<h4 id="configurable">Configurable</h4>
+<h4>Configurable</h4>
 <p>While Tailcoat had several different variables you could customize, you always got the full CSS bundle when you compiled Tailcoat.</p>
 <p>Calcite Web was created so that you could get as little or as much of the CSS as you needed. You can turn every font, pattern, and component on or off depending on your needs.</p>
-<h4 id="easier-integration">Easier Integration</h4>
+<h4>Easier Integration</h4>
 <p>Tailcoat was a compass plugin. This meant to use it you needed Sass, Compass, Ruby, a Gemfile, and probably Bundler.</p>
 <p>Calcite Web is much easier to integrate into a variety of tech stacks. In fact, it has no strict Ruby dependency <em>at all</em>. You can still use it as a compass extension, but you can also install it with npm, as a Ruby gem, load it from a CDN, or download a release directly from GitHub.</p>
-<h4 id="faster-builds">Faster Builds</h4>
+<h4>Faster Builds</h4>
 <p>Calcite Web supports and is built with LibSass, meaning that it can be used with regular Sass, or with any of the LibSass wrapping libraries (like Node-Sass). Now that there is less Sass to compile (no Compass) and you can compile with LibSass compiling the library to CSS is orders of magnitude faster than Tailcoat.</p>
-<h4 id="feature-rich">Feature Rich</h4>
-<p>Commonly asked for patterns have been added to Calcite Web that were not part of Tailcoat. Things like sticky elements, carousels, pagination, and expanding (or &#39;mega-menu&#39;) navigation have all been standardized and added so site authors don&#39;t need to reinvent the wheel when they need these patterns.</p>
-<h4 id="when-not-to-migrate">When <em>Not</em> to Migrate</h4>
-<p>We recommend that pretty much everybody migrate for the reasons mentioned above. If, however, you need to support older versions of Internet Explorer (IE8 or less) you might want to hold off on migrating until January 2016 (Microsoft&#39;s official end of support). We understand that for some products this is a deal-breaker. For that reason we will continue to maintain and support Tailcoat until this deadline.</p>
-<h2 id="key-differences">Key Differences</h2>
-<p>Now that you&#39;re (hopefully) convinced to start using Calcite Web, there are a few general differences between the two frameworks that will not only help you understand how to update your code, but also give you insight into <em>why</em> Calcite Web has implemented these things differently.</p>
-<h4 id="css-selectors">CSS Selectors</h4>
+<h4>Feature Rich</h4>
+<p>Commonly asked for patterns have been added to Calcite Web that were not part of Tailcoat. Things like sticky elements, carousels, pagination, and expanding (or 'mega-menu') navigation have all been standardized and added so site authors don't need to reinvent the wheel when they need these patterns.</p>
+<h4>When <em>Not</em> to Migrate</h4>
+<p>We recommend that pretty much everybody migrate for the reasons mentioned above. If, however, you need to support older versions of Internet Explorer (IE8 or less) you might want to hold off on migrating until January 2016 (Microsoft's official end of support). We understand that for some products this is a deal-breaker. For that reason we will continue to maintain and support Tailcoat until this deadline.</p>
+<h2>Key Differences</h2>
+<p>Now that you're (hopefully) convinced to start using Calcite Web, there are a few general differences between the two frameworks that will not only help you understand how to update your code, but also give you insight into <em>why</em> Calcite Web has implemented these things differently.</p>
+<h4>CSS Selectors</h4>
 <p>Calcite Web follows a few rules when naming css selectors:</p>
 <ol>
 <li>No <code>id</code> selectors (<code>#footer {}</code>)</li>
@@ -267,27 +265,26 @@
 <li>Keep selectors as shallow as possible (<code>.footer-link</code> not <code>.footer a.link</code>)</li>
 <li>Classes that are for JavaScript functionality are prefixed with <code>js-</code> (<code>js-accordion</code> not <code>accordion</code>)</li>
 </ol>
-<p>These guidelines help to avoid unintended naming clashes and over-specific or unwieldy selectors. Most of what needs to change from Tailcoat to Calcite Web will be small changes in selector convention, so it&#39;s important to understand that these changes are worth it as they will drastically reduce the probability of visual bugs and regressions down the road.</p>
-<h4 id="semantic-html">Semantic HTML</h4>
+<p>These guidelines help to avoid unintended naming clashes and over-specific or unwieldy selectors. Most of what needs to change from Tailcoat to Calcite Web will be small changes in selector convention, so it's important to understand that these changes are worth it as they will drastically reduce the probability of visual bugs and regressions down the road.</p>
+<h4>Semantic HTML</h4>
 <p>Wherever possible, semantic elements like <code>nav</code> and <code>aside</code> are now used when constructing patterns. This is important for things like screen readers, accessibility, and SEO. There are several patterns that will need to be upgraded to use semantic HTML.</p>
-<h4 id="grid">Grid</h4>
+<h4>Grid</h4>
 <p>The implementation of the new Calcite Web grid is very different from the Tailcoat grid. Things like the block grid, responsive classes, columns, pre and post are all <em>named</em> pretty much the same, but columns are now the same size regardless of what they are nested under. In Tailcoat a <code>column-12</code> inside of a <code>column-12</code> was actually only as wide as a <code>column-6</code>. In Calcite Web a <code>column-6</code> will be the same size as any other <code>column-6</code> regardless of what contains it.</p>
-<h4 id="typography">Typography</h4>
-<p>Everything is in Avenir Next with the exception of code blocks, and long form material. This is a substantial change from the current typefaces in Tailcoat, but it is more visual in nature and shouldn&#39;t require much work to change over.</p>
-<h2 id="breaking-changes">Breaking Changes</h2>
+<h4>Typography</h4>
+<p>Everything is in Avenir Next with the exception of code blocks, and long form material. This is a substantial change from the current typefaces in Tailcoat, but it is more visual in nature and shouldn't require much work to change over.</p>
+<h2>Breaking Changes</h2>
 <p>Below is a list of things that will need to be changed to migrate to Calcite Web. It may look daunting, but most of the changes are fairly superficial. If anything is unclear in this list please <a href="https://github.com/Esri/calcite-web/issues">open an issue</a>. We are also happy to help via phone, chat, and email! Good luck!</p>
-<h5 id="type">Type</h5>
-<h5 id="grid">Grid</h5>
-<h5 id="layout">Layout</h5>
-<h5 id="color">Color</h5>
-<h5 id="icons">Icons</h5>
-<h5 id="components">Components</h5>
-<h5 id="patterns">Patterns</h5>
-<h5 id="javascript">JavaScript</h5>
-<h5 id="sass">Sass</h5>
+<h5>Type</h5>
+<h5>Grid</h5>
+<h5>Layout</h5>
+<h5>Color</h5>
+<h5>Icons</h5>
+<h5>Components</h5>
+<h5>Patterns</h5>
+<h5>JavaScript</h5>
+<h5>Sass</h5>
 
 </div>
-
       </div>
 
     </div>

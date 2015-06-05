@@ -240,20 +240,20 @@
       <div class="grid-container leader-1">
         
   <main class="column-17 content-face">
-    <h1 id="html-styleguide">HTML Styleguide</h1>
+    <h1>HTML Styleguide</h1>
 <blockquote>
 <p>All code in any code base should look like a single person typed it, no matter how many people contributed. - The Golden Rule</p>
 </blockquote>
 <p>Below is an effort to standardize the syntax used in all projects. The hope is to make these decisions easy, and keep codebases clean and sensible.</p>
-<h2 id="general-guidelines">General Guidelines</h2>
+<h2>General Guidelines</h2>
 <ul>
 <li>Use soft-tabs with two spaces</li>
 <li>Nested elements should be indented once (2 spaces)</li>
 <li>Always use double quotes, never single quotes</li>
-<li>Don&#39;t include a trailing slash in self-closing elements</li>
+<li>Don't include a trailing slash in self-closing elements</li>
 </ul>
 <p>Incorrect example:</p>
-<pre><code class="lang-html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+<pre><code class="html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Page title<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
@@ -265,7 +265,7 @@
 <span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
 </code></pre>
 <p>Correct example:</p>
-<pre><code class="lang-html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+<pre><code class="html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Page title<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
@@ -276,9 +276,9 @@
   <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
 </code></pre>
-<h3 id="pragmatism-over-semantics">Pragmatism over semantics</h3>
-<p>Strive to maintain HTML standards and semantics, but don&#39;t sacrifice pragmatism. Use the least amount of markup with the fewest intricies whenever possible.</p>
-<h3 id="attribute-order">Attribute order</h3>
+<h3>Pragmatism over semantics</h3>
+<p>Strive to maintain HTML standards and semantics, but don't sacrifice pragmatism. Use the least amount of markup with the fewest intricies whenever possible.</p>
+<h3>Attribute order</h3>
 <p>HTML attributes should come in this particular order for easier reading of code:</p>
 <ul>
 <li>class</li>
@@ -287,7 +287,7 @@
 <li>for|type|href</li>
 </ul>
 <p>Such that your markup looks like:</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">data-modal</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">""</span>&gt;</span>Example link<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">data-modal</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">""</span>&gt;</span>Example link<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 </code></pre>
 
   </main>
