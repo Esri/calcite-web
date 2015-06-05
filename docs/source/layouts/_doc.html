@@ -12,7 +12,11 @@
         <h4 class="side-nav-title">{{ group.group }}</h4>
         <nav>
           {% for page in group.pages %}
-            <a href="#{{page.link}}" class="side-nav-link">{{page.title}}</a>
+            {% if page.title == 'Overview' %}
+              <a href="#{{group.group | replace(" ", "-") | lower}}" class="side-nav-link">{{page.title}}</a>
+            {% else %}
+              <a href="#{{page.link}}" class="side-nav-link">{{page.title}}</a>
+            {% endif %}
           {% endfor %}
         </nav>
       {% endfor %}
@@ -24,10 +28,13 @@
 
   <main class="column-17 pre-1 content-face">
     {% for group in data.table_of_contents[section].navigation %}
-      <h1 class="text-rule trailer-2">{{group.group}}</h1>
+      <h1 class="text-rule" id="{{group.group | replace(" ", "-") | lower}}">{{group.group}}</h1>
       {% for page in group.pages %}
         <section>
-          <h2 id="{{page.link}}">{{page.title}}</h2>
+          {% if page.title != 'Overview' %}
+            <h2 id="{{page.link}}">{{page.title}}</h2>
+          {% endif %}
+
           {% markdown %}{% include data.table_of_contents[section].base + '/_' + page.link %}{% endmarkdown %}
 
           {% if page.modifiers %}
