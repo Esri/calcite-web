@@ -1,5 +1,3 @@
-<h1 class="leader-0" id="overview">SASS</h1>
-
 Using Calcite Web as a Sass library is very powerful. After you successfully import the library (see [the getting started page](../) you can fully customize and use all of the Calcite Web Framework.
 
 ## Custom Build

@@ -1,5 +1,3 @@
-## Breakpoints
-
 Calcite Web comes with several variables representing the default screen sizes.
 
 ```scss

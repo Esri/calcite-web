@@ -1,5 +1,3 @@
-## Left and Right
-
 Use a class of `right` on html elements to float elements to the right. Use a class of `left` on html elements to float elements to the left.
 
 Left and right classes also have additional responsive `tablet-` and `phone-` prefix classes. These allow you to float an element right on a large screen, but float it left when the screen is smaller.

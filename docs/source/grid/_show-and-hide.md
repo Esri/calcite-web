@@ -1,5 +1,3 @@
-## Show and Hide
-
 These convenience classes are meant to help with quick responsive layout. Below are the classes and what breakpoints they are visible on:
 
 | Helper Class | Visible on Phone | Visible on Tablet | Visible on Desktop |

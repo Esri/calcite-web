@@ -1,4 +1,3 @@
-## Buttons
 Buttons are created by adding a class of `btn` to either a `<button>` or `<a>` element. `btn-{color}` classes can be mixed with `btn-{style}` classes.
 
 ```html

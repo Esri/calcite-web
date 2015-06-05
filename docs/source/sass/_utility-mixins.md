@@ -1,5 +1,3 @@
-# Utility Mixins
-
 Utility mixins are used to construct complicated behaviors for [components](../components) and [patterns](../patterns), provide baseline functionality for doc elements, and take care of browser prefixing.
 
 Most utility mixins are borrowed from [Bourbon](http://bourbon.io/). If mixins share a name, then they share the same code base.

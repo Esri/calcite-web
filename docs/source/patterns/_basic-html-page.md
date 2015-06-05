@@ -1,4 +1,3 @@
-## Basic HTML Page
 A basic starting point for an html page using Calcite Web might be something like this:
 
 ```html

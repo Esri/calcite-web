@@ -1,3 +1,1 @@
-## Scroll Sticky
-
 Elements that become position fixed as they reach a certain position in the viewport are refered to as 'sticky'. The `js-sticky` class takes an `data-top=x` attribute that defines the point from the top of the window the sticky element will stick.

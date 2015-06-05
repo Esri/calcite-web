@@ -7,6 +7,7 @@
   "scripts": {
     "test": "grunt test",
     "gh-release": "gh-release",
+    "acetate": "acetate build -i docs/source -o docs/build -c docs/acetate.conf.js",
     "start": "grunt"
   },
   "main": "dist/js/calcite-web.js",
@@ -37,12 +38,12 @@
     "url": "https://github.com/esri/calcite-web/issues"
   },
   "devDependencies": {
-    "acetate": "0.0.11",
+    "acetate": "^0.2.2",
+    "acetate-cli": "0.0.3",
     "arraystream": "0.0.5",
     "gh-release": "^1.1.7",
     "glob": "^5.0.6",
     "grunt": "^0.4.5",
-    "grunt-acetate": "^0.0.6",
     "grunt-aws-s3": "^0.11.0",
     "grunt-concurrent": "^0.5.0",
     "grunt-contrib-compress": "^0.11.0",

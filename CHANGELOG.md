@@ -3,6 +3,17 @@
 ### Fixed
 - Modals not blurry
 
+### Modified
+- `.text-rule` color is now the same as `<hr>`
+- `<hr>` elements now have slightly less margin top and bottom
+- `sub-nav-title` is no longer floated left (enables larger banner-like subnavs)
+
+### Added
+- styled list items by default
+
+### Removed
+- `.bulleted-list` removed as bulleted lists are default
+
 ## 0.5.2
 
 ### Added

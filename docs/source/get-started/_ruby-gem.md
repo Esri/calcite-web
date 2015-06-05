@@ -1,5 +1,3 @@
-## Ruby Gem
-
 To install Calcite-Web as a ruby gem, reference the gem from your `Gemfile`:
 
 ```

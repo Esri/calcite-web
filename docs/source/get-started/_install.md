@@ -1,5 +1,3 @@
-# Install
-
 Installing Calcite Web was designed to be fairly painless. If you have any problems, be sure to [submit an issue](https://github.com/Esri/calcite-web/issues/).
 
 ### Install Dependencies

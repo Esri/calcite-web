@@ -1,5 +1,3 @@
-# DOM utilities
-
 The following functions allow for basic DOM manipulation and traversal. These helpers are used by JavaScript dependent patterns, and can be included in any custom JavaScript in Calcite Web projects.
 
 ## Events
