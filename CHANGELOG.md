@@ -6,6 +6,7 @@
 ### Modified
 - `.text-rule` color is now the same as `<hr>`
 - `<hr>` elements now have slightly less margin top and bottom
+- `sub-nav-title` is no longer floated left (enables larger banner-like subnavs)
 
 ### Added
 - styled list items by default
