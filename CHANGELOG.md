@@ -1,4 +1,4 @@
-## Unreleased
+## 0.6.0
 
 ### Fixed
 - Modals not blurry
