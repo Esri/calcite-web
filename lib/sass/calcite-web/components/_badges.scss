@@ -4,7 +4,6 @@
 }
 
   @mixin badge-action() {
-    // @include link-color($off-black, $black);
     @include font-size(-3);
     float: left;
     display: inline-block;
@@ -24,6 +23,7 @@
 
   @mixin badge-blue() {
     .badge-action {
+      color: $white;
       background-color: $blue;
       border-color: $dark-blue;
     }
