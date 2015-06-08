@@ -270,10 +270,10 @@
         <section>
           
 
-          <p>Icons in Calcite Web come in two different flavors: one color and multi-color. The one color (or monochromatic) icon set is delivered as an icon font. The multi-color icons are delivered as a set of SVG icons with corresponsponding icon classes.</p>
-<p>Both sets can be called in the same way from your html. to display a download icon. For example:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-download"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+          <p>There are several sets of icons made available as part of Calcite Web. While they use two separate technologies (SVG vs. Icon Fonts) their API's are largely the same. To add an icon to a page, just add a class to an element, like this:</p>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-ui-close"</span> <span class="hljs-attribute">aria-label</span>=<span class="hljs-value">"close icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
 </code></pre>
+<p>This will automatically add the icon to the page. In the icon font, the icon will be added as a <code>:before</code> pseudo element in the same color and size as the text you're currently using. If the icon class is a social icon or a multi-colored icon from the Calcite set it will be added as a background image to the element. Social icons and Calcite icons have a specific size and color which can't be modified.</p>
 
 
           
@@ -365,411 +365,411 @@
 <p>Icons in the icon font will be scaled to the text size of whatever element you add the class to. Below are all of the icons available in the icon font.</p>
 <div class="block-group block-group-3-up">
 <div class="block">
-<span href="" class="font-size-4 icon-ui-add-attachment" aria-label="add-attachment"></span>
+<span class="font-size-4 icon-ui-add-attachment" aria-label="add-attachment"></span>
 <p class="trailer-1"><code>.icon-ui-add-attachment</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-add" aria-label="add"></span>
+<span class="font-size-4 icon-ui-add" aria-label="add"></span>
 <p class="trailer-1"><code>.icon-ui-add</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-announcement" aria-label="announcement"></span>
+<span class="font-size-4 icon-ui-announcement" aria-label="announcement"></span>
 <p class="trailer-1"><code>.icon-ui-announcement</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-applications" aria-label="applications"></span>
+<span class="font-size-4 icon-ui-applications" aria-label="applications"></span>
 <p class="trailer-1"><code>.icon-ui-applications</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-attachment" aria-label="attachment"></span>
+<span class="font-size-4 icon-ui-attachment" aria-label="attachment"></span>
 <p class="trailer-1"><code>.icon-ui-attachment</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-authorize" aria-label="authorize"></span>
+<span class="font-size-4 icon-ui-authorize" aria-label="authorize"></span>
 <p class="trailer-1"><code>.icon-ui-authorize</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-basemap" aria-label="basemap"></span>
+<span class="font-size-4 icon-ui-basemap" aria-label="basemap"></span>
 <p class="trailer-1"><code>.icon-ui-basemap</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-beginning" aria-label="beginning"></span>
+<span class="font-size-4 icon-ui-beginning" aria-label="beginning"></span>
 <p class="trailer-1"><code>.icon-ui-beginning</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-browser" aria-label="browser"></span>
+<span class="font-size-4 icon-ui-browser" aria-label="browser"></span>
 <p class="trailer-1"><code>.icon-ui-browser</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-calendar" aria-label="calendar"></span>
+<span class="font-size-4 icon-ui-calendar" aria-label="calendar"></span>
 <p class="trailer-1"><code>.icon-ui-calendar</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-caution" aria-label="caution"></span>
+<span class="font-size-4 icon-ui-caution" aria-label="caution"></span>
 <p class="trailer-1"><code>.icon-ui-caution</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-chart" aria-label="chart"></span>
+<span class="font-size-4 icon-ui-chart" aria-label="chart"></span>
 <p class="trailer-1"><code>.icon-ui-chart</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-check-mark" aria-label="check-mark"></span>
+<span class="font-size-4 icon-ui-check-mark" aria-label="check-mark"></span>
 <p class="trailer-1"><code>.icon-ui-check-mark</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-checkbox-checked" aria-label="checkbox-checked"></span>
+<span class="font-size-4 icon-ui-checkbox-checked" aria-label="checkbox-checked"></span>
 <p class="trailer-1"><code>.icon-ui-checkbox-checked</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-checkbox-unchecked" aria-label="checkbox-unchecked"></span>
+<span class="font-size-4 icon-ui-checkbox-unchecked" aria-label="checkbox-unchecked"></span>
 <p class="trailer-1"><code>.icon-ui-checkbox-unchecked</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-circled-back-arrow" aria-label="circled-back-arrow"></span>
+<span class="font-size-4 icon-ui-circled-back-arrow" aria-label="circled-back-arrow"></span>
 <p class="trailer-1"><code>.icon-ui-circled-back-arrow</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-circled-bottom-arrow" aria-label="circled-bottom-arrow"></span>
+<span class="font-size-4 icon-ui-circled-bottom-arrow" aria-label="circled-bottom-arrow"></span>
 <p class="trailer-1"><code>.icon-ui-circled-bottom-arrow</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-circled-close" aria-label="circled-close"></span>
+<span class="font-size-4 icon-ui-circled-close" aria-label="circled-close"></span>
 <p class="trailer-1"><code>.icon-ui-circled-close</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-circled-down-arrow" aria-label="circled-down-arrow"></span>
+<span class="font-size-4 icon-ui-circled-down-arrow" aria-label="circled-down-arrow"></span>
 <p class="trailer-1"><code>.icon-ui-circled-down-arrow</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-circled-forward-arrow" aria-label="circled-forward-arrow"></span>
+<span class="font-size-4 icon-ui-circled-forward-arrow" aria-label="circled-forward-arrow"></span>
 <p class="trailer-1"><code>.icon-ui-circled-forward-arrow</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-circled-left-arrow" aria-label="circled-left-arrow"></span>
+<span class="font-size-4 icon-ui-circled-left-arrow" aria-label="circled-left-arrow"></span>
 <p class="trailer-1"><code>.icon-ui-circled-left-arrow</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-circled-right-arrow" aria-label="circled-right-arrow"></span>
+<span class="font-size-4 icon-ui-circled-right-arrow" aria-label="circled-right-arrow"></span>
 <p class="trailer-1"><code>.icon-ui-circled-right-arrow</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-circled-top-arrow" aria-label="circled-top-arrow"></span>
+<span class="font-size-4 icon-ui-circled-top-arrow" aria-label="circled-top-arrow"></span>
 <p class="trailer-1"><code>.icon-ui-circled-top-arrow</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-circled-up-arrow" aria-label="circled-up-arrow"></span>
+<span class="font-size-4 icon-ui-circled-up-arrow" aria-label="circled-up-arrow"></span>
 <p class="trailer-1"><code>.icon-ui-circled-up-arrow</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-close" aria-label="close"></span>
+<span class="font-size-4 icon-ui-close" aria-label="close"></span>
 <p class="trailer-1"><code>.icon-ui-close</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-collection" aria-label="collection"></span>
+<span class="font-size-4 icon-ui-collection" aria-label="collection"></span>
 <p class="trailer-1"><code>.icon-ui-collection</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-comment" aria-label="comment"></span>
+<span class="font-size-4 icon-ui-comment" aria-label="comment"></span>
 <p class="trailer-1"><code>.icon-ui-comment</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-configure-popup" aria-label="configure-popup"></span>
+<span class="font-size-4 icon-ui-configure-popup" aria-label="configure-popup"></span>
 <p class="trailer-1"><code>.icon-ui-configure-popup</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-dashboard" aria-label="dashboard"></span>
+<span class="font-size-4 icon-ui-dashboard" aria-label="dashboard"></span>
 <p class="trailer-1"><code>.icon-ui-dashboard</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-delete" aria-label="delete"></span>
+<span class="font-size-4 icon-ui-delete" aria-label="delete"></span>
 <p class="trailer-1"><code>.icon-ui-delete</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-deny" aria-label="deny"></span>
+<span class="font-size-4 icon-ui-deny" aria-label="deny"></span>
 <p class="trailer-1"><code>.icon-ui-deny</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-description" aria-label="description"></span>
+<span class="font-size-4 icon-ui-description" aria-label="description"></span>
 <p class="trailer-1"><code>.icon-ui-description</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-directions-negative" aria-label="directions-negative"></span>
+<span class="font-size-4 icon-ui-directions-negative" aria-label="directions-negative"></span>
 <p class="trailer-1"><code>.icon-ui-directions-negative</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-directions" aria-label="directions"></span>
+<span class="font-size-4 icon-ui-directions" aria-label="directions"></span>
 <p class="trailer-1"><code>.icon-ui-directions</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-documentation" aria-label="documentation"></span>
+<span class="font-size-4 icon-ui-documentation" aria-label="documentation"></span>
 <p class="trailer-1"><code>.icon-ui-documentation</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-down-arrow" aria-label="down-arrow"></span>
+<span class="font-size-4 icon-ui-down-arrow" aria-label="down-arrow"></span>
 <p class="trailer-1"><code>.icon-ui-down-arrow</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-download" aria-label="download"></span>
+<span class="font-size-4 icon-ui-download" aria-label="download"></span>
 <p class="trailer-1"><code>.icon-ui-download</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-edit" aria-label="edit"></span>
+<span class="font-size-4 icon-ui-edit" aria-label="edit"></span>
 <p class="trailer-1"><code>.icon-ui-edit</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-end" aria-label="end"></span>
+<span class="font-size-4 icon-ui-end" aria-label="end"></span>
 <p class="trailer-1"><code>.icon-ui-end</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-environment-settings" aria-label="environment-settings"></span>
+<span class="font-size-4 icon-ui-environment-settings" aria-label="environment-settings"></span>
 <p class="trailer-1"><code>.icon-ui-environment-settings</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-eraser" aria-label="eraser"></span>
+<span class="font-size-4 icon-ui-eraser" aria-label="eraser"></span>
 <p class="trailer-1"><code>.icon-ui-eraser</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-error-negative" aria-label="error-negative"></span>
+<span class="font-size-4 icon-ui-error-negative" aria-label="error-negative"></span>
 <p class="trailer-1"><code>.icon-ui-error-negative</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-error" aria-label="error"></span>
+<span class="font-size-4 icon-ui-error" aria-label="error"></span>
 <p class="trailer-1"><code>.icon-ui-error</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-experimental" aria-label="experimental"></span>
+<span class="font-size-4 icon-ui-experimental" aria-label="experimental"></span>
 <p class="trailer-1"><code>.icon-ui-experimental</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-feature-layer" aria-label="feature-layer"></span>
+<span class="font-size-4 icon-ui-feature-layer" aria-label="feature-layer"></span>
 <p class="trailer-1"><code>.icon-ui-feature-layer</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-filter" aria-label="filter"></span>
+<span class="font-size-4 icon-ui-filter" aria-label="filter"></span>
 <p class="trailer-1"><code>.icon-ui-filter</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-fixed-zoom-in" aria-label="fixed-zoom-in"></span>
+<span class="font-size-4 icon-ui-fixed-zoom-in" aria-label="fixed-zoom-in"></span>
 <p class="trailer-1"><code>.icon-ui-fixed-zoom-in</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-fixed-zoom-out" aria-label="fixed-zoom-out"></span>
+<span class="font-size-4 icon-ui-fixed-zoom-out" aria-label="fixed-zoom-out"></span>
 <p class="trailer-1"><code>.icon-ui-fixed-zoom-out</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-forward" aria-label="forward"></span>
+<span class="font-size-4 icon-ui-forward" aria-label="forward"></span>
 <p class="trailer-1"><code>.icon-ui-forward</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-globe" aria-label="globe"></span>
+<span class="font-size-4 icon-ui-globe" aria-label="globe"></span>
 <p class="trailer-1"><code>.icon-ui-globe</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-grant" aria-label="grant"></span>
+<span class="font-size-4 icon-ui-grant" aria-label="grant"></span>
 <p class="trailer-1"><code>.icon-ui-grant</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-group" aria-label="group"></span>
+<span class="font-size-4 icon-ui-group" aria-label="group"></span>
 <p class="trailer-1"><code>.icon-ui-group</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-home" aria-label="home"></span>
+<span class="font-size-4 icon-ui-home" aria-label="home"></span>
 <p class="trailer-1"><code>.icon-ui-home</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-horizontal-drag-handle" aria-label="horizontal-drag-handle"></span>
+<span class="font-size-4 icon-ui-horizontal-drag-handle" aria-label="horizontal-drag-handle"></span>
 <p class="trailer-1"><code>.icon-ui-horizontal-drag-handle</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-horizontal-drag" aria-label="horizontal-drag"></span>
+<span class="font-size-4 icon-ui-horizontal-drag" aria-label="horizontal-drag"></span>
 <p class="trailer-1"><code>.icon-ui-horizontal-drag</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-key" aria-label="key"></span>
+<span class="font-size-4 icon-ui-key" aria-label="key"></span>
 <p class="trailer-1"><code>.icon-ui-key</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-layers" aria-label="layers"></span>
+<span class="font-size-4 icon-ui-layers" aria-label="layers"></span>
 <p class="trailer-1"><code>.icon-ui-layers</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-left" aria-label="left"></span>
+<span class="font-size-4 icon-ui-left" aria-label="left"></span>
 <p class="trailer-1"><code>.icon-ui-left</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-link-external" aria-label="link-external"></span>
+<span class="font-size-4 icon-ui-link-external" aria-label="link-external"></span>
 <p class="trailer-1"><code>.icon-ui-link-external</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-link" aria-label="link"></span>
+<span class="font-size-4 icon-ui-link" aria-label="link"></span>
 <p class="trailer-1"><code>.icon-ui-link</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-list" aria-label="list"></span>
+<span class="font-size-4 icon-ui-list" aria-label="list"></span>
 <p class="trailer-1"><code>.icon-ui-list</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-loading" aria-label="loading"></span>
+<span class="font-size-4 icon-ui-loading" aria-label="loading"></span>
 <p class="trailer-1"><code>.icon-ui-loading</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-locate" aria-label="locate"></span>
+<span class="font-size-4 icon-ui-locate" aria-label="locate"></span>
 <p class="trailer-1"><code>.icon-ui-locate</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-mail" aria-label="mail"></span>
+<span class="font-size-4 icon-ui-mail" aria-label="mail"></span>
 <p class="trailer-1"><code>.icon-ui-mail</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-map-pin" aria-label="map-pin"></span>
+<span class="font-size-4 icon-ui-map-pin" aria-label="map-pin"></span>
 <p class="trailer-1"><code>.icon-ui-map-pin</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-maps" aria-label="maps"></span>
+<span class="font-size-4 icon-ui-maps" aria-label="maps"></span>
 <p class="trailer-1"><code>.icon-ui-maps</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-marketplace" aria-label="marketplace"></span>
+<span class="font-size-4 icon-ui-marketplace" aria-label="marketplace"></span>
 <p class="trailer-1"><code>.icon-ui-marketplace</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-maximize" aria-label="maximize"></span>
+<span class="font-size-4 icon-ui-maximize" aria-label="maximize"></span>
 <p class="trailer-1"><code>.icon-ui-maximize</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-media" aria-label="media"></span>
+<span class="font-size-4 icon-ui-media" aria-label="media"></span>
 <p class="trailer-1"><code>.icon-ui-media</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-menu" aria-label="menu"></span>
+<span class="font-size-4 icon-ui-menu" aria-label="menu"></span>
 <p class="trailer-1"><code>.icon-ui-menu</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-minimize" aria-label="minimize"></span>
+<span class="font-size-4 icon-ui-minimize" aria-label="minimize"></span>
 <p class="trailer-1"><code>.icon-ui-minimize</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-mobile" aria-label="mobile"></span>
+<span class="font-size-4 icon-ui-mobile" aria-label="mobile"></span>
 <p class="trailer-1"><code>.icon-ui-mobile</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-navigation" aria-label="navigation"></span>
+<span class="font-size-4 icon-ui-navigation" aria-label="navigation"></span>
 <p class="trailer-1"><code>.icon-ui-navigation</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-notice" aria-label="notice"></span>
+<span class="font-size-4 icon-ui-notice" aria-label="notice"></span>
 <p class="trailer-1"><code>.icon-ui-notice</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-pan" aria-label="pan"></span>
+<span class="font-size-4 icon-ui-pan" aria-label="pan"></span>
 <p class="trailer-1"><code>.icon-ui-pan</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-pause" aria-label="pause"></span>
+<span class="font-size-4 icon-ui-pause" aria-label="pause"></span>
 <p class="trailer-1"><code>.icon-ui-pause</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-phone" aria-label="phone"></span>
+<span class="font-size-4 icon-ui-phone" aria-label="phone"></span>
 <p class="trailer-1"><code>.icon-ui-phone</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-play" aria-label="play"></span>
+<span class="font-size-4 icon-ui-play" aria-label="play"></span>
 <p class="trailer-1"><code>.icon-ui-play</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-printer" aria-label="printer"></span>
+<span class="font-size-4 icon-ui-printer" aria-label="printer"></span>
 <p class="trailer-1"><code>.icon-ui-printer</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-question" aria-label="question"></span>
+<span class="font-size-4 icon-ui-question" aria-label="question"></span>
 <p class="trailer-1"><code>.icon-ui-question</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-radio-checked" aria-label="radio-checked"></span>
+<span class="font-size-4 icon-ui-radio-checked" aria-label="radio-checked"></span>
 <p class="trailer-1"><code>.icon-ui-radio-checked</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-radio-unchecked" aria-label="radio-unchecked"></span>
+<span class="font-size-4 icon-ui-radio-unchecked" aria-label="radio-unchecked"></span>
 <p class="trailer-1"><code>.icon-ui-radio-unchecked</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-refresh" aria-label="refresh"></span>
+<span class="font-size-4 icon-ui-refresh" aria-label="refresh"></span>
 <p class="trailer-1"><code>.icon-ui-refresh</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-resend-invitation" aria-label="resend-invitation"></span>
+<span class="font-size-4 icon-ui-resend-invitation" aria-label="resend-invitation"></span>
 <p class="trailer-1"><code>.icon-ui-resend-invitation</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-reverse" aria-label="reverse"></span>
+<span class="font-size-4 icon-ui-reverse" aria-label="reverse"></span>
 <p class="trailer-1"><code>.icon-ui-reverse</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-review" aria-label="review"></span>
+<span class="font-size-4 icon-ui-review" aria-label="review"></span>
 <p class="trailer-1"><code>.icon-ui-review</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-right" aria-label="right"></span>
+<span class="font-size-4 icon-ui-right" aria-label="right"></span>
 <p class="trailer-1"><code>.icon-ui-right</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-rotate" aria-label="rotate"></span>
+<span class="font-size-4 icon-ui-rotate" aria-label="rotate"></span>
 <p class="trailer-1"><code>.icon-ui-rotate</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-save" aria-label="save"></span>
+<span class="font-size-4 icon-ui-save" aria-label="save"></span>
 <p class="trailer-1"><code>.icon-ui-save</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-search" aria-label="search"></span>
+<span class="font-size-4 icon-ui-search" aria-label="search"></span>
 <p class="trailer-1"><code>.icon-ui-search</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-settings" aria-label="settings"></span>
+<span class="font-size-4 icon-ui-settings" aria-label="settings"></span>
 <p class="trailer-1"><code>.icon-ui-settings</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-share" aria-label="share"></span>
+<span class="font-size-4 icon-ui-share" aria-label="share"></span>
 <p class="trailer-1"><code>.icon-ui-share</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-sign-out" aria-label="sign-out"></span>
+<span class="font-size-4 icon-ui-sign-out" aria-label="sign-out"></span>
 <p class="trailer-1"><code>.icon-ui-sign-out</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-support" aria-label="support"></span>
+<span class="font-size-4 icon-ui-support" aria-label="support"></span>
 <p class="trailer-1"><code>.icon-ui-support</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-tag" aria-label="tag"></span>
+<span class="font-size-4 icon-ui-tag" aria-label="tag"></span>
 <p class="trailer-1"><code>.icon-ui-tag</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-up-down-arrows" aria-label="up-down-arrows"></span>
+<span class="font-size-4 icon-ui-up-down-arrows" aria-label="up-down-arrows"></span>
 <p class="trailer-1"><code>.icon-ui-up-down-arrows</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-upload" aria-label="upload"></span>
+<span class="font-size-4 icon-ui-upload" aria-label="upload"></span>
 <p class="trailer-1"><code>.icon-ui-upload</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-user" aria-label="user"></span>
+<span class="font-size-4 icon-ui-user" aria-label="user"></span>
 <p class="trailer-1"><code>.icon-ui-user</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-vertical-drag-handle" aria-label="vertical-drag-handle"></span>
+<span class="font-size-4 icon-ui-vertical-drag-handle" aria-label="vertical-drag-handle"></span>
 <p class="trailer-1"><code>.icon-ui-vertical-drag-handle</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-vertical-drag" aria-label="vertical-drag"></span>
+<span class="font-size-4 icon-ui-vertical-drag" aria-label="vertical-drag"></span>
 <p class="trailer-1"><code>.icon-ui-vertical-drag</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-zoom-in" aria-label="zoom-in"></span>
+<span class="font-size-4 icon-ui-zoom-in" aria-label="zoom-in"></span>
 <p class="trailer-1"><code>.icon-ui-zoom-in</code></p>
 </div>
 <div class="block">
-<span href="" class="font-size-4 icon-ui-zoom-out" aria-label="zoom-out"></span>
+<span class="font-size-4 icon-ui-zoom-out" aria-label="zoom-out"></span>
 <p class="trailer-1"><code>.icon-ui-zoom-out</code></p>
 </div>
 </div>
@@ -790,7 +790,7 @@
           
 
           <p>Color icons can't be delivered as an icon font, so they are delivered as basic SVG files. These icons generally describe specific tools.</p>
-<p>You cannot change the colors of these icons, but you can change the size. Full color icons are provided at two specific sizes. Adding either the <code>icon-calcite-large-X</code> or <code>icon-calcite-X</code> class to an element will add a pseudo element before that element with the correct icon at the correct size. Below are the current set of Calcite icons as classes in Calcite Web.</p>
+<p>You cannot change the colors of these icons, but you can choose between two sizes. Adding either the <code>icon-calcite-large-X</code> or <code>icon-calcite-X</code> class to an element will add the icon as a background image to that element with the correct icon at the correct size. Below are the current set of Calcite icon classes in Calcite Web.</p>
 <blockquote>
 <p>Coming Soon.</p>
 </blockquote>

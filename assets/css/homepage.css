@@ -3149,6 +3149,7 @@ table {
 
 [class*="icon-ui-"] {
   font-family: 'calcite-ui';
+  padding-right: 0.33em;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -3157,6 +3158,8 @@ table {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+  [class*="icon-ui-"]:before {
+    padding-right: 0.33em; }
 
 .icon-ui-green:before {
   color: #5a9359; }
@@ -3703,6 +3706,53 @@ table {
   .btn:disabled:hover, .btn-disabled:hover, button[disabled]:hover {
     background-color: #a9a9a9;
     color: #959595; }
+
+.badge {
+  display: inline-block; }
+  .badge:after {
+    content: '';
+    display: table;
+    clear: both; }
+
+.badge-action {
+  font-size: 0.8125rem;
+  line-height: 1.55rem;
+  float: left;
+  display: inline-block;
+  padding: 0.19375rem 0.3875rem;
+  border: 1px solid #cccccc;
+  background-color: #efefef;
+  cursor: inherit; }
+
+.badge-count {
+  font-size: 0.8125rem;
+  line-height: 1.55rem;
+  float: left;
+  padding: 0.19375rem 0.3875rem;
+  border: 1px solid #cccccc;
+  border-left: none; }
+
+.badge-blue .badge-action {
+  color: white;
+  background-color: #3b8fc4;
+  border-color: #196fa6; }
+.badge-blue .badge-count {
+  border-color: #828282; }
+
+.badge-round .badge-action {
+  font-size: 0.875rem;
+  line-height: 1.55rem;
+  background-color: transparent;
+  border: none; }
+.badge-round .badge-count {
+  border: none;
+  background-color: #3b8fc4;
+  border-radius: 50% 50%;
+  width: 1em;
+  line-height: 1.5em;
+  margin-top: 0.2rem;
+  text-align: center;
+  color: white; }
 
 .dropdown {
   position: relative;
