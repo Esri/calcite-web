@@ -31,7 +31,7 @@ function constructItem(content, meta) {
 
   item.description = JSON.stringify(mark(markdown))
 
-  if (content.modifiers) {
+  if (content.modifiers && typeof content.modifiers !== 'boolean') {
     item.modifiers = content.modifiers
     var samplePath = path.join('docs', 'source', meta.page_slug, 'sample-code', '_' + item.slug + '.html')
     var sample = fs.readFileSync(samplePath, 'utf8')
