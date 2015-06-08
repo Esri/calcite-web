@@ -11,10 +11,14 @@ var yaml = require('js-yaml')
 var mark = require('marked')
 var now = Date.now()
 var version = require('../package.json').version
+var icons = require('../docs/source/icons.json')
 var response = {
-  elements: [],
-  colors: []
+  elements: []
 }
+
+var iconFont = require('../docs/source/icon-font.json').icons.map(function (icon) {
+  return icon.properties.name
+})
 
 function constructItem(content, meta) {
   var item = {
@@ -38,11 +42,23 @@ function constructItem(content, meta) {
     item.sample_code = JSON.stringify(sample)
   }
 
-  if (meta.group == 'Palette') {
-    response.colors.push(item)
-  } else {
-    response.elements.push(item)
+  if (content.colors) {
+    item.color_names = content.colors
   }
+
+  if (meta.page === 'Icons') {
+    if (content.title === 'Social Icons') {
+      item.icon_names = icons.social
+    }
+    if (content.title === 'Icon Font') {
+      item.icon_names = iconFont
+    }
+    if (content.title === 'Calcite Icons') {
+      item.icon_names = icons.calcite
+    }
+  }
+
+  response.elements.push(item)
 }
 
 var contents = yaml.safeLoad(fs.readFileSync('docs/source/table_of_contents.yml', 'utf8'))
