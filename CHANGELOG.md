@@ -3,6 +3,9 @@
 ### Added
 - Badges
 
+### Modified
+- icon font as baked-in padding right
+
 ## 0.6.0
 
 ### Fixed
