@@ -11,10 +11,14 @@ var yaml = require('js-yaml')
 var mark = require('marked')
 var now = Date.now()
 var version = require('../package.json').version
+var icons = require('../docs/source/icons.json')
 var response = {
-  elements: [],
-  colors: []
+  elements: []
 }
+
+var iconFont = require('../docs/source/icon-font.json').icons.map(function (icon) {
+  return icon.properties.name
+})
 
 function constructItem(content, meta) {
   var item = {
@@ -31,49 +35,51 @@ function constructItem(content, meta) {
 
   item.description = JSON.stringify(mark(markdown))
 
-  if (content.modifiers) {
+  if (content.modifiers && typeof content.modifiers !== 'boolean') {
     item.modifiers = content.modifiers
     var samplePath = path.join('docs', 'source', meta.page_slug, 'sample-code', '_' + item.slug + '.html')
     var sample = fs.readFileSync(samplePath, 'utf8')
     item.sample_code = JSON.stringify(sample)
   }
 
-  if (meta.group == 'Palette') {
-    response.colors.push(item)
-  } else {
-    response.elements.push(item)
+  if (content.colors) {
+    item.color_names = content.colors
   }
+
+  if (meta.page === 'Icons') {
+    if (content.title === 'Social Icons') {
+      item.icon_names = icons.social
+    }
+    if (content.title === 'Icon Font') {
+      item.icon_names = iconFont
+    }
+    if (content.title === 'Calcite Icons') {
+      item.icon_names = icons.calcite
+    }
+  }
+
+  response.elements.push(item)
 }
 
 var contents = yaml.safeLoad(fs.readFileSync('docs/source/table_of_contents.yml', 'utf8'))
-var counter = 0
+var pages = Object.keys(contents).map(function (page) {
+  return contents[page]
+})
 
-for (var key in contents) {
+pages.forEach(function (page, pageIndex) {
   var meta = {
-    page: contents[key].title,
-    page_slug: contents[key].base,
-    page_order: counter
+    page: page.title,
+    page_slug: page.base
   }
-  contents[key].navigation.forEach(function (group, index){
+  page.navigation.forEach(function (group, groupIndex){
     meta.group = group.group
-    meta.group_order = index
-
-    var orderArray = []
-
-    for (var i = group.pages.length; i > 0; i--) {
-      orderArray.push(i)
-    }
-
-    group.pages.forEach(function (element, i){
-      meta.order = orderArray[i]
-      if (element.title == 'Overview') {
-        meta.order == 100
-      }
-      constructItem(element, meta)
+    meta.group_order = groupIndex * 100
+    group.pages = group.pages.map(function (section, sectionIndex) {
+      meta.order = groupIndex * 100 + sectionIndex
+      return constructItem(section, meta)
     })
   })
-  counter++
-}
+})
 
 jf.writeFileSync('dist/latest.json', response)
 jf.writeFileSync(path.join('dist/', 'v' + version + '.json'), response)
