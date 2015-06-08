@@ -1,0 +1,149 @@
+// ┌───────────┐
+// │ Icon Font │
+// └───────────┘
+//  ↳ http://esri.github.io/calcite-web/icons/
+//  ↳ icons → _icon-font.md
+
+@mixin icon-font () {
+
+  @font-face {
+    font-family: 'calcite-ui';
+    src:url('#{$font-path}/calcite-ui.eot?-v8piff');
+    src:url('#{$font-path}/calcite-ui.eot?#iefix-v8piff') format('embedded-opentype'),
+      url('#{$font-path}/calcite-ui.ttf?-v8piff') format('truetype'),
+      url('#{$font-path}/calcite-ui.woff?-v8piff') format('woff'),
+      url('#{$font-path}/calcite-ui.svg?-v8piff#calcite-ui') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  [class*="icon-ui-"] {
+    font-family: 'calcite-ui';
+    padding-right: 0.33em;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    &:before {
+      padding-right: 0.33em;
+    }
+  }
+
+  .icon-ui-green:before  { color: $green;}
+  .icon-ui-blue:before   { color: $blue;}
+  .icon-ui-purple:before { color: $purple;}
+  .icon-ui-orange:before { color: $orange;}
+  .icon-ui-gray:before   { color: $gray;}
+  .icon-ui-red:before    { color: $red;}
+
+  .icon-ui-add-attachment:before {         content: "\e600";}
+  .icon-ui-add:before {                    content: "\e601";}
+  .icon-ui-announcement:before {           content: "\e602";}
+  .icon-ui-applications:before {           content: "\e603";}
+  .icon-ui-attachment:before {             content: "\e604";}
+  .icon-ui-authorize:before {              content: "\e605";}
+  .icon-ui-basemap:before {                content: "\e606";}
+  .icon-ui-beginning:before {              content: "\e607";}
+  .icon-ui-browser:before {                content: "\e608";}
+  .icon-ui-calendar:before {               content: "\e609";}
+  .icon-ui-caution:before {                content: "\e60a";}
+  .icon-ui-chart:before {                  content: "\e60b";}
+  .icon-ui-check-mark:before {             content: "\e60c";}
+  .icon-ui-checkbox-checked:before {       content: "\e60d";}
+  .icon-ui-checkbox-unchecked:before {     content: "\e60e";}
+  .icon-ui-circled-back-arrow:before {     content: "\e60f";}
+  .icon-ui-circled-bottom-arrow:before {   content: "\e610";}
+  .icon-ui-circled-close:before {          content: "\e611";}
+  .icon-ui-circled-down-arrow:before {     content: "\e612";}
+  .icon-ui-circled-forward-arrow:before {  content: "\e613";}
+  .icon-ui-circled-left-arrow:before {     content: "\e614";}
+  .icon-ui-circled-right-arrow:before {    content: "\e615";}
+  .icon-ui-circled-top-arrow:before {      content: "\e616";}
+  .icon-ui-circled-up-arrow:before {       content: "\e617";}
+  .icon-ui-close:before {                  content: "\e618";}
+  .icon-ui-collection:before {             content: "\e619";}
+  .icon-ui-comment:before {                content: "\e61a";}
+  .icon-ui-configure-popup:before {        content: "\e61b";}
+  .icon-ui-dashboard:before {              content: "\e61c";}
+  .icon-ui-delete:before {                 content: "\e61d";}
+  .icon-ui-deny:before {                   content: "\e61e";}
+  .icon-ui-description:before {            content: "\e61f";}
+  .icon-ui-directions-negative:before {    content: "\e620";}
+  .icon-ui-directions:before {             content: "\e621";}
+  .icon-ui-documentation:before {          content: "\e622";}
+  .icon-ui-down-arrow:before {             content: "\e623";}
+  .icon-ui-download:before {               content: "\e624";}
+  .icon-ui-edit:before {                   content: "\e625";}
+  .icon-ui-end:before {                    content: "\e626";}
+  .icon-ui-environment-settings:before {   content: "\e627";}
+  .icon-ui-eraser:before {                 content: "\e628";}
+  .icon-ui-error-negative:before {         content: "\e629";}
+  .icon-ui-error:before {                  content: "\e62a";}
+  .icon-ui-experimental:before {           content: "\e62b";}
+  .icon-ui-feature-layer:before {          content: "\e62c";}
+  .icon-ui-filter:before {                 content: "\e62d";}
+  .icon-ui-fixed-zoom-in:before {          content: "\e62e";}
+  .icon-ui-fixed-zoom-out:before {         content: "\e62f";}
+  .icon-ui-forward:before {                content: "\e630";}
+  .icon-ui-globe:before {                  content: "\e631";}
+  .icon-ui-grant:before {                  content: "\e632";}
+  .icon-ui-group:before {                  content: "\e633";}
+  .icon-ui-home:before {                   content: "\e634";}
+  .icon-ui-horizontal-drag-handle:before { content: "\e635";}
+  .icon-ui-horizontal-drag:before {        content: "\e636";}
+  .icon-ui-key:before {                    content: "\e637";}
+  .icon-ui-layers:before {                 content: "\e638";}
+  .icon-ui-left:before {                   content: "\e639";}
+  .icon-ui-link-external:before {          content: "\e63a";}
+  .icon-ui-link:before {                   content: "\e63b";}
+  .icon-ui-list:before {                   content: "\e63c";}
+  .icon-ui-loading:before {                content: "\e63d";}
+  .icon-ui-locate:before {                 content: "\e63e";}
+  .icon-ui-mail:before {                   content: "\e63f";}
+  .icon-ui-map-pin:before {                content: "\e640";}
+  .icon-ui-maps:before {                   content: "\e641";}
+  .icon-ui-marketplace:before {            content: "\e642";}
+  .icon-ui-maximize:before {               content: "\e643";}
+  .icon-ui-media:before {                  content: "\e644";}
+  .icon-ui-menu:before {                   content: "\e645";}
+  .icon-ui-minimize:before {               content: "\e646";}
+  .icon-ui-mobile:before {                 content: "\e647";}
+  .icon-ui-navigation:before {             content: "\e648";}
+  .icon-ui-notice:before {                 content: "\e649";}
+  .icon-ui-pan:before {                    content: "\e64a";}
+  .icon-ui-pause:before {                  content: "\e64b";}
+  .icon-ui-phone:before {                  content: "\e64c";}
+  .icon-ui-play:before {                   content: "\e64d";}
+  .icon-ui-printer:before {                content: "\e64e";}
+  .icon-ui-question:before {               content: "\e64f";}
+  .icon-ui-radio-checked:before {          content: "\e650";}
+  .icon-ui-radio-unchecked:before {        content: "\e651";}
+  .icon-ui-refresh:before {                content: "\e652";}
+  .icon-ui-resend-invitation:before {      content: "\e653";}
+  .icon-ui-reverse:before {                content: "\e654";}
+  .icon-ui-review:before {                 content: "\e655";}
+  .icon-ui-right:before {                  content: "\e656";}
+  .icon-ui-rotate:before {                 content: "\e657";}
+  .icon-ui-save:before {                   content: "\e658";}
+  .icon-ui-search:before {                 content: "\e659";}
+  .icon-ui-settings:before {               content: "\e65a";}
+  .icon-ui-share:before {                  content: "\e65b";}
+  .icon-ui-sign-out:before {               content: "\e65c";}
+  .icon-ui-support:before {                content: "\e65d";}
+  .icon-ui-tag:before {                    content: "\e65e";}
+  .icon-ui-up-down-arrows:before {         content: "\e660";}
+  .icon-ui-upload:before {                 content: "\e661";}
+  .icon-ui-user:before {                   content: "\e662";}
+  .icon-ui-vertical-drag-handle:before {   content: "\e663";}
+  .icon-ui-vertical-drag:before {          content: "\e664";}
+  .icon-ui-zoom-in:before {                content: "\e665";}
+  .icon-ui-zoom-out:before {               content: "\e666";}
+}
+
+@if $include-icon-font == true {
+  @include icon-font();
+}
