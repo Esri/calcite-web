@@ -1,0 +1,61 @@
+@mixin badge() {
+ @include clearfix();
+ display: inline-block;
+}
+
+  @mixin badge-action() {
+    @include font-size(-3);
+    float: left;
+    display: inline-block;
+    padding: $baseline/8 $baseline/4;
+    border: 1px solid $lighter-gray;
+    background-color: $lightest-gray;
+    cursor: inherit;
+  }
+
+  @mixin badge-count() {
+    @include font-size(-3);
+    float: left;
+    padding: $baseline/8 $baseline/4;
+    border: 1px solid $lighter-gray;
+    border-left: none;
+  }
+
+  @mixin badge-blue() {
+    .badge-action {
+      color: $white;
+      background-color: $blue;
+      border-color: $dark-blue;
+    }
+
+    .badge-count {
+      border-color: $dark-gray;
+    }
+  }
+
+  @mixin badge-round() {
+    .badge-action {
+      @include font-size(-2);
+      background-color: transparent;
+      border:none;
+    }
+      .badge-count {
+        border: none;
+        background-color: $blue;
+        border-radius: 50% 50%;
+        width: 1em;
+        line-height: 1.5em;
+        margin-top: 0.2rem;
+        text-align: center;
+        color: $white;
+      }
+  }
+
+@if $include-badges == true {
+  .badge                {@include badge(); }
+    .badge-action       {@include badge-action(); }
+    .badge-count        {@include badge-count(); }
+    .badge-blue         {@include badge-blue(); }
+    .badge-round        {@include badge-round(); }
+
+}

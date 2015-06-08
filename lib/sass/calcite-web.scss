@@ -32,6 +32,7 @@ $include-icons:                       $generate-css    !default;
 
 // Components
 $include-alerts:                      $generate-css    !default;
+$include-badges:                      $generate-css    !default;
 $include-tables:                      $generate-css    !default;
 $include-panel:                       $generate-css    !default;
 $include-button:                      $generate-css    !default;
@@ -98,6 +99,7 @@ $include-sticky:                      $generate-css    !default;
 // small pieces: buttons, icons, tables...
 @import "calcite-web/components/esri-logo";
 @import "calcite-web/components/button";
+@import "calcite-web/components/badges";
 @import "calcite-web/components/dropdown";
 @import "calcite-web/components/breadcrumbs";
 @import "calcite-web/components/tooltip";
