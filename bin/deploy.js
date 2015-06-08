@@ -46,34 +46,24 @@ function constructItem(content, meta) {
 }
 
 var contents = yaml.safeLoad(fs.readFileSync('docs/source/table_of_contents.yml', 'utf8'))
-var counter = 0
+var pages = Object.keys(contents).map(function (page) {
+  return contents[page]
+})
 
-for (var key in contents) {
+pages.forEach(function (page, pageIndex) {
   var meta = {
-    page: contents[key].title,
-    page_slug: contents[key].base,
-    page_order: counter
+    page: page.title,
+    page_slug: page.base
   }
-  contents[key].navigation.forEach(function (group, index){
+  page.navigation.forEach(function (group, groupIndex){
     meta.group = group.group
-    meta.group_order = index
-
-    var orderArray = []
-
-    for (var i = group.pages.length; i > 0; i--) {
-      orderArray.push(i)
-    }
-
-    group.pages.forEach(function (element, i){
-      meta.order = orderArray[i]
-      if (element.title == 'Overview') {
-        meta.order == 100
-      }
-      constructItem(element, meta)
+    meta.group_order = groupIndex * 100
+    group.pages = group.pages.map(function (section, sectionIndex) {
+      meta.order = groupIndex * 100 + sectionIndex
+      return constructItem(section, meta)
     })
   })
-  counter++
-}
+})
 
 jf.writeFileSync('dist/latest.json', response)
 jf.writeFileSync(path.join('dist/', 'v' + version + '.json'), response)
