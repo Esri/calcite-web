@@ -1,6 +1,6 @@
 Color icons can't be delivered as an icon font, so they are delivered as basic SVG files. These icons generally describe specific tools.
 
-You cannot change the colors of these icons, but you can change the size. Full color icons are provided at two specific sizes. Adding either the `icon-calcite-large-X` or `icon-calcite-X` class to an element will add a pseudo element before that element with the correct icon at the correct size. Below are the current set of Calcite icons as classes in Calcite Web.
+You cannot change the colors of these icons, but you can choose between two sizes. Adding either the `icon-calcite-large-X` or `icon-calcite-X` class to an element will add the icon as a background image to that element with the correct icon at the correct size. Below are the current set of Calcite icon classes in Calcite Web.
 
 > Coming Soon.
 

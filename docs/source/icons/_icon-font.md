@@ -7,7 +7,7 @@ Icons in the icon font will be scaled to the text size of whatever element you a
 <div class="block-group block-group-3-up">
 {% for icon in data.font.icons %}
 <div class="block">
-<span href="" class="font-size-4 icon-ui-{{icon.properties.name}}" aria-label="{{icon.properties.name}}"></span>
+<span class="font-size-4 icon-ui-{{icon.properties.name}}" aria-label="{{icon.properties.name}}"></span>
 <p class="trailer-1"><code>.icon-ui-{{icon.properties.name}}</code></p>
 </div>
 {% endfor %}
