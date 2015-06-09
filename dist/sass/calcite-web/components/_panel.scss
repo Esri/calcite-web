@@ -1,0 +1,86 @@
+// ┌────────┐
+// │ Panels │
+// └────────┘
+//  ↳ http://esri.github.io/calcite-web/components/#panels
+//  ↳ components → _panels.md
+
+@mixin panel() {
+  @include clearfix();
+  background-color: $lightest-gray;
+  [class*="column-"] {
+    @include gutter-left(1.5);
+    @include gutter-right(1.5);
+  }
+}
+
+  @mixin panel-bordered() {
+    border: 1px solid $light-gray;
+    margin: -1px;
+  }
+
+  @mixin panel-padded() {
+    @include gutter-left(1);
+    @include gutter-right(1);
+  }
+
+  @mixin panel-dark() {
+    background-color: $darkest-gray;
+    @extend .text-white;
+    &.panel-bordered {
+      border: 1px solid $off-black;
+    }
+  }
+
+  @mixin panel-dark-blue() {
+    background-color: $Brand_Blue_250;
+    @extend .text-white;
+    &.panel-bordered {
+      border: 1px solid $Brand_Blue_200;
+    }
+  }
+
+  @mixin panel-blue() {
+    background-color: $blue;
+    @extend .text-white;
+    &.panel-bordered {
+      border: 1px solid $light-blue;
+    }
+  }
+
+  @mixin panel-light-blue() {
+    background-color: $light-blue;
+    @extend .text-white;
+    &.panel-bordered {
+      border: 1px solid $blue;
+    }
+  }
+
+
+  @mixin panel-off-white() {
+    background-color: $off-white;
+    @extend .text-darker-gray;
+    &.panel-bordered {
+      border: 1px solid $lightest-gray;
+    }
+  }
+
+  @mixin panel-white() {
+    background-color: $white;
+    @extend .text-darker-gray;
+    &.panel-bordered {
+      border: 1px solid $lightest-gray;
+    }
+  }
+
+
+@if $include-panel == true {
+  .panel {@include panel();}
+    .panel-bordered {@include panel-bordered();}
+    .panel-padded {@include panel-padded();}
+    .panel-dark {@include panel-dark();}
+    .panel-white {@include panel-white();}
+    .panel-dark-blue {@include panel-dark-blue();}
+    .panel-blue {@include panel-blue();}
+    .panel-light-blue {@include panel-light-blue();}
+    .panel-off-white {@include panel-off-white();}
+}
