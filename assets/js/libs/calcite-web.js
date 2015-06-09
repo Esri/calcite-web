@@ -1,4 +1,4 @@
-/* calcite-web - v0.6.1 - 2015-06-08
+/* calcite-web - v0.7.0 - 2015-06-09
 *  https://github.com/esri/calcite-web
 *  Copyright (c) 2015 Environmental Systems Research Institute, Inc.
 *  Apache 2.0 License */
@@ -9,7 +9,7 @@
   // └────────────┘
   // define all public api methods (excluding patterns)
   var calcite = {
-    version: 'v0.6.0',
+    version: 'v0.7.0',
     click: click,
     addEvent: addEvent,
     removeEvent: removeEvent,

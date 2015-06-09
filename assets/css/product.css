@@ -4294,6 +4294,41 @@ select::-moz-focusring {
   .input-success:focus {
     border-color: #3b8fc4; }
 
+.input-group {
+  display: table;
+  margin-top: 0.3875rem; }
+
+.input-group-input {
+  display: table-cell;
+  position: relative;
+  margin-top: 0;
+  width: 100%; }
+
+.input-group-button {
+  width: 1%;
+  vertical-align: middle;
+  display: table-cell; }
+  .input-group-button .btn {
+    margin-left: -1px; }
+
+.action-bar:after {
+  content: '';
+  display: table;
+  clear: both; }
+
+.action-bar-btn {
+  float: right;
+  margin-left: 0.775rem; }
+
+.action-bar-left:after {
+  content: '';
+  display: table;
+  clear: both; }
+.action-bar-left .action-bar-btn {
+  float: left;
+  margin-left: 0;
+  margin-right: 0.775rem; }
+
 .loader-bars:before, .loader-bars:after, .loader-bars {
   background: #56a5d8;
   -webkit-animation: load 0.8s infinite ease-in-out;

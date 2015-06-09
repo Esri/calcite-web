@@ -301,6 +301,14 @@
             
           
             
+              <a href="#input-groups" class="side-nav-link">Input Groups</a>
+            
+          
+            
+              <a href="#action-bar" class="side-nav-link">Action Bar</a>
+            
+          
+            
               <a href="#selects" class="side-nav-link">Selects</a>
             
           
@@ -1352,6 +1360,91 @@
 <pre><code>&lt;label&gt;<span class="hljs-type">Label</span> <span class="hljs-type">Text</span>
   &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span>=</span><span class="hljs-symbol">'tex</span>t' placeholder=<span class="hljs-symbol">'placeholde</span>r' <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"modifier-class"</span>&gt;
 &lt;/label&gt;
+
+</code></pre>
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+        <section>
+          
+            <h2 id="input-groups">Input Groups</h2>
+          
+
+          <p>It is very common to have an input and a button attached to one another. The <code>input-group</code> component allows you to accomplish this with three classes.</p>
+
+
+          
+            <h3 class="leader-2">Modifiers</h3>
+            <div class="styleguide-modifiers">
+              <div class="styleguide-modifier-example">
+                <div class="input-group">
+  <input class="input-group-input" type="text" placeholder="Username">
+  <span class="input-group-button">
+    <button class="btn">Yay</button>
+  </span>
+</div>
+
+              </div>
+              
+            </div>
+<pre><code>&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"input-group"</span>&gt;
+  &lt;input <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"input-group-input"</span> <span class="hljs-class"><span class="hljs-keyword">type</span>=</span><span class="hljs-string">"text"</span> placeholder=<span class="hljs-string">"Username"</span>&gt;
+  &lt;span <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"input-group-button"</span>&gt;
+    &lt;button <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"btn"</span>&gt;<span class="hljs-type">Yay</span>&lt;/button&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+
+</code></pre>
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+        <section>
+          
+            <h2 id="action-bar">Action Bar</h2>
+          
+
+          <p>Action bars are used to display multiple actions horizontally. Actions are meant to be used with buttons. They are clearfixed and floated right by default.</p>
+
+
+          
+            <h3 class="leader-2">Modifiers</h3>
+            <div class="styleguide-modifiers">
+              <div class="styleguide-modifier-example">
+                <div class="action-bar modifier-class">
+  <button type="button" class="btn action-bar-btn">Submit</button>
+  <button type="button" class="btn btn-transparent action-bar-btn">Cancel</button>
+</div>
+
+              </div>
+              
+                <div class="styleguide-modifier-example">
+                  <div class="action-bar action-bar-left">
+  <button type="button" class="btn action-bar-btn">Submit</button>
+  <button type="button" class="btn btn-transparent action-bar-btn">Cancel</button>
+</div>
+
+                  <code class="modifier-name">.action-bar-left</code>
+                </div>
+              
+            </div>
+<pre><code>&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"action-bar modifier-class"</span>&gt;
+  &lt;button <span class="hljs-class"><span class="hljs-keyword">type</span>=</span><span class="hljs-string">"button"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"btn action-bar-btn"</span>&gt;<span class="hljs-type">Submit</span>&lt;/button&gt;
+  &lt;button <span class="hljs-class"><span class="hljs-keyword">type</span>=</span><span class="hljs-string">"button"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"btn btn-transparent action-bar-btn"</span>&gt;<span class="hljs-type">Cancel</span>&lt;/button&gt;
+&lt;/div&gt;
 
 </code></pre>
 
