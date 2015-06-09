@@ -1,3 +1,12 @@
+## 0.7.0
+
+- General documentation improvements/updates
+
+### Added
+
+- `input-group` component
+- `action-bar` component
+
 ## 0.6.1
 
 ### Added
