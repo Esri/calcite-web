@@ -17,7 +17,7 @@
     font-style: normal;
   }
 
-  [class*="icon-ui-"] {
+  [class*="icon-ui-"]:before {
     font-family: 'calcite-ui';
     padding-right: 0.33em;
     speak: none;
@@ -28,9 +28,6 @@
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    &:before {
-      padding-right: 0.33em;
-    }
   }
 
   .icon-ui-green:before  { color: $green;}
