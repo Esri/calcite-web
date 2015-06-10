@@ -2,13 +2,15 @@
 
 ### Modified
 - Removed margin-top on `sub-nav-list`
-- `$lightest-gray` slightly darker
 - Fix accordion hover
 - Side-nav and accordion borders fixed in all states
 - Tighten up sub-nav vertically
+- Panels have padding and border by default
+- Improve panel colors
 
 ### Added
 - Automatically remove margin-bottom on the last element in a panel
+- `panel-no-border` and `panel-no-padding` classes for tables
 - Add `is-active` state for side navigation
 
 ## 0.7.0
