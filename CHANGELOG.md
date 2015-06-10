@@ -1,6 +1,10 @@
 ## Unreleased
 
 ### Modified
+- Top nav link smaller, blue
+- User image smaller
+- Menu icon for menu
+- Icon font setting font family on `:before`
 - Removed margin-top on `sub-nav-list`
 - `$lightest-gray` slightly darker
 - Fix accordion hover
