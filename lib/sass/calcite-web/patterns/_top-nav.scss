@@ -5,7 +5,8 @@
 //  ↳ patterns → _top-nav.md
 @mixin top-nav {
   @extend .avenir-regular;
-  padding: $baseline*.75 0;
+  padding: $baseline/3 0;
+  border-bottom: 1px solid $lightest-gray;
 }
 
   @mixin top-nav-title {
@@ -18,12 +19,17 @@
   @mixin top-nav-list {
     float: left;
     @extend .avenir-regular;
-    line-height: 1.6em;
+    line-height: 1.75rem;
   }
 
   @mixin top-nav-link {
-    margin-right: 1em;
-    @extend .link-off-black;
+    @include font-size(-2);
+    margin-right: 0.75em;
+    // @extend .link-off-black;
+  }
+
+  @mixin top-nav-search() {
+    width: 20%;
   }
 
 @mixin sign-in {
@@ -39,11 +45,11 @@
 }
   @mixin user-image {
     float: left;
-    height: 1.7rem;
-    width: 1.7rem;
+    height: 1.25rem;
+    width: 1.25rem;
     border-radius: 50%;
     border: 1px solid $lightest-gray;
-    margin-top: -2px;
+    margin-top: 0.25rem;
   }
   @mixin user-name {
     z-index: 2;
