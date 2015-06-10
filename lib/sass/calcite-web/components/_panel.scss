@@ -7,6 +7,9 @@
 @mixin panel() {
   @include clearfix();
   background-color: $lightest-gray;
+  & > :last-child {
+    margin-bottom: 0;
+  }
   [class*="column-"] {
     @include gutter-left(1.5);
     @include gutter-right(1.5);
