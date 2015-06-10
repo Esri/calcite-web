@@ -2,7 +2,6 @@
 
 ### Modified
 - Removed margin-top on `sub-nav-list`
-- `$lightest-gray` slightly darker
 - Fix accordion hover
 - Side-nav and accordion borders fixed in all states
 - Tighten up sub-nav vertically
