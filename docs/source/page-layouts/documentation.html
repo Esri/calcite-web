@@ -37,9 +37,9 @@ css:
   </div>
 </header>
 
-<div class="grid-container">
+<div class="grid-container leader-2">
   <div class="column-6">
-    <aside class="leader-1 js-accordion accordion column-6">
+    <aside class="js-accordion accordion column-6">
       <div class="accordion-section is-active">
         <h4 class="accordion-title">Get Started</h4>
         <nav class="accordion-content">
@@ -201,7 +201,7 @@ css:
           <p>When you select this file in the MainMenu.xib file the <strong>Project Navigator</strong> pane on the left and the xib's UI contents are displayed in the Canvas section on the right. Between the <strong>Project Navigator</strong> and the <strong>Canvas</strong> lies the <strong>Dock</strong>, which provides a convenient list of all the UI components currently in the xib file. The rightmost section in Xcode is the <strong>Utility</strong> area, which contains the <strong>Inspector</strong> pane (top) and Library pane (bottom). The <strong>Inspector</strong> allows you to inspect and change properties of the UI components in the xib file, and the <strong>Library</strong> allows you to pick UI components to add to your project.</p>
           <p>To add a map view, select a Custom View object from the <strong>Object Library</strong> in the <strong>Library</strong> pane, then drag and drop it on to the view shown in the <strong>Canvas.</strong></p>
 
-          <div class="panel trailer-2 leader-2">
+          <div class="panel panel-padded padding-leader-half padding-trailer-half trailer-2 leader-2">
             <p class="trailer-0">The Library pane is located at the bottom right of the Xcode window. The screenshot below is for Xcode 6.1 but note that it is displayed in different ways depending on the version of Xcode. Make sure you have selected the Object Library that contains the Custom View.</p>
           </div>
 
@@ -219,8 +219,7 @@ css:
 
           <p>If you try to build the application at this stage, you will get compile errors because your application contains a reference to the AGSMapView class that has not been defined yet. Import the ArcGIS.h header into your header file. You can now reference any class in the ArcGIS Runtime SDK for OS X.</p>
 
-          <pre><code>
-#import <Cocoa/Cocoa.h>
+          <pre><code>#import <Cocoa/Cocoa.h>
 
 //Import the header file for the ArcGIS framework
 #import <ArcGIS/ArcGIS.h>
@@ -231,16 +230,14 @@ css:
 @property (strong) IBOutlet AGSMapView *mapView;
 ...
 
-@end
-          </code></pre>
+@end</code></pre>
 
           <h3>3. Add content to the map view</h3>
           <p>You have added a map view to the UI and connected it to the code files. You can now add the map content and specify how the users interact with the map. This tutorial describes how you can add individual map layers to the map view. Remember, you can also display content by opening a preconfigured web map.</p>
 
           <p>Select the AppDelegate.m implementation file in the Navigator. Open it in the source editor. Locate the applicationDidFinishLaunching method and add the code to create an instance of a tiled map service layer. Add this tiled layer to the map.</p>
 
-          <pre><code>
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+          <pre><code>- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
  // Insert code here to initialize your application
 
@@ -253,8 +250,7 @@ css:
 ...
 }
 
-@end
-          </code></pre>
+@end</code></pre>
           <p>If you build and run the application the map will display the content of the ArcGIS Online map service.</p>
           <h3>4. Respond to map actions</h3>
 
@@ -269,8 +265,7 @@ css:
           <p>Any class wanting to serve as the layer delegate must adopt the AGSMapViewLayerDelegate protocol and implement the methods related to the actions it is interested in.</p>
 
           <p>Any class wanting to serve as the layer delegate must adopt the AGSMapViewLayerDelegate protocol and implement the methods related to the actions it is interested in. First, adopt the AGSMapViewLayerDelegate protocol in the AppDelegate header file.</p>
-          <pre><code>
-@interface AppDelegate : NSObject <NSApplicationDelegate, AGSMapViewLayerDelegate>
+          <pre><code>@interface AppDelegate : NSObject <NSApplicationDelegate, AGSMapViewLayerDelegate>
 ...
 @end
 Implement the mapViewDidLoad method in the AppDelegate.m file. This method is invoked when the map loads.
@@ -283,11 +278,9 @@ Implement the mapViewDidLoad method in the AppDelegate.m file. This method is in
  ...
 }
 
-@end
-          </code></pre>
+@end</code></pre>
 Set the map view's <code>layerDelegate</code>.
-          <pre><code>
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+          <pre><code>- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
  // Insert code here to initialize your application
  // set the delegate for the map view
@@ -297,8 +290,7 @@ Set the map view's <code>layerDelegate</code>.
  ...
 }
 
-@end
-          </code></pre>
+@end</code></pre>
 
           <p>The touch delegate is informed about user interaction with the map, such as when a user taps, or taps and holds the map. Refer to the API reference documentation for the AGSMapViewTouchDelegate protocol to learn about the different actions conveyed to the touch delegate.</p>
 
@@ -347,8 +339,7 @@ Set the map view's <code>layerDelegate</code>.
           <p>Set the map view name</p>
 
           <p>If you try to build the application at this stage, you will get compile errors because your application contains a reference to the AGSMapView class that has not been defined yet. Import the ArcGIS.h header into your header file. You can now reference any class in the ArcGIS Runtime SDK for OS X.</p>
-          <pre><code></code></pre>
-#import <Cocoa/Cocoa.h>
+          <pre><code></code></pre>#import <Cocoa/Cocoa.h>
 
 //Import the header file for the ArcGIS framework
 #import <ArcGIS/ArcGIS.h>
@@ -359,15 +350,13 @@ Set the map view's <code>layerDelegate</code>.
 @property (strong) IBOutlet AGSMapView *mapView;
 ...
 
-@end
-          </code></pre>
+@end/code></pre>
           <h3>3. Add content to the map view</h3>
 
           <p>You have added a map view to the UI and connected it to the code files. You can now add the map content and specify how the users interact with the map. This tutorial describes how you can add individual map layers to the map view. Remember, you can also display content by opening a preconfigured web map.</p>
 
           <p>Select the AppDelegate.m implementation file in the Navigator. Open it in the source editor. Locate the applicationDidFinishLaunching method and add the code to create an instance of a tiled map service layer. Add this tiled layer to the map.</p>
-            <pre><code>
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+            <pre><code>- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
  // Insert code here to initialize your application
 
@@ -380,8 +369,7 @@ Set the map view's <code>layerDelegate</code>.
 ...
 }
 
-@end
-          </code></pre>
+@end</code></pre>
           <p>If you build and run the application the map will display the content of the ArcGIS Online map service.</p>
 
           <p>Add a map to your app</p>
@@ -399,14 +387,11 @@ Set the map view's <code>layerDelegate</code>.
           <p>Any class wanting to serve as the layer delegate must adopt the AGSMapViewLayerDelegate protocol and implement the methods related to the actions it is interested in.</p>
 
           Any class wanting to serve as the layer delegate must adopt the AGSMapViewLayerDelegate protocol and implement the <p>methods related to the actions it is interested in. First, adopt the AGSMapViewLayerDelegate protocol in the AppDelegate header file.</p>
-          <pre><code>
-@interface AppDelegate : NSObject <NSApplicationDelegate, AGSMapViewLayerDelegate>
+          <pre><code>@interface AppDelegate : NSObject <NSApplicationDelegate, AGSMapViewLayerDelegate>
 ...
-@end
-          </code></pre>
+@end</code></pre>
           <p>Implement the mapViewDidLoad method in the AppDelegate.m file. This method is invoked when the map loads.</p>
-          <pre><code>
-#pragma mark AGSMapViewLayerDelegate methods
+          <pre><code>#pragma mark AGSMapViewLayerDelegate methods
 
 -(void) mapViewDidLoad:(AGSMapView*)mapView {
 
@@ -414,11 +399,9 @@ Set the map view's <code>layerDelegate</code>.
  ...
 }
 
-@end
-          </code></pre>
+@end</code></pre>
           <p>Set the map view's layerDelegate.</p>
-          <pre><code>
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+          <pre><code>- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
  // Insert code here to initialize your application
  // set the delegate for the map view
@@ -429,8 +412,7 @@ Set the map view's <code>layerDelegate</code>.
 }
 
 @end
-Map view touch delegate
-          </code></pre>
+Map view touch delegate</code></pre>
           <p>The touch delegate is informed about user interaction with the map, such as when a user taps, or taps and holds the map. Refer to the API reference documentation for the AGSMapViewTouchDelegate protocol to learn about the different actions conveyed to the touch delegate.</p>
 
           The procedure for assigning a touch delegate is similar to the procedure described above for layer delegates: adopt the <p>delegate protocol (AGSMapViewTouchDelegate) in your class; implement the relevant methods of the protocol; set your class as the map view's touchDelegate.</p>

@@ -45,6 +45,10 @@
         @include transform(translate3d(8px,0,0));
       }
     }
+    &.is-active {
+      border-left: 3px solid $blue;
+      text-indent: -3px;
+    }
   }
 
 @if $include-side-nav == true {

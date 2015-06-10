@@ -1,10 +1,32 @@
+## Unreleased
+
+### Modified
+- Removed margin-top on `sub-nav-list`
+- `$lightest-gray` slightly darker
+- Fix accordion hover
+- Side-nav and accordion borders fixed in all states
+- Tighten up sub-nav vertically
+
+### Added
+- Automatically remove margin-bottom on the last element in a panel
+- Add `is-active` state for side navigation
+
+## 0.7.0
+
+- General documentation improvements/updates
+
+### Added
+
+- `input-group` component
+- `action-bar` component
+
 ## 0.6.1
 
 ### Added
 - Badges
 
 ### Modified
-- icon font as baked-in padding right
+- Icon font has baked-in padding right
 
 ## 0.6.0
 
@@ -17,7 +39,7 @@
 - `sub-nav-title` is no longer floated left (enables larger banner-like subnavs)
 
 ### Added
-- styled list items by default
+- Styled list items by default
 
 ### Removed
 - `.bulleted-list` removed as bulleted lists are default
@@ -67,12 +89,12 @@
 - `calcite.toggleClass()` exposed on public calcite-web.js api
 
 ### Breaking Changes
-- removed `calcite.getAttr()` as `Element.getAttribute()` support is IE8+
+- Removed `calcite.getAttr()` as `Element.getAttribute()` support is IE8+
 
 ## 0.3.1
 
 ### Improvements
-- calcite-web.js patterns can be passed a specific dom node as context when they are initialized.
+- `calcite-web.js` patterns can be passed a specific dom node as context when they are initialized.
 - Updated JavaScript documentation
 - Proper registration as CommonJS module
 
@@ -88,16 +110,16 @@
 
 ### Modified
 - Increase large breakpoint to 1450px
-- add `extra-large-leader-n`
-	- trailer
-	- padding-leader
-	- padding-trailer
-- add `extra-large-column-n` to 36 columns
+- Add `extra-large-leader-n`
+	- Trailer
+	- Padding-leader
+	- Padding-trailer
+- Add `extra-large-column-n` to 36 columns
 - Remove `container-max` and `container-min`
 - `extra-large-hide` and `-only`
 
 ### Removed
-- remove carousel pattern (will be its own project)
+- Remove carousel pattern (will be its own project)
 
 ## 0.2.3
 
@@ -107,15 +129,15 @@ behavior
 - Clicking in drawer while drawer is open will not close drawer
 
 ### Fixed
-- fix dropdowns in IE9
+- Fix dropdowns in IE9
 
 ## 0.2.2
 
 ### Fixed
 - Set avenir face on buttons
-- use `https` for font imports
-- table rows now have the same `font-weight` as the body
-- selects have more right padding
+- Use `https` for font imports
+- Table rows now have the same `font-weight` as the body
+- Selects have more right padding
 
 ### Added
 - Tailcoat migration guide
@@ -137,7 +159,7 @@ behavior
 ## 0.2.0
 
 ### Modified
-- tooltips use `aria-label` for tooltip text
+- Tooltips use `aria-label` for tooltip text
 - Modify tooltip styles
 - Multi-line tooltips
 - Custom `select` style
@@ -171,15 +193,15 @@ behavior
 - `body-face` => `content-face`
 
 ### Added
-- third nav hover state
+- Third nav hover state
 - `label.required`
 - `.input-warning`
 - `.input-success`
 - `.table-blue.table-striped`
 - Additional panel options
-- ie9 bugfixes
-	- .gif fallback for loader component
-	- transform2d for drawers, modals
+- IE9 bugfixes
+	- `.gif` fallback for loader component
+	- `transform2d` for drawers, modals
 
 
 ## 0.0.10

@@ -40,6 +40,8 @@ $include-dropdowns:                   $generate-css    !default;
 $include-breadcrumbs:                 $generate-css    !default;
 $include-tooltip:                     $generate-css    !default;
 $include-forms:                       $generate-css    !default;
+$include-input-groups:                $generate-css    !default;
+$include-action-bar:                  $generate-css    !default;
 $include-loader:                      $generate-css    !default;
 $include-search-bar:                  $generate-css    !default;
 $include-logo:                        $generate-css    !default;
@@ -107,6 +109,8 @@ $include-sticky:                      $generate-css    !default;
 @import "calcite-web/components/panel";
 @import "calcite-web/components/table";
 @import "calcite-web/components/form";
+@import "calcite-web/components/input-group";
+@import "calcite-web/components/action-bar";
 @import "calcite-web/components/loader";
 @import "calcite-web/components/search-bar";
 

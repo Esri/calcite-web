@@ -6,7 +6,7 @@ css:
 ---
 
 <header class="top-nav">
-  <div class="container">
+  <div class="grid-container">
     <a href="#" class="top-nav-title">ArcGIS Resources</a>
     <nav class="top-nav-list">
       <a class="top-nav-link" href="#">Home</a>
@@ -25,7 +25,7 @@ css:
 </header>
 
 <header class="sub-nav">
-  <div class="container">
+  <div class="grid-container">
     <h1 class="sub-nav-title"><a href="#" class="link-white">ArcGIS REST API: World Geocoding Service
 </a></h1>
     <nav class="sub-nav-list">
@@ -35,8 +35,9 @@ css:
     </nav>
   </div>
 </header>
+
 <header class="third-nav js-sticky" data-top='0'>
-  <div class="container">
+  <div class="grid-container">
     <nav class="breadcrumbs">
       <a href="#" class="crumb">Services</a>
       <a href="#" class="crumb">Geocoding</a>
@@ -46,9 +47,9 @@ css:
   </div>
 </header>
 
-<div class="container">
+<div class="grid-container leader-2">
   <div class="column-6">
-    <aside class="leader-1 js-accordion accordion column-6">
+    <aside class="js-accordion accordion column-6">
       <div class="accordion-section is-active">
         <h4 class="accordion-title">Routes</h4>
         <nav class="accordion-content">
@@ -67,7 +68,7 @@ css:
       </div>
     </aside>
 
-    <section class="column-6 js-sticky scroll-show tablet-hide" data-top="46">
+    <section class="column-6 js-sticky scroll-show tablet-hide" data-top="60">
       <a href="#" class="btn btn-grouped btn-clear">↑</a>
       <a href="#" class="btn btn-grouped btn-clear">param</a>
       <a href="#" class="btn btn-grouped btn-clear">↓</a>
@@ -208,7 +209,7 @@ css:
           </tbody>
         </table>
 
-        <div class="panel primary trailer-1">
+        <div class="panel panel-blue panel-padded padding-leader-half trailer-1">
           <strong class="icon-alert no-leader"> Caution:</strong>
           <p id="GUID-4DD8113E-7A31-4936-BF9F-A37F26898D1F">You can also geocode using the <code><a href="/rest/geocode/api-reference/findAddressCandidates">findAddressCandidates</a></code>. Single field input is easier because the address parsing is done for you; however,  multifield input may provide faster responses and more precise results.</p>
         </div>
@@ -258,7 +259,7 @@ css:
           </li><li purpose="li" id="LI_DBB7D6390DA143ABB017598395DE5075"><a class="xref" href="/rest/geocode/api-reference/geocoding-find.htm#ESRI_SECTION1_427A6D19644F4F6E9D0C1160B20FB1BF">Postal codes</a>: <ul purpose="ul" id="UL_19D4B6B7534541179119E82956AB7D99"><li purpose="li" id="LI_5886C62A652D4F299324F26CBB6A4026"><span class="usertext">92591</span></li><li purpose="li" id="LI_0DBAEE9C46AA41E195BE2D696473C123"> <span class="usertext">TW9 1DN</span></li></ul></li><li purpose="li" id="LI_AEFFC2F9878741B7AEF0B1391A16E7D3"><a class="xref" href="/rest/geocode/api-reference/geocoding-find.htm#ESRI_SECTION1_CF39B0C8FC2547C3A52156F509C555FC">X/Y coordinates</a>:<ul purpose="ul" id="UL_C3C8680828C549F5839405661168E31B"><li purpose="li" id="LI_4A0DF9DE314F4D4D816B46B75BD0FD4B"><span class="usertext">-117.155579,32.703761</span></li></ul> </li></ul>
         <p></p>
 
-        <aside class="panel white" id="GUID-3D2A305A-D973-43F4-87ED-29BCE111FA85">
+        <aside class="panel panel-white panel-padded padding-leader-half trailer-1 panel-bordered" id="GUID-3D2A305A-D973-43F4-87ED-29BCE111FA85">
           <h5 class="icon-notebook">Note:</h5>
           <p id="GUID-22DACC97-01DD-4E07-946E-E904D91A46B5">the <span class="usertext">text</span> parameter is not required if the <span class="usertext">category</span> parameter is included in the request with a valid value.</p>
         </aside>
