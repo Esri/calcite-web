@@ -1,4 +1,4 @@
-## Unreleased
+## 0.8.0
 
 ### Modified
 - Removed margin-top on `sub-nav-list`
@@ -11,7 +11,7 @@
 
 ### Added
 - Automatically remove margin-bottom on the last element in a panel
-- `panel-no-border` and `panel-no-padding` classes for tables
+- `panel-no-border` and `panel-no-padding` classes for panels
 - Add `is-active` state for side navigation
 
 ## 0.7.0
