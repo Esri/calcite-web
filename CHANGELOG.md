@@ -7,6 +7,7 @@
 - Tighten up sub-nav vertically
 - Panels have padding and border by default
 - Improve panel colors
+- Improve vertical-spacing of sub-nav
 
 ### Added
 - Automatically remove margin-bottom on the last element in a panel

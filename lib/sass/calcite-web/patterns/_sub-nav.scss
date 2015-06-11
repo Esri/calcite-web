@@ -10,7 +10,8 @@
 }
 
   @mixin sub-nav-title() {
-    margin-top: $baseline;
+    margin-top: $baseline/2;
+    margin-bottom: $baseline/2;
     display: inline-block;
     line-height: 1.25;
   }
