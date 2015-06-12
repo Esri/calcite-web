@@ -42,7 +42,6 @@
     right: $baseline/2;
   }
 
-
 @if $include-alerts == true {
   .alert {@include alert();}
     .alert-red {@include alert-red();}

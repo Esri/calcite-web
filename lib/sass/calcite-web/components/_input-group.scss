@@ -3,21 +3,21 @@
   margin-top: $baseline*.25;
 }
 
-@mixin input-group-input() {
-  display: table-cell;
-  position: relative;
-  margin-top: 0;
-  width: 100%;
-}
-
-@mixin input-group-button() {
-  width: 1%;
-  vertical-align: middle;
-  display: table-cell;
-  .btn {
-    margin-left: -1px;
+  @mixin input-group-input() {
+    display: table-cell;
+    position: relative;
+    margin-top: 0;
+    width: 100%;
   }
-}
+
+  @mixin input-group-button() {
+    width: 1%;
+    vertical-align: middle;
+    display: table-cell;
+    .btn {
+      margin-left: -1px;
+    }
+  }
 
 @if $include-input-groups == true {
   .input-group {@include input-group();}
