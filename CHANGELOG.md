@@ -1,3 +1,8 @@
+## Unreleased
+
+### Modified
+- `imports` is now accessed at `calcite-web/imports`
+
 ## 0.8.0
 
 ### Modified

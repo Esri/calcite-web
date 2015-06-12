@@ -4,27 +4,26 @@
 //  ↳ http://esri.github.io/calcite-web/components/#loader
 //  ↳ components → _loader.md
 
-$width: 0.85rem;
-$height: 2rem;
-$zoom: 0.5rem;
-$spacing: 1.25rem;
-$speed: 0.8s;
-$delay: 0.16s;
+$loader-width: 0.85rem;
+$loader-height: 2rem;
+$loader-zoom: 0.5rem;
+$loader-spacing: 1.25rem;
+$loader-speed: 0.8s;
+$loader-delay: 0.16s;
 
 @mixin loader() {
   display: none;
   &.is-active {
     display: block;
   }
-
 }
 
 %loader-styles {
   background: $light-blue;
-  -webkit-animation: load $speed infinite ease-in-out;
-  animation: load $speed infinite ease-in-out;
-  width: $width;
-  height: $height;
+  -webkit-animation: load $loader-speed infinite ease-in-out;
+  animation: load $loader-speed infinite ease-in-out;
+  width: $loader-width;
+  height: $loader-height;
 }
 
 %loader-pseudoelements {
@@ -41,18 +40,17 @@ $delay: 0.16s;
   position: absolute;
   right: 50%;
   font-size: 11px;
-  -webkit-animation-delay: $delay;
-  animation-delay: $delay;
-
+  -webkit-animation-delay: $loader-delay;
+  animation-delay: $loader-delay;
   &:before{
     @extend %loader-pseudoelements;
-    left: -$spacing;
+    left: -$loader-spacing;
   }
   &:after {
     @extend %loader-pseudoelements;
-    left: $spacing;
-    -webkit-animation-delay: 2*$delay;
-    animation-delay: 2*$delay;
+    left: $loader-spacing;
+    -webkit-animation-delay: 2*$loader-delay;
+    animation-delay: 2*$loader-delay;
   }
 }
 
@@ -72,12 +70,12 @@ $delay: 0.16s;
     100% {
       box-shadow: 0 0 $light-blue;
       background: $light-blue;
-      height: $height;
+      height: $loader-height;
     }
     40% {
-      box-shadow: 0 -1*$zoom $blue;
+      box-shadow: 0 -1*$loader-zoom $blue;
       background: $blue;
-      height: $height+$zoom;
+      height: $loader-height+$loader-zoom;
     }
   }
   @keyframes load {
@@ -86,18 +84,18 @@ $delay: 0.16s;
     100% {
       box-shadow: 0 0 $blue;
       background: $light-blue;
-      height: $height;
+      height: $loader-height;
     }
     40% {
-      box-shadow: 0 -1*$zoom $blue;
+      box-shadow: 0 -1*$loader-zoom $blue;
       background: $blue;
-      height: $height+$zoom;
+      height: $loader-height+$loader-zoom;
     }
   }
 
   .loader {@include loader();}
-    .loader-bars {@include loader-bars()}
-    .loader-text {@include loader-text()}
+    .loader-bars {@include loader-bars();}
+    .loader-text {@include loader-text();}
 
    .ie9 {
     .loader-bars {

@@ -40,16 +40,17 @@
       background-color: transparent;
       border:none;
     }
-      .badge-count {
-        border: none;
-        background-color: $blue;
-        border-radius: 50% 50%;
-        width: 1em;
-        line-height: 1.5em;
-        margin-top: 0.2rem;
-        text-align: center;
-        color: $white;
-      }
+
+    .badge-count {
+      border: none;
+      background-color: $blue;
+      border-radius: 50% 50%;
+      width: 1em;
+      line-height: 1.5em;
+      margin-top: 0.2rem;
+      text-align: center;
+      color: $white;
+    }
   }
 
 @if $include-badges == true {
