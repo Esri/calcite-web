@@ -139,6 +139,12 @@
   .btn-red         { @include btn-color($red, $dark-red);}
   .btn-green       { @include btn-color($green, $dark-green);}
   .btn-blue        { @include btn-color($blue, $dark-blue);}
-  .btn-orange      { @include btn-color($orange, $dark-orange);}
+  .btn-orange      {
+    @include btn-color($orange, $dark-orange);
+    color: $black;
+    &:hover {
+      color: $black;
+    }
+  }
   .btn:disabled, .btn-disabled, button[disabled] { @include btn-disabled(); }
 }
