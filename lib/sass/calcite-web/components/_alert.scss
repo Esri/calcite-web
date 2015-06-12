@@ -7,33 +7,30 @@
 @mixin alert() {
   @include font-size(-1);
   padding: $baseline/2 $baseline/2;
-  @include text-color($dark-blue);
-  background-color: lighten($light-blue, 15%);
+  @include text-color($transparent-black);
+  background-color: $lightest-blue;
   position: relative;
   display: none;
   z-index: 100;
   max-width: 40em;
   border: 1px solid $blue;
   @include box-shadow($box-shadow);
+  @extend .link-off-black;
   &.is-active {
     display: block;
   }
   a:hover {
-    color: $dark-blue;
+    color: $transparent-black;
   }
 }
 
   @mixin alert-red() {
-    background-color: lighten($light-red, 15%);
-    @include text-color($dark-red);
-    @extend .link-red;
+    background-color: $Calcite_Red_100;
     border-color: $light-red;
   }
 
   @mixin alert-green() {
-    background-color: lighten($light-green, 15%);
-    @include text-color($dark-green);
-    @extend .link-green;
+    background-color: $Calcite_Green_100;
     border-color: $light-green;
   }
 
