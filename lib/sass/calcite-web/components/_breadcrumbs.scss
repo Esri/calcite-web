@@ -8,6 +8,7 @@
   @extend .avenir-regular;
   @include font-size(-2);
   @include text-color($dark-gray);
+  @include no-hover-effect();
   a {
     @include link-color($dark-gray, $darker-gray);
   }

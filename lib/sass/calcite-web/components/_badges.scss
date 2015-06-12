@@ -1,5 +1,6 @@
 @mixin badge() {
  @include clearfix();
+ @include no-hover-effect();
  display: inline-block;
 }
 

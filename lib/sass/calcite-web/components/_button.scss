@@ -5,6 +5,7 @@
 //  ↳ components → _buttons.md
 
 @mixin btn() {
+  @include no-hover-effect();
   position: relative;
   display: inline-block;
   padding: $baseline/5 .9rem;
