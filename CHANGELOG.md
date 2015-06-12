@@ -9,14 +9,11 @@
 - `imports` is now accessed at `calcite-web/imports`
 - Links darker blue, with underline on hover
 - Alert text color transparent black.
+- Icon font setting font family on `:before`
 
 ## 0.8.0
 
 ### Modified
-- Top nav link smaller, blue
-- User image smaller
-- Menu icon for menu
-- Icon font setting font family on `:before`
 - Removed margin-top on `sub-nav-list`
 - Fix accordion hover
 - Side-nav and accordion borders fixed in all states
