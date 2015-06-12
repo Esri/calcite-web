@@ -2,6 +2,7 @@
 // │ Default Styles │
 // └────────────────┘
 @if $include-type == true and $include-type-defaults == true {
+
   html {
     font-size: 17px;
   }
@@ -101,7 +102,14 @@
     @include transition(color $transition);
     &:hover {
       color: $link-hover;
+
     }
+  }
+
+  blockquote > a:hover,
+  li > a:hover,
+  p  > a:hover {
+    @include link-hover-effect();
   }
 
   ul, ol {
