@@ -13,9 +13,14 @@ $topnav-link-underline: linear-gradient(to bottom, transparent 59%, $lightest-bl
 
   @mixin top-nav-title {
     @include font-size(1);
-    @extend .link-off-black;
     float: left;
-    padding-right: 2rem;
+    margin-right: 2rem;
+    color: $off-black;
+    &:hover {
+      color: $darkest-gray;
+      @include prefixer(background-image, $topnav-link-underline, webkit moz o);
+      background-image: $topnav-link-underline;
+    }
   }
 
   @mixin top-nav-list {
@@ -26,8 +31,9 @@ $topnav-link-underline: linear-gradient(to bottom, transparent 59%, $lightest-bl
 
   @mixin top-nav-link {
     margin-right: 1em;
-    @extend .link-off-black;
+    color: $off-black;
     &:hover {
+      color: $darkest-gray;
       @include prefixer(background-image, $topnav-link-underline, webkit moz o);
       background-image: $topnav-link-underline;
     }
