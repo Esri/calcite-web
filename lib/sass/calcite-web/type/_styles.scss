@@ -102,14 +102,8 @@
     @include transition(color $transition);
     &:hover {
       color: $link-hover;
-
+      @include link-hover-effect();
     }
-  }
-
-  blockquote > a:hover,
-  li > a:hover,
-  p  > a:hover {
-    @include link-hover-effect();
   }
 
   ul, ol {

@@ -155,6 +155,8 @@
   color: $value;
   &:hover {
     color: $light-value;
+    @include prefixer(background-image,linear-gradient(to bottom, transparent 94%, $light-value 96%, $light-value 100%), webkit moz o);
+    background-image:linear-gradient(to bottom, transparent 94%, $light-value 96%, $light-value 100%);
   }
 }
 
