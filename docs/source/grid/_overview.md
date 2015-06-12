@@ -5,10 +5,13 @@ The Calcite Grid System includes a full, responsive, and configurable grid with 
 
 These two principles mean that a column becomes a standard unit of measurement, creating a constant and abstracted grid system that stands behind the content of a page rather than within it.
 
+On very large screens like the apple cinema display, an extra large 36 column grid can be optionally used. This grid has no max width, and is useful for full screen web applications.
+
 ### The Grid
 
 | Max Width | Breakpoint | No. Columns |
 | --------- | ---------- | ----------- |
-| 1280px    | Desktop    | 24          |
+| n/a       | Cinema Display    | 36   |
+| 1450px    | Desktop    | 24          |
 | 860px     | Tablet     | 12          |
 | 480px     | Phone      | 6           |
