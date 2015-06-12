@@ -1,7 +1,15 @@
 ## Unreleased
 
+### Added
+- Documentation and structural patterns have proper `aria-role` and other required attributes.
+- Grid documentation for large columns.
+- Updated type documentation.
+
 ### Modified
 - `imports` is now accessed at `calcite-web/imports`
+- Links darker blue, with underline on hover
+- Alert text color transparent black.
+- Icon font setting font family on `:before`
 
 ## 0.8.0
 

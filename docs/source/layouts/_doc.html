@@ -7,10 +7,10 @@
 
 {% block content %}
   <div class="column-6">
-    <aside class="side-nav">
+    <aside class="side-nav" aria-role="complementary">
       {% for group in data.table_of_contents[section].navigation %}
         <h4 class="side-nav-title">{{ group.group }}</h4>
-        <nav>
+        <nav aria-role="navigation" aria-labelby="sidenav">
           {% for page in group.pages %}
             {% if page.title == 'Overview' %}
               <a href="#{{group.group | replace(" ", "-") | lower}}" class="side-nav-link">{{page.title}}</a>
@@ -26,7 +26,7 @@
     </div>
   </div>
 
-  <main class="column-17 pre-1 content-face">
+  <main class="column-17 pre-1 content-face" role="main">
     {% for group in data.table_of_contents[section].navigation %}
       <h1 class="text-rule" id="{{group.group | replace(" ", "-") | lower}}">{{group.group}}</h1>
       {% for page in group.pages %}

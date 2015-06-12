@@ -1,7 +1,7 @@
 A basic starting point for an html page using Calcite Web might be something like this:
 
 ```html
-<!doctype html>
+<!doctype html lang="en">
 <!--[if lt IE 9]>  <html class="ie lt-ie9 ie8"> <![endif]-->
 <!--[if IE 9]>     <html class="ie ie9"> <![endif]-->
 <!--[if !IE]><!--> <html> <!--<![endif]-->
@@ -22,7 +22,7 @@ A basic starting point for an html page using Calcite Web might be something lik
         <!-- header -->
         <!-- content of page -->
     </div>
-    <div class="footer">
+    <div class="footer" role="contentinfo">>
       <!-- content of footer -->
     </div>
     <script src="/assets/javascripts/calcite-web.js"></script>
