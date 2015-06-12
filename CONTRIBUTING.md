@@ -1,14 +1,18 @@
-# Contributing to Calcite Web
+# Contributing
 
-Installing Calcite Web was designed to be fairly painless. If you have any problems, be sure to [submit an issue](https://github.com/Esri/calcite-web/issues/).
+Calcite Web is open to all types of contributions from across Esri. Things you can do to contribute include:
+
+1. Report a bug ([open an issue](https://github.com/Esri/calcite-web/issues/new))
+2. Suggest a new pattern or component ([open an issue](https://github.com/Esri/calcite-web/issues/new))
+3. Fork the repository and fix one of the [open issues](https://github.com/Esri/calcite-web/issues)
+4. Report problems with the [documentation](http://esri.github.io/calcite-web/).
 
 ### Install Dependencies
 
-Calcite Web has three main dependencies. If you already have these on your computer, you can skip these steps:
+Calcite Web has two development dependencies, Node.js and Grunt. If you already have these on your computer, you can skip these steps:
 
 1. Visit [nodejs.org](http://nodejs.org/) to install Node.
 2. `npm install -g grunt-cli` to install Grunt.
-3. `gem install sass` to install SASS.
 
 ### Fork the Repository
 
@@ -60,7 +64,7 @@ The final number signifies patches such as fixing a pattern or component in a ce
 1. Change the version number in `package.json` to the desired version number.
 2. Write a description of the changes, additions, and bug fixes in `CHANGELOG.md`.
 3. Make sure `Esri/calcite-web` is up-to-date with your changes.
-5. Run `grunt release` and enter your username and password in the command prompt.
+5. Run `grunt release`. If prompted enter your GitHub credentials and your s3 access key/secret.
 
 # Updating the Documentation Site
 
