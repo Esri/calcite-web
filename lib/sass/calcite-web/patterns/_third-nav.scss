@@ -3,6 +3,7 @@
 // └──────────┘
 //  ↳ http://esri.github.io/calcite-web/patterns/#third-nav
 //  ↳ patterns → _third-nav.md
+
 @mixin third-nav() {
   @extend .avenir-regular;
   border-bottom: 1px solid $lightest-gray;
@@ -20,7 +21,7 @@
     @include font-size(-2);
     margin-right: $baseline * 0.75;
     &:hover {
-      color: $blue;
+      @include link-hover-effect();
     }
     &.is-active {
       @extend .avenir-bold;
@@ -29,7 +30,6 @@
       @extend .link-darkest-gray;
     }
   }
-
 
 @if $include-third-nav == true {
   .third-nav {@include third-nav();}

@@ -3,6 +3,8 @@
 // └────────┘
 //  ↳ http://esri.github.io/calcite-web/patterns/#top-nav
 //  ↳ patterns → _top-nav.md
+$topnav-link-underline: linear-gradient(to bottom, transparent 59%, $lightest-blue 60%, $lightest-blue 100%);
+
 @mixin top-nav {
   @extend .avenir-regular;
   padding: $baseline*.75 0;
@@ -24,6 +26,10 @@
   @mixin top-nav-link {
     margin-right: 1em;
     @extend .link-off-black;
+    &:hover {
+      @include prefixer(background-image, $topnav-link-underline, webkit moz o);
+      background-image: $topnav-link-underline;
+    }
   }
 
 @mixin sign-in {
