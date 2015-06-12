@@ -13,6 +13,10 @@
 ## 0.8.0
 
 ### Modified
+- Top nav link smaller, blue
+- User image smaller
+- Menu icon for menu
+- Icon font setting font family on `:before`
 - Removed margin-top on `sub-nav-list`
 - Fix accordion hover
 - Side-nav and accordion borders fixed in all states
