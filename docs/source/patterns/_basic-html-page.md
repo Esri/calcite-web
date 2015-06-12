@@ -22,7 +22,7 @@ A basic starting point for an html page using Calcite Web might be something lik
         <!-- header -->
         <!-- content of page -->
     </div>
-    <div class="footer">
+    <div class="footer" role="contentinfo">>
       <!-- content of footer -->
     </div>
     <script src="/assets/javascripts/calcite-web.js"></script>
