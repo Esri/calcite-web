@@ -32,7 +32,7 @@
       {% for page in group.pages %}
         <section>
           {% if page.title != 'Overview' %}
-            <h2 id="{{page.link}}">{{page.title}}</h2>
+            <h2 id="{{page.link}}" tabindex="0">{{page.title}}</h2>
           {% endif %}
 
           {% markdown %}{% include data.table_of_contents[section].base + '/_' + page.link %}{% endmarkdown %}
