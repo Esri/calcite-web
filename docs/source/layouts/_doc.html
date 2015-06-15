@@ -38,7 +38,7 @@
           {% markdown %}{% include data.table_of_contents[section].base + '/_' + page.link %}{% endmarkdown %}
 
           {% if page.modifiers %}
-            <h3 class="leader-2">Modifiers</h3>
+            <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
                 {% include data.table_of_contents[section].base + '/sample-code/_' + page.link %}
