@@ -36,6 +36,9 @@
   h6 {
     @extend .avenir-light;
     margin: 0 0 $baseline 0;
+    &:focus {
+      outline: none;
+    }
   }
 
   h1 {@include font-size(5);}

@@ -28,7 +28,7 @@
 
   <main class="column-17 pre-1 content-face" role="main">
     {% for group in data.table_of_contents[section].navigation %}
-      <h1 class="text-rule" id="{{group.group | replace(" ", "-") | lower}}">{{group.group}}</h1>
+      <h1 class="text-rule" id="{{group.group | replace(" ", "-") | lower}}" tabindex="0">{{group.group}}</h1>
       {% for page in group.pages %}
         <section>
           {% if page.title != 'Overview' %}
