@@ -26,7 +26,8 @@
     </div>
   </div>
 
-  <main class="column-17 pre-1 content-face" role="main" id="skip-to-content" tabindex="0">
+  <a id="skip-to-content" tabindex="0"></a>
+  <main class="column-17 pre-1 content-face" role="main">
     {% for group in data.table_of_contents[section].navigation %}
       <h1 class="text-rule" id="{{group.group | replace(" ", "-") | lower}}" tabindex="0">{{group.group}}</h1>
       {% for page in group.pages %}
