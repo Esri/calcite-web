@@ -1,0 +1,1 @@
+Used at the beginning of a page to allow keyboard and screen reader navigation to the primary content of the page without navigation through all the links that precede the content.
