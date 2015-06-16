@@ -4,6 +4,7 @@
 - Documentation and structural patterns have proper `aria-role` and other required attributes.
 - Grid documentation for large columns.
 - Updated type documentation.
+- Skip to Content component
 
 ### Modified
 - `imports` is now accessed at `calcite-web/imports`

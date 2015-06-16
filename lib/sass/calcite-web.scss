@@ -44,6 +44,7 @@ $include-input-groups:                $generate-css    !default;
 $include-action-bar:                  $generate-css    !default;
 $include-loader:                      $generate-css    !default;
 $include-search-bar:                  $generate-css    !default;
+$include-skip-to-content:             $generate-css    !default;
 $include-logo:                        $generate-css    !default;
 
 // Patterns
@@ -113,6 +114,7 @@ $include-sticky:                      $generate-css    !default;
 @import "calcite-web/components/action-bar";
 @import "calcite-web/components/loader";
 @import "calcite-web/components/search-bar";
+@import "calcite-web/components/skip-to-content";
 
 // Patterns
 // complete interfaces: header, footer, banner...
