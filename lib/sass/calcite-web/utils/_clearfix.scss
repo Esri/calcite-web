@@ -16,6 +16,8 @@
   @include clearfix();
 }
 
-.clearfix {
-  @extend %clearfix;
+@if $include-utils == true {
+  .clearfix {
+    @extend %clearfix;
+  }
 }

@@ -1,19 +1,23 @@
 ## Unreleased
 
 ### Added
-- Documentation and structural patterns have proper `aria-role` and other required attributes.
-- Grid documentation for large columns.
-- Updated type documentation.
+- Documentation and structural patterns have proper `aria-role` and other required attributes
+- Grid documentation for large columns
+- Updated type documentation
 - Skip to Content component
 
 ### Modified
 - `imports` is now accessed at `calcite-web/imports`
 - Links darker blue, with underline on hover
-- Alert text color transparent black.
+- Alert text color transparent black
 - Icon font setting font family on `:before`
-- Modal meets accessibility requirements.
-- Drawer meets accessibility requirements.
-- Dropdown meets accessibility requirements.
+- Modal meets accessibility requirements
+- Drawer meets accessibility requirements
+- Dropdown meets accessibility requirements
+- Icon font standardized, more icons added
+
+### Fixed
+- `$generate-css: false` now generates no CSS
 
 ## 0.8.0
 

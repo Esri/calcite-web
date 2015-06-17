@@ -9,6 +9,8 @@
   @include overflow-auto();
 }
 
-.overflow-auto {
-  @extend %overflow-auto;
+@if $include-utils == true {
+  .overflow-auto {
+    @extend %overflow-auto;
+  }
 }
