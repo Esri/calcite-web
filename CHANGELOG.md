@@ -2,6 +2,7 @@
 
 ### Modified
 - Sample code for form input include text for accessibility.
+- Minor doc fixes
 
 ## 0.9.1
 
