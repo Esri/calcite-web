@@ -1,3 +1,7 @@
+## unreleased
+- Accordion meets accessibility requirements
+- Tabs meet accessibility requirements
+
 ## 0.9.0
 
 ### Added
