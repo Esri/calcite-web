@@ -11,6 +11,9 @@
 - Links darker blue, with underline on hover
 - Alert text color transparent black.
 - Icon font setting font family on `:before`
+- Modal meets accessibility requirements.
+- Drawer meets accessibility requirements.
+- Dropdown meets accessibility requirements.
 
 ## 0.8.0
 
