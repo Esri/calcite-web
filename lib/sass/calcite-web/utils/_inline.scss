@@ -12,6 +12,8 @@
   @include inline();
 }
 
-.inline {
-  @extend %inline;
+@if $include-utils == true {
+  .inline {
+    @extend %inline;
+  }
 }

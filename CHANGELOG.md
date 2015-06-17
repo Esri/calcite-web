@@ -15,6 +15,9 @@
 - Drawer meets accessibility requirements.
 - Dropdown meets accessibility requirements.
 
+### Fixed
+- `$generate-css: false` now generates no CSS
+
 ## 0.8.0
 
 ### Modified
