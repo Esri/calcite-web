@@ -1,0 +1,19 @@
+// ┌────────┐
+// │ Inline │
+// └────────┘
+//  ↳ http://esri.github.io/calcite-web/grid/#inline
+//  ↳ grid → _inline.md
+
+@mixin inline() {
+  display: inline-block;
+}
+
+%inline {
+  @include inline();
+}
+
+@if $include-utils == true {
+  .inline {
+    @extend %inline;
+  }
+}
