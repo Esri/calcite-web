@@ -28,6 +28,7 @@
       padding-right: 0.5em;
       @include font-size(-6);
     }
+    &:focus,
     &:hover {
       @include transition(all, $transition);
       background-color: $Calcite_Gray_150;
