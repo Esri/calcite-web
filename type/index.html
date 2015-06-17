@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html lang="en">
 <!--[if lt IE 9]>  <html class="ie lt-ie9 ie8"> <![endif]-->
 <!--[if IE 9]>     <html class="ie ie9"> <![endif]-->
 <!--[if !IE]><!--> <html> <!--<![endif]-->
@@ -38,7 +38,7 @@
      ↳ patterns → _drawers.md
     -->
     <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
-      <nav class="drawer-nav">
+      <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerleft">
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
@@ -92,7 +92,7 @@
     </div>
 
     <div class="drawer drawer-right js-drawer" data-drawer="right">
-      <nav class="drawer-nav">
+      <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerright">
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
@@ -148,11 +148,12 @@
     <div class="wrapper">
       <!-- Logged Out Pattern-->
       <header class="top-nav">
+        <a class="skip-to-content" href="#skip-to-content">Skip To Content</a>
         <div class="grid-container">
           <div class="column-24">
             <div class="tablet-hide">
               <a href="../" class="top-nav-title">Calcite Web</a>
-              <nav class="top-nav-list">
+              <nav class="top-nav-list" role="navigation" aria-labelledby="topnav">
               
                 
                   <a href="../" class="top-nav-link">Get Started</a>
@@ -219,7 +220,7 @@
         </section>
       </div>
       <!-- Secondary Nav Pattern -->
-      <header class="sub-nav">
+      <header class="sub-nav" role="banner">
         <div class="grid-container">
           <div class="column-24">
             
@@ -234,10 +235,10 @@
       <div class="grid-container leader-1">
         
   <div class="column-6">
-    <aside class="side-nav">
+    <aside class="side-nav" aria-role="complementary">
       
         <h4 class="side-nav-title">Typefaces</h4>
-        <nav>
+        <nav aria-role="navigation" aria-labelby="sidenav">
           
             
               <a href="#typefaces" class="side-nav-link">Overview</a>
@@ -262,7 +263,7 @@
         </nav>
       
         <h4 class="side-nav-title">Composition Helpers</h4>
-        <nav>
+        <nav aria-role="navigation" aria-labelby="sidenav">
           
             
               <a href="#composition-helpers" class="side-nav-link">Overview</a>
@@ -291,7 +292,7 @@
         </nav>
       
         <h4 class="side-nav-title">Defaults</h4>
-        <nav>
+        <nav aria-role="navigation" aria-labelby="sidenav">
           
             
               <a href="#defaults" class="side-nav-link">Overview</a>
@@ -305,22 +306,23 @@
     </div>
   </div>
 
-  <main class="column-17 pre-1 content-face">
+  <a id="skip-to-content" tabindex="0"></a>
+  <main class="column-17 pre-1 content-face" role="main">
     
-      <h1 class="text-rule" id="typefaces">Typefaces</h1>
+      <h1 class="text-rule" id="typefaces" tabindex="0">Typefaces</h1>
       
         <section>
           
 
           <p>The Calcite Type System uses a combination of mixins and helper classes to achieve a clear visual style, focusing primarily on simplifying typesetting processes. Using the mixins and classes properly will ensure that all properties are consistent, beautiful, and robust.</p>
 <h3>Typefaces</h3>
-<p>We expose four sets of type families for use in Calcite Web; a Header Family, a Body Family, a Secondary Family, and a Code Family. Each of these type families have a set of weights and styles, defined by their application. For example, the Header Family has more weights than the Body family, reflecting its role as primary UI face, and heavy lifting header face.</p>
-<p>The typographic pallete for Calcite Web differs slightly from the official Esri branding document. All typefaces are examined in detail below.</p>
+<p>We expose four type families for use in Calcite Web; Avenir Next, Kepler, Frutiger, and Consolas. Each of these type families have a set of weights and styles, defined by their application. For example, Avenir Next has more weights than Frutiger family, reflecting its role as primary UI face, and heavy lifting header face.</p>
+<p>The typographic palette for Calcite Web differs slightly from the official Esri branding document. All typefaces are examined in detail below.</p>
 <p>Calcite Web provides a set of weights for each typeface. These are used by either using the helper class in html, or writing sass to include the mixin, or extending the helper class. The available weights for each face are below. Proper care has been taken to ensure that all type systems used by Calcite avoid faux-bold and faux-italics styled by the browser.</p>
-<h3>Vertical Rhythym</h3>
-<p>Vertical rhythym is maintained in the Calcite Web Type System by the use of the <code>$baseline</code> variable. <code>$baseline</code> sets a standard and regular leading in relation to the body copy – 1.5rem. This variable is used for any measurement on the vertical axis in the page, including the <a href="../grid/#leader-and-trailer">leader and trailer grid helper classes</a> and padding for <a href="../components/#buttons">components like buttons</a> which use standard measurements like <code>3/$baseline</code> and <code>2/$baseline</code>.</p>
+<h3>Vertical Rhythm</h3>
+<p>Vertical rhythm is maintained in the Calcite Web Type System by the use of the <code>$baseline</code> variable. <code>$baseline</code> sets a standard and regular leading in relation to the body copy – 1.5rem. This variable is used for any measurement on the vertical axis in the page, including the <a href="../grid/#leader-and-trailer">leader and trailer grid helper classes</a> and padding for <a href="../components/#buttons">components like buttons</a> which use standard measurements like <code>3/$baseline</code> and <code>2/$baseline</code>.</p>
 <h3>Proportional Scales</h3>
-<p>Text sizes are defined by a simple <a href="http://alistapart.com/article/more-meaningful-typography">modular scale</a>. The scale is defined by two base sizes for type - body at 1rem and small at 0.75rem - and extrapolates a series of larger type sizes based on a single ratio; 1.25, or a major third interval. All type sizes are <a href="http://snook.ca/archives/html_and_css/font-size-with-rem">set in rems</a>, which have <a href="http://caniuse.com/#feat=rem">more than acceptable browser support</a>. Rems are used for type sizing and all vertical measurements, defined either by the <code>$baseline</code> variable or the <a href="../sass/#modular-scale">modular scale</a> and <a href="../sass/#font-size">font size</a> mixins. This prevents odd sizing issues with nested content, unpredictable results with scaling, and provides a solid anchor for determining sizes.</p>
+<p>Text sizes are defined by a simple <a href="http://alistapart.com/article/more-meaningful-typography">modular scale</a>. The scale is defined by two base sizes for type - body at 1rem and small at 0.95rem - and extrapolates a series of larger type sizes based on a single ratio; 1.25, or a major third interval. All type sizes are <a href="http://snook.ca/archives/html_and_css/font-size-with-rem">set in rems</a>, which have <a href="http://caniuse.com/#feat=rem">more than acceptable browser support</a>. Rems are used for type sizing and all vertical measurements, defined either by the <code>$baseline</code> variable or the <a href="../sass/#modular-scale">modular scale</a> and <a href="../sass/#font-size">font size</a> mixins. This prevents odd sizing issues with nested content, unpredictable results with scaling, and provides a solid anchor for determining sizes.</p>
 
 
           
@@ -334,7 +336,7 @@
       
         <section>
           
-            <h2 id="avenir">Avenir</h2>
+            <h2 id="avenir" tabindex="0">Avenir</h2>
           
 
           <p><a href="http://www.fonts.com/font/linotype/avenir-next">Avenir Next</a> is a recut of the classic Avenir typeface, by Adrian Frutiger and Akira Kobayashi. It has been reworked for use on the web, and contains more weights, styles, and other improvements. Avenir Next improves on Avenir in web-specific settings.</p>
@@ -351,7 +353,7 @@
 
 
           
-            <h3 class="leader-2">Modifiers</h3>
+            <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
                 <h1 class="">Amazingly few discotheques provide jukeboxes.</h1>
@@ -407,17 +409,17 @@
       
         <section>
           
-            <h2 id="frutiger">Frutiger</h2>
+            <h2 id="frutiger" tabindex="0">Frutiger</h2>
           
 
-          <p>While there is no official Esri brand typeface for long form applications, Calcite Web employs <a href="http://www.fonts.com/font/linotype/frutiger?QueryFontType=Web">Frutiger</a> for this purpose. Frutiger evokes some of the stronger qualities of our default typefaces - Lucida Grande and Segoe UI - while presenting a consistent voice across platforms. Frutiger pairs remarkably well with Avenir, as they are both designed by Adrian Frutiger, with strong influences from Univers.</p>
+          <p>While there is no official Esri brand typeface for long form applications, Calcite Web employs <a href="http://www.fonts.com/font/linotype/frutiger?QueryFontType=Web">Frutiger</a> for this purpose. Frutiger evokes some of the stronger qualities of system default typefaces - Lucida Grande and Segoe UI - while presenting a consistent voice across platforms. Frutiger pairs remarkably well with Avenir, as they are both designed by Adrian Frutiger, with strong influences from Univers.</p>
 <h3>Frutiger</h3>
 <p class="type-sample"> Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
 <p class="type-sample"> Amazingly few discotheques provide jukeboxes.</p>
 
 
           
-            <h3 class="leader-2">Modifiers</h3>
+            <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
                 <p class="modifier-class">Amazingly few discotheques provide jukeboxes.</p>
@@ -458,7 +460,7 @@
       
         <section>
           
-            <h2 id="kepler">Kepler</h2>
+            <h2 id="kepler" tabindex="0">Kepler</h2>
           
 
           <p><a href="http://www.fonts.com/font/adobe/kepler">Kepler</a>, designer by  Robert Slimbach, is used to add graphic interest to a page. For example, Kepler could be used for a large, stylized pull-quote on a marketing landing page. Kepler is the official secondary face of the Esri brand, and offers good counterpoint to both Avenir and Frutiger.</p>
@@ -468,7 +470,7 @@
 
 
           
-            <h3 class="leader-2">Modifiers</h3>
+            <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
                 <h1 class="modifier-class">Amazingly few discotheques provide jukeboxes.</h1>
@@ -509,7 +511,7 @@
       
         <section>
           
-            <h2 id="code-face">Code Face</h2>
+            <h2 id="code-face" tabindex="0">Code Face</h2>
           
 
           <p>Designed by Microsoft's Lucas DeGroot, <a href="http://www.fonts.com/font/microsoft-corporation/consolas">Consolas</a> is a clean, readable, and simple monospace face for documenting code blocks.</p>
@@ -519,7 +521,7 @@
 
 
           
-            <h3 class="leader-2">Modifiers</h3>
+            <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
                 <h1 class="modifier-class">Amazingly few discotheques provide jukeboxes.</h1>
@@ -544,7 +546,7 @@
         <hr>
       
     
-      <h1 class="text-rule" id="composition-helpers">Composition Helpers</h1>
+      <h1 class="text-rule" id="composition-helpers" tabindex="0">Composition Helpers</h1>
       
         <section>
           
@@ -563,14 +565,14 @@
       
         <section>
           
-            <h2 id="text-modifiers">Text modifiers</h2>
+            <h2 id="text-modifiers" tabindex="0">Text modifiers</h2>
           
 
           <p>Build in classes that allow for quick customization and composition for a wide range of use cases.</p>
 
 
           
-            <h3 class="leader-2">Modifiers</h3>
+            <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
                 <p class="">Amazingly few discotheques provide jukeboxes.</p>
@@ -626,14 +628,14 @@
       
         <section>
           
-            <h2 id="text-size">Sizes</h2>
+            <h2 id="text-size" tabindex="0">Sizes</h2>
           
 
           <p>Helpers classes apply the <code>font-size($n)</code> <a href="/sass/#font-size">mixin</a> to an element. This allows for quick resizing of text elements up and down the <a href="/sass/#modular-scale">modular type size scale</a>.</p>
 
 
           
-            <h3 class="leader-2">Modifiers</h3>
+            <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
                 <p class="modifier-class">Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
@@ -714,14 +716,14 @@
       
         <section>
           
-            <h2 id="text-color">Color</h2>
+            <h2 id="text-color" tabindex="0">Color</h2>
           
 
           <p>Sets the font color of the element to any of the <a href="../color">Calcite colors</a> available.</p>
 
 
           
-            <h3 class="leader-2">Modifiers</h3>
+            <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
                 <h1 class="modifier-class">Amazingly few discotheques provide jukeboxes.</h1>
@@ -807,14 +809,14 @@
       
         <section>
           
-            <h2 id="link-color">Link Color</h2>
+            <h2 id="link-color" tabindex="0">Link Color</h2>
           
 
           <p>Sets the color of links within the element, or the link itself, to available <a href="../color">Calcite colors.</a></p>
 
 
           
-            <h3 class="leader-2">Modifiers</h3>
+            <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
                 <p>Amazingly few <a href="#" class="modifier-class">discotheques</a> provide <a href="#" class="modifier-class">jukeboxes.</a> </p>
@@ -900,14 +902,14 @@
       
         <section>
           
-            <h2 id="list-numbered">Numbered List</h2>
+            <h2 id="list-numbered" tabindex="0">Numbered List</h2>
           
 
           <p>Adds the Calcite styles for large numbered lists to an ordered list. Useful for listing steps in a process.</p>
 
 
           
-            <h3 class="leader-2">Modifiers</h3>
+            <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
                 <ol class="modifier-class">
@@ -965,7 +967,7 @@
         <hr>
       
     
-      <h1 class="text-rule" id="defaults">Defaults</h1>
+      <h1 class="text-rule" id="defaults" tabindex="0">Defaults</h1>
       
         <section>
           
@@ -1017,7 +1019,7 @@
     
 
     <!-- Footer Pattern -->
-    <footer class="footer leader-3">
+    <footer class="footer leader-3" role="contentinfo">>
       <div class="grid-container">
           <nav class="column-6">
             <h6>Styleguides</h6>

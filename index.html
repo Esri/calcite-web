@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html lang="en">
 <!--[if lt IE 9]>  <html class="ie lt-ie9 ie8"> <![endif]-->
 <!--[if IE 9]>     <html class="ie ie9"> <![endif]-->
 <!--[if !IE]><!--> <html> <!--<![endif]-->
@@ -38,7 +38,7 @@
      ↳ patterns → _drawers.md
     -->
     <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
-      <nav class="drawer-nav">
+      <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerleft">
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
@@ -92,7 +92,7 @@
     </div>
 
     <div class="drawer drawer-right js-drawer" data-drawer="right">
-      <nav class="drawer-nav">
+      <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerright">
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
@@ -148,11 +148,12 @@
     <div class="wrapper">
       <!-- Logged Out Pattern-->
       <header class="top-nav">
+        <a class="skip-to-content" href="#skip-to-content">Skip To Content</a>
         <div class="grid-container">
           <div class="column-24">
             <div class="tablet-hide">
               <a href="" class="top-nav-title">Calcite Web</a>
-              <nav class="top-nav-list">
+              <nav class="top-nav-list" role="navigation" aria-labelledby="topnav">
               
                 
                   <a href="" class="top-nav-link">Get Started</a>
@@ -219,7 +220,7 @@
         </section>
       </div>
       <!-- Secondary Nav Pattern -->
-      <header class="sub-nav">
+      <header class="sub-nav" role="banner">
         <div class="grid-container">
           <div class="column-24">
             
@@ -234,10 +235,10 @@
       <div class="grid-container leader-1">
         
   <div class="column-6">
-    <aside class="side-nav">
+    <aside class="side-nav" aria-role="complementary">
       
         <h4 class="side-nav-title">Get Started</h4>
-        <nav>
+        <nav aria-role="navigation" aria-labelby="sidenav">
           
             
               <a href="#get-started" class="side-nav-link">Overview</a>
@@ -258,10 +259,10 @@
         </nav>
       
         <h4 class="side-nav-title">Contributing</h4>
-        <nav>
+        <nav aria-role="navigation" aria-labelby="sidenav">
           
             
-              <a href="#install" class="side-nav-link">Install</a>
+              <a href="#contributing" class="side-nav-link">Overview</a>
             
           
             
@@ -284,9 +285,10 @@
     </div>
   </div>
 
-  <main class="column-17 pre-1 content-face">
+  <a id="skip-to-content" tabindex="0"></a>
+  <main class="column-17 pre-1 content-face" role="main">
     
-      <h1 class="text-rule" id="get-started">Get Started</h1>
+      <h1 class="text-rule" id="get-started" tabindex="0">Get Started</h1>
       
         <section>
           
@@ -315,7 +317,7 @@
       
         <section>
           
-            <h2 id="static-files">Static Files</h2>
+            <h2 id="static-files" tabindex="0">Static Files</h2>
           
 
           <p>This is probably the easiest way, but you won't get any of the helpful Sass mixins. If you're looking to get up and running quickly, just <a href="https://github.com/ArcGIS/calcite-web/releases">download the latest release</a> and move the zipped files to wherever you keep your assets (CSS, JavaScript, images). Be sure to use <a href="http://esri.github.io/calcite-web/">the documentation site</a> to copy and paste patterns, components, and even a sample html boilerplate.</p>
@@ -339,7 +341,7 @@
       
         <section>
           
-            <h2 id="ruby-gem">Ruby Gem</h2>
+            <h2 id="ruby-gem" tabindex="0">Ruby Gem</h2>
           
 
           <p>To install Calcite-Web as a ruby gem, reference the gem from your <code>Gemfile</code>:</p>
@@ -370,7 +372,7 @@ sass_dir = <span class="hljs-string">"sass"</span>
       
         <section>
           
-            <h2 id="npm">NPM</h2>
+            <h2 id="npm" tabindex="0">NPM</h2>
           
 
           <p>To install Calcite Web with npm, type:</p>
@@ -405,31 +407,34 @@ sass_dir = <span class="hljs-string">"sass"</span>
         <hr>
       
     
-      <h1 class="text-rule" id="contributing">Contributing</h1>
+      <h1 class="text-rule" id="contributing" tabindex="0">Contributing</h1>
       
         <section>
           
-            <h2 id="install">Install</h2>
-          
 
-          <p>Installing Calcite Web was designed to be fairly painless. If you have any problems, be sure to <a href="https://github.com/Esri/calcite-web/issues/">submit an issue</a>.</p>
+          <p>Calcite Web is open to all types of contributions from across Esri. Things you can do to contribute include:</p>
+<ol>
+<li>Report a bug (<a href="https://github.com/Esri/calcite-web/issues/new">open an issue</a>)</li>
+<li>Suggest a new pattern or component (<a href="https://github.com/Esri/calcite-web/issues/new">open an issue</a>)</li>
+<li>Fork the repository and fix one of the <a href="https://github.com/Esri/calcite-web/issues">open issues</a></li>
+<li>Report problems with the <a href="http://esri.github.io/calcite-web/">documentation</a>.</li>
+</ol>
 <h3>Install Dependencies</h3>
-<p>Calcite Web has three main dependencies. If you already have these on your computer, you can skip these steps:</p>
+<p>Calcite Web has two development dependencies, Node.js and Grunt. If you already have these on your computer, you can skip these steps:</p>
 <ol>
 <li>Visit <a href="http://nodejs.org/">nodejs.org</a> to install Node.</li>
 <li><code>npm install -g grunt-cli</code> to install Grunt.</li>
-<li><code>gem install sass</code> to install Sass.</li>
 </ol>
 <h3>Fork the Repository</h3>
-<p>All the code for Calcite Web lives on <a href="https://github.com/esri/calcite-web">GitHub</a>. We use the <a href="https://help.github.com/articles/using-pull-requests/">fork and pull model</a> to manage contribution.</p>
+<p>All the code for Calcite Web lives <a href="https://github.com/esri/calcite-web">on GitHub</a>. We use the <a href="https://help.github.com/articles/using-pull-requests/">fork and pull model</a> to manage contribution.</p>
 <ol>
 <li>Fork the repository so you have your own copy (<code>your-username/calcite-web</code>)</li>
-<li>Clone the repo locally with <code>git clone https://github.com/your-username/calcite-web.git</code></li>
+<li>Clone the repo locally with <code>git clone https://github.com/your-username/calcite-web</code></li>
 <li>Move into the clone repo:  <code>cd calcite-web</code></li>
 <li>Install project dependencies: <code>npm install</code></li>
 </ol>
 <p>You should also add <code>Esri/calcite-web</code> as a remote at this point. We generally call this remote branch 'upstream':</p>
-<pre><code>git remote <span class="hljs-built_in">add</span> upstream http<span class="hljs-variable">s:</span>//github.<span class="hljs-keyword">com</span>/Esri/calcite-web.git
+<pre><code>git remote <span class="hljs-built_in">add</span> upstream http<span class="hljs-variable">s:</span>//github.<span class="hljs-keyword">com</span>/Esri/calcite-web
 </code></pre>
 
 
@@ -444,12 +449,12 @@ sass_dir = <span class="hljs-string">"sass"</span>
       
         <section>
           
-            <h2 id="development">Development</h2>
+            <h2 id="development" tabindex="0">Development</h2>
           
 
           <p>To run a development environment, just type <code>grunt</code>. You should have a copy of the documentation site live at <a href="http://localhost:8888">localhost:8888</a>. As you develop features and fix bugs, be sure to write notes in <code>CHANGELOG.md</code>.</p>
 <h3>How We Use GitHub</h3>
-<p>All the code for Calcite Web lives on <a href="https://github.com/esri/calcite-web">GitHub</a>. We use the <a href="https://help.github.com/articles/using-pull-requests/">fork and pull model</a> to manage contribution. To contribute, you should:</p>
+<p>All the code for Calcite Web lives <a href="https://github.com/esri/calcite-web">on GitHub</a>. We use the <a href="https://help.github.com/articles/using-pull-requests/">fork and pull model</a> to manage contribution. To contribute, you should:</p>
 <ol>
 <li>Commit your changes.</li>
 <li>Note your changes in <code>CHANGELOG.md</code></li>
@@ -470,23 +475,26 @@ sass_dir = <span class="hljs-string">"sass"</span>
       
         <section>
           
-            <h2 id="versioning">Versioning</h2>
+            <h2 id="versioning" tabindex="0">Versioning</h2>
           
 
-          <p>Calcite Web uses SemVer (Semantic Versioning) for its releases. This means that version numbers are basically formatted like <code>MAJOR.MINOR.PATCH</code>. If you're well acquainted with SemVer you should skip to <a href="#releasing-a-new-version">releasing a new version</a> below.</p>
+          <p>Calcite-Web uses SemVer (Semantic Versioning) for its releases. This means that version numbers are basically formatted like <code>MAJOR.MINOR.PATCH</code>. If you're well acquainted with SemVer you should skip to 'Bumping the Version' below.</p>
 <h4>Major</h4>
-<p>Breaking changes are signified with a new <strong>first</strong> number. For example, moving from <code>1.0.0</code> to <code>2.0.0</code> implies breaking changes.</p>
+<p>Breaking changes are signified with a new <strong>first</strong> number. For example, moving from 1.0.0 to 2.0.0 implies breaking changes.</p>
 <h4>Minor</h4>
-<p>New components, new helper classes, or substantial visual changes to existing components and patterns are <em>minor releases</em>. These are signified by the second number changing. So from <code>1.1.2</code> to <code>1.2.0</code> there are minor changes.</p>
+<p>New components, new helper classes, or substantial visual changes to existing components and patterns are <em>minor releases</em>. These are signified by the second number changing. So from 1.1.2 to 1.2.0 there are minor changes.</p>
 <h4>Patches</h4>
-<p>The final number signifies patches such as fixing a pattern or component in a certain browser, or fixing an existing bug. Small changes to the documentation site and the tooling around the Calcite Web library are also considered patches.</p>
-<h2>Releasing a New Version</h2>
+<p>The final number signifies patches such as fixing a pattern or component in a certain browser, or fixing an existing bug. Small changes to the documentation site and the tooling around the Calcite-Web library are also considered patches.</p>
+<h2>Bumping the Version</h2>
 <ol>
 <li>Change the version number in <code>package.json</code> to the desired version number.</li>
 <li>Write a description of the changes, additions, and bug fixes in <code>CHANGELOG.md</code>.</li>
 <li>Make sure <code>Esri/calcite-web</code> is up-to-date with your changes.</li>
-<li>Run <code>grunt release</code> and enter your GitHub username and password.</li>
+<li>Run <code>grunt release</code>. If prompted enter your GitHub credentials and your s3 access key/secret.</li>
 </ol>
+<h1>Updating the Documentation Site</h1>
+<p>To update the documentation site, just make sure you have push access to the <code>Esri/calcite-web</code> repo and type <code>grunt deploy</code>. This will build the site and deploy to gh-pages.</p>
+<p>The site should be updated at <a href="http://esri.github.io/calcite-web/">http://esri.github.io/calcite-web/</a> in just a few moments.</p>
 
 
           
@@ -500,7 +508,7 @@ sass_dir = <span class="hljs-string">"sass"</span>
       
         <section>
           
-            <h2 id="deploy-the-documentation">Deploying the Documentation</h2>
+            <h2 id="deploy-the-documentation" tabindex="0">Deploying the Documentation</h2>
           
 
           <p>To update the documentation site, just make sure you have push access to the <code>Esri/calcite-web</code> repository and type <code>grunt deploy</code>. This will build the site and deploy to gh-pages.</p>
@@ -526,7 +534,7 @@ sass_dir = <span class="hljs-string">"sass"</span>
     
 
     <!-- Footer Pattern -->
-    <footer class="footer leader-3">
+    <footer class="footer leader-3" role="contentinfo">>
       <div class="grid-container">
           <nav class="column-6">
             <h6>Styleguides</h6>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html lang="en">
 <!--[if lt IE 9]>  <html class="ie lt-ie9 ie8"> <![endif]-->
 <!--[if IE 9]>     <html class="ie ie9"> <![endif]-->
 <!--[if !IE]><!--> <html> <!--<![endif]-->
@@ -38,7 +38,7 @@
      ↳ patterns → _drawers.md
     -->
     <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
-      <nav class="drawer-nav">
+      <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerleft">
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
@@ -92,7 +92,7 @@
     </div>
 
     <div class="drawer drawer-right js-drawer" data-drawer="right">
-      <nav class="drawer-nav">
+      <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerright">
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
@@ -148,11 +148,12 @@
     <div class="wrapper">
       <!-- Logged Out Pattern-->
       <header class="top-nav">
+        <a class="skip-to-content" href="#skip-to-content">Skip To Content</a>
         <div class="grid-container">
           <div class="column-24">
             <div class="tablet-hide">
               <a href="../" class="top-nav-title">Calcite Web</a>
-              <nav class="top-nav-list">
+              <nav class="top-nav-list" role="navigation" aria-labelledby="topnav">
               
                 
                   <a href="../" class="top-nav-link">Get Started</a>
@@ -219,7 +220,7 @@
         </section>
       </div>
       <!-- Secondary Nav Pattern -->
-      <header class="sub-nav">
+      <header class="sub-nav" role="banner">
         <div class="grid-container">
           <div class="column-24">
             
@@ -234,10 +235,10 @@
       <div class="grid-container leader-1">
         
   <div class="column-6">
-    <aside class="side-nav">
+    <aside class="side-nav" aria-role="complementary">
       
         <h4 class="side-nav-title">Interactive Patterns</h4>
-        <nav>
+        <nav aria-role="navigation" aria-labelby="sidenav">
           
             
               <a href="#interactive-patterns" class="side-nav-link">Overview</a>
@@ -246,7 +247,7 @@
         </nav>
       
         <h4 class="side-nav-title">Utility Functions</h4>
-        <nav>
+        <nav aria-role="navigation" aria-labelby="sidenav">
           
             
               <a href="#utility-functions" class="side-nav-link">Overview</a>
@@ -264,9 +265,10 @@
     </div>
   </div>
 
-  <main class="column-17 pre-1 content-face">
+  <a id="skip-to-content" tabindex="0"></a>
+  <main class="column-17 pre-1 content-face" role="main">
     
-      <h1 class="text-rule" id="interactive-patterns">Interactive Patterns</h1>
+      <h1 class="text-rule" id="interactive-patterns" tabindex="0">Interactive Patterns</h1>
       
         <section>
           
@@ -322,7 +324,7 @@ calcite.<span class="hljs-function"><span class="hljs-title">tabs</span><span cl
         <hr>
       
     
-      <h1 class="text-rule" id="utility-functions">Utility Functions</h1>
+      <h1 class="text-rule" id="utility-functions" tabindex="0">Utility Functions</h1>
       
         <section>
           
@@ -399,7 +401,7 @@ calcite.<span class="hljs-function"><span class="hljs-title">tabs</span><span cl
       
         <section>
           
-            <h2 id="dom-utilities">DOM Utilities</h2>
+            <h2 id="dom-utilities" tabindex="0">DOM Utilities</h2>
           
 
           <p>The following functions allow for basic DOM manipulation and traversal. These helpers are used by JavaScript dependent patterns, and can be included in any custom JavaScript in Calcite Web projects.</p>
@@ -532,7 +534,7 @@ calcite.toggleClass(node, <span class="hljs-string">'test'</span>); <span class=
     
 
     <!-- Footer Pattern -->
-    <footer class="footer leader-3">
+    <footer class="footer leader-3" role="contentinfo">>
       <div class="grid-container">
           <nav class="column-6">
             <h6>Styleguides</h6>

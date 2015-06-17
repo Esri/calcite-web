@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html lang="en">
 <!--[if lt IE 9]>  <html class="ie lt-ie9 ie8"> <![endif]-->
 <!--[if IE 9]>     <html class="ie ie9"> <![endif]-->
 <!--[if !IE]><!--> <html> <!--<![endif]-->
@@ -38,7 +38,7 @@
      ↳ patterns → _drawers.md
     -->
     <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
-      <nav class="drawer-nav">
+      <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerleft">
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
@@ -92,7 +92,7 @@
     </div>
 
     <div class="drawer drawer-right js-drawer" data-drawer="right">
-      <nav class="drawer-nav">
+      <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerright">
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
@@ -148,11 +148,12 @@
     <div class="wrapper">
       <!-- Logged Out Pattern-->
       <header class="top-nav">
+        <a class="skip-to-content" href="#skip-to-content">Skip To Content</a>
         <div class="grid-container">
           <div class="column-24">
             <div class="tablet-hide">
               <a href="../../" class="top-nav-title">Calcite Web</a>
-              <nav class="top-nav-list">
+              <nav class="top-nav-list" role="navigation" aria-labelledby="topnav">
               
                 
                   <a href="../../" class="top-nav-link">Get Started</a>
@@ -219,7 +220,7 @@
         </section>
       </div>
       <!-- Secondary Nav Pattern -->
-      <header class="sub-nav">
+      <header class="sub-nav" role="banner">
         <div class="grid-container">
           <div class="column-24">
             
@@ -522,7 +523,7 @@ File.fullPermissions = <span class="hljs-number">0777</span>;
     
 
     <!-- Footer Pattern -->
-    <footer class="footer leader-3">
+    <footer class="footer leader-3" role="contentinfo">>
       <div class="grid-container">
           <nav class="column-6">
             <h6>Styleguides</h6>

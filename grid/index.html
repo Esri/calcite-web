@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html lang="en">
 <!--[if lt IE 9]>  <html class="ie lt-ie9 ie8"> <![endif]-->
 <!--[if IE 9]>     <html class="ie ie9"> <![endif]-->
 <!--[if !IE]><!--> <html> <!--<![endif]-->
@@ -38,7 +38,7 @@
      ↳ patterns → _drawers.md
     -->
     <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
-      <nav class="drawer-nav">
+      <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerleft">
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
@@ -92,7 +92,7 @@
     </div>
 
     <div class="drawer drawer-right js-drawer" data-drawer="right">
-      <nav class="drawer-nav">
+      <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerright">
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
@@ -148,11 +148,12 @@
     <div class="wrapper">
       <!-- Logged Out Pattern-->
       <header class="top-nav">
+        <a class="skip-to-content" href="#skip-to-content">Skip To Content</a>
         <div class="grid-container">
           <div class="column-24">
             <div class="tablet-hide">
               <a href="../" class="top-nav-title">Calcite Web</a>
-              <nav class="top-nav-list">
+              <nav class="top-nav-list" role="navigation" aria-labelledby="topnav">
               
                 
                   <a href="../" class="top-nav-link">Get Started</a>
@@ -219,7 +220,7 @@
         </section>
       </div>
       <!-- Secondary Nav Pattern -->
-      <header class="sub-nav">
+      <header class="sub-nav" role="banner">
         <div class="grid-container">
           <div class="column-24">
             
@@ -234,10 +235,10 @@
       <div class="grid-container leader-1">
         
   <div class="column-6">
-    <aside class="side-nav">
+    <aside class="side-nav" aria-role="complementary">
       
         <h4 class="side-nav-title">Grid</h4>
-        <nav>
+        <nav aria-role="navigation" aria-labelby="sidenav">
           
             
               <a href="#grid" class="side-nav-link">Overview</a>
@@ -278,7 +279,7 @@
         </nav>
       
         <h4 class="side-nav-title">Grid Helpers</h4>
-        <nav>
+        <nav aria-role="navigation" aria-labelby="sidenav">
           
             
               <a href="#pre-and-post" class="side-nav-link">Pre & Post</a>
@@ -311,7 +312,7 @@
         </nav>
       
         <h4 class="side-nav-title">Interactive Layout Helpers</h4>
-        <nav>
+        <nav aria-role="navigation" aria-labelby="sidenav">
           
             
               <a href="#interactive-layout-helpers" class="side-nav-link">Overview</a>
@@ -333,9 +334,10 @@
     </div>
   </div>
 
-  <main class="column-17 pre-1 content-face">
+  <a id="skip-to-content" tabindex="0"></a>
+  <main class="column-17 pre-1 content-face" role="main">
     
-      <h1 class="text-rule" id="grid">Grid</h1>
+      <h1 class="text-rule" id="grid" tabindex="0">Grid</h1>
       
         <section>
           
@@ -346,6 +348,7 @@
 <li>Built-in smart defaults for responsive sizing puts less columns across the screen at smaller sizes, rather than smaller columns.</li>
 </ol>
 <p>These two principles mean that a column becomes a standard unit of measurement, creating a constant and abstracted grid system that stands behind the content of a page rather than within it.</p>
+<p>On very large screens like the apple cinema display, an extra large 36 column grid can be optionally used. This grid has no max width, and is useful for full screen web applications.</p>
 <h3>The Grid</h3>
 <table>
 <thead>
@@ -357,7 +360,12 @@
 </thead>
 <tbody>
 <tr>
-<td>1280px</td>
+<td>n/a</td>
+<td>Cinema Display</td>
+<td>36</td>
+</tr>
+<tr>
+<td>1450px</td>
 <td>Desktop</td>
 <td>24</td>
 </tr>
@@ -386,7 +394,7 @@
       
         <section>
           
-            <h2 id="configuration">Configuration</h2>
+            <h2 id="configuration" tabindex="0">Configuration</h2>
           
 
           <p>If you are using Calcite Web as a Sass library, you can customize the grid with Sass variables. Below are the different settings you have access to and their default values:</p>
@@ -411,23 +419,13 @@
 </tr>
 <tr>
 <td><code>$large</code></td>
-<td>1280px</td>
-<td>Largest (desktop) breakdpoint size in pixels</td>
+<td>1450px</td>
+<td>Default (desktop) breakpoint size in pixels</td>
 </tr>
 <tr>
 <td><code>$vw-ratio</code></td>
-<td>0.9</td>
+<td>0.95</td>
 <td>Amount of screen used by grid (0 - 1)</td>
-</tr>
-<tr>
-<td><code>$container-min</code></td>
-<td>0</td>
-<td>Smallest size of container</td>
-</tr>
-<tr>
-<td><code>$container-max</code></td>
-<td><code>$large * $vw-ratio</code></td>
-<td>Maximum size of the container</td>
 </tr>
 <tr>
 <td><code>$column-gutter</code></td>
@@ -451,11 +449,16 @@
 </tr>
 <tr>
 <td><code>$large-class</code></td>
-<td>column</td>
+<td>large</td>
 <td>Prefix word desktop size columns</td>
 </tr>
 <tr>
 <td><code>$large-column-count</code></td>
+<td>36</td>
+<td>How many columns to use past the desktop breakpoint</td>
+</tr>
+<tr>
+<td><code>$default-column-count</code></td>
 <td>24</td>
 <td>How many columns to use on the desktop breakpoint</td>
 </tr>
@@ -486,9 +489,9 @@
 </tr>
 </tbody>
 </table>
-<p>You can override these values to create a custom, project-specific grid in your own project. For example, to use a 16 column grid instead of the default 24 columns, you would set the <code>$large-column-count</code> variable after importing the library:</p>
-<pre><code><span class="hljs-at_rule">@<span class="hljs-keyword">import</span> calcite-web</span>;
-$<span class="hljs-rule"><span class="hljs-attribute">large-column-count</span>:<span class="hljs-value"> <span class="hljs-number">16</span></span></span>;
+<p>You can override these values to create a custom, project-specific grid in your own project. For example, to use a 16 column grid instead of the default 24 columns, you would set the <code>$default-column-count</code> variable before importing the library:</p>
+<pre><code>$<span class="hljs-rule"><span class="hljs-attribute">default-column-count</span>:<span class="hljs-value"> <span class="hljs-number">16</span></span></span>;
+<span class="hljs-at_rule">@<span class="hljs-keyword">import</span> calcite-web</span>;
 </code></pre>
 
 
@@ -503,7 +506,7 @@ $<span class="hljs-rule"><span class="hljs-attribute">large-column-count</span>:
       
         <section>
           
-            <h2 id="container">Container</h2>
+            <h2 id="container" tabindex="0">Container</h2>
           
 
           <p>The <code>.grid-container</code> class is required to contain the grid. Using the  <a href="#columns">column</a> classes without them being nested in a containing <code>div</code> will cause unexpected results.</p>
@@ -527,7 +530,7 @@ $<span class="hljs-rule"><span class="hljs-attribute">large-column-count</span>:
       
         <section>
           
-            <h2 id="columns">Columns</h2>
+            <h2 id="columns" tabindex="0">Columns</h2>
           
 
           <p>A column is a constant unit of measurement. The width of a column is dynamic, but always between a fixed range. Columns will never get too large or too small. As the viewport gets smaller the Calcite Grid System will simply put less columns on the page.</p>
@@ -547,7 +550,7 @@ $<span class="hljs-rule"><span class="hljs-attribute">large-column-count</span>:
       
         <section>
           
-            <h2 id="responsive-columns">Responsive Columns</h2>
+            <h2 id="responsive-columns" tabindex="0">Responsive Columns</h2>
           
 
           <p>The width of elements can be explicitly defined for breakpoints where columns would normally fold by default. This can be done with the <code>phone-column-n</code> and <code>tablet-column-n</code> classes. For example, <code>.column-12</code> would default to the full 12/12 column width at a tablet size. Adding to the same element <code>.tablet-column-6</code> would prevent the default behavior, and at a tablet viewport, the element would be 6/12 columns.</p>
@@ -565,7 +568,7 @@ $<span class="hljs-rule"><span class="hljs-attribute">large-column-count</span>:
       
         <section>
           
-            <h2 id="nested-columns">Nested Columns</h2>
+            <h2 id="nested-columns" tabindex="0">Nested Columns</h2>
           
 
           <p>Contrary to other flexible-width grid systems, Calcite Grid columns do not change behavior when nested. Because a column is a constant measurement relative to the size of the viewport, nested columns still span the same width as their non-nested counterparts. An element with <code>.column-6</code> nested within an element with <code>.column-12</code> is the same size as an un-nested <code>.column-6</code>. Further, clearing of the column-gutter is automatically done for you with <code>:first-child</code> and <code>:last-child</code> psuedo-selectors on all column classes.</p>
@@ -585,7 +588,7 @@ $<span class="hljs-rule"><span class="hljs-attribute">large-column-count</span>:
       
         <section>
           
-            <h2 id="rows">Rows</h2>
+            <h2 id="rows" tabindex="0">Rows</h2>
           
 
           <p>Because columns can now be nested without changing their behavior, we don't need rows, really. However, you still may find that a tall, narrow column with a short wide neighbor can cause float issues with subsequent columns.</p>
@@ -604,7 +607,7 @@ $<span class="hljs-rule"><span class="hljs-attribute">large-column-count</span>:
       
         <section>
           
-            <h2 id="block-groups">Block Groups</h2>
+            <h2 id="block-groups" tabindex="0">Block Groups</h2>
           
 
           <p>Block groups are designed for quickly creating gridded content, such as a tile pattern or image gallery. Block groups are percentage based, so they can subdivide columns. Block groups have the ability to break the regular grid system, and thus should be used sparingly and with thought.</p>
@@ -622,7 +625,7 @@ $<span class="hljs-rule"><span class="hljs-attribute">large-column-count</span>:
       
         <section>
           
-            <h2 id="responsive-block-groups">Responsive Block Groups</h2>
+            <h2 id="responsive-block-groups" tabindex="0">Responsive Block Groups</h2>
           
 
           <p>Block groups have responsive <code>tablet-</code> and <code>phone-</code> prefix classes. These allow the flow of content across repeating rows of content to be easily tweaked across viewport widths in scenarios where the default <a href="#columns">column resizing</a> or <a href="#responsive-columns">responsive column classes</a> would be too verbose or cumbersome.</p>
@@ -641,11 +644,11 @@ $<span class="hljs-rule"><span class="hljs-attribute">large-column-count</span>:
         <hr>
       
     
-      <h1 class="text-rule" id="grid-helpers">Grid Helpers</h1>
+      <h1 class="text-rule" id="grid-helpers" tabindex="0">Grid Helpers</h1>
       
         <section>
           
-            <h2 id="pre-and-post">Pre & Post</h2>
+            <h2 id="pre-and-post" tabindex="0">Pre & Post</h2>
           
 
           <p>Pre and Post classes are used to move your columns laterally across the grid by defining how many columns they should be from their neighbors on either side.</p>
@@ -665,7 +668,7 @@ $<span class="hljs-rule"><span class="hljs-attribute">large-column-count</span>:
       
         <section>
           
-            <h2 id="leader-and-trailer">Leader & Trailer</h2>
+            <h2 id="leader-and-trailer" tabindex="0">Leader & Trailer</h2>
           
 
           <p>The leader and trailer classes are designed for quick vertical adjustments with markup. The standard <code>leader-n</code> and <code>trailer-n</code> classes add top and bottom margin to the element, as multiples of the <code>$baseline</code> variable, or 1.5rem.</p>
@@ -679,7 +682,7 @@ $<span class="hljs-rule"><span class="hljs-attribute">large-column-count</span>:
 
 
           
-            <h3 class="leader-2">Modifiers</h3>
+            <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
                 <div class=" panel"></div>
@@ -840,14 +843,14 @@ $<span class="hljs-rule"><span class="hljs-attribute">large-column-count</span>:
       
         <section>
           
-            <h2 id="gutter">Gutter</h2>
+            <h2 id="gutter" tabindex="0">Gutter</h2>
           
 
           <p>Adds padding the the left or right of an element. For example, <code>&lt;div class=&quot;gutter-left-3&quot;&gt;</code> will receive three units of padding on its left side.</p>
 
 
           
-            <h3 class="leader-2">Modifiers</h3>
+            <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
                 <div class="modifier-class panel">modifier-class</div>
@@ -948,7 +951,7 @@ $<span class="hljs-rule"><span class="hljs-attribute">large-column-count</span>:
       
         <section>
           
-            <h2 id="first-and-last">First & Last</h2>
+            <h2 id="first-and-last" tabindex="0">First & Last</h2>
           
 
           <p>The <code>first</code> and <code>last</code> classes are used for
@@ -966,7 +969,7 @@ aligning grid columns when the Grid System is unable to determine which columns 
       
         <section>
           
-            <h2 id="show-and-hide">Show & Hide</h2>
+            <h2 id="show-and-hide" tabindex="0">Show & Hide</h2>
           
 
           <p>These convenience classes are meant to help with quick responsive layout. Below are the classes and what breakpoints they are visible on:</p>
@@ -1029,7 +1032,7 @@ aligning grid columns when the Grid System is unable to determine which columns 
       
         <section>
           
-            <h2 id="left-and-right">Left & Right</h2>
+            <h2 id="left-and-right" tabindex="0">Left & Right</h2>
           
 
           <p>Use a class of <code>right</code> on html elements to float elements to the right. Use a class of <code>left</code> on html elements to float elements to the left.</p>
@@ -1050,7 +1053,7 @@ aligning grid columns when the Grid System is unable to determine which columns 
       
         <section>
           
-            <h2 id="inline">Inline</h2>
+            <h2 id="inline" tabindex="0">Inline</h2>
           
 
           <p>Adds <code>display: inline-block</code> to an element.</p>
@@ -1066,7 +1069,7 @@ aligning grid columns when the Grid System is unable to determine which columns 
         <hr>
       
     
-      <h1 class="text-rule" id="interactive-layout-helpers">Interactive Layout Helpers</h1>
+      <h1 class="text-rule" id="interactive-layout-helpers" tabindex="0">Interactive Layout Helpers</h1>
       
         <section>
           
@@ -1085,7 +1088,7 @@ aligning grid columns when the Grid System is unable to determine which columns 
       
         <section>
           
-            <h2 id="scroll-show-and-hide">Scroll Show & Hide</h2>
+            <h2 id="scroll-show-and-hide" tabindex="0">Scroll Show & Hide</h2>
           
 
           <p>Some layouts call for elements to appear or disappear as the user scrolls down the page. An element with the <code>scroll-show</code> class will appear when it reaches a point specified by the <code>data-top=x</code> attribute, appearing when it comes within the given value of the top of the screen.</p>
@@ -1102,7 +1105,7 @@ aligning grid columns when the Grid System is unable to determine which columns 
       
         <section>
           
-            <h2 id="scroll-sticky">Scroll Sticky</h2>
+            <h2 id="scroll-sticky" tabindex="0">Scroll Sticky</h2>
           
 
           <p>Elements that become position fixed as they reach a certain position in the viewport are refered to as 'sticky'. The <code>js-sticky</code> class takes an <code>data-top=x</code> attribute that defines the point from the top of the window the sticky element will stick.</p>
@@ -1127,7 +1130,7 @@ aligning grid columns when the Grid System is unable to determine which columns 
     
 
     <!-- Footer Pattern -->
-    <footer class="footer leader-3">
+    <footer class="footer leader-3" role="contentinfo">>
       <div class="grid-container">
           <nav class="column-6">
             <h6>Styleguides</h6>

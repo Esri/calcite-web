@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html lang="en">
 <!--[if lt IE 9]>  <html class="ie lt-ie9 ie8"> <![endif]-->
 <!--[if IE 9]>     <html class="ie ie9"> <![endif]-->
 <!--[if !IE]><!--> <html> <!--<![endif]-->
@@ -38,7 +38,7 @@
      ↳ patterns → _drawers.md
     -->
     <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
-      <nav class="drawer-nav">
+      <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerleft">
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
@@ -92,7 +92,7 @@
     </div>
 
     <div class="drawer drawer-right js-drawer" data-drawer="right">
-      <nav class="drawer-nav">
+      <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerright">
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
@@ -148,11 +148,12 @@
     <div class="wrapper">
       <!-- Logged Out Pattern-->
       <header class="top-nav">
+        <a class="skip-to-content" href="#skip-to-content">Skip To Content</a>
         <div class="grid-container">
           <div class="column-24">
             <div class="tablet-hide">
               <a href="../" class="top-nav-title">Calcite Web</a>
-              <nav class="top-nav-list">
+              <nav class="top-nav-list" role="navigation" aria-labelledby="topnav">
               
                 
                   <a href="../" class="top-nav-link">Get Started</a>
@@ -219,7 +220,7 @@
         </section>
       </div>
       <!-- Secondary Nav Pattern -->
-      <header class="sub-nav">
+      <header class="sub-nav" role="banner">
         <div class="grid-container">
           <div class="column-24">
             
@@ -234,10 +235,10 @@
       <div class="grid-container leader-1">
         
   <div class="column-6">
-    <aside class="side-nav">
+    <aside class="side-nav" aria-role="complementary">
       
         <h4 class="side-nav-title">Sass</h4>
-        <nav>
+        <nav aria-role="navigation" aria-labelby="sidenav">
           
             
               <a href="#sass" class="side-nav-link">Overview</a>
@@ -246,7 +247,7 @@
         </nav>
       
         <h4 class="side-nav-title">Variables</h4>
-        <nav>
+        <nav aria-role="navigation" aria-labelby="sidenav">
           
             
               <a href="#variables" class="side-nav-link">Overview</a>
@@ -263,7 +264,7 @@
         </nav>
       
         <h4 class="side-nav-title">Type Composition</h4>
-        <nav>
+        <nav aria-role="navigation" aria-labelby="sidenav">
           
             
               <a href="#type-composition" class="side-nav-link">Type Composition</a>
@@ -296,7 +297,7 @@
         </nav>
       
         <h4 class="side-nav-title">Utilities</h4>
-        <nav>
+        <nav aria-role="navigation" aria-labelby="sidenav">
           
             
               <a href="#utility-mixins" class="side-nav-link">Utility Mixins</a>
@@ -310,9 +311,10 @@
     </div>
   </div>
 
-  <main class="column-17 pre-1 content-face">
+  <a id="skip-to-content" tabindex="0"></a>
+  <main class="column-17 pre-1 content-face" role="main">
     
-      <h1 class="text-rule" id="sass">Sass</h1>
+      <h1 class="text-rule" id="sass" tabindex="0">Sass</h1>
       
         <section>
           
@@ -475,7 +477,7 @@ $<span class="hljs-rule"><span class="hljs-attribute">include-type</span>:<span 
         <hr>
       
     
-      <h1 class="text-rule" id="variables">Variables</h1>
+      <h1 class="text-rule" id="variables" tabindex="0">Variables</h1>
       
         <section>
           
@@ -496,7 +498,7 @@ $<span class="hljs-rule"><span class="hljs-attribute">include-type</span>:<span 
       
         <section>
           
-            <h2 id="breakpoints">Breakpoints</h2>
+            <h2 id="breakpoints" tabindex="0">Breakpoints</h2>
           
 
           <p>Calcite Web comes with several variables representing the default screen sizes.</p>
@@ -519,7 +521,7 @@ $<span class="hljs-rule"><span class="hljs-attribute">include-type</span>:<span 
       
         <section>
           
-            <h2 id="ui-variables">UI Variables</h2>
+            <h2 id="ui-variables" tabindex="0">UI Variables</h2>
           
 
           <p>Controls specific aspects and behaviors across the UI.</p>
@@ -544,11 +546,11 @@ $<span class="hljs-rule"><span class="hljs-attribute">include-type</span>:<span 
         <hr>
       
     
-      <h1 class="text-rule" id="type-composition">Type Composition</h1>
+      <h1 class="text-rule" id="type-composition" tabindex="0">Type Composition</h1>
       
         <section>
           
-            <h2 id="type-composition">Type Composition</h2>
+            <h2 id="type-composition" tabindex="0">Type Composition</h2>
           
 
           <p>Calcite Web has a helpful set of mixins for composing type. We recommend you use these mixins wherever possible when writing your own components as it will keep the visual proportions and styles in line with the rest of the framework.</p>
@@ -565,7 +567,7 @@ $<span class="hljs-rule"><span class="hljs-attribute">include-type</span>:<span 
       
         <section>
           
-            <h2 id="font-size">Font Size</h2>
+            <h2 id="font-size" tabindex="0">Font Size</h2>
           
 
           <p>The Calcite Web type system uses a modular typographic scale to ensure a consistent tonal range within all text elements. This modular scale is created from the body size of the type, and a second, smaller size. These two type sizes anchor the scale, and using a precise ratio can be expanded to an entire set of sizes for all typographic needs.</p>
@@ -585,7 +587,7 @@ $<span class="hljs-rule"><span class="hljs-attribute">include-type</span>:<span 
       
         <section>
           
-            <h2 id="modular-scale">Modular Scale</h2>
+            <h2 id="modular-scale" tabindex="0">Modular Scale</h2>
           
 
           <p>The <code>modular-scale($n)</code> behaves the same as the <code>font-size($n)</code> mixin, but returns a raw rem value rather than css styles specific to type elements. This means that the <code>modular-scale($n)</code> mixin can be used to define heights, widths, padding, margins, or any other property of an element so that it adheres to the modular scale defined by the typography.
@@ -603,7 +605,7 @@ Setting the max width of an article to a large multiple of the text size is a wa
       
         <section>
           
-            <h2 id="tracking">Tracking</h2>
+            <h2 id="tracking" tabindex="0">Tracking</h2>
           
 
           <p>Tracking is the space between letters in a word. The <code>tracking($n)</code> mixin accepts an integer, and applies letterspacing to the element as fractions of 1/1000 of an em.
@@ -622,7 +624,7 @@ Setting the max width of an article to a large multiple of the text size is a wa
       
         <section>
           
-            <h2 id="leading">Leading</h2>
+            <h2 id="leading" tabindex="0">Leading</h2>
           
 
           <p>Leading is the space between lines in a text block. The <code>leading($n)</code> mixin accepts an integer, and sets the line height of the element to the integer times the standard baseline unit.</p>
@@ -639,7 +641,7 @@ Setting the max width of an article to a large multiple of the text size is a wa
       
         <section>
           
-            <h2 id="word-spacing">Word Spacing</h2>
+            <h2 id="word-spacing" tabindex="0">Word Spacing</h2>
           
 
           <p>Word spacing is - well - the space between words.  The <code>word-spacing($n)</code> mixin accepts an integer, and applies letterspacing to the element as fractions of 1/1000 of an em. If you're familiar with word-spacing in design programs like Adobe InDesign, the <code>word-spacing</code> mixin will immidiately feel fairly natural.</p>
@@ -691,7 +693,7 @@ Setting the max width of an article to a large multiple of the text size is a wa
       
         <section>
           
-            <h2 id="unicode-variables">Unicode Variables</h2>
+            <h2 id="unicode-variables" tabindex="0">Unicode Variables</h2>
           
 
           <p>Sass Unicode variables provide a simple way to display unicode characters as content in css declarations.</p>
@@ -936,11 +938,11 @@ Setting the max width of an article to a large multiple of the text size is a wa
         <hr>
       
     
-      <h1 class="text-rule" id="utilities">Utilities</h1>
+      <h1 class="text-rule" id="utilities" tabindex="0">Utilities</h1>
       
         <section>
           
-            <h2 id="utility-mixins">Utility Mixins</h2>
+            <h2 id="utility-mixins" tabindex="0">Utility Mixins</h2>
           
 
           <p>Utility mixins are used to construct complicated behaviors for <a href="../components">components</a> and <a href="../patterns">patterns</a>, provide baseline functionality for doc elements, and take care of browser prefixing.</p>
@@ -1171,7 +1173,7 @@ Setting the max width of an article to a large multiple of the text size is a wa
     
 
     <!-- Footer Pattern -->
-    <footer class="footer leader-3">
+    <footer class="footer leader-3" role="contentinfo">>
       <div class="grid-container">
           <nav class="column-6">
             <h6>Styleguides</h6>

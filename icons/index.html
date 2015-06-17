@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html lang="en">
 <!--[if lt IE 9]>  <html class="ie lt-ie9 ie8"> <![endif]-->
 <!--[if IE 9]>     <html class="ie ie9"> <![endif]-->
 <!--[if !IE]><!--> <html> <!--<![endif]-->
@@ -38,7 +38,7 @@
      ↳ patterns → _drawers.md
     -->
     <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
-      <nav class="drawer-nav">
+      <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerleft">
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
@@ -92,7 +92,7 @@
     </div>
 
     <div class="drawer drawer-right js-drawer" data-drawer="right">
-      <nav class="drawer-nav">
+      <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerright">
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
@@ -148,11 +148,12 @@
     <div class="wrapper">
       <!-- Logged Out Pattern-->
       <header class="top-nav">
+        <a class="skip-to-content" href="#skip-to-content">Skip To Content</a>
         <div class="grid-container">
           <div class="column-24">
             <div class="tablet-hide">
               <a href="../" class="top-nav-title">Calcite Web</a>
-              <nav class="top-nav-list">
+              <nav class="top-nav-list" role="navigation" aria-labelledby="topnav">
               
                 
                   <a href="../" class="top-nav-link">Get Started</a>
@@ -219,7 +220,7 @@
         </section>
       </div>
       <!-- Secondary Nav Pattern -->
-      <header class="sub-nav">
+      <header class="sub-nav" role="banner">
         <div class="grid-container">
           <div class="column-24">
             
@@ -234,10 +235,10 @@
       <div class="grid-container leader-1">
         
   <div class="column-6">
-    <aside class="side-nav">
+    <aside class="side-nav" aria-role="complementary">
       
         <h4 class="side-nav-title">Icon Sets</h4>
-        <nav>
+        <nav aria-role="navigation" aria-labelby="sidenav">
           
             
               <a href="#icon-sets" class="side-nav-link">Overview</a>
@@ -263,9 +264,10 @@
     </div>
   </div>
 
-  <main class="column-17 pre-1 content-face">
+  <a id="skip-to-content" tabindex="0"></a>
+  <main class="column-17 pre-1 content-face" role="main">
     
-      <h1 class="text-rule" id="icon-sets">Icon Sets</h1>
+      <h1 class="text-rule" id="icon-sets" tabindex="0">Icon Sets</h1>
       
         <section>
           
@@ -287,7 +289,7 @@
       
         <section>
           
-            <h2 id="social-icons">Social Icons</h2>
+            <h2 id="social-icons" tabindex="0">Social Icons</h2>
           
 
           <p>A set of social icons are provided as part of calcite-web. Just use the <code>icon-social-X</code> class on an element. It is suggested you add an aria-label to help the visually impaired understand what the element with the icon represents as they won't be able to see the Facebook logo, for example:</p>
@@ -297,51 +299,51 @@
 <div class="block-group block-group-3-up">
 <div class="block">
 <a href="" class="icon-social-contact" aria-label="contact"></a>
-<p class="trailer-1"><code>.icon-social-contact</code></p>
+<p class="trailer-1 leader-half"><code>.icon-social-contact</code></p>
 </div>
 <div class="block">
 <a href="" class="icon-social-facebook" aria-label="facebook"></a>
-<p class="trailer-1"><code>.icon-social-facebook</code></p>
+<p class="trailer-1 leader-half"><code>.icon-social-facebook</code></p>
 </div>
 <div class="block">
 <a href="" class="icon-social-geonet" aria-label="geonet"></a>
-<p class="trailer-1"><code>.icon-social-geonet</code></p>
+<p class="trailer-1 leader-half"><code>.icon-social-geonet</code></p>
 </div>
 <div class="block">
 <a href="" class="icon-social-github" aria-label="github"></a>
-<p class="trailer-1"><code>.icon-social-github</code></p>
+<p class="trailer-1 leader-half"><code>.icon-social-github</code></p>
 </div>
 <div class="block">
 <a href="" class="icon-social-google-plus" aria-label="google-plus"></a>
-<p class="trailer-1"><code>.icon-social-google-plus</code></p>
+<p class="trailer-1 leader-half"><code>.icon-social-google-plus</code></p>
 </div>
 <div class="block">
 <a href="" class="icon-social-instagram" aria-label="instagram"></a>
-<p class="trailer-1"><code>.icon-social-instagram</code></p>
+<p class="trailer-1 leader-half"><code>.icon-social-instagram</code></p>
 </div>
 <div class="block">
 <a href="" class="icon-social-linkedin" aria-label="linkedin"></a>
-<p class="trailer-1"><code>.icon-social-linkedin</code></p>
+<p class="trailer-1 leader-half"><code>.icon-social-linkedin</code></p>
 </div>
 <div class="block">
 <a href="" class="icon-social-pinterest" aria-label="pinterest"></a>
-<p class="trailer-1"><code>.icon-social-pinterest</code></p>
+<p class="trailer-1 leader-half"><code>.icon-social-pinterest</code></p>
 </div>
 <div class="block">
 <a href="" class="icon-social-rss" aria-label="rss"></a>
-<p class="trailer-1"><code>.icon-social-rss</code></p>
+<p class="trailer-1 leader-half"><code>.icon-social-rss</code></p>
 </div>
 <div class="block">
 <a href="" class="icon-social-share" aria-label="share"></a>
-<p class="trailer-1"><code>.icon-social-share</code></p>
+<p class="trailer-1 leader-half"><code>.icon-social-share</code></p>
 </div>
 <div class="block">
 <a href="" class="icon-social-twitter" aria-label="twitter"></a>
-<p class="trailer-1"><code>.icon-social-twitter</code></p>
+<p class="trailer-1 leader-half"><code>.icon-social-twitter</code></p>
 </div>
 <div class="block">
 <a href="" class="icon-social-youtube" aria-label="youtube"></a>
-<p class="trailer-1"><code>.icon-social-youtube</code></p>
+<p class="trailer-1 leader-half"><code>.icon-social-youtube</code></p>
 </div>
 </div>
 
@@ -357,7 +359,7 @@
       
         <section>
           
-            <h2 id="icon-font">Icon Font</h2>
+            <h2 id="icon-font" tabindex="0">Icon Font</h2>
           
 
           <p>The monochromatic icon set is delivered as an icon font. Icon fonts have several advantages such as the ability to quickly change their color, and the fact that icon fonts size themselves to be proportional to the text you place them with.</p>
@@ -365,412 +367,516 @@
 <p>Icons in the icon font will be scaled to the text size of whatever element you add the class to. Below are all of the icons available in the icon font.</p>
 <div class="block-group block-group-3-up">
 <div class="block">
-<span class="font-size-4 icon-ui-add-attachment" aria-label="add-attachment"></span>
-<p class="trailer-1"><code>.icon-ui-add-attachment</code></p>
+<span class="font-size-5 icon-ui-close" aria-label="close"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-close</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-add" aria-label="add"></span>
-<p class="trailer-1"><code>.icon-ui-add</code></p>
+<span class="font-size-5 icon-ui-drag-horizontal" aria-label="drag-horizontal"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-drag-horizontal</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-announcement" aria-label="announcement"></span>
-<p class="trailer-1"><code>.icon-ui-announcement</code></p>
+<span class="font-size-5 icon-ui-drag-vertical" aria-label="drag-vertical"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-drag-vertical</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-applications" aria-label="applications"></span>
-<p class="trailer-1"><code>.icon-ui-applications</code></p>
+<span class="font-size-5 icon-ui-handle-horizontal" aria-label="handle-horizontal"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-handle-horizontal</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-attachment" aria-label="attachment"></span>
-<p class="trailer-1"><code>.icon-ui-attachment</code></p>
+<span class="font-size-5 icon-ui-handle-vertical" aria-label="handle-vertical"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-handle-vertical</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-authorize" aria-label="authorize"></span>
-<p class="trailer-1"><code>.icon-ui-authorize</code></p>
+<span class="font-size-5 icon-ui-check-mark" aria-label="check-mark"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-check-mark</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-basemap" aria-label="basemap"></span>
-<p class="trailer-1"><code>.icon-ui-basemap</code></p>
+<span class="font-size-5 icon-ui-left-triangle-arrow" aria-label="left-triangle-arrow"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-left-triangle-arrow</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-beginning" aria-label="beginning"></span>
-<p class="trailer-1"><code>.icon-ui-beginning</code></p>
+<span class="font-size-5 icon-ui-right-triangle-arrow" aria-label="right-triangle-arrow"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-right-triangle-arrow</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-browser" aria-label="browser"></span>
-<p class="trailer-1"><code>.icon-ui-browser</code></p>
+<span class="font-size-5 icon-ui-down-arrow" aria-label="down-arrow"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-down-arrow</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-calendar" aria-label="calendar"></span>
-<p class="trailer-1"><code>.icon-ui-calendar</code></p>
+<span class="font-size-5 icon-ui-up-arrow" aria-label="up-arrow"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-up-arrow</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-caution" aria-label="caution"></span>
-<p class="trailer-1"><code>.icon-ui-caution</code></p>
+<span class="font-size-5 icon-ui-overview-arrow-bottom-left" aria-label="overview-arrow-bottom-left"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-overview-arrow-bottom-left</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-chart" aria-label="chart"></span>
-<p class="trailer-1"><code>.icon-ui-chart</code></p>
+<span class="font-size-5 icon-ui-overview-arrow-bottom-right" aria-label="overview-arrow-bottom-right"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-overview-arrow-bottom-right</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-check-mark" aria-label="check-mark"></span>
-<p class="trailer-1"><code>.icon-ui-check-mark</code></p>
+<span class="font-size-5 icon-ui-overview-arrow-top-left" aria-label="overview-arrow-top-left"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-overview-arrow-top-left</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-checkbox-checked" aria-label="checkbox-checked"></span>
-<p class="trailer-1"><code>.icon-ui-checkbox-checked</code></p>
+<span class="font-size-5 icon-ui-overview-arrow-top-right" aria-label="overview-arrow-top-right"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-overview-arrow-top-right</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-checkbox-unchecked" aria-label="checkbox-unchecked"></span>
-<p class="trailer-1"><code>.icon-ui-checkbox-unchecked</code></p>
+<span class="font-size-5 icon-ui-maximize" aria-label="maximize"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-maximize</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-circled-back-arrow" aria-label="circled-back-arrow"></span>
-<p class="trailer-1"><code>.icon-ui-circled-back-arrow</code></p>
+<span class="font-size-5 icon-ui-minimize" aria-label="minimize"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-minimize</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-circled-bottom-arrow" aria-label="circled-bottom-arrow"></span>
-<p class="trailer-1"><code>.icon-ui-circled-bottom-arrow</code></p>
+<span class="font-size-5 icon-ui-checkbox-unchecked" aria-label="checkbox-unchecked"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-checkbox-unchecked</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-circled-close" aria-label="circled-close"></span>
-<p class="trailer-1"><code>.icon-ui-circled-close</code></p>
+<span class="font-size-5 icon-ui-checkbox-checked" aria-label="checkbox-checked"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-checkbox-checked</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-circled-down-arrow" aria-label="circled-down-arrow"></span>
-<p class="trailer-1"><code>.icon-ui-circled-down-arrow</code></p>
+<span class="font-size-5 icon-ui-radio-unchecked" aria-label="radio-unchecked"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-radio-unchecked</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-circled-forward-arrow" aria-label="circled-forward-arrow"></span>
-<p class="trailer-1"><code>.icon-ui-circled-forward-arrow</code></p>
+<span class="font-size-5 icon-ui-radio-checked" aria-label="radio-checked"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-radio-checked</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-circled-left-arrow" aria-label="circled-left-arrow"></span>
-<p class="trailer-1"><code>.icon-ui-circled-left-arrow</code></p>
+<span class="font-size-5 icon-ui-up-arrow-circled" aria-label="up-arrow-circled"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-up-arrow-circled</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-circled-right-arrow" aria-label="circled-right-arrow"></span>
-<p class="trailer-1"><code>.icon-ui-circled-right-arrow</code></p>
+<span class="font-size-5 icon-ui-down-arrow-circled" aria-label="down-arrow-circled"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-down-arrow-circled</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-circled-top-arrow" aria-label="circled-top-arrow"></span>
-<p class="trailer-1"><code>.icon-ui-circled-top-arrow</code></p>
+<span class="font-size-5 icon-ui-left-arrow-circled" aria-label="left-arrow-circled"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-left-arrow-circled</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-circled-up-arrow" aria-label="circled-up-arrow"></span>
-<p class="trailer-1"><code>.icon-ui-circled-up-arrow</code></p>
+<span class="font-size-5 icon-ui-right-arrow-circled" aria-label="right-arrow-circled"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-right-arrow-circled</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-close" aria-label="close"></span>
-<p class="trailer-1"><code>.icon-ui-close</code></p>
+<span class="font-size-5 icon-ui-zoom-out-fixed" aria-label="zoom-out-fixed"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-zoom-out-fixed</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-collection" aria-label="collection"></span>
-<p class="trailer-1"><code>.icon-ui-collection</code></p>
+<span class="font-size-5 icon-ui-zoom-in-fixed" aria-label="zoom-in-fixed"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-zoom-in-fixed</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-comment" aria-label="comment"></span>
-<p class="trailer-1"><code>.icon-ui-comment</code></p>
+<span class="font-size-5 icon-ui-refresh" aria-label="refresh"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-refresh</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-configure-popup" aria-label="configure-popup"></span>
-<p class="trailer-1"><code>.icon-ui-configure-popup</code></p>
+<span class="font-size-5 icon-ui-edit" aria-label="edit"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-edit</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-dashboard" aria-label="dashboard"></span>
-<p class="trailer-1"><code>.icon-ui-dashboard</code></p>
+<span class="font-size-5 icon-ui-authorize" aria-label="authorize"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-authorize</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-delete" aria-label="delete"></span>
-<p class="trailer-1"><code>.icon-ui-delete</code></p>
+<span class="font-size-5 icon-ui-map-pin" aria-label="map-pin"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-map-pin</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-deny" aria-label="deny"></span>
-<p class="trailer-1"><code>.icon-ui-deny</code></p>
+<span class="font-size-5 icon-ui-blank-map-pin" aria-label="blank-map-pin"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-blank-map-pin</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-description" aria-label="description"></span>
-<p class="trailer-1"><code>.icon-ui-description</code></p>
+<span class="font-size-5 icon-ui-table" aria-label="table"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-table</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-directions-negative" aria-label="directions-negative"></span>
-<p class="trailer-1"><code>.icon-ui-directions-negative</code></p>
+<span class="font-size-5 icon-ui-zoom-in" aria-label="zoom-in"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-zoom-in</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-directions" aria-label="directions"></span>
-<p class="trailer-1"><code>.icon-ui-directions</code></p>
+<span class="font-size-5 icon-ui-zoom-out" aria-label="zoom-out"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-zoom-out</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-documentation" aria-label="documentation"></span>
-<p class="trailer-1"><code>.icon-ui-documentation</code></p>
+<span class="font-size-5 icon-ui-beginning" aria-label="beginning"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-beginning</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-down-arrow" aria-label="down-arrow"></span>
-<p class="trailer-1"><code>.icon-ui-down-arrow</code></p>
+<span class="font-size-5 icon-ui-reverse" aria-label="reverse"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-reverse</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-download" aria-label="download"></span>
-<p class="trailer-1"><code>.icon-ui-download</code></p>
+<span class="font-size-5 icon-ui-pause" aria-label="pause"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-pause</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-edit" aria-label="edit"></span>
-<p class="trailer-1"><code>.icon-ui-edit</code></p>
+<span class="font-size-5 icon-ui-play" aria-label="play"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-play</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-end" aria-label="end"></span>
-<p class="trailer-1"><code>.icon-ui-end</code></p>
+<span class="font-size-5 icon-ui-forward" aria-label="forward"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-forward</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-environment-settings" aria-label="environment-settings"></span>
-<p class="trailer-1"><code>.icon-ui-environment-settings</code></p>
+<span class="font-size-5 icon-ui-end" aria-label="end"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-end</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-eraser" aria-label="eraser"></span>
-<p class="trailer-1"><code>.icon-ui-eraser</code></p>
+<span class="font-size-5 icon-ui-erase" aria-label="erase"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-erase</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-error-negative" aria-label="error-negative"></span>
-<p class="trailer-1"><code>.icon-ui-error-negative</code></p>
+<span class="font-size-5 icon-ui-up-down-arrows" aria-label="up-down-arrows"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-up-down-arrows</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-error" aria-label="error"></span>
-<p class="trailer-1"><code>.icon-ui-error</code></p>
+<span class="font-size-5 icon-ui-left" aria-label="left"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-left</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-experimental" aria-label="experimental"></span>
-<p class="trailer-1"><code>.icon-ui-experimental</code></p>
+<span class="font-size-5 icon-ui-right" aria-label="right"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-right</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-feature-layer" aria-label="feature-layer"></span>
-<p class="trailer-1"><code>.icon-ui-feature-layer</code></p>
+<span class="font-size-5 icon-ui-announcement" aria-label="announcement"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-announcement</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-filter" aria-label="filter"></span>
-<p class="trailer-1"><code>.icon-ui-filter</code></p>
+<span class="font-size-5 icon-ui-notice-round" aria-label="notice-round"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-notice-round</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-fixed-zoom-in" aria-label="fixed-zoom-in"></span>
-<p class="trailer-1"><code>.icon-ui-fixed-zoom-in</code></p>
+<span class="font-size-5 icon-ui-notice-triangle" aria-label="notice-triangle"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-notice-triangle</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-fixed-zoom-out" aria-label="fixed-zoom-out"></span>
-<p class="trailer-1"><code>.icon-ui-fixed-zoom-out</code></p>
+<span class="font-size-5 icon-ui-home" aria-label="home"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-home</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-forward" aria-label="forward"></span>
-<p class="trailer-1"><code>.icon-ui-forward</code></p>
+<span class="font-size-5 icon-ui-locate" aria-label="locate"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-locate</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-globe" aria-label="globe"></span>
-<p class="trailer-1"><code>.icon-ui-globe</code></p>
+<span class="font-size-5 icon-ui-expand" aria-label="expand"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-expand</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-grant" aria-label="grant"></span>
-<p class="trailer-1"><code>.icon-ui-grant</code></p>
+<span class="font-size-5 icon-ui-collapse" aria-label="collapse"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-collapse</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-group" aria-label="group"></span>
-<p class="trailer-1"><code>.icon-ui-group</code></p>
+<span class="font-size-5 icon-ui-layer-list" aria-label="layer-list"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-layer-list</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-home" aria-label="home"></span>
-<p class="trailer-1"><code>.icon-ui-home</code></p>
+<span class="font-size-5 icon-ui-basemap" aria-label="basemap"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-basemap</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-horizontal-drag-handle" aria-label="horizontal-drag-handle"></span>
-<p class="trailer-1"><code>.icon-ui-horizontal-drag-handle</code></p>
+<span class="font-size-5 icon-ui-globe" aria-label="globe"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-globe</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-horizontal-drag" aria-label="horizontal-drag"></span>
-<p class="trailer-1"><code>.icon-ui-horizontal-drag</code></p>
+<span class="font-size-5 icon-ui-applications" aria-label="applications"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-applications</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-key" aria-label="key"></span>
-<p class="trailer-1"><code>.icon-ui-key</code></p>
+<span class="font-size-5 icon-ui-arrow-up-circled" aria-label="arrow-up-circled"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-arrow-up-circled</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-layers" aria-label="layers"></span>
-<p class="trailer-1"><code>.icon-ui-layers</code></p>
+<span class="font-size-5 icon-ui-arrow-down-circled" aria-label="arrow-down-circled"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-arrow-down-circled</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-left" aria-label="left"></span>
-<p class="trailer-1"><code>.icon-ui-left</code></p>
+<span class="font-size-5 icon-ui-arrow-left-circled" aria-label="arrow-left-circled"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-arrow-left-circled</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-link-external" aria-label="link-external"></span>
-<p class="trailer-1"><code>.icon-ui-link-external</code></p>
+<span class="font-size-5 icon-ui-arrow-right-circled" aria-label="arrow-right-circled"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-arrow-right-circled</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-link" aria-label="link"></span>
-<p class="trailer-1"><code>.icon-ui-link</code></p>
+<span class="font-size-5 icon-ui-delete" aria-label="delete"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-delete</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-list" aria-label="list"></span>
-<p class="trailer-1"><code>.icon-ui-list</code></p>
+<span class="font-size-5 icon-ui-add" aria-label="add"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-add</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-loading" aria-label="loading"></span>
-<p class="trailer-1"><code>.icon-ui-loading</code></p>
+<span class="font-size-5 icon-ui-add-attachment" aria-label="add-attachment"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-add-attachment</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-locate" aria-label="locate"></span>
-<p class="trailer-1"><code>.icon-ui-locate</code></p>
+<span class="font-size-5 icon-ui-attachment" aria-label="attachment"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-attachment</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-mail" aria-label="mail"></span>
-<p class="trailer-1"><code>.icon-ui-mail</code></p>
+<span class="font-size-5 icon-ui-calendar" aria-label="calendar"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-calendar</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-map-pin" aria-label="map-pin"></span>
-<p class="trailer-1"><code>.icon-ui-map-pin</code></p>
+<span class="font-size-5 icon-ui-close-circled" aria-label="close-circled"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-close-circled</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-maps" aria-label="maps"></span>
-<p class="trailer-1"><code>.icon-ui-maps</code></p>
+<span class="font-size-5 icon-ui-browser" aria-label="browser"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-browser</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-marketplace" aria-label="marketplace"></span>
-<p class="trailer-1"><code>.icon-ui-marketplace</code></p>
+<span class="font-size-5 icon-ui-collection" aria-label="collection"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-collection</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-maximize" aria-label="maximize"></span>
-<p class="trailer-1"><code>.icon-ui-maximize</code></p>
+<span class="font-size-5 icon-ui-comment" aria-label="comment"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-comment</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-media" aria-label="media"></span>
-<p class="trailer-1"><code>.icon-ui-media</code></p>
+<span class="font-size-5 icon-ui-configure-popup" aria-label="configure-popup"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-configure-popup</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-menu" aria-label="menu"></span>
-<p class="trailer-1"><code>.icon-ui-menu</code></p>
+<span class="font-size-5 icon-ui-contact" aria-label="contact"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-contact</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-minimize" aria-label="minimize"></span>
-<p class="trailer-1"><code>.icon-ui-minimize</code></p>
+<span class="font-size-5 icon-ui-dashboard" aria-label="dashboard"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-dashboard</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-mobile" aria-label="mobile"></span>
-<p class="trailer-1"><code>.icon-ui-mobile</code></p>
+<span class="font-size-5 icon-ui-deny" aria-label="deny"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-deny</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-navigation" aria-label="navigation"></span>
-<p class="trailer-1"><code>.icon-ui-navigation</code></p>
+<span class="font-size-5 icon-ui-description" aria-label="description"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-description</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-notice" aria-label="notice"></span>
-<p class="trailer-1"><code>.icon-ui-notice</code></p>
+<span class="font-size-5 icon-ui-directions" aria-label="directions"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-directions</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-pan" aria-label="pan"></span>
-<p class="trailer-1"><code>.icon-ui-pan</code></p>
+<span class="font-size-5 icon-ui-directions2" aria-label="directions2"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-directions2</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-pause" aria-label="pause"></span>
-<p class="trailer-1"><code>.icon-ui-pause</code></p>
+<span class="font-size-5 icon-ui-documentation" aria-label="documentation"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-documentation</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-phone" aria-label="phone"></span>
-<p class="trailer-1"><code>.icon-ui-phone</code></p>
+<span class="font-size-5 icon-ui-duplicate" aria-label="duplicate"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-duplicate</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-play" aria-label="play"></span>
-<p class="trailer-1"><code>.icon-ui-play</code></p>
+<span class="font-size-5 icon-ui-review" aria-label="review"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-review</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-printer" aria-label="printer"></span>
-<p class="trailer-1"><code>.icon-ui-printer</code></p>
+<span class="font-size-5 icon-ui-environment-settings" aria-label="environment-settings"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-environment-settings</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-question" aria-label="question"></span>
-<p class="trailer-1"><code>.icon-ui-question</code></p>
+<span class="font-size-5 icon-ui-error" aria-label="error"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-error</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-radio-checked" aria-label="radio-checked"></span>
-<p class="trailer-1"><code>.icon-ui-radio-checked</code></p>
+<span class="font-size-5 icon-ui-error2" aria-label="error2"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-error2</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-radio-unchecked" aria-label="radio-unchecked"></span>
-<p class="trailer-1"><code>.icon-ui-radio-unchecked</code></p>
+<span class="font-size-5 icon-ui-experimental" aria-label="experimental"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-experimental</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-refresh" aria-label="refresh"></span>
-<p class="trailer-1"><code>.icon-ui-refresh</code></p>
+<span class="font-size-5 icon-ui-feature-layer" aria-label="feature-layer"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-feature-layer</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-resend-invitation" aria-label="resend-invitation"></span>
-<p class="trailer-1"><code>.icon-ui-resend-invitation</code></p>
+<span class="font-size-5 icon-ui-filter" aria-label="filter"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-filter</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-reverse" aria-label="reverse"></span>
-<p class="trailer-1"><code>.icon-ui-reverse</code></p>
+<span class="font-size-5 icon-ui-grant" aria-label="grant"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-grant</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-review" aria-label="review"></span>
-<p class="trailer-1"><code>.icon-ui-review</code></p>
+<span class="font-size-5 icon-ui-group" aria-label="group"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-group</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-right" aria-label="right"></span>
-<p class="trailer-1"><code>.icon-ui-right</code></p>
+<span class="font-size-5 icon-ui-key" aria-label="key"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-key</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-rotate" aria-label="rotate"></span>
-<p class="trailer-1"><code>.icon-ui-rotate</code></p>
+<span class="font-size-5 icon-ui-labels" aria-label="labels"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-labels</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-save" aria-label="save"></span>
-<p class="trailer-1"><code>.icon-ui-save</code></p>
+<span class="font-size-5 icon-ui-tag" aria-label="tag"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-tag</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-search" aria-label="search"></span>
-<p class="trailer-1"><code>.icon-ui-search</code></p>
+<span class="font-size-5 icon-ui-layers" aria-label="layers"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-layers</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-settings" aria-label="settings"></span>
-<p class="trailer-1"><code>.icon-ui-settings</code></p>
+<span class="font-size-5 icon-ui-left-arrow" aria-label="left-arrow"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-left-arrow</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-share" aria-label="share"></span>
-<p class="trailer-1"><code>.icon-ui-share</code></p>
+<span class="font-size-5 icon-ui-right-arrow" aria-label="right-arrow"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-right-arrow</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-sign-out" aria-label="sign-out"></span>
-<p class="trailer-1"><code>.icon-ui-sign-out</code></p>
+<span class="font-size-5 icon-ui-link-external" aria-label="link-external"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-link-external</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-support" aria-label="support"></span>
-<p class="trailer-1"><code>.icon-ui-support</code></p>
+<span class="font-size-5 icon-ui-link" aria-label="link"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-link</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-tag" aria-label="tag"></span>
-<p class="trailer-1"><code>.icon-ui-tag</code></p>
+<span class="font-size-5 icon-ui-loading-indicator" aria-label="loading-indicator"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-loading-indicator</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-up-down-arrows" aria-label="up-down-arrows"></span>
-<p class="trailer-1"><code>.icon-ui-up-down-arrows</code></p>
+<span class="font-size-5 icon-ui-maps" aria-label="maps"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-maps</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-upload" aria-label="upload"></span>
-<p class="trailer-1"><code>.icon-ui-upload</code></p>
+<span class="font-size-5 icon-ui-marketplace" aria-label="marketplace"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-marketplace</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-user" aria-label="user"></span>
-<p class="trailer-1"><code>.icon-ui-user</code></p>
+<span class="font-size-5 icon-ui-media" aria-label="media"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-media</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-vertical-drag-handle" aria-label="vertical-drag-handle"></span>
-<p class="trailer-1"><code>.icon-ui-vertical-drag-handle</code></p>
+<span class="font-size-5 icon-ui-media2" aria-label="media2"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-media2</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-vertical-drag" aria-label="vertical-drag"></span>
-<p class="trailer-1"><code>.icon-ui-vertical-drag</code></p>
+<span class="font-size-5 icon-ui-menu" aria-label="menu"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-menu</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-zoom-in" aria-label="zoom-in"></span>
-<p class="trailer-1"><code>.icon-ui-zoom-in</code></p>
+<span class="font-size-5 icon-ui-mobile" aria-label="mobile"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-mobile</code></p>
 </div>
 <div class="block">
-<span class="font-size-4 icon-ui-zoom-out" aria-label="zoom-out"></span>
-<p class="trailer-1"><code>.icon-ui-zoom-out</code></p>
+<span class="font-size-5 icon-ui-phone" aria-label="phone"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-phone</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-navigation" aria-label="navigation"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-navigation</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-pan" aria-label="pan"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-pan</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-printer" aria-label="printer"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-printer</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-pie-chart" aria-label="pie-chart"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-pie-chart</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-chart" aria-label="chart"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-chart</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-line-chart" aria-label="line-chart"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-line-chart</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-question" aria-label="question"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-question</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-resend-invitation" aria-label="resend-invitation"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-resend-invitation</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-rotate" aria-label="rotate"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-rotate</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-save" aria-label="save"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-save</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-settings" aria-label="settings"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-settings</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-settings2" aria-label="settings2"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-settings2</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-share" aria-label="share"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-share</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-sign-out" aria-label="sign-out"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-sign-out</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-support" aria-label="support"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-support</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-user" aria-label="user"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-user</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-time-clock" aria-label="time-clock"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-time-clock</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-trash" aria-label="trash"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-trash</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-upload" aria-label="upload"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-upload</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-download" aria-label="download"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-download</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-zoom-in-magnifying-glass" aria-label="zoom-in-magnifying-glass"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-zoom-in-magnifying-glass</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-search" aria-label="search"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-search</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-zoom-out-magnifying-glass" aria-label="zoom-out-magnifying-glass"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-zoom-out-magnifying-glass</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-locked" aria-label="locked"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-locked</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-unlocked" aria-label="unlocked"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-unlocked</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-favorites" aria-label="favorites"></span>
+<p class="trailer-1 leader-half"><code>.icon-ui-favorites</code></p>
 </div>
 </div>
 
@@ -786,7 +892,7 @@
       
         <section>
           
-            <h2 id="calcite-icons">Calcite Icons</h2>
+            <h2 id="calcite-icons" tabindex="0">Calcite Icons</h2>
           
 
           <p>Color icons can't be delivered as an icon font, so they are delivered as basic SVG files. These icons generally describe specific tools.</p>
@@ -1039,7 +1145,7 @@
     
 
     <!-- Footer Pattern -->
-    <footer class="footer leader-3">
+    <footer class="footer leader-3" role="contentinfo">>
       <div class="grid-container">
           <nav class="column-6">
             <h6>Styleguides</h6>

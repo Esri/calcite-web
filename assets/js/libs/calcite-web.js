@@ -1,4 +1,4 @@
-/* calcite-web - v0.8.0 - 2015-06-11
+/* calcite-web - v0.9.0 - 2015-06-17
 *  https://github.com/esri/calcite-web
 *  Copyright (c) 2015 Environmental Systems Research Institute, Inc.
 *  Apache 2.0 License */
@@ -168,6 +168,18 @@
     }
   }
 
+  // toggles `aria-hidde="true"` on a domNode
+  function toggleAriaHidden (array) {
+    array.forEach(function (node) {
+      var hidden = node.getAttribute('aria-hidden');
+      if (hidden !== 'true') {
+        node.setAttribute('aria-hidden', true);
+      } else {
+        node.removeAttribute('aria-hidden');
+      }
+    });
+  }
+
   // ┌───────────┐
   // │ Accordion │
   // └───────────┘
@@ -219,22 +231,70 @@
   // └────────┘
   // show and hide drawers
   calcite.drawer = function (domNode) {
+    var wrapper = document.querySelector('.wrapper');
+    var footer = document.querySelector('.footer');
     var toggles = findElements('.js-drawer-toggle', domNode);
     var drawers = findElements('.js-drawer', domNode);
+    var lastOn;
+
+    function fenceDrawer (e) {
+      if ( !closest('js-drawer', e.target)) {
+        drawers.forEach(function (drawer) {
+          if (hasClass(drawer, 'is-active')) {
+            drawer.focus();
+          }
+        });
+      }
+    }
+
+    function escapeCloseDrawer (e) {
+      if (e.keyCode === 27) {
+        drawers.forEach(function (drawer) {
+          removeClass(drawer, 'is-active');
+          drawer.removeAttribute('tabindex');
+        });
+        toggleAriaHidden([wrapper, footer]);
+        removeEvent(document, 'keyup', escapeCloseDrawer);
+        removeEvent(document, 'focusin', fenceDrawer);
+        lastOn.focus();
+      }
+    }
+
+    function bindDrawerToggle (e) {
+      preventDefault(e);
+      var toggle = e.target;
+      var drawerId = toggle.getAttribute('data-drawer');
+      var drawer = document.querySelector('.js-drawer[data-drawer="' + drawerId + '"]');
+      var isOpen = hasClass(drawer, 'is-active');
+
+      toggleActive(drawers, drawer);
+      toggleAriaHidden([wrapper, footer]);
+
+      if (isOpen) {
+        removeEvent(document, 'keyup', escapeCloseDrawer);
+        removeEvent(document, 'focusin', fenceDrawer);
+        lastOn.focus();
+        drawer.removeAttribute('tabindex');
+      } else {
+        addEvent(document, 'keyup', escapeCloseDrawer);
+        addEvent(document, 'focusin', fenceDrawer);
+
+        lastOn = toggle;
+        drawer.setAttribute('tabindex', 0);
+        drawer.focus();
+      }
+    }
 
     toggles.forEach(function (toggle) {
-      addEvent(toggle, click(), function (e) {
-        preventDefault(e);
-        var drawerId = toggle.getAttribute('data-drawer');
-        var drawer = document.querySelector('.js-drawer[data-drawer="' + drawerId + '"');
-        toggleActive(drawers, drawer);
-      });
+      addEvent(toggle, click(), bindDrawerToggle);
     });
 
     drawers.forEach(function (drawer) {
       addEvent(drawer, click(), function (e) {
         if (hasClass(eventTarget(e), 'drawer')) {
           toggleActive(drawers, drawer);
+          toggleAriaHidden([wrapper, footer]);
+          removeEvent(document, 'keyup', escapeCloseDrawer);
         }
       });
     });
@@ -275,21 +335,70 @@
   // └───────┘
   // show and hide modal dialogues
   calcite.modal = function (domNode) {
+    var wrapper = document.querySelector('.wrapper');
+    var footer = document.querySelector('.footer');
     var toggles = findElements('.js-modal-toggle', domNode);
     var modals = findElements('.js-modal', domNode);
+    var lastOn;
+
+    function fenceModal (e) {
+      if ( !closest('js-modal', e.target)) {
+        modals.forEach(function (modal) {
+          if (hasClass(modal, 'is-active')) {
+            modal.focus();
+          }
+        });
+      }
+    }
+
+    function escapeCloseModal (e) {
+      if (e.keyCode === 27) {
+        modals.forEach(function (modal) {
+          removeClass(modal, 'is-active');
+          modal.removeAttribute('tabindex');
+        });
+        console.log(lastOn);
+        lastOn.focus();
+        toggleAriaHidden([wrapper, footer]);
+        removeEvent(document, 'keyup', escapeCloseModal);
+        removeEvent(document, 'focusin', fenceModal);
+      }
+    }
+
+    function bindModalToggle (e) {
+      preventDefault(e);
+      var toggle = e.target;
+      var modal;
+      var modalId = toggle.getAttribute('data-modal');
+      if (modalId) {
+        modal = document.querySelector('.js-modal[data-modal="' + modalId + '"]');
+      } else {
+        modal = closest('js-modal', toggle);
+      }
+
+      var isOpen = hasClass(modal, 'is-active');
+      toggleActive(modals, modal);
+      toggleAriaHidden([wrapper, footer]);
+
+      if (isOpen) {
+        removeEvent(document, 'keyup', escapeCloseModal);
+        removeEvent(document, 'focusin', fenceModal);
+        console.log(lastOn);
+        lastOn.focus();
+        modal.removeAttribute('tabindex');
+      } else {
+        addEvent(document, 'keyup', escapeCloseModal);
+        addEvent(document, 'focusin', fenceModal);
+        console.log(lastOn);
+        lastOn = toggle;
+        console.log(lastOn);
+        modal.setAttribute('tabindex', 0);
+        modal.focus();
+      }
+    }
 
     toggles.forEach(function (toggle) {
-      addEvent(toggle, click(), function (e) {
-        preventDefault(e);
-        var modal;
-        var modalId = toggle.getAttribute('data-modal');
-        if (modalId) {
-          modal = document.querySelector('.js-modal[data-modal="' + modalId + '"');
-        } else {
-          modal = closest('js-modal', toggle);
-        }
-        toggleActive(modals, modal);
-      });
+      addEvent(toggle, click(), bindModalToggle);
     });
 
     modals.forEach(function (modal) {
@@ -297,6 +406,8 @@
         stopPropagation(e);
         if (eventTarget(e) === modal) {
           toggleActive(modals, modal);
+          toggleAriaHidden([wrapper, footer]);
+          removeEvent(document, 'keyup', escapeCloseModal);
         }
       });
     });

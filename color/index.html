@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html lang="en">
 <!--[if lt IE 9]>  <html class="ie lt-ie9 ie8"> <![endif]-->
 <!--[if IE 9]>     <html class="ie ie9"> <![endif]-->
 <!--[if !IE]><!--> <html> <!--<![endif]-->
@@ -38,7 +38,7 @@
      ↳ patterns → _drawers.md
     -->
     <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
-      <nav class="drawer-nav">
+      <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerleft">
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
@@ -92,7 +92,7 @@
     </div>
 
     <div class="drawer drawer-right js-drawer" data-drawer="right">
-      <nav class="drawer-nav">
+      <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerright">
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
@@ -148,11 +148,12 @@
     <div class="wrapper">
       <!-- Logged Out Pattern-->
       <header class="top-nav">
+        <a class="skip-to-content" href="#skip-to-content">Skip To Content</a>
         <div class="grid-container">
           <div class="column-24">
             <div class="tablet-hide">
               <a href="../" class="top-nav-title">Calcite Web</a>
-              <nav class="top-nav-list">
+              <nav class="top-nav-list" role="navigation" aria-labelledby="topnav">
               
                 
                   <a href="../" class="top-nav-link">Get Started</a>
@@ -219,7 +220,7 @@
         </section>
       </div>
       <!-- Secondary Nav Pattern -->
-      <header class="sub-nav">
+      <header class="sub-nav" role="banner">
         <div class="grid-container">
           <div class="column-24">
             
@@ -234,10 +235,10 @@
       <div class="grid-container leader-1">
         
   <div class="column-6">
-    <aside class="side-nav">
+    <aside class="side-nav" aria-role="complementary">
       
         <h4 class="side-nav-title">Palette</h4>
-        <nav>
+        <nav aria-role="navigation" aria-labelby="sidenav">
           
             
               <a href="#palette" class="side-nav-link">Overview</a>
@@ -263,9 +264,10 @@
     </div>
   </div>
 
-  <main class="column-17 pre-1 content-face">
+  <a id="skip-to-content" tabindex="0"></a>
+  <main class="column-17 pre-1 content-face" role="main">
     
-      <h1 class="text-rule" id="palette">Palette</h1>
+      <h1 class="text-rule" id="palette" tabindex="0">Palette</h1>
       
         <section>
           
@@ -288,7 +290,7 @@
       
         <section>
           
-            <h2 id="grayscale">Grayscale</h2>
+            <h2 id="grayscale" tabindex="0">Grayscale</h2>
           
 
           <p>Calcite Web mostly deals with large-field layouts and a broader range of visual communication, including small interfaces and long format reading. With this in mind, Calcite Web's grayscale differs from that of Calcite Desktop.</p>
@@ -362,7 +364,7 @@
       
         <section>
           
-            <h2 id="ui-colors">UI Colors</h2>
+            <h2 id="ui-colors" tabindex="0">UI Colors</h2>
           
 
           <p>Calcite web exposes a set of Sass variables for the UI palette. Each color has three values: light, regular, and dark. The complete set of calcite colors is also supported.
@@ -476,7 +478,7 @@
       
         <section>
           
-            <h2 id="type-colors">Type Colors</h2>
+            <h2 id="type-colors" tabindex="0">Type Colors</h2>
           
 
           <p>Three basic colors are set for color in typography. It's not recommended to change these values, but they are provided for your reference.</p>
@@ -506,7 +508,7 @@
     
 
     <!-- Footer Pattern -->
-    <footer class="footer leader-3">
+    <footer class="footer leader-3" role="contentinfo">>
       <div class="grid-container">
           <nav class="column-6">
             <h6>Styleguides</h6>
