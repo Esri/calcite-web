@@ -234,7 +234,7 @@
       <!-- content of each page will go here -->
       <div class="grid-container leader-1">
         
-  <div class="column-6">
+  <div class="column-6 tablet-column-12">
     <aside class="side-nav" aria-role="complementary">
       
         <h4 class="side-nav-title">Components</h4>
@@ -343,7 +343,7 @@
   </div>
 
   <a id="skip-to-content" tabindex="0"></a>
-  <main class="column-17 pre-1 content-face" role="main">
+  <main class="column-17 phone-column-6 tablet-column-12 pre-1 content-face" role="main">
     
       <h1 class="text-rule" id="components" tabindex="0">Components</h1>
       
@@ -1164,7 +1164,7 @@
                 <form action="" method="post">
 
   <label>
-    Name<span class="text-red">*</span>
+    Name <span class="text-red font-size--2 right">Required</span>
     <input type="text" id="name" required aria-required="true"/>
   </label>
 
@@ -1229,7 +1229,7 @@
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">action</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">method</span>=<span class="hljs-value">"post"</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
-    Name<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-red"</span>&gt;</span>*<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    Name <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-red font-size--2 right"</span>&gt;</span>Required<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"name"</span> <span class="hljs-attribute">required</span> <span class="hljs-attribute">aria-required</span>=<span class="hljs-value">"true"</span>/&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
 
@@ -1354,14 +1354,16 @@
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
-                <label>Label Text
+                <label>
+  Label Text <span class="font-size--2 right">Input Message</span>
   <input type='text' placeholder='placeholder' class="modifier-class">
 </label>
 
               </div>
               
                 <div class="styleguide-modifier-example">
-                  <label>Label Text
+                  <label>
+  Label Text <span class="font-size--2 right">Input Message</span>
   <input type='text' placeholder='placeholder' class="input-error">
 </label>
 
@@ -1369,7 +1371,8 @@
                 </div>
               
                 <div class="styleguide-modifier-example">
-                  <label>Label Text
+                  <label>
+  Label Text <span class="font-size--2 right">Input Message</span>
   <input type='text' placeholder='placeholder' class="input-warning">
 </label>
 
@@ -1377,7 +1380,8 @@
                 </div>
               
                 <div class="styleguide-modifier-example">
-                  <label>Label Text
+                  <label>
+  Label Text <span class="font-size--2 right">Input Message</span>
   <input type='text' placeholder='placeholder' class="input-success">
 </label>
 
@@ -1385,7 +1389,8 @@
                 </div>
               
             </div>
-<pre><code>&lt;label&gt;<span class="hljs-type">Label</span> <span class="hljs-type">Text</span>
+<pre><code>&lt;label&gt;
+  <span class="hljs-type">Label</span> <span class="hljs-type">Text</span> &lt;span <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"font-size--2 right"</span>&gt;<span class="hljs-type">Input</span> <span class="hljs-type">Message</span>&lt;/span&gt;
   &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span>=</span><span class="hljs-symbol">'tex</span>t' placeholder=<span class="hljs-symbol">'placeholde</span>r' <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"modifier-class"</span>&gt;
 &lt;/label&gt;
 
