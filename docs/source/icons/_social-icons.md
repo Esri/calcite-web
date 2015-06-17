@@ -10,7 +10,7 @@ Below are the current social icons. More sizes are planned. For now only 30x30 p
 {% for icon in data.icons.social %}
 <div class="block">
 <a href="" class="icon-social-{{icon}}" aria-label="{{icon}}"></a>
-<p class="trailer-1"><code>.icon-social-{{icon}}</code></p>
+<p class="trailer-1 leader-half"><code>.icon-social-{{icon}}</code></p>
 </div>
 {% endfor %}
 </div>
