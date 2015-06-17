@@ -1,4 +1,4 @@
-/* calcite-web - v0.9.0 - 2015-06-17
+/* calcite-web - v0.9.1 - 2015-06-17
 *  https://github.com/esri/calcite-web
 *  Copyright (c) 2015 Environmental Systems Research Institute, Inc.
 *  Apache 2.0 License */
@@ -9,7 +9,7 @@
   // └────────────┘
   // define all public api methods (excluding patterns)
   var calcite = {
-    version: 'v0.8.0',
+    version: 'v0.9.1',
     click: click,
     addEvent: addEvent,
     removeEvent: removeEvent,
@@ -185,15 +185,41 @@
   // └───────────┘
   // collapsible accordion list
   calcite.accordion = function (domNode) {
+
+    function toggleAriaExpanded(domNode) {
+      var isExpanded = domNode.getAttribute('aria-expanded');
+      if (domNode.getAttribute('aria-expanded')) {
+        domNode.setAttribute('aria-expanded', 'false');
+      } else {
+        domNode.setAttribute('aria-expanded', 'true');
+      }
+    }
+
     findElements('.js-accordion', domNode).forEach(function (accordion) {
+      accordion.setAttribute('aria-live', 'polite');
+      accordion.setAttribute('role', 'tablist');
       nodeListToArray(accordion.children).forEach(function (child) {
+        var firstChild = child.children[0];
+        firstChild.setAttribute('role', 'tab');
+        firstChild.setAttribute('tabindex', '0');
+        if (hasClass(child, 'is-active')) {
+          child.setAttribute('aria-expanded', 'true');
+        } else {
+          child.setAttribute('aria-expanded', 'false');
+        }
         addEvent(child, click(), toggleAccordion);
+        addEvent(child, 'keyup', function(e) {
+          if (e.keyCode === 13) {
+            toggleAccordion(e);
+          }
+        });
       });
     });
 
     function toggleAccordion (e) {
       var parent = closest('accordion-section', eventTarget(e));
       toggleClass(parent, 'is-active');
+      toggleAriaExpanded(parent);
     }
   };
 
@@ -357,7 +383,6 @@
           removeClass(modal, 'is-active');
           modal.removeAttribute('tabindex');
         });
-        console.log(lastOn);
         lastOn.focus();
         toggleAriaHidden([wrapper, footer]);
         removeEvent(document, 'keyup', escapeCloseModal);
@@ -383,15 +408,12 @@
       if (isOpen) {
         removeEvent(document, 'keyup', escapeCloseModal);
         removeEvent(document, 'focusin', fenceModal);
-        console.log(lastOn);
         lastOn.focus();
         modal.removeAttribute('tabindex');
       } else {
         addEvent(document, 'keyup', escapeCloseModal);
         addEvent(document, 'focusin', fenceModal);
-        console.log(lastOn);
         lastOn = toggle;
-        console.log(lastOn);
         modal.setAttribute('tabindex', 0);
         modal.focus();
       }
@@ -420,9 +442,12 @@
   calcite.tabs = function (domNode) {
     var tabs = findElements('.js-tab', domNode);
     var tabGroups = findElements('.js-tab-group', domNode);
+    var tabSections = findElements('.js-tab-section', domNode);
 
     // set max width for each tab
     tabGroups.forEach(function (tab) {
+      tab.setAttribute('aria-live', 'polite');
+      tab.children[0].setAttribute('role', 'tablist');
       var tabsInGroup = tab.querySelectorAll('.js-tab');
       var percent = 100 / tabsInGroup.length;
       for (var i = 0; i < tabsInGroup.length; i++) {
@@ -442,12 +467,41 @@
       removeActive(tabs);
       removeActive(contents);
 
+      nodeListToArray(tabs).forEach(function (t){
+        t.setAttribute('aria-expanded', false);
+      });
+
+      nodeListToArray(contents).forEach(function (c){
+        c.setAttribute('aria-expanded', false);
+      });
+
       addClass(tab, 'is-active');
       addClass(contents[index], 'is-active');
+
+      tab.setAttribute('aria-expanded', 'true');
+      contents[index].setAttribute('aria-expanded', 'true');
     }
 
     tabs.forEach(function (tab) {
+      tab.setAttribute('aria-expanded', 'false');
+      tab.setAttribute('role', 'tab');
       addEvent(tab, click(), switchTab);
+      addEvent(tab, 'keyup', function(e) {
+        if (e.keyCode === 13) {
+          switchTab(e);
+        }
+      });
+      tab.setAttribute('tabindex', '0');
+    });
+
+    tabSections.forEach(function (section) {
+      section.setAttribute('role', 'tabpanel');
+      var isOpen = hasClass(section, 'is-active');
+      if (isOpen) {
+        section.setAttribute('aria-expanded', 'true');
+      } else {
+        section.setAttribute('aria-expanded', 'false');
+      }
     });
   };
 
