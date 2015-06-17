@@ -3,12 +3,17 @@
 ### Modified
 - Sample code for form input include text for accessibility.
 - Minor doc fixes
+- Tab hover moved to above element
+- Top nav active state above element
+- Top nav hover blue
+- Top nav font size one step down scale
 
 ## 0.9.1
 
 ### Modified
 - Accordion meets accessibility requirements
 - Tabs meet accessibility requirements
+- Tab hover has blue bar above
 
 ## 0.9.0
 
