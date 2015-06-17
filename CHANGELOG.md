@@ -1,4 +1,4 @@
-## Unreleased
+## 0.9.0
 
 ### Added
 - Documentation and structural patterns have proper `aria-role` and other required attributes
