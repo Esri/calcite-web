@@ -1,4 +1,4 @@
-## 0.9.2
+## 0.10.0
 
 ### Modified
 - No button borders except on hover
@@ -6,6 +6,9 @@
 
 ### Added
 - `btn-white`
+
+### Removed
+- `btn-orange`
 
 ## 0.9.2
 
