@@ -1,6 +1,15 @@
 ## 0.9.2
 
 ### Modified
+- No button borders except on hover
+- Darken button colors for accessibility.
+
+### Added
+- `btn-white`
+
+## 0.9.2
+
+### Modified
 - Sample code for form input include text for accessibility.
 - Minor doc fixes
 - Tab hover moved to above element
