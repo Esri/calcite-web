@@ -1,3 +1,15 @@
+## 0.10.0
+
+### Modified
+- No button borders except on hover
+- Darken button colors for accessibility.
+
+### Added
+- `btn-white`
+
+### Removed
+- `btn-orange`
+
 ## 0.9.2
 
 ### Modified
