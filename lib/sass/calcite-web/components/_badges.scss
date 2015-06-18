@@ -25,8 +25,8 @@
   @mixin badge-blue() {
     .badge-action {
       color: $white;
-      background-color: $blue;
-      border-color: $dark-blue;
+      background-color: $dark-blue;
+      border-color: $blue;
     }
 
     .badge-count {
@@ -42,8 +42,8 @@
     }
 
     .badge-count {
-      border: none;
-      background-color: $blue;
+      border-color: $blue;
+      background-color: $dark-blue;
       border-radius: 50% 50%;
       width: 1em;
       line-height: 1.5em;

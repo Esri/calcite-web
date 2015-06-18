@@ -11,7 +11,7 @@
   width: auto;
   @include avenir-light();
   color: $white;
-  border: 1px solid $blue;
+  border: 1px solid $dark-blue;
   background-color: $dark-blue;
   @include box-sizing(border-box);
   @include transition(all 0.05s linear);
@@ -30,7 +30,7 @@
 
   @mixin btn-disabled() {
     background-color: $off-white;
-    border-color: $lightest-gray;
+    border-color: $off-white;
     cursor: default;
     pointer-events: none;
     color: $gray;
@@ -95,6 +95,18 @@
       }
     }
 
+
+
+  @mixin btn-white() {
+    background: $white;
+    color: $off-black;
+    border: 1px solid $white;
+    &:hover {
+      color: $off-black;
+      background: $lightest-gray;
+    }
+  }
+
   @mixin btn-small() {
     @include font-size(-2);
     padding: $baseline/5*.75 .9rem*.75;
@@ -113,7 +125,8 @@
   @mixin btn-grouped() {
     float: left;
     & + .btn-grouped {
-      border-left: none;
+      // border-left: none
+      margin-left: 1px;
     }
     &:last-of-type {
       float: none;
@@ -122,7 +135,7 @@
 
   @mixin btn-color($value, $dark-value) {
     background-color: $value;
-    border-color: $dark-value;
+    border-color: $value;
     &:hover {
       background-color: $dark-value;
     }
@@ -138,9 +151,8 @@
   .btn-large       { @include btn-large();}
   .btn-fill        { @include btn-fill();}
   .btn-grouped     { @include btn-grouped();}
+  .btn-white       { @include btn-white();}
   .btn-red         { @include btn-color($dark-red, $red);}
   .btn-green       { @include btn-color($dark-green, $green);}
-  .btn-blue        { @include btn-color($dark-blue, $blue);}
-  .btn-orange      { @include btn-color($orange, $light-orange); }
   .btn:disabled, .btn-disabled, button[disabled] { @include btn-disabled(); }
 }
