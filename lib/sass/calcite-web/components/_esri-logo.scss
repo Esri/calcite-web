@@ -14,12 +14,12 @@
   min-width: 70px;
   line-height: 0;
   background-size: 100% 100%;
-  background-image: url('../img/logo/esri-logo.svg');
+  background-image: url('../img/logo/esri-logo.svg') !important;
 }
 
   @mixin esri-logo-reverse() {
     @include esri-logo();
-    background-image: url('../img/logo/esri-logo-reversed.svg');
+    background-image: url('../img/logo/esri-logo-reversed.svg') !important;
   }
 
   @mixin esri-logo-condensed() {
