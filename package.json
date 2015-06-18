@@ -8,6 +8,7 @@
     "test": "grunt test",
     "gh-release": "gh-release",
     "acetate": "acetate build -i docs/source -o docs/build -c docs/acetate.conf.js",
+    "a11y": "a11y local.arcgis.com:8888",
     "start": "grunt"
   },
   "main": "dist/js/calcite-web.js",
@@ -38,6 +39,7 @@
     "url": "https://github.com/esri/calcite-web/issues"
   },
   "devDependencies": {
+    "a11y": "^0.3.0",
     "acetate": "^0.2.2",
     "acetate-cli": "0.0.3",
     "arraystream": "0.0.5",
