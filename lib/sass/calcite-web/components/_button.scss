@@ -11,8 +11,8 @@
   width: auto;
   @include avenir-light();
   color: $white;
-  border: 1px solid $dark-blue;
-  background-color: $blue;
+  border: 1px solid $blue;
+  background-color: $dark-blue;
   @include box-sizing(border-box);
   @include transition(all 0.05s linear);
   cursor: pointer;
@@ -23,7 +23,7 @@
   }
   &:hover {
     @include no-hover-effect();
-    background-color: $dark-blue;
+    background-color: $blue;
     color: $white;
   }
 }
@@ -138,9 +138,9 @@
   .btn-large       { @include btn-large();}
   .btn-fill        { @include btn-fill();}
   .btn-grouped     { @include btn-grouped();}
-  .btn-red         { @include btn-color($red, $dark-red);}
-  .btn-green       { @include btn-color($green, $dark-green);}
-  .btn-blue        { @include btn-color($blue, $dark-blue);}
-  .btn-orange      { @include btn-color($orange, $dark-orange); }
+  .btn-red         { @include btn-color($dark-red, $red);}
+  .btn-green       { @include btn-color($dark-green, $green);}
+  .btn-blue        { @include btn-color($dark-blue, $blue);}
+  .btn-orange      { @include btn-color($orange, $light-orange); }
   .btn:disabled, .btn-disabled, button[disabled] { @include btn-disabled(); }
 }
