@@ -4586,35 +4586,45 @@ select::-moz-focusring {
     background-color: white; }
 
 .top-nav {
-  padding: 1.1625rem 0;
+  padding: 0;
   border-bottom: 1px solid #efefef; }
 
 .top-nav-title {
-  font-size: 1.1875rem;
+  font-size: 1rem;
   line-height: 1.55rem;
   float: left;
   margin-right: 2rem;
+  padding: 1.1625rem 0;
   color: #4c4c4c; }
   .top-nav-title:hover {
-    color: #595959;
-    -webkit-background-image: linear-gradient(to bottom, transparent 59%, #d2e9f9 60%, #d2e9f9 100%);
-    -moz-background-image: linear-gradient(to bottom, transparent 59%, #d2e9f9 60%, #d2e9f9 100%);
-    -o-background-image: linear-gradient(to bottom, transparent 59%, #d2e9f9 60%, #d2e9f9 100%);
-    background-image: linear-gradient(to bottom, transparent 59%, #d2e9f9 60%, #d2e9f9 100%); }
+    color: #3b8fc4;
+    -webkit-background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
+    -moz-background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
+    -o-background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
+    background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%); }
 
 .top-nav-list {
+  padding: 1.1625rem 0;
   float: left;
   line-height: 1.75rem; }
 
 .top-nav-link {
+  font-size: 0.9375rem;
+  line-height: 1.55rem;
   margin-right: 1em;
-  color: #4c4c4c; }
+  color: #4c4c4c;
+  padding: 1.55rem 0; }
   .top-nav-link:hover {
-    color: #595959;
-    -webkit-background-image: linear-gradient(to bottom, transparent 59%, #d2e9f9 60%, #d2e9f9 100%);
-    -moz-background-image: linear-gradient(to bottom, transparent 59%, #d2e9f9 60%, #d2e9f9 100%);
-    -o-background-image: linear-gradient(to bottom, transparent 59%, #d2e9f9 60%, #d2e9f9 100%);
-    background-image: linear-gradient(to bottom, transparent 59%, #d2e9f9 60%, #d2e9f9 100%); }
+    color: #3b8fc4;
+    -webkit-background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
+    -moz-background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
+    -o-background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
+    background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%); }
+  .top-nav-link.is-active {
+    -webkit-background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
+    -moz-background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
+    -o-background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
+    background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%); }
 
 .sign-in {
   float: right;
@@ -4870,7 +4880,11 @@ body {
   .tab-title:first-child {
     border-left: 1px solid #cccccc; }
   .tab-title:hover {
-    background-color: #fbfbfb; }
+    background-color: #fbfbfb;
+    -webkit-background-image: linear-gradient(to top, transparent 94%, #3b8fc4 96%, #3b8fc4 100%);
+    -moz-background-image: linear-gradient(to top, transparent 94%, #3b8fc4 96%, #3b8fc4 100%);
+    -o-background-image: linear-gradient(to top, transparent 94%, #3b8fc4 96%, #3b8fc4 100%);
+    background-image: linear-gradient(to top, transparent 94%, #3b8fc4 96%, #3b8fc4 100%); }
   .tab-title.is-active {
     border-bottom: 1px solid white;
     background-color: white; }
@@ -4905,7 +4919,7 @@ body {
 
 .tabs-transparent .tab-title {
   background-color: transparent;
-  border: 1px solid transparent; }
+  border: none; }
   .tabs-transparent .tab-title.is-active {
     background-color: transparent;
     border: 1px solid #cccccc;
