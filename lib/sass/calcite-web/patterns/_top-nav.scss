@@ -19,8 +19,8 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
     color: $off-black;
     &:hover {
       color: $blue;
-      @include prefixer(background-image, none, webkit moz o);
-      background-image: none;
+      @include prefixer(background-image, $topnav-link-overline, webkit moz o);
+      background-image: $topnav-link-overline;
     }
   }
 
@@ -38,8 +38,8 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
     padding: $baseline 0;
     &:hover {
       color: $blue;
-      @include prefixer(background-image, none, webkit moz o);
-      background-image: none;
+      @include prefixer(background-image, $topnav-link-overline, webkit moz o);
+      background-image: $topnav-link-overline;
     }
     &.is-active {
       @include prefixer(background-image, $topnav-link-overline, webkit moz o);
