@@ -3,39 +3,47 @@
 // └────────┘
 //  ↳ http://esri.github.io/calcite-web/patterns/#top-nav
 //  ↳ patterns → _top-nav.md
-$topnav-link-underline: linear-gradient(to bottom, transparent 59%, $lightest-blue 60%, $lightest-blue 100%);
+$topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue 100%);
 
 @mixin top-nav {
   @extend .avenir-regular;
-  padding: $baseline*0.75 0;
+  padding: 0;
   border-bottom: 1px solid $lightest-gray;
 }
 
   @mixin top-nav-title {
-    @include font-size(1);
+    @include font-size(0);
     float: left;
     margin-right: 2rem;
+    padding: $baseline*0.75 0;
     color: $off-black;
     &:hover {
-      color: $darkest-gray;
-      @include prefixer(background-image, $topnav-link-underline, webkit moz o);
-      background-image: $topnav-link-underline;
+      color: $blue;
+      @include prefixer(background-image, $topnav-link-overline, webkit moz o);
+      background-image: $topnav-link-overline;
     }
   }
 
   @mixin top-nav-list {
+    padding: $baseline*0.75 0;
     float: left;
     @extend .avenir-regular;
     line-height: 1.75rem;
   }
 
   @mixin top-nav-link {
+    @include font-size(-1);
     margin-right: 1em;
     color: $off-black;
+    padding: $baseline 0;
     &:hover {
-      color: $darkest-gray;
-      @include prefixer(background-image, $topnav-link-underline, webkit moz o);
-      background-image: $topnav-link-underline;
+      color: $blue;
+      @include prefixer(background-image, $topnav-link-overline, webkit moz o);
+      background-image: $topnav-link-overline;
+    }
+    &.is-active {
+      @include prefixer(background-image, $topnav-link-overline, webkit moz o);
+      background-image: $topnav-link-overline;
     }
   }
 

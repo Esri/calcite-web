@@ -26,6 +26,8 @@
   }
   &:hover {
     background-color: mix($white, $off-white);
+    @include prefixer(background-image,linear-gradient(to top, transparent 94%, $blue 96%, $blue 100%), webkit moz o);
+    background-image:linear-gradient(to top, transparent 94%, $blue 96%, $blue 100%);
   }
   &.is-active {
     border-bottom: 1px solid $white;
@@ -69,7 +71,7 @@
 @mixin tabs-transparent() {
   .tab-title    {
     background-color: transparent;
-    border: 1px solid transparent;
+    border: none;
     &.is-active {
       background-color: transparent;
       border: 1px solid $lighter-gray;
