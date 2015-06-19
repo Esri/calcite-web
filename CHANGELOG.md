@@ -19,6 +19,7 @@
 - Ie9 Shim for `<input>` line height
 - Ie9 Shim for `.tooltip` line height
 - Prefixerize transform property in tooltips
+- Resizing window recalculates and rebind stickies
 
 
 ## 0.9.2
