@@ -15,6 +15,7 @@
 
 ### Fixed
 - Clicking a dropdown button when the dropdown is open closes the dropdown
+- Ie9 Shim for `<main>`
 
 ## 0.9.2
 
