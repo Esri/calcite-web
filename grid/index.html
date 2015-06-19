@@ -196,6 +196,15 @@
                 
               
               </nav>
+              <div class="site-search js-site-search right">
+                <form class="site-search-form">
+                  <span class="icon-ui-search site-search-icon"></span>
+                  <input class="site-search-input" type="search" placeholder="Search">
+                  <span class="input-group-button">
+                    <button type="submit" class="btn btn-clear site-search-button">Go</button>
+                  </span>
+                </form>
+              </div>
             </div>
             <div class="tablet-show">
               <a href="" class="top-nav-title js-drawer-toggle" data-drawer="top-nav">☰ Calcite Web</a>
@@ -225,7 +234,7 @@
           <div class="column-24">
             
   <h1 class="sub-nav-title text-white">Grid</h1>
-  <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-orange btn-arrow right leader-half">Latest Release</a>
+  <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white btn-arrow right leader-half">Latest Release</a>
 
           </div>
         </div>
@@ -1019,6 +1028,8 @@ aligning grid columns when the Grid System is unable to determine which columns 
 <p>Essentially, the show classes will show that breakpoint and the breakpoint below it. So if you'd like something to be visible only on a phone, you would use <code>phone-show</code>. If you used <code>tablet-show</code>, the element would be visible on tablet and phone.</p>
 <h4>Hide Helpers</h4>
 <p>Hide helpers are very similar to show helpers. A responsive hide class will hide that breakpoint and the breakpoint below it. So if you wanted something to be visible on only desktop, you could use <code>tablet-hide</code>, hiding the element on tablet and phone. Or if you wanted something to be hidden only on a phone, <code>phone-hide</code> would hide it on the phone only.</p>
+<h4>Visual Hiding Helpers</h4>
+<p>Sometimes it is desireable for accessibility reasons to hide something visually but leave it accessable to screenreaders. You can use the <code>visually-hidden</code> class to achive this. If you want your hidden element to remain focusable my the keyboard add <code>visually-hidden-focusable</code> in addition to <code>visually-hidden</code>.</p>
 
 
           
@@ -1130,7 +1141,7 @@ aligning grid columns when the Grid System is unable to determine which columns 
     
 
     <!-- Footer Pattern -->
-    <footer class="footer leader-3" role="contentinfo">>
+    <footer class="footer leader-3" role="contentinfo">
       <div class="grid-container">
           <nav class="column-6">
             <h6>Styleguides</h6>

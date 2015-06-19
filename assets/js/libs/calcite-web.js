@@ -1,4 +1,4 @@
-/* calcite-web - v0.9.1 - 2015-06-18
+/* calcite-web - v0.10.0 - 2015-06-19
 *  https://github.com/esri/calcite-web
 *  Copyright (c) 2015 Environmental Systems Research Institute, Inc.
 *  Apache 2.0 License */
@@ -9,7 +9,7 @@
   // └────────────┘
   // define all public api methods (excluding patterns)
   var calcite = {
-    version: 'v0.9.1',
+    version: 'v0.10.0',
     click: click,
     addEvent: addEvent,
     removeEvent: removeEvent,
@@ -505,6 +505,34 @@
     });
   };
 
+
+  // ┌─────────────┐
+  // │ Site Search │
+  // └─────────────┘
+  // Expanding search bar that lives in the top nav.
+  calcite.siteSearch = function (domNode) {
+    var searchForms = findElements('.js-site-search', domNode);
+
+    function toggleForm (e) {
+      var searchContainer = closest('js-site-search', e.target);
+      var isOpen = hasClass(searchContainer, 'is-active');
+
+      if (isOpen) {
+        removeClass(searchContainer, 'is-active');
+        e.target.value = '';
+      } else {
+        addClass(searchContainer, 'is-active');
+      }
+
+    };
+
+    searchForms.forEach(function (search) {
+      addEvent(search, 'focusin', toggleForm);
+      addEvent(search, 'focusout', toggleForm);
+    });
+  };
+
+
   // ┌────────┐
   // │ Sticky │
   // └────────┘
@@ -557,7 +585,7 @@
   // start up Calcite and attach all the patterns
   // optionally pass an array of patterns you'd like to watch
   function init (patterns) {
-    patterns = patterns || ['accordion', 'dropdown', 'drawer', 'expandingNav', 'modal', 'tabs', 'sticky'];
+    patterns = patterns || ['accordion', 'dropdown', 'drawer', 'expandingNav', 'modal', 'tabs', 'siteSearch', 'sticky'];
     patterns.forEach(function (pattern) {
       calcite[pattern]();
     });

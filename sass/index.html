@@ -196,6 +196,15 @@
                 
               
               </nav>
+              <div class="site-search js-site-search right">
+                <form class="site-search-form">
+                  <span class="icon-ui-search site-search-icon"></span>
+                  <input class="site-search-input" type="search" placeholder="Search">
+                  <span class="input-group-button">
+                    <button type="submit" class="btn btn-clear site-search-button">Go</button>
+                  </span>
+                </form>
+              </div>
             </div>
             <div class="tablet-show">
               <a href="" class="top-nav-title js-drawer-toggle" data-drawer="top-nav">☰ Calcite Web</a>
@@ -225,7 +234,7 @@
           <div class="column-24">
             
   <h1 class="sub-nav-title text-white">Sass</h1>
-  <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-orange btn-arrow right leader-half">Latest Release</a>
+  <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white btn-arrow right leader-half">Latest Release</a>
 
           </div>
         </div>
@@ -995,6 +1004,10 @@ Setting the max width of an article to a large multiple of the text size is a wa
 <td><code>$name</code></td>
 </tr>
 <tr>
+<td><a href="#placeholder"><code>placeholder</code></a></td>
+<td><code>$property</code>,  <code>$attr</code></td>
+</tr>
+<tr>
 <td><a href="#prefixer"><code>prefixer</code></a></td>
 <td><code>$property, $value, $prefixes</code></td>
 </tr>
@@ -1099,6 +1112,10 @@ Setting the max width of an article to a large multiple of the text size is a wa
   <span class="hljs-variable">@include</span> <span class="hljs-function">animation</span>( <span class="hljs-variable">@include</span> <span class="hljs-function">animation</span>(ANIMATION_NAME <span class="hljs-number">200ms</span> ease-in);)
 }
 </code></pre>
+<h4>Placeholder</h4>
+<p>Wraps the wide array of input placeholder selectors across browsers.</p>
+<pre><code><span class="hljs-at_rule">@<span class="hljs-keyword">include</span> <span class="hljs-function">placeholder</span>(<span class="hljs-string">'color'</span>, $dark-blue)</span>;
+</code></pre>
 <h4>Prefixer</h4>
 <p>This is one of the most flexible mixins in the library. Use it to add browser prefixes to a property:</p>
 <pre><code class="scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> prefixer</span>(margin-end,<span class="hljs-preprocessor"> 5</span>%,<span class="hljs-preprocessor"> webkit</span><span class="hljs-preprocessor"> moz</span><span class="hljs-preprocessor"> spec</span>);</span>
@@ -1173,7 +1190,7 @@ Setting the max width of an article to a large multiple of the text size is a wa
     
 
     <!-- Footer Pattern -->
-    <footer class="footer leader-3" role="contentinfo">>
+    <footer class="footer leader-3" role="contentinfo">
       <div class="grid-container">
           <nav class="column-6">
             <h6>Styleguides</h6>

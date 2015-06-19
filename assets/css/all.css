@@ -2433,6 +2433,33 @@ img {
 .hide {
   display: none !important; }
 
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.visually-hidden-focusable {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+  .visually-hidden-focusable:active, .visually-hidden-focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto; }
+
 .left {
   float: left; }
 
@@ -2921,12 +2948,12 @@ blockquote, blockquote p {
   line-height: 1.55rem; }
 
 a {
-  color: #3b8fc4;
+  color: #196fa6;
   text-decoration: none;
   -webkit-transition: color 150ms linear;
   transition: color 150ms linear; }
   a:hover {
-    color: #196fa6;
+    color: #3b8fc4;
     -webkit-background-image: linear-gradient(to bottom, transparent 94%, #196fa6 96%, #196fa6 100%);
     -moz-background-image: linear-gradient(to bottom, transparent 94%, #196fa6 96%, #196fa6 100%);
     -o-background-image: linear-gradient(to bottom, transparent 94%, #196fa6 96%, #196fa6 100%);
@@ -3290,7 +3317,7 @@ table {
   color: #9081bc; }
 
 .esri-icon-orange:before, .icon-ui-orange:before {
-  color: #eda959; }
+  color: #d17e21; }
 
 .esri-icon-gray:before, .icon-ui-gray:before {
   color: #959595; }
@@ -3695,64 +3722,64 @@ table {
     transition: background-color 200ms linear; }
 
 .icon-social-contact {
-  background-image: url('../img/icons/social/contact.svg'); }
+  background-image: url('../img/icons/social/contact.svg') !important; }
   .icon-social-contact:hover {
-    background-color: #8EC449; }
+    background-color: #8EC449 !important; }
 
 .icon-social-facebook {
-  background-image: url('../img/icons/social/facebook.svg'); }
+  background-image: url('../img/icons/social/facebook.svg') !important; }
   .icon-social-facebook:hover {
-    background-color: #3D5A96; }
+    background-color: #3D5A96 !important; }
 
 .icon-social-geonet {
-  background-image: url('../img/icons/social/geonet.svg'); }
+  background-image: url('../img/icons/social/geonet.svg') !important; }
   .icon-social-geonet:hover {
-    background-color: #127BC0; }
+    background-color: #127BC0 !important; }
 
 .icon-social-github {
-  background-image: url('../img/icons/social/github.svg'); }
+  background-image: url('../img/icons/social/github.svg') !important; }
   .icon-social-github:hover {
-    background-color: #171515; }
+    background-color: #171515 !important; }
 
 .icon-social-google-plus {
-  background-image: url('../img/icons/social/google-plus.svg'); }
+  background-image: url('../img/icons/social/google-plus.svg') !important; }
   .icon-social-google-plus:hover {
-    background-color: #DD4C3C; }
+    background-color: #DD4C3C !important; }
 
 .icon-social-instagram {
-  background-image: url('../img/icons/social/instagram.svg'); }
+  background-image: url('../img/icons/social/instagram.svg') !important; }
   .icon-social-instagram:hover {
-    background-color: #1B6FB1; }
+    background-color: #1B6FB1 !important; }
 
 .icon-social-linkedin {
-  background-image: url('../img/icons/social/linkedin.svg'); }
+  background-image: url('../img/icons/social/linkedin.svg') !important; }
   .icon-social-linkedin:hover {
-    background-color: #127CB3; }
+    background-color: #127CB3 !important; }
 
 .icon-social-pinterest {
-  background-image: url('../img/icons/social/pinterest.svg'); }
+  background-image: url('../img/icons/social/pinterest.svg') !important; }
   .icon-social-pinterest:hover {
-    background-color: #BB0F23; }
+    background-color: #BB0F23 !important; }
 
 .icon-social-rss {
-  background-image: url('../img/icons/social/rss.svg'); }
+  background-image: url('../img/icons/social/rss.svg') !important; }
   .icon-social-rss:hover {
-    background-color: #FD8023; }
+    background-color: #FD8023 !important; }
 
 .icon-social-share {
-  background-image: url('../img/icons/social/share.svg'); }
+  background-image: url('../img/icons/social/share.svg') !important; }
   .icon-social-share:hover {
-    background-color: #1EBD21; }
+    background-color: #1EBD21 !important; }
 
 .icon-social-twitter {
-  background-image: url('../img/icons/social/twitter.svg'); }
+  background-image: url('../img/icons/social/twitter.svg') !important; }
   .icon-social-twitter:hover {
-    background-color: #59ADEB; }
+    background-color: #59ADEB !important; }
 
 .icon-social-youtube {
-  background-image: url('../img/icons/social/youtube.svg'); }
+  background-image: url('../img/icons/social/youtube.svg') !important; }
   .icon-social-youtube:hover {
-    background-color: #CF2529; }
+    background-color: #CF2529 !important; }
 
 .esri-logo {
   margin: 0.3875rem;
@@ -3765,7 +3792,7 @@ table {
   min-width: 70px;
   line-height: 0;
   background-size: 100% 100%;
-  background-image: url('../img/logo/esri-logo.svg'); }
+  background-image: url('../img/logo/esri-logo.svg') !important; }
 
 .esri-logo-reverse {
   margin: 0.3875rem;
@@ -3778,8 +3805,8 @@ table {
   min-width: 70px;
   line-height: 0;
   background-size: 100% 100%;
-  background-image: url('../img/logo/esri-logo.svg');
-  background-image: url('../img/logo/esri-logo-reversed.svg'); }
+  background-image: url('../img/logo/esri-logo.svg') !important;
+  background-image: url('../img/logo/esri-logo-reversed.svg') !important; }
 
 .esri-logo-condensed {
   margin-left: 0;
@@ -3798,7 +3825,7 @@ table {
   font-style: normal;
   color: white;
   border: 1px solid #196fa6;
-  background-color: #3b8fc4;
+  background-color: #196fa6;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -3816,7 +3843,7 @@ table {
     -moz-background-image: none;
     -o-background-image: none;
     background-image: none;
-    background-color: #196fa6;
+    background-color: #3b8fc4;
     color: white; }
 
 .btn-arrow:after {
@@ -3824,10 +3851,10 @@ table {
 
 .btn-transparent {
   background: none;
-  color: #3b8fc4;
+  color: #196fa6;
   border: none; }
   .btn-transparent:hover {
-    color: #196fa6;
+    color: #3b8fc4;
     background: none; }
   .btn-transparent.btn-disabled {
     background: none;
@@ -3837,9 +3864,9 @@ table {
       background: none; }
 
 .btn-clear {
-  color: #3b8fc4;
+  color: #196fa6;
   background: transparent;
-  border-color: #3b8fc4; }
+  border-color: #196fa6; }
   .btn-clear:hover {
     color: white;
     background: #196fa6;
@@ -3870,37 +3897,33 @@ table {
 .btn-grouped {
   float: left; }
   .btn-grouped + .btn-grouped {
-    border-left: none; }
+    margin-left: 1px; }
   .btn-grouped:last-of-type {
     float: none; }
 
+.btn-white {
+  background: white;
+  color: #4c4c4c;
+  border: 1px solid white; }
+  .btn-white:hover {
+    color: #4c4c4c;
+    background: #efefef; }
+
 .btn-red {
-  background-color: #c6542d;
+  background-color: #ab3c16;
   border-color: #ab3c16; }
   .btn-red:hover {
-    background-color: #ab3c16; }
+    background-color: #c6542d; }
 
 .btn-green {
-  background-color: #5a9359;
+  background-color: #338033;
   border-color: #338033; }
   .btn-green:hover {
-    background-color: #338033; }
-
-.btn-blue {
-  background-color: #3b8fc4;
-  border-color: #196fa6; }
-  .btn-blue:hover {
-    background-color: #196fa6; }
-
-.btn-orange {
-  background-color: #eda959;
-  border-color: #e8912e; }
-  .btn-orange:hover {
-    background-color: #e8912e; }
+    background-color: #5a9359; }
 
 .btn:disabled, .btn-disabled, button[disabled] {
   background-color: #f8f8f8;
-  border-color: #efefef;
+  border-color: #f8f8f8;
   cursor: default;
   pointer-events: none;
   color: #959595; }
@@ -3939,8 +3962,8 @@ table {
 
 .badge-blue .badge-action {
   color: white;
-  background-color: #3b8fc4;
-  border-color: #196fa6; }
+  background-color: #196fa6;
+  border-color: #3b8fc4; }
 .badge-blue .badge-count {
   border-color: #828282; }
 
@@ -3950,8 +3973,8 @@ table {
   background-color: transparent;
   border: none; }
 .badge-round .badge-count {
-  border: none;
-  background-color: #3b8fc4;
+  border-color: #3b8fc4;
+  background-color: #196fa6;
   border-radius: 50% 50%;
   width: 1em;
   line-height: 1.5em;
@@ -4363,7 +4386,7 @@ input[type='button'], input[type='reset'], input[type='submit'], button {
   font-style: normal;
   color: white;
   border: 1px solid #196fa6;
-  background-color: #3b8fc4;
+  background-color: #196fa6;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -4381,7 +4404,7 @@ input[type='button'], input[type='reset'], input[type='submit'], button {
     -moz-background-image: none;
     -o-background-image: none;
     background-image: none;
-    background-color: #196fa6;
+    background-color: #3b8fc4;
     color: white; }
 
 input[type="file"]::-webkit-file-upload-button {
@@ -4396,7 +4419,7 @@ input[type="file"]::-webkit-file-upload-button {
   font-style: normal;
   color: white;
   border: 1px solid #196fa6;
-  background-color: #3b8fc4;
+  background-color: #196fa6;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -4414,7 +4437,7 @@ input[type="file"]::-webkit-file-upload-button {
     -moz-background-image: none;
     -o-background-image: none;
     background-image: none;
-    background-color: #196fa6;
+    background-color: #3b8fc4;
     color: white; }
 
 ::-ms-browse {
@@ -4428,7 +4451,7 @@ input[type="file"]::-webkit-file-upload-button {
   font-style: normal;
   color: white;
   border: 1px solid #196fa6;
-  background-color: #3b8fc4;
+  background-color: #196fa6;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -4446,7 +4469,7 @@ input[type="file"]::-webkit-file-upload-button {
     -moz-background-image: none;
     -o-background-image: none;
     background-image: none;
-    background-color: #196fa6;
+    background-color: #3b8fc4;
     color: white; }
 
 input[type='radio'], input[type='checkbox'] {
@@ -4647,7 +4670,7 @@ select::-moz-focusring {
   font-style: normal;
   color: white;
   border: 1px solid #196fa6;
-  background-color: #3b8fc4;
+  background-color: #196fa6;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -4658,9 +4681,9 @@ select::-moz-focusring {
   font-size: 0.9375rem;
   line-height: 1.55rem;
   font-weight: 400;
-  color: #3b8fc4;
+  color: #196fa6;
   background: transparent;
-  border-color: #3b8fc4;
+  border-color: #196fa6;
   border-color: transparent;
   position: absolute;
   top: 0.3875rem;
@@ -4674,7 +4697,7 @@ select::-moz-focusring {
     -moz-background-image: none;
     -o-background-image: none;
     background-image: none;
-    background-color: #196fa6;
+    background-color: #3b8fc4;
     color: white; }
   .search-submit:hover {
     color: white;
@@ -4698,15 +4721,18 @@ select::-moz-focusring {
     background-color: white; }
 
 .top-nav {
-  padding: 0;
   border-bottom: 1px solid #efefef; }
+  .top-nav .esri-logo {
+    padding-top: 1rem; }
+  .top-nav .sign-in {
+    padding-top: 1.55rem; }
 
 .top-nav-title {
   font-size: 1rem;
   line-height: 1.55rem;
   float: left;
   margin-right: 2rem;
-  padding: 1.1625rem 0;
+  line-height: 3.75rem;
   color: #4c4c4c; }
   .top-nav-title:hover {
     color: #3b8fc4;
@@ -4716,59 +4742,127 @@ select::-moz-focusring {
     background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%); }
 
 .top-nav-list {
-  padding: 1.1625rem 0;
-  float: left;
-  line-height: 1.75rem; }
+  padding: 0;
+  float: left; }
+  .top-nav-list .top-nav-link + .top-nav-link {
+    margin-left: .75em; }
 
 .top-nav-link {
   font-size: 0.9375rem;
   line-height: 1.55rem;
-  margin-right: 1em;
   color: #4c4c4c;
-  padding: 1.55rem 0; }
+  padding: 1.1625rem 0;
+  line-height: 1.5rem;
+  display: inline-block; }
   .top-nav-link:hover {
     color: #3b8fc4;
     -webkit-background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
     -moz-background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
     -o-background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
     background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%); }
+    .top-nav-link:hover a {
+      color: #3b8fc4; }
   .top-nav-link.is-active {
     -webkit-background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
     -moz-background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
     -o-background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
     background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%); }
+  .top-nav-link a {
+    color: #4c4c4c; }
+    .top-nav-link a:hover {
+      background-image: none; }
+  .top-nav-link img {
+    width: 20px;
+    height: 20px;
+    vertical-align: -4px; }
+
+.top-nav-dropdown:after {
+  padding-left: .125em;
+  content: "▼";
+  font-size: .5rem;
+  vertical-align: .125rem; }
 
 .sign-in {
   float: right;
-  margin-top: -0.2583333333rem;
-  margin-bottom: -1.55rem; }
+  margin-top: -0.7rem; }
 
-.user {
-  font-size: 0.875rem;
-  line-height: 1.55rem;
-  z-index: 3;
-  cursor: pointer; }
-
-.user-image {
-  float: left;
-  height: 1.25rem;
-  width: 1.25rem;
-  border-radius: 50%;
-  border: 1px solid #efefef;
-  margin-top: 0.25rem; }
-
-.user-name {
-  z-index: 2;
-  line-height: 2;
-  padding-left: 0.3875rem; }
-  .user-name:after {
-    padding-left: 0.3875rem;
-    content: "\25bc";
-    font-size: .5rem;
-    vertical-align: .1rem; }
-
-.user-nav {
+.site-search {
   margin-top: 0.3875rem; }
+  .site-search input[type="search"] {
+    border-color: #196fa6; }
+  .site-search.is-active .site-search-form {
+    width: 20rem;
+    -webkit-transition: 150ms linear;
+    transition: 150ms linear; }
+  .site-search.is-active .site-search-icon {
+    color: #959595; }
+  .site-search.is-active .site-search-input {
+    text-align: left;
+    padding-left: 2rem;
+    -webkit-transition: 150ms linear;
+    transition: 150ms linear; }
+    .site-search.is-active .site-search-input:placeholder {
+      color: #959595; }
+    .site-search.is-active .site-search-input:input-placeholder {
+      color: #959595; }
+    .site-search.is-active .site-search-input::-webkit-input-placeholder {
+      color: #959595; }
+    .site-search.is-active .site-search-input:-moz-placeholder {
+      /* Firefox 18- */
+      color: #959595; }
+    .site-search.is-active .site-search-input::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #959595; }
+    .site-search.is-active .site-search-input:-ms-input-placeholder {
+      color: #959595; }
+  .site-search.is-active .site-search-button {
+    display: inline-block;
+    -webkit-transition: 150ms linear;
+    transition: 150ms linear; }
+
+.site-search-form {
+  display: table;
+  margin-top: 0.3875rem;
+  position: relative;
+  width: 8rem;
+  -webkit-transition: 150ms linear;
+  transition: 150ms linear; }
+
+.site-search-icon {
+  color: #196fa6;
+  position: absolute;
+  z-index: 1;
+  left: 0.75rem;
+  top: 0.5rem; }
+
+.site-search-input {
+  display: table-cell;
+  position: relative;
+  margin-top: 0;
+  width: 100%;
+  border-color: #196fa6;
+  text-align: center;
+  -webkit-transition: 150ms linear;
+  transition: 150ms linear; }
+  .site-search-input:placeholder {
+    color: #196fa6; }
+  .site-search-input:input-placeholder {
+    color: #196fa6; }
+  .site-search-input::-webkit-input-placeholder {
+    color: #196fa6; }
+  .site-search-input:-moz-placeholder {
+    /* Firefox 18- */
+    color: #196fa6; }
+  .site-search-input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #196fa6; }
+  .site-search-input:-ms-input-placeholder {
+    color: #196fa6; }
+
+.site-search-button {
+  display: none;
+  -webkit-transition: 150ms linear;
+  transition: 150ms linear; }
 
 .super-nav {
   position: relative;
@@ -4861,7 +4955,11 @@ select::-moz-focusring {
   transition: background-color 150ms linear, color 150ms 150ms linear; }
   .sub-nav-link:hover, .sub-nav-link:focus {
     background-color: rgba(0, 0, 0, 0.3);
-    color: white; }
+    color: white;
+    -webkit-background-image: linear-gradient(to top, transparent 94%, #ffffff 96%, #ffffff 100%);
+    -moz-background-image: linear-gradient(to top, transparent 94%, #ffffff 96%, #ffffff 100%);
+    -o-background-image: linear-gradient(to top, transparent 94%, #ffffff 96%, #ffffff 100%);
+    background-image: linear-gradient(to top, transparent 94%, #ffffff 96%, #ffffff 100%); }
   .sub-nav-link.is-active {
     background-color: white;
     color: #4c4c4c; }
@@ -5232,13 +5330,13 @@ body {
     background-image: linear-gradient(to bottom, transparent 94%, #7461a8 96%, #7461a8 100%); }
 
 .link-orange a, a.link-orange {
-  color: #eda959; }
+  color: #d17e21; }
   .link-orange a:hover, a.link-orange:hover {
-    color: #e8912e;
-    -webkit-background-image: linear-gradient(to bottom, transparent 94%, #e8912e 96%, #e8912e 100%);
-    -moz-background-image: linear-gradient(to bottom, transparent 94%, #e8912e 96%, #e8912e 100%);
-    -o-background-image: linear-gradient(to bottom, transparent 94%, #e8912e 96%, #e8912e 100%);
-    background-image: linear-gradient(to bottom, transparent 94%, #e8912e 96%, #e8912e 100%); }
+    color: #ad6511;
+    -webkit-background-image: linear-gradient(to bottom, transparent 94%, #ad6511 96%, #ad6511 100%);
+    -moz-background-image: linear-gradient(to bottom, transparent 94%, #ad6511 96%, #ad6511 100%);
+    -o-background-image: linear-gradient(to bottom, transparent 94%, #ad6511 96%, #ad6511 100%);
+    background-image: linear-gradient(to bottom, transparent 94%, #ad6511 96%, #ad6511 100%); }
 
 .link-brown a, a.link-brown {
   color: #a57946; }
@@ -5325,7 +5423,7 @@ body {
   color: #9081bc; }
 
 .text-orange {
-  color: #eda959; }
+  color: #d17e21; }
 
 .text-brown {
   color: #a57946; }
@@ -5946,11 +6044,11 @@ body {
   .color-sample.dark-red {
     background-color: #ab3c16; }
   .color-sample.light-orange {
-    background-color: #f6ca92; }
-  .color-sample.orange {
-    background-color: #eda959; }
-  .color-sample.dark-orange {
     background-color: #e8912e; }
+  .color-sample.orange {
+    background-color: #d17e21; }
+  .color-sample.dark-orange {
+    background-color: #ad6511; }
   .color-sample.light-yellow {
     background-color: #efe397; }
   .color-sample.yellow {
@@ -6069,19 +6167,19 @@ body {
   background-size: cover; }
 
 .carousel-slide:nth-child(1) {
-  background-image: linear-gradient(to right, #c6542d, #eda959); }
+  background-image: linear-gradient(to right, #c6542d, #d17e21); }
 
 .carousel-slide:nth-child(2) {
   background-image: linear-gradient(to right, #5a9359, #3b8fc4); }
 
 .carousel-slide:nth-child(3) {
-  background-image: linear-gradient(to right, #eda959, #c6542d); }
+  background-image: linear-gradient(to right, #d17e21, #c6542d); }
 
 .carousel-slide:nth-child(4) {
   background-image: linear-gradient(to right, #9081bc, #5a9359); }
 
 .carousel-slide:nth-child(5) {
-  background-image: linear-gradient(to right, #e4d154, #eda959); }
+  background-image: linear-gradient(to right, #e4d154, #d17e21); }
 
 .carousel-slide:nth-child(6) {
   background-image: linear-gradient(to right, #3b8fc4, #e4d154); }
