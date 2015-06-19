@@ -291,6 +291,9 @@ module.exports = function(grunt) {
       },
       acetate: {
         command: 'npm run acetate' // build the docs site
+      },
+      a11y: {
+        command: 'npm run a11y' // build the docs site
       }
     },
 
