@@ -6,8 +6,8 @@
 
 @mixin social-icon ($name, $color) {
   .icon-social-#{$name} {
-    background-image: url('#{$image-path}/icons/social/#{$name}.svg');
-    &:hover { background-color: $color; }
+    background-image: url('#{$image-path}/icons/social/#{$name}.svg') !important;
+    &:hover { background-color: $color !important; }
   }
 }
 

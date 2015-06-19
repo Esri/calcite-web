@@ -58,6 +58,7 @@ $include-top-nav:                $generate-css    !default;
 $include-super-nav:              $generate-css    !default;
 $include-toolbar:                $generate-css    !default;
 $include-carousel:               $generate-css    !default;
+$include-site-search:            $generate-css    !default;
 
 // Javascript
 $include-tabs:                   $generate-css    !default;
@@ -119,6 +120,7 @@ $include-sticky:                 $generate-css    !default;
 // Patterns
 // complete interfaces: header, footer, banner...
 @import "calcite-web/patterns/top-nav";
+@import "calcite-web/patterns/site-search";
 @import "calcite-web/patterns/super-nav";
 @import "calcite-web/patterns/expanding-nav";
 @import "calcite-web/patterns/sub-nav";

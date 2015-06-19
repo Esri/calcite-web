@@ -9,6 +9,12 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
   @extend .avenir-regular;
   padding: 0;
   border-bottom: 1px solid $lightest-gray;
+
+  .user-nav,
+  .esri-logo,
+  .sign-in {
+    padding-top: 0.75*$baseline
+  }
 }
 
   @mixin top-nav-title {
@@ -45,6 +51,10 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
       @include prefixer(background-image, $topnav-link-overline, webkit moz o);
       background-image: $topnav-link-overline;
     }
+  }
+
+  @mixin top-nav-logo {
+    margin-top: 0.75*$baseline;
   }
 
 @mixin sign-in {

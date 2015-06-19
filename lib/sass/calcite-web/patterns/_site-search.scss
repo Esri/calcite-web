@@ -1,0 +1,21 @@
+//┌─────────────┐
+//│ Site Search │
+//└─────────────┘
+// ↳ http://esri.github.io/calcite-web/patterns/#site-search
+// ↳ patterns → _site-search.md
+
+
+@mixin site-search() {
+  margin-top: 0.75*$baseline;
+
+  input[type="search"], input[type="text"] {
+  }
+}
+
+
+
+
+@if $include-site-search {
+  .site-search { @include site-search(); }
+
+}
