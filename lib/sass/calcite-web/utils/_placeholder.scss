@@ -1,25 +1,25 @@
-@mixin placeholder($property, $color) {
+@mixin placeholder($property, $attr) {
   &:placeholder {
-    $property: $color;
+    #{$property}: $attr;
   }
 
   &:input-placeholder {
-    $property: $color;
+    #{$property}: $attr;
   }
 
   &::-webkit-input-placeholder {
-     $property: $color;
+     #{$property}: $attr;
   }
 
   &:-moz-placeholder { /* Firefox 18- */
-     $property: $color;
+     #{$property}: $attr;
   }
 
   &::-moz-placeholder {  /* Firefox 19+ */
-     $property: $color;
+     #{$property}: $attr;
   }
 
   &:-ms-input-placeholder {
-     $property: $color;
+     #{$property}: $attr;
   }
 }

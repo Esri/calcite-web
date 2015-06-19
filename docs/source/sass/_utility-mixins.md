@@ -29,7 +29,7 @@ If the mixin accepts arguments, pass them into the parenthesis:
 | [`calc`](#calc)                               | `$property, $value`            |
 | [`clearfix`](#clearfix)                       | none                           |
 | [`keyframes`](#keyframes)                     | `$name`                        |
-| [`placeholder`](#placeholder)                       |`$property`,  `$color` |
+| [`placeholder`](#placeholder)                       |`$property`,  `$attr` |
 | [`prefixer`](#prefixer)                       | `$property, $value, $prefixes` |
 | [`respond-to`](#respond-to)                   | `$max, $mi, $type`             |
 | [`transform`](#transform)                     | `$property`                    |
