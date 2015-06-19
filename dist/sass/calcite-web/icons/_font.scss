@@ -1,0 +1,175 @@
+// ┌───────────┐
+// │ Icon Font │
+// └───────────┘
+//  ↳ http://esri.github.io/calcite-web/icons/
+//  ↳ icons → _icon-font.md
+
+@mixin icon-font () {
+
+  @font-face {
+    font-family: 'CalciteWebCoreIcons';
+    src:url('#{$font-path}/CalciteWebCoreIcons.eot?-v8piff');
+    src:url('#{$font-path}/CalciteWebCoreIcons.eot?#iefix-v8piff') format('embedded-opentype'),
+      url('#{$font-path}/CalciteWebCoreIcons.ttf?-v8piff') format('truetype'),
+      url('#{$font-path}/CalciteWebCoreIcons.woff?-v8piff') format('woff'),
+      url('#{$font-path}/CalciteWebCoreIcons.svg?-v8piff#CalciteWebCoreIcons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  [class^="esri-icon-"]:before,
+  [class*=" esri-icon-"]:before,
+  [class^="icon-ui-"]:before,
+  [class*=" icon-ui-"]:before {
+    font-family: 'CalciteWebCoreIcons';
+    padding-right: 0.33em;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .esri-icon-green:before, .icon-ui-green:before                                             { color: $green;}
+  .esri-icon-blue:before, .icon-ui-blue:before                                               { color: $blue;}
+  .esri-icon-purple:before, .icon-ui-purple:before                                           { color: $purple;}
+  .esri-icon-orange:before, .icon-ui-orange:before                                           { color: $orange;}
+  .esri-icon-gray:before, .icon-ui-gray:before                                               { color: $gray;}
+  .esri-icon-red:before, .icon-ui-red:before                                                 { color: $red;}
+
+  .esri-icon-close:before, .icon-ui-close:before                                             {content: "\e600";}
+  .esri-icon-drag-horizontal:before, .icon-ui-drag-horizontal:before                         {content: "\e601";}
+  .esri-icon-drag-vertical:before, .icon-ui-drag-vertical:before                             {content: "\e602";}
+  .esri-icon-handle-horizontal:before, .icon-ui-handle-horizontal:before                     {content: "\e603";}
+  .esri-icon-handle-vertical:before, .icon-ui-handle-vertical:before                         {content: "\e604";}
+  .esri-icon-check-mark:before, .icon-ui-check-mark:before                                   {content: "\e605";}
+  .esri-icon-left-triangle-arrow:before, .icon-ui-left-triangle-arrow:before                 {content: "\e606";}
+  .esri-icon-right-triangle-arrow:before, .icon-ui-right-triangle-arrow:before               {content: "\e607";}
+  .esri-icon-down-arrow:before, .icon-ui-down-arrow:before                                   {content: "\e608";}
+  .esri-icon-up-arrow:before, .icon-ui-up-arrow:before                                       {content: "\e609";}
+  .esri-icon-overview-arrow-bottom-left:before, .icon-ui-overview-arrow-bottom-left:before   {content: "\e60a";}
+  .esri-icon-overview-arrow-bottom-right:before, .icon-ui-overview-arrow-bottom-right:before {content: "\e60b";}
+  .esri-icon-overview-arrow-top-left:before, .icon-ui-overview-arrow-top-left:before         {content: "\e60c";}
+  .esri-icon-overview-arrow-top-right:before, .icon-ui-overview-arrow-top-right:before       {content: "\e60d";}
+  .esri-icon-maximize:before, .icon-ui-maximize:before                                       {content: "\e60e";}
+  .esri-icon-minimize:before, .icon-ui-minimize:before                                       {content: "\e60f";}
+  .esri-icon-checkbox-unchecked:before, .icon-ui-checkbox-unchecked:before                   {content: "\e610";}
+  .esri-icon-checkbox-checked:before, .icon-ui-checkbox-checked:before                       {content: "\e611";}
+  .esri-icon-radio-unchecked:before, .icon-ui-radio-unchecked:before                         {content: "\e612";}
+  .esri-icon-radio-checked:before, .icon-ui-radio-checked:before                             {content: "\e613";}
+  .esri-icon-up-arrow-circled:before, .icon-ui-up-arrow-circled:before                       {content: "\e614";}
+  .esri-icon-down-arrow-circled:before, .icon-ui-down-arrow-circled:before                   {content: "\e615";}
+  .esri-icon-left-arrow-circled:before, .icon-ui-left-arrow-circled:before                   {content: "\e616";}
+  .esri-icon-right-arrow-circled:before, .icon-ui-right-arrow-circled:before                 {content: "\e617";}
+  .esri-icon-zoom-out-fixed:before, .icon-ui-zoom-out-fixed:before                           {content: "\e618";}
+  .esri-icon-zoom-in-fixed:before, .icon-ui-zoom-in-fixed:before                             {content: "\e619";}
+  .esri-icon-refresh:before, .icon-ui-refresh:before                                         {content: "\e61a";}
+  .esri-icon-edit:before, .icon-ui-edit:before                                               {content: "\e61b";}
+  .esri-icon-authorize:before, .icon-ui-authorize:before                                     {content: "\e61c";}
+  .esri-icon-map-pin:before, .icon-ui-map-pin:before                                         {content: "\e61d";}
+  .esri-icon-blank-map-pin:before, .icon-ui-blank-map-pin:before                             {content: "\e61e";}
+  .esri-icon-table:before, .icon-ui-table:before                                             {content: "\e61f";}
+  .esri-icon-zoom-in:before, .icon-ui-zoom-in:before                                         {content: "\e620";}
+  .esri-icon-zoom-out:before, .icon-ui-zoom-out:before                                       {content: "\e621";}
+  .esri-icon-beginning:before, .icon-ui-beginning:before                                     {content: "\e622";}
+  .esri-icon-reverse:before, .icon-ui-reverse:before                                         {content: "\e623";}
+  .esri-icon-pause:before, .icon-ui-pause:before                                             {content: "\e624";}
+  .esri-icon-play:before, .icon-ui-play:before                                               {content: "\e625";}
+  .esri-icon-forward:before, .icon-ui-forward:before                                         {content: "\e626";}
+  .esri-icon-end:before, .icon-ui-end:before                                                 {content: "\e627";}
+  .esri-icon-erase:before, .icon-ui-erase:before                                             {content: "\e628";}
+  .esri-icon-up-down-arrows:before, .icon-ui-up-down-arrows:before                           {content: "\e629";}
+  .esri-icon-left:before, .icon-ui-left:before                                               {content: "\e62a";}
+  .esri-icon-right:before, .icon-ui-right:before                                             {content: "\e62b";}
+  .esri-icon-announcement:before, .icon-ui-announcement:before                               {content: "\e62c";}
+  .esri-icon-notice-round:before, .icon-ui-notice-round:before                               {content: "\e62d";}
+  .esri-icon-notice-triangle:before, .icon-ui-notice-triangle:before                         {content: "\e62e";}
+  .esri-icon-home:before, .icon-ui-home:before                                               {content: "\e62f";}
+  .esri-icon-locate:before, .icon-ui-locate:before                                           {content: "\e630";}
+  .esri-icon-expand:before, .icon-ui-expand:before                                           {content: "\e631";}
+  .esri-icon-collapse:before, .icon-ui-collapse:before                                       {content: "\e632";}
+  .esri-icon-layer-list:before, .icon-ui-layer-list:before                                   {content: "\e633";}
+  .esri-icon-basemap:before, .icon-ui-basemap:before                                         {content: "\e634";}
+  .esri-icon-globe:before, .icon-ui-globe:before                                             {content: "\e635";}
+  .esri-icon-applications:before, .icon-ui-applications:before                               {content: "\e636";}
+  .esri-icon-arrow-up-circled:before, .icon-ui-arrow-up-circled:before                       {content: "\e637";}
+  .esri-icon-arrow-down-circled:before, .icon-ui-arrow-down-circled:before                   {content: "\e638";}
+  .esri-icon-arrow-left-circled:before, .icon-ui-arrow-left-circled:before                   {content: "\e639";}
+  .esri-icon-arrow-right-circled:before, .icon-ui-arrow-right-circled:before                 {content: "\e63a";}
+  .esri-icon-delete:before, .icon-ui-delete:before                                           {content: "\e63b";}
+  .esri-icon-add:before, .icon-ui-add:before                                                 {content: "\e63c";}
+  .esri-icon-add-attachment:before, .icon-ui-add-attachment:before                           {content: "\e63d";}
+  .esri-icon-attachment:before, .icon-ui-attachment:before                                   {content: "\e63e";}
+  .esri-icon-calendar:before, .icon-ui-calendar:before                                       {content: "\e63f";}
+  .esri-icon-close-circled:before, .icon-ui-close-circled:before                             {content: "\e640";}
+  .esri-icon-browser:before, .icon-ui-browser:before                                         {content: "\e641";}
+  .esri-icon-collection:before, .icon-ui-collection:before                                   {content: "\e642";}
+  .esri-icon-comment:before, .icon-ui-comment:before                                         {content: "\e643";}
+  .esri-icon-configure-popup:before, .icon-ui-configure-popup:before                         {content: "\e644";}
+  .esri-icon-contact:before, .icon-ui-contact:before                                         {content: "\e645";}
+  .esri-icon-dashboard:before, .icon-ui-dashboard:before                                     {content: "\e646";}
+  .esri-icon-deny:before, .icon-ui-deny:before                                               {content: "\e647";}
+  .esri-icon-description:before, .icon-ui-description:before                                 {content: "\e648";}
+  .esri-icon-directions:before, .icon-ui-directions:before                                   {content: "\e649";}
+  .esri-icon-directions2:before, .icon-ui-directions2:before                                 {content: "\e64a";}
+  .esri-icon-documentation:before, .icon-ui-documentation:before                             {content: "\e64b";}
+  .esri-icon-duplicate:before, .icon-ui-duplicate:before                                     {content: "\e64c";}
+  .esri-icon-review:before, .icon-ui-review:before                                           {content: "\e64d";}
+  .esri-icon-environment-settings:before, .icon-ui-environment-settings:before               {content: "\e64e";}
+  .esri-icon-error:before, .icon-ui-error:before                                             {content: "\e64f";}
+  .esri-icon-error2:before, .icon-ui-error2:before                                           {content: "\e650";}
+  .esri-icon-experimental:before, .icon-ui-experimental:before                               {content: "\e651";}
+  .esri-icon-feature-layer:before, .icon-ui-feature-layer:before                             {content: "\e652";}
+  .esri-icon-filter:before, .icon-ui-filter:before                                           {content: "\e653";}
+  .esri-icon-grant:before, .icon-ui-grant:before                                             {content: "\e654";}
+  .esri-icon-group:before, .icon-ui-group:before                                             {content: "\e655";}
+  .esri-icon-key:before, .icon-ui-key:before                                                 {content: "\e656";}
+  .esri-icon-labels:before, .icon-ui-labels:before                                           {content: "\e657";}
+  .esri-icon-tag:before, .icon-ui-tag:before                                                 {content: "\e658";}
+  .esri-icon-layers:before, .icon-ui-layers:before                                           {content: "\e659";}
+  .esri-icon-left-arrow:before, .icon-ui-left-arrow:before                                   {content: "\e65a";}
+  .esri-icon-right-arrow:before, .icon-ui-right-arrow:before                                 {content: "\e65b";}
+  .esri-icon-link-external:before, .icon-ui-link-external:before                             {content: "\e65c";}
+  .esri-icon-link:before, .icon-ui-link:before                                               {content: "\e65d";}
+  .esri-icon-loading-indicator:before, .icon-ui-loading-indicator:before                     {content: "\e65e";}
+  .esri-icon-maps:before, .icon-ui-maps:before                                               {content: "\e65f";}
+  .esri-icon-marketplace:before, .icon-ui-marketplace:before                                 {content: "\e660";}
+  .esri-icon-media:before, .icon-ui-media:before                                             {content: "\e661";}
+  .esri-icon-media2:before, .icon-ui-media2:before                                           {content: "\e662";}
+  .esri-icon-menu:before, .icon-ui-menu:before                                               {content: "\e663";}
+  .esri-icon-mobile:before, .icon-ui-mobile:before                                           {content: "\e664";}
+  .esri-icon-phone:before, .icon-ui-phone:before                                             {content: "\e665";}
+  .esri-icon-navigation:before, .icon-ui-navigation:before                                   {content: "\e666";}
+  .esri-icon-pan:before, .icon-ui-pan:before                                                 {content: "\e667";}
+  .esri-icon-printer:before, .icon-ui-printer:before                                         {content: "\e668";}
+  .esri-icon-pie-chart:before, .icon-ui-pie-chart:before                                     {content: "\e669";}
+  .esri-icon-chart:before, .icon-ui-chart:before                                             {content: "\e66a";}
+  .esri-icon-line-chart:before, .icon-ui-line-chart:before                                   {content: "\e66b";}
+  .esri-icon-question:before, .icon-ui-question:before                                       {content: "\e66c";}
+  .esri-icon-resend-invitation:before, .icon-ui-resend-invitation:before                     {content: "\e66d";}
+  .esri-icon-rotate:before, .icon-ui-rotate:before                                           {content: "\e66e";}
+  .esri-icon-save:before, .icon-ui-save:before                                               {content: "\e66f";}
+  .esri-icon-settings:before, .icon-ui-settings:before                                       {content: "\e670";}
+  .esri-icon-settings2:before, .icon-ui-settings2:before                                     {content: "\e671";}
+  .esri-icon-share:before, .icon-ui-share:before                                             {content: "\e672";}
+  .esri-icon-sign-out:before, .icon-ui-sign-out:before                                       {content: "\e673";}
+  .esri-icon-support:before, .icon-ui-support:before                                         {content: "\e674";}
+  .esri-icon-user:before, .icon-ui-user:before                                               {content: "\e675";}
+  .esri-icon-time-clock:before, .icon-ui-time-clock:before                                   {content: "\e676";}
+  .esri-icon-trash:before, .icon-ui-trash:before                                             {content: "\e677";}
+  .esri-icon-upload:before, .icon-ui-upload:before                                           {content: "\e678";}
+  .esri-icon-download:before, .icon-ui-download:before                                       {content: "\e679";}
+  .esri-icon-zoom-in-magnifying-glass:before, .icon-ui-zoom-in-magnifying-glass:before       {content: "\e67a";}
+  .esri-icon-search:before, .icon-ui-search:before                                           {content: "\e67b";}
+  .esri-icon-zoom-out-magnifying-glass:before, .icon-ui-zoom-out-magnifying-glass:before     {content: "\e67c";}
+  .esri-icon-locked:before, .icon-ui-locked:before                                           {content: "\e67d";}
+  .esri-icon-unlocked:before, .icon-ui-unlocked:before                                       {content: "\e67e";}
+  .esri-icon-favorites:before, .icon-ui-favorites:before                                     {content: "\e67f";}
+}
+
+@if $include-icon-font == true {
+  @include icon-font();
+}
