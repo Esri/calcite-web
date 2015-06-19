@@ -17,6 +17,9 @@
 - Clicking a dropdown button when the dropdown is open closes the dropdown
 - Ie9 Shim for `<main>`
 - Ie9 Shim for `<input>` line height
+- Ie9 Shim for `.tooltip` line height
+- Prefixerize transform property in tooltips
+
 
 ## 0.9.2
 
