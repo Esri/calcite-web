@@ -43,6 +43,8 @@ img {
 .ie9 select {
   background-image: none;
   padding-right: 0.775rem; }
+.ie9 .tooltip:after {
+  line-height: 1.5; }
 
 .clearfix:after, .grid-container:after, [class*="column-"]:last-of-type:after, form:after, fieldset:after {
   content: '';
@@ -3951,7 +3953,6 @@ table {
     padding: 0.3875rem 0.775rem;
     font-size: 0.875rem;
     line-height: 1.55rem;
-    line-height: 1.5;
     color: white;
     text-align: center;
     word-wrap: break-word;
@@ -4003,6 +4004,10 @@ table {
   border-bottom: 5px solid transparent; }
 
 .tooltip:after, .tooltip-bottom:after {
+  -webkit-transform: translateX(50%);
+  -moz-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  -o-transform: translateX(50%);
   transform: translateX(50%); }
 
 .tooltip-left:after {
@@ -4011,6 +4016,10 @@ table {
   bottom: 50%;
   margin-right: 5px;
   margin-bottom: inherit;
+  -webkit-transform: translateY(50%);
+  -moz-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  -o-transform: translateY(50%);
   transform: translateY(50%); }
 .tooltip-left:before {
   top: 50%;
@@ -4026,6 +4035,10 @@ table {
   bottom: 50%;
   left: 100%;
   margin-left: 5px;
+  -webkit-transform: translateY(50%);
+  -moz-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  -o-transform: translateY(50%);
   transform: translateY(50%); }
 .tooltip-right:before {
   top: 50%;
@@ -4047,6 +4060,10 @@ table {
 .tooltip-multiline.tooltip-bottom:after, .tooltip-multiline.tooltip-top:after {
   right: auto;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
   transform: translateX(-50%); }
 .tooltip-multiline.tooltip-left:after, .tooltip-multiline.tooltip-right:after {
   right: 100%; }
