@@ -14,10 +14,6 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
   .sign-in {
     padding-top: 0.75*$baseline
   }
-
-  a {
-    background-image: none;
-  }
 }
 
   @mixin top-nav-title {
@@ -55,10 +51,19 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
       color: $blue;
       @include prefixer(background-image, $topnav-link-overline, webkit moz o);
       background-image: $topnav-link-overline;
+      a {
+        color: $blue;
+      }
     }
     &.is-active {
       @include prefixer(background-image, $topnav-link-overline, webkit moz o);
       background-image: $topnav-link-overline;
+    }
+    a {
+      color: $off-black;
+      &:hover {
+        background-image: none;
+      }
     }
     img {
       width: 20px;
@@ -80,10 +85,10 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
     }
   }
 
-@mixin sign-in {
-  float: right;
-  margin-top: -0.7rem;
-}
+  @mixin sign-in {
+    float: right;
+    margin-top: -0.7rem;
+  }
 
 @if $include-top-nav == true {
   .top-nav {@include top-nav();}
