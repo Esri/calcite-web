@@ -29,7 +29,7 @@ If the mixin accepts arguments, pass them into the parenthesis:
 | [`calc`](#calc)                               | `$property, $value`            |
 | [`clearfix`](#clearfix)                       | none                           |
 | [`keyframes`](#keyframes)                     | `$name`                        |
-| [`placeholder-color`](#placeholder-color)                       | `$color` |
+| [`placeholder`](#placeholder)                       |`$property`,  `$color` |
 | [`prefixer`](#prefixer)                       | `$property, $value, $prefixes` |
 | [`respond-to`](#respond-to)                   | `$max, $mi, $type`             |
 | [`transform`](#transform)                     | `$property`                    |
@@ -128,12 +128,12 @@ Now you can use the [animation mixin](#animation) as a named animation like this
 ```
 
 
-#### Placeholder Color
+#### Placeholder
 
 Wraps the wide array of input placeholder selectors across browsers.
 
 ```
-@include placeholder-color($dark-blue);
+@include placeholder('color', $dark-blue);
 ```
 
 #### Prefixer
