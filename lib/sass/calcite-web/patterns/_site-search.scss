@@ -6,42 +6,16 @@
 
 
 @mixin site-search() {
-  position: relative;
   margin-top: 0.75*$baseline;
-  width: 100px;
 
   input[type="search"], input[type="text"] {
   }
-
-  &.is-active {
-      .site-search-form {
-      }
-      input[type="search"], input[type="text"] {
-      }
-      .site-search-button {
-      }
-      .site-search-toggle {
-      }
-  }
 }
 
-  @mixin site-search-form() {
 
-  }
-  @mixin site-search-toggle() {
-
-  }
-  @mixin site-search-button() {
-
-    &:hover {
-
-    }
-  }
 
 
 @if $include-site-search {
   .site-search { @include site-search(); }
-    .site-search-form { @include site-search-form(); }
-    .site-search-toggle { @include site-search-toggle(); }
-    .site-search-button { @include site-search-button(); }
+
 }
