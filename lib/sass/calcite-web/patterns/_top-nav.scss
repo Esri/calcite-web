@@ -9,10 +9,12 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
   @extend .avenir-regular;
   border-bottom: 1px solid $lightest-gray;
 
-  .user-nav,
-  .esri-logo,
+  .esri-logo {
+    padding-top: 1rem;
+  }
+
   .sign-in {
-    padding-top: 0.75*$baseline
+    padding-top: $baseline
   }
 }
 
@@ -20,7 +22,7 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
     @include font-size(0);
     float: left;
     margin-right: 2rem;
-    line-height: 3rem;
+    line-height: 3.75rem;
     color: $off-black;
     &:hover {
       color: $blue;
@@ -36,15 +38,12 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
     .top-nav-link + .top-nav-link {
       margin-left: .75em;
     }
-    &.right {
-      float: right;
-    }
   }
 
   @mixin top-nav-link {
     @include font-size(-1);
     color: $off-black;
-    padding: .75rem 0;
+    padding: .75*$baseline 0;
     line-height: 1.5rem;
     display: inline-block;
     &:hover {

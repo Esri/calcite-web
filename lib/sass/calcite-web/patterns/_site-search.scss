@@ -8,7 +8,7 @@
 
 
 @mixin site-search() {
-  margin-top: 0.75*$baseline;
+  margin-top: 0.25*$baseline;
 
   input[type="search"] {
     border-color: $dark-blue;
@@ -40,6 +40,7 @@
 
   @mixin site-search-form() {
     @include input-group();
+    position: relative;
     width: 8rem;
     @include transition($transition);
   }
@@ -48,8 +49,8 @@
     color: $dark-blue;
     position: absolute;
     z-index: 1;
-    left: 1.25rem;
-    top: 2.25rem;
+    left: 0.75rem;
+    top: 0.5rem;
   }
 
   @mixin site-search-input() {
