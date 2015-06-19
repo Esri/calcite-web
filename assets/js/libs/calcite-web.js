@@ -243,8 +243,11 @@
         preventDefault(e);
         stopPropagation(e);
         var dropdown = closest('js-dropdown', toggle);
+        var isOpen = hasClass(dropdown, 'is-active');
         closeAllDropdowns();
-        addClass(dropdown, 'is-active');
+        if (!isOpen) {
+          addClass(dropdown, 'is-active');
+        }
         addEvent(document.body, click(), closeAllDropdowns);
       });
     }
@@ -524,7 +527,7 @@
         addClass(searchContainer, 'is-active');
       }
 
-    };
+    }
 
     searchForms.forEach(function (search) {
       addEvent(search, 'focusin', toggleForm);
