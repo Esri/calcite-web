@@ -62,6 +62,14 @@
     max-width: 100%;
     height: auto;
   }
+
+  .ie9 {
+    main {
+      display: block;
+    }
+
+
+  }
 }
 
 @if $include-reset == true {

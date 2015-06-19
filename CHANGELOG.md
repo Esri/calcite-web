@@ -13,6 +13,9 @@
 ### Removed
 - `btn-orange`
 
+### Fixed
+- Clicking a dropdown button when the dropdown is open closes the dropdown
+
 ## 0.9.2
 
 ### Modified
