@@ -16,6 +16,7 @@
 ### Fixed
 - Clicking a dropdown button when the dropdown is open closes the dropdown
 - Ie9 Shim for `<main>`
+- Ie9 Shim for `<input>` line height
 
 ## 0.9.2
 
