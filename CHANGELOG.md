@@ -3,9 +3,12 @@
 ### Modified
 - No button borders except on hover
 - Darken button colors for accessibility.
+- Top Nav finalized
 
 ### Added
 - `btn-white`
+- `placeholder` mixin
+- Site Search pattern
 
 ### Removed
 - `btn-orange`
