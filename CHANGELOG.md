@@ -13,6 +13,15 @@
 ### Removed
 - `btn-orange`
 
+### Fixed
+- Clicking a dropdown button when the dropdown is open closes the dropdown
+- Ie9 Shim for `<main>`
+- Ie9 Shim for `<input>` line height
+- Ie9 Shim for `.tooltip` line height
+- Prefixerize transform property in tooltips
+- Resizing window recalculates and rebind stickies
+
+
 ## 0.9.2
 
 ### Modified
