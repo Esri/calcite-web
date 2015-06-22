@@ -10,7 +10,8 @@
     <aside class="side-nav" aria-role="complementary">
       {% for group in data.table_of_contents[section].navigation %}
         <h4 class="side-nav-title">{{ group.group }}</h4>
-        <nav aria-role="navigation" aria-labelby="sidenav">
+        <!-- <nav aria-role="navigation" aria-labelledby="sidenav"> -->
+        <nav aria-role="navigation">
           {% for page in group.pages %}
             {% if page.title == 'Overview' %}
               <a href="#{{group.group | replace(" ", "-") | lower}}" class="side-nav-link">{{page.title}}</a>
