@@ -1,0 +1,60 @@
+// ┌─────────┐
+// │ Sidenav │
+// └─────────┘
+//  ↳ http://esri.github.io/calcite-web/patterns/#side-nav
+//  ↳ patterns → _side-nav.md
+
+@mixin side-nav() {
+  @include box-sizing(border-box);
+  padding: 0;
+  border: 1px solid $lightest-gray;
+  border-top: none;
+  @extend .avenir-regular;
+  background-color: $white;
+}
+
+  @mixin side-nav-title() {
+    margin: 0;
+    padding: $baseline/3;
+    @extend .avenir-regular;
+    @include font-size(-1);
+    background-color: $off-white;
+    border-top: 1px solid $lightest-gray;
+  }
+
+  @mixin side-nav-link() {
+    display: block;
+    @include box-sizing(border-box);
+    padding: $baseline/3;
+    @include font-size(-2);
+    color: $darker-gray;
+    background-color: $white;
+    border-top: 1px solid $lightest-gray;
+    @include transition(all $transition);
+    &:after {
+      content: "»";
+      opacity: 0;
+      float: right;
+      padding: 0 $baseline * 0.25;
+      @include transition(all $transition);
+      @include transform(translate3d(0,0,0));
+    }
+    &:hover {
+      @include no-hover-effect();
+      color: $dark-gray;
+      &:after {
+        opacity: 1;
+        @include transform(translate3d(8px,0,0));
+      }
+    }
+    &.is-active {
+      border-left: 3px solid $blue;
+      text-indent: -3px;
+    }
+  }
+
+@if $include-side-nav == true {
+  .side-nav {@include side-nav();}
+    .side-nav-title {@include side-nav-title();}
+    .side-nav-link {@include side-nav-link();}
+}
