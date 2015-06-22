@@ -1,3 +1,8 @@
+## Unreleased
+
+### Modified
+- Tabs get same style on hover and focus
+
 ## 0.10.1
 
 ### Modified
