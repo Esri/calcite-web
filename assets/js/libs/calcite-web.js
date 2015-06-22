@@ -1,4 +1,4 @@
-/* calcite-web - v0.10.0 - 2015-06-19
+/* calcite-web - v0.10.1 - 2015-06-22
 *  https://github.com/esri/calcite-web
 *  Copyright (c) 2015 Environmental Systems Research Institute, Inc.
 *  Apache 2.0 License */
@@ -9,7 +9,7 @@
   // └────────────┘
   // define all public api methods (excluding patterns)
   var calcite = {
-    version: 'v0.10.0',
+    version: 'v0.10.1',
     click: click,
     addEvent: addEvent,
     removeEvent: removeEvent,
@@ -542,16 +542,22 @@
   // sticks things to the window
   calcite.sticky = function () {
     var elements = findElements('.js-sticky');
-    var stickies = elements.map(function (el) {
-      var offset = el.offsetTop;
-      var dataTop = el.getAttribute('data-top') || 0;
-      return {
-        active: false,
-        top: offset - parseInt(dataTop, 0),
-        shim: el.cloneNode('deep'),
-        element: el
-      };
-    });
+
+    function calculateStickyPositions () {
+      var stickies = elements.map(function (el) {
+        var offset = el.offsetTop;
+        var dataTop = el.getAttribute('data-top') || 0;
+        return {
+          active: false,
+          top: offset - parseInt(dataTop, 0),
+          shim: el.cloneNode('deep'),
+          element: el
+        };
+      });
+      return stickies;
+    }
+
+    var stickies = calculateStickyPositions();
 
     function handleScroll(item, offset) {
       var el = item.element;
@@ -573,13 +579,20 @@
       }
     }
 
-    addEvent(window, 'scroll', function () {
+    function bindStickies (e) {
       var offset = window.pageYOffset;
       stickies.forEach(function (sticky) {
         handleScroll(sticky, offset);
       });
-    });
+    }
 
+    addEvent(window, 'scroll', bindStickies);
+
+    window.onresize = function() {
+      stickies = calculateStickyPositions();
+      removeEvent(window, 'scroll', bindStickies);
+      addEvent(window, 'scroll', bindStickies);
+    };
   };
 
   // ┌────────────────────┐
