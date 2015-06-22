@@ -1,11 +1,11 @@
 {
   "name": "calcite-web",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "description": "SASS & CSS Framework for Esri websites",
   "private": true,
   "homepage": "https://github.com/esri/calcite-web",
   "scripts": {
-    "test": "grunt test",
+    "test": "grunt test && npm run a11y",
     "gh-release": "gh-release",
     "acetate": "acetate build -i docs/source -o docs/build -c docs/acetate.conf.js",
     "a11y": "a11y local.arcgis.com:8888",
