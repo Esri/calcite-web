@@ -9,6 +9,9 @@
 ### Added
 - `list-plain` for plain unordered lists (no bullets)
 
+### Fixed
+- Fix bug with columns inside panels
+
 ## 0.10.1
 
 ### Modified
