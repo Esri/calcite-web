@@ -22,12 +22,14 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
     @include font-size(0);
     float: left;
     margin-right: 2rem;
-    line-height: 3.75rem;
+    padding: .75*$baseline 0;
+    line-height: 1.5rem;
     color: $off-black;
     &:hover {
       color: $blue;
       @include prefixer(background-image, $topnav-link-overline, webkit moz o);
       background-image: $topnav-link-overline;
+      text-decoration: none;
     }
   }
 
