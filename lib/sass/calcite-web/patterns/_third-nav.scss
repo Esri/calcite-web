@@ -19,9 +19,6 @@
     color: $darkest-gray;
     @include font-size(-2);
     margin-right: $baseline * 0.75;
-    &:hover {
-      @include link-hover-effect();
-    }
     &.is-active {
       @extend .avenir-bold;
     }

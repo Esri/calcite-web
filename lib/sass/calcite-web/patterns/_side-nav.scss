@@ -40,7 +40,7 @@
       @include transform(translate3d(0,0,0));
     }
     &:hover {
-      @include no-hover-effect();
+      text-decoration: none;
       color: $dark-gray;
       &:after {
         opacity: 1;

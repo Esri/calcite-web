@@ -35,6 +35,7 @@ $subnav-link-underline: linear-gradient(to top, transparent 94%, $white 96%, $wh
     &:hover, &:focus {
       background-color: rgba(0, 0, 0, .3);
       color: $white;
+      text-decoration: none;
       @include prefixer(background-image, $subnav-link-underline, webkit moz o);
       background-image: $subnav-link-underline;
     }

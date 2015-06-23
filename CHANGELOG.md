@@ -3,6 +3,8 @@
 ### Modified
 - Tabs get same style on hover and focus
 - `inline` helper class is now named `inline-block`
+- Links now have `text-decoration: underline` on hover instead of cool background hack
+- Updated footer with legal copyright information
 
 ### Added
 - `list-plain` for plain unordered lists (no bullets)
