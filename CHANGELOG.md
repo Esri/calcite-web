@@ -4,6 +4,9 @@
 - Tabs get same style on hover and focus
 - `inline` helper class is now named `inline-block`
 
+### Added
+- `list-plain` for plain unordered lists (no bullets)
+
 ## 0.10.1
 
 ### Modified
