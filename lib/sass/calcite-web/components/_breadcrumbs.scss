@@ -8,12 +8,8 @@
   @extend .avenir-regular;
   @include font-size(-2);
   @include text-color($dark-gray);
-  @include no-hover-effect();
   a {
     @include link-color($dark-gray, $blue);
-    &:hover {
-      @include no-hover-effect();
-    }
   }
 }
 
@@ -22,8 +18,12 @@
     &:after {
       @include font-size(-3);
       content: "/";
+      @include text-color($light-gray);
       padding: 0 0.25em 0 0.5em;
       opacity: 0.5;
+    }
+    &:hover:after {
+      text-decoration: none;
     }
 
     &.is-active {

@@ -102,10 +102,10 @@
   a {
     color: $link-color;
     text-decoration: none;
-    @include transition(color $transition);
+    @include transition(color $transition, text-decoration $transition);
     &:hover {
       color: $link-hover;
-      @include link-hover-effect();
+      text-decoration: underline;
     }
   }
 

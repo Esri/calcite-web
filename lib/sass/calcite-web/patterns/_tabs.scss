@@ -24,8 +24,12 @@
   &:first-child {
     border-left: 1px solid $lighter-gray;
   }
-  &:hover {
+  &:focus {
+    outline: none;
+  }
+  &:hover, &:focus {
     background-color: mix($white, $off-white);
+    text-decoration: none;
     @include prefixer(background-image,linear-gradient(to top, transparent 94%, $blue 96%, $blue 100%), webkit moz o);
     background-image:linear-gradient(to top, transparent 94%, $blue 96%, $blue 100%);
   }
