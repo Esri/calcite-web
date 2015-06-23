@@ -40,7 +40,7 @@
   .text-light        {@include text-light();}
   .text-ellipsis     {@include text-ellipsis();}
   .list-numbered     {@include list-numbered();}
-  .list-bulleted     {@include list-bulleted();}
+  .list-plain        {@include list-plain();}
 
   .font-size--3 { @include font-size(-3); }
   .font-size--2 { @include font-size(-2); }
@@ -54,5 +54,4 @@
   .font-size-6  { @include font-size(6); }
   .font-size-7  { @include font-size(7); }
   .font-size-8  { @include font-size(8); }
-
 }

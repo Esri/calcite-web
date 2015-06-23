@@ -72,14 +72,18 @@
   text-overflow: ellipsis;
 }
 
-// ┌───────────────┐
-// │ List Bulleted │
-// └───────────────┘
-//  ↳ http://esri.github.io/calcite-web/type/#list-bulleted
-//  ↳ type → _list-bulleted.md
+// ┌────────────┐
+// │ List Plain │
+// └────────────┘
+//  ↳ http://esri.github.io/calcite-web/type/#list-plain
+//  ↳ type → _list-plain.md
 
-@mixin list-bulleted() {
-  list-style-type: circle;
+@mixin list-plain() {
+  margin: $baseline/4 0;
+  li {
+    list-style-type: none;
+    margin-left: 0;
+  }
 }
 
 // ┌───────────────┐
@@ -155,18 +159,5 @@
   color: $value;
   &:hover {
     color: $light-value;
-    @include prefixer(background-image,linear-gradient(to bottom, transparent 94%, $light-value 96%, $light-value 100%), webkit moz o);
-    background-image:linear-gradient(to bottom, transparent 94%, $light-value 96%, $light-value 100%);
   }
-}
-
-$default-link-underline: linear-gradient(to bottom, transparent 94%, $dark-blue 96%, $dark-blue 100%);
-@mixin link-hover-effect() {
-  @include prefixer(background-image, $default-link-underline, webkit moz o);
-  background-image: $default-link-underline;
-}
-
-@mixin no-hover-effect() {
-  @include prefixer(background-image, none, webkit moz o);
-  background-image: none;
 }

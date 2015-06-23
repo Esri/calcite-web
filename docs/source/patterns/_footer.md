@@ -5,7 +5,7 @@ Standard footer for ArcGIS and Esri properties. The footer in Calcite Web is 'st
   <div class="container">
     <nav class="column-6">
       <h6>Arc<span>GIS</span></h6>
-      <ul class="list-bulleted">
+      <ul class="list-plain">
         <li><a href="http://www.arcgis.com/about/">Home</a></li>
         <li><a href="http://www.arcgis.com/about/features.html">Features</a></li>
         <li><a href="http://www.arcgis.com/about/pricing.html">Pricing</a></li>
@@ -14,7 +14,7 @@ Standard footer for ArcGIS and Esri properties. The footer in Calcite Web is 'st
 
     <nav class="column-6">
       <h6>Arc<span>GIS</span> for Developers</h6>
-      <ul>
+      <ul class="list-plain">
         <li><a href="/en/">Home</a></li>
         <li><a href="/en/features/">Features</a></li>
         <li><a href="http://blogs.esri.com/esri/arcgis/category/developer/">Blog</a></li>
@@ -23,7 +23,7 @@ Standard footer for ArcGIS and Esri properties. The footer in Calcite Web is 'st
 
     <nav class="column-6">
       <h6>About Esri</h6>
-      <ul>
+      <ul class="list-plain">
         <li><a href="http://www.esri.com/about-esri/">About Us</a></li>
         <li><a href="http://www.esri.com/careers/">Careers</a></li>
         <li><a href="http://blogs.esri.com/esri/esri-insider/">Insiders Blog</a></li>
@@ -42,7 +42,7 @@ Standard footer for ArcGIS and Esri properties. The footer in Calcite Web is 'st
       </section>
     </nav>
     <div class="column-24">
-      <p><small>© Copyright 2013 Environmental Systems Research Institute, Inc. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal/software-license">Legal</a></small></p>
+       <p><small>Copyright © 2015 Esri. All rights reserved. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal">Legal</a></small></p>
     </div>
   </div>
 </footer>
