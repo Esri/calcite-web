@@ -303,6 +303,10 @@
               <a href="#list-numbered" class="side-nav-link">Numbered List</a>
             
           
+            
+              <a href="#list-plain" class="side-nav-link">Plain List</a>
+            
+          
         </nav>
       
         <h4 class="side-nav-title">Defaults</h4>
@@ -981,6 +985,72 @@
         </section>
         <hr>
       
+        <section>
+          
+            <h2 id="list-plain" tabindex="0">Plain List</h2>
+          
+
+          <p>Provides a way to clear the styles for lists. For example, we use this pattern in the footer to clear the typical list styles for a clean, left aligned appearance.</p>
+
+
+          
+            <h3 class="leader-2" tabindex="0">Modifiers</h3>
+            <div class="styleguide-modifiers">
+              <div class="styleguide-modifier-example">
+                <ul class="modifier-class">
+  <li>Amazing</li>
+  <li>discotheques</li>
+  <li>
+    <p>jukeboxes</p>
+    <ul class="modifier-class">
+      <li>Amazing</li>
+      <li>discotheques</li>
+      <li>jukeboxes</li>
+    </ul>
+  </li>
+</ul>
+              </div>
+              
+                <div class="styleguide-modifier-example">
+                  <ul class="list-plain">
+  <li>Amazing</li>
+  <li>discotheques</li>
+  <li>
+    <p>jukeboxes</p>
+    <ul class="list-plain">
+      <li>Amazing</li>
+      <li>discotheques</li>
+      <li>jukeboxes</li>
+    </ul>
+  </li>
+</ul>
+                  <code class="modifier-name">.list-plain</code>
+                </div>
+              
+            </div>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Amazing<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>discotheques<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>jukeboxes<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"modifier-class"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Amazing<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>discotheques<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>jukeboxes<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+</code></pre>
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
     
       <h1 class="text-rule" id="defaults" tabindex="0">Defaults</h1>
       
@@ -1034,11 +1104,11 @@
     
 
     <!-- Footer Pattern -->
-    <footer class="footer leader-3" role="contentinfo">
+    <footer class="footer leader-3 link-dark-gray" role="contentinfo">
       <div class="grid-container">
           <nav class="column-6">
             <h6>Styleguides</h6>
-            <ul>
+            <ul class="list-plain">
               <li><a href="../styleguides/javascript/">JavaScript</a></li>
               <li><a href="../styleguides/css/">CSS</a></li>
               <li><a href="../styleguides/html/">HTML</a></li>
@@ -1047,7 +1117,7 @@
 
           <nav class="column-6">
             <h6>Resources</h6>
-            <ul>
+            <ul class="list-plain">
               <li><a href="../migration-guide/">Migration Guide</a></li>
               <li><a href="https://github.com/Esri/calcite-web/releases/">Releases</a></li>
               <li><a href="https://github.com/Esri/calcite-web/blob/master/CONTRIBUTING.md">Contributing</a></li>
@@ -1058,7 +1128,7 @@
 
           <nav class="column-6">
             <h6>About Esri</h6>
-            <ul>
+            <ul class="list-plain">
               <li><a href="http://www.esri.com/about-esri/">About Us</a></li>
               <li><a href="http://www.esri.com/careers/">Careers</a></li>
               <li><a href="http://blogs.esri.com/esri/esri-insider/">Insiders Blog</a></li>
@@ -1067,17 +1137,18 @@
             </ul>
           </nav>
 
-          <nav class="column-6 padding-leader-half">
-            <a class="esri-logo" href="http://esri.com"></a>
-            <section class="footer-social-nav">
+          <nav class="column-6">
+            <a class="esri-logo" href="http://esri.com" aria-label="Esri Home"></a>
+            <section class="footer-social-nav leader-1">
               <a class="icon-social-twitter" aria-label="Esri on Twitter"  href="https://twitter.com/Esri/"></a>
               <a class="icon-social-facebook" aria-label="Esri on Facebook"  href="https://www.facebook.com/esrigis/"></a>
               <a class="icon-social-github" aria-label="Esri on GitHub"  href="http://esri.github.com/"></a>
               <a class="icon-social-contact" aria-label="Contact Esri"  href="http://www.esri.com/about-esri/contact/"></a>
             </section>
           </nav>
-          <div class="column-24">
-            <p><small>© Copyright 2013 Environmental Systems Research Institute, Inc. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal/software-license">Legal</a></small></p>
+
+          <div class="column-24 leader-1">
+            <p><small>Copyright © 2015 Esri. All rights reserved. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal">Legal</a></small></p>
           </div>
         </div>
 
