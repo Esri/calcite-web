@@ -42,7 +42,7 @@ Standard footer for ArcGIS and Esri properties. The footer in Calcite Web is 'st
       </section>
     </nav>
     <div class="column-24">
-      <p><small>© Copyright 2013 Environmental Systems Research Institute, Inc. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal/software-license">Legal</a></small></p>
+       <p><small>Copyright © 2015 Esri. All rights reserved. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal">Legal</a></small></p>
     </div>
   </div>
 </footer>
