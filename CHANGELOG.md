@@ -2,6 +2,7 @@
 
 ### Modified
 - Tabs get same style on hover and focus
+- `inline` helper class is now named `inline-block`
 
 ## 0.10.1
 
