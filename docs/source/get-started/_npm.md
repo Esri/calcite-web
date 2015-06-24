@@ -6,7 +6,7 @@ npm install --save-dev Esri/calcite-web#v0.10.1
 
 You must add the current version in order to get the `dist/` folder.
 
-Then, if you're using sass, be sure to add `node_modules/calcite-web/dist/sass/` to your load path along with the `list-files.rb` script (used for automatically generating sass from a folder of icons. If you're using `grunt-contrib-sass` you add that like this:
+Then, if you're using sass, be sure to add `node_modules/calcite-web/dist/sass/` to your load path. If you're using `grunt-contrib-sass` you add that like this:
 
 ```js
 'sass': {
