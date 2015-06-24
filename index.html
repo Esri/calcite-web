@@ -390,11 +390,9 @@ sass_dir = <span class="hljs-string">"sass"</span>
           
 
           <p>To install Calcite Web with npm, type:</p>
-<pre><code class="bash">npm install --save-dev git://github.com/Esri/calcite-web.git
+<pre><code>npm <span class="hljs-keyword">install</span> --save-dev Esri/calcite-web<span class="hljs-comment">#v0.10.1</span>
 </code></pre>
-<p>You can also use a specific release by appending the version number to the end:</p>
-<pre><code class="bash">npm install --save-dev git://github.com/Esri/calcite-web.git<span class="hljs-comment">#v0.0.10</span>
-</code></pre>
+<p>You must add the current version in order to get the <code>dist/</code> folder.</p>
 <p>Then, if you're using sass, be sure to add <code>node_modules/calcite-web/dist/sass/</code> to your load path along with the <code>list-files.rb</code> script (used for automatically generating sass from a folder of icons. If you're using <code>grunt-contrib-sass</code> you add that like this:</p>
 <pre><code class="js"><span class="hljs-string">'sass'</span>: {
   target: {
