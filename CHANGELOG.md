@@ -1,4 +1,5 @@
-## unreleased
+## Unreleased
+
 ### Fixed
 - Columns collapse properly without a max-width
 - Minor documentation fixes
@@ -7,6 +8,7 @@
 ### Added
 - Multiple languages for type treatments
 - Cyrillic font face declarations
+- More intentional responsive design for subnav pattern
 
 ## 0.10.2
 
