@@ -18,6 +18,8 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
   }
 }
 
+
+
   @mixin top-nav-title {
     @include font-size(0);
     float: left;
@@ -99,4 +101,16 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
     .top-nav-link {@include top-nav-link();}
     .top-nav-dropdown {@include top-nav-dropdown();}
   .sign-in {@include sign-in();}
+
+  // TEMP. REMOVE FOR 1.0
+  // UNDOCUMENTED UNOFFICIAL FOR REAL DONT USE THIS
+  .top-nav-hover-top {
+    .top-nav-title:hover,
+    .top-nav-title.is-active,
+    .top-nav-link:hover,
+    .top-nav-link.is-active  {
+      @include prefixer(background-image, linear-gradient(to bottom, transparent 92%, $blue 93%, $blue 100%), webkit moz o);
+      background-image: linear-gradient(to bottom, transparent 92%, $blue 93%, $blue 100%);
+    }
+  }
 }

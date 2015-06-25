@@ -5,6 +5,7 @@
 - `inline` helper class is now named `inline-block`
 - Links now have `text-decoration: underline` on hover instead of cool background hack
 - Updated footer with legal copyright information
+- List style type disc rather than circle
 
 ### Added
 - `list-plain` for plain unordered lists (no bullets)
