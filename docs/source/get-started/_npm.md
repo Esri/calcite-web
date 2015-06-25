@@ -1,14 +1,10 @@
 To install Calcite Web with npm, type:
 
-```bash
-npm install --save-dev git://github.com/Esri/calcite-web.git
+```
+npm install --save-dev Esri/calcite-web#v0.10.1
 ```
 
-You can also use a specific release by appending the version number to the end:
-
-```bash
-npm install --save-dev git://github.com/Esri/calcite-web.git#v0.0.10
-```
+You must add the current version in order to get the `dist/` folder.
 
 Then, if you're using sass, be sure to add `node_modules/calcite-web/dist/sass/` to your load path along with the `list-files.rb` script (used for automatically generating sass from a folder of icons. If you're using `grunt-contrib-sass` you add that like this:
 
