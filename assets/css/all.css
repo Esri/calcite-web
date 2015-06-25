@@ -84,14 +84,14 @@ img {
   max-width: 100%;
   height: auto; }
 
-.ie9 main {
+.ie9 main, .ie10 main {
   display: block; }
-.ie9 input[type='date'], .ie9 input[type='datetime'], .ie9 input[type='datetime-local'], .ie9 input[type='email'], .ie9 input[type='time'], .ie9 input[type='week'], .ie9 input[type='search'], .ie9 input[type='tel'], .ie9 input[type='text'], .ie9 input[type='url'], .ie9 input[type='number'], .ie9 input[type='password'], .ie9 input[type='month'] {
+.ie9 input[type='date'], .ie9 input[type='datetime'], .ie9 input[type='datetime-local'], .ie9 input[type='email'], .ie9 input[type='time'], .ie9 input[type='week'], .ie9 input[type='search'], .ie9 input[type='tel'], .ie9 input[type='text'], .ie9 input[type='url'], .ie9 input[type='number'], .ie9 input[type='password'], .ie9 input[type='month'], .ie10 input[type='date'], .ie10 input[type='datetime'], .ie10 input[type='datetime-local'], .ie10 input[type='email'], .ie10 input[type='time'], .ie10 input[type='week'], .ie10 input[type='search'], .ie10 input[type='tel'], .ie10 input[type='text'], .ie10 input[type='url'], .ie10 input[type='number'], .ie10 input[type='password'], .ie10 input[type='month'] {
   height: 2.25rem; }
-.ie9 select {
+.ie9 select, .ie10 select {
   background-image: none;
   padding-right: 0.775rem; }
-.ie9 .tooltip:after {
+.ie9 .tooltip:after, .ie10 .tooltip:after {
   line-height: 1.5; }
 
 .clearfix:after, .grid-container:after, [class*="column-"]:last-of-type:after, form:after, fieldset:after {
@@ -2979,7 +2979,7 @@ li {
   margin: 0.3875rem 0 0.3875rem 1.5rem; }
 
 ul li {
-  list-style-type: circle; }
+  list-style-type: disc; }
 
 small, sup, sub {
   font-size: 0.8em; }
@@ -4727,14 +4727,16 @@ select::-moz-focusring {
   line-height: 1.55rem;
   float: left;
   margin-right: 2rem;
-  line-height: 3.75rem;
+  padding: 1.1625rem 0;
+  line-height: 1.5rem;
   color: #4c4c4c; }
   .top-nav-title:hover {
     color: #3b8fc4;
     -webkit-background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
     -moz-background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
     -o-background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
-    background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%); }
+    background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
+    text-decoration: none; }
 
 .top-nav-list {
   padding: 0;
@@ -4781,6 +4783,12 @@ select::-moz-focusring {
 .sign-in {
   float: right;
   margin-top: -0.7rem; }
+
+.top-nav-hover-bottom .top-nav-title:hover, .top-nav-hover-bottom .top-nav-title.is-active, .top-nav-hover-bottom .top-nav-link:hover, .top-nav-hover-bottom .top-nav-link.is-active {
+  -webkit-background-image: linear-gradient(to bottom, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
+  -moz-background-image: linear-gradient(to bottom, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
+  -o-background-image: linear-gradient(to bottom, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
+  background-image: linear-gradient(to bottom, transparent 92%, #3b8fc4 93%, #3b8fc4 100%); }
 
 .site-search {
   margin-top: 0.3875rem; }
