@@ -33,6 +33,10 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
       background-image: $topnav-link-overline;
       text-decoration: none;
     }
+    &.icon-ui-menu:before {
+      vertical-align: -1px;
+      padding-right: .5em;
+    }
   }
 
   @mixin top-nav-list {
