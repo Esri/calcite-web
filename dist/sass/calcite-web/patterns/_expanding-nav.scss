@@ -1,0 +1,43 @@
+//┌───────────────┐
+//│ Expanding Nav │
+//└───────────────┘
+// ↳ http://esri.github.io/calcite-web/patterns/#expanding-nav
+// ↳ patterns → _expanding-nav.md
+
+@mixin expanding-nav(){
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $lighter-gray;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  z-index: 40;
+  pointer-events: none;
+  @include transform(translate3d(0,-20px,0));
+  @include transition-prefixed(transform 400ms ease-out, opacity 400ms ease-out, max-height 400ms ease-out);
+  &.is-active {
+    max-height: 100vh;
+    @include transform(translate3d(0,0,0));
+    opacity: 1;
+  }
+}
+
+@mixin expanding-nav-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  @include transition(opacity $transition);
+  &.is-active {
+    opacity: 1;
+  }
+}
+
+@if $include-expanding-nav == true {
+  .expanding-nav {@include expanding-nav();}
+  .expanding-nav-menu {@include expanding-nav-menu();}
+}

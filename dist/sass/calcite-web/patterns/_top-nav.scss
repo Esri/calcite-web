@@ -1,0 +1,116 @@
+// ┌────────┐
+// │ Topnav │
+// └────────┘
+//  ↳ http://esri.github.io/calcite-web/patterns/#top-nav
+//  ↳ patterns → _top-nav.md
+$topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue 100%);
+
+@mixin top-nav {
+  @extend .avenir-regular;
+  border-bottom: 1px solid $lightest-gray;
+
+  .esri-logo {
+    padding-top: 1rem;
+  }
+
+  .sign-in {
+    padding-top: $baseline
+  }
+}
+
+
+
+  @mixin top-nav-title {
+    @include font-size(0);
+    float: left;
+    margin-right: 2rem;
+    padding: .75*$baseline 0;
+    line-height: 1.5rem;
+    color: $off-black;
+    &:hover {
+      color: $blue;
+      @include prefixer(background-image, $topnav-link-overline, webkit moz o);
+      background-image: $topnav-link-overline;
+      text-decoration: none;
+    }
+  }
+
+  @mixin top-nav-list {
+    padding: 0;
+    float: left;
+    @extend .avenir-regular;
+    .top-nav-link + .top-nav-link {
+      margin-left: .75em;
+    }
+  }
+
+  @mixin top-nav-link {
+    @include font-size(-1);
+    color: $off-black;
+    padding: .75*$baseline 0;
+    line-height: 1.5rem;
+    display: inline-block;
+    &:hover {
+      color: $blue;
+      @include prefixer(background-image, $topnav-link-overline, webkit moz o);
+      background-image: $topnav-link-overline;
+      text-decoration: none;
+      a {
+        color: $blue;
+      }
+    }
+    &.is-active {
+      @include prefixer(background-image, $topnav-link-overline, webkit moz o);
+      background-image: $topnav-link-overline;
+    }
+    a {
+      color: $off-black;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    img {
+      width: 20px;
+      height: 20px;
+      vertical-align: -4px;
+    }
+  }
+
+  @mixin top-nav-logo {
+    margin-top: 0.75*$baseline;
+  }
+
+  @mixin top-nav-dropdown {
+    &:after {
+      padding-left: .125em;
+      content: "▼";
+      font-size: .5rem;
+      vertical-align: .125rem;
+    }
+  }
+
+  @mixin sign-in {
+    float: right;
+    margin-top: -0.7rem;
+  }
+
+@if $include-top-nav == true {
+  .top-nav {@include top-nav();}
+    .top-nav-title {@include top-nav-title();}
+    .top-nav-list {@include top-nav-list();}
+    .top-nav-link {@include top-nav-link();}
+    .top-nav-dropdown {@include top-nav-dropdown();}
+  .sign-in {@include sign-in();}
+
+  // TEMP. REMOVE FOR 1.0
+  // UNDOCUMENTED UNOFFICIAL FOR REAL DONT USE THIS
+  .top-nav-hover-top {
+    .top-nav-title:hover,
+    .top-nav-title.is-active,
+    .top-nav-link:hover,
+    .top-nav-link.is-active  {
+      @include prefixer(background-image, linear-gradient(to bottom, transparent 92%, $blue 93%, $blue 100%), webkit moz o);
+      background-image: linear-gradient(to bottom, transparent 92%, $blue 93%, $blue 100%);
+    }
+  }
+}

@@ -1,0 +1,130 @@
+// ┌────────┐
+// │ Tables │
+// └────────┘
+//  ↳ http://esri.github.io/calcite-web/components/#tables
+//  ↳ components → _tables.md
+@mixin table() {
+  width: 100%;
+  background-color: $white;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid $lighter-gray;
+  text-align: left;
+  overflow: auto;
+  @include font-size(-2);
+
+  > thead {
+    background-color: $lightest-gray;
+    border-bottom: 1px solid $lighter-gray;
+    @extend .avenir-regular;
+    @include font-size(0);
+  }
+
+  > tbody {
+    overflow: auto;
+    width: 100%;
+  }
+
+  > tfoot {
+    background-color: $lightest-gray;
+    border-top: 1px solid $lighter-gray;
+  }
+
+  th, td {
+    font-weight: 300;
+    border-left: 1px solid $lighter-gray;
+    border-right: 1px solid $lighter-gray;
+    padding: $baseline/3;
+  }
+
+  tr {
+    border-bottom: 1px solid $lighter-gray;
+    text-align: left;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  caption {
+    color: $gray;
+    caption-side: bottom;
+    line-height: $baseline;
+    padding: $baseline/4 $baseline/2;
+  }
+
+}
+
+  @mixin table-blue() {
+    border: 1px solid $blue;
+
+    > thead {
+      background-color: $blue;
+      border: none;
+      border-bottom: 1px solid $blue;
+      color: $white;
+      tr:nth-child(even) {
+        background-color: $lighter-blue;
+        color: $type-color;
+      }
+    }
+
+    > tfoot {
+      border-top: 1px solid $blue;
+    }
+
+    th, td {
+      border-left: 1px solid $blue;
+      border-right: 1px solid $blue;
+    }
+
+    tr {
+      border-bottom: 1px solid $blue;
+    }
+  }
+
+  @mixin table-plain() {
+    border: none;
+
+    > thead, > tfoot, th, td {
+      background-color: transparent;
+      border: none;
+    }
+
+    tr {
+      border: none;
+      &:nth-child(even){
+          background-color: transparent;
+        td {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  @mixin table-striped() {
+    tr {
+      &:nth-child(even){
+          background-color: $off-white;
+        td {
+          background-color: $off-white;
+        }
+      }
+    }
+    &.table-blue {
+      tr {
+        &:nth-child(even){
+            background-color: $lightest-blue;
+          td {
+            background-color: $lightest-blue;
+          }
+        }
+      }
+    }
+  }
+
+@if $include-tables == true {
+  table {@include table();}
+    .table-blue {@include table-blue();}
+    .table-plain {@include table-plain();}
+    .table-striped {@include table-striped();}
+}
