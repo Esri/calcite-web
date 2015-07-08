@@ -1,3 +1,7 @@
+## unreleased
+### Fixed
+- Columns collapse properly without a max-width
+
 ## 0.10.2
 
 ### Modified
