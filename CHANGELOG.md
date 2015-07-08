@@ -1,6 +1,7 @@
 ## unreleased
 ### Fixed
 - Columns collapse properly without a max-width
+- Minor documentation fixes
 
 ## 0.10.2
 
