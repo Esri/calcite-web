@@ -106,6 +106,7 @@
         .column-#{$n} {
           width: (1) * $container-width;
         }
+      }
       @for $n from 1 through $medium-column-count {
         .#{$medium-class}-column-#{$n}  {
           width: ($n / $medium-column-count) * $container-width;
@@ -118,8 +119,6 @@
         margin-right: -($column-gutter / 2);
       }
     }
-
-
 
     // Small Columns
     @media screen and (max-width: $small - 1) {
