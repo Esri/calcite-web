@@ -3,6 +3,9 @@
 - Columns collapse properly without a max-width
 - Minor documentation fixes
 
+### Added
+- Multiple languages for type treatments
+
 ## 0.10.2
 
 ### Modified
