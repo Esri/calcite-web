@@ -2,6 +2,7 @@
 ### Fixed
 - Columns collapse properly without a max-width
 - Minor documentation fixes
+- Sticky.js no longer relies on scroll, solving window resize bugs
 
 ### Added
 - Multiple languages for type treatments
