@@ -102,6 +102,11 @@
           width: ($n / $medium-column-count) * $container-width;
         }
       }
+      @for $n from $medium-column-count through $default-column-count {
+        .column-#{$n} {
+          width: (1) * $container-width;
+        }
+      }
       @for $n from 1 through $medium-column-count {
         .#{$medium-class}-column-#{$n}  {
           width: ($n / $medium-column-count) * $container-width;
@@ -115,8 +120,6 @@
       }
     }
 
-
-
     // Small Columns
     @media screen and (max-width: $small - 1) {
       @for $n from 1 through $small-column-count {
@@ -124,9 +127,14 @@
           width: ($n / $small-column-count) * $container-width;
         }
       }
-      @for $n from 1 through $small-column-count {
+      @for $n from $small-column-count through $default-column-count {
+        .column-#{$n} {
+          width: (1) * $container-width;
+        }
+      }
+      @for $n from $small-column-count through $default-column-count {
         .#{$medium-class}-column-#{$n}{
-          width: ($n / $small-column-count) * $container-width;
+          width: (1) * $container-width;
         }
       }
       @for $n from 1 through $small-column-count {
