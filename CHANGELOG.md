@@ -5,6 +5,7 @@
 
 ### Added
 - Multiple languages for type treatments
+- Cyrillic font face declarations
 
 ## 0.10.2
 
