@@ -41,12 +41,10 @@
       <!-- <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerleft"> -->
       <nav class="drawer-nav" role="navigation">
         <aside class="side-nav">
-          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
-          <div class="panel padding-trailer-half padding-leader-half">
-            <label class="trailer-0">
-              <input type='search' placeholder='Search'>
-            </label>
-          </div>
+          <h2 class="side-nav-title">Calcite Web</h2>
+          <form class="gutter-left-half gutter-right-half leader-half trailer-half">
+            <input type="search" placeholder="Search" class="leader-0">
+          </form>
             {% for title, sec in data.table_of_contents %}
               {% if sec.base == "get-started" %}
                 <a href="{{relativePath}}" class="side-nav-link">{{ sec.title }}</a>
