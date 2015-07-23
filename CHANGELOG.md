@@ -1,3 +1,8 @@
+## 0.10.4
+
+### Fixed
+- `.esri-logo` uses `$image-path` instead of hard-coded location
+
 ## 0.10.3
 
 ### Fixed
