@@ -84,13 +84,30 @@ Below is a list of things that will need to be changed to migrate to Calcite Web
 
 ##### Type
 
+1. Text modifiers are now formatted `.text-{MODIFIER}` instead of `.{MODIFIER}-text`. Below is a list of new modifiers:
+  - `.center-text` => `.text-center`
+  - `.white-text` => `.text-white`
+  - `.red-text` => `.text-red`
+  - `.error-text` => `.text-red`
+  - `.green-text` => `.text-green`
+  - `.success-text` => `.text-green`
+  - `.overflow-ellipsis` => `.text-ellipses`
+2. Removed `.show-visited-links`
+
 ##### Grid
+
+1. There are no rows. If you need to group columns you can just put columns inside of a `column-24`
+2. `container` is now `grid-container`. This solved problems with other technologies also using a `container` class.
+3. Columns are always the same size, so layouts with nested columns will need to redone.
 
 ##### Layout
 
 ##### Color
 
 ##### Icons
+
+1. Icons are a completely different set. Most Tailcoat icons have a counterpart in Calcite Web, but some don't.
+2. Icons use the class prefix `.icon-ui-` not just `.icon-`
 
 ##### Components
 

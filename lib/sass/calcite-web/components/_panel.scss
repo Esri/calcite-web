@@ -22,18 +22,21 @@
     background-color: $darkest-gray;
     @extend .text-white;
     border: 1px solid $off-black;
+    a { @include link-color($lightest-blue, $lighter-blue); }
   }
 
   @mixin panel-dark-blue() {
     background-color: $Brand_Blue_250;
     @extend .text-white;
     border: 1px solid $darker-blue;
+    a { @include link-color($lighter-blue, $light-blue); }
   }
 
   @mixin panel-blue() {
     background-color: $blue;
     @extend .text-white;
     border: 1px solid $dark-blue;
+    a { @include link-color($lightest-blue, $lighter-blue); }
   }
 
   @mixin panel-light-blue() {
