@@ -1,10 +1,11 @@
-## Unreleased
+## 0.10.5
 
 ### Added
 - `.link-light-blue`
 
-### Modified
+### Fixed
 - Style links inside of panels
+- Pre and Post scoping properly
 
 ## 0.10.4
 
@@ -15,7 +16,6 @@
 
 ### Fixed
 - Columns collapse properly without a max-width
-- Pre and Post scoping properly
 - Minor documentation fixes
 - Sticky.js no longer relies on scroll, solving window resize bugs
 
