@@ -1,4 +1,4 @@
-/* calcite-web - v0.10.2 - 2015-06-25
+/* calcite-web - v0.10.5 - 2015-07-24
 *  https://github.com/esri/calcite-web
 *  Copyright (c) 2015 Environmental Systems Research Institute, Inc.
 *  Apache 2.0 License */
@@ -9,7 +9,7 @@
   // └────────────┘
   // define all public api methods (excluding patterns)
   var calcite = {
-    version: 'v0.10.1',
+    version: 'v0.10.5',
     click: click,
     addEvent: addEvent,
     removeEvent: removeEvent,
@@ -526,7 +526,6 @@
       } else {
         addClass(searchContainer, 'is-active');
       }
-
     }
 
     searchForms.forEach(function (search) {
@@ -543,56 +542,43 @@
   calcite.sticky = function () {
     var elements = findElements('.js-sticky');
 
-    function calculateStickyPositions () {
-      var stickies = elements.map(function (el) {
-        var offset = el.offsetTop;
-        var dataTop = el.getAttribute('data-top') || 0;
-        return {
-          active: false,
-          top: offset - parseInt(dataTop, 0),
-          shim: el.cloneNode('deep'),
-          element: el
-        };
-      });
-      return stickies;
-    }
+    var stickies = elements.map(function (el) {
+      var offset = el.offsetTop;
+      var dataTop = el.getAttribute('data-top');
+      return {
+        active: false,
+        top: offset - parseInt(dataTop, 0),
+        shim: el.cloneNode('deep'),
+        element: el
+      };
+    });
 
-    var stickies = calculateStickyPositions();
-
-    function handleScroll(item, offset) {
+    stickies.forEach(function (item) {
       var el = item.element;
       var parent = el.parentNode;
-      var distance = item.top - offset;
+      parent.insertBefore(item.shim, el);
       var dataTop = el.getAttribute('data-top');
+      item.shim.style.top = dataTop + 'px';
+      addClass(item.shim, 'is-sticky');
+      item.shim.style.display = 'none';
+    });
 
-      if (distance < 1 && !item.active) {
-        item.shim.style.visiblity = 'hidden';
-        parent.insertBefore(item.shim, el);
-        addClass(el, 'is-sticky');
-        item.active = true;
-        el.style.top = dataTop + 'px';
-      } else if (item.active && offset < item.top) {
-        parent.removeChild(item.shim);
-        removeClass(el, 'is-sticky');
-        el.style.top = null;
-        item.active = false;
-      }
-    }
+    var scrollHandler = function () {
+      stickies.forEach( function (item) {
+        var el = item.element;
+        var offset = el.offsetTop;
+        var dataTop = el.getAttribute('data-top');
+        item.top = el.offsetTop - parseInt(dataTop, 0);
 
-    function bindStickies (e) {
-      var offset = window.pageYOffset;
-      stickies.forEach(function (sticky) {
-        handleScroll(sticky, offset);
+        if (item.top < window.pageYOffset) {
+          item.shim.style.display = '';
+        } else {
+          item.shim.style.display = 'none';
+        }
       });
-    }
-
-    addEvent(window, 'scroll', bindStickies);
-
-    window.onresize = function() {
-      stickies = calculateStickyPositions();
-      removeEvent(window, 'scroll', bindStickies);
-      addEvent(window, 'scroll', bindStickies);
     };
+
+    scrollIntervalID = setInterval(scrollHandler, 10);
   };
 
   // ┌────────────────────┐

@@ -41,12 +41,10 @@
       <!-- <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerleft"> -->
       <nav class="drawer-nav" role="navigation">
         <aside class="side-nav">
-          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
-          <div class="panel padding-trailer-half padding-leader-half">
-            <label class="trailer-0">
-              <input type='search' placeholder='Search'>
-            </label>
-          </div>
+          <h2 class="side-nav-title">Calcite Web</h2>
+          <form class="gutter-left-half gutter-right-half leader-half trailer-half">
+            <input type="search" placeholder="Search" class="leader-0">
+          </form>
             
               
                 <a href="../" class="side-nav-link">Get Started</a>
@@ -210,7 +208,7 @@
               </div>
             </div>
             <div class="tablet-show">
-              <a href="" class="top-nav-title js-drawer-toggle" data-drawer="top-nav">☰ Calcite Web</a>
+              <a href="/" class="icon-ui-menu top-nav-title js-drawer-toggle" data-drawer="top-nav">Calcite Web</a>
             </div>
           </div>
         </div>
@@ -402,7 +400,7 @@
             <h2 id="top-nav" tabindex="0">Top Nav</h2>
           
 
-          <p>Top navigation is the primary, header level navigation for a web site. It contains the root level pages, user logins, and the site title. This pattern has basic responsive functionality than can either be combined with the <a href="#drawers">drawer</a> pattern, or be modified to suit specific use cases.</p>
+          <p>Top navigation is the primary, header level navigation for a web site. It contains the root level pages, user logins, and the site title. The main navigation should be hidden on screen sizes smaller than the size of the navigation. This navigation should be moved to an off-screen drawer on the left hand side. Notice the separate <code>div</code> elements with <code>tablet-hide</code> and <code>tablet-show</code> classes in the sample below.</p>
 
 
           
@@ -422,7 +420,7 @@
         </nav>
       </div>
       <div class="tablet-show">
-        <a href="#" class="top-nav-title">☰ Calcite for Unicorns</a>
+        <a href="/" class="icon-ui-menu top-nav-title js-drawer-toggle" data-drawer="top-nav">Calcite For Unicorns</a>
       </div>
     </div>
   </div>
@@ -444,7 +442,7 @@
         &lt;/nav&gt;
       &lt;/div&gt;
       &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"tablet-show"</span>&gt;
-        &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"top-nav-title"</span>&gt;☰ Calcite <span class="hljs-keyword">for</span> Unicorns&lt;/a&gt;
+        &lt;a href=<span class="hljs-string">"/"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"icon-ui-menu top-nav-title js-drawer-toggle"</span> data-drawer=<span class="hljs-string">"top-nav"</span>&gt;Calcite For Unicorns&lt;/a&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -1120,22 +1118,23 @@
 <p><a href="#" class="btn js-drawer-toggle" data-drawer="right">Open Right Drawer</a></p>
 <pre><code> <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- Drawer --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"drawer drawer-left js-drawer"</span> <span class="hljs-attribute">data-drawer</span>=<span class="hljs-value">"top-nav"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"drawer-nav"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">aside</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"side-nav"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"side-nav-title padding-leader-half padding-trailer-half text-large"</span>&gt;</span>Esri Patterns<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"panel padding-trailer-half padding-leader-half"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"trailer-0"</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">'search'</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">'Search'</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"side-nav-link padding-trailer-half padding-leader-half"</span>&gt;</span>Branding<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"../"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"side-nav-link padding-trailer-half padding-leader-half"</span>&gt;</span>Web<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"side-nav-link padding-trailer-half padding-leader-half"</span>&gt;</span>Mobile<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"side-nav-link padding-trailer-half padding-leader-half"</span>&gt;</span>Presentations<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">aside</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"drawer drawer-left js-drawer is-active"</span> <span class="hljs-attribute">data-drawer</span>=<span class="hljs-value">"top-nav"</span> <span class="hljs-attribute">tabindex</span>=<span class="hljs-value">"0"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"drawer-nav"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"navigation"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">aside</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"side-nav"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"side-nav-title"</span>&gt;</span>Calcite Web<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"side-nav-link"</span>&gt;</span>Get Started<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"side-nav-link"</span>&gt;</span>Type<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"side-nav-link"</span>&gt;</span>Grid<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"side-nav-link"</span>&gt;</span>Icons<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"side-nav-link"</span>&gt;</span>Color<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"side-nav-link"</span>&gt;</span>Components<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"side-nav-link"</span>&gt;</span>Patterns<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"side-nav-link"</span>&gt;</span>Sass<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"side-nav-link"</span>&gt;</span>JavaScript<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"side-nav-link"</span>&gt;</span>Layouts<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">aside</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 
   <span class="hljs-comment">&lt;!-- Main Content Wrapper --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"wrapper"</span>&gt;</span>

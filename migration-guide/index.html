@@ -41,12 +41,10 @@
       <!-- <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerleft"> -->
       <nav class="drawer-nav" role="navigation">
         <aside class="side-nav">
-          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
-          <div class="panel padding-trailer-half padding-leader-half">
-            <label class="trailer-0">
-              <input type='search' placeholder='Search'>
-            </label>
-          </div>
+          <h2 class="side-nav-title">Calcite Web</h2>
+          <form class="gutter-left-half gutter-right-half leader-half trailer-half">
+            <input type="search" placeholder="Search" class="leader-0">
+          </form>
             
               
                 <a href="../" class="side-nav-link">Get Started</a>
@@ -210,7 +208,7 @@
               </div>
             </div>
             <div class="tablet-show">
-              <a href="" class="top-nav-title js-drawer-toggle" data-drawer="top-nav">☰ Calcite Web</a>
+              <a href="/" class="icon-ui-menu top-nav-title js-drawer-toggle" data-drawer="top-nav">Calcite Web</a>
             </div>
           </div>
         </div>
@@ -288,10 +286,34 @@
 <h2>Breaking Changes</h2>
 <p>Below is a list of things that will need to be changed to migrate to Calcite Web. It may look daunting, but most of the changes are fairly superficial. If anything is unclear in this list please <a href="https://github.com/Esri/calcite-web/issues">open an issue</a>. We are also happy to help via phone, chat, and email! Good luck!</p>
 <h5>Type</h5>
+<ol>
+<li>Text modifiers are now formatted <code>.text-{MODIFIER}</code> instead of <code>.{MODIFIER}-text</code>. Below is a list of new modifiers:</li>
+</ol>
+<ul>
+<li><code>.center-text</code> =&gt; <code>.text-center</code></li>
+<li><code>.white-text</code> =&gt; <code>.text-white</code></li>
+<li><code>.red-text</code> =&gt; <code>.text-red</code></li>
+<li><code>.error-text</code> =&gt; <code>.text-red</code></li>
+<li><code>.green-text</code> =&gt; <code>.text-green</code></li>
+<li><code>.success-text</code> =&gt; <code>.text-green</code></li>
+<li><code>.overflow-ellipsis</code> =&gt; <code>.text-ellipses</code></li>
+</ul>
+<ol start="2">
+<li>Removed <code>.show-visited-links</code></li>
+</ol>
 <h5>Grid</h5>
+<ol>
+<li>There are no rows. If you need to group columns you can just put columns inside of a <code>column-24</code></li>
+<li><code>container</code> is now <code>grid-container</code>. This solved problems with other technologies also using a <code>container</code> class.</li>
+<li>Columns are always the same size, so layouts with nested columns will need to redone.</li>
+</ol>
 <h5>Layout</h5>
 <h5>Color</h5>
 <h5>Icons</h5>
+<ol>
+<li>Icons are a completely different set. Most Tailcoat icons have a counterpart in Calcite Web, but some don't.</li>
+<li>Icons use the class prefix <code>.icon-ui-</code> not just <code>.icon-</code></li>
+</ol>
 <h5>Components</h5>
 <h5>Patterns</h5>
 <h5>JavaScript</h5>
