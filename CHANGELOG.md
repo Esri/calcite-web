@@ -1,3 +1,11 @@
+## Unreleased
+
+### Added
+- `.link-light-blue`
+
+### Modified
+- Style links inside of panels
+
 ## 0.10.4
 
 ### Fixed
