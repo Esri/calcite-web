@@ -8,7 +8,35 @@ Icons in the icon font will be scaled to the text size of whatever element you a
 {% for icon in data.font.icons %}
 <div class="block">
 <span class="font-size-5 icon-ui-{{icon.properties.name}}" aria-label="{{icon.properties.name}}"></span>
-<p class="trailer-1 leader-half"><code>.icon-ui-{{icon.properties.name}}</code></p>
+<p class="trailer-1 leader-half"><code>icon-ui-{{icon.properties.name}}</code></p>
 </div>
 {% endfor %}
+</div>
+
+#### Icon Font Colors
+<div class="block-group block-group-3-up">
+<div class="block">
+<span class="font-size-5 icon-ui-check-mark icon-ui-green" aria-label="check-mark "></span>
+<p class="trailer-1 leader-half"><code>icon-ui-check-mark icon-ui-green</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-check-mark icon-ui-blue" aria-label="check-mark "></span>
+<p class="trailer-1 leader-half"><code>icon-ui-check-mark icon-ui-blue</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-check-mark icon-ui-purple" aria-label="check-mark "></span>
+<p class="trailer-1 leader-half"><code>icon-ui-check-mark icon-ui-purple</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-check-mark icon-ui-orange" aria-label="check-mark "></span>
+<p class="trailer-1 leader-half"><code>icon-ui-check-mark icon-ui-orange</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-check-mark icon-ui-gray" aria-label="check-mark "></span>
+<p class="trailer-1 leader-half"><code>icon-ui-check-mark icon-ui-gray</code></p>
+</div>
+<div class="block">
+<span class="font-size-5 icon-ui-check-mark icon-ui-red" aria-label="check-mark "></span>
+<p class="trailer-1 leader-half"><code>icon-ui-check-mark icon-ui-red</code></p>
+</div>
 </div>
