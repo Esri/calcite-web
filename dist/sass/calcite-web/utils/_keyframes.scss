@@ -1,0 +1,14 @@
+// ┌───────────┐
+// │ Keyframes │
+// └───────────┘
+//  ↳ http://esri.github.io/calcite-web/sass/#keyframes
+//  ↳ components → _utility-mixins.md
+
+@mixin keyframes ($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
