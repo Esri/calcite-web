@@ -1,6 +1,7 @@
 ## unreleased
 ### Fixed
 - Columns collapse properly without a max-width
+- Pre and Post scoping properly
 - Minor documentation fixes
 
 ### Added
