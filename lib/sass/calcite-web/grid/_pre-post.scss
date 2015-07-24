@@ -24,13 +24,13 @@
     @media screen and (min-width: $small) {
       @for $n from 0 through $medium-column-count {
         .#{$small-class}-pre-#{$n} {
-          @include pre($n, $medium-column-count);
+          @include pre(0, $medium-column-count);
         }
         [class*="column-"] .#{$small-class}-pre-#{$n}:first-child {
-          @include pre-calc($n, $medium-column-count);
+          @include pre-calc(0, $medium-column-count);
         }
         .#{$small-class}-post-#{$n} {
-          @include post($n, $medium-column-count);
+          @include post(0, $medium-column-count);
         }
 
 
@@ -51,24 +51,24 @@
     @media screen and (min-width: $medium) {
       @for $n from 0 through $default-column-count {
         .#{$small-class}-pre-#{$n} {
-          @include pre($n, $default-column-count);
+          @include pre(0, $default-column-count);
         }
         [class*="column-"] .#{$small-class}-pre-#{$n}:first-child {
-          @include pre-calc($n, $default-column-count);
+          @include pre-calc(0, $default-column-count);
         }
         .#{$small-class}-post-#{$n} {
-          @include post($n, $default-column-count);
+          @include post(0, $default-column-count);
         }
 
 
         .#{$medium-class}-pre-#{$n} {
-          @include pre($n, $default-column-count);
+          @include pre(0, $default-column-count);
         }
         [class*="column-"] .#{$medium-class}-pre-#{$n}:first-child {
-          @include pre-calc($n, $default-column-count);
+          @include pre-calc(0, $default-column-count);
         }
         .#{$medium-class}-post-#{$n} {
-          @include post($n, $default-column-count);
+          @include post(0, $default-column-count);
         }
 
         .pre-#{$n} {
@@ -88,34 +88,34 @@
     @media screen and (min-width: $large) {
       @for $n from 0 through $large-column-count {
         .#{$small-class}-pre-#{$n} {
-          @include pre($n, $large-column-count);
+          @include pre(0, $large-column-count);
         }
         [class*="column-"] .#{$small-class}-pre-#{$n}:first-child {
-          @include pre-calc($n, $large-column-count);
+          @include pre-calc(0, $large-column-count);
         }
         .#{$small-class}-post-#{$n} {
-          @include post($n, $large-column-count);
+          @include post(0, $large-column-count);
         }
 
 
         .#{$medium-class}-pre-#{$n} {
-          @include pre($n, $large-column-count);
+          @include pre(0, $large-column-count);
         }
         [class*="column-"] .#{$medium-class}-pre-#{$n}:first-child {
-          @include pre-calc($n, $large-column-count);
+          @include pre-calc(0, $large-column-count);
         }
         .#{$medium-class}-post-#{$n} {
-          @include post($n, $large-column-count);
+          @include post(0, $large-column-count);
         }
 
         .pre-#{$n} {
-          @include pre($n, $large-column-count);
+          @include pre(0, $large-column-count);
         }
         [class*="column-"] .pre-#{$n}:first-child {
-          @include pre-calc($n, $large-column-count);
+          @include pre-calc(0, $large-column-count);
         }
         .post-#{$n} {
-          @include post($n, $large-column-count);
+          @include post(0, $large-column-count);
         }
 
         .#{$large-class}-pre-#{$n} {

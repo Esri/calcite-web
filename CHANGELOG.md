@@ -7,6 +7,7 @@
 
 ### Fixed
 - Columns collapse properly without a max-width
+- Pre and Post scoping properly
 - Minor documentation fixes
 - Sticky.js no longer relies on scroll, solving window resize bugs
 
