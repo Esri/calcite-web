@@ -7,6 +7,9 @@
 - Style links inside of panels
 - Pre and Post scoping properly
 
+### Modified
+- `.panel` uses `$off-white` instead of `$lightest-gray`
+
 ## 0.10.4
 
 ### Fixed
