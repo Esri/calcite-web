@@ -10,7 +10,7 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
   border-bottom: 1px solid $lightest-gray;
 
   .esri-logo {
-    padding-top: 1rem;
+    margin-top: 1rem;
   }
 
   .sign-in {
@@ -32,6 +32,10 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
       @include prefixer(background-image, $topnav-link-overline, webkit moz o);
       background-image: $topnav-link-overline;
       text-decoration: none;
+    }
+    &.icon-ui-menu:before {
+      vertical-align: -1px;
+      padding-right: .5em;
     }
   }
 

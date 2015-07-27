@@ -1,12 +1,10 @@
 @mixin column($n) {
   @extend .column-base;
   width: ($n / $large-column-count) * $container-width;
-  max-width: ($n / $large-column-count) * $large-column-max;
 }
 
 @mixin column-width($n) {
   width: ($n / $large-column-count) * $container-width;
-  max-width: ($n / $large-column-count) * $large-column-max;
 }
 
 @mixin pre($n, $count: $large-column-count) {

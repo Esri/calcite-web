@@ -45,7 +45,7 @@ That will give you everything including sass utilities. You will also need to co
 To install Calcite Web with npm, type:
 
 ```
-npm install --save-dev Esri/calcite-web#v0.10.1
+npm install --save-dev Esri/calcite-web#v0.10.3
 ```
 
 You must add the current version in order to get the `dist/` folder.

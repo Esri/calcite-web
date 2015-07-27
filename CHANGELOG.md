@@ -1,12 +1,31 @@
-## unreleased
+## 0.10.5
+
+### Added
+- `.link-light-blue`
+
+### Fixed
+- Style links inside of panels
+- Pre and Post scoping properly
+
+## 0.10.4
+
+### Fixed
+- `.esri-logo` uses `$image-path` instead of hard-coded location
+
+## 0.10.3
+
 ### Fixed
 - Columns collapse properly without a max-width
-- Pre and Post scoping properly
 - Minor documentation fixes
+- Sticky.js no longer relies on scroll, solving window resize bugs
 
 ### Added
 - Multiple languages for type treatments
 - Cyrillic font face declarations
+- More intentional responsive design for subnav pattern
+
+### Removed
+- Removed the `max-width` declaration in the `column` and `column-width` mixins
 
 ## 0.10.2
 
