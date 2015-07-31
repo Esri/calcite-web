@@ -13,6 +13,7 @@ $loader-delay: 0.16s;
 
 @mixin loader() {
   display: none;
+  position: relative;
   &.is-active {
     display: block;
   }

@@ -7,6 +7,7 @@
 ### Fixed
 - Style links inside of panels
 - Pre and Post scoping properly
+- Loader bar container div relative
 
 ### Modified
 - `.panel` uses `$off-white` instead of `$lightest-gray`
