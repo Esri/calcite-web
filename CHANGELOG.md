@@ -16,6 +16,7 @@
 ### Modified
 - `.panel` uses `$off-white` instead of `$lightest-gray`
 - Add proper icons to accordion
+- Overflow-x scroll and no-wrap on third-nav
 
 ## 0.10.4
 
