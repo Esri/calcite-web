@@ -106,16 +106,16 @@
 
 
       <section class="expanding-nav js-expanding  panel panel-no-padding" data-expanding-nav="search">
-        <div class="grid-container padding-trailer-half">
-          <form class="column-12 pre-6 large-pre-6 leader-1 trailer-1">
-            <div class="input-group">
-              <input class="input-group-input" type="search" placeholder="Search for ...">
-              <span class="input-group-button">
-                <button type="submit" class="btn btn-clear">Search</button>
-              </span>
-            </div>
+        <div class="grid-container padding-trailer-half padding-leader-1 padding-trailer-1">
+          <form method="GET" action="/search/" class="column-24">
+            <label>Search Calcite Web
+              <a href="#" class="icon-ui-close js-expanding-toggle right" data-expanding-nav="search"></a>
+              <div class="search-bar">
+                <input type='search' placeholder='Search'>
+                <button type="submit" class="search-submit icon-ui-search"></button>
+              </div>
+            </label>
           </form>
-          <a href="#" class="icon-ui-close js-expanding-toggle right leader-1" data-expanding-nav="search"></a>
         </div>
       </section>
 
