@@ -95,15 +95,7 @@
                 {% endif %}
               {% endfor %}
               </nav>
-              <div class="site-search js-site-search right">
-                <form class="site-search-form">
-                  <span class="icon-ui-search site-search-icon"></span>
-                  <input class="site-search-input" type="search" placeholder="Search">
-                  <span class="input-group-button">
-                    <button type="submit" class="btn btn-clear site-search-button">Go</button>
-                  </span>
-                </form>
-              </div>
+              <a href="#" class="icon-ui-search js-expanding-toggle top-nav-link right" data-expanding-nav="search">Search</a >
             </div>
             <div class="tablet-show">
               <a href="/" class="icon-ui-menu top-nav-title js-drawer-toggle" data-drawer="top-nav">Calcite Web</a>
@@ -111,22 +103,23 @@
           </div>
         </div>
       </header>
-      <div class="expanding-nav js-expanding">
-        <section class="expanding-nav-menu js-expanding-nav" data-expanding-nav="one">
-          <div class="grid-container padding-trailer-half">
-            <div class="column-24">
-              <h1>Expanding Nav One</h1>
+
+
+      <section class="expanding-nav js-expanding  panel panel-no-padding" data-expanding-nav="search">
+        <div class="grid-container padding-trailer-half">
+          <form class="column-12 pre-6 large-pre-6 leader-1 trailer-1">
+            <div class="input-group">
+              <input class="input-group-input" type="search" placeholder="Search for ...">
+              <span class="input-group-button">
+                <button type="submit" class="btn btn-clear">Search</button>
+              </span>
             </div>
-          </div>
-        </section>
-        <section class="expanding-nav-menu js-expanding-nav" data-expanding-nav="two">
-          <div class="grid-container padding-trailer-half">
-            <div class="column-24">
-              <h1>Expanding Nav Two</h1>
-            </div>
-          </div>
-        </section>
-      </div>
+          </form>
+          <a href="#" class="icon-ui-close js-expanding-toggle right leader-1" data-expanding-nav="search"></a>
+        </div>
+      </section>
+
+
       <!-- Secondary Nav Pattern -->
       <header class="sub-nav" role="banner">
         <div class="grid-container">
