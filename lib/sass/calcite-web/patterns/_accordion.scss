@@ -6,6 +6,7 @@
 
 @mixin accordion(){
   @extend .side-nav;
+  @include icon-font();
 }
   @mixin accordion-section() {
     &.is-active {
@@ -13,8 +14,7 @@
         display: block;
       }
       .accordion-title:before {
-        content: $dstri;
-        @include font-size(0);
+        content: "\e608";
       }
     }
   }
@@ -24,9 +24,18 @@
     cursor: pointer;
     @include transition(all, $transition);
     &:before {
-      content: $rtri;
-      padding-right: 0.5em;
-      @include font-size(-6);
+      @include font-size(-3);
+      content: "\e607";
+      font-family: 'CalciteWebCoreIcons';
+      padding-right: 0.33em;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
     &:focus,
     &:hover {

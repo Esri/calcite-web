@@ -47,6 +47,7 @@ $subnav-link-underline: linear-gradient(to top, transparent 94%, $white 96%, $wh
 
     @include respond-to($medium) {
       margin: 0;
+      margin-top: 1px;
       width: 100%;
       &:hover {
         background-image: none;

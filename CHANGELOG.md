@@ -1,11 +1,23 @@
 ## 0.10.5
 
+### Removed
+- Calcite color icons are not a thing we're including. Removing the doc space for this.
+
 ### Added
 - `.link-light-blue`
+- Set `video` to 100% max width
+- Document hero subnav.
 
 ### Fixed
 - Style links inside of panels
 - Pre and Post scoping properly
+- Loader bar container div relative
+
+### Modified
+- `.panel` uses `$off-white` instead of `$lightest-gray`
+- Add proper icons to accordion
+- Overflow-x scroll and no-wrap on third-nav
+- Expanding nav and search pattern
 
 ## 0.10.4
 

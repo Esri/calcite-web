@@ -6,8 +6,8 @@
 
 @mixin panel() {
   @include clearfix();
-  background-color: $lightest-gray;
-  border: 1px solid $lighter-gray;
+  background-color: $off-white;
+  border: 1px solid $lightest-gray;
   padding: $baseline;
   & > :last-child {
     margin-bottom: 0;
