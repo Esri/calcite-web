@@ -3,6 +3,10 @@
 ### Removed
 - No dependency on patterns-color repo (variables are added by hand)
 
+### Modified
+- Codeblocks inside tabs are automatically formatted correctly
+- Minor changes to `pre > code` elements (slightly smaller type size)
+
 ## 0.11.0
 
 ### Removed
