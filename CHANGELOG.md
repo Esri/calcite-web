@@ -1,5 +1,8 @@
 ## 0.10.5
 
+### Removed
+- Calcite color icons are not a thing we're including. Removing the doc space for this.
+
 ### Added
 - `.link-light-blue`
 - Set `video` to 100% max width
