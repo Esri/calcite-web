@@ -87,7 +87,7 @@ module.exports = function(grunt) {
     'sass': {
 
       options: {
-        includePaths: ['lib/sass/', 'node_modules/patterns-color/scss']
+        includePaths: ['lib/sass/']
       },
 
       expanded: {
@@ -293,7 +293,7 @@ module.exports = function(grunt) {
         command: 'npm run acetate' // build the docs site
       },
       a11y: {
-        command: 'npm run a11y' // build the docs site
+        command: 'npm run a11y' // run accessibility tests
       }
     },
 
