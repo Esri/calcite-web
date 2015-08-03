@@ -6,6 +6,7 @@
 ### Added
 - `.link-light-blue`
 - Set `video` to 100% max width
+- Document hero subnav.
 
 ### Fixed
 - Style links inside of panels
