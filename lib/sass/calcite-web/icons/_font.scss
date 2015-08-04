@@ -4,6 +4,19 @@
 //  ↳ http://esri.github.io/calcite-web/icons/
 //  ↳ icons → _icon-font.md
 
+@mixin icon-font-styles() {
+  font-family: 'CalciteWebCoreIcons';
+  padding-right: 0.33em;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 @mixin icon-font () {
 
   @font-face {
@@ -21,16 +34,7 @@
   [class*=" esri-icon-"]:before,
   [class^="icon-ui-"]:before,
   [class*=" icon-ui-"]:before {
-    font-family: 'CalciteWebCoreIcons';
-    padding-right: 0.33em;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    @include icon-font-styles();
   }
 
   .esri-icon-green:before, .icon-ui-green:before                                             { color: $green;}
