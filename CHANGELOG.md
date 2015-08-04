@@ -9,6 +9,9 @@
 - Minor changes to `pre > code` elements (slightly smaller type size)
 - Vertical align `input-group-input`
 
+### Fixed
+- leader and trailer classes were being imported twice
+
 ## 0.11.0
 
 ### Removed
