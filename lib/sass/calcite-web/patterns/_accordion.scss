@@ -14,7 +14,7 @@
         display: block;
       }
       .accordion-title:before {
-        content: "\e608";
+        content: "\e63b";
       }
     }
   }
@@ -25,17 +25,8 @@
     @include transition(all, $transition);
     &:before {
       @include font-size(-3);
-      content: "\e607";
-      font-family: 'CalciteWebCoreIcons';
-      padding-right: 0.33em;
-      speak: none;
-      font-style: normal;
-      font-weight: normal;
-      font-variant: normal;
-      text-transform: none;
-      line-height: 1;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+      content: "\e63c";
+      @include icon-font-styles();
     }
     &:focus,
     &:hover {
