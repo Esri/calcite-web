@@ -85,7 +85,6 @@
           <div class="column-24">
             <div class="tablet-hide">
               <a href="{{relativePath}}" class="top-nav-title">Calcite Web</a>
-              <!-- <nav class="top-nav-list" role="navigation" aria-labelledby="topnav"> -->
               <nav class="top-nav-list" role="navigation">
               {% for title, sec in data.table_of_contents %}
                 {% if sec.base == "get-started" %}
@@ -95,8 +94,9 @@
                 {% endif %}
               {% endfor %}
               </nav>
-              <a href="#" class="icon-ui-search js-expanding-toggle top-nav-link right" data-expanding-nav="search">Search</a >
+              <a href="#" class="icon-ui-search js-expand-toggle top-nav-link right" data-expand="search">Search</a >
             </div>
+
             <div class="tablet-show">
               <a href="/" class="icon-ui-menu top-nav-title js-drawer-toggle" data-drawer="top-nav">Calcite Web</a>
             </div>
@@ -105,11 +105,11 @@
       </header>
 
 
-      <section class="expanding-nav js-expanding  panel panel-no-padding" data-expanding-nav="search">
+      <section class="expand js-expand  panel panel-no-padding" data-expand="search">
         <div class="grid-container padding-trailer-half padding-leader-1 padding-trailer-1">
           <form method="GET" action="/search/" class="column-24">
             <label>Search Calcite Web
-              <a href="#" class="icon-ui-close js-expanding-toggle right" data-expanding-nav="search"></a>
+              <a href="#" class="icon-ui-close js-expand-toggle right" data-expand="search"></a>
               <div class="search-bar">
                 <input type='search' placeholder='Search'>
                 <button type="submit" class="search-submit icon-ui-search"></button>
