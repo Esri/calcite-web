@@ -57,7 +57,7 @@
     border-radius: 3px;
     border: 1px solid $lightest-gray;
     color: $darkest-gray;
-    background: $off-white;
+    background-color: $off-white;
     white-space: pre;
     font-size: 0.85em;
   }
@@ -73,7 +73,7 @@
       display: block;
       overflow: auto;
       word-wrap: normal;
-      @include font-size(-2);
+      @include font-size(-3);
     }
   }
 

@@ -184,25 +184,6 @@ $include-secondary-family: true;
   &.swhitesquare:before {content: $swhitesquare}
 }
 
-// slider backgrounds
-.carousel-slides {
-  height: 300px;
-}
-
-.carousel-slide {
-  background-position: center top;
-  background-size: cover;
-  @extend .text-white;
-}
-
-.carousel-slide:nth-child(1) { background-image: linear-gradient(to right, $red, $orange); }
-.carousel-slide:nth-child(2) { background-image: linear-gradient(to right, $green, $blue); }
-.carousel-slide:nth-child(3) { background-image: linear-gradient(to right, $orange, $red); }
-.carousel-slide:nth-child(4) { background-image: linear-gradient(to right, $purple, $green); }
-.carousel-slide:nth-child(5) { background-image: linear-gradient(to right, $yellow, $orange); }
-.carousel-slide:nth-child(6) { background-image: linear-gradient(to right, $blue, $yellow); }
-
-
 // Temp type sample stuff
 
 @import url(http://fast.fonts.net/t/1.css?apiType=css&projectid=23855eec-5fdf-4594-9898-0113a04bfef0);

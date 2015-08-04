@@ -1,3 +1,17 @@
+## Unreleased
+
+### Removed
+- No dependency on patterns-color repo (variables are added by hand)
+- Carousel configuration
+
+### Modified
+- Codeblocks inside tabs are automatically formatted correctly
+- Minor changes to `pre > code` elements (slightly smaller type size)
+- Vertical align `input-group-input`
+
+### Fixed
+- leader and trailer classes were being imported twice
+
 ## 0.11.0
 
 ### Removed
