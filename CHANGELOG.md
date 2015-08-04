@@ -8,9 +8,12 @@
 - Codeblocks inside tabs are automatically formatted correctly
 - Minor changes to `pre > code` elements (slightly smaller type size)
 - Vertical align `input-group-input`
+- Cool plus and minuses on accordions
+- Simplified expanding nav
 
 ### Fixed
 - leader and trailer classes were being imported twice
+- Only bind close click on accordion section title
 
 ## 0.11.0
 
