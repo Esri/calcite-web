@@ -14,6 +14,7 @@
 ### Fixed
 - leader and trailer classes were being imported twice
 - Only bind close click on accordion section title
+- Init `sticky` first so other patterns bind to duplicated nodes
 
 ## 0.11.0
 

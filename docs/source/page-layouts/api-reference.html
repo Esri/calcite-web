@@ -4,6 +4,25 @@ description: Sample documentation layout using calcite-web
 css:
   - all
 ---
+<div class="drawer drawer-left js-drawer" data-drawer="top-nav">
+  <!-- <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerleft"> -->
+  <nav class="drawer-nav" role="navigation">
+    <aside class="side-nav">
+      <h2 class="side-nav-title">Calcite Web</h2>
+      <form class="gutter-left-half gutter-right-half leader-half trailer-half">
+        <input type="search" placeholder="Search" class="leader-0">
+      </form>
+        {% for title, sec in data.table_of_contents %}
+          {% if sec.base == "get-started" %}
+            <a href="{{relativePath}}" class="side-nav-link">{{ sec.title }}</a>
+          {% else %}
+            <a href="{{relativePath}}{{sec.base}}" class="side-nav-link">{{ sec.title }}</a>
+          {% endif %}
+        {% endfor %}
+    </aside>
+  </nav>
+</div>
+
 <header class="top-nav">
   <div class="grid-container">
     <div class="column-24">
@@ -45,6 +64,7 @@ css:
 <header class="third-nav js-sticky" data-top='0'>
   <div class="grid-container">
     <nav class="breadcrumbs">
+      <a class="icon-ui-menu crumb js-drawer-toggle" data-drawer="top-nav">Calcite Web</a>
       <a href="#" class="crumb">Services</a>
       <a href="#" class="crumb">Geocoding</a>
       <a href="#" class="crumb">API Reference</a>
