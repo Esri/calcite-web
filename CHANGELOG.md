@@ -1,4 +1,4 @@
-## Unreleased
+## 0.11.1
 
 ### Removed
 - No dependency on patterns-color repo (variables are added by hand)
