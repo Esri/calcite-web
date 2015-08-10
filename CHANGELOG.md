@@ -3,6 +3,12 @@
 ### Removed
 - bin script for calcite icons
 
+### Fixed
+- breadcrumb separator no longer gets underlined
+
+### Added
+- `breadcrumbs-white` modifier for light-on-dark breadcrumbs
+
 ## 0.11.1
 
 ### Removed
