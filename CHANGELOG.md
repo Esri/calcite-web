@@ -1,8 +1,9 @@
-## Unreleased
+## 0.11.1
 
 ### Removed
 - No dependency on patterns-color repo (variables are added by hand)
 - Carousel configuration
+- No calcite icon scss
 
 ### Modified
 - Codeblocks inside tabs are automatically formatted correctly
