@@ -1,3 +1,8 @@
+## Unreleased
+
+### Removed
+- bin script for calcite icons
+
 ## 0.11.1
 
 ### Removed

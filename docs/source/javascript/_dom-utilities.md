@@ -2,12 +2,12 @@ The following functions allow for basic DOM manipulation and traversal. These he
 
 ## Events
 
-### calcite.event()
+### calcite.click()
 
 Returns interaction event for the current browser environment. Currently only returns `'click'`. Will be more useful when touch support is added.
 
 ```js
-var event = calcite.event(); // => 'click'
+var click = calcite.click(); // => 'click'
 ```
 
 ### calcite.addEvent(domNode, event, fn)
@@ -15,14 +15,14 @@ var event = calcite.event(); // => 'click'
 Adds a callback function to an event on an element.
 
 ```js
-var event = calcite.event();
+var click = calcite.click();
 var node = document.querySelector('body');
 
 function action (event) {
   console.log('hola');
 };
 
-calcite.addEvent(node, event, action); // action will now fire when body is clicked
+calcite.addEvent(node, click, action); // action will now fire when body is clicked
 ```
 
 ### calcite.removeEvent(domNode, event, fn)
@@ -30,14 +30,14 @@ calcite.addEvent(node, event, action); // action will now fire when body is clic
 Removes a callback function from an event on an element.
 
 ```js
-var event = calcite.event();
+var click = calcite.click();
 var node = document.querySelector('body');
 
 function action (event) {
   console.log('hola');
 };
 
-calcite.addEvent(node, event, action); // action will now fire when body is clicked
+calcite.addEvent(node, click, action); // action will now fire when body is clicked
 calcite.removeEvent(node, event, action); // action has been removed from body click event
 ```
 
@@ -46,7 +46,7 @@ calcite.removeEvent(node, event, action); // action has been removed from body c
 Returns the target DOM node of an event.
 
 ```js
-var event = calcite.event();
+var click = calcite.click();
 var node = document.querySelector('body');
 
 function action (event) {
@@ -54,7 +54,7 @@ function action (event) {
   console.log(target);
 };
 
-calcite.addEvent(node, event, action);
+calcite.addEvent(node, click, action);
 ```
 
 Clicking the body will now log the contents of the `<body>` DOM node.
@@ -64,14 +64,14 @@ Clicking the body will now log the contents of the `<body>` DOM node.
 Prevents default behavior of an event.
 
 ```js
-var event = calcite.event();
+var click = calcite.click();
 var node = document.getElementsByTagName('a')[0];
 
 function action (event) {
   calcite.preventDefault(event);
 };
 
-calcite.addEvent(node, event, action);
+calcite.addEvent(node, click, action);
 ```
 
 This will prevent the first `<a>` DOM node in the document from performing its default behavior (sending the user to the link in its `href` attribute).
@@ -81,14 +81,14 @@ This will prevent the first `<a>` DOM node in the document from performing its d
 Stops an event from bubbling up the DOM tree. This is useful if events have been bound to both a parent DOM node and a child DOM node.
 
 ```js
-var event = calcite.event();
+var click = calcite.click();
 var node = document.getElementsByTagName('a')[0];
 
 function action (event) {
   calcite.stopPropagation(event);
 };
 
-calcite.addEvent(node, event, action);
+calcite.addEvent(node, click, action);
 ```
 
 If, for example, the `<body>` DOM node also has a function bound to a click event, this will prevent a user's click from triggering it.
