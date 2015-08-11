@@ -153,7 +153,6 @@
           <div class="column-24">
             <div class="tablet-hide">
               <a href="../" class="top-nav-title">Calcite Web</a>
-              <!-- <nav class="top-nav-list" role="navigation" aria-labelledby="topnav"> -->
               <nav class="top-nav-list" role="navigation">
               
                 
@@ -197,38 +196,32 @@
                 
               
               </nav>
-              <div class="site-search js-site-search right">
-                <form class="site-search-form">
-                  <span class="icon-ui-search site-search-icon"></span>
-                  <input class="site-search-input" type="search" placeholder="Search">
-                  <span class="input-group-button">
-                    <button type="submit" class="btn btn-clear site-search-button">Go</button>
-                  </span>
-                </form>
-              </div>
+              <a href="#" class="icon-ui-search js-expand-toggle top-nav-link right" data-expand="search">Search</a >
             </div>
+
             <div class="tablet-show">
               <a href="/" class="icon-ui-menu top-nav-title js-drawer-toggle" data-drawer="top-nav">Calcite Web</a>
             </div>
           </div>
         </div>
       </header>
-      <div class="expanding-nav js-expanding">
-        <section class="expanding-nav-menu js-expanding-nav" data-expanding-nav="one">
-          <div class="grid-container padding-trailer-half">
-            <div class="column-24">
-              <h1>Expanding Nav One</h1>
-            </div>
-          </div>
-        </section>
-        <section class="expanding-nav-menu js-expanding-nav" data-expanding-nav="two">
-          <div class="grid-container padding-trailer-half">
-            <div class="column-24">
-              <h1>Expanding Nav Two</h1>
-            </div>
-          </div>
-        </section>
-      </div>
+
+
+      <section class="expand js-expand  panel panel-no-padding" data-expand="search">
+        <div class="grid-container padding-trailer-half padding-leader-1 padding-trailer-1">
+          <form method="GET" action="/search/" class="column-24">
+            <label>Search Calcite Web
+              <a href="#" class="icon-ui-close js-expand-toggle right" data-expand="search"></a>
+              <div class="search-bar">
+                <input type='search' placeholder='Search'>
+                <button type="submit" class="search-submit icon-ui-search"></button>
+              </div>
+            </label>
+          </form>
+        </div>
+      </section>
+
+
       <!-- Secondary Nav Pattern -->
       <header class="sub-nav" role="banner">
         <div class="grid-container">
@@ -279,6 +272,7 @@
 
   <a id="skip-to-content" tabindex="0"></a>
   <main class="column-17 phone-column-6 tablet-column-12 pre-1 content-face" role="main">
+
     
       <h1 class="text-rule" id="interactive-patterns" tabindex="0">Interactive Patterns</h1>
       
@@ -325,6 +319,12 @@ calcite.<span class="hljs-function"><span class="hljs-title">tabs</span><span cl
 </code></pre>
 <p>This is helpful if you are using a different JavaScript framework and you need to rebind event listeners for a particular pattern or DOM node.</p>
 
+
+          
+
+          
+
+          
 
           
 
@@ -408,6 +408,12 @@ calcite.<span class="hljs-function"><span class="hljs-title">tabs</span><span cl
 
           
 
+          
+
+          
+
+          
+
         </section>
         <hr>
       
@@ -418,36 +424,36 @@ calcite.<span class="hljs-function"><span class="hljs-title">tabs</span><span cl
 
           <p>The following functions allow for basic DOM manipulation and traversal. These helpers are used by JavaScript dependent patterns, and can be included in any custom JavaScript in Calcite Web projects.</p>
 <h2>Events</h2>
-<h3>calcite.event()</h3>
+<h3>calcite.click()</h3>
 <p>Returns interaction event for the current browser environment. Currently only returns <code>'click'</code>. Will be more useful when touch support is added.</p>
-<pre><code class="js"><span class="hljs-keyword">var</span> event = calcite.event(); <span class="hljs-comment">// =&gt; 'click'</span>
+<pre><code class="js"><span class="hljs-keyword">var</span> click = calcite.click(); <span class="hljs-comment">// =&gt; 'click'</span>
 </code></pre>
 <h3>calcite.addEvent(domNode, event, fn)</h3>
 <p>Adds a callback function to an event on an element.</p>
-<pre><code class="js"><span class="hljs-keyword">var</span> event = calcite.event();
+<pre><code class="js"><span class="hljs-keyword">var</span> click = calcite.click();
 <span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'body'</span>);
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> <span class="hljs-params">(event)</span> </span>{
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'hola'</span>);
 };
 
-calcite.addEvent(node, event, action); <span class="hljs-comment">// action will now fire when body is clicked</span>
+calcite.addEvent(node, click, action); <span class="hljs-comment">// action will now fire when body is clicked</span>
 </code></pre>
 <h3>calcite.removeEvent(domNode, event, fn)</h3>
 <p>Removes a callback function from an event on an element.</p>
-<pre><code class="js"><span class="hljs-keyword">var</span> event = calcite.event();
+<pre><code class="js"><span class="hljs-keyword">var</span> click = calcite.click();
 <span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'body'</span>);
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> <span class="hljs-params">(event)</span> </span>{
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'hola'</span>);
 };
 
-calcite.addEvent(node, event, action); <span class="hljs-comment">// action will now fire when body is clicked</span>
+calcite.addEvent(node, click, action); <span class="hljs-comment">// action will now fire when body is clicked</span>
 calcite.removeEvent(node, event, action); <span class="hljs-comment">// action has been removed from body click event</span>
 </code></pre>
 <h3>calcite.eventTarget(event)</h3>
 <p>Returns the target DOM node of an event.</p>
-<pre><code class="js"><span class="hljs-keyword">var</span> event = calcite.event();
+<pre><code class="js"><span class="hljs-keyword">var</span> click = calcite.click();
 <span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'body'</span>);
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> <span class="hljs-params">(event)</span> </span>{
@@ -455,31 +461,31 @@ calcite.removeEvent(node, event, action); <span class="hljs-comment">// action h
   <span class="hljs-built_in">console</span>.log(target);
 };
 
-calcite.addEvent(node, event, action);
+calcite.addEvent(node, click, action);
 </code></pre>
 <p>Clicking the body will now log the contents of the <code>&lt;body&gt;</code> DOM node.</p>
 <h3>calcite.preventDefault(event)</h3>
 <p>Prevents default behavior of an event.</p>
-<pre><code class="js"><span class="hljs-keyword">var</span> event = calcite.event();
+<pre><code class="js"><span class="hljs-keyword">var</span> click = calcite.click();
 <span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">'a'</span>)[<span class="hljs-number">0</span>];
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> <span class="hljs-params">(event)</span> </span>{
   calcite.preventDefault(event);
 };
 
-calcite.addEvent(node, event, action);
+calcite.addEvent(node, click, action);
 </code></pre>
 <p>This will prevent the first <code>&lt;a&gt;</code> DOM node in the document from performing its default behavior (sending the user to the link in its <code>href</code> attribute).</p>
 <h3>calcite.stopPropagation(event)</h3>
 <p>Stops an event from bubbling up the DOM tree. This is useful if events have been bound to both a parent DOM node and a child DOM node.</p>
-<pre><code class="js"><span class="hljs-keyword">var</span> event = calcite.event();
+<pre><code class="js"><span class="hljs-keyword">var</span> click = calcite.click();
 <span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">'a'</span>)[<span class="hljs-number">0</span>];
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> <span class="hljs-params">(event)</span> </span>{
   calcite.stopPropagation(event);
 };
 
-calcite.addEvent(node, event, action);
+calcite.addEvent(node, click, action);
 </code></pre>
 <p>If, for example, the <code>&lt;body&gt;</code> DOM node also has a function bound to a click event, this will prevent a user's click from triggering it.</p>
 <h2>Manipulation &amp; Traversal</h2>
@@ -526,6 +532,12 @@ calcite.toggleClass(node, <span class="hljs-string">'test'</span>); <span class=
 <span class="hljs-keyword">var</span> nodeArray = calcite.nodeListToArray(nodes);
 </code></pre>
 
+
+          
+
+          
+
+          
 
           
 
@@ -584,6 +596,7 @@ calcite.toggleClass(node, <span class="hljs-string">'test'</span>); <span class=
             <section class="footer-social-nav leader-1">
               <a class="icon-social-twitter" aria-label="Esri on Twitter"  href="https://twitter.com/Esri/"></a>
               <a class="icon-social-facebook" aria-label="Esri on Facebook"  href="https://www.facebook.com/esrigis/"></a>
+              <a class="icon-social-instagram" aria-label="Esri on Instagram"  href="https://instagram.com/esrigram/"></a>
               <a class="icon-social-github" aria-label="Esri on GitHub"  href="http://esri.github.com/"></a>
               <a class="icon-social-contact" aria-label="Contact Esri"  href="http://www.esri.com/about-esri/contact/"></a>
             </section>

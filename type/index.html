@@ -153,7 +153,6 @@
           <div class="column-24">
             <div class="tablet-hide">
               <a href="../" class="top-nav-title">Calcite Web</a>
-              <!-- <nav class="top-nav-list" role="navigation" aria-labelledby="topnav"> -->
               <nav class="top-nav-list" role="navigation">
               
                 
@@ -197,38 +196,32 @@
                 
               
               </nav>
-              <div class="site-search js-site-search right">
-                <form class="site-search-form">
-                  <span class="icon-ui-search site-search-icon"></span>
-                  <input class="site-search-input" type="search" placeholder="Search">
-                  <span class="input-group-button">
-                    <button type="submit" class="btn btn-clear site-search-button">Go</button>
-                  </span>
-                </form>
-              </div>
+              <a href="#" class="icon-ui-search js-expand-toggle top-nav-link right" data-expand="search">Search</a >
             </div>
+
             <div class="tablet-show">
               <a href="/" class="icon-ui-menu top-nav-title js-drawer-toggle" data-drawer="top-nav">Calcite Web</a>
             </div>
           </div>
         </div>
       </header>
-      <div class="expanding-nav js-expanding">
-        <section class="expanding-nav-menu js-expanding-nav" data-expanding-nav="one">
-          <div class="grid-container padding-trailer-half">
-            <div class="column-24">
-              <h1>Expanding Nav One</h1>
-            </div>
-          </div>
-        </section>
-        <section class="expanding-nav-menu js-expanding-nav" data-expanding-nav="two">
-          <div class="grid-container padding-trailer-half">
-            <div class="column-24">
-              <h1>Expanding Nav Two</h1>
-            </div>
-          </div>
-        </section>
-      </div>
+
+
+      <section class="expand js-expand  panel panel-no-padding" data-expand="search">
+        <div class="grid-container padding-trailer-half padding-leader-1 padding-trailer-1">
+          <form method="GET" action="/search/" class="column-24">
+            <label>Search Calcite Web
+              <a href="#" class="icon-ui-close js-expand-toggle right" data-expand="search"></a>
+              <div class="search-bar">
+                <input type='search' placeholder='Search'>
+                <button type="submit" class="search-submit icon-ui-search"></button>
+              </div>
+            </label>
+          </form>
+        </div>
+      </section>
+
+
       <!-- Secondary Nav Pattern -->
       <header class="sub-nav" role="banner">
         <div class="grid-container">
@@ -325,6 +318,7 @@
 
   <a id="skip-to-content" tabindex="0"></a>
   <main class="column-17 phone-column-6 tablet-column-12 pre-1 content-face" role="main">
+
     
       <h1 class="text-rule" id="typefaces" tabindex="0">Typefaces</h1>
       
@@ -341,6 +335,12 @@
 <h3>Proportional Scales</h3>
 <p>Text sizes are defined by a simple <a href="http://alistapart.com/article/more-meaningful-typography">modular scale</a>. The scale is defined by two base sizes for type - body at 1rem and small at 0.95rem - and extrapolates a series of larger type sizes based on a single ratio; 1.25, or a major third interval. All type sizes are <a href="http://snook.ca/archives/html_and_css/font-size-with-rem">set in rems</a>, which have <a href="http://caniuse.com/#feat=rem">more than acceptable browser support</a>. Rems are used for type sizing and all vertical measurements, defined either by the <code>$baseline</code> variable or the <a href="../sass/#modular-scale">modular scale</a> and <a href="../sass/#font-size">font size</a> mixins. This prevents odd sizing issues with nested content, unpredictable results with scaling, and provides a solid anchor for determining sizes.</p>
 
+
+          
+
+          
+
+          
 
           
 
@@ -368,6 +368,12 @@
 <h5>Amazingly few discotheques provide jukeboxes.</h5>
 <h6>Amazingly few discotheques provide jukeboxes.</h6>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -436,6 +442,12 @@
 
 
           
+
+          
+
+          
+
+          
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
@@ -485,6 +497,12 @@
 <h2 class="secondary-face type-sample"> Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</h2>
 <h2 class="secondary-face  type-sample"> Amazingly few discotheques provide jukeboxes.</h2>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -538,6 +556,12 @@
 
 
           
+
+          
+
+          
+
+          
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
@@ -577,6 +601,12 @@
 
           
 
+          
+
+          
+
+          
+
         </section>
         <hr>
       
@@ -587,6 +617,12 @@
 
           <p>Build in classes that allow for quick customization and composition for a wide range of use cases.</p>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -650,6 +686,12 @@
 
           <p>Helpers classes apply the <code>font-size($n)</code> <a href="/sass/#font-size">mixin</a> to an element. This allows for quick resizing of text elements up and down the <a href="/sass/#modular-scale">modular type size scale</a>.</p>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -738,6 +780,12 @@
 
           <p>Sets the font color of the element to any of the <a href="../color">Calcite colors</a> available.</p>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -831,6 +879,12 @@
 
           <p>Sets the color of links within the element, or the link itself, to available <a href="../color">Calcite colors.</a></p>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -931,6 +985,12 @@
 
 
           
+
+          
+
+          
+
+          
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
@@ -995,6 +1055,12 @@
 
           <p>Provides a way to clear the styles for lists. For example, we use this pattern in the footer to clear the typical list styles for a clean, left aligned appearance.</p>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -1094,6 +1160,12 @@
 
           
 
+          
+
+          
+
+          
+
         </section>
         <hr>
       
@@ -1145,6 +1217,7 @@
             <section class="footer-social-nav leader-1">
               <a class="icon-social-twitter" aria-label="Esri on Twitter"  href="https://twitter.com/Esri/"></a>
               <a class="icon-social-facebook" aria-label="Esri on Facebook"  href="https://www.facebook.com/esrigis/"></a>
+              <a class="icon-social-instagram" aria-label="Esri on Instagram"  href="https://instagram.com/esrigram/"></a>
               <a class="icon-social-github" aria-label="Esri on GitHub"  href="http://esri.github.com/"></a>
               <a class="icon-social-contact" aria-label="Contact Esri"  href="http://www.esri.com/about-esri/contact/"></a>
             </section>

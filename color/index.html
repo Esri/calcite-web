@@ -153,7 +153,6 @@
           <div class="column-24">
             <div class="tablet-hide">
               <a href="../" class="top-nav-title">Calcite Web</a>
-              <!-- <nav class="top-nav-list" role="navigation" aria-labelledby="topnav"> -->
               <nav class="top-nav-list" role="navigation">
               
                 
@@ -197,38 +196,32 @@
                 
               
               </nav>
-              <div class="site-search js-site-search right">
-                <form class="site-search-form">
-                  <span class="icon-ui-search site-search-icon"></span>
-                  <input class="site-search-input" type="search" placeholder="Search">
-                  <span class="input-group-button">
-                    <button type="submit" class="btn btn-clear site-search-button">Go</button>
-                  </span>
-                </form>
-              </div>
+              <a href="#" class="icon-ui-search js-expand-toggle top-nav-link right" data-expand="search">Search</a >
             </div>
+
             <div class="tablet-show">
               <a href="/" class="icon-ui-menu top-nav-title js-drawer-toggle" data-drawer="top-nav">Calcite Web</a>
             </div>
           </div>
         </div>
       </header>
-      <div class="expanding-nav js-expanding">
-        <section class="expanding-nav-menu js-expanding-nav" data-expanding-nav="one">
-          <div class="grid-container padding-trailer-half">
-            <div class="column-24">
-              <h1>Expanding Nav One</h1>
-            </div>
-          </div>
-        </section>
-        <section class="expanding-nav-menu js-expanding-nav" data-expanding-nav="two">
-          <div class="grid-container padding-trailer-half">
-            <div class="column-24">
-              <h1>Expanding Nav Two</h1>
-            </div>
-          </div>
-        </section>
-      </div>
+
+
+      <section class="expand js-expand  panel panel-no-padding" data-expand="search">
+        <div class="grid-container padding-trailer-half padding-leader-1 padding-trailer-1">
+          <form method="GET" action="/search/" class="column-24">
+            <label>Search Calcite Web
+              <a href="#" class="icon-ui-close js-expand-toggle right" data-expand="search"></a>
+              <div class="search-bar">
+                <input type='search' placeholder='Search'>
+                <button type="submit" class="search-submit icon-ui-search"></button>
+              </div>
+            </label>
+          </form>
+        </div>
+      </section>
+
+
       <!-- Secondary Nav Pattern -->
       <header class="sub-nav" role="banner">
         <div class="grid-container">
@@ -277,6 +270,7 @@
 
   <a id="skip-to-content" tabindex="0"></a>
   <main class="column-17 phone-column-6 tablet-column-12 pre-1 content-face" role="main">
+
     
       <h1 class="text-rule" id="palette" tabindex="0">Palette</h1>
       
@@ -296,6 +290,12 @@
 
           
 
+          
+
+          
+
+          
+
         </section>
         <hr>
       
@@ -307,6 +307,12 @@
           <p>Calcite Web mostly deals with large-field layouts and a broader range of visual communication, including small interfaces and long format reading. With this in mind, Calcite Web's grayscale differs from that of Calcite Desktop.</p>
 <p>Calcite web provides a short list of simple color variables, while supporting the complete set of official calcite colors.</p>
 
+
+          
+
+          
+
+          
 
           
 
@@ -381,6 +387,12 @@
           <p>Calcite web exposes a set of Sass variables for the UI palette. Each color has three values: light, regular, and dark. The complete set of calcite colors is also supported.
 .</p>
 
+
+          
+
+          
+
+          
 
           
 
@@ -506,6 +518,12 @@
 
           
 
+          
+
+          
+
+          
+
         </section>
         <hr>
       
@@ -557,6 +575,7 @@
             <section class="footer-social-nav leader-1">
               <a class="icon-social-twitter" aria-label="Esri on Twitter"  href="https://twitter.com/Esri/"></a>
               <a class="icon-social-facebook" aria-label="Esri on Facebook"  href="https://www.facebook.com/esrigis/"></a>
+              <a class="icon-social-instagram" aria-label="Esri on Instagram"  href="https://instagram.com/esrigram/"></a>
               <a class="icon-social-github" aria-label="Esri on GitHub"  href="http://esri.github.com/"></a>
               <a class="icon-social-contact" aria-label="Contact Esri"  href="http://www.esri.com/about-esri/contact/"></a>
             </section>

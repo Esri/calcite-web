@@ -153,7 +153,6 @@
           <div class="column-24">
             <div class="tablet-hide">
               <a href="../" class="top-nav-title">Calcite Web</a>
-              <!-- <nav class="top-nav-list" role="navigation" aria-labelledby="topnav"> -->
               <nav class="top-nav-list" role="navigation">
               
                 
@@ -197,38 +196,32 @@
                 
               
               </nav>
-              <div class="site-search js-site-search right">
-                <form class="site-search-form">
-                  <span class="icon-ui-search site-search-icon"></span>
-                  <input class="site-search-input" type="search" placeholder="Search">
-                  <span class="input-group-button">
-                    <button type="submit" class="btn btn-clear site-search-button">Go</button>
-                  </span>
-                </form>
-              </div>
+              <a href="#" class="icon-ui-search js-expand-toggle top-nav-link right" data-expand="search">Search</a >
             </div>
+
             <div class="tablet-show">
               <a href="/" class="icon-ui-menu top-nav-title js-drawer-toggle" data-drawer="top-nav">Calcite Web</a>
             </div>
           </div>
         </div>
       </header>
-      <div class="expanding-nav js-expanding">
-        <section class="expanding-nav-menu js-expanding-nav" data-expanding-nav="one">
-          <div class="grid-container padding-trailer-half">
-            <div class="column-24">
-              <h1>Expanding Nav One</h1>
-            </div>
-          </div>
-        </section>
-        <section class="expanding-nav-menu js-expanding-nav" data-expanding-nav="two">
-          <div class="grid-container padding-trailer-half">
-            <div class="column-24">
-              <h1>Expanding Nav Two</h1>
-            </div>
-          </div>
-        </section>
-      </div>
+
+
+      <section class="expand js-expand  panel panel-no-padding" data-expand="search">
+        <div class="grid-container padding-trailer-half padding-leader-1 padding-trailer-1">
+          <form method="GET" action="/search/" class="column-24">
+            <label>Search Calcite Web
+              <a href="#" class="icon-ui-close js-expand-toggle right" data-expand="search"></a>
+              <div class="search-bar">
+                <input type='search' placeholder='Search'>
+                <button type="submit" class="search-submit icon-ui-search"></button>
+              </div>
+            </label>
+          </form>
+        </div>
+      </section>
+
+
       <!-- Secondary Nav Pattern -->
       <header class="sub-nav" role="banner">
         <div class="grid-container">
@@ -264,10 +257,6 @@
             
           
             
-              <a href="#site-search" class="side-nav-link">Site Search</a>
-            
-          
-            
               <a href="#user-sign-in" class="side-nav-link">User Sign In</a>
             
           
@@ -277,6 +266,10 @@
           
             
               <a href="#sub-nav" class="side-nav-link">Sub Nav</a>
+            
+          
+            
+              <a href="#hero" class="side-nav-link">Hero</a>
             
           
             
@@ -331,6 +324,7 @@
 
   <a id="skip-to-content" tabindex="0"></a>
   <main class="column-17 phone-column-6 tablet-column-12 pre-1 content-face" role="main">
+
     
       <h1 class="text-rule" id="patterns" tabindex="0">Patterns</h1>
       
@@ -340,6 +334,12 @@
           <p>Patterns are specific UI schemes that use a collection of <a href="../components">components</a> and pattern-specific css to solve a common design problem. Patterns can either stand alone entirely as markup, or be dependent on <a href="../javascript">JavaScript</a> to accomplish certain behaviors.</p>
 <p>To use a pattern, follow the structures defined in the sample code.</p>
 
+
+          
+
+          
+
+          
 
           
 
@@ -392,6 +392,12 @@
 
           
 
+          
+
+          
+
+          
+
         </section>
         <hr>
       
@@ -402,6 +408,12 @@
 
           <p>Top navigation is the primary, header level navigation for a web site. It contains the root level pages, user logins, and the site title. The main navigation should be hidden on screen sizes smaller than the size of the navigation. This navigation should be moved to an off-screen drawer on the left hand side. Notice the separate <code>div</code> elements with <code>tablet-hide</code> and <code>tablet-show</code> classes in the sample below.</p>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -461,55 +473,17 @@
       
         <section>
           
-            <h2 id="site-search" tabindex="0">Site Search</h2>
-          
-
-          <p>Site search is an expandable search input pattern that nests within the top nav pattern.</p>
-
-
-          
-            <h3 class="leader-2" tabindex="0">Modifiers</h3>
-            <div class="styleguide-modifiers">
-              <div class="styleguide-modifier-example">
-                <div class="site-search js-site-search">
-  <form class="site-search-form">
-    <span class="icon-ui-search site-search-icon"></span>
-    <input class="site-search-input" type="search" placeholder="Search">
-    <span class="input-group-button">
-      <button type="submit" class="btn btn-clear site-search-button">Go</button>
-    </span>
-  </form>
-</div>
-              </div>
-              
-            </div>
-<pre><code>&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"site-search js-site-search"</span>&gt;
-  &lt;form <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"site-search-form"</span>&gt;
-    &lt;span <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"icon-ui-search site-search-icon"</span>&gt;&lt;/span&gt;
-    &lt;input <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"site-search-input"</span> <span class="hljs-class"><span class="hljs-keyword">type</span>=</span><span class="hljs-string">"search"</span> placeholder=<span class="hljs-string">"Search"</span>&gt;
-    &lt;span <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"input-group-button"</span>&gt;
-      &lt;button <span class="hljs-class"><span class="hljs-keyword">type</span>=</span><span class="hljs-string">"submit"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"btn btn-clear site-search-button"</span>&gt;<span class="hljs-type">Go</span>&lt;/button&gt;
-    &lt;/span&gt;
-  &lt;/form&gt;
-&lt;/div&gt;
-</code></pre>
-
-          
-
-          
-
-          
-
-        </section>
-        <hr>
-      
-        <section>
-          
             <h2 id="user-sign-in" tabindex="0">User Sign In</h2>
           
 
           <p>Designed to be combined with the <a href="#top-nav">top navigation</a> pattern on sites where a logged in portion is accessible. Once a use is logged in, it should be replaced with the <a href="user-nav">user navigation pattern</a>.</p>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -545,6 +519,12 @@
           <p>Designed to be combined with the <a href="#user-nav">user sign in pattern</a> pattern on sites where a logged in portion is accessible.</p>
 <p>The user navigation element is just a <a href="../components/#dropdowns">dropdown</a> with a few special styles.</p>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -604,6 +584,12 @@
           <p>The 'Sub-Nav' provides a second level of hierarchy to a site. While the top-nav includes the top-most level of navigation, the sub-nav includes navigation for sections nested inside that. The subnav has a tabbed navigation pattern, a title, and room for a call to action.</p>
 <p>You can also turn the sub-nav into a more graphically-driven banner by adding <code>padding-leader</code> and <code>padding-trailer</code> classes to the title, thereby increasing the vertical size of the sub-nav.</p>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -667,11 +653,85 @@
       
         <section>
           
+            <h2 id="hero" tabindex="0">Hero</h2>
+          
+
+          <p>A <code>Hero</code> is an implementation of the Sub Nav pattern that allows for a big, splashy image and headline. A Hero can be accomplished entirely with markup, as below.</p>
+
+
+          
+
+          
+
+          
+
+          
+            <h3 class="leader-2" tabindex="0">Modifiers</h3>
+            <div class="styleguide-modifiers">
+              <div class="styleguide-modifier-example">
+                <header class="sub-nav" role="banner">
+  <div class="grid-container">
+    <div class="column-24">
+      <nav class="breadcrumbs link-white leader-1">
+        <a href="#" class="crumb">Heros</a>
+        <a href="#" class="crumb">Animated</a>
+        <a href="#" class="crumb is-active">Adventure Time</a>
+      </nav>
+      <h1 class="sub-nav-title text-white leader-3">Heros</h1>
+      <p class="trailer-4 text-white">Don' forget Breakfast Princess, Emerald Princess, Engagement Ring Princess, Flame Princess, Ghost Princess, Hot Dog Princess, Lumpy Space Princess, Muscle Princess, Princess Bubblegum, Raggedy Princess, Skeleton Princess, Slime Princess, Turtle Princess, Wildberry Princess, Bee Princess, Bounce House Princess, Cotton Candy Princess, Crab Princess, Frozen Yogurt Princess, Elbow Princess, Embryo Princess, Gridface Princess, Jungle Princess, Laurel Princess, Lizard Princess, Old Lady Princess, Peanut Princess, Princess Beautiful, Princess Monster Wife, Princess Princess Princess, Purple Princess, Space Angel Princess, Strudel Princess, and Toast Princess.</p>
+      <nav class="sub-nav-list" role="navigation" aria-labelledby="subnav">
+        <a class="sub-nav-link is-active" href="#">Jake the Dog</a>
+        <a class="sub-nav-link" href="#">Finn the Human</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+              </div>
+              
+            </div>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">header</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-nav"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"banner"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-container"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-24"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"breadcrumbs link-white leader-1"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"crumb"</span>&gt;</span>Heros<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"crumb"</span>&gt;</span>Animated<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"crumb is-active"</span>&gt;</span>Adventure Time<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-nav-title text-white leader-3"</span>&gt;</span>Heros<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"trailer-4 text-white"</span>&gt;</span>Don' forget Breakfast Princess, Emerald Princess, Engagement Ring Princess, Flame Princess, Ghost Princess, Hot Dog Princess, Lumpy Space Princess, Muscle Princess, Princess Bubblegum, Raggedy Princess, Skeleton Princess, Slime Princess, Turtle Princess, Wildberry Princess, Bee Princess, Bounce House Princess, Cotton Candy Princess, Crab Princess, Frozen Yogurt Princess, Elbow Princess, Embryo Princess, Gridface Princess, Jungle Princess, Laurel Princess, Lizard Princess, Old Lady Princess, Peanut Princess, Princess Beautiful, Princess Monster Wife, Princess Princess Princess, Purple Princess, Space Angel Princess, Strudel Princess, and Toast Princess.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-nav-list"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"navigation"</span> <span class="hljs-attribute">aria-labelledby</span>=<span class="hljs-value">"subnav"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-nav-link is-active"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Jake the Dog<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-nav-link"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Finn the Human<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">header</span>&gt;</span>
+
+</code></pre>
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+        <section>
+          
             <h2 id="third-nav" tabindex="0">Third Nav</h2>
           
 
           <p>Tertiary navigation is necessary only when the information architecture of the site requires three levels of hierarchy within pages. A breadcrumb component can also be used in this pattern.</p>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -722,6 +782,12 @@
 
           <p>Sidebar can be used either for in-page navigation — like on this page — or for lists of articles under a given topic.</p>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -819,6 +885,12 @@
 
           
 
+          
+
+          
+
+          
+
         </section>
         <hr>
       
@@ -829,6 +901,12 @@
 
           <p>Use the pagination pattern to navigate between pages of displayed content, either in a gallery or a search result view.</p>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -878,6 +956,12 @@
 <p>To create a link or button that opens a modal, you must add a <code>js-modal-toggle</code> class to the element, along with a <code>data-modal</code> attribute specifying the name of the modal that should open. The modal should also get a <code>data-modal</code> attribute with the same name.</p>
 <p>Elements with the <code>js-modal-toggle</code> that are inside a modal don't need the <code>data-modal</code> attribute as they will just close the modal they are in.</p>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -943,6 +1027,12 @@
           <p>The framework includes a quick set of styles for a tabbed interface pattern. The full tab container will expand to fit its parent.</p>
 <p>As an added bonus, this component supports intelligently restricting the width of tabs if they get too long and numerous.</p>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -1051,6 +1141,12 @@
 
 
           
+
+          
+
+          
+
+          
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
@@ -1150,6 +1246,12 @@
 
           
 
+          
+
+          
+
+          
+
         </section>
         <hr>
       
@@ -1160,6 +1262,31 @@
 
           <p>The exanding nav pattern is designed for use beneath the <a href="top-nav">Top Nav</a> pattern. It can be used to create search, or the <a href="http://esri.com">esri.com</a> style Mega Nav Dropdown. Expanding navs are controlled by the <code>js-expanding-toggle</code> classes, which bind the javascript function to the element, and the <code>data-expanding-nav</code> attribute, which ties toggle controllers to specfific expanding navs.</p>
 
+
+          
+
+          
+
+          
+
+          
+            <h3 class="leader-2" tabindex="0">Modifiers</h3>
+            <div class="styleguide-modifiers">
+              <div class="styleguide-modifier-example">
+                <a href="#" class="js-expand-toggle" data-expand="foo">Open Expander</a >
+
+<section class="expand js-expand" data-expand="foo">
+  <h1>Expander Expanded</h1>
+</section>
+              </div>
+              
+            </div>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-expand-toggle"</span> <span class="hljs-attribute">data-expand</span>=<span class="hljs-value">"foo"</span>&gt;</span>Open Expander<span class="hljs-tag">&lt;/<span class="hljs-title">a</span> &gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"expand js-expand"</span> <span class="hljs-attribute">data-expand</span>=<span class="hljs-value">"foo"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Expander Expanded<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+</code></pre>
 
           
 
@@ -1218,6 +1345,7 @@
             <section class="footer-social-nav leader-1">
               <a class="icon-social-twitter" aria-label="Esri on Twitter"  href="https://twitter.com/Esri/"></a>
               <a class="icon-social-facebook" aria-label="Esri on Facebook"  href="https://www.facebook.com/esrigis/"></a>
+              <a class="icon-social-instagram" aria-label="Esri on Instagram"  href="https://instagram.com/esrigram/"></a>
               <a class="icon-social-github" aria-label="Esri on GitHub"  href="http://esri.github.com/"></a>
               <a class="icon-social-contact" aria-label="Contact Esri"  href="http://www.esri.com/about-esri/contact/"></a>
             </section>

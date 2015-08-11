@@ -153,7 +153,6 @@
           <div class="column-24">
             <div class="tablet-hide">
               <a href="../" class="top-nav-title">Calcite Web</a>
-              <!-- <nav class="top-nav-list" role="navigation" aria-labelledby="topnav"> -->
               <nav class="top-nav-list" role="navigation">
               
                 
@@ -197,38 +196,32 @@
                 
               
               </nav>
-              <div class="site-search js-site-search right">
-                <form class="site-search-form">
-                  <span class="icon-ui-search site-search-icon"></span>
-                  <input class="site-search-input" type="search" placeholder="Search">
-                  <span class="input-group-button">
-                    <button type="submit" class="btn btn-clear site-search-button">Go</button>
-                  </span>
-                </form>
-              </div>
+              <a href="#" class="icon-ui-search js-expand-toggle top-nav-link right" data-expand="search">Search</a >
             </div>
+
             <div class="tablet-show">
               <a href="/" class="icon-ui-menu top-nav-title js-drawer-toggle" data-drawer="top-nav">Calcite Web</a>
             </div>
           </div>
         </div>
       </header>
-      <div class="expanding-nav js-expanding">
-        <section class="expanding-nav-menu js-expanding-nav" data-expanding-nav="one">
-          <div class="grid-container padding-trailer-half">
-            <div class="column-24">
-              <h1>Expanding Nav One</h1>
-            </div>
-          </div>
-        </section>
-        <section class="expanding-nav-menu js-expanding-nav" data-expanding-nav="two">
-          <div class="grid-container padding-trailer-half">
-            <div class="column-24">
-              <h1>Expanding Nav Two</h1>
-            </div>
-          </div>
-        </section>
-      </div>
+
+
+      <section class="expand js-expand  panel panel-no-padding" data-expand="search">
+        <div class="grid-container padding-trailer-half padding-leader-1 padding-trailer-1">
+          <form method="GET" action="/search/" class="column-24">
+            <label>Search Calcite Web
+              <a href="#" class="icon-ui-close js-expand-toggle right" data-expand="search"></a>
+              <div class="search-bar">
+                <input type='search' placeholder='Search'>
+                <button type="submit" class="search-submit icon-ui-search"></button>
+              </div>
+            </label>
+          </form>
+        </div>
+      </section>
+
+
       <!-- Secondary Nav Pattern -->
       <header class="sub-nav" role="banner">
         <div class="grid-container">
@@ -327,6 +320,7 @@
 
   <a id="skip-to-content" tabindex="0"></a>
   <main class="column-17 phone-column-6 tablet-column-12 pre-1 content-face" role="main">
+
     
       <h1 class="text-rule" id="sass" tabindex="0">Sass</h1>
       
@@ -487,6 +481,12 @@ $<span class="hljs-rule"><span class="hljs-attribute">include-type</span>:<span 
 
           
 
+          
+
+          
+
+          
+
         </section>
         <hr>
       
@@ -500,6 +500,12 @@ $<span class="hljs-rule"><span class="hljs-attribute">include-type</span>:<span 
 <p>These variables can also be configured in your own project to change the library for project-specific applications.</p>
 <p>Below are all of the variables and a brief description of what they represent.</p>
 
+
+          
+
+          
+
+          
 
           
 
@@ -523,6 +529,12 @@ $<span class="hljs-rule"><span class="hljs-attribute">include-type</span>:<span 
 </code></pre>
 <p>In static classes, these breakpoints are often expressed as <code>phone-</code>, <code>tablet-</code>, <code>desktop-</code>.</p>
 
+
+          
+
+          
+
+          
 
           
 
@@ -556,6 +568,12 @@ $<span class="hljs-rule"><span class="hljs-attribute">include-type</span>:<span 
 
           
 
+          
+
+          
+
+          
+
         </section>
         <hr>
       
@@ -569,6 +587,12 @@ $<span class="hljs-rule"><span class="hljs-attribute">include-type</span>:<span 
 
           <p>Calcite Web has a helpful set of mixins for composing type. We recommend you use these mixins wherever possible when writing your own components as it will keep the visual proportions and styles in line with the rest of the framework.</p>
 
+
+          
+
+          
+
+          
 
           
 
@@ -596,6 +620,12 @@ $<span class="hljs-rule"><span class="hljs-attribute">include-type</span>:<span 
 
           
 
+          
+
+          
+
+          
+
         </section>
         <hr>
       
@@ -607,6 +637,12 @@ $<span class="hljs-rule"><span class="hljs-attribute">include-type</span>:<span 
           <p>The <code>modular-scale($n)</code> behaves the same as the <code>font-size($n)</code> mixin, but returns a raw rem value rather than css styles specific to type elements. This means that the <code>modular-scale($n)</code> mixin can be used to define heights, widths, padding, margins, or any other property of an element so that it adheres to the modular scale defined by the typography.
 Setting the max width of an article to a large multiple of the text size is a way to define a comfortable reading measure related to the proportional decisions of the content.</p>
 
+
+          
+
+          
+
+          
 
           
 
@@ -633,6 +669,12 @@ Setting the max width of an article to a large multiple of the text size is a wa
 
           
 
+          
+
+          
+
+          
+
         </section>
         <hr>
       
@@ -643,6 +685,12 @@ Setting the max width of an article to a large multiple of the text size is a wa
 
           <p>Leading is the space between lines in a text block. The <code>leading($n)</code> mixin accepts an integer, and sets the line height of the element to the integer times the standard baseline unit.</p>
 
+
+          
+
+          
+
+          
 
           
 
@@ -702,6 +750,12 @@ Setting the max width of an article to a large multiple of the text size is a wa
 
           
 
+          
+
+          
+
+          
+
         </section>
         <hr>
       
@@ -712,6 +766,12 @@ Setting the max width of an article to a large multiple of the text size is a wa
 
           <p>Sass Unicode variables provide a simple way to display unicode characters as content in css declarations.</p>
 
+
+          
+
+          
+
+          
 
           
 
@@ -1182,6 +1242,12 @@ Setting the max width of an article to a large multiple of the text size is a wa
 
           
 
+          
+
+          
+
+          
+
         </section>
         <hr>
       
@@ -1233,6 +1299,7 @@ Setting the max width of an article to a large multiple of the text size is a wa
             <section class="footer-social-nav leader-1">
               <a class="icon-social-twitter" aria-label="Esri on Twitter"  href="https://twitter.com/Esri/"></a>
               <a class="icon-social-facebook" aria-label="Esri on Facebook"  href="https://www.facebook.com/esrigis/"></a>
+              <a class="icon-social-instagram" aria-label="Esri on Instagram"  href="https://instagram.com/esrigram/"></a>
               <a class="icon-social-github" aria-label="Esri on GitHub"  href="http://esri.github.com/"></a>
               <a class="icon-social-contact" aria-label="Contact Esri"  href="http://www.esri.com/about-esri/contact/"></a>
             </section>

@@ -153,7 +153,6 @@
           <div class="column-24">
             <div class="tablet-hide">
               <a href="../" class="top-nav-title">Calcite Web</a>
-              <!-- <nav class="top-nav-list" role="navigation" aria-labelledby="topnav"> -->
               <nav class="top-nav-list" role="navigation">
               
                 
@@ -197,38 +196,32 @@
                 
               
               </nav>
-              <div class="site-search js-site-search right">
-                <form class="site-search-form">
-                  <span class="icon-ui-search site-search-icon"></span>
-                  <input class="site-search-input" type="search" placeholder="Search">
-                  <span class="input-group-button">
-                    <button type="submit" class="btn btn-clear site-search-button">Go</button>
-                  </span>
-                </form>
-              </div>
+              <a href="#" class="icon-ui-search js-expand-toggle top-nav-link right" data-expand="search">Search</a >
             </div>
+
             <div class="tablet-show">
               <a href="/" class="icon-ui-menu top-nav-title js-drawer-toggle" data-drawer="top-nav">Calcite Web</a>
             </div>
           </div>
         </div>
       </header>
-      <div class="expanding-nav js-expanding">
-        <section class="expanding-nav-menu js-expanding-nav" data-expanding-nav="one">
-          <div class="grid-container padding-trailer-half">
-            <div class="column-24">
-              <h1>Expanding Nav One</h1>
-            </div>
-          </div>
-        </section>
-        <section class="expanding-nav-menu js-expanding-nav" data-expanding-nav="two">
-          <div class="grid-container padding-trailer-half">
-            <div class="column-24">
-              <h1>Expanding Nav Two</h1>
-            </div>
-          </div>
-        </section>
-      </div>
+
+
+      <section class="expand js-expand  panel panel-no-padding" data-expand="search">
+        <div class="grid-container padding-trailer-half padding-leader-1 padding-trailer-1">
+          <form method="GET" action="/search/" class="column-24">
+            <label>Search Calcite Web
+              <a href="#" class="icon-ui-close js-expand-toggle right" data-expand="search"></a>
+              <div class="search-bar">
+                <input type='search' placeholder='Search'>
+                <button type="submit" class="search-submit icon-ui-search"></button>
+              </div>
+            </label>
+          </form>
+        </div>
+      </section>
+
+
       <!-- Secondary Nav Pattern -->
       <header class="sub-nav" role="banner">
         <div class="grid-container">
@@ -357,6 +350,7 @@
 
   <a id="skip-to-content" tabindex="0"></a>
   <main class="column-17 phone-column-6 tablet-column-12 pre-1 content-face" role="main">
+
     
       <h1 class="text-rule" id="components" tabindex="0">Components</h1>
       
@@ -365,6 +359,12 @@
 
           <p>Components are reusable blocks that can be used across any part of a Calcite site. They can be used within <a href="../patterns/">patterns</a> or on their own.</p>
 
+
+          
+
+          
+
+          
 
           
 
@@ -386,6 +386,12 @@
 <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-red btn-arrow"</span>&gt;</span>  Red Button with Arrow <span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
 </code></pre>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -471,6 +477,12 @@
 
 
           
+
+          
+
+          
+
+          
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
@@ -505,6 +517,12 @@
 
           <p>Badges are inline components that combine a link, a panel, and perhaps an action.</p>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -563,6 +581,12 @@
 <p>Dropdowns are good for showing multiple options under a single call to action. For example, if you had a download button, and you needed the user to choose a format for the download, you could put several choices in a dropdown.</p>
 <p>Dropdowns differ from <code>select</code> elements in that they don't have a default state or a 'current' state. Instead, they offer a jumping off point for a series of related actions.</p>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -634,6 +658,12 @@
 
 
           
+
+          
+
+          
+
+          
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
@@ -667,6 +697,12 @@
           <p>Alerts are used to inform users of state changes, errors, or successful actions. Alerts are only visible if they have the <code>is-active</code> class. Without as <code>is-active</code> class, the alert will be set to <code>display: none;</code></p>
 <p>Calcite does not manage alert classes be default - you will have to write your own JavaScript handlers for this.</p>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -717,6 +753,12 @@
 
           <p>Panels are useful to draw attention or contain certain text on a page. They are simple containers, which can be used to help guide users through the visual hierarchy of your design. Adding borders and padding to any of the panels shown below allows for framing content as a call-out.</p>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -809,10 +851,16 @@
 
 
           
+
+          
+
+          
+
+          
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
-                <nav class="breadcrumbs">
+                <nav class="breadcrumbs modifier-class">
   <a href="#" class="crumb">Thing</a>
   <span class="crumb">Thing</span>
   <a href="#" class="crumb">Thing</a>
@@ -821,8 +869,19 @@
 </nav>
               </div>
               
+                <div class="styleguide-modifier-example">
+                  <nav class="breadcrumbs breadcrumbs-white">
+  <a href="#" class="crumb">Thing</a>
+  <span class="crumb">Thing</span>
+  <a href="#" class="crumb">Thing</a>
+  <a href="#" class="crumb">Thing</a>
+  <a href="#" class="crumb is-active">Current</a>
+</nav>
+                  <code class="modifier-name">.breadcrumbs-white</code>
+                </div>
+              
             </div>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"breadcrumbs"</span>&gt;</span>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"breadcrumbs modifier-class"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"crumb"</span>&gt;</span>Thing<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"crumb"</span>&gt;</span>Thing<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"crumb"</span>&gt;</span>Thing<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -847,6 +906,12 @@
 
           <p>Tooltips use an <code>aria-label</code> attribute to provide contextual help on hover. Tooltips can apply to any element.</p>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -931,6 +996,12 @@
 </code></pre>
 <p>Tables that are too wide for the layout will be constrained and scroll horizontally. This is especially helpful for responsive designs which scale down to be smaller than the table's minimum width.</p>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -1107,6 +1178,12 @@
 
 
           
+
+          
+
+          
+
+          
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
@@ -1146,6 +1223,12 @@
 <li>The <code>&lt;input&gt;</code> element should have both the <code>required</code> and <code>aria-required=&quot;true&quot;</code> attributes.</li>
 </ol>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -1297,6 +1380,12 @@
           
 
           
+
+          
+
+          
+
+          
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
@@ -1339,6 +1428,12 @@
 
           <p>All text inputs are styled by default. They receive a 1px border, a CSS3 transition, and a very distinct <code>:focus</code> style which helps provide feedback to the user while they engage with a form. The size of the forms and buttons are calibrated to they can exist in-line to each other.</p>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -1404,6 +1499,12 @@
 
 
           
+
+          
+
+          
+
+          
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
@@ -1442,6 +1543,12 @@
 
           <p>Action bars are used to display multiple actions horizontally. Actions are meant to be used with buttons. They are clearfixed and floated right by default.</p>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -1483,6 +1590,12 @@
         <section>
           
             <h2 id="selects" tabindex="0">Selects</h2>
+          
+
+          
+
+          
+
           
 
           
@@ -1571,6 +1684,12 @@
 
 
           
+
+          
+
+          
+
+          
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
@@ -1605,6 +1724,12 @@
 
           <p>Much like checkboxes, radio buttons are largely left alone except for alterations in spacing and focus state.</p>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -1647,6 +1772,12 @@
           <p>A minimum buffer zone of clear space is maintained around the logo. Display of the logo should not be less than 78 x 28 pixels. This minimun size and buffer is part of the component, designed to be as simple to use as possible.</p>
 <p>Use of the reverse logo should only be on top of dark backgrounds. Neither logo should be used on top of images, or altered in any way.</p>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -1726,6 +1857,7 @@
             <section class="footer-social-nav leader-1">
               <a class="icon-social-twitter" aria-label="Esri on Twitter"  href="https://twitter.com/Esri/"></a>
               <a class="icon-social-facebook" aria-label="Esri on Facebook"  href="https://www.facebook.com/esrigis/"></a>
+              <a class="icon-social-instagram" aria-label="Esri on Instagram"  href="https://instagram.com/esrigram/"></a>
               <a class="icon-social-github" aria-label="Esri on GitHub"  href="http://esri.github.com/"></a>
               <a class="icon-social-contact" aria-label="Contact Esri"  href="http://www.esri.com/about-esri/contact/"></a>
             </section>

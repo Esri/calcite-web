@@ -1,4 +1,4 @@
-/* calcite-web - v0.10.5 - 2015-07-24
+/* calcite-web - v0.11.1 - 2015-08-11
 *  https://github.com/esri/calcite-web
 *  Copyright (c) 2015 Environmental Systems Research Institute, Inc.
 *  Apache 2.0 License */
@@ -9,7 +9,7 @@
   // └────────────┘
   // define all public api methods (excluding patterns)
   var calcite = {
-    version: 'v0.10.5',
+    version: 'v0.11.1',
     click: click,
     addEvent: addEvent,
     removeEvent: removeEvent,
@@ -207,7 +207,8 @@
         } else {
           child.setAttribute('aria-expanded', 'false');
         }
-        addEvent(child, click(), toggleAccordion);
+        var sectionTitle = child.firstChild.nextElementSibling;
+        addEvent(sectionTitle, click(), toggleAccordion);
         addEvent(child, 'keyup', function(e) {
           if (e.keyCode === 13) {
             toggleAccordion(e);
@@ -334,26 +335,24 @@
   // └───────────────┘
   // show and hide exanding nav located under topnav
   calcite.expandingNav = function (domNode) {
-    var toggles = findElements('.js-expanding-toggle', domNode);
-    var expanders = findElements('.js-expanding', domNode);
-    var sections = document.querySelectorAll('.js-expanding-nav');
+    var toggles = findElements('.js-expand-toggle', domNode);
+    var sections = document.querySelectorAll('.js-expand');
 
     toggles.forEach(function (toggle) {
       addEvent(toggle, click(), function (e) {
         preventDefault(e);
 
-        var sectionId = toggle.getAttribute('data-expanding-nav');
-        var section = document.querySelector('.js-expanding-nav[data-expanding-nav="' + sectionId + '"]');
-        var expander = closest('js-expanding', section);
-        var isOpen = hasClass(expander, 'is-active');
+        var sectionId = toggle.getAttribute('data-expand');
+        var section = document.querySelector('.js-expand[data-expand="' + sectionId + '"]');
+        var isOpen = hasClass(section, 'is-active');
         var shouldClose = hasClass(section, 'is-active');
 
         toggleActive(sections, section);
 
         if (isOpen && shouldClose) {
-          removeClass(expander, 'is-active');
+          removeClass(section, 'is-active');
         } else {
-          addClass(expander, 'is-active');
+          addClass(section, 'is-active');
         }
       });
     });
@@ -587,7 +586,7 @@
   // start up Calcite and attach all the patterns
   // optionally pass an array of patterns you'd like to watch
   function init (patterns) {
-    patterns = patterns || ['accordion', 'dropdown', 'drawer', 'expandingNav', 'modal', 'tabs', 'siteSearch', 'sticky'];
+    patterns = patterns || ['sticky', 'accordion', 'dropdown', 'drawer', 'expandingNav', 'modal', 'tabs', 'siteSearch'];
     patterns.forEach(function (pattern) {
       calcite[pattern]();
     });

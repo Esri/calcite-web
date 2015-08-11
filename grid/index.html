@@ -153,7 +153,6 @@
           <div class="column-24">
             <div class="tablet-hide">
               <a href="../" class="top-nav-title">Calcite Web</a>
-              <!-- <nav class="top-nav-list" role="navigation" aria-labelledby="topnav"> -->
               <nav class="top-nav-list" role="navigation">
               
                 
@@ -197,38 +196,32 @@
                 
               
               </nav>
-              <div class="site-search js-site-search right">
-                <form class="site-search-form">
-                  <span class="icon-ui-search site-search-icon"></span>
-                  <input class="site-search-input" type="search" placeholder="Search">
-                  <span class="input-group-button">
-                    <button type="submit" class="btn btn-clear site-search-button">Go</button>
-                  </span>
-                </form>
-              </div>
+              <a href="#" class="icon-ui-search js-expand-toggle top-nav-link right" data-expand="search">Search</a >
             </div>
+
             <div class="tablet-show">
               <a href="/" class="icon-ui-menu top-nav-title js-drawer-toggle" data-drawer="top-nav">Calcite Web</a>
             </div>
           </div>
         </div>
       </header>
-      <div class="expanding-nav js-expanding">
-        <section class="expanding-nav-menu js-expanding-nav" data-expanding-nav="one">
-          <div class="grid-container padding-trailer-half">
-            <div class="column-24">
-              <h1>Expanding Nav One</h1>
-            </div>
-          </div>
-        </section>
-        <section class="expanding-nav-menu js-expanding-nav" data-expanding-nav="two">
-          <div class="grid-container padding-trailer-half">
-            <div class="column-24">
-              <h1>Expanding Nav Two</h1>
-            </div>
-          </div>
-        </section>
-      </div>
+
+
+      <section class="expand js-expand  panel panel-no-padding" data-expand="search">
+        <div class="grid-container padding-trailer-half padding-leader-1 padding-trailer-1">
+          <form method="GET" action="/search/" class="column-24">
+            <label>Search Calcite Web
+              <a href="#" class="icon-ui-close js-expand-toggle right" data-expand="search"></a>
+              <div class="search-bar">
+                <input type='search' placeholder='Search'>
+                <button type="submit" class="search-submit icon-ui-search"></button>
+              </div>
+            </label>
+          </form>
+        </div>
+      </section>
+
+
       <!-- Secondary Nav Pattern -->
       <header class="sub-nav" role="banner">
         <div class="grid-container">
@@ -349,6 +342,7 @@
 
   <a id="skip-to-content" tabindex="0"></a>
   <main class="column-17 phone-column-6 tablet-column-12 pre-1 content-face" role="main">
+
     
       <h1 class="text-rule" id="grid" tabindex="0">Grid</h1>
       
@@ -395,6 +389,12 @@
 </tbody>
 </table>
 
+
+          
+
+          
+
+          
 
           
 
@@ -514,6 +514,12 @@
 
           
 
+          
+
+          
+
+          
+
         </section>
         <hr>
       
@@ -531,6 +537,12 @@
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 </code></pre>
 
+
+          
+
+          
+
+          
 
           
 
@@ -558,6 +570,12 @@
 
           
 
+          
+
+          
+
+          
+
         </section>
         <hr>
       
@@ -569,6 +587,12 @@
           <p>The width of elements can be explicitly defined for breakpoints where columns would normally fold by default. This can be done with the <code>phone-column-n</code> and <code>tablet-column-n</code> classes. For example, <code>.column-12</code> would default to the full 12/12 column width at a tablet size. Adding to the same element <code>.tablet-column-6</code> would prevent the default behavior, and at a tablet viewport, the element would be 6/12 columns.</p>
 <p><a href="../page-layouts/grid#responsive-columns">View the example</a></p>
 
+
+          
+
+          
+
+          
 
           
 
@@ -596,6 +620,12 @@
 
           
 
+          
+
+          
+
+          
+
         </section>
         <hr>
       
@@ -608,6 +638,12 @@
 <p>With this grid you can wrap the first two columns in a 24 column grid, which will act in the same manner as a row.</p>
 <p><a href="../page-layouts/grid#rows">View the example</a></p>
 
+
+          
+
+          
+
+          
 
           
 
@@ -633,6 +669,12 @@
 
           
 
+          
+
+          
+
+          
+
         </section>
         <hr>
       
@@ -646,6 +688,12 @@
 </code></pre>
 <p><a href="../page-layouts/grid#responsive-block-groups">View the example</a></p>
 
+
+          
+
+          
+
+          
 
           
 
@@ -676,6 +724,12 @@
 
           
 
+          
+
+          
+
+          
+
         </section>
         <hr>
       
@@ -693,6 +747,12 @@
 </code></pre>
 <p>These also apply to <code>padding-leader</code> and <code>padding-trailer</code></p>
 
+
+          
+
+          
+
+          
 
           
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
@@ -863,6 +923,12 @@
 
 
           
+
+          
+
+          
+
+          
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
@@ -977,6 +1043,12 @@ aligning grid columns when the Grid System is unable to determine which columns 
 
           
 
+          
+
+          
+
+          
+
         </section>
         <hr>
       
@@ -1042,6 +1114,12 @@ aligning grid columns when the Grid System is unable to determine which columns 
 
           
 
+          
+
+          
+
+          
+
         </section>
         <hr>
       
@@ -1063,6 +1141,12 @@ aligning grid columns when the Grid System is unable to determine which columns 
 
           
 
+          
+
+          
+
+          
+
         </section>
         <hr>
       
@@ -1073,6 +1157,12 @@ aligning grid columns when the Grid System is unable to determine which columns 
 
           <p>The modifier class <code>inline-block</code> will add <code>display: inline-block</code> to an element.</p>
 
+
+          
+
+          
+
+          
 
           
 
@@ -1098,6 +1188,12 @@ aligning grid columns when the Grid System is unable to determine which columns 
 
           
 
+          
+
+          
+
+          
+
         </section>
         <hr>
       
@@ -1115,6 +1211,12 @@ aligning grid columns when the Grid System is unable to determine which columns 
 
           
 
+          
+
+          
+
+          
+
         </section>
         <hr>
       
@@ -1125,6 +1227,12 @@ aligning grid columns when the Grid System is unable to determine which columns 
 
           <p>Elements that become position fixed as they reach a certain position in the viewport are refered to as 'sticky'. The <code>js-sticky</code> class takes an <code>data-top=x</code> attribute that defines the point from the top of the window the sticky element will stick.</p>
 
+
+          
+
+          
+
+          
 
           
 
@@ -1183,6 +1291,7 @@ aligning grid columns when the Grid System is unable to determine which columns 
             <section class="footer-social-nav leader-1">
               <a class="icon-social-twitter" aria-label="Esri on Twitter"  href="https://twitter.com/Esri/"></a>
               <a class="icon-social-facebook" aria-label="Esri on Facebook"  href="https://www.facebook.com/esrigis/"></a>
+              <a class="icon-social-instagram" aria-label="Esri on Instagram"  href="https://instagram.com/esrigram/"></a>
               <a class="icon-social-github" aria-label="Esri on GitHub"  href="http://esri.github.com/"></a>
               <a class="icon-social-contact" aria-label="Contact Esri"  href="http://www.esri.com/about-esri/contact/"></a>
             </section>
