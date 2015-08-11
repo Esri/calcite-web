@@ -8,30 +8,23 @@
   @extend .avenir-regular;
   @include font-size(-2);
   @include text-color($dark-gray);
-  a {
-    @include link-color($dark-gray, $blue);
-  }
 }
 
   @mixin crumb() {
-
-    &:after {
-      @include font-size(-3);
-      content: "/";
-      @include text-color($light-gray);
-      padding: 0 0.25em 0 0.5em;
-      opacity: 0.5;
-    }
-    &:hover:after {
-      text-decoration: none;
-    }
-
+    color: $dark-gray;
+    padding: 0 0.25rem 0 0.75rem;
+    background: url('#{$image-path}/forward-slash.svg') left center no-repeat transparent;
     &.is-active {
       font-weight: 600;
-      text-decoration: underline;
-      &:after {
-        content: none;
-      }
+    }
+    .breadcrumbs-white & {
+      color: white;
+      @extend .link-white;
+      background-image: url('#{$image-path}/forward-slash-white.svg');
+    }
+    &:first-child {
+      background-image: none;
+      padding-left: 0;
     }
   }
 
