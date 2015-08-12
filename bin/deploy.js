@@ -11,12 +11,12 @@ var yaml = require('js-yaml')
 var mark = require('marked')
 var now = Date.now()
 var version = require('../package.json').version
-var icons = require('../docs/source/icons.json')
+var icons = require('../docs/source/icons-social.json')
 var response = {
   elements: []
 }
 
-var iconFont = require('../docs/source/icon-font.json').icons.map(function (icon) {
+var iconFont = require('../docs/source/icons-font.json').icons.map(function (icon) {
   return icon.properties.name
 })
 
@@ -27,6 +27,7 @@ function constructItem(content, meta) {
     slug: content.link,
     tags: ['calcite-web', 'web', content.title, meta.group, meta.page, meta.page_slug],
     sort_order: meta.order,
+    group: meta.group,
     LastModified: now
   }
 
