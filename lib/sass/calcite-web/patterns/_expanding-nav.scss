@@ -7,7 +7,7 @@
 @mixin expand(){
   display: none;
   &.is-active {
-    display: block;
+    display: inherit;
   }
 }
 
