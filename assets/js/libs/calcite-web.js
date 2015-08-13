@@ -1,4 +1,4 @@
-/* calcite-web - v0.11.2 - 2015-08-13
+/* calcite-web - v0.11.3 - 2015-08-13
 *  https://github.com/esri/calcite-web
 *  Copyright (c) 2015 Environmental Systems Research Institute, Inc.
 *  Apache 2.0 License */
@@ -9,7 +9,7 @@
   // └────────────┘
   // define all public api methods (excluding patterns)
   var calcite = {
-    version: 'v0.11.2',
+    version: 'v0.11.3',
     click: click,
     addEvent: addEvent,
     removeEvent: removeEvent,
@@ -543,41 +543,47 @@
 
     var stickies = elements.map(function (el) {
       var offset = el.offsetTop;
-      var dataTop = el.getAttribute('data-top');
+      var dataTop = el.getAttribute('data-top') || 0;
+      el.style.top = dataTop + 'px';
+      var parent = el.parentNode;
+      var shim = el.cloneNode('deep');
+      shim.style.visibility = 'hidden';
+      shim.style.display = 'none';
+      parent.insertBefore(shim, el);
+
       return {
-        active: false,
         top: offset - parseInt(dataTop, 0),
-        shim: el.cloneNode('deep'),
+        shim: shim,
         element: el
       };
     });
 
-    stickies.forEach(function (item) {
-      var el = item.element;
-      var parent = el.parentNode;
-      parent.insertBefore(item.shim, el);
-      var dataTop = el.getAttribute('data-top');
-      item.shim.style.top = dataTop + 'px';
-      addClass(item.shim, 'is-sticky');
-      item.shim.style.display = 'none';
-    });
+    function resize () {
+      stickies.forEach(function (item) {
+        var referenceElement = item.element
+        if (hasClass(item.element, 'is-sticky')) {
+          referenceElement = item.shim;
+        }
+        var dataTop = referenceElement.getAttribute('data-top') || 0;
+        item.top = referenceElement.offsetTop - parseInt(dataTop, 0);
+      });
+      scrollHandler();
+    }
 
     var scrollHandler = function () {
-      stickies.forEach( function (item) {
-        var el = item.element;
-        var offset = el.offsetTop;
-        var dataTop = el.getAttribute('data-top');
-        item.top = el.offsetTop - parseInt(dataTop, 0);
-
+      stickies.forEach(function (item) {
         if (item.top < window.pageYOffset) {
+          addClass(item.element, 'is-sticky');
           item.shim.style.display = '';
         } else {
+          removeClass(item.element, 'is-sticky');
           item.shim.style.display = 'none';
         }
       });
     };
 
-    scrollIntervalID = setInterval(scrollHandler, 10);
+    calcite.addEvent(window, 'scroll', scrollHandler);
+    calcite.addEvent(window, 'resize', resize);
   };
 
   // ┌────────────────────┐
