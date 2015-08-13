@@ -11,7 +11,7 @@
   padding-left: 0;
   margin-right: auto;
   margin-left: auto;
-  box-sizing: border-box;
+  @include box-sizing(border-box);
 }
 
 // ┌─────────┐
@@ -122,7 +122,7 @@
     // Small Columns
     @media screen and (max-width: $small - 1) {
       @for $n from 1 through $small-column-count {
-        .column-#{$n}{
+        .column-#{$n} {
           width: ($n / $small-column-count) * $container-width;
         }
       }
@@ -131,8 +131,13 @@
           width: (1) * $container-width;
         }
       }
+      @for $n from 1 through $small-column-count {
+        .#{$medium-class}-column-#{$n} {
+          width: ($n / $small-column-count) * $container-width;
+        }
+      }
       @for $n from $small-column-count through $default-column-count {
-        .#{$medium-class}-column-#{$n}{
+        .#{$medium-class}-column-#{$n} {
           width: (1) * $container-width;
         }
       }
