@@ -1,10 +1,16 @@
-## Unreleased
+## 0.11.2
 
 ### Removed
-- bin script for calcite icons
+- Bin script for calcite icons
+- `column-base` now has no margin
 
 ### Fixed
-- breadcrumb separator no longer gets underlined
+- Responsive `pre` and `post` apply to correct screen sizes
+- Columns with medium but no small column render properly
+- Breadcrumb separator no longer gets underlined
+
+### Modified
+- `column`, `pre`, and `post` at standard size apply at large size
 
 ### Added
 - `breadcrumbs-white` modifier for light-on-dark breadcrumbs

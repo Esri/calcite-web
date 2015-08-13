@@ -46,9 +46,7 @@
             <input type="search" placeholder="Search" class="leader-0">
           </form>
             {% for title, sec in data.table_of_contents %}
-              {% if sec.base == "get-started" %}
-                <a href="{{relativePath}}" class="side-nav-link">{{ sec.title }}</a>
-              {% else %}
+              {% if sec.base != "get-started" %}
                 <a href="{{relativePath}}{{sec.base}}" class="side-nav-link">{{ sec.title }}</a>
               {% endif %}
             {% endfor %}
@@ -67,9 +65,7 @@
             </label>
           </div>
             {% for title, sec in data.table_of_contents %}
-              {% if sec.base == "get-started" %}
-                <a href="{{relativePath}}" class="side-nav-link">{{ sec.title }}</a>
-              {% else %}
+              {% if sec.base != "get-started" %}
                 <a href="{{relativePath}}{{sec.base}}" class="side-nav-link">{{ sec.title }}</a>
               {% endif %}
             {% endfor %}
@@ -87,9 +83,7 @@
               <a href="{{relativePath}}" class="top-nav-title">Calcite Web</a>
               <nav class="top-nav-list" role="navigation">
               {% for title, sec in data.table_of_contents %}
-                {% if sec.base == "get-started" %}
-                  <a href="{{relativePath}}" class="top-nav-link">{{ sec.title }}</a>
-                {% else %}
+                {% if sec.base != "get-started" %}
                   <a href="{{relativePath}}{{sec.base}}" class="top-nav-link">{{ sec.title }}</a>
                 {% endif %}
               {% endfor %}
