@@ -1,3 +1,9 @@
+## 0.11.3
+
+### Fixed
+- sticky elements show up twice (#314)
+- js patterns bind in sticky elements (#315)
+
 ## 0.11.2
 
 ### Removed
