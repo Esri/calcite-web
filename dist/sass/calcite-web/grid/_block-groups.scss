@@ -1,0 +1,62 @@
+// ┌──────────────┐
+// │ Block Groups │
+// └──────────────┘
+//  ↳ http://esri.github.io/calcite-web/grid/#block-groups
+//  ↳ grid → _block-groups.md
+
+@mixin block-group() {
+  font-family: monospace;
+  letter-spacing: -.65em;
+  margin-left: -0.5*$column-gutter;
+  margin-right: -0.5*$column-gutter;
+  text-align: left;
+  display: block;
+  &.center {
+    text-align: center;
+  }
+}
+
+@mixin block() {
+  @extend .avenir-light;
+  position: relative;
+  display: inline-block;
+  float: none;
+  @include box-sizing(border-box);
+  padding-left: 0.5*$column-gutter;
+  padding-right: 0.5*$column-gutter;
+  letter-spacing: normal;
+  text-align: left;
+  vertical-align: top;
+}
+
+@mixin _block-grid ($prefix: "") {
+  .#{$prefix}block-group-1-up .block { width: 100%; }
+  .#{$prefix}block-group-2-up .block { width: 50%; }
+  .#{$prefix}block-group-3-up .block { width: 33.33333%; }
+  .#{$prefix}block-group-4-up .block { width: 25%; }
+  .#{$prefix}block-group-5-up .block { width: 20%; }
+  .#{$prefix}block-group-6-up .block { width: 16.66666%; }
+  .#{$prefix}block-group-7-up .block { width: 14.28570%; }
+  .#{$prefix}block-group-8-up .block { width: 12.5%; }
+}
+
+@if $block-grid == true {
+  .block-group {@include block-group();}
+  .block {@include block();}
+  @include _block-grid();
+}
+
+// ┌─────────────────────────┐
+// │ Responsive Block Groups │
+// └─────────────────────────┘
+//  ↳ http://esri.github.io/calcite-web/grid/#responsive-block-groups
+//  ↳ grid → _responsive-block-groups.md
+@if $block-grid == true {
+  @include respond-to($medium) {
+    @include _block-grid($medium-class + '-');
+  }
+
+  @include respond-to($small) {
+    @include _block-grid($small-class + '-');
+  }
+}
