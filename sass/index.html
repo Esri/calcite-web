@@ -47,8 +47,6 @@
           </form>
             
               
-                <a href="../" class="side-nav-link">Get Started</a>
-              
             
               
                 <a href="../type" class="side-nav-link">Type</a>
@@ -102,8 +100,6 @@
           </div>
             
               
-                <a href="../" class="side-nav-link">Get Started</a>
-              
             
               
                 <a href="../type" class="side-nav-link">Type</a>
@@ -155,8 +151,6 @@
               <a href="../" class="top-nav-title">Calcite Web</a>
               <nav class="top-nav-list" role="navigation">
               
-                
-                  <a href="../" class="top-nav-link">Get Started</a>
                 
               
                 
@@ -273,7 +267,7 @@
         <nav aria-role="navigation">
           
             
-              <a href="#type-composition" class="side-nav-link">Type Composition</a>
+              <a href="#type-composition" class="side-nav-link">Overview</a>
             
           
             
@@ -327,152 +321,7 @@
         <section>
           
 
-          <p>Using Calcite Web as a Sass library is very powerful. After you successfully import the library (see <a href="../">the getting started page</a> you can fully customize and use all of the Calcite Web Framework.</p>
-<h2>Custom Build</h2>
-<p>Calcite comes with the ability to only generate the css you actually need for your project. Class generation is controlled by setting the following variables to <code>true</code> or <code>false</code>. Setting all of these variables to <code>false</code> will prevent Calcite Web from generating <strong>any</strong> css classes while still exposing the complete set of mixins.</p>
-<p>For example, if didn't want to export the css for any of the type helpers, you would simply set the <code>$include-type</code> variable to <code>false;</code></p>
-<pre><code><span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-string">"calcite-web"</span></span>;
-$<span class="hljs-rule"><span class="hljs-attribute">include-type</span>:<span class="hljs-value"> false</span></span>;
-</code></pre>
-<p>Now in your project, you still have access to type mixins like <code>word-spacing()</code> and <code>tracking()</code> but your generated css file will have none of the generated static classes. Below are a list of all the configurable 'include' variables and a description of what they toggle on and off.</p>
-<table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>$image-path</code></td>
-<td>Path from the generated css to your images folder. Default: '../img'</td>
-</tr>
-<tr>
-<td><code>$font-path</code></td>
-<td>Path from the generated css to your fonts folder. Default: '../fonts'</td>
-</tr>
-<tr>
-<td><code>$include-grid</code></td>
-<td>Everything grid related (viewport grid, block grid, and responsive grid)</td>
-</tr>
-<tr>
-<td><code>$fold-grid</code></td>
-<td>Responsive grid classes and media queries</td>
-</tr>
-<tr>
-<td><code>$block-grid</code></td>
-<td>Block grid classes and media queries</td>
-</tr>
-<tr>
-<td><code>$include-type</code></td>
-<td>All type related classes</td>
-</tr>
-<tr>
-<td><code>$include-avenir-family</code></td>
-<td>Header family classes</td>
-</tr>
-<tr>
-<td><code>$include-body-family</code></td>
-<td>Body family classes</td>
-</tr>
-<tr>
-<td><code>$include-secondary-family</code></td>
-<td>Secondary family classes</td>
-</tr>
-<tr>
-<td><code>$include-code-family</code></td>
-<td>Code family classes</td>
-</tr>
-<tr>
-<td><code>$include-type-defaults</code></td>
-<td>All default styles for type elements</td>
-</tr>
-<tr>
-<td><code>$include-icons</code></td>
-<td>All icon sets, colors, and sizes</td>
-</tr>
-<tr>
-<td><code>$include-one-color-icons</code></td>
-<td>The monochromatic icon set</td>
-</tr>
-<tr>
-<td><code>$include-color-icons</code></td>
-<td>The full color icon set</td>
-</tr>
-<tr>
-<td><code>$include-alerts</code></td>
-<td>Alert styles and color modifier classes</td>
-</tr>
-<tr>
-<td><code>$include-tables</code></td>
-<td>Table styles and modifier classes</td>
-</tr>
-<tr>
-<td><code>$include-panel</code></td>
-<td>Panel styles and color modifier classes</td>
-</tr>
-<tr>
-<td><code>$include-button</code></td>
-<td>Button styles and all modifier classes (size, colors, disabled, etc)</td>
-</tr>
-<tr>
-<td><code>$include-breadcrumbs</code></td>
-<td>Breadcrumb styles and modifier classes</td>
-</tr>
-<tr>
-<td><code>$include-tooltip</code></td>
-<td>Tooltip styles and modifier classes</td>
-</tr>
-<tr>
-<td><code>$include-footer</code></td>
-<td>Footer styles</td>
-</tr>
-<tr>
-<td><code>$include-pagination</code></td>
-<td>Pagination styles</td>
-</tr>
-<tr>
-<td><code>$include-side-nav</code></td>
-<td>Side nav styles</td>
-</tr>
-<tr>
-<td><code>$include-sub-nav</code></td>
-<td>Sub Nav styles and modifiers</td>
-</tr>
-<tr>
-<td><code>$include-third-nav</code></td>
-<td>Third nav styles and modifiers</td>
-</tr>
-<tr>
-<td><code>$include-top-nav</code></td>
-<td>All top navigation elements, media queries, and encompassed patterns</td>
-</tr>
-<tr>
-<td><code>$include-tabs</code></td>
-<td>Tab styles and modifier classes</td>
-</tr>
-<tr>
-<td><code>$include-modal</code></td>
-<td>Modal styles</td>
-</tr>
-<tr>
-<td><code>$include-accordion</code></td>
-<td>Accordian styles</td>
-</tr>
-</tbody>
-</table>
-<h2>Custom Selectors</h2>
-<p>All classes are styled by mixins of the same name, meaning that the <code>btn</code> class is simply including the <code>btn()</code> mixin. You can style your own elements or classnames to match exactly that of the existing classes by including these mixins.</p>
-<pre><code class="scss"><span class="hljs-class">.my-button-class</span> {
-  <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> btn</span>()
-}
-<span class="hljs-preprocessor">
-.my-colored-button-class</span> {</span>
-  <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> btn</span>()
-  @<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> btn-color</span>(<span class="hljs-variable">$value</span>, <span class="hljs-variable">$hover-value</span>);</span>
-}
-</code></pre>
-<p>In this manner you can extend the classnames of some other existing framework with the visual style of the Calcite Web framework.</p>
+          <p>Calcite Web has a helpful set of mixins for composing type. We recommend you use these mixins wherever possible when writing your own components as it will keep the visual proportions and styles in line with the rest of the framework.</p>
 
 
           
@@ -581,8 +430,6 @@ $<span class="hljs-rule"><span class="hljs-attribute">include-type</span>:<span 
       <h1 class="text-rule" id="type-composition" tabindex="0">Type Composition</h1>
       
         <section>
-          
-            <h2 id="type-composition" tabindex="0">Type Composition</h2>
           
 
           <p>Calcite Web has a helpful set of mixins for composing type. We recommend you use these mixins wherever possible when writing your own components as it will keep the visual proportions and styles in line with the rest of the framework.</p>
