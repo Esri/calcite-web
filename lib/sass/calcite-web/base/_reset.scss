@@ -64,35 +64,13 @@
     height: auto;
   }
 
-  .ie9,
-  .ie10 {
+  .ie {
     main {
       display: block;
     }
 
-    input[type='date'],
-    input[type='datetime'],
-    input[type='datetime-local'],
-    input[type='email'],
-    input[type='time'],
-    input[type='week'],
-    input[type='search'],
-    input[type='tel'],
-    input[type='text'],
-    input[type='url'],
-    input[type='number'],
-    input[type='password'],
-    input[type='month'] {
-      height: 2.25rem;
-    }
-
     select {
-      background-image: none;
-      padding-right: $baseline/2;
-    }
-
-    .tooltip:after {
-      line-height: 1.5;
+      padding-right: 8px;
     }
 
   }
