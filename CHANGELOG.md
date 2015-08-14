@@ -2,6 +2,9 @@
 
 ### Fixed
 - correct user-nav pattern
+- set height on buttons in input groups
+- fix form elements in ie9, ie10, firefox, and safari (#270)
+- small fix to tooltips ie9, ie10, firefox, and safari
 
 ## 0.11.3
 

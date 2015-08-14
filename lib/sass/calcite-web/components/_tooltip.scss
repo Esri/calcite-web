@@ -40,10 +40,10 @@
 
   .tooltip {
     &:hover, &:active, &:focus {
+      text-decoration: none;
       &:before,
       &:after {
         display: inline-block;
-        text-decoration: none;
       }
     }
   }
@@ -62,6 +62,7 @@
       top: 100%;
       right: 50%;
       margin-top: 5px;
+      line-height: 1.5;
     }
 
     &:before {
