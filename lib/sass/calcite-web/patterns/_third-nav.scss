@@ -17,6 +17,31 @@
   }
 }
 
+  @mixin nav-overflow() {
+    position: absolute;
+    padding: 11px 6px;
+    top: 0;
+    margin: 0;
+    background-color: $white;
+    border-bottom: 1px solid $lightest-gray;
+    display: none;
+    &.is-active {
+      display: block;
+    }
+  }
+
+    @mixin nav-overflow-left () {
+      @include nav-overflow();
+      left: 0px;
+      border-right: 1px solid $lightest-gray;
+    }
+
+    @mixin nav-overflow-right () {
+      @include nav-overflow();
+      right: 0px;
+      border-left: 1px solid $lightest-gray;
+    }
+
   @mixin third-nav-link() {
     color: $darkest-gray;
     @include font-size(-2);
@@ -32,4 +57,6 @@
 @if $include-third-nav == true {
   .third-nav {@include third-nav();}
     .third-nav-link {@include third-nav-link();}
+    .nav-overflow-left {@include nav-overflow-left();}
+    .nav-overflow-right {@include nav-overflow-right();}
 }
