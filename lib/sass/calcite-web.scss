@@ -56,6 +56,7 @@ $include-sub-nav:                $generate-css    !default;
 $include-third-nav:              $generate-css    !default;
 $include-top-nav:                $generate-css    !default;
 $include-super-nav:              $generate-css    !default;
+$include-user-nav:               $generate-css    !default;
 $include-toolbar:                $generate-css    !default;
 $include-site-search:            $generate-css    !default;
 
@@ -118,6 +119,7 @@ $include-sticky:                 $generate-css    !default;
 @import "calcite-web/patterns/top-nav";
 @import "calcite-web/patterns/site-search";
 @import "calcite-web/patterns/super-nav";
+@import "calcite-web/patterns/user-nav";
 @import "calcite-web/patterns/expanding-nav";
 @import "calcite-web/patterns/sub-nav";
 @import "calcite-web/patterns/third-nav";

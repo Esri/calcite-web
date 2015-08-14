@@ -42,7 +42,6 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
   @mixin top-nav-list {
     padding: 0;
     float: left;
-    @extend .avenir-regular;
     .top-nav-link + .top-nav-link {
       margin-left: .75em;
     }
@@ -50,6 +49,7 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
 
   @mixin top-nav-link {
     @include font-size(-1);
+    @extend .avenir-regular;
     color: $off-black;
     padding: .75*$baseline 0;
     line-height: 1.5rem;
@@ -73,11 +73,6 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
         text-decoration: none;
       }
     }
-    img {
-      width: 20px;
-      height: 20px;
-      vertical-align: -4px;
-    }
   }
 
   @mixin top-nav-logo {
@@ -86,7 +81,7 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
 
   @mixin top-nav-dropdown {
     &:after {
-      padding-left: .125em;
+      padding-left: $baseline / 4;
       content: "▼";
       font-size: .5rem;
       vertical-align: .125rem;
