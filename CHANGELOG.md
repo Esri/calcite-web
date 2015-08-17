@@ -1,16 +1,25 @@
 ## Unreleased
 
+### Removed
+- Unicode Sass variables
+
 ### Fixed
-- correct user-nav pattern
-- set height on buttons in input groups
-- fix form elements in ie9, ie10, firefox, and safari (#270)
-- small fix to tooltips ie9, ie10, firefox, and safari
+- Correct user-nav pattern
+- Set height on buttons in input groups
+- Fix form elements in ie9, ie10, firefox, and safari (#270)
+- Small fix to tooltips ie9, ie10, firefox, and safari
+
+### Modified
+- All patterns that used unicode characters now use icons from ui font
+
+### Added
+- `fade-in` class for fading in elements on page load
 
 ## 0.11.3
 
 ### Fixed
-- sticky elements show up twice (#314)
-- js patterns bind in sticky elements (#315)
+- Sticky elements show up twice (#314)
+- JavaScript patterns bind in sticky elements (#315)
 
 ## 0.11.2
 
@@ -44,7 +53,7 @@
 - Simplified expanding nav
 
 ### Fixed
-- leader and trailer classes were being imported twice
+- Leader and trailer classes were being imported twice
 - Only bind close click on accordion section title
 - Init `sticky` first so other patterns bind to duplicated nodes
 

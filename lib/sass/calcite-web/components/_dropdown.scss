@@ -13,9 +13,12 @@
 }
 
   @mixin dropdown-btn {
-    content: $dtri;
-    padding-left: .75em;
-    @include font-size(-2);
+    padding-right: $baseline/2;
+    &:after {
+      @include font-size(-3);
+      @extend %icon-font-after;
+      @extend .icon-ui-down-arrow:before;
+    }
   }
 
   @mixin dropdown-menu {
@@ -35,7 +38,7 @@
 
 @if $include-dropdowns == true {
   .dropdown { @include dropdown(); }
-  .dropdown-btn:after { @include dropdown-btn(); }
+  .dropdown-btn { @include dropdown-btn(); }
   .dropdown-menu { @include dropdown-menu(); }
   .dropdown-link {
     @extend .side-nav-link;

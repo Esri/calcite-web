@@ -39,8 +39,6 @@
   @return $value;
 }
 
-
-
 // ┌───────────┐
 // │ Font Size │
 // └───────────┘
@@ -49,7 +47,6 @@
 
 @mixin font-size($n) {
   font-size: modular-scale($n);
-  // font-size: from-scale($n);
 
   @if $n < 9 and $n > 4 {
     line-height: 2*$baseline;
