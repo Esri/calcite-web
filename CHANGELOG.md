@@ -12,6 +12,9 @@
 ### Modified
 - All patterns that used unicode characters now use icons from ui font
 
+### Added
+- `fade-in` class for fading in elements on page load
+
 ## 0.11.3
 
 ### Fixed

@@ -55,4 +55,11 @@
   .font-size-6  { @include font-size(6); }
   .font-size-7  { @include font-size(7); }
   .font-size-8  { @include font-size(8); }
+
+  .fade-in { @include fade-in(); }
+  @include keyframes (fade-in) {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
 }
