@@ -6,7 +6,7 @@
 
 @mixin icon-font-styles() {
   font-family: 'CalciteWebCoreIcons';
-  padding-right: 0.33em;
+  padding-right: $baseline/3;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -15,6 +15,17 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+%icon-font-styles {
+  @include icon-font-styles();
+}
+
+// when placing an icon after text
+%icon-font-after {
+  @extend %icon-font-styles;
+  padding-right: 0;
+  padding-left: $baseline/3;
 }
 
 @mixin icon-font () {
