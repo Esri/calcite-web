@@ -10,12 +10,14 @@
   background-color: $white;
   padding: $baseline/4 0;
   width: 100%;
+  text-indent: $baseline * .5;
 }
 
   @mixin third-nav-container () {
-    margin-left: $baseline * .5;
-    overflow-x: scroll;
+    overflow-x: auto;
     white-space: nowrap;
+    padding-bottom: 15px;
+    margin-bottom: -15px;
   }
 
   @mixin nav-overflow() {
@@ -23,9 +25,11 @@
     padding: 11px 6px;
     top: 0;
     margin: 0;
-    background-color: $white;
-    border-bottom: 1px solid $lightest-gray;
+    background-color: rgba(255,255,255,.8);
     display: none;
+    &:before {
+      padding-right: 0;
+    }
     &.is-active {
       display: block;
     }
@@ -34,13 +38,11 @@
     @mixin nav-overflow-left () {
       @include nav-overflow();
       left: 0px;
-      border-right: 1px solid $lightest-gray;
     }
 
     @mixin nav-overflow-right () {
       @include nav-overflow();
       right: 0px;
-      border-left: 1px solid $lightest-gray;
     }
 
   @mixin third-nav-link() {
