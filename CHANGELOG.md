@@ -14,6 +14,7 @@
 
 ### Added
 - `fade-in` class for fading in elements on page load
+- Responsive Javascript for the third nav.
 
 ## 0.11.3
 
