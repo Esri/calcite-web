@@ -1,4 +1,4 @@
-/* calcite-web - v0.11.3 - 2015-08-13
+/* calcite-web - v0.11.4 - 2015-08-19
 *  https://github.com/esri/calcite-web
 *  Copyright (c) 2015 Environmental Systems Research Institute, Inc.
 *  Apache 2.0 License */
@@ -9,7 +9,7 @@
   // └────────────┘
   // define all public api methods (excluding patterns)
   var calcite = {
-    version: 'v0.11.3',
+    version: 'v0.11.4',
     click: click,
     addEvent: addEvent,
     removeEvent: removeEvent,
@@ -156,6 +156,16 @@
       removeClass(item, 'is-active');
     });
   }
+
+  function addActive (array) {
+    if (typeof array == 'object') {
+      array = nodeListToArray(array);
+    }
+    array.forEach(function (item) {
+      addClass(item, 'is-active');
+    });
+  }
+
 
   // remove 'is-active' from array, add to element
   function toggleActive (array, el) {
@@ -560,7 +570,7 @@
 
     function resize () {
       stickies.forEach(function (item) {
-        var referenceElement = item.element
+        var referenceElement = item.element;
         if (hasClass(item.element, 'is-sticky')) {
           referenceElement = item.shim;
         }
@@ -586,13 +596,41 @@
     calcite.addEvent(window, 'resize', resize);
   };
 
+  // ┌───────────┐
+  // │ Third Nav │
+  // └───────────┘
+  // sticks things to the window
+  calcite.thirdNav = function () {
+    var nav = document.querySelector('.js-nav-overflow');
+    var leftBtn = document.querySelector('.js-overflow-left');
+    var rightBtn = document.querySelector('.js-overflow-right');
+
+    function scroll (distance) {
+      nav.scrollLeft += distance;
+    }
+
+    calcite.addEvent(leftBtn, calcite.click(), scroll.bind(null, -40));
+    calcite.addEvent(rightBtn, calcite.click(), scroll.bind(null, 40));
+
+    function resize () {
+      calcite.removeClass(leftBtn, 'is-active');
+      calcite.removeClass(rightBtn, 'is-active');
+      if (nav.scrollLeft > 0) calcite.addClass(leftBtn, 'is-active');
+      if (nav.scrollLeft + nav.clientWidth + 5 < nav.scrollWidth) calcite.addClass(rightBtn, 'is-active');
+    }
+
+    calcite.addEvent(nav, 'scroll', resize);
+    calcite.addEvent(window, 'resize', resize);
+    resize();
+  };
+
   // ┌────────────────────┐
   // │ Initialize Calcite │
   // └────────────────────┘
   // start up Calcite and attach all the patterns
   // optionally pass an array of patterns you'd like to watch
   function init (patterns) {
-    patterns = patterns || ['sticky', 'accordion', 'dropdown', 'drawer', 'expandingNav', 'modal', 'tabs', 'siteSearch'];
+    patterns = patterns || ['sticky', 'accordion', 'dropdown', 'drawer', 'expandingNav', 'modal', 'tabs', 'siteSearch', 'thirdNav'];
     patterns.forEach(function (pattern) {
       calcite[pattern]();
     });
