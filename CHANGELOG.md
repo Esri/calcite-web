@@ -1,3 +1,8 @@
+## 0.11.5
+
+### Fixed
+- add icon_names for social icons to API (#328)
+
 ## 0.11.4
 
 ### Removed
