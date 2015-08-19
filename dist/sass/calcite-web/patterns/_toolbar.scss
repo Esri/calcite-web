@@ -1,0 +1,17 @@
+// ┌─────────┐
+// │ Toolbar │
+// └─────────┘
+//  ↳ http://esri.github.io/calcite-web/patterns/#toolbar
+//  ↳ patterns → _toolbar.md
+@mixin toolbar() {
+  @include box-sizing(border-box);
+  padding: 0;
+  border: 1px solid $lighter-gray;
+  @extend .avenir-regular;
+  background-color: $off-white;
+}
+
+
+@if $include-toolbar == true {
+  .toolbar {@include toolbar()}
+}
