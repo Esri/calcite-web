@@ -1,4 +1,4 @@
-## Unreleased
+## 0.11.4
 
 ### Removed
 - Unicode Sass variables
