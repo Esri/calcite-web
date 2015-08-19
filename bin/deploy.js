@@ -49,7 +49,7 @@ function constructItem(content, meta) {
 
   if (meta.page === 'Icons') {
     if (content.title === 'Social Icons') {
-      item.icon_names = icons.social
+      item.icon_names = icons
     }
     if (content.title === 'Icon Font') {
       item.icon_names = iconFont
