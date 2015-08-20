@@ -3,6 +3,9 @@
 ### Modified
 - No `text-indent` on third nav
 
+### Fixed
+- Don't set fixed height on `textarea` elements
+
 ## 0.11.5
 
 ### Fixed
