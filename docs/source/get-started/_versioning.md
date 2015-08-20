@@ -19,8 +19,3 @@ The final number signifies patches such as fixing a pattern or component in a ce
 3. Make sure `Esri/calcite-web` is up-to-date with your changes.
 5. Run `grunt release`. If prompted enter your GitHub credentials and your s3 access key/secret.
 
-# Updating the Documentation Site
-
-To update the documentation site, just make sure you have push access to the `Esri/calcite-web` repo and type `grunt deploy`. This will build the site and deploy to gh-pages.
-
-The site should be updated at http://esri.github.io/calcite-web/ in just a few moments.

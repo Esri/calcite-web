@@ -6,10 +6,11 @@ Calcite Web was built *for* developers. It is meant to be flexible enough that y
 
 ## Using Calcite Web
 
-There are two main ways to use Calcite Web:
+There are three ways to use Calcite Web:
 
 - (a) copying static files into your project
 - (b) installing via a package manager
+- (c) loading files from the cdn
 
 Using this framework as a Sass library will give you the most power, but whatever your flavor, we have you covered.
 
