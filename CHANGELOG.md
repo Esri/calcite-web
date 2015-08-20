@@ -1,3 +1,8 @@
+## Unreleased
+
+### Modified
+- No `text-indent` on third nav
+
 ## 0.11.5
 
 ### Fixed
