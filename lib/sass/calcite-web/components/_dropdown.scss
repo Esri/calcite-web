@@ -14,6 +14,7 @@
 
   @mixin dropdown-btn {
     padding-right: $baseline/2;
+    cursor: pointer;
     &:after {
       @include font-size(-3);
       @extend %icon-font-after;

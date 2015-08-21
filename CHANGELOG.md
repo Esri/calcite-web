@@ -1,3 +1,8 @@
+## Unreleased
+
+### Modified
+- Dropdown button gets `cursor: pointer`
+
 ## 0.11.4
 
 ### Removed
