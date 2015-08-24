@@ -3,6 +3,9 @@
 ### Modified
 - Dropdown button gets `cursor: pointer`
 
+### Added
+- Optional prefix for grid system
+
 ## 0.11.4
 
 ### Removed
