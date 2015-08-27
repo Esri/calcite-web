@@ -1,3 +1,8 @@
+## 0.11.7
+
+### Fixed
+- Accordion binds to specified class, not section siblings.
+
 ## 0.11.6
 
 ### Modified
