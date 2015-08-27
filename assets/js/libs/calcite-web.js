@@ -1,4 +1,4 @@
-/* calcite-web - v0.11.6 - 2015-08-27
+/* calcite-web - v0.11.7 - 2015-08-27
 *  https://github.com/esri/calcite-web
 *  Copyright (c) 2015 Environmental Systems Research Institute, Inc.
 *  Apache 2.0 License */
@@ -9,7 +9,7 @@
   // └────────────┘
   // define all public api methods (excluding patterns)
   var calcite = {
-    version: 'v0.11.6',
+    version: 'v0.11.7',
     click: click,
     addEvent: addEvent,
     removeEvent: removeEvent,
@@ -217,7 +217,7 @@
         } else {
           child.setAttribute('aria-expanded', 'false');
         }
-        var sectionTitle = child.firstChild.nextElementSibling;
+        var sectionTitle = child.querySelector('.accordion-title');
         addEvent(sectionTitle, click(), toggleAccordion);
         addEvent(child, 'keyup', function(e) {
           if (e.keyCode === 13) {
