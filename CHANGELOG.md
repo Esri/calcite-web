@@ -1,4 +1,4 @@
-## Unreleased
+## 0.11.6
 
 ### Modified
 - Dropdown button gets `cursor: pointer`
@@ -9,6 +9,7 @@
 
 ### Fixed
 - Don't set fixed height on `textarea` elements
+- Check for elements before binding to elements.
 
 ## 0.11.5
 
