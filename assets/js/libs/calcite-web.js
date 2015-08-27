@@ -1,4 +1,4 @@
-/* calcite-web - v0.11.4 - 2015-08-19
+/* calcite-web - v0.11.6 - 2015-08-27
 *  https://github.com/esri/calcite-web
 *  Copyright (c) 2015 Environmental Systems Research Institute, Inc.
 *  Apache 2.0 License */
@@ -9,7 +9,7 @@
   // └────────────┘
   // define all public api methods (excluding patterns)
   var calcite = {
-    version: 'v0.11.4',
+    version: 'v0.11.6',
     click: click,
     addEvent: addEvent,
     removeEvent: removeEvent,
@@ -548,8 +548,8 @@
   // │ Sticky │
   // └────────┘
   // sticks things to the window
-  calcite.sticky = function () {
-    var elements = findElements('.js-sticky');
+  calcite.sticky = function (domNode) {
+    var elements = findElements('.js-sticky', domNode);
 
     var stickies = elements.map(function (el) {
       var offset = el.offsetTop;
@@ -592,25 +592,24 @@
       });
     };
 
-    calcite.addEvent(window, 'scroll', scrollHandler);
-    calcite.addEvent(window, 'resize', resize);
+    if (elements) {
+      calcite.addEvent(window, 'scroll', scrollHandler);
+      calcite.addEvent(window, 'resize', resize);
+    }
   };
 
   // ┌───────────┐
   // │ Third Nav │
   // └───────────┘
   // sticks things to the window
-  calcite.thirdNav = function () {
-    var nav = document.querySelector('.js-nav-overflow');
-    var leftBtn = document.querySelector('.js-overflow-left');
-    var rightBtn = document.querySelector('.js-overflow-right');
+  calcite.thirdNav = function (domNode) {
+    var nav = findElements('.js-nav-overflow', domNode)[0];
+    var leftBtn = findElements('.js-overflow-left', domNode)[0];
+    var rightBtn = findElements('.js-overflow-right', domNode)[0];
 
     function scroll (distance) {
       nav.scrollLeft += distance;
     }
-
-    calcite.addEvent(leftBtn, calcite.click(), scroll.bind(null, -40));
-    calcite.addEvent(rightBtn, calcite.click(), scroll.bind(null, 40));
 
     function resize () {
       calcite.removeClass(leftBtn, 'is-active');
@@ -619,9 +618,13 @@
       if (nav.scrollLeft + nav.clientWidth + 5 < nav.scrollWidth) calcite.addClass(rightBtn, 'is-active');
     }
 
-    calcite.addEvent(nav, 'scroll', resize);
-    calcite.addEvent(window, 'resize', resize);
-    resize();
+    if (nav) {
+      calcite.addEvent(leftBtn, calcite.click(), scroll.bind(null, -40));
+      calcite.addEvent(rightBtn, calcite.click(), scroll.bind(null, 40));
+      calcite.addEvent(nav, 'scroll', resize);
+      calcite.addEvent(window, 'resize', resize);
+      resize();
+    }
   };
 
   // ┌────────────────────┐

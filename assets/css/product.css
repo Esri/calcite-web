@@ -2578,7 +2578,8 @@ table {
     display: block; }
 
 .dropdown-btn {
-  padding-right: 0.775rem; }
+  padding-right: 0.775rem;
+  cursor: pointer; }
   .dropdown-btn:after {
     font-size: 0.8125rem;
     line-height: 1.55rem; }
@@ -2970,6 +2971,9 @@ input[type='date'], input[type='datetime'], input[type='datetime-local'], input[
     border-color: #5a9359; }
   input[type='date']:focus, input[type='datetime']:focus, input[type='datetime-local']:focus, input[type='email']:focus, input[type='time']:focus, input[type='week']:focus, input[type='search']:focus, input[type='tel']:focus, input[type='text']:focus, input[type='url']:focus, input[type='number']:focus, input[type='password']:focus, input[type='month']:focus, textarea:focus {
     border-color: #3b8fc4; }
+
+textarea {
+  height: auto; }
 
 button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
@@ -3556,8 +3560,7 @@ select::-moz-focusring {
   border-bottom: 1px solid #efefef;
   background-color: white;
   padding: 0.3875rem 0;
-  width: 100%;
-  text-indent: 0.775rem; }
+  width: 100%; }
 
 .third-nav-container {
   overflow-x: auto;
