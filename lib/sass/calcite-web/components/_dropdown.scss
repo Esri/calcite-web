@@ -43,7 +43,6 @@
   .dropdown-menu { @include dropdown-menu(); }
   .dropdown-link {
     @extend .side-nav-link;
-    clear: both;
     white-space: nowrap;
   }
 }
