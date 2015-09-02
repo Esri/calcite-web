@@ -1,3 +1,8 @@
+## Unreleased
+
+### Fixed
+- Bug where long dropdowns wrapped just the arrow to the next line
+
 ## 0.11.7
 
 ### Fixed

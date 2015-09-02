@@ -23,9 +23,10 @@
   }
 
   @mixin side-nav-link() {
+    position: relative;
     display: block;
     @include box-sizing(border-box);
-    padding: $baseline/3;
+    padding: $baseline/3 $baseline $baseline/3 $baseline/3;
     @include font-size(-2);
     color: $darker-gray;
     background-color: $white;
@@ -34,17 +35,19 @@
     &:after {
       content: "»";
       opacity: 0;
-      float: right;
+      position: absolute;
+      right: 0;
+      top: .5rem;
       padding: 0 $baseline * 0.25;
       @include transition(all $transition);
-      @include transform(translate3d(0,0,0));
+      @include transform(translate3d(-8px,0,0));
     }
     &:hover {
       text-decoration: none;
       color: $dark-gray;
       &:after {
         opacity: 1;
-        @include transform(translate3d(8px,0,0));
+        @include transform(translate3d(0,0,0));
       }
     }
     &.is-active {
