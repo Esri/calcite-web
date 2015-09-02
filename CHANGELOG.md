@@ -2,6 +2,7 @@
 
 ### Fixed
 - Bug where long dropdowns wrapped just the arrow to the next line
+- Cursor should be pointer on side nav
 
 ## 0.11.7
 

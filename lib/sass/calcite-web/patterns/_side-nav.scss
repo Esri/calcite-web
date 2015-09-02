@@ -32,6 +32,7 @@
     background-color: $white;
     border-top: 1px solid $lightest-gray;
     @include transition(all $transition);
+    cursor: pointer;
     &:after {
       content: "»";
       opacity: 0;
