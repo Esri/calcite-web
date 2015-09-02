@@ -54,7 +54,7 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
     padding: .75*$baseline 0;
     line-height: 1.5rem;
     display: inline-block;
-    &:hover {
+    &:hover, &:focus {
       color: $blue;
       @include prefixer(background-image, $topnav-link-overline, webkit moz o);
       background-image: $topnav-link-overline;
@@ -62,6 +62,9 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
       a {
         color: $blue;
       }
+    }
+    &:focus {
+      outline: none;
     }
     &.is-active {
       @include prefixer(background-image, $topnav-link-overline, webkit moz o);
