@@ -41,14 +41,12 @@
       top: .5rem;
       padding: 0 $baseline * 0.25;
       @include transition(all $transition);
-      @include transform(translate3d(-8px,0,0));
     }
     &:hover {
       text-decoration: none;
       color: $dark-gray;
       &:after {
         opacity: 1;
-        @include transform(translate3d(0,0,0));
       }
     }
     &.is-active {

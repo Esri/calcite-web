@@ -169,8 +169,11 @@
 }
 
 @if $include-grid == true {
-  .#{$prefix}grid-container {
-    @include grid-container();
+
+  @media screen {
+    .#{$prefix}grid-container {
+      @include grid-container();
+    }
   }
 
   @media screen and (min-width: $large) {
@@ -187,16 +190,18 @@
     }
   }
 
-  [class*="column-"] {
-    @include column-base();
-  }
+  @media screen {
+    [class*="column-"] {
+      @include column-base();
+    }
 
-  .#{$prefix}first-column {
-    @include first-column();
-  }
-  .#{$prefix}last-column {
-    @include last-column();
-  }
+    .#{$prefix}first-column {
+      @include first-column();
+    }
+    .#{$prefix}last-column {
+      @include last-column();
+    }
 
-  @include responsive-column();
+    @include responsive-column();
+  }
 }
