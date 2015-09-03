@@ -6,6 +6,7 @@
 
 ### Modified
 - Top nav links get same style on `:hover` and `:focus`, remove default outline
+- Buttons are one step lighter, get darker on hover
 
 ### Added
 - `.label` component for calling out text
