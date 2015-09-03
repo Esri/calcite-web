@@ -169,25 +169,28 @@
 }
 
 @if $include-grid == true {
+
   @media screen {
     .#{$prefix}grid-container {
       @include grid-container();
     }
+  }
 
-    @media screen and (min-width: $large) {
-      .#{$prefix}grid-container {
-        $diff: $large-column-count - $default-column-count;
-        $side: $diff / 2;
-        $margin: $side / $large-column-count * $container-width;
-        padding-left: $margin;
-        padding-right: $margin;
-      }
-      .#{$prefix}grid-full {
-        padding-left: 0;
-        padding-right: 0;
-      }
+  @media screen and (min-width: $large) {
+    .#{$prefix}grid-container {
+      $diff: $large-column-count - $default-column-count;
+      $side: $diff / 2;
+      $margin: $side / $large-column-count * $container-width;
+      padding-left: $margin;
+      padding-right: $margin;
     }
+    .#{$prefix}grid-full {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 
+  @media screen {
     [class*="column-"] {
       @include column-base();
     }
