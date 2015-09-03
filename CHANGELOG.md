@@ -3,6 +3,7 @@
 ### Fixed
 - Bug where long dropdowns wrapped just the arrow to the next line
 - Cursor should be pointer on side nav
+- Bug where hovering on a third nav caused text to flicker strangely
 
 ### Modified
 - Top nav links get same style on `:hover` and `:focus`, remove default outline
