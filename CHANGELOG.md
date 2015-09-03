@@ -11,7 +11,7 @@
 
 ### Added
 - `.label` component for calling out text
-- sample print stylesheet for the docs
+- Grid columns turn themselves off for printing
 
 ## 0.11.7
 

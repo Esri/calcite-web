@@ -169,34 +169,36 @@
 }
 
 @if $include-grid == true {
-  .#{$prefix}grid-container {
-    @include grid-container();
-  }
-
-  @media screen and (min-width: $large) {
+  @media screen {
     .#{$prefix}grid-container {
-      $diff: $large-column-count - $default-column-count;
-      $side: $diff / 2;
-      $margin: $side / $large-column-count * $container-width;
-      padding-left: $margin;
-      padding-right: $margin;
+      @include grid-container();
     }
-    .#{$prefix}grid-full {
-      padding-left: 0;
-      padding-right: 0;
+
+    @media screen and (min-width: $large) {
+      .#{$prefix}grid-container {
+        $diff: $large-column-count - $default-column-count;
+        $side: $diff / 2;
+        $margin: $side / $large-column-count * $container-width;
+        padding-left: $margin;
+        padding-right: $margin;
+      }
+      .#{$prefix}grid-full {
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
-  }
 
-  [class*="column-"] {
-    @include column-base();
-  }
+    [class*="column-"] {
+      @include column-base();
+    }
 
-  .#{$prefix}first-column {
-    @include first-column();
-  }
-  .#{$prefix}last-column {
-    @include last-column();
-  }
+    .#{$prefix}first-column {
+      @include first-column();
+    }
+    .#{$prefix}last-column {
+      @include last-column();
+    }
 
-  @include responsive-column();
+    @include responsive-column();
+  }
 }
