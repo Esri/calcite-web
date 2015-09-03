@@ -11,6 +11,7 @@
 
 ### Added
 - `.label` component for calling out text
+- sample print stylesheet for the docs
 
 ## 0.11.7
 

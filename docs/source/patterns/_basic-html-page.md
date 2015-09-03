@@ -11,7 +11,8 @@ A basic starting point for an html page using Calcite Web might be something lik
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Calcite Web</title>
     <link rel="shortcut icon" href="/img/favicon.ico">
-    <link type="text/css" rel="stylesheet" href="/assets/stylesheets/calcite.css">
+  <link rel="stylesheet" href="{{relativePath}}assets/css/calcite.css" media="screen">
+  <link rel="stylesheet" href="{{relativePath}}assets/css/print.css" media="print">
     <!--[if lt IE 9]>
       <script src="/assets/javascripts/libs/selectivizr.js" type="text/javascript"></script>
       <script src="/assets/javascripts/libs/html5shiv.js" type="text/javascript"></script>
