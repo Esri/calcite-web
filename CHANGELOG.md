@@ -7,6 +7,9 @@
 ### Modified
 - Top nav links get same style on `:hover` and `:focus`, remove default outline
 
+### Added
+- `.label` component for calling out text
+
 ## 0.11.7
 
 ### Fixed
