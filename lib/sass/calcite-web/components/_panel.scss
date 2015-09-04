@@ -25,6 +25,13 @@
     a { @include link-color($lightest-blue, $lighter-blue); }
   }
 
+  @mixin panel-black() {
+    background-color: $black;
+    @extend .text-white;
+    border: 1px solid $off-black;
+    a { @include link-color($lightest-blue, $lighter-blue); }
+  }
+
   @mixin panel-dark-blue() {
     background-color: $Brand_Blue_250;
     @extend .text-white;
@@ -60,6 +67,7 @@
 
 @if $include-panel == true {
   .panel {@include panel();}
+    .panel-black {@include panel-black();}
     .panel-dark {@include panel-dark();}
     .panel-white {@include panel-white();}
     .panel-dark-blue {@include panel-dark-blue();}
