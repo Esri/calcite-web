@@ -1,3 +1,8 @@
+## Unreleased
+
+### Added
+- Panel Black
+
 ## 0.12.0
 
 ### Fixed
