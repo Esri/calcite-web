@@ -1806,7 +1806,7 @@ a {
   -webkit-transition: color 150ms linear, text-decoration 150ms linear;
   transition: color 150ms linear, text-decoration 150ms linear; }
   a:hover {
-    color: #3b8fc4;
+    color: #007ac2;
     text-decoration: underline; }
 
 ul, ol {
@@ -1902,7 +1902,7 @@ table {
   color: #5a9359; }
 
 .esri-icon-blue:before, .icon-ui-blue:before {
-  color: #3b8fc4; }
+  color: #007ac2; }
 
 .esri-icon-purple:before, .icon-ui-purple:before {
   color: #9081bc; }
@@ -1914,7 +1914,7 @@ table {
   color: #959595; }
 
 .esri-icon-red:before, .icon-ui-red:before {
-  color: #c6542d; }
+  color: #de2900; }
 
 .esri-icon-close:before, .icon-ui-close:before {
   content: "\e600"; }
@@ -2415,8 +2415,8 @@ table {
   font-weight: 300;
   font-style: normal;
   color: white;
-  border: 1px solid #3b8fc4;
-  background-color: #3b8fc4;
+  border: 1px solid #007ac2;
+  background-color: #007ac2;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -2442,7 +2442,7 @@ table {
   color: #196fa6;
   border: none; }
   .btn-transparent:hover {
-    color: #3b8fc4;
+    color: #007ac2;
     background: none; }
   .btn-transparent.btn-disabled {
     background: none;
@@ -2452,9 +2452,9 @@ table {
       background: none; }
 
 .btn-clear {
-  color: #3b8fc4;
+  color: #007ac2;
   background: transparent;
-  border-color: #3b8fc4; }
+  border-color: #007ac2; }
   .btn-clear:hover {
     color: white;
     background: #196fa6;
@@ -2498,8 +2498,8 @@ table {
     background: #efefef; }
 
 .btn-red {
-  background-color: #c6542d;
-  border-color: #c6542d; }
+  background-color: #de2900;
+  border-color: #de2900; }
   .btn-red:hover {
     background-color: #ab3c16; }
 
@@ -2527,7 +2527,7 @@ table {
   line-height: 1; }
 
 .label-red {
-  background-color: #c6542d;
+  background-color: #de2900;
   color: white; }
 
 .label-yellow {
@@ -2539,7 +2539,7 @@ table {
   color: white; }
 
 .label-blue {
-  background-color: #3b8fc4;
+  background-color: #007ac2;
   color: white; }
 
 .badge {
@@ -2571,7 +2571,7 @@ table {
 .badge-blue .badge-action {
   color: white;
   background-color: #196fa6;
-  border-color: #3b8fc4; }
+  border-color: #007ac2; }
 .badge-blue .badge-count {
   border-color: #828282; }
 
@@ -2581,7 +2581,7 @@ table {
   background-color: transparent;
   border: none; }
 .badge-round .badge-count {
-  border-color: #3b8fc4;
+  border-color: #007ac2;
   background-color: #196fa6;
   border-radius: 50% 50%;
   width: 1em;
@@ -2779,7 +2779,7 @@ table {
   display: none;
   z-index: 100;
   max-width: 40em;
-  border: 1px solid #3b8fc4;
+  border: 1px solid #007ac2;
   -webkit-box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05);
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05); }
@@ -2843,7 +2843,7 @@ table {
       color: #56a5d8; }
 
 .panel-blue {
-  background-color: #3b8fc4;
+  background-color: #007ac2;
   border: 1px solid #196fa6; }
   .panel-blue a {
     color: #d2e9f9; }
@@ -2898,22 +2898,22 @@ table {
     padding: 0.3875rem 0.775rem; }
 
 .table-blue {
-  border: 1px solid #3b8fc4; }
+  border: 1px solid #007ac2; }
   .table-blue > thead {
-    background-color: #3b8fc4;
+    background-color: #007ac2;
     border: none;
-    border-bottom: 1px solid #3b8fc4;
+    border-bottom: 1px solid #007ac2;
     color: white; }
     .table-blue > thead tr:nth-child(even) {
       background-color: #bcdaed;
       color: #4c4c4c; }
   .table-blue > tfoot {
-    border-top: 1px solid #3b8fc4; }
+    border-top: 1px solid #007ac2; }
   .table-blue th, .table-blue td {
-    border-left: 1px solid #3b8fc4;
-    border-right: 1px solid #3b8fc4; }
+    border-left: 1px solid #007ac2;
+    border-right: 1px solid #007ac2; }
   .table-blue tr {
-    border-bottom: 1px solid #3b8fc4; }
+    border-bottom: 1px solid #007ac2; }
 
 .table-plain {
   border: none; }
@@ -2975,7 +2975,7 @@ input, select, textarea {
   input[disabled], select[disabled], textarea[disabled] {
     cursor: default; }
   input:focus, select:focus, textarea:focus {
-    border-color: #3b8fc4;
+    border-color: #007ac2;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(81, 167, 232, 0.5); }
 
 input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='email'], input[type='time'], input[type='week'], input[type='search'], input[type='tel'], input[type='text'], input[type='url'], input[type='number'], input[type='password'], input[type='month'], textarea {
@@ -2990,13 +2990,13 @@ input[type='date'], input[type='datetime'], input[type='datetime-local'], input[
   -webkit-appearance: textfield;
   height: 2.25rem; }
   input[type='date'].input-error, input[type='datetime'].input-error, input[type='datetime-local'].input-error, input[type='email'].input-error, input[type='time'].input-error, input[type='week'].input-error, input[type='search'].input-error, input[type='tel'].input-error, input[type='text'].input-error, input[type='url'].input-error, input[type='number'].input-error, input[type='password'].input-error, input[type='month'].input-error, textarea.input-error {
-    border-color: #c6542d; }
+    border-color: #de2900; }
   input[type='date'].input-warning, input[type='datetime'].input-warning, input[type='datetime-local'].input-warning, input[type='email'].input-warning, input[type='time'].input-warning, input[type='week'].input-warning, input[type='search'].input-warning, input[type='tel'].input-warning, input[type='text'].input-warning, input[type='url'].input-warning, input[type='number'].input-warning, input[type='password'].input-warning, input[type='month'].input-warning, textarea.input-warning {
     border-color: #d9bf2b; }
   input[type='date'].input-success, input[type='datetime'].input-success, input[type='datetime-local'].input-success, input[type='email'].input-success, input[type='time'].input-success, input[type='week'].input-success, input[type='search'].input-success, input[type='tel'].input-success, input[type='text'].input-success, input[type='url'].input-success, input[type='number'].input-success, input[type='password'].input-success, input[type='month'].input-success, textarea.input-success {
     border-color: #5a9359; }
   input[type='date']:focus, input[type='datetime']:focus, input[type='datetime-local']:focus, input[type='email']:focus, input[type='time']:focus, input[type='week']:focus, input[type='search']:focus, input[type='tel']:focus, input[type='text']:focus, input[type='url']:focus, input[type='number']:focus, input[type='password']:focus, input[type='month']:focus, textarea:focus {
-    border-color: #3b8fc4; }
+    border-color: #007ac2; }
 
 textarea {
   height: auto; }
@@ -3008,7 +3008,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='time'], input[type='week'], input[type='month'] {
   max-height: 2.325rem; }
   input[type='date'].input-error, input[type='datetime'].input-error, input[type='datetime-local'].input-error, input[type='time'].input-error, input[type='week'].input-error, input[type='month'].input-error {
-    border-color: #c6542d; }
+    border-color: #de2900; }
 
 input[type='button'], input[type='reset'], input[type='submit'], button {
   position: relative;
@@ -3020,8 +3020,8 @@ input[type='button'], input[type='reset'], input[type='submit'], button {
   font-weight: 300;
   font-style: normal;
   color: white;
-  border: 1px solid #3b8fc4;
-  background-color: #3b8fc4;
+  border: 1px solid #007ac2;
+  background-color: #007ac2;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -3050,8 +3050,8 @@ input[type="file"]::-webkit-file-upload-button {
   font-weight: 300;
   font-style: normal;
   color: white;
-  border: 1px solid #3b8fc4;
-  background-color: #3b8fc4;
+  border: 1px solid #007ac2;
+  background-color: #007ac2;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -3079,8 +3079,8 @@ input[type="file"]::-webkit-file-upload-button {
   font-weight: 300;
   font-style: normal;
   color: white;
-  border: 1px solid #3b8fc4;
-  background-color: #3b8fc4;
+  border: 1px solid #007ac2;
+  background-color: #007ac2;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -3104,7 +3104,7 @@ input[type='radio'], input[type='checkbox'] {
   margin: .3rem .3rem 0 .2rem; }
   input[type='radio']:focus, input[type='checkbox']:focus {
     outline: 0;
-    box-shadow: 0 0 1px 2px #3b8fc4, 0 0 6px #3b8fc4; }
+    box-shadow: 0 0 1px 2px #007ac2, 0 0 6px #007ac2; }
 
 input[type='checkbox']:focus {
   border-radius: 3px; }
@@ -3131,7 +3131,7 @@ select {
   transition: border-color 150ms linear;
   -webkit-appearance: none; }
   select:focus {
-    border-color: #3b8fc4; }
+    border-color: #007ac2; }
 
 /* Select Browser Hacks */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -3150,19 +3150,19 @@ select::-moz-focusring {
   text-shadow: 0 0 0 #595959; }
 
 .input-error {
-  border-color: #c6542d; }
+  border-color: #de2900; }
   .input-error:focus {
-    border-color: #3b8fc4; }
+    border-color: #007ac2; }
 
 .input-warning {
   border-color: #d9bf2b; }
   .input-warning:focus {
-    border-color: #3b8fc4; }
+    border-color: #007ac2; }
 
 .input-success {
   border-color: #5a9359; }
   .input-success:focus {
-    border-color: #3b8fc4; }
+    border-color: #007ac2; }
 
 .input-group {
   display: table;
@@ -3220,19 +3220,19 @@ select::-moz-focusring {
     height: 2rem; }
 
   40% {
-    box-shadow: 0 -0.5rem #3b8fc4;
-    background: #3b8fc4;
+    box-shadow: 0 -0.5rem #007ac2;
+    background: #007ac2;
     height: 2.5rem; } }
 
 @keyframes load {
   0%, 80%, 100% {
-    box-shadow: 0 0 #3b8fc4;
+    box-shadow: 0 0 #007ac2;
     background: #56a5d8;
     height: 2rem; }
 
   40% {
-    box-shadow: 0 -0.5rem #3b8fc4;
-    background: #3b8fc4;
+    box-shadow: 0 -0.5rem #007ac2;
+    background: #007ac2;
     height: 2.5rem; } }
 
 .loader {
@@ -3299,8 +3299,8 @@ select::-moz-focusring {
   font-weight: 300;
   font-style: normal;
   color: white;
-  border: 1px solid #3b8fc4;
-  background-color: #3b8fc4;
+  border: 1px solid #007ac2;
+  background-color: #007ac2;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -3311,9 +3311,9 @@ select::-moz-focusring {
   font-size: 0.9375rem;
   line-height: 1.55rem;
   font-weight: 400;
-  color: #3b8fc4;
+  color: #007ac2;
   background: transparent;
-  border-color: #3b8fc4;
+  border-color: #007ac2;
   border-color: transparent;
   position: absolute;
   top: 0.3875rem;
@@ -3363,11 +3363,11 @@ select::-moz-focusring {
   line-height: 1.5rem;
   color: #4c4c4c; }
   .top-nav-title:hover {
-    color: #3b8fc4;
-    -webkit-background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
-    -moz-background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
-    -o-background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
-    background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
+    color: #007ac2;
+    -webkit-background-image: linear-gradient(to top, transparent 92%, #007ac2 93%, #007ac2 100%);
+    -moz-background-image: linear-gradient(to top, transparent 92%, #007ac2 93%, #007ac2 100%);
+    -o-background-image: linear-gradient(to top, transparent 92%, #007ac2 93%, #007ac2 100%);
+    background-image: linear-gradient(to top, transparent 92%, #007ac2 93%, #007ac2 100%);
     text-decoration: none; }
   .top-nav-title.icon-ui-menu:before {
     vertical-align: -1px;
@@ -3387,21 +3387,21 @@ select::-moz-focusring {
   line-height: 1.5rem;
   display: inline-block; }
   .top-nav-link:hover, .top-nav-link:focus {
-    color: #3b8fc4;
-    -webkit-background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
-    -moz-background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
-    -o-background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
-    background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
+    color: #007ac2;
+    -webkit-background-image: linear-gradient(to top, transparent 92%, #007ac2 93%, #007ac2 100%);
+    -moz-background-image: linear-gradient(to top, transparent 92%, #007ac2 93%, #007ac2 100%);
+    -o-background-image: linear-gradient(to top, transparent 92%, #007ac2 93%, #007ac2 100%);
+    background-image: linear-gradient(to top, transparent 92%, #007ac2 93%, #007ac2 100%);
     text-decoration: none; }
     .top-nav-link:hover a, .top-nav-link:focus a {
-      color: #3b8fc4; }
+      color: #007ac2; }
   .top-nav-link:focus {
     outline: none; }
   .top-nav-link.is-active {
-    -webkit-background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
-    -moz-background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
-    -o-background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
-    background-image: linear-gradient(to top, transparent 92%, #3b8fc4 93%, #3b8fc4 100%); }
+    -webkit-background-image: linear-gradient(to top, transparent 92%, #007ac2 93%, #007ac2 100%);
+    -moz-background-image: linear-gradient(to top, transparent 92%, #007ac2 93%, #007ac2 100%);
+    -o-background-image: linear-gradient(to top, transparent 92%, #007ac2 93%, #007ac2 100%);
+    background-image: linear-gradient(to top, transparent 92%, #007ac2 93%, #007ac2 100%); }
   .top-nav-link a {
     color: #4c4c4c; }
     .top-nav-link a:hover {
@@ -3418,10 +3418,10 @@ select::-moz-focusring {
   margin-top: -0.7rem; }
 
 .top-nav-hover-bottom .top-nav-title:hover, .top-nav-hover-bottom .top-nav-title.is-active, .top-nav-hover-bottom .top-nav-link:hover, .top-nav-hover-bottom .top-nav-link.is-active {
-  -webkit-background-image: linear-gradient(to bottom, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
-  -moz-background-image: linear-gradient(to bottom, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
-  -o-background-image: linear-gradient(to bottom, transparent 92%, #3b8fc4 93%, #3b8fc4 100%);
-  background-image: linear-gradient(to bottom, transparent 92%, #3b8fc4 93%, #3b8fc4 100%); }
+  -webkit-background-image: linear-gradient(to bottom, transparent 92%, #007ac2 93%, #007ac2 100%);
+  -moz-background-image: linear-gradient(to bottom, transparent 92%, #007ac2 93%, #007ac2 100%);
+  -o-background-image: linear-gradient(to bottom, transparent 92%, #007ac2 93%, #007ac2 100%);
+  background-image: linear-gradient(to bottom, transparent 92%, #007ac2 93%, #007ac2 100%); }
 
 .site-search {
   margin-top: 0.3875rem; }
@@ -3731,10 +3731,10 @@ body {
   .tab-title:hover, .tab-title:focus {
     background-color: #fbfbfb;
     text-decoration: none;
-    -webkit-background-image: linear-gradient(to top, transparent 94%, #3b8fc4 96%, #3b8fc4 100%);
-    -moz-background-image: linear-gradient(to top, transparent 94%, #3b8fc4 96%, #3b8fc4 100%);
-    -o-background-image: linear-gradient(to top, transparent 94%, #3b8fc4 96%, #3b8fc4 100%);
-    background-image: linear-gradient(to top, transparent 94%, #3b8fc4 96%, #3b8fc4 100%); }
+    -webkit-background-image: linear-gradient(to top, transparent 94%, #007ac2 96%, #007ac2 100%);
+    -moz-background-image: linear-gradient(to top, transparent 94%, #007ac2 96%, #007ac2 100%);
+    -o-background-image: linear-gradient(to top, transparent 94%, #007ac2 96%, #007ac2 100%);
+    background-image: linear-gradient(to top, transparent 94%, #007ac2 96%, #007ac2 100%); }
   .tab-title.is-active {
     border-bottom: 1px solid white;
     background-color: white; }
@@ -3869,7 +3869,7 @@ body {
   .accordion .esri-icon-green:before, .accordion .icon-ui-green:before {
     color: #5a9359; }
   .accordion .esri-icon-blue:before, .accordion .icon-ui-blue:before {
-    color: #3b8fc4; }
+    color: #007ac2; }
   .accordion .esri-icon-purple:before, .accordion .icon-ui-purple:before {
     color: #9081bc; }
   .accordion .esri-icon-orange:before, .accordion .icon-ui-orange:before {
@@ -3877,7 +3877,7 @@ body {
   .accordion .esri-icon-gray:before, .accordion .icon-ui-gray:before {
     color: #959595; }
   .accordion .esri-icon-red:before, .accordion .icon-ui-red:before {
-    color: #c6542d; }
+    color: #de2900; }
   .accordion .esri-icon-close:before, .accordion .icon-ui-close:before {
     content: "\e600"; }
   .accordion .esri-icon-drag-horizontal:before, .accordion .icon-ui-drag-horizontal:before {
@@ -4219,7 +4219,7 @@ body {
   -ms-transform: translate(-280px, 0); }
 
 .link-red a, a.link-red {
-  color: #c6542d; }
+  color: #de2900; }
   .link-red a:hover, a.link-red:hover {
     color: #ab3c16; }
 
@@ -4234,7 +4234,7 @@ body {
     color: #56a5d8; }
 
 .link-blue a, a.link-blue {
-  color: #3b8fc4; }
+  color: #007ac2; }
   .link-blue a:hover, a.link-blue:hover {
     color: #196fa6; }
 
@@ -4289,13 +4289,13 @@ body {
     color: #323232; }
 
 .text-red {
-  color: #c6542d; }
+  color: #de2900; }
 
 .text-green {
   color: #5a9359; }
 
 .text-blue {
-  color: #3b8fc4; }
+  color: #007ac2; }
 
 .text-purple {
   color: #9081bc; }
@@ -4912,7 +4912,7 @@ body {
   border: none; }
 
 .panel-blue {
-  background-color: #3b8fc4; }
+  background-color: #007ac2; }
 
 .panel-dark-blue {
   background-color: #196fa6;
