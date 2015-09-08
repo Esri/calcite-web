@@ -1,4 +1,4 @@
-## Unreleased
+## 0.12.1
 
 ### Added
 - Panel Black
