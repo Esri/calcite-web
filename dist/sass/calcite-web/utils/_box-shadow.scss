@@ -1,0 +1,9 @@
+// ┌────────────┐
+// │ Box Shadow │
+// └────────────┘
+//  ↳ http://esri.github.io/calcite-web/sass/#box-shadow
+//  ↳ components → _utility-mixins.md
+
+@mixin box-shadow ($shadow) {
+  @include prefixer(box-shadow, $shadow, webkit moz spec);
+}
