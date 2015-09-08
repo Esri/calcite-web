@@ -5,7 +5,7 @@
 //  ↳ grid → _container.md
 
 @mixin grid-container() {
-  @extend %clearfix;
+  @include clearfix();
   width: $container-width;
   padding-right: 0;
   padding-left: 0;
@@ -32,7 +32,7 @@
   [class*="column-"]:last-of-type {
     margin-right: -$column-gutter / 2;
   }
-  &:last-of-type { @extend %clearfix; }
+  &:last-of-type { @include clearfix(); }
 }
 
 // ┌────────────────┐

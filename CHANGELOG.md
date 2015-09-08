@@ -1,9 +1,14 @@
+## Unreleased
+
+### Fixed
+- `include` rather than `extend` clearfix in column base and grid container. Fixes error of invalid sass in ruby.
+
 ## 0.12.1
 
 ### Added
 - Panel Black
 
-#### Fixed
+### Fixed
 - Surpise! Blue and Red really accessible now.
 
 ## 0.12.0
