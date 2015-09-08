@@ -4,4 +4,10 @@
 //  ↳ http://esri.github.io/calcite-web/patterns/#filter-dropdown
 //  ↳ patterns → _filter-dropdown.md
 
+@mixin filter-dropdown() {
+  background-color: $blue;
+}
 
+@if $include-filter-dropdown == true {
+  .filter-dropdown { @include filter-dropdown() }
+}
