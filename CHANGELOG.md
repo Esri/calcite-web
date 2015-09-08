@@ -3,6 +3,9 @@
 ### Added
 - Panel Black
 
+#### Fixed
+- Surpise! Blue and Red really accessible now.
+
 ## 0.12.0
 
 ### Fixed
