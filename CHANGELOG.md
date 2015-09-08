@@ -3,6 +3,9 @@
 ### Fixed
 - `include` rather than `extend` clearfix in column base and grid container. Fixes error of invalid sass in ruby.
 
+### Modified
+- Dark blue hover slightly desaturated.
+
 ## 0.12.1
 
 ### Added
