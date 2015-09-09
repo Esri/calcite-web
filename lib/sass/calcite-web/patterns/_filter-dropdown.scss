@@ -115,6 +115,7 @@
   .filter-dropdown-list  { @include filter-dropdown-list() }
   .filter-dropdown-link  { @include filter-dropdown-link() }
   .filter-dropdown-active-link  { @include filter-dropdown-active-link() }
+  .is-hidden {@include hide()};
 }
 
 
