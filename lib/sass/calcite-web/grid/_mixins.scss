@@ -1,5 +1,5 @@
 @mixin column($n) {
-  @extend .column-base;
+  @include column-base();
   width: ($n / $large-column-count) * $container-width;
 }
 

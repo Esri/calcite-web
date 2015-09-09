@@ -2,6 +2,7 @@
 
 ### Fixed
 - `include` rather than `extend` clearfix in column base and grid container. Fixes error of invalid sass in ruby.
+- Include column base in the `column` mixin rather than extend a class that doesn't exist.
 
 ### Modified
 - Dark blue hover slightly desaturated.
