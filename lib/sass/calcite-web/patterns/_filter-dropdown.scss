@@ -5,9 +5,105 @@
 //  ↳ patterns → _filter-dropdown.md
 
 @mixin filter-dropdown() {
-  background-color: $blue;
 }
 
 @if $include-filter-dropdown == true {
   .filter-dropdown { @include filter-dropdown() }
 }
+
+
+.filter-header {
+  padding-bottom: $baseline/4
+}
+
+.filter-title {
+  display: inline;
+  padding-bottom: 0;
+}
+
+.filter-clear {
+  float: right;
+  @include font-size(-2);
+}
+
+.filter-list {
+  @include clearfix();
+  position: relative;
+  &.is-active .filter-dropdown-list {
+    display: block;
+  }
+}
+
+  .filter-dropdown-list {
+    @include dropdown-menu();
+    max-width: 100%;
+    width: 100%;
+    max-height: $baseline*8.75;
+    overflow: scroll;
+  }
+
+  .filter-link {
+    @include side-nav-link();
+
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+    }
+
+    &:before {
+      @extend %icon-font-styles;
+      @extend .icon-ui-check-mark:before;
+      opacity: 0;
+      padding-right: $baseline/6;
+      color: $gray;
+    }
+
+    &:after {
+      content: '';
+      opacity: 0;
+    }
+
+    &.is-active {
+      background-color: $white;
+      &:before {
+        opacity: 1;
+        color: $green;
+      }
+      &:after {
+        @extend %icon-font-styles;
+        @extend .icon-ui-close:before;
+        margin-top: $baseline/6;
+        opacity: 1;
+        color: $gray;
+      }
+      &:hover:after {
+        opacity: 1;
+        color: $red;
+      }
+    }
+
+    &.is-hidden {
+      display: none;
+    }
+  }
+
+  .filter-active-link {
+    @include side-nav-link();
+    border: none;
+    padding-top: $baseline/4;
+    padding-bottom: $baseline/4;
+    &:hover {
+      &:after {
+        @include transform(translate3d(0,0,0));
+        color: $red;
+      }
+    }
+    &:after {
+      @include font-size(2);
+      content: "𐄂";
+      color: $light-gray;
+      opacity: 1;
+    }
+  }
+
