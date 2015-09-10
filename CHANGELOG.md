@@ -1,4 +1,4 @@
-## Unreleased
+## 0.13.0
 
 ### Fixed
 - `include` rather than `extend` clearfix in column base and grid container. Fixes error of invalid sass in ruby.
