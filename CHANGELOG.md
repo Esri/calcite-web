@@ -1,9 +1,21 @@
+## 0.13.0
+
+### Fixed
+- `include` rather than `extend` clearfix in column base and grid container. Fixes error of invalid sass in ruby.
+- Include column base in the `column` mixin rather than extend a class that doesn't exist.
+
+### Modified
+- Dark blue hover slightly desaturated.
+
+### Added
+- `.filter-dropdown` interactive pattern.
+
 ## 0.12.1
 
 ### Added
 - Panel Black
 
-#### Fixed
+### Fixed
 - Surpise! Blue and Red really accessible now.
 
 ## 0.12.0
