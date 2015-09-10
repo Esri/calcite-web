@@ -312,6 +312,10 @@
               <a href="#expanding-nav" class="side-nav-link">Expanding Nav</a>
             
           
+            
+              <a href="#filter-dropdown" class="side-nav-link">Filter Dropdown</a>
+            
+          
         </nav>
       
     </aside>
@@ -1312,6 +1316,98 @@
 <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"expand js-expand"</span> <span class="hljs-attribute">data-expand</span>=<span class="hljs-value">"foo"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Expander Expanded<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+</code></pre>
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+        <section>
+          
+            <h2 id="filter-dropdown" tabindex="0">Filter Dropdown</h2>
+          
+
+          <p>The filter dropdown is a component used to select any number of items from a list of any number of options. It's used to locate specific items quickly even if that item is buried in a huge pile of other things.</p>
+<p>The primary use cases for the filter dropdown are selecting tags from a tag cloud, or a group from a list of all a user's groups.</p>
+<p>If the relationship being established is many-to-many, use the filter dropdown component.</p>
+
+
+          
+
+          
+
+          
+
+          
+            <h3 class="leader-2" tabindex="0">Modifiers</h3>
+            <div class="styleguide-modifiers">
+              <div class="styleguide-modifier-example">
+                <section class="js-filter-dropdown">
+  <header>
+    <h6 class="filter-dropdown-title">Tags</h6>
+    <a class="filter-dropdown-clear" href="#">clear</a>
+  </header>
+
+  <label class="trailer-half filter-dropdown-container">
+    <input class="filter-dropdown-input" type="text" placeholder="Filter by Tag">
+    <div class="filter-dropdown-list">
+      <a href="#" class="filter-dropdown-link is-active">Lorem</a>
+      <a href="#" class="filter-dropdown-link is-active">ipsum</a>
+      <a href="#" class="filter-dropdown-link">dolor</a>
+      <a href="#" class="filter-dropdown-link">sit</a>
+      <a href="#" class="filter-dropdown-link">amet</a>
+      <a href="#" class="filter-dropdown-link">consectetur</a>
+      <a href="#" class="filter-dropdown-link">adipisicing</a>
+      <a href="#" class="filter-dropdown-link">elit</a>
+      <a href="#" class="filter-dropdown-link">sed</a>
+      <a href="#" class="filter-dropdown-link">do</a>
+      <a href="#" class="filter-dropdown-link">eiusmod</a>
+      <a href="#" class="filter-dropdown-link">tempor</a>
+      <a href="#" class="filter-dropdown-link">incididunt</a>
+      <a href="#" class="filter-dropdown-link">ut</a>
+      <a href="#" class="filter-dropdown-link">labore</a>
+      <a href="#" class="filter-dropdown-link">et</a>
+    </div>
+  </label>
+</section>
+
+              </div>
+              
+            </div>
+<pre><code>&lt;section <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"js-filter-dropdown"</span>&gt;
+  &lt;header&gt;
+    &lt;h6 <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-title"</span>&gt;<span class="hljs-type">Tags</span>&lt;/h6&gt;
+    &lt;a <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-clear"</span> href=<span class="hljs-string">"#"</span>&gt;clear&lt;/a&gt;
+  &lt;/header&gt;
+
+  &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"trailer-half filter-dropdown-container"</span>&gt;
+    &lt;input <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-input"</span> <span class="hljs-class"><span class="hljs-keyword">type</span>=</span><span class="hljs-string">"text"</span> placeholder=<span class="hljs-string">"Filter by Tag"</span>&gt;
+    &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-list"</span>&gt;
+      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link is-active"</span>&gt;<span class="hljs-type">Lorem</span>&lt;/a&gt;
+      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link is-active"</span>&gt;ipsum&lt;/a&gt;
+      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;dolor&lt;/a&gt;
+      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;sit&lt;/a&gt;
+      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;amet&lt;/a&gt;
+      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;consectetur&lt;/a&gt;
+      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;adipisicing&lt;/a&gt;
+      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;elit&lt;/a&gt;
+      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;sed&lt;/a&gt;
+      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;do&lt;/a&gt;
+      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;eiusmod&lt;/a&gt;
+      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;tempor&lt;/a&gt;
+      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;incididunt&lt;/a&gt;
+      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;ut&lt;/a&gt;
+      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;labore&lt;/a&gt;
+      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;et&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/label&gt;
+&lt;/section&gt;
+
 </code></pre>
 
           
