@@ -1,0 +1,68 @@
+// ┌──────────┐
+// │ Thirdnav │
+// └──────────┘
+//  ↳ http://esri.github.io/calcite-web/patterns/#third-nav
+//  ↳ patterns → _third-nav.md
+
+@mixin third-nav() {
+  @extend .avenir-regular;
+  border-bottom: 1px solid $lightest-gray;
+  background-color: $white;
+  padding: $baseline/4 0;
+  width: 100%;
+}
+
+  @mixin third-nav-container () {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 15px;
+    margin-bottom: -15px;
+  }
+
+  @mixin nav-overflow() {
+    position: absolute;
+    padding: 11px 6px;
+    top: 0;
+    margin: 0;
+    background-color: rgba($white, .8);
+    display: none;
+    &:before {
+      padding-right: 0;
+    }
+    &.is-active {
+      display: block;
+    }
+  }
+
+    @mixin nav-overflow-left () {
+      @include nav-overflow();
+      left: 0px;
+    }
+
+    @mixin nav-overflow-right () {
+      @include nav-overflow();
+      right: 0px;
+    }
+
+  @mixin third-nav-link() {
+    color: $darkest-gray;
+    @include font-size(-2);
+    margin-right: $baseline * 0.75;
+    &:last-child {
+      margin-right: 1.5*$baseline;
+    }
+    &.is-active {
+      @extend .avenir-bold;
+    }
+    &.is-active:hover {
+      @extend .link-darkest-gray;
+    }
+  }
+
+@if $include-third-nav == true {
+  .third-nav {@include third-nav();}
+    .third-nav-container {@include third-nav-container();}
+    .third-nav-link {@include third-nav-link();}
+    .nav-overflow-left {@include nav-overflow-left();}
+    .nav-overflow-right {@include nav-overflow-right();}
+}
