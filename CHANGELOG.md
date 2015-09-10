@@ -7,6 +7,9 @@
 ### Modified
 - Dark blue hover slightly desaturated.
 
+### Added
+- `.filter-dropdown` interactive pattern.
+
 ## 0.12.1
 
 ### Added
