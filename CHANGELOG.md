@@ -1,3 +1,8 @@
+## Unreleased
+
+### Modified
+- Filter dropdown item close button unique and solitary entity.
+
 ## 0.13.0
 
 ### Fixed
