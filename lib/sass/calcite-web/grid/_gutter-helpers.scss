@@ -1,4 +1,4 @@
-@if $include-grid == true {
+@if $include-grid == true or $include-gutter == true {
 
 .gutter-left-quarter  { @include gutter-left-quarter(); }
 .gutter-right-quarter { @include gutter-right-quarter(); }

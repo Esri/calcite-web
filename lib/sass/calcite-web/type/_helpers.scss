@@ -2,11 +2,11 @@
 // │ Static Helper Classes │
 // └───────────────────────┘
 
-@if $include-type == true and $include-type-defaults == true {
+@if $include-type == true and $include-type-helpers == true {
 
   .link-red a, a.link-red                   { @include link-color($red, $dark-red);}
   .link-green a, a.link-green               { @include link-color($green, $dark-green);}
-  .link-blue a, a.link-light-blue           { @include link-color($lighter-blue, $light-blue);}
+  .link-light-blue a, a.link-light-blue     { @include link-color($lighter-blue, $light-blue);}
   .link-blue a, a.link-blue                 { @include link-color($blue, $dark-blue);}
   .link-purple a, a.link-purple             { @include link-color($purple, $dark-purple);}
   .link-orange a, a.link-orange             { @include link-color($orange, $dark-orange);}
