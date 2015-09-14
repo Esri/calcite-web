@@ -46,6 +46,10 @@
   @include box-sizing(border-box);
   border: 1px solid $lighter-gray;
   margin-top: -1px;
+  pre code {
+    border: none;
+    background-color: transparent;
+  }
 }
 
 @mixin tab-section() {
@@ -86,6 +90,10 @@
     border-bottom: none;
     border-left: none;
     border-right: none;
+    pre code {
+      border: 1px solid $lightest-gray;
+      background-color: $off-white;
+    }
   }
   .tab-section  {
     background-color: transparent;
