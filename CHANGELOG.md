@@ -11,6 +11,7 @@
 - Polyfill for `strinc.includes()`
 - Some cool new icons
 - Codeblocks inside tab styles other than `tabs-gray` are now styled normally.
+- Make import variables more granular
 
 ## 0.13.0
 
