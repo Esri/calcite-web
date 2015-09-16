@@ -9,6 +9,7 @@
 ### Added
 - Polyfill for `focusin` events
 - Polyfill for `strinc.includes()`
+- Some cool new icons
 
 ## 0.13.0
 
