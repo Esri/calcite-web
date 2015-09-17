@@ -51,7 +51,8 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
     @include font-size(-1);
     @extend .avenir-regular;
     color: $off-black;
-    padding: .75*$baseline 0;
+    padding-top: .75*$baseline;
+    padding-bottom: .75*$baseline;
     line-height: 1.5rem;
     display: inline-block;
     &:hover, &:focus {
@@ -69,6 +70,12 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
     &.is-active {
       @include prefixer(background-image, $topnav-link-overline, webkit moz o);
       background-image: $topnav-link-overline;
+    }
+    &.dropdown-btn {
+      padding-right: 1rem;
+      &:after {
+        right: 0;
+      }
     }
     a {
       color: $off-black;
