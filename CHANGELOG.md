@@ -2,6 +2,8 @@
 
 ### Modified
 - Filter dropdown item close button unique and solitary entity.
+- Dropdown button down arrow positioned absolute to work with `text-ellipsis`
+- Slight change to user navigation example markup
 
 ### Fixed
 - Browser bugs for filter dropdown
