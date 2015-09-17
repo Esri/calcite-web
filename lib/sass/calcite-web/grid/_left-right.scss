@@ -36,7 +36,7 @@
   }
 }
 
-@if $include-grid == true {
+@if $include-grid == true or $include-left-right == true {
   @include include-left-right();
   @include responsive-left-right();
 }

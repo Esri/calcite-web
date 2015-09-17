@@ -10,7 +10,7 @@ $font-path:                      '../fonts' !default;
 $include-colors:                 true    !default;
 $generate-css:                   true    !default;
 
-// CSS Output
+// Grid Output
 $include-reset:                  $generate-css    !default;
 $include-utils:                  $generate-css    !default;
 
@@ -18,11 +18,20 @@ $include-grid:                   $generate-css    !default;
   $fold-grid:                    $generate-css    !default;
   $block-grid:                   $generate-css    !default;
 
+// Grid Utilities Output
+$include-leader-trailer:         $generate-css    !default;
+$include-gutter:                 $generate-css    !default;
+$include-left-right:             $generate-css    !default;
+$include-show-hide:              $generate-css    !default;
+$include-sticky:                 $generate-css    !default;
+
+// Type Output
 $include-type:                   $generate-css    !default;
   $include-content-family:       false            !default;
   $include-secondary-family:     false            !default;
   $include-code-family:          $generate-css    !default;
   $include-type-defaults:        $generate-css    !default;
+  $include-type-helpers:         $generate-css    !default;
 
 // Icons
 $include-icons:                  $generate-css    !default;
