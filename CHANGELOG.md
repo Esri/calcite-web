@@ -1,3 +1,16 @@
+## Unreleased
+
+### Modified
+- Filter dropdown item close button unique and solitary entity.
+
+### Fixed
+- Browser bugs for filter dropdown
+
+### Added
+- Polyfill for `focusin` events
+- Polyfill for `strinc.includes()`
+- Some cool new icons
+
 ## 0.13.0
 
 ### Fixed
