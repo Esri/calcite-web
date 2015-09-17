@@ -115,14 +115,14 @@
 
 
 @if $include-filter-dropdown == true {
-  .filter-dropdown-title  { @include filter-dropdown-title() }
-  .filter-dropdown-clear  { @include filter-dropdown-clear() }
+  .filter-dropdown-title  { @include filter-dropdown-title(); }
+  .filter-dropdown-clear  { @include filter-dropdown-clear(); }
   .filter-dropdown-container {@include filter-dropdown-container();}
-  .filter-dropdown-list  { @include filter-dropdown-list() }
-  .filter-dropdown-link  { @include filter-dropdown-link() }
-  .filter-dropdown-active {@include filter-dropdown-active()}
-  .filter-dropdown-remove {@include filter-dropdown-remove()}
-  .is-hidden {@include hide()};
+  .filter-dropdown-list  { @include filter-dropdown-list(); }
+  .filter-dropdown-link  { @include filter-dropdown-link(); }
+  .filter-dropdown-active {@include filter-dropdown-active(); }
+  .filter-dropdown-remove {@include filter-dropdown-remove(); }
+  .is-hidden {@include hide(); }
 }
 
 
