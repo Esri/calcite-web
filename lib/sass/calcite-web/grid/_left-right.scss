@@ -4,9 +4,6 @@
 //  ↳ http://esri.github.io/calcite-web/grid/#left-and-right
 //  ↳ grid → _left-and-right.md
 
-@mixin left()  { float: left  }
-@mixin right(){ float: right }
-
 @mixin include-left-right(){
   .left  { @include left();  }
   .right { @include right(); }
@@ -18,20 +15,20 @@
 
     // Large
     @media screen and (min-width: $large) {
-      .#{$large-class}-left   { float: left  }
-      .#{$large-class}-right  { float: right }
+      .#{$large-class}-left   { @include left(); }
+      .#{$large-class}-right  { @include right(); }
     }
 
     // Medium
     @media screen and (max-width: $medium - 1) and (min-width: $small) {
-      .#{$medium-class}-left   { float: left  }
-      .#{$medium-class}-right  { float: right }
+      .#{$medium-class}-left   { @include left(); }
+      .#{$medium-class}-right  { @include right(); }
     }
 
     // Small
     @media screen and (max-width: $small - 1) {
-      .#{$small-class}-left   { float: left  }
-      .#{$small-class}-right  { float: right }
+      .#{$small-class}-left   { @include left(); }
+      .#{$small-class}-right  { @include right(); }
     }
   }
 }

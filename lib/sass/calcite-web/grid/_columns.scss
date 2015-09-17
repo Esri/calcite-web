@@ -25,12 +25,24 @@
   width: $container-width;
   padding-left: $column-gutter / 2;
   padding-right: $column-gutter / 2;
-  float: left;
+  @include left();
   [class*="column-"]:first-of-type {
     margin-left: -$column-gutter / 2;
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        margin-left: 0;
+        margin-right: -$column-gutter / 2;
+      }
+    }
   }
   [class*="column-"]:last-of-type {
     margin-right: -$column-gutter / 2;
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        margin-right: 0;
+        margin-left: -$column-gutter / 2;
+      }
+    }
   }
   &:last-of-type { @include clearfix(); }
 }
@@ -43,10 +55,22 @@
 
 @mixin first-column() {
   margin-left: -($column-gutter/2);
+  @if ($include-right-to-left) {
+    html[dir="rtl"] & {
+      margin-left: 0;
+      margin-right: -$column-gutter / 2;
+    }
+  }
 }
 
 @mixin last-column() {
   margin-right: -($column-gutter / 2);
+  @if ($include-right-to-left) {
+    html[dir="rtl"] & {
+      margin-right: 0;
+      margin-left: -$column-gutter / 2;
+    }
+  }
 }
 
 // ┌────────────────────┐
@@ -66,6 +90,12 @@
           width: ($n / $large-column-count) * $container-width;
           > .#{$prefix}column-#{$n} {
             margin-left: -($column-gutter/2);
+            @if ($include-right-to-left) {
+              html[dir="rtl"] & {
+                margin-left: 0;
+                margin-right: -$column-gutter / 2;
+              }
+            }
           }
         }
       }
@@ -76,9 +106,21 @@
       }
       .#{$prefix}#{$large-class}-first-column {
         margin-left: -($column-gutter / 2);
+        @if ($include-right-to-left) {
+          html[dir="rtl"] & {
+            margin-left: 0;
+            margin-right: -$column-gutter / 2;
+          }
+        }
       }
       .#{$prefix}#{$large-class}-last-column {
         margin-right: -($column-gutter / 2);
+        @if ($include-right-to-left) {
+          html[dir="rtl"] & {
+            margin-right: 0;
+            margin-left: -$column-gutter / 2;
+          }
+        }
       }
     }
 
@@ -89,6 +131,12 @@
           width: ($n / $default-column-count) * $container-width;
           > .#{$prefix}column-#{$n} {
             margin-left: -($column-gutter/2);
+            @if ($include-right-to-left) {
+              html[dir="rtl"] & {
+                margin-left: 0;
+                margin-right: -$column-gutter / 2;
+              }
+            }
           }
         }
       }
@@ -113,9 +161,21 @@
       }
       .#{$prefix}#{$medium-class}-first-column {
         margin-left: -($column-gutter / 2);
+        @if ($include-right-to-left) {
+          html[dir="rtl"] & {
+            margin-left: 0;
+            margin-right: -$column-gutter / 2;
+          }
+        }
       }
       .#{$prefix}#{$medium-class}-last-column {
         margin-right: -($column-gutter / 2);
+        @if ($include-right-to-left) {
+          html[dir="rtl"] & {
+            margin-right: 0;
+            margin-left: -$column-gutter / 2;
+          }
+        }
       }
     }
 
@@ -148,10 +208,22 @@
       }
       .#{$prefix}#{$small-class}-first-column {
         margin-left: -($column-gutter / 2);
+        @if ($include-right-to-left) {
+          html[dir="rtl"] & {
+            margin-left: 0;
+            margin-right: -$column-gutter / 2;
+          }
+        }
       }
       .#{$prefix}#{$small-class}-last-column {
         margin-right: -($column-gutter / 2);
       }
+      @if ($include-right-to-left) {
+          html[dir="rtl"] & {
+            margin-right: 0;
+            margin-left: -$column-gutter / 2;
+          }
+        }
     }
 
   } @else {
@@ -161,6 +233,12 @@
         width: ($n / $default-column-count) * $container-width;
         > .#{$prefix}column-#{$n} {
           margin-left: -($column-gutter/2);
+          @if ($include-right-to-left) {
+            html[dir="rtl"] & {
+              margin-left: 0;
+              margin-right: -$column-gutter / 2;
+            }
+          }
         }
       }
     }
