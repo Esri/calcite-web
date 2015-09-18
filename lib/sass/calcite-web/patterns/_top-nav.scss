@@ -20,11 +20,10 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
 
   @mixin top-nav-title {
     @include font-size(0);
-    float: left;
+    @include left();
     margin-right: 2rem;
     @if ($include-right-to-left) {
       html[dir="rtl"] & {
-        float: right;
         margin-right: 0;
         margin-left: 2rem;
       }
@@ -47,12 +46,8 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
 
   @mixin top-nav-list {
     padding: 0;
-    float: left;
-    @if ($include-right-to-left) {
-      html[dir="rtl"] & {
-        float: right;
-      }
-    }
+    @include left();
+
     .top-nav-link + .top-nav-link {
       margin-left: .75em;
       @if ($include-right-to-left) {
@@ -134,11 +129,10 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
   }
 
   @mixin sign-in {
-    float: right;
+    @include right();
     padding-left: $baseline / 4;
     @if ($include-right-to-left) {
       html[dir="rtl"] & {
-        float: left;
         padding-left: 0;
         padding-right: $baseline / 4;
       }
