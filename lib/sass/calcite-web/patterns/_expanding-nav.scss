@@ -6,9 +6,33 @@
 
 @mixin expand(){
   display: none;
+
   &.is-active {
+    background-color: $off-white;
     display: inherit;
+
+    height: auto;
+    max-height: 100%;
+    padding: 25px 0;
+    position: absolute;
+
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    width: 100%;
   }
+
+  &.expand-mobile {
+    padding: 0;
+    position: relative;
+  }
+
+  @media screen and (max-width: $small - 1) {
+    &.is-active {
+      padding: 0;
+      position: relative;
+    }
+  }
+
 }
 
 

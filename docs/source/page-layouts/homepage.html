@@ -7,20 +7,171 @@ css:
 
 <header class="top-nav">
   <div class="grid-container">
-    <div class="esri-logo esri-logo-condensed leader-half left"></div>
-    <nav class="top-nav-list pre-1">
-      <a href="#" class="top-nav-link">Industries</a>
-      <a href="#" class="top-nav-link">Products</a>
-      <a href="#" class="top-nav-link">Support & Services </a>
-      <a href="#" class="top-nav-link">About</a>
-      <a href="#" class="top-nav-link">Community</a>
-    </nav>
-    <nav class="sign-in right">
-      <a href="#" class="btn btn-small btn-clear">Sign Up</a>
-      <a href="#" class="btn btn-small btn-transparent">Sign In</a>
-    </nav>
+    <div class="tablet-hide">
+      <div class="esri-logo esri-logo-condensed leader-half left"></div>
+      <nav class="top-nav-list pre-1">
+        <a href="#" class="top-nav-link js-expand-toggle" data-expand="industries">Industries</a>
+        <a href="#" class="top-nav-link js-expand-toggle" data-expand="products">Products</a>
+        <a href="#" class="top-nav-link js-expand-toggle" data-expand="support-services">Support &amp; Services </a>
+        <a href="#" class="top-nav-link js-expand-toggle" data-expand="about">About</a>
+        <a href="#" class="top-nav-link js-expand-toggle" data-expand="community">Community</a>
+      </nav>
+      <nav class="sign-in right">
+        <a href="#" class="btn btn-small btn-transparent">Sign In</a>
+      </nav>
+      <a href="#" class="icon-ui-search js-expand-toggle top-nav-link right" data-expand="search"></a>
+    </div>
+  </div>
+  <div class="tablet-show">
+    <a href="/" class="icon-ui-menu js-drawer-toggle" data-drawer="top-nav">
+      <div class="esri-logo esri-logo-condensed leader-half trailer-half pre-1"></div>
+    </a>
   </div>
 </header>
+
+<!-- Mega Menu Items -->
+<section class="expand js-expand" data-expand="industries">
+  <div class="grid-container">
+    <div class="column-6">
+      <h4>Section Title</h4>
+      <ul class="list-plain font-size--2">
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </div>
+    <div class="column-6">
+      <h4>Section Title</h4>
+      <ul class="list-plain font-size--2">
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </div>
+    <div class="column-6">
+      <h4>Section Title</h4>
+      <ul class="list-plain font-size--2">
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </div>
+    <div class="column-6">
+      <h4>Section Title</h4>
+      <ul class="list-plain font-size--2">
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="expand js-expand" data-expand="products">
+  <div class="grid-container">
+    <div class="column-24">
+      <h1>Products</h1>
+    </div>
+  </div>
+</section>
+<section class="expand js-expand" data-expand="support-services">
+  <div class="grid-container">
+    <div class="column-24">
+      <h1>Support &amp; Services</h1>
+    </div>
+  </div>
+</section>
+<section class="expand js-expand" data-expand="about">
+  <div class="grid-container">
+    <div class="column-24">
+      <h1>About</h1>
+    </div>
+  </div>
+</section>
+<section class="expand js-expand" data-expand="community">
+  <div class="grid-container">
+    <div class="column-24">
+      <h1>Community</h1>
+    </div>
+  </div>
+</section>
+
+<!-- Search -->
+<section class="expand js-expand panel panel-no-padding" data-expand="search">
+  <div class="grid-container">
+    <form method="GET" action="/search/" class="column-24">
+      <label>Search Esri.com
+        <a href="#" class="icon-ui-close js-expand-toggle right" data-expand="search"></a>
+        <div class="search-bar">
+          <input type="search" placeholder="Search">
+          <button type="submit" class="search-submit icon-ui-search"></button>
+        </div>
+      </label>
+    </form>
+  </div>
+</section>
+
+
+<div class="drawer drawer-left js-drawer" data-drawer="top-nav" tabindex="0">
+  <nav class="drawer-nav" role="navigation">
+    <aside class="side-nav">
+      <a href="#" class="side-nav-link js-expand-toggle" data-expand="industries-mobile">Industries</a>
+      <ul class="expand js-expand list-plain font-size--2" data-expand="industries-mobile">
+        <li><a href="#" class="js-expand-toggle" data-expand="industries-mobile-1">Section 1</a>
+          <ul class="expand js-expand list-plain font-size--2" data-expand="industries-mobile-1">
+            <li><a href="#" class="js-expand-toggle" data-expand="industries-mobile-1-1">Section 1-1</a>
+              <ul class="expand js-expand list-plain font-size--2" data-expand="industries-mobile-1-1">
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+              </ul>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+        </li>
+        <li><a href="#" data-expand="industries-mobile-2">Section 2</a>
+          <ul class="expand js-expand list-plain font-size--2" data-expand="industries-mobile-2">
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+      <a href="#" class="side-nav-link js-expand-toggle" data-expand="products-mobile">Products</a>
+      <a href="#" class="side-nav-link js-expand-toggle" data-expand="support-services-mobile">Support &amp; Services </a>
+      <a href="#" class="side-nav-link js-expand-toggle" data-expand="about-mobile">About</a>
+      <a href="#" class="side-nav-link js-expand-toggle" data-expand="community-mobile">Community</a>
+    </aside>
+  </nav>
+</div>
+
+
+
+
 
 <section class="carousel js-carousel fade-in">
 
