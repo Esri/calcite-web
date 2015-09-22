@@ -123,10 +123,15 @@
   }
 
   @mixin btn-grouped() {
-    float: left;
+    @include left();
     & + .btn-grouped {
-      // border-left: none
       margin-left: 1px;
+      @if ($include-right-to-left) {
+        html[dir="rtl"] & {
+          margin-left: 0;
+          margin-right: 1px;
+        }
+      }
     }
     &:last-of-type {
       float: none;
