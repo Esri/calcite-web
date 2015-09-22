@@ -1,3 +1,20 @@
+## Unreleased
+
+### Modified
+- Filter dropdown item close button unique and solitary entity.
+- Dropdown button down arrow positioned absolute to work with `text-ellipsis`
+- Slight change to user navigation example markup
+
+### Fixed
+- Browser bugs for filter dropdown
+
+### Added
+- Polyfill for `focusin` events
+- Polyfill for `strinc.includes()`
+- Some cool new icons
+- Codeblocks inside tab styles other than `tabs-gray` are now styled normally.
+- Make import variables more granular
+
 ## 0.13.0
 
 ### Fixed
