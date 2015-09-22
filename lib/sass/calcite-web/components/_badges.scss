@@ -6,7 +6,7 @@
 
   @mixin badge-action() {
     @include font-size(-3);
-    float: left;
+    @include left();
     display: inline-block;
     padding: $baseline/8 $baseline/4;
     border: 1px solid $lighter-gray;
@@ -16,10 +16,16 @@
 
   @mixin badge-count() {
     @include font-size(-3);
-    float: left;
+    @include left();
     padding: $baseline/8 $baseline/4;
     border: 1px solid $lighter-gray;
     border-left: none;
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        border-left: 1px solid $lighter-gray;
+        border-right: none;
+      }
+    }
   }
 
   @mixin badge-blue() {
