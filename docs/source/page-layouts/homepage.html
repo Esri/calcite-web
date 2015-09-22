@@ -6,27 +6,32 @@ css:
 ---
 
 <header class="top-nav">
+  <a class="skip-to-content" href="#skip-to-content">Skip To Content</a>
   <div class="grid-container">
-    <div class="tablet-hide">
-      <div class="esri-logo esri-logo-condensed leader-half left"></div>
-      <nav class="top-nav-list pre-1">
-        <a href="#" class="top-nav-link js-expand-toggle" data-expand="industries">Industries</a>
-        <a href="#" class="top-nav-link js-expand-toggle" data-expand="products">Products</a>
-        <a href="#" class="top-nav-link js-expand-toggle" data-expand="support-services">Support &amp; Services </a>
-        <a href="#" class="top-nav-link js-expand-toggle" data-expand="about">About</a>
-        <a href="#" class="top-nav-link js-expand-toggle" data-expand="community">Community</a>
-      </nav>
-      <nav class="sign-in right">
-        <a href="#" class="btn btn-small btn-transparent">Sign In</a>
-      </nav>
-      <a href="#" class="icon-ui-search js-expand-toggle top-nav-link right" data-expand="search"></a>
+    <div class="column-24">
+      <div class="tablet-hide">
+        <a href="/page-layouts/homepage/" class="esri-logo esri-logo-condensed leader-half left"></a>
+        <nav class="top-nav-list pre-1">
+          <a href="#" class="top-nav-link js-expand-toggle" data-expand="industries">Industries</a>
+          <a href="#" class="top-nav-link js-expand-toggle" data-expand="products">Products</a>
+          <a href="#" class="top-nav-link js-expand-toggle" data-expand="support-services">Support &amp; Services </a>
+          <a href="#" class="top-nav-link js-expand-toggle" data-expand="about">About</a>
+          <a href="#" class="top-nav-link js-expand-toggle" data-expand="community">Community</a>
+        </nav>
+        <nav class="sign-in right">
+          <a href="#" class="btn btn-small btn-transparent">Sign In</a>
+        </nav>
+        <a href="#" class="icon-ui-search js-expand-toggle top-nav-link right" data-expand="search"></a>
+      </div>
+      <div class="tablet-show">
+        <div class="icon-ui-menu top-nav-link js-drawer-toggle left" data-drawer="top-nav"><!-- icon --></div>
+        <a href="/page-layouts/homepage/" class="esri-logo esri-logo-condensed leader-half left"></a>
+
+      </div>
     </div>
   </div>
-  <div class="tablet-show">
-    <a href="/" class="icon-ui-menu js-drawer-toggle" data-drawer="top-nav">
-      <div class="esri-logo esri-logo-condensed leader-half trailer-half pre-1"></div>
-    </a>
-  </div>
+
+
 </header>
 
 <!-- Mega Menu Items -->
@@ -106,6 +111,8 @@ css:
     </div>
   </div>
 </section>
+<!--// end of mega menu navigation -->
+
 
 <!-- Search -->
 <section class="expand js-expand panel panel-no-padding" data-expand="search">
@@ -121,54 +128,59 @@ css:
     </form>
   </div>
 </section>
-
+<!--// end of search block -->
 
 <div class="drawer drawer-left js-drawer" data-drawer="top-nav" tabindex="0">
   <nav class="drawer-nav" role="navigation">
     <aside class="side-nav">
-      <a href="#" class="side-nav-link js-expand-toggle" data-expand="industries-mobile">Industries</a>
-      <ul class="expand js-expand list-plain font-size--2" data-expand="industries-mobile">
-        <li><a href="#" class="js-expand-toggle" data-expand="industries-mobile-1">Section 1</a>
-          <ul class="expand js-expand list-plain font-size--2" data-expand="industries-mobile-1">
-            <li><a href="#" class="js-expand-toggle" data-expand="industries-mobile-1-1">Section 1-1</a>
-              <ul class="expand js-expand list-plain font-size--2" data-expand="industries-mobile-1-1">
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-              </ul>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-          </ul>
-        </li>
-        <li><a href="#" data-expand="industries-mobile-2">Section 2</a>
-          <ul class="expand js-expand list-plain font-size--2" data-expand="industries-mobile-2">
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
-      </ul>
-      <a href="#" class="side-nav-link js-expand-toggle" data-expand="products-mobile">Products</a>
-      <a href="#" class="side-nav-link js-expand-toggle" data-expand="support-services-mobile">Support &amp; Services </a>
-      <a href="#" class="side-nav-link js-expand-toggle" data-expand="about-mobile">About</a>
-      <a href="#" class="side-nav-link js-expand-toggle" data-expand="community-mobile">Community</a>
+      <aside class="js-accordion accordion">
+        <div class="accordion-section">
+          <h4 class="accordion-title ">Industries</h4>
+          <div class="accordion-content">
+            <a href="#" class="sub-nav-link">Link Title</a>
+            <a href="#" class="sub-nav-link">Link Title</a>
+            <a href="#" class="sub-nav-link">Link Title</a>
+            <a href="#" class="sub-nav-link">Link Title</a>
+            <a href="#" class="sub-nav-link">Link Title</a>
+            <div class="accordion-section">
+              <h4 class="accordion-title">Title of Sub Section</h4>
+              <div class="accordion-content">
+                <a href="#" class="sub-nav-link">Link Title</a>
+                <a href="#" class="sub-nav-link">Link Title</a>
+                <a href="#" class="sub-nav-link">Link Title</a>
+                <a href="#" class="sub-nav-link">Link Title</a>
+                <a href="#" class="sub-nav-link">Link Title</a>
+              </div>
+            </div>
+            <div class="accordion-section">
+              <h4 class="accordion-title">Title of Sub Section</h4>
+              <div class="accordion-content">
+                <a href="#" class="sub-nav-link">Link Title</a>
+                <a href="#" class="sub-nav-link">Link Title</a>
+                <a href="#" class="sub-nav-link">Link Title</a>
+                <a href="#" class="sub-nav-link">Link Title</a>
+                <a href="#" class="sub-nav-link">Link Title</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-section">
+          <h4 class="accordion-title">Products</h4>
+          <div class="accordion-content">
+            <a href="#" class="sub-nav-link">Link Title</a>
+            <a href="#" class="sub-nav-link">Link Title</a>
+            <a href="#" class="sub-nav-link">Link Title</a>
+            <a href="#" class="sub-nav-link">Link Title</a>
+            <a href="#" class="sub-nav-link">Link Title</a>
+          </div>
+        </div>
+      </aside>
+
     </aside>
   </nav>
 </div>
-
+<!--// end of sidenav mobile -->
 
 
 
