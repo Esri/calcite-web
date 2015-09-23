@@ -91,8 +91,14 @@
     margin: $baseline 0;
     @include avenir-regular();
     @include gutter-left(1);
-    border-left: 3px solid $lighter-gray;
     color: $darker-gray;
+    border-left: 3px solid $lighter-gray;
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        border-left: none;
+        border-right: 3px solid $lighter-gray;
+      }
+    }
   }
 
   blockquote,

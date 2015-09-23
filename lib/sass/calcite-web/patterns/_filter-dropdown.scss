@@ -11,7 +11,7 @@
 
 @mixin filter-dropdown-clear() {
   @include font-size(-2);
-  float: right;
+  @include right();
 }
 
 @mixin filter-dropdown-container() {
@@ -33,7 +33,12 @@
   position: relative;
   display: block;
   @include box-sizing(border-box);
-  padding: $baseline/3 $baseline $baseline/3 $baseline/3;
+  padding: $baseline/3 $baseline $baseline/3 $baseline;
+  @if ($include-right-to-left) {
+    html[dir="rtl"] & {
+      padding: $baseline/3 $baseline/3 $baseline/3 $baseline;
+    }
+  }
   @include font-size(-2);
   color: $darker-gray;
   border-top: 1px solid $lightest-gray;
@@ -43,6 +48,13 @@
     @extend .icon-ui-close:before;
     position: absolute;
     right: 0;
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        right: auto;
+        left: 0;
+        padding-left: $baseline/3;
+      }
+    }
     margin-top: $baseline/6;
     opacity: 0;
     color: $gray;
@@ -61,8 +73,14 @@
     @extend %icon-font-styles;
     @extend .icon-ui-check-mark:before;
     opacity: 0;
-    padding-right: $baseline/6;
+    padding: 0 $baseline/6;
     color: $gray;
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        float: right;
+        padding-top: $baseline/6;
+      }
+    }
   }
 
   &.is-active {
@@ -95,13 +113,20 @@
 }
 
 @mixin filter-dropdown-remove() {
-  float: right;
+  @include right();
   &:after {
     @include font-size(-1);
     @extend %icon-font-styles;
     @extend .icon-ui-close:before;
     position: absolute;
     right: 0;
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        right: auto;
+        left: 0;
+        padding-left: $baseline/3;
+      }
+    }
     opacity: 1;
     color: $gray;
   }

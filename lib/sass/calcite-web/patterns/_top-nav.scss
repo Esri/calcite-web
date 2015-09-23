@@ -18,13 +18,17 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
   }
 }
 
-
-
   @mixin top-nav-title {
     @include font-size(1);
-    float: left;
+    @include left();
     margin-right: 1.5rem;
     padding: 0 1.125rem;
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        margin-right: 0;
+        margin-left: 1.5rem;
+      }
+    }
     line-height: 1.5rem;
     color: $off-black;
     font-weight: 500;
@@ -42,9 +46,16 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
 
   @mixin top-nav-list {
     padding: 0;
-    float: left;
+    @include left();
+
     .top-nav-link + .top-nav-link {
       margin-left: .75em;
+      @if ($include-right-to-left) {
+        html[dir="rtl"] & {
+          margin-left: 0;
+          margin-right: .75em;
+        }
+      }
     }
   }
 
@@ -74,8 +85,20 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
     }
     &.dropdown-btn {
       padding-right: 1rem;
+      @if ($include-right-to-left) {
+        html[dir="rtl"] & {
+          padding-right: 0;
+          padding-left: 1rem;
+        }
+      }
       &:after {
         right: 0;
+        @if ($include-right-to-left) {
+          html[dir="rtl"] & {
+            right: auto;
+            left: 0;
+          }
+        }
       }
     }
     a {
@@ -93,6 +116,12 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
   @mixin top-nav-dropdown {
     &:after {
       padding-left: $baseline / 4;
+      @if ($include-right-to-left) {
+        html[dir="rtl"] & {
+          padding-left: 0;
+          padding-right: $baseline / 4;
+        }
+      }
       content: "▼";
       font-size: .5rem;
       vertical-align: .125rem;
@@ -100,7 +129,14 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
   }
 
   @mixin sign-in {
-    float: right;
+    @include right();
+    padding-left: $baseline / 4;
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        padding-left: 0;
+        padding-right: $baseline / 4;
+      }
+    }
     margin-top: -0.7rem;
   }
 

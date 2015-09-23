@@ -1,4 +1,7 @@
-## Unreleased
+## 0.13.1
+
+### Added
+- Right to left support
 
 ### Modified
 - Filter dropdown item close button unique and solitary entity.
