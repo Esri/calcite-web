@@ -37,6 +37,12 @@
   @mixin alert-close() {
     position: absolute;
     right: $baseline/2;
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        right: auto;
+        left: $baseline/2;
+      }
+    }
   }
 
 @if $include-alerts == true {

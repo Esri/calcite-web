@@ -19,13 +19,13 @@ $subnav-link-underline: linear-gradient(to top, transparent 94%, $white 96%, $wh
 
   @mixin sub-nav-list() {
     width: 100%;
-    float: left;
+    @include left();
   }
 
   @mixin sub-nav-link() {
     padding: .25em .75em;
     margin: 0 .25em 0 0;
-    float: left;
+    @include left();
     font-family: $avenir-family;
     color: $lightest-gray;
     @include font-size(-1);

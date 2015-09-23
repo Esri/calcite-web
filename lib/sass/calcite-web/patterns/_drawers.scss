@@ -26,9 +26,19 @@ $opacity-transition: opacity 200ms linear;
     @include transition-delay(0ms);
     &.drawer-left .drawer-nav {
       @include transform(translate3d($drawer-width,0,0));
+      @if ($include-right-to-left) {
+        html[dir="rtl"] & {
+          @include transform(translate3d(-$drawer-width,0,0));
+        }
+      }
     }
     &.drawer-right .drawer-nav {
       @include transform(translate3d(-$drawer-width,0,0));
+      @if ($include-right-to-left) {
+        html[dir="rtl"] & {
+          @include transform(translate3d($drawer-width,0,0));
+        }
+      }
     }
   }
 }
@@ -52,17 +62,41 @@ $opacity-transition: opacity 200ms linear;
 @if $include-drawers == true {
   .drawer { @include drawer();}
   .drawer-nav { @include drawer-nav();}
-  .drawer-left .drawer-nav  { left: -$drawer-width; }
-  .drawer-right .drawer-nav { left: 100%; }
+  .drawer-left .drawer-nav  {
+    left: -$drawer-width;
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        left: 100%;
+      }
+    }
+  }
+  .drawer-right .drawer-nav {
+    left: 100%;
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        left: -$drawer-width;
+      }
+    }
+  }
 
   .ie9 {
     .drawer {
       &.is-active {
         &.drawer-left .drawer-nav {
           -ms-transform:translate($drawer-width,0);
+          @if ($include-right-to-left) {
+            html[dir="rtl"] & {
+              -ms-transform:translate(-$drawer-width,0);
+            }
+          }
         }
         &.drawer-right .drawer-nav {
           -ms-transform:translate(-$drawer-width,0);
+          @if ($include-right-to-left) {
+            html[dir="rtl"] & {
+              -ms-transform:translate($drawer-width,0);
+            }
+          }
         }
       }
     }

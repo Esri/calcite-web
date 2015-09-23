@@ -1,5 +1,8 @@
 ## Unreleased
 
+### Added
+- Right to left support
+
 ### Modified
 - Filter dropdown item close button unique and solitary entity.
 - Dropdown button down arrow positioned absolute to work with `text-ellipsis`
