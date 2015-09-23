@@ -141,9 +141,9 @@
   //  ↳ components → _checkboxes.md
   //  ↳ components → _radio-buttons.md
   input[type='radio'], input[type='checkbox'] {
-    float: left;
+    @include left();
     width: auto;
-    margin: .3rem .3rem 0 .2rem;
+    margin: .3rem .3rem 0 .3rem;
     &:focus {
       outline: 0;
       box-shadow: 0 0 1px 2px $blue, 0 0 6px $blue;
