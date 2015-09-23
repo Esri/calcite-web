@@ -1,3 +1,15 @@
+## Unreleased
+
+### Added
+_ `.icon-ui-small` modifier to make icons about 3/4 existing size
+
+### Modified
+- `.panel-light-blue` is now slightly darker with light text
+- `.nav-bar-title` is now slightly larger with less right margin
+
+### Fixed
+- Line height has been fixed for `h2`'s and `h4`'s with multiple lines
+
 ## 0.13.1
 
 ### Added
