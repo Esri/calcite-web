@@ -23,7 +23,7 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
     @include font-size(1);
     @include left();
     margin-right: 1.5rem;
-    padding: 0 1.125rem;
+    padding: 1.125rem 0;
     line-height: 1.5rem;
     color: $off-black;
     @if ($include-right-to-left) {
