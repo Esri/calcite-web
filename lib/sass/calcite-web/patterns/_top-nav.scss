@@ -19,19 +19,19 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
 }
 
   @mixin top-nav-title {
+    @extend .avenir-regular;
     @include font-size(1);
     @include left();
     margin-right: 1.5rem;
     padding: 0 1.125rem;
+    line-height: 1.5rem;
+    color: $off-black;
     @if ($include-right-to-left) {
       html[dir="rtl"] & {
         margin-right: 0;
         margin-left: 1.5rem;
       }
     }
-    line-height: 1.5rem;
-    color: $off-black;
-    font-weight: 500;
     &:hover {
       color: $blue;
       @include prefixer(background-image, $topnav-link-overline, webkit moz o);
