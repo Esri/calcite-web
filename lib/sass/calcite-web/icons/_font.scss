@@ -48,6 +48,8 @@
     @include icon-font-styles();
   }
 
+  .esri-icon-small:before, .icon-ui-small:before                                             { font-size: .75rem;}
+
   .esri-icon-green:before, .icon-ui-green:before                                             { color: $green;}
   .esri-icon-blue:before, .icon-ui-blue:before                                               { color: $blue;}
   .esri-icon-purple:before, .icon-ui-purple:before                                           { color: $purple;}

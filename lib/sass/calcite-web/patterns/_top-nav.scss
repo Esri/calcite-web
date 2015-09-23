@@ -21,12 +21,13 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
 
 
   @mixin top-nav-title {
-    @include font-size(0);
+    @include font-size(1);
     float: left;
-    margin-right: 2rem;
-    padding: .75*$baseline 0;
+    margin-right: 1.5rem;
+    padding: 0 1.125rem;
     line-height: 1.5rem;
     color: $off-black;
+    font-weight: 500;
     &:hover {
       color: $blue;
       @include prefixer(background-image, $topnav-link-overline, webkit moz o);
