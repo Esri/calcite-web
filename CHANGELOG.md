@@ -8,6 +8,8 @@
 - `.panel-light-blue` is now slightly darker with light text
 - `.nav-bar-title` is now slightly larger with less right margin
 - Search icon baked into search-submit button, padding cleared
+- Transparent button underlines like links
+- Links hover darker
 
 ### Fixed
 - Line height has been fixed for `h2`'s and `h4`'s with multiple lines
