@@ -1,7 +1,9 @@
-## 0.13.1
+## Unreleased
 
 ### Added
-- Right to left support
+- `.btn-clear-disabled`
+
+## 0.13.1
 
 ### Modified
 - Filter dropdown item close button unique and solitary entity.
@@ -12,6 +14,7 @@
 - Browser bugs for filter dropdown
 
 ### Added
+- Right to left support
 - Polyfill for `focusin` events
 - Polyfill for `strinc.includes()`
 - Some cool new icons
