@@ -51,10 +51,10 @@
   @if $n < 9 and $n > 4 {
     line-height: 2*$baseline;
   }
-  @else if $n < 4 and $n > 2 {
+  @else if $n <= 4 and $n > 2 {
     line-height: 1.5*$baseline;
   }
-  @else if $n < 2 {
+  @else if $n <= 2 {
     line-height: $baseline;
   }
 }
