@@ -44,9 +44,14 @@ $easing-function: cubic-bezier(0.215, 0.440, 0.420, 0.880);
     max-height: 80vh;
     z-index: 100;
     float: none;
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        float: none;
+      }
+    }
     background: $white;
     padding: $baseline;
-    text-align: left;
+    text-align: start;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     display: inline-block;

@@ -11,6 +11,8 @@
 
 ### Fixed
 - Line height has been fixed for `h2`'s and `h4`'s with multiple lines
+- Text alignment helpers support rtl
+- Modal supports rtl properly
 
 ## 0.13.1
 

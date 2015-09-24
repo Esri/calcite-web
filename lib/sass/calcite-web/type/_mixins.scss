@@ -42,12 +42,15 @@
   text-align: center;
 }
 
+
+
+
 @mixin text-left() {
-  text-align: left;
+  text-align: start;
 }
 
 @mixin text-right() {
-  text-align: right;
+  text-align: end;
 }
 
 @mixin text-rule() {
