@@ -1,8 +1,9 @@
-## Unreleased
+## 0.13.2
 
 ### Added
 - `.btn-clear-disabled`
 - `.icon-ui-small` modifier to make icons about 3/4 existing size
+- `.icon-ui-flush` modifier to remove any padding
 -  Minimal `<dl>` styles
 
 ### Modified
