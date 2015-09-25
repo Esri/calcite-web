@@ -1,0 +1,193 @@
+// ┌──────────┐
+// │ Tracking │
+// └──────────┘
+//  ↳ http://esri.github.io/calcite-web/sass/#tracking
+//  ↳ sass → _tracking.md
+
+@mixin tracking($n) {
+  letter-spacing: $n * 0.001em;
+}
+
+// ┌─────────┐
+// │ Leading │
+// └─────────┘
+//  ↳ http://esri.github.io/calcite-web/sass/#leading
+//  ↳ sass → _leading.md
+
+@mixin leading($n) {
+  line-height: $n * $baseline;
+}
+
+// ┌──────────────┐
+// │ Word Spacing │
+// └──────────────┘
+//  ↳ http://esri.github.io/calcite-web/sass/#word-spacing
+//  ↳ sass → _word-spacing.md
+
+@mixin word-spacing($n) {
+  word-spacing: $n * 0.001em;
+}
+
+// ┌────────────────┐
+// │ Text Modifiers │
+// └────────────────┘
+//  ↳ http://esri.github.io/calcite-web/type/#text-modifiers
+//  ↳ type → _text-modifiers.md
+
+@mixin text-inline() {
+  display: inline;
+}
+
+@mixin text-center() {
+  text-align: center;
+}
+
+
+
+
+@mixin text-left() {
+  text-align: start;
+}
+
+@mixin text-right() {
+  text-align: end;
+}
+
+@mixin text-rule() {
+  border-bottom: 1px solid $lighter-gray;
+}
+
+@mixin text-large() {
+  @include font-size(0);
+}
+
+@mixin text-small() {
+  @include font-size(-2);
+}
+
+@mixin text-light() {
+  opacity: 0.66;
+}
+
+@mixin text-ellipsis() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// ┌────────────┐
+// │ List Plain │
+// └────────────┘
+//  ↳ http://esri.github.io/calcite-web/type/#list-plain
+//  ↳ type → _list-plain.md
+
+@mixin list-plain() {
+  margin: $baseline/4 0;
+  li {
+    list-style-type: none;
+    margin-left: 0;
+  }
+}
+
+// ┌───────────────┐
+// │ List Numbered │
+// └───────────────┘
+//  ↳ http://esri.github.io/calcite-web/type/#list-numbered
+//  ↳ type → _list-numbered.md
+
+@mixin list-numbered() {
+  counter-reset: li;
+  list-style: none;
+  position: relative;
+  padding-bottom: 1em;
+  margin-left: 0;
+  & > li {
+    padding: 0.3em .25em .25em 2.5em;
+    position: relative;
+    margin-bottom: 0.75em;
+    margin-left: 0;
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        padding: 0.3em 2.5em .25em .25em;
+      }
+    }
+    &:before {
+      @include avenir-light();
+      content: counter(li);
+      counter-increment: li;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0.75em;
+      padding: 0 .5em 0 0;
+      color: $gray;
+      @include font-size(1);
+      line-height: 1.5*$baseline;
+      text-align: right;
+      border-right: 2px solid $lighter-gray;
+      @if ($include-right-to-left) {
+        html[dir="rtl"] & {
+          left: auto;
+          right: 0;
+          padding: 0 0 0 .5em;
+          text-align: left;
+          border-right: none;
+          border-left: 2px solid $lighter-gray;
+        }
+      }
+    }
+    &:after {
+      content: ".";
+      display: block;
+      clear: left;
+      visibility: hidden;
+      line-height: 0;
+      height: 0;
+    }
+  }
+  .list-numbered {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    & > li {
+      &:before {
+        content: counter(li, lower-alpha);
+      }
+    }
+  }
+}
+
+// ┌────────────┐
+// │ Text Color │
+// └────────────┘
+//  ↳ http://esri.github.io/calcite-web/type/#text-color
+//  ↳ type → _text-color.md
+
+@mixin text-color($value) {
+  color: $value;
+}
+
+// ┌────────────┐
+// │ Link Color │
+// └────────────┘
+//  ↳ http://esri.github.io/calcite-web/type/#link-color
+//  ↳ type → _link-color.md
+
+@mixin link-color($value, $light-value) {
+  color: $value;
+  &:hover {
+    color: $light-value;
+  }
+}
+
+// ┌─────────┐
+// │ Fade In │
+// └─────────┘
+//  ↳ http://esri.github.io/calcite-web/type/#fade-in
+//  ↳ type → _fade-in.md
+@mixin fade-in () {
+  opacity: 0;
+  @include animation(fade-in ease-in 1);
+  @include animation-fill-mode(forwards);
+  @include animation-duration(.75s);
+}
