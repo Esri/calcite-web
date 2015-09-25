@@ -1,19 +1,23 @@
 ## Unreleased
 
 ### Added
-_ `.icon-ui-small` modifier to make icons about 3/4 existing size
+- `.btn-clear-disabled`
+- `.icon-ui-small` modifier to make icons about 3/4 existing size
+-  Minimal `<dl>` styles
 
 ### Modified
 - `.panel-light-blue` is now slightly darker with light text
 - `.nav-bar-title` is now slightly larger with less right margin
+- Search icon baked into search-submit button, padding cleared
+- Transparent button underlines like links
+- Links hover darker
 
 ### Fixed
 - Line height has been fixed for `h2`'s and `h4`'s with multiple lines
+- Text alignment helpers support rtl
+- Modal supports rtl properly
 
 ## 0.13.1
-
-### Added
-- Right to left support
 
 ### Modified
 - Filter dropdown item close button unique and solitary entity.
@@ -24,6 +28,8 @@ _ `.icon-ui-small` modifier to make icons about 3/4 existing size
 - Browser bugs for filter dropdown
 
 ### Added
+- `.btn-clear-disabled`
+- Right to left support
 - Polyfill for `focusin` events
 - Polyfill for `strinc.includes()`
 - Some cool new icons

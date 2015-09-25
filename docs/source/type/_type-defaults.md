@@ -20,3 +20,14 @@ All default text elements are styled to facilitate smooth reading, simple flow, 
 > Lorem Ipsum Blockquote
 
 Lorem ipsum paragraph with **strong, bold text** and _emphasis, italic text._
+
+<dl>
+	<dt>Guildenstern</dt>
+	<dd>I don't believe in it anyway.</dd>
+	<dt>Rosencrantz</dt>
+	<dd>What?</dd>
+	<dt>Guildenstern</dt>
+	<dd>England.</dd>
+	<dt>Rosencrantz</dt>
+	<dd>Just a conspiracy of cartographers, then?</dd>
+</dl>

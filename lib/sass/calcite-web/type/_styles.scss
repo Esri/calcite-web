@@ -133,6 +133,21 @@
     list-style-type: disc;
   }
 
+  dl {
+    padding: 0;
+    margin-bottom: $baseline;
+  }
+  dt {
+    @extend .avenir-demi;
+    margin-top: $baseline/2;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  dd {
+    margin-left: $baseline/2;
+  }
+
   small, sup, sub {
     font-size: 1/$ratio * 1em;
   }

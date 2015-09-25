@@ -21,6 +21,11 @@
     right: 0;
     bottom: 0;
     z-index: 3;
+    &:before {
+      @extend %icon-font-styles;
+      @extend .icon-ui-search:before;
+      padding: 0;
+    }
   }
 
 @if $include-search-bar == true {
