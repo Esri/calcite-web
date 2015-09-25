@@ -199,7 +199,7 @@
   .esri-icon-dock-right:before, .icon-ui-dock-right:before                                   {content: "\e686";}
   .esri-icon-organization:before, .icon-ui-organization:before                               {content: "\e687";}
 
-  .icon-flush:before, .icon-flush:after                                                      { @extend %icon-font-flush;}
+  .icon-ui-flush:before, .icon-esri-flush:before, .icon-ui-flush:after, .icon-esri-flush:after { @extend %icon-font-flush;}
 }
 
 @if $include-icon-font == true {
