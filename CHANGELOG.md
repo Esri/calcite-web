@@ -3,6 +3,7 @@
 ### Added
 - `.btn-clear-disabled`
 - `.icon-ui-small` modifier to make icons about 3/4 existing size
+-  Minimal `<dl>` styles
 
 ### Modified
 - `.panel-light-blue` is now slightly darker with light text
