@@ -42,9 +42,12 @@
       <nav class="drawer-nav" role="navigation">
         <aside class="side-nav">
           <h2 class="side-nav-title">Calcite Web</h2>
-          <form class="gutter-left-half gutter-right-half leader-half trailer-half">
-            <input type="search" placeholder="Search" class="leader-0">
-          </form>
+            <form method="GET" action="/search/">
+              <div class="search-bar">
+                <input type='search' placeholder='Search'>
+                <button type="submit" class="search-submit icon-ui-search"></button>
+              </div>
+            </form>
             
               
             
@@ -94,9 +97,12 @@
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
-            <label class="trailer-0">
-              <input type='search' placeholder='Search'>
-            </label>
+            <form method="GET" action="/search/">
+              <div class="search-bar">
+                <input type='search' placeholder='Search'>
+                <button type="submit" class="search-submit icon-ui-search"></button>
+              </div>
+            </form>
           </div>
             
               
@@ -1184,6 +1190,16 @@
 <p>Lorem Ipsum Blockquote</p>
 </blockquote>
 <p>Lorem ipsum paragraph with <strong>strong, bold text</strong> and <em>emphasis, italic text.</em></p>
+<dl>
+    <dt>Guildenstern</dt>
+    <dd>I don't believe in it anyway.</dd>
+    <dt>Rosencrantz</dt>
+    <dd>What?</dd>
+    <dt>Guildenstern</dt>
+    <dd>England.</dd>
+    <dt>Rosencrantz</dt>
+    <dd>Just a conspiracy of cartographers, then?</dd>
+</dl>
 
 
           

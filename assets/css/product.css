@@ -2751,12 +2751,12 @@ video, img {
   .avenir-light-italic b, .avenir-light-italic strong {
     font-weight: 500; }
 
-.avenir-regular, .breadcrumbs, table > thead, input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='email'], input[type='time'], input[type='week'], input[type='search'], input[type='tel'], input[type='text'], input[type='url'], input[type='number'], input[type='password'], input[type='month'], textarea, select, .loader-text, .search-bar, .top-nav, .top-nav-link, .third-nav, .toolbar, .side-nav, .dropdown-menu, .accordion, .filter-dropdown-list, .side-nav-title, .accordion-title {
+.avenir-regular, .breadcrumbs, table > thead, input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='email'], input[type='time'], input[type='week'], input[type='search'], input[type='tel'], input[type='text'], input[type='url'], input[type='number'], input[type='password'], input[type='month'], textarea, select, .loader-text, .search-bar, .top-nav, .top-nav-title, .top-nav-link, .third-nav, .toolbar, .side-nav, .dropdown-menu, .accordion, .filter-dropdown-list, .side-nav-title, .accordion-title {
   letter-spacing: 0em;
   font-family: 'Avenir Next W01', 'Avenir Next W00', 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: 400;
   font-style: normal; }
-  .avenir-regular b, .breadcrumbs b, table > thead b, input[type='date'] b, input[type='datetime'] b, input[type='datetime-local'] b, input[type='email'] b, input[type='time'] b, input[type='week'] b, input[type='search'] b, input[type='tel'] b, input[type='text'] b, input[type='url'] b, input[type='number'] b, input[type='password'] b, input[type='month'] b, textarea b, select b, .loader-text b, .search-bar b, .top-nav b, .top-nav-link b, .third-nav b, .toolbar b, .side-nav b, .dropdown-menu b, .accordion b, .filter-dropdown-list b, .side-nav-title b, .accordion-title b, .avenir-regular strong, .breadcrumbs strong, table > thead strong, input[type='date'] strong, input[type='datetime'] strong, input[type='datetime-local'] strong, input[type='email'] strong, input[type='time'] strong, input[type='week'] strong, input[type='search'] strong, input[type='tel'] strong, input[type='text'] strong, input[type='url'] strong, input[type='number'] strong, input[type='password'] strong, input[type='month'] strong, textarea strong, select strong, .loader-text strong, .search-bar strong, .top-nav strong, .top-nav-link strong, .third-nav strong, .toolbar strong, .side-nav strong, .dropdown-menu strong, .accordion strong, .filter-dropdown-list strong, .side-nav-title strong, .accordion-title strong {
+  .avenir-regular b, .breadcrumbs b, table > thead b, input[type='date'] b, input[type='datetime'] b, input[type='datetime-local'] b, input[type='email'] b, input[type='time'] b, input[type='week'] b, input[type='search'] b, input[type='tel'] b, input[type='text'] b, input[type='url'] b, input[type='number'] b, input[type='password'] b, input[type='month'] b, textarea b, select b, .loader-text b, .search-bar b, .top-nav b, .top-nav-title b, .top-nav-link b, .third-nav b, .toolbar b, .side-nav b, .dropdown-menu b, .accordion b, .filter-dropdown-list b, .side-nav-title b, .accordion-title b, .avenir-regular strong, .breadcrumbs strong, table > thead strong, input[type='date'] strong, input[type='datetime'] strong, input[type='datetime-local'] strong, input[type='email'] strong, input[type='time'] strong, input[type='week'] strong, input[type='search'] strong, input[type='tel'] strong, input[type='text'] strong, input[type='url'] strong, input[type='number'] strong, input[type='password'] strong, input[type='month'] strong, textarea strong, select strong, .loader-text strong, .search-bar strong, .top-nav strong, .top-nav-title strong, .top-nav-link strong, .third-nav strong, .toolbar strong, .side-nav strong, .dropdown-menu strong, .accordion strong, .filter-dropdown-list strong, .side-nav-title strong, .accordion-title strong {
     font-weight: 500; }
 
 .avenir-italic {
@@ -2767,12 +2767,12 @@ video, img {
   .avenir-italic b, .avenir-italic strong {
     font-weight: 500; }
 
-.avenir-demi {
+.avenir-demi, dt {
   letter-spacing: 0em;
   font-family: 'Avenir Next W01', 'Avenir Next W00', 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: 500;
   font-style: normal; }
-  .avenir-demi b, .avenir-demi strong {
+  .avenir-demi b, dt b, .avenir-demi strong, dt strong {
     font-weight: 600; }
 
 .avenir-demi-italic {
@@ -2851,14 +2851,16 @@ h1 {
   line-height: 3.1rem; }
 
 h2 {
-  font-size: 1.5625rem; }
+  font-size: 1.5625rem;
+  line-height: 2.325rem; }
 
 h3 {
   font-size: 1.484375rem;
   line-height: 2.325rem; }
 
 h4 {
-  font-size: 1.25rem; }
+  font-size: 1.25rem;
+  line-height: 1.55rem; }
 
 h5 {
   font-size: 1.1875rem;
@@ -2921,12 +2923,12 @@ blockquote, blockquote p {
   line-height: 1.55rem; }
 
 a {
-  color: #005e95;
+  color: #0079c1;
   text-decoration: none;
   -webkit-transition: color 150ms linear, text-decoration 150ms linear;
   transition: color 150ms linear, text-decoration 150ms linear; }
   a:hover {
-    color: #0079c1;
+    color: #005e95;
     text-decoration: underline; }
 
 ul, ol {
@@ -2943,6 +2945,18 @@ li {
 
 ul li {
   list-style-type: disc; }
+
+dl {
+  padding: 0;
+  margin-bottom: 1.55rem; }
+
+dt {
+  margin-top: 0.775rem; }
+  dt:first-child {
+    margin-top: 0; }
+
+dd {
+  margin-left: 0.775rem; }
 
 small, sup, sub {
   font-size: 0.8em; }
@@ -2983,7 +2997,7 @@ figcaption {
 table {
   margin-bottom: 1.55rem; }
 
-.dropdown-btn:after, .accordion-title:before, .filter-dropdown-link:after, .filter-dropdown-link:before, .filter-dropdown-remove:after {
+.dropdown-btn:after, .search-submit:before, .accordion-title:before, .filter-dropdown-link:after, .filter-dropdown-link:before, .filter-dropdown-remove:after {
   font-family: 'CalciteWebCoreIcons';
   padding-right: 0.5166666667rem;
   speak: none;
@@ -2998,6 +3012,10 @@ table {
 .dropdown-btn:after {
   padding-right: 0;
   padding-left: 0.5166666667rem; }
+
+.icon-ui-flush:before, .icon-esri-flush:before, .icon-ui-flush:after, .icon-esri-flush:after, .accordion .icon-ui-flush:before, .accordion .icon-esri-flush:before, .accordion .icon-ui-flush:after, .accordion .icon-esri-flush:after {
+  padding-right: 0 !important;
+  padding-left: 0 !important; }
 
 @font-face {
   font-family: 'CalciteWebCoreIcons';
@@ -3017,6 +3035,10 @@ table {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.esri-icon-small:before, .icon-ui-small:before {
+  font-size: 0.75rem;
+  line-height: 1.55rem; }
 
 .esri-icon-green:before, .icon-ui-green:before {
   color: #5a9359; }
@@ -3405,7 +3427,7 @@ table {
 .esri-icon-zoom-in-magnifying-glass:before, .icon-ui-zoom-in-magnifying-glass:before {
   content: "\e67a"; }
 
-.esri-icon-search:before, .icon-ui-search:before {
+.esri-icon-search:before, .icon-ui-search:before, .search-submit:before {
   content: "\e67b"; }
 
 .esri-icon-zoom-out-magnifying-glass:before, .icon-ui-zoom-out-magnifying-glass:before {
@@ -3583,11 +3605,12 @@ table {
 
 .btn-transparent {
   background: none;
-  color: #005e95;
+  color: #0079c1;
   border: none; }
   .btn-transparent:hover {
-    color: #0079c1;
-    background: none; }
+    color: #005e95;
+    background: none;
+    text-decoration: underline; }
   .btn-transparent.btn-disabled {
     background: none;
     color: #959595; }
@@ -3667,6 +3690,15 @@ table {
   .btn:disabled:hover, .btn-disabled:hover, button[disabled]:hover {
     background-color: #a9a9a9;
     color: #959595; }
+
+.btn-clear:disabled, .btn-clear-disabled {
+  background: none;
+  color: #cccccc;
+  border: 1px solid #cccccc;
+  cursor: default;
+  pointer-events: none; }
+  .btn-clear:disabled:hover, .btn-clear-disabled:hover {
+    color: #cccccc; }
 
 .label {
   background-color: #efefef;
@@ -4048,8 +4080,8 @@ table {
       color: #bcdaed; }
 
 .panel-light-blue {
-  background-color: #d2e9f9;
-  border: 1px solid #bcdaed; }
+  background-color: #56a5d8;
+  border: 1px solid #0079c1; }
 
 .panel-no-border {
   border: none; }
@@ -4529,6 +4561,8 @@ select::-moz-focusring {
     color: white;
     background: #005e95;
     border-color: #005e95; }
+  .search-submit:before {
+    padding: 0; }
 
 .skip-to-content {
   opacity: 0;
@@ -4554,18 +4588,18 @@ select::-moz-focusring {
     padding-top: 1.55rem; }
 
 .top-nav-title {
-  font-size: 1rem;
+  font-size: 1.1875rem;
   line-height: 1.55rem;
   float: left;
-  margin-right: 2rem;
-  padding: 1.1625rem 0;
+  margin-right: 1.5rem;
+  padding: 1.125rem 0;
   line-height: 1.5rem;
   color: #4c4c4c; }
   html[dir="rtl"] .top-nav-title {
     float: right; }
   html[dir="rtl"] .top-nav-title {
     margin-right: 0;
-    margin-left: 2rem; }
+    margin-left: 1.5rem; }
   .top-nav-title:hover {
     color: #0079c1;
     -webkit-background-image: linear-gradient(to top, transparent 92%, #0079c1 93%, #0079c1 100%);
@@ -5066,7 +5100,7 @@ body {
   float: none;
   background: white;
   padding: 1.55rem;
-  text-align: left;
+  text-align: start;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   display: inline-block;
@@ -5082,6 +5116,8 @@ body {
   -ms-transform: translate3d(0, 20px, 0);
   -o-transform: translate3d(0, 20px, 0);
   transform: translate3d(0, 20px, 0); }
+  html[dir="rtl"] .modal-content {
+    float: none; }
 
 .accordion {
   @font-face {
@@ -5102,6 +5138,9 @@ body {
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
+  .accordion .esri-icon-small:before, .accordion .icon-ui-small:before {
+    font-size: 0.75rem;
+    line-height: 1.55rem; }
   .accordion .esri-icon-green:before, .accordion .icon-ui-green:before {
     color: #5a9359; }
   .accordion .esri-icon-blue:before, .accordion .icon-ui-blue:before {
@@ -5360,7 +5399,7 @@ body {
     content: "\e679"; }
   .accordion .esri-icon-zoom-in-magnifying-glass:before, .accordion .icon-ui-zoom-in-magnifying-glass:before {
     content: "\e67a"; }
-  .accordion .esri-icon-search:before, .accordion .icon-ui-search:before {
+  .accordion .esri-icon-search:before, .accordion .icon-ui-search:before, .accordion .search-submit:before {
     content: "\e67b"; }
   .accordion .esri-icon-zoom-out-magnifying-glass:before, .accordion .icon-ui-zoom-out-magnifying-glass:before {
     content: "\e67c"; }
@@ -5725,10 +5764,10 @@ body {
   text-align: center; }
 
 .text-left {
-  text-align: left; }
+  text-align: start; }
 
 .text-right {
-  text-align: right; }
+  text-align: end; }
 
 .text-light {
   opacity: 0.66; }
@@ -5819,14 +5858,16 @@ body {
   line-height: 1.55rem; }
 
 .font-size-2 {
-  font-size: 1.25rem; }
+  font-size: 1.25rem;
+  line-height: 1.55rem; }
 
 .font-size-3 {
   font-size: 1.484375rem;
   line-height: 2.325rem; }
 
 .font-size-4 {
-  font-size: 1.5625rem; }
+  font-size: 1.5625rem;
+  line-height: 2.325rem; }
 
 .font-size-5 {
   font-size: 1.85546875rem;

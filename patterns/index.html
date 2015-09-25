@@ -42,9 +42,12 @@
       <nav class="drawer-nav" role="navigation">
         <aside class="side-nav">
           <h2 class="side-nav-title">Calcite Web</h2>
-          <form class="gutter-left-half gutter-right-half leader-half trailer-half">
-            <input type="search" placeholder="Search" class="leader-0">
-          </form>
+            <form method="GET" action="/search/">
+              <div class="search-bar">
+                <input type='search' placeholder='Search'>
+                <button type="submit" class="search-submit icon-ui-search"></button>
+              </div>
+            </form>
             
               
             
@@ -94,9 +97,12 @@
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
-            <label class="trailer-0">
-              <input type='search' placeholder='Search'>
-            </label>
+            <form method="GET" action="/search/">
+              <div class="search-bar">
+                <input type='search' placeholder='Search'>
+                <button type="submit" class="search-submit icon-ui-search"></button>
+              </div>
+            </form>
           </div>
             
               
@@ -999,7 +1005,7 @@
               <div class="styleguide-modifier-example">
                 <div class="js-modal modal-overlay " data-modal="foo">
   <div class="modal-content column-12" role="dialog" aria-labelledby="modal" role="dialog">
-    <a class="js-modal-toggle icon-ui-close font-size-1 right" href="#" aria-label="close-modal" ></a>
+    <a class="js-modal-toggle icon-ui-close icon-flush font-size-1 right" href="#" aria-label="close-modal" ></a>
     <h3 class='trailer-half'>Modal!</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -1021,7 +1027,7 @@
             </div>
 <pre><code>&lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"js-modal modal-overlay modifier-class"</span> data-modal=<span class="hljs-string">"foo"</span>&gt;
   &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"modal-content column-12"</span> role=<span class="hljs-string">"dialog"</span> aria-labelledby=<span class="hljs-string">"modal"</span> role=<span class="hljs-string">"dialog"</span>&gt;
-    &lt;a <span class="hljs-keyword">class</span>=<span class="hljs-string">"js-modal-toggle icon-ui-close font-size-1 right"</span> href=<span class="hljs-string">"#"</span> aria-label=<span class="hljs-string">"close-modal"</span> &gt;&lt;/a&gt;
+    &lt;a <span class="hljs-keyword">class</span>=<span class="hljs-string">"js-modal-toggle icon-ui-close icon-flush font-size-1 right"</span> href=<span class="hljs-string">"#"</span> aria-label=<span class="hljs-string">"close-modal"</span> &gt;&lt;/a&gt;
     &lt;h3 <span class="hljs-keyword">class</span>=<span class="hljs-string">'trailer-half'</span>&gt;Modal!&lt;/h3&gt;
     &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed <span class="hljs-keyword">do</span> eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
