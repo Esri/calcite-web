@@ -1,3 +1,8 @@
+## Unreleased
+
+### Modified
+- Pixel perfect search submit button
+
 ## 0.13.2
 
 ### Added
