@@ -1,3 +1,11 @@
+## Unreleased
+
+### Modified
+- Pixel perfect search submit button
+
+### Fixed
+- Fix nested media query bug for ie in the grid
+
 ## 0.13.2
 
 ### Added

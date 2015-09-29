@@ -279,7 +279,7 @@
     .#{$prefix}last-column {
       @include last-column();
     }
-
-    @include responsive-column();
   }
+
+  @include responsive-column();
 }

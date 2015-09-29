@@ -19,12 +19,12 @@
     position: absolute;
     top: $baseline*.25;
     right: 0;
-    bottom: 0;
+    bottom: -1px;
     z-index: 3;
     &:before {
       @extend %icon-font-styles;
       @extend .icon-ui-search:before;
-      padding: 0;
+      @extend %icon-font-flush;
     }
   }
 
