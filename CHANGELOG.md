@@ -1,4 +1,4 @@
-## Unreleased
+## 0.13.3
 
 ### Modified
 - Pixel perfect search submit button
