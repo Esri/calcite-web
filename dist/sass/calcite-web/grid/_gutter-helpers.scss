@@ -1,0 +1,17 @@
+@if $include-grid == true or $include-gutter == true {
+
+.gutter-left-quarter  { @include gutter-left-quarter(); }
+.gutter-right-quarter { @include gutter-right-quarter(); }
+.gutter-left-third    { @include gutter-left-third(); }
+.gutter-right-third   { @include gutter-right-third(); }
+
+  .gutter-left-half  { @include gutter-left-half(); }
+  .gutter-right-half { @include gutter-right-half(); }
+
+  @for $i from 0 through $horizontal-range {
+    .gutter-left-#{$i}          { @include gutter-left($i)  ;}
+    .gutter-right-#{$i}         { @include gutter-right($i) ;}
+  }
+
+  @include responsive-gutter();
+}
