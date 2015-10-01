@@ -2,6 +2,9 @@
 
 ### Modified
 - Pixel perfect search submit button
+- Changed build process for icon fonts
+- Changed unicode mapping for icon glyphs
+- Changes font name for icon font
 
 ### Fixed
 - Fix nested media query bug for ie in the grid
