@@ -1,15 +1,17 @@
-## Unreleased
+## 0.14.0
 
 ### Fixed
 - `.top-nav-link` `:hover` and `.is-active` state fallback for IE8 & 9
+
+### Modified
+- Changed build process for icon fonts
+- Changed unicode mapping for icon glyphs
+- Changes font name for icon font
 
 ## 0.13.3
 
 ### Modified
 - Pixel perfect search submit button
-- Changed build process for icon fonts
-- Changed unicode mapping for icon glyphs
-- Changes font name for icon font
 
 ### Fixed
 - Fix nested media query bug for ie in the grid
