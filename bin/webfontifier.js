@@ -10,7 +10,7 @@ var webfontsGenerator = require('webfonts-generator')
 
 var target  = path.join(process.cwd(), 'lib/img/icons/ui/')
 var dest    = path.join(process.cwd(), 'lib/fonts/')
-var cssDest = path.join(process.cwd(), 'lib/sass/calcite-web/icons/_ui.scss')
+var cssDest = path.join(process.cwd(), 'lib/sass/calcite-web/icons/_font.scss')
 var cssTemplate = path.join(process.cwd(), 'bin/webfont-template.hbs')
 
 fs.readdir(target, function (err, files) {
