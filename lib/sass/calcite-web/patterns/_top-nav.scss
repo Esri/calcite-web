@@ -69,6 +69,7 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
     display: inline-block;
     &:hover, &:focus {
       color: $blue;
+      background: url('#{$image-path}/top-nav-ie9.gif') repeat-x top left transparent;
       @include prefixer(background-image, $topnav-link-overline, webkit moz o);
       background-image: $topnav-link-overline;
       text-decoration: none;

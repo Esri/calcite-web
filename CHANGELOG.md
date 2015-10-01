@@ -1,3 +1,8 @@
+## Unreleased
+
+### Fixed
+- `.top-nav-link` `:hover` and `.is-active` state fallback for IE8 & 9
+
 ## 0.13.3
 
 ### Modified
