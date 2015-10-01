@@ -1,0 +1,34 @@
+// ┌───────────┐
+// │ Searchbar │
+// └───────────┘
+//  ↳ http://esri.github.io/calcite-web/components/#searchbar
+//  ↳ components → _searchbar.md
+@mixin search-bar() {
+  @include box-sizing(border-box);
+  @extend .avenir-regular;
+  position: relative;
+  input[type="search"], input[type="text"] {
+    padding-right: 4.25em;
+  }
+}
+
+  @mixin search-submit() {
+    @include btn();
+    @include btn-clear();
+    border-color: transparent;
+    position: absolute;
+    top: $baseline*.25;
+    right: 0;
+    bottom: -1px;
+    z-index: 3;
+    &:before {
+      @extend %icon-font-styles;
+      @extend .icon-ui-search:before;
+      @extend %icon-font-flush;
+    }
+  }
+
+@if $include-search-bar == true {
+  .search-bar {@include search-bar();}
+    .search-submit {@include search-submit();}
+}

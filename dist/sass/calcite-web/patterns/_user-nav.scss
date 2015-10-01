@@ -1,0 +1,21 @@
+// ┌────────┐
+// │ Modals │
+// └────────┘
+//  ↳ http://esri.github.io/calcite-web/patterns/#user-nav
+//  ↳ patterns → _user-nav.md
+
+@mixin user-name () {
+  padding: $baseline/4;
+}
+
+@mixin user-image () {
+  width: $baseline;
+  height: $baseline;
+  margin-right: $baseline / 4;
+  vertical-align: -$baseline / 4;
+}
+
+@if $include-user-nav == true {
+  .user-nav-name {@include user-name();}
+  .user-nav-image {@include user-image();}
+}
