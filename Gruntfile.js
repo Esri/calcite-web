@@ -271,6 +271,9 @@ module.exports = function(grunt) {
 
     // bin scripts
     'shell': {
+      fonts: {
+        command: 'bin/webfontifier.js', // Creates webfonts and attendant sass from svgs
+      },
       guid: {
         command: 'bin/guid.js',    // Generate a unique id for a new section
       },
@@ -342,6 +345,7 @@ module.exports = function(grunt) {
 
   // Build a dist folder with all assets
   grunt.registerTask('prepublish', [
+    'shell:fonts',
     'concurrent:prepublish'
   ]);
 
@@ -359,7 +363,6 @@ module.exports = function(grunt) {
       grunt.config.set('gh-pages.options.message', grunt.option('message'));
     }
     grunt.task.run([
-      'shell:acetate',
       'newer:imagemin:doc',
       'concat:doc',
       'sass:doc',
