@@ -30,7 +30,9 @@ var generate = function(files) {
     fontName: 'calcite-ui',
     css: true,
     cssDest: cssDest,
-    cssTemplate: cssTemplate
+    cssTemplate: cssTemplate,
+    cssFontsPath: '#{$font-path}/',
+    types: ['svg', 'ttf', 'woff', 'eot']
   }, function(error) {
     if (error) console.log('Fail!', error)
     else console.log('Done!')
