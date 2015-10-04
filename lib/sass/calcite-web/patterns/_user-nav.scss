@@ -6,13 +6,13 @@
 
 @mixin user-name () {
   padding: $baseline/4;
+  color: $off-black;
 }
 
 @mixin user-image () {
-  width: $baseline;
-  height: $baseline;
-  margin-right: $baseline / 4;
-  vertical-align: -$baseline / 4;
+  width: 1.2rem;
+  height: 1.2rem;
+  vertical-align: -0.25rem;
 }
 
 @if $include-user-nav == true {

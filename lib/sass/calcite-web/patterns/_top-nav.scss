@@ -59,7 +59,7 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
     }
   }
 
-  @mixin top-nav-link {
+  @mixin top-nav-style {
     @include font-size(-1);
     @extend .avenir-regular;
     color: $off-black;
@@ -67,15 +67,17 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
     padding-bottom: .75*$baseline;
     line-height: 1.5rem;
     display: inline-block;
+    vertical-align: top;
+  }
+
+  @mixin top-nav-link {
+    @include top-nav-style();
     &:hover, &:focus {
       color: $blue;
       background: url('#{$image-path}/top-nav-ie9.gif') repeat-x top left transparent;
       @include prefixer(background-image, $topnav-link-overline, webkit moz o);
       background-image: $topnav-link-overline;
       text-decoration: none;
-      a {
-        color: $blue;
-      }
     }
     &:focus {
       outline: none;
@@ -84,7 +86,18 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
       @include prefixer(background-image, $topnav-link-overline, webkit moz o);
       background-image: $topnav-link-overline;
     }
-    &.dropdown-btn {
+  }
+
+  @mixin top-nav-logo {
+    margin-top: 0.75*$baseline;
+  }
+
+  @mixin top-nav-dropdown {
+    @include top-nav-style();
+    .dropdown-btn {
+      @include font-size(-1);
+      @extend .avenir-regular;
+      color: $off-black;
       padding-right: 1rem;
       @if ($include-right-to-left) {
         html[dir="rtl"] & {
@@ -92,8 +105,18 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
           padding-left: 1rem;
         }
       }
+      &:hover, &:focus {
+        color: $blue;
+        text-decoration: none;
+      }
+      &:focus {
+        outline: none;
+      }
       &:after {
         right: 0;
+        content: "▼";
+        font-size: .5rem;
+        vertical-align: .125rem;
         @if ($include-right-to-left) {
           html[dir="rtl"] & {
             right: auto;
@@ -102,30 +125,23 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
         }
       }
     }
-    a {
-      color: $off-black;
-      &:hover {
-        text-decoration: none;
-      }
+  }
+
+  @mixin top-nav-icon-link {
+    @include top-nav-style();
+    @include font-size(1);
+    &:before {
+      top: 2.5rem;
     }
-  }
-
-  @mixin top-nav-logo {
-    margin-top: 0.75*$baseline;
-  }
-
-  @mixin top-nav-dropdown {
     &:after {
-      padding-left: $baseline / 4;
-      @if ($include-right-to-left) {
-        html[dir="rtl"] & {
-          padding-left: 0;
-          padding-right: $baseline / 4;
-        }
+      top:2.825rem;
+    }
+    span {
+      position: relative;
+      top: 3px;
+      &:before {
+        padding: 0;
       }
-      content: "▼";
-      font-size: .5rem;
-      vertical-align: .125rem;
     }
   }
 
@@ -147,6 +163,7 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
     .top-nav-list {@include top-nav-list();}
     .top-nav-link {@include top-nav-link();}
     .top-nav-dropdown {@include top-nav-dropdown();}
+    .top-nav-icon-link {@include top-nav-icon-link();}
   .sign-in {@include sign-in();}
 
   // TEMP. REMOVE FOR 1.0
