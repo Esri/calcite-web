@@ -8,6 +8,9 @@
 - Changed unicode mapping for icon glyphs
 - Changes font name for icon font
 
+### Added
+- `alert-yellow`
+
 ## 0.13.3
 
 ### Modified

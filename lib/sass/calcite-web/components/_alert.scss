@@ -29,6 +29,11 @@
     border-color: $light-red;
   }
 
+  @mixin alert-yellow() {
+    background-color: $Calcite_Yellow_100;
+    border-color: $yellow;
+  }
+
   @mixin alert-green() {
     background-color: $Calcite_Green_100;
     border-color: $light-green;
@@ -48,6 +53,7 @@
 @if $include-alerts == true {
   .alert {@include alert();}
     .alert-red {@include alert-red();}
+    .alert-yellow {@include alert-yellow();}
     .alert-green {@include alert-green();}
     .alert-close {@include alert-close();}
 }
