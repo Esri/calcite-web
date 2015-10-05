@@ -9,6 +9,7 @@
 - Changes font name for icon font
 - Pre and Code line heights, sizes
 - Pre and Code blocks inside tabs
+- Nested lists dont need margin bottom
 
 ### Added
 - `alert-yellow`

@@ -134,6 +134,10 @@
     list-style-type: disc;
   }
 
+  li ul, li, ol {
+    margin-bottom: 0;
+  }
+
   dl {
     padding: 0;
     margin-bottom: $baseline;
