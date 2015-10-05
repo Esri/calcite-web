@@ -1,3 +1,18 @@
+# Unreleased
+
+### Fixed
+
+- Alignment of items in top nav with top of page
+
+### Changed
+
+- Made user image in top nav smaller and with less padding
+- `.top-nav-dropdown` should now be added to the `.dropdown` element
+
+### Added
+
+- `.top-nav-icon-link` for creating links that are just icons in the top nav
+
 ## 0.14.0
 
 ### Fixed
