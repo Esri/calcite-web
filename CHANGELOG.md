@@ -7,6 +7,8 @@
 - Changed build process for icon fonts
 - Changed unicode mapping for icon glyphs
 - Changes font name for icon font
+- Pre and Code line heights, sizes
+- Pre and Code blocks inside tabs
 
 ### Added
 - `alert-yellow`

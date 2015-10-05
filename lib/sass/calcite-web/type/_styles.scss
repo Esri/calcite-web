@@ -61,6 +61,7 @@
     background-color: $off-white;
     white-space: pre;
     font-size: 0.85em;
+    line-height: 1.4rem;
   }
 
   pre {
@@ -74,7 +75,7 @@
       display: block;
       overflow: auto;
       word-wrap: normal;
-      @include font-size(-3);
+      font-size: 0.85em;
     }
   }
 
