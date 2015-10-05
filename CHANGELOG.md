@@ -12,6 +12,9 @@
 - Pre and Code blocks inside tabs
 - Nested lists dont need margin bottom
 
+### Fixed
+- No clear button doesnt destroy app
+
 ### Added
 - `alert-yellow`
 
