@@ -13,7 +13,7 @@
 }
 
   @mixin dropdown-btn {
-    padding-right: 2rem;
+    padding-right: 1rem;
     cursor: pointer;
     position: relative;
     &:after {
@@ -21,7 +21,7 @@
       @extend %icon-font-after;
       @extend .icon-ui-down-arrow:before;
       position: absolute;
-      right: .75rem;
+      right: .25rem;
     }
   }
 
@@ -48,4 +48,3 @@
     white-space: nowrap;
   }
 }
-
