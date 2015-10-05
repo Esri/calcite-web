@@ -5,8 +5,11 @@
 //  ↳ patterns → _user-nav.md
 
 @mixin user-name () {
-  padding: $baseline/4;
+  padding-right: 1.5em;
   color: $off-black;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 @mixin user-image () {

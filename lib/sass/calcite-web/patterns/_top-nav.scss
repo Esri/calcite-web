@@ -45,9 +45,8 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
   }
 
   @mixin top-nav-list {
-    padding: 0;
     @include left();
-
+    padding: 0;
     .top-nav-link + .top-nav-link {
       margin-left: .75em;
       @if ($include-right-to-left) {
@@ -57,21 +56,27 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
         }
       }
     }
+    &.right {
+      @include right();
+    }
   }
 
   @mixin top-nav-style {
     @include font-size(-1);
-    @extend .avenir-regular;
     color: $off-black;
-    padding-top: .75*$baseline;
-    padding-bottom: .75*$baseline;
+    padding: .75*$baseline 0;
     line-height: 1.5rem;
     display: inline-block;
     vertical-align: top;
   }
 
   @mixin top-nav-link {
-    @include top-nav-style();
+    @include font-size(-1);
+    color: $off-black;
+    padding: .75*$baseline 0;
+    line-height: 1.5rem;
+    display: inline-block;
+    vertical-align: top;
     &:hover, &:focus {
       color: $blue;
       background: url('#{$image-path}/top-nav-ie9.gif') repeat-x top left transparent;
@@ -92,59 +97,6 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
     margin-top: 0.75*$baseline;
   }
 
-  @mixin top-nav-dropdown {
-    @include top-nav-style();
-    .dropdown-btn {
-      @include font-size(-1);
-      @extend .avenir-regular;
-      color: $off-black;
-      padding-right: 1rem;
-      @if ($include-right-to-left) {
-        html[dir="rtl"] & {
-          padding-right: 0;
-          padding-left: 1rem;
-        }
-      }
-      &:hover, &:focus {
-        color: $blue;
-        text-decoration: none;
-      }
-      &:focus {
-        outline: none;
-      }
-      &:after {
-        right: 0;
-        content: "▼";
-        font-size: .5rem;
-        vertical-align: .125rem;
-        @if ($include-right-to-left) {
-          html[dir="rtl"] & {
-            right: auto;
-            left: 0;
-          }
-        }
-      }
-    }
-  }
-
-  @mixin top-nav-icon-link {
-    @include top-nav-style();
-    @include font-size(1);
-    &:before {
-      top: 2.5rem;
-    }
-    &:after {
-      top:2.825rem;
-    }
-    span {
-      position: relative;
-      top: 3px;
-      &:before {
-        padding: 0;
-      }
-    }
-  }
-
   @mixin sign-in {
     @include right();
     padding-left: $baseline / 4;
@@ -162,19 +114,5 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
     .top-nav-title {@include top-nav-title();}
     .top-nav-list {@include top-nav-list();}
     .top-nav-link {@include top-nav-link();}
-    .top-nav-dropdown {@include top-nav-dropdown();}
-    .top-nav-icon-link {@include top-nav-icon-link();}
   .sign-in {@include sign-in();}
-
-  // TEMP. REMOVE FOR 1.0
-  // UNDOCUMENTED UNOFFICIAL FOR REAL DONT USE THIS
-  .top-nav-hover-bottom {
-    .top-nav-title:hover,
-    .top-nav-title.is-active,
-    .top-nav-link:hover,
-    .top-nav-link.is-active  {
-      @include prefixer(background-image, linear-gradient(to bottom, transparent 92%, $blue 93%, $blue 100%), webkit moz o);
-      background-image: linear-gradient(to bottom, transparent 92%, $blue 93%, $blue 100%);
-    }
-  }
 }

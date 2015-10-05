@@ -4,14 +4,16 @@
 
 - Alignment of items in top nav with top of page
 
-### Changed
+### Modified
 
 - Made user image in top nav smaller and with less padding
-- `.top-nav-dropdown` should now be added to the `.dropdown` element
+- Changes font name for icon font
+- Pre and Code line heights, sizes
+- Pre and Code blocks inside tabs
+- Nested lists dont need margin bottom
 
 ### Added
-
-- `.top-nav-icon-link` for creating links that are just icons in the top nav
+- `alert-yellow`
 
 ## 0.14.0
 
@@ -21,13 +23,6 @@
 ### Modified
 - Changed build process for icon fonts
 - Changed unicode mapping for icon glyphs
-- Changes font name for icon font
-- Pre and Code line heights, sizes
-- Pre and Code blocks inside tabs
-- Nested lists dont need margin bottom
-
-### Added
-- `alert-yellow`
 
 ## 0.13.3
 
