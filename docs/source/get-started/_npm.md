@@ -1,7 +1,7 @@
 To install Calcite Web with npm, type:
 
 ```
-npm install --save-dev Esri/calcite-web#v0.10.1
+npm install --save-dev Esri/calcite-web#v0.14.1
 ```
 
 You must add the current version in order to get the `dist/` folder.
