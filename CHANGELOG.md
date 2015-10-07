@@ -13,6 +13,7 @@
 - Pre and Code line heights, sizes
 - Pre and Code blocks inside tabs
 - Nested lists dont need margin bottom
+- Updated Google Plus social icon
 
 ### Fixed
 - No clear button doesnt destroy app
