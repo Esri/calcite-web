@@ -1,3 +1,8 @@
+## 0.14.2
+
+### Fixed
+- Resolved breaking change in icons
+
 ## 0.14.1
 
 ### Fixed
