@@ -4,6 +4,7 @@
 
 - Alignment of items in top nav with top of page
 - Filter dropdowns work inside modals
+- Syntax bug in small last column right to left support
 
 ### Modified
 
