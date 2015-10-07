@@ -217,13 +217,14 @@
       }
       .#{$prefix}#{$small-class}-last-column {
         margin-right: -($column-gutter / 2);
-      }
-      @if ($include-right-to-left) {
+
+        @if ($include-right-to-left) {
           html[dir="rtl"] & {
             margin-right: 0;
             margin-left: -$column-gutter / 2;
           }
         }
+      }
     }
 
   } @else {

@@ -4,6 +4,8 @@
 
 - Alignment of items in top nav with top of page
 - Filter dropdowns work inside modals
+- Syntax bug in small last column right to left support
+- Ruby gem uses /dist instead of /lib
 
 ### Modified
 
@@ -12,6 +14,8 @@
 - Pre and Code line heights, sizes
 - Pre and Code blocks inside tabs
 - Nested lists dont need margin bottom
+- Updated Google Plus social icon
+- A hair of padding top added to `<textarea>` to match text input
 
 ### Fixed
 - No clear button doesnt destroy app
