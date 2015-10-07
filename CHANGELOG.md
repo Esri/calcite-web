@@ -14,6 +14,7 @@
 - Pre and Code blocks inside tabs
 - Nested lists dont need margin bottom
 - Updated Google Plus social icon
+- A hair of padding top added to `<textarea>` to match text input
 
 ### Fixed
 - No clear button doesnt destroy app
