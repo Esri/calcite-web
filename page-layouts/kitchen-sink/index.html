@@ -113,59 +113,59 @@
  ↳ patterns → _top-nav.md
 -->
 <header class="top-nav">
-<div class="grid-container">
-  <div class="tablet-hide">
-    <a href="#" class="top-nav-title">ArcGIS</a>
-    <nav class="top-nav-list">
-      <a class="top-nav-link" href="#">Layers</a>
-      <a class="top-nav-link is-active" href="#">Maps</a>
-      <a class="top-nav-link" href="#">Applications</a>
-      <a class="top-nav-link" href="#">Files</a>
-      <a class="top-nav-link" href="#">Tools</a>
-      <a class="top-nav-link" href="#">Analysis</a>
-      <a class="top-nav-link" href="#">Help</a>
-    </nav>
-  </div>
-  <div class="tablet-show js-drawer-toggle" data-drawer="top-nav">
-    <a href="#" class="top-nav-title">☰ Calcite for Unicorns</a>
-  </div>
+  <a class="skip-to-content" href="#skip-to-content">Skip To Content</a>
+  <div class="grid-container">
+    <div class="column-24">
+      <a href="/" class="top-nav-title tablet-hide">ArcGIS for Developers</a>
+      <a href="/" class="icon-ui-menu top-nav-title js-drawer-toggle tablet-show" data-drawer="top-nav">ArcGIS for Developers</a>
 
-<!--   <div class="top-nav-search column-4">
-    <input class="top-nav-search-input" type="text" placeholder="Search">
-    <span class="top-nav-search-btn">
-      <button class="btn btn-small icon-ui-search"></button>
-    </span>
-  </div> -->
+      <nav class="top-nav-list left tablet-hide" role="navigation">
+        <a href="/features/" class="top-nav-link is-active">Features</a>
+        <a href="/plans/" class="top-nav-link">Plans</a>
+        <a href="/documentation/" class="top-nav-link">Documentation</a>
+        <a href="/community/" class="top-nav-link">Community</a>
+      </nav>
 
-  <!--
-  <nav class="sign-in">
-    <a href="#" class="btn btn-small btn-clear">Sign Up</a>
-    <a href="#" class="btn btn-small btn-transparent">Sign In</a>
-  </nav>
-  -->
+      <nav class="gutter-left-1 top-nav-list right hide-if-logged-out">
+        <a href="/applications/" class="tooltip top-nav-link hide-if-public-account phone-hide" aria-label="Applications">
+          <span class="icon-ui-flush icon-ui-applications"></span>
+        </a>
+        <a href="/hosted-data/" class="tooltip top-nav-link hide-if-public-account phone-hide" aria-label="Hosted Data">
+          <span class="icon-ui-flush icon-ui-layers"></span>
+        </a>
+        <a href="/usage-summary/" class="tooltip top-nav-link hide-unless-admin hide-if-public-account phone-hide" aria-label="Usage Summary">
+          <span class="icon-ui-flush icon-ui-chart"></span>
+        </a>
+        <a href="/downloads/" class="tooltip top-nav-link phone-hide" aria-label="Downloads">
+          <span class="icon-ui-flush icon-ui-download"></span>
+        </a>
 
-  <div class="dropdown js-dropdown right">
-
-    <div class="user phone-show js-drawer-toggle" data-drawer="user-nav">
-      <img src="http://f.cl.ly/items/0S1k2j2q3k3Q0d3g2i3J/a9d.jpg" alt="Sloth Aldrin" class="user-image ">
+        <div class="dropdown js-dropdown right">
+          <div class="tablet-show top-nav-link">
+            <!-- <img src="http://f.cl.ly/items/0S1k2j2q3k3Q0d3g2i3J/a9d.jpg" alt="User Avatar" class="user-image js-drawer-toggle" data-drawer="user-nav"> -->
+            <a href="#" data-drawer="user-nav" class="js-drawer-toggle" data-first-name>Sloth</a>
+          </div>
+          <div class="tablet-hide top-nav-link js-dropdown-toggle">
+            <img src="http://f.cl.ly/items/0S1k2j2q3k3Q0d3g2i3J/a9d.jpg" alt="User Avatar" class="user-nav-image js-drawer-toggle" data-drawer="user-nav">
+            <a class="user-nav-name top-nav-dropdown dropdown-btn" data-first-name>&nbsp;Sloth</a>
+          </div>
+          <nav class="dropdown-menu dropdown-right">
+            <div class="user-name">
+              <p class="trailer-0" data-full-name></p>
+              <small data-username></small>
+            </div>
+            <a href="#" class="dropdown-link">Thing</a>
+            <a href="#" class="dropdown-link">Thing</a>
+            <a href="#" class="dropdown-link">Thing</a>
+            <a href="#" class="dropdown-link">Thing</a>
+            <a href="#" class="dropdown-link">Thing</a>
+            <a href="#" class="dropdown-link">Thing</a>
+            <a href="#" class="dropdown-link">Thing</a>
+          </nav>
+        </div>
+      </nav>
     </div>
-
-    <div class="user phone-hide js-dropdown-toggle top-nav-link">
-      <img src="http://f.cl.ly/items/0S1k2j2q3k3Q0d3g2i3J/a9d.jpg" alt="Sloth Aldrin" class="user-image ">
-      <span class="user-name">Sloth Aldrin</span>
-    </div>
-
-    <nav class="dropdown-menu dropdown-right user-nav">
-      <a href="#" class="dropdown-link">Account</a>
-      <a href="#" class="dropdown-link">Profile</a>
-      <a href="#" class="dropdown-link">Billing</a>
-      <a href="#" class="dropdown-link">Organizations</a>
-      <a href="#" class="dropdown-link">Groups</a>
-      <a href="#" class="dropdown-link">Log Out</a>
-    </nav>
   </div>
-
-</div>
 </header>
 <!--
 ┌───────────────┐

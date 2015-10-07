@@ -1,4 +1,4 @@
-/* calcite-web - v0.14.0 - 2015-10-01
+/* calcite-web - v0.14.0 - 2015-10-07
 *  https://github.com/esri/calcite-web
 *  Copyright (c) 2015 Environmental Systems Research Institute, Inc.
 *  Apache 2.0 License */
@@ -480,7 +480,6 @@
 
     modals.forEach(function (modal) {
       addEvent(modal, click(), function (e) {
-        stopPropagation(e);
         if (eventTarget(e) === modal) {
           toggleActive(modals, modal);
           toggleAriaHidden([wrapper, footer]);
@@ -751,6 +750,7 @@
         list.setAttribute('aria-expanded', true);
         addClass(list, 'is-active');
         addEvent(document.body, 'click', setDropdown);
+        console.log('open the thingy')
       }
 
       function setDropdown (e) {
@@ -790,7 +790,9 @@
       });
 
       container.addEventListener('focusin', openDropdown, true);
-      addEvent(clearButton, 'click', clearAllItems);
+      if (clearButton) {
+        addEvent(clearButton, 'click', clearAllItems);
+      }
       showActive();
     });
   };

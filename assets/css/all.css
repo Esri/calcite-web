@@ -871,9 +871,9 @@ video, img {
       margin-right: -0.5rem; }
   .phone-last-column {
     margin-right: -0.5rem; }
-  html[dir="rtl"] {
-    margin-right: 0;
-    margin-left: -0.5rem; } }
+    html[dir="rtl"] .phone-last-column {
+      margin-right: 0;
+      margin-left: -0.5rem; } }
 
 @media screen and (min-width: 860px) {
   .pre-0 {
@@ -2888,12 +2888,12 @@ video, img {
   .avenir-light-italic b, .avenir-light-italic strong {
     font-weight: 500; }
 
-.avenir-regular, .breadcrumbs, table > thead, input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='email'], input[type='time'], input[type='week'], input[type='search'], input[type='tel'], input[type='text'], input[type='url'], input[type='number'], input[type='password'], input[type='month'], textarea, select, .loader-text, .search-bar, .top-nav, .top-nav-title, .top-nav-link, .third-nav, .toolbar, .side-nav, .dropdown-menu, .accordion, .filter-dropdown-list, .side-nav-title, .accordion-title {
+.avenir-regular, .breadcrumbs, table > thead, input[type='date'], input[type='datetime'], input[type='datetime-local'], input[type='email'], input[type='time'], input[type='week'], input[type='search'], input[type='tel'], input[type='text'], input[type='url'], input[type='number'], input[type='password'], input[type='month'], textarea, select, .loader-text, .search-bar, .top-nav, .top-nav-title, .third-nav, .toolbar, .side-nav, .dropdown-menu, .accordion, .filter-dropdown-list, .side-nav-title, .accordion-title {
   letter-spacing: 0em;
   font-family: 'Avenir Next W01', 'Avenir Next W00', 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: 400;
   font-style: normal; }
-  .avenir-regular b, .breadcrumbs b, table > thead b, input[type='date'] b, input[type='datetime'] b, input[type='datetime-local'] b, input[type='email'] b, input[type='time'] b, input[type='week'] b, input[type='search'] b, input[type='tel'] b, input[type='text'] b, input[type='url'] b, input[type='number'] b, input[type='password'] b, input[type='month'] b, textarea b, select b, .loader-text b, .search-bar b, .top-nav b, .top-nav-title b, .top-nav-link b, .third-nav b, .toolbar b, .side-nav b, .dropdown-menu b, .accordion b, .filter-dropdown-list b, .side-nav-title b, .accordion-title b, .avenir-regular strong, .breadcrumbs strong, table > thead strong, input[type='date'] strong, input[type='datetime'] strong, input[type='datetime-local'] strong, input[type='email'] strong, input[type='time'] strong, input[type='week'] strong, input[type='search'] strong, input[type='tel'] strong, input[type='text'] strong, input[type='url'] strong, input[type='number'] strong, input[type='password'] strong, input[type='month'] strong, textarea strong, select strong, .loader-text strong, .search-bar strong, .top-nav strong, .top-nav-title strong, .top-nav-link strong, .third-nav strong, .toolbar strong, .side-nav strong, .dropdown-menu strong, .accordion strong, .filter-dropdown-list strong, .side-nav-title strong, .accordion-title strong {
+  .avenir-regular b, .breadcrumbs b, table > thead b, input[type='date'] b, input[type='datetime'] b, input[type='datetime-local'] b, input[type='email'] b, input[type='time'] b, input[type='week'] b, input[type='search'] b, input[type='tel'] b, input[type='text'] b, input[type='url'] b, input[type='number'] b, input[type='password'] b, input[type='month'] b, textarea b, select b, .loader-text b, .search-bar b, .top-nav b, .top-nav-title b, .third-nav b, .toolbar b, .side-nav b, .dropdown-menu b, .accordion b, .filter-dropdown-list b, .side-nav-title b, .accordion-title b, .avenir-regular strong, .breadcrumbs strong, table > thead strong, input[type='date'] strong, input[type='datetime'] strong, input[type='datetime-local'] strong, input[type='email'] strong, input[type='time'] strong, input[type='week'] strong, input[type='search'] strong, input[type='tel'] strong, input[type='text'] strong, input[type='url'] strong, input[type='number'] strong, input[type='password'] strong, input[type='month'] strong, textarea strong, select strong, .loader-text strong, .search-bar strong, .top-nav strong, .top-nav-title strong, .third-nav strong, .toolbar strong, .side-nav strong, .dropdown-menu strong, .accordion strong, .filter-dropdown-list strong, .side-nav-title strong, .accordion-title strong {
     font-weight: 500; }
 
 .avenir-italic {
@@ -3081,7 +3081,8 @@ code {
   color: #595959;
   background-color: #f8f8f8;
   white-space: pre;
-  font-size: 0.85em; }
+  font-size: 0.85em;
+  line-height: 1.4rem; }
 
 pre {
   white-space: pre;
@@ -3094,8 +3095,7 @@ pre {
     display: block;
     overflow: auto;
     word-wrap: normal;
-    font-size: 0.8125rem;
-    line-height: 1.55rem; }
+    font-size: 0.85em; }
 
 p, ul, ol, dl, blockquote {
   margin-top: 0;
@@ -3146,6 +3146,9 @@ li {
 
 ul li {
   list-style-type: disc; }
+
+li ul, li ol {
+  margin-bottom: 0; }
 
 dl {
   padding: 0;
@@ -3989,14 +3992,14 @@ table {
     display: block; }
 
 .dropdown-btn {
-  padding-right: 2rem;
+  padding-right: 1rem;
   cursor: pointer;
   position: relative; }
   .dropdown-btn:after {
     font-size: 0.8125rem;
     line-height: 1.55rem;
     position: absolute;
-    right: .75rem; }
+    right: .25rem; }
 
 .dropdown-menu {
   position: absolute;
@@ -4216,6 +4219,10 @@ table {
   background-color: #f3ded7;
   border-color: #e4a793; }
 
+.alert-yellow {
+  background-color: #f3edc7;
+  border-color: #e4d154; }
+
 .alert-green {
   background-color: #ddeedb;
   border-color: #9bc19c; }
@@ -4432,7 +4439,8 @@ input[type='date'], input[type='datetime'], input[type='datetime-local'], input[
     border-color: #0079c1; }
 
 textarea {
-  height: auto; }
+  height: auto;
+  padding-top: 0.31rem; }
 
 button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
@@ -4814,8 +4822,8 @@ select::-moz-focusring {
     padding-right: .5em; }
 
 .top-nav-list {
-  padding: 0;
-  float: left; }
+  float: left;
+  padding: 0; }
   html[dir="rtl"] .top-nav-list {
     float: right; }
   .top-nav-list .top-nav-link + .top-nav-link {
@@ -4823,15 +4831,19 @@ select::-moz-focusring {
     html[dir="rtl"] .top-nav-list .top-nav-link + .top-nav-link {
       margin-left: 0;
       margin-right: .75em; }
+  .top-nav-list.right {
+    float: right; }
+    html[dir="rtl"] .top-nav-list.right {
+      float: left; }
 
 .top-nav-link {
   font-size: 0.9375rem;
   line-height: 1.55rem;
   color: #4c4c4c;
-  padding-top: 1.1625rem;
-  padding-bottom: 1.1625rem;
+  padding: 1.1625rem 0;
   line-height: 1.5rem;
-  display: inline-block; }
+  display: inline-block;
+  vertical-align: top; }
   .top-nav-link:hover, .top-nav-link:focus {
     color: #0079c1;
     background: url('../img/top-nav-ie9.gif') repeat-x top left transparent;
@@ -4840,8 +4852,6 @@ select::-moz-focusring {
     -o-background-image: linear-gradient(to top, transparent 92%, #0079c1 93%, #0079c1 100%);
     background-image: linear-gradient(to top, transparent 92%, #0079c1 93%, #0079c1 100%);
     text-decoration: none; }
-    .top-nav-link:hover a, .top-nav-link:focus a {
-      color: #0079c1; }
   .top-nav-link:focus {
     outline: none; }
   .top-nav-link.is-active {
@@ -4849,29 +4859,6 @@ select::-moz-focusring {
     -moz-background-image: linear-gradient(to top, transparent 92%, #0079c1 93%, #0079c1 100%);
     -o-background-image: linear-gradient(to top, transparent 92%, #0079c1 93%, #0079c1 100%);
     background-image: linear-gradient(to top, transparent 92%, #0079c1 93%, #0079c1 100%); }
-  .top-nav-link.dropdown-btn {
-    padding-right: 1rem; }
-    html[dir="rtl"] .top-nav-link.dropdown-btn {
-      padding-right: 0;
-      padding-left: 1rem; }
-    .top-nav-link.dropdown-btn:after {
-      right: 0; }
-      html[dir="rtl"] .top-nav-link.dropdown-btn:after {
-        right: auto;
-        left: 0; }
-  .top-nav-link a {
-    color: #4c4c4c; }
-    .top-nav-link a:hover {
-      text-decoration: none; }
-
-.top-nav-dropdown:after {
-  padding-left: 0.3875rem;
-  content: "▼";
-  font-size: .5rem;
-  vertical-align: .125rem; }
-  html[dir="rtl"] .top-nav-dropdown:after {
-    padding-left: 0;
-    padding-right: 0.3875rem; }
 
 .sign-in {
   float: right;
@@ -4882,12 +4869,6 @@ select::-moz-focusring {
   html[dir="rtl"] .sign-in {
     padding-left: 0;
     padding-right: 0.3875rem; }
-
-.top-nav-hover-bottom .top-nav-title:hover, .top-nav-hover-bottom .top-nav-title.is-active, .top-nav-hover-bottom .top-nav-link:hover, .top-nav-hover-bottom .top-nav-link.is-active {
-  -webkit-background-image: linear-gradient(to bottom, transparent 92%, #0079c1 93%, #0079c1 100%);
-  -moz-background-image: linear-gradient(to bottom, transparent 92%, #0079c1 93%, #0079c1 100%);
-  -o-background-image: linear-gradient(to bottom, transparent 92%, #0079c1 93%, #0079c1 100%);
-  background-image: linear-gradient(to bottom, transparent 92%, #0079c1 93%, #0079c1 100%); }
 
 .site-search {
   margin-top: 0.3875rem; }
@@ -4993,13 +4974,15 @@ select::-moz-focusring {
     margin-bottom: 0; }
 
 .user-nav-name {
-  padding: 0.3875rem; }
+  padding-right: 1.5em;
+  color: #4c4c4c; }
+  .user-nav-name:hover {
+    text-decoration: none; }
 
 .user-nav-image {
-  width: 1.55rem;
-  height: 1.55rem;
-  margin-right: 0.3875rem;
-  vertical-align: -0.3875rem; }
+  width: 1.2rem;
+  height: 1.2rem;
+  vertical-align: -0.25rem; }
 
 .expand {
   display: none; }
@@ -5231,6 +5214,8 @@ body {
   overflow: auto; }
   .tab-section.is-active {
     display: block; }
+  .tab-section pre {
+    margin: 0; }
 
 .tabs-gray .tab-title {
   background-color: white; }
@@ -5240,6 +5225,7 @@ body {
 .tabs-gray .tab-section {
   background-color: #f8f8f8; }
 .tabs-gray pre code {
+  padding: 0;
   border: none;
   background-color: transparent; }
 
@@ -5775,13 +5761,13 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0.5166666667rem 1.55rem 0.5166666667rem 1.55rem;
+  padding: 0.5166666667rem 1.55rem 0.5166666667rem .125rem;
   font-size: 0.875rem;
   line-height: 1.55rem;
   color: #6e6e6e;
   border-top: 1px solid #efefef; }
   html[dir="rtl"] .filter-dropdown-link {
-    padding: 0.5166666667rem 0.5166666667rem 0.5166666667rem 1.55rem; }
+    padding: 0.5166666667rem .125rem 0.5166666667rem 1.55rem; }
   .filter-dropdown-link:after {
     position: absolute;
     right: 0;
