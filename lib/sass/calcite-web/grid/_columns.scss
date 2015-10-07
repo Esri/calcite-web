@@ -44,7 +44,7 @@
       }
     }
   }
-  &:last-of-type  @include clearfix();
+  &:last-of-type { @include clearfix(); }
 }
 
 // ┌────────────────┐
@@ -217,6 +217,7 @@
       }
       .#{$prefix}#{$small-class}-last-column {
         margin-right: -($column-gutter / 2);
+
         @if ($include-right-to-left) {
           html[dir="rtl"] & {
             margin-right: 0;
