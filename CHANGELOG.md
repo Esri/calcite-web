@@ -1,3 +1,8 @@
+## Unreleased
+
+### Fixed
+- `overflow: auto` removed from tab sections, which caused a bug on pre's when zoomed in.
+
 ## 0.14.2
 
 ### Fixed
