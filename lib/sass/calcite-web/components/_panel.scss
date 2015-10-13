@@ -16,6 +16,9 @@
     @include gutter-left(1.5);
     @include gutter-right(1.5);
   }
+  code {
+    background-color: $white;
+  }
 }
 
   @mixin panel-dark() {
@@ -55,6 +58,9 @@
     background-color: $white;
     @extend .text-darker-gray;
     border: 1px solid $lightest-gray;
+    code {
+      background-color: $off-white;
+    }
   }
 
   @mixin panel-no-border() {
