@@ -5,6 +5,7 @@
 
 ### Modified
 - `<code>` in `.panel` background white
+- Default body weight set to regular from light
 
 ## 0.14.2
 
