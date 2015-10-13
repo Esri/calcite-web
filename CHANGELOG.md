@@ -1,4 +1,4 @@
-## Unreleased
+## 0.14.3
 
 ### Fixed
 - `overflow: auto` removed from tab sections, which caused a bug on pre's when zoomed in.
@@ -6,6 +6,7 @@
 ### Modified
 - `<code>` in `.panel` background white
 - Default body weight set to regular from light
+- Update fonts.com to allow access to *.cybertech.com
 
 ## 0.14.2
 
