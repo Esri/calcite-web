@@ -31,7 +31,6 @@
     color: $darker-gray;
     background-color: $white;
     border-top: 1px solid $lightest-gray;
-    @include transition(all $transition);
     cursor: pointer;
     &:hover {
       background-color: $off-white;
@@ -39,7 +38,8 @@
       color: $darker-gray;
     }
     &.is-active {
-      background-color: $lightest-blue;
+      text-indent: -3px;
+      border-left: 3px solid $blue;
     }
   }
 
