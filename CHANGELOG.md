@@ -1,3 +1,8 @@
+## Unreleased
+
+### Modified
+- Hover state for side nav link
+
 ## 0.14.3
 
 ### Fixed
