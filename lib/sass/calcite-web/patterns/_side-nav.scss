@@ -31,32 +31,15 @@
     color: $darker-gray;
     background-color: $white;
     border-top: 1px solid $lightest-gray;
-    @include transition(all $transition);
     cursor: pointer;
-    &:after {
-      content: "»";
-      opacity: 0;
-      position: absolute;
-      right: 0;
-      @if ($include-right-to-left) {
-        html[dir="rtl"] & {
-          right: auto;
-          left: 0;
-        }
-      }
-      top: .5rem;
-      padding: 0 $baseline * 0.25;
-      @include transition(all $transition);
-    }
     &:hover {
+      background-color: $off-white;
       text-decoration: none;
-      color: $dark-gray;
-      &:after {
-        opacity: 1;
-      }
+      color: $darker-gray;
     }
     &.is-active {
-      background-color: $lightest-blue;
+      text-indent: -3px;
+      border-left: 3px solid $blue;
     }
   }
 

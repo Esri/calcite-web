@@ -12,6 +12,8 @@ There are three ways to use Calcite Web:
 - (b) installing via a package manager
 - (c) loading files from the cdn
 
+By default, Calcite Web expects image files to be located at `../`. If your fonts are elsewhere, set the `$font-path` variable
+
 Using this framework as a Sass library will give you the most power, but whatever your flavor, we have you covered.
 
 If you are migrating from Tailcoat, checkout the [migration guide]({{relativePath}}migration-guide/).

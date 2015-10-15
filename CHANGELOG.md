@@ -1,3 +1,10 @@
+## Unreleased
+
+### Modified
+- Hover state for side nav link
+- Panel links vibrant blue
+- `is-active` state on side nav links reverted
+
 ## 0.14.3
 
 ### Fixed

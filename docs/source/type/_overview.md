@@ -8,6 +8,8 @@ The typographic palette for Calcite Web differs slightly from the official Esri 
 
 Calcite Web provides a set of weights for each typeface. These are used by either using the helper class in html, or writing sass to include the mixin, or extending the helper class. The available weights for each face are below. Proper care has been taken to ensure that all type systems used by Calcite avoid faux-bold and faux-italics styled by the browser.
 
+By default, Calcite Web expects font files to be located at `../`. If your fonts are elsewhere, set the `$font-path` variable
+
 ### Vertical Rhythm
 
 Vertical rhythm is maintained in the Calcite Web Type System by the use of the `$baseline` variable. `$baseline` sets a standard and regular leading in relation to the body copy – 1.5rem. This variable is used for any measurement on the vertical axis in the page, including the [leader and trailer grid helper classes](../grid/#leader-and-trailer) and padding for [components like buttons](../components/#buttons) which use standard measurements like `3/$baseline` and `2/$baseline`.
