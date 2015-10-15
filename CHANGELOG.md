@@ -2,6 +2,7 @@
 
 ### Modified
 - Hover state for side nav link
+- Panel links vibrant blue
 
 ## 0.14.3
 
