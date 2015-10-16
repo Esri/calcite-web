@@ -4,6 +4,7 @@
 - Hover state for side nav link
 - Panel links vibrant blue
 - `is-active` state on side nav links reverted
+- icons should inherit line height, not declare it
 
 ## 0.14.3
 
