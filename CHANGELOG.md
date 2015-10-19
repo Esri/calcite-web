@@ -5,6 +5,7 @@
 - Panel links vibrant blue
 - `is-active` state on side nav links reverted
 - Better size and positioning for arrows on dropdowns
+- icons should inherit line height, not declare it
 
 ## 0.14.3
 
