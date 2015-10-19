@@ -1,0 +1,17 @@
+//┌───────────────┐
+//│ Expanding Nav │
+//└───────────────┘
+// ↳ http://esri.github.io/calcite-web/patterns/#expanding-nav
+// ↳ patterns → _expanding-nav.md
+
+@mixin expand(){
+  display: none;
+  &.is-active {
+    display: inherit;
+  }
+}
+
+
+@if $include-expanding-nav == true {
+  .expand {@include expand();}
+}

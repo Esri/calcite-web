@@ -1,0 +1,65 @@
+// ┌───────────────────────┐
+// │ Static Helper Classes │
+// └───────────────────────┘
+
+@if $include-type == true and $include-type-helpers == true {
+
+  .link-red a, a.link-red                   { @include link-color($red, $dark-red);}
+  .link-green a, a.link-green               { @include link-color($green, $dark-green);}
+  .link-light-blue a, a.link-light-blue     { @include link-color($lighter-blue, $light-blue);}
+  .link-blue a, a.link-blue                 { @include link-color($blue, $dark-blue);}
+  .link-purple a, a.link-purple             { @include link-color($purple, $dark-purple);}
+  .link-orange a, a.link-orange             { @include link-color($orange, $dark-orange);}
+  .link-brown a, a.link-brown               { @include link-color($brown, $dark-brown);}
+  .link-white a, a.link-white               { @include link-color($white, $lightest-gray);}
+  .link-light-gray a, a.link-light-gray     { @include link-color($light-gray, $gray);}
+  .link-gray a, a.link-gray                 { @include link-color($gray, $dark-gray);}
+  .link-dark-gray a, a.link-dark-gray       { @include link-color($dark-gray, $darker-gray);}
+  .link-darker-gray a, a.link-darker-gray   { @include link-color($darker-gray, $darkest-gray);}
+  .link-darkest-gray a, a.link-darkest-gray { @include link-color($darkest-gray, $off-black);}
+  .link-off-black a, a.link-off-black       { @include link-color($off-black, $black);}
+
+  .text-red          { color: $red; }
+  .text-green        { color: $green; }
+  .text-blue         { color: $blue; }
+  .text-purple       { color: $purple; }
+  .text-orange       { color: $orange; }
+  .text-brown        { color: $brown; }
+  .text-white        { color: $white; }
+  .text-light-gray   { color: $light-gray; }
+  .text-gray         { color: $gray; }
+  .text-dark-gray    { color: $dark-gray; }
+  .text-darker-gray  { color: $darker-gray; }
+  .text-darkest-gray { color: $darkest-gray; }
+  .text-off-black    { color: $off-black; }
+
+  .text-rule         {@include text-rule();}
+  .text-inline       {@include text-inline();}
+  .text-center       {@include text-center();}
+  .text-left         {@include text-left();}
+  .text-right        {@include text-right();}
+  .text-light        {@include text-light();}
+  .text-ellipsis     {@include text-ellipsis();}
+  .list-numbered     {@include list-numbered();}
+  .list-plain        {@include list-plain();}
+
+  .font-size--3 { @include font-size(-3); }
+  .font-size--2 { @include font-size(-2); }
+  .font-size--1 { @include font-size(-1); }
+  .font-size-0  { @include font-size(0); }
+  .font-size-1  { @include font-size(1); }
+  .font-size-2  { @include font-size(2); }
+  .font-size-3  { @include font-size(3); }
+  .font-size-4  { @include font-size(4); }
+  .font-size-5  { @include font-size(5); }
+  .font-size-6  { @include font-size(6); }
+  .font-size-7  { @include font-size(7); }
+  .font-size-8  { @include font-size(8); }
+
+  .fade-in { @include fade-in(); }
+  @include keyframes (fade-in) {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+}
