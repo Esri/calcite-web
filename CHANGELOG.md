@@ -1,5 +1,8 @@
 ## Unreleased
 
+### Fixed
+- fix weird bug in Chrome for Windows on elements with `scroll: auto` (https://github.com/ArcGIS/arcgis-for-developers/issues/3082#issuecomment-149293246)
+
 ### Modified
 - Hover state for side nav link
 - Panel links vibrant blue
