@@ -1,4 +1,4 @@
-## Unreleased
+## 0.14.4
 
 ### Fixed
 - fix weird bug in Chrome for Windows on elements with `scroll: auto` (https://github.com/ArcGIS/arcgis-for-developers/issues/3082#issuecomment-149293246)
