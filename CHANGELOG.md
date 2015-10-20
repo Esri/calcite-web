@@ -1,3 +1,8 @@
+## Unreleased
+
+### Modified
+- Base tool chain for generating icon font and documentation switched to Fontforge (python).
+
 ## 0.14.4
 
 ### Fixed
