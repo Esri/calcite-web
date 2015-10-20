@@ -7,11 +7,11 @@
 // ┌───────────┐
 // │ Generated │
 // └───────────┘
-//  ↳ /bin/webfonts-template.hbs
+//  ↳ /bin/webfonts-template.sccss
 //  ↳ content unicode values are generated and should not be used elsewhere
 
 @mixin icon-font-styles() {
-  font-family: '{{fontName}}';
+  font-family: '<%= fontBaseName %>';
   padding-right: $baseline/3;
   speak: none;
   font-style: normal;
@@ -42,16 +42,12 @@
 @mixin icon-font () {
 
   @font-face {
-    font-family: '{{fontName}}';
-    src: {{{src}}};
+    font-family: '<%= fontBaseName %>';
+    src: url("#{$font-path}/calcite-ui.eot?#iefix") format("embedded-opentype"),
+         url("#{$font-path}/calcite-ui.woff") format("woff"),
+         url("#{$font-path}/calcite-ui.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
-  }
-
-
-  @font-face {
-    font-family: "{{fontName}}";
-    src: {{{src}}};
   }
 
   [class^="esri-icon-"]:before,
@@ -70,12 +66,13 @@
   .esri-icon-gray:before, .icon-ui-gray:before     { color: $gray;}
   .esri-icon-red:before, .icon-ui-red:before       { color: $red;}
 
-  {{#each codepoints}}
-    .icon-ui-{{@key}}:before,
-    .esri-icon-{{@key}}:before, {
-      content: "\\{{this}}";
+  <% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { %>
+    // <%= glyphs[glyphIdx] %>
+    .icon-ui-<%= glyphs[glyphIdx] %>:before,
+    .esri-icon-<%= glyphs[glyphIdx] %>:before, {
+      content: "\<%= codepoints[glyphIdx] %>";
     }
-  {{/each}}
+  <% } %>
 
   .icon-ui-flush:before, .icon-esri-flush:before,
   .icon-ui-flush:after, .icon-esri-flush:after     { @extend %icon-font-flush;}

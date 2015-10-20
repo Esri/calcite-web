@@ -9,10 +9,20 @@ Calcite Web is open to all types of contributions from across Esri. Things you c
 
 ### Install Dependencies
 
-Calcite Web has two development dependencies, Node.js and Grunt. If you already have these on your computer, you can skip these steps:
+Calcite Web has two development dependencies, Node.js and Grunt.
 
 1. Visit [nodejs.org](http://nodejs.org/) to install Node.
 2. `npm install -g grunt-cli` to install Grunt.
+3. In the Calcite Web project repository, `npm install` to install development dependencies.
+4. `grunt` to run a development server for Calcite Web
+
+#### Working with the Icon Font
+
+Changing the icon font requires further dependencies - Python and Fontforge.
+
+1. [Install Python](https://www.python.org/downloads/)
+2. `brew install ttfautohint fontforge --with-python`
+3. `grunt webfont`
 
 ### Fork the Repository
 
