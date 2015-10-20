@@ -7,7 +7,7 @@
 // ┌───────────┐
 // │ Generated │
 // └───────────┘
-//  ↳ /bin/webfonts-template.hbs
+//  ↳ /bin/webfonts-template.sccss
 //  ↳ content unicode values are generated and should not be used elsewhere
 
 @mixin icon-font-styles() {
@@ -883,8 +883,6 @@
       content: "\f188";
     }
   
-
-
 
   .icon-ui-flush:before, .icon-esri-flush:before,
   .icon-ui-flush:after, .icon-esri-flush:after     { @extend %icon-font-flush;}

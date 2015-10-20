@@ -53,10 +53,10 @@
 
           {% if page.title == 'Icon Font' %}
             <div class="block-group block-group-3-up">
-              {% for icon in data.font.icons %}
+              {% for icon in data.font %}
                 <div class="block">
-                  <span class="font-size-5 icon-ui-{{icon.properties.name}}" aria-label="{{icon.properties.name}}"></span>
-                  <p class="trailer-1 leader-half"><code>icon-ui-{{icon.properties.name}}</code></p>
+                  <span class="font-size-5 icon-ui-{{icon}}" aria-label="{{icon}}"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-{{icon}}</code></p>
                 </div>
               {% endfor %}
             </div>
