@@ -2,6 +2,8 @@
 
 ### Modified
 - Base tool chain for generating icon font and documentation switched to Fontforge (python).
+- Variableify Avenir Next font imports
+- Document include variables for custom build
 
 ## 0.14.4
 

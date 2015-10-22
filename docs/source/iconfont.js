@@ -8,7 +8,6 @@ module.exports = function(callback) {
     files = files.map(function(filename){
       return path.basename(filename, '.svg')
     })
-    console.log(files)
     callback(er, files);
   })
 }
