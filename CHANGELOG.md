@@ -4,9 +4,19 @@
 ## Unreleased
 
 ### Modified
+- Base tool chain for generating icon font and documentation switched to Fontforge (python).
+
+## 0.14.4
+
+### Fixed
+- fix weird bug in Chrome for Windows on elements with `scroll: auto` (https://github.com/ArcGIS/arcgis-for-developers/issues/3082#issuecomment-149293246)
+
+### Modified
 - Hover state for side nav link
 - Panel links vibrant blue
 - `is-active` state on side nav links reverted
+- Better size and positioning for arrows on dropdowns
+- icons should inherit line height, not declare it
 
 ## 0.14.3
 

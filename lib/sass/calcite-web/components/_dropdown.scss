@@ -13,15 +13,15 @@
 }
 
   @mixin dropdown-btn {
-    padding-right: 1rem;
+    padding-right: 1.5rem;
     cursor: pointer;
     position: relative;
     &:after {
-      @include font-size(-3);
+      @include font-size(-5);
       @extend %icon-font-after;
       @extend .icon-ui-down-arrow:before;
       position: absolute;
-      right: .25rem;
+      right: .5rem;
     }
   }
 

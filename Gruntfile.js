@@ -104,6 +104,23 @@ module.exports = function(grunt) {
       }
     },
 
+    // Create a webfont full of icons from a folder of svgs
+    'webfont': {
+      icons: {
+        src: 'lib/img/icons/ui/*.svg',
+        dest: 'lib/fonts',
+        destCss: 'lib/sass/calcite-web/icons',
+        options: {
+          font: 'calcite-ui',
+          template: 'bin/webfont-template.scss',
+          relativeFontPath: '#{$font-path}',
+          stylesheet: 'scss',
+          htmlDemo: false,
+          engine: 'fontforge'
+        }
+      }
+    },
+
     // Create minified version of build css
     'cssmin': {
       target: {
@@ -271,9 +288,6 @@ module.exports = function(grunt) {
 
     // bin scripts
     'shell': {
-      fonts: {
-        command: 'bin/webfontifier.js', // Creates webfonts and attendant sass from svgs
-      },
       guid: {
         command: 'bin/guid.js',    // Generate a unique id for a new section
       },
@@ -320,6 +334,7 @@ module.exports = function(grunt) {
   // │ Grunt tasks │
   // └─────────────┘
 
+
   // Build sass
   grunt.registerTask('scss', [
     'sass',
@@ -345,7 +360,6 @@ module.exports = function(grunt) {
 
   // Build a dist folder with all assets
   grunt.registerTask('prepublish', [
-    'shell:fonts',
     'concurrent:prepublish'
   ]);
 
