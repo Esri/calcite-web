@@ -4,9 +4,17 @@ $generate-css: false;
 $include-content-family: true;
 $include-secondary-family: true;
 $include-code-family: true;
-@include-type: true;
-@include-grid: true;
-
+$include-type: true;
+$include-type-defaults: true;
+$include-type-helpers: true;
+$include-grid: true;
+$fold-grid:  true;
+$block-grid: true;
+$include-leader-trailer: true;
+$include-gutter: true;
+$include-left-right: true;
+$include-show-hide: true;
+$include-sticky: true;
 @import 'calcite-web'
 ```
 
