@@ -1,3 +1,6 @@
+- Variabalize Avenir Next font imports
+- Document include variables for custom build
+
 ## Unreleased
 
 ### Modified

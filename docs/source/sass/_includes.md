@@ -1,14 +1,13 @@
-// ┌──────────────┐
-// │ CUSTOM BUILD │
-// └──────────────┘
+By default, using the Calcite Web sass files will build css  for the complete framework. This build can be customized, or entirely turned off for sass-only applications.
 
-// Asset Paths
-$image-path:                     '../img'   !default;
-$font-path:                      '../fonts' !default;
+Setting the `$generate-css` variable to false in your sass files will prevent any css from being generated, while exposing all the underlying sass styles of the framework. Setting specific variables like `$include-alerts` to false will preclude only that components css from being built.
 
+Additionally, font imports are controlled this way. By default, Calcite Web requests Avenir Next from a cdn. Setting `$include-primary-family` to false will prevent the font imports, and the framework will roll back to secondary font options. Frutiger and Kepler are included by setting `$include-content-family` and `$include-secondary-family` to true.
+
+```
 // Sass Output
-$include-colors:                 true    !default;
-$generate-css:                   true    !default;
+$include-colors:                 true             !default;
+$generate-css:                   true             !default;
 
 // Language Helpers
 $include-right-to-left:          $generate-css    !default;
@@ -82,74 +81,4 @@ $include-drawers:                $generate-css    !default;
 $include-expanding-nav:          $generate-css    !default;
 $include-sticky:                 $generate-css    !default;
 $include-filter-dropdown:        $generate-css    !default;
-
-// ┌──────────────┐
-// │ CALCITE WEB  │
-// └──────────────┘
-
-// Base
-// initial setup: config, color pallete, reset...
-@import "calcite-web/base/colors";
-@import "calcite-web/base/config";
-@import "calcite-web/base/reset";
-
-// Utils
-// Micro-Framework adpated from Compass and Bourbon
-// Provides basic prefixing and standard mixins
-@import "calcite-web/utils/utils";
-
-// Grid
-// structural level styles: viewport grid, block group, helper classes...
-@import "calcite-web/grid/grid";
-
-// Type
-// typographic styles: font-families, element styles, modifiers...
-@import "calcite-web/type/type";
-
-// Icons
-// Icon font, social icons, and calcite icons
-@import "calcite-web/icons/font";
-@import "calcite-web/icons/social";
-
-// Components
-// small pieces: buttons, icons, tables...
-@import "calcite-web/components/esri-logo";
-@import "calcite-web/components/button";
-@import "calcite-web/components/label";
-@import "calcite-web/components/badges";
-@import "calcite-web/components/dropdown";
-@import "calcite-web/components/breadcrumbs";
-@import "calcite-web/components/tooltip";
-@import "calcite-web/components/alert";
-@import "calcite-web/components/panel";
-@import "calcite-web/components/table";
-@import "calcite-web/components/form";
-@import "calcite-web/components/input-group";
-@import "calcite-web/components/action-bar";
-@import "calcite-web/components/loader";
-@import "calcite-web/components/search-bar";
-@import "calcite-web/components/skip-to-content";
-
-// Patterns
-// complete interfaces: header, footer, banner...
-@import "calcite-web/patterns/top-nav";
-@import "calcite-web/patterns/site-search";
-@import "calcite-web/patterns/super-nav";
-@import "calcite-web/patterns/user-nav";
-@import "calcite-web/patterns/expanding-nav";
-@import "calcite-web/patterns/sub-nav";
-@import "calcite-web/patterns/third-nav";
-@import "calcite-web/patterns/toolbar";
-@import "calcite-web/patterns/side-nav";
-@import "calcite-web/patterns/footer";
-@import "calcite-web/patterns/tabs";
-@import "calcite-web/patterns/modal";
-@import "calcite-web/patterns/accordion";
-@import "calcite-web/patterns/drawers";
-@import "calcite-web/patterns/filter-dropdown";
-
-// Modifiers
-// modifier classes override standard styles
-@import 'calcite-web/type/helpers';
-@import "calcite-web/grid/leader-trailer";
-@import "calcite-web/grid/gutter-helpers";
+```
