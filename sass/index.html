@@ -250,6 +250,20 @@
           
         </nav>
       
+        <h4 class="side-nav-title">Custom Build</h4>
+        <!-- <nav aria-role="navigation" aria-labelledby="sidenav"> -->
+        <nav aria-role="navigation">
+          
+            
+              <a href="#custom-build" class="side-nav-link">Overview</a>
+            
+          
+            
+              <a href="#example" class="side-nav-link">Example</a>
+            
+          
+        </nav>
+      
         <h4 class="side-nav-title">Variables</h4>
         <!-- <nav aria-role="navigation" aria-labelledby="sidenav"> -->
         <nav aria-role="navigation">
@@ -324,6 +338,150 @@
           
 
           <p>Calcite Web has a helpful set of mixins for composing type. We recommend you use these mixins wherever possible when writing your own components as it will keep the visual proportions and styles in line with the rest of the framework.</p>
+
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+    
+      <h1 class="text-rule" id="custom-build" tabindex="0">Custom Build</h1>
+      
+        <section>
+          
+
+          <p>By default, using the Calcite Web sass files will build css  for the complete framework. This build can be customized, or entirely turned off for sass-only applications.</p>
+<p>Setting the <code>$generate-css</code> variable to false in your sass files will prevent any css from being generated, while exposing all the underlying sass styles of the framework. Setting specific variables like <code>$include-alerts</code> to false will preclude only that components css from being built.</p>
+<p>Additionally, font imports are controlled this way. By default, Calcite Web requests Avenir Next from a cdn. Setting <code>$include-primary-family</code> to false will prevent the font imports, and the framework will roll back to secondary font options. Frutiger and Kepler are included by setting <code>$include-content-family</code> and <code>$include-secondary-family</code> to true.</p>
+<pre><code><span class="hljs-comment">// Sass Output</span>
+<span class="hljs-variable">$include</span>-colors:                 true             !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$generate</span>-css:                   true             !<span class="hljs-keyword">default</span>;
+
+<span class="hljs-comment">// Language Helpers</span>
+<span class="hljs-variable">$include</span>-right-to-left:          <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+
+<span class="hljs-comment">// Grid Output</span>
+<span class="hljs-variable">$include</span>-reset:                  <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-utils:                  <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+
+<span class="hljs-variable">$include</span>-<span class="hljs-keyword">grid</span>:                   <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+  <span class="hljs-variable">$fold</span>-<span class="hljs-keyword">grid</span>:                    <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+  <span class="hljs-variable">$block</span>-<span class="hljs-keyword">grid</span>:                   <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+
+<span class="hljs-comment">// Grid Utilities Output</span>
+<span class="hljs-variable">$include</span>-leader-trailer:         <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-gutter:                 <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-left-right:             <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-show-<span class="hljs-keyword">hide</span>:              <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-sticky:                 <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+
+<span class="hljs-comment">// Type Output</span>
+<span class="hljs-variable">$include</span>-type:                   <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+  <span class="hljs-variable">$include</span>-primary-family:       true             !<span class="hljs-keyword">default</span>;
+  <span class="hljs-variable">$include</span>-content-family:       false            !<span class="hljs-keyword">default</span>;
+  <span class="hljs-variable">$include</span>-secondary-family:     false            !<span class="hljs-keyword">default</span>;
+  <span class="hljs-variable">$include</span>-code-family:          <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+  <span class="hljs-variable">$include</span>-type-defaults:        <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+  <span class="hljs-variable">$include</span>-type-helpers:         <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+
+<span class="hljs-comment">// Icons</span>
+<span class="hljs-variable">$include</span>-icons:                  <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+  <span class="hljs-variable">$include</span>-calcite-icons:        <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+  <span class="hljs-variable">$include</span>-social-icons:         <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+  <span class="hljs-variable">$include</span>-icon-font:            <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+
+<span class="hljs-comment">// Components</span>
+<span class="hljs-variable">$include</span>-alerts:                 <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-badges:                 <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-labels:                 <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-tables:                 <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-<span class="hljs-keyword">panel</span>:                  <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-<span class="hljs-keyword">button</span>:                 <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-dropdowns:              <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-breadcrumbs:            <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-tooltip:                <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-forms:                  <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-input-groups:           <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-action-bar:             <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-loader:                 <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-search-bar:             <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-skip-to-content:        <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-logo:                   <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+
+<span class="hljs-comment">// Patterns</span>
+<span class="hljs-variable">$include</span>-footer:                 <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-sticky-footer:          <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-pagination:             <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-side-nav:               <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-sub-nav:                <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-third-nav:              <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-top-nav:                <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-super-nav:              <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-user-nav:               <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-toolbar:                <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-site-search:            <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+
+<span class="hljs-comment">// Javascript</span>
+<span class="hljs-variable">$include</span>-tabs:                   <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-modal:                  <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-accordion:              <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-drawers:                <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-expanding-nav:          <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-sticky:                 <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-<span class="hljs-keyword">filter</span>-dropdown:        <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+</code></pre>
+
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+        <section>
+          
+            <h2 id="example" tabindex="0">Example</h2>
+          
+
+          <pre><code><span class="hljs-comment">// custom-build.scss</span>
+$generate-<span class="hljs-string">css:</span> <span class="hljs-literal">false</span>;
+$include-content-<span class="hljs-string">family:</span> <span class="hljs-literal">true</span>;
+$include-secondary-<span class="hljs-string">family:</span> <span class="hljs-literal">true</span>;
+$include-code-<span class="hljs-string">family:</span> <span class="hljs-literal">true</span>;
+$include-<span class="hljs-string">type:</span> <span class="hljs-literal">true</span>;
+$include-type-<span class="hljs-string">defaults:</span> <span class="hljs-literal">true</span>;
+$include-type-<span class="hljs-string">helpers:</span> <span class="hljs-literal">true</span>;
+$include-<span class="hljs-string">grid:</span> <span class="hljs-literal">true</span>;
+$fold-<span class="hljs-string">grid:</span>  <span class="hljs-literal">true</span>;
+$block-<span class="hljs-string">grid:</span> <span class="hljs-literal">true</span>;
+$include-leader-<span class="hljs-string">trailer:</span> <span class="hljs-literal">true</span>;
+$include-<span class="hljs-string">gutter:</span> <span class="hljs-literal">true</span>;
+$include-left-<span class="hljs-string">right:</span> <span class="hljs-literal">true</span>;
+$include-show-<span class="hljs-string">hide:</span> <span class="hljs-literal">true</span>;
+$include-<span class="hljs-string">sticky:</span> <span class="hljs-literal">true</span>;
+<span class="hljs-annotation">@import</span> <span class="hljs-string">'calcite-web'</span>
+</code></pre>
+<p>The above sass will import the framework, import all the type options (Avenir, Kepler, Frutiger, and Consolas), and build css that provides access to the type helpers and grid system.</p>
 
 
           

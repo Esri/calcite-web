@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(/t/1.css?apiType=css&projectid=9431e9a5-7a6d-4b5f-82be-4d935972de5a);
+@import url(https://fast.fonts.net/t/1.css?apiType=css&projectid=9431e9a5-7a6d-4b5f-82be-4d935972de5a);
 @import url(https://fast.fonts.net/cssapi/a2f744b5-a294-49c0-8af9-4599ad0ab33f.css);
 @import url(http://fast.fonts.net/t/1.css?apiType=css&projectid=23855eec-5fdf-4594-9898-0113a04bfef0);
 /*
@@ -103,6 +103,7 @@ video, img {
 @media screen {
   .grid-container {
     width: 95vw;
+    max-width: 95vw;
     padding-right: 0;
     padding-left: 0;
     margin-right: auto;
@@ -129,6 +130,7 @@ video, img {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 95vw;
+    max-width: 100%;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     float: left; }
@@ -3128,7 +3130,8 @@ pre {
     display: block;
     overflow: auto;
     word-wrap: normal;
-    font-size: 0.85em; }
+    font-size: 0.85em;
+    position: relative; }
 
 p, ul, ol, dl, blockquote {
   margin-top: 0;
@@ -3242,7 +3245,6 @@ table {
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -3256,13 +3258,9 @@ table {
 
 @font-face {
   font-family: 'calcite-ui';
-  src: url("../fonts/calcite-ui.eot?659e85abf15356e65e0d2cff2684a5d7?#iefix") format("embedded-opentype"), url("../fonts/calcite-ui.woff?659e85abf15356e65e0d2cff2684a5d7") format("woff"), url("../fonts/calcite-ui.ttf?659e85abf15356e65e0d2cff2684a5d7") format("truetype"), url("../fonts/calcite-ui.svg?659e85abf15356e65e0d2cff2684a5d7#calcite-ui") format("svg");
+  src: url("../fonts/calcite-ui.eot?#iefix") format("embedded-opentype"), url("../fonts/calcite-ui.woff") format("woff"), url("../fonts/calcite-ui.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
-
-@font-face {
-  font-family: "calcite-ui";
-  src: url("../fonts/calcite-ui.eot?659e85abf15356e65e0d2cff2684a5d7?#iefix") format("embedded-opentype"), url("../fonts/calcite-ui.woff?659e85abf15356e65e0d2cff2684a5d7") format("woff"), url("../fonts/calcite-ui.ttf?659e85abf15356e65e0d2cff2684a5d7") format("truetype"), url("../fonts/calcite-ui.svg?659e85abf15356e65e0d2cff2684a5d7#calcite-ui") format("svg"); }
 
 [class^="esri-icon-"]:before, [class*=" esri-icon-"]:before, [class^="icon-ui-"]:before, [class*=" icon-ui-"]:before {
   font-family: 'calcite-ui';
@@ -3272,7 +3270,6 @@ table {
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -4025,14 +4022,14 @@ table {
     display: block; }
 
 .dropdown-btn {
-  padding-right: 1rem;
+  padding-right: 1.5rem;
   cursor: pointer;
   position: relative; }
   .dropdown-btn:after {
-    font-size: 0.8125rem;
+    font-size: 0.6875rem;
     line-height: 1.55rem;
     position: absolute;
-    right: .25rem; }
+    right: .5rem; }
 
 .dropdown-menu {
   position: absolute;
@@ -4046,8 +4043,51 @@ table {
   .dropdown-menu.dropdown-right {
     right: 0; }
 
+.dropdown-title {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0.5166666667rem 1.55rem 0.5166666667rem 0.5166666667rem;
+  font-size: 0.875rem;
+  line-height: 1.55rem;
+  color: #6e6e6e;
+  background-color: white;
+  border-top: 1px solid #efefef;
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: #f8f8f8;
+  cursor: auto; }
+  .dropdown-title:hover {
+    background-color: #f8f8f8;
+    text-decoration: none;
+    color: #6e6e6e; }
+  .dropdown-title.is-active {
+    text-indent: -3px;
+    border-left: 3px solid #0079c1; }
+
 .dropdown-link {
-  white-space: nowrap; }
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0.5166666667rem 1.55rem 0.5166666667rem 0.5166666667rem;
+  font-size: 0.875rem;
+  line-height: 1.55rem;
+  color: #6e6e6e;
+  background-color: white;
+  border-top: 1px solid #efefef;
+  white-space: nowrap;
+  cursor: pointer; }
+  .dropdown-link:hover {
+    background-color: #f8f8f8;
+    text-decoration: none;
+    color: #6e6e6e; }
+  .dropdown-link.is-active {
+    text-indent: -3px;
+    border-left: 3px solid #0079c1; }
 
 .breadcrumbs {
   font-size: 0.875rem;
@@ -4293,7 +4333,7 @@ table {
   background-color: #323232;
   border: 1px solid #4c4c4c; }
   .panel-black a {
-    color: #d2e9f9; }
+    color: #bcdaed; }
     .panel-black a:hover {
       color: #bcdaed; }
 
@@ -4301,7 +4341,7 @@ table {
   background-color: #595959;
   border: 1px solid #4c4c4c; }
   .panel-dark a {
-    color: #d2e9f9; }
+    color: #bcdaed; }
     .panel-dark a:hover {
       color: #bcdaed; }
 
@@ -4315,21 +4355,26 @@ table {
   background-color: #004575;
   border: 1px solid #052942; }
   .panel-dark-blue a {
-    color: #bcdaed; }
+    color: #69dcff; }
     .panel-dark-blue a:hover {
-      color: #56a5d8; }
+      color: #00dee7; }
 
 .panel-blue {
   background-color: #0079c1;
   border: 1px solid #005e95; }
   .panel-blue a {
-    color: #d2e9f9; }
+    color: #69dcff; }
     .panel-blue a:hover {
-      color: #bcdaed; }
+      color: #00dee7; }
 
 .panel-light-blue {
+  color: #323232;
   background-color: #56a5d8;
   border: 1px solid #0079c1; }
+  .panel-light-blue a {
+    color: #f8f8f8; }
+    .panel-light-blue a:hover {
+      color: #efefef; }
 
 .panel-no-border {
   border: none; }
@@ -5145,7 +5190,7 @@ select::-moz-focusring {
   background-color: #f8f8f8;
   border-top: 1px solid #efefef; }
 
-.side-nav-link, .dropdown-link {
+.side-nav-link {
   position: relative;
   display: block;
   -webkit-box-sizing: border-box;
@@ -5157,28 +5202,14 @@ select::-moz-focusring {
   color: #6e6e6e;
   background-color: white;
   border-top: 1px solid #efefef;
-  -webkit-transition: all 150ms linear;
-  transition: all 150ms linear;
   cursor: pointer; }
-  .side-nav-link:after, .dropdown-link:after {
-    content: "»";
-    opacity: 0;
-    position: absolute;
-    right: 0;
-    top: .5rem;
-    padding: 0 0.3875rem;
-    -webkit-transition: all 150ms linear;
-    transition: all 150ms linear; }
-    html[dir="rtl"] .side-nav-link:after, html[dir="rtl"] .dropdown-link:after {
-      right: auto;
-      left: 0; }
-  .side-nav-link:hover, .dropdown-link:hover {
+  .side-nav-link:hover {
+    background-color: #f8f8f8;
     text-decoration: none;
-    color: #828282; }
-    .side-nav-link:hover:after, .dropdown-link:hover:after {
-      opacity: 1; }
-  .side-nav-link.is-active, .is-active.dropdown-link {
-    background-color: #d2e9f9; }
+    color: #6e6e6e; }
+  .side-nav-link.is-active {
+    text-indent: -3px;
+    border-left: 3px solid #0079c1; }
 
 body {
   display: flex;
@@ -5247,8 +5278,7 @@ body {
   box-sizing: border-box;
   background-color: white;
   display: none;
-  padding: 0.775rem;
-  overflow: auto; }
+  padding: 0.775rem; }
   .tab-section.is-active {
     display: block; }
   .tab-section pre {
@@ -5348,13 +5378,9 @@ body {
 .accordion {
   @font-face {
     font-family: 'calcite-ui';
-    src: url("../fonts/calcite-ui.eot?659e85abf15356e65e0d2cff2684a5d7?#iefix") format("embedded-opentype"), url("../fonts/calcite-ui.woff?659e85abf15356e65e0d2cff2684a5d7") format("woff"), url("../fonts/calcite-ui.ttf?659e85abf15356e65e0d2cff2684a5d7") format("truetype"), url("../fonts/calcite-ui.svg?659e85abf15356e65e0d2cff2684a5d7#calcite-ui") format("svg");
+    src: url("../fonts/calcite-ui.eot?#iefix") format("embedded-opentype"), url("../fonts/calcite-ui.woff") format("woff"), url("../fonts/calcite-ui.ttf") format("truetype");
     font-weight: normal;
     font-style: normal; }
-
-  @font-face {
-    font-family: "calcite-ui";
-    src: url("../fonts/calcite-ui.eot?659e85abf15356e65e0d2cff2684a5d7?#iefix") format("embedded-opentype"), url("../fonts/calcite-ui.woff?659e85abf15356e65e0d2cff2684a5d7") format("woff"), url("../fonts/calcite-ui.ttf?659e85abf15356e65e0d2cff2684a5d7") format("truetype"), url("../fonts/calcite-ui.svg?659e85abf15356e65e0d2cff2684a5d7#calcite-ui") format("svg"); }
  }
   .accordion [class^="esri-icon-"]:before, .accordion [class*=" esri-icon-"]:before, .accordion [class^="icon-ui-"]:before, .accordion [class*=" icon-ui-"]:before {
     font-family: 'calcite-ui';
@@ -5364,7 +5390,6 @@ body {
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
-    line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
   .accordion .esri-icon-small:before, .accordion .icon-ui-small:before {

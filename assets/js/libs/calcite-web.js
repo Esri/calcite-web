@@ -1,4 +1,4 @@
-/* calcite-web - v0.14.3 - 2015-10-13
+/* calcite-web - v0.14.6 - 2015-10-27
 *  https://github.com/esri/calcite-web
 *  Copyright (c) 2015 Environmental Systems Research Institute, Inc.
 *  Apache 2.0 License */
@@ -9,7 +9,7 @@
   // └────────────┘
   // define all public api methods (excluding patterns)
   var calcite = {
-    version: 'v0.14.3',
+    version: 'v0.14.4',
     click: click,
     addEvent: addEvent,
     removeEvent: removeEvent,
@@ -118,6 +118,35 @@
     if (e.cancelBubble) {
       e.cancelBubble = true;
     }
+  }
+
+  // return a funciton that will only execute
+  // once it is NOT called for delay milliseconds
+  function throttle(fn, time, context) {
+    var lock, args, wrapperFn, later;
+
+    later = function () {
+      // reset lock and call if queued
+      lock = false;
+      if (args) {
+        wrapperFn.apply(context, args);
+        args = false;
+      }
+    };
+
+    wrapperFn = function () {
+      if (lock) {
+        // called too soon, queue to call later
+        args = arguments;
+      } else {
+        // call and lock until later
+        fn.apply(context, arguments);
+        setTimeout(later, time);
+        lock = true;
+      }
+    };
+
+    return wrapperFn;
   }
 
   // ┌────────────────────┐
@@ -610,20 +639,16 @@
       };
     });
 
-    function resize () {
+    function scrollHandler () {
       stickies.forEach(function (item) {
         var referenceElement = item.element;
         if (hasClass(item.element, 'is-sticky')) {
           referenceElement = item.shim;
         }
+
         var dataTop = referenceElement.getAttribute('data-top') || 0;
         item.top = referenceElement.offsetTop - parseInt(dataTop, 0);
-      });
-      scrollHandler();
-    }
 
-    var scrollHandler = function () {
-      stickies.forEach(function (item) {
         if (item.top < window.pageYOffset) {
           addClass(item.element, 'is-sticky');
           item.shim.style.display = '';
@@ -632,11 +657,12 @@
           item.shim.style.display = 'none';
         }
       });
-    };
+    }
 
     if (elements) {
-      calcite.addEvent(window, 'scroll', scrollHandler);
-      calcite.addEvent(window, 'resize', resize);
+      calcite.addEvent(window, 'scroll', throttle(scrollHandler, 100));
+      calcite.addEvent(window, 'resize', throttle(scrollHandler, 100));
+      calcite.addEvent(document.body, 'click', scrollHandler);
     }
   };
 
@@ -750,7 +776,6 @@
         list.setAttribute('aria-expanded', true);
         addClass(list, 'is-active');
         addEvent(document.body, 'click', setDropdown);
-        console.log('open the thingy')
       }
 
       function setDropdown (e) {
