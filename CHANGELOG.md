@@ -5,6 +5,9 @@
 - Variableify Avenir Next font imports
 - Document include variables for custom build
 
+### Added
+- `dropdown-title`
+
 ## 0.14.4
 
 ### Fixed
