@@ -56,14 +56,6 @@ module.exports = function(grunt) {
           'copy:doc'
         ]
       },
-      fonts: {
-        files: ['lib/fonts/**/*'],
-        tasks: [
-          'copy:fonts',
-          'copy:fontsDist',
-          'copy:doc'
-        ]
-      },
       docs: {
         files: ['docs/source/**'],
         tasks: [
@@ -339,6 +331,12 @@ module.exports = function(grunt) {
   grunt.registerTask('scss', [
     'sass',
     'cssmin'
+  ]);
+
+  grunt.registerTask('buildFont', [
+    'webfont',
+    'copy:fonts',
+    'copy:fontsDist'
   ]);
 
   // Run a development environment
