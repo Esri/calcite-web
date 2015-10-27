@@ -1,0 +1,111 @@
+// ┌──────┐
+// │ Tabs │
+// └──────┘
+//  ↳ http://esri.github.io/calcite-web/patterns/#tabs
+//  ↳ patterns → _tabs.md
+
+@mixin tab-nav(){
+  @include clearfix();
+}
+
+@mixin tab-title() {
+  @include box-sizing(border-box);
+  @include font-size(-2);
+  @include transition(all, $transition);
+  padding: $baseline/4 $baseline/2;
+  float: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: $off-white;
+  border: 1px solid $lighter-gray;
+  border-left: none;
+  cursor: pointer;
+  &:first-child {
+    border-left: 1px solid $lighter-gray;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:hover, &:focus {
+    background-color: mix($white, $off-white);
+    text-decoration: none;
+    @include prefixer(background-image,linear-gradient(to top, transparent 94%, $blue 96%, $blue 100%), webkit moz o);
+    background-image:linear-gradient(to top, transparent 94%, $blue 96%, $blue 100%);
+  }
+  &.is-active {
+    border-bottom: 1px solid $white;
+    background-color: $white;
+    &:hover {
+      background-color: $white;
+    }
+  }
+}
+
+@mixin tab-contents() {
+  @include box-sizing(border-box);
+  border: 1px solid $lighter-gray;
+  margin-top: -1px;
+}
+
+@mixin tab-section() {
+  @include box-sizing(border-box);
+  background-color: $white;
+  display: none;
+  padding: $baseline/2;
+  &.is-active {
+    display: block;
+  }
+  pre {
+    margin: 0;
+  }
+}
+
+@mixin tabs-gray() {
+  .tab-title    {
+    background-color: $white;
+    &.is-active {
+      background-color: $off-white;
+      border-bottom: 1px solid $off-white;
+    }
+  }
+  .tab-section  {
+    background-color: $off-white;
+  }
+  pre code {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+@mixin tabs-transparent() {
+  .tab-title    {
+    background-color: transparent;
+    border: none;
+    &.is-active {
+      background-color: transparent;
+      border: 1px solid $lighter-gray;
+      border-bottom: 1px solid $white;
+    }
+  }
+  .tab-contents {
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+  }
+  .tab-section  {
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@if $include-tabs == true {
+  .tab-nav         { @include tab-nav()          ;}
+  .tab-title       { @include tab-title()        ;}
+  .tab-contents    { @include tab-contents()     ;}
+  .tab-section     { @include tab-section()      ;}
+  .tabs-gray       { @include tabs-gray()        ;}
+  .tabs-transparent{ @include tabs-transparent() ;}
+}

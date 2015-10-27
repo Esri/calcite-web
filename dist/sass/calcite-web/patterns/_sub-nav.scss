@@ -1,0 +1,63 @@
+// ┌────────┐
+// │ Subnav │
+// └────────┘
+//  ↳ http://esri.github.io/calcite-web/patterns/#sub-nav
+//  ↳ patterns → _sub-nav.md
+$subnav-link-underline: linear-gradient(to top, transparent 94%, $white 96%, $white 100%);
+
+
+@mixin sub-nav() {
+  background-color: $lightest-gray;
+}
+
+  @mixin sub-nav-title() {
+    margin-top: $baseline/2;
+    margin-bottom: $baseline/2;
+    display: inline-block;
+    line-height: 1.25;
+  }
+
+  @mixin sub-nav-list() {
+    width: 100%;
+    @include left();
+  }
+
+  @mixin sub-nav-link() {
+    padding: .25em .75em;
+    margin: 0 .25em 0 0;
+    @include left();
+    font-family: $avenir-family;
+    color: $lightest-gray;
+    @include font-size(-1);
+    background-color: $transparent-off-black;
+    box-sizing: border-box;
+    @include transition(background-color $transition, color 150ms $transition);
+
+    &:hover, &:focus {
+      background-color: rgba(0, 0, 0, .3);
+      color: $white;
+      text-decoration: none;
+      @include prefixer(background-image, $subnav-link-underline, webkit moz o);
+      background-image: $subnav-link-underline;
+    }
+    &.is-active {
+      background-color: $white;
+      color: $off-black;
+    }
+
+    @include respond-to($medium) {
+      margin: 0;
+      margin-top: 1px;
+      width: 100%;
+      &:hover {
+        background-image: none;
+      }
+    }
+  }
+
+@if $include-sub-nav == true {
+  .sub-nav {@include sub-nav();}
+    .sub-nav-title {@include sub-nav-title();}
+    .sub-nav-list {@include sub-nav-list();}
+    .sub-nav-link {@include sub-nav-link();}
+}
