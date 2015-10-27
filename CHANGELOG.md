@@ -8,6 +8,10 @@
 ### Added
 - `dropdown-title`
 
+### Fixed
+- Sticky elements will now recalculate their height correctly when elements change
+
+
 ## 0.14.4
 
 ### Fixed
