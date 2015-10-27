@@ -22,7 +22,7 @@ Changing the icon font requires further dependencies - Python and Fontforge.
 
 1. [Install Python](https://www.python.org/downloads/)
 2. `brew install ttfautohint fontforge --with-python`
-3. `grunt webfont`
+3. `grunt buildFont`
 
 ### Fork the Repository
 
