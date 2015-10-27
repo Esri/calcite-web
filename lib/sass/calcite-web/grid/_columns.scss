@@ -7,6 +7,7 @@
 @mixin grid-container() {
   @include clearfix();
   width: $container-width;
+  max-width: $max-width;
   padding-right: 0;
   padding-left: 0;
   margin-right: auto;
@@ -23,6 +24,7 @@
 @mixin column-base() {
   @include box-sizing(border-box);
   width: $container-width;
+  max-width: 100%;
   padding-left: $column-gutter / 2;
   padding-right: $column-gutter / 2;
   @include left();
@@ -146,17 +148,17 @@
     @media screen and (max-width: $medium - 1) {
       @for $n from 1 through $medium-column-count {
         .#{$prefix}column-#{$n} {
-          width: ($n / $medium-column-count) * $container-width;
+          width: ($n / $medium-column-count) * $max-width;
         }
       }
       @for $n from $medium-column-count through $default-column-count {
         .#{$prefix}column-#{$n} {
-          width: (1) * $container-width;
+          width: (1) * $max-width;
         }
       }
       @for $n from 1 through $medium-column-count {
         .#{$prefix}#{$medium-class}-column-#{$n}  {
-          width: ($n / $medium-column-count) * $container-width;
+          width: ($n / $medium-column-count) * $max-width;
         }
       }
       .#{$prefix}#{$medium-class}-first-column {
@@ -183,27 +185,27 @@
     @media screen and (max-width: $small - 1) {
       @for $n from 1 through $small-column-count {
         .#{$prefix}column-#{$n} {
-          width: ($n / $small-column-count) * $container-width;
+          width: ($n / $small-column-count) * $max-width;
         }
       }
       @for $n from $small-column-count through $default-column-count {
         .#{$prefix}column-#{$n} {
-          width: (1) * $container-width;
+          width: (1) * $max-width;
         }
       }
       @for $n from 1 through $small-column-count {
         .#{$prefix}#{$medium-class}-column-#{$n} {
-          width: ($n / $small-column-count) * $container-width;
+          width: ($n / $small-column-count) * $max-width;
         }
       }
       @for $n from $small-column-count through $default-column-count {
         .#{$prefix}#{$medium-class}-column-#{$n} {
-          width: (1) * $container-width;
+          width: (1) * $max-width;
         }
       }
       @for $n from 1 through $small-column-count {
        .#{$prefix}#{$small-class}-column-#{$n} {
-          width: ($n / $small-column-count) * $container-width;
+          width: ($n / $small-column-count) * $max-width;
         }
       }
       .#{$prefix}#{$small-class}-first-column {
@@ -231,7 +233,7 @@
 
     @for $n from 1 through $default-column-count {
       .#{$prefix}column-#{$n} {
-        width: ($n / $default-column-count) * $container-width;
+        width: ($n / $default-column-count) * $max-width;
         > .#{$prefix}column-#{$n} {
           margin-left: -($column-gutter/2);
           @if ($include-right-to-left) {
@@ -256,16 +258,19 @@
   }
 
   @media screen and (min-width: $large) {
-    .#{$prefix}grid-container {
-      $diff: $large-column-count - $default-column-count;
-      $side: $diff / 2;
-      $margin: $side / $large-column-count * $container-width;
-      padding-left: $margin;
-      padding-right: $margin;
-    }
-    .#{$prefix}grid-full {
-      padding-left: 0;
-      padding-right: 0;
+    @if unit($container-width) == 'vw' {
+      @debug unit($container-width);
+      .#{$prefix}grid-container {
+        $diff: $large-column-count - $default-column-count;
+        $side: $diff / 2;
+        $margin: $side / $large-column-count * $container-width;
+        padding-left: $margin;
+        padding-right: $margin;
+      }
+      .#{$prefix}grid-full {
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
   }
 

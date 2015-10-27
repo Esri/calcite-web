@@ -1,3 +1,8 @@
+## 0.14.6
+
+### Fixed
+- Hard pixel values blend with grid system
+
 ## 0.14.5
 
 ### Modified
