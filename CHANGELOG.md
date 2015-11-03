@@ -1,6 +1,10 @@
 ## Unreleased
 
+### Fixed
 - Set vietnamese to Helvetica
+
+### Modified
+- Default behavior is now always 24 columns with a width defined by `$container-width`. Default is 1450px, but can be set to 960px for a 960 grid.
 
 ## 0.14.6
 

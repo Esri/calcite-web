@@ -82,7 +82,11 @@
 
 
     // Fixed Pre and Post
-    @media screen and (min-width: $large) {
+    $remainder: 1 - $vw-ratio;
+    $margin-overflow: $container-width * $remainder;
+    $magic-number: $container-width + $margin-overflow;
+    @debug $magic-number;
+    @media screen and (min-width: $magic-number + 3) {
       @for $n from 0 through $large-column-count {
         .pre-#{$n}  {
           margin-left: ($n / $large-column-count) * $container-width !important;
