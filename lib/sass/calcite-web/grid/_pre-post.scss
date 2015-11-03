@@ -79,6 +79,23 @@
         }
       }
     }
+
+
+    // Fixed Pre and Post
+    @media screen and (min-width: $large) {
+      @for $n from 0 through $large-column-count {
+        .pre-#{$n}  {
+          margin-left: ($n / $large-column-count) * $container-width !important;
+        }
+        [class*="column-"] .pre-#{$n}:first-child {
+          $margin: ($n / $large-column-count) * $container-width;
+          $clear: $column-gutter / 2;
+          margin-left: calc(#{$margin} - #{$clear}) !important;
+        }
+        .post-#{$n} { margin-right: ($n / $large-column-count) * $container-width !important; }
+      }
+    }
+
   } @else {
     .pre-#{$n} {
       @include pre($n, $default-column-count);
