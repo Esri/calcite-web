@@ -1,3 +1,14 @@
+## Unreleased
+
+### Fixed
+- Set vietnamese to Helvetica
+- Set max width on selects
+- Dont override focus on input type submit
+
+### Modified
+- Default behavior is now always 24 columns with a width defined by `$container-width`. Default is 1450px, but can be set to 960px for a 960 grid.
+- Clicking on modal overlay no longer closes modal
+
 ## 0.14.6
 
 ### Fixed
