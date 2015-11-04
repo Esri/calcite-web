@@ -1,5 +1,11 @@
 ## Unreleased
 
+### Added
+- `esri-icon-light-blue`
+- `icon-ui-light-blue`
+- `esri-icon-dark-blue`
+- `icon-ui-dark-blue`
+
 ### Fixed
 - Set vietnamese to Helvetica
 - Set max width on selects
