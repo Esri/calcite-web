@@ -1,4 +1,4 @@
-/* calcite-web - v0.14.6 - 2015-10-27
+/* calcite-web - v0.15.0 - 2015-11-19
 *  https://github.com/esri/calcite-web
 *  Copyright (c) 2015 Environmental Systems Research Institute, Inc.
 *  Apache 2.0 License */
@@ -9,7 +9,7 @@
   // └────────────┘
   // define all public api methods (excluding patterns)
   var calcite = {
-    version: 'v0.14.4',
+    version: 'v0.15.0',
     click: click,
     addEvent: addEvent,
     removeEvent: removeEvent,
@@ -506,16 +506,6 @@
     toggles.forEach(function (toggle) {
       addEvent(toggle, click(), bindModalToggle);
     });
-
-    modals.forEach(function (modal) {
-      addEvent(modal, click(), function (e) {
-        if (eventTarget(e) === modal) {
-          toggleActive(modals, modal);
-          toggleAriaHidden([wrapper, footer]);
-          removeEvent(document, 'keyup', escapeCloseModal);
-        }
-      });
-    });
   };
 
   // ┌──────┐
@@ -695,140 +685,13 @@
     }
   };
 
-  // ┌─────────────┐
-  // │ Filter List │
-  // └─────────────┘
-  // Used for filtering lists
-  calcite.filterList = function (value, items) {
-    var results = items.filter(function (item) {
-        var val = value.toLowerCase();
-        var t = item.innerHTML.toLowerCase();
-        return t.includes(val);
-    });
-    return results;
-  };
-
-  // ┌─────────────────┐
-  // │ Filter Dropdown │
-  // └─────────────────┘
-  // Component used to select any number of things from an array of any number of things
-
-  calcite.filterDropdown = function (domNode) {
-    var context = domNode || document;
-    var dropdowns = nodeListToArray(context.querySelectorAll('.js-filter-dropdown'));
-
-    dropdowns.forEach(function (dropdown) {
-      var container = dropdown.querySelector('.filter-dropdown-container');
-      var list = dropdown.querySelector('.filter-dropdown-list');
-      var input = dropdown.querySelector('.filter-dropdown-input');
-      var clearButton = dropdown.querySelector('.filter-dropdown-clear');
-      var items = dropdown.querySelectorAll('.filter-dropdown-link');
-
-      list.setAttribute('aria-expanded', false);
-
-      for (i = 0; i < items.length; i++) {
-        var item = items[i];
-        item.setAttribute('data-item-id', i);
-        addEvent(item, 'click', toggleItem);
-      }
-
-      function showActive() {
-        var activeItems = dropdown.querySelectorAll('.filter-dropdown-active');
-
-        for (i = 0; i < activeItems.length; i++) {
-          var activeItem = activeItems[i];
-          activeItem.parentNode.removeChild(activeItem);
-        }
-
-        for (i = 0; i < items.length; i++) {
-          var item = items[i];
-          if (hasClass(item, 'is-active')) {
-            var template = '<span class="filter-dropdown-active">' + item.innerHTML  + '<a class="filter-dropdown-remove" href="#" data-item-id='+ [i] +'></a></span>';
-            container.insertAdjacentHTML('afterend', template);
-          }
-        }
-
-        activeItems = dropdown.querySelectorAll('.filter-dropdown-active');
-
-        for (i = 0; i < activeItems.length; i++) {
-          var closeButton = activeItems[i].querySelector('.filter-dropdown-remove');
-          addEvent(closeButton, 'click', clearItem);
-        }
-      }
-
-      function clearAllItems (e) {
-        if (e) e.preventDefault();
-        for (i = 0; i < items.length; i++) {
-          var item = items[i];
-          if (hasClass(item, 'is-active')) removeClass(item, 'is-active');
-        }
-        showActive();
-      }
-
-      function clearItem (e) {
-        e.preventDefault();
-        var targetId = e.target.getAttribute('data-item-id');
-        removeClass(items[targetId], 'is-active');
-        showActive();
-      }
-
-      function openDropdown (e) {
-        list.setAttribute('aria-expanded', true);
-        addClass(list, 'is-active');
-        addEvent(document.body, 'click', setDropdown);
-      }
-
-      function setDropdown (e) {
-        addEvent(document.body, 'click', closeDropdown);
-        addEvent(input, 'keyup', escapeCloseDropdown);
-      }
-
-      function escapeCloseDropdown (e) {
-        if (e.keyCode == 27) {
-          closeDropdown();
-        }
-      }
-
-      function closeDropdown (e) {
-        removeEvent(document.body, 'click', setDropdown);
-        removeEvent(input, 'keyup', escapeCloseDropdown);
-        removeEvent(document.body, 'click', closeDropdown);
-        list.setAttribute('aria-expanded', false);
-        removeClass(list, 'is-active');
-      }
-
-      function toggleItem (e) {
-        e.preventDefault();
-        toggleClass(e.target, 'is-active');
-        showActive();
-      }
-
-      addEvent(input, 'keyup', function(e) {
-        var itemsArray = nodeListToArray(items);
-        itemsArray.forEach(function(item) {
-          addClass(item, 'is-hidden');
-        });
-
-        calcite.filterList(input.value, itemsArray).forEach(function(item) {
-          removeClass(item, 'is-hidden');
-        });
-      });
-
-      container.addEventListener('focusin', openDropdown, true);
-      if (clearButton) {
-        addEvent(clearButton, 'click', clearAllItems);
-      }
-      showActive();
-    });
-  };
-
   // ┌────────────────────┐
   // │ Initialize Calcite │
   // └────────────────────┘
   // start up Calcite and attach all the patterns
   // optionally pass an array of patterns you'd like to watch
   function init (patterns) {
-    patterns = patterns || ['sticky', 'accordion', 'dropdown', 'drawer', 'expandingNav', 'modal', 'tabs', 'siteSearch', 'thirdNav', 'filterDropdown'];
+    patterns = patterns || ['sticky', 'accordion', 'dropdown', 'drawer', 'expandingNav', 'modal', 'tabs', 'siteSearch', 'thirdNav'];
     patterns.forEach(function (pattern) {
       calcite[pattern]();
     });
