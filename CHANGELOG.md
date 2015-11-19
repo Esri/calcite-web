@@ -1,4 +1,4 @@
-## Unreleased
+## 0.15.0
 
 ### Added
 - `esri-icon-light-blue`
