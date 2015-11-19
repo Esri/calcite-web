@@ -16,6 +16,9 @@
 - Clicking on modal overlay no longer closes modal
 - Slightly less padding on panels
 
+### Removed
+- Filter dropdown pattern
+
 ## 0.14.6
 
 ### Fixed
