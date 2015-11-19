@@ -1,0 +1,76 @@
+// ┌───────────┐
+// │ Dropdowns │
+// └───────────┘
+//  ↳ http://esri.github.io/calcite-web/components/#dropdowns
+//  ↳ components → _dropdowns.md
+
+@mixin dropdown {
+  position: relative;
+  display: inline-block;
+  &.is-active .dropdown-menu {
+    display: block;
+  }
+}
+
+  @mixin dropdown-link() {
+    position: relative;
+    display: block;
+    @include box-sizing(border-box);
+    padding: $baseline/3 $baseline $baseline/3 $baseline/3;
+    @include font-size(-2);
+    color: $darker-gray;
+    background-color: $white;
+    border-top: 1px solid $lightest-gray;
+    white-space: nowrap;
+    cursor: pointer;
+    &:hover {
+      background-color: $off-white;
+      text-decoration: none;
+      color: $darker-gray;
+    }
+    &.is-active {
+      text-indent: -3px;
+      border-left: 3px solid $blue;
+    }
+  }
+
+  @mixin dropdown-title() {
+    @include dropdown-link();
+    background-color: $off-white;
+    cursor: auto;
+  }
+
+  @mixin dropdown-btn {
+    padding-right: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    &:after {
+      @include font-size(-5);
+      @extend %icon-font-after;
+      @extend .icon-ui-down-arrow:before;
+      position: absolute;
+      right: .5rem;
+    }
+  }
+
+  @mixin dropdown-menu {
+    position: absolute;
+    min-width: 200px;
+    max-width: 300px;
+    @include box-shadow($box-shadow);
+    @extend .side-nav;
+    z-index: 1000;
+    display: none;
+
+    &.dropdown-right {
+      right: 0;
+    }
+  }
+
+@if $include-dropdowns == true {
+  .dropdown { @include dropdown(); }
+  .dropdown-btn { @include dropdown-btn(); }
+  .dropdown-menu { @include dropdown-menu(); }
+  .dropdown-title {@include dropdown-title();}
+  .dropdown-link { @include dropdown-link();}
+}

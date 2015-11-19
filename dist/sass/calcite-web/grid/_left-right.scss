@@ -1,0 +1,39 @@
+// ┌────────────────┐
+// │ Left and Right │
+// └────────────────┘
+//  ↳ http://esri.github.io/calcite-web/grid/#left-and-right
+//  ↳ grid → _left-and-right.md
+
+@mixin include-left-right(){
+  .left  { @include left();  }
+  .right { @include right(); }
+}
+
+// Responsive Left and Right
+@mixin responsive-left-right(){
+  @if $fold-grid == true {
+
+    // Large
+    @media screen and (min-width: $large) {
+      .#{$large-class}-left   { @include left(); }
+      .#{$large-class}-right  { @include right(); }
+    }
+
+    // Medium
+    @media screen and (max-width: $medium - 1) and (min-width: $small) {
+      .#{$medium-class}-left   { @include left(); }
+      .#{$medium-class}-right  { @include right(); }
+    }
+
+    // Small
+    @media screen and (max-width: $small - 1) {
+      .#{$small-class}-left   { @include left(); }
+      .#{$small-class}-right  { @include right(); }
+    }
+  }
+}
+
+@if $include-grid == true or $include-left-right == true {
+  @include include-left-right();
+  @include responsive-left-right();
+}

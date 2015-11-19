@@ -1,0 +1,10 @@
+// ┌──────┐
+// │ Calc │
+// └──────┘
+//  ↳ http://esri.github.io/calcite-web/sass/#calc
+//  ↳ components → _utility-mixins.md
+
+@mixin calc($property, $value) {
+  #{$property}: -webkit-calc(#{$value});
+  #{$property}:         calc(#{$value});
+}
