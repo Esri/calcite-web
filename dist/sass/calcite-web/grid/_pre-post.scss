@@ -1,0 +1,118 @@
+// ┌──────────────┐
+// │ Pre and Post │
+// └──────────────┘
+//  ↳ http://esri.github.io/calcite-web/grid/#pre-and-post
+//  ↳ grid → _pre-and-post.md
+
+@mixin responsive-pre-post(){
+
+  @if $fold-grid == true {
+    // Normal Columns
+    @media screen and (min-width: $medium) {
+      @for $n from 0 through $default-column-count {
+        .pre-#{$n} {
+          @include pre($n, $default-column-count);
+        }
+        [class*="column-"] .pre-#{$n}:first-child, .first-column.pre-#{$n} {
+          @include pre-calc($n, $default-column-count);
+        }
+        .post-#{$n} {
+          @include post($n, $default-column-count);
+        }
+      }
+    }
+
+    // Large Columns
+    @media screen and (min-width: $large) {
+      // keep normal pre and post, but make it out of new column count
+      @for $n from 0 through $default-column-count {
+        .pre-#{$n} {
+          @include pre($n, $large-column-count);
+        }
+        [class*="column-"] .pre-#{$n}:first-child, .first-column.pre-#{$n} {
+          @include pre-calc($n, $large-column-count);
+        }
+        .post-#{$n} {
+          @include post($n, $large-column-count);
+        }
+      }
+
+      @for $n from 0 through $large-column-count {
+        .#{$large-class}-pre-#{$n} {
+          @include pre($n, $large-column-count);
+        }
+        [class*="column-"] .#{$large-class}-pre-#{$n}:first-child, .#{$large-class}-first-column.#{$large-class}-pre-#{$n} {
+          @include pre-calc($n, $large-column-count);
+        }
+        .#{$large-class}-post-#{$n} {
+          @include post($n, $large-column-count);
+        }
+      }
+    }
+
+    // Medium Columns
+    @media screen and (max-width: $medium - 1) {
+      @for $n from 0 through $medium-column-count {
+        .#{$medium-class}-pre-#{$n} {
+          @include pre($n, $medium-column-count);
+        }
+        [class*="column-"] .#{$medium-class}-pre-#{$n}:first-child, .#{$medium-class}-first-column.#{$medium-class}-pre-#{$n} {
+          @include pre-calc($n, $medium-column-count);
+        }
+        .#{$medium-class}-post-#{$n} {
+          @include post($n, $medium-column-count);
+        }
+      }
+    }
+
+    // Small Columns
+    @media screen and (max-width: $small - 1) {
+      @for $n from 0 through $small-column-count {
+        .#{$small-class}-pre-#{$n} {
+          @include pre($n, $small-column-count);
+        }
+        [class*="column-"] .#{$small-class}-pre-#{$n}:first-child, .#{$small-class}-first-column.#{$small-class}-pre-#{$n} {
+          @include pre-calc($n, $small-column-count);
+        }
+        .#{$small-class}-post-#{$n} {
+          @include post($n, $small-column-count);
+        }
+      }
+    }
+
+
+    // Fixed Pre and Post
+    $remainder: 1 - $vw-ratio;
+    $margin-overflow: $container-width * $remainder;
+    $magic-number: $container-width + $margin-overflow;
+    @debug $magic-number;
+    @media screen and (min-width: $magic-number + 3) {
+      @for $n from 0 through $large-column-count {
+        .pre-#{$n}  {
+          margin-left: ($n / $large-column-count) * $container-width !important;
+        }
+        [class*="column-"] .pre-#{$n}:first-child {
+          $margin: ($n / $large-column-count) * $container-width;
+          $clear: $column-gutter / 2;
+          margin-left: calc(#{$margin} - #{$clear}) !important;
+        }
+        .post-#{$n} { margin-right: ($n / $large-column-count) * $container-width !important; }
+      }
+    }
+
+  } @else {
+    .pre-#{$n} {
+      @include pre($n, $default-column-count);
+    }
+    [class*="column-"] .pre-#{$n}:first-child, .first-column.pre-#{$n} {
+      @include pre-calc($n, $default-column-count);
+    }
+    .post-#{$n} {
+      @include post($n, $default-column-count);
+    }
+  }
+}
+
+@if $include-grid == true {
+  @include responsive-pre-post();
+}
