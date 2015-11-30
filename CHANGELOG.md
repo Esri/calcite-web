@@ -1,4 +1,4 @@
-## Unreleased
+## 0.15.1
 
 ### Fixed
 - Greater specificity for input group inputs
