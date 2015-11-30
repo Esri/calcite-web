@@ -4585,13 +4585,6 @@ select::-moz-focusring {
   display: table;
   margin-top: 0.3875rem; }
 
-.input-group-input {
-  display: table-cell;
-  position: relative;
-  margin-top: 0;
-  width: 100%;
-  vertical-align: middle; }
-
 .input-group-button {
   width: 1%;
   vertical-align: middle;
@@ -4599,6 +4592,13 @@ select::-moz-focusring {
   .input-group-button .btn, .input-group-button button {
     height: 2.25rem;
     margin-left: -1px; }
+
+input.input-group-input, .input-group-input {
+  display: table-cell;
+  position: relative;
+  margin-top: 0;
+  width: 100%;
+  vertical-align: middle; }
 
 .action-bar:after {
   content: '';
