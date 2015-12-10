@@ -1,3 +1,8 @@
+## Unreleased
+
+### Fixed
+- Removed underlines on `:hover` for icons inside of links
+
 ## 0.15.1
 
 ### Fixed
