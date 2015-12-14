@@ -201,6 +201,12 @@
     }
   }
 
+  select[multiple] {
+    height: auto;
+    background-image: none;
+    padding: $baseline/5 $baseline/4 $baseline/5 $baseline/4;
+  }
+
   /* Select Browser Hacks */
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     select::-ms-expand {
