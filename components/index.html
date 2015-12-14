@@ -1361,22 +1361,31 @@
     </label>
   </fieldset>
 
-  <fieldset>
-    <legend>Gender</legend>
-    <label>
-      <input type="radio" name="gender" value="male">Male
-    </label>
-    <label>
-      <input type="radio" name="gender" value="female">Female
-    </label>
-  </fieldset>
+  <label>Gender
+    <select name="tags" multiple>
+      <option value="basemap">Male</option>
+      <option value="esri_basemap">Female</option>
+      <option value="vector">Other</option>
+      <option value="hey">Your gender binaries cant hold me down</option>
+    </select>
+  </label>
 
   <label>
     Message
     <textarea></textarea>
   </label>
 
-  <input type="submit">
+  <fieldset>
+    <legend>Subscribe to Newsletter</legend>
+    <label>
+      <input type="radio" name="subscribe" value="yeah">Please
+    </label>
+    <label>
+      <input type="radio" name="subscribe" value="nope" checked>No Way
+    </label>
+  </fieldset>
+
+  <input type="submit" class="btn btn-clear">
 
   <button type="submit">Submit</button>
 
@@ -1428,22 +1437,31 @@
     <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>Gender<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"gender"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"male"</span>&gt;</span>Male
-    <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"gender"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"female"</span>&gt;</span>Female
-    <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Gender
+    <span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"tags"</span> <span class="hljs-attribute">multiple</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"basemap"</span>&gt;</span>Male<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"esri_basemap"</span>&gt;</span>Female<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"vector"</span>&gt;</span>Other<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"hey"</span>&gt;</span>Your gender binaries cant hold me down<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
     Message
     <span class="hljs-tag">&lt;<span class="hljs-title">textarea</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">textarea</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"submit"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>Subscribe to Newsletter<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"subscribe"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"yeah"</span>&gt;</span>Please
+    <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"subscribe"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"nope"</span> <span class="hljs-attribute">checked</span>&gt;</span>No Way
+    <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"submit"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-clear"</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"submit"</span>&gt;</span>Submit<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
 
