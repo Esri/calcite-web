@@ -2,10 +2,12 @@
 
 ### Fixed
 - Removed underlines on `:hover` for icons inside of links
+- Zero margin on `p:empty`
 
 ### Modified
 - Changes hover and active on side nav to subtle blue backgrounds
 - Darkened sidenav link color to meeet WCAGAA with the new active state background.
+
 
 ## 0.15.1
 
