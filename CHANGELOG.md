@@ -9,6 +9,9 @@
 - Changes hover and active on side nav to subtle blue backgrounds
 - Darkened sidenav link color to meeet WCAGAA with the new active state background.
 
+### Removed
+- **BREAKING** Removed automatic button style inheritance for `input[type='button']`. Using the `.btn` class is now required.
+
 
 ## 0.15.1
 
