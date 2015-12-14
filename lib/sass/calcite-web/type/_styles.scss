@@ -89,6 +89,10 @@
     margin-bottom: $baseline;
   }
 
+  p:empty {
+    margin: 0;
+  }
+
   blockquote {
     margin: $baseline 0;
     @include avenir-regular();
