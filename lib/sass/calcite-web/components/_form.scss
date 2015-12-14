@@ -132,9 +132,6 @@
   // └───────────────┘
   //  ↳ http://esri.github.io/calcite-web/components/#button-inputs
   //  ↳ components → _button-inputs.md
-  input[type='button'],
-  input[type='reset'],
-  input[type='submit'],
   button {
     @include btn();
   }
@@ -199,6 +196,12 @@
     &:focus {
       border-color: $blue;
     }
+  }
+
+  select[multiple] {
+    height: auto;
+    background-image: none;
+    padding: $baseline/5 $baseline/4 $baseline/5 $baseline/4;
   }
 
   /* Select Browser Hacks */

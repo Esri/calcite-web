@@ -1,13 +1,21 @@
 ## Unreleased
 
+### Added
+- `margin-left`, `padding-left`, `margin-right`, and `padding-right` alias classes for gutters.
+- `margin-gutter()` mixins for margin-left/right support.
+
 ### Fixed
 - Removed underlines on `:hover` for icons inside of links
 - Zero margin on `p:empty`
+- Style <select multiple>
 
 ### Modified
 - Changes hover and active on side nav to subtle blue backgrounds
 - Darkened sidenav link color to meeet WCAGAA with the new active state background.
+- Bottom margin on `<figure>` set to 1 baseline from 2.
 
+### Removed
+- **BREAKING** Removed automatic button style inheritance for `input[type='button']`. Using the `.btn` class is now required.
 
 ## 0.15.1
 

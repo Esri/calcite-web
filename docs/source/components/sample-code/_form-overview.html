@@ -41,22 +41,31 @@
     </label>
   </fieldset>
 
-  <fieldset>
-    <legend>Gender</legend>
-    <label>
-      <input type="radio" name="gender" value="male">Male
-    </label>
-    <label>
-      <input type="radio" name="gender" value="female">Female
-    </label>
-  </fieldset>
+  <label>Gender
+    <select name="tags" multiple>
+      <option value="basemap">Male</option>
+      <option value="esri_basemap">Female</option>
+      <option value="vector">Other</option>
+      <option value="hey">Your gender binaries cant hold me down</option>
+    </select>
+  </label>
 
   <label>
     Message
     <textarea></textarea>
   </label>
 
-  <input type="submit">
+  <fieldset>
+    <legend>Subscribe to Newsletter</legend>
+    <label>
+      <input type="radio" name="subscribe" value="yeah">Please
+    </label>
+    <label>
+      <input type="radio" name="subscribe" value="nope" checked>No Way
+    </label>
+  </fieldset>
+
+  <input type="submit" class="btn btn-clear">
 
   <button type="submit">Submit</button>
 
