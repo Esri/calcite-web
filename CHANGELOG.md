@@ -1,4 +1,4 @@
-## Unreleased
+## 1.0.0-beta
 
 ### Added
 - `margin-left`, `padding-left`, `margin-right`, and `padding-right` alias classes for gutters.

@@ -1,5 +1,3 @@
-> WARNING: Calcite Web is still very much an "alpha" technology. If you start building with Calcite Web be prepared for bugs and anticipate breaking changes as we move towards a more stable and production-ready `v1.0.0` release.
-
 # Calcite Web
 
 Calcite Web is a web design framework that implements the Esri Brand Guidelines and Calcite design framework for browser-based properties and products. Calcite Web is written in [Sass](http://sass-lang.com/), and is compatible with both the standard Sass ruby gem and the [Libsass](http://libsass.org/) compiler. The project also includes a dependency-free JavaScript library for use with interactive patterns.
@@ -45,7 +43,7 @@ That will give you everything including sass utilities. You will also need to co
 To install Calcite Web with npm, type:
 
 ```
-npm install --save-dev Esri/calcite-web#v0.14.4
+npm install --save-dev Esri/calcite-web#v1.0.0-beta
 ```
 
 You must add the current version in order to get the `dist/` folder.
