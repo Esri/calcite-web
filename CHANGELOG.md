@@ -1,5 +1,9 @@
 ## Unreleased
 
+### Added
+- `margin-left`, `padding-left`, `margin-right`, and `padding-right` alias classes for gutters.
+- `margin-gutter()` mixins for margin-left/right support.
+
 ### Fixed
 - Removed underlines on `:hover` for icons inside of links
 - Zero margin on `p:empty`
