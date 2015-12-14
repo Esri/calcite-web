@@ -1,0 +1,43 @@
+@if $include-grid == true or $include-gutter == true {
+
+.gutter-left-quarter  { @include gutter-left-quarter(); }
+.gutter-right-quarter { @include gutter-right-quarter(); }
+.gutter-left-third    { @include gutter-left-third(); }
+.gutter-right-third   { @include gutter-right-third(); }
+
+  .gutter-left-half  { @include gutter-left-half(); }
+  .gutter-right-half { @include gutter-right-half(); }
+
+  @for $i from 0 through $horizontal-range {
+    .gutter-left-#{$i}          { @include gutter-left($i)  ;}
+    .gutter-right-#{$i}         { @include gutter-right($i) ;}
+  }
+
+.padding-left-quarter  { @include gutter-left-quarter(); }
+.padding-right-quarter { @include gutter-right-quarter(); }
+.padding-left-third    { @include gutter-left-third(); }
+.padding-right-third   { @include gutter-right-third(); }
+
+  .padding-left-half  { @include gutter-left-half(); }
+  .padding-right-half { @include gutter-right-half(); }
+
+  @for $i from 0 through $horizontal-range {
+    .padding-left-#{$i}          { @include gutter-left($i)  ;}
+    .padding-right-#{$i}         { @include gutter-right($i) ;}
+  }
+
+.margin-left-quarter  { @include margin-gutter-left-quarter(); }
+.margin-right-quarter { @include margin-gutter-right-quarter(); }
+.margin-left-third    { @include margin-gutter-left-third(); }
+.margin-right-third   { @include margin-gutter-right-third(); }
+
+  .margin-left-half  { @include margin-gutter-left-half(); }
+  .margin-right-half { @include margin-gutter-right-half(); }
+
+  @for $i from 0 through $horizontal-range {
+    .margin-left-#{$i}          { @include margin-gutter-left($i)  ;}
+    .margin-right-#{$i}         { @include margin-gutter-right($i) ;}
+  }
+
+  @include responsive-gutter();
+}

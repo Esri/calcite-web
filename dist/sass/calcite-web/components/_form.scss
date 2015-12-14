@@ -1,0 +1,252 @@
+@mixin form() {
+
+  // ┌───────┐
+  // │ Forms │
+  // └───────┘
+  //  ↳ http://esri.github.io/calcite-web/components/#form-overview
+  //  ↳ components → _form-overview.md
+  form {
+    @extend %clearfix;
+    margin: 0;
+    padding: 0;
+  }
+
+  fieldset {
+    @extend %clearfix;
+    margin: 0 0 $baseline 0;
+    padding: 0;
+    border: none;
+    display: block;
+    label {
+      margin-bottom: 0;
+      @include font-size(-1);
+      color: $darkest-gray;
+    }
+  }
+
+  label, legend {
+    position: relative;
+    display: block;
+    @include font-size(0);
+    margin: 0 0 $baseline 0;
+  }
+
+  legend {
+    margin-bottom: .1rem;
+  }
+
+  input[type='date'],
+  input[type='datetime'],
+  input[type='datetime-local'],
+  input[type='email'],
+  input[type='time'],
+  input[type='week'],
+  input[type='search'],
+  input[type='tel'],
+  input[type='text'],
+  input[type='url'],
+  input[type='number'],
+  input[type='password'],
+  input[type='month'],
+  select,
+  textarea {
+    @include box-sizing(border-box);
+    display: block;
+    width: 100%;
+    outline: none;
+    outline-offset: 0;
+    vertical-align: baseline;
+    margin: $baseline*.25 0 0 0;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+    &[disabled] {
+      cursor: default;
+    }
+    &:focus {
+      border-color: $blue;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075),0 0 5px rgba(81, 167, 232, 0.5);
+    }
+  }
+
+  // ┌─────────────┐
+  // │ Text Inputs │
+  // └─────────────┘
+  //  ↳ http://esri.github.io/calcite-web/components/#text-inputs
+  //  ↳ components → _text-inputs.md
+  input[type='date'],
+  input[type='datetime'],
+  input[type='datetime-local'],
+  input[type='email'],
+  input[type='time'],
+  input[type='week'],
+  input[type='search'],
+  input[type='tel'],
+  input[type='text'],
+  input[type='url'],
+  input[type='number'],
+  input[type='password'],
+  input[type='month'],
+  textarea {
+    display: inline-block;
+    padding: 0 $baseline / 5;
+    @include font-size(-1);
+    @extend .avenir-regular;
+    color: $darkest-gray;
+    border: 1px solid $light-gray;
+    @include transition(border-color 150ms linear);
+    -webkit-appearance: textfield;
+    height: 2.25rem;
+    &.input-error { border-color: $red; }
+    &.input-warning { border-color: $dark-yellow; }
+    &.input-success { border-color: $green; }
+    &:focus { border-color: $blue; }
+  }
+
+  textarea {
+    height: auto;
+    padding-top: $baseline / 5;
+  }
+
+  button::-moz-focus-inner,
+  input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+  // ┌─────────────┐
+  // │ Date Inputs │
+  // └─────────────┘
+  input[type='date'],
+  input[type='datetime'],
+  input[type='datetime-local'],
+  input[type='time'],
+  input[type='week'],
+  input[type='month'] {
+    max-height: $baseline * 1.5;
+    &.input-error {
+      border-color: $red;
+    }
+  }
+
+  // ┌───────────────┐
+  // │ Button Inputs │
+  // └───────────────┘
+  //  ↳ http://esri.github.io/calcite-web/components/#button-inputs
+  //  ↳ components → _button-inputs.md
+  button {
+    @include btn();
+  }
+
+  input[type="file"]::-webkit-file-upload-button {
+    -webkit-appearance: none;
+    @include btn();
+  }
+
+  ::-ms-browse {
+    @include btn();
+  }
+
+  // ┌────────────────────────────┐
+  // │ Checkboxes & Radio Buttons │
+  // └────────────────────────────┘
+  //  ↳ http://esri.github.io/calcite-web/components/#checkboxes
+  //  ↳ http://esri.github.io/calcite-web/components/#radio-buttons
+  //  ↳ components → _checkboxes.md
+  //  ↳ components → _radio-buttons.md
+  input[type='radio'], input[type='checkbox'] {
+    @include left();
+    width: auto;
+    margin: .3rem .3rem 0 .3rem;
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 1px 2px $blue, 0 0 6px $blue;
+    }
+  }
+
+  input[type='checkbox']:focus {
+    border-radius: 3px;
+  }
+
+  input[type='radio']:focus {
+    border-radius: 50%;
+  }
+
+  // ┌─────────┐
+  // │ Selects │
+  // └─────────┘
+  //  ↳ http://esri.github.io/calcite-web/components/#selects
+  //  ↳ components → _selects.md
+  select {
+    background-color: $off-white;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PGcgZmlsbD0iIzU5NTk1OSI+PHBhdGggZD0iTTU2Ljc1IDM3LjQ2NmMuNDI1LjQyNS41NTIgMS4wNjMuMzIyIDEuNjE4LS4yMy41NTUtLjc3LjkxNi0xLjM3Mi45MTZINi4zYy0uNiAwLTEuMTQzLS4zNjItMS4zNzItLjkxNy0uMjMtLjU1NS0uMTAzLTEuMTkzLjMyMi0xLjYxOGwyMy40NC0yMy40NGMxLjI3Ni0xLjI3NiAzLjM0My0xLjI3NiA0LjYyIDBsMjMuNDQgMjMuNDR6TTUuMjUgNjIuNTM0Yy0uNDI2LS40MjUtLjU1My0xLjA2My0uMzIzLTEuNjE4LjIzLS41NTUuNzctLjkxNiAxLjM3LS45MTZoNDkuNDA0Yy42MDIgMCAxLjE0My4zNiAxLjM3My45MTYuMjMuNTU1LjEwMyAxLjE5My0uMzIyIDEuNjE4TDMzLjMxIDg1Ljk3N2MtMS4yNzUgMS4yNzUtMy4zNDQgMS4yNzQtNC42MiAwTDUuMjUgNjIuNTM0eiIvPjwvZz48L3N2Zz4=');
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: .9rem;
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: 2.25rem;
+    padding: $baseline/5 $baseline $baseline/5 $baseline/4;
+    @include font-size(-1);
+    @extend .avenir-regular;
+    color: $darkest-gray;
+    border: 1px solid $light-gray;
+    border-radius: 0;
+    @include transition(border-color 150ms linear);
+    -webkit-appearance: none;
+    &:focus {
+      border-color: $blue;
+    }
+  }
+
+  select[multiple] {
+    height: auto;
+    background-image: none;
+    padding: $baseline/5 $baseline/4 $baseline/5 $baseline/4;
+  }
+
+  /* Select Browser Hacks */
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    select::-ms-expand {
+      display: none;
+    }
+    select:focus::-ms-value {
+      background: transparent;
+      color: $darkest-gray;
+    }
+  }
+  @-moz-document url-prefix() {
+    select {
+      background-image: none;
+    }
+  }
+  select::-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 $darkest-gray;
+  }
+
+  .input-error {
+    border-color: $red;
+    &:focus {
+      border-color: $blue;
+    }
+  }
+
+  .input-warning {
+    border-color: $dark-yellow;
+    &:focus {
+      border-color: $blue;
+    }
+  }
+
+  .input-success {
+    border-color: $green;
+    &:focus {
+      border-color: $blue;
+    }
+  }
+
+}
+
+@if $include-forms == true {
+  @include form();
+}

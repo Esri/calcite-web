@@ -1,0 +1,47 @@
+// ┌───────────┐
+// │ Accordion │
+// └───────────┘
+//  ↳ http://esri.github.io/calcite-web/patterns/#accordion
+//  ↳ patterns → _accordion.md
+
+@mixin accordion(){
+  @extend .side-nav;
+  @include icon-font();
+}
+  @mixin accordion-section() {
+    &.is-active {
+      .accordion-content {
+        display: block;
+      }
+      .accordion-title:before {
+        @extend .icon-ui-minus-circled:before;
+      }
+    }
+  }
+
+  @mixin accordion-title() {
+    @extend .side-nav-title;
+    cursor: pointer;
+    @include transition(all, $transition);
+    &:before {
+      @include font-size(-3);
+      @extend %icon-font-styles;
+      @extend .icon-ui-plus-circled:before;
+    }
+    &:focus,
+    &:hover {
+      @include transition(all, $transition);
+      background-color: $Calcite_Gray_150;
+    }
+  }
+  @mixin accordion-content() {
+    display: none;
+  }
+
+
+@if $include-accordion == true {
+  .accordion {@include accordion();}
+    .accordion-section {@include accordion-section();};
+    .accordion-title {@include accordion-title();}
+    .accordion-content {@include accordion-content();}
+}

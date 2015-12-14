@@ -1,0 +1,2317 @@
+{
+  "elements": [
+    {
+      "_id": "0e93f7c2-6302-4724-a15a-a32c2592be38",
+      "name": "Overview",
+      "slug": "get-started",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Overview",
+        "Get Started",
+        "Get Started",
+        "get-started"
+      ],
+      "sort_order": 0,
+      "group": "Get Started",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Calcite Web is a CSS framework built with <a href=\\\"http://sass-lang.com/\\\">Sass</a>. A dependency-free JavaScript library for use with interactive patterns like tabs and modals is also included.</p>\\n<p>Calcite Web is a web adaptation of Calcite, the desktop framework developed for ArcGIS Pro. The idea is to have designs be consistent, but also embrace the characteristics that make each medium unique.</p>\\n<p>Calcite Web was built <em>for</em> developers. It is meant to be flexible enough that you can accomplish 80% of your website with the default patterns. If you use Calcite Web as a Sass library, you&#39;ll also get a set of very helpful mixins to help you make new patterns and components that fit in with the Calcite methodology and aesthetic.</p>\\n<h2 id=\\\"using-calcite-web\\\">Using Calcite Web</h2>\\n<p>There are three ways to use Calcite Web:</p>\\n<ul>\\n<li>(a) copying static files into your project</li>\\n<li>(b) installing via a package manager</li>\\n<li>(c) loading files from the cdn</li>\\n</ul>\\n<p>By default, Calcite Web expects image files to be located at <code>../</code>. If your fonts are elsewhere, set the <code>$font-path</code> variable</p>\\n<p>Using this framework as a Sass library will give you the most power, but whatever your flavor, we have you covered.</p>\\n<p>If you are migrating from Tailcoat, checkout the <a href=\\\"{{relativePath}}migration-guide/\\\">migration guide</a>.</p>\\n\""
+    },
+    {
+      "_id": "b8750ed0-85a9-4640-9644-7afe84e708c1",
+      "name": "Static Files",
+      "slug": "static-files",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Static Files",
+        "Get Started",
+        "Get Started",
+        "get-started"
+      ],
+      "sort_order": 1,
+      "group": "Get Started",
+      "LastModified": 1448921979892,
+      "description": "\"<p>This is probably the easiest way, but you won&#39;t get any of the helpful Sass mixins. If you&#39;re looking to get up and running quickly, just <a href=\\\"https://github.com/ArcGIS/calcite-web/releases\\\">download the latest release</a> and move the zipped files to wherever you keep your assets (CSS, JavaScript, images). Be sure to use <a href=\\\"http://esri.github.io/calcite-web/\\\">the documentation site</a> to copy and paste patterns, components, and even a sample html boilerplate.</p>\\n<p><em>A CDN is being planned for future releases, allowing you to reference Calcite Web static assets on a server.</em></p>\\n<p>When used statically, one very helpful thing to know is that Calcite Web comes bundled with several modifier classes. For example, if you need to add some margin to the top of an element, instead of writing a class and adding it yourself, you can use the built in <code>leader-X</code> class:</p>\\n<pre><code class=\\\"lang-html\\\">&lt;div class=&quot;leader-3&quot;&gt;\\n  This item will get three &#39;lines&#39; of margin at the top.\\n&lt;/div&gt;\\n</code></pre>\\n<p>This will keep spacing consistent and you won&#39;t have to write any CSS! There are modifier classes for virtually everything: padding, margin, text-color, background-color, etc. Be sure to read <a href=\\\"http://esri.github.io/calcite-web/grid/\\\">the documentation</a> to learn what is possible.</p>\\n\""
+    },
+    {
+      "_id": "28241474-c950-4ae3-84ec-374a5513804c",
+      "name": "Ruby Gem",
+      "slug": "ruby-gem",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Ruby Gem",
+        "Get Started",
+        "Get Started",
+        "get-started"
+      ],
+      "sort_order": 2,
+      "group": "Get Started",
+      "LastModified": 1448921979892,
+      "description": "\"<p>To install Calcite-Web as a ruby gem, reference the gem from your <code>Gemfile</code>:</p>\\n<pre><code>gem &quot;calcite-web&quot;, :git =&gt; &quot;https://github.com/Esri/calcite-web.git&quot;, :tag =&gt; &quot;current.tag.version&quot;\\n</code></pre><p>Be sure to use the replace <code>current.tag.version</code> with <a href=\\\"https://github.com/Esri/calcite-web/releases\\\">the most up to date tag</a>.</p>\\n<p>This makes Calcite Web available as a Compass extension. To use Calcite Web, make sure you require the gem in your compass config file (usually found at <code>config/compass.rb</code>). an example config file might look like this:</p>\\n<pre><code class=\\\"lang-ruby\\\">require &#39;calcite-web&#39;\\n\\ncss_dir = &quot;stylesheets&quot;\\nsass_dir = &quot;sass&quot;\\n</code></pre>\\n<p>Then in your project&#39;s sass files, just import it:</p>\\n<pre><code>@import &quot;calcite-web&quot;;\\n</code></pre><p>That will give you everything including Sass utilities. You will also need to copy over the JavaScript and image assets to your static folder <a href=\\\"/#static-files\\\">(see above)</a>.</p>\\n<p>Calcite Web has a built in library of mixins that cover everything from animation to font-size. To be sure you&#39;re building your site in the easiest way (and the most visually consistent way) read up on everything that&#39;s available on the <a href=\\\"./sass\\\">Sass Page</a>.</p>\\n\""
+    },
+    {
+      "_id": "5ddecbb1-3f18-4603-9b67-5c927673fae1",
+      "name": "NPM",
+      "slug": "npm",
+      "tags": [
+        "calcite-web",
+        "web",
+        "NPM",
+        "Get Started",
+        "Get Started",
+        "get-started"
+      ],
+      "sort_order": 3,
+      "group": "Get Started",
+      "LastModified": 1448921979892,
+      "description": "\"<p>To install Calcite Web with npm, type:</p>\\n<pre><code>npm install --save-dev Esri/calcite-web#v0.14.1\\n</code></pre><p>You must add the current version in order to get the <code>dist/</code> folder.</p>\\n<p>Then, if you&#39;re using sass, be sure to add <code>node_modules/calcite-web/dist/sass/</code> to your load path. If you&#39;re using <code>grunt-contrib-sass</code> you add that like this:</p>\\n<pre><code class=\\\"lang-js\\\">&#39;sass&#39;: {\\n  target: {\\n    options: {\\n      loadPath: &#39;node_modules/calcite-web/dist/sass/&#39;,\\n      require: &#39;./lib/list-files.rb&#39;\\n    },\\n    files: {\\n      &#39;path/to.css&#39;: &#39;path/to.scss&#39;\\n    }\\n  }\\n}\\n</code></pre>\\n<p>Then in your main <code>.scss</code> file, you can just require the framework: <code>@import &quot;calcite-web&quot;;</code>. Everything mentioned about mixins above in the <a href=\\\"/#ruby-gem\\\">Ruby gem section</a> applies to the Node module as well, so scroll up a bit and learn more about how Calcite Web functions as a Sass library;</p>\\n\""
+    },
+    {
+      "_id": "53a4132e-ce9f-4e10-bf10-366778372167",
+      "name": "Overview",
+      "slug": "contributing",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Overview",
+        "Contributing",
+        "Get Started",
+        "get-started"
+      ],
+      "sort_order": 100,
+      "group": "Contributing",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Calcite Web is open to all types of contributions from across Esri. Things you can do to contribute include:</p>\\n<ol>\\n<li>Report a bug (<a href=\\\"https://github.com/Esri/calcite-web/issues/new\\\">open an issue</a>)</li>\\n<li>Suggest a new pattern or component (<a href=\\\"https://github.com/Esri/calcite-web/issues/new\\\">open an issue</a>)</li>\\n<li>Fork the repository and fix one of the <a href=\\\"https://github.com/Esri/calcite-web/issues\\\">open issues</a></li>\\n<li>Report problems with the <a href=\\\"http://esri.github.io/calcite-web/\\\">documentation</a>.</li>\\n</ol>\\n<h3 id=\\\"install-dependencies\\\">Install Dependencies</h3>\\n<p>Calcite Web has two development dependencies, Node.js and Grunt. If you already have these on your computer, you can skip these steps:</p>\\n<ol>\\n<li>Visit <a href=\\\"http://nodejs.org/\\\">nodejs.org</a> to install Node.</li>\\n<li><code>npm install -g grunt-cli</code> to install Grunt.</li>\\n</ol>\\n<h3 id=\\\"fork-the-repository\\\">Fork the Repository</h3>\\n<p>All the code for Calcite Web lives <a href=\\\"https://github.com/esri/calcite-web\\\">on GitHub</a>. We use the <a href=\\\"https://help.github.com/articles/using-pull-requests/\\\">fork and pull model</a> to manage contribution.</p>\\n<ol>\\n<li>Fork the repository so you have your own copy (<code>your-username/calcite-web</code>)</li>\\n<li>Clone the repo locally with <code>git clone https://github.com/your-username/calcite-web</code></li>\\n<li>Move into the clone repo:  <code>cd calcite-web</code></li>\\n<li>Install project dependencies: <code>npm install</code></li>\\n</ol>\\n<p>You should also add <code>Esri/calcite-web</code> as a remote at this point. We generally call this remote branch &#39;upstream&#39;:</p>\\n<pre><code>git remote add upstream https://github.com/Esri/calcite-web\\n</code></pre>\""
+    },
+    {
+      "_id": "99ea74b8-7a26-4dd2-8944-e82dcb1d39cb",
+      "name": "Development",
+      "slug": "development",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Development",
+        "Contributing",
+        "Get Started",
+        "get-started"
+      ],
+      "sort_order": 101,
+      "group": "Contributing",
+      "LastModified": 1448921979892,
+      "description": "\"<p>To run a development environment, just type <code>grunt</code>. You should have a copy of the documentation site live at <a href=\\\"http://localhost:8888\\\">localhost:8888</a>. As you develop features and fix bugs, be sure to write notes in <code>CHANGELOG.md</code>.</p>\\n<h3 id=\\\"how-we-use-github\\\">How We Use GitHub</h3>\\n<p>All the code for Calcite Web lives <a href=\\\"https://github.com/esri/calcite-web\\\">on GitHub</a>. We use the <a href=\\\"https://help.github.com/articles/using-pull-requests/\\\">fork and pull model</a> to manage contribution. To contribute, you should:</p>\\n<ol>\\n<li>Commit your changes.</li>\\n<li>Note your changes in <code>CHANGELOG.md</code></li>\\n<li>Make sure your copy is up to date: <code>git pull upstream master</code></li>\\n<li>Push your changes to your fork: <code>/your-username/calcite-web</code></li>\\n<li>Open a pull-request from your fork (<code>/your-username/calcite-web</code>) to the &#39;upstream&#39; fork (<code>/Esri/calcite-web</code>).</li>\\n</ol>\\n\""
+    },
+    {
+      "_id": "d1002cfd-11e1-4720-b05d-60b1f057c818",
+      "name": "Versioning",
+      "slug": "versioning",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Versioning",
+        "Contributing",
+        "Get Started",
+        "get-started"
+      ],
+      "sort_order": 102,
+      "group": "Contributing",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Calcite-Web uses SemVer (Semantic Versioning) for its releases. This means that version numbers are basically formatted like <code>MAJOR.MINOR.PATCH</code>. If you&#39;re well acquainted with SemVer you should skip to &#39;Bumping the Version&#39; below.</p>\\n<h4 id=\\\"major\\\">Major</h4>\\n<p>Breaking changes are signified with a new <strong>first</strong> number. For example, moving from 1.0.0 to 2.0.0 implies breaking changes.</p>\\n<h4 id=\\\"minor\\\">Minor</h4>\\n<p>New components, new helper classes, or substantial visual changes to existing components and patterns are <em>minor releases</em>. These are signified by the second number changing. So from 1.1.2 to 1.2.0 there are minor changes.</p>\\n<h4 id=\\\"patches\\\">Patches</h4>\\n<p>The final number signifies patches such as fixing a pattern or component in a certain browser, or fixing an existing bug. Small changes to the documentation site and the tooling around the Calcite-Web library are also considered patches.</p>\\n<h2 id=\\\"bumping-the-version\\\">Bumping the Version</h2>\\n<ol>\\n<li>Change the version number in <code>package.json</code> to the desired version number.</li>\\n<li>Write a description of the changes, additions, and bug fixes in <code>CHANGELOG.md</code>.</li>\\n<li>Make sure <code>Esri/calcite-web</code> is up-to-date with your changes.</li>\\n<li>Run <code>grunt release</code>. If prompted enter your GitHub credentials and your s3 access key/secret.</li>\\n</ol>\\n\""
+    },
+    {
+      "_id": "323de7b8-663b-4ee2-8ff8-b8068171d9a0",
+      "name": "Deploying the Documentation",
+      "slug": "deploy-the-documentation",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Deploying the Documentation",
+        "Contributing",
+        "Get Started",
+        "get-started"
+      ],
+      "sort_order": 103,
+      "group": "Contributing",
+      "LastModified": 1448921979892,
+      "description": "\"<p>To update the documentation site, just make sure you have push access to the <code>Esri/calcite-web</code> repo and type <code>grunt deploy</code>. This will build the site and deploy to gh-pages.</p>\\n<p>The site should be updated at <a href=\\\"http://esri.github.io/calcite-web/\\\">http://esri.github.io/calcite-web/</a> in just a few moments.</p>\\n\""
+    },
+    {
+      "_id": "0c1050c6-27df-4a9f-b7a3-bea7b0b0954b",
+      "name": "Overview",
+      "slug": "overview",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Overview",
+        "Typefaces",
+        "Type",
+        "type"
+      ],
+      "sort_order": 0,
+      "group": "Typefaces",
+      "LastModified": 1448921979892,
+      "description": "\"<p>The Calcite Type System uses a combination of mixins and helper classes to achieve a clear visual style, focusing primarily on simplifying typesetting processes. Using the mixins and classes properly will ensure that all properties are consistent, beautiful, and robust.</p>\\n<h3 id=\\\"typefaces\\\">Typefaces</h3>\\n<p>We expose four type families for use in Calcite Web; Avenir Next, Kepler, Frutiger, and Consolas. Each of these type families have a set of weights and styles, defined by their application. For example, Avenir Next has more weights than Frutiger family, reflecting its role as primary UI face, and heavy lifting header face.</p>\\n<p>The typographic palette for Calcite Web differs slightly from the official Esri branding document. All typefaces are examined in detail below.</p>\\n<p>Calcite Web provides a set of weights for each typeface. These are used by either using the helper class in html, or writing sass to include the mixin, or extending the helper class. The available weights for each face are below. Proper care has been taken to ensure that all type systems used by Calcite avoid faux-bold and faux-italics styled by the browser.</p>\\n<p>By default, Calcite Web expects font files to be located at <code>../</code>. If your fonts are elsewhere, set the <code>$font-path</code> variable</p>\\n<h3 id=\\\"vertical-rhythm\\\">Vertical Rhythm</h3>\\n<p>Vertical rhythm is maintained in the Calcite Web Type System by the use of the <code>$baseline</code> variable. <code>$baseline</code> sets a standard and regular leading in relation to the body copy – 1.5rem. This variable is used for any measurement on the vertical axis in the page, including the <a href=\\\"../grid/#leader-and-trailer\\\">leader and trailer grid helper classes</a> and padding for <a href=\\\"../components/#buttons\\\">components like buttons</a> which use standard measurements like <code>3/$baseline</code> and <code>2/$baseline</code>.</p>\\n<h3 id=\\\"proportional-scales\\\">Proportional Scales</h3>\\n<p>Text sizes are defined by a simple <a href=\\\"http://alistapart.com/article/more-meaningful-typography\\\">modular scale</a>. The scale is defined by two base sizes for type - body at 1rem and small at 0.95rem - and extrapolates a series of larger type sizes based on a single ratio; 1.25, or a major third interval. All type sizes are <a href=\\\"http://snook.ca/archives/html_and_css/font-size-with-rem\\\">set in rems</a>, which have <a href=\\\"http://caniuse.com/#feat=rem\\\">more than acceptable browser support</a>. Rems are used for type sizing and all vertical measurements, defined either by the <code>$baseline</code> variable or the <a href=\\\"../sass/#modular-scale\\\">modular scale</a> and <a href=\\\"../sass/#font-size\\\">font size</a> mixins. This prevents odd sizing issues with nested content, unpredictable results with scaling, and provides a solid anchor for determining sizes.</p>\\n\""
+    },
+    {
+      "_id": "6918aafb-dbc4-4508-b73a-01cc4711af1d",
+      "name": "Avenir",
+      "slug": "avenir",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Avenir",
+        "Typefaces",
+        "Type",
+        "type"
+      ],
+      "sort_order": 1,
+      "group": "Typefaces",
+      "LastModified": 1448921979892,
+      "description": "\"<p><a href=\\\"http://www.fonts.com/font/linotype/avenir-next\\\">Avenir Next</a> is a recut of the classic Avenir typeface, by Adrian Frutiger and Akira Kobayashi. It has been reworked for use on the web, and contains more weights, styles, and other improvements. Avenir Next improves on Avenir in web-specific settings.</p>\\n<p>Applies the the header face, along with a set of smart weight interactions and typographic defaults, to an element.</p>\\n<h3 id=\\\"avenir-next\\\">Avenir Next</h3>\\n<h2 class=\\\"type-sample\\\"> Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</h2>\\n<h2 class=\\\"type-sample\\\"> Amazingly few discotheques provide jukeboxes.</h2>\\n\\n<p><h1>Amazingly few discotheques provide jukeboxes.</h1></p>\\n<p><h2>Amazingly few discotheques provide jukeboxes.</h2></p>\\n<p><h3>Amazingly few discotheques provide jukeboxes.</h3></p>\\n<p><h4>Amazingly few discotheques provide jukeboxes.</h4></p>\\n<p><h5>Amazingly few discotheques provide jukeboxes.</h5></p>\\n<h6>Amazingly few discotheques provide jukeboxes.</h6>\\n\\n\"",
+      "modifiers": [
+        "avenir-light",
+        "avenir-light-italic",
+        "avenir-regular",
+        "avenir-italic",
+        "avenir-demi",
+        "avenir-demi-italic",
+        "avenir-bold-italic"
+      ],
+      "sample_code": "\"<h1 class=\\\"{{modifier}}\\\">Amazingly few discotheques provide jukeboxes.</h1>\""
+    },
+    {
+      "_id": "d8652d8a-f86e-4aae-be91-a0e496ca96fc",
+      "name": "Frutiger",
+      "slug": "frutiger",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Frutiger",
+        "Typefaces",
+        "Type",
+        "type"
+      ],
+      "sort_order": 2,
+      "group": "Typefaces",
+      "LastModified": 1448921979892,
+      "description": "\"<p>While there is no official Esri brand typeface for long form applications, Calcite Web employs <a href=\\\"http://www.fonts.com/font/linotype/frutiger?QueryFontType=Web\\\">Frutiger</a> for this purpose. Frutiger evokes some of the stronger qualities of system default typefaces - Lucida Grande and Segoe UI - while presenting a consistent voice across platforms. Frutiger pairs remarkably well with Avenir, as they are both designed by Adrian Frutiger, with strong influences from Univers.</p>\\n<h3 id=\\\"frutiger\\\">Frutiger</h3>\\n<p class=\\\"type-sample\\\"> Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>\\n<p class=\\\"type-sample\\\"> Amazingly few discotheques provide jukeboxes.</p>\\n\"",
+      "modifiers": [
+        "content-face",
+        "content-italic",
+        "content-bold"
+      ],
+      "sample_code": "\"<p class=\\\"{{modifier}}\\\">Amazingly few discotheques provide jukeboxes.</p>\\n\""
+    },
+    {
+      "_id": "5c57b63b-f9af-450a-8f0c-b877ef2ee8bf",
+      "name": "Kepler",
+      "slug": "kepler",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Kepler",
+        "Typefaces",
+        "Type",
+        "type"
+      ],
+      "sort_order": 3,
+      "group": "Typefaces",
+      "LastModified": 1448921979892,
+      "description": "\"<p><a href=\\\"http://www.fonts.com/font/adobe/kepler\\\">Kepler</a>, designer by  Robert Slimbach, is used to add graphic interest to a page. For example, Kepler could be used for a large, stylized pull-quote on a marketing landing page. Kepler is the official secondary face of the Esri brand, and offers good counterpoint to both Avenir and Frutiger.</p>\\n<h3 id=\\\"kepler\\\">Kepler</h3>\\n<h2 class=\\\"secondary-face type-sample\\\"> Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</h2>\\n<h2 class=\\\"secondary-face  type-sample\\\"> Amazingly few discotheques provide jukeboxes.</h2>\\n\"",
+      "modifiers": [
+        "secondary-face",
+        "secondary-italic",
+        "secondary-bold",
+        "secondary-bold-italic"
+      ],
+      "sample_code": "\"<h1 class=\\\"{{modifier}}\\\">Amazingly few discotheques provide jukeboxes.</h1>\""
+    },
+    {
+      "_id": "0e6fb89b-ec62-49c1-a076-61d15693c4c8",
+      "name": "Code Face",
+      "slug": "code-face",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Code Face",
+        "Typefaces",
+        "Type",
+        "type"
+      ],
+      "sort_order": 4,
+      "group": "Typefaces",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Designed by Microsoft&#39;s Lucas DeGroot, <a href=\\\"http://www.fonts.com/font/microsoft-corporation/consolas\\\">Consolas</a> is a clean, readable, and simple monospace face for documenting code blocks.</p>\\n<h3 id=\\\"consolas\\\">Consolas</h3>\\n<h2 class=\\\"code-face type-sample\\\"> Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</h2>\\n<h2 class=\\\"code-face  type-sample\\\"> Amazingly few discotheques provide jukeboxes.</h2>\\n\"",
+      "modifiers": [
+        "code-face"
+      ],
+      "sample_code": "\"<h1 class=\\\"{{modifier}}\\\">Amazingly few discotheques provide jukeboxes.</h1>\""
+    },
+    {
+      "_id": "76ae62a6-f8cb-4e60-92de-5c1d7013a985",
+      "name": "Overview",
+      "slug": "composition-helpers",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Overview",
+        "Composition Helpers",
+        "Type",
+        "type"
+      ],
+      "sort_order": 100,
+      "group": "Composition Helpers",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Calcite Web provides a set of html class helpers for basic type composition. The goal of these helpers is to provide a set of tools that allows for typographic treatments that differ from the default style set without writing additional css.</p>\\n\""
+    },
+    {
+      "_id": "fca01d0c-a767-45e7-b7c1-c76df4dbf235",
+      "name": "Text modifiers",
+      "slug": "text-modifiers",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Text modifiers",
+        "Composition Helpers",
+        "Type",
+        "type"
+      ],
+      "sort_order": 101,
+      "group": "Composition Helpers",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Build in classes that allow for quick customization and composition for a wide range of use cases.</p>\\n\"",
+      "modifiers": [
+        "text-light",
+        "text-ellipsis",
+        "text-rule",
+        "text-inline",
+        "text-center",
+        "text-left",
+        "text-right"
+      ],
+      "sample_code": "\"<p class=\\\"{{modifier}}\\\">Amazingly few discotheques provide jukeboxes.</p>\""
+    },
+    {
+      "_id": "fde2dc9e9-806b-4750-9e2c-0b51b2b35497",
+      "name": "Sizes",
+      "slug": "text-size",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Sizes",
+        "Composition Helpers",
+        "Type",
+        "type"
+      ],
+      "sort_order": 102,
+      "group": "Composition Helpers",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Helpers classes apply the <code>font-size($n)</code> <a href=\\\"/sass/#font-size\\\">mixin</a> to an element. This allows for quick resizing of text elements up and down the <a href=\\\"/sass/#modular-scale\\\">modular type size scale</a>.</p>\\n\"",
+      "modifiers": [
+        "font-size--3",
+        "font-size--2",
+        "font-size--1",
+        "font-size-0",
+        "font-size-1",
+        "font-size-2",
+        "font-size-3",
+        "font-size-4",
+        "font-size-5",
+        "font-size-6",
+        "font-size-7",
+        "font-size-8"
+      ],
+      "sample_code": "\"<p class=\\\"{{modifier}}\\\">Grumpy wizards make toxic brew for the evil Queen and Jack.</p>\""
+    },
+    {
+      "_id": "f2002b89-6a32-40de-aee8-dac683459c18",
+      "name": "Color",
+      "slug": "text-color",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Color",
+        "Composition Helpers",
+        "Type",
+        "type"
+      ],
+      "sort_order": 103,
+      "group": "Composition Helpers",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Sets the font color of the element to any of the <a href=\\\"../color\\\">Calcite colors</a> available.</p>\\n\"",
+      "modifiers": [
+        "text-red",
+        "text-green",
+        "text-blue",
+        "text-purple",
+        "text-orange",
+        "text-brown",
+        "text-white",
+        "text-light-gray",
+        "text-gray",
+        "text-dark-gray",
+        "text-darker-gray",
+        "text-darkest-gray",
+        "text-off-black"
+      ],
+      "sample_code": "\"<h1 class=\\\"{{modifier}}\\\">Amazingly few discotheques provide jukeboxes.</h1>\""
+    },
+    {
+      "_id": "491ab42e-ce0a-4f62-a174-932a96d3374e",
+      "name": "Link Color",
+      "slug": "link-color",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Link Color",
+        "Composition Helpers",
+        "Type",
+        "type"
+      ],
+      "sort_order": 104,
+      "group": "Composition Helpers",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Sets the color of links within the element, or the link itself, to available <a href=\\\"../color\\\">Calcite colors.</a></p>\\n\"",
+      "modifiers": [
+        "link-red",
+        "link-green",
+        "link-blue",
+        "link-light-blue",
+        "link-purple",
+        "link-orange",
+        "link-brown",
+        "link-white",
+        "link-light-gray",
+        "link-gray",
+        "link-dark-gray",
+        "link-darker-gray",
+        "link-darkest-gray",
+        "link-off-black"
+      ],
+      "sample_code": "\"<p>Amazingly few <a href=\\\"#\\\" class=\\\"{{modifier}}\\\">discotheques</a> provide <a href=\\\"#\\\" class=\\\"{{modifier}}\\\">jukeboxes.</a> </p>\""
+    },
+    {
+      "_id": "73691692-9d3c-4642-8802-a8bf11405d28",
+      "name": "Fade In",
+      "slug": "fade-in",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Fade In",
+        "Composition Helpers",
+        "Type",
+        "type"
+      ],
+      "sort_order": 105,
+      "group": "Composition Helpers",
+      "LastModified": 1448921979892,
+      "description": "\"<p>On page load, applies an animation which transitions from <code>opacity: 0</code> to <code>opacity: 1</code>. Several compelling page load effects can be achieved with this class in conjunction with <code>transition-delay</code>.</p>\\n\""
+    },
+    {
+      "_id": "c6aa58c9-3654-4e58-9eca-2eeb6765ac87",
+      "name": "Numbered List",
+      "slug": "list-numbered",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Numbered List",
+        "Composition Helpers",
+        "Type",
+        "type"
+      ],
+      "sort_order": 106,
+      "group": "Composition Helpers",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Adds the Calcite styles for large numbered lists to an ordered list. Useful for listing steps in a process.</p>\\n\"",
+      "modifiers": [
+        "list-numbered"
+      ],
+      "sample_code": "\"<ol class=\\\"{{modifier}}\\\">\\n  <li>Amazing</li>\\n  <li>discotheques</li>\\n  <li>\\n    <p>jukeboxes</p>\\n    <ol class=\\\"{{modifier}}\\\">\\n      <li>Amazing</li>\\n      <li>discotheques</li>\\n      <li>jukeboxes</li>\\n    </ol>\\n  </li>\\n</ol>\""
+    },
+    {
+      "_id": "a8619680-28c8-4b00-ba72-6870435c292e",
+      "name": "Plain List",
+      "slug": "list-plain",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Plain List",
+        "Composition Helpers",
+        "Type",
+        "type"
+      ],
+      "sort_order": 107,
+      "group": "Composition Helpers",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Provides a way to clear the styles for lists. For example, we use this pattern in the footer to clear the typical list styles for a clean, left aligned appearance.</p>\\n\"",
+      "modifiers": [
+        "list-plain"
+      ],
+      "sample_code": "\"<ul class=\\\"{{modifier}}\\\">\\n  <li>Amazing</li>\\n  <li>discotheques</li>\\n  <li>\\n    <p>jukeboxes</p>\\n    <ul class=\\\"{{modifier}}\\\">\\n      <li>Amazing</li>\\n      <li>discotheques</li>\\n      <li>jukeboxes</li>\\n    </ul>\\n  </li>\\n</ul>\""
+    },
+    {
+      "_id": "c77ab0ff-109f-4324-bdb5-19b2649dcea4",
+      "name": "Overview",
+      "slug": "type-defaults",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Overview",
+        "Defaults",
+        "Type",
+        "type"
+      ],
+      "sort_order": 200,
+      "group": "Defaults",
+      "LastModified": 1448921979892,
+      "description": "\"<p>All default text elements are styled to facilitate smooth reading, simple flow, and appropriate proportions. This is a default paragraph. This is a default <a href=\\\"#\\\">link</a>. Below is a sample of default type elements.</p>\\n<h1 id=\\\"header-one\\\">Header One</h1>\\n<h2 id=\\\"header-two\\\">Header Two</h2>\\n<h3 id=\\\"header-three\\\">Header Three</h3>\\n<h4 id=\\\"header-four\\\">Header Four</h4>\\n<h5 id=\\\"header-five\\\">Header Five</h5>\\n<h6 id=\\\"header-six\\\">Header Six</h6>\\n<ol>\\n<li>List One that is really long and will break to the next line, demonstrating that the left edges of the text are aligned.</li>\\n<li>List Two</li>\\n<li><p>List Three</p>\\n</li>\\n<li><p>List Item that is really long and will break to the next line, demonstrating that the left edges of the text are aligned.</p>\\n<ul>\\n<li>sub list item</li>\\n<li>sub list item</li>\\n</ul>\\n</li>\\n<li>List Item</li>\\n<li>List Item</li>\\n</ol>\\n<blockquote>\\n<p>Lorem Ipsum Blockquote</p>\\n</blockquote>\\n<p>Lorem ipsum paragraph with <strong>strong, bold text</strong> and <em>emphasis, italic text.</em></p>\\n<dl>\\n    <dt>Guildenstern</dt>\\n    <dd>I don&#39;t believe in it anyway.</dd>\\n    <dt>Rosencrantz</dt>\\n    <dd>What?</dd>\\n    <dt>Guildenstern</dt>\\n    <dd>England.</dd>\\n    <dt>Rosencrantz</dt>\\n    <dd>Just a conspiracy of cartographers, then?</dd>\\n</dl>\\n\""
+    },
+    {
+      "_id": "3289a3b7-40c1-4f8a-a091-24f85e8ac50e",
+      "name": "Overview",
+      "slug": "overview",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Overview",
+        "Grid",
+        "Grid",
+        "grid"
+      ],
+      "sort_order": 0,
+      "group": "Grid",
+      "LastModified": 1448921979892,
+      "description": "\"<p>The Calcite Grid System includes a full, responsive, and configurable grid with columns, a container, and a &#39;Block Group&#39; grid. The main grid is different from standard css grid systems in two key ways:</p>\\n<ol>\\n<li>Column widths are defined by the viewport size rather than percentage of their containers.</li>\\n<li>Built-in smart defaults for responsive sizing puts less columns across the screen at smaller sizes, rather than smaller columns.</li>\\n</ol>\\n<p>These two principles mean that a column becomes a standard unit of measurement, creating a constant and abstracted grid system that stands behind the content of a page rather than within it.</p>\\n<p>On very large screens like the apple cinema display, an extra large 36 column grid can be optionally used. This grid has no max width, and is useful for full screen web applications.</p>\\n<h3 id=\\\"the-grid\\\">The Grid</h3>\\n<table>\\n<thead>\\n<tr>\\n<th>Max Width</th>\\n<th>Breakpoint</th>\\n<th>No. Columns</th>\\n</tr>\\n</thead>\\n<tbody>\\n<tr>\\n<td>n/a</td>\\n<td>Cinema Display</td>\\n<td>36</td>\\n</tr>\\n<tr>\\n<td>1450px</td>\\n<td>Desktop</td>\\n<td>24</td>\\n</tr>\\n<tr>\\n<td>860px</td>\\n<td>Tablet</td>\\n<td>12</td>\\n</tr>\\n<tr>\\n<td>480px</td>\\n<td>Phone</td>\\n<td>6</td>\\n</tr>\\n</tbody>\\n</table>\\n\""
+    },
+    {
+      "_id": "e250b7ce-88d4-49c4-921f-0250963f246b",
+      "name": "Configuration",
+      "slug": "configuration",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Configuration",
+        "Grid",
+        "Grid",
+        "grid"
+      ],
+      "sort_order": 1,
+      "group": "Grid",
+      "LastModified": 1448921979892,
+      "description": "\"<p>If you are using Calcite Web as a Sass library, you can customize the grid with Sass variables. Below are the different settings you have access to and their default values:</p>\\n<table>\\n<thead>\\n<tr>\\n<th>Variable</th>\\n<th>Default</th>\\n<th>Description</th>\\n</tr>\\n</thead>\\n<tbody>\\n<tr>\\n<td><code>$small</code></td>\\n<td>480px</td>\\n<td>Smallest (phone) breakpoint size in pixels</td>\\n</tr>\\n<tr>\\n<td><code>$medium</code></td>\\n<td>860px</td>\\n<td>Medium (tablet) breakpoint size in pixels</td>\\n</tr>\\n<tr>\\n<td><code>$large</code></td>\\n<td>1450px</td>\\n<td>Default (desktop) breakpoint size in pixels</td>\\n</tr>\\n<tr>\\n<td><code>$vw-ratio</code></td>\\n<td>0.95</td>\\n<td>Amount of screen used by grid (0 - 1)</td>\\n</tr>\\n<tr>\\n<td><code>$column-gutter</code></td>\\n<td>1rem</td>\\n<td>Space between columns</td>\\n</tr>\\n<tr>\\n<td><code>$ie8-support</code></td>\\n<td>false</td>\\n<td>Whether you&#39;d like to support Internet Explorer 8</td>\\n</tr>\\n<tr>\\n<td><code>$container-width</code></td>\\n<td>95vw</td>\\n<td>Fluid container size</td>\\n</tr>\\n<tr>\\n<td><code>$column-gutter-fallback</code></td>\\n<td>20px</td>\\n<td>Fallback for space between columns for IE8</td>\\n</tr>\\n<tr>\\n<td><code>$container-width-fallback</code></td>\\n<td>960px</td>\\n<td>Fixed container size</td>\\n</tr>\\n<tr>\\n<td><code>$large-class</code></td>\\n<td>large</td>\\n<td>Prefix word desktop size columns</td>\\n</tr>\\n<tr>\\n<td><code>$large-column-count</code></td>\\n<td>36</td>\\n<td>How many columns to use past the desktop breakpoint</td>\\n</tr>\\n<tr>\\n<td><code>$default-column-count</code></td>\\n<td>24</td>\\n<td>How many columns to use on the desktop breakpoint</td>\\n</tr>\\n<tr>\\n<td><code>$medium-class</code></td>\\n<td>tablet</td>\\n<td>Prefix word for tablet breakpoint</td>\\n</tr>\\n<tr>\\n<td><code>$medium-column-count</code></td>\\n<td>12</td>\\n<td>How many columns to use on tablet breakpoint</td>\\n</tr>\\n<tr>\\n<td><code>$small-class</code></td>\\n<td>phone</td>\\n<td>Prefix word for phone breakpoint</td>\\n</tr>\\n<tr>\\n<td><code>$small-column-count</code></td>\\n<td>6</td>\\n<td>How many columns to use for phone breakpoint</td>\\n</tr>\\n<tr>\\n<td><code>$vertical-range</code></td>\\n<td>6</td>\\n<td>How many leader and trailer classes to generate</td>\\n</tr>\\n</tbody>\\n</table>\\n<p>You can override these values to create a custom, project-specific grid in your own project. For example, to use a 16 column grid instead of the default 24 columns, you would set the <code>$default-column-count</code> variable before importing the library:</p>\\n<pre><code>$default-column-count: 16;\\n@import calcite-web;\\n</code></pre>\""
+    },
+    {
+      "_id": "4f3afff4-4307-49d9-89f5-d72e74428f74",
+      "name": "Container",
+      "slug": "container",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Container",
+        "Grid",
+        "Grid",
+        "grid"
+      ],
+      "sort_order": 2,
+      "group": "Grid",
+      "LastModified": 1448921979892,
+      "description": "\"<p>The <code>.grid-container</code> class is required to contain the grid. Using the  <a href=\\\"#columns\\\">column</a> classes without them being nested in a containing <code>div</code> will cause unexpected results.</p>\\n<p>The container class applies a max width to the content it contains and handles the column relationship with the viewport window, preventing collisions with scroll bars or other exciting bugs.</p>\\n<pre><code class=\\\"lang-html\\\">&lt;div class=&quot;grid-container&quot;&gt;\\n    &lt;div class=&quot;column-24&quot;&gt;\\n        &lt;blockquote&gt;Contain the Columns&lt;/blockquote&gt;\\n    &lt;/div&gt;\\n&lt;/div&gt;\\n</code></pre>\\n\""
+    },
+    {
+      "_id": "59bb117c-3d4a-4118-be8f-ce4f6c82f6c1",
+      "name": "Columns",
+      "slug": "columns",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Columns",
+        "Grid",
+        "Grid",
+        "grid"
+      ],
+      "sort_order": 3,
+      "group": "Grid",
+      "LastModified": 1448921979892,
+      "description": "\"<p>A column is a constant unit of measurement. The width of a column is dynamic, but always between a fixed range. Columns will never get too large or too small. As the viewport gets smaller the Calcite Grid System will simply put less columns on the page.</p>\\n<p>By default, large screens hold 24 columns, medium tablet-sized screens hold 12, and phone-sized screens hold 6. The grid will fold columns at these breakpoints. That means an element that is 3 columns wide will always be 3 columns wide, no matter how big or small the screen.</p>\\n<p>On large screens, 3 columns out of 24 is proportionally a small piece of screen real estate. On Phones, the Grid will leave the element at 3 columns wide -- proportionally more real estate, as 3/6 columns is more significant than 3/24.</p>\\n<p><a href=\\\"../page-layouts/grid#columns\\\">View the example</a></p>\\n\""
+    },
+    {
+      "_id": "2b507129-e407-4e1d-b391-4f34f004c7b2",
+      "name": "Responsive Columns",
+      "slug": "responsive-columns",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Responsive Columns",
+        "Grid",
+        "Grid",
+        "grid"
+      ],
+      "sort_order": 4,
+      "group": "Grid",
+      "LastModified": 1448921979892,
+      "description": "\"<p>The width of elements can be explicitly defined for breakpoints where columns would normally fold by default. This can be done with the <code>phone-column-n</code> and <code>tablet-column-n</code> classes. For example, <code>.column-12</code> would default to the full 12/12 column width at a tablet size. Adding to the same element <code>.tablet-column-6</code> would prevent the default behavior, and at a tablet viewport, the element would be 6/12 columns.</p>\\n<p><a href=\\\"../page-layouts/grid#responsive-columns\\\">View the example</a></p>\\n\""
+    },
+    {
+      "_id": "213d4570-e92a-4cb0-ac03-f0b756e28cd0",
+      "name": "Nested Columns",
+      "slug": "nested-columns",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Nested Columns",
+        "Grid",
+        "Grid",
+        "grid"
+      ],
+      "sort_order": 5,
+      "group": "Grid",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Contrary to other flexible-width grid systems, Calcite Grid columns do not change behavior when nested. Because a column is a constant measurement relative to the size of the viewport, nested columns still span the same width as their non-nested counterparts. An element with <code>.column-6</code> nested within an element with <code>.column-12</code> is the same size as an un-nested <code>.column-6</code>. Further, clearing of the column-gutter is automatically done for you with <code>:first-child</code> and <code>:last-child</code> psuedo-selectors on all column classes.</p>\\n<p>Column-folding behavior is almost entirely automatic. The only exception is gutter clearing behaviors on deeply nested items after column folding occurs - in some situations we can not know what columns are now first or last in their rows. This will cause the column to be inset from the edge of the container. The example below solves this by introducing <code>first-column</code> classes, along with <code>tablet-first-column</code> and <code>phone-first-column</code>.</p>\\n<p>There are four levels of nesting in this example, the more transparent the blue, the deeper the column is nested.</p>\\n<p><a href=\\\"../page-layouts/grid#nested-columns\\\">View the example</a></p>\\n\""
+    },
+    {
+      "_id": "b85a062f-c886-484a-99f9-10c8a7abb35d",
+      "name": "Rows",
+      "slug": "rows",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Rows",
+        "Grid",
+        "Grid",
+        "grid"
+      ],
+      "sort_order": 6,
+      "group": "Grid",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Because columns can now be nested without changing their behavior, we don&#39;t need rows, really. However, you still may find that a tall, narrow column with a short wide neighbor can cause float issues with subsequent columns.</p>\\n<p>With this grid you can wrap the first two columns in a 24 column grid, which will act in the same manner as a row.</p>\\n<p><a href=\\\"../page-layouts/grid#rows\\\">View the example</a></p>\\n\""
+    },
+    {
+      "_id": "0a02534e-1f3d-4366-8431-d8d5b0bd159f",
+      "name": "Block Groups",
+      "slug": "block-groups",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Block Groups",
+        "Grid",
+        "Grid",
+        "grid"
+      ],
+      "sort_order": 7,
+      "group": "Grid",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Block groups are designed for quickly creating gridded content, such as a tile pattern or image gallery. Block groups are percentage based, so they can subdivide columns. Block groups have the ability to break the regular grid system, and thus should be used sparingly and with thought.</p>\\n<p><a href=\\\"../page-layouts/grid#block-groups\\\">View the example</a></p>\\n\""
+    },
+    {
+      "_id": "fde4e890-c67e-485f-b194-69673542d237",
+      "name": "Responsive Block Groups",
+      "slug": "responsive-block-groups",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Responsive Block Groups",
+        "Grid",
+        "Grid",
+        "grid"
+      ],
+      "sort_order": 8,
+      "group": "Grid",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Block groups have responsive <code>tablet-</code> and <code>phone-</code> prefix classes. These allow the flow of content across repeating rows of content to be easily tweaked across viewport widths in scenarios where the default <a href=\\\"#columns\\\">column resizing</a> or <a href=\\\"#responsive-columns\\\">responsive column classes</a> would be too verbose or cumbersome.</p>\\n<pre><code class=\\\"lang-html\\\">&lt;div class=&quot;block-group block-group-4-up tablet-block-group-2-up phone-block-group-1-up&quot;&gt;\\n</code></pre>\\n<p><a href=\\\"../page-layouts/grid#responsive-block-groups\\\">View the example</a></p>\\n\""
+    },
+    {
+      "_id": "ec9ea889-2a0f-4fab-9213-e60938485e25",
+      "name": "Overview",
+      "slug": "helpers-overview",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Overview",
+        "Grid Helpers",
+        "Grid",
+        "grid"
+      ],
+      "sort_order": 100,
+      "group": "Grid Helpers",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Calcite Web includes a large set of helper classes to quickly layout a page. In addition to classes directly related to the grid like <code>column-X</code>, <code>pre-X</code> and <code>post-X</code> there are also classes which help space things vertically (<code>leader-X</code>, <code>trailer-X</code>, <code>padding-leader-X</code>, <code>padding-trailer-X</code>) and horizontally (<code>gutter-left-X</code>, <code>gutter-right-X</code>).</p>\\n<p>Certain other CSS properties that are commonly needed are available as well such as <code>show</code>, <code>hide</code>, <code>left</code>, <code>right</code>, and sticky classes.</p>\\n<p>Almost all of the helper classes are available with responsive prefixes as well. For example, <code>phone-leader-1</code> will set one line of space above the element on the mobile size only.</p>\\n\""
+    },
+    {
+      "_id": "a33b3232-7401-4bcd-8b6f-82e8d797ae2a",
+      "name": "Pre & Post",
+      "slug": "pre-and-post",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Pre & Post",
+        "Grid Helpers",
+        "Grid",
+        "grid"
+      ],
+      "sort_order": 101,
+      "group": "Grid Helpers",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Pre and Post classes are used to move your columns laterally across the grid by defining how many columns they should be from their neighbors on either side.</p>\\n<p>Pre and Post classes do not responsively fold. This prevents a <code>pre-5</code> from pushing content off the edge of the screen on phone sizes. Responsive <code>tablet-</code> and <code>phone-</code> classes are exposed for defining pre and post behavior on breakpoints.</p>\\n<p>Pre and post helpers are available from <code>.pre-1</code> and <code>.post-1</code> to <code>.pre-24</code> and <code>.post-24</code>.</p>\\n<p><a href=\\\"../page-layouts/grid#pre-and-post\\\">View the example</a></p>\\n\""
+    },
+    {
+      "_id": "9579cd13-2f03-4457-98a6-661085e1fdf7",
+      "name": "Leader & Trailer",
+      "slug": "leader-and-trailer",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Leader & Trailer",
+        "Grid Helpers",
+        "Grid",
+        "grid"
+      ],
+      "sort_order": 102,
+      "group": "Grid Helpers",
+      "LastModified": 1448921979892,
+      "description": "\"<p>The leader and trailer classes are designed for quick vertical adjustments with markup. The standard <code>leader-n</code> and <code>trailer-n</code> classes add top and bottom margin to the element, as multiples of the <code>$baseline</code> variable, or 1.5rem.</p>\\n<p>The <code>padding-</code> prefix adds lines of padding instead of margin, and both classes can be used in conjunction.</p>\\n<p>Calcite Web provides a <code>$vertical-range</code> variable that sets the maximum value of <code>n</code> for the <code>leader-n</code> and <code>trailer-n</code> classes at 6.</p>\\n<p>Leader and trailer classes also have additional responsive <code>tablet-</code> and <code>phone-</code> prefix classes. These allow you to add different amounts of space above and below an element at different screen sizes.</p>\\n<p>For example, if you wanted an element to have 3 lines of margin above it on desktop, but that was too much on a phone, you could use responsive classes to specify that:</p>\\n<pre><code>&lt;div class=&quot;leader-3 phone-leader-1&quot;&gt;&lt;/div&gt;\\n</code></pre><p>These also apply to <code>padding-leader</code> and <code>padding-trailer</code></p>\\n\"",
+      "modifiers": [
+        "leader-0",
+        "leader-1",
+        "leader-2",
+        "leader-3",
+        "leader-4",
+        "leader-5",
+        "leader-6",
+        "trailer-0",
+        "trailer-1",
+        "trailer-2",
+        "trailer-3",
+        "trailer-4",
+        "trailer-5",
+        "trailer-6",
+        "padding-leader-0",
+        "padding-leader-1",
+        "padding-leader-2",
+        "padding-leader-3",
+        "padding-leader-4",
+        "padding-leader-5",
+        "padding-leader-6",
+        "padding-trailer-0",
+        "padding-trailer-1",
+        "padding-trailer-2",
+        "padding-trailer-3",
+        "padding-trailer-4",
+        "padding-trailer-5",
+        "padding-trailer-6"
+      ],
+      "sample_code": "\"<div class=\\\"{{modifier}} panel\\\">{{modifier}}</div>\""
+    },
+    {
+      "_id": "66fcd5d4-445d-44c8-aae9-7eb85e6d27c7",
+      "name": "Gutter",
+      "slug": "gutter",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Gutter",
+        "Grid Helpers",
+        "Grid",
+        "grid"
+      ],
+      "sort_order": 103,
+      "group": "Grid Helpers",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Adds padding the the left or right of an element. For example, <code>&lt;div class=&quot;gutter-left-3&quot;&gt;</code> will receive three units of padding on its left side.</p>\\n\"",
+      "modifiers": [
+        "gutter-left-0",
+        "gutter-right-0",
+        "gutter-left-quarter",
+        "gutter-right-quarter",
+        "gutter-left-third",
+        "gutter-right-third",
+        "gutter-left-half",
+        "gutter-right-half",
+        "gutter-left-1",
+        "gutter-right-1",
+        "gutter-left-2",
+        "gutter-right-2",
+        "gutter-left-3",
+        "gutter-right-3",
+        "gutter-left-4",
+        "gutter-right-4"
+      ],
+      "sample_code": "\"<div class=\\\"{{modifier}} panel\\\">{{modifier}}</div>\""
+    },
+    {
+      "_id": "655ca374-bd47-4fe4-9a4d-e3c259c57458",
+      "name": "First & Last",
+      "slug": "first-and-last",
+      "tags": [
+        "calcite-web",
+        "web",
+        "First & Last",
+        "Grid Helpers",
+        "Grid",
+        "grid"
+      ],
+      "sort_order": 104,
+      "group": "Grid Helpers",
+      "LastModified": 1448921979892,
+      "description": "\"<p>The <code>first</code> and <code>last</code> classes are used for\\naligning grid columns when the Grid System is unable to determine which columns are first or last in their rows. This will cause the column to be inset from the edge of the container. The example below solves this by introducing <code>first-column</code> and <code>last-column</code> classes, along with <code>tablet-first-column</code>, <code>phone-first-column</code>, <code>tablet-last-column</code>, and <code>phone-last-column</code>.</p>\\n\""
+    },
+    {
+      "_id": "6eff5153-abea-42e1-9cb2-000b1409e638",
+      "name": "Show & Hide",
+      "slug": "show-and-hide",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Show & Hide",
+        "Grid Helpers",
+        "Grid",
+        "grid"
+      ],
+      "sort_order": 105,
+      "group": "Grid Helpers",
+      "LastModified": 1448921979892,
+      "description": "\"<p>These convenience classes are meant to help with quick responsive layout. Below are the classes and what breakpoints they are visible on:</p>\\n<table>\\n<thead>\\n<tr>\\n<th>Helper Class</th>\\n<th>Visible on Phone</th>\\n<th>Visible on Tablet</th>\\n<th>Visible on Desktop</th>\\n</tr>\\n</thead>\\n<tbody>\\n<tr>\\n<td>phone-hide</td>\\n<td>no</td>\\n<td>yes</td>\\n<td>yes</td>\\n</tr>\\n<tr>\\n<td>tablet-hide</td>\\n<td>no</td>\\n<td>no</td>\\n<td>yes</td>\\n</tr>\\n<tr>\\n<td>phone-show</td>\\n<td>yes</td>\\n<td>no</td>\\n<td>no</td>\\n</tr>\\n<tr>\\n<td>tablet-show</td>\\n<td>yes</td>\\n<td>yes</td>\\n<td>no</td>\\n</tr>\\n<tr>\\n<td>tablet-only</td>\\n<td>no</td>\\n<td>yes</td>\\n<td>no</td>\\n</tr>\\n</tbody>\\n</table>\\n<h4 id=\\\"show-helpers\\\">Show Helpers</h4>\\n<p>Essentially, the show classes will show that breakpoint and the breakpoint below it. So if you&#39;d like something to be visible only on a phone, you would use <code>phone-show</code>. If you used <code>tablet-show</code>, the element would be visible on tablet and phone.</p>\\n<h4 id=\\\"hide-helpers\\\">Hide Helpers</h4>\\n<p>Hide helpers are very similar to show helpers. A responsive hide class will hide that breakpoint and the breakpoint below it. So if you wanted something to be visible on only desktop, you could use <code>tablet-hide</code>, hiding the element on tablet and phone. Or if you wanted something to be hidden only on a phone, <code>phone-hide</code> would hide it on the phone only.</p>\\n<h4 id=\\\"visual-hiding-helpers\\\">Visual Hiding Helpers</h4>\\n<p>Sometimes it is desireable for accessibility reasons to hide something visually but leave it accessable to screenreaders. You can use the <code>visually-hidden</code> class to achive this. If you want your hidden element to remain focusable my the keyboard add <code>visually-hidden-focusable</code> in addition to <code>visually-hidden</code>.</p>\\n\""
+    },
+    {
+      "_id": "48beff7a-ef70-4fb7-ac96-af8436dcb243",
+      "name": "Left & Right",
+      "slug": "left-and-right",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Left & Right",
+        "Grid Helpers",
+        "Grid",
+        "grid"
+      ],
+      "sort_order": 106,
+      "group": "Grid Helpers",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Use a class of <code>right</code> on html elements to float elements to the right. Use a class of <code>left</code> on html elements to float elements to the left.</p>\\n<p>Left and right classes also have additional responsive <code>tablet-</code> and <code>phone-</code> prefix classes. These allow you to float an element right on a large screen, but float it left when the screen is smaller.</p>\\n<p>For example, if you wanted an element to float right on desktop, but left on a phone, you could use responsive right and left classes to specify that:</p>\\n<pre><code>&lt;div class=&quot;right phone-left&quot;&gt;&lt;/div&gt;\\n</code></pre>\""
+    },
+    {
+      "_id": "52a300e2-4415-444c-9ffb-1326637e88dc",
+      "name": "Inline Block",
+      "slug": "inline-block",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Inline Block",
+        "Grid Helpers",
+        "Grid",
+        "grid"
+      ],
+      "sort_order": 107,
+      "group": "Grid Helpers",
+      "LastModified": 1448921979892,
+      "description": "\"<p>The modifier class <code>inline-block</code> will add <code>display: inline-block</code> to an element.</p>\\n\""
+    },
+    {
+      "_id": "1a74846a-39ee-437b-bce2-c4c2535e7276",
+      "name": "Overview",
+      "slug": "interactive-layout-helpers",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Overview",
+        "Interactive Layout Helpers",
+        "Grid",
+        "grid"
+      ],
+      "sort_order": 200,
+      "group": "Interactive Layout Helpers",
+      "LastModified": 1448921979892,
+      "description": "\"<p>JavaScript dependent helper classes that surface simple class-based hooks for common interactive layout patterns.</p>\\n\""
+    },
+    {
+      "_id": "10a12805-c75a-4b38-bea6-287759d8f868",
+      "name": "Scroll Show & Hide",
+      "slug": "scroll-show-and-hide",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Scroll Show & Hide",
+        "Interactive Layout Helpers",
+        "Grid",
+        "grid"
+      ],
+      "sort_order": 201,
+      "group": "Interactive Layout Helpers",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Some layouts call for elements to appear or disappear as the user scrolls down the page. An element with the <code>scroll-show</code> class will appear when it reaches a point specified by the <code>data-top=x</code> attribute, appearing when it comes within the given value of the top of the screen.</p>\\n\""
+    },
+    {
+      "_id": "35f1c06e-c344-4d83-8b68-8c0828d6ab37",
+      "name": "Scroll Sticky",
+      "slug": "scroll-sticky",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Scroll Sticky",
+        "Interactive Layout Helpers",
+        "Grid",
+        "grid"
+      ],
+      "sort_order": 202,
+      "group": "Interactive Layout Helpers",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Elements that become position fixed as they reach a certain position in the viewport are refered to as &#39;sticky&#39;. The <code>js-sticky</code> class takes an <code>data-top=x</code> attribute that defines the point from the top of the window the sticky element will stick.</p>\\n\""
+    },
+    {
+      "_id": "7234c859-df11-4fed-80ca-c4626fbe89bc",
+      "name": "Overview",
+      "slug": "overview",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Overview",
+        "Icon Sets",
+        "Icons",
+        "icons"
+      ],
+      "sort_order": 0,
+      "group": "Icon Sets",
+      "LastModified": 1448921979892,
+      "description": "\"<p>There are several sets of icons made available as part of Calcite Web. While they use two separate technologies (SVG vs. Icon Fonts) their API&#39;s are largely the same. To add an icon to a page, just add a class to an element, like this:</p>\\n<pre><code>&lt;span class=&quot;icon-ui-close&quot; aria-label=&quot;close icon&quot;&gt;&lt;/span&gt;\\n</code></pre><p>This will automatically add the icon to the page. In the icon font, the icon will be added as a <code>:before</code> pseudo element in the same color and size as the text you&#39;re currently using. If the icon class is a social icon or a multi-colored icon from the Calcite set it will be added as a background image to the element. Social icons and Calcite icons have a specific size and color which can&#39;t be modified.</p>\\n\""
+    },
+    {
+      "_id": "e89c9fe7-fb5b-4865-9f9c-3cc031eeff0b",
+      "name": "Social Icons",
+      "slug": "social-icons",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Social Icons",
+        "Icon Sets",
+        "Icons",
+        "icons"
+      ],
+      "sort_order": 1,
+      "group": "Icon Sets",
+      "LastModified": 1448921979892,
+      "description": "\"<p>A set of social icons are provided as part of calcite-web. Just use the <code>icon-social-X</code> class on an element. It is suggested you add an aria-label to help the visually impaired understand what the element with the icon represents as they won&#39;t be able to see the Facebook logo, for example:</p>\\n<pre><code class=\\\"lang-html\\\">&lt;span class=&quot;icon-social-facebook&quot; aria-label=&quot;Facebook&quot;&gt;&lt;/span&gt;\\n</code></pre>\\n<p>Below are the current social icons. More sizes are planned. For now only 30x30 pixel square icons are available.</p>\\n\"",
+      "icon_names": [
+        "contact",
+        "facebook",
+        "geonet",
+        "github",
+        "google-plus",
+        "instagram",
+        "linkedin",
+        "pinterest",
+        "rss",
+        "share",
+        "twitter",
+        "youtube"
+      ]
+    },
+    {
+      "_id": "498a8593-caea-4ea3-8d50-1b60f923ff5b",
+      "name": "Icon Font",
+      "slug": "icon-font",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Icon Font",
+        "Icon Sets",
+        "Icons",
+        "icons"
+      ],
+      "sort_order": 2,
+      "group": "Icon Sets",
+      "LastModified": 1448921979892,
+      "description": "\"<p>The monochromatic icon set is delivered as an icon font. By default, Calcite Web expects font files to be located at <code>../</code>. If your fonts are elsewhere, set the <code>$font-path</code> variable</p>\\n<p>Icon fonts have several advantages such as the ability to quickly change their color, and the fact that icon fonts size themselves to be proportional to the text you place them with.</p>\\n<p>Monochromatic icons are generally &#39;interface&#39; icons, and are named after the <em>action</em> you&#39;d like to illustrate, instead of the <em>noun</em> the icon represents. For example, the delete icon has a class of <code>icon-delete</code> (the action) and not <code>icon-trash</code> (the noun). The reason for this is that if we decide another icon describes the action or idea better than the current one, we can change it without breaking existing code.</p>\\n<p>Icons in the icon font will be scaled to the text size of whatever element you add the class to. Below are all of the icons available in the icon font.</p>\\n\"",
+      "icon_names": [
+        "close",
+        "drag-horizontal",
+        "drag-vertical",
+        "handle-horizontal",
+        "handle-vertical",
+        "check-mark",
+        "left-triangle-arrow",
+        "right-triangle-arrow",
+        "down-arrow",
+        "up-arrow",
+        "overview-arrow-bottom-left",
+        "overview-arrow-bottom-right",
+        "overview-arrow-top-left",
+        "overview-arrow-top-right",
+        "maximize",
+        "minimize",
+        "checkbox-unchecked",
+        "checkbox-checked",
+        "radio-unchecked",
+        "radio-checked",
+        "up-arrow-circled",
+        "down-arrow-circled",
+        "left-arrow-circled",
+        "right-arrow-circled",
+        "zoom-out-fixed",
+        "zoom-in-fixed",
+        "refresh",
+        "edit",
+        "authorize",
+        "map-pin",
+        "blank-map-pin",
+        "table",
+        "plus",
+        "minus",
+        "beginning",
+        "reverse",
+        "pause",
+        "play",
+        "forward",
+        "end",
+        "erase",
+        "up-down-arrows",
+        "left",
+        "right",
+        "announcement",
+        "notice-round",
+        "notice-triangle",
+        "home",
+        "locate",
+        "expand",
+        "collapse",
+        "layer-list",
+        "basemap",
+        "globe",
+        "applications",
+        "arrow-up-circled",
+        "arrow-down-circled",
+        "arrow-left-circled",
+        "arrow-right-circled",
+        "minus-circled",
+        "plus-circled",
+        "add-attachment",
+        "attachment",
+        "calendar",
+        "close-circled",
+        "browser",
+        "collection",
+        "comment",
+        "configure-popup",
+        "contact",
+        "dashboard",
+        "deny",
+        "description",
+        "directions",
+        "directions2",
+        "documentation",
+        "duplicate",
+        "review",
+        "environment-settings",
+        "error",
+        "error2",
+        "experimental",
+        "feature-layer",
+        "filter",
+        "grant",
+        "group",
+        "key",
+        "labels",
+        "tag",
+        "layers",
+        "left-arrow",
+        "right-arrow",
+        "link-external",
+        "link",
+        "loading-indicator",
+        "maps",
+        "marketplace",
+        "media",
+        "media2",
+        "menu",
+        "mobile",
+        "phone",
+        "navigation",
+        "pan",
+        "printer",
+        "pie-chart",
+        "chart",
+        "line-chart",
+        "question",
+        "resend-invitation",
+        "rotate",
+        "save",
+        "settings",
+        "settings2",
+        "share",
+        "sign-out",
+        "support",
+        "user",
+        "time-clock",
+        "trash",
+        "upload",
+        "download",
+        "zoom-in-magnifying-glass",
+        "search",
+        "zoom-out-magnifying-glass",
+        "locked",
+        "unlocked",
+        "favorites",
+        "compass",
+        "down",
+        "up",
+        "chat",
+        "dock-bottom",
+        "dock-left",
+        "dock-right",
+        "organization"
+      ]
+    },
+    {
+      "_id": "ae98e816-c3e2-418b-a147-73c2908dcb11",
+      "name": "Icon Font Colors",
+      "slug": "icon-font-colors",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Icon Font Colors",
+        "Icon Sets",
+        "Icons",
+        "icons"
+      ],
+      "sort_order": 3,
+      "group": "Icon Sets",
+      "LastModified": 1448921979892,
+      "description": "\"<p>A set of helper classes are available to simply change the color of an icon without affecting text within the same element.</p>\\n\""
+    },
+    {
+      "_id": "59e05d70-8952-43d4-bc1f-c121b08fe943",
+      "name": "Overview",
+      "slug": "overview",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Overview",
+        "Palette",
+        "Color",
+        "color"
+      ],
+      "sort_order": 0,
+      "group": "Palette",
+      "LastModified": 1448921979892,
+      "description": "\"<p>An extensive set of color variables are set up inside of config. Color names are generally semantic and simple, making them very easy to remember. Color variables are references like any other Sass variable:</p>\\n<pre><code class=\\\"lang-scss\\\">.element-to-style{\\n  color: $gray;\\n}\\n</code></pre>\\n\""
+    },
+    {
+      "_id": "0d5b6033-a27c-4d16-aca8-67aa78fe2d8c",
+      "name": "Grayscale",
+      "slug": "grayscale",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Grayscale",
+        "Palette",
+        "Color",
+        "color"
+      ],
+      "sort_order": 1,
+      "group": "Palette",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Calcite Web mostly deals with large-field layouts and a broader range of visual communication, including small interfaces and long format reading. With this in mind, Calcite Web&#39;s grayscale differs from that of Calcite Desktop.</p>\\n<p>Calcite web provides a short list of simple color variables, while supporting the complete set of official calcite colors.</p>\\n\"",
+      "color_names": [
+        "white",
+        "off-white",
+        "lightest-gray",
+        "lighter-gray",
+        "light-gray",
+        "gray",
+        "dark-gray",
+        "darker-gray",
+        "darkest-gray",
+        "off-black",
+        "black",
+        "transparent-black",
+        "transparent-off-black"
+      ]
+    },
+    {
+      "_id": "35333048-5b8b-427d-baf2-a069bfa995f4",
+      "name": "UI Colors",
+      "slug": "ui-colors",
+      "tags": [
+        "calcite-web",
+        "web",
+        "UI Colors",
+        "Palette",
+        "Color",
+        "color"
+      ],
+      "sort_order": 2,
+      "group": "Palette",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Calcite web exposes a set of Sass variables for the UI palette. Each color has three values: light, regular, and dark. The complete set of calcite colors is also supported.\\n.</p>\\n\"",
+      "color_names": [
+        "lightest-blue",
+        "lighter-blue",
+        "light-blue",
+        "blue",
+        "dark-blue",
+        "light-green",
+        "green",
+        "dark-green",
+        "light-red",
+        "red",
+        "dark-red",
+        "light-orange",
+        "orange",
+        "dark-orange",
+        "light-yellow",
+        "yellow",
+        "dark-yellow",
+        "light-purple",
+        "purple",
+        "dark-purple",
+        "light-brown",
+        "brown",
+        "dark-brown"
+      ]
+    },
+    {
+      "_id": "befed6dc-7581-40d9-a518-b1488213d55e",
+      "name": "Type Colors",
+      "slug": "type-colors",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Type Colors",
+        "Palette",
+        "Color",
+        "color"
+      ],
+      "sort_order": 3,
+      "group": "Palette",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Three basic colors are set for color in typography. It&#39;s not recommended to change these values, but they are provided for your reference.</p>\\n<pre><code class=\\\"lang-scss\\\">$type-color: $off-black;\\n$link-color: $blue;\\n$link-hover: $light-blue;\\n</code></pre>\\n<p>In writing Sass it&#39;s often easier to remember <code>$type-color</code> is the color of type than it is to remember the specific grayscale value that is the default for type.</p>\\n\""
+    },
+    {
+      "_id": "f3abfe1e-d55b-4fc0-9bbf-4a0f759d44de",
+      "name": "Overview",
+      "slug": "overview",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Overview",
+        "Components",
+        "Components",
+        "components"
+      ],
+      "sort_order": 0,
+      "group": "Components",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Components are reusable blocks that can be used across any part of a Calcite site. They can be used within <a href=\\\"../patterns/\\\">patterns</a> or on their own.</p>\\n\""
+    },
+    {
+      "_id": "c69d9df6-f58c-4d5b-9b72-688e9c67ca64",
+      "name": "Buttons",
+      "slug": "buttons",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Buttons",
+        "Components",
+        "Components",
+        "components"
+      ],
+      "sort_order": 1,
+      "group": "Components",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Buttons are created by adding a class of <code>btn</code> to either a <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> element. <code>btn-{color}</code> classes can be mixed with <code>btn-{style}</code> classes.</p>\\n<pre><code class=\\\"lang-html\\\">&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt; Button &lt;/a&gt;\\n&lt;button class=&quot;btn&quot;&gt;  Button &lt;/button&gt;\\n&lt;button class=&quot;btn btn-red btn-arrow&quot;&gt;  Red Button with Arrow &lt;/button&gt;\\n</code></pre>\\n\"",
+      "modifiers": [
+        "btn-arrow",
+        "btn-transparent",
+        "btn-clear",
+        "btn-clear-white",
+        "btn-small",
+        "btn-large",
+        "btn-fill",
+        "btn-disabled",
+        "btn-clear-disabled",
+        "btn-white",
+        "btn-red",
+        "btn-green"
+      ],
+      "sample_code": "\"<button class=\\\"btn {{modifier}}\\\"> btn {{modifier}} </button>\""
+    },
+    {
+      "_id": "d6b176ee-cc95-45f8-8db9-a3f557bac4d9",
+      "name": "Button Groups",
+      "slug": "button-groups",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Button Groups",
+        "Components",
+        "Components",
+        "components"
+      ],
+      "sort_order": 2,
+      "group": "Components",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Button groups are ... groups of buttons. The button group allows for sets of buttons to be directly adjacent to each other without borders or margins interfering.</p>\\n\""
+    },
+    {
+      "_id": "ef9ba17e-b369-4ef2-97c8-ec1a1a31f9b7",
+      "name": "Labels",
+      "slug": "label",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Labels",
+        "Components",
+        "Components",
+        "components"
+      ],
+      "sort_order": 3,
+      "group": "Components",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Labels are a way to call attention to a word. The <code>mark</code> element, a notification count, or an important indicator (like marking a technology as &#39;beta&#39; or &#39;private&#39;) are all use cases for labels.</p>\\n<p>Labels should be limited to one or two words and should only be used in situations where the content in the label is quite important. Labels are sized in <code>em</code> units, so they will scale up with whatever element they are inside.</p>\\n\"",
+      "modifiers": [
+        "label-blue",
+        "label-green",
+        "label-yellow",
+        "label-red"
+      ],
+      "sample_code": "\"<mark class=\\\"label {{modifier}}\\\">beta</mark>\""
+    },
+    {
+      "_id": "a421b2da-fab0-4ac8-94aa-671dcfd3f2de",
+      "name": "Badges",
+      "slug": "badges",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Badges",
+        "Components",
+        "Components",
+        "components"
+      ],
+      "sort_order": 4,
+      "group": "Components",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Badges are inline components that combine a link, a panel, and perhaps an action.</p>\\n\"",
+      "modifiers": [
+        "badge-blue",
+        "badge-round"
+      ],
+      "sample_code": "\"<div class=\\\"badge {{modifier}}\\\">\\n  <span class=\\\"badge-action icon-ui-layers\\\">Favorites</span>\\n  <span href=\\\"\\\" class=\\\"badge-count\\\">4</span>\\n</div>\\n\""
+    },
+    {
+      "_id": "2fabab1c-0017-42d1-b4f5-52421ae630ed",
+      "name": "Dropdowns",
+      "slug": "dropdowns",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Dropdowns",
+        "Components",
+        "Components",
+        "components"
+      ],
+      "sort_order": 5,
+      "group": "Components",
+      "LastModified": 1448921979892,
+      "description": "\"<blockquote>\\n<p>Dropdowns rely on the <code>calcite-web.js</code> JavaScript library for their functionality. See the <a href=\\\"../javascript/\\\">JavaScript Documentation</a> for more information.</p>\\n</blockquote>\\n<p>Dropdowns are good for showing multiple options under a single call to action. For example, if you had a download button, and you needed the user to choose a format for the download, you could put several choices in a dropdown.</p>\\n<p>Dropdowns differ from <code>select</code> elements in that they don&#39;t have a default state or a &#39;current&#39; state. Instead, they offer a jumping off point for a series of related actions.</p>\\n\"",
+      "modifiers": [
+        "dropdown-right"
+      ],
+      "sample_code": "\"<div class=\\\"dropdown js-dropdown\\\">\\n  <!-- extends side-nav -->\\n  <a href=\\\"#\\\" class=\\\"btn dropdown-btn js-dropdown-toggle\\\" tabindex=\\\"0\\\">Dropdown Select</a>\\n  <!-- extends side-nav -->\\n  <nav class=\\\"dropdown-menu {{modifier}}\\\">\\n    <!-- extends side-nav-link -->\\n    <span class=\\\"dropdown-title\\\">Some Options</span>\\n    <a href=\\\"#\\\" class=\\\"dropdown-link\\\">Option 1 that has a really long text.</a>\\n    <a href=\\\"#\\\" class=\\\"dropdown-link\\\">Option 2</a>\\n    <a href=\\\"#\\\" class=\\\"dropdown-link\\\">Option 3</a>\\n    <span class=\\\"dropdown-title\\\">More Options</span>\\n    <a href=\\\"#\\\" class=\\\"dropdown-link\\\">Option 4</a>\\n    <a href=\\\"#\\\" class=\\\"dropdown-link\\\">Option 5</a>\\n  </nav>\\n</div>\""
+    },
+    {
+      "_id": "136f44d9-7e03-4869-9a5d-6177a9831a5b",
+      "name": "Loader",
+      "slug": "loader",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Loader",
+        "Components",
+        "Components",
+        "components"
+      ],
+      "sort_order": 6,
+      "group": "Components",
+      "LastModified": 1448921979892,
+      "description": "\"<p>The loader element is a placeholder while content is being retreived or rendered. By default, the loader is set to <code>display: none;</code> and requires an <code>is-active</code> class to display.</p>\\n\""
+    },
+    {
+      "_id": "9a6b6e52-3860-4fbc-8917-fb02636c8ed9",
+      "name": "Alerts",
+      "slug": "alerts",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Alerts",
+        "Components",
+        "Components",
+        "components"
+      ],
+      "sort_order": 7,
+      "group": "Components",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Alerts are used to inform users of state changes, errors, or successful actions. Alerts are only visible if they have the <code>is-active</code> class. Without as <code>is-active</code> class, the alert will be set to <code>display: none;</code></p>\\n<p>Calcite does not manage alert classes be default - you will have to write your own JavaScript handlers for this.</p>\\n\"",
+      "modifiers": [
+        "alert-red",
+        "alert-yellow",
+        "alert-green"
+      ],
+      "sample_code": "\"<div class=\\\"alert {{modifier}} is-active\\\">\\n  Something Happened!\\n  <a href=\\\"#\\\" class=\\\"alert-close\\\">close</a>\\n</div>\""
+    },
+    {
+      "_id": "6c29e0a4-4e14-4c98-9edf-1d348ce6f553",
+      "name": "Panels",
+      "slug": "panels",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Panels",
+        "Components",
+        "Components",
+        "components"
+      ],
+      "sort_order": 8,
+      "group": "Components",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Panels are useful to draw attention or contain certain text on a page. They are simple containers, which can be used to help guide users through the visual hierarchy of your design. Adding borders and padding to any of the panels shown below allows for framing content as a call-out.</p>\\n\"",
+      "modifiers": [
+        "panel-no-border",
+        "panel-no-padding",
+        "panel-dark",
+        "panel-black",
+        "panel-white",
+        "panel-light-blue",
+        "panel-blue",
+        "panel-dark-blue"
+      ],
+      "sample_code": "\"<div class=\\\"panel {{modifier}}\\\">\\n  <h4>This is a panel.</h4>\\n  <p>Panels set <code>background-color</code> and frame content. Panels also <a href=\\\"\\\">style links</a> in a color that can be read on the panel background.</p>\\n</div>\""
+    },
+    {
+      "_id": "f6281457-56ae-4edd-bd23-149531e9a731",
+      "name": "Breadcrumbs",
+      "slug": "breadcrumbs",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Breadcrumbs",
+        "Components",
+        "Components",
+        "components"
+      ],
+      "sort_order": 9,
+      "group": "Components",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Breadcrumbs are a set of links or spans inside of a <code>&lt;nav&gt;</code> element. The <code>crumb</code> class will take care of spacing, alignment, and icons. Normal <a href=\\\"../type/#text-color\\\">text</a> and <a href=\\\"../type/#link-color\\\">link</a> helpers can be applied to breadcrumbs to allow for a range of contexts.</p>\\n\"",
+      "modifiers": [
+        "breadcrumbs-white"
+      ],
+      "sample_code": "\"<nav class=\\\"breadcrumbs {{modifier}}\\\">\\n  <a href=\\\"#\\\" class=\\\"crumb\\\">Thing</a>\\n  <span class=\\\"crumb\\\">Thing</span>\\n  <a href=\\\"#\\\" class=\\\"crumb\\\">Thing</a>\\n  <a href=\\\"#\\\" class=\\\"crumb\\\">Thing</a>\\n  <a href=\\\"#\\\" class=\\\"crumb is-active\\\">Current</a>\\n</nav>\""
+    },
+    {
+      "_id": "19e8dbb4-f877-40ec-9344-8655c4e261b6",
+      "name": "Tooltips",
+      "slug": "tooltips",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Tooltips",
+        "Components",
+        "Components",
+        "components"
+      ],
+      "sort_order": 10,
+      "group": "Components",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Tooltips use an <code>aria-label</code> attribute to provide contextual help on hover. Tooltips can apply to any element.</p>\\n\"",
+      "modifiers": [
+        "tooltip-left",
+        "tooltip-right",
+        "tooltip-top"
+      ],
+      "sample_code": "\"<p>\\n  Tooltips can be single line: <a class=\\\"tooltip {{modifier}}\\\" aria-label=\\\"This is the message of the tooltip\\\">single line tooltip</a>\\n</p>\\n<p>\\n  Tooltips can also have more than one line. Just use the <code>tooltip-multiline</code> class:\\n  <span class=\\\"tooltip tooltip-multiline {{modifier}}\\\" aria-label=\\\"This is a tooltip with a quite large message if I do say so myself. Probably too long for just one line.\\\"> multiline tooltip</span>\\n</p>\\n\""
+    },
+    {
+      "_id": "21d0b59b-bb08-4aac-a486-880891246ba2",
+      "name": "Tables",
+      "slug": "tables",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Tables",
+        "Components",
+        "Components",
+        "components"
+      ],
+      "sort_order": 11,
+      "group": "Components",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Tables have been styled by default. No extra classes are required, although there are some modifier classes available for specific flavors.</p>\\n<p>By default, a large table will break your layout horizontally. You can solve this problem by wrapping a table in a <code>&lt;div&gt;</code> with the <code>.overflow-auto</code> helper class:</p>\\n<pre><code>&lt;div class=&quot;overflow-auto&quot;&gt;\\n  &lt;table&gt;...&lt;/table&gt;\\n&lt;/div&gt;\\n</code></pre><p>Tables that are too wide for the layout will be constrained and scroll horizontally. This is especially helpful for responsive designs which scale down to be smaller than the table&#39;s minimum width.</p>\\n\"",
+      "modifiers": [
+        "table-blue",
+        "table-striped",
+        "table-plain",
+        "table-striped table-blue"
+      ],
+      "sample_code": "\"<table class=\\\"{{modifier}}\\\">\\n  <thead>\\n    <tr>\\n      <th>Thing 1</th>\\n      <th>Thing 2</th>\\n      <th>Thing 3</th>\\n    </tr>\\n  </thead>\\n  <tbody>\\n    <tr>\\n     <td>a</td>\\n     <td>b</td>\\n     <td>c</td>\\n    </tr>\\n    <tr>\\n     <td>x</td>\\n     <td>y</td>\\n     <td>z</td>\\n    </tr>\\n  </tbody>\\n</table>\\n\""
+    },
+    {
+      "_id": "25dbd70f-083e-4d4f-9c82-7d8182e9fdf1",
+      "name": "Skip to Content",
+      "slug": "skip",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Skip to Content",
+        "Components",
+        "Components",
+        "components"
+      ],
+      "sort_order": 12,
+      "group": "Components",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Used at the beginning of a page to allow keyboard and screen reader navigation to the primary content of the page without navigation through all the links that precede the content.</p>\\n\""
+    },
+    {
+      "_id": "8fbc1527-ab31-4c93-af2f-1761116d178c",
+      "name": "Overview",
+      "slug": "form-overview",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Overview",
+        "Forms",
+        "Components",
+        "components"
+      ],
+      "sort_order": 100,
+      "group": "Forms",
+      "LastModified": 1448921979892,
+      "description": "\"<p>The forms section provides basic styling of form elements in addition to a basic reset.</p>\\n<p>Labels for form elements should describe what the field is, while placeholder text should describe the specifics about formatting or examples for the input text. Labels should <strong>not</strong> be followed by a semicolon.</p>\\n<p>Required form fields should be labeled with two things:</p>\\n<ol>\\n<li>The <code>&lt;label&gt;</code> should include a red asterisk indicating visually that the field is required.</li>\\n<li>The <code>&lt;input&gt;</code> element should have both the <code>required</code> and <code>aria-required=&quot;true&quot;</code> attributes.</li>\\n</ol>\\n\""
+    },
+    {
+      "_id": "06ae4847-e8ff-4270-8897-e2ad5fc9c52d",
+      "name": "Search Bar",
+      "slug": "search-bar",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Search Bar",
+        "Forms",
+        "Components",
+        "components"
+      ],
+      "sort_order": 101,
+      "group": "Forms",
+      "LastModified": 1448921979892,
+      "description": "\"\""
+    },
+    {
+      "_id": "2845e289-ccce-4f3e-b825-4e2a8d6395d9",
+      "name": "Text Inputs",
+      "slug": "text-inputs",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Text Inputs",
+        "Forms",
+        "Components",
+        "components"
+      ],
+      "sort_order": 102,
+      "group": "Forms",
+      "LastModified": 1448921979892,
+      "description": "\"<p>All text inputs are styled by default. They receive a 1px border, a CSS3 transition, and a very distinct <code>:focus</code> style which helps provide feedback to the user while they engage with a form. The size of the forms and buttons are calibrated to they can exist in-line to each other.</p>\\n\"",
+      "modifiers": [
+        "input-error",
+        "input-warning",
+        "input-success"
+      ],
+      "sample_code": "\"<label>\\n  Label Text <span class=\\\"font-size--2 right\\\">Input Message</span>\\n  <input type='text' placeholder='placeholder' class=\\\"{{modifier}}\\\">\\n</label>\\n\""
+    },
+    {
+      "_id": "bce1cce3-ec43-4a8d-b14d-0dbeb4893259",
+      "name": "Input Groups",
+      "slug": "input-groups",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Input Groups",
+        "Forms",
+        "Components",
+        "components"
+      ],
+      "sort_order": 103,
+      "group": "Forms",
+      "LastModified": 1448921979892,
+      "description": "\"<p>It is very common to have an input and a button attached to one another. The <code>input-group</code> component allows you to accomplish this with three classes.</p>\\n\""
+    },
+    {
+      "_id": "b25ed3c9-10a1-4998-9f3e-296c00c9d976",
+      "name": "Action Bar",
+      "slug": "action-bar",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Action Bar",
+        "Forms",
+        "Components",
+        "components"
+      ],
+      "sort_order": 104,
+      "group": "Forms",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Action bars are used to display multiple actions horizontally. Actions are meant to be used with buttons. They are clearfixed and floated right by default.</p>\\n\"",
+      "modifiers": [
+        "action-bar-left"
+      ],
+      "sample_code": "\"<div class=\\\"action-bar {{modifier}}\\\">\\n  <button type=\\\"button\\\" class=\\\"btn action-bar-btn\\\">Submit</button>\\n  <button type=\\\"button\\\" class=\\\"btn btn-transparent action-bar-btn\\\">Cancel</button>\\n</div>\\n\""
+    },
+    {
+      "_id": "7326581a-f2f5-42be-9a46-d79faec27253",
+      "name": "Selects",
+      "slug": "selects",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Selects",
+        "Forms",
+        "Components",
+        "components"
+      ],
+      "sort_order": 105,
+      "group": "Forms",
+      "LastModified": 1448921979892,
+      "description": "\"\"",
+      "modifiers": [
+        "input-error",
+        "input-warning",
+        "input-success"
+      ],
+      "sample_code": "\"<label>\\n  Select Menu:\\n  <select class=\\\"{{modifier}}\\\">\\n    <option value=\\\"\\\">Menu 1</option>\\n    <option value=\\\"\\\">Menu 2</option>\\n    <option value=\\\"\\\">Menu 3</option>\\n    <option value=\\\"\\\">Menu 4</option>\\n  </select>\\n</label>\""
+    },
+    {
+      "_id": "d745e424-540c-4ee3-954b-27bd1a121ee9",
+      "name": "Checkboxes",
+      "slug": "checkboxes",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Checkboxes",
+        "Forms",
+        "Components",
+        "components"
+      ],
+      "sort_order": 106,
+      "group": "Forms",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Checkboxes are aligned properly and given a focus state consistent with other form elements. Other than that they are left as is.</p>\\n\""
+    },
+    {
+      "_id": "9004bf43-d962-43e7-a5b8-8bc0905557ea",
+      "name": "Radio Buttons",
+      "slug": "radio-buttons",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Radio Buttons",
+        "Forms",
+        "Components",
+        "components"
+      ],
+      "sort_order": 107,
+      "group": "Forms",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Much like checkboxes, radio buttons are largely left alone except for alterations in spacing and focus state.</p>\\n\""
+    },
+    {
+      "_id": "ecacdf63-466d-4897-b597-0357a8833427",
+      "name": "Esri Logo",
+      "slug": "esri-logo",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Esri Logo",
+        "Branding",
+        "Components",
+        "components"
+      ],
+      "sort_order": 200,
+      "group": "Branding",
+      "LastModified": 1448921979892,
+      "description": "\"<p>A minimum buffer zone of clear space is maintained around the logo. Display of the logo should not be less than 78 x 28 pixels. This minimun size and buffer is part of the component, designed to be as simple to use as possible.</p>\\n<p>Use of the reverse logo should only be on top of dark backgrounds. Neither logo should be used on top of images, or altered in any way.</p>\\n\"",
+      "modifiers": [
+        "esri-logo-reverse",
+        "esri-logo-condensed"
+      ],
+      "sample_code": "\"<div class=\\\"esri-logo {{modifier}}\\\"></div>\""
+    },
+    {
+      "_id": "102c73b6-ac62-4ef7-b74b-0adb04a5a9f6",
+      "name": "Overview",
+      "slug": "overview",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Overview",
+        "Patterns",
+        "Patterns",
+        "patterns"
+      ],
+      "sort_order": 0,
+      "group": "Patterns",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Patterns are specific UI schemes that use a collection of <a href=\\\"../components\\\">components</a> and pattern-specific css to solve a common design problem. Patterns can either stand alone entirely as markup, or be dependent on <a href=\\\"../javascript\\\">JavaScript</a> to accomplish certain behaviors.</p>\\n<p>To use a pattern, follow the structures defined in the sample code.</p>\\n\""
+    },
+    {
+      "_id": "8c6b323a-b24c-4a2e-841b-a349f1262322",
+      "name": "Basic Page",
+      "slug": "basic-html-page",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Basic Page",
+        "Patterns",
+        "Patterns",
+        "patterns"
+      ],
+      "sort_order": 1,
+      "group": "Patterns",
+      "LastModified": 1448921979892,
+      "description": "\"<p>A basic starting point for an html page using Calcite Web might be something like this:</p>\\n<pre><code class=\\\"lang-html\\\">&lt;!doctype html lang=&quot;en&quot;&gt;\\n&lt;!--[if lt IE 9]&gt;  &lt;html class=&quot;ie lt-ie9 ie8&quot;&gt; &lt;![endif]--&gt;\\n&lt;!--[if IE 9]&gt;     &lt;html class=&quot;ie ie9&quot;&gt; &lt;![endif]--&gt;\\n&lt;!--[if !IE]&gt;&lt;!--&gt; &lt;html&gt; &lt;!--&lt;![endif]--&gt;\\n  &lt;head&gt;\\n    &lt;meta charset=&quot;utf-8&quot;&gt;\\n    &lt;meta content=&quot;IE=edge,chrome=1&quot; http-equiv=&quot;X-UA-Compatible&quot;&gt;\\n    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, user-scalable=no&quot;&gt;\\n    &lt;title&gt;Calcite Web&lt;/title&gt;\\n    &lt;link rel=&quot;shortcut icon&quot; href=&quot;/img/favicon.ico&quot;&gt;\\n  &lt;link rel=&quot;stylesheet&quot; href=&quot;{{relativePath}}assets/css/calcite.css&quot;&gt;\\n    &lt;!--[if lt IE 9]&gt;\\n      &lt;script src=&quot;/assets/javascripts/libs/selectivizr.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;\\n      &lt;script src=&quot;/assets/javascripts/libs/html5shiv.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;\\n    &lt;![endif]--&gt;\\n  &lt;/head&gt;\\n  &lt;body&gt;\\n    &lt;div class=&quot;wrapper&quot;&gt;\\n        &lt;!-- header --&gt;\\n        &lt;!-- content of page --&gt;\\n    &lt;/div&gt;\\n    &lt;div class=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;&gt;\\n      &lt;!-- content of footer --&gt;\\n    &lt;/div&gt;\\n    &lt;script src=&quot;/assets/javascripts/calcite-web.js&quot;&gt;&lt;/script&gt;\\n  &lt;/body&gt;\\n&lt;/html&gt;\\n</code></pre>\\n\""
+    },
+    {
+      "_id": "4fd8bd45-2b8e-4a40-af68-fa96e6de13af",
+      "name": "Top Nav",
+      "slug": "top-nav",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Top Nav",
+        "Patterns",
+        "Patterns",
+        "patterns"
+      ],
+      "sort_order": 2,
+      "group": "Patterns",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Top navigation is the primary, header level navigation for a web site. It contains the root level pages, user logins, and the site title. The main navigation should be hidden on screen sizes smaller than the size of the navigation. This navigation should be moved to an off-screen drawer on the left hand side. Notice the separate <code>div</code> elements with <code>tablet-hide</code> and <code>tablet-show</code> classes in the sample below.</p>\\n\""
+    },
+    {
+      "_id": "b5e31f9b-4f04-40bc-9dde-e56f24b4604d",
+      "name": "User Sign In",
+      "slug": "user-sign-in",
+      "tags": [
+        "calcite-web",
+        "web",
+        "User Sign In",
+        "Patterns",
+        "Patterns",
+        "patterns"
+      ],
+      "sort_order": 3,
+      "group": "Patterns",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Designed to be combined with the <a href=\\\"#top-nav\\\">top navigation</a> pattern on sites where a logged in portion is accessible. Once a use is logged in, it should be replaced with the <a href=\\\"user-nav\\\">user navigation pattern</a>.</p>\\n\""
+    },
+    {
+      "_id": "f31d7b16-9788-4d3e-821b-902f9b77937b",
+      "name": "User Nav",
+      "slug": "user-nav",
+      "tags": [
+        "calcite-web",
+        "web",
+        "User Nav",
+        "Patterns",
+        "Patterns",
+        "patterns"
+      ],
+      "sort_order": 4,
+      "group": "Patterns",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Designed to be combined with the <a href=\\\"#user-nav\\\">user sign in pattern</a> pattern on sites where a logged in portion is accessible.</p>\\n<p>The user navigation element is just a <a href=\\\"../components/#dropdowns\\\">dropdown</a> with a few special styles.</p>\\n\""
+    },
+    {
+      "_id": "1636ba83-321f-4bbd-8f20-a9ff6c749f41",
+      "name": "Sub Nav",
+      "slug": "sub-nav",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Sub Nav",
+        "Patterns",
+        "Patterns",
+        "patterns"
+      ],
+      "sort_order": 5,
+      "group": "Patterns",
+      "LastModified": 1448921979892,
+      "description": "\"<p>The &#39;Sub-Nav&#39; provides a second level of hierarchy to a site. While the top-nav includes the top-most level of navigation, the sub-nav includes navigation for sections nested inside that. The subnav has a tabbed navigation pattern, a title, and room for a call to action.</p>\\n<p>You can also turn the sub-nav into a more graphically-driven banner by adding <code>padding-leader</code> and <code>padding-trailer</code> classes to the title, thereby increasing the vertical size of the sub-nav.</p>\\n\""
+    },
+    {
+      "_id": "dd28ebbf-6703-4677-95e6-b7111ee278dc",
+      "name": "Hero",
+      "slug": "hero",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Hero",
+        "Patterns",
+        "Patterns",
+        "patterns"
+      ],
+      "sort_order": 6,
+      "group": "Patterns",
+      "LastModified": 1448921979892,
+      "description": "\"<p>A <code>Hero</code> is an implementation of the Sub Nav pattern that allows for a big, splashy image and headline. A Hero can be accomplished entirely with markup, as below.</p>\\n\""
+    },
+    {
+      "_id": "a54ce149-a63f-4e69-9fb4-671880061a40",
+      "name": "Third Nav",
+      "slug": "third-nav",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Third Nav",
+        "Patterns",
+        "Patterns",
+        "patterns"
+      ],
+      "sort_order": 7,
+      "group": "Patterns",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Tertiary navigation is necessary only when the information architecture of the site requires three levels of hierarchy within pages. A breadcrumb component can also be used in this pattern.</p>\\n<p>The third nav has a set of of Javascript bindings responsible for responsive behavior when the content of the third nav is greater than it&#39;s container.</p>\\n<p>Only a single third nav can be on a page.</p>\\n\""
+    },
+    {
+      "_id": "6e6b700d-62e4-4651-87df-78fee8bd1120",
+      "name": "Side Nav",
+      "slug": "side-nav",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Side Nav",
+        "Patterns",
+        "Patterns",
+        "patterns"
+      ],
+      "sort_order": 8,
+      "group": "Patterns",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Sidebar can be used either for in-page navigation — like on this page — or for lists of articles under a given topic.</p>\\n\""
+    },
+    {
+      "_id": "72f7f8cf-3c9f-460c-b5d1-597a42a8f10c",
+      "name": "Footer",
+      "slug": "footer",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Footer",
+        "Patterns",
+        "Patterns",
+        "patterns"
+      ],
+      "sort_order": 9,
+      "group": "Patterns",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Standard footer for ArcGIS and Esri properties. The footer in Calcite Web is &#39;sticky&#39; by default. This means that if the page doesn&#39;t have sufficient height, the footer will still hug the bottom of the screen. For this to work properly, you must use a <code>div</code> with a class of <code>wrapper</code>. See the <a href=\\\"#basic-html-page\\\">basic HTML page</a> for an example.</p>\\n<pre><code>&lt;footer class=&quot;footer avenir-regular leader-3&quot;&gt;\\n  &lt;div class=&quot;container&quot;&gt;\\n    &lt;nav class=&quot;column-6&quot;&gt;\\n      &lt;h6&gt;Arc&lt;span&gt;GIS&lt;/span&gt;&lt;/h6&gt;\\n      &lt;ul class=&quot;list-plain&quot;&gt;\\n        &lt;li&gt;&lt;a href=&quot;http://www.arcgis.com/about/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;\\n        &lt;li&gt;&lt;a href=&quot;http://www.arcgis.com/about/features.html&quot;&gt;Features&lt;/a&gt;&lt;/li&gt;\\n        &lt;li&gt;&lt;a href=&quot;http://www.arcgis.com/about/pricing.html&quot;&gt;Pricing&lt;/a&gt;&lt;/li&gt;\\n      &lt;/ul&gt;\\n    &lt;/nav&gt;\\n\\n    &lt;nav class=&quot;column-6&quot;&gt;\\n      &lt;h6&gt;Arc&lt;span&gt;GIS&lt;/span&gt; for Developers&lt;/h6&gt;\\n      &lt;ul class=&quot;list-plain&quot;&gt;\\n        &lt;li&gt;&lt;a href=&quot;/en/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;\\n        &lt;li&gt;&lt;a href=&quot;/en/features/&quot;&gt;Features&lt;/a&gt;&lt;/li&gt;\\n        &lt;li&gt;&lt;a href=&quot;http://blogs.esri.com/esri/arcgis/category/developer/&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;\\n      &lt;/ul&gt;\\n    &lt;/nav&gt;\\n\\n    &lt;nav class=&quot;column-6&quot;&gt;\\n      &lt;h6&gt;About Esri&lt;/h6&gt;\\n      &lt;ul class=&quot;list-plain&quot;&gt;\\n        &lt;li&gt;&lt;a href=&quot;http://www.esri.com/about-esri/&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;\\n        &lt;li&gt;&lt;a href=&quot;http://www.esri.com/careers/&quot;&gt;Careers&lt;/a&gt;&lt;/li&gt;\\n        &lt;li&gt;&lt;a href=&quot;http://blogs.esri.com/esri/esri-insider/&quot;&gt;Insiders Blog&lt;/a&gt;&lt;/li&gt;\\n        &lt;li&gt;&lt;a href=&quot;http://www.esri.com/events/user-conference/index.html&quot;&gt;User Conference&lt;/a&gt;&lt;/li&gt;\\n        &lt;li&gt;&lt;a href=&quot;http://www.esri.com/events/devsummit/index.html&quot;&gt;Developer Summit&lt;/a&gt;&lt;/li&gt;\\n      &lt;/ul&gt;\\n    &lt;/nav&gt;\\n\\n    &lt;nav class=&quot;column-6 padding-leader-half&quot;&gt;\\n      &lt;a class=&quot;esri-logo&quot; href=&quot;http://esri.com&quot;&gt;&lt;/a&gt;\\n      &lt;section class=&quot;footer-social-nav&quot;&gt;\\n        &lt;a class=&quot;icon-twitter&quot; href=&quot;https://twitter.com/Esri/&quot;&gt;&lt;/a&gt;\\n        &lt;a class=&quot;icon-facebook&quot; href=&quot;https://www.facebook.com/esrigis/&quot;&gt;&lt;/a&gt;\\n        &lt;a class=&quot;icon-github&quot; href=&quot;http://esri.github.com/&quot;&gt;&lt;/a&gt;\\n        &lt;a class=&quot;icon-email&quot; href=&quot;http://www.esri.com/about-esri/contact/&quot;&gt;&lt;/a&gt;\\n      &lt;/section&gt;\\n    &lt;/nav&gt;\\n    &lt;div class=&quot;column-24&quot;&gt;\\n       &lt;p&gt;&lt;small&gt;Copyright © 2015 Esri. All rights reserved. | &lt;a href=&quot;http://www.esri.com/legal/privacy&quot;&gt;Privacy&lt;/a&gt; | &lt;a href=&quot;http://www.esri.com/legal&quot;&gt;Legal&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;\\n    &lt;/div&gt;\\n  &lt;/div&gt;\\n&lt;/footer&gt;\\n</code></pre>\""
+    },
+    {
+      "_id": "aa4653d3-0283-4f3a-92ff-ff736ab11e83",
+      "name": "Pagination",
+      "slug": "pagination",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Pagination",
+        "Patterns",
+        "Patterns",
+        "patterns"
+      ],
+      "sort_order": 10,
+      "group": "Patterns",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Use the pagination pattern to navigate between pages of displayed content, either in a gallery or a search result view.</p>\\n\""
+    },
+    {
+      "_id": "70bc670b-afa4-4cf3-ab12-025e6065ff56",
+      "name": "Overview",
+      "slug": "interactive-overview",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Overview",
+        "Interactive Patterns",
+        "Patterns",
+        "patterns"
+      ],
+      "sort_order": 100,
+      "group": "Interactive Patterns",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Interactive patterns rely on <code>calcite-web.js</code> to work properly. You must add a reference to <code>calcite-web.js</code> (either from the cdn or you can host it yourself). After that, you should startup all the interactive patterns on load with <code>calcite.init()</code>.</p>\\n<p>For more on using <code>calcite-web.js</code> you can view the <a href=\\\"../javascript/\\\">JavaScript Guide</a>.</p>\\n\""
+    },
+    {
+      "_id": "a066105f-aa00-4b7a-8d84-2b5db2d9fbb5",
+      "name": "Modals",
+      "slug": "modals",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Modals",
+        "Interactive Patterns",
+        "Patterns",
+        "patterns"
+      ],
+      "sort_order": 101,
+      "group": "Interactive Patterns",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Modals are meant to &quot;take over&quot; the screen and focus users attention on a dialog which presents the user with an opportunity to add, modify or create content. A modal should always be centered both vertically and horizontally within the browser window. When a modal is opened, the interface darkens and disables all other user interface elements in order to force a user to take an action required by their workflow. Two modals can&#39;t be open at once.</p>\\n<p>To create a link or button that opens a modal, you must add a <code>js-modal-toggle</code> class to the element, along with a <code>data-modal</code> attribute specifying the name of the modal that should open. The modal should also get a <code>data-modal</code> attribute with the same name.</p>\\n<p>Elements with the <code>js-modal-toggle</code> that are inside a modal don&#39;t need the <code>data-modal</code> attribute as they will just close the modal they are in.</p>\\n\""
+    },
+    {
+      "_id": "1f77faa4-b6f2-4b00-bd5f-f357da5814e0",
+      "name": "Tabs",
+      "slug": "tabs",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Tabs",
+        "Interactive Patterns",
+        "Patterns",
+        "patterns"
+      ],
+      "sort_order": 102,
+      "group": "Interactive Patterns",
+      "LastModified": 1448921979892,
+      "description": "\"<p>The framework includes a quick set of styles for a tabbed interface pattern. The full tab container will expand to fit its parent.</p>\\n<p>As an added bonus, this component supports intelligently restricting the width of tabs if they get too long and numerous.</p>\\n<p><code>tabs-gray</code> can be used to display code samples. Just wrap code blocks in <code>&lt;pre&gt;</code> and <code>&lt;code&gt;</code> tags inside the element with <code>.tab-section</code> class.</p>\\n\"",
+      "modifiers": [
+        "tabs-gray",
+        "tabs-transparent"
+      ],
+      "sample_code": "\"<div class=\\\"{{modifier}} trailer-2 js-tab-group\\\">\\n  <nav class=\\\"tab-nav\\\">\\n    <a class=\\\"tab-title is-active js-tab\\\">Tab 1</a>\\n    <a class=\\\"tab-title js-tab\\\">Tab 2</a>\\n    <a class=\\\"tab-title js-tab\\\">Tab 3</a>\\n  </nav>\\n  <section class=\\\"tab-contents\\\">\\n    <article class=\\\"tab-section js-tab-section is-active\\\">\\n      <p>Tab 1 section</p>\\n    </article>\\n    <article class=\\\"tab-section js-tab-section\\\">\\n      <p>Tab 2 section</p>\\n    </article>\\n    <article class=\\\"tab-section js-tab-section\\\">\\n      <p>Tab 3 section</p>\\n    </article>\\n  </section>\\n</div>\""
+    },
+    {
+      "_id": "93e95ff8-0ad4-478b-b1c4-d87a34486b05",
+      "name": "Accordions",
+      "slug": "accordions",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Accordions",
+        "Interactive Patterns",
+        "Patterns",
+        "patterns"
+      ],
+      "sort_order": 103,
+      "group": "Interactive Patterns",
+      "LastModified": 1448921979892,
+      "description": "\"<p>The <code>js-accordion</code> class provides the JavaScript binding for the accordion pattern, which handles which pane of the accordion is active via the <code>is-active</code> class.</p>\\n\""
+    },
+    {
+      "_id": "e538b8cd-ce5e-4f86-823a-ebb5ec041039",
+      "name": "Drawers",
+      "slug": "drawers",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Drawers",
+        "Interactive Patterns",
+        "Patterns",
+        "patterns"
+      ],
+      "sort_order": 104,
+      "group": "Interactive Patterns",
+      "LastModified": 1448921979892,
+      "description": "\"<p>The off-canvas &quot;drawer&quot; pattern is used primarily for top-level mobile navigation.</p>\\n<p><a href=\\\"#\\\" class=\\\"btn js-drawer-toggle\\\" data-drawer=\\\"top-nav\\\">Open Left Drawer</a></p>\\n<p><a href=\\\"#\\\" class=\\\"btn js-drawer-toggle\\\" data-drawer=\\\"right\\\">Open Right Drawer</a></p>\\n<pre><code> &lt;body&gt;\\n  &lt;!-- Drawer --&gt;\\n  &lt;div class=&quot;drawer drawer-left js-drawer is-active&quot; data-drawer=&quot;top-nav&quot; tabindex=&quot;0&quot;&gt;\\n    &lt;nav class=&quot;drawer-nav&quot; role=&quot;navigation&quot;&gt;\\n      &lt;aside class=&quot;side-nav&quot;&gt;\\n        &lt;h2 class=&quot;side-nav-title&quot;&gt;Calcite Web&lt;/h2&gt;\\n        &lt;a href=&quot;/&quot; class=&quot;side-nav-link&quot;&gt;Get Started&lt;/a&gt;\\n        &lt;a href=&quot;/&quot; class=&quot;side-nav-link&quot;&gt;Type&lt;/a&gt;\\n        &lt;a href=&quot;/&quot; class=&quot;side-nav-link&quot;&gt;Grid&lt;/a&gt;\\n        &lt;a href=&quot;/&quot; class=&quot;side-nav-link&quot;&gt;Icons&lt;/a&gt;\\n        &lt;a href=&quot;/&quot; class=&quot;side-nav-link&quot;&gt;Color&lt;/a&gt;\\n        &lt;a href=&quot;/&quot; class=&quot;side-nav-link&quot;&gt;Components&lt;/a&gt;\\n        &lt;a href=&quot;/&quot; class=&quot;side-nav-link&quot;&gt;Patterns&lt;/a&gt;\\n        &lt;a href=&quot;/&quot; class=&quot;side-nav-link&quot;&gt;Sass&lt;/a&gt;\\n        &lt;a href=&quot;/&quot; class=&quot;side-nav-link&quot;&gt;JavaScript&lt;/a&gt;\\n        &lt;a href=&quot;/&quot; class=&quot;side-nav-link&quot;&gt;Layouts&lt;/a&gt;\\n      &lt;/aside&gt;\\n    &lt;/nav&gt;\\n  &lt;/div&gt;\\n\\n  &lt;!-- Main Content Wrapper --&gt;\\n  &lt;div class=&quot;wrapper&quot;&gt;\\n    &lt;!-- ...all site content goes here... --&gt;\\n  &lt;/div&gt;\\n &lt;/body&gt;\\n</code></pre>\""
+    },
+    {
+      "_id": "60b94e36-5263-494d-85a5-828b4379d6dd",
+      "name": "Expanding Nav",
+      "slug": "expanding-nav",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Expanding Nav",
+        "Interactive Patterns",
+        "Patterns",
+        "patterns"
+      ],
+      "sort_order": 105,
+      "group": "Interactive Patterns",
+      "LastModified": 1448921979892,
+      "description": "\"<p>The exanding nav pattern is designed for use beneath the <a href=\\\"top-nav\\\">Top Nav</a> pattern. It can be used to create search, or the esri.com style Mega Nav Dropdown. Expanding navs are controlled by the <code>js-expanding-toggle</code> classes, which bind the javascript function to the element, and the <code>data-expanding-nav</code> attribute, which ties toggle controllers to specfific expanding navs.</p>\\n\""
+    },
+    {
+      "_id": "582f1018-ce9e-45fc-a457-d896acc9a0db",
+      "name": "Filter Dropdown",
+      "slug": "filter-dropdown",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Filter Dropdown",
+        "Interactive Patterns",
+        "Patterns",
+        "patterns"
+      ],
+      "sort_order": 106,
+      "group": "Interactive Patterns",
+      "LastModified": 1448921979892,
+      "description": "\"<p>The filter dropdown is a component used to select any number of items from a list of any number of options. It&#39;s used to locate specific items quickly even if that item is buried in a huge pile of other things.</p>\\n<p>The primary use cases for the filter dropdown are selecting tags from a tag cloud, or a group from a list of all a user&#39;s groups.</p>\\n<p>If the relationship being established is many-to-many, use the filter dropdown component.</p>\\n\""
+    },
+    {
+      "_id": "caefd32d-f525-4d88-8558-f2f5336fca58",
+      "name": "Overview",
+      "slug": "overview",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Overview",
+        "Sass",
+        "Sass",
+        "sass"
+      ],
+      "sort_order": 0,
+      "group": "Sass",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Calcite Web has a helpful set of mixins for composing type. We recommend you use these mixins wherever possible when writing your own components as it will keep the visual proportions and styles in line with the rest of the framework.</p>\\n\""
+    },
+    {
+      "_id": "710590a9-b55c-46c4-a091-4ebc18ad721c",
+      "name": "Overview",
+      "slug": "includes",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Overview",
+        "Custom Build",
+        "Sass",
+        "sass"
+      ],
+      "sort_order": 100,
+      "group": "Custom Build",
+      "LastModified": 1448921979892,
+      "description": "\"<p>By default, using the Calcite Web sass files will build css  for the complete framework. This build can be customized, or entirely turned off for sass-only applications.</p>\\n<p>Setting the <code>$generate-css</code> variable to false in your sass files will prevent any css from being generated, while exposing all the underlying sass styles of the framework. Setting specific variables like <code>$include-alerts</code> to false will preclude only that components css from being built.</p>\\n<p>Additionally, font imports are controlled this way. By default, Calcite Web requests Avenir Next from a cdn. Setting <code>$include-primary-family</code> to false will prevent the font imports, and the framework will roll back to secondary font options. Frutiger and Kepler are included by setting <code>$include-content-family</code> and <code>$include-secondary-family</code> to true.</p>\\n<pre><code>// Sass Output\\n$include-colors:                 true             !default;\\n$generate-css:                   true             !default;\\n\\n// Language Helpers\\n$include-right-to-left:          $generate-css    !default;\\n\\n// Grid Output\\n$include-reset:                  $generate-css    !default;\\n$include-utils:                  $generate-css    !default;\\n\\n$include-grid:                   $generate-css    !default;\\n  $fold-grid:                    $generate-css    !default;\\n  $block-grid:                   $generate-css    !default;\\n\\n// Grid Utilities Output\\n$include-leader-trailer:         $generate-css    !default;\\n$include-gutter:                 $generate-css    !default;\\n$include-left-right:             $generate-css    !default;\\n$include-show-hide:              $generate-css    !default;\\n$include-sticky:                 $generate-css    !default;\\n\\n// Type Output\\n$include-type:                   $generate-css    !default;\\n  $include-primary-family:       true             !default;\\n  $include-content-family:       false            !default;\\n  $include-secondary-family:     false            !default;\\n  $include-code-family:          $generate-css    !default;\\n  $include-type-defaults:        $generate-css    !default;\\n  $include-type-helpers:         $generate-css    !default;\\n\\n// Icons\\n$include-icons:                  $generate-css    !default;\\n  $include-calcite-icons:        $generate-css    !default;\\n  $include-social-icons:         $generate-css    !default;\\n  $include-icon-font:            $generate-css    !default;\\n\\n// Components\\n$include-alerts:                 $generate-css    !default;\\n$include-badges:                 $generate-css    !default;\\n$include-labels:                 $generate-css    !default;\\n$include-tables:                 $generate-css    !default;\\n$include-panel:                  $generate-css    !default;\\n$include-button:                 $generate-css    !default;\\n$include-dropdowns:              $generate-css    !default;\\n$include-breadcrumbs:            $generate-css    !default;\\n$include-tooltip:                $generate-css    !default;\\n$include-forms:                  $generate-css    !default;\\n$include-input-groups:           $generate-css    !default;\\n$include-action-bar:             $generate-css    !default;\\n$include-loader:                 $generate-css    !default;\\n$include-search-bar:             $generate-css    !default;\\n$include-skip-to-content:        $generate-css    !default;\\n$include-logo:                   $generate-css    !default;\\n\\n// Patterns\\n$include-footer:                 $generate-css    !default;\\n$include-sticky-footer:          $generate-css    !default;\\n$include-pagination:             $generate-css    !default;\\n$include-side-nav:               $generate-css    !default;\\n$include-sub-nav:                $generate-css    !default;\\n$include-third-nav:              $generate-css    !default;\\n$include-top-nav:                $generate-css    !default;\\n$include-super-nav:              $generate-css    !default;\\n$include-user-nav:               $generate-css    !default;\\n$include-toolbar:                $generate-css    !default;\\n$include-site-search:            $generate-css    !default;\\n\\n// Javascript\\n$include-tabs:                   $generate-css    !default;\\n$include-modal:                  $generate-css    !default;\\n$include-accordion:              $generate-css    !default;\\n$include-drawers:                $generate-css    !default;\\n$include-expanding-nav:          $generate-css    !default;\\n$include-sticky:                 $generate-css    !default;\\n$include-filter-dropdown:        $generate-css    !default;\\n</code></pre>\""
+    },
+    {
+      "_id": "076b9e72-a5eb-413d-8bb2-2c1f8999780e",
+      "name": "Example",
+      "slug": "example",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Example",
+        "Custom Build",
+        "Sass",
+        "sass"
+      ],
+      "sort_order": 101,
+      "group": "Custom Build",
+      "LastModified": 1448921979892,
+      "description": "\"<pre><code>// custom-build.scss\\n$generate-css: false;\\n$include-content-family: true;\\n$include-secondary-family: true;\\n$include-code-family: true;\\n$include-type: true;\\n$include-type-defaults: true;\\n$include-type-helpers: true;\\n$include-grid: true;\\n$fold-grid:  true;\\n$block-grid: true;\\n$include-leader-trailer: true;\\n$include-gutter: true;\\n$include-left-right: true;\\n$include-show-hide: true;\\n$include-sticky: true;\\n@import &#39;calcite-web&#39;\\n</code></pre><p>The above sass will import the framework, import all the type options (Avenir, Kepler, Frutiger, and Consolas), and build css that provides access to the type helpers and grid system.</p>\\n\""
+    },
+    {
+      "_id": "d7dd7bef-8663-46c2-83a0-2879638b8e88",
+      "name": "Overview",
+      "slug": "variables",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Overview",
+        "Variables",
+        "Sass",
+        "sass"
+      ],
+      "sort_order": 200,
+      "group": "Variables",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Calcite Web comes with several variables. These variables represent project-standard configurations of different aspects. For example, <code>$baseline</code> can be used in your Sass to set a property to the default typographic baseline of Calcite Web.</p>\\n<p>These variables can also be configured in your own project to change the library for project-specific applications.</p>\\n<p>Below are all of the variables and a brief description of what they represent.</p>\\n\""
+    },
+    {
+      "_id": "5d7bc93b-2030-4150-acd2-086582d9c9f1",
+      "name": "Breakpoints",
+      "slug": "breakpoints",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Breakpoints",
+        "Variables",
+        "Sass",
+        "sass"
+      ],
+      "sort_order": 201,
+      "group": "Variables",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Calcite Web comes with several variables representing the default screen sizes.</p>\\n<pre><code class=\\\"lang-scss\\\">// Breakpoints\\n$small:  480px  !default;\\n$medium: 860px  !default;\\n$large:  1280px !default;\\n</code></pre>\\n<p>In static classes, these breakpoints are often expressed as <code>phone-</code>, <code>tablet-</code>, <code>desktop-</code>.</p>\\n\""
+    },
+    {
+      "_id": "5a1759db-3818-422b-8f9f-863ef1849b67",
+      "name": "UI Variables",
+      "slug": "ui-variables",
+      "tags": [
+        "calcite-web",
+        "web",
+        "UI Variables",
+        "Variables",
+        "Sass",
+        "sass"
+      ],
+      "sort_order": 202,
+      "group": "Variables",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Controls specific aspects and behaviors across the UI.</p>\\n<pre><code class=\\\"lang-scss\\\">$transition: 150ms linear;\\n$box-shadow: 0 0 16px 0 rgba(0,0,0,0.05) !default;\\n$drawer-width: 280px !default;\\n$footer-height: 250px;\\n</code></pre>\\n<p><code>$transtion</code> is a speed and easing function used throughout the framework for motion effects.</p>\\n<p><code>$box-shadow</code> ensures consistent box shadow effects for adding depths to elements.</p>\\n<p><code>$drawer-width</code> controls the width of the hidden left and right drawers.</p>\\n<p><code>$footer-height</code> controls the height of the footer.</p>\\n\""
+    },
+    {
+      "_id": "fd29d552-426e-4a6e-9988-b9caad79cdf1",
+      "name": "Overview",
+      "slug": "type-composition",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Overview",
+        "Type Composition",
+        "Sass",
+        "sass"
+      ],
+      "sort_order": 300,
+      "group": "Type Composition",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Calcite Web has a helpful set of mixins for composing type. We recommend you use these mixins wherever possible when writing your own components as it will keep the visual proportions and styles in line with the rest of the framework.</p>\\n\""
+    },
+    {
+      "_id": "585869bd-5bc5-4c36-b3f0-f9c44acaa0bb",
+      "name": "Font Size",
+      "slug": "font-size",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Font Size",
+        "Type Composition",
+        "Sass",
+        "sass"
+      ],
+      "sort_order": 301,
+      "group": "Type Composition",
+      "LastModified": 1448921979892,
+      "description": "\"<p>The Calcite Web type system uses a modular typographic scale to ensure a consistent tonal range within all text elements. This modular scale is created from the body size of the type, and a second, smaller size. These two type sizes anchor the scale, and using a precise ratio can be expanded to an entire set of sizes for all typographic needs.</p>\\n<p>The <code>font-size($n)</code> mixin takes an integer, positive or negative, and sets all type within the element to the size defined by traversing that number of steps up or down the typographic scale.</p>\\n<p>&#39;0&#39; represents the normal text size while &#39;-1&#39; is a type size smaller, and &#39;1&#39; is a type size larger. So if you&#39;d like to have a very large pull-quote or something of that nature, you could use <code>@include font-size(6)</code>. This means that the text you&#39;ve styled will be six steps up the typographic scale from the normal body size.</p>\\n<p>The <code>font-size($n)</code> mixin relies on the <code>modular-scale($n)</code> mixin to define the scale, and apply it to typographic elements.</p>\\n\""
+    },
+    {
+      "_id": "3f0e370f-8901-49db-a537-2deacaa1d12d",
+      "name": "Modular Scale",
+      "slug": "modular-scale",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Modular Scale",
+        "Type Composition",
+        "Sass",
+        "sass"
+      ],
+      "sort_order": 302,
+      "group": "Type Composition",
+      "LastModified": 1448921979892,
+      "description": "\"<p>The <code>modular-scale($n)</code> behaves the same as the <code>font-size($n)</code> mixin, but returns a raw rem value rather than css styles specific to type elements. This means that the <code>modular-scale($n)</code> mixin can be used to define heights, widths, padding, margins, or any other property of an element so that it adheres to the modular scale defined by the typography.\\nSetting the max width of an article to a large multiple of the text size is a way to define a comfortable reading measure related to the proportional decisions of the content.</p>\\n\""
+    },
+    {
+      "_id": "8a11b8b2-a98a-436c-b082-abbb03e8d2aa",
+      "name": "Tracking",
+      "slug": "tracking",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Tracking",
+        "Type Composition",
+        "Sass",
+        "sass"
+      ],
+      "sort_order": 303,
+      "group": "Type Composition",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Tracking is the space between letters in a word. The <code>tracking($n)</code> mixin accepts an integer, and applies letterspacing to the element as fractions of 1/1000 of an em.\\n<code>@include tracking(500)</code> will apply 1/2 em letterspacing.\\n<code>@include tracking(166)</code> will apply a hairline em letterspacing.</p>\\n\""
+    },
+    {
+      "_id": "413a58a8-12fa-47c4-95e3-a771cdb000ea",
+      "name": "Leading",
+      "slug": "leading",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Leading",
+        "Type Composition",
+        "Sass",
+        "sass"
+      ],
+      "sort_order": 304,
+      "group": "Type Composition",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Leading is the space between lines in a text block. The <code>leading($n)</code> mixin accepts an integer, and sets the line height of the element to the integer times the standard baseline unit.</p>\\n\""
+    },
+    {
+      "_id": "0e37d6f4-a571-408c-92d6-c1edeac71db7",
+      "name": "Word Spacing",
+      "slug": "word-spacing",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Word Spacing",
+        "Type Composition",
+        "Sass",
+        "sass"
+      ],
+      "sort_order": 305,
+      "group": "Type Composition",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Word spacing is - well - the space between words.  The <code>word-spacing($n)</code> mixin accepts an integer, and applies letterspacing to the element as fractions of 1/1000 of an em. If you&#39;re familiar with word-spacing in design programs like Adobe InDesign, the <code>word-spacing</code> mixin will immidiately feel fairly natural.</p>\\n<p>While you can pass any integer to the mixin, below is a list of values you can pass to the <code>word-spacing</code> mixin to achieve well known typographic defaults:</p>\\n<table>\\n<thead>\\n<tr>\\n<th>Value</th>\\n<th>Number</th>\\n</tr>\\n</thead>\\n<tbody>\\n<tr>\\n<td>em</td>\\n<td><code>word-spacing(1000)</code></td>\\n</tr>\\n<tr>\\n<td>en</td>\\n<td><code>word-spacing(500)</code></td>\\n</tr>\\n<tr>\\n<td>thick</td>\\n<td><code>word-spacing(333)</code></td>\\n</tr>\\n<tr>\\n<td>mid</td>\\n<td><code>word-spacing(250)</code></td>\\n</tr>\\n<tr>\\n<td>thin</td>\\n<td><code>word-spacing(200)</code></td>\\n</tr>\\n<tr>\\n<td>hair</td>\\n<td><code>word-spacing(166)</code></td>\\n</tr>\\n</tbody>\\n</table>\\n\""
+    },
+    {
+      "_id": "1456a860-3e4d-4f99-b443-9ba179ca65e1",
+      "name": "Utility Mixins",
+      "slug": "utility-mixins",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Utility Mixins",
+        "Utilities",
+        "Sass",
+        "sass"
+      ],
+      "sort_order": 400,
+      "group": "Utilities",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Utility mixins are used to construct complicated behaviors for <a href=\\\"../components\\\">components</a> and <a href=\\\"../patterns\\\">patterns</a>, provide baseline functionality for doc elements, and take care of browser prefixing.</p>\\n<p>Most utility mixins are borrowed from <a href=\\\"http://bourbon.io/\\\">Bourbon</a>. If mixins share a name, then they share the same code base.</p>\\n<p>Use the utility mixins inside the selector you wish to apply the styles to, passing the arguments in if required. For example, to apply a clearfix to an element with the class <code>.my-div</code>, the use the following Sass:</p>\\n<pre><code class=\\\"lang-scss\\\">.my-div {\\n  @include clearfix();\\n}\\n</code></pre>\\n<p>If the mixin accepts arguments, pass them into the parenthesis:</p>\\n<pre><code class=\\\"lang-scss\\\">.my-div {\\n  @include box-sizing(border-box);\\n}\\n</code></pre>\\n<h4 id=\\\"quick-reference\\\">Quick Reference</h4>\\n<table>\\n<thead>\\n<tr>\\n<th>Mixin</th>\\n<th>Arguments</th>\\n</tr>\\n</thead>\\n<tbody>\\n<tr>\\n<td><a href=\\\"#appearance\\\"><code>appearance</code></a></td>\\n<td><code>$value</code></td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#animation\\\"><code>animation</code></a></td>\\n<td><code>$animations...</code></td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#box-sizing\\\"><code>box-sizing</code></a></td>\\n<td><code>$box</code></td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#box-shadow\\\"><code>box-shadow</code></a></td>\\n<td><code>$shadow</code></td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#calc\\\"><code>calc</code></a></td>\\n<td><code>$property, $value</code></td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#clearfix\\\"><code>clearfix</code></a></td>\\n<td>none</td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#keyframes\\\"><code>keyframes</code></a></td>\\n<td><code>$name</code></td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#placeholder\\\"><code>placeholder</code></a></td>\\n<td><code>$property</code>,  <code>$attr</code></td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#prefixer\\\"><code>prefixer</code></a></td>\\n<td><code>$property, $value, $prefixes</code></td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#respond-to\\\"><code>respond-to</code></a></td>\\n<td><code>$max, $mi, $type</code></td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#transform\\\"><code>transform</code></a></td>\\n<td><code>$property</code></td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#transform\\\"><code>transform-origin</code></a></td>\\n<td><code>$axes</code></td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#transform\\\"><code>transform-style</code></a></td>\\n<td><code>$style</code></td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#transition\\\"><code>transition</code></a></td>\\n<td><code>$value</code></td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#transition-prefixed\\\"><code>transition-prefixed</code></a></td>\\n<td><code>$value</code></td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#transition\\\"><code>transition-property</code></a></td>\\n<td><code>$value</code></td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#transition\\\"><code>transition-duration</code></a></td>\\n<td><code>$value</code></td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#transition\\\"><code>transition-timing-function</code></a></td>\\n<td><code>$value</code></td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#transition\\\"><code>transition-delay</code></a></td>\\n<td><code>$value</code></td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#visibility\\\"><code>visible</code></a></td>\\n<td>none</td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#visibility\\\"><code>invisible</code></a></td>\\n<td>none</td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#visibility\\\"><code>hide</code></a></td>\\n<td>none</td>\\n</tr>\\n</tbody>\\n</table>\\n<h4 id=\\\"animation\\\">Animation</h4>\\n<p>The animation mixin allows you to declare cross-browser animations. The mixin accepts</p>\\n<pre><code class=\\\"lang-scss\\\">box:hover {\\n  @include animation(scale 1.0s ease-in, slide 2.0s ease);\\n}\\n</code></pre>\\n<p>Or, use individual animation mixins:</p>\\n<pre><code class=\\\"lang-scss\\\">box:hover {\\n  @include animation-name(scale, slide);\\n  @include animation-duration(2s);\\n  @include animation-timing-function(ease);\\n  @include animation-iteration-count(infinite);\\n}\\n</code></pre>\\n<h4 id=\\\"appearance\\\">Appearance</h4>\\n<p>The <code>appearance</code> CSS property is used to display an element using a platform-native styling based on the operating system&#39;s theme. For example, to remove browser specific styling for a ui element, use:</p>\\n<pre><code class=\\\"lang-scss\\\">@include appearance(none);\\n</code></pre>\\n<h4 id=\\\"box-sizing\\\">Box-Sizing</h4>\\n<p>Set the <code>box-sizing</code> property for all browsers (with browser prefixes):</p>\\n<pre><code class=\\\"lang-scss\\\">@include box-sizing(border-box);\\n</code></pre>\\n<p>Valid values are <code>content-box</code>, <code>border-box</code>, and <code>inherit</code>.</p>\\n<h4 id=\\\"box-shadow\\\">Box-Shadow</h4>\\n<p>Set the <code>box-shadow</code> property for all browsers (with browser prefixes):</p>\\n<pre><code class=\\\"lang-scss\\\">@include box-shadow(border-box);\\n</code></pre>\\n<h4 id=\\\"calc\\\">Calc</h4>\\n<p>Shorthand for setting a property to use a <code>calc</code> value. Pass the property you&#39;d like to set, then the value you&#39;d like to use:</p>\\n<pre><code class=\\\"lang-scss\\\">@include calc(width, &#39;100px - 10%&#39;);\\n</code></pre>\\n<h4 id=\\\"clearfix\\\">Clearfix</h4>\\n<p>Applies the framework-standard clear for floated elements:</p>\\n<pre><code class=\\\"lang-scss\\\">@include clearfix();\\n</code></pre>\\n<h4 id=\\\"keyframes\\\">Keyframes</h4>\\n<p>For creating animations, you can use the <code>keyframes</code> mixin. This mixin accepts an animation name. Then inside the mixin, write your animation as a content block:</p>\\n<pre><code class=\\\"lang-scss\\\">@include keyframes(ANIMATION_NAME){\\n  0%   { background-color: #ffccf2; }\\n  100% { background-color: #ccffff; }\\n};\\n</code></pre>\\n<p>Now you can use the <a href=\\\"#animation\\\">animation mixin</a> as a named animation like this:</p>\\n<pre><code>.animation-class {\\n  @include animation( @include animation(ANIMATION_NAME 200ms ease-in);)\\n}\\n</code></pre><h4 id=\\\"placeholder\\\">Placeholder</h4>\\n<p>Wraps the wide array of input placeholder selectors across browsers.</p>\\n<pre><code>@include placeholder(&#39;color&#39;, $dark-blue);\\n</code></pre><h4 id=\\\"prefixer\\\">Prefixer</h4>\\n<p>This is one of the most flexible mixins in the library. Use it to add browser prefixes to a property:</p>\\n<pre><code class=\\\"lang-scss\\\">@include prefixer(margin-end, 5%, webkit moz spec);\\n</code></pre>\\n<p>In this way you can prefix any property. Adding the <code>spec</code> as the last argument will also output the property <em>without</em> a prefix.</p>\\n<h4 id=\\\"respond-to\\\">Respond To</h4>\\n<p>The <code>respond-to</code> mixin adds media queries for use in responsive design. The mixin accepts three arguments: maximum size, minimum size, and type (screen, print, etc). You can pass just the first out of convenience. This mixin works well with the <a href=\\\"../sass#breakpoints\\\">breakpoint variables</a>:</p>\\n<pre><code class=\\\"lang-scss\\\">.my-div {\\n  @include respond-to($small){\\n    padding: 1rem;\\n  }\\n}\\n</code></pre>\\n<p>This will compile to the following css:</p>\\n<pre><code class=\\\"lang-css\\\">@media screen and (max-width: 480px) {\\n  .my-div {\\n    padding: 1rem;\\n  }\\n}\\n</code></pre>\\n<p>You can assemble more complicated media queries by using both min and max:</p>\\n<pre><code>@include respond-to($large, $medium) { ... }\\n</code></pre><p>This will add styles that only appear <em>between</em> the <code>$medium</code> and <code>$large</code> screen sizes.</p>\\n<h4 id=\\\"transform\\\">Transform</h4>\\n<p>The CSS transform property lets you modify the coordinate space of the CSS visual formatting model. Using it, elements can be translated, rotated, scaled, and skewed according to the values set. <code>transform</code>, <code>transform-origin</code>, and <code>transform-style</code> all add the necessary browser prefixes for interacting with their respective transform properties.</p>\\n<pre><code class=\\\"lang-scss\\\">@include transform(translateY(50px));\\n@include transform(scale(0.9) rotate(-3deg));\\n@include transform-origin(center top);\\n@include transform-style(preserve-3d);\\n</code></pre>\\n<h4 id=\\\"transition\\\">Transition</h4>\\n<p>This mixin provides a shorthand syntax and supports multiple transitions.</p>\\n<pre><code class=\\\"lang-scss\\\">@include transition(all 2.0s ease-in-out);\\n@include transition(opacity 1.0s ease-in 0s, width 2.0s ease-in 2s);\\n</code></pre>\\n<p>Or you can use the individual transition properties:</p>\\n<pre><code>@include transition-property(transform);\\n@include transition-duration(1.0s);\\n@include transition-timing-function(ease-in);\\n@include transition-delay(0.5s);\\n</code></pre><h4 id=\\\"transition-prefixed\\\">Transition Prefixed</h4>\\n<p>To transition vendor-prefixed properties, e.g. <code>-webkit-transform</code> and <code>-moz-transform</code>, there is an additional convinience <code>transition-prefixed()</code> mixin:</p>\\n<pre><code>@include transition-prefixed(transform3d(0,0,0) 200ms linear);\\n</code></pre><p>This will generate vendor prefixed properties <em>and</em> values.</p>\\n<h4 id=\\\"visibility\\\">Visibility</h4>\\n<p>The visibility mixins change the <code>visibility</code> property. This is useful for removing and adding elements at certain breakpoints or with certain class names. No arguments are passed. Invisible sets <code>visibility: hidden</code> on the object, leaving in the in document flow, but removing it from view. <code>hide()</code> will completely remove the item with <code>display:none</code>.</p>\\n<pre><code class=\\\"lang-scss\\\">@include hide();\\n@include invisible();\\n@include visible();\\n</code></pre>\\n\""
+    },
+    {
+      "_id": "3a6b6c9f-9108-4546-a8fe-2dcbca936b11",
+      "name": "Overview",
+      "slug": "overview",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Overview",
+        "Interactive Patterns",
+        "JavaScript",
+        "javascript"
+      ],
+      "sort_order": 0,
+      "group": "Interactive Patterns",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Calcite Web includes a small JavaScript library. <code>calcite-web.js</code> is a lightweight and dependency-free library made to enable interactive behaviors for certain <a href=\\\"../patterns/\\\">patterns</a> and <a href=\\\"../components\\\">components</a>.</p>\\n<p>Currently, the following components and patterns rely on <code>calcite-web.js</code>:</p>\\n<ul>\\n<li><a href=\\\"../components/#dropdowns\\\">Dropdowns</a></li>\\n<li><a href=\\\"../patterns/#modals\\\">Modals</a></li>\\n<li><a href=\\\"../patterns/#tabs\\\">Tabs</a></li>\\n<li><a href=\\\"../patterns/#accordions\\\">Accordions</a></li>\\n<li><a href=\\\"../patterns/#drawers\\\">Drawers</a></li>\\n<li><a href=\\\"../patterns/#expanding-nav\\\">Expanding Nav</a></li>\\n</ul>\\n<h3 id=\\\"loading-calcite-as-a-module\\\">Loading Calcite as a Module</h3>\\n<p>If you don&#39;t use a module loader (you probably should...), Calcite will be available as <code>window.calcite</code>. If you do, both flavors of module loaders are also covered below.</p>\\n<h4 id=\\\"commonjs\\\">CommonJS</h4>\\n<pre><code class=\\\"lang-js\\\">var calcite = require(&#39;calcite-web&#39;);\\n</code></pre>\\n<h4 id=\\\"amd\\\">AMD</h4>\\n<pre><code class=\\\"lang-js\\\">require([&#39;path/to/calcite-web.js&#39;], function(calcite){\\n  // use calcite\\n});\\n</code></pre>\\n<h3 id=\\\"initializing\\\">Initializing</h3>\\n<p>To use <code>calcite-web.js</code> simply <a href=\\\"../patterns#basic-html-page\\\">include a reference to it in your html</a> and then run the <code>calcite.init()</code> method. For example, say your JavaScript was located in a file called <code>script.js</code>. You can bind all the JavaScript patterns from <code>script.js</code> like this:</p>\\n<pre><code class=\\\"lang-js\\\">// On document ready\\nwindow.onload = function () {\\n  // Initialize all calcite.js patterns\\n  calcite.init();\\n};\\n</code></pre>\\n<p>To only initialize some patterns, you can pass an array of patterns, and only those will be initialized:</p>\\n<pre><code class=\\\"lang-js\\\">calcite.init([&#39;modal&#39;, &#39;drawer&#39;]);\\n</code></pre>\\n<p>You can also initialize individual patterns by their own method, for example:</p>\\n<pre><code>calcite.tabs()\\n</code></pre><p>Finally, an element can be passed to a pattern method, and only the patterns within that element will be initialized. Like this:</p>\\n<pre><code>var tabs = document.querySelector(&#39;.my-tab-class&#39;)\\ncalcite.tabs(tabs)\\n</code></pre><p>This is helpful if you are using a different JavaScript framework and you need to rebind event listeners for a particular pattern or DOM node.</p>\\n\""
+    },
+    {
+      "_id": "774add83-6f64-45d3-aedb-e36b147ee3da",
+      "name": "Overview",
+      "slug": "utility-functions",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Overview",
+        "Utility Functions",
+        "JavaScript",
+        "javascript"
+      ],
+      "sort_order": 100,
+      "group": "Utility Functions",
+      "LastModified": 1448921979892,
+      "description": "\"<p><code>calcite-web.js</code> also has methods for <a href=\\\"https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model\\\">DOM</a> traversal and manipulation. If the needs of a project are not too complex it can be used in place of jQuery, Dojo, or other large frameworks.</p>\\n<table>\\n<thead>\\n<tr>\\n<th>function</th>\\n<th>action</th>\\n</tr>\\n</thead>\\n<tbody>\\n<tr>\\n<td><a href=\\\"#calcite-event-\\\"><code>calcite.click()</code></a></td>\\n<td>Returns standard interaction event (click). Touch support will be added soon.</td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#calcite-addevent-domnode-event-fn-\\\"><code>calcite.addEvent(domNode, event, fn)</code></a></td>\\n<td>Adds a callback function to an event on an element.</td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#calcite-removeevent-domnode-event-fn-\\\"><code>calcite.removeEvent(domNode, event, fn)</code></a></td>\\n<td>Removes a callback function from an event on an element.</td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#calcite-eventtarget-event-\\\"><code>calcite.eventTarget()</code></a></td>\\n<td>Returns the target element of an event.</td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#calcite-preventdefault-event-\\\"><code>calcite.preventDefault(event)</code></a></td>\\n<td>Prevents default behavior of an event.</td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#calcite-stoppropagation-event-\\\"><code>calcite.stopPropagation(event)</code></a></td>\\n<td>Stops an event from bubbling up the DOM tree.</td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#calcite-hasclass-node-class-\\\"><code>calcite.hasClass(event)</code></a></td>\\n<td>Checks if an element has a specific class. Returns boolean.</td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#calcite-addclass-domnode-classes-\\\"><code>calcite.addClass(domNode, className)</code></a></td>\\n<td>Adds one or more classes to an element.</td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#calcite-removeclass-domnode-classes-\\\"><code>calcite.removeClass(domNode, classes)</code></a></td>\\n<td>Removes one or more classes from an element.</td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#calcite-toggleclass-domnode-classname-\\\"><code>calcite.toggleClass(domNode, className)</code></a></td>\\n<td>Toggles one class on an element.</td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#calcite-closest-class-element-\\\"><code>calcite.closest(domNode, classes)</code></a></td>\\n<td>Returns closest element up the DOM tree matching a given class. Returns DOM node.</td>\\n</tr>\\n<tr>\\n<td><a href=\\\"#calcite-nodelisttoarray-domnodelist-\\\"><code>calcite.nodeListToArray(domNodeList)</code></a></td>\\n<td>Takes a DOM node list and returns an array.</td>\\n</tr>\\n</tbody>\\n</table>\\n\""
+    },
+    {
+      "_id": "1c2831b4-e10a-48c8-a973-553612a2757d",
+      "name": "DOM Utilities",
+      "slug": "dom-utilities",
+      "tags": [
+        "calcite-web",
+        "web",
+        "DOM Utilities",
+        "Utility Functions",
+        "JavaScript",
+        "javascript"
+      ],
+      "sort_order": 101,
+      "group": "Utility Functions",
+      "LastModified": 1448921979892,
+      "description": "\"<p>The following functions allow for basic DOM manipulation and traversal. These helpers are used by JavaScript dependent patterns, and can be included in any custom JavaScript in Calcite Web projects.</p>\\n<h2 id=\\\"events\\\">Events</h2>\\n<h3 id=\\\"calcite-click-\\\">calcite.click()</h3>\\n<p>Returns interaction event for the current browser environment. Currently only returns <code>&#39;click&#39;</code>. Will be more useful when touch support is added.</p>\\n<pre><code class=\\\"lang-js\\\">var click = calcite.click(); // =&gt; &#39;click&#39;\\n</code></pre>\\n<h3 id=\\\"calcite-addevent-domnode-event-fn-\\\">calcite.addEvent(domNode, event, fn)</h3>\\n<p>Adds a callback function to an event on an element.</p>\\n<pre><code class=\\\"lang-js\\\">var click = calcite.click();\\nvar node = document.querySelector(&#39;body&#39;);\\n\\nfunction action (event) {\\n  console.log(&#39;hola&#39;);\\n};\\n\\ncalcite.addEvent(node, click, action); // action will now fire when body is clicked\\n</code></pre>\\n<h3 id=\\\"calcite-removeevent-domnode-event-fn-\\\">calcite.removeEvent(domNode, event, fn)</h3>\\n<p>Removes a callback function from an event on an element.</p>\\n<pre><code class=\\\"lang-js\\\">var click = calcite.click();\\nvar node = document.querySelector(&#39;body&#39;);\\n\\nfunction action (event) {\\n  console.log(&#39;hola&#39;);\\n};\\n\\ncalcite.addEvent(node, click, action); // action will now fire when body is clicked\\ncalcite.removeEvent(node, event, action); // action has been removed from body click event\\n</code></pre>\\n<h3 id=\\\"calcite-eventtarget-event-\\\">calcite.eventTarget(event)</h3>\\n<p>Returns the target DOM node of an event.</p>\\n<pre><code class=\\\"lang-js\\\">var click = calcite.click();\\nvar node = document.querySelector(&#39;body&#39;);\\n\\nfunction action (event) {\\n  var target = calcite.eventTarget(event);\\n  console.log(target);\\n};\\n\\ncalcite.addEvent(node, click, action);\\n</code></pre>\\n<p>Clicking the body will now log the contents of the <code>&lt;body&gt;</code> DOM node.</p>\\n<h3 id=\\\"calcite-preventdefault-event-\\\">calcite.preventDefault(event)</h3>\\n<p>Prevents default behavior of an event.</p>\\n<pre><code class=\\\"lang-js\\\">var click = calcite.click();\\nvar node = document.getElementsByTagName(&#39;a&#39;)[0];\\n\\nfunction action (event) {\\n  calcite.preventDefault(event);\\n};\\n\\ncalcite.addEvent(node, click, action);\\n</code></pre>\\n<p>This will prevent the first <code>&lt;a&gt;</code> DOM node in the document from performing its default behavior (sending the user to the link in its <code>href</code> attribute).</p>\\n<h3 id=\\\"calcite-stoppropagation-event-\\\">calcite.stopPropagation(event)</h3>\\n<p>Stops an event from bubbling up the DOM tree. This is useful if events have been bound to both a parent DOM node and a child DOM node.</p>\\n<pre><code class=\\\"lang-js\\\">var click = calcite.click();\\nvar node = document.getElementsByTagName(&#39;a&#39;)[0];\\n\\nfunction action (event) {\\n  calcite.stopPropagation(event);\\n};\\n\\ncalcite.addEvent(node, click, action);\\n</code></pre>\\n<p>If, for example, the <code>&lt;body&gt;</code> DOM node also has a function bound to a click event, this will prevent a user&#39;s click from triggering it.</p>\\n<h2 id=\\\"manipulation-traversal\\\">Manipulation &amp; Traversal</h2>\\n<h3 id=\\\"calcite-hasclass-node-class-\\\">calcite.hasClass(node, class)</h3>\\n<p>Checks if the <code>node</code> currently has the provided <code>class</code>. For example, given the following html:</p>\\n<pre><code class=\\\"lang-html\\\">&lt;div class=&quot;apple&quot; id=&quot;test&quot;&gt;&lt;/div&gt;\\n</code></pre>\\n<p>The <code>hasClass</code> utility can be used as follows:</p>\\n<pre><code class=\\\"lang-js\\\">var node = document.getElementById(&#39;test&#39;);\\nvar isApple = calcite.hasClass(node, &#39;apple&#39;);\\nconsole.log(isApple); // true\\n</code></pre>\\n<h3 id=\\\"calcite-addclass-domnode-classes-\\\">calcite.addClass(domNode, classes)</h3>\\n<p>Adds one or more classes to a given element. Multiple classes should be passed as a space-separated string, like this:</p>\\n<pre><code class=\\\"lang-js\\\">var node = document.getElementById(&#39;test&#39;);\\ncalcite.addClass(node, &#39;apples bananas oranges&#39;);\\n</code></pre>\\n<h3 id=\\\"calcite-removeclass-domnode-classes-\\\">calcite.removeClass(domNode, classes)</h3>\\n<p>Removes one or more classes from an element. Like <code>addClass</code>, multiple classes should be separated with a space and passed as a single string:</p>\\n<pre><code class=\\\"lang-js\\\">var node = document.getElementById(&#39;test&#39;);\\ncalcite.removeClass(node, &#39;apples bananas oranges&#39;);\\n</code></pre>\\n<h3 id=\\\"calcite-toggleclass-domnode-classname-\\\">calcite.toggleClass(domNode, className)</h3>\\n<p>Adds the class to the element if it doesn&#39;t have the class, otherwise, remove it:</p>\\n<pre><code class=\\\"lang-js\\\">var node = document.querySelector(&#39;.test&#39;);\\ncalcite.toggleClass(node, &#39;test&#39;); // remove test class\\ncalcite.toggleClass(node, &#39;test&#39;); // add test class\\n</code></pre>\\n<h3 id=\\\"calcite-closest-class-element-\\\">calcite.closest(class, element)</h3>\\n<p>Searches up the DOM tree to find the closest parent element with a given class.</p>\\n<pre><code class=\\\"lang-js\\\">var nodes = document.querySelector(&#39;.child-element&#39;);\\n\\nfunction clickHandler (event) {\\n  var closestNode = calcite.closest(&#39;parent-class&#39;, event.target);\\n}\\n\\nfor (var i = 0; i &lt; nodes.length; i++) {\\n  calcite.addEvent(nodes[i], calcite.click(), clickHandler);\\n}\\n</code></pre>\\n<h3 id=\\\"calcite-nodelisttoarray-domnodelist-\\\">calcite.nodeListToArray(domNodeList)</h3>\\n<p>Turn a node list (usually returned from a query) into an array.</p>\\n<pre><code class=\\\"lang-js\\\">var nodes = document.getElementsByTagName(&#39;a&#39;);\\nvar nodeArray = calcite.nodeListToArray(nodes);\\n</code></pre>\\n\""
+    },
+    {
+      "_id": "c67b8815-4f70-4759-b8aa-128beb04624b",
+      "name": "Homepage",
+      "slug": "homepage",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Homepage",
+        "Building Layouts",
+        "Layouts",
+        "page-layouts"
+      ],
+      "sort_order": 0,
+      "group": "Building Layouts",
+      "LastModified": 1448921979892,
+      "description": "\"<p>The homepage layout is designed for quickly establishing an entry point for a new project that succinctly describes the purpose and vision for the project, and enables a high-click through to the content held within. The homepage structures should be augmented with clear and concise copy, and visual assets that illustrate and illuminate the text.</p>\\n<p><a href=\\\"./homepage/\\\">View Homepage Layout</a></p>\\n\""
+    },
+    {
+      "_id": "b81a5ca4-3d82-41bc-b855-38114245d411",
+      "name": "Product Page",
+      "slug": "product",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Product Page",
+        "Building Layouts",
+        "Layouts",
+        "page-layouts"
+      ],
+      "sort_order": 1,
+      "group": "Building Layouts",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Product pages are the marketing-forward descriptions of products, services, or other offerings. The landing page is an extension the homepage, but provides more in-depth overview of the aspect being presented. Again, clear, concise copy and useful illustrations are a requisite for this layout.</p>\\n<p><a href=\\\"./product/\\\">View Landing Layout</a></p>\\n\""
+    },
+    {
+      "_id": "e08f8684-5b33-4b2c-bb89-6333666fd85e",
+      "name": "Documentation",
+      "slug": "documentation",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Documentation",
+        "Building Layouts",
+        "Layouts",
+        "page-layouts"
+      ],
+      "sort_order": 2,
+      "group": "Building Layouts",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Documentation pages are the technically focused descriptions of products, services, or other offerings. The documentation layout will be the key content for any product using the Calcite Web system, and as such it has been designed with rigor for primary use.</p>\\n<p><a href=\\\"./documentation/\\\">View Documentation Layout</a></p>\\n\""
+    },
+    {
+      "_id": "fe69c8b6-fd9d-4db0-b1a7-bdfa4bb65759",
+      "name": "API Reference",
+      "slug": "api-reference",
+      "tags": [
+        "calcite-web",
+        "web",
+        "API Reference",
+        "Building Layouts",
+        "Layouts",
+        "page-layouts"
+      ],
+      "sort_order": 3,
+      "group": "Building Layouts",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Reference pages are similar to documentation pages, but handle content that needs to live in tables, and has more specific needs than a general written documentation page. These two pages live in harmony together, teaching all who come before them like a pair of wizened sages.</p>\\n<p><a href=\\\"./api-reference/\\\">View API Reference Layout</a></p>\\n\""
+    },
+    {
+      "_id": "fc8fd951-037e-475f-b5ba-e685b9ca7213",
+      "name": "Blog",
+      "slug": "blog",
+      "tags": [
+        "calcite-web",
+        "web",
+        "Blog",
+        "Building Layouts",
+        "Layouts",
+        "page-layouts"
+      ],
+      "sort_order": 4,
+      "group": "Building Layouts",
+      "LastModified": 1448921979892,
+      "description": "\"<p>Blog posts are mostly about long-form content layout. Luckily, calcite-web has built in type styles that make this style of page very easy to build.</p>\\n<p><a href=\\\"./blog/\\\">View Blog Layout</a></p>\\n\""
+    }
+  ]
+}

@@ -1,0 +1,303 @@
+// ┌───────────┐
+// │ Container │
+// └───────────┘
+//  ↳ http://esri.github.io/calcite-web/grid/#container
+//  ↳ grid → _container.md
+
+@mixin grid-container() {
+  @include clearfix();
+  width: $container-width;
+  max-width: $max-width;
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  @include box-sizing(border-box);
+}
+
+// ┌─────────┐
+// │ Columns │
+// └─────────┘
+//  ↳ http://esri.github.io/calcite-web/grid/#columns
+//  ↳ grid → _columns.md
+
+@mixin column-base() {
+  @include box-sizing(border-box);
+  width: $container-width;
+  max-width: 100%;
+  padding-left: $column-gutter / 2;
+  padding-right: $column-gutter / 2;
+  @include left();
+  [class*="column-"]:first-of-type {
+    margin-left: -$column-gutter / 2;
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        margin-left: 0;
+        margin-right: -$column-gutter / 2;
+      }
+    }
+  }
+  [class*="column-"]:last-of-type {
+    margin-right: -$column-gutter / 2;
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        margin-right: 0;
+        margin-left: -$column-gutter / 2;
+      }
+    }
+  }
+  &:last-of-type { @include clearfix(); }
+}
+
+// ┌────────────────┐
+// │ First and Last │
+// └────────────────┘
+//  ↳ http://esri.github.io/calcite-web/grid/#first-and-last
+//  ↳ grid → _first-and-last.md
+
+@mixin first-column() {
+  margin-left: -($column-gutter/2);
+  @if ($include-right-to-left) {
+    html[dir="rtl"] & {
+      margin-left: 0;
+      margin-right: -$column-gutter / 2;
+    }
+  }
+}
+
+@mixin last-column() {
+  margin-right: -($column-gutter / 2);
+  @if ($include-right-to-left) {
+    html[dir="rtl"] & {
+      margin-right: 0;
+      margin-left: -$column-gutter / 2;
+    }
+  }
+}
+
+// ┌────────────────────┐
+// │ Responsive Columns │
+// └────────────────────┘
+//  ↳ http://esri.github.io/calcite-web/grid/#responsive-columns
+//  ↳ grid → _responsive-columns.md
+
+@mixin responsive-column() {
+
+  @if $fold-grid == true {
+
+    // Extra Large Columns
+    @media screen and (min-width: $large) {
+      @for $n from 1 through $large-column-count {
+        .#{$prefix}column-#{$n} {
+          width: ($n / $large-column-count) * $container-width;
+          max-width: ($n / $large-column-count) * $max-width;
+          > .#{$prefix}column-#{$n} {
+            margin-left: -($column-gutter/2);
+            @if ($include-right-to-left) {
+              html[dir="rtl"] & {
+                margin-left: 0;
+                margin-right: -$column-gutter / 2;
+              }
+            }
+          }
+        }
+      }
+      @for $n from 1 through $large-column-count {
+        .#{$prefix}#{$large-class}-column-#{$n}  {
+          width: ($n / $large-column-count) * $container-width;
+          max-width: ($n / $large-column-count) * $max-width;
+        }
+      }
+      .#{$prefix}#{$large-class}-first-column {
+        margin-left: -($column-gutter / 2);
+        @if ($include-right-to-left) {
+          html[dir="rtl"] & {
+            margin-left: 0;
+            margin-right: -$column-gutter / 2;
+          }
+        }
+      }
+      .#{$prefix}#{$large-class}-last-column {
+        margin-right: -($column-gutter / 2);
+        @if ($include-right-to-left) {
+          html[dir="rtl"] & {
+            margin-right: 0;
+            margin-left: -$column-gutter / 2;
+          }
+        }
+      }
+    }
+
+    // Large Columns
+    @media screen and (max-width: $large - 1) {
+      @for $n from 1 through $default-column-count {
+        .#{$prefix}column-#{$n} {
+          width: ($n / $default-column-count) * $container-width;
+          max-width: ($n / $default-column-count) * $max-width;
+          > .#{$prefix}column-#{$n} {
+            margin-left: -($column-gutter/2);
+            @if ($include-right-to-left) {
+              html[dir="rtl"] & {
+                margin-left: 0;
+                margin-right: -$column-gutter / 2;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Medium Columns
+    @media screen and (max-width: $medium - 1) {
+      @for $n from 1 through $medium-column-count {
+        .#{$prefix}column-#{$n} {
+          width: ($n / $medium-column-count) * $container-width;
+          max-width: ($n / $medium-column-count) * $max-width;
+        }
+      }
+      @for $n from $medium-column-count through $default-column-count {
+        .#{$prefix}column-#{$n} {
+          width: (1) * $container-width;
+          max-width: (1) * $max-width;
+        }
+      }
+      @for $n from 1 through $medium-column-count {
+        .#{$prefix}#{$medium-class}-column-#{$n}  {
+          width: ($n / $medium-column-count) * $container-width;
+          max-width: ($n / $medium-column-count) * $max-width;
+        }
+      }
+      .#{$prefix}#{$medium-class}-first-column {
+        margin-left: -($column-gutter / 2);
+        @if ($include-right-to-left) {
+          html[dir="rtl"] & {
+            margin-left: 0;
+            margin-right: -$column-gutter / 2;
+          }
+        }
+      }
+      .#{$prefix}#{$medium-class}-last-column {
+        margin-right: -($column-gutter / 2);
+        @if ($include-right-to-left) {
+          html[dir="rtl"] & {
+            margin-right: 0;
+            margin-left: -$column-gutter / 2;
+          }
+        }
+      }
+    }
+
+    // Small Columns
+    @media screen and (max-width: $small - 1) {
+      @for $n from 1 through $small-column-count {
+        .#{$prefix}column-#{$n} {
+          width: ($n / $small-column-count) * $container-width;
+          max-width: ($n / $small-column-count) * $max-width;
+        }
+      }
+      @for $n from $small-column-count through $default-column-count {
+        .#{$prefix}column-#{$n} {
+          width: (1) * $container-width;
+          max-width: (1) * $max-width;
+        }
+      }
+      @for $n from 1 through $small-column-count {
+        .#{$prefix}#{$medium-class}-column-#{$n} {
+          width: ($n / $small-column-count) * $container-width;
+          max-width: ($n / $small-column-count) * $max-width;
+        }
+      }
+      @for $n from $small-column-count through $default-column-count {
+        .#{$prefix}#{$medium-class}-column-#{$n} {
+          width: (1) * $container-width;
+          max-width: (1) * $max-width;
+        }
+      }
+      @for $n from 1 through $small-column-count {
+       .#{$prefix}#{$small-class}-column-#{$n} {
+          width: ($n / $small-column-count) * $container-width;
+          max-width: ($n / $small-column-count) * $max-width;
+        }
+      }
+      .#{$prefix}#{$small-class}-first-column {
+        margin-left: -($column-gutter / 2);
+        @if ($include-right-to-left) {
+          html[dir="rtl"] & {
+            margin-left: 0;
+            margin-right: -$column-gutter / 2;
+          }
+        }
+      }
+      .#{$prefix}#{$small-class}-last-column {
+        margin-right: -($column-gutter / 2);
+
+        @if ($include-right-to-left) {
+          html[dir="rtl"] & {
+            margin-right: 0;
+            margin-left: -$column-gutter / 2;
+          }
+        }
+      }
+    }
+
+  } @else {
+
+    @for $n from 1 through $default-column-count {
+      .#{$prefix}column-#{$n} {
+        width: ($n / $default-column-count) * $container-width;
+        max-width: ($n / $default-column-count) * $max-width;
+        > .#{$prefix}column-#{$n} {
+          margin-left: -($column-gutter/2);
+          @if ($include-right-to-left) {
+            html[dir="rtl"] & {
+              margin-left: 0;
+              margin-right: -$column-gutter / 2;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@if $include-grid == true {
+
+  @media screen {
+    .#{$prefix}grid-container {
+      @include grid-container();
+    }
+  }
+
+  @media screen and (min-width: $large) {
+    @if unit($container-width) == 'vw' {
+      @debug unit($container-width);
+      .#{$prefix}grid-container {
+        $diff: $large-column-count - $default-column-count;
+        $side: $diff / 2;
+        $margin: $side / $large-column-count * $container-width;
+        padding-left: $margin;
+        padding-right: $margin;
+      }
+      .#{$prefix}grid-full {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
+  @media screen {
+    [class*="column-"] {
+      @include column-base();
+    }
+
+    .#{$prefix}first-column {
+      @include first-column();
+    }
+    .#{$prefix}last-column {
+      @include last-column();
+    }
+  }
+
+  @include responsive-column();
+}
