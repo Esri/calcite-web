@@ -49,7 +49,7 @@
     }
   }
 }
-@mixin margon-gutter-left-third() {
+@mixin margin-gutter-left-third() {
   margin-left:  $column-gutter/3;
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
