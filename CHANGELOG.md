@@ -1,3 +1,8 @@
+## Unreleased
+
+### Modified
+- Iconography change for accordions
+
 ## 1.0.0-beta
 
 ### Added
