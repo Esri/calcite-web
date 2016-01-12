@@ -1,7 +1,8 @@
-## Unreleased
+## 1.0.0.beta.1
 
 ### Modified
 - Iconography change for accordions
+- Opacity used for disabled state in buttons
 
 ## 1.0.0-beta
 
