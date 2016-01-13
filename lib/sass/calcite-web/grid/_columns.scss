@@ -21,7 +21,7 @@
 //  ↳ http://esri.github.io/calcite-web/grid/#columns
 //  ↳ grid → _columns.md
 
-@mixin column-base() {
+%column-base {
   @include box-sizing(border-box);
   width: $container-width;
   max-width: 100%;
@@ -230,7 +230,6 @@
       }
       .#{$prefix}#{$small-class}-last-column {
         margin-right: -($column-gutter / 2);
-
         @if ($include-right-to-left) {
           html[dir="rtl"] & {
             margin-right: 0;
@@ -239,9 +238,7 @@
         }
       }
     }
-
   } @else {
-
     @for $n from 1 through $default-column-count {
       .#{$prefix}column-#{$n} {
         width: ($n / $default-column-count) * $container-width;
@@ -257,7 +254,6 @@
         }
       }
     }
-
   }
 }
 
@@ -287,8 +283,11 @@
   }
 
   @media screen {
-    [class*="column-"] {
-      @include column-base();
+
+    @for $n from 1 through $default-column-count {
+      .#{$prefix}column-#{$n} {
+        @extend %column-base;
+      }
     }
 
     .#{$prefix}first-column {

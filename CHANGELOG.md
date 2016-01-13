@@ -3,6 +3,7 @@
 ### Modified
 - Iconography change for accordions
 - Opacity used for disabled state in buttons
+- Don't use wild-card selector in column-base styles
 
 ## 1.0.0-beta
 
