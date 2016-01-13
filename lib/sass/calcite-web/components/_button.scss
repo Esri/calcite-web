@@ -29,15 +29,8 @@
 }
 
   @mixin btn-disabled() {
-    background-color: $off-white;
-    border-color: $off-white;
+    opacity: .3;
     cursor: default;
-    pointer-events: none;
-    color: $gray;
-    &:hover {
-      background-color: $light-gray;
-      color: $gray;
-    }
   }
 
   @mixin btn-arrow() {
@@ -54,14 +47,6 @@
       color: $link-hover;
       background: none;
       text-decoration: underline;
-    }
-    &.btn-disabled {
-      background: none;
-      color: $gray;
-      &:hover {
-        color: $gray;
-        background: none;
-      }
     }
   }
 

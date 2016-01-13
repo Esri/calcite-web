@@ -1,7 +1,10 @@
-## Unreleased
+## 1.0.0.beta.1
 
 ### Modified
 - Iconography change for accordions
+- Opacity used for disabled state in buttons
+- Don't use wild-card selector in column-base styles
+- Selects now have white background
 
 ## 1.0.0-beta
 
