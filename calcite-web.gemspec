@@ -5,7 +5,7 @@ package = JSON.parse(File.read("package.json"))
 
 Gem::Specification.new do |s|
   s.name        = package["name"]
-  s.version     = package["version"]
+  s.version     = package["version"].gsub('-', '.')
   s.summary     = package["description"]
   s.authors     = ["Paul C. Pederson", "Nikolas Wise"]
   s.email       = package["author"]["email"]
