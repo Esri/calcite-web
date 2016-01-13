@@ -1,0 +1,19 @@
+@mixin skip-to-content {
+  opacity: 0;
+  float: left;
+  pointer-events: none;
+  margin: 0 0 0 1rem;
+  position: absolute;
+  z-index: 10;
+  background-color: transparent;
+  @include transition($transition);
+  &:focus {
+    opacity: 1;
+    @include transition($transition);
+    background-color: $white;
+  }
+}
+
+@if $include-skip-to-content {
+  .skip-to-content {@include skip-to-content(); }
+}
