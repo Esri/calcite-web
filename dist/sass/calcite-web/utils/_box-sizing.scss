@@ -1,0 +1,9 @@
+// ┌────────────┐
+// │ Box Sizing │
+// └────────────┘
+//  ↳ http://esri.github.io/calcite-web/sass/#box-sizing
+//  ↳ components → _utility-mixins.md
+
+@mixin box-sizing ($box) {
+  @include prefixer(box-sizing, $box, webkit moz spec);
+}

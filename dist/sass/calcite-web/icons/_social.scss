@@ -1,0 +1,42 @@
+// ┌──────────────┐
+// │ Social Icons │
+// └──────────────┘
+//  ↳ http://esri.github.io/calcite-web/icons/
+//  ↳ icons → _social-icons.md
+
+@mixin social-icon ($name, $color) {
+  .icon-social-#{$name} {
+    background-image: url('#{$image-path}/icons/social/#{$name}.svg') !important;
+    &:hover { background-color: $color !important; }
+  }
+}
+
+@mixin social-icons () {
+  [class*="icon-social-"] {
+    background-color: #b2b2b2;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    @include transition(background-color 200ms linear);
+    &:hover {
+      @include transition(background-color 200ms linear);
+    }
+  }
+  @include social-icon('contact', #8EC449);
+  @include social-icon('facebook', #3D5A96);
+  @include social-icon('geonet', #127BC0);
+  @include social-icon('github', #171515);
+  @include social-icon('google-plus', #DD4C3C);
+  @include social-icon('instagram', #1B6FB1);
+  @include social-icon('linkedin', #127CB3);
+  @include social-icon('pinterest', #BB0F23);
+  @include social-icon('rss', #FD8023);
+  @include social-icon('share', #1EBD21);
+  @include social-icon('twitter', #59ADEB);
+  @include social-icon('youtube', #CF2529);
+}
+
+@if $include-social-icons == true {
+  @include social-icons();
+}
