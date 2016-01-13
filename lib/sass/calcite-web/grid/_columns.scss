@@ -283,18 +283,17 @@
   }
 
   @media screen {
-
-    @for $n from 1 through $default-column-count {
-      .#{$prefix}column-#{$n} {
-        @extend %column-base;
-      }
-    }
-
     .#{$prefix}first-column {
       @include first-column();
     }
     .#{$prefix}last-column {
       @include last-column();
+    }
+  }
+
+  @for $n from 1 through $default-column-count {
+    .#{$prefix}column-#{$n} {
+      @extend %column-base;
     }
   }
 

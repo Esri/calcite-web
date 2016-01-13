@@ -1,3 +1,8 @@
+## 1.0.0-beta.2
+
+### Modified
+- Don't extend `%column-base` inside media query (#463)
+
 ## 1.0.0-beta.1
 
 ### Modified
