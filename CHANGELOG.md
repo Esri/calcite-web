@@ -2,6 +2,7 @@
 
 ### Fixed
 - remove reference to missing `column-base()` mixin
+- remove Sass debug in `_columns.scss`
 
 ## 1.0.0-beta.2
 

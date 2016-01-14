@@ -267,7 +267,6 @@
 
   @media screen and (min-width: $large) {
     @if unit($container-width) == 'vw' {
-      @debug unit($container-width);
       .#{$prefix}grid-container {
         $diff: $large-column-count - $default-column-count;
         $side: $diff / 2;
