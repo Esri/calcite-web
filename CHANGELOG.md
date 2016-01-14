@@ -1,3 +1,8 @@
+## Unreleased
+
+### Fixed
+- remove reference to missing `column-base()` mixin
+
 ## 1.0.0-beta.2
 
 ### Modified
