@@ -20,7 +20,7 @@
 ### Fixed
 - Removed underlines on `:hover` for icons inside of links
 - Zero margin on `p:empty`
-- Style <select multiple>
+- Style `<select multiple>`
 
 ### Modified
 - Changes hover and active on side nav to subtle blue backgrounds
