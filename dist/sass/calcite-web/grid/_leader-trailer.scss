@@ -1,0 +1,66 @@
+// ┌────────────────┐
+// │ Leader Trailer │
+// └────────────────┘
+//  ↳ http://esri.github.io/calcite-web/grid/#leader-and-trailer
+//  ↳ grid → _leader-and-trailer.md
+
+@mixin leader-half()  { margin-top:    0.5 * $baseline; }
+@mixin trailer-half() { margin-bottom: 0.5 * $baseline; }
+@mixin padding-leader-half()  { padding-top:    0.5 * $baseline; }
+@mixin padding-trailer-half() { padding-bottom: 0.5 * $baseline; }
+
+@mixin leader($n)          { margin-top:     $n * $baseline; }
+@mixin trailer($n)         { margin-bottom:  $n * $baseline; }
+@mixin padding-leader($n)  { padding-top:    $n * $baseline; }
+@mixin padding-trailer($n) { padding-bottom: $n * $baseline; }
+
+// Responsive Leader and Trailer
+@mixin responsive-leader-trailer() {
+  @if $fold-grid == true {
+    @media screen and (min-width: $large) {
+      @for $i from 0 through $vertical-range {
+        .#{$large-class}-leader-#{$i}          { margin-top:     $i * $baseline; }
+        .#{$large-class}-trailer-#{$i}         { margin-bottom:  $i * $baseline; }
+        .#{$large-class}-padding-leader-#{$i}  { padding-top:    $i * $baseline; }
+        .#{$large-class}-padding-trailer-#{$i} { padding-bottom: $i * $baseline; }
+      }
+    }
+
+    // Medium
+    @media screen and (max-width: $medium - 1) {
+      @for $i from 0 through $vertical-range {
+        .#{$medium-class}-leader-#{$i}          { margin-top:     $i * $baseline; }
+        .#{$medium-class}-trailer-#{$i}         { margin-bottom:  $i * $baseline; }
+        .#{$medium-class}-padding-leader-#{$i}  { padding-top:    $i * $baseline; }
+        .#{$medium-class}-padding-trailer-#{$i} { padding-bottom: $i * $baseline; }
+      }
+    }
+
+    // Small
+    @media screen and (max-width: $small - 1) {
+      @for $i from 0 through $vertical-range {
+        .#{$small-class}-leader-#{$i}          { margin-top:     $i * $baseline; }
+        .#{$small-class}-trailer-#{$i}         { margin-bottom:  $i * $baseline; }
+        .#{$small-class}-padding-leader-#{$i}  { padding-top:    $i * $baseline; }
+        .#{$small-class}-padding-trailer-#{$i} { padding-bottom: $i * $baseline; }
+      }
+    }
+  }
+}
+
+@if $include-grid == true or $include-leader-trailer == true {
+
+  .leader-half  { @include leader-half(); }
+  .trailer-half { @include trailer-half(); }
+  .padding-leader-half  { @include padding-leader-half(); }
+  .padding-trailer-half { @include padding-trailer-half(); }
+
+  @for $i from 0 through $vertical-range {
+    .leader-#{$i}          { @include leader($i)          ;}
+    .trailer-#{$i}         { @include trailer($i)         ;}
+    .padding-leader-#{$i}  { @include padding-leader($i)  ;}
+    .padding-trailer-#{$i} { @include padding-trailer($i) ;}
+  }
+
+  @include responsive-leader-trailer();
+}
