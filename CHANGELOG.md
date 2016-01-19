@@ -1,4 +1,4 @@
-## Unreleased
+## 1.0.0-beta.4
 
 ### Added
 - `calcite.init()` now removes any existing events so they're not bound twice
