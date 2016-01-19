@@ -1,0 +1,209 @@
+// ┌────────────────┐
+// │ Default Styles │
+// └────────────────┘
+
+@if $include-type == true and $include-type-defaults == true {
+
+  html {
+    font-size: 17px;
+  }
+
+  body {
+    @include avenir-regular();
+    @include font-size(0);
+    line-height: $baseline;
+    color: $type-color;
+
+    -webkit-font-feature-settings: "kern";
+       -moz-font-feature-settings: "kern";
+            font-feature-settings: "kern";
+    font-kerning: normal;
+
+    text-rendering: optimizeLegibility;
+
+     -moz-font-feature-settings : 'liga= 1','calt=0';
+     -moz-font-feature-settings : "liga" 1,"calt" 0;
+     -webkit-font-feature-settings : "liga" 1,"calt" 0;
+     -ms-font-feature-settings : 'liga= 1','calt=0';
+     -o-font-feature-settings : "liga" 1,"calt" 0;
+     font-feature-settings : "liga" 1,"calt" 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @extend .avenir-light;
+    margin: 0 0 $baseline 0;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  h1 {@include font-size(5);}
+  h2 {@include font-size(4);}
+  h3 {@include font-size(3);}
+  h4 {@include font-size(2);}
+  h5 {@include font-size(1);}
+  h6 {@include font-size(0);}
+
+  code, kbd, pre, samp {
+    font-family: $code-family;
+  }
+
+  code {
+    padding: .25rem;
+    border-radius: 3px;
+    border: 1px solid $lightest-gray;
+    color: $darkest-gray;
+    background-color: $off-white;
+    white-space: pre;
+    font-size: 0.85em;
+    line-height: 1.4rem;
+  }
+
+  pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-width: 100%;
+    margin-bottom: $baseline;
+    code {
+      padding: 1rem;
+      display: block;
+      overflow: auto;
+      word-wrap: normal;
+      font-size: 0.85em;
+      position: relative;
+    }
+  }
+
+  p,
+  ul,
+  ol,
+  dl,
+  blockquote {
+    margin-top: 0;
+    margin-bottom: $baseline;
+  }
+
+  p:empty {
+    margin: 0;
+  }
+
+  blockquote {
+    margin: $baseline 0;
+    @include avenir-regular();
+    @include gutter-left(1);
+    color: $darker-gray;
+    border-left: 3px solid $lighter-gray;
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        border-left: none;
+        border-right: 3px solid $lighter-gray;
+      }
+    }
+  }
+
+  blockquote,
+  blockquote p {
+    @include font-size(1);
+  }
+
+  a {
+    color: $link-color;
+    text-decoration: none;
+    @include transition(color $transition, text-decoration $transition);
+    &:hover {
+      color: $link-hover;
+      text-decoration: underline;
+    }
+  }
+
+  ul, ol {
+    padding: 0;
+    list-style-position: inside;
+    margin-bottom: $baseline;
+    margin-left: $baseline / 2;
+    @include font-size(-1);
+  }
+
+  li {
+    list-style-position: outside;
+    margin: $baseline/4 0 $baseline/4 1.5rem;
+  }
+
+  ul li {
+    list-style-type: disc;
+  }
+
+  li ul, li ol {
+    margin-bottom: 0;
+  }
+
+  dl {
+    padding: 0;
+    margin-bottom: $baseline;
+  }
+  dt {
+    @extend .avenir-demi;
+    margin-top: $baseline/2;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  dd {
+    margin-left: $baseline/2;
+  }
+
+  small, sup, sub {
+    font-size: 1/$ratio * 1em;
+  }
+
+  sub,
+  sup {
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+
+  sup {
+    top: -0.5em;
+  }
+
+  sub {
+    bottom: -0.25em;
+  }
+
+  mark {
+    padding: 0 0.1em 0.1em;
+  }
+
+  hr {
+    margin: $baseline*1.5 0;
+    border: none;
+    border-top: 1px solid $lighter-gray;
+  }
+
+  figure {
+    margin: 0 0 $baseline 0;
+    img {
+      max-width: 100%;
+    }
+  }
+
+  figcaption {
+    margin: $baseline/4 0;
+    padding-left: $baseline/2;
+    border-left: 3px solid $dark-gray;
+    @include font-size(-2);
+    font-style: italic;
+    color: $dark-gray;
+  }
+
+  table {
+    margin-bottom: $baseline;
+  }
+}

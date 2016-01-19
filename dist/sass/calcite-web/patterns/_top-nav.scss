@@ -1,0 +1,118 @@
+// ┌────────┐
+// │ Topnav │
+// └────────┘
+//  ↳ http://esri.github.io/calcite-web/patterns/#top-nav
+//  ↳ patterns → _top-nav.md
+$topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue 100%);
+
+@mixin top-nav {
+  @extend .avenir-regular;
+  border-bottom: 1px solid $lightest-gray;
+
+  .esri-logo {
+    margin-top: 1rem;
+  }
+
+  .sign-in {
+    padding-top: $baseline
+  }
+}
+
+  @mixin top-nav-title {
+    @extend .avenir-regular;
+    @include font-size(1);
+    @include left();
+    margin-right: 1.5rem;
+    padding: 1.125rem 0;
+    line-height: 1.5rem;
+    color: $off-black;
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        margin-right: 0;
+        margin-left: 1.5rem;
+      }
+    }
+    &:hover {
+      color: $blue;
+      @include prefixer(background-image, $topnav-link-overline, webkit moz o);
+      background-image: $topnav-link-overline;
+      text-decoration: none;
+    }
+    &.icon-ui-menu:before {
+      vertical-align: -1px;
+      padding-right: .5em;
+    }
+  }
+
+  @mixin top-nav-list {
+    @include left();
+    padding: 0;
+    .top-nav-link + .top-nav-link {
+      margin-left: .75em;
+      @if ($include-right-to-left) {
+        html[dir="rtl"] & {
+          margin-left: 0;
+          margin-right: .75em;
+        }
+      }
+    }
+    &.right {
+      @include right();
+    }
+  }
+
+  @mixin top-nav-style {
+    @include font-size(-1);
+    color: $off-black;
+    padding: .75*$baseline 0;
+    line-height: 1.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  @mixin top-nav-link {
+    @include font-size(-1);
+    color: $off-black;
+    padding: .75*$baseline 0;
+    line-height: 1.5rem;
+    display: inline-block;
+    vertical-align: top;
+    &:hover, &:focus {
+      color: $blue;
+      background: url('#{$image-path}/top-nav-ie9.gif') repeat-x top left transparent;
+      @include prefixer(background-image, $topnav-link-overline, webkit moz o);
+      background-image: $topnav-link-overline;
+      text-decoration: none;
+    }
+    &:focus {
+      outline: none;
+    }
+    &.is-active {
+      @include prefixer(background-image, $topnav-link-overline, webkit moz o);
+      background-image: $topnav-link-overline;
+    }
+  }
+
+  @mixin top-nav-logo {
+    margin-top: 0.75*$baseline;
+  }
+
+  @mixin sign-in {
+    @include right();
+    padding-left: $baseline / 4;
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        padding-left: 0;
+        padding-right: $baseline / 4;
+      }
+    }
+    margin-top: -0.7rem;
+  }
+
+@if $include-top-nav == true {
+  .top-nav {@include top-nav();}
+    .top-nav-title {@include top-nav-title();}
+    .top-nav-list {@include top-nav-list();}
+    .top-nav-link {@include top-nav-link();}
+  .sign-in {@include sign-in();}
+}

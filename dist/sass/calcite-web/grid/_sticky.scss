@@ -1,0 +1,12 @@
+@mixin is-sticky() {
+  position: fixed;
+  z-index: 10;
+  &.scroll-show, & .scroll-show {
+    @include visible();
+  }
+}
+
+@if $include-sticky == true {
+  .is-sticky{ @include is-sticky(); }
+  .scroll-show { @include invisible(); }
+}
