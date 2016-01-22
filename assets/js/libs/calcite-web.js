@@ -1,6 +1,6 @@
-/* calcite-web - v1.0.0-beta - 2015-12-14
+/* calcite-web - v1.0.0-beta.4 - 2016-01-22
 *  https://github.com/esri/calcite-web
-*  Copyright (c) 2015 Environmental Systems Research Institute, Inc.
+*  Copyright (c) 2016 Environmental Systems Research Institute, Inc.
 *  Apache 2.0 License */
 (function Calcite () {
 
@@ -9,7 +9,7 @@
   // └────────────┘
   // define all public api methods (excluding patterns)
   var calcite = {
-    version: 'v1.0.0-beta',
+    version: '1.0.0-beta.4',
     click: click,
     addEvent: addEvent,
     removeEvent: removeEvent,
@@ -22,7 +22,8 @@
     toggleClass: toggleClass,
     closest: closest,
     nodeListToArray: nodeListToArray,
-    init: init
+    init: init,
+    events: []
   };
 
   // ┌──────────────────────┐
@@ -79,6 +80,13 @@
 
   // add a callback function to an event on a DOM node
   function addEvent (domNode, e, fn) {
+    // push into events registry
+    calcite.events.push({
+      domNode: domNode,
+      e: e,
+      fn: fn
+    });
+
     if (domNode.addEventListener) {
       return domNode.addEventListener(e, fn, false);
     } else if (domNode.attachEvent) {
@@ -88,6 +96,12 @@
 
   // remove a specific function binding from a DOM node event
   function removeEvent (domNode, e, fn) {
+    calcite.events = calcite.events.filter(function (ev) {
+      // if the event, domNode, and function match, remove from events registry
+      var shouldRemove = ev.domNode === domNode && ev.e === e && ev.fn === fn
+      return !shouldRemove;
+    });
+
     if (domNode.removeEventListener) {
       return domNode.removeEventListener(e, fn, false);
     } else if (domNode.detachEvent) {
@@ -691,6 +705,10 @@
   // start up Calcite and attach all the patterns
   // optionally pass an array of patterns you'd like to watch
   function init (patterns) {
+    // if there are attached events, remove them
+    calcite.events.forEach(function (ev) {
+      removeEvent (ev.domNode, ev.e, ev.fn);
+    });
     patterns = patterns || ['sticky', 'accordion', 'dropdown', 'drawer', 'expandingNav', 'modal', 'tabs', 'siteSearch', 'thirdNav'];
     patterns.forEach(function (pattern) {
       calcite[pattern]();
