@@ -364,31 +364,39 @@
           
 
           <p>A basic starting point for an html page using Calcite Web might be something like this:</p>
-<pre><code class="html"><span class="hljs-doctype">&lt;!doctype html lang="en"&gt;</span>
+<pre><code class="html"><span class="hljs-doctype">&lt;!doctype html&gt;</span>
 <span class="hljs-comment">&lt;!--[if lt IE 9]&gt;  &lt;html class="ie lt-ie9 ie8"&gt; &lt;![endif]--&gt;</span>
 <span class="hljs-comment">&lt;!--[if IE 9]&gt;     &lt;html class="ie ie9"&gt; &lt;![endif]--&gt;</span>
 <span class="hljs-comment">&lt;!--[if !IE]&gt;&lt;!--&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span> <span class="hljs-comment">&lt;!--&lt;![endif]--&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"utf-8"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"IE=edge,chrome=1"</span> <span class="hljs-attribute">http-equiv</span>=<span class="hljs-value">"X-UA-Compatible"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"IE=edge"</span> <span class="hljs-attribute">http-equiv</span>=<span class="hljs-value">"X-UA-Compatible"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"viewport"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"width=device-width, user-scalable=no"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Calcite Web<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"shortcut icon"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/img/favicon.ico"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"../assets/css/calcite.css"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- get calcite-web css from the cdn (use latest version) --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.4/css/calcite-web.min.css"</span>&gt;</span>
     <span class="hljs-comment">&lt;!--[if lt IE 9]&gt;
-      &lt;script src="/assets/javascripts/libs/selectivizr.js" type="text/javascript"&gt;&lt;/script&gt;
-      &lt;script src="/assets/javascripts/libs/html5shiv.js" type="text/javascript"&gt;&lt;/script&gt;
+      &lt;script src="/assets/javascripts/libs/selectivizr.js"&gt;&lt;/script&gt;
+      &lt;script src="/assets/javascripts/libs/html5shiv.js"&gt;&lt;/script&gt;
     &lt;![endif]--&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"wrapper"</span>&gt;</span>
-        <span class="hljs-comment">&lt;!-- header --&gt;</span>
-        <span class="hljs-comment">&lt;!-- content of page --&gt;</span>
+      <span class="hljs-comment">&lt;!-- header --&gt;</span>
+      <span class="hljs-comment">&lt;!-- content of page --&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"footer"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"contentinfo"</span>&gt;</span>&gt;
       <span class="hljs-comment">&lt;!-- content of footer --&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"/assets/javascripts/calcite-web.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- get calcite-web js from the cdn (use latest version) --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.4/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- interactive patterns need to be initialized --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="stylus">
+       calcite.<span class="hljs-function"><span class="hljs-title">init</span><span class="hljs-params">()</span></span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
 </code></pre>
