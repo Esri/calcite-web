@@ -77,8 +77,8 @@ module.exports = function(grunt) {
       },
 
       expanded: {
-        src: 'lib/sass/calcite-web.scss',
-        dest: 'dist/css/calcite-web.css'
+        src: ['lib/sass/*.scss'],
+        dest: 'dist/css/'
       },
 
       doc: {
@@ -117,7 +117,8 @@ module.exports = function(grunt) {
     'cssmin': {
       target: {
         files: {
-          'dist/css/calcite-web.min.css': ['dist/css/calcite-web.css']
+          'dist/css/calcite-web.min.css': ['dist/css/calcite-web.css'],
+          'dist/css/calcite-web-no-fonts.min.css': ['dist/css/calcite-web-no-fonts.css'],
         }
       }
     },
