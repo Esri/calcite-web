@@ -77,6 +77,7 @@ module.exports = function(grunt) {
       },
 
       expanded: {
+        expand: true,
         src: ['lib/sass/*.scss'],
         dest: 'dist/css/'
       },
