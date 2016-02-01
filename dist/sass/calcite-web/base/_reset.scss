@@ -1,0 +1,81 @@
+// ┌─────────────┐
+// │ Basic Reset │
+// └─────────────┘
+
+@mixin reset() {
+
+  // Always show vertical scroll bars, standardize type size
+  html {
+    overflow-y: scroll;
+    height: 100%;
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+       -moz-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+  }
+
+  // Make body full height
+  body {
+    min-height: 100%;
+    margin: 0;
+  }
+
+  .wrapper {
+    overflow: hidden;
+  }
+
+  // Reset HTML5 elements
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  nav,
+  section,
+  summary {
+    display: block;
+  }
+
+  audio,
+  canvas,
+  video {
+    display: inline-block;
+  }
+
+  audio:not([controls]) {
+    display: none;
+    height: 0;
+  }
+
+  [hidden] {
+    display: none;
+  }
+
+  svg:not(:root) {
+    overflow: hidden;
+  }
+
+  video,
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .ie {
+    main {
+      display: block;
+    }
+
+    select {
+      padding-right: 8px;
+    }
+
+  }
+}
+
+@if $include-reset == true {
+  @include reset();
+}

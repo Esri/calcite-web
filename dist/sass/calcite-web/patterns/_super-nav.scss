@@ -1,0 +1,27 @@
+// ┌──────────┐
+// │ Supernav │
+// └──────────┘
+//  ↳ http://esri.github.io/calcite-web/patterns/#super-nav
+//  ↳ patterns → _super-nav.md
+
+$super-nav-height: 3*$baseline;
+
+@mixin super-nav() {
+  position: relative;
+  background-color: $black;
+  height: $super-nav-height;
+  color: $off-white;
+  top: 0;
+  margin-bottom: -$super-nav-height;
+  @include transform(translate3d(0,-$super-nav-height,0));
+  @include transition($transition);
+  &.is-active {
+    @include transform(translate3d(0,0,0));
+    @include transition($transition);
+    margin-bottom: 0;
+  }
+}
+
+@if $include-super-nav == true {
+  .super-nav {@include super-nav();}
+}

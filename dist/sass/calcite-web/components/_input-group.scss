@@ -1,0 +1,29 @@
+@mixin input-group() {
+  display: table;
+  margin-top: $baseline*.25;
+}
+
+  @mixin input-group-input() {
+    display: table-cell;
+    position: relative;
+    margin-top: 0;
+    width: 100%;
+    vertical-align: middle;
+  }
+
+  @mixin input-group-button() {
+    width: 1%;
+    vertical-align: middle;
+    display: table-cell;
+    .btn, button {
+      height: 2.25rem;
+      margin-left: -1px;
+    }
+  }
+
+@if $include-input-groups == true {
+  .input-group {@include input-group();}
+    .input-group-button {@include input-group-button();}
+    input.input-group-input,
+    .input-group-input {@include input-group-input();}
+}
