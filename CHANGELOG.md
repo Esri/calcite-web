@@ -1,3 +1,8 @@
+## 1.0.0-beta.5
+
+### Added
+- Distribute a css file that doesn't call fonts.com for Avenir Next
+
 ## 1.0.0-beta.4
 
 ### Added
