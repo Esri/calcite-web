@@ -1,0 +1,300 @@
+<!DOCTYPE html lang="en">
+<!--[if lt IE 9]>  <html class="ie lt-ie9 ie8"> <![endif]-->
+<!--[if IE 9]>     <html class="ie ie9"> <![endif]-->
+<!--[if !IE]><!--> <html> <!--<![endif]-->
+  <head>
+
+    <!-- Set encoding -->
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <!-- Use title from page frontmatter -->
+    <title> | Esri Design Patterns</title>
+
+    <!-- Link to favicon -->
+    <link rel="shortcut icon" href="../../assets/img/favicon.ico">
+
+    <!-- stylesheets -->
+    
+      <link rel="stylesheet" href="../../assets/css/all.css">
+    
+
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/libs/selectivizr-min.js"></script>
+      <script src="../../assets/js/libs/html5shiv.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+    <!--
+    ┌─────────┐
+    │ Drawers │
+    └─────────┘
+     ↳ http://esri.github.io/calcite-web/patterns/#drawers
+     ↳ patterns → _drawers.md
+    -->
+    <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
+      <nav class="drawer-nav">
+        <aside class="side-nav">
+          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
+          <div class="panel padding-trailer-half padding-leader-half">
+            <label class="trailer-0">
+              <input type='search' placeholder='Search'>
+            </label>
+          </div>
+            
+              
+                <a href="../../" class="side-nav-link">Get Started</a>
+              
+            
+              
+                <a href="../../type" class="side-nav-link">Type</a>
+              
+            
+              
+                <a href="../../grid" class="side-nav-link">Grid</a>
+              
+            
+              
+                <a href="../../icons" class="side-nav-link">Icons</a>
+              
+            
+              
+                <a href="../../color" class="side-nav-link">Color</a>
+              
+            
+              
+                <a href="../../components" class="side-nav-link">Components</a>
+              
+            
+              
+                <a href="../../patterns" class="side-nav-link">Patterns</a>
+              
+            
+              
+                <a href="../../sass" class="side-nav-link">Sass</a>
+              
+            
+              
+                <a href="../../javascript" class="side-nav-link">JavaScript</a>
+              
+            
+              
+                <a href="../../page-layouts" class="side-nav-link">Layouts</a>
+              
+            
+        </aside>
+      </nav>
+    </div>
+
+    <div class="drawer drawer-right js-drawer" data-drawer="right">
+      <nav class="drawer-nav">
+        <aside class="side-nav">
+          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
+          <div class="panel padding-trailer-half padding-leader-half">
+            <label class="trailer-0">
+              <input type='search' placeholder='Search'>
+            </label>
+          </div>
+            
+              
+                <a href="../../" class="side-nav-link">Get Started</a>
+              
+            
+              
+                <a href="../../type" class="side-nav-link">Type</a>
+              
+            
+              
+                <a href="../../grid" class="side-nav-link">Grid</a>
+              
+            
+              
+                <a href="../../icons" class="side-nav-link">Icons</a>
+              
+            
+              
+                <a href="../../color" class="side-nav-link">Color</a>
+              
+            
+              
+                <a href="../../components" class="side-nav-link">Components</a>
+              
+            
+              
+                <a href="../../patterns" class="side-nav-link">Patterns</a>
+              
+            
+              
+                <a href="../../sass" class="side-nav-link">Sass</a>
+              
+            
+              
+                <a href="../../javascript" class="side-nav-link">JavaScript</a>
+              
+            
+              
+                <a href="../../page-layouts" class="side-nav-link">Layouts</a>
+              
+            
+        </aside>
+      </nav>
+    </div>
+
+    <div class="wrapper">
+      <!-- Logged Out Pattern-->
+      <header class="top-nav">
+        <div class="grid-container">
+          <div class="column-24">
+            <div class="tablet-hide">
+              <a href="../../" class="top-nav-title">Calcite Web</a>
+              <nav class="top-nav-list">
+              
+                
+                  <a href="../../" class="top-nav-link">Get Started</a>
+                
+              
+                
+                  <a href="../../type" class="top-nav-link">Type</a>
+                
+              
+                
+                  <a href="../../grid" class="top-nav-link">Grid</a>
+                
+              
+                
+                  <a href="../../icons" class="top-nav-link">Icons</a>
+                
+              
+                
+                  <a href="../../color" class="top-nav-link">Color</a>
+                
+              
+                
+                  <a href="../../components" class="top-nav-link">Components</a>
+                
+              
+                
+                  <a href="../../patterns" class="top-nav-link">Patterns</a>
+                
+              
+                
+                  <a href="../../sass" class="top-nav-link">Sass</a>
+                
+              
+                
+                  <a href="../../javascript" class="top-nav-link">JavaScript</a>
+                
+              
+                
+                  <a href="../../page-layouts" class="top-nav-link">Layouts</a>
+                
+              
+              </nav>
+            </div>
+            <div class="tablet-show">
+              <a href="" class="top-nav-title js-drawer-toggle" data-drawer="top-nav">☰ Calcite Web</a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="expanding-nav js-expanding">
+        <section class="expanding-nav-menu js-expanding-nav" data-expanding-nav="one">
+          <div class="grid-container padding-trailer-half">
+            <div class="column-24">
+              <h1>Expanding Nav One</h1>
+            </div>
+          </div>
+        </section>
+        <section class="expanding-nav-menu js-expanding-nav" data-expanding-nav="two">
+          <div class="grid-container padding-trailer-half">
+            <div class="column-24">
+              <h1>Expanding Nav Two</h1>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- Secondary Nav Pattern -->
+      <header class="sub-nav">
+        <div class="grid-container">
+          <div class="column-24">
+            
+
+          </div>
+        </div>
+      </header>
+
+      <!-- content of each page will go here -->
+      <div class="grid-container leader-1">
+        
+
+
+      </div>
+
+    </div>
+
+    
+
+    <!-- Footer Pattern -->
+    <footer class="footer leader-3">
+      <div class="grid-container">
+          <nav class="column-6">
+            <h6>Styleguides</h6>
+            <ul>
+              <li><a href="../../styleguides/javascript/">JavaScript</a></li>
+              <li><a href="../../styleguides/css/">CSS</a></li>
+              <li><a href="../../styleguides/html/">HTML</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <h6>Resources</h6>
+            <ul>
+              <li><a href="../../migration-guide/">Migration Guide</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/releases/">Releases</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/blob/master/CONTRIBUTING.md">Contributing</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/issues/">Issues</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/">GitHub</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <h6>About Esri</h6>
+            <ul>
+              <li><a href="http://www.esri.com/about-esri/">About Us</a></li>
+              <li><a href="http://www.esri.com/careers/">Careers</a></li>
+              <li><a href="http://blogs.esri.com/esri/esri-insider/">Insiders Blog</a></li>
+              <li><a href="http://www.esri.com/events/user-conference/index.html">User Conference</a></li>
+              <li><a href="http://www.esri.com/events/devsummit/index.html">Developer Summit</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6 padding-leader-half">
+            <a class="esri-logo" href="http://esri.com"></a>
+            <section class="footer-social-nav">
+              <a class="icon-social-twitter" aria-label="Esri on Twitter"  href="https://twitter.com/Esri/"></a>
+              <a class="icon-social-facebook" aria-label="Esri on Facebook"  href="https://www.facebook.com/esrigis/"></a>
+              <a class="icon-social-github" aria-label="Esri on GitHub"  href="http://esri.github.com/"></a>
+              <a class="icon-social-contact" aria-label="Contact Esri"  href="http://www.esri.com/about-esri/contact/"></a>
+            </section>
+          </nav>
+          <div class="column-24">
+            <p><small>© Copyright 2013 Environmental Systems Research Institute, Inc. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal/software-license">Legal</a></small></p>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+    <script src="../../assets/js/libs/calcite-web.js"></script>
+    <script src="../../assets/js/all.js"></script>
+
+    
+
+  </body>
+
+</html>
