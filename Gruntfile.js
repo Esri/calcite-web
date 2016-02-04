@@ -4,6 +4,9 @@
 // Grunt wraps several tasks to ease development
 // runs middleman, deploys the site, and tags new releases
 var babel = require('rollup-plugin-babel');
+var npm = require('rollup-plugin-npm');
+var commonjs = require('rollup-plugin-commonjs');
+
 
 // Javascript banner
 var banner = '/* <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
@@ -70,10 +73,20 @@ module.exports = function (grunt) {
         banner: banner,
         sourceMap: true,
         sourceMapRelativePaths: true,
+        namedExports: {
+          'node_modules/tiny-emitter/index.js': [ 'Emitter' ]
+        },
         plugins: [
+          npm({
+            jsnext: true,
+            main: true
+          }),
           babel({
             "presets": ["es2015-rollup"],
             exclude: './node_modules/**'
+          }),
+          commonjs({
+            include: 'node_modules/**'
           })
         ]
       },
@@ -172,7 +185,7 @@ module.exports = function (grunt) {
       doc: {
         expand: true,
         cwd: 'docs/source/',
-        src: ['assets/img/**/*', 'assets/js/**/*'],
+        src: ['assets/img/**/*'],
         dest: 'docs/build/'
       },
       fonts: {
