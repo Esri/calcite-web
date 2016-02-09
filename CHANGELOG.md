@@ -3,6 +3,9 @@
 ### Added
 - Created an event bus for interactive js patterns.
 
+### Changed
+- Accordion icons
+
 ## 1.0.0-beta.5
 
 ### Added
