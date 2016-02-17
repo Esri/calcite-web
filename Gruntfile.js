@@ -39,8 +39,8 @@ module.exports = function (grunt) {
       js: {
         files: ['lib/js/**/*.js', 'docs/source/assets/js/**/*'],
         tasks: [
-          'rollup:doc',
-          'copy:doc'
+          'copy:doc',
+          'rollup:doc'
         ]
       },
       img: {
@@ -185,7 +185,7 @@ module.exports = function (grunt) {
       doc: {
         expand: true,
         cwd: 'docs/source/',
-        src: ['assets/img/**/*'],
+        src: ['assets/img/**/*', 'assets/js/**/*'],
         dest: 'docs/build/'
       },
       fonts: {
