@@ -199,6 +199,9 @@
 
     {% endblock %}
 
-  </body>
+    {% for name in js %}
+      <script src="{{relativePath}}assets/js/{{name}}.js"></script>
+    {% endfor %}
 
+  </body>
 </html>

@@ -9,7 +9,7 @@
   padding-bottom: 0;
 }
 
-@mixin filter-dropdown-clear() {
+@mixin filter-dropdown-action() {
   @include font-size(-2);
   @include right();
 }
@@ -141,7 +141,8 @@
 
 @if $include-filter-dropdown == true {
   .filter-dropdown-title  { @include filter-dropdown-title(); }
-  .filter-dropdown-clear  { @include filter-dropdown-clear(); }
+  .filter-dropdown-close  { @include filter-dropdown-action(); }
+  .filter-dropdown-open  { @include filter-dropdown-action(); }
   .filter-dropdown-container {@include filter-dropdown-container();}
   .filter-dropdown-list  { @include filter-dropdown-list(); }
   .filter-dropdown-link  { @include filter-dropdown-link(); }
