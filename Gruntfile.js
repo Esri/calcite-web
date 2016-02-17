@@ -185,7 +185,7 @@ module.exports = function (grunt) {
       doc: {
         expand: true,
         cwd: 'docs/source/',
-        src: ['assets/img/**/*', 'assets/js/**/*'],
+        src: ['assets/img/**/*'],
         dest: 'docs/build/'
       },
       fonts: {
