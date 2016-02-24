@@ -2,6 +2,7 @@
 
 ### Added
 - Created an event bus for interactive js patterns.
+- Reintroduced filter dropdown pattern
 
 ## 1.0.0-beta.5
 
