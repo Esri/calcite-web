@@ -1,5 +1,14 @@
 # Calcite Web
 
+[![github releases][github-img]][github-url] [![travis][travis-img]][travis-url] [![semistandard][semistandard-img]][semistandard-url]
+
+[github-img]: https://img.shields.io/github/release/esri/calcite-web.svg?style=flat-square
+[github-url]: https://github.com/Esri/calcite-web/releases
+[travis-img]: https://img.shields.io/travis/esri/calcite-web.svg?style=flat-square
+[travis-url]: https://travis-ci.org/Esri/calcite-web
+[semistandard-img]: https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square
+[semistandard-url]: https://github.com/Flet/semistandard
+
 Calcite Web is a web design framework that implements the Esri Brand Guidelines and Calcite design framework for browser-based properties and products. Calcite Web is written in [Sass](http://sass-lang.com/), and is compatible with both the standard Sass ruby gem and the [Libsass](http://libsass.org/) compiler. The project also includes a dependency-free JavaScript library for use with interactive patterns.
 
 # Using Calcite Web
