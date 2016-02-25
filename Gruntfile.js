@@ -7,15 +7,15 @@ var babel = require('rollup-plugin-babel');
 var npm = require('rollup-plugin-npm');
 var commonjs = require('rollup-plugin-commonjs');
 
-
 // Javascript banner
-var banner = '/* <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
-                '*  <%= pkg.homepage %>\n' +
-                '*  Copyright (c) <%= grunt.template.today("yyyy") %> Environmental Systems Research Institute, Inc.\n' +
-                '*  Apache 2.0 License */\n';
+var banner = [
+  '/* <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>',
+  '*  <%= pkg.homepage %>',
+  '*  Copyright (c) <%= grunt.template.today("yyyy") %> Environmental Systems Research Institute, Inc.',
+  '*  Apache 2.0 License */'
+].join('\n');
 
 module.exports = function (grunt) {
-
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -27,7 +27,7 @@ module.exports = function (grunt) {
         port: 8888,
         host: '0.0.0.0',
         cache: 0,
-        showDir : true,
+        showDir: true,
         autoIndex: true,
         ext: 'html',
         runInBackground: true
@@ -40,7 +40,8 @@ module.exports = function (grunt) {
         files: ['lib/js/**/*.js', 'docs/source/assets/js/**/*'],
         tasks: [
           'copy:doc',
-          'rollup:doc'
+          'rollup:doc',
+          'shell:lint'
         ]
       },
       img: {
@@ -82,7 +83,7 @@ module.exports = function (grunt) {
             main: true
           }),
           babel({
-            "presets": ["es2015-rollup"],
+            presets: ['es2015-rollup'],
             exclude: './node_modules/**'
           }),
           commonjs({
@@ -91,19 +92,18 @@ module.exports = function (grunt) {
         ]
       },
       dist: {
-        'dest':'dist/js/calcite-web.js',
-        'src' : 'lib/js/calcite-web.js'
+        'dest': 'dist/js/calcite-web.js',
+        'src': 'lib/js/calcite-web.js'
       },
       doc: {
-        'dest':'docs/build/assets/js/libs/calcite-web.js',
-        'src' : 'lib/js/calcite-web.js'
-      },
+        'dest': 'docs/build/assets/js/libs/calcite-web.js',
+        'src': 'lib/js/calcite-web.js'
+      }
 
     },
 
     // Build CSS files from SASS
     'sass': {
-
       options: {
         includePaths: ['lib/sass/']
       },
@@ -185,7 +185,7 @@ module.exports = function (grunt) {
       doc: {
         expand: true,
         cwd: 'docs/source/',
-        src: ['assets/img/**/*'],
+        src: ['assets/img/**/*', 'assets/js/**/*'],
         dest: 'docs/build/'
       },
       fonts: {
@@ -236,7 +236,7 @@ module.exports = function (grunt) {
           {
             src: ['dist/**', '!dist/__MACOSX'],
             dest: './'
-          },
+          }
         ]
       }
     },
@@ -253,28 +253,28 @@ module.exports = function (grunt) {
       production: {
         files: [
           // Manually set content type (plugin was setting incorrectly).
-          {expand: true, cwd: 'dist/', src: ['**/*.js'],   dest: 'files/calcite-web/<%= pkg.version %>/', params: {ContentType: 'application/javascript'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.css'],  dest: 'files/calcite-web/<%= pkg.version %>/', params: {ContentType: 'text/css'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.svg'],  dest: 'files/calcite-web/<%= pkg.version %>/', params: {ContentType: 'image/svg+xml'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.ico'],  dest: 'files/calcite-web/<%= pkg.version %>/', params: {ContentType: 'image/x-icon'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.jpg'],  dest: 'files/calcite-web/<%= pkg.version %>/', params: {ContentType: 'image/jpg'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.map'],  dest: 'files/calcite-web/<%= pkg.version %>/', params: {ContentType: 'application/javascript'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.eot'],  dest: 'files/calcite-web/<%= pkg.version %>/', params: {ContentType: 'application/vnd.ms-fontobject'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.woff'], dest: 'files/calcite-web/<%= pkg.version %>/', params: {ContentType: 'application/font-woff'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.otf'],  dest: 'files/calcite-web/<%= pkg.version %>/', params: {ContentType: 'application/font-sfnt'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.ttf'],  dest: 'files/calcite-web/<%= pkg.version %>/', params: {ContentType: 'application/font-sfnt'}},
+          {expand: true, cwd: 'dist/', src: ['**/*.js'], dest: 'files/calcite-web/<%= pkg.version %>/', params: { ContentType: 'application/javascript' }},
+          {expand: true, cwd: 'dist/', src: ['**/*.css'], dest: 'files/calcite-web/<%= pkg.version %>/', params: { ContentType: 'text/css' }},
+          {expand: true, cwd: 'dist/', src: ['**/*.svg'], dest: 'files/calcite-web/<%= pkg.version %>/', params: { ContentType: 'image/svg+xml' }},
+          {expand: true, cwd: 'dist/', src: ['**/*.ico'], dest: 'files/calcite-web/<%= pkg.version %>/', params: { ContentType: 'image/x-icon' }},
+          {expand: true, cwd: 'dist/', src: ['**/*.jpg'], dest: 'files/calcite-web/<%= pkg.version %>/', params: { ContentType: 'image/jpg' }},
+          {expand: true, cwd: 'dist/', src: ['**/*.map'], dest: 'files/calcite-web/<%= pkg.version %>/', params: { ContentType: 'application/javascript' }},
+          {expand: true, cwd: 'dist/', src: ['**/*.eot'], dest: 'files/calcite-web/<%= pkg.version %>/', params: { ContentType: 'application/vnd.ms-fontobject' }},
+          {expand: true, cwd: 'dist/', src: ['**/*.woff'], dest: 'files/calcite-web/<%= pkg.version %>/', params: { ContentType: 'application/font-woff' }},
+          {expand: true, cwd: 'dist/', src: ['**/*.otf'], dest: 'files/calcite-web/<%= pkg.version %>/', params: { ContentType: 'application/font-sfnt' }},
+          {expand: true, cwd: 'dist/', src: ['**/*.ttf'], dest: 'files/calcite-web/<%= pkg.version %>/', params: { ContentType: 'application/font-sfnt' }},
           // Also upload to the 'latest' directory
-          {expand: true, cwd: 'dist/', src: ['**/*.js'],   dest: 'files/calcite-web/latest/', params: {ContentType: 'application/javascript'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.css'],  dest: 'files/calcite-web/latest/', params: {ContentType: 'text/css'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.svg'],  dest: 'files/calcite-web/latest/', params: {ContentType: 'image/svg+xml'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.ico'],  dest: 'files/calcite-web/latest/', params: {ContentType: 'image/x-icon'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.jpg'],  dest: 'files/calcite-web/latest/', params: {ContentType: 'image/jpg'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.map'],  dest: 'files/calcite-web/latest/', params: {ContentType: 'application/javascript'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.eot'],  dest: 'files/calcite-web/latest/', params: {ContentType: 'application/vnd.ms-fontobject'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.woff'], dest: 'files/calcite-web/latest/', params: {ContentType: 'application/font-woff'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.otf'],  dest: 'files/calcite-web/latest/', params: {ContentType: 'application/font-sfnt'}},
-          {expand: true, cwd: 'dist/', src: ['**/*.ttf'],  dest: 'files/calcite-web/latest/', params: {ContentType: 'application/font-sfnt'}},
-          {expand: true, cwd: 'dist/', src: ['CHANGELOG.md'], dest: 'files/calcite-web/latest/', params: {ContentType: 'text/x-markdown'}}
+          {expand: true, cwd: 'dist/', src: ['**/*.js'], dest: 'files/calcite-web/latest/', params: { ContentType: 'application/javascript' }},
+          {expand: true, cwd: 'dist/', src: ['**/*.css'], dest: 'files/calcite-web/latest/', params: { ContentType: 'text/css' }},
+          {expand: true, cwd: 'dist/', src: ['**/*.svg'], dest: 'files/calcite-web/latest/', params: { ContentType: 'image/svg+xml' }},
+          {expand: true, cwd: 'dist/', src: ['**/*.ico'], dest: 'files/calcite-web/latest/', params: { ContentType: 'image/x-icon' }},
+          {expand: true, cwd: 'dist/', src: ['**/*.jpg'], dest: 'files/calcite-web/latest/', params: { ContentType: 'image/jpg' }},
+          {expand: true, cwd: 'dist/', src: ['**/*.map'], dest: 'files/calcite-web/latest/', params: { ContentType: 'application/javascript' }},
+          {expand: true, cwd: 'dist/', src: ['**/*.eot'], dest: 'files/calcite-web/latest/', params: { ContentType: 'application/vnd.ms-fontobject' }},
+          {expand: true, cwd: 'dist/', src: ['**/*.woff'], dest: 'files/calcite-web/latest/', params: { ContentType: 'application/font-woff' }},
+          {expand: true, cwd: 'dist/', src: ['**/*.otf'], dest: 'files/calcite-web/latest/', params: { ContentType: 'application/font-sfnt' }},
+          {expand: true, cwd: 'dist/', src: ['**/*.ttf'], dest: 'files/calcite-web/latest/', params: { ContentType: 'application/font-sfnt' }},
+          {expand: true, cwd: 'dist/', src: ['CHANGELOG.md'], dest: 'files/calcite-web/latest/', params: { ContentType: 'text/x-markdown ' }}
         ]
       }
     },
@@ -309,6 +309,9 @@ module.exports = function (grunt) {
       },
       a11y: {
         command: 'npm run a11y'
+      },
+      lint: {
+        command: 'node_modules/.bin/semistandard | snazzy'
       }
     },
 
@@ -332,6 +335,6 @@ module.exports = function (grunt) {
   grunt.registerTask('buildFont', ['webfont', 'copy:fonts', 'copy:fontsDist']);
   grunt.registerTask('doc', ['shell:acetate', 'newer:imagemin:doc', 'sass:doc', 'copy:doc', 'copy:fonts', 'rollup:doc']);
   grunt.registerTask('deploy', ['doc', 'gh-pages']);
-  grunt.registerTask('release', ['sass', 'cssmin', 'rollup:dist', 'uglify', 'copy', 'newer:imagemin:dist', 'compress', 'shell:release', 'prompt:aws', 'aws_s3']);
+  grunt.registerTask('release', ['sass', 'cssmin', 'rollup:dist', 'shell:lint', 'uglify', 'copy', 'newer:imagemin:dist', 'compress', 'shell:release', 'prompt:aws', 'aws_s3']);
   grunt.registerTask('default', ['doc', 'http-server', 'watch']);
 };
