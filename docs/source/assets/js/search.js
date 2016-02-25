@@ -1,1 +1,1 @@
-console.log('cool search page')
+console.log('cool search page');

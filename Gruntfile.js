@@ -3,9 +3,9 @@
 // └─────────────┘
 // Grunt wraps several tasks to ease development
 // runs middleman, deploys the site, and tags new releases
-var babel = require('rollup-plugin-babel')
-var npm = require('rollup-plugin-npm')
-var commonjs = require('rollup-plugin-commonjs')
+var babel = require('rollup-plugin-babel');
+var npm = require('rollup-plugin-npm');
+var commonjs = require('rollup-plugin-commonjs');
 
 // Javascript banner
 var banner = [
@@ -13,7 +13,7 @@ var banner = [
   '*  <%= pkg.homepage %>',
   '*  Copyright (c) <%= grunt.template.today("yyyy") %> Environmental Systems Research Institute, Inc.',
   '*  Apache 2.0 License */'
-].join('\n')
+].join('\n');
 
 module.exports = function (grunt) {
   // Project configuration.
@@ -104,7 +104,6 @@ module.exports = function (grunt) {
 
     // Build CSS files from SASS
     'sass': {
-
       options: {
         includePaths: ['lib/sass/']
       },
@@ -325,17 +324,17 @@ module.exports = function (grunt) {
       src: ['**']
     }
 
-  })
+  });
 
   // load all grunt modules
-  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks)
+  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
   // ┌─────────────┐
   // │ Grunt tasks │
   // └─────────────┘
-  grunt.registerTask('buildFont', ['webfont', 'copy:fonts', 'copy:fontsDist'])
-  grunt.registerTask('doc', ['shell:acetate', 'newer:imagemin:doc', 'sass:doc', 'copy:doc', 'copy:fonts', 'rollup:doc'])
-  grunt.registerTask('deploy', ['doc', 'gh-pages'])
-  grunt.registerTask('release', ['sass', 'cssmin', 'rollup:dist', 'shell:standard', 'uglify', 'copy', 'newer:imagemin:dist', 'compress', 'shell:release', 'prompt:aws', 'aws_s3'])
-  grunt.registerTask('default', ['doc', 'http-server', 'watch'])
-}
+  grunt.registerTask('buildFont', ['webfont', 'copy:fonts', 'copy:fontsDist']);
+  grunt.registerTask('doc', ['shell:acetate', 'newer:imagemin:doc', 'sass:doc', 'copy:doc', 'copy:fonts', 'rollup:doc']);
+  grunt.registerTask('deploy', ['doc', 'gh-pages']);
+  grunt.registerTask('release', ['sass', 'cssmin', 'rollup:dist', 'shell:standard', 'uglify', 'copy', 'newer:imagemin:dist', 'compress', 'shell:release', 'prompt:aws', 'aws_s3']);
+  grunt.registerTask('default', ['doc', 'http-server', 'watch']);
+};
