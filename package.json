@@ -5,7 +5,7 @@
   "private": true,
   "homepage": "https://github.com/esri/calcite-web",
   "scripts": {
-    "test": "standard",
+    "test": "semistandard | snazzy",
     "a11y": "a11y local.arcgis.com:8888",
     "gh-release": "gh-release -a calcite-web.zip",
     "acetate": "acetate build -i docs/source -o docs/build -c docs/acetate.conf.js",
@@ -68,6 +68,7 @@
     "rollup-plugin-commonjs": "^2.2.1",
     "rollup-plugin-npm": "^1.4.0",
     "semistandard": "*",
+    "snazzy": "^3.0.0",
     "webfonts-generator": "^0.3.1"
   },
   "dependencies": {

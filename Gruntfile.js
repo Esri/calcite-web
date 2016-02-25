@@ -41,7 +41,7 @@ module.exports = function (grunt) {
         tasks: [
           'copy:doc',
           'rollup:doc',
-          'shell:standard'
+          'shell:lint'
         ]
       },
       img: {
@@ -185,7 +185,7 @@ module.exports = function (grunt) {
       doc: {
         expand: true,
         cwd: 'docs/source/',
-        src: ['assets/img/**/*'],
+        src: ['assets/img/**/*', 'assets/js/**/*'],
         dest: 'docs/build/'
       },
       fonts: {
@@ -310,8 +310,8 @@ module.exports = function (grunt) {
       a11y: {
         command: 'npm run a11y'
       },
-      standard: {
-        command: 'npm run standard'
+      lint: {
+        command: 'node_modules/.bin/semistandard | snazzy'
       }
     },
 
@@ -335,6 +335,6 @@ module.exports = function (grunt) {
   grunt.registerTask('buildFont', ['webfont', 'copy:fonts', 'copy:fontsDist']);
   grunt.registerTask('doc', ['shell:acetate', 'newer:imagemin:doc', 'sass:doc', 'copy:doc', 'copy:fonts', 'rollup:doc']);
   grunt.registerTask('deploy', ['doc', 'gh-pages']);
-  grunt.registerTask('release', ['sass', 'cssmin', 'rollup:dist', 'shell:standard', 'uglify', 'copy', 'newer:imagemin:dist', 'compress', 'shell:release', 'prompt:aws', 'aws_s3']);
+  grunt.registerTask('release', ['sass', 'cssmin', 'rollup:dist', 'shell:lint', 'uglify', 'copy', 'newer:imagemin:dist', 'compress', 'shell:release', 'prompt:aws', 'aws_s3']);
   grunt.registerTask('default', ['doc', 'http-server', 'watch']);
 };
