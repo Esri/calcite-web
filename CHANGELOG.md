@@ -2,6 +2,7 @@
 
 ### Added
 - Created an event bus for interactive js patterns.
+- Reintroduced filter dropdown pattern
 
 ### Changed
 - Accordion icons
