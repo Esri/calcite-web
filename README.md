@@ -2,7 +2,7 @@
 
 [![github releases][github-img]][github-url] [![travis][travis-img]][travis-url] [![semistandard][semistandard-img]][semistandard-url]
 
-[github-img]: https://img.shields.io/github/release/esri/calcite-web.svg?style=flat-square
+[github-img]: https://img.shields.io/github/release/Esri/calcite-web.svg?style=flat-square
 [github-url]: https://github.com/Esri/calcite-web/releases
 [travis-img]: https://img.shields.io/travis/esri/calcite-web.svg?style=flat-square
 [travis-url]: https://travis-ci.org/Esri/calcite-web
