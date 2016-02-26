@@ -1,11 +1,9 @@
 # Calcite Web
 
-[![github releases][github-img]][github-url] [![travis][travis-img]][travis-url] [![semistandard][semistandard-img]][semistandard-url]
+[![github releases][github-img]][github-url] [![Travis](https://img.shields.io/travis/Esri/calcite-web.svg?style=flat-square)](https://travis-ci.org/Esri/calcite-web) [![semistandard][semistandard-img]][semistandard-url]
 
 [github-img]: https://img.shields.io/github/release/Esri/calcite-web.svg?style=flat-square
 [github-url]: https://github.com/Esri/calcite-web/releases
-[travis-img]: https://img.shields.io/travis/esri/calcite-web.svg?style=flat-square
-[travis-url]: https://travis-ci.org/Esri/calcite-web
 [semistandard-img]: https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square
 [semistandard-url]: https://github.com/Flet/semistandard
 
