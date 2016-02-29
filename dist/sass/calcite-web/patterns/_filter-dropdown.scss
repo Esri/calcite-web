@@ -1,0 +1,163 @@
+// ┌─────────────────┐
+// │ Filter Dropdown │
+// └─────────────────┘
+//  ↳ http://esri.github.io/calcite-web/patterns/#filter-dropdown
+//  ↳ patterns → _filter-dropdown.md
+
+@mixin filter-dropdown-title() {
+  display: inline;
+  padding-bottom: 0;
+}
+
+@mixin filter-dropdown-action() {
+  @include font-size(-3);
+  @include right();
+  color: $gray;
+  display: none;
+  &.is-active {
+    display: inline-block;
+  }
+}
+
+@mixin filter-dropdown-container() {
+  @include clearfix();
+}
+
+@mixin filter-dropdown-list() {
+  @include dropdown-menu();
+  max-width: 100%;
+  width: 100%;
+  max-height: $baseline*8.75;
+  &.is-active {
+    display: block;
+  }
+}
+@mixin filter-dropdown-inner-list() {
+  max-height: $baseline*6;
+  overflow: scroll;
+}
+
+@mixin filter-dropdown-link() {
+  position: relative;
+  display: block;
+  @include box-sizing(border-box);
+  padding: $baseline/3 $baseline $baseline/3 .125rem;
+  @if ($include-right-to-left) {
+    html[dir="rtl"] & {
+      padding: $baseline/3 .125rem $baseline/3 $baseline;
+    }
+  }
+  @include font-size(-2);
+  color: $darker-gray;
+  border-top: 1px solid $lightest-gray;
+
+  &:after {
+    @extend %icon-font-styles;
+    @extend .icon-ui-close:before;
+    position: absolute;
+    right: 0;
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        right: auto;
+        left: 0;
+        padding-left: $baseline/3;
+      }
+    }
+    margin-top: $baseline/6;
+    opacity: 0;
+    color: $gray;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: $dark-gray;
+
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  &:before {
+    @extend %icon-font-styles;
+    @extend .icon-ui-check-mark:before;
+    opacity: 0;
+    padding: 0 $baseline/6;
+    color: $gray;
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        float: right;
+        padding-top: $baseline/6;
+      }
+    }
+  }
+
+  &.is-active {
+    &:before {
+      opacity: 1;
+      color: $green;
+    }
+    &:after {
+      opacity: 1;
+    }
+
+    &:hover {
+      &:after {
+        opacity: 1;
+        color: $red;
+      }
+    }
+  }
+}
+
+@mixin filter-dropdown-active() {
+  @include label();
+  @include font-size(-2);
+  @include box-sizing(border-box);
+  position: relative;
+  display: inline-block;
+  padding: $baseline/3 $baseline $baseline/3 $baseline/3;
+  margin-right: $baseline/6;
+  margin-top: $baseline/6;
+  color: $darker-gray;
+}
+
+@mixin filter-dropdown-remove() {
+  @include right();
+  &:after {
+    @include font-size(-1);
+    @extend %icon-font-styles;
+    @extend .icon-ui-close:before;
+    position: absolute;
+    right: 0;
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        right: auto;
+        left: 0;
+        padding-left: $baseline/3;
+      }
+    }
+    opacity: 1;
+    color: $gray;
+  }
+
+  &:hover {
+    &:after {
+      color: $red;
+    }
+  }
+}
+
+
+@if $include-filter-dropdown == true {
+  .filter-dropdown-title  { @include filter-dropdown-title(); }
+  .filter-dropdown-action  { @include filter-dropdown-action(); }
+  .filter-dropdown-container {@include filter-dropdown-container();}
+  .filter-dropdown-list  { @include filter-dropdown-list(); }
+  .filter-dropdown-inner-list  { @include filter-dropdown-inner-list(); }
+  .filter-dropdown-link  { @include filter-dropdown-link(); }
+  .filter-dropdown-active {@include filter-dropdown-active(); }
+  .filter-dropdown-remove {@include filter-dropdown-remove(); }
+  .is-hidden {@include hide(); }
+}
+
+
