@@ -1,4 +1,4 @@
-## Unreleased
+## 1.0.0-beta.6
 
 ### Added
 - Created an event bus for interactive js patterns.
