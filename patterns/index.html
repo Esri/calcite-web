@@ -22,9 +22,9 @@
       <link rel="stylesheet" href="../assets/css/all.css">
     
 
-    <!--[if lt IE 9]>
-      <script src="../assets/js/libs/selectivizr-min.js"></script>
-      <script src="../assets/js/libs/html5shiv.js"></script>
+    <!--[if IE]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
     <![endif]-->
 
   </head>
@@ -375,7 +375,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Calcite Web<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"shortcut icon"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/img/favicon.ico"</span>&gt;</span>
     <span class="hljs-comment">&lt;!-- get calcite-web css from the cdn (use latest version) --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.4/css/calcite-web.min.css"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.6/css/calcite-web.min.css"</span>&gt;</span>
     <span class="hljs-comment">&lt;!--[if lt IE 9]&gt;
       &lt;script src="/assets/javascripts/libs/selectivizr.js"&gt;&lt;/script&gt;
       &lt;script src="/assets/javascripts/libs/html5shiv.js"&gt;&lt;/script&gt;
@@ -391,7 +391,7 @@
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 
     <span class="hljs-comment">&lt;!-- get calcite-web js from the cdn (use latest version) --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.4/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.6/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 
     <span class="hljs-comment">&lt;!-- interactive patterns need to be initialized --&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="stylus">
@@ -1362,67 +1362,87 @@
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
-                <section class="js-filter-dropdown">
+                <section class="js-filter-dropdown trailer-4" data-filter-dropdown="sections">
   <header>
-    <h6 class="filter-dropdown-title">Tags</h6>
-    <a class="filter-dropdown-clear" href="#">clear</a>
+    <h6 class="filter-dropdown-title">Sections</h6>
+    <a class="js-filter-dropdown-open filter-dropdown-action is-active" href="#">edit</a>
+    <a class="js-filter-dropdown-close filter-dropdown-action" href="#">done</a>
   </header>
 
   <label class="trailer-half filter-dropdown-container">
-    <input class="filter-dropdown-input" type="text" placeholder="Filter by Tag">
-    <div class="filter-dropdown-list">
-      <a href="#" class="filter-dropdown-link is-active">Lorem</a>
-      <a href="#" class="filter-dropdown-link is-active">ipsum</a>
-      <a href="#" class="filter-dropdown-link">dolor</a>
-      <a href="#" class="filter-dropdown-link">sit</a>
-      <a href="#" class="filter-dropdown-link">amet</a>
-      <a href="#" class="filter-dropdown-link">consectetur</a>
-      <a href="#" class="filter-dropdown-link">adipisicing</a>
-      <a href="#" class="filter-dropdown-link">elit</a>
-      <a href="#" class="filter-dropdown-link">sed</a>
-      <a href="#" class="filter-dropdown-link">do</a>
-      <a href="#" class="filter-dropdown-link">eiusmod</a>
-      <a href="#" class="filter-dropdown-link">tempor</a>
-      <a href="#" class="filter-dropdown-link">incididunt</a>
-      <a href="#" class="filter-dropdown-link">ut</a>
-      <a href="#" class="filter-dropdown-link">labore</a>
-      <a href="#" class="filter-dropdown-link">et</a>
+    <div class="filter-dropdown-list modifier-class">
+      <input class="filter-dropdown-input" type="text" placeholder="Filter by Section">
+      <div class="filter-dropdown-inner-list">
+        <a href="#" class="filter-dropdown-link">Get Started</a>
+        <a href="#" class="filter-dropdown-link">Contributing</a>
+        <a href="#" class="filter-dropdown-link">Typefaces</a>
+        <a href="#" class="filter-dropdown-link">Composition Helpers</a>
+        <a href="#" class="filter-dropdown-link">Defaults</a>
+        <a href="#" class="filter-dropdown-link">Grid</a>
+        <a href="#" class="filter-dropdown-link">Grid Helpers</a>
+        <a href="#" class="filter-dropdown-link">Interactive Layout Helpers</a>
+        <a href="#" class="filter-dropdown-link">Icon Sets</a>
+        <a href="#" class="filter-dropdown-link">Palette</a>
+        <a href="#" class="filter-dropdown-link">Components</a>
+        <a href="#" class="filter-dropdown-link">Forms</a>
+        <a href="#" class="filter-dropdown-link">Branding</a>
+        <a href="#" class="filter-dropdown-link">Patterns</a>
+        <a href="#" class="filter-dropdown-link">Interactive Patterns</a>
+        <a href="#" class="filter-dropdown-link">Sass</a>
+        <a href="#" class="filter-dropdown-link">Custom Build</a>
+        <a href="#" class="filter-dropdown-link">Variables</a>
+        <a href="#" class="filter-dropdown-link">Type Composition</a>
+        <a href="#" class="filter-dropdown-link">Utilities</a>
+        <a href="#" class="filter-dropdown-link">Interactive Patterns</a>
+        <a href="#" class="filter-dropdown-link">Utility Functions</a>
+        <a href="#" class="filter-dropdown-link">Building Layouts</a>
+      </div>
     </div>
   </label>
+  <span class="text-gray font-size--1 js-flilter-dropdown-no-filters">None Selected</span>
 </section>
-
               </div>
               
             </div>
-<pre><code>&lt;section <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"js-filter-dropdown"</span>&gt;
+<pre><code>&lt;section <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"js-filter-dropdown trailer-4"</span> data-filter-dropdown=<span class="hljs-string">"sections"</span>&gt;
   &lt;header&gt;
-    &lt;h6 <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-title"</span>&gt;<span class="hljs-type">Tags</span>&lt;/h6&gt;
-    &lt;a <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-clear"</span> href=<span class="hljs-string">"#"</span>&gt;clear&lt;/a&gt;
+    &lt;h6 <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-title"</span>&gt;<span class="hljs-type">Sections</span>&lt;/h6&gt;
+    &lt;a <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"js-filter-dropdown-open filter-dropdown-action is-active"</span> href=<span class="hljs-string">"#"</span>&gt;edit&lt;/a&gt;
+    &lt;a <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"js-filter-dropdown-close filter-dropdown-action"</span> href=<span class="hljs-string">"#"</span>&gt;done&lt;/a&gt;
   &lt;/header&gt;
 
   &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"trailer-half filter-dropdown-container"</span>&gt;
-    &lt;input <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-input"</span> <span class="hljs-class"><span class="hljs-keyword">type</span>=</span><span class="hljs-string">"text"</span> placeholder=<span class="hljs-string">"Filter by Tag"</span>&gt;
-    &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-list"</span>&gt;
-      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link is-active"</span>&gt;<span class="hljs-type">Lorem</span>&lt;/a&gt;
-      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link is-active"</span>&gt;ipsum&lt;/a&gt;
-      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;dolor&lt;/a&gt;
-      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;sit&lt;/a&gt;
-      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;amet&lt;/a&gt;
-      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;consectetur&lt;/a&gt;
-      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;adipisicing&lt;/a&gt;
-      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;elit&lt;/a&gt;
-      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;sed&lt;/a&gt;
-      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;do&lt;/a&gt;
-      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;eiusmod&lt;/a&gt;
-      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;tempor&lt;/a&gt;
-      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;incididunt&lt;/a&gt;
-      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;ut&lt;/a&gt;
-      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;labore&lt;/a&gt;
-      &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;et&lt;/a&gt;
+    &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-list modifier-class"</span>&gt;
+      &lt;input <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-input"</span> <span class="hljs-class"><span class="hljs-keyword">type</span>=</span><span class="hljs-string">"text"</span> placeholder=<span class="hljs-string">"Filter by Section"</span>&gt;
+      &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-inner-list"</span>&gt;
+        &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;<span class="hljs-type">Get</span> <span class="hljs-type">Started</span>&lt;/a&gt;
+        &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;<span class="hljs-type">Contributing</span>&lt;/a&gt;
+        &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;<span class="hljs-type">Typefaces</span>&lt;/a&gt;
+        &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;<span class="hljs-type">Composition</span> <span class="hljs-type">Helpers</span>&lt;/a&gt;
+        &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;<span class="hljs-type">Defaults</span>&lt;/a&gt;
+        &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;<span class="hljs-type">Grid</span>&lt;/a&gt;
+        &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;<span class="hljs-type">Grid</span> <span class="hljs-type">Helpers</span>&lt;/a&gt;
+        &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;<span class="hljs-type">Interactive</span> <span class="hljs-type">Layout</span> <span class="hljs-type">Helpers</span>&lt;/a&gt;
+        &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;<span class="hljs-type">Icon</span> <span class="hljs-type">Sets</span>&lt;/a&gt;
+        &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;<span class="hljs-type">Palette</span>&lt;/a&gt;
+        &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;<span class="hljs-type">Components</span>&lt;/a&gt;
+        &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;<span class="hljs-type">Forms</span>&lt;/a&gt;
+        &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;<span class="hljs-type">Branding</span>&lt;/a&gt;
+        &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;<span class="hljs-type">Patterns</span>&lt;/a&gt;
+        &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;<span class="hljs-type">Interactive</span> <span class="hljs-type">Patterns</span>&lt;/a&gt;
+        &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;<span class="hljs-type">Sass</span>&lt;/a&gt;
+        &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;<span class="hljs-type">Custom</span> <span class="hljs-type">Build</span>&lt;/a&gt;
+        &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;<span class="hljs-type">Variables</span>&lt;/a&gt;
+        &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;<span class="hljs-type">Type</span> <span class="hljs-type">Composition</span>&lt;/a&gt;
+        &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;<span class="hljs-type">Utilities</span>&lt;/a&gt;
+        &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;<span class="hljs-type">Interactive</span> <span class="hljs-type">Patterns</span>&lt;/a&gt;
+        &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;<span class="hljs-type">Utility</span> <span class="hljs-type">Functions</span>&lt;/a&gt;
+        &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"filter-dropdown-link"</span>&gt;<span class="hljs-type">Building</span> <span class="hljs-type">Layouts</span>&lt;/a&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/label&gt;
+  &lt;span <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"text-gray font-size--1 js-flilter-dropdown-no-filters"</span>&gt;<span class="hljs-type">None</span> <span class="hljs-type">Selected</span>&lt;/span&gt;
 &lt;/section&gt;
-
 </code></pre>
 
           
@@ -1501,6 +1521,7 @@
 
     
 
-  </body>
+    
 
+  </body>
 </html>
