@@ -69,7 +69,6 @@ module.exports = function (grunt) {
     'rollup': {
       options: {
         format: 'umd',
-        moduleId: 'calcite-web',
         moduleName: 'calcite',
         banner: banner,
         sourceMap: true,
