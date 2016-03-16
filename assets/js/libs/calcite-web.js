@@ -1,10 +1,10 @@
-/* calcite-web - v1.0.0-beta.6 - 2016-02-29
+/* calcite-web - v1.0.0-beta.7 - 2016-03-16
 *  https://github.com/esri/calcite-web
 *  Copyright (c) 2016 Environmental Systems Research Institute, Inc.
 *  Apache 2.0 License */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-  typeof define === 'function' && define.amd ? define('calcite-web', factory) :
+  typeof define === 'function' && define.amd ? define(factory) :
   (global.calcite = factory());
 }(this, function () { 'use strict';
 
@@ -1116,7 +1116,7 @@
   // └────────────┘
   // define all public api methods
   var calciteWeb = {
-    version: '1.0.0-beta.6',
+    version: '1.0.0-beta.7',
     click: click,
     addEvent: add$1,
     removeEvent: remove$1,
