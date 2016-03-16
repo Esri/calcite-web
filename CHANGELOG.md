@@ -1,3 +1,8 @@
+## 1.0.0-beta.7
+
+### Fixed
+- `calcite-web.js` can now be loaded by the Dojo AMD loader
+
 ## 1.0.0-beta.6
 
 ### Added
