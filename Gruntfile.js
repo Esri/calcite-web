@@ -263,6 +263,7 @@ module.exports = function (grunt) {
           {expand: true, cwd: 'dist/', src: ['**/*.woff'], dest: 'files/calcite-web/<%= pkg.version %>/', params: { ContentType: 'application/font-woff' }},
           {expand: true, cwd: 'dist/', src: ['**/*.otf'], dest: 'files/calcite-web/<%= pkg.version %>/', params: { ContentType: 'application/font-sfnt' }},
           {expand: true, cwd: 'dist/', src: ['**/*.ttf'], dest: 'files/calcite-web/<%= pkg.version %>/', params: { ContentType: 'application/font-sfnt' }},
+          {expand: true, cwd: 'dist/', src: ['CHANGELOG.md'], dest: 'files/calcite-web/<%= pkg.version %>/', params: { ContentType: 'text/x-markdown ' }},
           // Also upload to the 'latest' directory
           {expand: true, cwd: 'dist/', src: ['**/*.js'], dest: 'files/calcite-web/latest/', params: { ContentType: 'application/javascript' }},
           {expand: true, cwd: 'dist/', src: ['**/*.css'], dest: 'files/calcite-web/latest/', params: { ContentType: 'text/css' }},
@@ -335,6 +336,7 @@ module.exports = function (grunt) {
   grunt.registerTask('buildFont', ['webfont', 'copy:fonts', 'copy:fontsDist']);
   grunt.registerTask('doc', ['shell:acetate', 'newer:imagemin:doc', 'sass:doc', 'copy:doc', 'copy:fonts', 'rollup:doc']);
   grunt.registerTask('deploy', ['doc', 'gh-pages']);
+  grunt.registerTask('s3', ['sass', 'cssmin', 'rollup:dist', 'shell:lint', 'uglify', 'copy', 'newer:imagemin:dist', 'compress', 'prompt:aws', 'aws_s3']);
   grunt.registerTask('release', ['sass', 'cssmin', 'rollup:dist', 'shell:lint', 'uglify', 'copy', 'newer:imagemin:dist', 'compress', 'shell:release', 'prompt:aws', 'aws_s3']);
   grunt.registerTask('default', ['doc', 'http-server', 'watch']);
 };
