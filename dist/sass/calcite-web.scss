@@ -1,0 +1,156 @@
+// ┌──────────────┐
+// │ CUSTOM BUILD │
+// └──────────────┘
+
+// Asset Paths
+$image-path:                     '../img'   !default;
+$font-path:                      '../fonts' !default;
+
+// Sass Output
+$include-colors:                 true    !default;
+$generate-css:                   true    !default;
+
+// Language Helpers
+$include-right-to-left:          $generate-css    !default;
+
+// Grid Output
+$include-reset:                  $generate-css    !default;
+$include-utils:                  $generate-css    !default;
+
+$include-grid:                   $generate-css    !default;
+  $fold-grid:                    $generate-css    !default;
+  $block-grid:                   $generate-css    !default;
+
+// Grid Utilities Output
+$include-leader-trailer:         $generate-css    !default;
+$include-gutter:                 $generate-css    !default;
+$include-left-right:             $generate-css    !default;
+$include-show-hide:              $generate-css    !default;
+$include-sticky:                 $generate-css    !default;
+
+// Type Output
+$include-type:                   $generate-css    !default;
+  $include-primary-family:       true             !default;
+  $include-content-family:       false            !default;
+  $include-secondary-family:     false            !default;
+  $include-code-family:          $generate-css    !default;
+  $include-type-defaults:        $generate-css    !default;
+  $include-type-helpers:         $generate-css    !default;
+
+// Icons
+$include-icons:                  $generate-css    !default;
+  $include-calcite-icons:        $generate-css    !default;
+  $include-social-icons:         $generate-css    !default;
+  $include-icon-font:            $generate-css    !default;
+
+// Components
+$include-alerts:                 $generate-css    !default;
+$include-badges:                 $generate-css    !default;
+$include-labels:                 $generate-css    !default;
+$include-tables:                 $generate-css    !default;
+$include-panel:                  $generate-css    !default;
+$include-button:                 $generate-css    !default;
+$include-dropdowns:              $generate-css    !default;
+$include-breadcrumbs:            $generate-css    !default;
+$include-tooltip:                $generate-css    !default;
+$include-forms:                  $generate-css    !default;
+$include-input-groups:           $generate-css    !default;
+$include-action-bar:             $generate-css    !default;
+$include-loader:                 $generate-css    !default;
+$include-search-bar:             $generate-css    !default;
+$include-skip-to-content:        $generate-css    !default;
+$include-logo:                   $generate-css    !default;
+
+// Patterns
+$include-footer:                 $generate-css    !default;
+$include-sticky-footer:          $generate-css    !default;
+$include-pagination:             $generate-css    !default;
+$include-side-nav:               $generate-css    !default;
+$include-sub-nav:                $generate-css    !default;
+$include-third-nav:              $generate-css    !default;
+$include-top-nav:                $generate-css    !default;
+$include-super-nav:              $generate-css    !default;
+$include-user-nav:               $generate-css    !default;
+$include-toolbar:                $generate-css    !default;
+$include-site-search:            $generate-css    !default;
+
+// Javascript
+$include-tabs:                   $generate-css    !default;
+$include-modal:                  $generate-css    !default;
+$include-accordion:              $generate-css    !default;
+$include-drawers:                $generate-css    !default;
+$include-expanding-nav:          $generate-css    !default;
+$include-sticky:                 $generate-css    !default;
+$include-filter-dropdown:        $generate-css    !default;
+
+// ┌──────────────┐
+// │ CALCITE WEB  │
+// └──────────────┘
+
+// Base
+// initial setup: config, color pallete, reset...
+@import "calcite-web/base/colors";
+@import "calcite-web/base/config";
+@import "calcite-web/base/reset";
+
+// Utils
+// Micro-Framework adpated from Compass and Bourbon
+// Provides basic prefixing and standard mixins
+@import "calcite-web/utils/utils";
+
+// Grid
+// structural level styles: viewport grid, block group, helper classes...
+@import "calcite-web/grid/grid";
+
+// Type
+// typographic styles: font-families, element styles, modifiers...
+@import "calcite-web/type/type";
+
+// Icons
+// Icon font, social icons, and calcite icons
+@import "calcite-web/icons/calcite-ui";
+@import "calcite-web/icons/icon-colors";
+@import "calcite-web/icons/social";
+
+// Components
+// small pieces: buttons, icons, tables...
+@import "calcite-web/components/esri-logo";
+@import "calcite-web/components/button";
+@import "calcite-web/components/label";
+@import "calcite-web/components/badges";
+@import "calcite-web/components/dropdown";
+@import "calcite-web/components/breadcrumbs";
+@import "calcite-web/components/tooltip";
+@import "calcite-web/components/alert";
+@import "calcite-web/components/panel";
+@import "calcite-web/components/table";
+@import "calcite-web/components/form";
+@import "calcite-web/components/input-group";
+@import "calcite-web/components/action-bar";
+@import "calcite-web/components/loader";
+@import "calcite-web/components/search-bar";
+@import "calcite-web/components/skip-to-content";
+
+// Patterns
+// complete interfaces: header, footer, banner...
+@import "calcite-web/patterns/top-nav";
+@import "calcite-web/patterns/site-search";
+@import "calcite-web/patterns/super-nav";
+@import "calcite-web/patterns/user-nav";
+@import "calcite-web/patterns/expanding-nav";
+@import "calcite-web/patterns/sub-nav";
+@import "calcite-web/patterns/third-nav";
+@import "calcite-web/patterns/toolbar";
+@import "calcite-web/patterns/side-nav";
+@import "calcite-web/patterns/footer";
+@import "calcite-web/patterns/tabs";
+@import "calcite-web/patterns/modal";
+@import "calcite-web/patterns/accordion";
+@import "calcite-web/patterns/drawers";
+@import "calcite-web/patterns/filter-dropdown";
+
+// Modifiers
+// modifier classes override standard styles
+@import 'calcite-web/type/helpers';
+@import "calcite-web/grid/leader-trailer";
+@import "calcite-web/grid/gutter-helpers";
