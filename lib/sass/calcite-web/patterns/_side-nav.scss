@@ -9,14 +9,14 @@
   padding: 0;
   border: 1px solid $lightest-gray;
   border-top: none;
-  @extend .avenir-regular;
+  @include avenir-regular();
   background-color: $white;
 }
 
   @mixin side-nav-title() {
     margin: 0;
     padding: $baseline/3;
-    @extend .avenir-regular;
+    @include avenir-regular();
     @include font-size(-1);
     background-color: $off-white;
     border-top: 1px solid $lightest-gray;
@@ -38,7 +38,6 @@
       color: $darker-gray;
     }
     &.is-active {
-      // text-indent: -3px;
       background-color: $Calcite_Highlight_Blue_200;
     }
   }

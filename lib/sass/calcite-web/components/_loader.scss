@@ -58,7 +58,7 @@ $loader-delay: 0.16s;
 @mixin loader-text() {
   text-align: center;
   padding-top: 4rem;
-  @extend .avenir-regular;
+  @include avenir-regular();
   &:after {
     content: "…";
   }
