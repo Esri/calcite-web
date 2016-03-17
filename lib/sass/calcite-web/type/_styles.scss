@@ -11,9 +11,10 @@
   body {
     @include avenir-regular();
     @include font-size(0);
+    @include tracking($avenir-tracking);
+    font-family: $avenir-family;
     line-height: $baseline;
     color: $type-color;
-
 
     -webkit-font-feature-settings: "kern";
        -moz-font-feature-settings: "kern";
@@ -36,7 +37,7 @@
   h4,
   h5,
   h6 {
-    font-weight: 300;
+    @include avenir-light();
     margin: 0 0 $baseline 0;
     &:focus {
       outline: none;
@@ -149,6 +150,7 @@
     margin-bottom: $baseline;
   }
   dt {
+    @extend .avenir-demi;
     margin-top: $baseline/2;
     &:first-child {
       margin-top: 0;
