@@ -1,26 +1,26 @@
 @mixin i18n {
-  html[lang="vi"] &, .lang-vi & {
+  html[lang="vi"] &, html.vi & {
     font-family: 'Lucida Sans', 'Arial', sans-serif;
   }
-  html[lang="tr"] &, .lang-tr & {
+  html[lang="tr"] &, html.tr & {
     font-family: 'Helvetica', Arial, Verdana, Geneva, sans-serif;
   }
-  html[lang="th"] &, .lang-th & {
+  html[lang="th"] &, html.th & {
     font-family: 'Helvetica', Arial, Verdana, Geneva, sans-serif;
   }
-  html[lang="ko"] &, .lang-ko & {
+  html[lang="ko"] &, html.ko & {
     font-family: 'Helvetica', Arial, Verdana, Geneva, sans-serif;
   }
-  html[lang="ja"] &, .lang-ja & {
+  html[lang="ja"] &, html.ja & {
+    font-family: 'Georgia', Arial, Verdana, Geneva, sans-serif;
+  }
+  html[lang="he"] &, html.he & {
     font-family: 'Helvetica', Arial, Verdana, Geneva, sans-serif;
   }
-  html[lang="he"] &, .lang-he & {
+  html[lang="ch"] &, html.ch & {
     font-family: 'Helvetica', Arial, Verdana, Geneva, sans-serif;
   }
-  html[lang="ch"] &, .lang-ch & {
-    font-family: 'Helvetica', Arial, Verdana, Geneva, sans-serif;
-  }
-  html[lang="ar"] &, .lang-ar & {
+  html[lang="ar"] &, html.ar & {
     font-family: 'Helvetica', Arial, Verdana, Geneva, sans-serif;
   }
 }

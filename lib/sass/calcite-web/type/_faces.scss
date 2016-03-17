@@ -1,9 +1,3 @@
-@mixin i18n {
-  html[lang="vi"] &, .lang-vi & {
-    font-family: 'Helvetica', 'Arial', sans-serif;
-  }
-}
-
 // ┌─────────────┐
 // │ Header Face │
 // └─────────────┘
@@ -13,7 +7,6 @@
 @mixin avenir-light() {
   @include tracking($avenir-tracking);
   font-family: $avenir-family;
-  @include i18n();
   font-weight: 300; font-style: normal;
   html[lang="rtl"] & {
     margin-left: 0;
@@ -25,7 +18,6 @@
 @mixin avenir-light-italic() {
   @include tracking($avenir-tracking);
   font-family: $avenir-family;
-  @include i18n();
   font-weight: 300; font-style: italic;
   b, strong {font-weight: 500;}
 }
@@ -33,7 +25,6 @@
 @mixin avenir-regular() {
   @include tracking($avenir-tracking);
   font-family: $avenir-family;
-  @include i18n();
   font-weight: 400; font-style: normal;
   b, strong {font-weight: 500;}
 }
@@ -41,7 +32,6 @@
 @mixin avenir-italic() {
   @include tracking($avenir-tracking);
   font-family: $avenir-family;
-  @include i18n();
   font-weight: 400; font-style: italic;
   b, strong {font-weight: 500;}
 }
@@ -49,7 +39,6 @@
 @mixin avenir-demi() {
   @include tracking($avenir-tracking);
   font-family: $avenir-family;
-  @include i18n();
   font-weight: 500; font-style: normal;
   b, strong {font-weight: 600;}
 }
@@ -57,7 +46,6 @@
 @mixin avenir-demi-italic() {
   @include tracking($avenir-tracking);
   font-family: $avenir-family;
-  @include i18n();
   font-weight: 500; font-style: italic;
   b, strong {font-weight: 600;}
 }
@@ -65,7 +53,6 @@
 @mixin avenir-bold() {
   @include tracking($avenir-tracking);
   font-family: $avenir-family;
-  @include i18n();
   font-weight: 600; font-style: normal;
   b, strong {font-weight: 600;}
 }
@@ -73,39 +60,8 @@
 @mixin avenir-bold-italic() {
   @include tracking($avenir-tracking);
   font-family: $avenir-family;
-  @include i18n();
   font-weight: 600; font-style: italic;
   b, strong {font-weight: 600;}
-}
-
-// ┌───────────┐
-// │ Body Face │
-// └───────────┘
-//  ↳ http://esri.github.io/calcite-web/type/#content-face
-//  ↳ type → _content-face.md
-
-@mixin content-face() {
-  @include tracking($content-tracking);
-  font-family: $content-family; font-weight: 300; font-style: normal;
-  b, strong {font-weight: 500;}
-}
-
-@mixin content-italic() {
-  @include tracking($content-tracking);
-  font-family: $content-family; font-weight: 300; font-style: italic;
-  b, strong {font-weight: 500;}
-}
-
-@mixin content-bold() {
-  @include tracking($content-tracking);
-  font-family: $content-family; font-weight: 500; font-style: normal;
-  b, strong {font-weight: 500;}
-}
-
-@mixin content-bold-italic() {
-  @include tracking($content-tracking);
-  font-family: $content-family; font-weight: 500; font-style: italic;
-  b, strong {font-weight: 500;}
 }
 
 // ┌────────────────┐

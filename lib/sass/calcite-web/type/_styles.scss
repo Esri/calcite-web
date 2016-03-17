@@ -14,6 +14,7 @@
     line-height: $baseline;
     color: $type-color;
 
+
     -webkit-font-feature-settings: "kern";
        -moz-font-feature-settings: "kern";
             font-feature-settings: "kern";
@@ -35,7 +36,7 @@
   h4,
   h5,
   h6 {
-    @extend .avenir-light;
+    font-weight: 300;
     margin: 0 0 $baseline 0;
     &:focus {
       outline: none;
@@ -148,7 +149,6 @@
     margin-bottom: $baseline;
   }
   dt {
-    @extend .avenir-demi;
     margin-top: $baseline/2;
     &:first-child {
       margin-top: 0;
