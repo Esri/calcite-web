@@ -19,7 +19,7 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
 }
 
   @mixin top-nav-title {
-    @extend .avenir-regular;
+    @include avenir-regular();
     @include font-size(1);
     @include left();
     margin-right: 1.5rem;

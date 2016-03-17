@@ -2,27 +2,33 @@
 // │ Type Config │
 // └─────────────┘
 
+$octave:             2;
+$major7th:           1.875;
+$minor7th:           1.778;
+$major6th:           1.667;
+$minor6th:           1.6;
+$fifth:              1.5;
+$dim5th:             1.414;
+$aug4th:             1.414;
+$fourth:             1.33;
+$major3rd:           1.25;
+$minor3rd:           1.2;
+$major2nd:           1.125;
+$minor2nd:           1.067;
+$unison:             1;
+
 // Scale
 $golden-ratio:       1.618;
-$major-third :       1.25 ;
 
 // Structural
-$ratio:              $major-third;
+$ratio:              $aug4th;
 $body-size:          1rem;
-$small-size:         0.95rem;
+$small-size:         0.85rem;
 $indent:             1em;
 
 // Header Family
 $avenir-tracking:    0;
 $avenir-family:      'Avenir Next W01', 'Avenir Next W00', 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-
-// Body Family
-$content-tracking:   30;
-$content-family:     'Frutiger W01', 'Lucida Grande', 'Segoe UI', 'Arial', sans-serif;
-
-// Secondary Family
-$secondary-tracking: 10;
-$secondary-family:   'Kepler W01', Georgia, serif;
 
 // Code Family
 $code-tracking:      0;
