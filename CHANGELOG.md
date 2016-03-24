@@ -1,7 +1,8 @@
 ## Unreleased
 
 ### Modified
-- Small visual style updates to filter dropdown
+- Small visual style updates to `filter-dropdown` pattern
+- Visual improvements to `loader` component
 
 ## 1.0.0-beta.7
 
