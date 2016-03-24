@@ -4,6 +4,9 @@
 - Small visual style updates to `filter-dropdown` pattern
 - Visual improvements to `loader` component
 
+### Fixed
+- `textarea` elements now cannot overlap other elements
+
 ## 1.0.0-beta.7
 
 ### Fixed
