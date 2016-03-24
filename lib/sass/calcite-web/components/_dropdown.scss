@@ -61,7 +61,8 @@
     @extend .side-nav;
     z-index: 1000;
     display: none;
-
+    overflow: auto;
+    max-height: $baseline*8.75;
     &.dropdown-right {
       right: 0;
     }

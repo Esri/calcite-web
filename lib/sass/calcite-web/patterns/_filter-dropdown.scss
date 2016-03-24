@@ -4,6 +4,11 @@
 //  ↳ http://esri.github.io/calcite-web/patterns/#filter-dropdown
 //  ↳ patterns → _filter-dropdown.md
 
+@mixin filter-dropdown-input() {
+  margin: 1%;
+  width: 98%;
+}
+
 @mixin filter-dropdown-title() {
   display: inline;
   padding-bottom: 0;
@@ -25,9 +30,10 @@
 
 @mixin filter-dropdown-list() {
   @include dropdown-menu();
+  background-color: $off-white;
+  border-top: 1px solid $lightest-gray;
   max-width: 100%;
   width: 100%;
-  max-height: $baseline*8.75;
   &.is-active {
     display: block;
   }
@@ -35,6 +41,8 @@
 @mixin filter-dropdown-inner-list() {
   max-height: $baseline*6;
   overflow: scroll;
+  border-top: 1px solid $lightest-gray;
+  background-color: $white;
 }
 
 @mixin filter-dropdown-link() {
@@ -50,7 +58,9 @@
   @include font-size(-2);
   color: $darker-gray;
   border-top: 1px solid $lightest-gray;
-
+  &:first-child {
+    border-top: none;
+  }
   &:after {
     @extend %icon-font-styles;
     @extend .icon-ui-close:before;
@@ -149,6 +159,7 @@
 
 
 @if $include-filter-dropdown == true {
+  input.filter-dropdown-input { @include filter-dropdown-input; }
   .filter-dropdown-title  { @include filter-dropdown-title(); }
   .filter-dropdown-action  { @include filter-dropdown-action(); }
   .filter-dropdown-container {@include filter-dropdown-container();}

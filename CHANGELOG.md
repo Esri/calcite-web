@@ -1,3 +1,8 @@
+## Unreleased
+
+### Modified
+- Small visual style updates to filter dropdown
+
 ## 1.0.0-beta.7
 
 ### Fixed
