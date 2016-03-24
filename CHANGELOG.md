@@ -1,4 +1,4 @@
-## Unreleased
+## 1.0.0-beta.8
 
 ### Modified
 - Small visual style updates to `filter-dropdown` pattern
