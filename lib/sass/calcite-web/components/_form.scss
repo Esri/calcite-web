@@ -102,6 +102,7 @@
   }
 
   textarea {
+    max-width: 100%;
     height: auto;
     padding-top: $baseline / 5;
   }
@@ -198,6 +199,10 @@
     }
   }
 
+  select {
+      -moz-appearance: none;
+  }
+
   select[multiple] {
     height: auto;
     background-image: none;
@@ -213,15 +218,6 @@
       background: transparent;
       color: $darkest-gray;
     }
-  }
-  @-moz-document url-prefix() {
-    select {
-      background-image: none;
-    }
-  }
-  select::-moz-focusring {
-    color: transparent;
-    text-shadow: 0 0 0 $darkest-gray;
   }
 
   .input-error {

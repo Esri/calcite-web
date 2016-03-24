@@ -20,7 +20,7 @@ $loader-delay: 0.16s;
 }
 
 %loader-styles {
-  background: $light-blue;
+  background: $blue;
   -webkit-animation: load $loader-speed infinite ease-in-out;
   animation: load $loader-speed infinite ease-in-out;
   width: $loader-width;
@@ -69,13 +69,13 @@ $loader-delay: 0.16s;
     0%,
     80%,
     100% {
-      box-shadow: 0 0 $light-blue;
-      background: $light-blue;
+      opacity: .75;
+      box-shadow: 0 0 $blue;
       height: $loader-height;
     }
     40% {
+      opacity: 1;
       box-shadow: 0 -1*$loader-zoom $blue;
-      background: $blue;
       height: $loader-height+$loader-zoom;
     }
   }
@@ -83,13 +83,13 @@ $loader-delay: 0.16s;
     0%,
     80%,
     100% {
+      opacity: .75;
       box-shadow: 0 0 $blue;
-      background: $light-blue;
       height: $loader-height;
     }
     40% {
+      opacity: 1;
       box-shadow: 0 -1*$loader-zoom $blue;
-      background: $blue;
       height: $loader-height+$loader-zoom;
     }
   }
