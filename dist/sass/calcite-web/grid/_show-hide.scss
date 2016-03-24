@@ -1,0 +1,78 @@
+// ┌───────────────┐
+// │ Show and Hide │
+// └───────────────┘
+//  ↳ http://esri.github.io/calcite-web/grid/#show-and-hide
+//  ↳ grid → _show-and-hide.md
+
+// Responsive Show and Hide
+@mixin responsive-show-hide(){
+  @if $fold-grid == true {
+
+    @media screen and (min-width: $large) {
+      .#{$small-class}-show   {@include hide();}
+      .#{$medium-class}-show  {@include hide();}
+      .#{$medium-class}-only  {@include hide();}
+      .#{$large-class}-hide   {@include hide();}
+    }
+
+    // Default
+    @media screen and (max-width: $large - 1) and (min-width: $medium) {
+      .#{$small-class}-show   {@include hide();}
+      .#{$medium-class}-show  {@include hide();}
+      .#{$medium-class}-only  {@include hide();}
+      .#{$large-class}-only   {@include hide();}
+      .#{$large-class}-show   {@include hide();}
+    }
+
+    // Medium
+    @media screen and (max-width: $medium - 1) and (min-width: $small) {
+      .#{$medium-class}-hide  {@include hide();}
+      .#{$small-class}-show   {@include hide();}
+      .#{$large-class}-only   {@include hide();}
+      .#{$large-class}-show   {@include hide();}
+    }
+
+    // Small
+    @media screen and (max-width: $small - 1) {
+      .#{$small-class}-hide   {@include hide();}
+      .#{$medium-class}-hide  {@include hide();}
+      .#{$medium-class}-only  {@include hide();}
+      .#{$large-class}-only   {@include hide();}
+      .#{$large-class}-show   {@include hide();}
+    }
+  }
+}
+
+@mixin visually-hidden() {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@mixin visually-hidden-focusable() {
+  &:active, &:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+  }
+}
+
+@if $include-grid == true {
+  @include responsive-show-hide();
+  .invisible {@include invisible();}
+  .visible {@include visible();}
+  .hide {@include hide();}
+  .visually-hidden {@include visually-hidden();}
+  .visually-hidden-focusable {
+    @include visually-hidden();
+    @include visually-hidden-focusable();
+  }
+}
