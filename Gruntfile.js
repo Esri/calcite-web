@@ -262,7 +262,7 @@ module.exports = function (grunt) {
           {expand: true, cwd: 'dist/', src: ['**/*.woff'], dest: 'files/calcite-web/<%= pkg.version %>/', params: { ContentType: 'application/font-woff' }},
           {expand: true, cwd: 'dist/', src: ['**/*.otf'], dest: 'files/calcite-web/<%= pkg.version %>/', params: { ContentType: 'application/font-sfnt' }},
           {expand: true, cwd: 'dist/', src: ['**/*.ttf'], dest: 'files/calcite-web/<%= pkg.version %>/', params: { ContentType: 'application/font-sfnt' }},
-          {expand: true, cwd: 'dist/', src: ['CHANGELOG.md'], dest: 'files/calcite-web/<%= pkg.version %>/', params: { ContentType: 'text/x-markdown ' }},
+          {expand: true, cwd: 'dist/', src: ['CHANGELOG.md'], dest: 'files/calcite-web/<%= pkg.version %>/', params: { ContentType: 'text/x-markdown' }},
           // Also upload to the 'latest' directory
           {expand: true, cwd: 'dist/', src: ['**/*.js'], dest: 'files/calcite-web/latest/', params: { ContentType: 'application/javascript' }},
           {expand: true, cwd: 'dist/', src: ['**/*.css'], dest: 'files/calcite-web/latest/', params: { ContentType: 'text/css' }},
@@ -274,7 +274,7 @@ module.exports = function (grunt) {
           {expand: true, cwd: 'dist/', src: ['**/*.woff'], dest: 'files/calcite-web/latest/', params: { ContentType: 'application/font-woff' }},
           {expand: true, cwd: 'dist/', src: ['**/*.otf'], dest: 'files/calcite-web/latest/', params: { ContentType: 'application/font-sfnt' }},
           {expand: true, cwd: 'dist/', src: ['**/*.ttf'], dest: 'files/calcite-web/latest/', params: { ContentType: 'application/font-sfnt' }},
-          {expand: true, cwd: 'dist/', src: ['CHANGELOG.md'], dest: 'files/calcite-web/latest/', params: { ContentType: 'text/x-markdown ' }}
+          {expand: true, cwd: 'dist/', src: ['CHANGELOG.md'], dest: 'files/calcite-web/latest/', params: { ContentType: 'text/x-markdown' }}
         ]
       }
     },
