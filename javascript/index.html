@@ -248,6 +248,10 @@
               <a href="#interactive-patterns" class="side-nav-link">Overview</a>
             
           
+            
+              <a href="#event-bus" class="side-nav-link">Event Bus</a>
+            
+          
         </nav>
       
         <h4 class="side-nav-title">Utility Functions</h4>
@@ -318,6 +322,330 @@
 calcite.<span class="hljs-function"><span class="hljs-title">tabs</span><span class="hljs-params">(tabs)</span></span>
 </code></pre>
 <p>This is helpful if you are using a different JavaScript framework and you need to rebind event listeners for a particular pattern or DOM node.</p>
+
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+        <section>
+          
+            <h2 id="event-bus" tabindex="0">Event Bus</h2>
+          
+
+          <p>The event bus is used to help interactive patterns communicate with each other and the rest of your application.</p>
+<p>Along with a set of common bus events, each pattern has a set of channels that it emits on and listens for. These events can be emitted or listened for by the larger application.</p>
+<h3>Common Event Channels</h3>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+<th>Emits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>keyboard:return</td>
+<td>The <code>return</code> key was pressed.</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>keyboard:escape</td>
+<td>The <code>escape</code> key was pressed.</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>scrolling:at</td>
+<td>The page is scrolling</td>
+<td>ScrollYOffset</td>
+</tr>
+</tbody>
+</table>
+<h3>Pattern-Specific Event Channels</h3>
+<h4>Accordions</h4>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+<th>Emits</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>accordion:bind</td>
+<td>Binds Dom nodes on the page to their listeners</td>
+<td>n/a</td>
+<td><code>bindToggles()</code></td>
+</tr>
+<tr>
+<td>accordion:toggle</td>
+<td>Toggles an accordion section open and closed.</td>
+<td><code>{node: domNode}</code></td>
+<td><code>handleToggle()</code></td>
+</tr>
+</tbody>
+</table>
+<h4>Drawers</h4>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+<th>Emits</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>drawer:bind</td>
+<td>Binds dom to event listeners</td>
+<td>n/a</td>
+<td><code>bindDrawers()</code></td>
+</tr>
+<tr>
+<td>drawer:open</td>
+<td>Opens a specified drawer data-drawer attribute</td>
+<td><code>{id: drawerid}</code></td>
+<td><code>openDrawer()</code></td>
+</tr>
+<tr>
+<td>drawer:close</td>
+<td>Closes a specified drawer by data-drawer attribute</td>
+<td><code>{id: drawerid}</code></td>
+<td><code>closeDrawer()</code></td>
+</tr>
+<tr>
+<td>keyboard:escape</td>
+<td>Closes all drawers on escape</td>
+<td>n/a</td>
+<td><code>closeDrawer()</code></td>
+</tr>
+</tbody>
+</table>
+<h4>Dropdown</h4>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+<th>Emits</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dropdown:bind</td>
+<td>Binds dom to event listeners</td>
+<td>n/a</td>
+<td><code>bindDropdowns()</code></td>
+</tr>
+<tr>
+<td>dropdown:toggle</td>
+<td>Toggles a dropdown open and closed</td>
+<td><code>{node: domNode}</code></td>
+<td><code>toggleDropdown()</code></td>
+</tr>
+<tr>
+<td>dropdown:close</td>
+<td>Closes all the dropdowns</td>
+<td>n/a</td>
+<td><code>closeAllDropdowns()</code></td>
+</tr>
+<tr>
+<td>keyboard:escape</td>
+<td>Closes all the dropdowns when the escape key is pressed.</td>
+<td>n/a</td>
+<td><code>closeAllDropdowns()</code></td>
+</tr>
+</tbody>
+</table>
+<h4>Filter Dropdown</h4>
+<p>Many of the filter dropdown channels emit and listen for the following Options Object:</p>
+<pre><code>{
+  <span class="hljs-attribute">parent</span>: domNode,
+  <span class="hljs-attribute">id</span>: filterDropdownId,
+  <span class="hljs-attribute">item</span>: domNode
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+<th>Emits</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filterDropdown:bind</td>
+<td>Binds the dom to event listeners</td>
+<td>n/a</td>
+<td><code>bindFilterDropdowns()</code></td>
+</tr>
+<tr>
+<td>filterDropdown:select</td>
+<td>An item in the dropdown list has been selected.</td>
+<td>Options Object</td>
+<td><code>toggleItem()</code>, <code>emitActive()</code></td>
+</tr>
+<tr>
+<td>filterDropdown:select:remove</td>
+<td>Removes a specific selection from the list of active items.</td>
+<td>Options Object</td>
+<td><code>removeItem()</code></td>
+</tr>
+<tr>
+<td>filterDropdown:active</td>
+<td>Emits all the currently selected items from the componenet.</td>
+<td>Options Object. Replaces <code>item</code> with <code>active</code> Array of items.</td>
+<td><code>drawActive()</code></td>
+</tr>
+<tr>
+<td>filterDropdown:active:clear</td>
+<td>Clear all active items from the dropdown</td>
+<td>Options Object</td>
+<td><code>clearActive()</code></td>
+</tr>
+<tr>
+<td>filterDropdown:toggle</td>
+<td>Toggle a dropdown open and closed</td>
+<td>Options Object</td>
+<td><code>toggleDropdown()</code></td>
+</tr>
+<tr>
+<td>filterDropdown:open</td>
+<td>Open a specific dropdown</td>
+<td>Options Object</td>
+<td><code>openList()</code></td>
+</tr>
+<tr>
+<td>filterDropdown:close</td>
+<td>Closes all dropdowns</td>
+<td>n/a.</td>
+<td><code>closeList()</code></td>
+</tr>
+<tr>
+<td>keyboard:escape</td>
+<td>Closes all dropdowns</td>
+<td>n/a</td>
+<td><code>closeList()</code></td>
+</tr>
+</tbody>
+</table>
+<h4>Modal</h4>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+<th>Emits</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>modal:bind</td>
+<td>Binds dom to event listeners</td>
+<td>n/a</td>
+<td><code>bindModals()</code></td>
+</tr>
+<tr>
+<td>modal:open</td>
+<td>Opens a specific modal</td>
+<td><code>{id: modalId }</code></td>
+<td><code>openModal()</code></td>
+</tr>
+<tr>
+<td>modal:close</td>
+<td>Closes all modals</td>
+<td>n/a</td>
+<td><code>closeModal()</code></td>
+</tr>
+<tr>
+<td>keyboard:escape</td>
+<td>Closes all modals</td>
+<td>n/a</td>
+<td><code>closeModal()</code></td>
+</tr>
+</tbody>
+</table>
+<h4>Sticky</h4>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+<th>Emits</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sticky:stick</td>
+<td>Dom Node to stick in place</td>
+<td>Dom Node</td>
+<td><code>stickItem()</code></td>
+</tr>
+<tr>
+<td>sticky:unstick</td>
+<td>Dom Node to unstick and return to normal</td>
+<td>Dom Node</td>
+<td><code>unstickItem()</code></td>
+</tr>
+<tr>
+<td>scrolling:at</td>
+<td>Current offset y position on scroll</td>
+<td><code>OffsetY</code> Number</td>
+<td><code>scrollHandler()</code></td>
+</tr>
+</tbody>
+</table>
+<h4>Tabs</h4>
+<p>Tab events emit and listen for an Options Object.</p>
+<pre><code>{
+  <span class="hljs-attribute">id</span>: tabId <span class="hljs-comment">// data-tab attribute</span>
+  <span class="hljs-attribute">active</span>: domNode
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+<th>Emits</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tabs:bind</td>
+<td>Binds dom to event listeners</td>
+<td>n/a</td>
+<td><code>bindTabs()</code></td>
+</tr>
+<tr>
+<td>tabs:active</td>
+<td>A tab to set as active</td>
+<td>Options Object</td>
+<td><code>setTab()</code></td>
+</tr>
+</tbody>
+</table>
 
 
           
