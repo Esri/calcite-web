@@ -1,3 +1,13 @@
+## 1.0.0-beta.8
+
+### Modified
+- Small visual style updates to `filter-dropdown` pattern
+- Visual improvements to `loader` component
+
+### Fixed
+- `textarea` elements now cannot overlap other elements
+- `select` elements display properly in Firefox
+
 ## 1.0.0-beta.7
 
 ### Fixed
