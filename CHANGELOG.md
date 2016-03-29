@@ -2,6 +2,7 @@
 
 ### Fixed
 - Removing a sticky node from the dom no longer spouts console errors like a fountain
+- `dropdown` menu shouldn't have restricted height, and the `max-height` of `filter-dropdown` should be a bit taller
 
 ## 1.0.0-beta.9
 
