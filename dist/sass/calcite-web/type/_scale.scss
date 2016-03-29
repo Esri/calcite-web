@@ -1,0 +1,144 @@
+// ┌───────────────┐
+// │ Modular Scale │
+// └───────────────┘
+//  ↳ http://esri.github.io/calcite-web/sass/#modular-scale
+//  ↳ sass → _modular-scale.md
+@function modular-scale($increment) {
+  $v1: $body-size;
+  $v2: $small-size;
+  $value: $v1;
+
+  @while $v2 > $v1 {
+    $v2: ($v2 / $ratio); // will be off-by-1
+  }
+  @while $v2 < $v1 {
+    $v2: ($v2 * $ratio); // will fix off-by-1
+  }
+
+  $double-stranded: $v2 > $v1;
+
+  @if $increment > 0 {
+    @for $i from 1 through $increment {
+      @if $double-stranded and ($v1 * $ratio) > $v2 {
+        $value: $v2;
+        $v2: ($v2 * $ratio);
+      } @else {
+        $v1: ($v1 * $ratio);
+        $value: $v1;
+      }
+    }
+  }
+
+  @if $increment < 0 {
+    $unit: $body-size/16;
+    $decriment: $increment * $unit;
+    $value: $body-size + $decriment;
+  }
+
+  @return $value;
+}
+
+
+@function medium-modular-scale($increment) {
+  $v1: $body-size;
+  $v2: $small-size;
+  $value: $v1;
+
+  @while $v2 > $v1 {
+    $v2: ($v2 / $medium-ratio); // will be off-by-1
+  }
+  @while $v2 < $v1 {
+    $v2: ($v2 * $medium-ratio); // will fix off-by-1
+  }
+
+  $double-stranded: $v2 > $v1;
+
+  @if $increment > 0 {
+    @for $i from 1 through $increment {
+      @if $double-stranded and ($v1 * $medium-ratio) > $v2 {
+        $value: $v2;
+        $v2: ($v2 * $medium-ratio);
+      } @else {
+        $v1: ($v1 * $medium-ratio);
+        $value: $v1;
+      }
+    }
+  }
+
+  @if $increment < 0 {
+    $unit: $body-size/16;
+    $decriment: $increment * $unit;
+    $value: $body-size + $decriment;
+  }
+
+  @return $value;
+}
+
+@function small-modular-scale($increment) {
+  $v1: $body-size;
+  $v2: $small-size;
+  $value: $v1;
+
+  @while $v2 > $v1 {
+    $v2: ($v2 / $small-ratio); // will be off-by-1
+  }
+  @while $v2 < $v1 {
+    $v2: ($v2 * $small-ratio); // will fix off-by-1
+  }
+
+  $double-stranded: $v2 > $v1;
+
+  @if $increment > 0 {
+    @for $i from 1 through $increment {
+      @if $double-stranded and ($v1 * $small-ratio) > $v2 {
+        $value: $v2;
+        $v2: ($v2 * $small-ratio);
+      } @else {
+        $v1: ($v1 * $small-ratio);
+        $value: $v1;
+      }
+    }
+  }
+
+  @if $increment < 0 {
+    $unit: $body-size/16;
+    $decriment: $increment * $unit;
+    $value: $body-size + $decriment;
+  }
+
+  @return $value;
+}
+
+// ┌───────────┐
+// │ Font Size │
+// └───────────┘
+//  ↳ http://esri.github.io/calcite-web/sass/#font-size
+//  ↳ sass → _font-size.md
+
+@mixin font-size($n) {
+  font-size: modular-scale($n);
+  @if $n > 7 {
+    line-height: 2.5*$baseline;
+  }
+  @else if $n <= 7 and $n > 4 {
+    line-height: 2*$baseline;
+  }
+  @else if $n <= 4 and $n > 2 {
+    line-height: 1.5*$baseline;
+  }
+  @else if $n <= 2 {
+    line-height: $baseline;
+  }
+  @media screen and (max-width: $medium - 1) {
+    font-size: medium-modular-scale($n);
+  }
+  @media screen and (max-width: $small - 1) {
+    font-size: small-modular-scale($n);
+    @if $n > 7 {
+      line-height: 2*$baseline;
+    }
+    @else if $n <= 7 and $n > 4 {
+      line-height: 1.5*$baseline;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+// ┌──────────────┐
+// │ UI Variables │
+// └──────────────┘
+//  ↳ http://esri.github.io/calcite-web/sass/#ui-variables
+//  ↳ sass → _ui-variables.md
+$transition:               150ms linear                !default;
+$box-shadow:               0 0 16px 0 rgba(0,0,0,.05)  !default;
+$drawer-width:             280px                       !default;
+$footer-height:            250px                       !default;
+
+// ┌─────────────┐
+// │ TYPE COLORS │
+// └─────────────┘
+$type-color:               $off-black                  !default;
+$link-color:               $blue                       !default;
+$link-hover:               $dark-blue                  !default;
+
+// ┌──────────────┐
+// │ Breakpoints  │
+// └──────────────┘
+//  ↳ http://esri.github.io/calcite-web/sass/#breakpoints
+//  ↳ sass → _breakpoints.md
+$small:                    480px                       !default;
+$medium:                   860px                       !default;
+$large:                    1450px                      !default;
+
+// ┌────────────────────┐
+// │ Grid Configuration │
+// └────────────────────┘
+//  ↳ http://esri.github.io/calcite-web/grid/#configuration
+//  ↳ grid → _configuration.md
+$prefix:                   ""                          !default;
+
+$vw-ratio:                 0.95;
+$container-width:          1450px                      !default;
+$max-width:                $vw-ratio * 100vw           !default;
+$column-gutter:            1rem                        !default;
+
+// Grid Fallback Options
+$ie8-support:              false                       !default;
+$column-gutter-fallback:   20px                        !default;
+$container-width-fallback: 960px                       !default;
+
+// Medium
+$large-class:             'large'                      !default;
+$large-column-count:      24                           !default;
+
+// Default
+$default-column-count:     24                          !default;
+
+// Medium
+$medium-class:             'tablet'                    !default;
+$medium-column-count:      12                          !default;
+
+// Small
+$small-class:              'phone'                     !default;
+$small-column-count:       6                           !default;
+
+// Rhythm
+$horizontal-range:         4                           !default;
+$vertical-range:           6                           !default;
+$baseline:                 1.55rem                     !default;
