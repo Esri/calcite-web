@@ -1,3 +1,8 @@
+## unreleased
+
+### Fixed
+- Removing a sticky node from the dom no longer spouts console errors like a fountain
+
 ## 1.0.0-beta.9
 
 ### Added
