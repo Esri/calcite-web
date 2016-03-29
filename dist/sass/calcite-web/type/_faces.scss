@@ -1,0 +1,79 @@
+// ┌─────────────┐
+// │ Header Face │
+// └─────────────┘
+//  ↳ http://esri.github.io/calcite-web/type/#avenir-regular
+//  ↳ type → _avenir-regular.md
+
+@mixin avenir-light() {
+  font-weight: 300; font-style: normal;
+  b, strong {font-weight: 500;}
+}
+
+@mixin avenir-light-italic() {
+  font-weight: 300; font-style: italic;
+  b, strong {font-weight: 500;}
+}
+
+@mixin avenir-regular() {
+  font-weight: 400; font-style: normal;
+  b, strong {font-weight: 500;}
+}
+
+@mixin avenir-italic() {
+  font-weight: 400; font-style: italic;
+  b, strong {font-weight: 500;}
+}
+
+@mixin avenir-demi() {
+  font-weight: 500; font-style: normal;
+  b, strong {font-weight: 600;}
+}
+
+@mixin avenir-demi-italic() {
+  font-weight: 500; font-style: italic;
+  b, strong {font-weight: 600;}
+}
+
+@mixin avenir-bold() {
+  font-weight: 600; font-style: normal;
+  b, strong {font-weight: 600;}
+}
+
+@mixin avenir-bold-italic() {
+  font-weight: 600; font-style: italic;
+  b, strong {font-weight: 600;}
+}
+
+
+// ┌───────────┐
+// │ Code Face │
+// └───────────┘
+//  ↳ http://esri.github.io/calcite-web/type/#code-face
+//  ↳ type → _code-face.md
+
+@mixin code-face() {
+  @include tracking($code-tracking);
+  font-family: $code-family; font-weight: 400; font-style: normal;
+  b, strong {font-weight: 400;}
+}
+
+@mixin code-italic() {
+  @include tracking($code-tracking);
+  font-family: $code-family; font-weight: 400; font-style: italic;
+  b, strong {font-weight: 400;}
+}
+
+@if $include-type == true {
+  .avenir-light {@include avenir-light();}
+  .avenir-light-italic {@include avenir-light-italic();}
+  .avenir-regular {@include avenir-regular();}
+  .avenir-italic {@include avenir-italic();}
+  .avenir-demi {@include avenir-demi();}
+  .avenir-demi-italic {@include avenir-demi-italic();}
+  .avenir-bold {@include avenir-bold();}
+  .avenir-bold-italic {@include avenir-bold-italic();}
+
+  .code-face, .code-face .block {@include code-face();}
+  .code-italic, .code-italic .block {@include code-italic();}
+
+}
