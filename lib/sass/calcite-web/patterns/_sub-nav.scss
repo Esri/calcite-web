@@ -11,6 +11,7 @@ $subnav-link-underline: linear-gradient(to top, transparent 94%, $white 96%, $wh
 }
 
   @mixin sub-nav-title() {
+    @include font-size(4);
     margin-top: $baseline/2;
     margin-bottom: $baseline/2;
     display: inline-block;

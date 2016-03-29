@@ -46,11 +46,21 @@
 
 
 @mixin text-left() {
-  text-align: start;
+  text-align: left;
+  @if ($include-right-to-left) {
+    html[dir="rtl"] & {
+      text-align: right;
+    }
+  }
 }
 
 @mixin text-right() {
-  text-align: end;
+  text-align: right;
+  @if ($include-right-to-left) {
+    html[dir="rtl"] & {
+      text-align: left;
+    }
+  }
 }
 
 @mixin text-rule() {

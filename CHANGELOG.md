@@ -1,3 +1,21 @@
+## Unreleased
+
+### Added
+- Responsive type scale
+
+### Modified
+- Default type scale has a wider range of sizes
+- `text-left` and `text-right` use supported values for ie, use checks to support rtl.
+- `sub-nav-title` smaller to adjust for new type scales.
+- Type config moved further up the import stack
+
+### Fixed
+- Monospace type rendering probs in block groups and textareas.
+- Block groups declare avenir as font family.
+
+### Removed
+- Frutiger and Kepler type styles and families
+
 ## 1.0.0-beta.8
 
 ### Modified
