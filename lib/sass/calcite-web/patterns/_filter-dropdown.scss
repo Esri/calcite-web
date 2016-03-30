@@ -39,8 +39,8 @@
   }
 }
 @mixin filter-dropdown-inner-list() {
-  max-height: $baseline*6;
-  overflow: scroll;
+  max-height: $baseline*9;
+  overflow: auto;
   border-top: 1px solid $lightest-gray;
   background-color: $white;
 }
