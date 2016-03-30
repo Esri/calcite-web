@@ -1,4 +1,4 @@
-/* calcite-web - v1.0.0-beta.8 - 2016-03-26
+/* calcite-web - v1.0.0-beta.11 - 2016-03-30
 *  https://github.com/esri/calcite-web
 *  Copyright (c) 2016 Environmental Systems Research Institute, Inc.
 *  Apache 2.0 License */
@@ -63,14 +63,10 @@
     });
   }
 
+  // remove 'is-active' class from every element in an array, add to one element
   function toggleActive(array, el) {
-    var isActive = has(el, 'is-active');
-    if (isActive) {
-      remove(el, 'is-active');
-    } else {
-      removeActive(array);
-      add(el, 'is-active');
-    }
+    removeActive(array);
+    add(el, 'is-active');
   }
 
   // ┌─────┐
@@ -907,15 +903,19 @@
     function stickItem(item) {
       var id = item.element.getAttribute('data-sticky-id');
       var shim = document.querySelector('.js-shim[data-sticky-id="' + id + '"]');
-      add(item.element, 'is-sticky');
-      shim.style.display = '';
+      if (id && shim) {
+        add(item.element, 'is-sticky');
+        shim.style.display = '';
+      }
     }
 
     function unstickItem(item) {
       var id = item.element.getAttribute('data-sticky-id');
       var shim = document.querySelector('.js-shim[data-sticky-id="' + id + '"]');
-      remove(item.element, 'is-sticky');
-      shim.style.display = 'none';
+      if (id && shim) {
+        remove(item.element, 'is-sticky');
+        shim.style.display = 'none';
+      }
     }
 
     function scrollHandler(pageYOffset) {
@@ -925,8 +925,11 @@
           var id = item.element.getAttribute('data-sticky-id');
           referenceElement = document.querySelector('.js-shim[data-sticky-id="' + id + '"]');
         }
-        var dataTop = referenceElement.getAttribute('data-top') || 0;
-        item.top = referenceElement.offsetTop - parseInt(dataTop, 0);
+
+        if (referenceElement) {
+          var dataTop = referenceElement.getAttribute('data-top') || 0;
+          item.top = referenceElement.offsetTop - parseInt(dataTop, 0);
+        }
 
         if (item.top < pageYOffset) {
           bus.emit('sticky:stick', item);
