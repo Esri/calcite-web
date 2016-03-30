@@ -1,0 +1,7 @@
+@mixin card () {
+  background: $red;
+}
+
+@if $include-card == true {
+  .card {@include card();}
+}
