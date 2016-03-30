@@ -1,0 +1,76 @@
+//┌─────────────┐
+//│ Site Search │
+//└─────────────┘
+// ↳ http://esri.github.io/calcite-web/patterns/#site-search
+// ↳ patterns → _site-search.md
+
+
+
+
+@mixin site-search() {
+  margin-top: 0.25*$baseline;
+
+  input[type="search"] {
+    border-color: $dark-blue;
+  }
+
+  &.is-active {
+    .site-search-form {
+      width: 20rem;
+      @include transition($transition);
+    }
+
+    .site-search-icon {
+      color: $gray;
+    }
+
+    .site-search-input {
+      @include placeholder('color', $gray);
+      text-align: left;
+      padding-left: 2rem;
+      @include transition($transition);
+    }
+
+    .site-search-button {
+      display: inline-block;
+      @include transition($transition);
+    }
+  }
+}
+
+  @mixin site-search-form() {
+    @include input-group();
+    position: relative;
+    width: 8rem;
+    @include transition($transition);
+  }
+
+  @mixin site-search-icon() {
+    color: $dark-blue;
+    position: absolute;
+    z-index: 1;
+    left: 0.75rem;
+    top: 0.5rem;
+  }
+
+  @mixin site-search-input() {
+    @include input-group-input();
+    border-color: $dark-blue;
+    text-align: center;
+    @include placeholder('color', $dark-blue);
+    @include transition($transition);
+  }
+
+  @mixin site-search-button() {
+    display: none;
+    @include transition($transition);
+  }
+
+
+@if $include-site-search {
+  .site-search { @include site-search(); }
+    .site-search-form {@include site-search-form(); }
+    .site-search-icon {@include site-search-icon(); }
+    .site-search-input {@include site-search-input(); }
+    .site-search-button {@include site-search-button(); }
+}
