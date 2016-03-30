@@ -2,6 +2,7 @@
 
 ### Fixed
 - Removing a sticky node from the dom no longer spouts console errors like a fountain
+- Simplified `toggleActive` class, always removes active from array, adds to el.
 
 ## 1.0.0-beta.9
 
