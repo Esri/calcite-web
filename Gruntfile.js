@@ -187,6 +187,12 @@ module.exports = function (grunt) {
         src: ['assets/img/**/*', 'assets/js/**/*'],
         dest: 'docs/build/'
       },
+      js: {
+        expand: true,
+        cwd: 'lib/js/',
+        src: ['**/*'],
+        dest: 'dist/js/source/'
+      },
       fonts: {
         expand: true,
         cwd: 'lib/',
@@ -333,6 +339,7 @@ module.exports = function (grunt) {
   // │ Grunt tasks │
   // └─────────────┘
   grunt.registerTask('buildFont', ['webfont', 'copy:fonts', 'copy:fontsDist']);
+  grunt.registerTask('dist', ['sass', 'cssmin', 'rollup:dist', 'uglify:dist', 'copy', 'imagemin:dist'])
   grunt.registerTask('doc', ['shell:acetate', 'newer:imagemin:doc', 'sass:doc', 'copy:doc', 'copy:fonts', 'rollup:doc']);
   grunt.registerTask('deploy', ['doc', 'gh-pages']);
   grunt.registerTask('s3', ['sass', 'cssmin', 'rollup:dist', 'shell:lint', 'uglify', 'copy', 'newer:imagemin:dist', 'compress', 'prompt:aws', 'aws_s3']);
