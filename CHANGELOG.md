@@ -1,6 +1,7 @@
 ## Unreleased
 
 ### Modified
+- small visual update to multiple select elements
 - Removed all external dependencies.
 
 ### Fixed
