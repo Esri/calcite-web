@@ -2,6 +2,22 @@
 
 ### Modified
 - small visual update to multiple select elements
+- Removed all external dependencies.
+
+### Fixed
+- using `gutter-left-n` and `gutter-right-n` on the same element will no longer break.
+- Additional RTL on default type styles.
+- RTL support for action bars.
+- RTL support for table cells.
+
+### Added
+- `rtl-gutter-`, `rtl-margin-gutter-` left and right mixins
+- `rtl-margin-gutter-left-0`, `rtl-margin-gutter-right-0`, `rtl-gutter-left-0`, `rtl-gutter-right-0` classes.
+- `.radio` and `.checkbox` classes for styling radio and checkbox fieldsets.
+- Card styles.
+
+### Removed
+- Default label styling for fieldsets
 
 ## 1.0.0-beta.11
 

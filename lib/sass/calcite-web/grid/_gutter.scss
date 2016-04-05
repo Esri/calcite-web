@@ -8,7 +8,6 @@
   padding-left:  $column-gutter/4;
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
-      padding-left: 0;
       padding-right:  $column-gutter/4;
     }
   }
@@ -17,7 +16,7 @@
   margin-left:  $column-gutter/4;
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
-      margin-left: 0;
+      // margin-left: 0;
       margin-right:  $column-gutter/4;
     }
   }
@@ -26,7 +25,6 @@
   padding-right: $column-gutter/4;
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
-      padding-right: 0;
       padding-left: $column-gutter/4;
     }
   }
@@ -35,7 +33,6 @@
   margin-right: $column-gutter/4;
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
-      margin-right: 0;
       margin-left: $column-gutter/4;
     }
   }
@@ -44,7 +41,6 @@
   padding-left:  $column-gutter/3;
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
-      padding-left: 0;
       padding-right:  $column-gutter/3;
     }
   }
@@ -53,7 +49,6 @@
   margin-left:  $column-gutter/3;
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
-      margin-left: 0;
       margin-right:  $column-gutter/3;
     }
   }
@@ -62,7 +57,6 @@
   padding-right: $column-gutter/3;
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
-      padding-right: 0;
       padding-left: $column-gutter/3;
     }
   }
@@ -71,7 +65,6 @@
   margin-right: $column-gutter/3;
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
-      margin-right: 0;
       margin-left: $column-gutter/3;
     }
   }
@@ -80,7 +73,6 @@
   padding-left:  $column-gutter/2;
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
-      padding-left: 0;
       padding-right:  $column-gutter/2;
     }
   }
@@ -89,7 +81,6 @@
   margin-left:  $column-gutter/2;
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
-      margin-left: 0;
       margin-right:  $column-gutter/2;
     }
   }
@@ -98,7 +89,6 @@
   padding-right: $column-gutter/2;
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
-      padding-right: 0;
       padding-left: $column-gutter/2;
     }
   }
@@ -107,7 +97,6 @@
   margin-right: $column-gutter/2;
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
-      margin-right: 0;
       margin-left: $column-gutter/2;
     }
   }
@@ -116,7 +105,6 @@
   padding-left:  $n * $column-gutter;
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
-      padding-left: 0;
       padding-right: $n * $column-gutter;
     }
   }
@@ -125,8 +113,21 @@
   margin-left:  $n * $column-gutter;
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
-      margin-left: 0;
       margin-right: $n * $column-gutter;
+    }
+  }
+}
+@mixin rtl-gutter-left($n) {
+  @if ($include-right-to-left) {
+    html[dir="rtl"] & {
+      padding-left: $n * $column-gutter;
+    }
+  }
+}
+@mixin rtl-margin-gutter-left($n) {
+  @if ($include-right-to-left) {
+    html[dir="rtl"] & {
+      margin-left: $n * $column-gutter;
     }
   }
 }
@@ -134,8 +135,15 @@
   padding-right: $n * $column-gutter;
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
-      padding-right: 0;
+      // padding-right: 0;
       padding-left: $n * $column-gutter;
+    }
+  }
+}
+@mixin rtl-gutter-right($n) {
+  @if ($include-right-to-left) {
+    html[dir="rtl"] & {
+      padding-right: $n * $column-gutter;
     }
   }
 }
@@ -143,8 +151,14 @@
   margin-right: $n * $column-gutter;
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
-      margin-right: 0;
       margin-left: $n * $column-gutter;
+    }
+  }
+}
+@mixin rtl-margin-gutter-right($n) {
+  @if ($include-right-to-left) {
+    html[dir="rtl"] & {
+      margin-right: $n * $column-gutter;
     }
   }
 }
@@ -159,7 +173,6 @@
           padding-left:     $i * $column-gutter;
           @if ($include-right-to-left) {
             html[dir="rtl"] & {
-              padding-left: 0;
               padding-right: $i * $column-gutter;
             }
           }
@@ -168,7 +181,6 @@
           padding-right:  $i * $column-gutter;
           @if ($include-right-to-left) {
             html[dir="rtl"] & {
-              padding-right: 0;
               padding-left: $i * $column-gutter;
             }
           }
@@ -183,7 +195,6 @@
           padding-left:     $i * $column-gutter;
           @if ($include-right-to-left) {
             html[dir="rtl"] & {
-              padding-left: 0;
               padding-right: $i * $column-gutter;
             }
           }
@@ -192,7 +203,6 @@
           padding-right:  $i * $column-gutter;
           @if ($include-right-to-left) {
             html[dir="rtl"] & {
-              padding-right: 0;
               padding-left: $i * $column-gutter;
             }
           }

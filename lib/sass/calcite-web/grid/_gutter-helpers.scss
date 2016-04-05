@@ -1,5 +1,7 @@
 @if $include-grid == true or $include-gutter == true {
 
+.rtl-gutter-left-0    { @include rtl-gutter-left(0)  ;}
+.rtl-gutter-right-0   { @include rtl-gutter-right(0) ;}
 .gutter-left-quarter  { @include gutter-left-quarter(); }
 .gutter-right-quarter { @include gutter-right-quarter(); }
 .gutter-left-third    { @include gutter-left-third(); }
@@ -13,6 +15,8 @@
     .gutter-right-#{$i}         { @include gutter-right($i) ;}
   }
 
+.rtl-padding-left-0    { @include rtl-gutter-left(0)  ;}
+.rtl-padding-right-0   { @include rtl-gutter-right(0) ;}
 .padding-left-quarter  { @include gutter-left-quarter(); }
 .padding-right-quarter { @include gutter-right-quarter(); }
 .padding-left-third    { @include gutter-left-third(); }
@@ -26,6 +30,8 @@
     .padding-right-#{$i}         { @include gutter-right($i) ;}
   }
 
+.rtl-margin-left-0    { @include rtl-margin-gutter-left(0)  ;}
+.rtl-margin-right-0   { @include rtl-margin-gutter-right(0) ;}
 .margin-left-quarter  { @include margin-gutter-left-quarter(); }
 .margin-right-quarter { @include margin-gutter-right-quarter(); }
 .margin-left-third    { @include margin-gutter-left-third(); }
