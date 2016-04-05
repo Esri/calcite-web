@@ -138,6 +138,11 @@
     margin-bottom: $baseline;
     margin-left: $baseline / 2;
     @include font-size(-1);
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        margin-right: $baseline / 2;
+      }
+    }
   }
 
   li {
@@ -166,6 +171,11 @@
   }
   dd {
     margin-left: $baseline/2;
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        margin-right: $baseline / 2;
+      }
+    }
   }
 
   small, sup, sub {
@@ -211,6 +221,14 @@
     @include font-size(-2);
     font-style: italic;
     color: $dark-gray;
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        padding-left: 0;
+        border-left: none;
+        padding-right: $baseline/2;
+        border-right: 3px solid $dark-gray;
+      }
+    }
   }
 
   table {

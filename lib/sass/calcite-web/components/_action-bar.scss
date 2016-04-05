@@ -5,6 +5,10 @@
 @mixin action-bar-btn() {
   float: right;
   margin-left: $baseline * .5;
+  html[dir="rtl"] & {
+    float: left;
+    margin-right: $baseline * .5;
+  }
 }
 
 @mixin action-bar-left() {
@@ -13,6 +17,11 @@
     float: left;
     margin-left: 0;
     margin-right: $baseline * .5;
+    html[dir="rtl"] & {
+      float: right;
+      margin-right: 0;
+      margin-left: $baseline * .5;
+    }
   }
 }
 

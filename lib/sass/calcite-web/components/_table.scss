@@ -12,6 +12,9 @@
   text-align: left;
   overflow: auto;
   @include font-size(-2);
+  html[dir="rtl"] & {
+    text-align: right;
+  }
 
   > thead {
     background-color: $lightest-gray;
@@ -35,6 +38,9 @@
     border-left: 1px solid $lighter-gray;
     border-right: 1px solid $lighter-gray;
     padding: $baseline/3;
+    html[dir="rtl"] & {
+      text-align: right;
+    }
   }
 
   tr {
