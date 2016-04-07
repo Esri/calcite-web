@@ -89,13 +89,24 @@
       @for $n from 0 through $large-column-count {
         .pre-#{$n}  {
           margin-left: ($n / $large-column-count) * $container-width !important;
+          html[dir="rtl"] & {
+            margin-right: ($n / $large-column-count) * $container-width !important;
+          }
         }
         [class*="column-"] .pre-#{$n}:first-child {
           $margin: ($n / $large-column-count) * $container-width;
           $clear: $column-gutter / 2;
           margin-left: calc(#{$margin} - #{$clear}) !important;
+          html[dir="rtl"] & {
+            margin-right: calc(#{$margin} - #{$clear}) !important;
+          }
         }
-        .post-#{$n} { margin-right: ($n / $large-column-count) * $container-width !important; }
+        .post-#{$n} {
+          margin-right: ($n / $large-column-count) * $container-width !important;
+          html[dir="rtl"] & {
+            margin-left: ($n / $large-column-count) * $container-width !important;
+          }
+        }
       }
     }
 
