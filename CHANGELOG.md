@@ -9,6 +9,7 @@
 - Additional RTL on default type styles.
 - RTL support for action bars.
 - RTL support for table cells.
+- RTL mysterious text wrapping bugs.
 
 ### Added
 - `rtl-gutter-`, `rtl-margin-gutter-` left and right mixins

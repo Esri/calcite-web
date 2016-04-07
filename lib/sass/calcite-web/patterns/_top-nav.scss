@@ -28,6 +28,7 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
     color: $off-black;
     @if ($include-right-to-left) {
       html[dir="rtl"] & {
+        white-space: nowrap;
         margin-right: 0;
         margin-left: 1.5rem;
       }
