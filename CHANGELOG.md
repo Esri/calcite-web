@@ -13,6 +13,7 @@
 - RTL on screens larger than 1450px get proper pixel value for pre and post.
 
 ### Added
+- Documentation and samples for responsive images
 - `rtl-gutter-`, `rtl-margin-gutter-` left and right mixins
 - `rtl-margin-gutter-left-0`, `rtl-margin-gutter-right-0`, `rtl-gutter-left-0`, `rtl-gutter-right-0` classes.
 - `.radio` and `.checkbox` classes for styling radio and checkbox fieldsets.
