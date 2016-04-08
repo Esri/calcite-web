@@ -14,6 +14,7 @@
 
 ### Added
 - Documentation and samples for responsive images
+- Documentation for common grid structures.
 - `rtl-gutter-`, `rtl-margin-gutter-` left and right mixins
 - `rtl-margin-gutter-left-0`, `rtl-margin-gutter-right-0`, `rtl-gutter-left-0`, `rtl-gutter-right-0` classes.
 - `.radio` and `.checkbox` classes for styling radio and checkbox fieldsets.
