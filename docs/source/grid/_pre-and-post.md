@@ -4,4 +4,6 @@ Pre and Post classes do not responsively fold. This prevents a `pre-5` from push
 
 Pre and post helpers are available from `.pre-1` and `.post-1` to `.pre-24` and `.post-24`.
 
+**Notee:** While a single DOM element *can* have both pre and post helpers, putting both on a single node can cause problems when switching a layout for right to left languages.
+
 [View the example](../page-layouts/grid#pre-and-post)

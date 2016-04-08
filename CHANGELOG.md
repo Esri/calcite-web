@@ -12,6 +12,7 @@
 - RTL support for table cells.
 - RTL mysterious text wrapping bugs.
 - RTL on screens larger than 1450px get proper pixel value for pre and post.
+- Explicit RTL pre and post classes resolve grid issues in RTL when `pre-n` and `post-n` exist on the same element.
 
 ### Added
 - Documentation and samples for responsive images

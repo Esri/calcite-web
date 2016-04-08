@@ -19,6 +19,17 @@
         .post-#{$n} {
           @include post($n, $default-column-count);
         }
+        @if $include-right-to-left == true {
+          .rtl-pre-#{$n} {
+            @include pre($n, $default-column-count);
+          }
+          [class*="column-"] .rtl-pre-#{$n}:first-child, .first-column.rtl-pre-#{$n} {
+            @include pre-calc($n, $default-column-count);
+          }
+          .rtl-post-#{$n} {
+            @include post($n, $default-column-count);
+          }
+        }
       }
     }
 
@@ -35,6 +46,17 @@
         .post-#{$n} {
           @include post($n, $large-column-count);
         }
+        @if $include-right-to-left == true {
+          .rtl-pre-#{$n} {
+            @include pre($n, $large-column-count);
+          }
+          [class*="column-"] .rtl-pre-#{$n}:first-child, .first-column.rtl-pre-#{$n} {
+            @include pre-calc($n, $large-column-count);
+          }
+          .rtl-post-#{$n} {
+            @include post($n, $large-column-count);
+          }
+        }
       }
 
       @for $n from 0 through $large-column-count {
@@ -46,6 +68,18 @@
         }
         .#{$large-class}-post-#{$n} {
           @include post($n, $large-column-count);
+        }
+
+        @if $include-right-to-left == true {
+          .rtl-#{$large-class}-pre-#{$n} {
+            @include pre($n, $large-column-count);
+          }
+          [class*="column-"] .rtl-#{$large-class}-pre-#{$n}:first-child, .#{$large-class}-first-column.rtl-#{$large-class}-pre-#{$n} {
+            @include pre-calc($n, $large-column-count);
+          }
+          .rtl-#{$large-class}-post-#{$n} {
+            @include post($n, $large-column-count);
+          }
         }
       }
     }
@@ -62,6 +96,17 @@
         .#{$medium-class}-post-#{$n} {
           @include post($n, $medium-column-count);
         }
+        @if $include-right-to-left == true {
+          .rtl-#{$medium-class}-pre-#{$n} {
+            @include pre($n, $medium-column-count);
+          }
+          [class*="column-"] .rtl-#{$medium-class}-pre-#{$n}:first-child, .#{$medium-class}-first-column.rtl-#{$medium-class}-pre-#{$n} {
+            @include pre-calc($n, $medium-column-count);
+          }
+          .rtl-#{$medium-class}-post-#{$n} {
+            @include post($n, $medium-column-count);
+          }
+        }
       }
     }
 
@@ -76,6 +121,17 @@
         }
         .#{$small-class}-post-#{$n} {
           @include post($n, $small-column-count);
+        }
+        @if $include-right-to-left == true {
+          .rtl-#{$small-class}-pre-#{$n} {
+            @include pre($n, $small-column-count);
+          }
+          [class*="column-"] .rtl-#{$small-class}-pre-#{$n}:first-child, .#{$small-class}-first-column.rtl-#{$small-class}-pre-#{$n} {
+            @include pre-calc($n, $small-column-count);
+          }
+          .rtl-#{$small-class}-post-#{$n} {
+            @include post($n, $small-column-count);
+          }
         }
       }
     }
@@ -107,6 +163,28 @@
             margin-left: ($n / $large-column-count) * $container-width !important;
           }
         }
+        @if $include-right-to-left == true {
+          .rtl-pre-#{$n}  {
+            margin-left: ($n / $large-column-count) * $container-width !important;
+            html[dir="rtl"] & {
+              margin-right: ($n / $large-column-count) * $container-width !important;
+            }
+          }
+          [class*="column-"] .rtl-pre-#{$n}:first-child {
+            $margin: ($n / $large-column-count) * $container-width;
+            $clear: $column-gutter / 2;
+            margin-left: calc(#{$margin} - #{$clear}) !important;
+            html[dir="rtl"] & {
+              margin-right: calc(#{$margin} - #{$clear}) !important;
+            }
+          }
+          .rtl-post-#{$n} {
+            margin-right: ($n / $large-column-count) * $container-width !important;
+            html[dir="rtl"] & {
+              margin-left: ($n / $large-column-count) * $container-width !important;
+            }
+          }
+        }
       }
     }
 
@@ -119,6 +197,17 @@
     }
     .post-#{$n} {
       @include post($n, $default-column-count);
+    }
+    @if $include-right-to-left == true {
+      .rtl-pre-#{$n} {
+        @include pre($n, $default-column-count);
+      }
+      [class*="column-"] .rtl-pre-#{$n}:first-child, .first-column.rtl-pre-#{$n} {
+        @include pre-calc($n, $default-column-count);
+      }
+      .rtl-post-#{$n} {
+        @include post($n, $default-column-count);
+      }
     }
   }
 }
