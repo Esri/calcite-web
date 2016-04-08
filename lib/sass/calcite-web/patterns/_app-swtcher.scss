@@ -1,0 +1,7 @@
+@mixin app-switcher() {
+
+}
+
+@if $include-app-switcher == 'true' {
+  .app-switcher {@include app-switcher();}
+}

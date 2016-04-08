@@ -1,0 +1,1 @@
+The app switcher should be present on the top nav of every Esri product, next to the user nav. It allows a logged in user to quickly navigate between web products.

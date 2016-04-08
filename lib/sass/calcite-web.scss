@@ -74,6 +74,7 @@ $include-super-nav:              $generate-css    !default;
 $include-user-nav:               $generate-css    !default;
 $include-toolbar:                $generate-css    !default;
 $include-site-search:            $generate-css    !default;
+$include-app-switcher:           $generate-css    !default;
 
 // Javascript
 $include-tabs:                   $generate-css    !default;
@@ -152,6 +153,7 @@ $include-filter-dropdown:        $generate-css    !default;
 @import "calcite-web/patterns/accordion";
 @import "calcite-web/patterns/drawers";
 @import "calcite-web/patterns/filter-dropdown";
+@import "calcite-web/patterns/app-switcher";
 
 // Modifiers
 // modifier classes override standard styles
