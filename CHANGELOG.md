@@ -9,6 +9,8 @@
 - Additional RTL on default type styles.
 - RTL support for action bars.
 - RTL support for table cells.
+- RTL mysterious text wrapping bugs.
+- RTL on screens larger than 1450px get proper pixel value for pre and post.
 
 ### Added
 - `rtl-gutter-`, `rtl-margin-gutter-` left and right mixins
