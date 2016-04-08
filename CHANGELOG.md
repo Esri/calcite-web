@@ -3,6 +3,7 @@
 ### Modified
 - small visual update to multiple select elements
 - Removed all external dependencies.
+- Documented animation as unique component, prepared to expand this list out.
 
 ### Fixed
 - using `gutter-left-n` and `gutter-right-n` on the same element will no longer break.

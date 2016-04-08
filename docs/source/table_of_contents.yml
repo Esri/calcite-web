@@ -105,9 +105,6 @@ type:
             - link-darker-gray
             - link-darkest-gray
             - link-off-black
-        - title: 'Fade In'
-          link: fade-in
-          modifiers: true
         - title: 'Numbered List'
           link: list-numbered
           modifiers:
@@ -406,6 +403,12 @@ components:
         - title: 'Radio Buttons'
           link: radio-buttons
           modifiers: true
+    - group: 'Animation'
+      pages:
+        - title: 'Overview'
+          link: animation
+          modifiers:
+            - 'animate-fade-in'
     - group: 'Branding'
       pages:
         - title: 'Esri Logo'

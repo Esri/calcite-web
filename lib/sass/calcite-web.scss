@@ -60,6 +60,7 @@ $include-search-bar:             $generate-css    !default;
 $include-skip-to-content:        $generate-css    !default;
 $include-logo:                   $generate-css    !default;
 $include-card:                   $generate-css    !default;
+$include-animation:              $generate-css    !default;
 
 // Patterns
 $include-footer:                 $generate-css    !default;
@@ -132,6 +133,7 @@ $include-filter-dropdown:        $generate-css    !default;
 @import "calcite-web/components/search-bar";
 @import "calcite-web/components/skip-to-content";
 @import "calcite-web/components/card";
+@import "calcite-web/components/animation";
 
 // Patterns
 // complete interfaces: header, footer, banner...
