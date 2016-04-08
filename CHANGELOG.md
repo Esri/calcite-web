@@ -15,6 +15,7 @@
 - Explicit RTL pre and post classes resolve grid issues in RTL when `pre-n` and `post-n` exist on the same element.
 
 ### Added
+- Fancy form validation styles
 - Documentation and samples for responsive images
 - Documentation for common grid structures.
 - `rtl-gutter-`, `rtl-margin-gutter-` left and right mixins
