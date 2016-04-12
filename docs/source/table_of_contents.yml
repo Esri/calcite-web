@@ -478,6 +478,26 @@ patterns:
         - title: 'Filter Dropdown'
           link: 'filter-dropdown'
           modifiers: true
+layouts:
+  title: 'Layouts'
+  base: page-layouts
+  navigation:
+    - group: 'Common Page Layouts'
+      pages:
+        - title: 'Aside / Main'
+          link: aside-main
+        - title: 'Three Up'
+          link: three-up
+        - title: 'Content / Illustration'
+          link: content-illustration
+    - group: 'Sample Pages'
+      pages:
+        - title: 'Blog Article'
+          link: blog
+        - title: 'Documentation'
+          link: documentation
+        - title: 'API Reference'
+          link: api-reference
 sass:
   title: 'Sass'
   base: sass
@@ -536,20 +556,3 @@ javascript:
           link: utility-functions
         - title: 'DOM Utilities'
           link: dom-utilities
-
-layouts:
-  title: 'Layouts'
-  base: page-layouts
-  navigation:
-    - group: 'Building Layouts'
-      pages:
-        - title: 'Homepage'
-          link: homepage
-        - title: 'Product Page'
-          link: product
-        - title: 'Documentation'
-          link: documentation
-        - title: 'API Reference'
-          link: api-reference
-        - title: 'Blog'
-          link: blog
