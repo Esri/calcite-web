@@ -1,4 +1,4 @@
-## Unreleased
+## 1.0.0-beta.12
 
 ### Modified
 - small visual update to multiple select elements
