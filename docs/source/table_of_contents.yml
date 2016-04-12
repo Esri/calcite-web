@@ -105,9 +105,6 @@ type:
             - link-darker-gray
             - link-darkest-gray
             - link-off-black
-        - title: 'Fade In'
-          link: fade-in
-          modifiers: true
         - title: 'Numbered List'
           link: list-numbered
           modifiers:
@@ -406,6 +403,12 @@ components:
         - title: 'Radio Buttons'
           link: radio-buttons
           modifiers: true
+    - group: 'Animation'
+      pages:
+        - title: 'Overview'
+          link: animation
+          modifiers:
+            - 'animate-fade-in'
     - group: 'Branding'
       pages:
         - title: 'Esri Logo'
@@ -425,6 +428,9 @@ patterns:
           link: basic-html-page
         - title: 'Top Nav'
           link: top-nav
+          modifiers: true
+        - title: 'App Switcher'
+          link: app-switcher
           modifiers: true
         - title: 'User Sign In'
           link: user-sign-in
@@ -472,6 +478,26 @@ patterns:
         - title: 'Filter Dropdown'
           link: 'filter-dropdown'
           modifiers: true
+layouts:
+  title: 'Layouts'
+  base: page-layouts
+  navigation:
+    - group: 'Common Page Layouts'
+      pages:
+        - title: 'Aside / Main'
+          link: aside-main
+        - title: 'Three Up'
+          link: three-up
+        - title: 'Content / Illustration'
+          link: content-illustration
+    - group: 'Sample Pages'
+      pages:
+        - title: 'Blog Article'
+          link: blog
+        - title: 'Documentation'
+          link: documentation
+        - title: 'API Reference'
+          link: api-reference
 sass:
   title: 'Sass'
   base: sass
@@ -530,20 +556,3 @@ javascript:
           link: utility-functions
         - title: 'DOM Utilities'
           link: dom-utilities
-
-layouts:
-  title: 'Layouts'
-  base: page-layouts
-  navigation:
-    - group: 'Building Layouts'
-      pages:
-        - title: 'Homepage'
-          link: homepage
-        - title: 'Product Page'
-          link: product
-        - title: 'Documentation'
-          link: documentation
-        - title: 'API Reference'
-          link: api-reference
-        - title: 'Blog'
-          link: blog

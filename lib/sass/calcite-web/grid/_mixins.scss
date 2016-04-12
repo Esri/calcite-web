@@ -28,7 +28,6 @@
   margin-left: ($n / $count) * $max-width !important;
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
-      margin-left: 0 !important;
       margin-right: ($n / $count) * $max-width !important;
     }
   }
@@ -40,7 +39,6 @@
   margin-left: calc(#{$margin} - #{$clear}) !important;
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
-      margin-left: 0 !important;
       margin-right: calc(#{$margin} - #{$clear}) !important;
     }
   }
@@ -50,7 +48,6 @@
   margin-right: ($n / $count) * $max-width !important;
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
-      margin-right: 0 !important;
       margin-left: ($n / $count) * $max-width !important;
     }
   }

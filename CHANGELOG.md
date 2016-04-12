@@ -3,6 +3,7 @@
 ### Modified
 - small visual update to multiple select elements
 - Removed all external dependencies.
+- Documented animation as unique component, prepared to expand this list out.
 
 ### Fixed
 - using `gutter-left-n` and `gutter-right-n` on the same element will no longer break.
@@ -11,9 +12,14 @@
 - RTL support for table cells.
 - RTL mysterious text wrapping bugs.
 - RTL on screens larger than 1450px get proper pixel value for pre and post.
+- Explicit RTL pre and post classes resolve grid issues in RTL when `pre-n` and `post-n` exist on the same element.
+- Opening a dropdown closes all other dropdowns on the page.
 
 ### Added
+- App Switcher pattern
+- Fancy form validation styles
 - Documentation and samples for responsive images
+- Documentation for common grid structures.
 - `rtl-gutter-`, `rtl-margin-gutter-` left and right mixins
 - `rtl-margin-gutter-left-0`, `rtl-margin-gutter-right-0`, `rtl-gutter-left-0`, `rtl-gutter-right-0` classes.
 - `.radio` and `.checkbox` classes for styling radio and checkbox fieldsets.

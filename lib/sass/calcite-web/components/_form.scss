@@ -67,6 +67,8 @@
     }
   }
 
+
+
   // ┌─────────────┐
   // │ Text Inputs │
   // └─────────────┘
@@ -95,7 +97,7 @@
     @include transition(border-color 150ms linear);
     -webkit-appearance: textfield;
     height: 2.25rem;
-    &.input-error { border-color: $red; }
+    &.input-error   { border-color: $red; }
     &.input-warning { border-color: $dark-yellow; }
     &.input-success { border-color: $green; }
     &:focus { border-color: $blue; }
@@ -106,6 +108,50 @@
     max-width: 100%;
     height: auto;
     padding-top: $baseline / 5;
+  }
+
+  .form-hint {
+    @include font-size(-2);
+    display: block;
+  }
+    .form-hint-text {
+      display: none;
+      position: absolute;
+    }
+    .form-hint-icon {
+      display: none;
+      position: absolute;
+      right: 0.5em;
+      top: 2.2rem;
+      &:before {
+        @include font-size(-1);
+        @extend %icon-font-styles;
+     }
+    }
+
+  input:required:valid   {
+    + .form-hint {
+      color: $green;
+      .form-hint-icon {
+        display: inline-block;
+        &:before {
+          @extend .icon-ui-check-mark:before;
+        }
+      }
+    }
+  }
+
+  input:required:invalid {
+    border-color: $red;
+    + .form-hint {
+      color: $red;
+     .form-hint-icon, .form-hint-text {
+        display: inline-block;
+      }
+      .form-hint-icon:before {
+        @extend .icon-ui-error:before;
+      }
+    }
   }
 
   button::-moz-focus-inner,

@@ -1,13 +1,21 @@
 <form action="" method="post">
 
   <label>
-    Name <span class="text-red font-size--2 right">Required</span>
+    Name<span class="text-red">*</span>
     <input type="text" id="name" required aria-required="true"/>
+    <span class="form-hint">
+      <span class="form-hint-text">Just type some letters</span>
+      <span class="form-hint-icon"></span>
+    </span>
   </label>
 
   <label>
-    E-mail
-    <input type="email"/>
+    E-mail<span class="text-red">*</span>
+    <input type="email" required aria-required="true"/>
+    <span class="form-hint">
+      <span class="form-hint-text">name@domain.tld</span>
+      <span class="form-hint-icon"></span>
+    </span>
   </label>
 
   <label>
