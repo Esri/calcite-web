@@ -1,0 +1,19 @@
+// ┌─────────┐
+// │ Fade In │
+// └─────────┘
+//  ↳ http://esri.github.io/calcite-web/type/#fade-in
+//  ↳ type → _fade-in.md
+@mixin fade-in () {
+  opacity: 0;
+  @include animation(fade-in ease-in 1);
+  @include animation-fill-mode(forwards);
+  @include animation-duration(.75s);
+}
+
+@if $include-card == true {
+  .fade-in, .animate-fade-in {@include fade-in();}
+  @include keyframes (fade-in) {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+}
