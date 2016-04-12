@@ -1,4 +1,4 @@
-/* calcite-web - v1.0.0-beta.11 - 2016-03-30
+/* calcite-web - v1.0.0-beta.12 - 2016-04-12
 *  https://github.com/esri/calcite-web
 *  Copyright (c) 2016 Environmental Systems Research Institute, Inc.
 *  Apache 2.0 License */
@@ -7,8 +7,6 @@
   typeof define === 'function' && define.amd ? define(factory) :
   (global.calcite = factory());
 }(this, function () { 'use strict';
-
-  function __commonjs(fn, module) { return module = { exports: {} }, fn(module, module.exports), module.exports; }
 
   // ┌────────────────────┐
   // │ Class Manipulation │
@@ -231,14 +229,13 @@
     return wrapperFn;
   }
 
-  var index = __commonjs(function (module) {
-  function E () {
-  	// Keep this empty so it's easier to inherit from
+  function E() {
+    // Keep this empty so it's easier to inherit from
     // (via https://github.com/lipsmack from https://github.com/scottcorgan/tiny-emitter/issues/3)
   }
 
   E.prototype = {
-  	on: function (name, callback, ctx) {
+    on: function on(name, callback, ctx) {
       var e = this.e || (this.e = {});
 
       (e[name] || (e[name] = [])).push({
@@ -249,18 +246,18 @@
       return this;
     },
 
-    once: function (name, callback, ctx) {
+    once: function once(name, callback, ctx) {
       var self = this;
-      function listener () {
+      function listener() {
         self.off(name, listener);
         callback.apply(ctx, arguments);
-      };
+      }
 
-      listener._ = callback
+      listener._ = callback;
       return this.on(name, listener, ctx);
     },
 
-    emit: function (name) {
+    emit: function emit(name) {
       var data = [].slice.call(arguments, 1);
       var evtArr = ((this.e || (this.e = {}))[name] || []).slice();
       var i = 0;
@@ -273,15 +270,16 @@
       return this;
     },
 
-    off: function (name, callback) {
+    off: function off(name, callback) {
       var e = this.e || (this.e = {});
       var evts = e[name];
       var liveEvents = [];
 
       if (evts && callback) {
         for (var i = 0, len = evts.length; i < len; i++) {
-          if (evts[i].fn !== callback && evts[i].fn._ !== callback)
+          if (evts[i].fn !== callback && evts[i].fn._ !== callback) {
             liveEvents.push(evts[i]);
+          }
         }
       }
 
@@ -289,20 +287,12 @@
       // Suggested by https://github.com/lazd
       // Ref: https://github.com/scottcorgan/tiny-emitter/commit/c6ebfaa9bc973b33d110a84a307742b7cf94c953#commitcomment-5024910
 
-      (liveEvents.length)
-        ? e[name] = liveEvents
-        : delete e[name];
-
+      liveEvents.length ? e[name] = liveEvents : delete e[name];
       return this;
     }
   };
 
-  module.exports = E;
-  });
-
-  var Emitter = (index && typeof index === 'object' && 'default' in index ? index['default'] : index);
-
-  var bus = new Emitter();
+  var bus = new E();
 
   // ┌───────────┐
   // │ Accordion │
@@ -368,7 +358,6 @@
   // show and hide dropdown menus
   function dropdown() {
     var toggles = findElements('.js-dropdown-toggle');
-    var dropdowns = findElements('.js-dropdown');
 
     bus.on('dropdown:toggle', toggleDropdown);
     bus.on('dropdown:close', closeAllDropdowns);
@@ -377,14 +366,18 @@
 
     function closeAllDropdowns(options) {
       remove$1(document.body, click(), closeAllDropdowns);
-      dropdowns.forEach(function (dropdown) {
+      findElements('.js-dropdown').forEach(function (dropdown) {
         remove(dropdown, 'is-active');
       });
     }
 
     function toggleDropdown(options) {
       if (!options) return;
-      toggle(options.node, 'is-active');
+      var isOpen = has(options.node, 'is-active');
+      bus.emit('dropdown:close');
+      if (!isOpen) {
+        add(options.node, 'is-active');
+      }
       if (has(options.node, 'is-active')) {
         add$1(document.body, click(), closeAllDropdowns);
       }
@@ -796,73 +789,48 @@
     });
   }
 
-  var guid = __commonjs(function (module) {
-  (function () {
-    var validator = new RegExp("^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$", "i");
+  var validator = new RegExp('^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$', 'i');
 
-    function gen(count) {
-      var out = "";
-      for (var i=0; i<count; i++) {
-        out += (((1+Math.random())*0x10000)|0).toString(16).substring(1);
-      }
-      return out;
+  function gen(count) {
+    var out = '';
+    for (var i = 0; i < count; i++) {
+      out += ((1 + Math.random()) * 0x10000 | 0).toString(16).substring(1);
     }
+    return out;
+  }
 
-    function Guid(guid) {
-      if (!guid) throw new TypeError("Invalid argument; `value` has no value.");
-        
-      this.value = Guid.EMPTY;
-      
-      if (guid && guid instanceof Guid) {
-        this.value = guid.toString();
-
-      } else if (guid && Object.prototype.toString.call(guid) === "[object String]" && Guid.isGuid(guid)) {
-        this.value = guid;
-      }
-      
-      this.equals = function(other) {
-        // Comparing string `value` against provided `guid` will auto-call
-        // toString on `guid` for comparison
-        return Guid.isGuid(other) && this.value == other;
-      };
-
-      this.isEmpty = function() {
-        return this.value === Guid.EMPTY;
-      };
-      
-      this.toString = function() {
-        return this.value;
-      };
-      
-      this.toJSON = function() {
-        return this.value;
-      };
-    };
-
-    Guid.EMPTY = "00000000-0000-0000-0000-000000000000";
-
-    Guid.isGuid = function(value) {
-      return value && (value instanceof Guid || validator.test(value.toString()));
-    };
-
-    Guid.create = function() {
-      return new Guid([gen(2), gen(1), gen(1), gen(1), gen(3)].join("-"));
-    };
-
-    Guid.raw = function() {
-      return [gen(2), gen(1), gen(1), gen(1), gen(3)].join("-");
-    };
-
-    if(typeof module != 'undefined' && module.exports) {
-      module.exports = Guid;
+  function Guid(guid) {
+    if (!guid) throw new TypeError('Invalid argument `value` has no value.');
+    this.value = Guid.EMPTY;
+    if (guid && guid instanceof Guid) {
+      this.value = guid.toString();
+    } else if (guid && Object.prototype.toString.call(guid) === '[object String]' && Guid.isGuid(guid)) {
+      this.value = guid;
     }
-    else if (typeof window != 'undefined') {
-      window.Guid = Guid;
-    }
-  })();
-  });
+    this.equals = function (other) {
+      return Guid.isGuid(other) && this.value === other;
+    };
+    this.isEmpty = function () {
+      return this.value === Guid.EMPTY;
+    };
+    this.toString = function () {
+      return this.value;
+    };
+    this.toJSON = function () {
+      return this.value;
+    };
+  }
 
-  var Guid = (guid && typeof guid === 'object' && 'default' in guid ? guid['default'] : guid);
+  Guid.EMPTY = '00000000-0000-0000-0000-000000000000';
+  Guid.isGuid = function (value) {
+    return value && (value instanceof Guid || validator.test(value.toString()));
+  };
+  Guid.create = function () {
+    return new Guid([gen(2), gen(1), gen(1), gen(1), gen(3)].join('-'));
+  };
+  Guid.raw = function () {
+    return [gen(2), gen(1), gen(1), gen(1), gen(3)].join('-');
+  };
 
   // ┌────────┐
   // │ Sticky │

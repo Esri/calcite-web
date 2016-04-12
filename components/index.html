@@ -76,15 +76,15 @@
               
             
               
+                <a href="../page-layouts" class="side-nav-link">Layouts</a>
+              
+            
+              
                 <a href="../sass" class="side-nav-link">Sass</a>
               
             
               
                 <a href="../javascript" class="side-nav-link">JavaScript</a>
-              
-            
-              
-                <a href="../page-layouts" class="side-nav-link">Layouts</a>
               
             
         </aside>
@@ -132,15 +132,15 @@
               
             
               
+                <a href="../page-layouts" class="side-nav-link">Layouts</a>
+              
+            
+              
                 <a href="../sass" class="side-nav-link">Sass</a>
               
             
               
                 <a href="../javascript" class="side-nav-link">JavaScript</a>
-              
-            
-              
-                <a href="../page-layouts" class="side-nav-link">Layouts</a>
               
             
         </aside>
@@ -184,15 +184,15 @@
                 
               
                 
+                  <a href="../page-layouts" class="top-nav-link">Layouts</a>
+                
+              
+                
                   <a href="../sass" class="top-nav-link">Sass</a>
                 
               
                 
                   <a href="../javascript" class="top-nav-link">JavaScript</a>
-                
-              
-                
-                  <a href="../page-layouts" class="top-nav-link">Layouts</a>
                 
               
               </nav>
@@ -281,6 +281,10 @@
             
           
             
+              <a href="#card" class="side-nav-link">Cards</a>
+            
+          
+            
               <a href="#breadcrumbs" class="side-nav-link">Breadcrumbs</a>
             
           
@@ -294,6 +298,10 @@
           
             
               <a href="#skip" class="side-nav-link">Skip to Content</a>
+            
+          
+            
+              <a href="#images" class="side-nav-link">Responsive Images</a>
             
           
         </nav>
@@ -332,6 +340,16 @@
           
             
               <a href="#radio-buttons" class="side-nav-link">Radio Buttons</a>
+            
+          
+        </nav>
+      
+        <h4 class="side-nav-title">Animation</h4>
+        <!-- <nav aria-role="navigation" aria-labelledby="sidenav"> -->
+        <nav aria-role="navigation">
+          
+            
+              <a href="#animation" class="side-nav-link">Overview</a>
             
           
         </nav>
@@ -930,6 +948,76 @@
       
         <section>
           
+            <h2 id="card" tabindex="0">Cards</h2>
+          
+
+          <p>Cards are so hot right now.</p>
+
+
+          
+
+          
+
+          
+
+          
+            <h3 class="leader-2" tabindex="0">Modifiers</h3>
+            <div class="styleguide-modifiers">
+              <div class="styleguide-modifier-example">
+                
+<div class="card column-5">
+  <div class="card-header">
+    Contract Bridge
+  </div>
+  <div class="card-body">
+    <span>Bridge is a trick-taking game using a standard 52-card deck. It is played by four players in two competing partnerships, with partners sitting opposite each other around a table.</span>
+  </div>
+</div>
+
+<div class="card column-5 pre-1">
+  <div class="card-image">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Shimer_College_bridge_club_1942.jpg" alt="Bridge Club, 1942">
+  </div>
+  <div class="card-body">
+    <span>Millions of people play bridge worldwide.</span>
+  </div>
+</div>
+
+              </div>
+              
+            </div>
+<pre><code>
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"card column-5"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"card-header"</span>&gt;
+    Contract Bridge
+  &lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"card-body"</span>&gt;
+    &lt;span&gt;Bridge <span class="hljs-keyword">is</span> a trick-taking game using a standard <span class="hljs-number">52</span>-card deck. It <span class="hljs-keyword">is</span> played <span class="hljs-keyword">by</span> four players <span class="hljs-keyword">in</span> two competing partnerships, <span class="hljs-keyword">with</span> partners sitting opposite each other <span class="hljs-keyword">around</span> a table.&lt;/span&gt;
+  &lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"card column-5 pre-1"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"card-image"</span>&gt;
+    &lt;img src=<span class="hljs-string">"https://upload.wikimedia.org/wikipedia/commons/8/86/Shimer_College_bridge_club_1942.jpg"</span> alt=<span class="hljs-string">"Bridge Club, 1942"</span>&gt;
+  &lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"card-body"</span>&gt;
+    &lt;span&gt;Millions <span class="hljs-keyword">of</span> people play bridge worldwide.&lt;/span&gt;
+  &lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+
+</code></pre>
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+        <section>
+          
             <h2 id="breadcrumbs" tabindex="0">Breadcrumbs</h2>
           
 
@@ -1293,6 +1381,82 @@
         </section>
         <hr>
       
+        <section>
+          
+            <h2 id="images" tabindex="0">Responsive Images</h2>
+          
+
+          <p>Creating a number of file sizes for bitmap assets can be very useful for reducing load times on small screens - especially phones and tablets. While this image markup is not enforced or unique to Calcite Web (there is no code in the framework that enables this), the following examples should be used as a standard when implementing responsive images.</p>
+<p>A full range of images widths are listed below.</p>
+<pre><code>${<span class="hljs-built_in">title</span>}.jpg
+${<span class="hljs-built_in">title</span>}-<span class="hljs-number">1920</span>-xlg.jpg
+${<span class="hljs-built_in">title</span>}-<span class="hljs-number">960</span>-lg.jpg
+${<span class="hljs-built_in">title</span>}-<span class="hljs-number">640</span>-bmd.jpg
+${<span class="hljs-built_in">title</span>}-<span class="hljs-number">480</span>-<span class="hljs-built_in">md</span>.jpg
+${<span class="hljs-built_in">title</span>}-<span class="hljs-number">320</span>-smd.jpg
+${<span class="hljs-built_in">title</span>}-<span class="hljs-number">240</span>-sm.jpg
+${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>-xsm.jpg
+</code></pre>
+
+
+          
+
+          
+
+          
+
+          
+            <h3 class="leader-2" tabindex="0">Modifiers</h3>
+            <div class="styleguide-modifiers">
+              <div class="styleguide-modifier-example">
+                <img srcset="/assets/img/image-1920-xlg.jpg 192w,
+             /assets/img/image-960-lg.jpg   960w,
+             /assets/img/image-480-md.jpg   480w"
+     src="/assets/img/image.jpg"
+     alt="24 column or fulscreen image.">
+
+<img srcset="/assets/img/image-960-lg.jpg   960w,
+             /assets/img/image-480-md.jpg   480w,
+             /assets/img/image-240-sm.jpg   240w"
+     src="/assets/img/image.jpg"
+     alt="12 column or two up image.">
+
+<img srcset="/assets/img/image-640-bmd.jpg  640w,
+             /assets/img/image-320-smd.jpg  320w,
+             /assets/img/image-160-xsm.jpg  160w"
+     src="/assets/img/image.jpg"
+     alt="8 column or three up image">
+              </div>
+              
+            </div>
+<pre><code>&lt;img <span class="hljs-variable">srcset=</span><span class="hljs-string">"/assets/img/image-1920-xlg.jpg 192w,
+             /assets/img/image-960-lg.jpg   960w,
+             /assets/img/image-480-md.jpg   480w"</span>
+     <span class="hljs-variable">src=</span><span class="hljs-string">"/assets/img/image.jpg"</span>
+     <span class="hljs-variable">alt=</span><span class="hljs-string">"24 column or fulscreen image."</span>&gt;
+
+&lt;img <span class="hljs-variable">srcset=</span><span class="hljs-string">"/assets/img/image-960-lg.jpg   960w,
+             /assets/img/image-480-md.jpg   480w,
+             /assets/img/image-240-sm.jpg   240w"</span>
+     <span class="hljs-variable">src=</span><span class="hljs-string">"/assets/img/image.jpg"</span>
+     <span class="hljs-variable">alt=</span><span class="hljs-string">"12 column or two up image."</span>&gt;
+
+&lt;img <span class="hljs-variable">srcset=</span><span class="hljs-string">"/assets/img/image-640-bmd.jpg  640w,
+             /assets/img/image-320-smd.jpg  320w,
+             /assets/img/image-160-xsm.jpg  160w"</span>
+     <span class="hljs-variable">src=</span><span class="hljs-string">"/assets/img/image.jpg"</span>
+     <span class="hljs-variable">alt=</span><span class="hljs-string">"8 column or three up image"</span>&gt;
+</code></pre>
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
     
       <h1 class="text-rule" id="forms" tabindex="0">Forms</h1>
       
@@ -1321,13 +1485,21 @@
                 <form action="" method="post">
 
   <label>
-    Name <span class="text-red font-size--2 right">Required</span>
+    Name<span class="text-red">*</span>
     <input type="text" id="name" required aria-required="true"/>
+    <span class="form-hint">
+      <span class="form-hint-text">Just type some letters</span>
+      <span class="form-hint-icon"></span>
+    </span>
   </label>
 
   <label>
-    E-mail
-    <input type="email"/>
+    E-mail<span class="text-red">*</span>
+    <input type="email" required aria-required="true"/>
+    <span class="form-hint">
+      <span class="form-hint-text">name@domain.tld</span>
+      <span class="form-hint-icon"></span>
+    </span>
   </label>
 
   <label>
@@ -1348,7 +1520,7 @@
     <input type=text pattern="[0-9]{13,16}">
   </label>
 
-  <fieldset>
+  <fieldset class="checkbox">
     <legend>Email Preferences</legend>
     <label>
       <input type="checkbox"> Weekly Newsletter
@@ -1375,7 +1547,7 @@
     <textarea></textarea>
   </label>
 
-  <fieldset>
+  <fieldset class="radio">
     <legend>Subscribe to Newsletter</legend>
     <label>
       <input type="radio" name="subscribe" value="yeah">Please
@@ -1397,13 +1569,21 @@
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">action</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">method</span>=<span class="hljs-value">"post"</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
-    Name <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-red font-size--2 right"</span>&gt;</span>Required<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    Name<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-red"</span>&gt;</span>*<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"name"</span> <span class="hljs-attribute">required</span> <span class="hljs-attribute">aria-required</span>=<span class="hljs-value">"true"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-hint"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-hint-text"</span>&gt;</span>Just type some letters<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-hint-icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
-    E-mail
-    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"email"</span>/&gt;</span>
+    E-mail<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-red"</span>&gt;</span>*<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"email"</span> <span class="hljs-attribute">required</span> <span class="hljs-attribute">aria-required</span>=<span class="hljs-value">"true"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-hint"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-hint-text"</span>&gt;</span>name@domain.tld<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-hint-icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
@@ -1424,7 +1604,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">text</span> <span class="hljs-attribute">pattern</span>=<span class="hljs-value">"[0-9]{13,16}"</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"checkbox"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>Email Preferences<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span>&gt;</span> Weekly Newsletter
@@ -1451,7 +1631,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-title">textarea</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">textarea</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"radio"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>Subscribe to Newsletter<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"subscribe"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"yeah"</span>&gt;</span>Please
@@ -1799,7 +1979,7 @@
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
-                <fieldset>
+                <fieldset class="checkbox">
   <legend>Checkbox Label:</legend>
   <label><input type="checkbox">Check Box 1</label>
   <label><input type="checkbox">Check Box 2</label>
@@ -1807,7 +1987,7 @@
               </div>
               
             </div>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span>&gt;</span>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"checkbox"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>Checkbox Label:<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span>&gt;</span>Check Box 1<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span>&gt;</span>Check Box 2<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
@@ -1841,7 +2021,7 @@
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
-                <fieldset>
+                <fieldset class="radio">
   <legend>Choose One Color</legend>
   <label><input type="radio" name="color" value="blue">Blue</label>
   <label><input type="radio" name="color" value="red">Red</label>
@@ -1850,12 +2030,58 @@
               </div>
               
             </div>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>Choose One Color<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"color"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"blue"</span>&gt;</span>Blue<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"color"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"red"</span>&gt;</span>Red<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"color"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"green"</span>&gt;</span>Green<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span>
+<pre><code>&lt;fieldset <span class="hljs-keyword">class</span>=<span class="hljs-string">"radio"</span>&gt;
+  &lt;legend&gt;Choose <span class="hljs-keyword">One</span> Color&lt;/legend&gt;
+  &lt;<span class="hljs-keyword">label</span>&gt;&lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">"radio"</span> name=<span class="hljs-string">"color"</span> value=<span class="hljs-string">"blue"</span>&gt;Blue&lt;/<span class="hljs-keyword">label</span>&gt;
+  &lt;<span class="hljs-keyword">label</span>&gt;&lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">"radio"</span> name=<span class="hljs-string">"color"</span> value=<span class="hljs-string">"red"</span>&gt;Red&lt;/<span class="hljs-keyword">label</span>&gt;
+  &lt;<span class="hljs-keyword">label</span>&gt;&lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">"radio"</span> name=<span class="hljs-string">"color"</span> value=<span class="hljs-string">"green"</span>&gt;Green&lt;/<span class="hljs-keyword">label</span>&gt;
+&lt;/fieldset&gt;
+</code></pre>
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+    
+      <h1 class="text-rule" id="animation" tabindex="0">Animation</h1>
+      
+        <section>
+          
+
+          <p>Animation helper classes are used to provide character, visual richness, and tactile feedback for the user. Adding an <code>.animate-</code> class to any DOM node will animate that node.Using JavaScript to add <code>.animate-fade-in</code> to a dom node when it enters the viewport will cause that node to fade in.</p>
+
+
+          
+
+          
+
+          
+
+          
+            <h3 class="leader-2" tabindex="0">Modifiers</h3>
+            <div class="styleguide-modifiers">
+              <div class="styleguide-modifier-example">
+                <div class="">
+  <h3>Wakko packs away the snacks, while Bill Clinton plays the sax.</h3>
+</div>
+              </div>
+              
+                <div class="styleguide-modifier-example">
+                  <div class="animate-fade-in">
+  <h3>Wakko packs away the snacks, while Bill Clinton plays the sax.</h3>
+</div>
+                  <code class="modifier-name">.animate-fade-in</code>
+                </div>
+              
+            </div>
+<pre><code>&lt;<span class="hljs-operator">div</span> class=<span class="hljs-string">"modifier-class"</span>&gt;
+  &lt;h3&gt;Wakko packs away <span class="hljs-operator">the</span> snacks, <span class="hljs-keyword">while</span> Bill Clinton plays <span class="hljs-operator">the</span> sax.&lt;/h3&gt;
+&lt;/<span class="hljs-operator">div</span>&gt;
 </code></pre>
 
           

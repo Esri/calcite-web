@@ -76,15 +76,15 @@
               
             
               
+                <a href="../page-layouts" class="side-nav-link">Layouts</a>
+              
+            
+              
                 <a href="../sass" class="side-nav-link">Sass</a>
               
             
               
                 <a href="../javascript" class="side-nav-link">JavaScript</a>
-              
-            
-              
-                <a href="../page-layouts" class="side-nav-link">Layouts</a>
               
             
         </aside>
@@ -132,15 +132,15 @@
               
             
               
+                <a href="../page-layouts" class="side-nav-link">Layouts</a>
+              
+            
+              
                 <a href="../sass" class="side-nav-link">Sass</a>
               
             
               
                 <a href="../javascript" class="side-nav-link">JavaScript</a>
-              
-            
-              
-                <a href="../page-layouts" class="side-nav-link">Layouts</a>
               
             
         </aside>
@@ -184,15 +184,15 @@
                 
               
                 
+                  <a href="../page-layouts" class="top-nav-link">Layouts</a>
+                
+              
+                
                   <a href="../sass" class="top-nav-link">Sass</a>
                 
               
                 
                   <a href="../javascript" class="top-nav-link">JavaScript</a>
-                
-              
-                
-                  <a href="../page-layouts" class="top-nav-link">Layouts</a>
                 
               
               </nav>
@@ -254,6 +254,10 @@
           
             
               <a href="#top-nav" class="side-nav-link">Top Nav</a>
+            
+          
+            
+              <a href="#app-switcher" class="side-nav-link">App Switcher</a>
             
           
             
@@ -375,7 +379,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Calcite Web<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"shortcut icon"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/img/favicon.ico"</span>&gt;</span>
     <span class="hljs-comment">&lt;!-- get calcite-web css from the cdn (use latest version) --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.11/css/calcite-web.min.css"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.12/css/calcite-web.min.css"</span>&gt;</span>
     <span class="hljs-comment">&lt;!--[if lt IE 9]&gt;
       &lt;script src="/assets/javascripts/libs/selectivizr.js"&gt;&lt;/script&gt;
       &lt;script src="/assets/javascripts/libs/html5shiv.js"&gt;&lt;/script&gt;
@@ -391,7 +395,7 @@
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 
     <span class="hljs-comment">&lt;!-- get calcite-web js from the cdn (use latest version) --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.11/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.12/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 
     <span class="hljs-comment">&lt;!-- interactive patterns need to be initialized --&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="stylus">
@@ -476,6 +480,166 @@
   &lt;/div&gt;
 &lt;/header&gt;
 
+</code></pre>
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+        <section>
+          
+            <h2 id="app-switcher" tabindex="0">App Switcher</h2>
+          
+
+          <p>The app switcher should be present on the top nav of every Esri product, next to the user nav. It allows a logged in user to quickly navigate between web products.</p>
+
+
+          
+
+          
+
+          
+
+          
+            <h3 class="leader-2" tabindex="0">Modifiers</h3>
+            <div class="styleguide-modifiers">
+              <div class="styleguide-modifier-example">
+                <div class="app-switcher js-dropdown">
+  <a class="app-switcher-icon js-dropdown-toggle"></a>
+  <div class="app-switcher-panel">
+    <div class="app-switcher-list">
+      <div class="app-switcher-app">
+        <a href="#" class="app-switcher-link">
+          <div class="app-switcher-app-icon"></div>
+          <span class="app-switcher-app-title">ArcGIS</span>
+        </a>
+      </div>
+      <div class="app-switcher-app">
+        <a href="#" class="app-switcher-link">
+          <div class="app-switcher-app-icon"></div>
+          <span class="app-switcher-app-title">Developers</span>
+        </a>
+      </div>
+      <div class="app-switcher-app">
+        <a href="#" class="app-switcher-link">
+          <div class="app-switcher-app-icon"></div>
+          <span class="app-switcher-app-title">Open Data</span>
+        </a>
+      </div>
+      <div class="app-switcher-app">
+        <a href="#" class="app-switcher-link">
+          <div class="app-switcher-app-icon"></div>
+          <span class="app-switcher-app-title">StoryMaps</span>
+        </a>
+      </div>
+      <div class="app-switcher-app">
+        <a href="#" class="app-switcher-link">
+          <div class="app-switcher-app-icon"></div>
+          <span class="app-switcher-app-title">Collector</span>
+        </a>
+      </div>
+      <div class="app-switcher-app">
+        <a href="#" class="app-switcher-link">
+          <div class="app-switcher-app-icon"></div>
+          <span class="app-switcher-app-title">AnotherApp</span>
+        </a>
+      </div>
+      <div class="app-switcher-app">
+        <a href="#" class="app-switcher-link">
+          <div class="app-switcher-app-icon"></div>
+          <span class="app-switcher-app-title">Something</span>
+        </a>
+      </div>
+      <div class="app-switcher-app">
+        <a href="#" class="app-switcher-link">
+          <div class="app-switcher-app-icon"></div>
+          <span class="app-switcher-app-title">GeoNet</span>
+        </a>
+      </div>
+      <div class="app-switcher-app">
+        <a href="#" class="app-switcher-link">
+          <div class="app-switcher-app-icon"></div>
+          <span class="app-switcher-app-title">MyEsri</span>
+        </a>
+      </div>
+    </div>
+    <div class="app-switcher-more">
+      <span><a href="#">View All</a></span>
+    </div>
+  </div>
+</div>
+              </div>
+              
+            </div>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher js-dropdown"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-icon js-dropdown-toggle"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-panel"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-list"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-app"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-link"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-app-icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-app-title"</span>&gt;</span>ArcGIS<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-app"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-link"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-app-icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-app-title"</span>&gt;</span>Developers<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-app"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-link"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-app-icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-app-title"</span>&gt;</span>Open Data<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-app"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-link"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-app-icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-app-title"</span>&gt;</span>StoryMaps<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-app"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-link"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-app-icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-app-title"</span>&gt;</span>Collector<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-app"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-link"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-app-icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-app-title"</span>&gt;</span>AnotherApp<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-app"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-link"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-app-icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-app-title"</span>&gt;</span>Something<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-app"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-link"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-app-icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-app-title"</span>&gt;</span>GeoNet<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-app"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-link"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-app-icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-app-title"</span>&gt;</span>MyEsri<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"app-switcher-more"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>View All<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 </code></pre>
 
           
