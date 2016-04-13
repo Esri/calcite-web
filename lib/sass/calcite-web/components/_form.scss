@@ -11,12 +11,15 @@
     padding: 0;
   }
 
-  .radio, .checkbox {
+  fieldset {
     @extend %clearfix;
     margin: 0 0 $baseline 0;
     padding: 0;
     border: none;
     display: block;
+  }
+
+  .fieldset-radio, .fieldset-checkbox {
     label {
       margin-bottom: 0;
       @include font-size(-1);

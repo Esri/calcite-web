@@ -1,3 +1,9 @@
+## Unreleased
+
+### Modified
+- Namespace fieldset checkbox labels.
+- Always style fieldsets.
+
 ## 1.0.0-beta.12
 
 ### Modified
