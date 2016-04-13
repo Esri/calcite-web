@@ -1,7 +1,7 @@
 
 When the aside needs more room, either to be a set of code sample, an image, video, or other information that needs more space and is not really navigation.
 
-[View the page sample.](/page-layouts/content-illustration)
+[View the page sample.](./content-illustration)
 
 ```
 <div class="grid-container">
