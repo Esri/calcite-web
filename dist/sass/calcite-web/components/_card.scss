@@ -1,0 +1,23 @@
+@mixin card () {
+  @include clearfix();
+}
+@mixin card-header () {
+  @include panel();
+}
+@mixin card-image () {
+  @include panel-white();
+  img {
+    display: block;
+  }
+}
+@mixin card-body () {
+  padding: 0.66*$baseline;
+  @include panel-white();
+}
+
+@if $include-card == true {
+  .card { @include card();}
+    .card-header { @include card-header();}
+    .card-image  { @include card-image();}
+    .card-body   { @include card-body();}
+}

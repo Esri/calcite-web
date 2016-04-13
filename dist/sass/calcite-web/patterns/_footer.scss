@@ -1,0 +1,25 @@
+// ┌────────┐
+// │ Footer │
+// └────────┘
+//  ↳ http://esri.github.io/calcite-web/patterns/#footer
+//  ↳ patterns → _footer.md
+@if $include-sticky-footer == true {
+  body {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+  }
+  .wrapper {
+    flex: 1 0 auto;
+  }
+  .footer {
+    flex: none;
+  }
+}
+
+@if $include-footer == true {
+  .footer  {
+    background-color: $off-white;
+    padding-top: $baseline * 2;
+  }
+}
