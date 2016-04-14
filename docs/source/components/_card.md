@@ -1,1 +1,1 @@
-Cards are so hot right now.
+Cards are like panels, but with a more structured content. They can have headers, footers, and full bleed images. Use cards when panels are too simple.
