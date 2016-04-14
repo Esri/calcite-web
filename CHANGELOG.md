@@ -1,3 +1,9 @@
+## 1.0.0-beta.14
+
+### Added
+- `animate-in-up`, `animate-in-down`
+- `animate-out-up`, `animate-out-down`, animate-fade-out`
+
 ## 1.0.0-beta.13
 
 ### Modified
