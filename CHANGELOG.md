@@ -1,4 +1,4 @@
-## Unreleased
+## 1.0.0-beta.13
 
 ### Modified
 - Namespace fieldset checkbox labels.
