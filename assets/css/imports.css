@@ -119,3 +119,99 @@
   src: url("https://fast.fonts.net/dv2/2/af97a512-f55a-4f61-b2ce-659c883930fc.eot?d44f19a684109620e4841678a190e8188b840650be32dfdff11226f4eb7fb62da2e4ff3ac5cb9baab9aeebd387f687d9b2e887da180096d585541d490d3d9db024bb32bb30fda6ff2d79d5960f7e637780942055575c79d5999be6317cd2d9d893107e020badd8044f29d12eed77cbe2e4ceae93321cb707732be30a17f2d854fe9b6eac5d9a24169d94c96c5d3ec2a9204fbd6a2ceb5a2d56a22044d41f42d9d47bbaa0a29232c8a85f469fd695c13771f0e196df56a5f905efb130244641637912fb8e675b873323ab93f92ed2551dc42a3aa38c068521&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a#iefix") format("eot"), url("https://fast.fonts.net/dv2/14/9b1fae67-8764-448a-a926-54b09bd0b06b.woff2?d44f19a684109620e4841678a190e8188b840650be32dfdff11226f4eb7fb62da2e4ff3ac5cb9baab9aeebd387f687d9b2e887da180096d585541d490d3d9db024bb32bb30fda6ff2d79d5960f7e637780942055575c79d5999be6317cd2d9d893107e020badd8044f29d12eed77cbe2e4ceae93321cb707732be30a17f2d854fe9b6eac5d9a24169d94c96c5d3ec2a9204fbd6a2ceb5a2d56a22044d41f42d9d47bbaa0a29232c8a85f469fd695c13771f0e196df56a5f905efb130244641637912fb8e675b873323ab93f92ed2551dc42a3aa38c068521&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("woff2"), url("https://fast.fonts.net/dv2/3/3fbbd6b1-cfa7-4ff0-97ea-af1b2c489f15.woff?d44f19a684109620e4841678a190e8188b840650be32dfdff11226f4eb7fb62da2e4ff3ac5cb9baab9aeebd387f687d9b2e887da180096d585541d490d3d9db024bb32bb30fda6ff2d79d5960f7e637780942055575c79d5999be6317cd2d9d893107e020badd8044f29d12eed77cbe2e4ceae93321cb707732be30a17f2d854fe9b6eac5d9a24169d94c96c5d3ec2a9204fbd6a2ceb5a2d56a22044d41f42d9d47bbaa0a29232c8a85f469fd695c13771f0e196df56a5f905efb130244641637912fb8e675b873323ab93f92ed2551dc42a3aa38c068521&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("woff"), url("https://fast.fonts.net/dv2/1/076311f8-a01b-4389-a5eb-334a62e62d45.ttf?d44f19a684109620e4841678a190e8188b840650be32dfdff11226f4eb7fb62da2e4ff3ac5cb9baab9aeebd387f687d9b2e887da180096d585541d490d3d9db024bb32bb30fda6ff2d79d5960f7e637780942055575c79d5999be6317cd2d9d893107e020badd8044f29d12eed77cbe2e4ceae93321cb707732be30a17f2d854fe9b6eac5d9a24169d94c96c5d3ec2a9204fbd6a2ceb5a2d56a22044d41f42d9d47bbaa0a29232c8a85f469fd695c13771f0e196df56a5f905efb130244641637912fb8e675b873323ab93f92ed2551dc42a3aa38c068521&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a") format("truetype"), url("https://fast.fonts.net/dv2/11/c59a36ab-4ef8-4ee1-a2f8-48aa79d4f877.svg?d44f19a684109620e4841678a190e8188b840650be32dfdff11226f4eb7fb62da2e4ff3ac5cb9baab9aeebd387f687d9b2e887da180096d585541d490d3d9db024bb32bb30fda6ff2d79d5960f7e637780942055575c79d5999be6317cd2d9d893107e020badd8044f29d12eed77cbe2e4ceae93321cb707732be30a17f2d854fe9b6eac5d9a24169d94c96c5d3ec2a9204fbd6a2ceb5a2d56a22044d41f42d9d47bbaa0a29232c8a85f469fd695c13771f0e196df56a5f905efb130244641637912fb8e675b873323ab93f92ed2551dc42a3aa38c068521&projectId=9431e9a5-7a6d-4b5f-82be-4d935972de5a#c59a36ab-4ef8-4ee1-a2f8-48aa79d4f877") format("svg");
   font-weight: 500;
   font-style: normal; }
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes in-down {
+  0% {
+    transform: translate3d(0, -100%, 0); }
+  100% {
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes in-down {
+  0% {
+    transform: translate3d(0, -100%, 0); }
+  100% {
+    transform: translate3d(0, 0, 0); } }
+
+@-webkit-keyframes in-down {
+  0% {
+    transform: translate3d(0, -100%, 0); }
+  100% {
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes in-down {
+  0% {
+    transform: translate3d(0, -100%, 0); }
+  100% {
+    transform: translate3d(0, 0, 0); } }
+
+@-webkit-keyframes in-up {
+  0% {
+    transform: translate3d(0, 100%, 0); }
+  100% {
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes in-up {
+  0% {
+    transform: translate3d(0, 100%, 0); }
+  100% {
+    transform: translate3d(0, 0, 0); } }
+
+@-webkit-keyframes in-down {
+  0% {
+    transform: translate3d(0, -100%, 0); }
+  100% {
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes in-down {
+  0% {
+    transform: translate3d(0, -100%, 0); }
+  100% {
+    transform: translate3d(0, 0, 0); } }
+
+@-webkit-keyframes out-down {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  100% {
+    transform: translate3d(0, -100%, 0); } }
+
+@keyframes out-down {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  100% {
+    transform: translate3d(0, -100%, 0); } }
+
+@-webkit-keyframes out-up {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  100% {
+    transform: translate3d(0, 100%, 0); } }
+
+@keyframes out-up {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  100% {
+    transform: translate3d(0, 100%, 0); } }
