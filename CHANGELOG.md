@@ -1,3 +1,9 @@
+## Unreleased
+
+### Added
+- 'select-full' for 100% wide selects
+- Responsive subnav docs
+
 ## 1.0.0-beta.14
 
 ### Added
