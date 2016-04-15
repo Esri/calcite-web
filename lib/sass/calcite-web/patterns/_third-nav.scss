@@ -5,6 +5,7 @@
 //  ↳ patterns → _third-nav.md
 
 @mixin third-nav() {
+  position: relative;
   @include avenir-regular();
   border-bottom: 1px solid $lightest-gray;
   background-color: $white;
