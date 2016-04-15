@@ -1,3 +1,13 @@
+## Unreleased
+
+### Added
+- 'select-full' for 100% wide selects
+- Responsive subnav docs
+- `js-select-nav` functionality
+
+### Fixed
+- Third nav arrow absolute position
+
 ## 1.0.0-beta.14
 
 ### Added
