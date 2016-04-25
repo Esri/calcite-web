@@ -1,5 +1,8 @@
 ## Unreleased
 
+### Modified
+- cursor: not-allowed on diabled buttons
+
 ### Added
 - 'select-full' for 100% wide selects
 - Responsive subnav docs

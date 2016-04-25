@@ -29,8 +29,8 @@
 }
 
   @mixin btn-disabled() {
+    cursor: not-allowed;
     opacity: .3;
-    cursor: default;
   }
 
   @mixin btn-arrow() {
@@ -81,18 +81,17 @@
       }
     }
 
-
     @mixin btn-clear-disabled() {
       background: none;
       color: $lighter-gray;
       border: 1px solid $lighter-gray;
-      cursor: default;
-      pointer-events: none;
+      cursor: not-allowed;
       &:hover {
-        color: $lighter-gray;
+        border: 1px solid $light-gray;
+        background: none;
+        color: $light-gray;
       }
     }
-
 
   @mixin btn-white() {
     background: $white;
