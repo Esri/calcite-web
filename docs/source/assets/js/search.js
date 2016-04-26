@@ -1,6 +1,6 @@
 (function () {
   var q = window.location.search.substring(3);
-  var regex = new RegExp(q, "g");
+  var regex = new RegExp(q, 'g');
 
   function toArray (domList) {
     return Array.prototype.slice.call(domList);
@@ -32,17 +32,17 @@
       return containsTerm(child, q);
     })
     .map(function (child) {
-      var highlighted = child.textContent.replace(regex, "<b>" + q + "</b>");
+      var highlighted = child.textContent.replace(regex, '<b>' + q + '</b>');
       var position = highlighted.indexOf(q);
       // if index of character - 100 is not the beginning, add ellipsis
-      var ellipsis = position - 100 > 0 ? "&hellip;" : "";
+      var ellipsis = position - 100 > 0 ? '&hellip;' : '';
       return ellipsis + highlighted.substring(position - 300, position + 300);
     })
     .shift();
 
     item.querySelector('.js-search-item-snippet').innerHTML = snippet;
     return item;
-  })
+  });
 
   // Render data to elements
   document.querySelector('.js-term').innerHTML = '"' + q + '"';
@@ -60,10 +60,10 @@
   var list = document.querySelector('.js-search-list');
   var sortedItems = toArray(list.children)
   .sort(function (a, b) {
-    return parseInt(parseInt(b.getAttribute('data-rank') - a.getAttribute('data-rank')));
+    return parseInt(b.getAttribute('data-rank'), 10) - parseInt(a.getAttribute('data-rank'), 10);
   })
   .reduce(function (prev, curr) {
     return prev + curr.outerHTML;
-  }, '')
+  }, '');
   list.innerHTML = sortedItems;
 })();

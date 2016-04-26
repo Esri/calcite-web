@@ -53,7 +53,7 @@ js:
       {% for group in page.navigation %}
         {% for section in group.pages %}
           <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
-            <h4 class="trailer-half">
+            <h5 class="trailer-half">
               <a href="{{relativePath}}{{data.table_of_contents[pageName].base}}/#{{section.link}}">
                 {% if section.title == "Overview" %}
                   {{section.title}} ({{page.title}})
@@ -61,7 +61,7 @@ js:
                   {{section.title}}
                 {% endif %}
               </a>
-            </h4>
+            </h5>
             <div class="js-search-item-content hide">
               {% markdown %}{% include data.table_of_contents[pageName].base + '/_' + section.link %}{% endmarkdown %}
             </div>
