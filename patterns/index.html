@@ -42,9 +42,9 @@
       <nav class="drawer-nav" role="navigation">
         <aside class="side-nav">
           <h2 class="side-nav-title">Calcite Web</h2>
-            <form method="GET" action="/search/">
+            <form method="GET" action="../search/">
               <div class="search-bar">
-                <input type='search' placeholder='Search'>
+                <input type='search' placeholder='Search' name="q">
                 <button type="submit" class="search-submit icon-ui-search"></button>
               </div>
             </form>
@@ -97,9 +97,9 @@
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
-            <form method="GET" action="/search/">
+            <form method="GET" action="../search/">
               <div class="search-bar">
-                <input type='search' placeholder='Search'>
+                <input type='search' placeholder='Search' name="q">
                 <button type="submit" class="search-submit icon-ui-search"></button>
               </div>
             </form>
@@ -209,11 +209,11 @@
 
       <section class="expand js-expand  panel panel-no-padding" data-expand="search">
         <div class="grid-container padding-trailer-half padding-leader-1 padding-trailer-1">
-          <form method="GET" action="/search/" class="column-24">
+          <form method="GET" action="../search/" class="column-24">
             <label>Search Calcite Web
               <a href="#" class="icon-ui-close js-expand-toggle right" data-expand="search"></a>
               <div class="search-bar">
-                <input type='search' placeholder='Search'>
+                <input type='search' placeholder='Search' name='q'>
                 <button type="submit" class="search-submit icon-ui-search"></button>
               </div>
             </label>
@@ -270,6 +270,10 @@
           
             
               <a href="#sub-nav" class="side-nav-link">Sub Nav</a>
+            
+          
+            
+              <a href="#responsive-sub-nav" class="side-nav-link">Responsive Sub Nav</a>
             
           
             
@@ -781,14 +785,71 @@
   <div class="grid-container">
     <div class="column-24">
       <h1 class="sub-nav-title text-white">Fields</h1>
-      <div class="phone-show dropdown column-6 trailer-half js-dropdown-toggle">
-        <a href="#" class="link-white">Meadows &darr;</a>
-        <nav class="dropdown-menu js-dropdown sidenav" role="navigation" aria-labelledby="subnav">
-          <a class="sub-nav-link" href="#">Glens</a>
-          <a class="sub-nav-link" href="#">Dales</a>
-          <a class="sub-nav-link" href="#">Meadows</a>
-        </nav>
-      </div>
+      <nav class="sub-nav-list" role="navigation" aria-labelledby="subnav">
+        <a class="sub-nav-link" href="#">Glens</a>
+        <a class="sub-nav-link" href="#">Dales</a>
+        <a class="sub-nav-link is-active" href="#">Meadows</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+              </div>
+              
+            </div>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">header</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-nav"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"banner"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-container"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-24"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-nav-title text-white"</span>&gt;</span>Fields<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-nav-list"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"navigation"</span> <span class="hljs-attribute">aria-labelledby</span>=<span class="hljs-value">"subnav"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-nav-link"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Glens<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-nav-link"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Dales<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-nav-link is-active"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Meadows<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">header</span>&gt;</span>
+
+</code></pre>
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+        <section>
+          
+            <h2 id="responsive-sub-nav" tabindex="0">Responsive Sub Nav</h2>
+          
+
+          <p>When a sub nav has more than two or three items in it, it may need to collapse down into a smaller space on smaller screen sizes. The following pattern will work within an app, with <code>tablet-show</code> or <code>phone-show</code> used as needed.</p>
+
+
+          
+
+          
+
+          
+
+          
+            <h3 class="leader-2" tabindex="0">Modifiers</h3>
+            <div class="styleguide-modifiers">
+              <div class="styleguide-modifier-example">
+                <header class="sub-nav" role="banner">
+  <div class="grid-container">
+    <div class="column-24">
+      <h1 class="sub-nav-title text-white">Fields</h1>
+
+      <select class="phone-show select-full trailer-half js-select-nav">
+        <option value="#">Glens</option>
+        <option value="#">Dales</option>
+        <option value="#" selected>Meadows</option>
+      </select>
+
       <nav class="sub-nav-list phone-hide" role="navigation" aria-labelledby="subnav">
         <a class="sub-nav-link" href="#">Glens</a>
         <a class="sub-nav-link" href="#">Dales</a>
@@ -805,14 +866,13 @@
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-container"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-24"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-nav-title text-white"</span>&gt;</span>Fields<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"phone-show dropdown column-6 trailer-half js-dropdown-toggle"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"link-white"</span>&gt;</span>Meadows &amp;darr;<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-menu js-dropdown sidenav"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"navigation"</span> <span class="hljs-attribute">aria-labelledby</span>=<span class="hljs-value">"subnav"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-nav-link"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Glens<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-nav-link"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Dales<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-nav-link"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Meadows<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"phone-show select-full trailer-half js-select-nav"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"#"</span>&gt;</span>Glens<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"#"</span>&gt;</span>Dales<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">selected</span>&gt;</span>Meadows<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
+
       <span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-nav-list phone-hide"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"navigation"</span> <span class="hljs-attribute">aria-labelledby</span>=<span class="hljs-value">"subnav"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-nav-link"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Glens<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sub-nav-link"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Dales<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>

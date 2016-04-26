@@ -1,4 +1,4 @@
-/* calcite-web - v1.0.0-beta.14 - 2016-04-14
+/* calcite-web - v1.0.0-beta.14 - 2016-04-26
 *  https://github.com/esri/calcite-web
 *  Copyright (c) 2016 Environmental Systems Research Institute, Inc.
 *  Apache 2.0 License */
@@ -789,6 +789,24 @@
     });
   }
 
+  function selectNav() {
+    bus.on('selectnav:bind', bindSelects);
+
+    var selects = findElements('.js-select-nav');
+
+    function bindSelects() {
+      selects.forEach(function (select) {
+        add$1(select, 'change', selectPage);
+      });
+    }
+
+    function selectPage(e) {
+      window.location.assign(e.currentTarget.value);
+    }
+
+    bus.emit('selectnav:bind');
+  }
+
   var validator = new RegExp('^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$', 'i');
 
   function gen(count) {
@@ -1077,6 +1095,7 @@
     filterDropdown();
     modal();
     search();
+    selectNav();
     sticky();
     tabs();
     thirdNav();
@@ -1115,6 +1134,7 @@
     filterDropdown: filterDropdown,
     modal: modal,
     search: search,
+    selectNav: selectNav,
     sticky: sticky,
     tabs: tabs,
     thirdNav: thirdNav,

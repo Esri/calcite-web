@@ -6585,6 +6585,9 @@ select[multiple] {
 select[multiple] option {
   padding: 0.31rem; }
 
+.select-full {
+  width: 100%; }
+
 /* Select Browser Hacks */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   select::-ms-expand {
@@ -7290,15 +7293,9 @@ input.input-group-input,
   .sub-nav-link.is-active {
     background-color: white;
     color: #4c4c4c; }
-  @media screen and (max-width: 860px) {
-    .sub-nav-link {
-      margin: 0;
-      margin-top: 1px;
-      width: 100%; }
-      .sub-nav-link:hover {
-        background-image: none; } }
 
 .third-nav {
+  position: relative;
   font-weight: 400;
   font-style: normal;
   border-bottom: 1px solid #efefef;
