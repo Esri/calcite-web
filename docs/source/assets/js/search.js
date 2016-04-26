@@ -49,9 +49,11 @@
   toArray(document.querySelectorAll('.js-results-length')).forEach(function (item) {
     item.innerHTML = items.length;
   });
+  document.querySelector('.js-pagination').classList.remove('hide');
 
   if (items.length === 0) {
     document.querySelector('.js-no-results').classList.remove('hide');
+    document.querySelector('.js-pagination').classList.add('hide');
   }
 
   // Reorder elements based on how many times the search term occurs
