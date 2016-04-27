@@ -12,6 +12,7 @@
 
 ### Fixed
 - Third nav arrow absolute position
+- dont `extend` mixins thats not right
 
 ### Removed
 - `btn-clear-disabled`
