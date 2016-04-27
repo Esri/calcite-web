@@ -1,4 +1,4 @@
-## Unreleased
+## 1.0.0-beta.15
 
 ### Modified
 - cursor: not-allowed on disabled buttons
