@@ -2,7 +2,6 @@
 
 ### Modified
 - cursor: not-allowed on disabled buttons
-- Tab colors adjusted
 - pointer events: none on disabled buttons
 - Radios and chekboxes bigger
 
@@ -10,7 +9,6 @@
 - 'select-full' for 100% wide selects
 - Responsive subnav docs
 - `js-select-nav` functionality
-- Active blue bar on tabs.
 
 ### Fixed
 - Third nav arrow absolute position
