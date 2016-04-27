@@ -13,6 +13,7 @@
 ### Fixed
 - Third nav arrow absolute position
 - dont `extend` mixins thats not right
+- clicking inside drawer no longer closes drawer
 
 ### Removed
 - `btn-clear-disabled`
