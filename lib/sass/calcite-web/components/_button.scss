@@ -30,6 +30,7 @@
 
   @mixin btn-disabled() {
     cursor: not-allowed;
+    pointer-events: none;
     opacity: .3;
   }
 
@@ -78,18 +79,6 @@
       &:hover {
         color: $gray;
         background: $white;
-      }
-    }
-
-    @mixin btn-clear-disabled() {
-      background: none;
-      color: $lighter-gray;
-      border: 1px solid $lighter-gray;
-      cursor: not-allowed;
-      &:hover {
-        border: 1px solid $light-gray;
-        background: none;
-        color: $light-gray;
       }
     }
 
@@ -156,5 +145,4 @@
   .btn-red         { @include btn-color($red, $dark-red);}
   .btn-green       { @include btn-color($green, $dark-green);}
   .btn:disabled, .btn-disabled, button[disabled] { @include btn-disabled(); }
-  .btn-clear:disabled, .btn-clear-disabled { @include btn-clear-disabled(); }
 }

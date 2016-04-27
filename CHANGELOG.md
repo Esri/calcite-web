@@ -1,8 +1,9 @@
 ## Unreleased
 
 ### Modified
-- cursor: not-allowed on diabled buttons
-- Tab colors adjsuted
+- cursor: not-allowed on disabled buttons
+- Tab colors adjusted
+- pointer events: none on disabled buttons
 
 ### Added
 - 'select-full' for 100% wide selects
@@ -12,6 +13,9 @@
 
 ### Fixed
 - Third nav arrow absolute position
+
+### Removed
+- `btn-clear-disabled`
 
 ## 1.0.0-beta.14
 
