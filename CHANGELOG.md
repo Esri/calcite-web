@@ -2,11 +2,13 @@
 
 ### Modified
 - cursor: not-allowed on diabled buttons
+- Tab colors adjsuted
 
 ### Added
 - 'select-full' for 100% wide selects
 - Responsive subnav docs
 - `js-select-nav` functionality
+- Active blue bar on tabs.
 
 ### Fixed
 - Third nav arrow absolute position

@@ -17,7 +17,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  background-color: $off-white;
+  background-color: $lightest-gray;
   border: 1px solid $lighter-gray;
   border-left: none;
   cursor: pointer;
@@ -28,14 +28,16 @@
     outline: none;
   }
   &:hover, &:focus {
-    background-color: mix($white, $off-white);
+    background-color: mix($white, $lightest-gray);
     text-decoration: none;
-    @include prefixer(background-image,linear-gradient(to top, transparent 94%, $blue 96%, $blue 100%), webkit moz o);
-    background-image:linear-gradient(to top, transparent 94%, $blue 96%, $blue 100%);
+    @include prefixer(background-image,linear-gradient(to top, transparent 94%, $light-blue 96%, $light-blue 100%), webkit moz o);
+    background-image:linear-gradient(to top, transparent 94%, $light-blue 96%, $light-blue 100%);
   }
   &.is-active {
     border-bottom: 1px solid $white;
     background-color: $white;
+    @include prefixer(background-image,linear-gradient(to top, transparent 94%, $blue 96%, $blue 100%), webkit moz o);
+    background-image:linear-gradient(to top, transparent 94%, $blue 96%, $blue 100%);
     &:hover {
       background-color: $white;
     }
@@ -65,12 +67,12 @@
   .tab-title    {
     background-color: $white;
     &.is-active {
-      background-color: $off-white;
-      border-bottom: 1px solid $off-white;
+      background-color: $lightest-gray;
+      border-bottom: 1px solid $lightest-gray;
     }
   }
   .tab-section  {
-    background-color: $off-white;
+    background-color: $lightest-gray;
   }
   pre code {
     padding: 0;
