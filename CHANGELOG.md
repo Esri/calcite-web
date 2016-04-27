@@ -4,6 +4,7 @@
 - cursor: not-allowed on disabled buttons
 - Tab colors adjusted
 - pointer events: none on disabled buttons
+- Radios and chekboxes bigger
 
 ### Added
 - 'select-full' for 100% wide selects
@@ -16,6 +17,7 @@
 
 ### Removed
 - `btn-clear-disabled`
+- custom focus state on checkboxes and radios
 
 ## 1.0.0-beta.14
 

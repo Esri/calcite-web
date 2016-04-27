@@ -205,20 +205,9 @@
   //  ↳ components → _radio-buttons.md
   input[type='radio'], input[type='checkbox'] {
     @include left();
-    width: auto;
+    width: 1rem;
+    height: 1rem;
     margin: .3rem .3rem 0 .3rem;
-    &:focus {
-      outline: 0;
-      box-shadow: 0 0 1px 2px $blue, 0 0 6px $blue;
-    }
-  }
-
-  input[type='checkbox']:focus {
-    border-radius: 3px;
-  }
-
-  input[type='radio']:focus {
-    border-radius: 50%;
   }
 
   // ┌─────────┐
