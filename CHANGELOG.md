@@ -1,3 +1,8 @@
+## Unreleased
+
+### Fixed
+- `calcite.dropdown()` now only adds click events once
+
 ## 1.0.0-beta.15
 
 ### Modified
