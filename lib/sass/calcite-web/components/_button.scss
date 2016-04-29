@@ -38,6 +38,9 @@
     &:after {
       content: " →";
     }
+    html[dir="rtl"] &:after {
+      content: "← "
+    }
   }
 
   @mixin btn-transparent() {

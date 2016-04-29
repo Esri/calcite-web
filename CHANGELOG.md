@@ -2,6 +2,7 @@
 
 ### Fixed
 - `calcite.dropdown()` now only adds click events once
+- `btn-arrow` should point other direction in right-to-left
 
 ## 1.0.0-beta.15
 
