@@ -20,6 +20,8 @@
   text-transform: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  text-decoration: none;
 }
 
 %icon-font-styles {
@@ -57,13 +59,6 @@
   }
 
   .esri-icon-small:before, .icon-ui-small:before   { @include font-size(-4);}
-
-  .esri-icon-green:before, .icon-ui-green:before   { color: $green;}
-  .esri-icon-blue:before, .icon-ui-blue:before     { color: $blue;}
-  .esri-icon-purple:before, .icon-ui-purple:before { color: $purple;}
-  .esri-icon-orange:before, .icon-ui-orange:before { color: $orange;}
-  .esri-icon-gray:before, .icon-ui-gray:before     { color: $gray;}
-  .esri-icon-red:before, .icon-ui-red:before       { color: $red;}
 
   
     // add-attachment
