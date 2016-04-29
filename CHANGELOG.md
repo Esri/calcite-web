@@ -4,6 +4,7 @@
 - `calcite.dropdown()` now only adds click events once
 - `btn-arrow` should point other direction in right-to-left
 - Icon padding on wrong side in right-to-left
+- `icon-ui-compass` casing fixed
 
 ## 1.0.0-beta.15
 
