@@ -20,6 +20,12 @@
   text-transform: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  text-decoration: none;
+  html[dir="rtl"] & {
+    padding-left: $baseline * .5;
+    padding-right: 0;
+  }
 }
 
 %icon-font-styles {
@@ -58,161 +64,154 @@
 
   .esri-icon-small:before, .icon-ui-small:before   { @include font-size(-4);}
 
-  .esri-icon-green:before, .icon-ui-green:before   { color: $green;}
-  .esri-icon-blue:before, .icon-ui-blue:before     { color: $blue;}
-  .esri-icon-purple:before, .icon-ui-purple:before { color: $purple;}
-  .esri-icon-orange:before, .icon-ui-orange:before { color: $orange;}
-  .esri-icon-gray:before, .icon-ui-gray:before     { color: $gray;}
-  .esri-icon-red:before, .icon-ui-red:before       { color: $red;}
-
+  
+    // Compass
+    .icon-ui-Compass:before,
+    .esri-icon-Compass:before, {
+      content: "\f101";
+    }
   
     // add-attachment
     .icon-ui-add-attachment:before,
     .esri-icon-add-attachment:before, {
-      content: "\f101";
+      content: "\f102";
     }
   
     // announcement
     .icon-ui-announcement:before,
     .esri-icon-announcement:before, {
-      content: "\f102";
+      content: "\f103";
     }
   
     // applications
     .icon-ui-applications:before,
     .esri-icon-applications:before, {
-      content: "\f103";
+      content: "\f104";
     }
   
     // arrow-down-circled
     .icon-ui-arrow-down-circled:before,
     .esri-icon-arrow-down-circled:before, {
-      content: "\f104";
+      content: "\f105";
     }
   
     // arrow-left-circled
     .icon-ui-arrow-left-circled:before,
     .esri-icon-arrow-left-circled:before, {
-      content: "\f105";
+      content: "\f106";
     }
   
     // arrow-right-circled
     .icon-ui-arrow-right-circled:before,
     .esri-icon-arrow-right-circled:before, {
-      content: "\f106";
+      content: "\f107";
     }
   
     // arrow-up-circled
     .icon-ui-arrow-up-circled:before,
     .esri-icon-arrow-up-circled:before, {
-      content: "\f107";
+      content: "\f108";
     }
   
     // attachment
     .icon-ui-attachment:before,
     .esri-icon-attachment:before, {
-      content: "\f108";
+      content: "\f109";
     }
   
     // authorize
     .icon-ui-authorize:before,
     .esri-icon-authorize:before, {
-      content: "\f109";
+      content: "\f10a";
     }
   
     // basemap
     .icon-ui-basemap:before,
     .esri-icon-basemap:before, {
-      content: "\f10a";
+      content: "\f10b";
     }
   
     // beginning
     .icon-ui-beginning:before,
     .esri-icon-beginning:before, {
-      content: "\f10b";
+      content: "\f10c";
     }
   
     // blank-map-pin
     .icon-ui-blank-map-pin:before,
     .esri-icon-blank-map-pin:before, {
-      content: "\f10c";
+      content: "\f10d";
     }
   
     // browser
     .icon-ui-browser:before,
     .esri-icon-browser:before, {
-      content: "\f10d";
+      content: "\f10e";
     }
   
     // calendar
     .icon-ui-calendar:before,
     .esri-icon-calendar:before, {
-      content: "\f10e";
+      content: "\f10f";
     }
   
     // chart
     .icon-ui-chart:before,
     .esri-icon-chart:before, {
-      content: "\f10f";
+      content: "\f110";
     }
   
     // chat
     .icon-ui-chat:before,
     .esri-icon-chat:before, {
-      content: "\f110";
+      content: "\f111";
     }
   
     // check-mark
     .icon-ui-check-mark:before,
     .esri-icon-check-mark:before, {
-      content: "\f111";
+      content: "\f112";
     }
   
     // checkbox-checked
     .icon-ui-checkbox-checked:before,
     .esri-icon-checkbox-checked:before, {
-      content: "\f112";
+      content: "\f113";
     }
   
     // checkbox-unchecked
     .icon-ui-checkbox-unchecked:before,
     .esri-icon-checkbox-unchecked:before, {
-      content: "\f113";
+      content: "\f114";
     }
   
     // close-circled
     .icon-ui-close-circled:before,
     .esri-icon-close-circled:before, {
-      content: "\f114";
+      content: "\f115";
     }
   
     // close
     .icon-ui-close:before,
     .esri-icon-close:before, {
-      content: "\f115";
+      content: "\f116";
     }
   
     // collapse
     .icon-ui-collapse:before,
     .esri-icon-collapse:before, {
-      content: "\f116";
+      content: "\f117";
     }
   
     // collection
     .icon-ui-collection:before,
     .esri-icon-collection:before, {
-      content: "\f117";
+      content: "\f118";
     }
   
     // comment
     .icon-ui-comment:before,
     .esri-icon-comment:before, {
-      content: "\f118";
-    }
-  
-    // compass
-    .icon-ui-compass:before,
-    .esri-icon-compass:before, {
       content: "\f119";
     }
   
