@@ -5,9 +5,11 @@
 
 ### Modified
 - renamed `icon-ui-Compass` to `icon-ui-compass`
+- drawer sliding moves wrapper with it
 
 ### Fixed
 - `calcite.dropdown()` now only adds click events once
+- drawer aria roles fixed
 
 ## 1.0.0-beta.15
 
