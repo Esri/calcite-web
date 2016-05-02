@@ -8,6 +8,11 @@ Along with a set of common bus events, each pattern has a set of channels that i
 | --- | --- | --- |
 | keyboard:return | The `return` key was pressed. | n/a |
 | keyboard:escape | The `escape` key was pressed. | n/a |
+| keyboard:space | The `space` key was pressed      | n/a |
+| keyboard:arrow:up | The `↑` key was pressed   | n/a |
+| keyboard:arrow:down | The `↓` key was pressed | n/a |
+| keyboard:arrow:left | The `←` key was pressed | n/a |
+| keyboard:arrow:right | The `→` key was pressed | n/a |
 | scrolling:at | The page is scrolling | ScrollYOffset |
 
 ### Pattern-Specific Event Channels

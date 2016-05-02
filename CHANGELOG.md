@@ -1,5 +1,11 @@
 ## Unreleased
 
+### Added
+- Arrow key bus emitters, space bar bus emitter
+
+### Modified
+- renamed `icon-ui-Compass` to `icon-ui-compass`
+
 ### Fixed
 - `calcite.dropdown()` now only adds click events once
 
