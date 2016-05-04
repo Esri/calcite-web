@@ -1,11 +1,20 @@
 ## Unreleased
 
+### Added
+- Arrow key bus emitters, space bar bus emitter
+
+### Modified
+- renamed `icon-ui-Compass` to `icon-ui-compass`
+- drawer sliding moves wrapper with it
+
 ### Fixed
 - `calcite.dropdown()` now only adds click events once
+- drawer aria roles fixed
 - `btn-arrow` should point other direction in right-to-left
 - Icon padding on wrong side in right-to-left
 - `icon-ui-compass` casing fixed
 - `dropdown-btn` arrow shoud be on other side in right-to-left
+
 
 ## 1.0.0-beta.15
 
