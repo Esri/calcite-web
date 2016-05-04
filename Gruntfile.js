@@ -342,7 +342,7 @@ module.exports = function (grunt) {
   grunt.registerTask('dist', ['sass', 'cssmin', 'rollup:dist', 'uglify:dist', 'copy', 'imagemin:dist']);
   grunt.registerTask('doc', ['shell:acetate', 'newer:imagemin:doc', 'sass:doc', 'copy:doc', 'copy:fonts', 'rollup:doc']);
   grunt.registerTask('deploy', ['doc', 'gh-pages']);
-  grunt.registerTask('s3', ['sass', 'cssmin', 'rollup:dist', 'shell:lint', 'uglify', 'copy', 'newer:imagemin:dist', 'compress', 'prompt:aws', 'aws_s3']);
-  grunt.registerTask('release', ['sass', 'cssmin', 'rollup:dist', 'shell:lint', 'uglify', 'copy', 'newer:imagemin:dist', 'compress', 'shell:release', 'prompt:aws', 'aws_s3']);
+  grunt.registerTask('s3', ['dist', 'prompt:aws', 'aws_s3']);
+  grunt.registerTask('release', ['shell:release', 'prompt:aws', 'aws_s3']);
   grunt.registerTask('default', ['doc', 'http-server', 'watch']);
 };
