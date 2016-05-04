@@ -51,6 +51,16 @@
       position: absolute;
       right: .5rem;
     }
+    html[dir="rtl"] &:after {
+      right: auto;
+      left: .5rem;
+      padding-left: 0;
+    }
+
+    html[dir="rtl"] & {
+      padding-left: 1.5rem;
+      padding-right: 0.9rem;
+    }
   }
 
   @mixin dropdown-menu {
