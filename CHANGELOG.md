@@ -13,7 +13,10 @@
 - `btn-arrow` should point other direction in right-to-left
 - Icon padding on wrong side in right-to-left
 - `icon-ui-compass` casing fixed
-- `dropdown-btn` arrow shoud be on other side in right-to-left
+- `dropdown-btn` arrow should be on other side in right-to-left
+
+### Modified
+- dropdown menus are not constrained in width
 
 
 ## 1.0.0-beta.15
