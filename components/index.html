@@ -371,7 +371,7 @@
   </div>
 
   <a id="skip-to-content" tabindex="0"></a>
-  <main class="column-17 phone-column-6 tablet-column-12 pre-1 content-face" role="main">
+  <main class="column-17 phone-column-6 tablet-column-12 pre-1 rtl-post-0 content-face" role="main">
 
     
       <h1 class="text-rule" id="components" tabindex="0">Components</h1>
@@ -676,17 +676,17 @@
               <div class="styleguide-modifier-example">
                 <div class="dropdown js-dropdown">
   <!-- extends side-nav -->
-  <a href="#" class="btn dropdown-btn js-dropdown-toggle" tabindex="0">Dropdown Select</a>
+  <button class="btn dropdown-btn js-dropdown-toggle" tabindex="0" aria-haspopup="true" aria-expanded="false">Dropdown Select</button>
   <!-- extends side-nav -->
-  <nav class="dropdown-menu modifier-class">
+  <nav class="dropdown-menu modifier-class" role="menu">
     <!-- extends side-nav-link -->
     <span class="dropdown-title">Some Options</span>
-    <a href="#" class="dropdown-link">Option 1 that has a really long text.</a>
-    <a href="#" class="dropdown-link">Option 2</a>
-    <a href="#" class="dropdown-link">Option 3</a>
+    <a href="#" class="dropdown-link" role="menu-item">Option 1 that has a really long text.</a>
+    <a href="#" class="dropdown-link" role="menu-item">Option 2</a>
+    <a href="#" class="dropdown-link" role="menu-item">Option 3</a>
     <span class="dropdown-title">More Options</span>
-    <a href="#" class="dropdown-link">Option 4</a>
-    <a href="#" class="dropdown-link">Option 5</a>
+    <a href="#" class="dropdown-link" role="menu-item">Option 4</a>
+    <a href="#" class="dropdown-link" role="menu-item">Option 5</a>
   </nav>
 </div>
               </div>
@@ -694,17 +694,17 @@
                 <div class="styleguide-modifier-example">
                   <div class="dropdown js-dropdown">
   <!-- extends side-nav -->
-  <a href="#" class="btn dropdown-btn js-dropdown-toggle" tabindex="0">Dropdown Select</a>
+  <button class="btn dropdown-btn js-dropdown-toggle" tabindex="0" aria-haspopup="true" aria-expanded="false">Dropdown Select</button>
   <!-- extends side-nav -->
-  <nav class="dropdown-menu dropdown-right">
+  <nav class="dropdown-menu dropdown-right" role="menu">
     <!-- extends side-nav-link -->
     <span class="dropdown-title">Some Options</span>
-    <a href="#" class="dropdown-link">Option 1 that has a really long text.</a>
-    <a href="#" class="dropdown-link">Option 2</a>
-    <a href="#" class="dropdown-link">Option 3</a>
+    <a href="#" class="dropdown-link" role="menu-item">Option 1 that has a really long text.</a>
+    <a href="#" class="dropdown-link" role="menu-item">Option 2</a>
+    <a href="#" class="dropdown-link" role="menu-item">Option 3</a>
     <span class="dropdown-title">More Options</span>
-    <a href="#" class="dropdown-link">Option 4</a>
-    <a href="#" class="dropdown-link">Option 5</a>
+    <a href="#" class="dropdown-link" role="menu-item">Option 4</a>
+    <a href="#" class="dropdown-link" role="menu-item">Option 5</a>
   </nav>
 </div>
                   <code class="modifier-name">.dropdown-right</code>
@@ -713,17 +713,17 @@
             </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown js-dropdown"</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- extends side-nav --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn dropdown-btn js-dropdown-toggle"</span> <span class="hljs-attribute">tabindex</span>=<span class="hljs-value">"0"</span>&gt;</span>Dropdown Select<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn dropdown-btn js-dropdown-toggle"</span> <span class="hljs-attribute">tabindex</span>=<span class="hljs-value">"0"</span> <span class="hljs-attribute">aria-haspopup</span>=<span class="hljs-value">"true"</span> <span class="hljs-attribute">aria-expanded</span>=<span class="hljs-value">"false"</span>&gt;</span>Dropdown Select<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- extends side-nav --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-menu modifier-class"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-menu modifier-class"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"menu"</span>&gt;</span>
     <span class="hljs-comment">&lt;!-- extends side-nav-link --&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-title"</span>&gt;</span>Some Options<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-link"</span>&gt;</span>Option 1 that has a really long text.<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-link"</span>&gt;</span>Option 2<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-link"</span>&gt;</span>Option 3<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-link"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"menu-item"</span>&gt;</span>Option 1 that has a really long text.<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-link"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"menu-item"</span>&gt;</span>Option 2<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-link"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"menu-item"</span>&gt;</span>Option 3<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-title"</span>&gt;</span>More Options<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-link"</span>&gt;</span>Option 4<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-link"</span>&gt;</span>Option 5<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-link"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"menu-item"</span>&gt;</span>Option 4<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dropdown-link"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"menu-item"</span>&gt;</span>Option 5<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 </code></pre>

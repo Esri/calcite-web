@@ -4568,72 +4568,6 @@ html.vi button,
 html.vi input {
   font-family: 'Lucida Grande', Arial, Verdana, Geneva, sans-serif; }
 
-html[lang="th"] body,
-html[lang="th"] form,
-html[lang="th"] select,
-html[lang="th"] button,
-html[lang="th"] input, html.th body,
-html.th form,
-html.th select,
-html.th button,
-html.th input {
-  font-family: 'Georgia', Arial, Verdana, Geneva, sans-serif; }
-
-html[lang="ko"] body,
-html[lang="ko"] form,
-html[lang="ko"] select,
-html[lang="ko"] button,
-html[lang="ko"] input, html.ko body,
-html.ko form,
-html.ko select,
-html.ko button,
-html.ko input {
-  font-family: 'Georgia', Arial, Verdana, Geneva, sans-serif; }
-
-html[lang="ja"] body,
-html[lang="ja"] form,
-html[lang="ja"] select,
-html[lang="ja"] button,
-html[lang="ja"] input, html.ja body,
-html.ja form,
-html.ja select,
-html.ja button,
-html.ja input {
-  font-family: 'Georgia', Arial, Verdana, Geneva, sans-serif; }
-
-html[lang="he"] body,
-html[lang="he"] form,
-html[lang="he"] select,
-html[lang="he"] button,
-html[lang="he"] input, html.he body,
-html.he form,
-html.he select,
-html.he button,
-html.he input {
-  font-family: 'Georgia', Arial, Verdana, Geneva, sans-serif; }
-
-html[lang="ch"] body,
-html[lang="ch"] form,
-html[lang="ch"] select,
-html[lang="ch"] button,
-html[lang="ch"] input, html.ch body,
-html.ch form,
-html.ch select,
-html.ch button,
-html.ch input {
-  font-family: 'Georgia', Arial, Verdana, Geneva, sans-serif; }
-
-html[lang="ar"] body,
-html[lang="ar"] form,
-html[lang="ar"] select,
-html[lang="ar"] button,
-html[lang="ar"] input, html.ar body,
-html.ar form,
-html.ar select,
-html.ar button,
-html.ar input {
-  font-family: 'Georgia', Arial, Verdana, Geneva, sans-serif; }
-
 .dropdown-btn:after, .form-hint-icon:before, .search-submit:before, .accordion-title:before, .filter-dropdown-link:after, .filter-dropdown-link:before, .filter-dropdown-remove:after, .app-switcher-icon:before {
   font-family: 'calcite-ui';
   padding-right: 0.5166666667rem;
@@ -4643,7 +4577,12 @@ html.ar input {
   font-variant: normal;
   text-transform: none;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  text-decoration: none; }
+  html[dir="rtl"] .dropdown-btn:after, html[dir="rtl"] .form-hint-icon:before, html[dir="rtl"] .search-submit:before, html[dir="rtl"] .accordion-title:before, html[dir="rtl"] .filter-dropdown-link:after, html[dir="rtl"] .filter-dropdown-link:before, html[dir="rtl"] .filter-dropdown-remove:after, html[dir="rtl"] .app-switcher-icon:before {
+    padding-left: 0.775rem;
+    padding-right: 0; }
 
 .dropdown-btn:after {
   padding-right: 0;
@@ -4673,7 +4612,15 @@ html.ar input {
   font-variant: normal;
   text-transform: none;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  text-decoration: none; }
+  html[dir="rtl"] [class^="esri-icon-"]:before, html[dir="rtl"]
+  [class*=" esri-icon-"]:before, html[dir="rtl"]
+  [class^="icon-ui-"]:before, html[dir="rtl"]
+  [class*=" icon-ui-"]:before {
+    padding-left: 0.775rem;
+    padding-right: 0; }
 
 .esri-icon-small:before, .icon-ui-small:before {
   font-size: 0.75rem;
@@ -4684,24 +4631,6 @@ html.ar input {
   @media screen and (max-width: 479px) {
     .esri-icon-small:before, .icon-ui-small:before {
       font-size: 0.75rem; } }
-
-.esri-icon-green:before, .icon-ui-green:before {
-  color: #5a9359; }
-
-.esri-icon-blue:before, .icon-ui-blue:before {
-  color: #0079c1; }
-
-.esri-icon-purple:before, .icon-ui-purple:before {
-  color: #9081bc; }
-
-.esri-icon-orange:before, .icon-ui-orange:before {
-  color: #d17e21; }
-
-.esri-icon-gray:before, .icon-ui-gray:before {
-  color: #959595; }
-
-.esri-icon-red:before, .icon-ui-red:before {
-  color: #de2900; }
 
 .icon-ui-add-attachment:before,
 .esri-icon-add-attachment:before {
@@ -5412,6 +5341,9 @@ html.ar input {
 .btn-arrow:after {
   content: " →"; }
 
+html[dir="rtl"] .btn-arrow:after {
+  content: "← "; }
+
 .btn-transparent {
   background: none;
   color: #0079c1;
@@ -5497,17 +5429,9 @@ html.ar input {
     background-color: #338033; }
 
 .btn:disabled, .btn-disabled, button[disabled] {
-  opacity: .3;
-  cursor: default; }
-
-.btn-clear:disabled, .btn-clear-disabled {
-  background: none;
-  color: #cccccc;
-  border: 1px solid #cccccc;
-  cursor: default;
-  pointer-events: none; }
-  .btn-clear:disabled:hover, .btn-clear-disabled:hover {
-    color: #cccccc; }
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: .3; }
 
 .label {
   background-color: #efefef;
@@ -5628,11 +5552,17 @@ html.ar input {
     @media screen and (max-width: 479px) {
       .dropdown-btn:after {
         font-size: 0.6875rem; } }
+  html[dir="rtl"] .dropdown-btn:after {
+    right: auto;
+    left: .5rem;
+    padding-left: 0; }
+  html[dir="rtl"] .dropdown-btn {
+    padding-left: 1.5rem;
+    padding-right: 0.9rem; }
 
 .dropdown-menu {
   position: absolute;
   min-width: 200px;
-  max-width: 300px;
   -webkit-box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05);
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05);
@@ -5648,7 +5578,7 @@ html.ar input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0.5166666667rem 1.55rem 0.5166666667rem 0.5166666667rem;
+  padding: 0.5166666667rem;
   font-size: 0.875rem;
   line-height: 1.55rem;
   color: #6e6e6e;
@@ -5678,7 +5608,7 @@ html.ar input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0.5166666667rem 1.55rem 0.5166666667rem 0.5166666667rem;
+  padding: 0.5166666667rem;
   font-size: 0.875rem;
   line-height: 1.55rem;
   color: #6e6e6e;
@@ -6532,19 +6462,11 @@ input[type="file"]::-webkit-file-upload-button {
 
 input[type='radio'], input[type='checkbox'] {
   float: left;
-  width: auto;
+  width: 1rem;
+  height: 1rem;
   margin: .3rem .3rem 0 .3rem; }
   html[dir="rtl"] input[type='radio'], html[dir="rtl"] input[type='checkbox'] {
     float: right; }
-  input[type='radio']:focus, input[type='checkbox']:focus {
-    outline: 0;
-    box-shadow: 0 0 1px 2px #0079c1, 0 0 6px #0079c1; }
-
-input[type='checkbox']:focus {
-  border-radius: 3px; }
-
-input[type='radio']:focus {
-  border-radius: 50%; }
 
 select {
   background-color: white;
@@ -6559,6 +6481,8 @@ select {
   padding: 0.31rem 1.55rem 0.31rem 0.3875rem;
   font-size: 0.9375rem;
   line-height: 1.55rem;
+  font-weight: 400;
+  font-style: normal;
   color: #595959;
   border: 1px solid #a9a9a9;
   border-radius: 0;
@@ -6571,6 +6495,8 @@ select {
   @media screen and (max-width: 479px) {
     select {
       font-size: 0.9375rem; } }
+  select b, select strong {
+    font-weight: 500; }
   select:focus {
     border-color: #0079c1; }
 
@@ -7239,8 +7165,6 @@ input.input-group-input,
 
 .sub-nav {
   background-color: #efefef; }
-  html[dir="rtl"] .sub-nav {
-    white-space: nowrap; }
 
 .sub-nav-title {
   font-size: 1.999396rem;
@@ -7620,7 +7544,15 @@ body {
   font-variant: normal;
   text-transform: none;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  text-decoration: none; }
+  html[dir="rtl"] .accordion [class^="esri-icon-"]:before, html[dir="rtl"]
+  .accordion [class*=" esri-icon-"]:before, html[dir="rtl"]
+  .accordion [class^="icon-ui-"]:before, html[dir="rtl"]
+  .accordion [class*=" icon-ui-"]:before {
+    padding-left: 0.775rem;
+    padding-right: 0; }
 
 .accordion .esri-icon-small:before, .accordion .icon-ui-small:before {
   font-size: 0.75rem;
@@ -7631,24 +7563,6 @@ body {
   @media screen and (max-width: 479px) {
     .accordion .esri-icon-small:before, .accordion .icon-ui-small:before {
       font-size: 0.75rem; } }
-
-.accordion .esri-icon-green:before, .accordion .icon-ui-green:before {
-  color: #5a9359; }
-
-.accordion .esri-icon-blue:before, .accordion .icon-ui-blue:before {
-  color: #0079c1; }
-
-.accordion .esri-icon-purple:before, .accordion .icon-ui-purple:before {
-  color: #9081bc; }
-
-.accordion .esri-icon-orange:before, .accordion .icon-ui-orange:before {
-  color: #d17e21; }
-
-.accordion .esri-icon-gray:before, .accordion .icon-ui-gray:before {
-  color: #959595; }
-
-.accordion .esri-icon-red:before, .accordion .icon-ui-red:before {
-  color: #de2900; }
 
 .accordion .icon-ui-add-attachment:before,
 .accordion .esri-icon-add-attachment:before {
@@ -8294,6 +8208,54 @@ body {
   html[dir="rtl"] .drawer-right .drawer-nav {
     left: -280px; }
 
+.wrapper {
+  -webkit-transition: -webkit- transform 200ms cubic-bezier(0.215, 0.44, 0.42, 0.88);
+  -moz-transition: -moz- transform 200ms cubic-bezier(0.215, 0.44, 0.42, 0.88);
+  -o-transition: -o- transform 200ms cubic-bezier(0.215, 0.44, 0.42, 0.88);
+  transition: transform 200ms cubic-bezier(0.215, 0.44, 0.42, 0.88); }
+
+.drawer-left-is-active {
+  -webkit-transition: -webkit- transform 200ms cubic-bezier(0.215, 0.44, 0.42, 0.88);
+  -moz-transition: -moz- transform 200ms cubic-bezier(0.215, 0.44, 0.42, 0.88);
+  -o-transition: -o- transform 200ms cubic-bezier(0.215, 0.44, 0.42, 0.88);
+  transition: transform 200ms cubic-bezier(0.215, 0.44, 0.42, 0.88);
+  -webkit-transform: translate3d(280px, 0, 0);
+  -moz-transform: translate3d(280px, 0, 0);
+  -ms-transform: translate3d(280px, 0, 0);
+  -o-transform: translate3d(280px, 0, 0);
+  transform: translate3d(280px, 0, 0); }
+  html[dir="rtl"] .drawer-left-is-active {
+    -webkit-transition: -webkit- transform 200ms cubic-bezier(0.215, 0.44, 0.42, 0.88);
+    -moz-transition: -moz- transform 200ms cubic-bezier(0.215, 0.44, 0.42, 0.88);
+    -o-transition: -o- transform 200ms cubic-bezier(0.215, 0.44, 0.42, 0.88);
+    transition: transform 200ms cubic-bezier(0.215, 0.44, 0.42, 0.88);
+    -webkit-transform: translate3d(-280px, 0, 0);
+    -moz-transform: translate3d(-280px, 0, 0);
+    -ms-transform: translate3d(-280px, 0, 0);
+    -o-transform: translate3d(-280px, 0, 0);
+    transform: translate3d(-280px, 0, 0); }
+
+.drawer-right-is-active {
+  -webkit-transition: -webkit- transform 200ms cubic-bezier(0.215, 0.44, 0.42, 0.88);
+  -moz-transition: -moz- transform 200ms cubic-bezier(0.215, 0.44, 0.42, 0.88);
+  -o-transition: -o- transform 200ms cubic-bezier(0.215, 0.44, 0.42, 0.88);
+  transition: transform 200ms cubic-bezier(0.215, 0.44, 0.42, 0.88);
+  -webkit-transform: translate3d(-280px, 0, 0);
+  -moz-transform: translate3d(-280px, 0, 0);
+  -ms-transform: translate3d(-280px, 0, 0);
+  -o-transform: translate3d(-280px, 0, 0);
+  transform: translate3d(-280px, 0, 0); }
+  html[dir="rtl"] .drawer-right-is-active {
+    -webkit-transition: -webkit- transform 200ms cubic-bezier(0.215, 0.44, 0.42, 0.88);
+    -moz-transition: -moz- transform 200ms cubic-bezier(0.215, 0.44, 0.42, 0.88);
+    -o-transition: -o- transform 200ms cubic-bezier(0.215, 0.44, 0.42, 0.88);
+    transition: transform 200ms cubic-bezier(0.215, 0.44, 0.42, 0.88);
+    -webkit-transform: translate3d(280px, 0, 0);
+    -moz-transform: translate3d(280px, 0, 0);
+    -ms-transform: translate3d(280px, 0, 0);
+    -o-transform: translate3d(280px, 0, 0);
+    transform: translate3d(280px, 0, 0); }
+
 .ie9 .drawer.is-active.drawer-left .drawer-nav {
   -ms-transform: translate(280px, 0); }
   html[dir="rtl"] .ie9 .drawer.is-active.drawer-left .drawer-nav {
@@ -8337,7 +8299,6 @@ input.filter-dropdown-input {
 .filter-dropdown-list {
   position: absolute;
   min-width: 200px;
-  max-width: 300px;
   -webkit-box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05);
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05);

@@ -1,4 +1,4 @@
-/* calcite-web - v1.0.0-beta.14 - 2016-04-26
+/* calcite-web - v1.0.0-beta.17 - 2016-05-05
 *  https://github.com/esri/calcite-web
 *  Copyright (c) 2016 Environmental Systems Research Institute, Inc.
 *  Apache 2.0 License */
@@ -151,6 +151,10 @@
   // ┌──────────────────────┐
   // │ DOM Event Management │
   // └──────────────────────┘
+
+  var boundEvents = {
+    dropdowns: []
+  };
 
   // returns standard interaction event, later will add touch support
   function click() {
@@ -356,47 +360,71 @@
   // │ Dropdown │
   // └──────────┘
   // show and hide dropdown menus
-  function dropdown() {
-    var toggles = findElements('.js-dropdown-toggle');
+  function closeAllDropdowns(options) {
+    remove$1(document.body, click(), closeAllDropdowns);
+    findElements('.js-dropdown').forEach(function (dropdown) {
+      remove(dropdown, 'is-active');
+    });
+    findElements('.js-dropdown-toggle').forEach(function (toggle) {
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  }
 
+  function toggleDropdown(options) {
+    if (!options) return;
+    var isOpen = has(options.node, 'is-active');
+    bus.emit('dropdown:close');
+    if (!isOpen) {
+      add(options.node, 'is-active');
+      if (options.target) {
+        options.target.setAttribute('aria-expanded', 'true');
+      }
+    }
+    if (has(options.node, 'is-active')) {
+      add$1(document.body, click(), closeAllDropdowns);
+    }
+  }
+
+  function bindDropdowns(options) {
+    // attach the new events
+    var toggles = findElements('.js-dropdown-toggle');
+    toggles.forEach(function (toggle) {
+      // check if the event was already added
+      var eventExists = false;
+      boundEvents.dropdowns.forEach(function (e) {
+        if (e.target === toggle && e.event === click() && e.fn === toggleClick) {
+          eventExists = true;
+        }
+      });
+      if (!eventExists) {
+        boundEvents.dropdowns.push({ target: toggle, event: click(), fn: toggleClick });
+        add$1(toggle, click(), toggleClick);
+      }
+    });
+  }
+
+  function toggleClick(e) {
+    preventDefault(e);
+    stopPropagation(e);
+    var dropdown = closest('js-dropdown', e.target);
+    bus.emit('dropdown:toggle', { node: dropdown, target: e.target });
+  }
+
+  function addListeners() {
     bus.on('dropdown:toggle', toggleDropdown);
     bus.on('dropdown:close', closeAllDropdowns);
     bus.on('keyboard:escape', closeAllDropdowns);
-    bus.on('dropdown:bind', bindDropdowns);
+    listenersAdded = true;
+  }
 
-    function closeAllDropdowns(options) {
-      remove$1(document.body, click(), closeAllDropdowns);
-      findElements('.js-dropdown').forEach(function (dropdown) {
-        remove(dropdown, 'is-active');
-      });
+  var listenersAdded = false;
+
+  function dropdown() {
+    // only add the listeners if they haven't been added already
+    if (!listenersAdded) {
+      addListeners();
     }
-
-    function toggleDropdown(options) {
-      if (!options) return;
-      var isOpen = has(options.node, 'is-active');
-      bus.emit('dropdown:close');
-      if (!isOpen) {
-        add(options.node, 'is-active');
-      }
-      if (has(options.node, 'is-active')) {
-        add$1(document.body, click(), closeAllDropdowns);
-      }
-    }
-
-    function bindDropdowns(options) {
-      toggles.forEach(function (toggle) {
-        add$1(toggle, click(), toggleClick);
-      });
-    }
-
-    function toggleClick(e) {
-      preventDefault(e);
-      stopPropagation(e);
-      var dropdown = closest('js-dropdown', e.target);
-      bus.emit('dropdown:toggle', { node: dropdown });
-    }
-
-    bus.emit('dropdown:bind');
+    bindDropdowns();
   }
 
   // ┌────────┐
@@ -419,9 +447,19 @@
     function openDrawer(options) {
       bus.emit('drawer:close');
       var drawer = document.querySelector('.js-drawer[data-drawer="' + options.id + '"]');
+      var right = has(drawer, 'drawer-right');
+      var left = has(drawer, 'drawer-left');
+
       drawer.setAttribute('tabindex', 0);
       add(drawer, 'is-active');
-      toggleHidden([wrapper, footer]);
+
+      if (right) {
+        add(wrapper, 'drawer-right-is-active');
+      } else if (left) {
+        add(wrapper, 'drawer-left-is-active');
+      }
+
+      hide([wrapper, footer]);
       add$1(drawer, click(), closeClick);
       add$1(document, 'focusin', fenceDrawer);
     }
@@ -437,7 +475,9 @@
         drawer.removeAttribute('tabindex');
         remove(drawer, 'is-active');
       }
-      hide([wrapper, footer]);
+      remove(wrapper, 'drawer-left-is-active');
+      remove(wrapper, 'drawer-right-is-active');
+      show([wrapper, footer]);
       remove$1(document, 'focusin', fenceDrawer);
       if (lastOn) lastOn.focus();
     }
@@ -462,8 +502,10 @@
       }
     }
 
-    function closeClick() {
-      bus.emit('drawer:close');
+    function closeClick(e) {
+      if (has(e.target, 'js-drawer')) {
+        bus.emit('drawer:close');
+      }
     }
 
     function toggleClick(e) {
@@ -1070,6 +1112,16 @@
       bus.emit('keyboard:escape');
     } else if (e.keyCode === 13) {
       bus.emit('keyboard:return');
+    } else if (e.keyCode === 32) {
+      bus.emit('keyboard:space');
+    } else if (e.keyCode === 38) {
+      bus.emit('keyboard:arrow:up');
+    } else if (e.keyCode === 40) {
+      bus.emit('keyboard:arrow:down');
+    } else if (e.keyCode === 37) {
+      bus.emit('keyboard:arrow:left');
+    } else if (e.keyCode === 39) {
+      bus.emit('keyboard:arrow:right');
     }
   }
 
@@ -1106,7 +1158,7 @@
   // └────────────┘
   // define all public api methods
   var calciteWeb = {
-    version: '1.0.0-beta.7',
+    version: '1.0.0-beta.16',
     click: click,
     addEvent: add$1,
     removeEvent: remove$1,
