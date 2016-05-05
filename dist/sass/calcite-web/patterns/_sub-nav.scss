@@ -8,11 +8,6 @@ $subnav-link-underline: linear-gradient(to top, transparent 94%, $white 96%, $wh
 
 @mixin sub-nav() {
   background-color: $lightest-gray;
-  @if ($include-right-to-left) {
-    html[dir="rtl"] & {
-      white-space: nowrap;
-    }
-  }
 }
 
   @mixin sub-nav-title() {
