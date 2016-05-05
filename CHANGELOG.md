@@ -1,3 +1,9 @@
+## Unreleased
+
+### Removed
+- all language specific type declarations (except for vietnamese)
+- unfix fix for #532
+
 ## 1.0.0-beta.16
 
 ### Added
