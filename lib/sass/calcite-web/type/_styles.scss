@@ -125,7 +125,7 @@
   a {
     color: $link-color;
     text-decoration: none;
-    @include transition(color $transition, text-decoration $transition);
+    // @include transition(color $transition, text-decoration $transition);
     &:hover {
       color: $link-hover;
       text-decoration: underline;

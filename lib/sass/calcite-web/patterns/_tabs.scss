@@ -11,7 +11,7 @@
 @mixin tab-title() {
   @include box-sizing(border-box);
   @include font-size(-2);
-  @include transition(all, $transition);
+  @include transition(backround, $transition);
   padding: $baseline/4 $baseline/2;
   float: left;
   white-space: nowrap;
@@ -82,8 +82,13 @@
 @mixin tabs-transparent() {
   .tab-title    {
     background-color: transparent;
-    border: none;
+    border: 1px solid transparent;
+    border-bottom: 1px solid $lighter-gray;
+    &:hover {
+      border-bottom: 1px solid $lighter-gray;
+    }
     &.is-active {
+      @include transition(backround, $transition);
       background-color: transparent;
       border: 1px solid $lighter-gray;
       border-bottom: 1px solid $white;
