@@ -2,6 +2,7 @@
 
 ### Fixed
 - Trab transparent transition trubs
+- combo third nav w/ overflow and sticky fix
 
 ## 1.0.0-beta.17
 
