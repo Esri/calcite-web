@@ -34,7 +34,7 @@
     left: -7.25rem;
     width: 15.66rem;
     @include transition-prefixed(transform 300ms $easing-function, visibility 0ms linear 300ms, opacity 300ms $easing-function);
-    @include transform(translate3d(0,-6px,0))
+    @include transform(translate3d(0,-6px,0));
     &:before {
       content: "";
       display: block;
