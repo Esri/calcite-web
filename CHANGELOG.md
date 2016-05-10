@@ -1,5 +1,10 @@
 ## Unreleased
 
+### Added
+- `.shaped-card`
+- `.card-bar-color`
+- `.btn-half`
+
 ### Fixed
 - Tab transparent transition trubs
 - combo third nav w/ overflow and sticky fix
