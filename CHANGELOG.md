@@ -1,3 +1,8 @@
+## 1.0.0-beta.19
+
+### Fixed
+- card caption bug
+
 ## 1.0.0-beta.18
 
 ### Added
