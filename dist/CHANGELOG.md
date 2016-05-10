@@ -1,3 +1,8 @@
+## 1.0.0-beta.19
+
+### Fixed
+- card caption bug
+
 ## 1.0.0-beta.18
 
 ### Added
@@ -9,6 +14,9 @@
 - Tab transparent transition trubs
 - combo third nav w/ overflow and sticky fix
 - select toggle arrow on wrong side in right to left
+
+### Removed
+- Deleted selectors for `esri-icon-*`
 
 ### Removed
 - Deleted selectors for `esri-icon-*`
