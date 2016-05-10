@@ -1,23 +1,74 @@
 @mixin card () {
   @include clearfix();
-}
-@mixin card-header () {
-  @include panel();
-}
-@mixin card-image () {
-  @include panel-white();
-  img {
-    display: block;
-  }
-}
-@mixin card-body () {
-  padding: 0.66*$baseline;
-  @include panel-white();
+  box-sizing: border-box;
 }
 
+  @mixin card-shaped () {
+    .card-image {
+      margin-bottom: -2*$baseline;
+    }
+    .card-body {
+      padding-top: 2.5*$baseline;
+    }
+  }
+
+  @mixin card-bar($color) {
+    .card-body { border-top: $baseline/8 solid $color; }
+  }
+
+  @mixin card-header () {
+    @include panel();
+  }
+
+  @mixin card-image () {
+    margin-bottom: 0;
+    position: relative;
+    img {
+      display: block;
+    }
+  }
+
+  @mixin card-caption () {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 0.11*$baseline 0.66*$baseline;
+    background-color: rgba($white, 0.8);
+  }
+
+  @mixin card-body () {
+    padding: 0.66*$baseline;
+    @include panel-white();
+  }
+
 @if $include-card == true {
-  .card { @include card();}
-    .card-header { @include card-header();}
-    .card-image  { @include card-image();}
-    .card-body   { @include card-body();}
+  .card                        { @include card();}
+    .card-header               { @include card-header();}
+    .card-image                { @include card-image();}
+    .card-caption              { @include card-caption();}
+    .card-body                 { @include card-body();}
+    .card-shaped               { @include card-shaped();}
+    .card-bar-lightest-blue    { @include card-bar($lightest-blue);}
+    .card-bar-lighter-blue     { @include card-bar($lighter-blue);}
+    .card-bar-light-blue       { @include card-bar($light-blue);}
+    .card-bar-blue             { @include card-bar($blue);}
+    .card-bar-dark-blue        { @include card-bar($dark-blue);}
+    .card-bar-light-green      { @include card-bar($light-green);}
+    .card-bar-green            { @include card-bar($green);}
+    .card-bar-dark-green       { @include card-bar($dark-green);}
+    .card-bar-light-red        { @include card-bar($light-red);}
+    .card-bar-red              { @include card-bar($red);}
+    .card-bar-dark-red         { @include card-bar($dark-red);}
+    .card-bar-light-orange     { @include card-bar($light-orange);}
+    .card-bar-orange           { @include card-bar($orange);}
+    .card-bar-dark-orange      { @include card-bar($dark-orange);}
+    .card-bar-light-yellow     { @include card-bar($light-yellow);}
+    .card-bar-yellow           { @include card-bar($yellow);}
+    .card-bar-dark-yellow      { @include card-bar($dark-yellow);}
+    .card-bar-light-purple     { @include card-bar($light-purple);}
+    .card-bar-purple           { @include card-bar($purple);}
+    .card-bar-dark-purple      { @include card-bar($dark-purple);}
+    .card-bar-light-brown      { @include card-bar($light-brown);}
+    .card-bar-brown            { @include card-bar($brown);}
+    .card-bar-dark-brown       { @include card-bar($dark-brown);}
 }
