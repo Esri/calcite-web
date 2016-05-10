@@ -1,4 +1,4 @@
-## Unreleased
+## 1.0.0-beta.18
 
 ### Added
 - `.shaped-card`
