@@ -110,6 +110,11 @@
     text-align: center;
   }
 
+  @mixin btn-half() {
+    width: 50%;
+    text-align: center;
+  }
+
   @mixin btn-grouped() {
     @include left();
     & + .btn-grouped {
@@ -123,6 +128,9 @@
     }
     &:last-of-type {
       float: none;
+    }
+    &.btn-half {
+      margin-left: 0;
     }
   }
 
@@ -143,6 +151,7 @@
   .btn-small       { @include btn-small();}
   .btn-large       { @include btn-large();}
   .btn-fill        { @include btn-fill();}
+  .btn-half        { @include btn-half();}
   .btn-grouped     { @include btn-grouped();}
   .btn-white       { @include btn-white();}
   .btn-red         { @include btn-color($red, $dark-red);}
