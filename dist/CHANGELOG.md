@@ -1,3 +1,18 @@
+## 1.0.0-beta.18
+
+### Added
+- `.shaped-card`
+- `.card-bar-color`
+- `.btn-half`
+
+### Fixed
+- Tab transparent transition trubs
+- combo third nav w/ overflow and sticky fix
+- select toggle arrow on wrong side in right to left
+
+### Removed
+- Deleted selectors for `esri-icon-*`
+
 ## 1.0.0-beta.17
 
 ### Removed
