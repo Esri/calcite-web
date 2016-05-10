@@ -18,9 +18,6 @@
 ### Removed
 - Deleted selectors for `esri-icon-*`
 
-### Removed
-- Deleted selectors for `esri-icon-*`
-
 ## 1.0.0-beta.17
 
 ### Removed
