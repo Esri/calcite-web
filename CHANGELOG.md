@@ -1,8 +1,11 @@
 ## Unreleased
 
 ### Fixed
-- Trab transparent transition trubs
+- Tab transparent transition trubs
 - combo third nav w/ overflow and sticky fix
+
+### Removed
+- Deleted selectors for `esri-icon-*`
 
 ## 1.0.0-beta.17
 
