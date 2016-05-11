@@ -1,6 +1,6 @@
 ## 1.0.0-beta.20
 
-## Modified
+### Modified
 - More clear focus state for dropdown links
 - Make dropdown `:hover` and `is-active` state consistent with side nav
 - red buttons are now outlined instead of solid red
@@ -21,6 +21,9 @@
 - Tab transparent transition trubs
 - combo third nav w/ overflow and sticky fix
 - select toggle arrow on wrong side in right to left
+
+### Removed
+- Deleted selectors for `esri-icon-*`
 
 ### Removed
 - Deleted selectors for `esri-icon-*`
