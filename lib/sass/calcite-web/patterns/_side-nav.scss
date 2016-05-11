@@ -33,12 +33,13 @@
     border-top: 1px solid $lightest-gray;
     cursor: pointer;
     &:hover {
-      background-color: $Calcite_Highlight_Blue_100;
+      background-color: $off-white;
       text-decoration: none;
-      color: $darker-gray;
+      color: $off-black;
     }
     &.is-active {
-      background-color: $Calcite_Highlight_Blue_200;
+      text-indent: -3px;
+      border-left: 3px solid $blue;
     }
   }
 

@@ -2,6 +2,7 @@
 
 ## Modified
 - More clear focus state for dropdown links
+- Make dropdown `:hover` and `is-active` state consistent with side nav
 
 ## 1.0.0-beta.19
 
