@@ -1,4 +1,4 @@
-## Unreleased
+## 1.0.0-beta.20
 
 ## Modified
 - More clear focus state for dropdown links
