@@ -134,6 +134,17 @@
     }
   }
 
+  @mixin btn-red() {
+    color: $red;
+    background: transparent;
+    border-color: $red;
+    &:hover {
+      color: $white;
+      background: $dark-red;
+      border-color: $dark-red;
+    }
+  }
+
   @mixin btn-color($value, $hover-value) {
     background-color: $value;
     border-color: $value;
@@ -154,7 +165,7 @@
   .btn-half        { @include btn-half();}
   .btn-grouped     { @include btn-grouped();}
   .btn-white       { @include btn-white();}
-  .btn-red         { @include btn-color($red, $dark-red);}
+  .btn-red         { @include btn-red();}
   .btn-green       { @include btn-color($green, $dark-green);}
   .btn:disabled, .btn-disabled, button[disabled] { @include btn-disabled(); }
 }
