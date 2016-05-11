@@ -28,7 +28,7 @@
       text-decoration: none;
       color: $darker-gray;
     }
-    &.is-active {
+    &.is-active, &:focus {
       text-indent: -3px;
       border-left: 3px solid $blue;
     }
