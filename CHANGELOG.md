@@ -1,3 +1,8 @@
+## Unreleased
+
+### Added
+- `table-pricing` adjusts headers on tables.
+
 ## 1.0.0-beta.20
 
 ## Modified
