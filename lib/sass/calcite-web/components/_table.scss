@@ -128,9 +128,57 @@
     }
   }
 
+  @mixin table-pricing() {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+    > thead {
+      background-color: transparent;
+    }
+    th {
+      text-align: center;
+      border-top: 1px solid $lighter-gray;
+      background-color: transparent;
+      padding: 0.75*$baseline;
+      &:first-child {
+        text-align: left;
+        border-left: none;
+        border-top: none;
+        padding-left: 0.25*$baseline;
+      }
+    }
+    td {
+      text-align: center;
+      &:first-child {
+        text-align: left;
+      }
+    }
+    tbody tr {
+      &:nth-child(odd){
+          background-color: $off-white;
+        td {
+          background-color: $off-white;
+        }
+      }
+    }
+    &.table-blue {
+
+      tr {
+        &:nth-child(odd){
+            background-color: $lightest-blue;
+          td {
+            background-color: $lightest-blue;
+          }
+        }
+      }
+    }
+  }
+
 @if $include-tables == true {
   table {@include table();}
     .table-blue {@include table-blue();}
     .table-plain {@include table-plain();}
     .table-striped {@include table-striped();}
+    .table-pricing {@include table-pricing();}
 }
