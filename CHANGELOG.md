@@ -1,3 +1,8 @@
+## 1.0.0-beta.22
+
+### Modified
+- don't clear focus styles in firefox for inputs + buttons
+
 ## 1.0.0-beta.21
 
 ### Added
