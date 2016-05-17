@@ -1,7 +1,8 @@
-## Unreleased
+## 1.0.0-beta.21
 
 ### Added
 - `table-pricing` adjusts headers on tables.
+- rebuild webfont
 
 ## 1.0.0-beta.20
 
