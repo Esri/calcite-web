@@ -1,3 +1,9 @@
+## 1.0.0-beta.21
+
+### Added
+- `table-pricing` adjusts headers on tables.
+- rebuild webfont
+
 ## 1.0.0-beta.20
 
 ### Modified
@@ -21,6 +27,9 @@
 - Tab transparent transition trubs
 - combo third nav w/ overflow and sticky fix
 - select toggle arrow on wrong side in right to left
+
+### Removed
+- Deleted selectors for `esri-icon-*`
 
 ### Removed
 - Deleted selectors for `esri-icon-*`
