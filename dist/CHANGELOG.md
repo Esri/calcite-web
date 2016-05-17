@@ -1,3 +1,8 @@
+## 1.0.0-beta.22
+
+### Modified
+- don't clear focus styles in firefox for inputs + buttons
+
 ## 1.0.0-beta.21
 
 ### Added
@@ -27,12 +32,6 @@
 - Tab transparent transition trubs
 - combo third nav w/ overflow and sticky fix
 - select toggle arrow on wrong side in right to left
-
-### Removed
-- Deleted selectors for `esri-icon-*`
-
-### Removed
-- Deleted selectors for `esri-icon-*`
 
 ### Removed
 - Deleted selectors for `esri-icon-*`
