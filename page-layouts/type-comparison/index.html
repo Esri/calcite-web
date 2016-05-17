@@ -77,9 +77,10 @@
   <div class="column-24 leader-2">
     <div class="column-12">
       <h2>Pangrams</h2>
-      <p>Calcite Web is meant to be used by applications which are localized into hundreds of languages. Because of this, it is important that text displays properly in all languages. The main typeface used by Calcite Web is Avenir Next. Any languages that use the latin or cyrillic alphabets should render well with Avenir Next, but it doesn't contain characters required by several languages (including arabic, chinese, vietnamese, etc).</p>
-      <p>To deal with this problem, Calcite Web looks for a lang on the <code>html</code> element (or a class correspnding to the <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO-69 code</a>) and for certain languages will set the font family of the entire <code>html</code> element to be something other than Avenir Next. Below are all of the supported languages and a type sample (pangram) for each.</p>
-      <p> To troubleshoot, change the class on the body to the language code and ensure that that table row renders properly.</p>
+      <p>Calcite Web is meant to be used by applications which are localized into hundreds of languages. Because of this, it is important that text displays properly in all languages. The main typeface used by Calcite Web is Avenir Next. Any languages that use the latin, cyrillic, or greek alphabets should render well with Avenir Next, but it doesn't contain characters required by several languages (including arabic, chinese, vietnamese, etc).</p>
+      <p>Most of the languages not covered by Avenir Next don't pose a real problem. We can simply allow them to render in the browser default, and they are distinct enough that users won't feel as though something is wrong.</p>
+      <p>The exception to this is Vietnamese, which uses mostly standard Latin characters, but also glyphs from the Latin Extended Additional set which are missing. This causes the missing characters to be rendered in a different font. This looks like a bug to the user. For this reason, we set the font family for pages in Vietnamese to Lucide Grande. Simply set the `lang` attribute of the html document to `vi` (the ISO-639 code for Vietnamese).</p>
+      <p>You can preview how different languages render below with a sample set of characters from each language. Notice that vietnamese will look slightly off, but add `vi` to the lang and everything will render in Lucide Grande.</p>
     </div>
     <table>
 <thead>
