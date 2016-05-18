@@ -21,8 +21,9 @@
 
   .fieldset-radio, .fieldset-checkbox {
     label {
-      margin-bottom: 0;
+      margin-bottom: .25rem;
       @include font-size(-1);
+      line-height: 1.25rem;
       color: $darkest-gray;
     }
   }
@@ -201,7 +202,6 @@
     @include left();
     width: 1rem;
     height: 1rem;
-    margin: .3rem .3rem 0 .3rem;
   }
 
   // ┌─────────┐
