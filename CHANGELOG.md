@@ -1,3 +1,8 @@
+## Unreleased
+
+### Fixed
+- checkboxes and radio buttons left alignment in IE10
+
 ## 1.0.0-beta.22
 
 ### Modified
