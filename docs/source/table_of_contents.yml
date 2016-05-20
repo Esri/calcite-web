@@ -272,6 +272,8 @@ color:
         - title: 'Grayscale'
           link: grayscale
           colors:
+            - transparent-white
+            - opaque-white
             - white
             - off-white
             - lightest-gray
@@ -283,6 +285,7 @@ color:
             - darkest-gray
             - off-black
             - black
+            - opaque-black
             - transparent-black
             - transparent-off-black
         - title: 'UI Colors'
@@ -510,7 +513,7 @@ patterns:
             - 'tabs-gray'
             - 'tabs-transparent'
             - 'tabs-translucent'
-            - 'tabs-translucent tabs-dark'
+            - 'tabs-dark'
         - title: 'Accordions'
           link: accordions
           modifiers: true
