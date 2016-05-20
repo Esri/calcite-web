@@ -2,8 +2,12 @@
 
 ### Added
 - `translucent-tab` pattern added
+-  `$opaque-white` color
+-  `$transparent-white` color
+-  `$opaque-black` color
 
 ### Fixed
+- translucent tab wiggle on active change
 - checkboxes and radio buttons left alignment in IE10
 - `user-nav` pattern in IE10 (#591)
 - `dropdown-btn` in IE10
