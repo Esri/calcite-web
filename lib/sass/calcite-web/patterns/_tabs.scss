@@ -108,23 +108,20 @@
 
 @mixin tabs-translucent() {
   .tab-title    {
-    background-color: rgba(255,255,255,0.7);
-    border: 1px solid transparent;
-    border-bottom: none;
+    background-color: $transparent-white;
+    border: none;
     color: $off-black;
     margin-right: 2px;
-    margin-bottom: 1px;
+    margin-bottom: 3px;
     &:hover {
-      background-color: rgba(255,255,255,0.8);
-      background-image: none;
+      background-color: $opaque-white;
       @include prefixer(background-image,linear-gradient(to top, transparent 94%, $blue 96%, $blue 100%), webkit moz o);
       background-image:linear-gradient(to top, transparent 94%, $blue 96%, $blue 100%);
     }
     &.is-active {
-      background-color: rgba(255,255,255,0.8);
-      background-image: none;
-      border-bottom: none;
+      background-color: $opaque-white;
       padding-bottom: 0.5rem;
+      margin-bottom: 0;
       @include prefixer(background-image,linear-gradient(to top, transparent 94%, $blue 96%, $blue 100%), webkit moz o);
       background-image:linear-gradient(to top, transparent 94%, $blue 96%, $blue 100%);
     }
@@ -133,7 +130,7 @@
     border: none;
   }
   .tab-section  {
-    background-color: rgba(255,255,255,0.8);
+    background-color: $opaque-white;
   }
 }
 
