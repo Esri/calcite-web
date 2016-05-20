@@ -1,0 +1,203 @@
+// ┌──────────┐
+// │ Tooltips │
+// └──────────┘
+//  ↳ http://esri.github.io/calcite-web/components/#tooltips
+//  ↳ components → _tooltips.md
+@if $include-tooltip {
+  $multiline-max-width: 250px;
+
+  .tooltip {
+    position: relative;
+    cursor: pointer;
+    &:after {
+      content: attr(aria-label);
+      position: absolute;
+      z-index: 1000000;
+      display: none;
+      padding: $baseline/4 $baseline/2;
+      @include font-size(-2);
+      color: $white;
+      text-align: center;
+      word-wrap: break-word;
+      white-space: pre;
+      pointer-events: none;
+      background: $transparent-black;
+      border-radius: 3px;
+    }
+  }
+
+  .tooltip:before {
+    content: "";
+    position: absolute;
+    z-index: 1000001;
+    display: none;
+    width: 0;
+    height: 0;
+    color: $transparent-black;
+    pointer-events: none;
+    border: 5px solid transparent;
+  }
+
+  .tooltip {
+    &:hover, &:active, &:focus {
+      text-decoration: none;
+      &:before,
+      &:after {
+        display: inline-block;
+      }
+    }
+  }
+
+  .tooltip-multiline {
+    &:hover, &:active, &:focus {
+      &:after {
+        display: table-cell;
+      }
+    }
+  }
+
+  // Default is bottom
+  .tooltip {
+    &:after {
+      top: 100%;
+      right: 50%;
+      margin-top: 5px;
+      line-height: 1.5;
+    }
+
+    &:before {
+      top: auto;
+      right: 50%;
+      bottom: -5px;
+      margin-right: -5px;
+      border-bottom-color: $transparent-black;
+    }
+  }
+
+  .tooltip-top {
+    &:after {
+      top: auto;
+      right: 50%;
+      bottom: 100%;
+      margin-bottom: 5px;
+    }
+
+    &:before {
+      top: -5px;
+      right: 50%;
+      bottom: auto;
+      margin-right: -5px;
+      border-top-color: $transparent-black;
+      border-bottom: 5px solid transparent;
+    }
+  }
+
+  .tooltip:after,
+  .tooltip-bottom:after {
+    @include transform(translateX(50%));
+  }
+
+  .tooltip-left {
+    &:after {
+      top: auto;
+      right: 100%;
+      margin-right: 5px;
+      @if ($include-right-to-left) {
+        html[dir="rtl"] & {
+          right: auto;
+          left: 100%;
+          margin-right: 0;
+          margin-left: 5px;
+        }
+      }
+      bottom: 50%;
+      margin-bottom: inherit;
+      @include transform(translateY(50%));
+    }
+
+    &:before {
+      top: 50%;
+      bottom: 50%;
+      left: -5px;
+      margin-top: -5px;
+      border-left-color: $transparent-black;
+      @if ($include-right-to-left) {
+        html[dir="rtl"] & {
+          left: auto;
+          right: -5px;
+          margin-right: 0;
+          border-left-color: transparent;
+          border-right-color: $transparent-black;
+        }
+      }
+      border-bottom: 5px solid transparent;
+    }
+  }
+
+  .tooltip-right {
+    &:after {
+      top: auto;
+      right: auto;
+      bottom: 50%;
+      left: 100%;
+      margin-left: 5px;
+      @if ($include-right-to-left) {
+        html[dir="rtl"] & {
+          left: auto;
+          right: 100%;
+          margin-left: 0;
+          margin-right: 5px;
+        }
+      }
+      @include transform(translateY(50%));
+    }
+
+    &:before {
+      top: 50%;
+      right: -5px;
+      bottom: 50%;
+      margin-top: -5px;
+      margin-right: 0;
+      border-right-color: $transparent-black;
+      @if ($include-right-to-left) {
+        html[dir="rtl"] & {
+          left: -5px;
+          right: auto;
+          border-left-color: $transparent-black;
+          border-right-color: transparent;
+        }
+      }
+      border-bottom: 5px solid transparent;
+    }
+  }
+
+  .tooltip-multiline {
+    &:after {
+      width: -moz-max-content;
+      width: -webkit-max-content;
+      max-width: $multiline-max-width;
+      word-break: break-word;
+      word-wrap: normal;
+      white-space: pre-line;
+      border-collapse: separate;
+    }
+
+    &.tooltip-bottom:after,
+    &.tooltip-top:after {
+      right: auto;
+      left: 50%;
+      @include transform(translateX(-50%));
+    }
+
+    &.tooltip-left:after,
+    &.tooltip-right:after {
+      right: 100%;
+    }
+  }
+
+  @media screen and (min-width:0\0) {
+    .tooltip-multiline:after {
+      width: $multiline-max-width;
+    }
+  }
+}
