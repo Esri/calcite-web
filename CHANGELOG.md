@@ -1,9 +1,13 @@
 ## Unreleased
 
+### Added
+- `translucent-tab` pattern added
+
 ### Fixed
 - checkboxes and radio buttons left alignment in IE10
 - `user-nav` pattern in IE10 (#591)
 - `dropdown-btn` in IE10
+- `backgound` changed to `background` in tab transition
 
 ## 1.0.0-beta.22
 
