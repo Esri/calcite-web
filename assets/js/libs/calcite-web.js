@@ -1,4 +1,4 @@
-/* calcite-web - v1.0.0-beta.22 - 2016-05-17
+/* calcite-web - v1.0.0-beta.23 - 2016-05-23
 *  https://github.com/esri/calcite-web
 *  Copyright (c) 2016 Environmental Systems Research Institute, Inc.
 *  Apache 2.0 License */

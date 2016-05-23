@@ -5551,6 +5551,7 @@ html[dir="rtl"] .btn-arrow:after {
   .dropdown-btn:after {
     font-size: 0.6875rem;
     line-height: 1.55rem;
+    line-height: 2.25em;
     position: absolute;
     right: .5rem; }
     @media screen and (max-width: 859px) {
@@ -6095,9 +6096,10 @@ fieldset {
   display: block; }
 
 .fieldset-radio label, .fieldset-checkbox label {
-  margin-bottom: 0;
+  margin-bottom: .25rem;
   font-size: 0.9375rem;
   line-height: 1.55rem;
+  line-height: 1.25rem;
   color: #595959; }
   @media screen and (max-width: 859px) {
     .fieldset-radio label, .fieldset-checkbox label {
@@ -6494,8 +6496,7 @@ input[type="file"]::-webkit-file-upload-button {
 input[type='radio'], input[type='checkbox'] {
   float: left;
   width: 1rem;
-  height: 1rem;
-  margin: .3rem .3rem 0 .3rem; }
+  height: 1rem; }
   html[dir="rtl"] input[type='radio'], html[dir="rtl"] input[type='checkbox'] {
     float: right; }
 
@@ -7495,8 +7496,8 @@ body {
   box-sizing: border-box;
   font-size: 0.875rem;
   line-height: 1.55rem;
-  -webkit-transition: backround, 150ms linear;
-  transition: backround, 150ms linear;
+  -webkit-transition: background, 150ms linear;
+  transition: background, 150ms linear;
   padding: 0.3875rem 0.775rem;
   float: left;
   white-space: nowrap;
@@ -7584,6 +7585,80 @@ body {
   background-color: transparent;
   padding-left: 0;
   padding-right: 0; }
+
+.tabs-translucent .tab-title {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  color: #4c4c4c;
+  margin-right: 2px;
+  margin-bottom: 3px; }
+  .tabs-translucent .tab-title:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    -webkit-background-image: linear-gradient(to top, transparent 94%, #0079c1 96%, #0079c1 100%);
+    -moz-background-image: linear-gradient(to top, transparent 94%, #0079c1 96%, #0079c1 100%);
+    -o-background-image: linear-gradient(to top, transparent 94%, #0079c1 96%, #0079c1 100%);
+    background-image: linear-gradient(to top, transparent 94%, #0079c1 96%, #0079c1 100%); }
+  .tabs-translucent .tab-title.is-active {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+    -webkit-background-image: linear-gradient(to top, transparent 94%, #0079c1 96%, #0079c1 100%);
+    -moz-background-image: linear-gradient(to top, transparent 94%, #0079c1 96%, #0079c1 100%);
+    -o-background-image: linear-gradient(to top, transparent 94%, #0079c1 96%, #0079c1 100%);
+    background-image: linear-gradient(to top, transparent 94%, #0079c1 96%, #0079c1 100%); }
+
+.tabs-translucent .tab-contents {
+  border: none; }
+
+.tabs-translucent .tab-section {
+  background-color: rgba(255, 255, 255, 0.8); }
+
+.tabs-dark .tab-title {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  color: #4c4c4c;
+  margin-right: 2px;
+  margin-bottom: 3px; }
+  .tabs-dark .tab-title:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    -webkit-background-image: linear-gradient(to top, transparent 94%, #0079c1 96%, #0079c1 100%);
+    -moz-background-image: linear-gradient(to top, transparent 94%, #0079c1 96%, #0079c1 100%);
+    -o-background-image: linear-gradient(to top, transparent 94%, #0079c1 96%, #0079c1 100%);
+    background-image: linear-gradient(to top, transparent 94%, #0079c1 96%, #0079c1 100%); }
+  .tabs-dark .tab-title.is-active {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+    -webkit-background-image: linear-gradient(to top, transparent 94%, #0079c1 96%, #0079c1 100%);
+    -moz-background-image: linear-gradient(to top, transparent 94%, #0079c1 96%, #0079c1 100%);
+    -o-background-image: linear-gradient(to top, transparent 94%, #0079c1 96%, #0079c1 100%);
+    background-image: linear-gradient(to top, transparent 94%, #0079c1 96%, #0079c1 100%); }
+
+.tabs-dark .tab-contents {
+  border: none; }
+
+.tabs-dark .tab-section {
+  background-color: rgba(255, 255, 255, 0.8); }
+
+.tabs-dark .tab-title {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white; }
+  .tabs-dark .tab-title:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+    -webkit-background-image: linear-gradient(to top, transparent 94%, white 96%, white 100%);
+    -moz-background-image: linear-gradient(to top, transparent 94%, white 96%, white 100%);
+    -o-background-image: linear-gradient(to top, transparent 94%, white 96%, white 100%);
+    background-image: linear-gradient(to top, transparent 94%, white 96%, white 100%); }
+  .tabs-dark .tab-title.is-active {
+    background-color: rgba(0, 0, 0, 0.85);
+    -webkit-background-image: linear-gradient(to top, transparent 94%, white 96%, white 100%);
+    -moz-background-image: linear-gradient(to top, transparent 94%, white 96%, white 100%);
+    -o-background-image: linear-gradient(to top, transparent 94%, white 96%, white 100%);
+    background-image: linear-gradient(to top, transparent 94%, white 96%, white 100%); }
+
+.tabs-dark .tab-section {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white; }
 
 .modal-overlay {
   position: fixed;
