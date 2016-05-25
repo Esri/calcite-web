@@ -6,6 +6,7 @@
   "homepage": "https://github.com/esri/calcite-web",
   "scripts": {
     "test": "semistandard | snazzy",
+    "cssStat": "cssstats dist/css/calcite-web.css dist/css/stats.json",
     "a11y": "a11y local.arcgis.com:8888",
     "gh-release": "gh-release -a calcite-web.zip",
     "acetate": "acetate build -i docs/source -o docs/build -c docs/acetate.conf.js",
@@ -45,6 +46,7 @@
     "acetate-cli": "0.0.3",
     "arraystream": "0.0.5",
     "babel-preset-es2015-rollup": "^1.1.1",
+    "cssstats-cli": "^1.0.0-beta.2",
     "gh-release": "^2.0.1",
     "glob": "^5.0.6",
     "grunt": "^0.4.5",
