@@ -1,3 +1,9 @@
+## unreleased
+
+### Modified
+- headers are focusable
+- panels no longer style columns
+
 ## 1.0.0.0-beta.24
 
 ### Removed
