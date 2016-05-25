@@ -6,7 +6,6 @@
 
 @mixin accordion(){
   @extend .side-nav;
-  @include icon-font();
 }
   @mixin accordion-section() {
     &.is-active {
