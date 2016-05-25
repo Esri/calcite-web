@@ -16,28 +16,26 @@
 
   @mixin panel-dark() {
     background-color: $darkest-gray;
-    @extend .text-white;
+    color: $white;
     border: 1px solid $off-black;
-    a { @include link-color($lighter-blue, $lighter-blue); }
   }
 
   @mixin panel-black() {
     background-color: $black;
-    @extend .text-white;
+    color: $white;
     border: 1px solid $off-black;
-    a { @include link-color($lighter-blue, $lighter-blue); }
   }
 
   @mixin panel-dark-blue() {
     background-color: $Brand_Blue_250;
-    @extend .text-white;
+    color: $white;
     border: 1px solid $darker-blue;
     a { @include link-color($Calcite_Vibrant_Blue_150, $Calcite_Vibrant_Blue_200); }
   }
 
   @mixin panel-blue() {
     background-color: $blue;
-    @extend .text-white;
+    color: $white;
     border: 1px solid $dark-blue;
     a { @include link-color($Calcite_Vibrant_Blue_150, $Calcite_Vibrant_Blue_200); }
   }
@@ -51,7 +49,7 @@
 
   @mixin panel-white() {
     background-color: $white;
-    @extend .text-darker-gray;
+    color: $darker-gray;
     border: 1px solid $lightest-gray;
     code {
       background-color: $off-white;
