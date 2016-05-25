@@ -6,13 +6,11 @@
   //  ↳ http://esri.github.io/calcite-web/components/#form-overview
   //  ↳ components → _form-overview.md
   form {
-    @extend %clearfix;
     margin: 0;
     padding: 0;
   }
 
   fieldset {
-    @extend %clearfix;
     margin: 0 0 $baseline 0;
     padding: 0;
     border: none;
@@ -22,7 +20,7 @@
   .fieldset-radio, .fieldset-checkbox {
     label {
       margin-bottom: .25rem;
-      @include font-size(-1);
+      font-size: modular-scale(-1);
       line-height: 1.25rem;
       color: $darkest-gray;
     }
@@ -31,7 +29,6 @@
   label, legend {
     position: relative;
     display: block;
-    @include font-size(0);
     margin: 0 0 $baseline 0;
   }
 
@@ -94,17 +91,13 @@
   textarea {
     display: inline-block;
     padding: 0 $baseline / 5;
-    @include font-size(-1);
-    @include avenir-regular();
+    font-size: modular-scale(0);
+    font-family: $avenir-family;
     color: $darkest-gray;
     border: 1px solid $light-gray;
     @include transition(border-color 150ms linear);
     -webkit-appearance: textfield;
     height: 2.25rem;
-    &.input-error   { border-color: $red; }
-    &.input-warning { border-color: $dark-yellow; }
-    &.input-success { border-color: $green; }
-    &:focus { border-color: $blue; }
   }
 
   textarea {
@@ -114,49 +107,6 @@
     padding-top: $baseline / 5;
   }
 
-  .form-hint {
-    @include font-size(-2);
-    display: block;
-  }
-    .form-hint-text {
-      display: none;
-      position: absolute;
-    }
-    .form-hint-icon {
-      display: none;
-      position: absolute;
-      right: 0.5em;
-      top: 2.2rem;
-      &:before {
-        @include font-size(-1);
-        @extend %icon-font-styles;
-     }
-    }
-
-  input:required:valid   {
-    + .form-hint {
-      color: $green;
-      .form-hint-icon {
-        display: inline-block;
-        &:before {
-          @extend .icon-ui-check-mark:before;
-        }
-      }
-    }
-  }
-
-  input:required:invalid {
-    border-color: $red;
-    + .form-hint {
-      color: $red;
-     .form-hint-icon, .form-hint-text {
-        display: inline-block;
-      }
-      .form-hint-icon:before {
-        @extend .icon-ui-error:before;
-      }
-    }
-  }
 
   // ┌─────────────┐
   // │ Date Inputs │
@@ -168,9 +118,6 @@
   input[type='week'],
   input[type='month'] {
     max-height: $baseline * 1.5;
-    &.input-error {
-      border-color: $red;
-    }
   }
 
   // ┌───────────────┐
@@ -220,8 +167,8 @@
     max-width: 100%;
     height: 2.25rem;
     padding: $baseline/5 $baseline $baseline/5 $baseline/4;
-    @include font-size(-1);
-    @include avenir-regular();
+    font-size: modular-scale(-1);
+    font-family: $avenir-family;
     color: $darkest-gray;
     border: 1px solid $light-gray;
     border-radius: 0;

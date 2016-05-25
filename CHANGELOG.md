@@ -7,6 +7,7 @@
 ### Removed
 - Panels no longer force anchor color
 - gutter-n classes. use padding-n instead.
+- form hinting
 
 ## 1.0.0.0-beta.24
 
