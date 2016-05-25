@@ -12,14 +12,12 @@
   .wrapper {
     flex: 1 0 auto;
   }
-  .footer {
-    flex: none;
-  }
 }
 
 @if $include-footer == true {
   .footer  {
     background-color: $off-white;
     padding-top: $baseline * 2;
+    flex: none;
   }
 }
