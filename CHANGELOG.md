@@ -4,6 +4,9 @@
 - headers are focusable
 - panels no longer style columns
 
+### Removed
+- Panels no longer force anchor color
+
 ## 1.0.0.0-beta.24
 
 ### Removed
