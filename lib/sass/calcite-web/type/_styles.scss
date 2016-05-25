@@ -47,9 +47,6 @@
   h6 {
     @include avenir-light();
     margin: 0 0 $baseline 0;
-    &:focus {
-      outline: none;
-    }
   }
 
   h1 {@include font-size(5);}
@@ -125,7 +122,6 @@
   a {
     color: $link-color;
     text-decoration: none;
-    // @include transition(color $transition, text-decoration $transition);
     &:hover {
       color: $link-hover;
       text-decoration: underline;
