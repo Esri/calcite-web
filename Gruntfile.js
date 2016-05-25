@@ -318,6 +318,12 @@ module.exports = function (grunt) {
       },
       lint: {
         command: 'node_modules/.bin/semistandard | snazzy'
+      },
+      stat: {
+        command: 'npm run cssStat'
+      },
+      statLog: {
+        command: 'node ./bin/stat.js'
       }
     },
 
@@ -344,5 +350,6 @@ module.exports = function (grunt) {
   grunt.registerTask('deploy', ['doc', 'gh-pages']);
   grunt.registerTask('s3', ['dist', 'prompt:aws', 'aws_s3']);
   grunt.registerTask('release', ['shell:release', 'prompt:aws', 'aws_s3']);
+  grunt.registerTask('stat', ['sass', 'copy', 'shell:stat', 'shell:statLog']);
   grunt.registerTask('default', ['doc', 'http-server', 'watch']);
 };
