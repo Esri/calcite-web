@@ -1,3 +1,22 @@
+## 1.0.0.0-beta.24
+
+### Removed
+- .link-purple
+- .link-orange
+- .link-brown
+- .link-gray
+- .text-purple
+- .text-orange
+- .text-brown
+- .text-gray
+- supernav
+- site search
+- search bar
+- toolbar
+- action bar
+- expanding nav
+- badges
+
 ## 1.0.0-beta.23
 
 ### Added

@@ -78,12 +78,8 @@ type:
             - text-red
             - text-green
             - text-blue
-            - text-purple
-            - text-orange
-            - text-brown
             - text-white
             - text-light-gray
-            - text-gray
             - text-dark-gray
             - text-darker-gray
             - text-darkest-gray
@@ -95,12 +91,8 @@ type:
             - link-green
             - link-blue
             - link-light-blue
-            - link-purple
-            - link-orange
-            - link-brown
             - link-white
             - link-light-gray
-            - link-gray
             - link-dark-gray
             - link-darker-gray
             - link-darkest-gray
@@ -351,11 +343,6 @@ components:
             - label-green
             - label-yellow
             - label-red
-        - title: 'Badges'
-          link: badges
-          modifiers:
-            - badge-blue
-            - badge-round
         - title: 'Dropdowns'
           link: dropdowns
           modifiers:
@@ -424,10 +411,6 @@ components:
         - title: 'Input Groups'
           link: input-groups
           modifiers: true
-        - title: 'Action Bar'
-          link: action-bar
-          modifiers:
-            - action-bar-left
         - title: 'Selects'
           link: selects
           modifiers:
@@ -519,8 +502,6 @@ patterns:
           modifiers: true
         - title: 'Drawers'
           link: drawers
-        - title: 'Expanding Nav'
-          link: expanding-nav
           modifiers: true
         - title: 'Filter Dropdown'
           link: 'filter-dropdown'
