@@ -93,12 +93,7 @@
           max-width: ($n / $large-column-count) * $max-width;
           > .#{$prefix}column-#{$n} {
             margin-left: -($column-gutter/2);
-            @if ($include-right-to-left) {
-              html[dir="rtl"] & {
-                margin-left: 0;
-                margin-right: -$column-gutter / 2;
-              }
-            }
+            margin-right: -$column-gutter / 2;
           }
         }
       }
@@ -110,21 +105,11 @@
       }
       .#{$prefix}#{$large-class}-first-column {
         margin-left: -($column-gutter / 2);
-        @if ($include-right-to-left) {
-          html[dir="rtl"] & {
-            margin-left: 0;
-            margin-right: -$column-gutter / 2;
-          }
-        }
+        margin-right: -$column-gutter / 2;
       }
       .#{$prefix}#{$large-class}-last-column {
         margin-right: -($column-gutter / 2);
-        @if ($include-right-to-left) {
-          html[dir="rtl"] & {
-            margin-right: 0;
-            margin-left: -$column-gutter / 2;
-          }
-        }
+        margin-left: -$column-gutter / 2;
       }
     }
 
@@ -136,12 +121,7 @@
           max-width: ($n / $default-column-count) * $max-width;
           > .#{$prefix}column-#{$n} {
             margin-left: -($column-gutter/2);
-            @if ($include-right-to-left) {
-              html[dir="rtl"] & {
-                margin-left: 0;
-                margin-right: -$column-gutter / 2;
-              }
-            }
+            margin-right: -$column-gutter / 2;
           }
         }
       }
@@ -245,12 +225,7 @@
         max-width: ($n / $default-column-count) * $max-width;
         > .#{$prefix}column-#{$n} {
           margin-left: -($column-gutter/2);
-          @if ($include-right-to-left) {
-            html[dir="rtl"] & {
-              margin-left: 0;
-              margin-right: -$column-gutter / 2;
-            }
-          }
+          margin-right: -$column-gutter / 2;
         }
       }
     }
