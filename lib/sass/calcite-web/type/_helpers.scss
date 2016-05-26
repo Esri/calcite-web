@@ -4,16 +4,16 @@
 
 @if $include-type == true and $include-type-helpers == true {
 
-  .link-red a, a.link-red                   { @include link-color($red, $dark-red);}
-  .link-green a, a.link-green               { @include link-color($green, $dark-green);}
-  .link-light-blue a, a.link-light-blue     { @include link-color($lighter-blue, $light-blue);}
-  .link-blue a, a.link-blue                 { @include link-color($blue, $dark-blue);}
-  .link-white a, a.link-white               { @include link-color($white, $lightest-gray);}
-  .link-light-gray a, a.link-light-gray     { @include link-color($light-gray, $gray);}
-  .link-dark-gray a, a.link-dark-gray       { @include link-color($dark-gray, $darker-gray);}
-  .link-darker-gray a, a.link-darker-gray   { @include link-color($darker-gray, $darkest-gray);}
-  .link-darkest-gray a, a.link-darkest-gray { @include link-color($darkest-gray, $off-black);}
-  .link-off-black a, a.link-off-black       { @include link-color($off-black, $black);}
+  .link-red          { @include link-color($red, $dark-red);}
+  .link-green        { @include link-color($green, $dark-green);}
+  .link-light-blue   { @include link-color($lighter-blue, $light-blue);}
+  .link-blue         { @include link-color($blue, $dark-blue);}
+  .link-white        { @include link-color($white, $lightest-gray);}
+  .link-light-gray   { @include link-color($light-gray, $gray);}
+  .link-dark-gray    { @include link-color($dark-gray, $darker-gray);}
+  .link-darker-gray  { @include link-color($darker-gray, $darkest-gray);}
+  .link-darkest-gray { @include link-color($darkest-gray, $off-black);}
+  .link-off-black    { @include link-color($off-black, $black);}
 
   .text-red          { color: $red; }
   .text-green        { color: $green; }
