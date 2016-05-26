@@ -30,15 +30,6 @@
     opacity: .3;
   }
 
-  @mixin btn-arrow() {
-    &:after {
-      content: " →";
-    }
-    html[dir="rtl"] &:after {
-      content: "← "
-    }
-  }
-
   @mixin btn-transparent() {
     background: none;
     color: $link-color;
@@ -151,7 +142,6 @@
 
 @if $include-button == true {
   .btn             { @include btn();}
-  .btn-arrow       { @include btn-arrow();}
   .btn-transparent { @include btn-transparent();}
   .btn-clear       { @include btn-clear();}
   .btn-clear-white { @include btn-clear-white();}
