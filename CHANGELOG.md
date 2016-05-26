@@ -8,6 +8,8 @@
 - Panels no longer force anchor color
 - gutter-n classes. use padding-n instead.
 - form hinting
+- `.link-color-foo a` selected
+- app switcher pattern
 
 ## 1.0.0.0-beta.24
 

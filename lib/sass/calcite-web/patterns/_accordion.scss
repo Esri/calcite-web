@@ -23,7 +23,7 @@
     cursor: pointer;
     @include transition(all, $transition);
     &:before {
-      @include font-size(-3);
+      font-size: modular-scale(-3);
       @extend %icon-font-styles;
       @extend .icon-ui-right:before;
     }
