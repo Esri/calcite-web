@@ -10,6 +10,7 @@
 - form hinting
 - `.link-color-foo a` selected
 - app switcher pattern
+- btn-arrow
 
 ## 1.0.0.0-beta.24
 
