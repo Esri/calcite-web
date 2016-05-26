@@ -21,7 +21,7 @@
 //  ↳ http://esri.github.io/calcite-web/grid/#columns
 //  ↳ grid → _columns.md
 
-%column-base {
+[class*="column-"] {
   @include box-sizing(border-box);
   width: $container-width;
   max-width: 100%;
@@ -287,12 +287,6 @@
     }
     .#{$prefix}last-column {
       @include last-column();
-    }
-  }
-
-  @for $n from 1 through $default-column-count {
-    .#{$prefix}column-#{$n} {
-      @extend %column-base;
     }
   }
 
