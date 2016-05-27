@@ -13,7 +13,7 @@
         .pre-#{$n} {
           @include pre($n, $default-column-count);
         }
-        [class*="column-"] .pre-#{$n}:first-child, .first-column.pre-#{$n} {
+        .first-column.pre-#{$n} {
           @include pre-calc($n, $default-column-count);
         }
         .post-#{$n} {
@@ -26,9 +26,11 @@
           .rtl-pre-#{$n} {
             @include pre($n, $default-column-count);
           }
-          [class*="column-"] .rtl-pre-#{$n}:first-child, .first-column.rtl-pre-#{$n} {
+
+          .first-column.rtl-pre-#{$n} {
             @include pre-calc($n, $default-column-count);
           }
+
           .rtl-post-#{$n} {
             @include post($n, $default-column-count);
           }
@@ -36,61 +38,6 @@
       }
     }
 
-    // Large Columns
-    @media screen and (min-width: $large) {
-      // keep normal pre and post, but make it out of new column count
-      @for $n from 0 through $default-column-count {
-        .pre-#{$n} {
-          @include pre($n, $large-column-count);
-        }
-        [class*="column-"] .pre-#{$n}:first-child, .first-column.pre-#{$n} {
-          @include pre-calc($n, $large-column-count);
-        }
-        .post-#{$n} {
-          @include post($n, $large-column-count);
-        }
-      }
-
-      @if $include-right-to-left == true {
-        @for $n from 0 through $default-column-count {
-          .rtl-pre-#{$n} {
-            @include pre($n, $large-column-count);
-          }
-          [class*="column-"] .rtl-pre-#{$n}:first-child, .first-column.rtl-pre-#{$n} {
-            @include pre-calc($n, $large-column-count);
-          }
-          .rtl-post-#{$n} {
-            @include post($n, $large-column-count);
-          }
-        }
-      }
-
-      @for $n from 0 through $large-column-count {
-        .#{$large-class}-pre-#{$n} {
-          @include pre($n, $large-column-count);
-        }
-        [class*="column-"] .#{$large-class}-pre-#{$n}:first-child, .#{$large-class}-first-column.#{$large-class}-pre-#{$n} {
-          @include pre-calc($n, $large-column-count);
-        }
-        .#{$large-class}-post-#{$n} {
-          @include post($n, $large-column-count);
-        }
-      }
-
-      @if $include-right-to-left == true {
-        @for $n from 0 through $large-column-count {
-          .rtl-#{$large-class}-pre-#{$n} {
-            @include pre($n, $large-column-count);
-          }
-          [class*="column-"] .rtl-#{$large-class}-pre-#{$n}:first-child, .#{$large-class}-first-column.rtl-#{$large-class}-pre-#{$n} {
-            @include pre-calc($n, $large-column-count);
-          }
-          .rtl-#{$large-class}-post-#{$n} {
-            @include post($n, $large-column-count);
-          }
-        }
-      }
-    }
 
     // Medium Columns
     @media screen and (max-width: $medium - 1) {
@@ -98,7 +45,7 @@
         .#{$medium-class}-pre-#{$n} {
           @include pre($n, $medium-column-count);
         }
-        [class*="column-"] .#{$medium-class}-pre-#{$n}:first-child, .#{$medium-class}-first-column.#{$medium-class}-pre-#{$n} {
+        .#{$medium-class}-first-column.#{$medium-class}-pre-#{$n} {
           @include pre-calc($n, $medium-column-count);
         }
         .#{$medium-class}-post-#{$n} {
@@ -111,7 +58,7 @@
           .rtl-#{$medium-class}-pre-#{$n} {
             @include pre($n, $medium-column-count);
           }
-          [class*="column-"] .rtl-#{$medium-class}-pre-#{$n}:first-child, .#{$medium-class}-first-column.rtl-#{$medium-class}-pre-#{$n} {
+          .#{$medium-class}-first-column.rtl-#{$medium-class}-pre-#{$n} {
             @include pre-calc($n, $medium-column-count);
           }
           .rtl-#{$medium-class}-post-#{$n} {
@@ -127,7 +74,7 @@
         .#{$small-class}-pre-#{$n} {
           @include pre($n, $small-column-count);
         }
-        [class*="column-"] .#{$small-class}-pre-#{$n}:first-child, .#{$small-class}-first-column.#{$small-class}-pre-#{$n} {
+        .#{$small-class}-first-column.#{$small-class}-pre-#{$n} {
           @include pre-calc($n, $small-column-count);
         }
         .#{$small-class}-post-#{$n} {
@@ -140,7 +87,7 @@
           .rtl-#{$small-class}-pre-#{$n} {
             @include pre($n, $small-column-count);
           }
-          [class*="column-"] .rtl-#{$small-class}-pre-#{$n}:first-child, .#{$small-class}-first-column.rtl-#{$small-class}-pre-#{$n} {
+          .#{$small-class}-first-column.rtl-#{$small-class}-pre-#{$n} {
             @include pre-calc($n, $small-column-count);
           }
           .rtl-#{$small-class}-post-#{$n} {
@@ -164,14 +111,6 @@
             margin-right: ($n / $large-column-count) * $container-width !important;
           }
         }
-        [class*="column-"] .pre-#{$n}:first-child {
-          $margin: ($n / $large-column-count) * $container-width;
-          $clear: $column-gutter / 2;
-          margin-left: calc(#{$margin} - #{$clear}) !important;
-          html[dir="rtl"] & {
-            margin-right: calc(#{$margin} - #{$clear}) !important;
-          }
-        }
         .post-#{$n} {
           margin-right: ($n / $large-column-count) * $container-width !important;
           html[dir="rtl"] & {
@@ -185,14 +124,6 @@
             margin-left: ($n / $large-column-count) * $container-width !important;
             html[dir="rtl"] & {
               margin-right: ($n / $large-column-count) * $container-width !important;
-            }
-          }
-          [class*="column-"] .rtl-pre-#{$n}:first-child {
-            $margin: ($n / $large-column-count) * $container-width;
-            $clear: $column-gutter / 2;
-            margin-left: calc(#{$margin} - #{$clear}) !important;
-            html[dir="rtl"] & {
-              margin-right: calc(#{$margin} - #{$clear}) !important;
             }
           }
           .rtl-post-#{$n} {
@@ -209,7 +140,7 @@
     .pre-#{$n} {
       @include pre($n, $default-column-count);
     }
-    [class*="column-"] .pre-#{$n}:first-child, .first-column.pre-#{$n} {
+    .first-column.pre-#{$n} {
       @include pre-calc($n, $default-column-count);
     }
     .post-#{$n} {
@@ -219,7 +150,7 @@
       .rtl-pre-#{$n} {
         @include pre($n, $default-column-count);
       }
-      [class*="column-"] .rtl-pre-#{$n}:first-child, .first-column.rtl-pre-#{$n} {
+      .first-column.rtl-pre-#{$n} {
         @include pre-calc($n, $default-column-count);
       }
       .rtl-post-#{$n} {
