@@ -78,12 +78,8 @@ type:
             - text-red
             - text-green
             - text-blue
-            - text-purple
-            - text-orange
-            - text-brown
             - text-white
             - text-light-gray
-            - text-gray
             - text-dark-gray
             - text-darker-gray
             - text-darkest-gray
@@ -95,12 +91,8 @@ type:
             - link-green
             - link-blue
             - link-light-blue
-            - link-purple
-            - link-orange
-            - link-brown
             - link-white
             - link-light-gray
-            - link-gray
             - link-dark-gray
             - link-darker-gray
             - link-darkest-gray
@@ -181,22 +173,6 @@ grid:
         - title: 'Gutter'
           link: gutter
           modifiers:
-            - rtl-gutter-left-0
-            - rtl-gutter-right-0
-            - gutter-left-quarter
-            - gutter-right-quarter
-            - gutter-left-third
-            - gutter-right-third
-            - gutter-left-half
-            - gutter-right-half
-            - gutter-left-1
-            - gutter-left-2
-            - gutter-left-3
-            - gutter-left-4
-            - gutter-right-1
-            - gutter-right-2
-            - gutter-right-3
-            - gutter-right-4
             - rtl-padding-left-0
             - rtl-padding-right-0
             - padding-left-quarter
@@ -351,11 +327,6 @@ components:
             - label-green
             - label-yellow
             - label-red
-        - title: 'Badges'
-          link: badges
-          modifiers:
-            - badge-blue
-            - badge-round
         - title: 'Dropdowns'
           link: dropdowns
           modifiers:
@@ -424,10 +395,6 @@ components:
         - title: 'Input Groups'
           link: input-groups
           modifiers: true
-        - title: 'Action Bar'
-          link: action-bar
-          modifiers:
-            - action-bar-left
         - title: 'Selects'
           link: selects
           modifiers:
@@ -519,8 +486,6 @@ patterns:
           modifiers: true
         - title: 'Drawers'
           link: drawers
-        - title: 'Expanding Nav'
-          link: expanding-nav
           modifiers: true
         - title: 'Filter Dropdown'
           link: 'filter-dropdown'
