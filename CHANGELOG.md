@@ -1,4 +1,4 @@
-## 1.0.0.0-beta.25
+## 1.0.0-beta.25
 
 ### Modified
 - headers are focusable
