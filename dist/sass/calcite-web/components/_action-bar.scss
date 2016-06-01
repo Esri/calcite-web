@@ -1,0 +1,32 @@
+@mixin action-bar() {
+  @include clearfix();
+}
+
+@mixin action-bar-btn() {
+  float: right;
+  margin-left: $baseline * .5;
+  html[dir="rtl"] & {
+    float: left;
+    margin-right: $baseline * .5;
+  }
+}
+
+@mixin action-bar-left() {
+  @include clearfix();
+  .action-bar-btn {
+    float: left;
+    margin-left: 0;
+    margin-right: $baseline * .5;
+    html[dir="rtl"] & {
+      float: right;
+      margin-right: 0;
+      margin-left: $baseline * .5;
+    }
+  }
+}
+
+@if $include-action-bar == true {
+  .action-bar {@include action-bar();}
+    .action-bar-btn {@include action-bar-btn();}
+    .action-bar-left {@include action-bar-left();}
+}

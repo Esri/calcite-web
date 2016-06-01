@@ -1,0 +1,94 @@
+// ┌────────────┐
+// │ Animations │
+// └────────────┘
+//  ↳ http://esri.github.io/calcite-web/components/#animation
+//  ↳ componenet → _animation.md
+
+@include keyframes (fade-in) {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@mixin fade-in () {
+  opacity: 0;
+  @include animation(fade-in ease-in 1);
+  @include animation-fill-mode(forwards);
+  @include animation-duration(.75s);
+}
+@include keyframes (fade-out) {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+@mixin fade-out () {
+  @include animation(fade-out ease-out 1);
+  @include animation-fill-mode(both);
+  @include animation-duration(.75s);
+}
+
+@include keyframes (in-down) {
+  0%   { transform: translate3d(0, -100%, 0);}
+  100% { transform: translate3d(0, 0, 0); }
+}
+@mixin in-down () {
+  @include animation(in-down ease-out 1);
+  @include animation-fill-mode(both);
+  @include animation-duration(0.5s);
+}
+
+@include keyframes (in-down) {
+  0%   { transform: translate3d(0, -100%, 0);}
+  100% { transform: translate3d(0, 0, 0); }
+}
+@mixin in-down () {
+  @include animation(in-down ease-out 1);
+  @include animation-fill-mode(both);
+  @include animation-duration(0.5s);
+}
+
+@include keyframes (in-up) {
+  0%   { transform: translate3d(0, 100%, 0);}
+  100% { transform: translate3d(0, 0, 0); }
+}
+@mixin in-up () {
+  @include animation(in-up ease-out 1);
+  @include animation-fill-mode(both);
+  @include animation-duration(0.5s);
+}
+
+@include keyframes (in-down) {
+  0%   { transform: translate3d(0, -100%, 0);}
+  100% { transform: translate3d(0, 0, 0); }
+}
+@mixin in-down () {
+  @include animation(in-down ease-out 1);
+  @include animation-fill-mode(both);
+  @include animation-duration(0.5s);
+}
+
+@include keyframes (out-down) {
+  0%   { transform: translate3d(0, 0, 0);}
+  100% { transform: translate3d(0, -100%, 0); }
+}
+@mixin out-down () {
+  @include animation(out-down ease-in 1);
+  @include animation-fill-mode(both);
+  @include animation-duration(0.5s);
+}
+
+@include keyframes (out-up) {
+  0%   { transform: translate3d(0, 0, 0);}
+  100% { transform: translate3d(0, 100%, 0); }
+}
+@mixin out-up () {
+  @include animation(out-up ease-in 1);
+  @include animation-fill-mode(both);
+  @include animation-duration(0.5s);
+}
+
+@if $include-card == true {
+  .fade-in, .animate-fade-in {@include fade-in();}
+  .animate-fade-out { @include fade-out(); }
+  .animate-in-down  { @include in-down(); }
+  .animate-in-up    { @include in-up(); }
+  .animate-out-down { @include out-down(); }
+  .animate-out-up   { @include out-up(); }
+}

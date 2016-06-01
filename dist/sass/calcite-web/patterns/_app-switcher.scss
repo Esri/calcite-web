@@ -1,0 +1,105 @@
+@mixin app-switcher() {
+  @include clearfix();
+  position: relative;
+  &.is-active .app-switcher-panel {
+    visibility: visible;
+    opacity: 1;
+      @include transition-delay(0ms);
+      @include transform(translate3d(0, 0, 0))
+  }
+}
+  @mixin app-switcher-icon() {
+    @include clearfix();
+    @include link-color($off-black, $blue);
+    &:hover {
+      text-decoration: none;
+    }
+    &:before {
+      @include font-size(2);
+      @extend %icon-font-styles;
+      @extend .icon-ui-basemap:before;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  @mixin app-switcher-panel() {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    z-index: 1001;
+    background-color: $white;
+    border: 1px solid $lightest-gray;
+    box-shadow: $box-shadow;
+    top: 2rem;
+    left: -7.25rem;
+    width: 15.66rem;
+    @include transition-prefixed(transform 300ms $easing-function, visibility 0ms linear 300ms, opacity 300ms $easing-function);
+    @include transform(translate3d(0,-6px,0));
+    &:before {
+      content: "";
+      display: block;
+      top: -12px;
+      position: absolute;
+      left: 48%;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 6px;
+      border-color: transparent transparent $white transparent;
+    }
+  }
+  @mixin app-switcher-list() {
+    padding: $baseline/6;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 1px solid $lightest-gray;
+  }
+  @mixin app-switcher-link() {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  @mixin app-switcher-app() {
+    box-sizing: border-box;
+    text-align: center;
+    width: 5rem;
+    border: 1px solid transparent;
+    padding-top: $baseline/4;
+    padding-bottom: $baseline/4;
+    &:hover {
+      background-color: $off-white;
+      border: 1px solid $lightest-gray;
+    }
+  }
+  @mixin app-switcher-app-icon() {
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    height: 2rem;
+    width: 2rem;
+    margin-top: $baseline/4;
+    background-image: url('#{$image-path}/logo/dummy-logo.svg');
+    background-size: cover;
+  }
+  @mixin app-switcher-app-title() {
+    @include font-size(-3);
+  }
+  @mixin app-switcher-more() {
+    @include font-size(-3);
+    text-align: center;
+    padding: $baseline/6  ;
+    background-color: $off-white;
+  }
+
+@if $include-app-switcher == true {
+  .app-switcher {@include app-switcher();}
+    .app-switcher-icon  { @include app-switcher-icon(); }
+    .app-switcher-panel     { @include app-switcher-panel(); }
+    .app-switcher-list      { @include app-switcher-list(); }
+    .app-switcher-link      { @include app-switcher-link(); }
+    .app-switcher-app       { @include app-switcher-app(); }
+    .app-switcher-app-icon  { @include app-switcher-app-icon(); }
+    .app-switcher-app-title { @include app-switcher-app-title(); }
+    .app-switcher-more      { @include app-switcher-more(); }
+}
