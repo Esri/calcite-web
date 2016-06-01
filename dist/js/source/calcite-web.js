@@ -87,7 +87,7 @@ function init () {
 // └────────────┘
 // define all public api methods
 export default {
-  version: '1.0.0.0-beta.25',
+  version: '1.0.0-beta.25',
   click: event.click,
   addEvent: event.add,
   removeEvent: event.remove,
