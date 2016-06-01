@@ -1,3 +1,36 @@
+## 1.0.0.0-beta.25
+
+### Modified
+- headers are focusable
+- panels no longer style columns
+
+### Removed
+- Panels no longer force anchor color
+- gutter-n classes. use padding-n instead.
+- form hinting
+- `.link-color-foo a` selected
+- app switcher pattern
+- btn-arrow
+
+## 1.0.0.0-beta.24
+
+### Removed
+- .link-purple
+- .link-orange
+- .link-brown
+- .link-gray
+- .text-purple
+- .text-orange
+- .text-brown
+- .text-gray
+- supernav
+- site search
+- search bar
+- toolbar
+- action bar
+- expanding nav
+- badges
+
 ## 1.0.0-beta.23
 
 ### Added

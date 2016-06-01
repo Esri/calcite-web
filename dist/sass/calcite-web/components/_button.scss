@@ -9,7 +9,6 @@
   display: inline-block;
   padding: $baseline/5 .9rem;
   width: auto;
-  @include avenir-light();
   color: $white;
   border: 1px solid $blue;
   background-color: $blue;
@@ -17,10 +16,7 @@
   @include transition(all 0.05s linear);
   cursor: pointer;
   white-space: nowrap;
-  @if $include-type {
-    @include font-size(-1);
-    font-weight: 400;
-  }
+  @include font-size(-1);
   &:hover {
     text-decoration: none;
     background-color: $dark-blue;
@@ -32,15 +28,6 @@
     cursor: not-allowed;
     pointer-events: none;
     opacity: .3;
-  }
-
-  @mixin btn-arrow() {
-    &:after {
-      content: " →";
-    }
-    html[dir="rtl"] &:after {
-      content: "← "
-    }
   }
 
   @mixin btn-transparent() {
@@ -155,7 +142,6 @@
 
 @if $include-button == true {
   .btn             { @include btn();}
-  .btn-arrow       { @include btn-arrow();}
   .btn-transparent { @include btn-transparent();}
   .btn-clear       { @include btn-clear();}
   .btn-clear-white { @include btn-clear-white();}
