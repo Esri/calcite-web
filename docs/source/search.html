@@ -63,7 +63,7 @@ js:
               </a>
             </h5>
             <div class="js-search-item-content hide">
-              {% markdown %}{% include data.table_of_contents[pageName].base + '/_' + section.link %}{% endmarkdown %}
+              {% markdown %}{% include 'documentation/' + data.table_of_contents[pageName].base + '/_' + section.link %}{% endmarkdown %}
             </div>
             <!-- populated on the client -->
             <div class="js-search-item-snippet font-size-0"></div>

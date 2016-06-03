@@ -48,11 +48,15 @@
                 <button type="submit" class="search-submit icon-ui-search"></button>
               </div>
             </form>
+
+
             {% for title, sec in data.table_of_contents %}
               {% if sec.base != "get-started" %}
                 <a href="{{relativePath}}{{sec.base}}" class="side-nav-link">{{ sec.title }}</a>
               {% endif %}
             {% endfor %}
+
+
         </aside>
       </nav>
     </div>
@@ -70,11 +74,15 @@
               </div>
             </form>
           </div>
+
+
             {% for title, sec in data.table_of_contents %}
               {% if sec.base != "get-started" %}
                 <a href="{{relativePath}}{{sec.base}}" class="side-nav-link">{{ sec.title }}</a>
               {% endif %}
             {% endfor %}
+
+
         </aside>
       </nav>
     </div>
@@ -88,11 +96,8 @@
             <div class="tablet-hide">
               <a href="{{relativePath}}" class="top-nav-title">Calcite Web</a>
               <nav class="top-nav-list" role="navigation">
-              {% for title, sec in data.table_of_contents %}
-                {% if sec.base != "get-started" %}
-                  <a href="{{relativePath}}{{sec.base}}" class="top-nav-link">{{ sec.title }}</a>
-                {% endif %}
-              {% endfor %}
+                <a href="{{relativePath}}documentation" class="top-nav-link">Documentation</a>
+                <a href="{{relativePath}}examples" class="top-nav-link">Examples</a>
               </nav>
               <a href="#" class="icon-ui-search js-expand-toggle top-nav-link right" data-expand="search">Search</a >
             </div>
