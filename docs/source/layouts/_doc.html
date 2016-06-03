@@ -8,9 +8,7 @@
         <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white btn-arrow right leader-half">Latest Release</a>
         <nav class="sub-nav-list" role="navigation" aria-labelledby="subnav">
           {% for title, sec in data.table_of_contents %}
-            {% if sec.base != "get-started" %}
-              <a class="sub-nav-link" href="{{relativePath}}documentation/{{sec.base}}">{{ sec.title }}</a>
-            {% endif %}
+            <a class="sub-nav-link {% if url == 'documentation/' + sec.base + '/' or url == 'documentation/' + sec.base %}is-active{% endif %}" href="{{relativePath}}documentation/{{sec.base}}">{{ sec.title }}</a>
           {% endfor %}
         </nav>
       </div>

@@ -1,4 +1,5 @@
 module.exports = function (acetate) {
+  acetate.layout('index.html', 'layouts/_layout');
   acetate.layout('documentation/**/*', 'layouts/_doc');
   acetate.layout('examples/*', 'layouts/_examples');
   acetate.layout('page-layouts/*.html', 'layouts/_blank:content');
