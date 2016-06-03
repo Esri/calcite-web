@@ -7,6 +7,18 @@ $include-secondary-family: true;
 @import "github";
 @import "calcite-web";
 
+// Splashy banner stuff
+.bg-blue {
+  background-color: $blue;
+  background-image: url('/assets/img/topo-map.svg'), linear-gradient(110deg, $dark-blue 10%, $light-green 90%);
+}
+
+.huge-text {
+  font-size: 5vw;
+  line-height: 1.25;
+}
+
+
 // Sub-Nav test Classes
 .sub-nav {
   background-image: url('../img/banner.jpg');

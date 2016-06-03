@@ -12,6 +12,7 @@
 - app switcher pattern
 - btn-arrow
 - naive check for `column pre-n:first-child` use explicit `.first-column`
+- pricing table
 
 ## 1.0.0.0-beta.24
 
