@@ -4,8 +4,8 @@
   <header class="sub-nav" role="banner">
     <div class="grid-container">
       <div class="column-24">
-        <h1 class="sub-nav-title text-white">Documentation</h1>
-        <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white btn-arrow right leader-half">Latest Release</a>
+        <h1 class="sub-nav-title leader-1 text-white">Documentation</h1>
+        <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1">Download Latest Release</a>
         <nav class="sub-nav-list" role="navigation" aria-labelledby="subnav">
           {% for title, sec in data.table_of_contents %}
             <a class="sub-nav-link {% if url == 'documentation/' + sec.base + '/' or url == 'documentation/' + sec.base %}is-active{% endif %}" href="{{relativePath}}documentation/{{sec.base}}">{{ sec.title }}</a>
@@ -17,6 +17,7 @@
 {% endblock %}
 
 {% block content %}
+<div class="grid-container leader-1">
   <div class="column-6 tablet-column-12">
     <aside class="side-nav" aria-role="complementary">
       {% for group in data.table_of_contents[section].navigation %}
@@ -162,4 +163,5 @@
       {% endfor %}
     {% endfor %}
   </main>
+</div>
 {% endblock %}
