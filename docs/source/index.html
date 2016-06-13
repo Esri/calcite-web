@@ -35,11 +35,11 @@ template: layouts/_layout.html
 {%endblock%}
 
 {% block content %}
-
-<div class="column-10 pre-7 tablet-pre-1 leader-2">
-  <h2>A Design & Development Framework.</h2>
-
+<div class="grid-container leader-1">
+  <div class="column-10 pre-7 tablet-pre-1 leader-2">
 {% markdown %}
+
+## A Design & Development Framework.
 
 Calcite Web is a branded CSS & JavaScript framework, web style guide, and visual language design catalog for Esri. You can use Calcite Web to quickly build on-brand, lightweight, and accessible websites. The robust codebase is well supported, steadily maintained, and always being improved.
 
@@ -47,8 +47,21 @@ Calcite Web contains everything you need to quickly build excellent web sites ou
 
 The sass-based system allows for use a dependency for creating branded themes for other front end frameworks, custom application-specific extensions, and other developer-friendly uses.
 
+### Start Building Today
+
+Getting started with Calcite Web is as easy as copy paste. The [Quickstart Guide](/examples) explains how to [include the framework](/documentation) in your project, lay out basic page structures with the [grid system](/documentation/grid), and use the [UI Patterns](/documentation/patterns) to present content.
+
+<a href="/examples" class="btn btn-clear">Read the Quickstart Guide</a>
+
+### Comprehensive & Extendable
+
+Calcite Web has all the building blocks you need to create most projects, but sometimes you might need a little extra. This is why we've created a set of extensions to Calcite Web to handle situations like [e-commerce](/examples/e-commerce), [splashy marketing pages](/examples/marketing), and [web applications](/examples/apps). Just include a line of CSS, and start working from the examples.
+
+<a href="/documentation#extentions" class="btn btn-clear">Learn More About Extentions</a>
+
 {% endmarkdown %}
 
+  </div>
 </div>
 
 {% endblock %}

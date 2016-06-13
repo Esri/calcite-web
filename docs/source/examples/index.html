@@ -5,5 +5,31 @@ template: layouts/_examples.html
 ---
 
 {% block content %}
-  <h1>SICK EXAMPLES</h1>
+<div class="grid-container leader-1">
+
+  <main role='main'>
+    <article>
+      <section class="column-12 phone-column-6 tablet-column-12">
+        <h2 class="text-rule">Create a Project With Calcite Web</h2>
+        <p>this is a chunk of text that is pretty helpful, down there is a prettttty cool image that shows off whats happening.</p>
+      </section>
+
+      <figure class="column-18">
+        <img srcset="../assets/img/image-1920-xlg.jpg 192w,
+                     ../assets/img/image-960-lg.jpg   960w,
+                     ../assets/img/image-480-md.jpg   480w"
+             src="../assets/img/image.jpg"
+             alt="24 column or fulscreen image.">
+        <caption>A sample image</caption>
+      </figure>
+
+      <section class="column-12 phone-column-6 tablet-column-12">
+        <h3 class="text-rule">Copy and Paste the basics.</h3>
+        <p>this is a chunk of text that is pretty helpful, down there is a prettttty cool image that shows off whats happening.</p>
+      </section>
+
+    </article>
+
+  </main>
+</div>
 {% endblock %}
