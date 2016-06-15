@@ -1,5 +1,67 @@
 ---
 title: Calcite Web
 description: Quickly build beautiful, consistent websites with the Calcite Web Framework
-section: 'get-started'
+template: layouts/_layout.html
 ---
+{% block subnav %}
+  <header class="bg-blue" role="banner">
+    <div class="grid-container">
+      <div class="column-24 padding-leader-4 padding-trailer-5">
+        <h1 class="text-center text-white huge-text avenir-light">Calcite Web</h1>
+
+        <div class="card column-6 phone-column-4 pre-9 tablet-pre-3 phone-pre-1">
+          <div class="card-body">
+            <table class="table-blue trailer-0">
+              <tbody>
+                <tr class="trailer-0">
+                 <td><b>Current Version</b></td>
+                 <td class="text-right">v1.0.0-beta.24</td>
+                </tr>
+                <tr class="trailer-0">
+                 <td><b>Last Released</b></td>
+                 <td class="text-right">Today</td>
+                </tr>
+                <tr class="trailer-0">
+                 <td><b>Size</b></td>
+                 <td class="text-right">21.3k</td>
+                </tr>
+            </table>
+            <a href="#" class="btn btn-clear btn-fill icon-ui-download">Download Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+{%endblock%}
+
+{% block content %}
+<div class="grid-container leader-1">
+  <div class="column-10 pre-7 tablet-pre-1 leader-2">
+{% markdown %}
+
+## A Design & Development Framework.
+
+Calcite Web is a branded CSS & JavaScript framework, web style guide, and visual language design catalog for Esri. You can use Calcite Web to quickly build on-brand, lightweight, and accessible websites. The robust codebase is well supported, steadily maintained, and always being improved.
+
+Calcite Web contains everything you need to quickly build excellent web sites out of the box, with no configuration or set up. A collection of [extensions](#) for the framework provide sets of patterns that can be used for specific use cases, including [marketing pages](#), [e-commerce](#), and application [dashboards](#).
+
+The sass-based system allows for use a dependency for creating branded themes for other front end frameworks, custom application-specific extensions, and other developer-friendly uses.
+
+### Start Building Today
+
+Getting started with Calcite Web is as easy as copy paste. The [Quickstart Guide](/examples) explains how to [include the framework](/documentation) in your project, lay out basic page structures with the [grid system](/documentation/grid), and use the [UI Patterns](/documentation/patterns) to present content.
+
+<a href="/examples" class="btn btn-clear">Read the Quickstart Guide</a>
+
+### Comprehensive & Extendable
+
+Calcite Web has all the building blocks you need to create most projects, but sometimes you might need a little extra. This is why we've created a set of extensions to Calcite Web to handle situations like [e-commerce](/examples/e-commerce), [splashy marketing pages](/examples/marketing), and [web applications](/examples/apps). Just include a line of CSS, and start working from the examples.
+
+<a href="/documentation#extentions" class="btn btn-clear">Learn More About Extentions</a>
+
+{% endmarkdown %}
+
+  </div>
+</div>
+
+{% endblock %}

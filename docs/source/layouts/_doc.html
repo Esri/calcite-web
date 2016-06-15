@@ -1,11 +1,23 @@
 {% extends "layouts/_layout" %}
 
 {% block subnav %}
-  <h1 class="sub-nav-title text-white">{{ data.table_of_contents[section].title }}</h1>
-  <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white btn-arrow right leader-half">Latest Release</a>
+  <header class="sub-nav" role="banner">
+    <div class="grid-container">
+      <div class="column-24">
+        <h1 class="sub-nav-title leader-1 text-white">Documentation</h1>
+        <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1">Download Latest Release</a>
+        <nav class="sub-nav-list" role="navigation" aria-labelledby="subnav">
+          {% for title, sec in data.table_of_contents %}
+            <a class="sub-nav-link {% if url == 'documentation/' + sec.base + '/' or url == 'documentation/' + sec.base %}is-active{% endif %}" href="{{relativePath}}documentation/{{sec.base}}">{{ sec.title }}</a>
+          {% endfor %}
+        </nav>
+      </div>
+    </div>
+  </header>
 {% endblock %}
 
 {% block content %}
+<div class="grid-container leader-1">
   <div class="column-6 tablet-column-12">
     <aside class="side-nav" aria-role="complementary">
       {% for group in data.table_of_contents[section].navigation %}
@@ -38,7 +50,13 @@
             <h2 id="{{page.link}}" tabindex="0">{{page.title}}</h2>
           {% endif %}
 
-          {% markdown %}{% include data.table_of_contents[section].base + '/_' + page.link %}{% endmarkdown %}
+          {% markdown %}
+            {% if section == 'get-started' %}
+{% include 'documentation/' + data.table_of_contents[section].base + '/get-started/_' + page.link %}
+            {% else %}
+{% include 'documentation/' + data.table_of_contents[section].base + '/_' + page.link %}
+            {% endif %}
+          {% endmarkdown %}
 
           {% if page.title == 'Social Icons' %}
             <div class="block-group block-group-3-up">
@@ -103,18 +121,18 @@
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
-                {% include data.table_of_contents[section].base + '/sample-code/_' + page.link %}
+                {% include 'documentation/' + data.table_of_contents[section].base + '/sample-code/_' + page.link %}
               </div>
               {% for modifier in page.modifiers %}
                 <div class="styleguide-modifier-example">
-                  {% include data.table_of_contents[section].base + '/sample-code/_' + page.link %}
+                  {% include 'documentation/' + data.table_of_contents[section].base + '/sample-code/_' + page.link %}
                   <code class="modifier-name">.{{ modifier }}</code>
                 </div>
               {% endfor %}
             </div>
 {% markdown %}
 ```
-{% set modifier = "modifier-class" %}{% include data.table_of_contents[section].base + '/sample-code/_' + page.link %}
+{% set modifier = "modifier-class" %}{% include 'documentation/' + data.table_of_contents[section].base + '/sample-code/_' + page.link %}
 ```
 {% endmarkdown %}
           {% endif %}
@@ -145,4 +163,5 @@
       {% endfor %}
     {% endfor %}
   </main>
+</div>
 {% endblock %}
