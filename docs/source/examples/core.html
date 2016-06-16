@@ -1,0 +1,88 @@
+---
+title: Calcite Web
+description: Quickly build beautiful, consistent websites with the Calcite Web Framework
+template: /layouts/_examples.html
+active: core
+patterns:
+  - title: Page Divisions
+    examples:
+      - title: Aside / Main
+        id: aside-main
+      - title: Three Up
+        id: three-up
+      - title: Content / Illustration
+        id: content-illustration
+      - title: Full Bleed
+        id: full-bleed
+      - title: Center Column
+        id: center-column
+  - title: Navigation Patterns
+    examples:
+      - title: Global Navigation
+        id: global-nav
+      - title: Secondary Navigation
+        id: sub-nav
+      - title: Sticky Secondary Navigation
+        id: sub-nav
+      - title: Hero
+        id: hero
+      - title: Footer
+        id: footer
+  - title: Content Patterns
+    examples:
+      - title: Cards
+        id: cards
+      - title: Documentation
+        id: doc
+      - title: Blog Article
+        id: blog
+      - title: Product Demo
+        id: demo
+      - title: Key Features
+        id: features
+---
+
+{% block content %}
+<header class="third-nav scroll-show js-sticky" data-top=0>
+  <div class="third-nav-container">
+    <div class="grid-container">
+      <nav class="column-24 js-nav-overflow" role="navigation" aria-labelledby="thirdnav breadcrumbs">
+        <a href="/examples" class="third-nav-link crumb">Examples</a>
+        <a href="/examples/core" class="third-nav-link crumb">Core</a>
+        <a class="icon-ui-up third-nav-link right" href="#">Back to Top</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div class="grid-container">
+  <div class="column-24">
+    <h1>Core Design Pattern Examples</h1>
+
+    {% for section in patterns %}
+      <h2 class="text-rule leader-1">{{section.title}}</h2>
+      <div class="block-group block-group-5-up tablet-block-group-3-up phone-block-group-2-up">
+        {% for example in section.examples %}
+          <div class="block trailer-1">
+            <div class="card">
+              <div class="card-body">
+                <a href="#{{example.id}}">
+                  <img src="/assets/img/illustrations/examples/{{example.id}}.svg" alt="{{example.title}} illustration">
+                </a>
+              </div>
+              <div class="card-header">
+                <h5 class="trailer-0"><a href="#{{example.id}}">{{example.title}}</a></h5>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% import "examples/core/_cards" as cards %}
+{{ cards.sample() }}
+<pre><code>{{ cards.sample() | replace("<", "&lt;")}}</code></pre>
+
+{% endblock %}
