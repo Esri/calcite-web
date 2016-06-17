@@ -5,6 +5,7 @@ template: /layouts/_examples.html
 active: core
 patterns:
   - title: Page Divisions
+    id: page-divisions
     examples:
       - title: Aside / Main
         id: aside-main
@@ -17,18 +18,20 @@ patterns:
       - title: Center Column
         id: center-column
   - title: Navigation Patterns
+    id: navigation-patterns
     examples:
       - title: Global Navigation
         id: global-nav
       - title: Secondary Navigation
         id: sub-nav
       - title: Sticky Secondary Navigation
-        id: sub-nav
+        id: sticky-sub-nav
       - title: Hero
         id: hero
       - title: Footer
         id: footer
   - title: Content Patterns
+    id: content-pattern
     examples:
       - title: Cards
         id: cards
@@ -60,7 +63,7 @@ patterns:
     <h1>Core Design Pattern Examples</h1>
 
     {% for section in patterns %}
-      <h2 class="text-rule leader-1">{{section.title}}</h2>
+      <h2 class="text-rule leader-1">{{section.title}} <a href="#{{section.id}}" class="right font-size-0">View Examples</a></h2>
       <div class="block-group block-group-5-up tablet-block-group-3-up phone-block-group-2-up">
         {% for example in section.examples %}
           <div class="block trailer-1">
@@ -79,10 +82,15 @@ patterns:
       </div>
     {% endfor %}
   </div>
+  <div class="column-24 leader-2">
+    {% for section in patterns %}
+      <h2 class="text-rule padding-leader-2" id="{{section.id}}">{{section.title}}</h2>
+        {% for example in section.examples %}
+          {% import "examples/core/_" + example.id as code %}
+          {{ code.sample() }}
+          <pre><code>{{ code.sample() | replace("<", "&lt;")}}</code></pre>
+        {% endfor %}
+    {% endfor %}
+  </div>
 </div>
-
-{% import "examples/core/_cards" as cards %}
-{{ cards.sample() }}
-<pre><code>{{ cards.sample() | replace("<", "&lt;")}}</code></pre>
-
 {% endblock %}
