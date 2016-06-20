@@ -1,6 +1,49 @@
 {% macro sample() %}<!-- Sample HTML -->
-<h1>Hey I am some cool html</h1>
+<header class="top-nav">
+  <div class="grid-container">
+    <div class="column-24">
+      <!-- desktop sized navigation -->
+      <div class="tablet-hide">
+        <!-- logo / home -->
+        <a href="#" class="top-nav-title">esri</a>
+        <!-- primary navigation sections -->
+        <nav class="top-nav-list" role="navigation" aria-labelledby="topnav">
+          <a class="top-nav-link is-active" href="#">ArcGIS</a>
+          <a class="top-nav-link" href="#">Industries</a>
+          <a class="top-nav-link" href="#">About</a>
+          <a class="top-nav-link" href="#">Support</a>
+        </nav>
+        <!-- user specific dropdowns -->
+        <nav class="class-top-nav-list right" role="navigation" aria-labelledby="usernav">
+          <a class="top-nav-link icon-ui-search" href="#">Search</a>
+          <a class="top-nav-link icon-ui-collection margin-left-1" href="#">Applications</a>
+          <a class="top-nav-link icon-ui-user margin-left-1" href="#">Sign In</a>
+        </nav>
+      </div>
+
+      <!-- tablet and mobile sized navigation -->
+      <div class="tablet-show">
+        <!-- open primary navigation drawer -->
+        <nav class="top-nav-list column-2" role="navigation" aria-labelledby="topnav">
+          <a href="/" class="icon-ui-flush margin-left-1 icon-ui-menu top-nav-title js-drawer-toggle" data-drawer="top-nav"></a>
+        </nav>
+        <!-- logo / home -->
+        <header class="column-8 phone-column-2 text-center">
+          <a href="/" class="top-nav-title text-center">esri</a>
+        </header>
+        <!-- user specific actions -->
+        <nav class="class-top-nav-list column-2 text-right" role="navigation" aria-labelledby="usernav">
+          <a class="top-nav-link icon-ui-flush icon-ui-search js-drawer-toggle" href="#"></a>
+          <a class="top-nav-link icon-ui-flush icon-ui-user margin-left-1 js-drawer-toggle" href="#"></a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
 {% endmacro %}
 
 {% macro description() %}
+
+The Global Navigation pattern is used for the heighest level of navigation on a web project. On the left we have a specific site title, with that sites primary navigation. The right section of the pattern is used for user-interction patterns. Constants should be as shown - Search, Applications, and User components. Additional components such as 'New Map' can also live here.
+
 {% endmacro %}
