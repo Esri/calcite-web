@@ -86,11 +86,16 @@ patterns:
     {% for section in patterns %}
       <h2 class="text-rule padding-leader-2" id="{{section.id}}">{{section.title}}</h2>
         {% for example in section.examples %}
-          <h3 class="text-center" id="{{example.id}}">{{example.title}}</h3>
+        <div class="column-10 pre-7 tablet-pre-1">
+          <h3 class="text-center padding-leader-2" id="{{example.id}}">{{example.title}}</h3>
+          {% import "examples/core/_" + example.id as code %}
+          {% markdown %}
+{{ code.description() }}
+          {% endmarkdown %}
           <p class="text-center">
             <a href="#" class="js-modal-toggle btn btn-clear" data-modal="{{example.id}}">View HTML</a>
           </p>
-          {% import "examples/core/_" + example.id as code %}
+        </div>
           <div class="js-modal modal-overlay modifier-class" data-modal="{{example.id}}">
             <div class="modal-content column-12" role="dialog" aria-labelledby="modal" role="dialog">
               <a class="js-modal-toggle icon-ui-close icon-flush font-size-1 right" href="#" aria-label="close-modal" ></a>
@@ -107,7 +112,7 @@ patterns:
           {{ code.sample() }}
 <div class="grid-container">
   <div class="column-24">
-          <hr class="leader-2">
+          <hr class="leader-4">
         {% endfor %}
     {% endfor %}
   </div>
