@@ -206,22 +206,6 @@
         </div>
       </header>
 
-
-      <section class="expand js-expand  panel panel-no-padding" data-expand="search">
-        <div class="grid-container padding-trailer-half padding-leader-1 padding-trailer-1">
-          <form method="GET" action="../search/" class="column-24">
-            <label>Search Calcite Web
-              <a href="#" class="icon-ui-close js-expand-toggle right" data-expand="search"></a>
-              <div class="search-bar">
-                <input type='search' placeholder='Search' name='q'>
-                <button type="submit" class="search-submit icon-ui-search"></button>
-              </div>
-            </label>
-          </form>
-        </div>
-      </section>
-
-
       <!-- Secondary Nav Pattern -->
       <header class="sub-nav" role="banner">
         <div class="grid-container">
@@ -323,10 +307,6 @@
             
           
             
-              <a href="#expanding-nav" class="side-nav-link">Expanding Nav</a>
-            
-          
-            
               <a href="#filter-dropdown" class="side-nav-link">Filter Dropdown</a>
             
           
@@ -383,7 +363,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Calcite Web<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"shortcut icon"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/img/favicon.ico"</span>&gt;</span>
     <span class="hljs-comment">&lt;!-- get calcite-web css from the cdn (use latest version) --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.23/css/calcite-web.min.css"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.25/css/calcite-web.min.css"</span>&gt;</span>
     <span class="hljs-comment">&lt;!--[if lt IE 9]&gt;
       &lt;script src="/assets/javascripts/libs/selectivizr.js"&gt;&lt;/script&gt;
       &lt;script src="/assets/javascripts/libs/html5shiv.js"&gt;&lt;/script&gt;
@@ -399,7 +379,7 @@
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 
     <span class="hljs-comment">&lt;!-- get calcite-web js from the cdn (use latest version) --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.23/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.25/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 
     <span class="hljs-comment">&lt;!-- interactive patterns need to be initialized --&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="stylus">
@@ -1564,45 +1544,14 @@
           
 
           
-
-          
-
-          
-
-        </section>
-        <hr>
-      
-        <section>
-          
-            <h2 id="expanding-nav" tabindex="0">Expanding Nav</h2>
-          
-
-          <p>The exanding nav pattern is designed for use beneath the <a href="top-nav">Top Nav</a> pattern. It can be used to create search, or the <a href="http://esri.com">esri.com</a> style Mega Nav Dropdown. Expanding navs are controlled by the <code>js-expanding-toggle</code> classes, which bind the javascript function to the element, and the <code>data-expanding-nav</code> attribute, which ties toggle controllers to specfific expanding navs.</p>
-
-
-          
-
-          
-
-          
-
-          
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
-                <a href="#" class="js-expand-toggle" data-expand="foo">Open Expander</a >
-
-<section class="expand js-expand" data-expand="foo">
-  <h1>Expander Expanded</h1>
-</section>
+                
               </div>
               
             </div>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-expand-toggle"</span> <span class="hljs-attribute">data-expand</span>=<span class="hljs-value">"foo"</span>&gt;</span>Open Expander<span class="hljs-tag">&lt;/<span class="hljs-title">a</span> &gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"expand js-expand"</span> <span class="hljs-attribute">data-expand</span>=<span class="hljs-value">"foo"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Expander Expanded<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+<pre><code>
 </code></pre>
 
           

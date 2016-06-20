@@ -1,4 +1,4 @@
-/* calcite-web - v1.0.0-beta.23 - 2016-05-23
+/* calcite-web - v1.0.0-beta.25 - 2016-06-20
 *  https://github.com/esri/calcite-web
 *  Copyright (c) 2016 Environmental Systems Research Institute, Inc.
 *  Apache 2.0 License */
@@ -576,16 +576,16 @@
           add$1(open, click(), toggleClick);
         }
         var closes = dropdown.querySelectorAll('.js-filter-dropdown-close');
-        for (var i = 0; i < closes.length; i++) {
-          var close = closes[i];
+        for (var _i = 0; _i < closes.length; _i++) {
+          var close = closes[_i];
           close.setAttribute('data-id', dropdownId);
           add$1(close, click(), toggleClick);
         }
 
         var items = dropdown.querySelectorAll('.filter-dropdown-link');
-        for (var i = 0; i < items.length; i++) {
-          var item = items[i];
-          item.setAttribute('data-item-id', i);
+        for (var _i2 = 0; _i2 < items.length; _i2++) {
+          var item = items[_i2];
+          item.setAttribute('data-item-id', _i2);
           add$1(item, click(), itemClick);
         }
 
@@ -1158,7 +1158,7 @@
   // └────────────┘
   // define all public api methods
   var calciteWeb = {
-    version: '1.0.0-beta.16',
+    version: '1.0.0-beta.25',
     click: click,
     addEvent: add$1,
     removeEvent: remove$1,
