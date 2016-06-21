@@ -3,6 +3,8 @@ title: Calcite Web
 description: Quickly build beautiful, consistent websites with the Calcite Web Framework
 template: /layouts/_examples.html
 active: core
+js:
+  - clipboard
 patterns:
   - title: Navigation Patterns
     id: navigation-patterns
@@ -37,8 +39,8 @@ patterns:
   <div class="third-nav-container">
     <div class="grid-container">
       <nav class="column-24 js-nav-overflow" role="navigation" aria-labelledby="thirdnav breadcrumbs">
-        <a href="/examples" class="third-nav-link crumb">Examples</a>
-        <a href="/examples/core" class="third-nav-link crumb">Core</a>
+        <a href="{{relativePath}}examples" class="third-nav-link crumb">Examples</a>
+        <a href="{{relativePath}}examples/core" class="third-nav-link crumb">Core</a>
         <a class="icon-ui-up third-nav-link right" href="#">Back to Top</a>
       </nav>
     </div>
@@ -87,10 +89,10 @@ patterns:
             <div class="modal-content column-12" role="dialog" aria-labelledby="modal" role="dialog">
               <a class="js-modal-toggle icon-ui-close icon-flush font-size-1 right" href="#" aria-label="close-modal" ></a>
               <h3 class='trailer-half'>{{example.title}}</h3>
-              <pre><code>{{ code.sample() | replace("<", "&lt;")}}</code></pre>
+              <pre class="html-sample"><code  id="{{example.id}}-snippet">{{ code.sample() | replace("<", "&lt;")}}</code></pre>
               <div class="action-bar text-right">
                 <button class="btn btn-clear js-modal-toggle">Close</button>
-                <button class="btn">Copy to Clipboard</button>
+                <button class="btn js-copy-to-clipboard" data-clipboard-target="#{{example.id}}-snippet">Copy to Clipboard</button>
               </div>
             </div>
           </div>
