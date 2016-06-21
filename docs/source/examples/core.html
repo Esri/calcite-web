@@ -18,14 +18,16 @@ patterns:
   - title: Content Patterns
     id: content-pattern
     examples:
-      - title: Cards
-        id: cards
+      - title: Two Up Cards
+        id: two-up-cards
+      - title: Three Up Cards
+        id: three-up-cards
+      - title: Four Up Cards
+        id: four-up-cards
       - title: Documentation
         id: doc
       - title: Blog Article
         id: blog
-      - title: Product Demo
-        id: demo
       - title: Key Features
         id: features
 ---
@@ -47,7 +49,7 @@ patterns:
   <div class="column-24">
     <h1>Core Design Pattern Examples</h1>
 
-    {% for section in patterns %}
+<!--     {% for section in patterns %}
       <h2 class="text-rule leader-1">{{section.title}} <a href="#{{section.id}}" class="right font-size-0">View Examples</a></h2>
       <div class="block-group block-group-5-up tablet-block-group-3-up phone-block-group-2-up">
         {% for example in section.examples %}
@@ -65,9 +67,9 @@ patterns:
           </div>
         {% endfor %}
       </div>
-    {% endfor %}
+    {% endfor %} -->
   </div>
-  <div class="column-24 leader-2">
+  <div class="column-24">
     {% for section in patterns %}
       <h2 class="text-rule padding-leader-2" id="{{section.id}}">{{section.title}}</h2>
         {% for example in section.examples %}
