@@ -3,41 +3,33 @@ title: Calcite Web
 description: Quickly build beautiful, consistent websites with the Calcite Web Framework
 template: /layouts/_examples.html
 active: core
+js:
+  - clipboard
 patterns:
-  - title: Page Divisions
-    examples:
-      - title: Aside / Main
-        id: aside-main
-      - title: Three Up
-        id: three-up
-      - title: Content / Illustration
-        id: content-illustration
-      - title: Full Bleed
-        id: full-bleed
-      - title: Center Column
-        id: center-column
   - title: Navigation Patterns
+    id: navigation-patterns
     examples:
       - title: Global Navigation
         id: global-nav
       - title: Secondary Navigation
-        id: sub-nav
-      - title: Sticky Secondary Navigation
         id: sub-nav
       - title: Hero
         id: hero
       - title: Footer
         id: footer
   - title: Content Patterns
+    id: content-pattern
     examples:
-      - title: Cards
-        id: cards
+      - title: Two Up Cards
+        id: two-up-cards
+      - title: Three Up Cards
+        id: three-up-cards
+      - title: Four Up Cards
+        id: four-up-cards
       - title: Documentation
         id: doc
       - title: Blog Article
         id: blog
-      - title: Product Demo
-        id: demo
       - title: Key Features
         id: features
 ---
@@ -47,8 +39,8 @@ patterns:
   <div class="third-nav-container">
     <div class="grid-container">
       <nav class="column-24 js-nav-overflow" role="navigation" aria-labelledby="thirdnav breadcrumbs">
-        <a href="/examples" class="third-nav-link crumb">Examples</a>
-        <a href="/examples/core" class="third-nav-link crumb">Core</a>
+        <a href="{{relativePath}}examples" class="third-nav-link crumb">Examples</a>
+        <a href="{{relativePath}}examples/core" class="third-nav-link crumb">Core</a>
         <a class="icon-ui-up third-nav-link right" href="#">Back to Top</a>
       </nav>
     </div>
@@ -59,8 +51,8 @@ patterns:
   <div class="column-24">
     <h1>Core Design Pattern Examples</h1>
 
-    {% for section in patterns %}
-      <h2 class="text-rule leader-1">{{section.title}}</h2>
+<!--     {% for section in patterns %}
+      <h2 class="text-rule leader-1">{{section.title}} <a href="#{{section.id}}" class="right font-size-0">View Examples</a></h2>
       <div class="block-group block-group-5-up tablet-block-group-3-up phone-block-group-2-up">
         {% for example in section.examples %}
           <div class="block trailer-1">
@@ -77,12 +69,43 @@ patterns:
           </div>
         {% endfor %}
       </div>
+    {% endfor %} -->
+  </div>
+  <div class="column-24">
+    {% for section in patterns %}
+      <h2 class="text-rule padding-leader-2" id="{{section.id}}">{{section.title}}</h2>
+        {% for example in section.examples %}
+          <div class="column-10 pre-7 tablet-pre-1">
+            <h3 class="text-center padding-leader-2" id="{{example.id}}">{{example.title}}</h3>
+            {% import "examples/core/_" + example.id as code %}
+            <p class="text-center">
+              <a href="#" class="js-modal-toggle btn btn-clear" data-modal="{{example.id}}">View HTML</a>
+            </p>
+            {% markdown %}
+  {{ code.description() }}
+            {% endmarkdown %}
+          </div>
+          <div class="js-modal modal-overlay" data-modal="{{example.id}}">
+            <div class="modal-content column-12" role="dialog" aria-labelledby="modal" role="dialog">
+              <a class="js-modal-toggle icon-ui-close icon-flush font-size-1 right" href="#" aria-label="close-modal" ></a>
+              <h3 class='trailer-half'>{{example.title}}</h3>
+              <pre class="html-sample"><code  id="{{example.id}}-snippet">{{ code.sample() | replace("<", "&lt;")}}</code></pre>
+              <div class="action-bar text-right">
+                <button class="btn btn-clear js-modal-toggle">Close</button>
+                <button class="btn js-copy-to-clipboard" data-clipboard-target="#{{example.id}}-snippet">Copy to Clipboard</button>
+              </div>
+            </div>
+          </div>
+  </div>
+</div>
+<div class="panel panel-no-padding padding-leader-1 padding-trailer-1">
+          {{ code.sample() }}
+</div>
+<div class="grid-container">
+  <div class="column-24">
+          <hr class="leader-4">
+        {% endfor %}
     {% endfor %}
   </div>
 </div>
-
-{% import "examples/core/_cards" as cards %}
-{{ cards.sample() }}
-<pre><code>{{ cards.sample() | replace("<", "&lt;")}}</code></pre>
-
 {% endblock %}
