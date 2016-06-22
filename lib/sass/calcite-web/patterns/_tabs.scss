@@ -108,11 +108,13 @@
 
 @mixin tabs-translucent() {
   .tab-title    {
+    background-clip: padding-box;
     background-color: $transparent-white;
     border: none;
     color: $off-black;
     margin-right: 2px;
     margin-bottom: 3px;
+    transition: background, 0ms linear;
     &:hover {
       background-color: $opaque-white;
       @include prefixer(background-image,linear-gradient(to top, transparent 94%, $blue 96%, $blue 100%), webkit moz o);
@@ -120,7 +122,7 @@
     }
     &.is-active {
       background-color: $opaque-white;
-      padding-bottom: 0.5rem;
+      border-bottom: 2px solid $opaque-white;
       margin-bottom: 0;
       @include prefixer(background-image,linear-gradient(to top, transparent 94%, $blue 96%, $blue 100%), webkit moz o);
       background-image:linear-gradient(to top, transparent 94%, $blue 96%, $blue 100%);
@@ -144,6 +146,7 @@
       background-image:linear-gradient(to top, transparent 94%, $white 96%, $white 100%);
     }
     &.is-active {
+      border-bottom: 2px solid $opaque-black;
       background-color: $opaque-black;
       @include prefixer(background-image,linear-gradient(to top, transparent 94%, $white 96%, $white 100%), webkit moz o);
       background-image:linear-gradient(to top, transparent 94%, $white 96%, $white 100%);
