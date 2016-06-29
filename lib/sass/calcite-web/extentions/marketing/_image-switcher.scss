@@ -1,0 +1,39 @@
+.image-toggle {
+  @include font-size(-1);
+  border: 1px solid $lighter-gray;
+  border-bottom: 1px solid transparent;
+  padding: $baseline/2;
+  display: inline-block;
+  width: 100%;
+  color: $off-black;
+  position: relative;
+  &:hover {
+    background-color: $lightest-blue;
+    text-decoration: none;
+  }
+  &:last-child {
+    border-bottom: 1px solid $lighter-gray;
+  }
+  &:after {
+    @extend %icon-font-styles;
+    @extend .icon-ui-right:before;
+    font-size: modular-scale(-3);
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &.is-active {
+    border-bottom: 1px solid $blue;
+    border-color: $blue;
+    color: $blue;
+  }
+}
+
+.image-panel {
+  display: none;
+  &.is-active {
+    display: block;
+    border: 5px solid $blue;
+  }
+}

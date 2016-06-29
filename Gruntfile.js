@@ -98,7 +98,6 @@ module.exports = function (grunt) {
         'dest': 'docs/build/assets/js/libs/calcite-web.js',
         'src': 'lib/js/calcite-web.js'
       }
-
     },
 
     // Build CSS files from SASS

@@ -20,13 +20,16 @@
     <!-- stylesheets -->
     {% block head %}
       <link rel="stylesheet" href="{{relativePath}}assets/css/all.css">
+      {% for name in css %}
+        <link rel="stylesheet" href="{{relativePath}}assets/css/{{name}}.css">
+      {% endfor %}
     {% endblock %}
 
     <!--[if IE]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
     <![endif]-->
-
+    <script src="{{relativePath}}assets/js/libs/calcite-web.js"></script>
   </head>
 
   <body>
@@ -172,7 +175,6 @@
       </div>
     </footer>
 
-    <script src="{{relativePath}}assets/js/libs/calcite-web.js"></script>
     <script src="{{relativePath}}assets/js/all.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
 

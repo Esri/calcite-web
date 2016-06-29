@@ -1,0 +1,32 @@
+{% macro sample() %}<!-- Sample HTML -->
+
+<nav class="carousel-nav">
+  <a href="#"
+     class="js-view-toggle icon-ui-left icon-ui-flush font-size-2"
+     data-toggle-set="carousel"
+     data-toggle='prev'></a>
+  <a href="#"
+     class="carousel-dot js-view-toggle is-active"
+     data-toggle-set="carousel"
+     data-toggle="foo"></a>
+  <a href="#"
+     class="carousel-dot js-view-toggle"
+     data-toggle-set="carousel"
+     data-toggle="baz"></a>
+  <a href="#"
+     class="carousel-dot  js-view-toggle"
+     data-toggle-set="carousel"
+     data-toggle="bar"></a>
+  <a href="#"
+     class="js-view-toggle icon-ui-right icon-ui-flush font-size-2"
+     data-toggle-set="carousel"
+     data-toggle='next'></a>
+</nav>
+
+{% endmacro %}
+
+{% macro description() %}
+
+Yup, it's finally time for a carousel.
+
+{% endmacro %}
