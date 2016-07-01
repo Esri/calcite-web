@@ -23,11 +23,10 @@ window.onload = function () {
     nodes.map(function (node) {
       window.calcite.removeClass(node, 'is-active');
     });
-    var setNodes = window.calcite.nodeListToArray(document.querySelectorAll('[data-toggle=' + target + ']'));
+    var setNodes = window.calcite.nodeListToArray(document.querySelectorAll('[data-toggle=' + target + '][data-toggle-set=' + set + ']'));
     setNodes.map(function (node) {
       window.calcite.addClass(node, 'is-active');
     });
   }
-
   window.calcite.init();
 };

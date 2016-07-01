@@ -19,10 +19,12 @@ window.onload = function () {
   function setView (set, target) {
     var nodes = calcite.nodeListToArray(document.querySelectorAll('[data-toggle-set=' + set + ']'));
     nodes.map(function (node) {
+      console.log(node)
       calcite.removeClass(node, 'is-active');
     });
-    var setNodes = calcite.nodeListToArray(document.querySelectorAll('[data-toggle=' + target + ']'));
+    var setNodes = calcite.nodeListToArray(nodes.querySelectorAll('[data-toggle=' + target + ']'));
     setNodes.map(function (node) {
+      console.log(setNodes)
       calcite.addClass(node, 'is-active');
     });
   }

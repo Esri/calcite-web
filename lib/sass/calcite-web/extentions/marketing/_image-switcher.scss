@@ -14,15 +14,6 @@
   &:last-child {
     border-bottom: 1px solid $lighter-gray;
   }
-  &:after {
-    @extend %icon-font-styles;
-    @extend .icon-ui-right:before;
-    font-size: modular-scale(-3);
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
   &.is-active {
     border-bottom: 1px solid $blue;
     border-color: $blue;
@@ -34,6 +25,5 @@
   display: none;
   &.is-active {
     display: block;
-    border: 5px solid $blue;
   }
 }
