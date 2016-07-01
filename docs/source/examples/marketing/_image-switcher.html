@@ -1,9 +1,18 @@
 {% macro sample() %}<!-- Sample HTML -->
 <div class="grid-container">
   <div class="column-10 pre-1 post-1 padding-leader-6">
-    <a href="#" class="image-toggle js-view-toggle is-active" data-toggle-set="image-switcher" data-toggle="foo">Image One</a>
-    <a href="#" class="image-toggle js-view-toggle" data-toggle-set="image-switcher" data-toggle="bar">Image Two</a>
-    <a href="#" class="image-toggle js-view-toggle" data-toggle-set="image-switcher" data-toggle="baz">Image Three</a>
+    <a href="#" class="image-toggle js-view-toggle is-active" data-toggle-set="image-switcher" data-toggle="foo">
+      <img src="{{realtivePath}}/assets/img/illustrations/01-circle.svg" alt="" class="image-toggle-preview">
+      <span class="image-toggle-description">Image One</span>
+    </a>
+    <a href="#" class="image-toggle js-view-toggle" data-toggle-set="image-switcher" data-toggle="bar">
+      <img src="{{realtivePath}}/assets/img/illustrations/02-circle.svg" alt="" class="image-toggle-preview">
+      <span class="image-toggle-description">Image Two</span>
+    </a>
+    <a href="#" class="image-toggle js-view-toggle" data-toggle-set="image-switcher" data-toggle="baz">
+      <img src="{{realtivePath}}/assets/img/illustrations/03-circle.svg" alt="" class="image-toggle-preview">
+      <span class="image-toggle-description"> Image Three</span>
+    </a>
   </div>
   <div class="column-12">
     <img class="image-panel is-active" src="{{realtivePath}}/assets/img/illustrations/01-square.svg" alt="one" data-toggle-set="image-switcher" data-toggle="foo">

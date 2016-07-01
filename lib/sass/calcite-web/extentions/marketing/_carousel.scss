@@ -23,3 +23,10 @@ $dot-size: 0.75em;
   }
 }
 
+.carousel-panel {
+  display: none;
+  &.is-active {
+    display: block;
+  }
+}
+
