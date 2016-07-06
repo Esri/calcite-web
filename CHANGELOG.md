@@ -1,5 +1,10 @@
 ## unreleased
 
+### Added
+- Marketing Extension
+- E-commerce Extension
+- Lots of Doc Examples
+
 ### Modified
 - headers are focusable
 - panels no longer style columns
