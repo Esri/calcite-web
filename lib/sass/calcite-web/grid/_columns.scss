@@ -21,7 +21,7 @@
 //  ↳ http://esri.github.io/calcite-web/grid/#columns
 //  ↳ grid → _columns.md
 
-[class*="column-"] {
+@mixin column()  {
   @include box-sizing(border-box);
   width: $container-width;
   max-width: 100%;
@@ -233,6 +233,7 @@
 }
 
 @if $include-grid == true {
+  [class*="column-"] { @include column(); }
 
   @media screen {
     .#{$prefix}grid-container {

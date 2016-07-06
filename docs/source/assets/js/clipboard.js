@@ -1,2 +1,3 @@
 var Clipboard;
-Clipboard('.js-copy-to-clipboard');
+var clipboard = new Clipboard('.js-copy-to-clipboard');
+clipboard;
