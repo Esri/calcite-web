@@ -17,9 +17,9 @@
     "prerollup": "npm run test",
     "rollup": "npm-run-series rollup:core:dist rollup:core:docs rollup:marketing:dist rollup:marketing:docs",
     "serve": "http-server docs/build -p 8888",
-    "sass:dist": "sass lib/sass/*.scss dist/css"
-    "sass:docs": "sass docs/source/assets/css/**/*.scss docs/build/assets/css"
-    "sass": "npm-run-series sass"
+    "sass:dist": "sass lib/sass/*.scss dist/css",
+    "sass:docs": "sass docs/source/assets/css/**/*.scss docs/build/assets/css",
+    "sass": "npm-run-series sass",
     "start": "grunt"
   },
   "watches": {
