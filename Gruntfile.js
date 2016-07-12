@@ -345,7 +345,7 @@ module.exports = function (grunt) {
   // └─────────────┘
   grunt.registerTask('buildFont', ['webfont', 'copy:fonts', 'copy:fontsDist']);
   grunt.registerTask('dist', ['sass', 'cssmin', 'rollup:dist', 'uglify:dist', 'copy', 'imagemin:dist']);
-  grunt.registerTask('doc', ['shell:acetate', 'newer:imagemin:doc', 'sass:doc', 'copy:doc', 'copy:fonts', 'rollup:doc']);
+  grunt.registerTask('doc', ['shell:acetate', 'newer:imagemin:doc', 'sass:doc', 'copy:doc', 'copy:fonts']);
   grunt.registerTask('deploy', ['doc', 'gh-pages']);
   grunt.registerTask('s3', ['dist', 'prompt:aws', 'aws_s3']);
   grunt.registerTask('release', ['shell:release', 'prompt:aws', 'aws_s3']);
