@@ -28,7 +28,7 @@
     "prefont": "ncp lib/fonts docs/build/assets/fonts",
     "font": "ncp lib/fonts dist/fonts",
     "prestart": "npm-run-series acetate sass rollup imagemin",
-    "s3": "s3-cli --config ./s3.conf sync ./dist/ https://s3-us-west-1.amazonaws.com/files/calcite/web/testing",
+    "s3": "node bin/s3.js",
     "start": "parallelshell 'rerun-script' 'npm run serve' 'watchify docs/source/assets/js/all.js -o docs/build/assets/js/all.js'"
   },
   "watches": {
@@ -89,6 +89,7 @@
     "parallelshell": "^2.0.0",
     "rerun-script": "^0.6.0",
     "rollup": "^0.34.1",
+    "s3": "^4.4.0",
     "semistandard": "*",
     "snazzy": "^3.0.0",
     "watchify": "^3.7.0",
