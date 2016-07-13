@@ -40,10 +40,17 @@
       "docs/source/assets/img/**/*"
     ],
     "sass": [
-      "lib/sass/**/*', 'docs/source/assets/css/**/*"
+      "lib/sass/**/*",
+      "docs/source/assets/css/**/*"
     ],
     "acetate": [
       "docs/source/**"
+    ]
+  },
+  "semistandard": {
+    "ignore": [
+      "bin/",
+      "docs/"
     ]
   },
   "main": "dist/js/calcite-web.js",
