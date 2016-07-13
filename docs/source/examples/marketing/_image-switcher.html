@@ -23,34 +23,7 @@
 {% endmacro %}
 
 {% macro description() %}
-Extention patterns that require interaction are not supported out of the box with Calcite Web. They require additional code javascript when you are creating your app. When this is the case, sample code will be provided to enable the use of the pattern using Calcite Web JavaScript library.
 
-```
-var viewTogglers = calcite.nodeListToArray(document.querySelectorAll('.js-view-toggle'));
-
-viewTogglers.map(function (toggle) {
-  calcite.addEvent(toggle, 'click', clickHandler)
-})
-
-function clickHandler (e) {
-  e.preventDefault();
-  var set = e.target.getAttribute('data-toggle-set');
-  var target = e.target.getAttribute('data-toggle');
-  calcite.bus.emit('view:toggle', set, target)
-}
-
-calcite.bus.on('view:toggle', setView)
-
-function setView (set, target) {
-  var nodes = calcite.nodeListToArray(document.querySelectorAll('[data-toggle-set=' + set + ']'))
-  nodes.map(function (node) {
-    calcite.removeClass(node, 'is-active')
-  })
-  var set = calcite.nodeListToArray(document.querySelectorAll('[data-toggle=' + target + ']'))
-  set.map(function (node) {
-    calcite.addClass(node, 'is-active')
-  })
-}
-```
+Image switchers for switching images.
 
 {% endmacro %}

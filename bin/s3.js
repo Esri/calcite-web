@@ -1,14 +1,14 @@
 var s3 = require('s3');
 var conf = require('./aws-credentials.json')
-var package = require('../package.json')
+var pkg = require('../package.json')
 
-console.log(package.version)
+console.log(pkg.version)
 
 var client = s3.createClient({
   s3Options: conf
 });
 
-var destination = "files/calcite-web/" + package.version + "/"
+var destination = "files/calcite-web/" + pkg.version + "/"
 
 var versioned = {
   localDir: "./dist",
