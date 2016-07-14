@@ -1,4 +1,4 @@
-## unreleased
+## 1.0.0-beta.25
 
 ### Added
 - Marketing Extension
@@ -8,6 +8,7 @@
 ### Modified
 - headers are focusable
 - panels no longer style columns
+- translucent tab issue with larger text and hover effects
 
 ### Removed
 - Panels no longer force anchor color
