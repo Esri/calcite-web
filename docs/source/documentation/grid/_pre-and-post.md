@@ -8,4 +8,4 @@ Pre and post helpers are available from `.pre-1` and `.post-1` to `.pre-24` and 
 
 If problems occur in a layout, use the `rtl-` prefix to explicitly assign `pre` and `post` classes to the right to left layout.
 
-[View the example](../page-layouts/grid#pre-and-post)
+[View the example]({{relativePath}}page-layouts/grid#pre-and-post)

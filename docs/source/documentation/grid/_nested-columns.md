@@ -4,4 +4,4 @@ Column-folding behavior is almost entirely automatic. The only exception is gutt
 
 There are four levels of nesting in this example, the more transparent the blue, the deeper the column is nested.
 
-[View the example](../page-layouts/grid#nested-columns)
+[View the example]({{relativePath}}page-layouts/grid#nested-columns)
