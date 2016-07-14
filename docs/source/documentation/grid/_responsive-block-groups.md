@@ -5,4 +5,4 @@ Block groups have responsive `tablet-` and `phone-` prefix classes. These allow 
 <div class="block-group block-group-4-up tablet-block-group-2-up phone-block-group-1-up">
 ```
 
-[View the example](../page-layouts/grid#responsive-block-groups)
+[View the example]({{relativePath}}page-layouts/grid#responsive-block-groups)
