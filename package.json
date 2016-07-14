@@ -7,6 +7,7 @@
   "scripts": {
     "test": "semistandard | snazzy",
     "cssStat": "cssstats dist/css/calcite-web.css dist/css/stats.json",
+    "deploy": "gh-pages -d docs/build -o upstream"
     "a11y": "a11y local.arcgis.com:8888",
     "gh-release": "gh-release -a calcite-web.zip",
     "acetate": "acetate build -i docs/source -o docs/build -c docs/acetate.conf.js",
@@ -87,6 +88,7 @@
     "acetate-cli": "0.0.3",
     "babel-preset-es2015-rollup": "^1.1.1",
     "cssstats-cli": "^1.0.0-beta.2",
+    "gh-pages": "^0.11.0",
     "gh-release": "^2.0.1",
     "imagemin-newer": "^1.0.1",
     "mkdirp": "^0.5.1",
