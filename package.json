@@ -7,7 +7,7 @@
   "scripts": {
     "test": "semistandard | snazzy",
     "cssStat": "cssstats dist/css/calcite-web.css dist/css/stats.json",
-    "deploy": "gh-pages -d docs/build -o upstream"
+    "deploy": "gh-pages -d docs/build -o upstream",
     "a11y": "a11y local.arcgis.com:8888",
     "gh-release": "gh-release -a calcite-web.zip",
     "acetate": "acetate build -i docs/source -o docs/build -c docs/acetate.conf.js",
