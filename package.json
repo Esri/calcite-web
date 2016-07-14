@@ -23,7 +23,6 @@
     "imagemin": "npm-run-series imagemin:docs imagemin:lib imagemin:dist",
     "serve": "http-server docs/build -p 8888",
     "sass:dist": "node-sass lib/sass/ -o dist/css/",
-    "postsass:dist": "minify dist/css/",
     "sass:docs": "node-sass docs/source/assets/css/ -o docs/build/assets/css/ --include-path lib/sass",
     "presass": "mkdirp docs/source/assets/css",
     "sass": "npm-run-series sass:dist sass:docs",
