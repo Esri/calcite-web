@@ -21,16 +21,15 @@
     "imagemin:docs": "imagemin-newer docs/source/assets/img/ docs/build/assets/img/",
     "imagemin:dist": "imagemin-newer lib/img/ dist/img/",
     "imagemin": "npm-run-series imagemin:docs imagemin:lib imagemin:dist",
-    "serve": "http-server docs/build -p 8888",
     "sass:dist": "node-sass lib/sass/ -o dist/css/",
     "sass:docs": "node-sass docs/source/assets/css/ -o docs/build/assets/css/ --include-path lib/sass",
     "presass": "mkdirp docs/source/assets/css",
     "sass": "npm-run-series sass:dist sass:docs",
     "prefont": "ncp lib/fonts docs/build/assets/fonts",
     "font": "ncp lib/fonts dist/fonts",
-    "prestart": "npm-run-series acetate sass rollup imagemin font",
+    "prestart": "npm-run-series acetate sass rollup imagemin font cssStat",
     "s3": "node bin/s3.js",
-    "start": "parallelshell 'rerun-script' 'npm run serve' 'watchify docs/source/assets/js/all.js -o docs/build/assets/js/all.js'"
+    "start": "parallelshell 'rerun-script' 'live-server docs/build --port=8888 --no-browser' 'watchify docs/source/assets/js/all.js -o docs/build/assets/js/all.js'"
   },
   "watches": {
     "rollup": [
@@ -90,7 +89,8 @@
     "cssstats-cli": "^1.0.0-beta.2",
     "gh-pages": "^0.11.0",
     "gh-release": "^2.0.1",
-    "imagemin-newer": "^1.0.1",
+    "imagemin-newer": "^1.0.2",
+    "live-server": "^1.0.0",
     "minifier": "^0.8.0",
     "mkdirp": "^0.5.1",
     "ncp": "^2.0.0",
