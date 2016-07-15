@@ -2,6 +2,7 @@
 
 ### Added
 - `icon-ui-yellow`
+- `card-wide` for cards in landscape orientation
 
 ### Modified
 - changes to card markup. (`card-body => card-content`)
