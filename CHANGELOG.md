@@ -1,3 +1,8 @@
+## Unreleased
+
+### Added
+- `icon-ui-yellow`
+
 ## 1.0.0-beta.25
 
 ### Added
