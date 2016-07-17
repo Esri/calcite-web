@@ -140,9 +140,68 @@ Below is a list of things that will need to be changed to migrate to Calcite Web
 1. Dropdowns now happen on click and require JavaScript
 2. Classes and markup have both changed (see [dropdown documentation](../documentation/components/#dropdowns))
 
-#####
+##### Alerts
+1. Icons named after colors not conditions (ie. `success` => `alert-green`)
+2. Markup is different
+3. Alerts are meant to fade in, must add the `is-active` class to see them.
+
+##### Breadcrumbs
+1. Breadcrumbs are now a `nav` element with anchors inside
+2. Anchors must have `breadcrumb` class
+
+##### Pagination
+Pagination as a defined pattern, but there are no special classes for it anymore. It's just made up of other components. See the [pagination documentation](../documentation/patterns/#pagination).
+
+##### Loader
+1. Loader requires one less `div`
+2. `loading-word` => `loader-text`
+3. Hidden by default, must add `is-active` class to see it
+
+##### Panels
+1. `primary` => `panel-light-blue`
+2. `compact`, `drop-shadow` removed
+3. Colors should be prefixed with `panel-`
+
+##### Tables
+1. `blue` => `table-blue`
+2 `striped` => `table-striped`
+
+##### Table Cells
+No modifiers
+
+##### Forms
+1. `.error` => `.input-error` (or `select-error`)
+2. No modifiers on `textareas`
+3. Removed `input-list`
 
 ### Patterns
+
+Rather than list out exactly what has changed in each pattern, it will be easier for you to just reference the documentation on the patterns and reimplement your UI with Calcite Web patterns.
+
+Below is a summary of what has changed.
+
+1. Markup for basic page has been updated slightly
+2. Top Nav markup has changed a lot: [top nav](../documentation/patterns/#top-nav)
+3. Navigation Bar is now [Sub Nav](../documentation/patterns/#sub-nav)
+4. Search Bar removed (we are still assessing the search design)
+5. Content Area removed
+6. Feature Block Removed (replace with column layouts or [cards](../documentation/components/#card))
+7. Sidebar Navigation is now [Side Nav](../documentation/patterns/#side-nav) and uses different markup
+8. Footer uses mostly other components and modifier classes, now, so markup is fairly different
+9. Sticky footer removed as footer is now sticky be default
+
+### Javascript
+1. Modal markup has updated, and the toggles now must use `js-modal` classes with data attributes, see [modals](../documentation/patterns/#modals)
+2. Must use `js-` classes for interactivity. Modifier classes are prefixed. See [tabs](../documentation/patterns/#tabs)
+3. [Accordion markup](../documentation/patterns/#accordions) is sustantially different (plus the above changes).
+4. [Drawer](../documentation/patterns/#drawers) direction goes onto the `drawer` and not the `drawer-nav`, uses `side-nav` classes, `is-active, and `js-` classes
+5. Dropdowns and click dropdowns are now the same thing, just [dropdowns](../documentation/components/#dropdowns)
+6. Site Dropdown removed due to very poor user testing
+7. Responsive Nav Bar removed
+
+## Conclusion
+
+It's a large effort to migrate, but because Calcite Web is in many ways just an evolution of Tailcoat, most of the ideas are still represented. If at any point you have questions, comments, or patterns you really need from Tailcoat that you don't feel are covered, *please* [open an issue](https://github.com/Esri/calcite-web/issues/new) on Calcite Web and we'll be sure to hop on and try to help!
 
 {% endmarkdown %}
   </div>
