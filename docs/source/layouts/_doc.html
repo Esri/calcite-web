@@ -8,7 +8,11 @@
         <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1">Download Latest Release</a>
         <nav class="sub-nav-list" role="navigation" aria-labelledby="subnav">
           {% for title, sec in data.table_of_contents %}
-            <a class="sub-nav-link {% if url == 'documentation/' + sec.base + '/' or url == 'documentation/' + sec.base %}is-active{% endif %}" href="{{relativePath}}documentation/{{sec.base}}">{{ sec.title }}</a>
+          {% set slug = 'documentation/' + sec.base + '/' %}
+          {% if sec.base == 'get-started' %}
+            {% set slug = 'documentation/' %}
+          {% endif %}
+            <a class="sub-nav-link {% if url == slug %}is-active{% endif %}" href="{{relativePath}}{{slug}}">{{ sec.title }}</a>
           {% endfor %}
         </nav>
       </div>
@@ -50,13 +54,7 @@
             <h2 id="{{page.link}}" tabindex="0">{{page.title}}</h2>
           {% endif %}
 
-          {% markdown %}
-            {% if section == 'get-started' %}
-{% include 'documentation/' + data.table_of_contents[section].base + '/get-started/_' + page.link %}
-            {% else %}
-{% include 'documentation/' + data.table_of_contents[section].base + '/_' + page.link %}
-            {% endif %}
-          {% endmarkdown %}
+          {% markdown %}{% include 'documentation/' + data.table_of_contents[section].base + '/_' + page.link %}{% endmarkdown %}
 
           {% if page.title == 'Social Icons' %}
             <div class="block-group block-group-3-up">
