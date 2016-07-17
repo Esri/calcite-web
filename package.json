@@ -27,14 +27,14 @@
     "sass": "npm-run-series sass:dist sass:docs",
     "prefont": "ncp lib/fonts docs/build/assets/fonts",
     "font": "ncp lib/fonts dist/fonts",
-    "prestart": "npm-run-series acetate sass rollup imagemin font cssStat",
+    "js:docs": "ncp docs/source/assets/js/ docs/build/assets/js/",
+    "prestart": "npm-run-series acetate sass rollup imagemin font cssStat js:docs",
     "s3": "node bin/s3.js",
     "start": "parallelshell 'rerun-script' 'live-server docs/build --port=8888 --no-browser' 'watchify docs/source/assets/js/all.js -o docs/build/assets/js/all.js'"
   },
   "watches": {
-    "rollup": [
-      "lib/js/**/*.js"
-    ],
+    "js:docs": "docs/source/assets/js/**/*",
+    "rollup": "lib/js/**/*.js",
     "imagemin": [
       "lib/img/**/*",
       "docs/source/assets/img/**/*"
@@ -43,9 +43,7 @@
       "lib/sass/**/*",
       "docs/source/assets/css/**/*"
     ],
-    "acetate": [
-      "docs/source/**"
-    ]
+    "acetate": "docs/source/**"
   },
   "semistandard": {
     "ignore": [
