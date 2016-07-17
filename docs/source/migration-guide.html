@@ -4,8 +4,16 @@ description: Everything you need to know about migrating from Tailcoat at Calcit
 section: 'get-started'
 layout: layouts/_layout:content
 ---
+<header class="sub-nav" role="banner">
+  <div class="grid-container">
+    <div class="column-24">
+      <h1 class="sub-nav-title text-white">Migration Guide</h1>
+    </div>
+  </div>
+</header>
 
-<div class="column-16">
+<div class="grid-container leader-2">
+  <div class="column-16">
 {% markdown %}
 
 Migrating from Tailcoat to Calcite Web is fairly straightforward. Most of the structures and basic ideas between the two frameworks are quite similar. For example, while class names and recommended markup for something like the side navigation pattern have changed, there is still a like-for-like replacement for the tailcoat pattern. From a user experience perspective, almost all of the patterns and use cases covered in Tailcoat have simply been improved and reimplemented in Calcite Web.
@@ -46,10 +54,6 @@ Calcite Web supports and is built with LibSass, meaning that it can be used with
 
 Commonly asked for patterns have been added to Calcite Web that were not part of Tailcoat. Things like sticky elements, carousels, pagination, and expanding (or 'mega-menu') navigation have all been standardized and added so site authors don't need to reinvent the wheel when they need these patterns.
 
-#### When *Not* to Migrate
-
-We recommend that pretty much everybody migrate for the reasons mentioned above. If, however, you need to support older versions of Internet Explorer (IE8 or less) you might want to hold off on migrating until January 2016 (Microsoft's official end of support). We understand that for some products this is a deal-breaker. For that reason we will continue to maintain and support Tailcoat until this deadline.
-
 ## Key Differences
 
 Now that you're (hopefully) convinced to start using Calcite Web, there are a few general differences between the two frameworks that will not only help you understand how to update your code, but also give you insight into *why* Calcite Web has implemented these things differently.
@@ -82,7 +86,7 @@ Everything is in Avenir Next with the exception of code blocks, and long form ma
 
 Below is a list of things that will need to be changed to migrate to Calcite Web. It may look daunting, but most of the changes are fairly superficial. If anything is unclear in this list please [open an issue](https://github.com/Esri/calcite-web/issues). We are also happy to help via phone, chat, and email! Good luck!
 
-##### Type
+### Type
 
 1. Text modifiers are now formatted `.text-{MODIFIER}` instead of `.{MODIFIER}-text`. Below is a list of new modifiers:
   - `.center-text` => `.text-center`
@@ -94,28 +98,52 @@ Below is a list of things that will need to be changed to migrate to Calcite Web
   - `.overflow-ellipsis` => `.text-ellipses`
 2. Removed `.show-visited-links`
 
-##### Grid
+### Grid
 
 1. There are no rows. If you need to group columns you can just put columns inside of a `column-24`
 2. `container` is now `grid-container`. This solved problems with other technologies also using a `container` class.
 3. Columns are always the same size, so layouts with nested columns will need to redone.
+4. Behavior of columns at responsive sizes has changed. By default Calcite Web tries to resize columns intelligently, but you can still specify column counts at certain breakpoints as in Tailcoat.
 
-##### Layout
+### Layout
 
-##### Color
+1. Removed `full` class
+2. Removed `clear` class
+3. Removed all `square-X` classes
 
-##### Icons
+### Color
+
+1. Several colors use the same class, but the colors are slightly different
+2. Tan was removed
+3. `lightest-` and `lighter-` purple and green were removed
+
+### Icons
 
 1. Icons are a completely different set. Most Tailcoat icons have a counterpart in Calcite Web, but some don't.
 2. Icons use the class prefix `.icon-ui-` not just `.icon-`
+3. Some color classes have been removed, while others have been added
 
-##### Components
+### Components
 
-##### Patterns
+##### Buttons
+1. `success`, `delete`, `cancel`, `gray`, `orange` classes all removed
+2. Modifier classes formatted `btn-X` instead of `X`
 
-##### JavaScript
+##### Button Groups
+1. Button groups are now just three buttons next to each other
+2. All buttons must have the `btn-grouped` class
 
-##### Sass
+##### Tooltips
+1. Tooltip markup has been greatly simplified. Just add an `aria-label` and the `tooltip` class to the element you'd like to have a tooltip
+
+##### Dropdowns
+1. Dropdowns now happen on click and require JavaScript
+2. Classes and markup have both changed (see [dropdown documentation](../documentation/components/#dropdowns))
+
+#####
+
+### Patterns
 
 {% endmarkdown %}
+  </div>
 </div>
