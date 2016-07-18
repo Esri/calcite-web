@@ -2,8 +2,6 @@ The Calcite Type System uses a combination of mixins and helper classes to achie
 
 ### Typefaces
 
-We expose four type families for use in Calcite Web; Avenir Next, Kepler, Frutiger, and Consolas. Each of these type families have a set of weights and styles, defined by their application. For example, Avenir Next has more weights than Frutiger family, reflecting its role as primary UI face, and heavy lifting header face.
-
 The typographic palette for Calcite Web differs slightly from the official Esri branding document. All typefaces are examined in detail below.
 
 Calcite Web provides a set of weights for each typeface. These are used by either using the helper class in html, or writing sass to include the mixin, or extending the helper class. The available weights for each face are below. Proper care has been taken to ensure that all type systems used by Calcite avoid faux-bold and faux-italics styled by the browser.
