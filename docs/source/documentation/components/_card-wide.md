@@ -1,0 +1,1 @@
+For list views, cards can also be used in landscape orientation. The full bleed image will crop itself to fill the available space.

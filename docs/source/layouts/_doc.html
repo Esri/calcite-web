@@ -8,7 +8,11 @@
         <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1">Download Latest Release</a>
         <nav class="sub-nav-list" role="navigation" aria-labelledby="subnav">
           {% for title, sec in data.table_of_contents %}
-            <a class="sub-nav-link {% if url == 'documentation/' + sec.base + '/' or url == 'documentation/' + sec.base %}is-active{% endif %}" href="{{relativePath}}documentation/{{sec.base}}">{{ sec.title }}</a>
+          {% set slug = 'documentation/' + sec.base + '/' %}
+          {% if sec.base == 'get-started' %}
+            {% set slug = 'documentation/' %}
+          {% endif %}
+            <a class="sub-nav-link {% if url == slug %}is-active{% endif %}" href="{{relativePath}}{{slug}}">{{ sec.title }}</a>
           {% endfor %}
         </nav>
       </div>
@@ -50,13 +54,7 @@
             <h2 id="{{page.link}}" tabindex="0">{{page.title}}</h2>
           {% endif %}
 
-          {% markdown %}
-            {% if section == 'get-started' %}
-{% include 'documentation/' + data.table_of_contents[section].base + '/get-started/_' + page.link %}
-            {% else %}
-{% include 'documentation/' + data.table_of_contents[section].base + '/_' + page.link %}
-            {% endif %}
-          {% endmarkdown %}
+          {% markdown %}{% include 'documentation/' + data.table_of_contents[section].base + '/_' + page.link %}{% endmarkdown %}
 
           {% if page.title == 'Social Icons' %}
             <div class="block-group block-group-3-up">
@@ -84,35 +82,39 @@
             <div class="block-group block-group-3-up">
               <div class="block">
                 <span class="font-size-5 icon-ui-check-mark icon-ui-green" aria-label="check-mark "></span>
-                  <p class="trailer-1 leader-half"><code>icon-ui-check-mark icon-ui-green</code></p>
+                <p class="trailer-1 leader-half"><code>icon-ui-green</code></p>
               </div>
               <div class="block">
                 <span class="font-size-5 icon-ui-check-mark icon-ui-light-blue" aria-label="check-mark "></span>
-                  <p class="trailer-1 leader-half"><code>icon-ui-check-mark icon-ui-light-blue</code></p>
+                <p class="trailer-1 leader-half"><code>icon-ui-light-blue</code></p>
               </div>
               <div class="block">
                 <span class="font-size-5 icon-ui-check-mark icon-ui-blue" aria-label="check-mark "></span>
-                  <p class="trailer-1 leader-half"><code>icon-ui-check-mark icon-ui-blue</code></p>
+                <p class="trailer-1 leader-half"><code>icon-ui-blue</code></p>
               </div>
               <div class="block">
                 <span class="font-size-5 icon-ui-check-mark icon-ui-dark-blue" aria-label="check-mark "></span>
-                  <p class="trailer-1 leader-half"><code>icon-ui-check-mark icon-ui-dark-blue</code></p>
+                <p class="trailer-1 leader-half"><code>icon-ui-dark-blue</code></p>
               </div>
               <div class="block">
                 <span class="font-size-5 icon-ui-check-mark icon-ui-purple" aria-label="check-mark "></span>
-                  <p class="trailer-1 leader-half"><code>icon-ui-check-mark icon-ui-purple</code></p>
+                <p class="trailer-1 leader-half"><code>icon-ui-purple</code></p>
               </div>
               <div class="block">
                 <span class="font-size-5 icon-ui-check-mark icon-ui-orange" aria-label="check-mark "></span>
-                  <p class="trailer-1 leader-half"><code>icon-ui-check-mark icon-ui-orange</code></p>
+                <p class="trailer-1 leader-half"><code>icon-ui-orange</code></p>
               </div>
               <div class="block">
                 <span class="font-size-5 icon-ui-check-mark icon-ui-gray" aria-label="check-mark "></span>
-                  <p class="trailer-1 leader-half"><code>icon-ui-check-mark icon-ui-gray</code></p>
+                <p class="trailer-1 leader-half"><code>icon-ui-gray</code></p>
               </div>
               <div class="block">
-              <span class="font-size-5 icon-ui-check-mark icon-ui-red" aria-label="check-mark "></span>
-              <p class="trailer-1 leader-half"><code>icon-ui-check-mark icon-ui-red</code></p>
+                <span class="font-size-5 icon-ui-check-mark icon-ui-red" aria-label="check-mark "></span>
+                <p class="trailer-1 leader-half"><code>icon-ui-red</code></p>
+              </div>
+              <div class="block">
+                <span class="font-size-5 icon-ui-check-mark icon-ui-yellow" aria-label="check-mark "></span>
+                <p class="trailer-1 leader-half"><code>icon-ui-yellow</code></p>
               </div>
             </div>
           {% endif %}
@@ -138,11 +140,13 @@
           {% endif %}
 
           {% if page.colors %}
-            <div class="block-group block-group-1-up">
+            <div class="block-group block-group-4-up">
               {% for color in page.colors %}
-                <div class="block color-sample {{ color }}">
-                  <code>${{ color }}</code>
+                <div class="card block trailer-1">
+                  <div class="color-sample {{ color }}"></div>
+                  <div class="card-content">{{ color }}</div>
                 </div>
+
               {% endfor %}
             </div>
           {% endif %}
