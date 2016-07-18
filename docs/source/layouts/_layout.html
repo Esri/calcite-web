@@ -45,21 +45,14 @@
       <nav class="drawer-nav" role="navigation">
         <aside class="side-nav">
           <h2 class="side-nav-title">Calcite Web</h2>
-            <form method="GET" action="{{relativePath}}search/">
-              <div class="search-bar">
-                <input type='search' placeholder='Search' name="q">
-                <button type="submit" class="search-submit icon-ui-search"></button>
-              </div>
+            <form method="GET" action="{{relativePath}}search/" class="panel padding-leader-half">
+              <input type="search" placeholder="Search" name="q">
             </form>
-
-
             {% for title, sec in data.table_of_contents %}
               {% if sec.base != "get-started" %}
                 <a href="{{relativePath}}{{sec.base}}" class="side-nav-link">{{ sec.title }}</a>
               {% endif %}
             {% endfor %}
-
-
         </aside>
       </nav>
     </div>
@@ -70,22 +63,15 @@
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
-            <form method="GET" action="{{relativePath}}search/">
-              <div class="search-bar">
-                <input type='search' placeholder='Search' name="q">
-                <button type="submit" class="search-submit icon-ui-search"></button>
-              </div>
+            <form method="GET" action="{{relativePath}}search/" class="panel padding-leader-half">
+              <input type="search" placeholder="Search" name="q">
             </form>
           </div>
-
-
-            {% for title, sec in data.table_of_contents %}
-              {% if sec.base != "get-started" %}
-                <a href="{{relativePath}}{{sec.base}}" class="side-nav-link">{{ sec.title }}</a>
-              {% endif %}
-            {% endfor %}
-
-
+          {% for title, sec in data.table_of_contents %}
+            {% if sec.base != "get-started" %}
+              <a href="{{relativePath}}{{sec.base}}" class="side-nav-link">{{ sec.title }}</a>
+            {% endif %}
+          {% endfor %}
         </aside>
       </nav>
     </div>
