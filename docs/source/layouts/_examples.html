@@ -40,7 +40,7 @@
       <h2 class="text-rule padding-leader-2" id="{{section.id}}">{{section.title}}</h2>
         {% for example in section.examples %}
           <div class="column-10 pre-7 tablet-pre-1">
-            <h3 class="text-center padding-leader-2" id="{{example.id}}">{{example.title}}</h3>
+            <h3 class="text-center padding-leader-4" id="{{example.id}}">{{example.title}}</h3>
             {% import "examples/" + active + "/_" + example.id as code %}
             <p class="text-center">
               <a href="#" class="js-modal-toggle btn btn-clear" data-modal="{{example.id}}">View HTML</a>
@@ -67,7 +67,7 @@
 </div>
 <div class="grid-container">
   <div class="column-24">
-          <hr class="leader-4">
+
         {% endfor %}
     {% endfor %}
   </div>
