@@ -140,11 +140,13 @@
           {% endif %}
 
           {% if page.colors %}
-            <div class="block-group block-group-1-up">
+            <div class="block-group block-group-4-up">
               {% for color in page.colors %}
-                <div class="block color-sample {{ color }}">
-                  <code>${{ color }}</code>
+                <div class="card block trailer-1">
+                  <div class="color-sample {{ color }}"></div>
+                  <div class="card-content">{{ color }}</div>
                 </div>
+
               {% endfor %}
             </div>
           {% endif %}
