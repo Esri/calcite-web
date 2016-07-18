@@ -9,13 +9,3 @@ You can also use a hosted version Calcite Web:
 <!-- Just before end of body -->
 <script src="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/{{data.pkg.version}}/js/calcite-web.min.js"></script>
 ```
-
-When used statically, one very helpful thing to know is that Calcite Web comes bundled with several modifier classes. For example, if you need to add some margin to the top of an element, instead of writing a class and adding it yourself, you can use the built in `leader-X` class:
-
-```html
-<div class="leader-3">
-  This item will get three 'lines' of margin at the top.
-</div>
-```
-
-This will keep spacing consistent and you won't have to write any CSS! There are modifier classes for virtually everything: padding, margin, text-color, background-color, etc. Be sure to read [the documentation](http://esri.github.io/calcite-web/grid/) to learn what is possible.
