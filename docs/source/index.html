@@ -1,7 +1,7 @@
 ---
 title: Calcite Web
 description: Quickly build beautiful, consistent websites with the Calcite Web Framework
-template: layouts/_layout.html
+layout: layouts/_layout
 ---
 {% block subnav %}
   <header class="bg-banner" role="banner">
@@ -16,7 +16,7 @@ template: layouts/_layout.html
 
 {% block content %}
 <div class="grid-container leader-2 trailer-1 padding-trailer-half">
-  <div class="column-7 pre-2 leader-1 trailer-1 tablet-column-12">
+  <div class="column-7 pre-2 leader-half trailer-1 tablet-column-12">
     <div class="panel panel-white">
       <table class="table-plain trailer-half">
         <tbody>
@@ -31,13 +31,18 @@ template: layouts/_layout.html
           <tr class="trailer-0">
            <td><b>Size (Gzipped)</b></td>
            <td class="text-right">{{data.stats.humanizedGzipSize}}</td>
+           {{data.release}}
+          </tr>
+          <tr class="trailer-0">
+           <td><b>Last Update</b></td>
+           <td class="text-right">{{data.repo.pushed_at}}</td>
           </tr>
       </table>
-      <a href="https://github.com/Esri/calcite-web/releases" class="btn btn-small btn-fill leader-half icon-ui-download">Dowload</a>
+      <a href="https://github.com/Esri/calcite-web/releases" class="btn btn-small btn-fill leader-half icon-ui-download">Download</a>
     </div>
   </div>
 
-  <div class="column-12 pre-1">
+  <div class="column-12 pre-1 tablet-leader-2">
 {% markdown %}
 
 ## A Design & Development Framework.
