@@ -7,6 +7,7 @@
 ### Modified
 - changes to card markup. (`card-body => card-content`)
 - cards implemented with flex-box
+- `panel-white` text now more accessible
 
 ## 1.0.0-beta.25
 
