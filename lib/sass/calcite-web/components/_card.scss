@@ -1,75 +1,145 @@
+// ┌────────┐
+// │ Cards  │
+// └────────┘
+//  ↳ http://esri.github.io/calcite-web/documentation/components/#card
+//  ↳ components → _card.md
 @mixin card () {
-  @include clearfix();
-  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  background: white;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0,0,0,.1);
 }
 
-  @mixin card-shaped () {
-    .card-image {
-      margin-bottom: -2*$baseline;
-    }
-    .card-body {
-      padding-top: 2.5*$baseline;
-    }
-  }
+@mixin card-image-wrap () {
+  width: 100%;
+  position: relative;
+  margin-bottom: 0;
+}
 
-  @mixin card-bar($color) {
-    .card-body { border-top: $baseline/8 solid $color; }
+@mixin card-shaped () {
+  box-shadow: none;
+  background: transparent;
+  border: none;
+  .card-content {
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0,0,0,.1);
+    padding-top: 4rem;
   }
-
-  @mixin card-header () {
-    @include panel();
-  }
-
-  @mixin card-image () {
-    margin-bottom: 0;
-    position: relative;
-    img {
-      display: block;
-    }
-  }
-
-  @mixin card-caption () {
-    position: absolute;
+  .card-image-wrap {
+    margin-bottom: -3rem;
+    padding: 0 1.25rem;
     box-sizing: border-box;
-    width: 100%;
-    bottom: 0;
-    padding: 0.11*$baseline 0.66*$baseline;
-    background-color: rgba($white, 0.8);
   }
+}
 
-  @mixin card-body () {
-    padding: 0.66*$baseline;
-    @include panel-white();
+
+@mixin card-image-caption () {
+  background: rgba(255, 255, 255, .8);
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  @include font-size(-2);
+  padding: .35rem 1.25rem .35rem 1.25rem;
+}
+
+@mixin card-image () {
+  width: 100%;
+  display: block;
+}
+
+@mixin card-content () {
+  padding: 1.5rem 1.25rem 1.25rem 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+@mixin card-last {
+  margin-bottom: auto;
+}
+
+@mixin card-bar($color) {
+  border-top: 3px solid $color;
+}
+
+/* Wide Card - - - - - - - - - - - - */
+@mixin card-wide () {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  .card-content {
+    display: block;
   }
+}
+
+@mixin card-wide-image-wrap {
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 25%;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+@mixin card-wide-image {
+  width: auto;
+  min-width: 100%;
+  max-width: none;
+  height: 100%;
+  margin: 0;
+  display: block;
+  position: absolute;
+}
 
 @if $include-card == true {
-  .card                        { @include card();}
-    .card-header               { @include card-header();}
-    .card-image                { @include card-image();}
-    .card-caption              { @include card-caption();}
-    .card-body                 { @include card-body();}
-    .card-shaped               { @include card-shaped();}
-    .card-bar-lightest-blue    { @include card-bar($lightest-blue);}
-    .card-bar-lighter-blue     { @include card-bar($lighter-blue);}
-    .card-bar-light-blue       { @include card-bar($light-blue);}
-    .card-bar-blue             { @include card-bar($blue);}
-    .card-bar-dark-blue        { @include card-bar($dark-blue);}
-    .card-bar-light-green      { @include card-bar($light-green);}
-    .card-bar-green            { @include card-bar($green);}
-    .card-bar-dark-green       { @include card-bar($dark-green);}
-    .card-bar-light-red        { @include card-bar($light-red);}
-    .card-bar-red              { @include card-bar($red);}
-    .card-bar-dark-red         { @include card-bar($dark-red);}
-    .card-bar-light-orange     { @include card-bar($light-orange);}
-    .card-bar-orange           { @include card-bar($orange);}
-    .card-bar-dark-orange      { @include card-bar($dark-orange);}
-    .card-bar-light-yellow     { @include card-bar($light-yellow);}
-    .card-bar-yellow           { @include card-bar($yellow);}
-    .card-bar-dark-yellow      { @include card-bar($dark-yellow);}
-    .card-bar-light-purple     { @include card-bar($light-purple);}
-    .card-bar-purple           { @include card-bar($purple);}
-    .card-bar-dark-purple      { @include card-bar($dark-purple);}
-    .card-bar-light-brown      { @include card-bar($light-brown);}
-    .card-bar-brown            { @include card-bar($brown);}
-    .card-bar-dark-brown       { @include card-bar($dark-brown);}
+  .card                      { @include card();}
+  .card-image-wrap           { @include card-image-wrap();}
+  .card-image                { @include card-image();}
+  .card-image-caption        { @include card-image-caption();}
+  .card-last                 { @include card-last();}
+  .card-content              { @include card-content();}
+  .card-shaped               { @include card-shaped();}
+  .card-bar-lightest-blue    { @include card-bar($lightest-blue);}
+  .card-bar-lighter-blue     { @include card-bar($lighter-blue);}
+  .card-bar-light-blue       { @include card-bar($light-blue);}
+  .card-bar-blue             { @include card-bar($blue);}
+  .card-bar-dark-blue        { @include card-bar($dark-blue);}
+  .card-bar-light-green      { @include card-bar($light-green);}
+  .card-bar-green            { @include card-bar($green);}
+  .card-bar-dark-green       { @include card-bar($dark-green);}
+  .card-bar-light-red        { @include card-bar($light-red);}
+  .card-bar-red              { @include card-bar($red);}
+  .card-bar-dark-red         { @include card-bar($dark-red);}
+  .card-bar-light-orange     { @include card-bar($light-orange);}
+  .card-bar-orange           { @include card-bar($orange);}
+  .card-bar-dark-orange      { @include card-bar($dark-orange);}
+  .card-bar-light-yellow     { @include card-bar($light-yellow);}
+  .card-bar-yellow           { @include card-bar($yellow);}
+  .card-bar-dark-yellow      { @include card-bar($dark-yellow);}
+  .card-bar-light-purple     { @include card-bar($light-purple);}
+  .card-bar-purple           { @include card-bar($purple);}
+  .card-bar-dark-purple      { @include card-bar($dark-purple);}
+  .card-bar-light-brown      { @include card-bar($light-brown);}
+  .card-bar-brown            { @include card-bar($brown);}
+  .card-bar-dark-brown       { @include card-bar($dark-brown);}
+  .card-wide                 { @include card-wide();}
+  .card-wide-image-wrap      { @include card-wide-image-wrap();}
+  .card-wide-image           { @include card-wide-image();}
 }

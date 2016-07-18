@@ -1,3 +1,13 @@
+## Unreleased
+
+### Added
+- `icon-ui-yellow`
+- `card-wide` for cards in landscape orientation
+
+### Modified
+- changes to card markup. (`card-body => card-content`)
+- cards implemented with flex-box
+
 ## 1.0.0-beta.25
 
 ### Added
