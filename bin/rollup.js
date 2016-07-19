@@ -36,6 +36,9 @@ function compile (err, files) {
         moduleName: moduleName,
         dest: './dist/js/' + filename
       });
+    })
+    .catch( function (err) {
+      console.error(err);
     });
   })
 }

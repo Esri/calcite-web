@@ -1,6 +1,6 @@
 module.exports = function (acetate) {
   acetate.layout('documentation/**/*', 'layouts/_doc');
-  acetate.layout('examples/*', 'layouts/_examples');
+  acetate.layout('examples/**/*', 'layouts/_examples');
 
   acetate.data('table_of_contents', 'table_of_contents.yml');
   acetate.data('stats', '../../dist/css/stats.json');
