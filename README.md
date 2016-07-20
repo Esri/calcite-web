@@ -73,6 +73,10 @@ If you're using sass, be sure to add `node_modules/calcite-web/dist/sass/` to yo
 Then in your main `.scss` file, you can just require the framework: `@import "calcite-web";`.
 
 
+# Contributing to Calcite Web
+
+We welcome all contributions: issues, pull requests, idea, questions, documentation improvements, etc. Just make sure you read the [contribution guidelines](./CONTRIBUTING.md).
+
 # Why Calcite Web?
 
 The primary goal of Calcite Web is create a unified visual language for all esri.com and arcgis.com projects. The secondary goal of Calcite Web is to make it as easy as possible to implement high quality design patterns in a way that is appropriate to both the project at hand and the design strategies of Esri as a whole.
