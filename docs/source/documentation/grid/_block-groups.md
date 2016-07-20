@@ -14,4 +14,4 @@ Block groups are designed for quickly creating gridded content, such as a tile p
 </div>
 ```
 
-[View the example]({{relativePath}}page-layouts/grid#block-groups)
+[View the example]({{relativePath}}examples/grid/#block-groups)

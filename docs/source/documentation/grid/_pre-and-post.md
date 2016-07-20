@@ -19,4 +19,4 @@ If problems occur in a layout, use the `rtl-` prefix to explicitly assign `pre` 
   <span>column-8 pre-2</span>
 </div>
 ```
-[View the example]({{relativePath}}page-layouts/grid#pre-and-post)
+[View the example]({{relativePath}}examples/grid/#pre-and-post)
