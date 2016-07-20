@@ -14,6 +14,7 @@
     "acetate": "acetate build -i docs/source -o docs/build -c docs/acetate.conf.js",
     "prerollup": "npm run test",
     "rollup": "node bin/rollup.js",
+    "postrollup": "ncp dist/js docs/build/assets/js/libs",
     "imagemin:lib": "imagemin-newer lib/img/ docs/build/assets/img/",
     "imagemin:docs": "imagemin-newer docs/source/assets/img/ docs/build/assets/img/",
     "imagemin:dist": "imagemin-newer lib/img/ dist/img/",
@@ -24,15 +25,15 @@
     "sass": "npm-run-series sass:dist sass:docs",
     "prefont": "ncp lib/fonts docs/build/assets/fonts",
     "font": "ncp lib/fonts dist/fonts",
-    "js:docs": "ncp docs/source/assets/js/ docs/build/assets/js/",
-    "prestart": "npm-run-series acetate sass rollup imagemin font js:docs",
+    "js": "ncp docs/source/assets/js/ docs/build/assets/js/",
+    "prestart": "npm-run-series acetate sass rollup imagemin font js",
     "pres3": "node bin/minify.js",
     "s3": "node bin/s3.js",
     "release": "npm-run-series prestart s3 deploy",
     "start": "parallelshell 'rerun-script' 'live-server docs/build --port=8888 --no-browser' 'watchify docs/source/assets/js/all.js -o docs/build/assets/js/all.js'"
   },
   "watches": {
-    "js:docs": "docs/source/assets/js/**/*",
+    "js": "docs/source/assets/js/**/*",
     "rollup": "lib/js/**/*.js",
     "imagemin": [
       "lib/img/**/*",
