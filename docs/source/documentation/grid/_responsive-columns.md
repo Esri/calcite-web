@@ -16,4 +16,4 @@ The width of elements can be explicitly defined for breakpoints where columns wo
 </div>
 ```
 
-[View the full example]({{relativePath}}page-layouts/grid#responsive-columns)
+[View the full example]({{relativePath}}examples/grid/#responsive-columns)

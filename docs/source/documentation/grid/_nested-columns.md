@@ -27,4 +27,4 @@ Column-folding behavior is almost entirely automatic. The only exception is gutt
 ```
 
 
-[View the example]({{relativePath}}page-layouts/grid#nested-columns)
+[View the example]({{relativePath}}examples/grid/#nested-columns)

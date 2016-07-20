@@ -28,4 +28,4 @@ On large screens, 3 columns out of 24 is proportionally a small piece of screen 
 </div>
 ```
 
-[View the full example]({{relativePath}}page-layouts/grid#columns)
+[View the full example]({{relativePath}}examples/grid/#columns)
