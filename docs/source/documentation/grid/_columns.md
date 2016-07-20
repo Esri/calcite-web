@@ -4,4 +4,28 @@ By default, large screens hold 24 columns, medium tablet-sized screens hold 12, 
 
 On large screens, 3 columns out of 24 is proportionally a small piece of screen real estate. On Phones, the Grid will leave the element at 3 columns wide -- proportionally more real estate, as 3/6 columns is more significant than 3/24.
 
-[View the example]({{relativePath}}page-layouts/grid#columns)
+<div class="grid-example clearfix">
+  <div class="column-17">
+    <span>column-17</span>
+    <div class="column-8">
+      <span>column-8</span>
+    </div>
+    <div class="column-9 tablet-first-column">
+      <span>column-9</span>
+    </div>
+  </div>
+</div>
+
+```
+<div class="column-17">
+  <span>column-17</span>
+  <div class="column-8">
+    <span>column-8</span>
+  </div>
+  <div class="column-9 tablet-first-column">
+    <span>column-9</span>
+  </div>
+</div>
+```
+
+[View the full example]({{relativePath}}page-layouts/grid#columns)
