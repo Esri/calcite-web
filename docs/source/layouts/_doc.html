@@ -5,8 +5,8 @@
     <div class="grid-container">
       <div class="column-24">
         <h1 class="sub-nav-title leader-1 text-white">Documentation</h1>
-        <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1">Download Latest Release</a>
-        <nav class="sub-nav-list" role="navigation" aria-labelledby="subnav">
+        <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1 tablet-hide">Download Latest Release</a>
+        <nav class="sub-nav-list tablet-hide" role="navigation" aria-labelledby="subnav">
           {% for title, sec in data.table_of_contents %}
           {% set slug = 'documentation/' + sec.base + '/' %}
           {% if sec.base == 'get-started' %}
@@ -15,6 +15,17 @@
             <a class="sub-nav-link {% if url == slug %}is-active{% endif %}" href="{{relativePath}}{{slug}}">{{ sec.title }}</a>
           {% endfor %}
         </nav>
+
+        <select class="tablet-show select-full trailer-half js-select-nav">
+          {% for title, sec in data.table_of_contents %}
+          {% set slug = 'documentation/' + sec.base + '/' %}
+          {% if sec.base == 'get-started' %}
+            {% set slug = 'documentation/' %}
+          {% endif %}
+            <option value="{{relativePath}}{{slug}}" {% if url == slug %}selected{% endif %}>{{ sec.title }}</option>
+          {% endfor %}
+        </select>
+
       </div>
     </div>
   </header>
@@ -44,7 +55,7 @@
   </div>
 
   <a id="skip-to-content" tabindex="0"></a>
-  <main class="column-17 phone-column-6 tablet-column-12 pre-1 rtl-post-0 content-face" role="main">
+  <main class="column-17 phone-column-6 tablet-column-12 pre-1 rtl-post-0 tablet-leader-1" role="main">
 
     {% for group in data.table_of_contents[section].navigation %}
       <h1 class="text-rule" id="{{group.group | replace(" ", "-") | lower}}" tabindex="0">{{group.group}}</h1>

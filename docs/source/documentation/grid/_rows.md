@@ -2,4 +2,4 @@ Because columns can now be nested without changing their behavior, we don't need
 
 With this grid you can wrap the first two columns in a 24 column grid, which will act in the same manner as a row.
 
-[View the example]({{relativePath}}page-layouts/grid#rows)
+[View the example]({{relativePath}}examples/grid/#rows)
