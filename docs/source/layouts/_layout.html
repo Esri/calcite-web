@@ -45,14 +45,14 @@
       <nav class="drawer-nav" role="navigation">
         <aside class="side-nav">
           <h2 class="side-nav-title">Calcite Web</h2>
-            <form method="GET" action="{{relativePath}}search/" class="panel padding-leader-half">
+          <div class="panel padding-trailer-half padding-leader-half">
+            <form method="GET" action="{{relativePath}}search/">
               <input type="search" placeholder="Search" name="q">
             </form>
-            {% for title, sec in data.table_of_contents %}
-              {% if sec.base != "get-started" %}
-                <a href="{{relativePath}}{{sec.base}}" class="side-nav-link">{{ sec.title }}</a>
-              {% endif %}
-            {% endfor %}
+          </div>
+          <a href="{{relativePath}}documentation/" class="side-nav-link">Documentation</a>
+          <a href="{{relativePath}}examples/" class="side-nav-link">Examples</a>
+          <a href="{{relativePath}}guides/" class="side-nav-link">Guides</a>
         </aside>
       </nav>
     </div>
@@ -67,11 +67,9 @@
               <input type="search" placeholder="Search" name="q">
             </form>
           </div>
-          {% for title, sec in data.table_of_contents %}
-            {% if sec.base != "get-started" %}
-              <a href="{{relativePath}}{{sec.base}}" class="side-nav-link">{{ sec.title }}</a>
-            {% endif %}
-          {% endfor %}
+          <a href="{{relativePath}}documentation/" class="side-nav-link">Documentation</a>
+          <a href="{{relativePath}}examples/" class="side-nav-link">Examples</a>
+          <a href="{{relativePath}}guides/" class="side-nav-link">Guides</a>
         </aside>
       </nav>
     </div>
