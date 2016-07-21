@@ -1,0 +1,50 @@
+// Additional Modifier for Tables
+@mixin table-pricing {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+  > thead {
+    background-color: transparent;
+  }
+  th {
+    text-align: center;
+    background-color: $white;
+    border-top: 1px solid $lighter-gray;
+    padding: 0.75*$baseline;
+    &:first-child {
+      text-align: left;
+      border-left: none;
+      border-top: none;
+      background-color: transparent;
+      padding-left: 0.25*$baseline;
+    }
+  }
+  td {
+    text-align: center;
+    &:first-child {
+      text-align: left;
+    }
+  }
+  tbody tr {
+    &:nth-child(even){
+        background-color: $white;
+      td {
+        background-color: $white;
+      }
+    }
+  }
+  &.table-blue {
+
+    tr {
+      &:nth-child(even){
+          background-color: $lightest-blue;
+        td {
+          background-color: $lightest-blue;
+        }
+      }
+    }
+  }
+}
+
+.table-pricing {@include table-pricing();}

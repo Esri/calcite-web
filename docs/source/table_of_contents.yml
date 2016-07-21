@@ -12,16 +12,6 @@ get-started:
           link: ruby-gem
         - title: 'NPM'
           link: npm
-    - group: 'Contributing'
-      pages:
-        - title: 'Overview'
-          link: contributing
-        - title: 'Development'
-          link: development
-        - title: 'Versioning'
-          link: versioning
-        - title: 'Deploying the Documentation'
-          link: deploy-the-documentation
 
 type:
   title: 'Type'
@@ -248,8 +238,6 @@ color:
         - title: 'Grayscale'
           link: grayscale
           colors:
-            - transparent-white
-            - opaque-white
             - white
             - off-white
             - lightest-gray
@@ -260,10 +248,8 @@ color:
             - darker-gray
             - darkest-gray
             - off-black
-            - black
-            - opaque-black
             - transparent-black
-            - transparent-off-black
+            - black
         - title: 'UI Colors'
           link: ui-colors
           colors:
@@ -304,7 +290,6 @@ components:
         - title: 'Buttons'
           link: buttons
           modifiers:
-            - btn-arrow
             - btn-transparent
             - btn-clear
             - btn-clear-white
@@ -313,7 +298,6 @@ components:
             - btn-fill
             - btn-half
             - btn-disabled
-            - btn-clear-disabled
             - btn-white
             - btn-red
             - btn-green
@@ -354,6 +338,9 @@ components:
         - title: 'Cards'
           link: card
           modifiers: true
+        - title: 'Wide Cards'
+          link: card-wide
+          modifiers: true
         - title: 'Breadcrumbs'
           link: breadcrumbs
           modifiers:
@@ -382,9 +369,6 @@ components:
       pages:
         - title: 'Overview'
           link: form-overview
-          modifiers: true
-        - title: 'Search Bar'
-          link: search-bar
           modifiers: true
         - title: 'Text Inputs'
           link: text-inputs
@@ -486,36 +470,10 @@ patterns:
           modifiers: true
         - title: 'Drawers'
           link: drawers
-          modifiers: true
+          modifiers: false
         - title: 'Filter Dropdown'
           link: 'filter-dropdown'
           modifiers: true
-layouts:
-  title: 'Layouts'
-  base: page-layouts
-  navigation:
-    - group: 'Common Page Layouts'
-      pages:
-        - title: 'Aside / Main'
-          link: aside-main
-        - title: 'Three Up'
-          link: three-up
-        - title: 'Content / Illustration'
-          link: content-illustration
-    - group: "Common Page Sections"
-      pages:
-        - title: 'Three Up Cards'
-          link: three-cards
-        - title: 'Pricing Table'
-          link: pricing-table
-    - group: 'Sample Pages'
-      pages:
-        - title: 'Blog Article'
-          link: blog
-        - title: 'Documentation'
-          link: documentation
-        - title: 'API Reference'
-          link: api-reference
 sass:
   title: 'Sass'
   base: sass

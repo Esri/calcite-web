@@ -20,13 +20,16 @@
     <!-- stylesheets -->
     {% block head %}
       <link rel="stylesheet" href="{{relativePath}}assets/css/all.css">
+      <link rel="stylesheet" href="{{relativePath}}assets/css/extensions.css">
+      {% for name in css %}
+        <link rel="stylesheet" href="{{relativePath}}assets/css/{{name}}.css">
+      {% endfor %}
     {% endblock %}
 
     <!--[if IE]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
     <![endif]-->
-
   </head>
 
   <body>
@@ -42,11 +45,8 @@
       <nav class="drawer-nav" role="navigation">
         <aside class="side-nav">
           <h2 class="side-nav-title">Calcite Web</h2>
-            <form method="GET" action="{{relativePath}}search/">
-              <div class="search-bar">
-                <input type='search' placeholder='Search' name="q">
-                <button type="submit" class="search-submit icon-ui-search"></button>
-              </div>
+            <form method="GET" action="{{relativePath}}search/" class="panel padding-leader-half">
+              <input type="search" placeholder="Search" name="q">
             </form>
             {% for title, sec in data.table_of_contents %}
               {% if sec.base != "get-started" %}
@@ -63,18 +63,15 @@
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
-            <form method="GET" action="{{relativePath}}search/">
-              <div class="search-bar">
-                <input type='search' placeholder='Search' name="q">
-                <button type="submit" class="search-submit icon-ui-search"></button>
-              </div>
+            <form method="GET" action="{{relativePath}}search/" class="panel padding-leader-half">
+              <input type="search" placeholder="Search" name="q">
             </form>
           </div>
-            {% for title, sec in data.table_of_contents %}
-              {% if sec.base != "get-started" %}
-                <a href="{{relativePath}}{{sec.base}}" class="side-nav-link">{{ sec.title }}</a>
-              {% endif %}
-            {% endfor %}
+          {% for title, sec in data.table_of_contents %}
+            {% if sec.base != "get-started" %}
+              <a href="{{relativePath}}{{sec.base}}" class="side-nav-link">{{ sec.title }}</a>
+            {% endif %}
+          {% endfor %}
         </aside>
       </nav>
     </div>
@@ -88,13 +85,14 @@
             <div class="tablet-hide">
               <a href="{{relativePath}}" class="top-nav-title">Calcite Web</a>
               <nav class="top-nav-list" role="navigation">
-              {% for title, sec in data.table_of_contents %}
-                {% if sec.base != "get-started" %}
-                  <a href="{{relativePath}}{{sec.base}}" class="top-nav-link">{{ sec.title }}</a>
-                {% endif %}
-              {% endfor %}
+                <a href="{{relativePath}}documentation" class="top-nav-link">Documentation</a>
+                <a href="{{relativePath}}examples" class="top-nav-link">Examples</a>
+                <a href="{{relativePath}}guides" class="top-nav-link">Guides</a>
               </nav>
-              <a href="#" class="icon-ui-search js-expand-toggle top-nav-link right" data-expand="search">Search</a >
+              <form method="GET" action="{{relativePath}}search/" class="inline-block right site-search">
+                <input type='search' placeholder='Search' name="q" class="inline-block leader-half js-search-input">
+                <button type="submit" class="hide">Search</button>
+              </form>
             </div>
 
             <div class="tablet-show">
@@ -105,22 +103,11 @@
       </header>
 
       <!-- Secondary Nav Pattern -->
-      <header class="sub-nav" role="banner">
-        <div class="grid-container">
-          <div class="column-24">
-            {% block subnav%}
-              <h1 class="sub-nav-title text-white">{{title}}</h1>
-              <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white btn-arrow right leader-half">Latest Release</a>
-            {% endblock %}
-          </div>
-        </div>
-      </header>
+      <!-- what -->
+      {% block subnav%}{% endblock %}
 
       <!-- content of each page will go here -->
-      <div class="grid-container leader-1">
-        {% block content%}{% endblock %}
-      </div>
-
+      {% block content%}{% endblock %}
     </div>
 
     {% block footer %}
@@ -179,7 +166,10 @@
     </footer>
 
     <script src="{{relativePath}}assets/js/libs/calcite-web.js"></script>
+    <script src="{{relativePath}}assets/js/libs/calcite-web-marketing.js"></script>
+
     <script src="{{relativePath}}assets/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
 
     {% endblock %}
 

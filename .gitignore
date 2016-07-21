@@ -11,37 +11,19 @@ Icon
 # SASS
 .sass-cache
 
-# Ruby
-*.gem
-*.rbc
-.bundle
-.config
-coverage
-InstalledFiles
-lib/bundler/man
-pkg
-rdoc
-spec/reports
-test/tmp
-test/version_tmp
-tmp
-
-# RVM
-.rvmrc
-
-# YARD artifacts
-.yardoc
-_yardoc
-
 # node
 node_modules
 .grunt
 npm-debug.log
 
 # project specific
+s3.conf
+aws-credentials.json
 docs/build
 dist/
-docs/source/assets/img
+docs/source/assets/img/*.*
+docs/source/assets/img/icons/
+docs/source/assets/img/logo/
 docs/source/assets/fonts
 docs/source/assets/js/libs/calcite-web.js
 docs/source/assets/css/ago-header.scss

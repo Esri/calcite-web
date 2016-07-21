@@ -1,5 +1,167 @@
 ---
 title: Calcite Web
 description: Quickly build beautiful, consistent websites with the Calcite Web Framework
-section: 'get-started'
+layout: layouts/_layout
 ---
+{% block subnav %}
+  <header class="bg-banner" role="banner">
+    <div class="grid-container">
+      <div class="column-24 padding-leader-4 padding-trailer-4">
+        <h1 class="text-center text-gradient huge-text avenir-light">Calcite Web</h1>
+        <p class="text-center text-darker-gray font-size-2">A Responsive HTML, CSS, and JS Framework for Esri</p>
+      </div>
+    </div>
+  </header>
+{%endblock%}
+
+{% block content %}
+<div class="grid-container leader-2 trailer-1 padding-trailer-half">
+  <div class="column-7 pre-2 leader-half trailer-1 tablet-column-12">
+    <div class="panel panel-white">
+      <table class="table-plain trailer-half">
+        <tbody>
+          <tr class="trailer-0">
+           <td><b>Current Version</b></td>
+           <td class="text-right">{{data.pkg.version}}</td>
+          </tr>
+          <tr class="trailer-0">
+           <td><b>Size</b></td>
+           <td class="text-right">{{data.stats.humanizedSize}}</td>
+          </tr>
+          <tr class="trailer-0">
+           <td><b>Size (Gzipped)</b></td>
+           <td class="text-right">{{data.stats.humanizedGzipSize}}</td>
+           {{data.release}}
+          </tr>
+          <tr class="trailer-0">
+           <td><b>Last Update</b></td>
+           <td class="text-right">{{data.repo.pushed_at}}</td>
+          </tr>
+      </table>
+      <a href="https://github.com/Esri/calcite-web/releases" class="btn btn-small btn-fill leader-half icon-ui-download">Download</a>
+    </div>
+  </div>
+
+  <div class="column-12 pre-1 tablet-leader-2">
+{% markdown %}
+
+## A Design & Development Framework
+
+Calcite Web is a branded CSS & JavaScript framework, web style guide, and visual language design catalog for Esri. You can use Calcite Web to quickly build on-brand, lightweight, and accessible websites. The robust codebase is well supported, steadily maintained, and always being improved.
+
+Calcite Web has everything you need to quickly build excellent web experiences and a collection of [extensions](./examples/extentions/) that enable specific use cases like [marketing pages](./examples/marketing/) and [e-commerce](./examples/ecommerce/).
+
+{% endmarkdown %}
+  </div>
+
+  <hr class="column-20 pre-2">
+
+  <div class="column-20 pre-2">
+    <div class="column-12 first-column">
+      <h3>Easy to Get Started</h3>
+      <p class="font-size-1">Use Calcite Web from your favorite package manager, download it, or just use it off the CDN.</p>
+    </div>
+  </div>
+
+  <div class="column-8 leader-1 trailer-1 pre-2">
+    <h4>Package Managers</h4>
+    <p>Calcite Web can be installed as a <a href="./documentation/#ruby-gem">Ruby Gem</a> or an <a href="./documentation/#npm">NPM package.</a></p>
+    <a href="./documentation/" class="btn btn-clear">Get instructions</a>
+  </div>
+
+  <div class="column-12 leader-1">
+{% markdown %}
+#### CDN
+
+Calcite Web can also be referenced directly from the CDN:
+
+```html
+<link rel="stylesheet" href="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/{{data.pkg.version}}/css/calcite-web.min.css">
+<script src="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/{{data.pkg.version}}/js/calcite-web.min.js"></script>
+```
+{% endmarkdown %}
+
+  </div>
+</div>
+
+<div class="panel padding-leader-3 padding-trailer-2">
+  <div class="grid-container">
+    <div class="column-24">
+
+      <div class="column-16">
+        <div class="block-group block-group-3-up tablet-block-group-2-up phone-block-group-1-up">
+          <div class="card block trailer-1">
+            <a href="./documentation/components/"><img class="card-image" src="./assets/img/docs/components.svg"/></a>
+            <div class="card-content">
+              <h4 class="font-size-1 trailer-half"><a href="./documentation/components/">Components</a></h4>
+              <p class="trailer-0 font-size--1">Small, reusable elements in a design like buttons, dropdowns, and tooltips</p>
+            </div>
+          </div>
+          <div class="card block trailer-1">
+            <a href="./documentation/patterns/"><img class="card-image" src="./assets/img/docs/patterns.svg"/></a>
+            <div class="card-content">
+              <h4 class="font-size-1 trailer-half"><a href="./documentation/patterns/">Patterns</a></h4>
+              <p class="trailer-0 font-size--1">Larger design patterns like navigation, tabs, and accordions</p>
+            </div>
+          </div>
+          <div class="card block trailer-1">
+            <a href="./documentation/icons/"><img class="card-image" src="./assets/img/docs/icons.svg"/></a>
+            <div class="card-content">
+              <h4 class="font-size-1 trailer-half"><a href="./documentation/icons/">Icons</a></h4>
+              <p class="trailer-0 font-size--1">Iconography for both social media and user interfaces</p>
+            </div>
+          </div>
+          <div class="card block trailer-1">
+            <a href="./documentation/grid/"><img class="card-image" src="./assets/img/docs/grid.svg"/></a>
+            <div class="card-content">
+              <h4 class="font-size-1 trailer-half"><a href="./documentation/grid/">Grid</a></h4>
+              <p class="trailer-0 font-size--1">Fully responsive, twenty-four column grid for layout</p>
+            </div>
+          </div>
+          <div class="card block trailer-1">
+            <a href="./documentation/type/"><img class="card-image" src="./assets/img/docs/type.svg"/></a>
+            <div class="card-content">
+              <h4 class="font-size-1 trailer-half"><a href="./documentation/type/">Typography</a></h4>
+              <p class="trailer-0 font-size--1">Type styles, size, color, and helpful modifier classes</p>
+            </div>
+          </div>
+          <div class="card block trailer-1">
+            <a href="./documentation/color/"><img class="card-image" src="./assets/img/docs/color.svg"/></a>
+            <div class="card-content">
+              <h4 class="font-size-1 trailer-half"><a href="./documentation/color/">Color</a></h4>
+              <p class="trailer-0 font-size--1">Simplified Esri color pallette available as Sass variables</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="column-7 pre-1 leader-5 padding-leader-3 tablet-leader-0">
+      {% markdown %}
+### Copy, Paste
+
+Using Calcite Web's design patterns is as easy as copy paste. The [Quickstart Guide](/examples) explains how to [include the framework](/documentation) in your project, lay out basic page structures with the [grid system](/documentation/grid), and use the [UI Patterns](/documentation/patterns) to present content.
+{% endmarkdown %}
+        <a href="./examples/" class="btn btn-clear">Read the Quickstart Guide</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="grid-container leader-2">
+  <div class="column-18 pre-3">
+    {% markdown %}
+### Comprehensive & Extendable
+
+Calcite Web has all the building blocks you need to create most projects, but sometimes you might need a little extra. This is why we've created a set of extensions to Calcite Web to handle situations like [e-commerce](/examples/e-commerce), [splashy marketing pages](/examples/marketing), and [web applications](/examples/apps). Just include a line of CSS, and start working from the examples.
+
+<a href="/documentation#extentions" class="btn btn-clear">Learn More About Extentions</a>
+
+{% endmarkdown %}
+
+  </div>
+</div>
+
+{% endblock %}

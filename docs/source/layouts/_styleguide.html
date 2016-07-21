@@ -1,18 +1,26 @@
 {% extends "layouts/_layout" %}
 
 {% block subnav%}
-  <h1 class="sub-nav-title text-white">Styleguides</h1>
-  <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-orange btn-arrow right leader-half">Latest Release</a>
-  <nav class="sub-nav-list phone-hide">
-    <a class="sub-nav-link {% if src == 'styleguides/index.md' %}is-active{% endif %}" href="{{relativePath}}styleguides/">Overview</a>
-    <a class="sub-nav-link {% if src == 'styleguides/html.md' %}is-active{% endif %}" href="{{relativePath}}styleguides/html">HTML</a>
-    <a class="sub-nav-link {% if src == 'styleguides/css.md' %}is-active{% endif %}" href="{{relativePath}}styleguides/css">CSS</a>
-    <a class="sub-nav-link {% if src == 'styleguides/javascript.md' %}is-active{% endif %}" href="{{relativePath}}styleguides/javascript">JavaScript</a>
-  </nav>
+<header class="sub-nav" role="banner">
+  <div class="grid-container">
+    <div class="column-24">
+      <h1 class="sub-nav-title text-white leader-1 trailer-1">Code Styleguides</h1>
+
+      <nav class="sub-nav-list">
+        <a class="sub-nav-link {% if src == 'guides/index.md' %}is-active{% endif %}" href="{{relativePath}}guides/">Overview</a>
+        <a class="sub-nav-link {% if src == 'guides/html.md' %}is-active{% endif %}" href="{{relativePath}}guides/html">HTML</a>
+        <a class="sub-nav-link {% if src == 'guides/css.md' %}is-active{% endif %}" href="{{relativePath}}guides/css">CSS</a>
+        <a class="sub-nav-link {% if src == 'guides/javascript.md' %}is-active{% endif %}" href="{{relativePath}}guides/javascript">JavaScript</a>
+      </nav>
+    </div>
+  </div>
+</header>
 {% endblock %}
 
 {% block content %}
+<div class="grid-container leader-2">
   <main class="column-17 content-face">
     {% block text %}{% endblock %}
   </main>
+</div>
 {% endblock %}

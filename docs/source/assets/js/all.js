@@ -1,6 +1,5 @@
-// On document ready
-window.onload = function () {
-  // Initialize all calcite.js patterns
-  console.log('Initializing calcite!');
-  window.calcite.init();
-};
+// var calcite   = require('../../../../dist/js/calcite-web')
+// var marketing = require('../../../../dist/js/calcite-web-marketing')
+
+calcite.extend(calciteMarketing)
+calcite.init()

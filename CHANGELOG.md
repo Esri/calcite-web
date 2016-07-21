@@ -1,4 +1,20 @@
+## Unreleased
+
+### Added
+- `icon-ui-yellow`
+- `card-wide` for cards in landscape orientation
+
+### Modified
+- changes to card markup. (`card-body => card-content`)
+- cards implemented with flex-box
+- `panel-white` text now more accessible
+
 ## 1.0.0-beta.25
+
+### Added
+- Marketing Extension
+- E-commerce Extension
+- Lots of Doc Examples
 
 ### Modified
 - headers are focusable
@@ -12,6 +28,8 @@
 - `.link-color-foo a` selected
 - app switcher pattern
 - btn-arrow
+- naive check for `column pre-n:first-child` use explicit `.first-column`
+- pricing table
 
 ## 1.0.0.0-beta.24
 
