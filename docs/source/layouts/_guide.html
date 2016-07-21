@@ -1,0 +1,23 @@
+{% extends "layouts/_layout" %}
+
+{% block subnav%}
+<header class="sub-nav" role="banner">
+  <div class="grid-container">
+    <div class="column-24">
+      <h1 class="sub-nav-title text-white leader-1 trailer-1">Guides</h1>
+
+      <nav class="sub-nav-list">
+
+      </nav>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block content %}
+<div class="grid-container leader-2">
+  <main class="column-17 content-face">
+    {% block text %}{% endblock %}
+  </main>
+</div>
+{% endblock %}
