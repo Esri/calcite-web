@@ -2,13 +2,11 @@ var s3 = require('s3');
 var conf = require('./aws-credentials.json')
 var pkg = require('../package.json')
 
-console.log(pkg.version)
-
 var client = s3.createClient({
   s3Options: conf
 });
 
-var destination = "files/calcite-web/" + "version-foo" + "/"
+var destination = "files/calcite-web/" + pkg.version + "/"
 
 var versioned = {
   localDir: "./dist",
@@ -42,3 +40,17 @@ uploader.on('end', function() {
   console.log("done uploading");
 });
 
+
+var latestUpload = client.uploadDir(latest);
+
+uploader.on('error', function(err) {
+  console.error("unable to sync:", err.stack);
+});
+
+uploader.on('progress', function() {
+  console.log("progress", uploader.progressAmount, uploader.progressTotal);
+});
+
+uploader.on('end', function() {
+  console.log("done uploading");
+});
