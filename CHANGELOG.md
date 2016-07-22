@@ -1,13 +1,3 @@
-## Unreleased
-
-### Added
-- `icon-ui-yellow`
-- `card-wide` for cards in landscape orientation
-
-### Modified
-- changes to card markup. (`card-body => card-content`)
-- cards implemented with flex-box
-- `panel-white` text now more accessible
 
 ## 1.0.0-beta.25
 
@@ -15,8 +5,15 @@
 - Marketing Extension
 - E-commerce Extension
 - Lots of Doc Examples
+- `icon-ui-yellow`
+- `card-wide` for cards in landscape orientation
+- calcite Sass and JS extensions
+- `calcite.extend(obj)` function
 
 ### Modified
+- changes to card markup. (`card-body => card-content`)
+- cards implemented with flex-box
+- `panel-white` text now more accessible
 - headers are focusable
 - panels no longer style columns
 - translucent tab issue with larger text and hover effects
