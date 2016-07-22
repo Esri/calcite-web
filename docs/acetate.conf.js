@@ -5,7 +5,7 @@ module.exports = function (acetate) {
   acetate.data('table_of_contents', 'table_of_contents.yml');
   acetate.data('stats', '../../dist/css/stats.json');
   acetate.data('pkg', '../../package.json');
-  acetate.data('icons', 'icon-social.js');
-  acetate.data('font', 'icon-font.js');
-  acetate.data('repo', './repo.js');
+  acetate.data('icons', './data/icon-social.js');
+  acetate.data('font', './data/icon-font.js');
+  acetate.data('repo', './data/repo.js');
 };
