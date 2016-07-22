@@ -1,7 +1,3 @@
-/* calcite-web - v1.0.0-beta.25 - 2016-06-20
-*  https://github.com/esri/calcite-web
-*  Copyright (c) 2016 Environmental Systems Research Institute, Inc.
-*  Apache 2.0 License */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
@@ -1094,8 +1090,12 @@
     }
 
     if (nav) {
-      add$1(leftBtn, click(), scroll.bind(null, -40));
-      add$1(rightBtn, click(), scroll.bind(null, 40));
+      if (leftBtn) {
+        add$1(leftBtn, click(), scroll.bind(null, -40));
+      }
+      if (rightBtn) {
+        add$1(rightBtn, click(), scroll.bind(null, 40));
+      }
       add$1(nav, 'scroll', resize);
       add$1(window, 'resize', resize);
       resize();
@@ -1139,18 +1139,19 @@
   // └────────────────────┘
   // start up Calcite and attach all the patterns
   // optionally pass an array of patterns you'd like to watch
+  var patterns = [accordion, dropdown, drawer, expander, filterDropdown, modal, search, selectNav, sticky, tabs, thirdNav];
+
   function init() {
-    accordion();
-    dropdown();
-    drawer();
-    expander();
-    filterDropdown();
-    modal();
-    search();
-    selectNav();
-    sticky();
-    tabs();
-    thirdNav();
+    while (patterns.length) {
+      patterns.shift().call();
+    }
+  }
+
+  function extend(plugin) {
+    for (var key in plugin) {
+      patterns.push(plugin[key]);
+    }
+    Object.assign(this, plugin);
   }
 
   // ┌────────────┐
@@ -1190,10 +1191,10 @@
     sticky: sticky,
     tabs: tabs,
     thirdNav: thirdNav,
+    extend: extend,
     init: init
   };
 
   return calciteWeb;
 
 }));
-//# sourceMappingURL=calcite-web.js.map

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>  <html class="ie lt-ie9 ie8"> <![endif]-->
+<!--[if IE 9]>     <html class="ie ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+
+    <!-- Set encoding -->
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <!-- Use title from page frontmatter -->
+    <title>Calcite Web | Esri Design Patterns</title>
+
+    <!-- Link to favicon -->
+    <link rel="shortcut icon" href="../../assets/img/favicon.ico">
+
+    <!-- stylesheets -->
+    
+      <link rel="stylesheet" href="../../assets/css/all.css">
+      <link rel="stylesheet" href="../../assets/css/extensions.css">
+      
+    
+
+    <!--[if IE]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!--
+    ┌─────────┐
+    │ Drawers │
+    └─────────┘
+     ↳ http://esri.github.io/calcite-web/patterns/#drawers
+     ↳ patterns → _drawers.md
+    -->
+    <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
+      <!-- <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerleft"> -->
+      <nav class="drawer-nav" role="navigation">
+        <aside class="side-nav">
+          <h2 class="side-nav-title">Calcite Web</h2>
+          <div class="panel padding-trailer-half padding-leader-half">
+            <form method="GET" action="../../search/">
+              <input type="search" placeholder="Search" name="q">
+            </form>
+          </div>
+          <a href="../../documentation/" class="side-nav-link">Documentation</a>
+          <a href="../../examples/" class="side-nav-link">Examples</a>
+          <a href="../../guides/" class="side-nav-link">Guides</a>
+        </aside>
+      </nav>
+    </div>
+
+    <div class="drawer drawer-right js-drawer" data-drawer="right">
+      <!-- <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerright"> -->
+      <nav class="drawer-nav" role="navigation">
+        <aside class="side-nav">
+          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
+          <div class="panel padding-trailer-half padding-leader-half">
+            <form method="GET" action="../../search/" class="panel padding-leader-half">
+              <input type="search" placeholder="Search" name="q">
+            </form>
+          </div>
+          <a href="../../documentation/" class="side-nav-link">Documentation</a>
+          <a href="../../examples/" class="side-nav-link">Examples</a>
+          <a href="../../guides/" class="side-nav-link">Guides</a>
+        </aside>
+      </nav>
+    </div>
+
+    <div class="wrapper">
+      <!-- Logged Out Pattern-->
+      <header class="top-nav">
+        <a class="skip-to-content" href="#skip-to-content">Skip To Content</a>
+        <div class="grid-container">
+          <div class="column-24">
+            <div class="tablet-hide">
+              <a href="../../" class="top-nav-title">Calcite Web</a>
+              <nav class="top-nav-list" role="navigation">
+                <a href="../../documentation" class="top-nav-link">Documentation</a>
+                <a href="../../examples" class="is-active top-nav-link">Examples</a>
+                <a href="../../guides" class="top-nav-link">Guides</a>
+              </nav>
+              <form method="GET" action="../../search/" class="inline-block right site-search">
+                <input type='search' placeholder='Search' name="q" class="inline-block leader-half js-search-input">
+                <button type="submit" class="hide">Search</button>
+              </form>
+            </div>
+
+            <div class="tablet-show">
+              <a href="/" class="icon-ui-menu top-nav-title js-drawer-toggle" data-drawer="top-nav">Calcite Web</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Secondary Nav Pattern -->
+      <!-- what -->
+      
+  <header class="sub-nav" role="banner">
+    <div class="grid-container">
+      <div class="column-24">
+        <h1 class="sub-nav-title leader-1 text-white">Examples</h1>
+        <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1">Download Latest Release</a>
+        <nav class="sub-nav-list" role="navigation" aria-labelledby="subnav">
+          <a class="sub-nav-link " href="../../examples">Overview</a>
+          <a href="../../examples/core" class="sub-nav-link ">Basic Pages</a>
+          <a href="../../examples/grid" class="sub-nav-link ">Grid</a>
+          <a href="../../examples/navigation" class="sub-nav-link ">Navigation</a>
+          <a href="../../examples/marketing" class="sub-nav-link ">Marketing</a>
+          <a href="../../examples/e-commerce" class="sub-nav-link  is-active ">E-Commerce</a>
+          <a href="../../examples/apps" class="sub-nav-link ">Apps</a>
+          <a href="../../examples/i18n" class="sub-nav-link ">i18n</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+
+      <!-- content of each page will go here -->
+      
+  <header class="third-nav scroll-show js-sticky" data-top=0>
+    <div class="third-nav-container">
+      <div class="grid-container">
+        <nav class="column-24" role="navigation" aria-labelledby="thirdnav breadcrumbs">
+          <a href="../../examples" class="third-nav-link crumb">Examples</a>
+          <a href="../../examples/e-commerce" class="third-nav-link crumb">e-commerce</a>
+          <a class="icon-ui-up third-nav-link right" href="#">Back to Top</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <a id="skip-to-content" tabindex="0"></a>
+
+  
+<div class="grid-container">
+  <div class="column-24">
+    <h1>E-Commerce Pattern Examples</h1>
+  </div>
+</div>
+
+
+  <div class="grid-container">
+    <div class="column-24">
+      
+        <h2 class="text-rule padding-leader-2" id="e-commerce">E-Commerce</h2>
+          
+            <div class="column-10 pre-7 tablet-pre-1">
+              <h3 class="text-center padding-leader-4" id="pricing-table">Pricing Table</h3>
+              
+              <p class="text-center">
+                <a href="#" class="js-modal-toggle btn btn-clear" data-modal="pricing-table">View HTML</a>
+              </p>
+              
+            </div>
+            <div class="js-modal modal-overlay" data-modal="pricing-table">
+              <div class="modal-content column-12" role="dialog" aria-labelledby="modal" role="dialog">
+                <a class="js-modal-toggle icon-ui-close icon-flush font-size-1 right" href="#" aria-label="close-modal" ></a>
+                <h3 class='trailer-half'>Pricing Table</h3>
+                <pre class="html-sample"><code  id="pricing-table-snippet">&lt;!-- Sample HTML -->
+&lt;div class="grid-container">
+  &lt;div class="trailer-2 leader-1 clearfix">
+    &lt;div class="column-24">
+
+      &lt;div class="column-8">
+        &lt;h2 class="text-darker-gray leader-3 font-size-4">Splashy Marketing Pitch That Makes you Want This Thing we Sell.&lt;/h2>
+      &lt;/div>
+
+  &lt;div class="column-15 pre-1">
+    &lt;div class="block-group block-group-3-up trailer-1">
+
+      &lt;div class="card card-bar-purple block">
+        &lt;div class="card-content text-center">
+          &lt;h4>Some Option&lt;/h4>
+          &lt;p class="font-size--3 text-darker-gray trailer-0">&lt;b>A NOTE ABOUT THAT&lt;/b>&lt;/p>
+          &lt;p class="font-size--3 text-darker-gray">&lt;b>YOU WILL LIKE IT&lt;/b>&lt;/p>
+          &lt;hr>
+          &lt;p class="trailer-0">An option option: $10&lt;/p>
+          &lt;p>Another option option: $10&lt;/p>
+          &lt;a href="#" class="btn btn-fill">Buy Online&lt;/a>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;div class="card card-bar-blue block">
+        &lt;div class="card-content text-center">
+          &lt;h4>Some Option&lt;/h4>
+          &lt;p class="font-size--3 text-darker-gray trailer-0">&lt;b>A NOTE ABOUT THAT&lt;/b>&lt;/p>
+          &lt;p class="font-size--3 text-darker-gray">&lt;b>YOU WILL LIKE IT&lt;/b>&lt;/p>
+          &lt;hr>
+          &lt;p class="trailer-0">An option option: $10&lt;/p>
+          &lt;p>Another option option: $10&lt;/p>
+          &lt;a href="#" class="btn btn-clear btn-fill">Buy Online&lt;/a>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;div class="card card-bar-orange block">
+        &lt;div class="card-content text-center">
+          &lt;h4>Some Option&lt;/h4>
+          &lt;p class="font-size--3 text-darker-gray trailer-0">&lt;b>A NOTE ABOUT THAT&lt;/b>&lt;/p>
+          &lt;p class="font-size--3 text-darker-gray">&lt;b>YOU WILL LIKE IT&lt;/b>&lt;/p>
+          &lt;hr>
+          &lt;p class="trailer-0">An option option: $10&lt;/p>
+          &lt;p>Another option option: $10&lt;/p>
+          &lt;a href="#" class="btn btn-clear btn-fill">Buy Online&lt;/a>
+        &lt;/div>
+      &lt;/div>
+
+    &lt;/div>
+  &lt;/div>
+
+
+      &lt;table class="table-pricing">
+        &lt;col width="38%">
+        &lt;thead>
+          &lt;tr>
+            &lt;th>
+              &lt;a href="#" class="font-size-2">Here is one category of thing.&lt;/a>
+            &lt;/th>
+            &lt;th>Option 1&lt;/th>
+            &lt;th>Option 2&lt;/th>
+            &lt;th>Option 3&lt;/th>
+          &lt;/tr>
+        &lt;/thead>
+        &lt;tbody>
+          &lt;tr>
+           &lt;td>One particular feature goes here&lt;/td>
+           &lt;td>&lt;span class="icon-ui-check-mark icon-ui-purple">&lt;/span>&lt;/td>
+           &lt;td>&lt;span class="icon-ui-check-mark icon-ui-blue">&lt;/span>&lt;/td>
+           &lt;td>&lt;span class="icon-ui-check-mark icon-ui-orange">&lt;/span>&lt;/td>
+          &lt;/tr>
+          &lt;tr>
+            &lt;td>
+              Some other specific feature thing goes here. &lt;a class="icon-ui-description" href="#">&lt;/a>
+            &lt;/td>
+           &lt;td>&lt;span class="icon-ui-check-mark icon-ui-purple">&lt;/span>&lt;/td>
+           &lt;td>&lt;span class="icon-ui-check-mark icon-ui-blue">&lt;/span>&lt;/td>
+           &lt;td> &lt;/td>
+          &lt;/tr>
+          &lt;tr>
+            &lt;td>
+              This one is really expensive and only one plan gets it.
+            &lt;/td>
+           &lt;td>&lt;span class="icon-ui-check-mark icon-ui-purple">&lt;/span>&lt;/td>
+           &lt;td>&lt;/td>
+           &lt;td>&lt;/td>
+          &lt;/tr>
+        &lt;/tbody>
+      &lt;/table>
+
+    &lt;/div>
+  &lt;/div>
+&lt;/div>
+</code></pre>
+                <div class="action-bar text-right">
+                  <button class="btn btn-clear js-modal-toggle">Close</button>
+                  <button class="btn js-copy-to-clipboard" data-clipboard-target="#pricing-table-snippet">Copy to Clipboard</button>
+                </div>
+              </div>
+            </div>
+    </div>
+  </div>
+  <div class="panel panel-no-padding padding-leader-1 padding-trailer-1">
+            <!-- Sample HTML -->
+<div class="grid-container">
+  <div class="trailer-2 leader-1 clearfix">
+    <div class="column-24">
+
+      <div class="column-8">
+        <h2 class="text-darker-gray leader-3 font-size-4">Splashy Marketing Pitch That Makes you Want This Thing we Sell.</h2>
+      </div>
+
+  <div class="column-15 pre-1">
+    <div class="block-group block-group-3-up trailer-1">
+
+      <div class="card card-bar-purple block">
+        <div class="card-content text-center">
+          <h4>Some Option</h4>
+          <p class="font-size--3 text-darker-gray trailer-0"><b>A NOTE ABOUT THAT</b></p>
+          <p class="font-size--3 text-darker-gray"><b>YOU WILL LIKE IT</b></p>
+          <hr>
+          <p class="trailer-0">An option option: $10</p>
+          <p>Another option option: $10</p>
+          <a href="#" class="btn btn-fill">Buy Online</a>
+        </div>
+      </div>
+
+      <div class="card card-bar-blue block">
+        <div class="card-content text-center">
+          <h4>Some Option</h4>
+          <p class="font-size--3 text-darker-gray trailer-0"><b>A NOTE ABOUT THAT</b></p>
+          <p class="font-size--3 text-darker-gray"><b>YOU WILL LIKE IT</b></p>
+          <hr>
+          <p class="trailer-0">An option option: $10</p>
+          <p>Another option option: $10</p>
+          <a href="#" class="btn btn-clear btn-fill">Buy Online</a>
+        </div>
+      </div>
+
+      <div class="card card-bar-orange block">
+        <div class="card-content text-center">
+          <h4>Some Option</h4>
+          <p class="font-size--3 text-darker-gray trailer-0"><b>A NOTE ABOUT THAT</b></p>
+          <p class="font-size--3 text-darker-gray"><b>YOU WILL LIKE IT</b></p>
+          <hr>
+          <p class="trailer-0">An option option: $10</p>
+          <p>Another option option: $10</p>
+          <a href="#" class="btn btn-clear btn-fill">Buy Online</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+      <table class="table-pricing">
+        <col width="38%">
+        <thead>
+          <tr>
+            <th>
+              <a href="#" class="font-size-2">Here is one category of thing.</a>
+            </th>
+            <th>Option 1</th>
+            <th>Option 2</th>
+            <th>Option 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+           <td>One particular feature goes here</td>
+           <td><span class="icon-ui-check-mark icon-ui-purple"></span></td>
+           <td><span class="icon-ui-check-mark icon-ui-blue"></span></td>
+           <td><span class="icon-ui-check-mark icon-ui-orange"></span></td>
+          </tr>
+          <tr>
+            <td>
+              Some other specific feature thing goes here. <a class="icon-ui-description" href="#"></a>
+            </td>
+           <td><span class="icon-ui-check-mark icon-ui-purple"></span></td>
+           <td><span class="icon-ui-check-mark icon-ui-blue"></span></td>
+           <td> </td>
+          </tr>
+          <tr>
+            <td>
+              This one is really expensive and only one plan gets it.
+            </td>
+           <td><span class="icon-ui-check-mark icon-ui-purple"></span></td>
+           <td></td>
+           <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="grid-container">
+    <div class="column-24">
+
+          
+      
+    </div>
+  </div>
+
+    </div>
+
+    
+
+    <!-- Footer Pattern -->
+    <footer class="footer leader-3 link-dark-gray" role="contentinfo">
+      <div class="grid-container">
+          <nav class="column-6">
+            <h6>Styleguides</h6>
+            <ul class="list-plain">
+              <li><a href="../../styleguides/javascript/">JavaScript</a></li>
+              <li><a href="../../styleguides/css/">CSS</a></li>
+              <li><a href="../../styleguides/html/">HTML</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <h6>Resources</h6>
+            <ul class="list-plain">
+              <li><a href="../../guides/migration-guide/">Migration Guide</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/releases/">Releases</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/blob/master/CONTRIBUTING.md">Contributing</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/issues/">Issues</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/">GitHub</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <h6>About Esri</h6>
+            <ul class="list-plain">
+              <li><a href="http://www.esri.com/about-esri/">About Us</a></li>
+              <li><a href="http://www.esri.com/careers/">Careers</a></li>
+              <li><a href="http://blogs.esri.com/esri/esri-insider/">Insiders Blog</a></li>
+              <li><a href="http://www.esri.com/events/user-conference/index.html">User Conference</a></li>
+              <li><a href="http://www.esri.com/events/devsummit/index.html">Developer Summit</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <a class="esri-logo" href="http://esri.com" aria-label="Esri Home"></a>
+            <section class="footer-social-nav leader-1">
+              <a class="icon-social-twitter" aria-label="Esri on Twitter"  href="https://twitter.com/Esri/"></a>
+              <a class="icon-social-facebook" aria-label="Esri on Facebook"  href="https://www.facebook.com/esrigis/"></a>
+              <a class="icon-social-instagram" aria-label="Esri on Instagram"  href="https://instagram.com/esrigram/"></a>
+              <a class="icon-social-github" aria-label="Esri on GitHub"  href="http://esri.github.com/"></a>
+              <a class="icon-social-contact" aria-label="Contact Esri"  href="http://www.esri.com/about-esri/contact/"></a>
+            </section>
+          </nav>
+
+          <div class="column-24 leader-1">
+            <p><small>Copyright © 2015 Esri. All rights reserved. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal">Legal</a></small></p>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+    <script src="../../assets/js/libs/calcite-web.js"></script>
+    <script src="../../assets/js/libs/calcite-web-marketing.js"></script>
+
+    <script src="../../assets/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+
+    
+
+    
+
+  </body>
+</html>

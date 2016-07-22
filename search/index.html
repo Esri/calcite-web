@@ -20,13 +20,14 @@
     <!-- stylesheets -->
     
       <link rel="stylesheet" href="../assets/css/all.css">
+      <link rel="stylesheet" href="../assets/css/extensions.css">
+      
     
 
     <!--[if IE]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
     <![endif]-->
-
   </head>
 
   <body>
@@ -42,51 +43,14 @@
       <nav class="drawer-nav" role="navigation">
         <aside class="side-nav">
           <h2 class="side-nav-title">Calcite Web</h2>
+          <div class="panel padding-trailer-half padding-leader-half">
             <form method="GET" action="../search/">
-              <div class="search-bar">
-                <input type='search' placeholder='Search' name="q">
-                <button type="submit" class="search-submit icon-ui-search"></button>
-              </div>
+              <input type="search" placeholder="Search" name="q">
             </form>
-            
-              
-            
-              
-                <a href="../type" class="side-nav-link">Type</a>
-              
-            
-              
-                <a href="../grid" class="side-nav-link">Grid</a>
-              
-            
-              
-                <a href="../icons" class="side-nav-link">Icons</a>
-              
-            
-              
-                <a href="../color" class="side-nav-link">Color</a>
-              
-            
-              
-                <a href="../components" class="side-nav-link">Components</a>
-              
-            
-              
-                <a href="../patterns" class="side-nav-link">Patterns</a>
-              
-            
-              
-                <a href="../page-layouts" class="side-nav-link">Layouts</a>
-              
-            
-              
-                <a href="../sass" class="side-nav-link">Sass</a>
-              
-            
-              
-                <a href="../javascript" class="side-nav-link">JavaScript</a>
-              
-            
+          </div>
+          <a href="../documentation/" class="side-nav-link">Documentation</a>
+          <a href="../examples/" class="side-nav-link">Examples</a>
+          <a href="../guides/" class="side-nav-link">Guides</a>
         </aside>
       </nav>
     </div>
@@ -97,52 +61,13 @@
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
-            <form method="GET" action="../search/">
-              <div class="search-bar">
-                <input type='search' placeholder='Search' name="q">
-                <button type="submit" class="search-submit icon-ui-search"></button>
-              </div>
+            <form method="GET" action="../search/" class="panel padding-leader-half">
+              <input type="search" placeholder="Search" name="q">
             </form>
           </div>
-            
-              
-            
-              
-                <a href="../type" class="side-nav-link">Type</a>
-              
-            
-              
-                <a href="../grid" class="side-nav-link">Grid</a>
-              
-            
-              
-                <a href="../icons" class="side-nav-link">Icons</a>
-              
-            
-              
-                <a href="../color" class="side-nav-link">Color</a>
-              
-            
-              
-                <a href="../components" class="side-nav-link">Components</a>
-              
-            
-              
-                <a href="../patterns" class="side-nav-link">Patterns</a>
-              
-            
-              
-                <a href="../page-layouts" class="side-nav-link">Layouts</a>
-              
-            
-              
-                <a href="../sass" class="side-nav-link">Sass</a>
-              
-            
-              
-                <a href="../javascript" class="side-nav-link">JavaScript</a>
-              
-            
+          <a href="../documentation/" class="side-nav-link">Documentation</a>
+          <a href="../examples/" class="side-nav-link">Examples</a>
+          <a href="../guides/" class="side-nav-link">Guides</a>
         </aside>
       </nav>
     </div>
@@ -156,47 +81,14 @@
             <div class="tablet-hide">
               <a href="../" class="top-nav-title">Calcite Web</a>
               <nav class="top-nav-list" role="navigation">
-              
-                
-              
-                
-                  <a href="../type" class="top-nav-link">Type</a>
-                
-              
-                
-                  <a href="../grid" class="top-nav-link">Grid</a>
-                
-              
-                
-                  <a href="../icons" class="top-nav-link">Icons</a>
-                
-              
-                
-                  <a href="../color" class="top-nav-link">Color</a>
-                
-              
-                
-                  <a href="../components" class="top-nav-link">Components</a>
-                
-              
-                
-                  <a href="../patterns" class="top-nav-link">Patterns</a>
-                
-              
-                
-                  <a href="../page-layouts" class="top-nav-link">Layouts</a>
-                
-              
-                
-                  <a href="../sass" class="top-nav-link">Sass</a>
-                
-              
-                
-                  <a href="../javascript" class="top-nav-link">JavaScript</a>
-                
-              
+                <a href="../documentation" class="top-nav-link">Documentation</a>
+                <a href="../examples" class="top-nav-link">Examples</a>
+                <a href="../guides" class="top-nav-link">Guides</a>
               </nav>
-              <a href="#" class="icon-ui-search js-expand-toggle top-nav-link right" data-expand="search">Search</a >
+              <form method="GET" action="../search/" class="inline-block right site-search">
+                <input type='search' placeholder='Search' name="q" class="inline-block leader-half js-search-input">
+                <button type="submit" class="hide">Search</button>
+              </form>
             </div>
 
             <div class="tablet-show">
@@ -207,74 +99,27 @@
       </header>
 
       <!-- Secondary Nav Pattern -->
-      <header class="sub-nav" role="banner">
-        <div class="grid-container">
-          <div class="column-24">
-            
-              <h1 class="sub-nav-title text-white">Search Calcite Web</h1>
-              <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white btn-arrow right leader-half">Latest Release</a>
-            
-          </div>
-        </div>
-      </header>
+      <!-- what -->
+      
 
       <!-- content of each page will go here -->
-      <div class="grid-container leader-1">
-        <div class="grid-container">
-  <aside class="column-6 leader-half">
-    <section class="js-filter-dropdown trailer-4" data-filter-dropdown="sections">
-      <header>
-        <h5 class="filter-dropdown-title">Sections</h5>
-        <a class="js-filter-dropdown-open filter-dropdown-action is-active" href="#">edit</a>
-        <a class="js-filter-dropdown-close filter-dropdown-action" href="#">done</a>
-      </header>
+      <header class="sub-nav" role="banner">
+  <div class="grid-container">
+    <div class="column-24">
+      <h1 class="sub-nav-title text-white">Search</h1>
+    </div>
+  </div>
+</header>
 
-      <label class="trailer-half filter-dropdown-container">
-        <div class="filter-dropdown-list modifier-class">
-          <input class="filter-dropdown-input" type="text" placeholder="Filter by Section">
-          <div class="filter-dropdown-inner-list">
-            
-              <a href="#" class="filter-dropdown-link" data-page="get-started">Get Started</a>
-            
-              <a href="#" class="filter-dropdown-link" data-page="type">Type</a>
-            
-              <a href="#" class="filter-dropdown-link" data-page="grid">Grid</a>
-            
-              <a href="#" class="filter-dropdown-link" data-page="icons">Icons</a>
-            
-              <a href="#" class="filter-dropdown-link" data-page="color">Color</a>
-            
-              <a href="#" class="filter-dropdown-link" data-page="components">Components</a>
-            
-              <a href="#" class="filter-dropdown-link" data-page="patterns">Patterns</a>
-            
-              <a href="#" class="filter-dropdown-link" data-page="page-layouts">Layouts</a>
-            
-              <a href="#" class="filter-dropdown-link" data-page="sass">Sass</a>
-            
-              <a href="#" class="filter-dropdown-link" data-page="javascript">JavaScript</a>
-            
-          </div>
-        </div>
-      </label>
-      <span class="text-gray font-size--1 js-flilter-dropdown-no-filters">None Selected</span>
-    </section>
-  </aside>
 
-  <div class="column-17 pre-1">
+<div class="grid-container leader-half">
+  <div class="column-17">
 
     <div class="clearfix font-size--1">
       <p class="trailer-0 inline-block leader-half">
         Showing <span class="js-results-length">0</span> of <span class="js-results-length">0</span>
         results for <b class="js-term">"search term"</b>
       </p>
-      <span class="right">
-        <span class="inline-block gutter-right-half">sort by:</span>
-        <select class="inline-block leader-0">
-          <option value="match" selected>Best Match</option>
-          <option value="recent">Most Recent</option>
-        </select>
-      </span>
     </div>
 
     <hr class="trailer-0 leader-half">
@@ -304,8 +149,8 @@
 </ul>
 <p>By default, Calcite Web expects image files to be located at <code>../</code>. If your fonts are elsewhere, set the <code>$font-path</code> variable</p>
 <p>Using this framework as a Sass library will give you the most power, but whatever your flavor, we have you covered.</p>
-<p>If you are migrating from Tailcoat, checkout the <a href="../migration-guide/">migration guide</a>.</p>
-<p>Calcite Web is an open project, that anyone can use to make web apps. However, some of our resources are not. Using Calcite Web on any project that does not live at an Esri or ArcGIS domain will not have access to any of Esri's brand typefaces. You can load a version of the framework with typefaces removes with <code>calcite-web-no-fonts.css</code>.</p>
+<p>If you are migrating from Tailcoat, checkout the <a href="../guides/migration-guide/">migration guide</a>.</p>
+<p>Calcite Web is an open project, that anyone can use to make web apps. However, some of our resources are not. Using Calcite Web on any project that does not live at an Esri or ArcGIS domain will not have access to any of Esri's brand typefaces. You can load a version of the framework without typefaces by using <code>calcite-web-no-fonts.css</code>.</p>
 
             </div>
             <!-- populated on the client -->
@@ -323,13 +168,13 @@
             </h5>
             <div class="js-search-item-content hide">
               <p>This is probably the easiest way, but you won't get any of the helpful Sass mixins. If you're looking to get up and running quickly, just <a href="https://github.com/ArcGIS/calcite-web/releases">download the latest release</a> and move the zipped files to wherever you keep your assets (CSS, JavaScript, images). Be sure to use <a href="http://esri.github.io/calcite-web/">the documentation site</a> to copy and paste patterns, components, and even a sample html boilerplate.</p>
-<p><a href="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.7/css/calcite-web.min.css">https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.7/css/calcite-web.min.css</a></p>
-<p>When used statically, one very helpful thing to know is that Calcite Web comes bundled with several modifier classes. For example, if you need to add some margin to the top of an element, instead of writing a class and adding it yourself, you can use the built in <code>leader-X</code> class:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"leader-3"</span>&gt;</span>
-  This item will get three 'lines' of margin at the top.
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<p>You can also use a hosted version Calcite Web:</p>
+<pre><code><span class="hljs-comment">&lt;!-- In the head --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.25/css/calcite-web.min.css"</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Just before end of body --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.25/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 </code></pre>
-<p>This will keep spacing consistent and you won't have to write any CSS! There are modifier classes for virtually everything: padding, margin, text-color, background-color, etc. Be sure to read <a href="http://esri.github.io/calcite-web/grid/">the documentation</a> to learn what is possible.</p>
 
             </div>
             <!-- populated on the client -->
@@ -347,10 +192,9 @@
             </h5>
             <div class="js-search-item-content hide">
               <p>To install Calcite-Web as a ruby gem, reference the gem from your <code>Gemfile</code>:</p>
-<pre><code>gem <span class="hljs-string">"calcite-web"</span>, :git =&gt; <span class="hljs-string">"https://github.com/Esri/calcite-web.git"</span>, :tag =&gt; <span class="hljs-string">"current.tag.version"</span>
+<pre><code>gem <span class="hljs-string">"calcite-web"</span>, :git =&gt; <span class="hljs-string">"https://github.com/Esri/calcite-web.git"</span>, :tag =&gt; <span class="hljs-string">"v1.0.0-beta.25"</span>
 </code></pre>
-<p>Be sure to use the replace <code>current.tag.version</code> with <a href="https://github.com/Esri/calcite-web/releases">the most up to date tag</a>.</p>
-<p>This makes Calcite Web available as a Compass extension. To use Calcite Web, make sure you require the gem in your compass config file (usually found at <code>config/compass.rb</code>). an example config file might look like this:</p>
+<p>This makes Calcite Web available as a Compass extension. To use Calcite Web, make sure you require the gem in your compass config file (usually found at <code>config/compass.rb</code>). An example config file might look like this:</p>
 <pre><code class="ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">'calcite-web'</span>
 
 css_dir = <span class="hljs-string">"stylesheets"</span>
@@ -359,7 +203,7 @@ sass_dir = <span class="hljs-string">"sass"</span>
 <p>Then in your project's sass files, just import it:</p>
 <pre><code><span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-string">"calcite-web"</span></span>;
 </code></pre>
-<p>That will give you everything including Sass utilities. You will also need to copy over the JavaScript and image assets to your static folder <a href="/#static-files">(see above)</a>.</p>
+<p>That will give you everything including Sass utilities. You will also need to copy over the JavaScript and image assets to your static folder <a href="./#static-files">(see above)</a>.</p>
 <p>Calcite Web has a built in library of mixins that cover everything from animation to font-size. To be sure you're building your site in the easiest way (and the most visually consistent way) read up on everything that's available on the <a href="./sass">Sass Page</a>.</p>
 
             </div>
@@ -378,144 +222,17 @@ sass_dir = <span class="hljs-string">"sass"</span>
             </h5>
             <div class="js-search-item-content hide">
               <p>To install Calcite Web with npm, type:</p>
-<pre><code>npm <span class="hljs-keyword">install</span> --save-dev Esri/calcite-web<span class="hljs-comment">#v1.0.0-beta.24</span>
+<pre><code>npm <span class="hljs-keyword">install</span> --save-dev Esri/calcite-web<span class="hljs-comment">#v1.0.0-beta.25</span>
 </code></pre>
 <p>You must add the current version in order to get the <code>dist/</code> folder.</p>
-<p>Then, if you're using sass, be sure to add <code>node_modules/calcite-web/dist/sass/</code> to your load path. If you're using <code>grunt-contrib-sass</code> you add that like this:</p>
-<pre><code class="js"><span class="hljs-string">'sass'</span>: {
-  target: {
-    options: {
-      loadPath: <span class="hljs-string">'node_modules/calcite-web/dist/sass/'</span>,
-      <span class="hljs-built_in">require</span>: <span class="hljs-string">'./lib/list-files.rb'</span>
-    },
-    files: {
-      <span class="hljs-string">'path/to.css'</span>: <span class="hljs-string">'path/to.scss'</span>
-    }
-  }
-}
+<p>Now, in your main <code>.scss</code> file, you can just require the framework:</p>
+<pre><code><span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-string">"node_modules/calcite-web/dist/sass/calcite-web"</span></span>;
 </code></pre>
-<p>Then in your main <code>.scss</code> file, you can just require the framework: <code>@import &quot;calcite-web&quot;;</code>. Everything mentioned about mixins above in the <a href="/#ruby-gem">Ruby gem section</a> applies to the Node module as well, so scroll up a bit and learn more about how Calcite Web functions as a Sass library;</p>
 
             </div>
             <!-- populated on the client -->
             <div class="js-search-item-snippet font-size-0"></div>
             <a href="../get-started/#npm" class="link-gray font-size--2">esri.github.io/get-started/#npm</a>
-          </section>
-        
-      
-        
-          <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
-            <h5 class="trailer-half">
-              <a href="../get-started/#contributing">
-                
-                  Overview (Get Started)
-                
-              </a>
-            </h5>
-            <div class="js-search-item-content hide">
-              <p>Calcite Web is open to all types of contributions from across Esri. Things you can do to contribute include:</p>
-<ol>
-<li>Report a bug (<a href="https://github.com/Esri/calcite-web/issues/new">open an issue</a>)</li>
-<li>Suggest a new pattern or component (<a href="https://github.com/Esri/calcite-web/issues/new">open an issue</a>)</li>
-<li>Fork the repository and fix one of the <a href="https://github.com/Esri/calcite-web/issues">open issues</a></li>
-<li>Report problems with the <a href="http://esri.github.io/calcite-web/">documentation</a>.</li>
-</ol>
-<h3>Install Dependencies</h3>
-<p>Calcite Web has two development dependencies, Node.js and Grunt. If you already have these on your computer, you can skip these steps:</p>
-<ol>
-<li>Visit <a href="http://nodejs.org/">nodejs.org</a> to install Node.</li>
-<li><code>npm install -g grunt-cli</code> to install Grunt.</li>
-</ol>
-<h3>Fork the Repository</h3>
-<p>All the code for Calcite Web lives <a href="https://github.com/esri/calcite-web">on GitHub</a>. We use the <a href="https://help.github.com/articles/using-pull-requests/">fork and pull model</a> to manage contribution.</p>
-<ol>
-<li>Fork the repository so you have your own copy (<code>your-username/calcite-web</code>)</li>
-<li>Clone the repo locally with <code>git clone https://github.com/your-username/calcite-web</code></li>
-<li>Move into the clone repo:  <code>cd calcite-web</code></li>
-<li>Install project dependencies: <code>npm install</code></li>
-</ol>
-<p>You should also add <code>Esri/calcite-web</code> as a remote at this point. We generally call this remote branch 'upstream':</p>
-<pre><code>git remote <span class="hljs-built_in">add</span> upstream http<span class="hljs-variable">s:</span>//github.<span class="hljs-keyword">com</span>/Esri/calcite-web
-</code></pre>
-
-            </div>
-            <!-- populated on the client -->
-            <div class="js-search-item-snippet font-size-0"></div>
-            <a href="../get-started/#contributing" class="link-gray font-size--2">esri.github.io/get-started/#contributing</a>
-          </section>
-        
-          <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
-            <h5 class="trailer-half">
-              <a href="../get-started/#development">
-                
-                  Development
-                
-              </a>
-            </h5>
-            <div class="js-search-item-content hide">
-              <p>To run a development environment, just type <code>grunt</code>. You should have a copy of the documentation site live at <a href="http://localhost:8888">localhost:8888</a>. As you develop features and fix bugs, be sure to write notes in <code>CHANGELOG.md</code>.</p>
-<h3>How We Use GitHub</h3>
-<p>All the code for Calcite Web lives <a href="https://github.com/esri/calcite-web">on GitHub</a>. We use the <a href="https://help.github.com/articles/using-pull-requests/">fork and pull model</a> to manage contribution. To contribute, you should:</p>
-<ol>
-<li>Commit your changes.</li>
-<li>Note your changes in <code>CHANGELOG.md</code></li>
-<li>Make sure your copy is up to date: <code>git pull upstream master</code></li>
-<li>Push your changes to your fork: <code>/your-username/calcite-web</code></li>
-<li>Open a pull-request from your fork (<code>/your-username/calcite-web</code>) to the 'upstream' fork (<code>/Esri/calcite-web</code>).</li>
-</ol>
-
-            </div>
-            <!-- populated on the client -->
-            <div class="js-search-item-snippet font-size-0"></div>
-            <a href="../get-started/#development" class="link-gray font-size--2">esri.github.io/get-started/#development</a>
-          </section>
-        
-          <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
-            <h5 class="trailer-half">
-              <a href="../get-started/#versioning">
-                
-                  Versioning
-                
-              </a>
-            </h5>
-            <div class="js-search-item-content hide">
-              <p>Calcite-Web uses SemVer (Semantic Versioning) for its releases. This means that version numbers are basically formatted like <code>MAJOR.MINOR.PATCH</code>. If you're well acquainted with SemVer you should skip to 'Bumping the Version' below.</p>
-<h4>Major</h4>
-<p>Breaking changes are signified with a new <strong>first</strong> number. For example, moving from 1.0.0 to 2.0.0 implies breaking changes.</p>
-<h4>Minor</h4>
-<p>New components, new helper classes, or substantial visual changes to existing components and patterns are <em>minor releases</em>. These are signified by the second number changing. So from 1.1.2 to 1.2.0 there are minor changes.</p>
-<h4>Patches</h4>
-<p>The final number signifies patches such as fixing a pattern or component in a certain browser, or fixing an existing bug. Small changes to the documentation site and the tooling around the Calcite-Web library are also considered patches.</p>
-<h2>Bumping the Version</h2>
-<ol>
-<li>Change the version number in <code>package.json</code> to the desired version number.</li>
-<li>Write a description of the changes, additions, and bug fixes in <code>CHANGELOG.md</code>.</li>
-<li>Make sure <code>Esri/calcite-web</code> is up-to-date with your changes.</li>
-<li>Run <code>grunt release</code>. If prompted enter your GitHub credentials and your s3 access key/secret.</li>
-</ol>
-
-            </div>
-            <!-- populated on the client -->
-            <div class="js-search-item-snippet font-size-0"></div>
-            <a href="../get-started/#versioning" class="link-gray font-size--2">esri.github.io/get-started/#versioning</a>
-          </section>
-        
-          <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
-            <h5 class="trailer-half">
-              <a href="../get-started/#deploy-the-documentation">
-                
-                  Deploying the Documentation
-                
-              </a>
-            </h5>
-            <div class="js-search-item-content hide">
-              <p>To update the documentation site, just make sure you have push access to the <code>Esri/calcite-web</code> repo and type <code>grunt deploy</code>. This will build the site and deploy to gh-pages.</p>
-<p>The site should be updated at <a href="http://esri.github.io/calcite-web/">http://esri.github.io/calcite-web/</a> in just a few moments.</p>
-
-            </div>
-            <!-- populated on the client -->
-            <div class="js-search-item-snippet font-size-0"></div>
-            <a href="../get-started/#deploy-the-documentation" class="link-gray font-size--2">esri.github.io/get-started/#deploy-the-documentation</a>
           </section>
         
       
@@ -533,7 +250,6 @@ sass_dir = <span class="hljs-string">"sass"</span>
             <div class="js-search-item-content hide">
               <p>The Calcite Type System uses a combination of mixins and helper classes to achieve a clear visual style, focusing primarily on simplifying typesetting processes. Using the mixins and classes properly will ensure that all properties are consistent, beautiful, and robust.</p>
 <h3>Typefaces</h3>
-<p>We expose four type families for use in Calcite Web; Avenir Next, Kepler, Frutiger, and Consolas. Each of these type families have a set of weights and styles, defined by their application. For example, Avenir Next has more weights than Frutiger family, reflecting its role as primary UI face, and heavy lifting header face.</p>
 <p>The typographic palette for Calcite Web differs slightly from the official Esri branding document. All typefaces are examined in detail below.</p>
 <p>Calcite Web provides a set of weights for each typeface. These are used by either using the helper class in html, or writing sass to include the mixin, or extending the helper class. The available weights for each face are below. Proper care has been taken to ensure that all type systems used by Calcite avoid faux-bold and faux-italics styled by the browser.</p>
 <p>By default, Calcite Web expects font files to be located at <code>../</code>. If your fonts are elsewhere, set the <code>$font-path</code> variable</p>
@@ -640,7 +356,7 @@ sass_dir = <span class="hljs-string">"sass"</span>
               </a>
             </h5>
             <div class="js-search-item-content hide">
-              <p>Helpers classes apply the <code>font-size($n)</code> <a href="/sass/#font-size">mixin</a> to an element. This allows for quick resizing of text elements up and down the <a href="/sass/#modular-scale">modular type size scale</a>.</p>
+              <p>Helpers classes apply the <code>font-size($n)</code> <a href="../sass/#font-size">mixin</a> to an element. This allows for quick resizing of text elements up and down the <a href="../sass/#modular-scale">modular type size scale</a>.</p>
 
             </div>
             <!-- populated on the client -->
@@ -783,13 +499,12 @@ sass_dir = <span class="hljs-string">"sass"</span>
               </a>
             </h5>
             <div class="js-search-item-content hide">
-              <p>The Calcite Grid System includes a full, responsive, and configurable grid with columns, a container, and a 'Block Group' grid. The main grid is different from standard css grid systems in two key ways:</p>
+              <p>The Calcite Grid System includes a full, responsive, and configurable grid with columns, a container, and a 'Block Group' grid. The main grid is different from standard CSS grid systems in two key ways:</p>
 <ol>
 <li>Column widths are defined by the viewport size rather than percentage of their containers.</li>
 <li>Built-in smart defaults for responsive sizing puts less columns across the screen at smaller sizes, rather than smaller columns.</li>
 </ol>
 <p>These two principles mean that a column becomes a standard unit of measurement, creating a constant and abstracted grid system that stands behind the content of a page rather than within it.</p>
-<p>On very large screens like the apple cinema display, an extra large 36 column grid can be optionally used. This grid has no max width, and is useful for full screen web applications.</p>
 <h3>The Grid</h3>
 <table>
 <thead>
@@ -802,11 +517,6 @@ sass_dir = <span class="hljs-string">"sass"</span>
 <tbody>
 <tr>
 <td>n/a</td>
-<td>Cinema Display</td>
-<td>36</td>
-</tr>
-<tr>
-<td>1450px</td>
 <td>Desktop</td>
 <td>24</td>
 </tr>
@@ -894,16 +604,6 @@ sass_dir = <span class="hljs-string">"sass"</span>
 <td>Fixed container size</td>
 </tr>
 <tr>
-<td><code>$large-class</code></td>
-<td>large</td>
-<td>Prefix word desktop size columns</td>
-</tr>
-<tr>
-<td><code>$large-column-count</code></td>
-<td>36</td>
-<td>How many columns to use past the desktop breakpoint</td>
-</tr>
-<tr>
 <td><code>$default-column-count</code></td>
 <td>24</td>
 <td>How many columns to use on the desktop breakpoint</td>
@@ -982,7 +682,28 @@ sass_dir = <span class="hljs-string">"sass"</span>
               <p>A column is a constant unit of measurement. The width of a column is dynamic, but always between a fixed range. Columns will never get too large or too small. As the viewport gets smaller the Calcite Grid System will simply put less columns on the page.</p>
 <p>By default, large screens hold 24 columns, medium tablet-sized screens hold 12, and phone-sized screens hold 6. The grid will fold columns at these breakpoints. That means an element that is 3 columns wide will always be 3 columns wide, no matter how big or small the screen.</p>
 <p>On large screens, 3 columns out of 24 is proportionally a small piece of screen real estate. On Phones, the Grid will leave the element at 3 columns wide -- proportionally more real estate, as 3/6 columns is more significant than 3/24.</p>
-<p><a href="../page-layouts/grid#columns">View the example</a></p>
+<div class="grid-example clearfix">
+  <div class="column-17">
+    <span>column-17</span>
+    <div class="column-8">
+      <span>column-8</span>
+    </div>
+    <div class="column-9 tablet-first-column">
+      <span>column-9</span>
+    </div>
+  </div>
+</div>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-17"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>column-17<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>column-8<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-9 tablet-first-column"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>column-9<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p><a href="../examples/grid/#columns">View the full example</a></p>
 
             </div>
             <!-- populated on the client -->
@@ -1000,7 +721,20 @@ sass_dir = <span class="hljs-string">"sass"</span>
             </h5>
             <div class="js-search-item-content hide">
               <p>The width of elements can be explicitly defined for breakpoints where columns would normally fold by default. This can be done with the <code>phone-column-n</code> and <code>tablet-column-n</code> classes. For example, <code>.column-12</code> would default to the full 12/12 column width at a tablet size. Adding to the same element <code>.tablet-column-6</code> would prevent the default behavior, and at a tablet viewport, the element would be 6/12 columns.</p>
-<p><a href="../page-layouts/grid#responsive-columns">View the example</a></p>
+<div class="grid-example clearfix">
+  <div class="column-8 tablet-column-2 phone-column-3">
+    <span class="tablet-hide">column-8</span>
+    <span class="tablet-only">tablet-column-2</span>
+    <span class="phone-show">phone-column-3</span>
+  </div>
+</div>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-8 tablet-column-2 phone-column-3"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tablet-hide"</span>&gt;</span>column-8<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tablet-only"</span>&gt;</span>tablet-column-2<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"phone-show"</span>&gt;</span>phone-column-3<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p><a href="../examples/grid/#responsive-columns">View the full example</a></p>
 
             </div>
             <!-- populated on the client -->
@@ -1019,8 +753,28 @@ sass_dir = <span class="hljs-string">"sass"</span>
             <div class="js-search-item-content hide">
               <p>Contrary to other flexible-width grid systems, Calcite Grid columns do not change behavior when nested. Because a column is a constant measurement relative to the size of the viewport, nested columns still span the same width as their non-nested counterparts. An element with <code>.column-6</code> nested within an element with <code>.column-12</code> is the same size as an un-nested <code>.column-6</code>. Further, clearing of the column-gutter is automatically done for you with <code>:first-child</code> and <code>:last-child</code> psuedo-selectors on all column classes.</p>
 <p>Column-folding behavior is almost entirely automatic. The only exception is gutter clearing behaviors on deeply nested items after column folding occurs - in some situations we can not know what columns are now first or last in their rows. This will cause the column to be inset from the edge of the container. The example below solves this by introducing <code>first-column</code> classes, along with <code>tablet-first-column</code> and <code>phone-first-column</code>.</p>
-<p>There are four levels of nesting in this example, the more transparent the blue, the deeper the column is nested.</p>
-<p><a href="../page-layouts/grid#nested-columns">View the example</a></p>
+<div class="grid-example clearfix">
+  <div class="column-8">
+    <span>column-8</span>
+    <div class="column-4">
+      <span>column-4</span>
+    </div>
+    <div class="column-4">
+      <span>column-4</span>
+    </div>
+  </div>
+</div>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-8"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>column-8<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>column-4<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>column-4<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p><a href="../examples/grid/#nested-columns">View the example</a></p>
 
             </div>
             <!-- populated on the client -->
@@ -1039,7 +793,7 @@ sass_dir = <span class="hljs-string">"sass"</span>
             <div class="js-search-item-content hide">
               <p>Because columns can now be nested without changing their behavior, we don't need rows, really. However, you still may find that a tall, narrow column with a short wide neighbor can cause float issues with subsequent columns.</p>
 <p>With this grid you can wrap the first two columns in a 24 column grid, which will act in the same manner as a row.</p>
-<p><a href="../page-layouts/grid#rows">View the example</a></p>
+<p><a href="../examples/grid/#rows">View the example</a></p>
 
             </div>
             <!-- populated on the client -->
@@ -1057,7 +811,18 @@ sass_dir = <span class="hljs-string">"sass"</span>
             </h5>
             <div class="js-search-item-content hide">
               <p>Block groups are designed for quickly creating gridded content, such as a tile pattern or image gallery. Block groups are percentage based, so they can subdivide columns. Block groups have the ability to break the regular grid system, and thus should be used sparingly and with thought.</p>
-<p><a href="../page-layouts/grid#block-groups">View the example</a></p>
+<div class="block-group block-group-3-up">
+  <div class="panel block">Block</div>
+  <div class="panel block">Block</div>
+  <div class="panel block">Block</div>
+</div>
+<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block-group block-group-3-up"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"panel block"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"panel block"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"panel block"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+<p><a href="../examples/grid/#block-groups">View the example</a></p>
 
             </div>
             <!-- populated on the client -->
@@ -1075,9 +840,20 @@ sass_dir = <span class="hljs-string">"sass"</span>
             </h5>
             <div class="js-search-item-content hide">
               <p>Block groups have responsive <code>tablet-</code> and <code>phone-</code> prefix classes. These allow the flow of content across repeating rows of content to be easily tweaked across viewport widths in scenarios where the default <a href="#columns">column resizing</a> or <a href="#responsive-columns">responsive column classes</a> would be too verbose or cumbersome.</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"block-group block-group-4-up tablet-block-group-2-up phone-block-group-1-up"</span>&gt;</span>
+<div class="block-group block-group-4-up tablet-block-group-2-up phone-block-group-1-up">
+  <div class="block panel trailer-half">Block</div>
+  <div class="block panel trailer-half">Block</div>
+  <div class="block panel trailer-half">Block</div>
+  <div class="block panel trailer-half">Block</div>
+</div>
+<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block-group block-group-4-up tablet-block-group-2-up phone-block-group-1-up"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block panel trailer-half"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block panel trailer-half"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block panel trailer-half"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block panel trailer-half"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
 </code></pre>
-<p><a href="../page-layouts/grid#responsive-block-groups">View the example</a></p>
+<p><a href="../examples/grid/#responsive-block-groups">View the example</a></p>
 
             </div>
             <!-- populated on the client -->
@@ -1120,7 +896,16 @@ sass_dir = <span class="hljs-string">"sass"</span>
 <p>Pre and post helpers are available from <code>.pre-1</code> and <code>.post-1</code> to <code>.pre-24</code> and <code>.post-24</code>.</p>
 <p><strong>Note:</strong> While a single DOM element <em>can</em> have both pre and post helpers, putting both on a single node can cause problems when switching a layout for right to left languages.</p>
 <p>If problems occur in a layout, use the <code>rtl-</code> prefix to explicitly assign <code>pre</code> and <code>post</code> classes to the right to left layout.</p>
-<p><a href="../page-layouts/grid#pre-and-post">View the example</a></p>
+<div class="grid-example clearfix">
+  <div class="column-8 pre-2">
+    <span>column-8 pre-2</span>
+  </div>
+</div>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-8 pre-2"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>column-8 pre-2<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p><a href="../examples/grid/#pre-and-post">View the example</a></p>
 
             </div>
             <!-- populated on the client -->
@@ -1401,8 +1186,6 @@ aligning grid columns when the Grid System is unable to determine which columns 
             <div class="js-search-item-content hide">
               <p>The monochromatic icon set is delivered as an icon font. By default, Calcite Web expects font files to be located at <code>../</code>. If your fonts are elsewhere, set the <code>$font-path</code> variable</p>
 <p>Icon fonts have several advantages such as the ability to quickly change their color, and the fact that icon fonts size themselves to be proportional to the text you place them with.</p>
-<p>Monochromatic icons are generally 'interface' icons, and are named after the <em>action</em> you'd like to illustrate, instead of the <em>noun</em> the icon represents. For example, the delete icon has a class of <code>icon-delete</code> (the action) and not <code>icon-trash</code> (the noun). The reason for this is that if we decide another icon describes the action or idea better than the current one, we can change it without breaking existing code.</p>
-<p>Icons in the icon font will be scaled to the text size of whatever element you add the class to. Below are all of the icons available in the icon font.</p>
 
             </div>
             <!-- populated on the client -->
@@ -1669,12 +1452,30 @@ aligning grid columns when the Grid System is unable to determine which columns 
               </a>
             </h5>
             <div class="js-search-item-content hide">
-              <p>Cards are like panels, but with a more structured content. They can have headers, footers, and full bleed images. Use cards when panels are too simple.</p>
+              <p>Cards are like panels, but a little more structured. They can have titles, buttons, and full bleed images. Use cards when panels are too simple.</p>
+<p>If you don't have an image, use the <code>.card-bar-blue</code> (or another color) to add some graphic punch.</p>
 
             </div>
             <!-- populated on the client -->
             <div class="js-search-item-snippet font-size-0"></div>
             <a href="../components/#card" class="link-gray font-size--2">esri.github.io/components/#card</a>
+          </section>
+        
+          <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
+            <h5 class="trailer-half">
+              <a href="../components/#card-wide">
+                
+                  Wide Cards
+                
+              </a>
+            </h5>
+            <div class="js-search-item-content hide">
+              <p>For list views, cards can also be used in landscape orientation. The full bleed image will crop itself to fill the available space.</p>
+
+            </div>
+            <!-- populated on the client -->
+            <div class="js-search-item-snippet font-size-0"></div>
+            <a href="../components/#card-wide" class="link-gray font-size--2">esri.github.io/components/#card-wide</a>
           </section>
         
           <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
@@ -1801,22 +1602,6 @@ ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>
             <!-- populated on the client -->
             <div class="js-search-item-snippet font-size-0"></div>
             <a href="../components/#form-overview" class="link-gray font-size--2">esri.github.io/components/#form-overview</a>
-          </section>
-        
-          <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
-            <h5 class="trailer-half">
-              <a href="../components/#search-bar">
-                
-                  Search Bar
-                
-              </a>
-            </h5>
-            <div class="js-search-item-content hide">
-              
-            </div>
-            <!-- populated on the client -->
-            <div class="js-search-item-snippet font-size-0"></div>
-            <a href="../components/#search-bar" class="link-gray font-size--2">esri.github.io/components/#search-bar</a>
           </section>
         
           <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
@@ -1967,59 +1752,6 @@ ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>
         
           <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
             <h5 class="trailer-half">
-              <a href="../patterns/#basic-html-page">
-                
-                  Basic Page
-                
-              </a>
-            </h5>
-            <div class="js-search-item-content hide">
-              <p>A basic starting point for an html page using Calcite Web might be something like this:</p>
-<pre><code class="html"><span class="hljs-doctype">&lt;!doctype html&gt;</span>
-<span class="hljs-comment">&lt;!--[if lt IE 9]&gt;  &lt;html class="ie lt-ie9 ie8"&gt; &lt;![endif]--&gt;</span>
-<span class="hljs-comment">&lt;!--[if IE 9]&gt;     &lt;html class="ie ie9"&gt; &lt;![endif]--&gt;</span>
-<span class="hljs-comment">&lt;!--[if !IE]&gt;&lt;!--&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span> <span class="hljs-comment">&lt;!--&lt;![endif]--&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"utf-8"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"IE=edge"</span> <span class="hljs-attribute">http-equiv</span>=<span class="hljs-value">"X-UA-Compatible"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"viewport"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"width=device-width, user-scalable=no"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Calcite Web<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"shortcut icon"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/img/favicon.ico"</span>&gt;</span>
-    <span class="hljs-comment">&lt;!-- get calcite-web css from the cdn (use latest version) --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web//css/calcite-web.min.css"</span>&gt;</span>
-    <span class="hljs-comment">&lt;!--[if lt IE 9]&gt;
-      &lt;script src="/assets/javascripts/libs/selectivizr.js"&gt;&lt;/script&gt;
-      &lt;script src="/assets/javascripts/libs/html5shiv.js"&gt;&lt;/script&gt;
-    &lt;![endif]--&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"wrapper"</span>&gt;</span>
-      <span class="hljs-comment">&lt;!-- header --&gt;</span>
-      <span class="hljs-comment">&lt;!-- content of page --&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"footer"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"contentinfo"</span>&gt;</span>
-      <span class="hljs-comment">&lt;!-- content of footer --&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-
-    <span class="hljs-comment">&lt;!-- get calcite-web js from the cdn (use latest version) --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web//js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
-
-    <span class="hljs-comment">&lt;!-- interactive patterns need to be initialized --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="stylus">
-       calcite.<span class="hljs-function"><span class="hljs-title">init</span><span class="hljs-params">()</span></span>
-    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
-</code></pre>
-
-            </div>
-            <!-- populated on the client -->
-            <div class="js-search-item-snippet font-size-0"></div>
-            <a href="../patterns/#basic-html-page" class="link-gray font-size--2">esri.github.io/patterns/#basic-html-page</a>
-          </section>
-        
-          <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
-            <h5 class="trailer-half">
               <a href="../patterns/#top-nav">
                 
                   Top Nav
@@ -2033,23 +1765,6 @@ ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>
             <!-- populated on the client -->
             <div class="js-search-item-snippet font-size-0"></div>
             <a href="../patterns/#top-nav" class="link-gray font-size--2">esri.github.io/patterns/#top-nav</a>
-          </section>
-        
-          <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
-            <h5 class="trailer-half">
-              <a href="../patterns/#app-switcher">
-                
-                  App Switcher
-                
-              </a>
-            </h5>
-            <div class="js-search-item-content hide">
-              <p>The app switcher should be present on the top nav of every Esri product, next to the user nav. It allows a logged in user to quickly navigate between web products.</p>
-
-            </div>
-            <!-- populated on the client -->
-            <div class="js-search-item-snippet font-size-0"></div>
-            <a href="../patterns/#app-switcher" class="link-gray font-size--2">esri.github.io/patterns/#app-switcher</a>
           </section>
         
           <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
@@ -2184,7 +1899,7 @@ ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>
               </a>
             </h5>
             <div class="js-search-item-content hide">
-              <p>Standard footer for ArcGIS and Esri properties. The footer in Calcite Web is 'sticky' by default. This means that if the page doesn't have sufficient height, the footer will still hug the bottom of the screen. For this to work properly, you must use a <code>div</code> with a class of <code>wrapper</code>. See the <a href="#basic-html-page">basic HTML page</a> for an example.</p>
+              <p>Standard footer for ArcGIS and Esri properties. The footer in Calcite Web is 'sticky' by default. This means that if the page doesn't have sufficient height, the footer will still hug the bottom of the screen. For this to work properly, you must use a <code>div</code> with a class of <code>wrapper</code>. See the <a href="../guides/quickstart/">basic HTML page</a> for an example.</p>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">footer</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"footer avenir-regular leader-3"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"container"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-6"</span>&gt;</span>
@@ -2267,7 +1982,7 @@ ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>
             </h5>
             <div class="js-search-item-content hide">
               <p>Interactive patterns rely on <code>calcite-web.js</code> to work properly. You must add a reference to <code>calcite-web.js</code> (either from the cdn or you can host it yourself). After that, you should startup all the interactive patterns on load with <code>calcite.init()</code>.</p>
-<p>For more on using <code>calcite-web.js</code> you can view the <a href="../javascript/">JavaScript Guide</a>.</p>
+<p>For more on using <code>calcite-web.js</code> you can view the <a href="../javascript/">JavaScript Documentation</a>.</p>
 
             </div>
             <!-- populated on the client -->
@@ -2400,330 +2115,6 @@ ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>
         
           <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
             <h5 class="trailer-half">
-              <a href="../page-layouts/#aside-main">
-                
-                  Aside / Main
-                
-              </a>
-            </h5>
-            <div class="js-search-item-content hide">
-              <p>This structure is commonly used for any big block of content that needs a secondary navigation structure. Documentation uses this often, as does a search results page, and a blog page. Can be reversed to be Main / Aside.</p>
-<p><a href="./aside-main/">View the page sample.</a></p>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-container"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">aside</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-6"</span>&gt;</span>
-    <span class="hljs-comment">&lt;!-- Aside Content --&gt;</span>
-    <span class="hljs-comment">&lt;!-- Search Filters, Side Navs, etc --&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">aside</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-title">main</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-17 pre-1"</span>&gt;</span>
-    <span class="hljs-comment">&lt;!-- Main Content --&gt;</span>
-    <span class="hljs-comment">&lt;!-- Article, Search Results, other Content --&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">main</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-</code></pre>
-
-            </div>
-            <!-- populated on the client -->
-            <div class="js-search-item-snippet font-size-0"></div>
-            <a href="../page-layouts/#aside-main" class="link-gray font-size--2">esri.github.io/page-layouts/#aside-main</a>
-          </section>
-        
-          <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
-            <h5 class="trailer-half">
-              <a href="../page-layouts/#three-up">
-                
-                  Three Up
-                
-              </a>
-            </h5>
-            <div class="js-search-item-content hide">
-              <p>When presenting a set of facets to illustrate a concept, the three up block is useful</p>
-<p><a href="./three-up/">View the page sample.</a></p>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-container"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-8"</span>&gt;</span>
-    <span class="hljs-comment">&lt;!-- Panel, Card, or Illustration --&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-8"</span>&gt;</span>
-    <span class="hljs-comment">&lt;!-- Panel, Card, or Illustration --&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-8"</span>&gt;</span>
-    <span class="hljs-comment">&lt;!-- Panel, Card, or Illustration --&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-</code></pre>
-
-            </div>
-            <!-- populated on the client -->
-            <div class="js-search-item-snippet font-size-0"></div>
-            <a href="../page-layouts/#three-up" class="link-gray font-size--2">esri.github.io/page-layouts/#three-up</a>
-          </section>
-        
-          <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
-            <h5 class="trailer-half">
-              <a href="../page-layouts/#content-illustration">
-                
-                  Content / Illustration
-                
-              </a>
-            </h5>
-            <div class="js-search-item-content hide">
-              <p>When the aside needs more room, either to be a set of code sample, an image, video, or other information that needs more space and is not really navigation.</p>
-<p><a href="./content-illustration">View the page sample.</a></p>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-container"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-12"</span>&gt;</span>
-    <span class="hljs-comment">&lt;!-- Main Content --&gt;</span>
-    <span class="hljs-comment">&lt;!-- Header and paragraph --&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-11 pre-1"</span>&gt;</span>
-    <span class="hljs-comment">&lt;!-- Illustration --&gt;</span>
-    <span class="hljs-comment">&lt;!-- Video, Image, or Code Sample --&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-</code></pre>
-
-            </div>
-            <!-- populated on the client -->
-            <div class="js-search-item-snippet font-size-0"></div>
-            <a href="../page-layouts/#content-illustration" class="link-gray font-size--2">esri.github.io/page-layouts/#content-illustration</a>
-          </section>
-        
-      
-        
-          <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
-            <h5 class="trailer-half">
-              <a href="../page-layouts/#three-cards">
-                
-                  Three Up Cards
-                
-              </a>
-            </h5>
-            <div class="js-search-item-content hide">
-              <p>Cards are often used to present facets of an idea, or preview a set from a larger context.</p>
-<p><a href="./three-cards/">View the section sample.</a></p>
-<pre><code>&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">"grid-example trailer-2 leader-1 clearfix"</span>&gt;
-  &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">"card column-8 trailer-1"</span>&gt;
-    &lt;<span class="hljs-tag">figure</span> class=<span class="hljs-string">"card-image"</span>&gt;
-      &lt;<span class="hljs-tag">img</span> src=<span class="hljs-string">"/assets/img/bridge-club.jpg"</span> alt=<span class="hljs-string">"Bridge Club, 1942"</span>&gt;
-      &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">"card-caption"</span>&gt;
-        Card Games
-      &lt;/div&gt;
-    &lt;/figure&gt;
-    &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">"card-body"</span>&gt;
-      &lt;<span class="hljs-tag">h4</span> class=<span class="hljs-string">"trailer-0"</span>&gt;&lt;<span class="hljs-tag">a</span> href=<span class="hljs-string">"#"</span>&gt;Contact Bridge&lt;/a&gt;&lt;/h4&gt;
-      &lt;<span class="hljs-tag">p</span> class=<span class="hljs-string">"font-size--2 text-darker-gray"</span>&gt;From Wikipedia on <span class="hljs-number">4</span>/<span class="hljs-number">20</span>&lt;/p&gt;
-      &lt;<span class="hljs-tag">p</span> class=<span class="hljs-string">"font-size--1"</span>&gt;Bridge is <span class="hljs-tag">a</span> trick-taking game using <span class="hljs-tag">a</span> standard <span class="hljs-number">52</span>-card deck. It is played by four players <span class="hljs-keyword">in</span> two competing partnerships, with partners sitting opposite each other around <span class="hljs-tag">a</span> <span class="hljs-tag">table</span>.&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;<span class="hljs-tag">a</span> href=<span class="hljs-string">"#"</span> class=<span class="hljs-string">"btn btn-grouped btn-clear btn-half"</span>&gt;Learn more&lt;/a&gt;
-    &lt;<span class="hljs-tag">a</span> href=<span class="hljs-string">"#"</span> class=<span class="hljs-string">"btn btn-grouped btn-half"</span>&gt;Play Bridge&lt;/a&gt;
-  &lt;/div&gt;
-
-  &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">"card column-8 trailer-1"</span>&gt;
-    &lt;<span class="hljs-tag">figure</span> class=<span class="hljs-string">"card-image"</span>&gt;
-      &lt;<span class="hljs-tag">img</span> src=<span class="hljs-string">"/assets/img/bridge-club.jpg"</span> alt=<span class="hljs-string">"Bridge Club, 1942"</span>&gt;
-      &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">"card-caption"</span>&gt;
-        Card Games
-      &lt;/div&gt;
-    &lt;/figure&gt;
-    &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">"card-body"</span>&gt;
-      &lt;<span class="hljs-tag">h4</span> class=<span class="hljs-string">"trailer-0"</span>&gt;&lt;<span class="hljs-tag">a</span> href=<span class="hljs-string">"#"</span>&gt;Contact Bridge&lt;/a&gt;&lt;/h4&gt;
-      &lt;<span class="hljs-tag">p</span> class=<span class="hljs-string">"font-size--2 text-darker-gray"</span>&gt;From Wikipedia on <span class="hljs-number">4</span>/<span class="hljs-number">20</span>&lt;/p&gt;
-      &lt;<span class="hljs-tag">p</span> class=<span class="hljs-string">"font-size--1"</span>&gt;Bridge is <span class="hljs-tag">a</span> trick-taking game using <span class="hljs-tag">a</span> standard <span class="hljs-number">52</span>-card deck. It is played by four players <span class="hljs-keyword">in</span> two competing partnerships, with partners sitting opposite each other around <span class="hljs-tag">a</span> <span class="hljs-tag">table</span>.&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;<span class="hljs-tag">a</span> href=<span class="hljs-string">"#"</span> class=<span class="hljs-string">"btn btn-grouped btn-clear btn-half"</span>&gt;Learn more&lt;/a&gt;
-    &lt;<span class="hljs-tag">a</span> href=<span class="hljs-string">"#"</span> class=<span class="hljs-string">"btn btn-grouped btn-half"</span>&gt;Play Bridge&lt;/a&gt;
-  &lt;/div&gt;
-
-  &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">"card column-8 trailer-1"</span>&gt;
-    &lt;<span class="hljs-tag">figure</span> class=<span class="hljs-string">"card-image"</span>&gt;
-      &lt;<span class="hljs-tag">img</span> src=<span class="hljs-string">"/assets/img/bridge-club.jpg"</span> alt=<span class="hljs-string">"Bridge Club, 1942"</span>&gt;
-      &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">"card-caption"</span>&gt;
-        Card Games
-      &lt;/div&gt;
-    &lt;/figure&gt;
-    &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">"card-body"</span>&gt;
-      &lt;<span class="hljs-tag">h4</span> class=<span class="hljs-string">"trailer-0"</span>&gt;&lt;<span class="hljs-tag">a</span> href=<span class="hljs-string">"#"</span>&gt;Contact Bridge&lt;/a&gt;&lt;/h4&gt;
-      &lt;<span class="hljs-tag">p</span> class=<span class="hljs-string">"font-size--2 text-darker-gray"</span>&gt;From Wikipedia on <span class="hljs-number">4</span>/<span class="hljs-number">20</span>&lt;/p&gt;
-      &lt;<span class="hljs-tag">p</span> class=<span class="hljs-string">"font-size--1"</span>&gt;Bridge is <span class="hljs-tag">a</span> trick-taking game using <span class="hljs-tag">a</span> standard <span class="hljs-number">52</span>-card deck. It is played by four players <span class="hljs-keyword">in</span> two competing partnerships, with partners sitting opposite each other around <span class="hljs-tag">a</span> <span class="hljs-tag">table</span>.&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;<span class="hljs-tag">a</span> href=<span class="hljs-string">"#"</span> class=<span class="hljs-string">"btn btn-grouped btn-clear btn-half"</span>&gt;Learn more&lt;/a&gt;
-    &lt;<span class="hljs-tag">a</span> href=<span class="hljs-string">"#"</span> class=<span class="hljs-string">"btn btn-grouped btn-half"</span>&gt;Play Bridge&lt;/a&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-</code></pre>
-
-            </div>
-            <!-- populated on the client -->
-            <div class="js-search-item-snippet font-size-0"></div>
-            <a href="../page-layouts/#three-cards" class="link-gray font-size--2">esri.github.io/page-layouts/#three-cards</a>
-          </section>
-        
-          <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
-            <h5 class="trailer-half">
-              <a href="../page-layouts/#pricing-table">
-                
-                  Pricing Table
-                
-              </a>
-            </h5>
-            <div class="js-search-item-content hide">
-              <p>Pricing tables are used to help a customer find the best option from a wide rubric.</p>
-<p><a href="./pricing-table/">View the page sample.</a></p>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"trailer-2 leader-1 clearfix"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-24"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-8 post-1"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-darker-gray leader-3 font-size-4"</span>&gt;</span>Splashy Marketing Pitch That Makes you Want This Thing we Sell.<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"card card-bar-purple column-5 trailer-1"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"card-body text-center"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Some Option<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"font-size--3 text-darker-gray trailer-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>A NOTE ABOUT THAT<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"font-size--3 text-darker-gray"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>YOU WILL LIKE IT<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Pretty Great Thing: $100<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">hr</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"trailer-0"</span>&gt;</span>An option option: $10<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Another option option: $10<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-fill"</span>&gt;</span>Buy Online<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"card card-bar-light-blue column-5 trailer-1"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"card-body text-center"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Some Option<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"font-size--3 text-darker-gray trailer-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>A NOTE ABOUT THAT<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"font-size--3 text-darker-gray"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>YOU WILL LIKE IT<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Pretty Great Thing: $100<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">hr</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"trailer-0"</span>&gt;</span>An option option: $10<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Another option option: $10<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-fill"</span>&gt;</span>Buy Online<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"card card-bar-light-green column-5 trailer-1"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"card-body text-center"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Some Option<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"font-size--3 text-darker-gray trailer-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>A NOTE ABOUT THAT<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"font-size--3 text-darker-gray"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>YOU WILL LIKE IT<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Pretty Great Thing: $100<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">hr</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"trailer-0"</span>&gt;</span>An option option: $10<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Another option option: $10<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-fill"</span>&gt;</span>Buy Online<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table-pricing"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">col</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"38%"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"font-size-2"</span>&gt;</span>Here is one category of thing.<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Option 1<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Option 2<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Option 3<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>One particular feature goes here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-ui-radio-checked icon-ui-purple"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-ui-radio-checked icon-ui-blue"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-ui-radio-checked icon-ui-green"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>
-            Some other specific feature thing goes here. <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-ui-description"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-ui-radio-checked icon-ui-purple"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-ui-radio-checked icon-ui-blue"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>
-            This one is really expensive and only one plan gets it.
-          <span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-ui-radio-checked icon-ui-purple"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-
-
-
-</code></pre>
-
-            </div>
-            <!-- populated on the client -->
-            <div class="js-search-item-snippet font-size-0"></div>
-            <a href="../page-layouts/#pricing-table" class="link-gray font-size--2">esri.github.io/page-layouts/#pricing-table</a>
-          </section>
-        
-      
-        
-          <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
-            <h5 class="trailer-half">
-              <a href="../page-layouts/#blog">
-                
-                  Blog Article
-                
-              </a>
-            </h5>
-            <div class="js-search-item-content hide">
-              <p>Blog posts are mostly about long-form content layout. Luckily, calcite-web has built in type styles that make this style of page very easy to build.</p>
-<p><a href="./blog/">View Blog Layout</a></p>
-
-            </div>
-            <!-- populated on the client -->
-            <div class="js-search-item-snippet font-size-0"></div>
-            <a href="../page-layouts/#blog" class="link-gray font-size--2">esri.github.io/page-layouts/#blog</a>
-          </section>
-        
-          <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
-            <h5 class="trailer-half">
-              <a href="../page-layouts/#documentation">
-                
-                  Documentation
-                
-              </a>
-            </h5>
-            <div class="js-search-item-content hide">
-              <p>Documentation pages are the technically focused descriptions of products, services, or other offerings. The documentation layout will be the key content for any product using the Calcite Web system, and as such it has been designed with rigor for primary use.</p>
-<p><a href="./documentation/">View Documentation Layout</a></p>
-
-            </div>
-            <!-- populated on the client -->
-            <div class="js-search-item-snippet font-size-0"></div>
-            <a href="../page-layouts/#documentation" class="link-gray font-size--2">esri.github.io/page-layouts/#documentation</a>
-          </section>
-        
-          <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
-            <h5 class="trailer-half">
-              <a href="../page-layouts/#api-reference">
-                
-                  API Reference
-                
-              </a>
-            </h5>
-            <div class="js-search-item-content hide">
-              <p>Reference pages are similar to documentation pages, but handle content that needs to live in tables, and has more specific needs than a general written documentation page. These two pages live in harmony together, teaching all who come before them like a pair of wizened sages.</p>
-<p><a href="./api-reference/">View API Reference Layout</a></p>
-
-            </div>
-            <!-- populated on the client -->
-            <div class="js-search-item-snippet font-size-0"></div>
-            <a href="../page-layouts/#api-reference" class="link-gray font-size--2">esri.github.io/page-layouts/#api-reference</a>
-          </section>
-        
-      
-    
-      
-        
-          <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
-            <h5 class="trailer-half">
               <a href="../sass/#overview">
                 
                   Overview (Sass)
@@ -2752,10 +2143,10 @@ ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>
             <div class="js-search-item-content hide">
               <p>By default, using the Calcite Web sass files will build css  for the complete framework. This build can be customized, or entirely turned off for sass-only applications.</p>
 <p>Setting the <code>$generate-css</code> variable to false in your sass files will prevent any css from being generated, while exposing all the underlying sass styles of the framework. Setting specific variables like <code>$include-alerts</code> to false will preclude only that components css from being built.</p>
-<p>Additionally, font imports are controlled this way. By default, Calcite Web requests Avenir Next from a cdn. Setting <code>$include-primary-family</code> to false will prevent the font imports, and the framework will roll back to secondary font options. Frutiger and Kepler are included by setting <code>$include-content-family</code> and <code>$include-secondary-family</code> to true.</p>
+<p>Additionally, font imports are controlled this way. By default, Calcite Web requests Avenir Next from a cdn. You can import <code>calcite-web-no-fonts.scss</code> if you don't want the fonts.</p>
 <pre><code><span class="hljs-comment">// Sass Output</span>
-<span class="hljs-variable">$include</span>-colors:                 true             !<span class="hljs-keyword">default</span>;
-<span class="hljs-variable">$generate</span>-css:                   true             !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-colors:                 true    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$generate</span>-css:                   true    !<span class="hljs-keyword">default</span>;
 
 <span class="hljs-comment">// Language Helpers</span>
 <span class="hljs-variable">$include</span>-right-to-left:          <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
@@ -2778,9 +2169,8 @@ ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>
 <span class="hljs-comment">// Type Output</span>
 <span class="hljs-variable">$include</span>-type:                   <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
   <span class="hljs-variable">$include</span>-primary-family:       true             !<span class="hljs-keyword">default</span>;
-  <span class="hljs-variable">$include</span>-content-family:       false            !<span class="hljs-keyword">default</span>;
-  <span class="hljs-variable">$include</span>-secondary-family:     false            !<span class="hljs-keyword">default</span>;
   <span class="hljs-variable">$include</span>-code-family:          <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+  <span class="hljs-variable">$include</span>-i18n:                 <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
   <span class="hljs-variable">$include</span>-type-defaults:        <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
   <span class="hljs-variable">$include</span>-type-helpers:         <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
 
@@ -2802,11 +2192,11 @@ ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>
 <span class="hljs-variable">$include</span>-tooltip:                <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
 <span class="hljs-variable">$include</span>-forms:                  <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
 <span class="hljs-variable">$include</span>-input-groups:           <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
-<span class="hljs-variable">$include</span>-action-bar:             <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
 <span class="hljs-variable">$include</span>-loader:                 <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
-<span class="hljs-variable">$include</span>-search-bar:             <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
 <span class="hljs-variable">$include</span>-skip-to-content:        <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
 <span class="hljs-variable">$include</span>-logo:                   <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-card:                   <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-animation:              <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
 
 <span class="hljs-comment">// Patterns</span>
 <span class="hljs-variable">$include</span>-footer:                 <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
@@ -2816,17 +2206,14 @@ ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>
 <span class="hljs-variable">$include</span>-sub-nav:                <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
 <span class="hljs-variable">$include</span>-third-nav:              <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
 <span class="hljs-variable">$include</span>-top-nav:                <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
-<span class="hljs-variable">$include</span>-super-nav:              <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
 <span class="hljs-variable">$include</span>-user-nav:               <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
-<span class="hljs-variable">$include</span>-toolbar:                <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
-<span class="hljs-variable">$include</span>-site-search:            <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-app-switcher:           <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
 
 <span class="hljs-comment">// Javascript</span>
 <span class="hljs-variable">$include</span>-tabs:                   <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
 <span class="hljs-variable">$include</span>-modal:                  <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
 <span class="hljs-variable">$include</span>-accordion:              <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
 <span class="hljs-variable">$include</span>-drawers:                <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
-<span class="hljs-variable">$include</span>-expanding-nav:          <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
 <span class="hljs-variable">$include</span>-sticky:                 <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
 <span class="hljs-variable">$include</span>-<span class="hljs-keyword">filter</span>-dropdown:        <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
 </code></pre>
@@ -2848,12 +2235,7 @@ ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>
             <div class="js-search-item-content hide">
               <pre><code><span class="hljs-comment">// custom-build.scss</span>
 $generate-<span class="hljs-string">css:</span> <span class="hljs-literal">false</span>;
-$include-content-<span class="hljs-string">family:</span> <span class="hljs-literal">true</span>;
-$include-secondary-<span class="hljs-string">family:</span> <span class="hljs-literal">true</span>;
-$include-code-<span class="hljs-string">family:</span> <span class="hljs-literal">true</span>;
 $include-<span class="hljs-string">type:</span> <span class="hljs-literal">true</span>;
-$include-type-<span class="hljs-string">defaults:</span> <span class="hljs-literal">true</span>;
-$include-type-<span class="hljs-string">helpers:</span> <span class="hljs-literal">true</span>;
 $include-<span class="hljs-string">grid:</span> <span class="hljs-literal">true</span>;
 $fold-<span class="hljs-string">grid:</span>  <span class="hljs-literal">true</span>;
 $block-<span class="hljs-string">grid:</span> <span class="hljs-literal">true</span>;
@@ -2862,9 +2244,10 @@ $include-<span class="hljs-string">gutter:</span> <span class="hljs-literal">tru
 $include-left-<span class="hljs-string">right:</span> <span class="hljs-literal">true</span>;
 $include-show-<span class="hljs-string">hide:</span> <span class="hljs-literal">true</span>;
 $include-<span class="hljs-string">sticky:</span> <span class="hljs-literal">true</span>;
+
 <span class="hljs-annotation">@import</span> <span class="hljs-string">'calcite-web'</span>
 </code></pre>
-<p>The above sass will import the framework, import all the type options (Avenir, Kepler, Frutiger, and Consolas), and build css that provides access to the type helpers and grid system.</p>
+<p>The above sass will import the framework, import the type styles, and build css that provides access to the type helpers and grid system. Notice that the variable declarations are <em>before</em> the import.</p>
 
             </div>
             <!-- populated on the client -->
@@ -2929,12 +2312,10 @@ $include-<span class="hljs-string">sticky:</span> <span class="hljs-literal">tru
 <pre><code class="scss"><span class="hljs-variable">$transition</span><span class="hljs-value">: <span class="hljs-number">150ms</span> linear;</span>
 <span class="hljs-variable">$box-shadow</span><span class="hljs-value">: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16px</span> <span class="hljs-number">0</span> <span class="hljs-function">rgba</span>(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0.05</span>) !default;</span>
 <span class="hljs-variable">$drawer-width</span><span class="hljs-value">: <span class="hljs-number">280px</span> !default;</span>
-<span class="hljs-variable">$footer-height</span><span class="hljs-value">: <span class="hljs-number">250px</span>;</span>
 </code></pre>
-<p><code>$transtion</code> is a speed and easing function used throughout the framework for motion effects.</p>
+<p><code>$transition</code> is a speed and easing function used throughout the framework for motion effects.</p>
 <p><code>$box-shadow</code> ensures consistent box shadow effects for adding depths to elements.</p>
 <p><code>$drawer-width</code> controls the width of the hidden left and right drawers.</p>
-<p><code>$footer-height</code> controls the height of the footer.</p>
 
             </div>
             <!-- populated on the client -->
@@ -3341,7 +2722,6 @@ Setting the max width of an article to a large multiple of the text size is a wa
 <li><a href="../patterns/#tabs">Tabs</a></li>
 <li><a href="../patterns/#accordions">Accordions</a></li>
 <li><a href="../patterns/#drawers">Drawers</a></li>
-<li><a href="../patterns/#expanding-nav">Expanding Nav</a></li>
 </ul>
 <h3>Loading Calcite as a Module</h3>
 <p>If you don't use a module loader (you probably should...), Calcite will be available as <code>window.calcite</code>. If you do, both flavors of module loaders are also covered below.</p>
@@ -3354,7 +2734,7 @@ Setting the max width of an article to a large multiple of the text size is a wa
 });
 </code></pre>
 <h3>Initializing</h3>
-<p>To use <code>calcite-web.js</code> simply <a href="../patterns#basic-html-page">include a reference to it in your html</a> and then run the <code>calcite.init()</code> method. For example, say your JavaScript was located in a file called <code>script.js</code>. You can bind all the JavaScript patterns from <code>script.js</code> like this:</p>
+<p>To use <code>calcite-web.js</code> simply <a href="../guides/quickstart/">include a reference to it in your html</a> and then run the <code>calcite.init()</code> method. For example, say your JavaScript was located in a file called <code>script.js</code>. You can bind all the JavaScript patterns from <code>script.js</code> like this:</p>
 <pre><code class="js"><span class="hljs-comment">// On document ready</span>
 <span class="hljs-built_in">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
   <span class="hljs-comment">// Initialize all calcite.js patterns</span>
@@ -3933,21 +3313,9 @@ calcite.toggleClass(node, <span class="hljs-string">'test'</span>); <span class=
       <p>Sorry, your search returned no results. Try changing your search term or filter and try again.</p>
     </section>
 
-    <div class="text-center trailer-1 leader-1 js-pagination">
-      <a href="#" class="btn btn-transparent btn-disabled">Previous</a>
-      <a href="#" class="btn">1</a>
-      <a href="#" class="btn btn-transparent">2</a>
-      <a href="#" class="btn btn-transparent">3</a>
-      <span class="avenir-light text-light-gray">...</span>
-      <a href="#" class="btn btn-transparent">20</a>
-      <a href="#" class="btn btn-transparent btn-arrow">Next</a>
-    </div>
-
   </div>
 
 </div>
-      </div>
-
     </div>
 
     
@@ -3967,7 +3335,7 @@ calcite.toggleClass(node, <span class="hljs-string">'test'</span>); <span class=
           <nav class="column-6">
             <h6>Resources</h6>
             <ul class="list-plain">
-              <li><a href="../migration-guide/">Migration Guide</a></li>
+              <li><a href="../guides/migration-guide/">Migration Guide</a></li>
               <li><a href="https://github.com/Esri/calcite-web/releases/">Releases</a></li>
               <li><a href="https://github.com/Esri/calcite-web/blob/master/CONTRIBUTING.md">Contributing</a></li>
               <li><a href="https://github.com/Esri/calcite-web/issues/">Issues</a></li>
@@ -4006,7 +3374,10 @@ calcite.toggleClass(node, <span class="hljs-string">'test'</span>); <span class=
     </footer>
 
     <script src="../assets/js/libs/calcite-web.js"></script>
+    <script src="../assets/js/libs/calcite-web-marketing.js"></script>
+
     <script src="../assets/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
 
     
 

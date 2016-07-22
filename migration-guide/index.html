@@ -20,13 +20,14 @@
     <!-- stylesheets -->
     
       <link rel="stylesheet" href="../assets/css/all.css">
+      <link rel="stylesheet" href="../assets/css/extensions.css">
+      
     
 
     <!--[if IE]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
     <![endif]-->
-
   </head>
 
   <body>
@@ -42,51 +43,14 @@
       <nav class="drawer-nav" role="navigation">
         <aside class="side-nav">
           <h2 class="side-nav-title">Calcite Web</h2>
+          <div class="panel padding-trailer-half padding-leader-half">
             <form method="GET" action="../search/">
-              <div class="search-bar">
-                <input type='search' placeholder='Search' name="q">
-                <button type="submit" class="search-submit icon-ui-search"></button>
-              </div>
+              <input type="search" placeholder="Search" name="q">
             </form>
-            
-              
-            
-              
-                <a href="../type" class="side-nav-link">Type</a>
-              
-            
-              
-                <a href="../grid" class="side-nav-link">Grid</a>
-              
-            
-              
-                <a href="../icons" class="side-nav-link">Icons</a>
-              
-            
-              
-                <a href="../color" class="side-nav-link">Color</a>
-              
-            
-              
-                <a href="../components" class="side-nav-link">Components</a>
-              
-            
-              
-                <a href="../patterns" class="side-nav-link">Patterns</a>
-              
-            
-              
-                <a href="../page-layouts" class="side-nav-link">Layouts</a>
-              
-            
-              
-                <a href="../sass" class="side-nav-link">Sass</a>
-              
-            
-              
-                <a href="../javascript" class="side-nav-link">JavaScript</a>
-              
-            
+          </div>
+          <a href="../documentation/" class="side-nav-link">Documentation</a>
+          <a href="../examples/" class="side-nav-link">Examples</a>
+          <a href="../guides/" class="side-nav-link">Guides</a>
         </aside>
       </nav>
     </div>
@@ -97,52 +61,13 @@
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
-            <form method="GET" action="../search/">
-              <div class="search-bar">
-                <input type='search' placeholder='Search' name="q">
-                <button type="submit" class="search-submit icon-ui-search"></button>
-              </div>
+            <form method="GET" action="../search/" class="panel padding-leader-half">
+              <input type="search" placeholder="Search" name="q">
             </form>
           </div>
-            
-              
-            
-              
-                <a href="../type" class="side-nav-link">Type</a>
-              
-            
-              
-                <a href="../grid" class="side-nav-link">Grid</a>
-              
-            
-              
-                <a href="../icons" class="side-nav-link">Icons</a>
-              
-            
-              
-                <a href="../color" class="side-nav-link">Color</a>
-              
-            
-              
-                <a href="../components" class="side-nav-link">Components</a>
-              
-            
-              
-                <a href="../patterns" class="side-nav-link">Patterns</a>
-              
-            
-              
-                <a href="../page-layouts" class="side-nav-link">Layouts</a>
-              
-            
-              
-                <a href="../sass" class="side-nav-link">Sass</a>
-              
-            
-              
-                <a href="../javascript" class="side-nav-link">JavaScript</a>
-              
-            
+          <a href="../documentation/" class="side-nav-link">Documentation</a>
+          <a href="../examples/" class="side-nav-link">Examples</a>
+          <a href="../guides/" class="side-nav-link">Guides</a>
         </aside>
       </nav>
     </div>
@@ -156,47 +81,14 @@
             <div class="tablet-hide">
               <a href="../" class="top-nav-title">Calcite Web</a>
               <nav class="top-nav-list" role="navigation">
-              
-                
-              
-                
-                  <a href="../type" class="top-nav-link">Type</a>
-                
-              
-                
-                  <a href="../grid" class="top-nav-link">Grid</a>
-                
-              
-                
-                  <a href="../icons" class="top-nav-link">Icons</a>
-                
-              
-                
-                  <a href="../color" class="top-nav-link">Color</a>
-                
-              
-                
-                  <a href="../components" class="top-nav-link">Components</a>
-                
-              
-                
-                  <a href="../patterns" class="top-nav-link">Patterns</a>
-                
-              
-                
-                  <a href="../page-layouts" class="top-nav-link">Layouts</a>
-                
-              
-                
-                  <a href="../sass" class="top-nav-link">Sass</a>
-                
-              
-                
-                  <a href="../javascript" class="top-nav-link">JavaScript</a>
-                
-              
+                <a href="../documentation" class="top-nav-link">Documentation</a>
+                <a href="../examples" class="top-nav-link">Examples</a>
+                <a href="../guides" class="top-nav-link">Guides</a>
               </nav>
-              <a href="#" class="icon-ui-search js-expand-toggle top-nav-link right" data-expand="search">Search</a >
+              <form method="GET" action="../search/" class="inline-block right site-search">
+                <input type='search' placeholder='Search' name="q" class="inline-block leader-half js-search-input">
+                <button type="submit" class="hide">Search</button>
+              </form>
             </div>
 
             <div class="tablet-show">
@@ -207,20 +99,20 @@
       </header>
 
       <!-- Secondary Nav Pattern -->
-      <header class="sub-nav" role="banner">
-        <div class="grid-container">
-          <div class="column-24">
-            
-              <h1 class="sub-nav-title text-white">Migration Guide</h1>
-              <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white btn-arrow right leader-half">Latest Release</a>
-            
-          </div>
-        </div>
-      </header>
+      <!-- what -->
+      
 
       <!-- content of each page will go here -->
-      <div class="grid-container leader-1">
-        <div class="column-16">
+      <header class="sub-nav" role="banner">
+  <div class="grid-container">
+    <div class="column-24">
+      <h1 class="sub-nav-title text-white">Migration Guide</h1>
+    </div>
+  </div>
+</header>
+
+<div class="grid-container leader-2">
+  <div class="column-16">
 <p>Migrating from Tailcoat to Calcite Web is fairly straightforward. Most of the structures and basic ideas between the two frameworks are quite similar. For example, while class names and recommended markup for something like the side navigation pattern have changed, there is still a like-for-like replacement for the tailcoat pattern. From a user experience perspective, almost all of the patterns and use cases covered in Tailcoat have simply been improved and reimplemented in Calcite Web.</p>
 <p>While it will not be trivial to update an entire code base to Calcite Web, it will be a fairly straight forward experience of updating class names and markup. Occasionally you will need to re-imagine a layout or pattern, but we have created Calcite Web with a fairly clear migration path in mind.</p>
 <h2>Why Migrate?</h2>
@@ -240,8 +132,6 @@
 <p>Calcite Web supports and is built with LibSass, meaning that it can be used with regular Sass, or with any of the LibSass wrapping libraries (like Node-Sass). Now that there is less Sass to compile (no Compass) and you can compile with LibSass compiling the library to CSS is orders of magnitude faster than Tailcoat.</p>
 <h4>Feature Rich</h4>
 <p>Commonly asked for patterns have been added to Calcite Web that were not part of Tailcoat. Things like sticky elements, carousels, pagination, and expanding (or 'mega-menu') navigation have all been standardized and added so site authors don't need to reinvent the wheel when they need these patterns.</p>
-<h4>When <em>Not</em> to Migrate</h4>
-<p>We recommend that pretty much everybody migrate for the reasons mentioned above. If, however, you need to support older versions of Internet Explorer (IE8 or less) you might want to hold off on migrating until January 2016 (Microsoft's official end of support). We understand that for some products this is a deal-breaker. For that reason we will continue to maintain and support Tailcoat until this deadline.</p>
 <h2>Key Differences</h2>
 <p>Now that you're (hopefully) convinced to start using Calcite Web, there are a few general differences between the two frameworks that will not only help you understand how to update your code, but also give you insight into <em>why</em> Calcite Web has implemented these things differently.</p>
 <h4>CSS Selectors</h4>
@@ -262,7 +152,7 @@
 <p>Everything is in Avenir Next with the exception of code blocks, and long form material. This is a substantial change from the current typefaces in Tailcoat, but it is more visual in nature and shouldn't require much work to change over.</p>
 <h2>Breaking Changes</h2>
 <p>Below is a list of things that will need to be changed to migrate to Calcite Web. It may look daunting, but most of the changes are fairly superficial. If anything is unclear in this list please <a href="https://github.com/Esri/calcite-web/issues">open an issue</a>. We are also happy to help via phone, chat, and email! Good luck!</p>
-<h5>Type</h5>
+<h3>Type</h3>
 <ol>
 <li>Text modifiers are now formatted <code>.text-{MODIFIER}</code> instead of <code>.{MODIFIER}-text</code>. Below is a list of new modifiers:</li>
 </ol>
@@ -278,27 +168,118 @@
 <ol start="2">
 <li>Removed <code>.show-visited-links</code></li>
 </ol>
-<h5>Grid</h5>
+<h3>Grid</h3>
 <ol>
 <li>There are no rows. If you need to group columns you can just put columns inside of a <code>column-24</code></li>
 <li><code>container</code> is now <code>grid-container</code>. This solved problems with other technologies also using a <code>container</code> class.</li>
 <li>Columns are always the same size, so layouts with nested columns will need to redone.</li>
+<li>Behavior of columns at responsive sizes has changed. By default Calcite Web tries to resize columns intelligently, but you can still specify column counts at certain breakpoints as in Tailcoat.</li>
 </ol>
-<h5>Layout</h5>
-<h5>Color</h5>
-<h5>Icons</h5>
+<h3>Layout</h3>
+<ol>
+<li>Removed <code>full</code> class</li>
+<li>Removed <code>clear</code> class</li>
+<li>Removed all <code>square-X</code> classes</li>
+</ol>
+<h3>Color</h3>
+<ol>
+<li>Several colors use the same class, but the colors are slightly different</li>
+<li>Tan was removed</li>
+<li><code>lightest-</code> and <code>lighter-</code> purple and green were removed</li>
+</ol>
+<h3>Icons</h3>
 <ol>
 <li>Icons are a completely different set. Most Tailcoat icons have a counterpart in Calcite Web, but some don't.</li>
 <li>Icons use the class prefix <code>.icon-ui-</code> not just <code>.icon-</code></li>
+<li>Some color classes have been removed, while others have been added</li>
 </ol>
-<h5>Components</h5>
-<h5>Patterns</h5>
-<h5>JavaScript</h5>
-<h5>Sass</h5>
+<h3>Components</h3>
+<h5>Buttons</h5>
+<ol>
+<li><code>success</code>, <code>delete</code>, <code>cancel</code>, <code>gray</code>, <code>orange</code> classes all removed</li>
+<li>Modifier classes formatted <code>btn-X</code> instead of <code>X</code></li>
+</ol>
+<h5>Button Groups</h5>
+<ol>
+<li>Button groups are now just three buttons next to each other</li>
+<li>All buttons must have the <code>btn-grouped</code> class</li>
+</ol>
+<h5>Tooltips</h5>
+<ol>
+<li>Tooltip markup has been greatly simplified. Just add an <code>aria-label</code> and the <code>tooltip</code> class to the element you'd like to have a tooltip</li>
+</ol>
+<h5>Dropdowns</h5>
+<ol>
+<li>Dropdowns now happen on click and require JavaScript</li>
+<li>Classes and markup have both changed (see <a href="../documentation/components/#dropdowns">dropdown documentation</a>)</li>
+</ol>
+<h5>Alerts</h5>
+<ol>
+<li>Icons named after colors not conditions (ie. <code>success</code> =&gt; <code>alert-green</code>)</li>
+<li>Markup is different</li>
+<li>Alerts are meant to fade in, must add the <code>is-active</code> class to see them.</li>
+</ol>
+<h5>Breadcrumbs</h5>
+<ol>
+<li>Breadcrumbs are now a <code>nav</code> element with anchors inside</li>
+<li>Anchors must have <code>breadcrumb</code> class</li>
+</ol>
+<h5>Pagination</h5>
+<p>Pagination as a defined pattern, but there are no special classes for it anymore. It's just made up of other components. See the <a href="../documentation/patterns/#pagination">pagination documentation</a>.</p>
+<h5>Loader</h5>
+<ol>
+<li>Loader requires one less <code>div</code></li>
+<li><code>loading-word</code> =&gt; <code>loader-text</code></li>
+<li>Hidden by default, must add <code>is-active</code> class to see it</li>
+</ol>
+<h5>Panels</h5>
+<ol>
+<li><code>primary</code> =&gt; <code>panel-light-blue</code></li>
+<li><code>compact</code>, <code>drop-shadow</code> removed</li>
+<li>Colors should be prefixed with <code>panel-</code></li>
+</ol>
+<h5>Tables</h5>
+<ol>
+<li><code>blue</code> =&gt; <code>table-blue</code>
+2 <code>striped</code> =&gt; <code>table-striped</code></li>
+</ol>
+<h5>Table Cells</h5>
+<p>No modifiers</p>
+<h5>Forms</h5>
+<ol>
+<li><code>.error</code> =&gt; <code>.input-error</code> (or <code>select-error</code>)</li>
+<li>No modifiers on <code>textareas</code></li>
+<li>Removed <code>input-list</code></li>
+</ol>
+<h3>Patterns</h3>
+<p>Rather than list out exactly what has changed in each pattern, it will be easier for you to just reference the documentation on the patterns and reimplement your UI with Calcite Web patterns.</p>
+<p>Below is a summary of what has changed.</p>
+<ol>
+<li>Markup for basic page has been updated slightly</li>
+<li>Top Nav markup has changed a lot: <a href="../documentation/patterns/#top-nav">top nav</a></li>
+<li>Navigation Bar is now <a href="../documentation/patterns/#sub-nav">Sub Nav</a></li>
+<li>Search Bar removed (we are still assessing the search design)</li>
+<li>Content Area removed</li>
+<li>Feature Block Removed (replace with column layouts or <a href="../documentation/components/#card">cards</a>)</li>
+<li>Sidebar Navigation is now <a href="../documentation/patterns/#side-nav">Side Nav</a> and uses different markup</li>
+<li>Footer uses mostly other components and modifier classes, now, so markup is fairly different</li>
+<li>Sticky footer removed as footer is now sticky be default</li>
+</ol>
+<h3>Javascript</h3>
+<ol>
+<li>Modal markup has updated, and the toggles now must use <code>js-modal</code> classes with data attributes, see <a href="../documentation/patterns/#modals">modals</a></li>
+<li>Must use <code>js-</code> classes for interactivity. Modifier classes are prefixed. See <a href="../documentation/patterns/#tabs">tabs</a></li>
+<li><a href="../documentation/patterns/#accordions">Accordion markup</a> is sustantially different (plus the above changes).</li>
+<li><a href="../documentation/patterns/#drawers">Drawer</a> direction goes onto the <code>drawer</code> and not the <code>drawer-nav</code>, uses <code>side-nav</code> classes, <code>is-active, and</code>js-` classes</li>
+<li>Dropdowns and click dropdowns are now the same thing, just <a href="../documentation/components/#dropdowns">dropdowns</a></li>
+<li>Site Dropdown removed due to very poor user testing</li>
+<li>Responsive Nav Bar removed</li>
+</ol>
+<h2>Conclusion</h2>
+<p>It's a large effort to migrate, but because Calcite Web is in many ways just an evolution of Tailcoat, most of the ideas are still represented. If at any point you have questions, comments, or patterns you really need from Tailcoat that you don't feel are covered, <em>please</em> <a href="https://github.com/Esri/calcite-web/issues/new">open an issue</a> on Calcite Web and we'll be sure to hop on and try to help!</p>
 
+  </div>
 </div>
-      </div>
-
     </div>
 
     
@@ -357,7 +338,10 @@
     </footer>
 
     <script src="../assets/js/libs/calcite-web.js"></script>
+    <script src="../assets/js/libs/calcite-web-marketing.js"></script>
+
     <script src="../assets/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
 
     
 

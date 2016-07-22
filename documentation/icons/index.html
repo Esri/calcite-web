@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>  <html class="ie lt-ie9 ie8"> <![endif]-->
+<!--[if IE 9]>     <html class="ie ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+
+    <!-- Set encoding -->
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <!-- Use title from page frontmatter -->
+    <title>Calcite Web | Esri Design Patterns</title>
+
+    <!-- Link to favicon -->
+    <link rel="shortcut icon" href="../../assets/img/favicon.ico">
+
+    <!-- stylesheets -->
+    
+      <link rel="stylesheet" href="../../assets/css/all.css">
+      <link rel="stylesheet" href="../../assets/css/extensions.css">
+      
+    
+
+    <!--[if IE]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!--
+    ┌─────────┐
+    │ Drawers │
+    └─────────┘
+     ↳ http://esri.github.io/calcite-web/patterns/#drawers
+     ↳ patterns → _drawers.md
+    -->
+    <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
+      <!-- <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerleft"> -->
+      <nav class="drawer-nav" role="navigation">
+        <aside class="side-nav">
+          <h2 class="side-nav-title">Calcite Web</h2>
+          <div class="panel padding-trailer-half padding-leader-half">
+            <form method="GET" action="../../search/">
+              <input type="search" placeholder="Search" name="q">
+            </form>
+          </div>
+          <a href="../../documentation/" class="side-nav-link">Documentation</a>
+          <a href="../../examples/" class="side-nav-link">Examples</a>
+          <a href="../../guides/" class="side-nav-link">Guides</a>
+        </aside>
+      </nav>
+    </div>
+
+    <div class="drawer drawer-right js-drawer" data-drawer="right">
+      <!-- <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerright"> -->
+      <nav class="drawer-nav" role="navigation">
+        <aside class="side-nav">
+          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
+          <div class="panel padding-trailer-half padding-leader-half">
+            <form method="GET" action="../../search/" class="panel padding-leader-half">
+              <input type="search" placeholder="Search" name="q">
+            </form>
+          </div>
+          <a href="../../documentation/" class="side-nav-link">Documentation</a>
+          <a href="../../examples/" class="side-nav-link">Examples</a>
+          <a href="../../guides/" class="side-nav-link">Guides</a>
+        </aside>
+      </nav>
+    </div>
+
+    <div class="wrapper">
+      <!-- Logged Out Pattern-->
+      <header class="top-nav">
+        <a class="skip-to-content" href="#skip-to-content">Skip To Content</a>
+        <div class="grid-container">
+          <div class="column-24">
+            <div class="tablet-hide">
+              <a href="../../" class="top-nav-title">Calcite Web</a>
+              <nav class="top-nav-list" role="navigation">
+                <a href="../../documentation" class="is-active top-nav-link">Documentation</a>
+                <a href="../../examples" class="top-nav-link">Examples</a>
+                <a href="../../guides" class="top-nav-link">Guides</a>
+              </nav>
+              <form method="GET" action="../../search/" class="inline-block right site-search">
+                <input type='search' placeholder='Search' name="q" class="inline-block leader-half js-search-input">
+                <button type="submit" class="hide">Search</button>
+              </form>
+            </div>
+
+            <div class="tablet-show">
+              <a href="/" class="icon-ui-menu top-nav-title js-drawer-toggle" data-drawer="top-nav">Calcite Web</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Secondary Nav Pattern -->
+      <!-- what -->
+      
+  <header class="sub-nav" role="banner">
+    <div class="grid-container">
+      <div class="column-24">
+        <h1 class="sub-nav-title leader-1 text-white">Documentation</h1>
+        <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1 tablet-hide">Download Latest Release</a>
+        <nav class="sub-nav-list tablet-hide" role="navigation" aria-labelledby="subnav">
+          
+          
+          
+            
+          
+            <a class="sub-nav-link " href="../../documentation/">Get Started</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../../documentation/type/">Type</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../../documentation/grid/">Grid</a>
+          
+          
+          
+            <a class="sub-nav-link is-active" href="../../documentation/icons/">Icons</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../../documentation/color/">Color</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../../documentation/components/">Components</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../../documentation/patterns/">Patterns</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../../documentation/sass/">Sass</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../../documentation/javascript/">JavaScript</a>
+          
+        </nav>
+
+        <select class="tablet-show select-full trailer-half js-select-nav">
+          
+          
+          
+            
+          
+            <option value="../../documentation/" >Get Started</option>
+          
+          
+          
+            <option value="../../documentation/type/" >Type</option>
+          
+          
+          
+            <option value="../../documentation/grid/" >Grid</option>
+          
+          
+          
+            <option value="../../documentation/icons/" selected>Icons</option>
+          
+          
+          
+            <option value="../../documentation/color/" >Color</option>
+          
+          
+          
+            <option value="../../documentation/components/" >Components</option>
+          
+          
+          
+            <option value="../../documentation/patterns/" >Patterns</option>
+          
+          
+          
+            <option value="../../documentation/sass/" >Sass</option>
+          
+          
+          
+            <option value="../../documentation/javascript/" >JavaScript</option>
+          
+        </select>
+
+      </div>
+    </div>
+  </header>
+
+
+      <!-- content of each page will go here -->
+      
+<div class="grid-container leader-1">
+  <div class="column-6 tablet-column-12">
+    <aside class="side-nav" aria-role="complementary">
+      
+        <h4 class="side-nav-title">Icon Sets</h4>
+        <!-- <nav aria-role="navigation" aria-labelledby="sidenav"> -->
+        <nav aria-role="navigation">
+          
+            
+              <a href="#icon-sets" class="side-nav-link">Overview</a>
+            
+          
+            
+              <a href="#social-icons" class="side-nav-link">Social Icons</a>
+            
+          
+            
+              <a href="#icon-font" class="side-nav-link">Icon Font</a>
+            
+          
+            
+              <a href="#icon-font-colors" class="side-nav-link">Icon Font Colors</a>
+            
+          
+        </nav>
+      
+    </aside>
+    <div class="js-sticky scroll-show tablet-hide" data-top="46">
+      <a href="#" class="btn btn-clear">Back to Top</a>
+    </div>
+  </div>
+
+  <a id="skip-to-content" tabindex="0"></a>
+  <main class="column-17 phone-column-6 tablet-column-12 pre-1 rtl-post-0 tablet-leader-1" role="main">
+
+    
+      <h1 class="text-rule" id="icon-sets" tabindex="0">Icon Sets</h1>
+      
+        <section>
+          
+
+          <p>There are several sets of icons made available as part of Calcite Web. While they use two separate technologies (SVG vs. Icon Fonts) their API's are largely the same. To add an icon to a page, just add a class to an element, like this:</p>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-ui-close"</span> <span class="hljs-attribute">aria-label</span>=<span class="hljs-value">"close icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+</code></pre>
+<p>This will automatically add the icon to the page. In the icon font, the icon will be added as a <code>:before</code> pseudo element in the same color and size as the text you're currently using. If the icon class is a social icon or a multi-colored icon from the Calcite set it will be added as a background image to the element. Social icons and Calcite icons have a specific size and color which can't be modified.</p>
+
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+        <section>
+          
+            <h2 id="social-icons" tabindex="0">Social Icons</h2>
+          
+
+          <p>A set of social icons are provided as part of calcite-web. Just use the <code>icon-social-X</code> class on an element. It is suggested you add an aria-label to help the visually impaired understand what the element with the icon represents as they won't be able to see the Facebook logo, for example:</p>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-social-facebook"</span> <span class="hljs-attribute">aria-label</span>=<span class="hljs-value">"Facebook"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+</code></pre>
+<p>Below are the current social icons. More sizes are planned. For now only 30x30 pixel square icons are available.</p>
+
+
+          
+            <div class="block-group block-group-3-up">
+              
+                <div class="block">
+                  <a href="" class="icon-social-contact" aria-label="contact"></a>
+                  <p class="trailer-1 leader-half"><code>.icon-social-contact</code></p>
+                </div>
+              
+                <div class="block">
+                  <a href="" class="icon-social-facebook" aria-label="facebook"></a>
+                  <p class="trailer-1 leader-half"><code>.icon-social-facebook</code></p>
+                </div>
+              
+                <div class="block">
+                  <a href="" class="icon-social-geonet" aria-label="geonet"></a>
+                  <p class="trailer-1 leader-half"><code>.icon-social-geonet</code></p>
+                </div>
+              
+                <div class="block">
+                  <a href="" class="icon-social-github" aria-label="github"></a>
+                  <p class="trailer-1 leader-half"><code>.icon-social-github</code></p>
+                </div>
+              
+                <div class="block">
+                  <a href="" class="icon-social-google-plus" aria-label="google-plus"></a>
+                  <p class="trailer-1 leader-half"><code>.icon-social-google-plus</code></p>
+                </div>
+              
+                <div class="block">
+                  <a href="" class="icon-social-instagram" aria-label="instagram"></a>
+                  <p class="trailer-1 leader-half"><code>.icon-social-instagram</code></p>
+                </div>
+              
+                <div class="block">
+                  <a href="" class="icon-social-linkedin" aria-label="linkedin"></a>
+                  <p class="trailer-1 leader-half"><code>.icon-social-linkedin</code></p>
+                </div>
+              
+                <div class="block">
+                  <a href="" class="icon-social-pinterest" aria-label="pinterest"></a>
+                  <p class="trailer-1 leader-half"><code>.icon-social-pinterest</code></p>
+                </div>
+              
+                <div class="block">
+                  <a href="" class="icon-social-rss" aria-label="rss"></a>
+                  <p class="trailer-1 leader-half"><code>.icon-social-rss</code></p>
+                </div>
+              
+                <div class="block">
+                  <a href="" class="icon-social-share" aria-label="share"></a>
+                  <p class="trailer-1 leader-half"><code>.icon-social-share</code></p>
+                </div>
+              
+                <div class="block">
+                  <a href="" class="icon-social-twitter" aria-label="twitter"></a>
+                  <p class="trailer-1 leader-half"><code>.icon-social-twitter</code></p>
+                </div>
+              
+                <div class="block">
+                  <a href="" class="icon-social-youtube" aria-label="youtube"></a>
+                  <p class="trailer-1 leader-half"><code>.icon-social-youtube</code></p>
+                </div>
+              
+            </div>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+        <section>
+          
+            <h2 id="icon-font" tabindex="0">Icon Font</h2>
+          
+
+          <p>The monochromatic icon set is delivered as an icon font. By default, Calcite Web expects font files to be located at <code>../</code>. If your fonts are elsewhere, set the <code>$font-path</code> variable</p>
+<p>Icon fonts have several advantages such as the ability to quickly change their color, and the fact that icon fonts size themselves to be proportional to the text you place them with.</p>
+
+
+          
+
+          
+            <div class="block-group block-group-3-up">
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-add-attachment" aria-label="add-attachment"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-add-attachment</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-announcement" aria-label="announcement"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-announcement</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-applications" aria-label="applications"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-applications</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-arrow-down-circled" aria-label="arrow-down-circled"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-arrow-down-circled</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-arrow-left-circled" aria-label="arrow-left-circled"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-arrow-left-circled</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-arrow-right-circled" aria-label="arrow-right-circled"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-arrow-right-circled</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-arrow-up-circled" aria-label="arrow-up-circled"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-arrow-up-circled</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-attachment" aria-label="attachment"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-attachment</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-authorize" aria-label="authorize"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-authorize</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-basemap" aria-label="basemap"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-basemap</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-beginning" aria-label="beginning"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-beginning</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-blank-map-pin" aria-label="blank-map-pin"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-blank-map-pin</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-browser" aria-label="browser"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-browser</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-calendar" aria-label="calendar"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-calendar</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-chart" aria-label="chart"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-chart</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-chat" aria-label="chat"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-chat</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-check-mark" aria-label="check-mark"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-check-mark</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-checkbox-checked" aria-label="checkbox-checked"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-checkbox-checked</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-checkbox-unchecked" aria-label="checkbox-unchecked"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-checkbox-unchecked</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-close-circled" aria-label="close-circled"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-close-circled</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-close" aria-label="close"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-close</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-collapse" aria-label="collapse"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-collapse</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-collection" aria-label="collection"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-collection</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-comment" aria-label="comment"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-comment</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-compass" aria-label="compass"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-compass</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-configure-popup" aria-label="configure-popup"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-configure-popup</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-contact" aria-label="contact"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-contact</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-dashboard" aria-label="dashboard"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-dashboard</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-deny" aria-label="deny"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-deny</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-description" aria-label="description"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-description</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-directions" aria-label="directions"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-directions</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-directions2" aria-label="directions2"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-directions2</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-dock-bottom" aria-label="dock-bottom"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-dock-bottom</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-dock-left" aria-label="dock-left"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-dock-left</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-dock-right" aria-label="dock-right"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-dock-right</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-documentation" aria-label="documentation"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-documentation</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-down-arrow-circled" aria-label="down-arrow-circled"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-down-arrow-circled</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-down-arrow" aria-label="down-arrow"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-down-arrow</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-down" aria-label="down"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-down</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-download" aria-label="download"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-download</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-drag-horizontal" aria-label="drag-horizontal"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-drag-horizontal</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-drag-vertical" aria-label="drag-vertical"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-drag-vertical</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-duplicate" aria-label="duplicate"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-duplicate</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-edit" aria-label="edit"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-edit</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-end" aria-label="end"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-end</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-environment-settings" aria-label="environment-settings"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-environment-settings</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-erase" aria-label="erase"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-erase</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-error" aria-label="error"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-error</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-error2" aria-label="error2"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-error2</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-expand" aria-label="expand"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-expand</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-experimental" aria-label="experimental"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-experimental</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-favorites" aria-label="favorites"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-favorites</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-feature-layer" aria-label="feature-layer"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-feature-layer</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-filter" aria-label="filter"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-filter</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-forward" aria-label="forward"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-forward</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-globe" aria-label="globe"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-globe</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-grant" aria-label="grant"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-grant</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-group" aria-label="group"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-group</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-handle-horizontal" aria-label="handle-horizontal"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-handle-horizontal</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-handle-vertical" aria-label="handle-vertical"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-handle-vertical</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-home" aria-label="home"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-home</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-key" aria-label="key"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-key</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-labels" aria-label="labels"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-labels</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-layer-list" aria-label="layer-list"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-layer-list</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-layers" aria-label="layers"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-layers</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-left-arrow-circled" aria-label="left-arrow-circled"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-left-arrow-circled</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-left-arrow" aria-label="left-arrow"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-left-arrow</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-left-triangle-arrow" aria-label="left-triangle-arrow"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-left-triangle-arrow</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-left" aria-label="left"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-left</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-line-chart" aria-label="line-chart"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-line-chart</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-link-external" aria-label="link-external"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-link-external</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-link" aria-label="link"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-link</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-loading-indicator" aria-label="loading-indicator"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-loading-indicator</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-locate" aria-label="locate"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-locate</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-locked" aria-label="locked"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-locked</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-map-pin" aria-label="map-pin"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-map-pin</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-maps" aria-label="maps"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-maps</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-marketplace" aria-label="marketplace"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-marketplace</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-maximize" aria-label="maximize"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-maximize</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-media" aria-label="media"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-media</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-media2" aria-label="media2"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-media2</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-menu" aria-label="menu"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-menu</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-minimize" aria-label="minimize"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-minimize</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-minus-circled" aria-label="minus-circled"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-minus-circled</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-minus" aria-label="minus"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-minus</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-mobile" aria-label="mobile"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-mobile</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-navigation" aria-label="navigation"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-navigation</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-notice-round" aria-label="notice-round"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-notice-round</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-notice-triangle" aria-label="notice-triangle"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-notice-triangle</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-organization" aria-label="organization"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-organization</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-overview-arrow-bottom-left" aria-label="overview-arrow-bottom-left"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-overview-arrow-bottom-left</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-overview-arrow-bottom-right" aria-label="overview-arrow-bottom-right"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-overview-arrow-bottom-right</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-overview-arrow-top-left" aria-label="overview-arrow-top-left"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-overview-arrow-top-left</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-overview-arrow-top-right" aria-label="overview-arrow-top-right"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-overview-arrow-top-right</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-pan" aria-label="pan"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-pan</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-pause" aria-label="pause"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-pause</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-phone" aria-label="phone"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-phone</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-pie-chart" aria-label="pie-chart"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-pie-chart</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-play" aria-label="play"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-play</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-plus-circled" aria-label="plus-circled"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-plus-circled</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-plus" aria-label="plus"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-plus</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-printer" aria-label="printer"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-printer</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-question" aria-label="question"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-question</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-radio-checked" aria-label="radio-checked"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-radio-checked</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-radio-unchecked" aria-label="radio-unchecked"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-radio-unchecked</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-refresh" aria-label="refresh"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-refresh</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-resend-invitation" aria-label="resend-invitation"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-resend-invitation</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-reverse" aria-label="reverse"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-reverse</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-review" aria-label="review"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-review</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-right-arrow-circled" aria-label="right-arrow-circled"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-right-arrow-circled</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-right-arrow" aria-label="right-arrow"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-right-arrow</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-right-triangle-arrow" aria-label="right-triangle-arrow"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-right-triangle-arrow</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-right" aria-label="right"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-right</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-rotate" aria-label="rotate"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-rotate</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-save" aria-label="save"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-save</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-search" aria-label="search"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-search</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-settings" aria-label="settings"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-settings</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-settings2" aria-label="settings2"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-settings2</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-share" aria-label="share"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-share</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-sign-out" aria-label="sign-out"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-sign-out</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-support" aria-label="support"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-support</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-table" aria-label="table"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-table</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-tag" aria-label="tag"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-tag</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-time-clock" aria-label="time-clock"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-time-clock</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-trash" aria-label="trash"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-trash</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-unlocked" aria-label="unlocked"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-unlocked</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-up-arrow-circled" aria-label="up-arrow-circled"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-up-arrow-circled</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-up-arrow" aria-label="up-arrow"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-up-arrow</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-up-down-arrows" aria-label="up-down-arrows"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-up-down-arrows</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-up" aria-label="up"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-up</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-upload" aria-label="upload"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-upload</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-user" aria-label="user"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-user</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-zoom-in-fixed" aria-label="zoom-in-fixed"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-zoom-in-fixed</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-zoom-in-magnifying-glass" aria-label="zoom-in-magnifying-glass"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-zoom-in-magnifying-glass</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-zoom-out-fixed" aria-label="zoom-out-fixed"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-zoom-out-fixed</code></p>
+                </div>
+              
+                <div class="block">
+                  <span class="font-size-5 icon-ui-zoom-out-magnifying-glass" aria-label="zoom-out-magnifying-glass"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-zoom-out-magnifying-glass</code></p>
+                </div>
+              
+            </div>
+          
+
+          
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+        <section>
+          
+            <h2 id="icon-font-colors" tabindex="0">Icon Font Colors</h2>
+          
+
+          <p>A set of helper classes are available to simply change the color of an icon without affecting text within the same element.</p>
+
+
+          
+
+          
+
+          
+            <div class="block-group block-group-3-up">
+              <div class="block">
+                <span class="font-size-5 icon-ui-check-mark icon-ui-green" aria-label="check-mark "></span>
+                <p class="trailer-1 leader-half"><code>icon-ui-green</code></p>
+              </div>
+              <div class="block">
+                <span class="font-size-5 icon-ui-check-mark icon-ui-light-blue" aria-label="check-mark "></span>
+                <p class="trailer-1 leader-half"><code>icon-ui-light-blue</code></p>
+              </div>
+              <div class="block">
+                <span class="font-size-5 icon-ui-check-mark icon-ui-blue" aria-label="check-mark "></span>
+                <p class="trailer-1 leader-half"><code>icon-ui-blue</code></p>
+              </div>
+              <div class="block">
+                <span class="font-size-5 icon-ui-check-mark icon-ui-dark-blue" aria-label="check-mark "></span>
+                <p class="trailer-1 leader-half"><code>icon-ui-dark-blue</code></p>
+              </div>
+              <div class="block">
+                <span class="font-size-5 icon-ui-check-mark icon-ui-purple" aria-label="check-mark "></span>
+                <p class="trailer-1 leader-half"><code>icon-ui-purple</code></p>
+              </div>
+              <div class="block">
+                <span class="font-size-5 icon-ui-check-mark icon-ui-orange" aria-label="check-mark "></span>
+                <p class="trailer-1 leader-half"><code>icon-ui-orange</code></p>
+              </div>
+              <div class="block">
+                <span class="font-size-5 icon-ui-check-mark icon-ui-gray" aria-label="check-mark "></span>
+                <p class="trailer-1 leader-half"><code>icon-ui-gray</code></p>
+              </div>
+              <div class="block">
+                <span class="font-size-5 icon-ui-check-mark icon-ui-red" aria-label="check-mark "></span>
+                <p class="trailer-1 leader-half"><code>icon-ui-red</code></p>
+              </div>
+              <div class="block">
+                <span class="font-size-5 icon-ui-check-mark icon-ui-yellow" aria-label="check-mark "></span>
+                <p class="trailer-1 leader-half"><code>icon-ui-yellow</code></p>
+              </div>
+            </div>
+          
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+    
+  </main>
+</div>
+
+    </div>
+
+    
+
+    <!-- Footer Pattern -->
+    <footer class="footer leader-3 link-dark-gray" role="contentinfo">
+      <div class="grid-container">
+          <nav class="column-6">
+            <h6>Styleguides</h6>
+            <ul class="list-plain">
+              <li><a href="../../styleguides/javascript/">JavaScript</a></li>
+              <li><a href="../../styleguides/css/">CSS</a></li>
+              <li><a href="../../styleguides/html/">HTML</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <h6>Resources</h6>
+            <ul class="list-plain">
+              <li><a href="../../guides/migration-guide/">Migration Guide</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/releases/">Releases</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/blob/master/CONTRIBUTING.md">Contributing</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/issues/">Issues</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/">GitHub</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <h6>About Esri</h6>
+            <ul class="list-plain">
+              <li><a href="http://www.esri.com/about-esri/">About Us</a></li>
+              <li><a href="http://www.esri.com/careers/">Careers</a></li>
+              <li><a href="http://blogs.esri.com/esri/esri-insider/">Insiders Blog</a></li>
+              <li><a href="http://www.esri.com/events/user-conference/index.html">User Conference</a></li>
+              <li><a href="http://www.esri.com/events/devsummit/index.html">Developer Summit</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <a class="esri-logo" href="http://esri.com" aria-label="Esri Home"></a>
+            <section class="footer-social-nav leader-1">
+              <a class="icon-social-twitter" aria-label="Esri on Twitter"  href="https://twitter.com/Esri/"></a>
+              <a class="icon-social-facebook" aria-label="Esri on Facebook"  href="https://www.facebook.com/esrigis/"></a>
+              <a class="icon-social-instagram" aria-label="Esri on Instagram"  href="https://instagram.com/esrigram/"></a>
+              <a class="icon-social-github" aria-label="Esri on GitHub"  href="http://esri.github.com/"></a>
+              <a class="icon-social-contact" aria-label="Contact Esri"  href="http://www.esri.com/about-esri/contact/"></a>
+            </section>
+          </nav>
+
+          <div class="column-24 leader-1">
+            <p><small>Copyright © 2015 Esri. All rights reserved. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal">Legal</a></small></p>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+    <script src="../../assets/js/libs/calcite-web.js"></script>
+    <script src="../../assets/js/libs/calcite-web-marketing.js"></script>
+
+    <script src="../../assets/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+
+    
+
+    
+
+  </body>
+</html>

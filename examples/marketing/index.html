@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>  <html class="ie lt-ie9 ie8"> <![endif]-->
+<!--[if IE 9]>     <html class="ie ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+
+    <!-- Set encoding -->
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <!-- Use title from page frontmatter -->
+    <title>Calcite Web | Esri Design Patterns</title>
+
+    <!-- Link to favicon -->
+    <link rel="shortcut icon" href="../../assets/img/favicon.ico">
+
+    <!-- stylesheets -->
+    
+      <link rel="stylesheet" href="../../assets/css/all.css">
+      <link rel="stylesheet" href="../../assets/css/extensions.css">
+      
+    
+
+    <!--[if IE]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!--
+    ┌─────────┐
+    │ Drawers │
+    └─────────┘
+     ↳ http://esri.github.io/calcite-web/patterns/#drawers
+     ↳ patterns → _drawers.md
+    -->
+    <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
+      <!-- <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerleft"> -->
+      <nav class="drawer-nav" role="navigation">
+        <aside class="side-nav">
+          <h2 class="side-nav-title">Calcite Web</h2>
+          <div class="panel padding-trailer-half padding-leader-half">
+            <form method="GET" action="../../search/">
+              <input type="search" placeholder="Search" name="q">
+            </form>
+          </div>
+          <a href="../../documentation/" class="side-nav-link">Documentation</a>
+          <a href="../../examples/" class="side-nav-link">Examples</a>
+          <a href="../../guides/" class="side-nav-link">Guides</a>
+        </aside>
+      </nav>
+    </div>
+
+    <div class="drawer drawer-right js-drawer" data-drawer="right">
+      <!-- <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerright"> -->
+      <nav class="drawer-nav" role="navigation">
+        <aside class="side-nav">
+          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
+          <div class="panel padding-trailer-half padding-leader-half">
+            <form method="GET" action="../../search/" class="panel padding-leader-half">
+              <input type="search" placeholder="Search" name="q">
+            </form>
+          </div>
+          <a href="../../documentation/" class="side-nav-link">Documentation</a>
+          <a href="../../examples/" class="side-nav-link">Examples</a>
+          <a href="../../guides/" class="side-nav-link">Guides</a>
+        </aside>
+      </nav>
+    </div>
+
+    <div class="wrapper">
+      <!-- Logged Out Pattern-->
+      <header class="top-nav">
+        <a class="skip-to-content" href="#skip-to-content">Skip To Content</a>
+        <div class="grid-container">
+          <div class="column-24">
+            <div class="tablet-hide">
+              <a href="../../" class="top-nav-title">Calcite Web</a>
+              <nav class="top-nav-list" role="navigation">
+                <a href="../../documentation" class="top-nav-link">Documentation</a>
+                <a href="../../examples" class="is-active top-nav-link">Examples</a>
+                <a href="../../guides" class="top-nav-link">Guides</a>
+              </nav>
+              <form method="GET" action="../../search/" class="inline-block right site-search">
+                <input type='search' placeholder='Search' name="q" class="inline-block leader-half js-search-input">
+                <button type="submit" class="hide">Search</button>
+              </form>
+            </div>
+
+            <div class="tablet-show">
+              <a href="/" class="icon-ui-menu top-nav-title js-drawer-toggle" data-drawer="top-nav">Calcite Web</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Secondary Nav Pattern -->
+      <!-- what -->
+      
+  <header class="sub-nav" role="banner">
+    <div class="grid-container">
+      <div class="column-24">
+        <h1 class="sub-nav-title leader-1 text-white">Examples</h1>
+        <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1">Download Latest Release</a>
+        <nav class="sub-nav-list" role="navigation" aria-labelledby="subnav">
+          <a class="sub-nav-link " href="../../examples">Overview</a>
+          <a href="../../examples/core" class="sub-nav-link ">Basic Pages</a>
+          <a href="../../examples/grid" class="sub-nav-link ">Grid</a>
+          <a href="../../examples/navigation" class="sub-nav-link ">Navigation</a>
+          <a href="../../examples/marketing" class="sub-nav-link  is-active ">Marketing</a>
+          <a href="../../examples/e-commerce" class="sub-nav-link ">E-Commerce</a>
+          <a href="../../examples/apps" class="sub-nav-link ">Apps</a>
+          <a href="../../examples/i18n" class="sub-nav-link ">i18n</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+
+      <!-- content of each page will go here -->
+      
+  <header class="third-nav scroll-show js-sticky" data-top=0>
+    <div class="third-nav-container">
+      <div class="grid-container">
+        <nav class="column-24" role="navigation" aria-labelledby="thirdnav breadcrumbs">
+          <a href="../../examples" class="third-nav-link crumb">Examples</a>
+          <a href="../../examples/marketing" class="third-nav-link crumb">marketing</a>
+          <a class="icon-ui-up third-nav-link right" href="#">Back to Top</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <a id="skip-to-content" tabindex="0"></a>
+
+  
+<div class="grid-container">
+  <div class="column-24">
+    <h1>Marketing Pattern Examples</h1>
+  </div>
+</div>
+
+
+  <div class="grid-container">
+    <div class="column-24">
+      
+        <h2 class="text-rule padding-leader-2" id="marketing">Marketing</h2>
+          
+            <div class="column-10 pre-7 tablet-pre-1">
+              <h3 class="text-center padding-leader-4" id="image-switcher">Image Switcher</h3>
+              
+              <p class="text-center">
+                <a href="#" class="js-modal-toggle btn btn-clear" data-modal="image-switcher">View HTML</a>
+              </p>
+              <p>Image switchers for switching images.</p>
+
+            </div>
+            <div class="js-modal modal-overlay" data-modal="image-switcher">
+              <div class="modal-content column-12" role="dialog" aria-labelledby="modal" role="dialog">
+                <a class="js-modal-toggle icon-ui-close icon-flush font-size-1 right" href="#" aria-label="close-modal" ></a>
+                <h3 class='trailer-half'>Image Switcher</h3>
+                <pre class="html-sample"><code  id="image-switcher-snippet">&lt;!-- Sample HTML -->
+&lt;div class="grid-container">
+  &lt;div class="column-10 pre-1 post-1 padding-leader-6">
+    &lt;a class="image-switcher js-view-toggle is-active"
+       data-set="image-switcher"
+       data-view="foo"
+       href="#">
+      &lt;figure class="image-switcher-preview">
+        &lt;img src="/assets/img/illustrations/01-circle.svg" alt="">
+      &lt;/figure>
+      &lt;div class="image-switcher-title">
+        &lt;p class="trailer-0">Image One&lt;/p>
+      &lt;/div>
+    &lt;/a>
+
+    &lt;a class="image-switcher js-view-toggle"
+       data-set="image-switcher"
+       data-view="bar"
+       href="#">
+      &lt;figure class="image-switcher-preview">
+        &lt;img src="/assets/img/illustrations/02-circle.svg" alt="">
+      &lt;/figure>
+      &lt;div class="image-switcher-title">
+        &lt;p class="trailer-0">Image Two&lt;/p>
+      &lt;/div>
+    &lt;/a>
+
+    &lt;a class="image-switcher js-view-toggle"
+       data-set="image-switcher"
+       data-view="baz"
+       href="#">
+      &lt;figure class="image-switcher-preview">
+        &lt;img src="/assets/img/illustrations/03-circle.svg" alt="">
+      &lt;/figure>
+      &lt;div class="image-switcher-title">
+        &lt;p class="trailer-0">Image Three&lt;/p>
+      &lt;/div>
+    &lt;/a>
+
+  &lt;/div>
+
+  &lt;div class="column-12">
+    &lt;img class="image-switcher-view js-view is-active" src="/assets/img/illustrations/01-square.svg" alt="one" data-set="image-switcher" data-view="foo">
+    &lt;img class="image-switcher-view js-view" src="/assets/img/illustrations/02-square.svg" alt="two" data-set="image-switcher" data-view="bar">
+    &lt;img class="image-switcher-view js-view" src="/assets/img/illustrations/03-square.svg" alt="three" data-set="image-switcher" data-view="baz">
+  &lt;/div>
+&lt;/div>
+</code></pre>
+                <div class="action-bar text-right">
+                  <button class="btn btn-clear js-modal-toggle">Close</button>
+                  <button class="btn js-copy-to-clipboard" data-clipboard-target="#image-switcher-snippet">Copy to Clipboard</button>
+                </div>
+              </div>
+            </div>
+    </div>
+  </div>
+  <div class="panel panel-no-padding padding-leader-1 padding-trailer-1">
+            <!-- Sample HTML -->
+<div class="grid-container">
+  <div class="column-10 pre-1 post-1 padding-leader-6">
+    <a class="image-switcher js-view-toggle is-active"
+       data-set="image-switcher"
+       data-view="foo"
+       href="#">
+      <figure class="image-switcher-preview">
+        <img src="/assets/img/illustrations/01-circle.svg" alt="">
+      </figure>
+      <div class="image-switcher-title">
+        <p class="trailer-0">Image One</p>
+      </div>
+    </a>
+
+    <a class="image-switcher js-view-toggle"
+       data-set="image-switcher"
+       data-view="bar"
+       href="#">
+      <figure class="image-switcher-preview">
+        <img src="/assets/img/illustrations/02-circle.svg" alt="">
+      </figure>
+      <div class="image-switcher-title">
+        <p class="trailer-0">Image Two</p>
+      </div>
+    </a>
+
+    <a class="image-switcher js-view-toggle"
+       data-set="image-switcher"
+       data-view="baz"
+       href="#">
+      <figure class="image-switcher-preview">
+        <img src="/assets/img/illustrations/03-circle.svg" alt="">
+      </figure>
+      <div class="image-switcher-title">
+        <p class="trailer-0">Image Three</p>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="column-12">
+    <img class="image-switcher-view js-view is-active" src="/assets/img/illustrations/01-square.svg" alt="one" data-set="image-switcher" data-view="foo">
+    <img class="image-switcher-view js-view" src="/assets/img/illustrations/02-square.svg" alt="two" data-set="image-switcher" data-view="bar">
+    <img class="image-switcher-view js-view" src="/assets/img/illustrations/03-square.svg" alt="three" data-set="image-switcher" data-view="baz">
+  </div>
+</div>
+
+  </div>
+  <div class="grid-container">
+    <div class="column-24">
+
+          
+            <div class="column-10 pre-7 tablet-pre-1">
+              <h3 class="text-center padding-leader-4" id="carousel">Carousel</h3>
+              
+              <p class="text-center">
+                <a href="#" class="js-modal-toggle btn btn-clear" data-modal="carousel">View HTML</a>
+              </p>
+              <p>Yup, it's finally time for a carousel.</p>
+
+            </div>
+            <div class="js-modal modal-overlay" data-modal="carousel">
+              <div class="modal-content column-12" role="dialog" aria-labelledby="modal" role="dialog">
+                <a class="js-modal-toggle icon-ui-close icon-flush font-size-1 right" href="#" aria-label="close-modal" ></a>
+                <h3 class='trailer-half'>Carousel</h3>
+                <pre class="html-sample"><code  id="carousel-snippet">&lt;!-- Sample HTML -->
+
+&lt;div class="carousel">
+  &lt;div class="carousel-panel is-active" data-toggle-set="carousel" data-toggle="foo">
+    &lt;img src="/assets/img/illustrations/01-picture.svg" alt="one">
+  &lt;/div>
+  &lt;div class="carousel-panel" data-toggle-set="carousel" data-toggle="baz">
+    &lt;img src="/assets/img/illustrations/02-picture.svg" alt="two">
+  &lt;/div>
+  &lt;div class="carousel-panel" data-toggle-set="carousel" data-toggle="bar">
+    &lt;img src="/assets/img/illustrations/03-picture.svg" alt="three">
+  &lt;/div>
+&lt;/div>
+
+&lt;nav class="carousel-nav">
+  &lt;a href="#"
+     class="js-view-toggle icon-ui-left icon-ui-flush font-size-2"
+     data-toggle-set="carousel"
+     data-toggle='prev'>&lt;/a>
+  &lt;a href="#"
+     class="carousel-dot js-view-toggle is-active"
+     data-toggle-set="carousel"
+     data-toggle="foo">&lt;/a>
+  &lt;a href="#"
+     class="carousel-dot js-view-toggle"
+     data-toggle-set="carousel"
+     data-toggle="baz">&lt;/a>
+  &lt;a href="#"
+     class="carousel-dot  js-view-toggle"
+     data-toggle-set="carousel"
+     data-toggle="bar">&lt;/a>
+  &lt;a href="#"
+     class="js-view-toggle icon-ui-right icon-ui-flush font-size-2"
+     data-toggle-set="carousel"
+     data-toggle='next'>&lt;/a>
+&lt;/nav>
+
+</code></pre>
+                <div class="action-bar text-right">
+                  <button class="btn btn-clear js-modal-toggle">Close</button>
+                  <button class="btn js-copy-to-clipboard" data-clipboard-target="#carousel-snippet">Copy to Clipboard</button>
+                </div>
+              </div>
+            </div>
+    </div>
+  </div>
+  <div class="panel panel-no-padding padding-leader-1 padding-trailer-1">
+            <!-- Sample HTML -->
+
+<div class="carousel">
+  <div class="carousel-panel is-active" data-toggle-set="carousel" data-toggle="foo">
+    <img src="/assets/img/illustrations/01-picture.svg" alt="one">
+  </div>
+  <div class="carousel-panel" data-toggle-set="carousel" data-toggle="baz">
+    <img src="/assets/img/illustrations/02-picture.svg" alt="two">
+  </div>
+  <div class="carousel-panel" data-toggle-set="carousel" data-toggle="bar">
+    <img src="/assets/img/illustrations/03-picture.svg" alt="three">
+  </div>
+</div>
+
+<nav class="carousel-nav">
+  <a href="#"
+     class="js-view-toggle icon-ui-left icon-ui-flush font-size-2"
+     data-toggle-set="carousel"
+     data-toggle='prev'></a>
+  <a href="#"
+     class="carousel-dot js-view-toggle is-active"
+     data-toggle-set="carousel"
+     data-toggle="foo"></a>
+  <a href="#"
+     class="carousel-dot js-view-toggle"
+     data-toggle-set="carousel"
+     data-toggle="baz"></a>
+  <a href="#"
+     class="carousel-dot  js-view-toggle"
+     data-toggle-set="carousel"
+     data-toggle="bar"></a>
+  <a href="#"
+     class="js-view-toggle icon-ui-right icon-ui-flush font-size-2"
+     data-toggle-set="carousel"
+     data-toggle='next'></a>
+</nav>
+
+
+  </div>
+  <div class="grid-container">
+    <div class="column-24">
+
+          
+      
+    </div>
+  </div>
+
+    </div>
+
+    
+
+    <!-- Footer Pattern -->
+    <footer class="footer leader-3 link-dark-gray" role="contentinfo">
+      <div class="grid-container">
+          <nav class="column-6">
+            <h6>Styleguides</h6>
+            <ul class="list-plain">
+              <li><a href="../../styleguides/javascript/">JavaScript</a></li>
+              <li><a href="../../styleguides/css/">CSS</a></li>
+              <li><a href="../../styleguides/html/">HTML</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <h6>Resources</h6>
+            <ul class="list-plain">
+              <li><a href="../../guides/migration-guide/">Migration Guide</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/releases/">Releases</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/blob/master/CONTRIBUTING.md">Contributing</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/issues/">Issues</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/">GitHub</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <h6>About Esri</h6>
+            <ul class="list-plain">
+              <li><a href="http://www.esri.com/about-esri/">About Us</a></li>
+              <li><a href="http://www.esri.com/careers/">Careers</a></li>
+              <li><a href="http://blogs.esri.com/esri/esri-insider/">Insiders Blog</a></li>
+              <li><a href="http://www.esri.com/events/user-conference/index.html">User Conference</a></li>
+              <li><a href="http://www.esri.com/events/devsummit/index.html">Developer Summit</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <a class="esri-logo" href="http://esri.com" aria-label="Esri Home"></a>
+            <section class="footer-social-nav leader-1">
+              <a class="icon-social-twitter" aria-label="Esri on Twitter"  href="https://twitter.com/Esri/"></a>
+              <a class="icon-social-facebook" aria-label="Esri on Facebook"  href="https://www.facebook.com/esrigis/"></a>
+              <a class="icon-social-instagram" aria-label="Esri on Instagram"  href="https://instagram.com/esrigram/"></a>
+              <a class="icon-social-github" aria-label="Esri on GitHub"  href="http://esri.github.com/"></a>
+              <a class="icon-social-contact" aria-label="Contact Esri"  href="http://www.esri.com/about-esri/contact/"></a>
+            </section>
+          </nav>
+
+          <div class="column-24 leader-1">
+            <p><small>Copyright © 2015 Esri. All rights reserved. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal">Legal</a></small></p>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+    <script src="../../assets/js/libs/calcite-web.js"></script>
+    <script src="../../assets/js/libs/calcite-web-marketing.js"></script>
+
+    <script src="../../assets/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+
+    
+
+    
+
+  </body>
+</html>

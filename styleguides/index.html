@@ -20,13 +20,14 @@
     <!-- stylesheets -->
     
       <link rel="stylesheet" href="../assets/css/all.css">
+      <link rel="stylesheet" href="../assets/css/extensions.css">
+      
     
 
     <!--[if IE]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
     <![endif]-->
-
   </head>
 
   <body>
@@ -42,11 +43,8 @@
       <nav class="drawer-nav" role="navigation">
         <aside class="side-nav">
           <h2 class="side-nav-title">Calcite Web</h2>
-            <form method="GET" action="../search/">
-              <div class="search-bar">
-                <input type='search' placeholder='Search' name="q">
-                <button type="submit" class="search-submit icon-ui-search"></button>
-              </div>
+            <form method="GET" action="../search/" class="panel padding-leader-half">
+              <input type="search" placeholder="Search" name="q">
             </form>
             
               
@@ -73,10 +71,6 @@
             
               
                 <a href="../patterns" class="side-nav-link">Patterns</a>
-              
-            
-              
-                <a href="../page-layouts" class="side-nav-link">Layouts</a>
               
             
               
@@ -97,52 +91,45 @@
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
-            <form method="GET" action="../search/">
-              <div class="search-bar">
-                <input type='search' placeholder='Search' name="q">
-                <button type="submit" class="search-submit icon-ui-search"></button>
-              </div>
+            <form method="GET" action="../search/" class="panel padding-leader-half">
+              <input type="search" placeholder="Search" name="q">
             </form>
           </div>
+          
             
-              
+          
             
-              
-                <a href="../type" class="side-nav-link">Type</a>
-              
+              <a href="../type" class="side-nav-link">Type</a>
             
-              
-                <a href="../grid" class="side-nav-link">Grid</a>
-              
+          
             
-              
-                <a href="../icons" class="side-nav-link">Icons</a>
-              
+              <a href="../grid" class="side-nav-link">Grid</a>
             
-              
-                <a href="../color" class="side-nav-link">Color</a>
-              
+          
             
-              
-                <a href="../components" class="side-nav-link">Components</a>
-              
+              <a href="../icons" class="side-nav-link">Icons</a>
             
-              
-                <a href="../patterns" class="side-nav-link">Patterns</a>
-              
+          
             
-              
-                <a href="../page-layouts" class="side-nav-link">Layouts</a>
-              
+              <a href="../color" class="side-nav-link">Color</a>
             
-              
-                <a href="../sass" class="side-nav-link">Sass</a>
-              
+          
             
-              
-                <a href="../javascript" class="side-nav-link">JavaScript</a>
-              
+              <a href="../components" class="side-nav-link">Components</a>
             
+          
+            
+              <a href="../patterns" class="side-nav-link">Patterns</a>
+            
+          
+            
+              <a href="../sass" class="side-nav-link">Sass</a>
+            
+          
+            
+              <a href="../javascript" class="side-nav-link">JavaScript</a>
+            
+          
         </aside>
       </nav>
     </div>
@@ -156,47 +143,14 @@
             <div class="tablet-hide">
               <a href="../" class="top-nav-title">Calcite Web</a>
               <nav class="top-nav-list" role="navigation">
-              
-                
-              
-                
-                  <a href="../type" class="top-nav-link">Type</a>
-                
-              
-                
-                  <a href="../grid" class="top-nav-link">Grid</a>
-                
-              
-                
-                  <a href="../icons" class="top-nav-link">Icons</a>
-                
-              
-                
-                  <a href="../color" class="top-nav-link">Color</a>
-                
-              
-                
-                  <a href="../components" class="top-nav-link">Components</a>
-                
-              
-                
-                  <a href="../patterns" class="top-nav-link">Patterns</a>
-                
-              
-                
-                  <a href="../page-layouts" class="top-nav-link">Layouts</a>
-                
-              
-                
-                  <a href="../sass" class="top-nav-link">Sass</a>
-                
-              
-                
-                  <a href="../javascript" class="top-nav-link">JavaScript</a>
-                
-              
+                <a href="../documentation" class="top-nav-link">Documentation</a>
+                <a href="../examples" class="top-nav-link">Examples</a>
+                <a href="../guides" class="top-nav-link">Guides</a>
               </nav>
-              <a href="#" class="icon-ui-search js-expand-toggle top-nav-link right" data-expand="search">Search</a >
+              <form method="GET" action="../search/" class="inline-block right site-search">
+                <input type='search' placeholder='Search' name="q" class="inline-block leader-half js-search-input">
+                <button type="submit" class="hide">Search</button>
+              </form>
             </div>
 
             <div class="tablet-show">
@@ -207,26 +161,26 @@
       </header>
 
       <!-- Secondary Nav Pattern -->
-      <header class="sub-nav" role="banner">
-        <div class="grid-container">
-          <div class="column-24">
-            
-  <h1 class="sub-nav-title text-white">Styleguides</h1>
-  <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-orange btn-arrow right leader-half">Latest Release</a>
-  <nav class="sub-nav-list phone-hide">
-    <a class="sub-nav-link is-active" href="../styleguides/">Overview</a>
-    <a class="sub-nav-link " href="../styleguides/html">HTML</a>
-    <a class="sub-nav-link " href="../styleguides/css">CSS</a>
-    <a class="sub-nav-link " href="../styleguides/javascript">JavaScript</a>
-  </nav>
+      <!-- what -->
+      
+<header class="sub-nav" role="banner">
+  <div class="grid-container">
+    <div class="column-24">
+      <h1 class="sub-nav-title text-white">Code Styleguides</h1>
+      <nav class="sub-nav-list">
+        <a class="sub-nav-link is-active" href="../styleguides/">Overview</a>
+        <a class="sub-nav-link " href="../styleguides/html">HTML</a>
+        <a class="sub-nav-link " href="../styleguides/css">CSS</a>
+        <a class="sub-nav-link " href="../styleguides/javascript">JavaScript</a>
+      </nav>
+    </div>
+  </div>
+</header>
 
-          </div>
-        </div>
-      </header>
 
       <!-- content of each page will go here -->
-      <div class="grid-container leader-1">
-        
+      
+<div class="grid-container leader-2">
   <main class="column-17 content-face">
     <p>A style guide helps to ensure that code is approachable and familiar to everybody on a team. The most important rule is that code should look as though it was typed by one person. <em>Any</em> agreed upon standard is better than no standard at all. That being said, the pages in this section offer up what has worked for us in the past. Nearly every rule has a logical reason behind it.</p>
 <p>Style guides are available for:</p>
@@ -238,8 +192,7 @@
 <p>If you don't already have a style guide for your team, we recommend you adopt these rules. Teams work best when they're on the same page!</p>
 
   </main>
-
-      </div>
+</div>
 
     </div>
 
@@ -299,7 +252,10 @@
     </footer>
 
     <script src="../assets/js/libs/calcite-web.js"></script>
+    <script src="../assets/js/libs/calcite-web-marketing.js"></script>
+
     <script src="../assets/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
 
     
 

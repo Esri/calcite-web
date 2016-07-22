@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>  <html class="ie lt-ie9 ie8"> <![endif]-->
+<!--[if IE 9]>     <html class="ie ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+
+    <!-- Set encoding -->
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <!-- Use title from page frontmatter -->
+    <title>Calcite Web | Esri Design Patterns</title>
+
+    <!-- Link to favicon -->
+    <link rel="shortcut icon" href="../../assets/img/favicon.ico">
+
+    <!-- stylesheets -->
+    
+      <link rel="stylesheet" href="../../assets/css/all.css">
+      <link rel="stylesheet" href="../../assets/css/extensions.css">
+      
+    
+
+    <!--[if IE]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!--
+    ┌─────────┐
+    │ Drawers │
+    └─────────┘
+     ↳ http://esri.github.io/calcite-web/patterns/#drawers
+     ↳ patterns → _drawers.md
+    -->
+    <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
+      <!-- <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerleft"> -->
+      <nav class="drawer-nav" role="navigation">
+        <aside class="side-nav">
+          <h2 class="side-nav-title">Calcite Web</h2>
+          <div class="panel padding-trailer-half padding-leader-half">
+            <form method="GET" action="../../search/">
+              <input type="search" placeholder="Search" name="q">
+            </form>
+          </div>
+          <a href="../../documentation/" class="side-nav-link">Documentation</a>
+          <a href="../../examples/" class="side-nav-link">Examples</a>
+          <a href="../../guides/" class="side-nav-link">Guides</a>
+        </aside>
+      </nav>
+    </div>
+
+    <div class="drawer drawer-right js-drawer" data-drawer="right">
+      <!-- <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerright"> -->
+      <nav class="drawer-nav" role="navigation">
+        <aside class="side-nav">
+          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
+          <div class="panel padding-trailer-half padding-leader-half">
+            <form method="GET" action="../../search/" class="panel padding-leader-half">
+              <input type="search" placeholder="Search" name="q">
+            </form>
+          </div>
+          <a href="../../documentation/" class="side-nav-link">Documentation</a>
+          <a href="../../examples/" class="side-nav-link">Examples</a>
+          <a href="../../guides/" class="side-nav-link">Guides</a>
+        </aside>
+      </nav>
+    </div>
+
+    <div class="wrapper">
+      <!-- Logged Out Pattern-->
+      <header class="top-nav">
+        <a class="skip-to-content" href="#skip-to-content">Skip To Content</a>
+        <div class="grid-container">
+          <div class="column-24">
+            <div class="tablet-hide">
+              <a href="../../" class="top-nav-title">Calcite Web</a>
+              <nav class="top-nav-list" role="navigation">
+                <a href="../../documentation" class="top-nav-link">Documentation</a>
+                <a href="../../examples" class="is-active top-nav-link">Examples</a>
+                <a href="../../guides" class="top-nav-link">Guides</a>
+              </nav>
+              <form method="GET" action="../../search/" class="inline-block right site-search">
+                <input type='search' placeholder='Search' name="q" class="inline-block leader-half js-search-input">
+                <button type="submit" class="hide">Search</button>
+              </form>
+            </div>
+
+            <div class="tablet-show">
+              <a href="/" class="icon-ui-menu top-nav-title js-drawer-toggle" data-drawer="top-nav">Calcite Web</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Secondary Nav Pattern -->
+      <!-- what -->
+      
+  <header class="sub-nav" role="banner">
+    <div class="grid-container">
+      <div class="column-24">
+        <h1 class="sub-nav-title leader-1 text-white">Examples</h1>
+        <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1">Download Latest Release</a>
+        <nav class="sub-nav-list" role="navigation" aria-labelledby="subnav">
+          <a class="sub-nav-link " href="../../examples">Overview</a>
+          <a href="../../examples/core" class="sub-nav-link ">Basic Pages</a>
+          <a href="../../examples/grid" class="sub-nav-link  is-active ">Grid</a>
+          <a href="../../examples/navigation" class="sub-nav-link ">Navigation</a>
+          <a href="../../examples/marketing" class="sub-nav-link ">Marketing</a>
+          <a href="../../examples/e-commerce" class="sub-nav-link ">E-Commerce</a>
+          <a href="../../examples/apps" class="sub-nav-link ">Apps</a>
+          <a href="../../examples/i18n" class="sub-nav-link ">i18n</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+
+      <!-- content of each page will go here -->
+      
+  <header class="third-nav scroll-show js-sticky" data-top=0>
+    <div class="third-nav-container">
+      <div class="grid-container">
+        <nav class="column-24" role="navigation" aria-labelledby="thirdnav breadcrumbs">
+          <a href="../../examples" class="third-nav-link crumb">Examples</a>
+          <a href="../../examples/grid" class="third-nav-link crumb">grid</a>
+          <a class="icon-ui-up third-nav-link right" href="#">Back to Top</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <a id="skip-to-content" tabindex="0"></a>
+
+  
+<div class="grid-container">
+  <div class="column-24">
+    <h1>Grid System Examples</h1>
+  </div>
+</div>
+
+<div class="grid-container">
+  <div class="grid-example">
+    <div class="column-24 trailer-5">
+     <div class="column-1"><span>1</span></div>
+     <div class="column-4 pre-6 post-6 rtl-pre-6"><span>4 pre-6 post-6</span></div>
+     <div class="column-1"><span>1</span></div>
+   </div>
+  </div>
+
+  <h2 id="columns" class="column-24">Columns</h2>
+
+  <div class="grid-example trailer-2 leader-1">
+    <div class="column-1"><span>1</span></div>
+    <div class="column-23"><span>.column-23</span></div>
+    <div class="column-2"><span>2</span></div>
+    <div class="column-22"><span>.column-22</span></div>
+    <div class="column-3"><span>3</span></div>
+    <div class="column-21"><span>.column-21</span></div>
+    <div class="column-4"><span>4</span></div>
+    <div class="column-20"><span>.column-20</span></div>
+    <div class="column-5"><span>.column-5</span></div>
+    <div class="column-19"><span>.column-19</span></div>
+    <div class="column-6"><span>.column-6</span></div>
+    <div class="column-18"><span>.column-18</span></div>
+    <div class="column-7"><span>.column-7</span></div>
+    <div class="column-17"><span>.column-17</span></div>
+    <div class="column-8"><span>.column-8</span></div>
+    <div class="column-16"><span>.column-16</span></div>
+    <div class="column-9"><span>.column-9</span></div>
+    <div class="column-15"><span>.column-15</span></div>
+    <div class="column-10"><span>.column-10</span></div>
+    <div class="column-14"><span>.column-14</span></div>
+    <div class="column-11"><span>.column-11</span></div>
+    <div class="column-13"><span>.column-13</span></div>
+    <div class="column-12"><span>.column-12</span></div>
+    <div class="column-12"><span>.column-12</span></div>
+  </div>
+
+  <h2 id="nested-columns" class="padding-leader-2 column-24">Nested Columns</h2>
+
+  <div class="grid-example trailer-2 nested-demo">
+    <div class="column-18 tablet-column-8">
+      <span class="tablet-hide">.column-18</span>
+      <span class="tablet-show">.tablet-column-8</span>
+      <div class="column-3 pre-1 tablet-column-4">
+        <span class="tablet-hide">.column-3</span>
+        <span class="tablet-show">.tablet-column-4</span>
+        <div class="column-1 tablet-column-4">
+          <span class="tablet-hide">1</span>
+          <span class="tablet-show">.tablet-column-4</span>
+        </div>
+        <div class="column-1 tablet-column-4 tablet-first-column">
+          <span class="tablet-hide">1</span>
+          <span class="tablet-show">.tablet-column-4</span>
+        </div>
+        <div class="column-1 tablet-column-4 tablet-first-column">
+          <span class="tablet-hide">1</span>
+          <span class="tablet-show">.tablet-column-4</span>
+        </div>
+      </div>
+      <div class="column-2 tablet-column-4 tablet-last-column phone-first-column">
+        <span class="tablet-hide">2</span>
+        <span class="tablet-show">.tablet-column-4</span>
+      </div>
+      <div class="column-10 tablet-column-8 tablet-first-column">
+        <span class="tablet-hide">10</span><span class="tablet-show">.tablet-column-8</span>
+        <div class="column-5 tablet-column-4">
+          <span class="tablet-hide">.column-5</span>
+          <span class="tablet-show">.tablet-column-4</span>
+        </div>
+        <div class="column-5 tablet-column-4 phone-first-column">
+          <span class="tablet-hide">.column-5</span>
+          <span class="tablet-show">.tablet-column-4</span>
+          <div class="column-2 tablet-column-4 phone-first-column">
+            <span class="tablet-hide">2</span>
+            <span class="tablet-show">.tablet-column-4</span>
+          </div>
+          <div class="column-3 tablet-column-4 tablet-first-column phone-first-column">
+            <span class="tablet-hide">.column-3</span>
+            <span class="tablet-show">.tablet-column-4</span>
+          </div>
+        </div>
+      </div>
+      <div class="column-1 tablet-column-4 tablet-first-column">
+        <span class="tablet-hide">1</span>
+        <span class="tablet-show">.tablet-column-4</span>
+      </div>
+      <div class="column-1 tablet-column-5 tablet-first-column">
+        <span class="tablet-hide">1</span>
+        <span class="tablet-show">.tablet-column-5</span>
+      </div>
+    </div>
+    <div class="column-6 tablet-column-4">
+      <span class="tablet-hide">.column-6</span>
+      <span class="tablet-show">.tablet-column-4</span>
+      <div class="column-6 tablet-column-4">
+        <span class="tablet-hide">.column-6</span>
+        <span class="tablet-show">.tablet-column-4</span>
+        <div class="column-4 tablet-column-2">
+          <span class="tablet-hide">.column-4</span>
+          <span class="tablet-show">.tablet-column-2</span>
+        </div>
+        <div class="column-2 tablet-column-2">
+          <span class="tablet-hide">2</span>
+          <span class="tablet-show">.tablet-column-2</span>
+        </div>
+      </div>
+      <div class="column-4 tablet-column-4 column-first tablet-first-column">
+        <span class="tablet-hide first-column">.column-4</span>
+        <span class="tablet-show">.tablet-column-4</span>
+      </div>
+    </div>
+  </div>
+
+  <h2 id="responsive-columns" class="padding-leader-2 column-24">Responsive Columns</h2>
+
+  <div class="grid-example">
+    <div class="column-24"><span>24</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+  </div>
+
+  <h2 id="pre-and-post" class="padding-leader-2 column-24">Pre and Post</h2>
+
+  <div class="grid-example trailer-2 leader-1">
+    <div class="column-1">
+      <span>col</span>
+    </div>
+    <div class="column-2 pre-21 tablet-pre-9 phone-pre-3">
+      <span>.pre-21</span>
+    </div>
+  </div>
+  <div class="grid-example trailer-2 leader-1">
+    <div class="column-2 post-21 tablet-post-9 phone-post-3">
+      <span>.post-21</span>
+    </div>
+    <div class="column-1">
+      <span>col</span>
+    </div>
+  </div>
+
+  <h2 class="padding-leader-2 column-24" id="rows">Rows</h2>
+
+  <div class="grid-example">
+    <div class="column-2"><span>.column-2 With a lot of content, so it pushes down.</span></div>
+    <div class="column-22"><span>.column-22</span></div>
+    <div class="column-4"><span>.column-4</span></div>
+    <div class="column-4"><span>.column-4</span></div>
+    <div class="column-4"><span>.column-4</span></div>
+  </div>
+  <div class="grid-example">
+    <div class="column-24">
+      <div class="column-2"><span>.column-2 With a lot of content, so it pushes down.</span></div>
+      <div class="column-22 tablet-first-column"><span>.column-22</span></div>
+    </div>
+    <div class="column-4"><span>.column-4</span></div>
+    <div class="column-4"><span>.column-4</span></div>
+    <div class="column-4"><span>.column-4</span></div>
+  </div>
+
+  <h2 id="block-groups" class="padding-leader-2 column-24">Block Groups</h2>
+
+  <div class="grid-example trailer-2 leader-1 column-24">
+    <div class="block-group block-group-4-up">
+      <div class="block"><span>.block-group-4-up</span></div>
+      <div class="block"><span>.block-group-4-up</span></div>
+      <div class="block"><span>.block-group-4-up</span></div>
+      <div class="block"><span>.block-group-4-up</span></div>
+      <div class="block"><span>.block-group-4-up</span></div>
+      <div class="block"><span>.block-group-4-up</span></div>
+      <div class="block"><span>.block-group-4-up</span></div>
+      <div class="block"><span>.block-group-4-up</span></div>
+    </div>
+  </div>
+
+  <h2 id="responsive-block-groups" class="padding-leader-2 column-24">Responsive Block Groups</h2>
+
+  <div class="grid-example trailer-2 leader-1 column-24">
+    <div class="block-group block-group-4-up tablet-block-group-2-up phone-block-group-1-up">
+      <div class="block"><span>.block</span></div>
+      <div class="block"><span>.block</span></div>
+      <div class="block"><span>.block</span></div>
+      <div class="block"><span>.block</span></div>
+      <div class="block"><span>.block</span></div>
+      <div class="block"><span>.block</span></div>
+      <div class="block"><span>.block</span></div>
+      <div class="block"><span>.block</span></div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="grid-container">
+    <div class="column-24">
+      
+    </div>
+  </div>
+
+    </div>
+
+    
+
+    <!-- Footer Pattern -->
+    <footer class="footer leader-3 link-dark-gray" role="contentinfo">
+      <div class="grid-container">
+          <nav class="column-6">
+            <h6>Styleguides</h6>
+            <ul class="list-plain">
+              <li><a href="../../styleguides/javascript/">JavaScript</a></li>
+              <li><a href="../../styleguides/css/">CSS</a></li>
+              <li><a href="../../styleguides/html/">HTML</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <h6>Resources</h6>
+            <ul class="list-plain">
+              <li><a href="../../guides/migration-guide/">Migration Guide</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/releases/">Releases</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/blob/master/CONTRIBUTING.md">Contributing</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/issues/">Issues</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/">GitHub</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <h6>About Esri</h6>
+            <ul class="list-plain">
+              <li><a href="http://www.esri.com/about-esri/">About Us</a></li>
+              <li><a href="http://www.esri.com/careers/">Careers</a></li>
+              <li><a href="http://blogs.esri.com/esri/esri-insider/">Insiders Blog</a></li>
+              <li><a href="http://www.esri.com/events/user-conference/index.html">User Conference</a></li>
+              <li><a href="http://www.esri.com/events/devsummit/index.html">Developer Summit</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <a class="esri-logo" href="http://esri.com" aria-label="Esri Home"></a>
+            <section class="footer-social-nav leader-1">
+              <a class="icon-social-twitter" aria-label="Esri on Twitter"  href="https://twitter.com/Esri/"></a>
+              <a class="icon-social-facebook" aria-label="Esri on Facebook"  href="https://www.facebook.com/esrigis/"></a>
+              <a class="icon-social-instagram" aria-label="Esri on Instagram"  href="https://instagram.com/esrigram/"></a>
+              <a class="icon-social-github" aria-label="Esri on GitHub"  href="http://esri.github.com/"></a>
+              <a class="icon-social-contact" aria-label="Contact Esri"  href="http://www.esri.com/about-esri/contact/"></a>
+            </section>
+          </nav>
+
+          <div class="column-24 leader-1">
+            <p><small>Copyright © 2015 Esri. All rights reserved. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal">Legal</a></small></p>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+    <script src="../../assets/js/libs/calcite-web.js"></script>
+    <script src="../../assets/js/libs/calcite-web-marketing.js"></script>
+
+    <script src="../../assets/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+
+    
+
+    
+
+  </body>
+</html>

@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>  <html class="ie lt-ie9 ie8"> <![endif]-->
+<!--[if IE 9]>     <html class="ie ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+
+    <!-- Set encoding -->
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <!-- Use title from page frontmatter -->
+    <title>Calcite Web | Esri Design Patterns</title>
+
+    <!-- Link to favicon -->
+    <link rel="shortcut icon" href="../../assets/img/favicon.ico">
+
+    <!-- stylesheets -->
+    
+      <link rel="stylesheet" href="../../assets/css/all.css">
+      <link rel="stylesheet" href="../../assets/css/extensions.css">
+      
+    
+
+    <!--[if IE]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!--
+    ┌─────────┐
+    │ Drawers │
+    └─────────┘
+     ↳ http://esri.github.io/calcite-web/patterns/#drawers
+     ↳ patterns → _drawers.md
+    -->
+    <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
+      <!-- <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerleft"> -->
+      <nav class="drawer-nav" role="navigation">
+        <aside class="side-nav">
+          <h2 class="side-nav-title">Calcite Web</h2>
+          <div class="panel padding-trailer-half padding-leader-half">
+            <form method="GET" action="../../search/">
+              <input type="search" placeholder="Search" name="q">
+            </form>
+          </div>
+          <a href="../../documentation/" class="side-nav-link">Documentation</a>
+          <a href="../../examples/" class="side-nav-link">Examples</a>
+          <a href="../../guides/" class="side-nav-link">Guides</a>
+        </aside>
+      </nav>
+    </div>
+
+    <div class="drawer drawer-right js-drawer" data-drawer="right">
+      <!-- <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerright"> -->
+      <nav class="drawer-nav" role="navigation">
+        <aside class="side-nav">
+          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
+          <div class="panel padding-trailer-half padding-leader-half">
+            <form method="GET" action="../../search/" class="panel padding-leader-half">
+              <input type="search" placeholder="Search" name="q">
+            </form>
+          </div>
+          <a href="../../documentation/" class="side-nav-link">Documentation</a>
+          <a href="../../examples/" class="side-nav-link">Examples</a>
+          <a href="../../guides/" class="side-nav-link">Guides</a>
+        </aside>
+      </nav>
+    </div>
+
+    <div class="wrapper">
+      <!-- Logged Out Pattern-->
+      <header class="top-nav">
+        <a class="skip-to-content" href="#skip-to-content">Skip To Content</a>
+        <div class="grid-container">
+          <div class="column-24">
+            <div class="tablet-hide">
+              <a href="../../" class="top-nav-title">Calcite Web</a>
+              <nav class="top-nav-list" role="navigation">
+                <a href="../../documentation" class="is-active top-nav-link">Documentation</a>
+                <a href="../../examples" class="top-nav-link">Examples</a>
+                <a href="../../guides" class="top-nav-link">Guides</a>
+              </nav>
+              <form method="GET" action="../../search/" class="inline-block right site-search">
+                <input type='search' placeholder='Search' name="q" class="inline-block leader-half js-search-input">
+                <button type="submit" class="hide">Search</button>
+              </form>
+            </div>
+
+            <div class="tablet-show">
+              <a href="/" class="icon-ui-menu top-nav-title js-drawer-toggle" data-drawer="top-nav">Calcite Web</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Secondary Nav Pattern -->
+      <!-- what -->
+      
+  <header class="sub-nav" role="banner">
+    <div class="grid-container">
+      <div class="column-24">
+        <h1 class="sub-nav-title leader-1 text-white">Documentation</h1>
+        <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1 tablet-hide">Download Latest Release</a>
+        <nav class="sub-nav-list tablet-hide" role="navigation" aria-labelledby="subnav">
+          
+          
+          
+            
+          
+            <a class="sub-nav-link " href="../../documentation/">Get Started</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../../documentation/type/">Type</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../../documentation/grid/">Grid</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../../documentation/icons/">Icons</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../../documentation/color/">Color</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../../documentation/components/">Components</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../../documentation/patterns/">Patterns</a>
+          
+          
+          
+            <a class="sub-nav-link is-active" href="../../documentation/sass/">Sass</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../../documentation/javascript/">JavaScript</a>
+          
+        </nav>
+
+        <select class="tablet-show select-full trailer-half js-select-nav">
+          
+          
+          
+            
+          
+            <option value="../../documentation/" >Get Started</option>
+          
+          
+          
+            <option value="../../documentation/type/" >Type</option>
+          
+          
+          
+            <option value="../../documentation/grid/" >Grid</option>
+          
+          
+          
+            <option value="../../documentation/icons/" >Icons</option>
+          
+          
+          
+            <option value="../../documentation/color/" >Color</option>
+          
+          
+          
+            <option value="../../documentation/components/" >Components</option>
+          
+          
+          
+            <option value="../../documentation/patterns/" >Patterns</option>
+          
+          
+          
+            <option value="../../documentation/sass/" selected>Sass</option>
+          
+          
+          
+            <option value="../../documentation/javascript/" >JavaScript</option>
+          
+        </select>
+
+      </div>
+    </div>
+  </header>
+
+
+      <!-- content of each page will go here -->
+      
+<div class="grid-container leader-1">
+  <div class="column-6 tablet-column-12">
+    <aside class="side-nav" aria-role="complementary">
+      
+        <h4 class="side-nav-title">Sass</h4>
+        <!-- <nav aria-role="navigation" aria-labelledby="sidenav"> -->
+        <nav aria-role="navigation">
+          
+            
+              <a href="#sass" class="side-nav-link">Overview</a>
+            
+          
+        </nav>
+      
+        <h4 class="side-nav-title">Custom Build</h4>
+        <!-- <nav aria-role="navigation" aria-labelledby="sidenav"> -->
+        <nav aria-role="navigation">
+          
+            
+              <a href="#custom-build" class="side-nav-link">Overview</a>
+            
+          
+            
+              <a href="#example" class="side-nav-link">Example</a>
+            
+          
+        </nav>
+      
+        <h4 class="side-nav-title">Variables</h4>
+        <!-- <nav aria-role="navigation" aria-labelledby="sidenav"> -->
+        <nav aria-role="navigation">
+          
+            
+              <a href="#variables" class="side-nav-link">Overview</a>
+            
+          
+            
+              <a href="#breakpoints" class="side-nav-link">Breakpoints</a>
+            
+          
+            
+              <a href="#ui-variables" class="side-nav-link">UI Variables</a>
+            
+          
+        </nav>
+      
+        <h4 class="side-nav-title">Type Composition</h4>
+        <!-- <nav aria-role="navigation" aria-labelledby="sidenav"> -->
+        <nav aria-role="navigation">
+          
+            
+              <a href="#type-composition" class="side-nav-link">Overview</a>
+            
+          
+            
+              <a href="#font-size" class="side-nav-link">Font Size</a>
+            
+          
+            
+              <a href="#modular-scale" class="side-nav-link">Modular Scale</a>
+            
+          
+            
+              <a href="#tracking" class="side-nav-link">Tracking</a>
+            
+          
+            
+              <a href="#leading" class="side-nav-link">Leading</a>
+            
+          
+            
+              <a href="#word-spacing" class="side-nav-link">Word Spacing</a>
+            
+          
+        </nav>
+      
+        <h4 class="side-nav-title">Utilities</h4>
+        <!-- <nav aria-role="navigation" aria-labelledby="sidenav"> -->
+        <nav aria-role="navigation">
+          
+            
+              <a href="#utility-mixins" class="side-nav-link">Utility Mixins</a>
+            
+          
+        </nav>
+      
+    </aside>
+    <div class="js-sticky scroll-show tablet-hide" data-top="46">
+      <a href="#" class="btn btn-clear">Back to Top</a>
+    </div>
+  </div>
+
+  <a id="skip-to-content" tabindex="0"></a>
+  <main class="column-17 phone-column-6 tablet-column-12 pre-1 rtl-post-0 tablet-leader-1" role="main">
+
+    
+      <h1 class="text-rule" id="sass" tabindex="0">Sass</h1>
+      
+        <section>
+          
+
+          <p>Calcite Web has a helpful set of mixins for composing type. We recommend you use these mixins wherever possible when writing your own components as it will keep the visual proportions and styles in line with the rest of the framework.</p>
+
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+    
+      <h1 class="text-rule" id="custom-build" tabindex="0">Custom Build</h1>
+      
+        <section>
+          
+
+          <p>By default, using the Calcite Web sass files will build css  for the complete framework. This build can be customized, or entirely turned off for sass-only applications.</p>
+<p>Setting the <code>$generate-css</code> variable to false in your sass files will prevent any css from being generated, while exposing all the underlying sass styles of the framework. Setting specific variables like <code>$include-alerts</code> to false will preclude only that components css from being built.</p>
+<p>Additionally, font imports are controlled this way. By default, Calcite Web requests Avenir Next from a cdn. You can import <code>calcite-web-no-fonts.scss</code> if you don't want the fonts.</p>
+<pre><code><span class="hljs-comment">// Sass Output</span>
+<span class="hljs-variable">$include</span>-colors:                 true    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$generate</span>-css:                   true    !<span class="hljs-keyword">default</span>;
+
+<span class="hljs-comment">// Language Helpers</span>
+<span class="hljs-variable">$include</span>-right-to-left:          <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+
+<span class="hljs-comment">// Grid Output</span>
+<span class="hljs-variable">$include</span>-reset:                  <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-utils:                  <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+
+<span class="hljs-variable">$include</span>-<span class="hljs-keyword">grid</span>:                   <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+  <span class="hljs-variable">$fold</span>-<span class="hljs-keyword">grid</span>:                    <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+  <span class="hljs-variable">$block</span>-<span class="hljs-keyword">grid</span>:                   <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+
+<span class="hljs-comment">// Grid Utilities Output</span>
+<span class="hljs-variable">$include</span>-leader-trailer:         <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-gutter:                 <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-left-right:             <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-show-<span class="hljs-keyword">hide</span>:              <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-sticky:                 <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+
+<span class="hljs-comment">// Type Output</span>
+<span class="hljs-variable">$include</span>-type:                   <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+  <span class="hljs-variable">$include</span>-primary-family:       true             !<span class="hljs-keyword">default</span>;
+  <span class="hljs-variable">$include</span>-code-family:          <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+  <span class="hljs-variable">$include</span>-i18n:                 <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+  <span class="hljs-variable">$include</span>-type-defaults:        <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+  <span class="hljs-variable">$include</span>-type-helpers:         <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+
+<span class="hljs-comment">// Icons</span>
+<span class="hljs-variable">$include</span>-icons:                  <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+  <span class="hljs-variable">$include</span>-calcite-icons:        <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+  <span class="hljs-variable">$include</span>-social-icons:         <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+  <span class="hljs-variable">$include</span>-icon-font:            <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+
+<span class="hljs-comment">// Components</span>
+<span class="hljs-variable">$include</span>-alerts:                 <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-badges:                 <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-labels:                 <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-tables:                 <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-<span class="hljs-keyword">panel</span>:                  <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-<span class="hljs-keyword">button</span>:                 <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-dropdowns:              <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-breadcrumbs:            <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-tooltip:                <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-forms:                  <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-input-groups:           <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-loader:                 <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-skip-to-content:        <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-logo:                   <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-card:                   <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-animation:              <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+
+<span class="hljs-comment">// Patterns</span>
+<span class="hljs-variable">$include</span>-footer:                 <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-sticky-footer:          <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-pagination:             <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-side-nav:               <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-sub-nav:                <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-third-nav:              <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-top-nav:                <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-user-nav:               <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-app-switcher:           <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+
+<span class="hljs-comment">// Javascript</span>
+<span class="hljs-variable">$include</span>-tabs:                   <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-modal:                  <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-accordion:              <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-drawers:                <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-sticky:                 <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+<span class="hljs-variable">$include</span>-<span class="hljs-keyword">filter</span>-dropdown:        <span class="hljs-variable">$generate</span>-css    !<span class="hljs-keyword">default</span>;
+</code></pre>
+
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+        <section>
+          
+            <h2 id="example" tabindex="0">Example</h2>
+          
+
+          <pre><code><span class="hljs-comment">// custom-build.scss</span>
+$generate-<span class="hljs-string">css:</span> <span class="hljs-literal">false</span>;
+$include-<span class="hljs-string">type:</span> <span class="hljs-literal">true</span>;
+$include-<span class="hljs-string">grid:</span> <span class="hljs-literal">true</span>;
+$fold-<span class="hljs-string">grid:</span>  <span class="hljs-literal">true</span>;
+$block-<span class="hljs-string">grid:</span> <span class="hljs-literal">true</span>;
+$include-leader-<span class="hljs-string">trailer:</span> <span class="hljs-literal">true</span>;
+$include-<span class="hljs-string">gutter:</span> <span class="hljs-literal">true</span>;
+$include-left-<span class="hljs-string">right:</span> <span class="hljs-literal">true</span>;
+$include-show-<span class="hljs-string">hide:</span> <span class="hljs-literal">true</span>;
+$include-<span class="hljs-string">sticky:</span> <span class="hljs-literal">true</span>;
+
+<span class="hljs-annotation">@import</span> <span class="hljs-string">'calcite-web'</span>
+</code></pre>
+<p>The above sass will import the framework, import the type styles, and build css that provides access to the type helpers and grid system. Notice that the variable declarations are <em>before</em> the import.</p>
+
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+    
+      <h1 class="text-rule" id="variables" tabindex="0">Variables</h1>
+      
+        <section>
+          
+
+          <p>Calcite Web comes with several variables. These variables represent project-standard configurations of different aspects. For example, <code>$baseline</code> can be used in your Sass to set a property to the default typographic baseline of Calcite Web.</p>
+<p>These variables can also be configured in your own project to change the library for project-specific applications.</p>
+<p>Below are all of the variables and a brief description of what they represent.</p>
+
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+        <section>
+          
+            <h2 id="breakpoints" tabindex="0">Breakpoints</h2>
+          
+
+          <p>Calcite Web comes with several variables representing the default screen sizes.</p>
+<pre><code class="scss"><span class="hljs-comment">// Breakpoints</span>
+<span class="hljs-variable">$small</span><span class="hljs-value">:  <span class="hljs-number">480px</span>  !default;</span>
+<span class="hljs-variable">$medium</span><span class="hljs-value">: <span class="hljs-number">860px</span>  !default;</span>
+<span class="hljs-variable">$large</span><span class="hljs-value">:  <span class="hljs-number">1280px</span> !default;</span>
+</code></pre>
+<p>In static classes, these breakpoints are often expressed as <code>phone-</code>, <code>tablet-</code>, <code>desktop-</code>.</p>
+
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+        <section>
+          
+            <h2 id="ui-variables" tabindex="0">UI Variables</h2>
+          
+
+          <p>Controls specific aspects and behaviors across the UI.</p>
+<pre><code class="scss"><span class="hljs-variable">$transition</span><span class="hljs-value">: <span class="hljs-number">150ms</span> linear;</span>
+<span class="hljs-variable">$box-shadow</span><span class="hljs-value">: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16px</span> <span class="hljs-number">0</span> <span class="hljs-function">rgba</span>(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0.05</span>) !default;</span>
+<span class="hljs-variable">$drawer-width</span><span class="hljs-value">: <span class="hljs-number">280px</span> !default;</span>
+</code></pre>
+<p><code>$transition</code> is a speed and easing function used throughout the framework for motion effects.</p>
+<p><code>$box-shadow</code> ensures consistent box shadow effects for adding depths to elements.</p>
+<p><code>$drawer-width</code> controls the width of the hidden left and right drawers.</p>
+
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+    
+      <h1 class="text-rule" id="type-composition" tabindex="0">Type Composition</h1>
+      
+        <section>
+          
+
+          <p>Calcite Web has a helpful set of mixins for composing type. We recommend you use these mixins wherever possible when writing your own components as it will keep the visual proportions and styles in line with the rest of the framework.</p>
+
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+        <section>
+          
+            <h2 id="font-size" tabindex="0">Font Size</h2>
+          
+
+          <p>The Calcite Web type system uses a modular typographic scale to ensure a consistent tonal range within all text elements. This modular scale is created from the body size of the type, and a second, smaller size. These two type sizes anchor the scale, and using a precise ratio can be expanded to an entire set of sizes for all typographic needs.</p>
+<p>The <code>font-size($n)</code> mixin takes an integer, positive or negative, and sets all type within the element to the size defined by traversing that number of steps up or down the typographic scale.</p>
+<p>'0' represents the normal text size while '-1' is a type size smaller, and '1' is a type size larger. So if you'd like to have a very large pull-quote or something of that nature, you could use <code>@include font-size(6)</code>. This means that the text you've styled will be six steps up the typographic scale from the normal body size.</p>
+<p>The <code>font-size($n)</code> mixin relies on the <code>modular-scale($n)</code> mixin to define the scale, and apply it to typographic elements.</p>
+
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+        <section>
+          
+            <h2 id="modular-scale" tabindex="0">Modular Scale</h2>
+          
+
+          <p>The <code>modular-scale($n)</code> behaves the same as the <code>font-size($n)</code> mixin, but returns a raw rem value rather than css styles specific to type elements. This means that the <code>modular-scale($n)</code> mixin can be used to define heights, widths, padding, margins, or any other property of an element so that it adheres to the modular scale defined by the typography.
+Setting the max width of an article to a large multiple of the text size is a way to define a comfortable reading measure related to the proportional decisions of the content.</p>
+
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+        <section>
+          
+            <h2 id="tracking" tabindex="0">Tracking</h2>
+          
+
+          <p>Tracking is the space between letters in a word. The <code>tracking($n)</code> mixin accepts an integer, and applies letterspacing to the element as fractions of 1/1000 of an em.
+<code>@include tracking(500)</code> will apply 1/2 em letterspacing.
+<code>@include tracking(166)</code> will apply a hairline em letterspacing.</p>
+
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+        <section>
+          
+            <h2 id="leading" tabindex="0">Leading</h2>
+          
+
+          <p>Leading is the space between lines in a text block. The <code>leading($n)</code> mixin accepts an integer, and sets the line height of the element to the integer times the standard baseline unit.</p>
+
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+        <section>
+          
+            <h2 id="word-spacing" tabindex="0">Word Spacing</h2>
+          
+
+          <p>Word spacing is - well - the space between words.  The <code>word-spacing($n)</code> mixin accepts an integer, and applies letterspacing to the element as fractions of 1/1000 of an em. If you're familiar with word-spacing in design programs like Adobe InDesign, the <code>word-spacing</code> mixin will immidiately feel fairly natural.</p>
+<p>While you can pass any integer to the mixin, below is a list of values you can pass to the <code>word-spacing</code> mixin to achieve well known typographic defaults:</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Number</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>em</td>
+<td><code>word-spacing(1000)</code></td>
+</tr>
+<tr>
+<td>en</td>
+<td><code>word-spacing(500)</code></td>
+</tr>
+<tr>
+<td>thick</td>
+<td><code>word-spacing(333)</code></td>
+</tr>
+<tr>
+<td>mid</td>
+<td><code>word-spacing(250)</code></td>
+</tr>
+<tr>
+<td>thin</td>
+<td><code>word-spacing(200)</code></td>
+</tr>
+<tr>
+<td>hair</td>
+<td><code>word-spacing(166)</code></td>
+</tr>
+</tbody>
+</table>
+
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+    
+      <h1 class="text-rule" id="utilities" tabindex="0">Utilities</h1>
+      
+        <section>
+          
+            <h2 id="utility-mixins" tabindex="0">Utility Mixins</h2>
+          
+
+          <p>Utility mixins are used to construct complicated behaviors for <a href="../components">components</a> and <a href="../patterns">patterns</a>, provide baseline functionality for doc elements, and take care of browser prefixing.</p>
+<p>Most utility mixins are borrowed from <a href="http://bourbon.io/">Bourbon</a>. If mixins share a name, then they share the same code base.</p>
+<p>Use the utility mixins inside the selector you wish to apply the styles to, passing the arguments in if required. For example, to apply a clearfix to an element with the class <code>.my-div</code>, the use the following Sass:</p>
+<pre><code class="scss"><span class="hljs-class">.my-div</span> {
+  <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> clearfix</span>();</span>
+}
+</code></pre>
+<p>If the mixin accepts arguments, pass them into the parenthesis:</p>
+<pre><code class="scss"><span class="hljs-class">.my-div</span> {
+  <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> box-sizing</span>(border-box);</span>
+}
+</code></pre>
+<h4>Quick Reference</h4>
+<table>
+<thead>
+<tr>
+<th>Mixin</th>
+<th>Arguments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#appearance"><code>appearance</code></a></td>
+<td><code>$value</code></td>
+</tr>
+<tr>
+<td><a href="#animation"><code>animation</code></a></td>
+<td><code>$animations...</code></td>
+</tr>
+<tr>
+<td><a href="#box-sizing"><code>box-sizing</code></a></td>
+<td><code>$box</code></td>
+</tr>
+<tr>
+<td><a href="#box-shadow"><code>box-shadow</code></a></td>
+<td><code>$shadow</code></td>
+</tr>
+<tr>
+<td><a href="#calc"><code>calc</code></a></td>
+<td><code>$property, $value</code></td>
+</tr>
+<tr>
+<td><a href="#clearfix"><code>clearfix</code></a></td>
+<td>none</td>
+</tr>
+<tr>
+<td><a href="#keyframes"><code>keyframes</code></a></td>
+<td><code>$name</code></td>
+</tr>
+<tr>
+<td><a href="#placeholder"><code>placeholder</code></a></td>
+<td><code>$property</code>,  <code>$attr</code></td>
+</tr>
+<tr>
+<td><a href="#prefixer"><code>prefixer</code></a></td>
+<td><code>$property, $value, $prefixes</code></td>
+</tr>
+<tr>
+<td><a href="#respond-to"><code>respond-to</code></a></td>
+<td><code>$max, $mi, $type</code></td>
+</tr>
+<tr>
+<td><a href="#transform"><code>transform</code></a></td>
+<td><code>$property</code></td>
+</tr>
+<tr>
+<td><a href="#transform"><code>transform-origin</code></a></td>
+<td><code>$axes</code></td>
+</tr>
+<tr>
+<td><a href="#transform"><code>transform-style</code></a></td>
+<td><code>$style</code></td>
+</tr>
+<tr>
+<td><a href="#transition"><code>transition</code></a></td>
+<td><code>$value</code></td>
+</tr>
+<tr>
+<td><a href="#transition-prefixed"><code>transition-prefixed</code></a></td>
+<td><code>$value</code></td>
+</tr>
+<tr>
+<td><a href="#transition"><code>transition-property</code></a></td>
+<td><code>$value</code></td>
+</tr>
+<tr>
+<td><a href="#transition"><code>transition-duration</code></a></td>
+<td><code>$value</code></td>
+</tr>
+<tr>
+<td><a href="#transition"><code>transition-timing-function</code></a></td>
+<td><code>$value</code></td>
+</tr>
+<tr>
+<td><a href="#transition"><code>transition-delay</code></a></td>
+<td><code>$value</code></td>
+</tr>
+<tr>
+<td><a href="#visibility"><code>visible</code></a></td>
+<td>none</td>
+</tr>
+<tr>
+<td><a href="#visibility"><code>invisible</code></a></td>
+<td>none</td>
+</tr>
+<tr>
+<td><a href="#visibility"><code>hide</code></a></td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<h4>Animation</h4>
+<p>The animation mixin allows you to declare cross-browser animations. The mixin accepts</p>
+<pre><code class="scss">box<span class="hljs-pseudo">:hover</span> {
+  <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> animation</span>(scale<span class="hljs-preprocessor"> 1.0s</span><span class="hljs-preprocessor"> ease-in</span>,<span class="hljs-preprocessor"> slide</span><span class="hljs-preprocessor"> 2.0s</span><span class="hljs-preprocessor"> ease</span>);</span>
+}
+</code></pre>
+<p>Or, use individual animation mixins:</p>
+<pre><code class="scss">box<span class="hljs-pseudo">:hover</span> {
+  <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> animation-name</span>(scale,<span class="hljs-preprocessor"> slide</span>);</span>
+  <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> animation-duration</span>(<span class="hljs-number">2s</span>);</span>
+  <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> animation-timing-function</span>(ease);</span>
+  <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> animation-iteration-count</span>(infinite);</span>
+}
+</code></pre>
+<h4>Appearance</h4>
+<p>The <code>appearance</code> CSS property is used to display an element using a platform-native styling based on the operating system's theme. For example, to remove browser specific styling for a ui element, use:</p>
+<pre><code class="scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> appearance</span>(none);</span>
+</code></pre>
+<h4>Box-Sizing</h4>
+<p>Set the <code>box-sizing</code> property for all browsers (with browser prefixes):</p>
+<pre><code class="scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> box-sizing</span>(border-box);</span>
+</code></pre>
+<p>Valid values are <code>content-box</code>, <code>border-box</code>, and <code>inherit</code>.</p>
+<h4>Box-Shadow</h4>
+<p>Set the <code>box-shadow</code> property for all browsers (with browser prefixes):</p>
+<pre><code class="scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> box-shadow</span>(border-box);</span>
+</code></pre>
+<h4>Calc</h4>
+<p>Shorthand for setting a property to use a <code>calc</code> value. Pass the property you'd like to set, then the value you'd like to use:</p>
+<pre><code class="scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> calc</span>(width, <span class="hljs-string">'100px - 10%'</span>);</span>
+</code></pre>
+<h4>Clearfix</h4>
+<p>Applies the framework-standard clear for floated elements:</p>
+<pre><code class="scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> clearfix</span>();</span>
+</code></pre>
+<h4>Keyframes</h4>
+<p>For creating animations, you can use the <code>keyframes</code> mixin. This mixin accepts an animation name. Then inside the mixin, write your animation as a content block:</p>
+<pre><code class="scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> keyframes</span>(ANIMATION_NAME){</span>
+  0%   { <span class="hljs-attribute">background-color</span><span class="hljs-value">: <span class="hljs-hexcolor">#ffccf2</span>;</span> }
+  100% { <span class="hljs-attribute">background-color</span><span class="hljs-value">: <span class="hljs-hexcolor">#ccffff</span>;</span> }
+};
+</code></pre>
+<p>Now you can use the <a href="#animation">animation mixin</a> as a named animation like this:</p>
+<pre><code><span class="hljs-class">.animation-class</span> {
+  <span class="hljs-variable">@include</span> <span class="hljs-function">animation</span>( <span class="hljs-variable">@include</span> <span class="hljs-function">animation</span>(ANIMATION_NAME <span class="hljs-number">200ms</span> ease-in);)
+}
+</code></pre>
+<h4>Placeholder</h4>
+<p>Wraps the wide array of input placeholder selectors across browsers.</p>
+<pre><code><span class="hljs-at_rule">@<span class="hljs-keyword">include</span> <span class="hljs-function">placeholder</span>(<span class="hljs-string">'color'</span>, $dark-blue)</span>;
+</code></pre>
+<h4>Prefixer</h4>
+<p>This is one of the most flexible mixins in the library. Use it to add browser prefixes to a property:</p>
+<pre><code class="scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> prefixer</span>(margin-end,<span class="hljs-preprocessor"> 5</span>%,<span class="hljs-preprocessor"> webkit</span><span class="hljs-preprocessor"> moz</span><span class="hljs-preprocessor"> spec</span>);</span>
+</code></pre>
+<p>In this way you can prefix any property. Adding the <code>spec</code> as the last argument will also output the property <em>without</em> a prefix.</p>
+<h4>Respond To</h4>
+<p>The <code>respond-to</code> mixin adds media queries for use in responsive design. The mixin accepts three arguments: maximum size, minimum size, and type (screen, print, etc). You can pass just the first out of convenience. This mixin works well with the <a href="../sass#breakpoints">breakpoint variables</a>:</p>
+<pre><code class="scss"><span class="hljs-class">.my-div</span> {
+  <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> respond-to</span>(<span class="hljs-variable">$small</span>){</span>
+    <span class="hljs-attribute">padding</span><span class="hljs-value">: <span class="hljs-number">1rem</span>;</span>
+  }
+}
+</code></pre>
+<p>This will compile to the following css:</p>
+<pre><code class="css"><span class="hljs-at_rule">@<span class="hljs-keyword">media</span> screen and (max-width: <span class="hljs-number">480px</span>) </span>{
+  <span class="hljs-class">.my-div</span> <span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">1rem</span></span></span>;
+  }</span>
+}
+</code></pre>
+<p>You can assemble more complicated media queries by using both min and max:</p>
+<pre><code><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> respond-to</span>(<span class="hljs-variable">$large</span>, <span class="hljs-variable">$medium</span>) {</span> ... }
+</code></pre>
+<p>This will add styles that only appear <em>between</em> the <code>$medium</code> and <code>$large</code> screen sizes.</p>
+<h4>Transform</h4>
+<p>The CSS transform property lets you modify the coordinate space of the CSS visual formatting model. Using it, elements can be translated, rotated, scaled, and skewed according to the values set. <code>transform</code>, <code>transform-origin</code>, and <code>transform-style</code> all add the necessary browser prefixes for interacting with their respective transform properties.</p>
+<pre><code class="scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> transform</span>(<span class="hljs-function">translateY</span>(<span class="hljs-number">50px</span>));</span>
+<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> transform</span>(<span class="hljs-function">scale</span>(<span class="hljs-number">0.9</span>)<span class="hljs-preprocessor"> rotate</span>(-<span class="hljs-number">3deg</span>));</span>
+<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> transform-origin</span>(center<span class="hljs-preprocessor"> top</span>);</span>
+<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> transform-style</span>(preserve-<span class="hljs-number">3</span>d);</span>
+</code></pre>
+<h4>Transition</h4>
+<p>This mixin provides a shorthand syntax and supports multiple transitions.</p>
+<pre><code class="scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> transition</span>(all<span class="hljs-preprocessor"> 2.0s</span><span class="hljs-preprocessor"> ease-in-out</span>);</span>
+<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> transition</span>(opacity<span class="hljs-preprocessor"> 1.0s</span><span class="hljs-preprocessor"> ease-in</span><span class="hljs-preprocessor"> 0s</span>,<span class="hljs-preprocessor"> width</span><span class="hljs-preprocessor"> 2.0s</span><span class="hljs-preprocessor"> ease-in</span><span class="hljs-preprocessor"> 2s</span>);</span>
+</code></pre>
+<p>Or you can use the individual transition properties:</p>
+<pre><code><span class="hljs-at_rule">@<span class="hljs-keyword">include</span> <span class="hljs-function">transition-property</span>(transform)</span>;
+<span class="hljs-at_rule">@<span class="hljs-keyword">include</span> <span class="hljs-function">transition-duration</span>(<span class="hljs-number">1.0s</span>)</span>;
+<span class="hljs-at_rule">@<span class="hljs-keyword">include</span> <span class="hljs-function">transition-timing-function</span>(ease-in)</span>;
+<span class="hljs-at_rule">@<span class="hljs-keyword">include</span> <span class="hljs-function">transition-delay</span>(<span class="hljs-number">0.5s</span>)</span>;
+</code></pre>
+<h4>Transition Prefixed</h4>
+<p>To transition vendor-prefixed properties, e.g. <code>-webkit-transform</code> and <code>-moz-transform</code>, there is an additional convinience <code>transition-prefixed()</code> mixin:</p>
+<pre><code><span class="hljs-at_rule">@<span class="hljs-keyword">include</span> <span class="hljs-function">transition-prefixed</span>(<span class="hljs-function">transform3d</span>(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>) <span class="hljs-number">200ms</span> linear)</span>;
+</code></pre>
+<p>This will generate vendor prefixed properties <em>and</em> values.</p>
+<h4>Visibility</h4>
+<p>The visibility mixins change the <code>visibility</code> property. This is useful for removing and adding elements at certain breakpoints or with certain class names. No arguments are passed. Invisible sets <code>visibility: hidden</code> on the object, leaving in the in document flow, but removing it from view. <code>hide()</code> will completely remove the item with <code>display:none</code>.</p>
+<pre><code class="scss"><span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> hide</span>();</span>
+<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> invisible</span>();</span>
+<span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> visible</span>();</span>
+</code></pre>
+
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+    
+  </main>
+</div>
+
+    </div>
+
+    
+
+    <!-- Footer Pattern -->
+    <footer class="footer leader-3 link-dark-gray" role="contentinfo">
+      <div class="grid-container">
+          <nav class="column-6">
+            <h6>Styleguides</h6>
+            <ul class="list-plain">
+              <li><a href="../../styleguides/javascript/">JavaScript</a></li>
+              <li><a href="../../styleguides/css/">CSS</a></li>
+              <li><a href="../../styleguides/html/">HTML</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <h6>Resources</h6>
+            <ul class="list-plain">
+              <li><a href="../../guides/migration-guide/">Migration Guide</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/releases/">Releases</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/blob/master/CONTRIBUTING.md">Contributing</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/issues/">Issues</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/">GitHub</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <h6>About Esri</h6>
+            <ul class="list-plain">
+              <li><a href="http://www.esri.com/about-esri/">About Us</a></li>
+              <li><a href="http://www.esri.com/careers/">Careers</a></li>
+              <li><a href="http://blogs.esri.com/esri/esri-insider/">Insiders Blog</a></li>
+              <li><a href="http://www.esri.com/events/user-conference/index.html">User Conference</a></li>
+              <li><a href="http://www.esri.com/events/devsummit/index.html">Developer Summit</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <a class="esri-logo" href="http://esri.com" aria-label="Esri Home"></a>
+            <section class="footer-social-nav leader-1">
+              <a class="icon-social-twitter" aria-label="Esri on Twitter"  href="https://twitter.com/Esri/"></a>
+              <a class="icon-social-facebook" aria-label="Esri on Facebook"  href="https://www.facebook.com/esrigis/"></a>
+              <a class="icon-social-instagram" aria-label="Esri on Instagram"  href="https://instagram.com/esrigram/"></a>
+              <a class="icon-social-github" aria-label="Esri on GitHub"  href="http://esri.github.com/"></a>
+              <a class="icon-social-contact" aria-label="Contact Esri"  href="http://www.esri.com/about-esri/contact/"></a>
+            </section>
+          </nav>
+
+          <div class="column-24 leader-1">
+            <p><small>Copyright © 2015 Esri. All rights reserved. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal">Legal</a></small></p>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+    <script src="../../assets/js/libs/calcite-web.js"></script>
+    <script src="../../assets/js/libs/calcite-web-marketing.js"></script>
+
+    <script src="../../assets/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+
+    
+
+    
+
+  </body>
+</html>

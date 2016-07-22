@@ -20,13 +20,14 @@
     <!-- stylesheets -->
     
       <link rel="stylesheet" href="../assets/css/all.css">
+      <link rel="stylesheet" href="../assets/css/extensions.css">
+      
     
 
     <!--[if IE]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
     <![endif]-->
-
   </head>
 
   <body>
@@ -42,51 +43,14 @@
       <nav class="drawer-nav" role="navigation">
         <aside class="side-nav">
           <h2 class="side-nav-title">Calcite Web</h2>
+          <div class="panel padding-trailer-half padding-leader-half">
             <form method="GET" action="../search/">
-              <div class="search-bar">
-                <input type='search' placeholder='Search' name="q">
-                <button type="submit" class="search-submit icon-ui-search"></button>
-              </div>
+              <input type="search" placeholder="Search" name="q">
             </form>
-            
-              
-            
-              
-                <a href="../type" class="side-nav-link">Type</a>
-              
-            
-              
-                <a href="../grid" class="side-nav-link">Grid</a>
-              
-            
-              
-                <a href="../icons" class="side-nav-link">Icons</a>
-              
-            
-              
-                <a href="../color" class="side-nav-link">Color</a>
-              
-            
-              
-                <a href="../components" class="side-nav-link">Components</a>
-              
-            
-              
-                <a href="../patterns" class="side-nav-link">Patterns</a>
-              
-            
-              
-                <a href="../page-layouts" class="side-nav-link">Layouts</a>
-              
-            
-              
-                <a href="../sass" class="side-nav-link">Sass</a>
-              
-            
-              
-                <a href="../javascript" class="side-nav-link">JavaScript</a>
-              
-            
+          </div>
+          <a href="../documentation/" class="side-nav-link">Documentation</a>
+          <a href="../examples/" class="side-nav-link">Examples</a>
+          <a href="../guides/" class="side-nav-link">Guides</a>
         </aside>
       </nav>
     </div>
@@ -97,52 +61,13 @@
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
           <div class="panel padding-trailer-half padding-leader-half">
-            <form method="GET" action="../search/">
-              <div class="search-bar">
-                <input type='search' placeholder='Search' name="q">
-                <button type="submit" class="search-submit icon-ui-search"></button>
-              </div>
+            <form method="GET" action="../search/" class="panel padding-leader-half">
+              <input type="search" placeholder="Search" name="q">
             </form>
           </div>
-            
-              
-            
-              
-                <a href="../type" class="side-nav-link">Type</a>
-              
-            
-              
-                <a href="../grid" class="side-nav-link">Grid</a>
-              
-            
-              
-                <a href="../icons" class="side-nav-link">Icons</a>
-              
-            
-              
-                <a href="../color" class="side-nav-link">Color</a>
-              
-            
-              
-                <a href="../components" class="side-nav-link">Components</a>
-              
-            
-              
-                <a href="../patterns" class="side-nav-link">Patterns</a>
-              
-            
-              
-                <a href="../page-layouts" class="side-nav-link">Layouts</a>
-              
-            
-              
-                <a href="../sass" class="side-nav-link">Sass</a>
-              
-            
-              
-                <a href="../javascript" class="side-nav-link">JavaScript</a>
-              
-            
+          <a href="../documentation/" class="side-nav-link">Documentation</a>
+          <a href="../examples/" class="side-nav-link">Examples</a>
+          <a href="../guides/" class="side-nav-link">Guides</a>
         </aside>
       </nav>
     </div>
@@ -156,47 +81,14 @@
             <div class="tablet-hide">
               <a href="../" class="top-nav-title">Calcite Web</a>
               <nav class="top-nav-list" role="navigation">
-              
-                
-              
-                
-                  <a href="../type" class="top-nav-link">Type</a>
-                
-              
-                
-                  <a href="../grid" class="top-nav-link">Grid</a>
-                
-              
-                
-                  <a href="../icons" class="top-nav-link">Icons</a>
-                
-              
-                
-                  <a href="../color" class="top-nav-link">Color</a>
-                
-              
-                
-                  <a href="../components" class="top-nav-link">Components</a>
-                
-              
-                
-                  <a href="../patterns" class="top-nav-link">Patterns</a>
-                
-              
-                
-                  <a href="../page-layouts" class="top-nav-link">Layouts</a>
-                
-              
-                
-                  <a href="../sass" class="top-nav-link">Sass</a>
-                
-              
-                
-                  <a href="../javascript" class="top-nav-link">JavaScript</a>
-                
-              
+                <a href="../documentation" class="is-active top-nav-link">Documentation</a>
+                <a href="../examples" class="top-nav-link">Examples</a>
+                <a href="../guides" class="top-nav-link">Guides</a>
               </nav>
-              <a href="#" class="icon-ui-search js-expand-toggle top-nav-link right" data-expand="search">Search</a >
+              <form method="GET" action="../search/" class="inline-block right site-search">
+                <input type='search' placeholder='Search' name="q" class="inline-block leader-half js-search-input">
+                <button type="submit" class="hide">Search</button>
+              </form>
             </div>
 
             <div class="tablet-show">
@@ -207,72 +99,107 @@
       </header>
 
       <!-- Secondary Nav Pattern -->
-      <header class="sub-nav" role="banner">
-        <div class="grid-container">
-          <div class="column-24">
+      <!-- what -->
+      
+  <header class="sub-nav" role="banner">
+    <div class="grid-container">
+      <div class="column-24">
+        <h1 class="sub-nav-title leader-1 text-white">Documentation</h1>
+        <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1 tablet-hide">Download Latest Release</a>
+        <nav class="sub-nav-list tablet-hide" role="navigation" aria-labelledby="subnav">
+          
+          
+          
             
-  <h1 class="sub-nav-title text-white">Layouts</h1>
-  <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white btn-arrow right leader-half">Latest Release</a>
+          
+            <a class="sub-nav-link " href="../documentation/">Get Started</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../documentation/type/">Type</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../documentation/grid/">Grid</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../documentation/icons/">Icons</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../documentation/color/">Color</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../documentation/components/">Components</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../documentation/patterns/">Patterns</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../documentation/sass/">Sass</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../documentation/javascript/">JavaScript</a>
+          
+        </nav>
 
-          </div>
-        </div>
-      </header>
+        <select class="tablet-show select-full trailer-half js-select-nav">
+          
+          
+          
+            
+          
+            <option value="../documentation/" >Get Started</option>
+          
+          
+          
+            <option value="../documentation/type/" >Type</option>
+          
+          
+          
+            <option value="../documentation/grid/" >Grid</option>
+          
+          
+          
+            <option value="../documentation/icons/" >Icons</option>
+          
+          
+          
+            <option value="../documentation/color/" >Color</option>
+          
+          
+          
+            <option value="../documentation/components/" >Components</option>
+          
+          
+          
+            <option value="../documentation/patterns/" >Patterns</option>
+          
+          
+          
+            <option value="../documentation/sass/" >Sass</option>
+          
+          
+          
+            <option value="../documentation/javascript/" >JavaScript</option>
+          
+        </select>
+
+      </div>
+    </div>
+  </header>
+
 
       <!-- content of each page will go here -->
-      <div class="grid-container leader-1">
-        
+      
+<div class="grid-container leader-1">
   <div class="column-6 tablet-column-12">
     <aside class="side-nav" aria-role="complementary">
-      
-        <h4 class="side-nav-title">Common Page Layouts</h4>
-        <!-- <nav aria-role="navigation" aria-labelledby="sidenav"> -->
-        <nav aria-role="navigation">
-          
-            
-              <a href="#aside-main" class="side-nav-link">Aside / Main</a>
-            
-          
-            
-              <a href="#three-up" class="side-nav-link">Three Up</a>
-            
-          
-            
-              <a href="#content-illustration" class="side-nav-link">Content / Illustration</a>
-            
-          
-        </nav>
-      
-        <h4 class="side-nav-title">Common Page Sections</h4>
-        <!-- <nav aria-role="navigation" aria-labelledby="sidenav"> -->
-        <nav aria-role="navigation">
-          
-            
-              <a href="#three-cards" class="side-nav-link">Three Up Cards</a>
-            
-          
-            
-              <a href="#pricing-table" class="side-nav-link">Pricing Table</a>
-            
-          
-        </nav>
-      
-        <h4 class="side-nav-title">Sample Pages</h4>
-        <!-- <nav aria-role="navigation" aria-labelledby="sidenav"> -->
-        <nav aria-role="navigation">
-          
-            
-              <a href="#blog" class="side-nav-link">Blog Article</a>
-            
-          
-            
-              <a href="#documentation" class="side-nav-link">Documentation</a>
-            
-          
-            
-              <a href="#api-reference" class="side-nav-link">API Reference</a>
-            
-          
-        </nav>
       
     </aside>
     <div class="js-sticky scroll-show tablet-hide" data-top="46">
@@ -281,385 +208,11 @@
   </div>
 
   <a id="skip-to-content" tabindex="0"></a>
-  <main class="column-17 phone-column-6 tablet-column-12 pre-1 rtl-post-0 content-face" role="main">
+  <main class="column-17 phone-column-6 tablet-column-12 pre-1 rtl-post-0 tablet-leader-1" role="main">
 
-    
-      <h1 class="text-rule" id="common-page-layouts" tabindex="0">Common Page Layouts</h1>
-      
-        <section>
-          
-            <h2 id="aside-main" tabindex="0">Aside / Main</h2>
-          
-
-          <p>This structure is commonly used for any big block of content that needs a secondary navigation structure. Documentation uses this often, as does a search results page, and a blog page. Can be reversed to be Main / Aside.</p>
-<p><a href="./aside-main/">View the page sample.</a></p>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-container"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">aside</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-6"</span>&gt;</span>
-    <span class="hljs-comment">&lt;!-- Aside Content --&gt;</span>
-    <span class="hljs-comment">&lt;!-- Search Filters, Side Navs, etc --&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">aside</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-title">main</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-17 pre-1"</span>&gt;</span>
-    <span class="hljs-comment">&lt;!-- Main Content --&gt;</span>
-    <span class="hljs-comment">&lt;!-- Article, Search Results, other Content --&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">main</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-</code></pre>
-
-
-          
-
-          
-
-          
-
-          
-
-          
-
-          
-
-        </section>
-        <hr>
-      
-        <section>
-          
-            <h2 id="three-up" tabindex="0">Three Up</h2>
-          
-
-          <p>When presenting a set of facets to illustrate a concept, the three up block is useful</p>
-<p><a href="./three-up/">View the page sample.</a></p>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-container"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-8"</span>&gt;</span>
-    <span class="hljs-comment">&lt;!-- Panel, Card, or Illustration --&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-8"</span>&gt;</span>
-    <span class="hljs-comment">&lt;!-- Panel, Card, or Illustration --&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-8"</span>&gt;</span>
-    <span class="hljs-comment">&lt;!-- Panel, Card, or Illustration --&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-</code></pre>
-
-
-          
-
-          
-
-          
-
-          
-
-          
-
-          
-
-        </section>
-        <hr>
-      
-        <section>
-          
-            <h2 id="content-illustration" tabindex="0">Content / Illustration</h2>
-          
-
-          <p>When the aside needs more room, either to be a set of code sample, an image, video, or other information that needs more space and is not really navigation.</p>
-<p><a href="./content-illustration">View the page sample.</a></p>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-container"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-12"</span>&gt;</span>
-    <span class="hljs-comment">&lt;!-- Main Content --&gt;</span>
-    <span class="hljs-comment">&lt;!-- Header and paragraph --&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-11 pre-1"</span>&gt;</span>
-    <span class="hljs-comment">&lt;!-- Illustration --&gt;</span>
-    <span class="hljs-comment">&lt;!-- Video, Image, or Code Sample --&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-</code></pre>
-
-
-          
-
-          
-
-          
-
-          
-
-          
-
-          
-
-        </section>
-        <hr>
-      
-    
-      <h1 class="text-rule" id="common-page-sections" tabindex="0">Common Page Sections</h1>
-      
-        <section>
-          
-            <h2 id="three-cards" tabindex="0">Three Up Cards</h2>
-          
-
-          <p>Cards are often used to present facets of an idea, or preview a set from a larger context.</p>
-<p><a href="./three-cards/">View the section sample.</a></p>
-<pre><code>&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">"grid-example trailer-2 leader-1 clearfix"</span>&gt;
-  &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">"card column-8 trailer-1"</span>&gt;
-    &lt;<span class="hljs-tag">figure</span> class=<span class="hljs-string">"card-image"</span>&gt;
-      &lt;<span class="hljs-tag">img</span> src=<span class="hljs-string">"/assets/img/bridge-club.jpg"</span> alt=<span class="hljs-string">"Bridge Club, 1942"</span>&gt;
-      &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">"card-caption"</span>&gt;
-        Card Games
-      &lt;/div&gt;
-    &lt;/figure&gt;
-    &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">"card-body"</span>&gt;
-      &lt;<span class="hljs-tag">h4</span> class=<span class="hljs-string">"trailer-0"</span>&gt;&lt;<span class="hljs-tag">a</span> href=<span class="hljs-string">"#"</span>&gt;Contact Bridge&lt;/a&gt;&lt;/h4&gt;
-      &lt;<span class="hljs-tag">p</span> class=<span class="hljs-string">"font-size--2 text-darker-gray"</span>&gt;From Wikipedia on <span class="hljs-number">4</span>/<span class="hljs-number">20</span>&lt;/p&gt;
-      &lt;<span class="hljs-tag">p</span> class=<span class="hljs-string">"font-size--1"</span>&gt;Bridge is <span class="hljs-tag">a</span> trick-taking game using <span class="hljs-tag">a</span> standard <span class="hljs-number">52</span>-card deck. It is played by four players <span class="hljs-keyword">in</span> two competing partnerships, with partners sitting opposite each other around <span class="hljs-tag">a</span> <span class="hljs-tag">table</span>.&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;<span class="hljs-tag">a</span> href=<span class="hljs-string">"#"</span> class=<span class="hljs-string">"btn btn-grouped btn-clear btn-half"</span>&gt;Learn more&lt;/a&gt;
-    &lt;<span class="hljs-tag">a</span> href=<span class="hljs-string">"#"</span> class=<span class="hljs-string">"btn btn-grouped btn-half"</span>&gt;Play Bridge&lt;/a&gt;
-  &lt;/div&gt;
-
-  &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">"card column-8 trailer-1"</span>&gt;
-    &lt;<span class="hljs-tag">figure</span> class=<span class="hljs-string">"card-image"</span>&gt;
-      &lt;<span class="hljs-tag">img</span> src=<span class="hljs-string">"/assets/img/bridge-club.jpg"</span> alt=<span class="hljs-string">"Bridge Club, 1942"</span>&gt;
-      &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">"card-caption"</span>&gt;
-        Card Games
-      &lt;/div&gt;
-    &lt;/figure&gt;
-    &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">"card-body"</span>&gt;
-      &lt;<span class="hljs-tag">h4</span> class=<span class="hljs-string">"trailer-0"</span>&gt;&lt;<span class="hljs-tag">a</span> href=<span class="hljs-string">"#"</span>&gt;Contact Bridge&lt;/a&gt;&lt;/h4&gt;
-      &lt;<span class="hljs-tag">p</span> class=<span class="hljs-string">"font-size--2 text-darker-gray"</span>&gt;From Wikipedia on <span class="hljs-number">4</span>/<span class="hljs-number">20</span>&lt;/p&gt;
-      &lt;<span class="hljs-tag">p</span> class=<span class="hljs-string">"font-size--1"</span>&gt;Bridge is <span class="hljs-tag">a</span> trick-taking game using <span class="hljs-tag">a</span> standard <span class="hljs-number">52</span>-card deck. It is played by four players <span class="hljs-keyword">in</span> two competing partnerships, with partners sitting opposite each other around <span class="hljs-tag">a</span> <span class="hljs-tag">table</span>.&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;<span class="hljs-tag">a</span> href=<span class="hljs-string">"#"</span> class=<span class="hljs-string">"btn btn-grouped btn-clear btn-half"</span>&gt;Learn more&lt;/a&gt;
-    &lt;<span class="hljs-tag">a</span> href=<span class="hljs-string">"#"</span> class=<span class="hljs-string">"btn btn-grouped btn-half"</span>&gt;Play Bridge&lt;/a&gt;
-  &lt;/div&gt;
-
-  &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">"card column-8 trailer-1"</span>&gt;
-    &lt;<span class="hljs-tag">figure</span> class=<span class="hljs-string">"card-image"</span>&gt;
-      &lt;<span class="hljs-tag">img</span> src=<span class="hljs-string">"/assets/img/bridge-club.jpg"</span> alt=<span class="hljs-string">"Bridge Club, 1942"</span>&gt;
-      &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">"card-caption"</span>&gt;
-        Card Games
-      &lt;/div&gt;
-    &lt;/figure&gt;
-    &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">"card-body"</span>&gt;
-      &lt;<span class="hljs-tag">h4</span> class=<span class="hljs-string">"trailer-0"</span>&gt;&lt;<span class="hljs-tag">a</span> href=<span class="hljs-string">"#"</span>&gt;Contact Bridge&lt;/a&gt;&lt;/h4&gt;
-      &lt;<span class="hljs-tag">p</span> class=<span class="hljs-string">"font-size--2 text-darker-gray"</span>&gt;From Wikipedia on <span class="hljs-number">4</span>/<span class="hljs-number">20</span>&lt;/p&gt;
-      &lt;<span class="hljs-tag">p</span> class=<span class="hljs-string">"font-size--1"</span>&gt;Bridge is <span class="hljs-tag">a</span> trick-taking game using <span class="hljs-tag">a</span> standard <span class="hljs-number">52</span>-card deck. It is played by four players <span class="hljs-keyword">in</span> two competing partnerships, with partners sitting opposite each other around <span class="hljs-tag">a</span> <span class="hljs-tag">table</span>.&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;<span class="hljs-tag">a</span> href=<span class="hljs-string">"#"</span> class=<span class="hljs-string">"btn btn-grouped btn-clear btn-half"</span>&gt;Learn more&lt;/a&gt;
-    &lt;<span class="hljs-tag">a</span> href=<span class="hljs-string">"#"</span> class=<span class="hljs-string">"btn btn-grouped btn-half"</span>&gt;Play Bridge&lt;/a&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-</code></pre>
-
-
-          
-
-          
-
-          
-
-          
-
-          
-
-          
-
-        </section>
-        <hr>
-      
-        <section>
-          
-            <h2 id="pricing-table" tabindex="0">Pricing Table</h2>
-          
-
-          <p>Pricing tables are used to help a customer find the best option from a wide rubric.</p>
-<p><a href="./pricing-table/">View the page sample.</a></p>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"trailer-2 leader-1 clearfix"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-24"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-8 post-1"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-darker-gray leader-3 font-size-4"</span>&gt;</span>Splashy Marketing Pitch That Makes you Want This Thing we Sell.<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"card card-bar-purple column-5 trailer-1"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"card-body text-center"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Some Option<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"font-size--3 text-darker-gray trailer-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>A NOTE ABOUT THAT<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"font-size--3 text-darker-gray"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>YOU WILL LIKE IT<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Pretty Great Thing: $100<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">hr</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"trailer-0"</span>&gt;</span>An option option: $10<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Another option option: $10<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-fill"</span>&gt;</span>Buy Online<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"card card-bar-light-blue column-5 trailer-1"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"card-body text-center"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Some Option<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"font-size--3 text-darker-gray trailer-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>A NOTE ABOUT THAT<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"font-size--3 text-darker-gray"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>YOU WILL LIKE IT<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Pretty Great Thing: $100<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">hr</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"trailer-0"</span>&gt;</span>An option option: $10<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Another option option: $10<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-fill"</span>&gt;</span>Buy Online<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"card card-bar-light-green column-5 trailer-1"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"card-body text-center"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Some Option<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"font-size--3 text-darker-gray trailer-0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>A NOTE ABOUT THAT<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"font-size--3 text-darker-gray"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>YOU WILL LIKE IT<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Pretty Great Thing: $100<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">hr</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"trailer-0"</span>&gt;</span>An option option: $10<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Another option option: $10<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-fill"</span>&gt;</span>Buy Online<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table-pricing"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">col</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"38%"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">thead</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"font-size-2"</span>&gt;</span>Here is one category of thing.<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Option 1<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Option 2<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Option 3<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">thead</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">tbody</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>One particular feature goes here<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-ui-radio-checked icon-ui-purple"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-ui-radio-checked icon-ui-blue"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-ui-radio-checked icon-ui-green"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>
-            Some other specific feature thing goes here. <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-ui-description"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-ui-radio-checked icon-ui-purple"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-ui-radio-checked icon-ui-blue"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>
-            This one is really expensive and only one plan gets it.
-          <span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-ui-radio-checked icon-ui-purple"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">tbody</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-
-
-
-</code></pre>
-
-
-          
-
-          
-
-          
-
-          
-
-          
-
-          
-
-        </section>
-        <hr>
-      
-    
-      <h1 class="text-rule" id="sample-pages" tabindex="0">Sample Pages</h1>
-      
-        <section>
-          
-            <h2 id="blog" tabindex="0">Blog Article</h2>
-          
-
-          <p>Blog posts are mostly about long-form content layout. Luckily, calcite-web has built in type styles that make this style of page very easy to build.</p>
-<p><a href="./blog/">View Blog Layout</a></p>
-
-
-          
-
-          
-
-          
-
-          
-
-          
-
-          
-
-        </section>
-        <hr>
-      
-        <section>
-          
-            <h2 id="documentation" tabindex="0">Documentation</h2>
-          
-
-          <p>Documentation pages are the technically focused descriptions of products, services, or other offerings. The documentation layout will be the key content for any product using the Calcite Web system, and as such it has been designed with rigor for primary use.</p>
-<p><a href="./documentation/">View Documentation Layout</a></p>
-
-
-          
-
-          
-
-          
-
-          
-
-          
-
-          
-
-        </section>
-        <hr>
-      
-        <section>
-          
-            <h2 id="api-reference" tabindex="0">API Reference</h2>
-          
-
-          <p>Reference pages are similar to documentation pages, but handle content that needs to live in tables, and has more specific needs than a general written documentation page. These two pages live in harmony together, teaching all who come before them like a pair of wizened sages.</p>
-<p><a href="./api-reference/">View API Reference Layout</a></p>
-
-
-          
-
-          
-
-          
-
-          
-
-          
-
-          
-
-        </section>
-        <hr>
-      
     
   </main>
-
-      </div>
+</div>
 
     </div>
 
@@ -719,7 +272,10 @@
     </footer>
 
     <script src="../assets/js/libs/calcite-web.js"></script>
+    <script src="../assets/js/libs/calcite-web-marketing.js"></script>
+
     <script src="../assets/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
 
     
 

@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>  <html class="ie lt-ie9 ie8"> <![endif]-->
+<!--[if IE 9]>     <html class="ie ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+
+    <!-- Set encoding -->
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <!-- Use title from page frontmatter -->
+    <title>Calcite Web | Esri Design Patterns</title>
+
+    <!-- Link to favicon -->
+    <link rel="shortcut icon" href="../../assets/img/favicon.ico">
+
+    <!-- stylesheets -->
+    
+      <link rel="stylesheet" href="../../assets/css/all.css">
+      <link rel="stylesheet" href="../../assets/css/extensions.css">
+      
+    
+
+    <!--[if IE]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!--
+    ┌─────────┐
+    │ Drawers │
+    └─────────┘
+     ↳ http://esri.github.io/calcite-web/patterns/#drawers
+     ↳ patterns → _drawers.md
+    -->
+    <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
+      <!-- <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerleft"> -->
+      <nav class="drawer-nav" role="navigation">
+        <aside class="side-nav">
+          <h2 class="side-nav-title">Calcite Web</h2>
+          <div class="panel padding-trailer-half padding-leader-half">
+            <form method="GET" action="../../search/">
+              <input type="search" placeholder="Search" name="q">
+            </form>
+          </div>
+          <a href="../../documentation/" class="side-nav-link">Documentation</a>
+          <a href="../../examples/" class="side-nav-link">Examples</a>
+          <a href="../../guides/" class="side-nav-link">Guides</a>
+        </aside>
+      </nav>
+    </div>
+
+    <div class="drawer drawer-right js-drawer" data-drawer="right">
+      <!-- <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerright"> -->
+      <nav class="drawer-nav" role="navigation">
+        <aside class="side-nav">
+          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
+          <div class="panel padding-trailer-half padding-leader-half">
+            <form method="GET" action="../../search/" class="panel padding-leader-half">
+              <input type="search" placeholder="Search" name="q">
+            </form>
+          </div>
+          <a href="../../documentation/" class="side-nav-link">Documentation</a>
+          <a href="../../examples/" class="side-nav-link">Examples</a>
+          <a href="../../guides/" class="side-nav-link">Guides</a>
+        </aside>
+      </nav>
+    </div>
+
+    <div class="wrapper">
+      <!-- Logged Out Pattern-->
+      <header class="top-nav">
+        <a class="skip-to-content" href="#skip-to-content">Skip To Content</a>
+        <div class="grid-container">
+          <div class="column-24">
+            <div class="tablet-hide">
+              <a href="../../" class="top-nav-title">Calcite Web</a>
+              <nav class="top-nav-list" role="navigation">
+                <a href="../../documentation" class="is-active top-nav-link">Documentation</a>
+                <a href="../../examples" class="top-nav-link">Examples</a>
+                <a href="../../guides" class="top-nav-link">Guides</a>
+              </nav>
+              <form method="GET" action="../../search/" class="inline-block right site-search">
+                <input type='search' placeholder='Search' name="q" class="inline-block leader-half js-search-input">
+                <button type="submit" class="hide">Search</button>
+              </form>
+            </div>
+
+            <div class="tablet-show">
+              <a href="/" class="icon-ui-menu top-nav-title js-drawer-toggle" data-drawer="top-nav">Calcite Web</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Secondary Nav Pattern -->
+      <!-- what -->
+      
+  <header class="sub-nav" role="banner">
+    <div class="grid-container">
+      <div class="column-24">
+        <h1 class="sub-nav-title leader-1 text-white">Documentation</h1>
+        <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1 tablet-hide">Download Latest Release</a>
+        <nav class="sub-nav-list tablet-hide" role="navigation" aria-labelledby="subnav">
+          
+          
+          
+            
+          
+            <a class="sub-nav-link " href="../../documentation/">Get Started</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../../documentation/type/">Type</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../../documentation/grid/">Grid</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../../documentation/icons/">Icons</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../../documentation/color/">Color</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../../documentation/components/">Components</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../../documentation/patterns/">Patterns</a>
+          
+          
+          
+            <a class="sub-nav-link " href="../../documentation/sass/">Sass</a>
+          
+          
+          
+            <a class="sub-nav-link is-active" href="../../documentation/javascript/">JavaScript</a>
+          
+        </nav>
+
+        <select class="tablet-show select-full trailer-half js-select-nav">
+          
+          
+          
+            
+          
+            <option value="../../documentation/" >Get Started</option>
+          
+          
+          
+            <option value="../../documentation/type/" >Type</option>
+          
+          
+          
+            <option value="../../documentation/grid/" >Grid</option>
+          
+          
+          
+            <option value="../../documentation/icons/" >Icons</option>
+          
+          
+          
+            <option value="../../documentation/color/" >Color</option>
+          
+          
+          
+            <option value="../../documentation/components/" >Components</option>
+          
+          
+          
+            <option value="../../documentation/patterns/" >Patterns</option>
+          
+          
+          
+            <option value="../../documentation/sass/" >Sass</option>
+          
+          
+          
+            <option value="../../documentation/javascript/" selected>JavaScript</option>
+          
+        </select>
+
+      </div>
+    </div>
+  </header>
+
+
+      <!-- content of each page will go here -->
+      
+<div class="grid-container leader-1">
+  <div class="column-6 tablet-column-12">
+    <aside class="side-nav" aria-role="complementary">
+      
+        <h4 class="side-nav-title">Interactive Patterns</h4>
+        <!-- <nav aria-role="navigation" aria-labelledby="sidenav"> -->
+        <nav aria-role="navigation">
+          
+            
+              <a href="#interactive-patterns" class="side-nav-link">Overview</a>
+            
+          
+            
+              <a href="#event-bus" class="side-nav-link">Event Bus</a>
+            
+          
+        </nav>
+      
+        <h4 class="side-nav-title">Utility Functions</h4>
+        <!-- <nav aria-role="navigation" aria-labelledby="sidenav"> -->
+        <nav aria-role="navigation">
+          
+            
+              <a href="#utility-functions" class="side-nav-link">Overview</a>
+            
+          
+            
+              <a href="#dom-utilities" class="side-nav-link">DOM Utilities</a>
+            
+          
+        </nav>
+      
+    </aside>
+    <div class="js-sticky scroll-show tablet-hide" data-top="46">
+      <a href="#" class="btn btn-clear">Back to Top</a>
+    </div>
+  </div>
+
+  <a id="skip-to-content" tabindex="0"></a>
+  <main class="column-17 phone-column-6 tablet-column-12 pre-1 rtl-post-0 tablet-leader-1" role="main">
+
+    
+      <h1 class="text-rule" id="interactive-patterns" tabindex="0">Interactive Patterns</h1>
+      
+        <section>
+          
+
+          <p>Calcite Web includes a small JavaScript library. <code>calcite-web.js</code> is a lightweight and dependency-free library made to enable interactive behaviors for certain <a href="../patterns/">patterns</a> and <a href="../components">components</a>.</p>
+<p>Currently, the following components and patterns rely on <code>calcite-web.js</code>:</p>
+<ul>
+<li><a href="../components/#dropdowns">Dropdowns</a></li>
+<li><a href="../patterns/#modals">Modals</a></li>
+<li><a href="../patterns/#tabs">Tabs</a></li>
+<li><a href="../patterns/#accordions">Accordions</a></li>
+<li><a href="../patterns/#drawers">Drawers</a></li>
+</ul>
+<h3>Loading Calcite as a Module</h3>
+<p>If you don't use a module loader (you probably should...), Calcite will be available as <code>window.calcite</code>. If you do, both flavors of module loaders are also covered below.</p>
+<h4>CommonJS</h4>
+<pre><code class="js"><span class="hljs-keyword">var</span> calcite = <span class="hljs-built_in">require</span>(<span class="hljs-string">'calcite-web'</span>);
+</code></pre>
+<h4>AMD</h4>
+<pre><code class="js"><span class="hljs-built_in">require</span>([<span class="hljs-string">'path/to/calcite-web.js'</span>], <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(calcite)</span></span>{
+  <span class="hljs-comment">// use calcite</span>
+});
+</code></pre>
+<h3>Initializing</h3>
+<p>To use <code>calcite-web.js</code> simply <a href="../../guides/quickstart/">include a reference to it in your html</a> and then run the <code>calcite.init()</code> method. For example, say your JavaScript was located in a file called <code>script.js</code>. You can bind all the JavaScript patterns from <code>script.js</code> like this:</p>
+<pre><code class="js"><span class="hljs-comment">// On document ready</span>
+<span class="hljs-built_in">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+  <span class="hljs-comment">// Initialize all calcite.js patterns</span>
+  calcite.init();
+};
+</code></pre>
+<p>To only initialize some patterns, you can pass an array of patterns, and only those will be initialized:</p>
+<pre><code class="js">calcite.init([<span class="hljs-string">'modal'</span>, <span class="hljs-string">'drawer'</span>]);
+</code></pre>
+<p>You can also initialize individual patterns by their own method, for example:</p>
+<pre><code>calcite.<span class="hljs-function"><span class="hljs-title">tabs</span><span class="hljs-params">()</span></span>
+</code></pre>
+<p>Finally, an element can be passed to a pattern method, and only the patterns within that element will be initialized. Like this:</p>
+<pre><code><span class="hljs-tag">var</span> tabs = document.<span class="hljs-function"><span class="hljs-title">querySelector</span><span class="hljs-params">(<span class="hljs-string">'.my-tab-class'</span>)</span></span>
+calcite.<span class="hljs-function"><span class="hljs-title">tabs</span><span class="hljs-params">(tabs)</span></span>
+</code></pre>
+<p>This is helpful if you are using a different JavaScript framework and you need to rebind event listeners for a particular pattern or DOM node.</p>
+
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+        <section>
+          
+            <h2 id="event-bus" tabindex="0">Event Bus</h2>
+          
+
+          <p>The event bus is used to help interactive patterns communicate with each other and the rest of your application.</p>
+<p>Along with a set of common bus events, each pattern has a set of channels that it emits on and listens for. These events can be emitted or listened for by the larger application.</p>
+<h3>Common Event Channels</h3>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+<th>Emits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>keyboard:return</td>
+<td>The <code>return</code> key was pressed.</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>keyboard:escape</td>
+<td>The <code>escape</code> key was pressed.</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>keyboard:space</td>
+<td>The <code>space</code> key was pressed</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>keyboard:arrow:up</td>
+<td>The <code>↑</code> key was pressed</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>keyboard:arrow:down</td>
+<td>The <code>↓</code> key was pressed</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>keyboard:arrow:left</td>
+<td>The <code>←</code> key was pressed</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>keyboard:arrow:right</td>
+<td>The <code>→</code> key was pressed</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>scrolling:at</td>
+<td>The page is scrolling</td>
+<td>ScrollYOffset</td>
+</tr>
+</tbody>
+</table>
+<h3>Pattern-Specific Event Channels</h3>
+<h4>Accordions</h4>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+<th>Emits</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>accordion:bind</td>
+<td>Binds Dom nodes on the page to their listeners</td>
+<td>n/a</td>
+<td><code>bindToggles()</code></td>
+</tr>
+<tr>
+<td>accordion:toggle</td>
+<td>Toggles an accordion section open and closed.</td>
+<td><code>{node: domNode}</code></td>
+<td><code>handleToggle()</code></td>
+</tr>
+</tbody>
+</table>
+<h4>Drawers</h4>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+<th>Emits</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>drawer:bind</td>
+<td>Binds dom to event listeners</td>
+<td>n/a</td>
+<td><code>bindDrawers()</code></td>
+</tr>
+<tr>
+<td>drawer:open</td>
+<td>Opens a specified drawer data-drawer attribute</td>
+<td><code>{id: drawerid}</code></td>
+<td><code>openDrawer()</code></td>
+</tr>
+<tr>
+<td>drawer:close</td>
+<td>Closes a specified drawer by data-drawer attribute</td>
+<td><code>{id: drawerid}</code></td>
+<td><code>closeDrawer()</code></td>
+</tr>
+<tr>
+<td>keyboard:escape</td>
+<td>Closes all drawers on escape</td>
+<td>n/a</td>
+<td><code>closeDrawer()</code></td>
+</tr>
+</tbody>
+</table>
+<h4>Dropdown</h4>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+<th>Emits</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dropdown:bind</td>
+<td>Binds dom to event listeners</td>
+<td>n/a</td>
+<td><code>bindDropdowns()</code></td>
+</tr>
+<tr>
+<td>dropdown:toggle</td>
+<td>Toggles a dropdown open and closed</td>
+<td><code>{node: domNode}</code></td>
+<td><code>toggleDropdown()</code></td>
+</tr>
+<tr>
+<td>dropdown:close</td>
+<td>Closes all the dropdowns</td>
+<td>n/a</td>
+<td><code>closeAllDropdowns()</code></td>
+</tr>
+<tr>
+<td>keyboard:escape</td>
+<td>Closes all the dropdowns when the escape key is pressed.</td>
+<td>n/a</td>
+<td><code>closeAllDropdowns()</code></td>
+</tr>
+</tbody>
+</table>
+<h4>Filter Dropdown</h4>
+<p>Many of the filter dropdown channels emit and listen for the following Options Object:</p>
+<pre><code>{
+  <span class="hljs-attribute">parent</span>: domNode,
+  <span class="hljs-attribute">id</span>: filterDropdownId,
+  <span class="hljs-attribute">item</span>: domNode
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+<th>Emits</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filterDropdown:bind</td>
+<td>Binds the dom to event listeners</td>
+<td>n/a</td>
+<td><code>bindFilterDropdowns()</code></td>
+</tr>
+<tr>
+<td>filterDropdown:select</td>
+<td>An item in the dropdown list has been selected.</td>
+<td>Options Object</td>
+<td><code>toggleItem()</code>, <code>emitActive()</code></td>
+</tr>
+<tr>
+<td>filterDropdown:select:remove</td>
+<td>Removes a specific selection from the list of active items.</td>
+<td>Options Object</td>
+<td><code>removeItem()</code></td>
+</tr>
+<tr>
+<td>filterDropdown:active</td>
+<td>Emits all the currently selected items from the componenet.</td>
+<td>Options Object. Replaces <code>item</code> with <code>active</code> Array of items.</td>
+<td><code>drawActive()</code></td>
+</tr>
+<tr>
+<td>filterDropdown:active:clear</td>
+<td>Clear all active items from the dropdown</td>
+<td>Options Object</td>
+<td><code>clearActive()</code></td>
+</tr>
+<tr>
+<td>filterDropdown:toggle</td>
+<td>Toggle a dropdown open and closed</td>
+<td>Options Object</td>
+<td><code>toggleDropdown()</code></td>
+</tr>
+<tr>
+<td>filterDropdown:open</td>
+<td>Open a specific dropdown</td>
+<td>Options Object</td>
+<td><code>openList()</code></td>
+</tr>
+<tr>
+<td>filterDropdown:close</td>
+<td>Closes all dropdowns</td>
+<td>n/a.</td>
+<td><code>closeList()</code></td>
+</tr>
+<tr>
+<td>keyboard:escape</td>
+<td>Closes all dropdowns</td>
+<td>n/a</td>
+<td><code>closeList()</code></td>
+</tr>
+</tbody>
+</table>
+<h4>Modal</h4>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+<th>Emits</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>modal:bind</td>
+<td>Binds dom to event listeners</td>
+<td>n/a</td>
+<td><code>bindModals()</code></td>
+</tr>
+<tr>
+<td>modal:open</td>
+<td>Opens a specific modal</td>
+<td><code>{id: modalId }</code></td>
+<td><code>openModal()</code></td>
+</tr>
+<tr>
+<td>modal:close</td>
+<td>Closes all modals</td>
+<td>n/a</td>
+<td><code>closeModal()</code></td>
+</tr>
+<tr>
+<td>keyboard:escape</td>
+<td>Closes all modals</td>
+<td>n/a</td>
+<td><code>closeModal()</code></td>
+</tr>
+</tbody>
+</table>
+<h4>Sticky</h4>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+<th>Emits</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sticky:stick</td>
+<td>Dom Node to stick in place</td>
+<td>Dom Node</td>
+<td><code>stickItem()</code></td>
+</tr>
+<tr>
+<td>sticky:unstick</td>
+<td>Dom Node to unstick and return to normal</td>
+<td>Dom Node</td>
+<td><code>unstickItem()</code></td>
+</tr>
+<tr>
+<td>scrolling:at</td>
+<td>Current offset y position on scroll</td>
+<td><code>OffsetY</code> Number</td>
+<td><code>scrollHandler()</code></td>
+</tr>
+</tbody>
+</table>
+<h4>Tabs</h4>
+<p>Tab events emit and listen for an Options Object.</p>
+<pre><code>{
+  <span class="hljs-attribute">id</span>: tabId <span class="hljs-comment">// data-tab attribute</span>
+  <span class="hljs-attribute">active</span>: domNode
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+<th>Emits</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tabs:bind</td>
+<td>Binds dom to event listeners</td>
+<td>n/a</td>
+<td><code>bindTabs()</code></td>
+</tr>
+<tr>
+<td>tabs:active</td>
+<td>A tab to set as active</td>
+<td>Options Object</td>
+<td><code>setTab()</code></td>
+</tr>
+</tbody>
+</table>
+
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+    
+      <h1 class="text-rule" id="utility-functions" tabindex="0">Utility Functions</h1>
+      
+        <section>
+          
+
+          <p><code>calcite-web.js</code> also has methods for <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">DOM</a> traversal and manipulation. If the needs of a project are not too complex it can be used in place of jQuery, Dojo, or other large frameworks.</p>
+<table>
+<thead>
+<tr>
+<th>function</th>
+<th>action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#calcite-event-"><code>calcite.click()</code></a></td>
+<td>Returns standard interaction event (click). Touch support will be added soon.</td>
+</tr>
+<tr>
+<td><a href="#calcite-addevent-domnode-event-fn-"><code>calcite.addEvent(domNode, event, fn)</code></a></td>
+<td>Adds a callback function to an event on an element.</td>
+</tr>
+<tr>
+<td><a href="#calcite-removeevent-domnode-event-fn-"><code>calcite.removeEvent(domNode, event, fn)</code></a></td>
+<td>Removes a callback function from an event on an element.</td>
+</tr>
+<tr>
+<td><a href="#calcite-eventtarget-event-"><code>calcite.eventTarget()</code></a></td>
+<td>Returns the target element of an event.</td>
+</tr>
+<tr>
+<td><a href="#calcite-preventdefault-event-"><code>calcite.preventDefault(event)</code></a></td>
+<td>Prevents default behavior of an event.</td>
+</tr>
+<tr>
+<td><a href="#calcite-stoppropagation-event-"><code>calcite.stopPropagation(event)</code></a></td>
+<td>Stops an event from bubbling up the DOM tree.</td>
+</tr>
+<tr>
+<td><a href="#calcite-hasclass-node-class-"><code>calcite.hasClass(event)</code></a></td>
+<td>Checks if an element has a specific class. Returns boolean.</td>
+</tr>
+<tr>
+<td><a href="#calcite-addclass-domnode-classes-"><code>calcite.addClass(domNode, className)</code></a></td>
+<td>Adds one or more classes to an element.</td>
+</tr>
+<tr>
+<td><a href="#calcite-removeclass-domnode-classes-"><code>calcite.removeClass(domNode, classes)</code></a></td>
+<td>Removes one or more classes from an element.</td>
+</tr>
+<tr>
+<td><a href="#calcite-toggleclass-domnode-classname-"><code>calcite.toggleClass(domNode, className)</code></a></td>
+<td>Toggles one class on an element.</td>
+</tr>
+<tr>
+<td><a href="#calcite-closest-class-element-"><code>calcite.closest(domNode, classes)</code></a></td>
+<td>Returns closest element up the DOM tree matching a given class. Returns DOM node.</td>
+</tr>
+<tr>
+<td><a href="#calcite-nodelisttoarray-domnodelist-"><code>calcite.nodeListToArray(domNodeList)</code></a></td>
+<td>Takes a DOM node list and returns an array.</td>
+</tr>
+</tbody>
+</table>
+
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+        <section>
+          
+            <h2 id="dom-utilities" tabindex="0">DOM Utilities</h2>
+          
+
+          <p>The following functions allow for basic DOM manipulation and traversal. These helpers are used by JavaScript dependent patterns, and can be included in any custom JavaScript in Calcite Web projects.</p>
+<h2>Events</h2>
+<h3>calcite.click()</h3>
+<p>Returns interaction event for the current browser environment. Currently only returns <code>'click'</code>. Will be more useful when touch support is added.</p>
+<pre><code class="js"><span class="hljs-keyword">var</span> click = calcite.click(); <span class="hljs-comment">// =&gt; 'click'</span>
+</code></pre>
+<h3>calcite.addEvent(domNode, event, fn)</h3>
+<p>Adds a callback function to an event on an element.</p>
+<pre><code class="js"><span class="hljs-keyword">var</span> click = calcite.click();
+<span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'body'</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> <span class="hljs-params">(event)</span> </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'hola'</span>);
+};
+
+calcite.addEvent(node, click, action); <span class="hljs-comment">// action will now fire when body is clicked</span>
+</code></pre>
+<h3>calcite.removeEvent(domNode, event, fn)</h3>
+<p>Removes a callback function from an event on an element.</p>
+<pre><code class="js"><span class="hljs-keyword">var</span> click = calcite.click();
+<span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'body'</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> <span class="hljs-params">(event)</span> </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'hola'</span>);
+};
+
+calcite.addEvent(node, click, action); <span class="hljs-comment">// action will now fire when body is clicked</span>
+calcite.removeEvent(node, event, action); <span class="hljs-comment">// action has been removed from body click event</span>
+</code></pre>
+<h3>calcite.eventTarget(event)</h3>
+<p>Returns the target DOM node of an event.</p>
+<pre><code class="js"><span class="hljs-keyword">var</span> click = calcite.click();
+<span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'body'</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> <span class="hljs-params">(event)</span> </span>{
+  <span class="hljs-keyword">var</span> target = calcite.eventTarget(event);
+  <span class="hljs-built_in">console</span>.log(target);
+};
+
+calcite.addEvent(node, click, action);
+</code></pre>
+<p>Clicking the body will now log the contents of the <code>&lt;body&gt;</code> DOM node.</p>
+<h3>calcite.preventDefault(event)</h3>
+<p>Prevents default behavior of an event.</p>
+<pre><code class="js"><span class="hljs-keyword">var</span> click = calcite.click();
+<span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">'a'</span>)[<span class="hljs-number">0</span>];
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> <span class="hljs-params">(event)</span> </span>{
+  calcite.preventDefault(event);
+};
+
+calcite.addEvent(node, click, action);
+</code></pre>
+<p>This will prevent the first <code>&lt;a&gt;</code> DOM node in the document from performing its default behavior (sending the user to the link in its <code>href</code> attribute).</p>
+<h3>calcite.stopPropagation(event)</h3>
+<p>Stops an event from bubbling up the DOM tree. This is useful if events have been bound to both a parent DOM node and a child DOM node.</p>
+<pre><code class="js"><span class="hljs-keyword">var</span> click = calcite.click();
+<span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">'a'</span>)[<span class="hljs-number">0</span>];
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> <span class="hljs-params">(event)</span> </span>{
+  calcite.stopPropagation(event);
+};
+
+calcite.addEvent(node, click, action);
+</code></pre>
+<p>If, for example, the <code>&lt;body&gt;</code> DOM node also has a function bound to a click event, this will prevent a user's click from triggering it.</p>
+<h2>Manipulation &amp; Traversal</h2>
+<h3>calcite.hasClass(node, class)</h3>
+<p>Checks if the <code>node</code> currently has the provided <code>class</code>. For example, given the following html:</p>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"apple"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"test"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p>The <code>hasClass</code> utility can be used as follows:</p>
+<pre><code class="js"><span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'test'</span>);
+<span class="hljs-keyword">var</span> isApple = calcite.hasClass(node, <span class="hljs-string">'apple'</span>);
+<span class="hljs-built_in">console</span>.log(isApple); <span class="hljs-comment">// true</span>
+</code></pre>
+<h3>calcite.addClass(domNode, classes)</h3>
+<p>Adds one or more classes to a given element. Multiple classes should be passed as a space-separated string, like this:</p>
+<pre><code class="js"><span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'test'</span>);
+calcite.addClass(node, <span class="hljs-string">'apples bananas oranges'</span>);
+</code></pre>
+<h3>calcite.removeClass(domNode, classes)</h3>
+<p>Removes one or more classes from an element. Like <code>addClass</code>, multiple classes should be separated with a space and passed as a single string:</p>
+<pre><code class="js"><span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'test'</span>);
+calcite.removeClass(node, <span class="hljs-string">'apples bananas oranges'</span>);
+</code></pre>
+<h3>calcite.toggleClass(domNode, className)</h3>
+<p>Adds the class to the element if it doesn't have the class, otherwise, remove it:</p>
+<pre><code class="js"><span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.test'</span>);
+calcite.toggleClass(node, <span class="hljs-string">'test'</span>); <span class="hljs-comment">// remove test class</span>
+calcite.toggleClass(node, <span class="hljs-string">'test'</span>); <span class="hljs-comment">// add test class</span>
+</code></pre>
+<h3>calcite.closest(class, element)</h3>
+<p>Searches up the DOM tree to find the closest parent element with a given class.</p>
+<pre><code class="js"><span class="hljs-keyword">var</span> nodes = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.child-element'</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">clickHandler</span> <span class="hljs-params">(event)</span> </span>{
+  <span class="hljs-keyword">var</span> closestNode = calcite.closest(<span class="hljs-string">'parent-class'</span>, event.target);
+}
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; nodes.length; i++) {
+  calcite.addEvent(nodes[i], calcite.click(), clickHandler);
+}
+</code></pre>
+<h3>calcite.nodeListToArray(domNodeList)</h3>
+<p>Turn a node list (usually returned from a query) into an array.</p>
+<pre><code class="js"><span class="hljs-keyword">var</span> nodes = <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">'a'</span>);
+<span class="hljs-keyword">var</span> nodeArray = calcite.nodeListToArray(nodes);
+</code></pre>
+
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+    
+  </main>
+</div>
+
+    </div>
+
+    
+
+    <!-- Footer Pattern -->
+    <footer class="footer leader-3 link-dark-gray" role="contentinfo">
+      <div class="grid-container">
+          <nav class="column-6">
+            <h6>Styleguides</h6>
+            <ul class="list-plain">
+              <li><a href="../../styleguides/javascript/">JavaScript</a></li>
+              <li><a href="../../styleguides/css/">CSS</a></li>
+              <li><a href="../../styleguides/html/">HTML</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <h6>Resources</h6>
+            <ul class="list-plain">
+              <li><a href="../../guides/migration-guide/">Migration Guide</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/releases/">Releases</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/blob/master/CONTRIBUTING.md">Contributing</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/issues/">Issues</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/">GitHub</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <h6>About Esri</h6>
+            <ul class="list-plain">
+              <li><a href="http://www.esri.com/about-esri/">About Us</a></li>
+              <li><a href="http://www.esri.com/careers/">Careers</a></li>
+              <li><a href="http://blogs.esri.com/esri/esri-insider/">Insiders Blog</a></li>
+              <li><a href="http://www.esri.com/events/user-conference/index.html">User Conference</a></li>
+              <li><a href="http://www.esri.com/events/devsummit/index.html">Developer Summit</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <a class="esri-logo" href="http://esri.com" aria-label="Esri Home"></a>
+            <section class="footer-social-nav leader-1">
+              <a class="icon-social-twitter" aria-label="Esri on Twitter"  href="https://twitter.com/Esri/"></a>
+              <a class="icon-social-facebook" aria-label="Esri on Facebook"  href="https://www.facebook.com/esrigis/"></a>
+              <a class="icon-social-instagram" aria-label="Esri on Instagram"  href="https://instagram.com/esrigram/"></a>
+              <a class="icon-social-github" aria-label="Esri on GitHub"  href="http://esri.github.com/"></a>
+              <a class="icon-social-contact" aria-label="Contact Esri"  href="http://www.esri.com/about-esri/contact/"></a>
+            </section>
+          </nav>
+
+          <div class="column-24 leader-1">
+            <p><small>Copyright © 2015 Esri. All rights reserved. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal">Legal</a></small></p>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+    <script src="../../assets/js/libs/calcite-web.js"></script>
+    <script src="../../assets/js/libs/calcite-web-marketing.js"></script>
+
+    <script src="../../assets/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+
+    
+
+    
+
+  </body>
+</html>

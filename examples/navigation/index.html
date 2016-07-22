@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>  <html class="ie lt-ie9 ie8"> <![endif]-->
+<!--[if IE 9]>     <html class="ie ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+
+    <!-- Set encoding -->
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <!-- Use title from page frontmatter -->
+    <title>Calcite Web | Esri Design Patterns</title>
+
+    <!-- Link to favicon -->
+    <link rel="shortcut icon" href="../../assets/img/favicon.ico">
+
+    <!-- stylesheets -->
+    
+      <link rel="stylesheet" href="../../assets/css/all.css">
+      <link rel="stylesheet" href="../../assets/css/extensions.css">
+      
+    
+
+    <!--[if IE]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!--
+    ┌─────────┐
+    │ Drawers │
+    └─────────┘
+     ↳ http://esri.github.io/calcite-web/patterns/#drawers
+     ↳ patterns → _drawers.md
+    -->
+    <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
+      <!-- <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerleft"> -->
+      <nav class="drawer-nav" role="navigation">
+        <aside class="side-nav">
+          <h2 class="side-nav-title">Calcite Web</h2>
+          <div class="panel padding-trailer-half padding-leader-half">
+            <form method="GET" action="../../search/">
+              <input type="search" placeholder="Search" name="q">
+            </form>
+          </div>
+          <a href="../../documentation/" class="side-nav-link">Documentation</a>
+          <a href="../../examples/" class="side-nav-link">Examples</a>
+          <a href="../../guides/" class="side-nav-link">Guides</a>
+        </aside>
+      </nav>
+    </div>
+
+    <div class="drawer drawer-right js-drawer" data-drawer="right">
+      <!-- <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerright"> -->
+      <nav class="drawer-nav" role="navigation">
+        <aside class="side-nav">
+          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
+          <div class="panel padding-trailer-half padding-leader-half">
+            <form method="GET" action="../../search/" class="panel padding-leader-half">
+              <input type="search" placeholder="Search" name="q">
+            </form>
+          </div>
+          <a href="../../documentation/" class="side-nav-link">Documentation</a>
+          <a href="../../examples/" class="side-nav-link">Examples</a>
+          <a href="../../guides/" class="side-nav-link">Guides</a>
+        </aside>
+      </nav>
+    </div>
+
+    <div class="wrapper">
+      <!-- Logged Out Pattern-->
+      <header class="top-nav">
+        <a class="skip-to-content" href="#skip-to-content">Skip To Content</a>
+        <div class="grid-container">
+          <div class="column-24">
+            <div class="tablet-hide">
+              <a href="../../" class="top-nav-title">Calcite Web</a>
+              <nav class="top-nav-list" role="navigation">
+                <a href="../../documentation" class="top-nav-link">Documentation</a>
+                <a href="../../examples" class="is-active top-nav-link">Examples</a>
+                <a href="../../guides" class="top-nav-link">Guides</a>
+              </nav>
+              <form method="GET" action="../../search/" class="inline-block right site-search">
+                <input type='search' placeholder='Search' name="q" class="inline-block leader-half js-search-input">
+                <button type="submit" class="hide">Search</button>
+              </form>
+            </div>
+
+            <div class="tablet-show">
+              <a href="/" class="icon-ui-menu top-nav-title js-drawer-toggle" data-drawer="top-nav">Calcite Web</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Secondary Nav Pattern -->
+      <!-- what -->
+      
+  <header class="sub-nav" role="banner">
+    <div class="grid-container">
+      <div class="column-24">
+        <h1 class="sub-nav-title leader-1 text-white">Examples</h1>
+        <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1">Download Latest Release</a>
+        <nav class="sub-nav-list" role="navigation" aria-labelledby="subnav">
+          <a class="sub-nav-link " href="../../examples">Overview</a>
+          <a href="../../examples/core" class="sub-nav-link ">Basic Pages</a>
+          <a href="../../examples/grid" class="sub-nav-link ">Grid</a>
+          <a href="../../examples/navigation" class="sub-nav-link  is-active ">Navigation</a>
+          <a href="../../examples/marketing" class="sub-nav-link ">Marketing</a>
+          <a href="../../examples/e-commerce" class="sub-nav-link ">E-Commerce</a>
+          <a href="../../examples/apps" class="sub-nav-link ">Apps</a>
+          <a href="../../examples/i18n" class="sub-nav-link ">i18n</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+
+      <!-- content of each page will go here -->
+      
+  <header class="third-nav scroll-show js-sticky" data-top=0>
+    <div class="third-nav-container">
+      <div class="grid-container">
+        <nav class="column-24" role="navigation" aria-labelledby="thirdnav breadcrumbs">
+          <a href="../../examples" class="third-nav-link crumb">Examples</a>
+          <a href="../../examples/navigation" class="third-nav-link crumb">navigation</a>
+          <a class="icon-ui-up third-nav-link right" href="#">Back to Top</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <a id="skip-to-content" tabindex="0"></a>
+
+  
+<div class="grid-container">
+  <div class="column-24">
+    <h1>Navigation Examples</h1>
+  </div>
+</div>
+
+
+  <div class="grid-container">
+    <div class="column-24">
+      
+        <h2 class="text-rule padding-leader-2" id="navigation-patterns">Navigation Patterns</h2>
+          
+            <div class="column-10 pre-7 tablet-pre-1">
+              <h3 class="text-center padding-leader-4" id="global-nav">Global Navigation</h3>
+              
+              <p class="text-center">
+                <a href="#" class="js-modal-toggle btn btn-clear" data-modal="global-nav">View HTML</a>
+              </p>
+              <p>The Global Navigation pattern is used for the heighest level of navigation on a web project. On the left we have a specific site title, with that sites primary navigation. The right section of the pattern is used for user-interction patterns. Constants should be as shown - Search, Applications, and User components. Additional components such as 'New Map' can also live here.</p>
+
+            </div>
+            <div class="js-modal modal-overlay" data-modal="global-nav">
+              <div class="modal-content column-12" role="dialog" aria-labelledby="modal" role="dialog">
+                <a class="js-modal-toggle icon-ui-close icon-flush font-size-1 right" href="#" aria-label="close-modal" ></a>
+                <h3 class='trailer-half'>Global Navigation</h3>
+                <pre class="html-sample"><code  id="global-nav-snippet">&lt;!-- Sample HTML -->
+&lt;header class="top-nav">
+  &lt;div class="grid-container">
+    &lt;div class="column-24">
+      &lt;!-- desktop sized navigation -->
+      &lt;div class="tablet-hide">
+        &lt;!-- logo / home -->
+        &lt;a href="#" class="top-nav-title">esri&lt;/a>
+        &lt;!-- primary navigation sections -->
+        &lt;nav class="top-nav-list" role="navigation" aria-labelledby="topnav">
+          &lt;a class="top-nav-link is-active" href="#">ArcGIS&lt;/a>
+          &lt;a class="top-nav-link" href="#">Industries&lt;/a>
+          &lt;a class="top-nav-link" href="#">About&lt;/a>
+          &lt;a class="top-nav-link" href="#">Support&lt;/a>
+        &lt;/nav>
+        &lt;!-- user specific dropdowns -->
+        &lt;nav class="class-top-nav-list right" role="navigation" aria-labelledby="usernav">
+          &lt;a class="top-nav-link icon-ui-search" href="#">Search&lt;/a>
+          &lt;a class="top-nav-link icon-ui-collection margin-left-1" href="#">Applications&lt;/a>
+          &lt;a class="top-nav-link icon-ui-user margin-left-1" href="#">Sign In&lt;/a>
+        &lt;/nav>
+      &lt;/div>
+
+      &lt;!-- tablet and mobile sized navigation -->
+      &lt;div class="tablet-show">
+        &lt;!-- open primary navigation drawer -->
+        &lt;nav class="top-nav-list column-2" role="navigation" aria-labelledby="topnav">
+          &lt;a href="/" class="icon-ui-flush margin-left-1 icon-ui-menu top-nav-title js-drawer-toggle" data-drawer="top-nav">&lt;/a>
+        &lt;/nav>
+        &lt;!-- logo / home -->
+        &lt;header class="column-8 phone-column-2 text-center">
+          &lt;a href="/" class="top-nav-title text-center">esri&lt;/a>
+        &lt;/header>
+        &lt;!-- user specific actions -->
+        &lt;nav class="class-top-nav-list column-2 text-right" role="navigation" aria-labelledby="usernav">
+          &lt;a class="top-nav-link icon-ui-flush icon-ui-search js-drawer-toggle" href="#">&lt;/a>
+          &lt;a class="top-nav-link icon-ui-flush icon-ui-user margin-left-1 js-drawer-toggle" href="#">&lt;/a>
+        &lt;/nav>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+&lt;/header>
+</code></pre>
+                <div class="action-bar text-right">
+                  <button class="btn btn-clear js-modal-toggle">Close</button>
+                  <button class="btn js-copy-to-clipboard" data-clipboard-target="#global-nav-snippet">Copy to Clipboard</button>
+                </div>
+              </div>
+            </div>
+    </div>
+  </div>
+  <div class="panel panel-no-padding padding-leader-1 padding-trailer-1">
+            <!-- Sample HTML -->
+<header class="top-nav">
+  <div class="grid-container">
+    <div class="column-24">
+      <!-- desktop sized navigation -->
+      <div class="tablet-hide">
+        <!-- logo / home -->
+        <a href="#" class="top-nav-title">esri</a>
+        <!-- primary navigation sections -->
+        <nav class="top-nav-list" role="navigation" aria-labelledby="topnav">
+          <a class="top-nav-link is-active" href="#">ArcGIS</a>
+          <a class="top-nav-link" href="#">Industries</a>
+          <a class="top-nav-link" href="#">About</a>
+          <a class="top-nav-link" href="#">Support</a>
+        </nav>
+        <!-- user specific dropdowns -->
+        <nav class="class-top-nav-list right" role="navigation" aria-labelledby="usernav">
+          <a class="top-nav-link icon-ui-search" href="#">Search</a>
+          <a class="top-nav-link icon-ui-collection margin-left-1" href="#">Applications</a>
+          <a class="top-nav-link icon-ui-user margin-left-1" href="#">Sign In</a>
+        </nav>
+      </div>
+
+      <!-- tablet and mobile sized navigation -->
+      <div class="tablet-show">
+        <!-- open primary navigation drawer -->
+        <nav class="top-nav-list column-2" role="navigation" aria-labelledby="topnav">
+          <a href="/" class="icon-ui-flush margin-left-1 icon-ui-menu top-nav-title js-drawer-toggle" data-drawer="top-nav"></a>
+        </nav>
+        <!-- logo / home -->
+        <header class="column-8 phone-column-2 text-center">
+          <a href="/" class="top-nav-title text-center">esri</a>
+        </header>
+        <!-- user specific actions -->
+        <nav class="class-top-nav-list column-2 text-right" role="navigation" aria-labelledby="usernav">
+          <a class="top-nav-link icon-ui-flush icon-ui-search js-drawer-toggle" href="#"></a>
+          <a class="top-nav-link icon-ui-flush icon-ui-user margin-left-1 js-drawer-toggle" href="#"></a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+  </div>
+  <div class="grid-container">
+    <div class="column-24">
+
+          
+            <div class="column-10 pre-7 tablet-pre-1">
+              <h3 class="text-center padding-leader-4" id="sub-nav">Secondary Navigation</h3>
+              
+              <p class="text-center">
+                <a href="#" class="js-modal-toggle btn btn-clear" data-modal="sub-nav">View HTML</a>
+              </p>
+              <p>The standard Secondary Navigation is used for for subdividing the top level of navigation, or creating divisions within a section.</p>
+
+            </div>
+            <div class="js-modal modal-overlay" data-modal="sub-nav">
+              <div class="modal-content column-12" role="dialog" aria-labelledby="modal" role="dialog">
+                <a class="js-modal-toggle icon-ui-close icon-flush font-size-1 right" href="#" aria-label="close-modal" ></a>
+                <h3 class='trailer-half'>Secondary Navigation</h3>
+                <pre class="html-sample"><code  id="sub-nav-snippet">&lt;!-- Sample HTML -->
+&lt;header class="sub-nav" role="banner">
+  &lt;div class="grid-container">
+    &lt;div class="column-24">
+      &lt;h1 class="sub-nav-title text-white">Fields&lt;/h1>
+      &lt;nav class="sub-nav-list" role="navigation" aria-labelledby="subnav">
+        &lt;a class="sub-nav-link is-active" href="#">Glens&lt;/a>
+        &lt;a class="sub-nav-link" href="#">Dales&lt;/a>
+        &lt;a class="sub-nav-link" href="#">Meadows&lt;/a>
+      &lt;/nav>
+    &lt;/div>
+  &lt;/div>
+&lt;/header>
+
+</code></pre>
+                <div class="action-bar text-right">
+                  <button class="btn btn-clear js-modal-toggle">Close</button>
+                  <button class="btn js-copy-to-clipboard" data-clipboard-target="#sub-nav-snippet">Copy to Clipboard</button>
+                </div>
+              </div>
+            </div>
+    </div>
+  </div>
+  <div class="panel panel-no-padding padding-leader-1 padding-trailer-1">
+            <!-- Sample HTML -->
+<header class="sub-nav" role="banner">
+  <div class="grid-container">
+    <div class="column-24">
+      <h1 class="sub-nav-title text-white">Fields</h1>
+      <nav class="sub-nav-list" role="navigation" aria-labelledby="subnav">
+        <a class="sub-nav-link is-active" href="#">Glens</a>
+        <a class="sub-nav-link" href="#">Dales</a>
+        <a class="sub-nav-link" href="#">Meadows</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+  </div>
+  <div class="grid-container">
+    <div class="column-24">
+
+          
+            <div class="column-10 pre-7 tablet-pre-1">
+              <h3 class="text-center padding-leader-4" id="hero">Hero</h3>
+              
+              <p class="text-center">
+                <a href="#" class="js-modal-toggle btn btn-clear" data-modal="hero">View HTML</a>
+              </p>
+              <p>The secondary navigation pattern can be altered to create a prominent hero image section, with or without navigation elements.</p>
+
+            </div>
+            <div class="js-modal modal-overlay" data-modal="hero">
+              <div class="modal-content column-12" role="dialog" aria-labelledby="modal" role="dialog">
+                <a class="js-modal-toggle icon-ui-close icon-flush font-size-1 right" href="#" aria-label="close-modal" ></a>
+                <h3 class='trailer-half'>Hero</h3>
+                <pre class="html-sample"><code  id="hero-snippet">&lt;!-- Sample HTML -->
+&lt;header class="sub-nav arcgis-product-header">
+  &lt;div class="grid-container padding-leader-1">
+    &lt;div class="column-24">
+      &lt;nav class="breadcrumbs link-off-black">
+        &lt;a href="#" class="crumb">Products&lt;/a>
+        &lt;a href="#" class="crumb is-active">ArcGIS Online&lt;/a>
+      &lt;/nav>
+    &lt;/div>
+
+    &lt;div class="column-12">
+      &lt;h1 class="font-size-8 padding-leader-3 text-white">ArcGIS Online&lt;/h1>
+      &lt;p class="text-white font-size-1">It's a pretty great product.&lt;/p>
+    &lt;/div>
+    &lt;div class="column-12">
+      &lt;a href="#" class="btn leader-4 right">Sign up for a Free Trial&lt;/a>
+    &lt;/div>
+
+    &lt;nav class="sub-nav-list phone-hide padding-leader-4 column-24">
+      &lt;a class="sub-nav-link is-active" href="#">Main&lt;/a>
+      &lt;a class="sub-nav-link" href="#">Features&lt;/a>
+      &lt;a class="sub-nav-link" href="#">Showcase&lt;/a>
+      &lt;a class="sub-nav-link" href="#">What's New&lt;/a>
+      &lt;a class="sub-nav-link" href="#">Credits&lt;/a>
+      &lt;a class="sub-nav-link" href="#">Pricing&lt;/a>
+      &lt;a class="sub-nav-link" href="#">Free Trial&lt;/a>
+    &lt;/nav>
+  &lt;/div>
+&lt;/header>
+</code></pre>
+                <div class="action-bar text-right">
+                  <button class="btn btn-clear js-modal-toggle">Close</button>
+                  <button class="btn js-copy-to-clipboard" data-clipboard-target="#hero-snippet">Copy to Clipboard</button>
+                </div>
+              </div>
+            </div>
+    </div>
+  </div>
+  <div class="panel panel-no-padding padding-leader-1 padding-trailer-1">
+            <!-- Sample HTML -->
+<header class="sub-nav arcgis-product-header">
+  <div class="grid-container padding-leader-1">
+    <div class="column-24">
+      <nav class="breadcrumbs link-off-black">
+        <a href="#" class="crumb">Products</a>
+        <a href="#" class="crumb is-active">ArcGIS Online</a>
+      </nav>
+    </div>
+
+    <div class="column-12">
+      <h1 class="font-size-8 padding-leader-3 text-white">ArcGIS Online</h1>
+      <p class="text-white font-size-1">It's a pretty great product.</p>
+    </div>
+    <div class="column-12">
+      <a href="#" class="btn leader-4 right">Sign up for a Free Trial</a>
+    </div>
+
+    <nav class="sub-nav-list phone-hide padding-leader-4 column-24">
+      <a class="sub-nav-link is-active" href="#">Main</a>
+      <a class="sub-nav-link" href="#">Features</a>
+      <a class="sub-nav-link" href="#">Showcase</a>
+      <a class="sub-nav-link" href="#">What's New</a>
+      <a class="sub-nav-link" href="#">Credits</a>
+      <a class="sub-nav-link" href="#">Pricing</a>
+      <a class="sub-nav-link" href="#">Free Trial</a>
+    </nav>
+  </div>
+</header>
+
+  </div>
+  <div class="grid-container">
+    <div class="column-24">
+
+          
+            <div class="column-10 pre-7 tablet-pre-1">
+              <h3 class="text-center padding-leader-4" id="footer">Footer</h3>
+              
+              <p class="text-center">
+                <a href="#" class="js-modal-toggle btn btn-clear" data-modal="footer">View HTML</a>
+              </p>
+              <p>This footer should live at the bottom of every page across the Esri and ArcGIS ecosystem. Project-specific navigation items should be used, but more general information and social media icons should be maintained.</p>
+
+            </div>
+            <div class="js-modal modal-overlay" data-modal="footer">
+              <div class="modal-content column-12" role="dialog" aria-labelledby="modal" role="dialog">
+                <a class="js-modal-toggle icon-ui-close icon-flush font-size-1 right" href="#" aria-label="close-modal" ></a>
+                <h3 class='trailer-half'>Footer</h3>
+                <pre class="html-sample"><code  id="footer-snippet">&lt;!-- Sample HTML -->
+&lt;div class="grid-container">
+  &lt;footer class="footer leader-3">
+    &lt;div class="container">
+      &lt;nav class="column-8">
+        &lt;h6 class="font-size-5">&lt;strong>esri&lt;/strong>&lt;/h6>
+        &lt;ul class="list-plain font-size--2">
+          &lt;li>&lt;strong>Talk With Us&lt;/strong>&lt;/li>
+          &lt;li>&lt;a class="link-off-black" href="#">Contact Sales&lt;/a>&lt;/li>
+          &lt;li>&lt;a class="link-off-black" href="#">Contact Support&lt;/a>&lt;/li>
+        &lt;/ul>
+        &lt;p class="leader-1 font-size--2">&lt;strong>Follow Us&lt;/strong>&lt;/span>&lt;/p>
+        &lt;section class="footer-social-nav">
+          &lt;a class="icon-social-twitter" href="https://twitter.com/Esri/">&lt;/a>
+          &lt;a class="icon-social-facebook" href="https://www.facebook.com/esrigis/">&lt;/a>
+          &lt;a class="icon-social-youtube" href="https://www.youtube.com/esrigis/">&lt;/a>
+          &lt;a class="icon-social-github" href="http://esri.github.com/">&lt;/a>
+          &lt;a class="icon-social-linkedin" href="https://www.linkedin.com/company/5311">&lt;/a>
+          &lt;a class="icon-social-contact" href="http://www.esri.com/about-esri/contact/">&lt;/a>
+        &lt;/section>
+      &lt;/nav>
+
+      &lt;nav class="column-4 leader-1">
+        &lt;h6 class="font-size--2">&lt;strong>Arc&lt;span>GIS&lt;/span>&lt;/strong>&lt;/h6>
+        &lt;ul class="list-plain font-size--2">
+          &lt;li>&lt;a class="link-off-black" href="#">About ArcGIS&lt;/a>&lt;/li>
+          &lt;li>&lt;a class="link-off-black" href="#">ArcGIS Desktop&lt;/a>&lt;/li>
+          &lt;li>&lt;a class="link-off-black" href="#">ArcGIS Server&lt;/a>&lt;/li>
+          &lt;li>&lt;a class="link-off-black" href="#">ArcGIS Online&lt;/a>&lt;/li>
+          &lt;li>&lt;a class="link-off-black" href="#">Apps&lt;/a>&lt;/li>
+          &lt;li>&lt;a class="link-off-black" href="#">How to Buy&lt;/a>&lt;/li>
+        &lt;/ul>
+      &lt;/nav>
+      &lt;nav class="column-4 leader-1">
+        &lt;h6 class="font-size--2">&lt;strong>Community&lt;/strong>&lt;/h6>
+        &lt;ul class="list-plain font-size--2">
+          &lt;li>&lt;a class="link-off-black" href="#">Esri Community&lt;/a>&lt;/li>
+          &lt;li>&lt;a class="link-off-black" href="#">Events&lt;/a>&lt;/li>
+          &lt;li>&lt;a class="link-off-black" href="#">Education&lt;/a>&lt;/li>
+          &lt;li>&lt;a class="link-off-black" href="#">Early Adopters&lt;/a>&lt;/li>
+          &lt;li>&lt;a class="link-off-black" href="#">Developers&lt;/a>&lt;/li>
+        &lt;/ul>
+      &lt;/nav>
+      &lt;nav class="column-4 leader-1">
+        &lt;h6 class="font-size--2">&lt;strong>Understanding GIS&lt;/strong>&lt;/h6>
+        &lt;ul class="list-plain font-size--2">
+          &lt;li>&lt;a class="link-off-black" href="#">What is GIS&lt;/a>&lt;/li>
+          &lt;li>&lt;a class="link-off-black" href="#">Training&lt;/a>&lt;/li>
+          &lt;li>&lt;a class="link-off-black" href="#">Events&lt;/a>&lt;/li>
+          &lt;li>&lt;a class="link-off-black" href="#">Insights&lt;/a>&lt;/li>
+          &lt;li>&lt;a class="link-off-black" href="#">Esri Press&lt;/a>&lt;/li>
+        &lt;/ul>
+      &lt;/nav>
+      &lt;nav class="column-4 leader-1">
+        &lt;h6 class="font-size--2">&lt;strong>Company&lt;/strong>&lt;/h6>
+        &lt;ul class="list-plain font-size--2">
+          &lt;li>&lt;a class="link-off-black" href="#">About Esri&lt;/a>&lt;/li>
+          &lt;li>&lt;a class="link-off-black" href="#">Contact Us&lt;/a>&lt;/li>
+          &lt;li>&lt;a class="link-off-black" href="#">Careers&lt;/a>&lt;/li>
+          &lt;li>&lt;a class="link-off-black" href="#">Worldwide Distributors&lt;/a>&lt;/li>
+          &lt;li>&lt;a class="link-off-black" href="#">Partners&lt;/a>&lt;/li>
+          &lt;li>&lt;a class="link-off-black" href="#">Disaster Response Program&lt;/a>&lt;/li>
+        &lt;/ul>
+      &lt;/nav>
+
+      &lt;div class="column-24">
+        &lt;hr>
+        &lt;div class="column-8">
+          &lt;p>United States (English)&nbsp;&lt;span class="icon-ui-globe">&lt;/span>&lt;/p>
+        &lt;/div>
+        &lt;div class="column-16 font-size--2">
+          &lt;a class="link-off-black margin-right-4" href="#">Privacy&lt;/a>
+          &lt;a class="link-off-black margin-right-4" href="#">Legal&lt;/a>
+          &lt;a class="link-off-black margin-right-4" href="#">Site Map&lt;/a>
+          &lt;a class="link-off-black margin-right-4" href="#">Terms and Conditions&lt;/a>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/footer>
+&lt;/div>
+</code></pre>
+                <div class="action-bar text-right">
+                  <button class="btn btn-clear js-modal-toggle">Close</button>
+                  <button class="btn js-copy-to-clipboard" data-clipboard-target="#footer-snippet">Copy to Clipboard</button>
+                </div>
+              </div>
+            </div>
+    </div>
+  </div>
+  <div class="panel panel-no-padding padding-leader-1 padding-trailer-1">
+            <!-- Sample HTML -->
+<div class="grid-container">
+  <footer class="footer leader-3">
+    <div class="container">
+      <nav class="column-8">
+        <h6 class="font-size-5"><strong>esri</strong></h6>
+        <ul class="list-plain font-size--2">
+          <li><strong>Talk With Us</strong></li>
+          <li><a class="link-off-black" href="#">Contact Sales</a></li>
+          <li><a class="link-off-black" href="#">Contact Support</a></li>
+        </ul>
+        <p class="leader-1 font-size--2"><strong>Follow Us</strong></span></p>
+        <section class="footer-social-nav">
+          <a class="icon-social-twitter" href="https://twitter.com/Esri/"></a>
+          <a class="icon-social-facebook" href="https://www.facebook.com/esrigis/"></a>
+          <a class="icon-social-youtube" href="https://www.youtube.com/esrigis/"></a>
+          <a class="icon-social-github" href="http://esri.github.com/"></a>
+          <a class="icon-social-linkedin" href="https://www.linkedin.com/company/5311"></a>
+          <a class="icon-social-contact" href="http://www.esri.com/about-esri/contact/"></a>
+        </section>
+      </nav>
+
+      <nav class="column-4 leader-1">
+        <h6 class="font-size--2"><strong>Arc<span>GIS</span></strong></h6>
+        <ul class="list-plain font-size--2">
+          <li><a class="link-off-black" href="#">About ArcGIS</a></li>
+          <li><a class="link-off-black" href="#">ArcGIS Desktop</a></li>
+          <li><a class="link-off-black" href="#">ArcGIS Server</a></li>
+          <li><a class="link-off-black" href="#">ArcGIS Online</a></li>
+          <li><a class="link-off-black" href="#">Apps</a></li>
+          <li><a class="link-off-black" href="#">How to Buy</a></li>
+        </ul>
+      </nav>
+      <nav class="column-4 leader-1">
+        <h6 class="font-size--2"><strong>Community</strong></h6>
+        <ul class="list-plain font-size--2">
+          <li><a class="link-off-black" href="#">Esri Community</a></li>
+          <li><a class="link-off-black" href="#">Events</a></li>
+          <li><a class="link-off-black" href="#">Education</a></li>
+          <li><a class="link-off-black" href="#">Early Adopters</a></li>
+          <li><a class="link-off-black" href="#">Developers</a></li>
+        </ul>
+      </nav>
+      <nav class="column-4 leader-1">
+        <h6 class="font-size--2"><strong>Understanding GIS</strong></h6>
+        <ul class="list-plain font-size--2">
+          <li><a class="link-off-black" href="#">What is GIS</a></li>
+          <li><a class="link-off-black" href="#">Training</a></li>
+          <li><a class="link-off-black" href="#">Events</a></li>
+          <li><a class="link-off-black" href="#">Insights</a></li>
+          <li><a class="link-off-black" href="#">Esri Press</a></li>
+        </ul>
+      </nav>
+      <nav class="column-4 leader-1">
+        <h6 class="font-size--2"><strong>Company</strong></h6>
+        <ul class="list-plain font-size--2">
+          <li><a class="link-off-black" href="#">About Esri</a></li>
+          <li><a class="link-off-black" href="#">Contact Us</a></li>
+          <li><a class="link-off-black" href="#">Careers</a></li>
+          <li><a class="link-off-black" href="#">Worldwide Distributors</a></li>
+          <li><a class="link-off-black" href="#">Partners</a></li>
+          <li><a class="link-off-black" href="#">Disaster Response Program</a></li>
+        </ul>
+      </nav>
+
+      <div class="column-24">
+        <hr>
+        <div class="column-8">
+          <p>United States (English)&nbsp;<span class="icon-ui-globe"></span></p>
+        </div>
+        <div class="column-16 font-size--2">
+          <a class="link-off-black margin-right-4" href="#">Privacy</a>
+          <a class="link-off-black margin-right-4" href="#">Legal</a>
+          <a class="link-off-black margin-right-4" href="#">Site Map</a>
+          <a class="link-off-black margin-right-4" href="#">Terms and Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+  </div>
+  <div class="grid-container">
+    <div class="column-24">
+
+          
+      
+    </div>
+  </div>
+
+    </div>
+
+    
+
+    <!-- Footer Pattern -->
+    <footer class="footer leader-3 link-dark-gray" role="contentinfo">
+      <div class="grid-container">
+          <nav class="column-6">
+            <h6>Styleguides</h6>
+            <ul class="list-plain">
+              <li><a href="../../styleguides/javascript/">JavaScript</a></li>
+              <li><a href="../../styleguides/css/">CSS</a></li>
+              <li><a href="../../styleguides/html/">HTML</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <h6>Resources</h6>
+            <ul class="list-plain">
+              <li><a href="../../guides/migration-guide/">Migration Guide</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/releases/">Releases</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/blob/master/CONTRIBUTING.md">Contributing</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/issues/">Issues</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/">GitHub</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <h6>About Esri</h6>
+            <ul class="list-plain">
+              <li><a href="http://www.esri.com/about-esri/">About Us</a></li>
+              <li><a href="http://www.esri.com/careers/">Careers</a></li>
+              <li><a href="http://blogs.esri.com/esri/esri-insider/">Insiders Blog</a></li>
+              <li><a href="http://www.esri.com/events/user-conference/index.html">User Conference</a></li>
+              <li><a href="http://www.esri.com/events/devsummit/index.html">Developer Summit</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <a class="esri-logo" href="http://esri.com" aria-label="Esri Home"></a>
+            <section class="footer-social-nav leader-1">
+              <a class="icon-social-twitter" aria-label="Esri on Twitter"  href="https://twitter.com/Esri/"></a>
+              <a class="icon-social-facebook" aria-label="Esri on Facebook"  href="https://www.facebook.com/esrigis/"></a>
+              <a class="icon-social-instagram" aria-label="Esri on Instagram"  href="https://instagram.com/esrigram/"></a>
+              <a class="icon-social-github" aria-label="Esri on GitHub"  href="http://esri.github.com/"></a>
+              <a class="icon-social-contact" aria-label="Contact Esri"  href="http://www.esri.com/about-esri/contact/"></a>
+            </section>
+          </nav>
+
+          <div class="column-24 leader-1">
+            <p><small>Copyright © 2015 Esri. All rights reserved. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal">Legal</a></small></p>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+    <script src="../../assets/js/libs/calcite-web.js"></script>
+    <script src="../../assets/js/libs/calcite-web-marketing.js"></script>
+
+    <script src="../../assets/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+
+    
+
+    
+
+  </body>
+</html>
