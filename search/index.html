@@ -203,7 +203,7 @@ sass_dir = <span class="hljs-string">"sass"</span>
 <p>Then in your project's sass files, just import it:</p>
 <pre><code><span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-string">"calcite-web"</span></span>;
 </code></pre>
-<p>That will give you everything including Sass utilities. You will also need to copy over the JavaScript and image assets to your static folder <a href="./#static-files">(see above)</a>.</p>
+<p>That will give you everything including Sass utilities. You will also need to copy over the JavaScript and image assets to your static folder <a href="/#static-files">(see above)</a>.</p>
 <p>Calcite Web has a built in library of mixins that cover everything from animation to font-size. To be sure you're building your site in the easiest way (and the most visually consistent way) read up on everything that's available on the <a href="./sass">Sass Page</a>.</p>
 
             </div>
@@ -356,7 +356,7 @@ sass_dir = <span class="hljs-string">"sass"</span>
               </a>
             </h5>
             <div class="js-search-item-content hide">
-              <p>Helpers classes apply the <code>font-size($n)</code> <a href="../sass/#font-size">mixin</a> to an element. This allows for quick resizing of text elements up and down the <a href="../sass/#modular-scale">modular type size scale</a>.</p>
+              <p>Helpers classes apply the <code>font-size($n)</code> <a href="/sass/#font-size">mixin</a> to an element. This allows for quick resizing of text elements up and down the <a href="/sass/#modular-scale">modular type size scale</a>.</p>
 
             </div>
             <!-- populated on the client -->
@@ -1769,6 +1769,23 @@ ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>
         
           <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
             <h5 class="trailer-half">
+              <a href="../patterns/#app-switcher">
+                
+                  App Switcher
+                
+              </a>
+            </h5>
+            <div class="js-search-item-content hide">
+              <p>The app switcher should be present on the top nav of every Esri product, next to the user nav. It allows a logged in user to quickly navigate between web products.</p>
+
+            </div>
+            <!-- populated on the client -->
+            <div class="js-search-item-snippet font-size-0"></div>
+            <a href="../patterns/#app-switcher" class="link-gray font-size--2">esri.github.io/patterns/#app-switcher</a>
+          </section>
+        
+          <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
+            <h5 class="trailer-half">
               <a href="../patterns/#user-sign-in">
                 
                   User Sign In
@@ -1899,7 +1916,7 @@ ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>
               </a>
             </h5>
             <div class="js-search-item-content hide">
-              <p>Standard footer for ArcGIS and Esri properties. The footer in Calcite Web is 'sticky' by default. This means that if the page doesn't have sufficient height, the footer will still hug the bottom of the screen. For this to work properly, you must use a <code>div</code> with a class of <code>wrapper</code>. See the <a href="../guides/quickstart/">basic HTML page</a> for an example.</p>
+              <p>Standard footer for ArcGIS and Esri properties. The footer in Calcite Web is 'sticky' by default. This means that if the page doesn't have sufficient height, the footer will still hug the bottom of the screen. For this to work properly, you must use a <code>div</code> with a class of <code>wrapper</code>. See the <a href="#basic-html-page">basic HTML page</a> for an example.</p>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">footer</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"footer avenir-regular leader-3"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"container"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-6"</span>&gt;</span>
@@ -1982,7 +1999,7 @@ ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>
             </h5>
             <div class="js-search-item-content hide">
               <p>Interactive patterns rely on <code>calcite-web.js</code> to work properly. You must add a reference to <code>calcite-web.js</code> (either from the cdn or you can host it yourself). After that, you should startup all the interactive patterns on load with <code>calcite.init()</code>.</p>
-<p>For more on using <code>calcite-web.js</code> you can view the <a href="../javascript/">JavaScript Documentation</a>.</p>
+<p>For more on using <code>calcite-web.js</code> you can view the <a href="../javascript/">JavaScript Guide</a>.</p>
 
             </div>
             <!-- populated on the client -->
@@ -2722,6 +2739,7 @@ Setting the max width of an article to a large multiple of the text size is a wa
 <li><a href="../patterns/#tabs">Tabs</a></li>
 <li><a href="../patterns/#accordions">Accordions</a></li>
 <li><a href="../patterns/#drawers">Drawers</a></li>
+<li><a href="../patterns/#expanding-nav">Expanding Nav</a></li>
 </ul>
 <h3>Loading Calcite as a Module</h3>
 <p>If you don't use a module loader (you probably should...), Calcite will be available as <code>window.calcite</code>. If you do, both flavors of module loaders are also covered below.</p>
@@ -2734,7 +2752,7 @@ Setting the max width of an article to a large multiple of the text size is a wa
 });
 </code></pre>
 <h3>Initializing</h3>
-<p>To use <code>calcite-web.js</code> simply <a href="../guides/quickstart/">include a reference to it in your html</a> and then run the <code>calcite.init()</code> method. For example, say your JavaScript was located in a file called <code>script.js</code>. You can bind all the JavaScript patterns from <code>script.js</code> like this:</p>
+<p>To use <code>calcite-web.js</code> simply <a href="../patterns#basic-html-page">include a reference to it in your html</a> and then run the <code>calcite.init()</code> method. For example, say your JavaScript was located in a file called <code>script.js</code>. You can bind all the JavaScript patterns from <code>script.js</code> like this:</p>
 <pre><code class="js"><span class="hljs-comment">// On document ready</span>
 <span class="hljs-built_in">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
   <span class="hljs-comment">// Initialize all calcite.js patterns</span>
