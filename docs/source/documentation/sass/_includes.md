@@ -2,12 +2,12 @@ By default, using the Calcite Web sass files will build css  for the complete fr
 
 Setting the `$generate-css` variable to false in your sass files will prevent any css from being generated, while exposing all the underlying sass styles of the framework. Setting specific variables like `$include-alerts` to false will preclude only that components css from being built.
 
-Additionally, font imports are controlled this way. By default, Calcite Web requests Avenir Next from a cdn. Setting `$include-primary-family` to false will prevent the font imports, and the framework will roll back to secondary font options. Frutiger and Kepler are included by setting `$include-content-family` and `$include-secondary-family` to true.
+Additionally, font imports are controlled this way. By default, Calcite Web requests Avenir Next from a cdn. You can import `calcite-web-no-fonts.scss` if you don't want the fonts.
 
 ```
 // Sass Output
-$include-colors:                 true             !default;
-$generate-css:                   true             !default;
+$include-colors:                 true    !default;
+$generate-css:                   true    !default;
 
 // Language Helpers
 $include-right-to-left:          $generate-css    !default;
@@ -30,9 +30,8 @@ $include-sticky:                 $generate-css    !default;
 // Type Output
 $include-type:                   $generate-css    !default;
   $include-primary-family:       true             !default;
-  $include-content-family:       false            !default;
-  $include-secondary-family:     false            !default;
   $include-code-family:          $generate-css    !default;
+  $include-i18n:                 $generate-css    !default;
   $include-type-defaults:        $generate-css    !default;
   $include-type-helpers:         $generate-css    !default;
 
@@ -54,11 +53,11 @@ $include-breadcrumbs:            $generate-css    !default;
 $include-tooltip:                $generate-css    !default;
 $include-forms:                  $generate-css    !default;
 $include-input-groups:           $generate-css    !default;
-$include-action-bar:             $generate-css    !default;
 $include-loader:                 $generate-css    !default;
-$include-search-bar:             $generate-css    !default;
 $include-skip-to-content:        $generate-css    !default;
 $include-logo:                   $generate-css    !default;
+$include-card:                   $generate-css    !default;
+$include-animation:              $generate-css    !default;
 
 // Patterns
 $include-footer:                 $generate-css    !default;
@@ -68,17 +67,14 @@ $include-side-nav:               $generate-css    !default;
 $include-sub-nav:                $generate-css    !default;
 $include-third-nav:              $generate-css    !default;
 $include-top-nav:                $generate-css    !default;
-$include-super-nav:              $generate-css    !default;
 $include-user-nav:               $generate-css    !default;
-$include-toolbar:                $generate-css    !default;
-$include-site-search:            $generate-css    !default;
+$include-app-switcher:           $generate-css    !default;
 
 // Javascript
 $include-tabs:                   $generate-css    !default;
 $include-modal:                  $generate-css    !default;
 $include-accordion:              $generate-css    !default;
 $include-drawers:                $generate-css    !default;
-$include-expanding-nav:          $generate-css    !default;
 $include-sticky:                 $generate-css    !default;
 $include-filter-dropdown:        $generate-css    !default;
 ```

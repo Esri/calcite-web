@@ -9,12 +9,9 @@ Calcite Web is open to all types of contributions from across Esri. Things you c
 
 ### Install Dependencies
 
-Calcite Web has two development dependencies, Node.js and Grunt.
-
 1. Visit [nodejs.org](http://nodejs.org/) to install Node.
-2. `npm install -g grunt-cli` to install Grunt.
-3. In the Calcite Web project repository, `npm install` to install development dependencies.
-4. `grunt` to run a development server for Calcite Web
+2. In the Calcite Web project repository, `npm install` to install development dependencies.
+3. `npm start` to run a development server for Calcite Web
 
 #### Working with the Icon Font
 
@@ -22,7 +19,7 @@ Changing the icon font requires further dependencies - Python and Fontforge.
 
 1. [Install Python](https://www.python.org/downloads/)
 2. `brew install ttfautohint fontforge --with-python`
-3. `grunt buildFont`
+3. `npm run font`
 
 ### Fork the Repository
 
@@ -137,7 +134,7 @@ The source files for the Documentation site live in here. There are a number of 
 
 ## Development
 
-To run a development environment, just type `grunt`. You should have a copy of the documentation site live at [localhost:8888](http://localhost:8888). As you develop features and fix bugs, be sure to write notes in `CHANGELOG.md`.
+To run a development environment, just type `npm start`. You should have a copy of the documentation site live at [localhost:8888](http://localhost:8888). As you develop features and fix bugs, be sure to write notes in `CHANGELOG.md`.
 
 ### Accessibility
 
@@ -174,10 +171,10 @@ The final number signifies patches such as fixing a pattern or component in a ce
 1. Change the version number in `package.json` to the desired version number.
 2. Write a description of the changes, additions, and bug fixes in `CHANGELOG.md`.
 3. Make sure `Esri/calcite-web` is up-to-date with your changes.
-5. Run `grunt release`. If prompted enter your GitHub credentials and your s3 access key/secret.
+5. Run `npm run release`. If prompted enter your GitHub credentials and your s3 access key/secret.
 
 # Updating the Documentation Site
 
-To update the documentation site, just make sure you have push access to the `Esri/calcite-web` repo and type `grunt deploy`. This will build the site and deploy to gh-pages.
+To update the documentation site, just make sure you have push access to the `Esri/calcite-web` repo and type `npm run deploy`. This will build the site and deploy to gh-pages.
 
 The site should be updated at http://esri.github.io/calcite-web/ in just a few moments.

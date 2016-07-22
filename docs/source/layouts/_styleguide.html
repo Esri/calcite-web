@@ -1,26 +1,25 @@
-{% extends "layouts/_layout" %}
+{% extends "layouts/_guide" %}
 
-{% block subnav%}
-<header class="sub-nav" role="banner">
-  <div class="grid-container">
-    <div class="column-24">
-      <h1 class="sub-nav-title text-white leader-1 trailer-1">Code Styleguides</h1>
-
-      <nav class="sub-nav-list">
-        <a class="sub-nav-link {% if src == 'guides/index.md' %}is-active{% endif %}" href="{{relativePath}}guides/">Overview</a>
-        <a class="sub-nav-link {% if src == 'guides/html.md' %}is-active{% endif %}" href="{{relativePath}}guides/html">HTML</a>
-        <a class="sub-nav-link {% if src == 'guides/css.md' %}is-active{% endif %}" href="{{relativePath}}guides/css">CSS</a>
-        <a class="sub-nav-link {% if src == 'guides/javascript.md' %}is-active{% endif %}" href="{{relativePath}}guides/javascript">JavaScript</a>
-      </nav>
-    </div>
-  </div>
-</header>
-{% endblock %}
+{% set isCode = true %}
 
 {% block content %}
 <div class="grid-container leader-2">
-  <main class="column-17 content-face">
+  <div class="column-6">
+    <aside class="side-nav trailer-2" aria-role="complementary">
+      <h4 class="side-nav-title">Code Styleguides</h4>
+      <nav role="navigation" aria-labelledby="sidenav">
+        <a class="side-nav-link {% if src == 'guides/code/index.md' %}is-active{% endif %}" href="{{relativePath}}guides/code/">Overview</a>
+        <a class="side-nav-link {% if src == 'guides/code/html.md' %}is-active{% endif %}" href="{{relativePath}}guides/code/html/">HTML</a>
+        <a class="side-nav-link {% if src == 'guides/code/css.md' %}is-active{% endif %}" href="{{relativePath}}guides/code/css/">CSS</a>
+        <a class="side-nav-link {% if src == 'guides/code/javascript.md' %}is-active{% endif %}" href="{{relativePath}}guides/code/javascript/">JavaScript</a>
+      </nav>
+    </aside>
+  </div>
+  <main class="column-17 pre-1">
     {% block text %}{% endblock %}
   </main>
 </div>
 {% endblock %}
+
+
+
