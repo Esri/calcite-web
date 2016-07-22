@@ -6,8 +6,8 @@ Additionally, font imports are controlled this way. By default, Calcite Web requ
 
 ```
 // Sass Output
-$include-colors:                 true             !default;
-$generate-css:                   true             !default;
+$include-colors:                 true    !default;
+$generate-css:                   true    !default;
 
 // Language Helpers
 $include-right-to-left:          $generate-css    !default;
@@ -30,9 +30,8 @@ $include-sticky:                 $generate-css    !default;
 // Type Output
 $include-type:                   $generate-css    !default;
   $include-primary-family:       true             !default;
-  $include-content-family:       false            !default;
-  $include-secondary-family:     false            !default;
   $include-code-family:          $generate-css    !default;
+  $include-i18n:                 $generate-css    !default;
   $include-type-defaults:        $generate-css    !default;
   $include-type-helpers:         $generate-css    !default;
 
@@ -54,11 +53,11 @@ $include-breadcrumbs:            $generate-css    !default;
 $include-tooltip:                $generate-css    !default;
 $include-forms:                  $generate-css    !default;
 $include-input-groups:           $generate-css    !default;
-$include-action-bar:             $generate-css    !default;
 $include-loader:                 $generate-css    !default;
-$include-search-bar:             $generate-css    !default;
 $include-skip-to-content:        $generate-css    !default;
 $include-logo:                   $generate-css    !default;
+$include-card:                   $generate-css    !default;
+$include-animation:              $generate-css    !default;
 
 // Patterns
 $include-footer:                 $generate-css    !default;
@@ -68,17 +67,14 @@ $include-side-nav:               $generate-css    !default;
 $include-sub-nav:                $generate-css    !default;
 $include-third-nav:              $generate-css    !default;
 $include-top-nav:                $generate-css    !default;
-$include-super-nav:              $generate-css    !default;
 $include-user-nav:               $generate-css    !default;
-$include-toolbar:                $generate-css    !default;
-$include-site-search:            $generate-css    !default;
+$include-app-switcher:           $generate-css    !default;
 
 // Javascript
 $include-tabs:                   $generate-css    !default;
 $include-modal:                  $generate-css    !default;
 $include-accordion:              $generate-css    !default;
 $include-drawers:                $generate-css    !default;
-$include-expanding-nav:          $generate-css    !default;
 $include-sticky:                 $generate-css    !default;
 $include-filter-dropdown:        $generate-css    !default;
 ```
