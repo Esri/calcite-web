@@ -2,19 +2,10 @@
 title: Migration Guide
 description: Everything you need to know about migrating from Tailcoat at Calcite-Web
 section: 'get-started'
-layout: layouts/_layout:content
+layout: layouts/_guide:text
 ---
-<header class="sub-nav" role="banner">
-  <div class="grid-container">
-    <div class="column-24">
-      <h1 class="sub-nav-title text-white">Migration Guide</h1>
-    </div>
-  </div>
-</header>
 
-<div class="grid-container leader-2">
-  <div class="column-16">
-{% markdown %}
+# Tailcoat Migration Guide
 
 Migrating from Tailcoat to Calcite Web is fairly straightforward. Most of the structures and basic ideas between the two frameworks are quite similar. For example, while class names and recommended markup for something like the side navigation pattern have changed, there is still a like-for-like replacement for the tailcoat pattern. From a user experience perspective, almost all of the patterns and use cases covered in Tailcoat have simply been improved and reimplemented in Calcite Web.
 
@@ -202,7 +193,3 @@ Below is a summary of what has changed.
 ## Conclusion
 
 It's a large effort to migrate, but because Calcite Web is in many ways just an evolution of Tailcoat, most of the ideas are still represented. If at any point you have questions, comments, or patterns you really need from Tailcoat that you don't feel are covered, *please* [open an issue](https://github.com/Esri/calcite-web/issues/new) on Calcite Web and we'll be sure to hop on and try to help!
-
-{% endmarkdown %}
-  </div>
-</div>
