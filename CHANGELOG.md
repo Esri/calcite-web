@@ -1,3 +1,16 @@
+## 1.0.0-beta.27
+
+### Fixed
+- ie11 fix for filter dropdown
+- ie11 fix for `Object.assign()`
+
+## 1.0.0-beta.26
+
+### Fixed
+- Release tooling, now includes Dist
+
+### Modified
+- Moved several patterns to `@include` rather than `@extend()`
 
 ## 1.0.0-beta.25
 

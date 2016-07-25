@@ -133,6 +133,10 @@
 
 @mixin filter-dropdown-remove() {
   @include right();
+  // ie 11 fix;
+  display: absolute;
+  right: 0;
+  top: 1.3rem;
   &:after {
     @include font-size(-1);
     @extend %icon-font-styles;
