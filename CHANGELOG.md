@@ -815,9 +815,9 @@
 ### Modified
 - Increase large breakpoint to 1450px
 - Add `extra-large-leader-n`
-	- Trailer
-	- Padding-leader
-	- Padding-trailer
+  - Trailer
+  - Padding-leader
+  - Padding-trailer
 - Add `extra-large-column-n` to 36 columns
 - Remove `container-max` and `container-min`
 - `extra-large-hide` and `-only`
@@ -904,8 +904,8 @@ behavior
 - `.table-blue.table-striped`
 - Additional panel options
 - IE9 bugfixes
-	- `.gif` fallback for loader component
-	- `transform2d` for drawers, modals
+  - `.gif` fallback for loader component
+  - `transform2d` for drawers, modals
 
 
 ## 0.0.10

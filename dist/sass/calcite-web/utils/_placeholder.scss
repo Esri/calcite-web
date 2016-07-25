@@ -1,0 +1,25 @@
+@mixin placeholder($property, $attr) {
+  &:placeholder {
+    #{$property}: $attr;
+  }
+
+  &:input-placeholder {
+    #{$property}: $attr;
+  }
+
+  &::-webkit-input-placeholder {
+     #{$property}: $attr;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+     #{$property}: $attr;
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+     #{$property}: $attr;
+  }
+
+  &:-ms-input-placeholder {
+     #{$property}: $attr;
+  }
+}
