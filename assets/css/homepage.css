@@ -2679,10 +2679,10 @@ img {
   .avenir-light-italic b, .avenir-light-italic strong {
     font-weight: 500; }
 
-.avenir-regular, .top-nav {
+.avenir-regular {
   font-weight: 400;
   font-style: normal; }
-  .avenir-regular b, .top-nav b, .avenir-regular strong, .top-nav strong {
+  .avenir-regular b, .avenir-regular strong {
     font-weight: 500; }
 
 .avenir-italic {
@@ -2691,10 +2691,10 @@ img {
   .avenir-italic b, .avenir-italic strong {
     font-weight: 500; }
 
-.avenir-demi, dt {
+.avenir-demi {
   font-weight: 500;
   font-style: normal; }
-  .avenir-demi b, dt b, .avenir-demi strong, dt strong {
+  .avenir-demi b, .avenir-demi strong {
     font-weight: 600; }
 
 .avenir-demi-italic {
@@ -2957,7 +2957,11 @@ dl {
   margin-bottom: 1.55rem; }
 
 dt {
+  font-weight: 500;
+  font-style: normal;
   margin-top: 0.775rem; }
+  dt b, dt strong {
+    font-weight: 600; }
   dt:first-child {
     margin-top: 0; }
 
@@ -4042,7 +4046,10 @@ html.vi input {
     font-weight: 600; }
   .breadcrumbs-white .crumb {
     color: white;
+    color: white;
     background-image: url("../img/forward-slash-white.svg"); }
+    .breadcrumbs-white .crumb:hover {
+      color: #efefef; }
   .crumb:first-child {
     background-image: none;
     padding-left: 0; }
@@ -4229,13 +4236,16 @@ html.vi input {
   border: 1px solid #0079c1;
   -webkit-box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05);
-  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05); }
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05);
+  color: #4c4c4c; }
   @media screen and (max-width: 859px) {
     .alert {
       font-size: 0.9375rem; } }
   @media screen and (max-width: 479px) {
     .alert {
       font-size: 0.9375rem; } }
+  .alert:hover {
+    color: #323232; }
   .alert.is-active {
     display: block; }
   .alert a:hover {
@@ -5131,8 +5141,12 @@ input.input-group-input,
   animation-duration: 0.5s; }
 
 .top-nav {
+  font-weight: 400;
+  font-style: normal;
   border-bottom: 1px solid #efefef;
   background-color: white; }
+  .top-nav b, .top-nav strong {
+    font-weight: 500; }
   .top-nav .esri-logo {
     margin-top: 1rem; }
   .top-nav .sign-in {
@@ -5358,7 +5372,7 @@ input.input-group-input,
   .nav-overflow-right.is-active {
     display: block; }
 
-.side-nav, .dropdown-menu, .accordion, .filter-dropdown-list {
+.side-nav, .dropdown-menu, .filter-dropdown-list {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -5368,10 +5382,10 @@ input.input-group-input,
   font-weight: 400;
   font-style: normal;
   background-color: white; }
-  .side-nav b, .dropdown-menu b, .accordion b, .filter-dropdown-list b, .side-nav strong, .dropdown-menu strong, .accordion strong, .filter-dropdown-list strong {
+  .side-nav b, .dropdown-menu b, .filter-dropdown-list b, .side-nav strong, .dropdown-menu strong, .filter-dropdown-list strong {
     font-weight: 500; }
 
-.side-nav-title, .accordion-title {
+.side-nav-title {
   margin: 0;
   padding: 0.51667rem;
   font-weight: 400;
@@ -5380,13 +5394,13 @@ input.input-group-input,
   line-height: 1.55rem;
   background-color: #f8f8f8;
   border-top: 1px solid #efefef; }
-  .side-nav-title b, .accordion-title b, .side-nav-title strong, .accordion-title strong {
+  .side-nav-title b, .side-nav-title strong {
     font-weight: 500; }
   @media screen and (max-width: 859px) {
-    .side-nav-title, .accordion-title {
+    .side-nav-title {
       font-size: 0.9375rem; } }
   @media screen and (max-width: 479px) {
-    .side-nav-title, .accordion-title {
+    .side-nav-title {
       font-size: 0.9375rem; } }
 
 .side-nav-link {
@@ -5672,13 +5686,42 @@ body {
   html[dir="rtl"] .modal-content {
     float: none; }
 
+.accordion {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  border: 1px solid #efefef;
+  border-top: none;
+  font-weight: 400;
+  font-style: normal;
+  background-color: white; }
+  .accordion b, .accordion strong {
+    font-weight: 500; }
+
 .accordion-section.is-active .accordion-content {
   display: block; }
 
 .accordion-title {
+  margin: 0;
+  padding: 0.51667rem;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.55rem;
+  background-color: #f8f8f8;
+  border-top: 1px solid #efefef;
   cursor: pointer;
   -webkit-transition: all, 150ms linear;
   transition: all, 150ms linear; }
+  .accordion-title b, .accordion-title strong {
+    font-weight: 500; }
+  @media screen and (max-width: 859px) {
+    .accordion-title {
+      font-size: 0.9375rem; } }
+  @media screen and (max-width: 479px) {
+    .accordion-title {
+      font-size: 0.9375rem; } }
   .accordion-title:before {
     font-size: 0.8125rem; }
   .accordion-title:focus, .accordion-title:hover {
@@ -6000,9 +6043,9 @@ input.filter-dropdown-input {
   .link-blue:hover {
     color: #005e95; }
 
-.link-white, .breadcrumbs-white .crumb {
+.link-white {
   color: white; }
-  .link-white:hover, .breadcrumbs-white .crumb:hover {
+  .link-white:hover {
     color: #efefef; }
 
 .link-light-gray {
@@ -6025,9 +6068,9 @@ input.filter-dropdown-input {
   .link-darkest-gray:hover, .third-nav-link.is-active:hover {
     color: #4c4c4c; }
 
-.link-off-black, .alert {
+.link-off-black {
   color: #4c4c4c; }
-  .link-off-black:hover, .alert:hover {
+  .link-off-black:hover {
     color: #323232; }
 
 .text-red {
