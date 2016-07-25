@@ -6,7 +6,7 @@
 $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue 100%);
 
 @mixin top-nav {
-  @extend .avenir-regular;
+  @include avenir-regular();
   border-bottom: 1px solid $lightest-gray;
   background-color: $white;
 

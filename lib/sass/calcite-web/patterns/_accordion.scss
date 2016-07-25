@@ -5,7 +5,7 @@
 //  ↳ patterns → _accordion.md
 
 @mixin accordion(){
-  @extend .side-nav;
+  @include side-nav();
 }
   @mixin accordion-section() {
     &.is-active {
@@ -19,7 +19,7 @@
   }
 
   @mixin accordion-title() {
-    @extend .side-nav-title;
+    @include side-nav-title();
     cursor: pointer;
     @include transition(all, $transition);
     &:before {
