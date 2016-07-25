@@ -28,7 +28,7 @@
 
     .breadcrumbs-white & {
       color: white;
-      @extend .link-white;
+      @include link-color($white, $lightest-gray);
       background-image: url('#{$image-path}/forward-slash-white.svg');
     }
 
