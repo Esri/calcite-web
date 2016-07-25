@@ -6,6 +6,7 @@
   "homepage": "https://github.com/esri/calcite-web",
   "scripts": {
     "test": "semistandard | snazzy",
+    "precssStat": "npm run sass:dist",
     "cssStat": "cssstats dist/css/calcite-web.css dist/css/stats.json",
     "deploy": "gh-pages -d docs/build -o upstream",
     "a11y": "a11y local.arcgis.com:8888",
