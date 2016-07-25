@@ -1,6 +1,6 @@
 {
   "name": "calcite-web",
-  "version": "1.0.0-beta.25",
+  "version": "1.0.0-beta.26",
   "description": "SASS & CSS Framework for Esri websites",
   "private": true,
   "homepage": "https://github.com/esri/calcite-web",
@@ -10,6 +10,7 @@
     "deploy": "gh-pages -d docs/build -o upstream",
     "a11y": "a11y local.arcgis.com:8888",
     "gh-release": "gh-release",
+    "releaseScript": "./bin/release.sh",
     "preacetate": "npm run cssStat",
     "acetate": "acetate build -i docs/source -o docs/build -c docs/acetate.conf.js",
     "prerollup": "npm run test",
@@ -29,7 +30,7 @@
     "prestart": "npm-run-series acetate sass rollup imagemin font js",
     "pres3": "node bin/minify.js",
     "s3": "node bin/s3.js",
-    "release": "npm-run-series prestart gh-release s3 deploy",
+    "release": "npm-run-series sass:dist prestart s3 releaseScript deploy",
     "start": "parallelshell 'rerun-script' 'live-server docs/build --port=8888 --no-browser' 'watchify docs/source/assets/js/all.js -o docs/build/assets/js/all.js'"
   },
   "watches": {
