@@ -159,7 +159,7 @@
     margin-bottom: $baseline;
   }
   dt {
-    @extend .avenir-demi;
+    @include avenir-demi();
     margin-top: $baseline/2;
     &:first-child {
       margin-top: 0;
