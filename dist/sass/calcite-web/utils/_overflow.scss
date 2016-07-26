@@ -11,6 +11,6 @@
 
 @if $include-utils == true {
   .overflow-auto {
-    @extend %overflow-auto;
+    @include overflow-auto();
   }
 }

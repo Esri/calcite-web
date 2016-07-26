@@ -16,7 +16,6 @@
 }
 
 @mixin column($n) {
-  @extend %column-base;
   width: ($n / $large-column-count) * $max-width;
 }
 
