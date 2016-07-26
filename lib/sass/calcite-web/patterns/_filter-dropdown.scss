@@ -134,7 +134,7 @@
 @mixin filter-dropdown-remove() {
   @include right();
   // ie 11 fix;
-  display: absolute;
+  position: absolute;
   right: 0;
   top: 1.3rem;
   &:after {
