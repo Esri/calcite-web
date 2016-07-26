@@ -1,3 +1,8 @@
+## 1.0.0-beta.28
+
+### Fixed
+- fix for ie11 fix for filter dropdown
+
 ## 1.0.0-beta.27
 
 ### Fixed
