@@ -22,6 +22,7 @@
     "imagemin:dist": "imagemin-newer lib/img/ dist/img/",
     "imagemin": "npm-run-series imagemin:docs imagemin:lib imagemin:dist",
     "sass:dist": "node-sass lib/sass/ -o dist/css/",
+    "postsass:dist": "ncp lib/fonts dist/sass",
     "sass:docs": "node-sass docs/source/assets/css/ -o docs/build/assets/css/ --include-path lib/sass",
     "presass": "mkdirp docs/source/assets/css",
     "sass": "npm-run-series sass:dist sass:docs",
