@@ -146,8 +146,11 @@
     margin: $baseline/4 0 $baseline/4 1.5rem;
   }
 
-  ul li {
-    list-style-type: disc;
+  ul ul,
+  ul ol,
+  ol ul,
+  ol ol {
+    margin-bottom: 0;
   }
 
   li ul, li ol {
