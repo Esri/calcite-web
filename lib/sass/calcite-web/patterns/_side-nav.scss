@@ -26,7 +26,7 @@
     position: relative;
     display: block;
     @include box-sizing(border-box);
-    padding: $baseline/3 $baseline $baseline/3 $baseline/3;
+    padding: $baseline/3;
     @include font-size(-2);
     color: $darkest-gray;
     background-color: $white;
@@ -40,6 +40,12 @@
     &.is-active {
       text-indent: -3px;
       border-left: 3px solid $blue;
+      @if ($include-right-to-left) {
+        html[dir="rtl"] & {
+          border-left: none;
+          border-right: 3px solid $blue;
+        }
+      }
     }
   }
 
