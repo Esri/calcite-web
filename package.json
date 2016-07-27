@@ -1,6 +1,6 @@
 {
   "name": "calcite-web",
-  "version": "1.0.0-beta.28",
+  "version": "1.0.0-beta.29",
   "description": "SASS & CSS Framework for Esri websites",
   "private": true,
   "homepage": "https://github.com/esri/calcite-web",
@@ -22,7 +22,7 @@
     "imagemin:dist": "imagemin-newer lib/img/ dist/img/",
     "imagemin": "npm-run-series imagemin:docs imagemin:lib imagemin:dist",
     "sass:dist": "node-sass lib/sass/ -o dist/css/",
-    "postsass:dist": "ncp lib/fonts dist/sass",
+    "postsass:dist": "ncp lib/sass dist/sass",
     "sass:docs": "node-sass docs/source/assets/css/ -o docs/build/assets/css/ --include-path lib/sass",
     "presass": "mkdirp docs/source/assets/css",
     "sass": "npm-run-series sass:dist sass:docs",

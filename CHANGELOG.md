@@ -1,3 +1,12 @@
+## 1.0.0-beta.29
+
+### Fixed
+- RTL for SideNav Active States
+
+### Modified
+- Margin and list styles
+- Odd-numbered black behavior in Block Groups
+
 ## 1.0.0-beta.28
 
 ### Fixed
