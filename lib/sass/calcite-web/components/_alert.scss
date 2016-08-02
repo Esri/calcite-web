@@ -15,7 +15,7 @@
   max-width: 40em;
   border: 1px solid $blue;
   @include box-shadow($box-shadow);
-  @extend .link-off-black;
+  @include link-color($off-black, $black);
   &.is-active {
     display: block;
   }

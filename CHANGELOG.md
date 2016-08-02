@@ -1,13 +1,30 @@
-## Unreleased
+## 1.0.0-beta.29
 
-### Added
-- `icon-ui-yellow`
-- `card-wide` for cards in landscape orientation
+### Fixed
+- RTL for SideNav Active States
 
 ### Modified
-- changes to card markup. (`card-body => card-content`)
-- cards implemented with flex-box
-- `panel-white` text now more accessible
+- Margin and list styles
+- Odd-numbered black behavior in Block Groups
+
+## 1.0.0-beta.28
+
+### Fixed
+- fix for ie11 fix for filter dropdown
+
+## 1.0.0-beta.27
+
+### Fixed
+- ie11 fix for filter dropdown
+- ie11 fix for `Object.assign()`
+
+## 1.0.0-beta.26
+
+### Fixed
+- Release tooling, now includes Dist
+
+### Modified
+- Moved several patterns to `@include` rather than `@extend()`
 
 ## 1.0.0-beta.25
 
@@ -15,8 +32,15 @@
 - Marketing Extension
 - E-commerce Extension
 - Lots of Doc Examples
+- `icon-ui-yellow`
+- `card-wide` for cards in landscape orientation
+- calcite Sass and JS extensions
+- `calcite.extend(obj)` function
 
 ### Modified
+- changes to card markup. (`card-body => card-content`)
+- cards implemented with flex-box
+- `panel-white` text now more accessible
 - headers are focusable
 - panels no longer style columns
 - translucent tab issue with larger text and hover effects

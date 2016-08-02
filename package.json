@@ -1,15 +1,17 @@
 {
   "name": "calcite-web",
-  "version": "1.0.0-beta.25",
+  "version": "1.0.0-beta.29",
   "description": "SASS & CSS Framework for Esri websites",
   "private": true,
   "homepage": "https://github.com/esri/calcite-web",
   "scripts": {
     "test": "semistandard | snazzy",
+    "precssStat": "npm run sass:dist",
     "cssStat": "cssstats dist/css/calcite-web.css dist/css/stats.json",
     "deploy": "gh-pages -d docs/build -o upstream",
     "a11y": "a11y local.arcgis.com:8888",
-    "gh-release": "gh-release -a calcite-web.zip",
+    "gh-release": "gh-release",
+    "releaseScript": "./bin/release.sh",
     "preacetate": "npm run cssStat",
     "acetate": "acetate build -i docs/source -o docs/build -c docs/acetate.conf.js",
     "prerollup": "npm run test",
@@ -20,6 +22,7 @@
     "imagemin:dist": "imagemin-newer lib/img/ dist/img/",
     "imagemin": "npm-run-series imagemin:docs imagemin:lib imagemin:dist",
     "sass:dist": "node-sass lib/sass/ -o dist/css/",
+    "postsass:dist": "ncp lib/sass dist/sass",
     "sass:docs": "node-sass docs/source/assets/css/ -o docs/build/assets/css/ --include-path lib/sass",
     "presass": "mkdirp docs/source/assets/css",
     "sass": "npm-run-series sass:dist sass:docs",
@@ -29,7 +32,7 @@
     "prestart": "npm-run-series acetate sass rollup imagemin font js",
     "pres3": "node bin/minify.js",
     "s3": "node bin/s3.js",
-    "release": "npm-run-series prestart s3 deploy",
+    "release": "npm-run-series sass:dist prestart s3 releaseScript deploy",
     "start": "parallelshell 'rerun-script' 'live-server docs/build --port=8888 --no-browser' 'watchify docs/source/assets/js/all.js -o docs/build/assets/js/all.js'"
   },
   "watches": {

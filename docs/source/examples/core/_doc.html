@@ -1,4 +1,6 @@
-{% macro sample() %}<!-- Sample HTML -->
+{% macro sample() %}
+{% raw %}
+<!-- Sample HTML -->
 <!-- Panel and padding classes not necessary in practice -->
 <div class="panel panel-white panel-no-padding padding-leader-1 padding-trailer-1">
 <div class="grid-container">
@@ -43,6 +45,7 @@
   </main>
 </div>
 </div>
+{% endraw %}
 {% endmacro %}
 
 {% macro description() %}
