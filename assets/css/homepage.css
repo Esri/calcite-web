@@ -3066,8 +3066,6 @@ html.vi input {
   font-weight: normal;
   font-style: normal; }
 
-[class^="esri-icon-"]:before,
-[class*=" esri-icon-"]:before,
 [class^="icon-ui-"]:before,
 [class*=" icon-ui-"]:before {
   font-family: 'calcite-ui';
@@ -3081,9 +3079,7 @@ html.vi input {
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
   text-decoration: none; }
-  html[dir="rtl"] [class^="esri-icon-"]:before, html[dir="rtl"]
-  [class*=" esri-icon-"]:before, html[dir="rtl"]
-  [class^="icon-ui-"]:before, html[dir="rtl"]
+  html[dir="rtl"] [class^="icon-ui-"]:before, html[dir="rtl"]
   [class*=" icon-ui-"]:before {
     padding-left: 0.775rem;
     padding-right: 0; }
