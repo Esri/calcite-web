@@ -1,3 +1,8 @@
+## Unreleased
+
+### Removed
+- removed `esri-icon` classes to prevent collisions with JS API
+
 ## 1.0.0-beta.29
 
 ### Fixed
