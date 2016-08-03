@@ -4,7 +4,7 @@ git checkout -b release
 git pull --rebase upstream release
 npm run rollup
 npm run sass:dist
-node ./minify.js
+node ./bin/minify.js
 git add -f dist/
 git commit -m "Release"
 git push upstream release
