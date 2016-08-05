@@ -14,7 +14,7 @@
     "releaseScript": "./bin/release.sh",
     "preacetate": "npm run cssStat",
     "acetate": "acetate build -i docs/source -o docs/build -c docs/acetate.conf.js",
-    "prerollup": "npm run test",
+    "prerollup": "mkdirp dist/js && mkdirp docs/build/assets/js/libs",
     "rollup": "node bin/rollup.js",
     "postrollup": "ncp dist/js docs/build/assets/js/libs",
     "imagemin:lib": "imagemin-newer lib/img/ docs/build/assets/img/",
