@@ -1,8 +1,10 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-  typeof define === 'function' && define.amd ? define(factory) :
-  (global.calcite = factory());
-}(this, function () { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('clipboard')) :
+  typeof define === 'function' && define.amd ? define(['clipboard'], factory) :
+  (global.calcite = factory(global.Clipboard));
+}(this, function (Clipboard) { 'use strict';
+
+  Clipboard = 'default' in Clipboard ? Clipboard['default'] : Clipboard;
 
   // ┌────────────────────┐
   // │ Class Manipulation │
@@ -205,7 +207,7 @@
   function throttle(fn, time, context) {
     var lock, args, wrapperFn, later;
 
-    later = function later() {
+    later = function () {
       // reset lock and call if queued
       lock = false;
       if (args) {
@@ -214,7 +216,7 @@
       }
     };
 
-    wrapperFn = function wrapperFn() {
+    wrapperFn = function () {
       if (lock) {
         // called too soon, queue to call later
         args = arguments;
@@ -235,7 +237,7 @@
   }
 
   E.prototype = {
-    on: function on(name, callback, ctx) {
+    on: function (name, callback, ctx) {
       var e = this.e || (this.e = {});
 
       (e[name] || (e[name] = [])).push({
@@ -246,7 +248,7 @@
       return this;
     },
 
-    once: function once(name, callback, ctx) {
+    once: function (name, callback, ctx) {
       var self = this;
       function listener() {
         self.off(name, listener);
@@ -257,7 +259,7 @@
       return this.on(name, listener, ctx);
     },
 
-    emit: function emit(name) {
+    emit: function (name) {
       var data = [].slice.call(arguments, 1);
       var evtArr = ((this.e || (this.e = {}))[name] || []).slice();
       var i = 0;
@@ -270,7 +272,7 @@
       return this;
     },
 
-    off: function off(name, callback) {
+    off: function (name, callback) {
       var e = this.e || (this.e = {});
       var evts = e[name];
       var liveEvents = [];
@@ -442,7 +444,7 @@
 
     function openDrawer(options) {
       bus.emit('drawer:close');
-      var drawer = document.querySelector('.js-drawer[data-drawer="' + options.id + '"]');
+      var drawer = document.querySelector(`.js-drawer[data-drawer="${ options.id }"]`);
       var right = has(drawer, 'drawer-right');
       var left = has(drawer, 'drawer-left');
 
@@ -467,7 +469,7 @@
           remove(drawer, 'is-active');
         });
       } else {
-        var drawer = document.querySelector('.js-drawer[data-drawer="' + options.id + '"]');
+        var drawer = document.querySelector(`.js-drawer[data-drawer="${ options.id }"]`);
         drawer.removeAttribute('tabindex');
         remove(drawer, 'is-active');
       }
@@ -566,22 +568,22 @@
         add$1(input, 'focus', inputFocus);
 
         var opens = dropdown.querySelectorAll('.js-filter-dropdown-open');
-        for (var i = 0; i < opens.length; i++) {
+        for (let i = 0; i < opens.length; i++) {
           var open = opens[i];
           open.setAttribute('data-id', dropdownId);
           add$1(open, click(), toggleClick);
         }
         var closes = dropdown.querySelectorAll('.js-filter-dropdown-close');
-        for (var _i = 0; _i < closes.length; _i++) {
-          var close = closes[_i];
+        for (let i = 0; i < closes.length; i++) {
+          var close = closes[i];
           close.setAttribute('data-id', dropdownId);
           add$1(close, click(), toggleClick);
         }
 
         var items = dropdown.querySelectorAll('.filter-dropdown-link');
-        for (var _i2 = 0; _i2 < items.length; _i2++) {
-          var item = items[_i2];
-          item.setAttribute('data-item-id', _i2);
+        for (let i = 0; i < items.length; i++) {
+          var item = items[i];
+          item.setAttribute('data-item-id', i);
           add$1(item, click(), itemClick);
         }
 
@@ -662,12 +664,8 @@
 
       var closes = findElements('.js-filter-dropdown-close', options.parent);
       var opens = findElements('.js-filter-dropdown-open', options.parent);
-      opens.forEach(function (el) {
-        return remove(el, 'is-active');
-      });
-      closes.forEach(function (el) {
-        return add(el, 'is-active');
-      });
+      opens.forEach(el => remove(el, 'is-active'));
+      closes.forEach(el => add(el, 'is-active'));
     }
 
     function closeList(e) {
@@ -676,12 +674,8 @@
 
       var opens = findElements('.js-filter-dropdown-open');
       var closes = findElements('.js-filter-dropdown-close');
-      opens.forEach(function (el) {
-        return add(el, 'is-active');
-      });
-      closes.forEach(function (el) {
-        return remove(el, 'is-active');
-      });
+      opens.forEach(el => add(el, 'is-active'));
+      closes.forEach(el => remove(el, 'is-active'));
     }
 
     function emitActive(options) {
@@ -704,11 +698,11 @@
         remove(placeholder, 'hide');
       }
 
-      for (var i = 0; i < options.active.length; i++) {
+      for (let i = 0; i < options.active.length; i++) {
         var item = options.active[i];
-        var template = '<span class="filter-dropdown-active">' + item.innerHTML + '<a class="filter-dropdown-remove" href="#" data-item-id=\'' + i + '\'></a></span>';
+        var template = `<span class="filter-dropdown-active">${ item.innerHTML }<a class="filter-dropdown-remove" href="#" data-item-id='${ i }'></a></span>`;
         options.parent.insertAdjacentHTML('beforeend', template);
-        var remove$$ = options.parent.querySelector('.filter-dropdown-remove[data-item-id="' + i + '"]');
+        var remove$$ = options.parent.querySelector(`.filter-dropdown-remove[data-item-id="${ i }"]`);
         add$1(remove$$, click(), removeClick);
       }
     }
@@ -722,7 +716,7 @@
 
     function clearActive(options) {
       var current = options.parent.querySelectorAll('.filter-dropdown-active');
-      for (var i = 0; i < current.length; i++) {
+      for (let i = 0; i < current.length; i++) {
         options.parent.removeChild(current[i]);
       }
     }
@@ -756,7 +750,7 @@
     function openModal(modalId) {
       bus.emit('modal:close');
       if (!modalId) return;
-      var modal = document.querySelector('.js-modal[data-modal="' + modalId + '"]');
+      var modal = document.querySelector(`.js-modal[data-modal="${ modalId }"]`);
       modal.removeAttribute('tabindex');
       add$1(document, 'focusin', fenceModal);
       add(modal, 'is-active');
@@ -766,7 +760,7 @@
 
     function closeModal(modalId) {
       if (!modalId) return removeActive(modals);
-      var modal = document.querySelector('.js-modal[data-modal="' + modalId + '"]');
+      var modal = document.querySelector(`.js-modal[data-modal="${ modalId }"]`);
       remove(modal, 'is-active');
       modal.setAttribute('tabindex', 0);
       remove$1(document, 'focusin', fenceModal);
@@ -926,7 +920,7 @@
 
     function stickItem(item) {
       var id = item.element.getAttribute('data-sticky-id');
-      var shim = document.querySelector('.js-shim[data-sticky-id="' + id + '"]');
+      var shim = document.querySelector(`.js-shim[data-sticky-id="${ id }"]`);
       if (id && shim) {
         add(item.element, 'is-sticky');
         shim.style.display = '';
@@ -935,7 +929,7 @@
 
     function unstickItem(item) {
       var id = item.element.getAttribute('data-sticky-id');
-      var shim = document.querySelector('.js-shim[data-sticky-id="' + id + '"]');
+      var shim = document.querySelector(`.js-shim[data-sticky-id="${ id }"]`);
       if (id && shim) {
         remove(item.element, 'is-sticky');
         shim.style.display = 'none';
@@ -947,7 +941,7 @@
         var referenceElement = item.element;
         if (has(item.element, 'is-sticky')) {
           var id = item.element.getAttribute('data-sticky-id');
-          referenceElement = document.querySelector('.js-shim[data-sticky-id="' + id + '"]');
+          referenceElement = document.querySelector(`.js-shim[data-sticky-id="${ id }"]`);
         }
 
         if (referenceElement) {
@@ -1102,6 +1096,8 @@
     }
   }
 
+  console.log(Clipboard);
+
   // Object Assign Polyfill
   if (typeof Object.assign !== 'function') {
     Object.assign = function (target) {
@@ -1215,8 +1211,8 @@
     sticky: sticky,
     tabs: tabs,
     thirdNav: thirdNav,
-    extend: extend,
-    init: init
+    extend,
+    init
   };
 
   return calciteWeb;

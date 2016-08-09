@@ -79,7 +79,7 @@
   }
 
   E.prototype = {
-    on: function on(name, callback, ctx) {
+    on: function (name, callback, ctx) {
       var e = this.e || (this.e = {});
 
       (e[name] || (e[name] = [])).push({
@@ -90,7 +90,7 @@
       return this;
     },
 
-    once: function once(name, callback, ctx) {
+    once: function (name, callback, ctx) {
       var self = this;
       function listener() {
         self.off(name, listener);
@@ -101,7 +101,7 @@
       return this.on(name, listener, ctx);
     },
 
-    emit: function emit(name) {
+    emit: function (name) {
       var data = [].slice.call(arguments, 1);
       var evtArr = ((this.e || (this.e = {}))[name] || []).slice();
       var i = 0;
@@ -114,7 +114,7 @@
       return this;
     },
 
-    off: function off(name, callback) {
+    off: function (name, callback) {
       var e = this.e || (this.e = {});
       var evts = e[name];
       var liveEvents = [];
@@ -169,10 +169,10 @@
     }
 
     function handleToggle(options) {
-      var viewSet = findElements('.js-view[data-set=' + options.set + ']');
-      var viewTarget = findElements('.js-view[data-set=' + options.set + '][data-view=' + options.target + ']');
-      var toggleSet = findElements('.js-view-toggle[data-set=' + options.set + ']');
-      var toggleTarget = findElements('.js-view-toggle[data-set=' + options.set + '][data-view=' + options.target + ']');
+      var viewSet = findElements(`.js-view[data-set=${ options.set }]`);
+      var viewTarget = findElements(`.js-view[data-set=${ options.set }][data-view=${ options.target }]`);
+      var toggleSet = findElements(`.js-view-toggle[data-set=${ options.set }]`);
+      var toggleTarget = findElements(`.js-view-toggle[data-set=${ options.set }][data-view=${ options.target }]`);
       removeActive(viewSet);
       removeActive(toggleSet);
       addActive(viewTarget);
