@@ -125,7 +125,7 @@
   @include box-sizing(border-box);
   position: relative;
   display: inline-block;
-  padding: $baseline/3 $baseline $baseline/3 $baseline/3;
+  padding: $baseline/3 0 $baseline/3 $baseline/3;
   margin-right: $baseline/6;
   margin-top: $baseline/6;
   color: $darker-gray;
@@ -140,8 +140,7 @@
     @include font-size(-1);
     @extend %icon-font-styles;
     @extend .icon-ui-close:before;
-    position: absolute;
-    right: 0;
+    margin-left: $baseline/3;
     @if ($include-right-to-left) {
       html[dir="rtl"] & {
         right: auto;
