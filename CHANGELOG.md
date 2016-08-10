@@ -1,3 +1,8 @@
+## Unreleased
+
+### Fixed
+- `filter-dropdown-remove:after` no longer positioned absolutely
+
 ## 1.0.0-beta.30
 
 ### Removed
