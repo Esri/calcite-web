@@ -129,11 +129,12 @@
       top: 0;
       left: 0;
       height: 100%;
+      height: calc(100% - .3em);
       width: 0.75em;
-      padding: 0 .5em 0 0;
+      padding: .3em .5em 0 0;
       color: $gray;
       @include font-size(1);
-      line-height: 1.5*$baseline;
+      line-height: 1;
       text-align: right;
       border-right: 2px solid $lighter-gray;
       @if ($include-right-to-left) {
