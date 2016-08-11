@@ -2,9 +2,10 @@
 
 ### Fixed
 - `filter-dropdown-remove:after` no longer positioned absolutely
+- `list-numbered` number alignment in IE11 (#614)
 
 ### Modified
-- `btn-clear` has bg white, rathe than transparent for ACAG on light grays.
+- `btn-clear` now has white background instead of transparent in order to pass WCAG contrast on light grays.
 
 ## 1.0.0-beta.30
 
