@@ -1,3 +1,11 @@
+## Unreleased
+
+### Fixed
+- `filter-dropdown-remove:after` no longer positioned absolutely
+
+### Modified
+- `btn-clear` has bg white, rathe than transparent for ACAG on light grays.
+
 ## 1.0.0-beta.30
 
 ### Removed
