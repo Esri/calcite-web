@@ -32,6 +32,7 @@
     "prestart": "npm-run-series acetate sass rollup imagemin font js",
     "pres3": "node bin/minify.js",
     "s3": "node bin/s3.js",
+    "dist": "npm-run-series sass:dist rollup imagemin:dist font pres3",
     "release": "npm-run-series sass:dist prestart s3 releaseScript deploy",
     "start": "parallelshell 'rerun-script' 'live-server docs/build --port=8888 --no-browser' 'watchify docs/source/assets/js/all.js -o docs/build/assets/js/all.js'"
   },
@@ -52,6 +53,11 @@
     "ignore": [
       "bin/",
       "docs/"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "es2015-rollup"
     ]
   },
   "main": "dist/js/calcite-web.js",
@@ -86,7 +92,7 @@
     "a11y": "^0.3.0",
     "acetate": "^0.2.2",
     "acetate-cli": "0.0.3",
-    "babel-preset-es2015-rollup": "^1.1.1",
+    "babel-preset-es2015-rollup": "^1.2.0",
     "cssstats-cli": "^1.0.0-beta.2",
     "gh-pages": "^0.11.0",
     "gh-release": "^2.0.1",
