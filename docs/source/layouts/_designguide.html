@@ -1,0 +1,24 @@
+{% extends "layouts/_guide" %}
+
+{% set isDesign = true %}
+
+{% block content %}
+<div class="grid-container leader-2">
+  <div class="column-6">
+    <aside class="side-nav trailer-2" aria-role="complementary">
+      <h4 class="side-nav-title">Best Practices</h4>
+      <nav role="navigation" aria-labelledby="sidenav">
+        <a class="side-nav-link {% if src == 'guides/best-practices/index.md' %}is-active{% endif %}" href="{{relativePath}}guides/best-practices/">Overview</a>
+        <a class="side-nav-link {% if src == 'guides/best-practices/typography.md' %}is-active{% endif %}" href="{{relativePath}}guides/best-practices/typography/">Typography</a>
+        <a class="side-nav-link {% if src == 'guides/best-practices/forms.md' %}is-active{% endif %}" href="{{relativePath}}guides/best-practices/forms/">Forms</a>
+      </nav>
+    </aside>
+  </div>
+  <main class="column-17 pre-1">
+    {% block text %}{% endblock %}
+  </main>
+</div>
+{% endblock %}
+
+
+
