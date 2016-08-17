@@ -1,4 +1,4 @@
-## Unreleased
+## 1.0.0-beta.31
 
 ### Fixed
 - `filter-dropdown-remove:after` no longer positioned absolutely
