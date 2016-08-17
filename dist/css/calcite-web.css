@@ -3673,7 +3673,7 @@ html.vi input {
 
 .btn-clear {
   color: #0079c1;
-  background: transparent;
+  background: white;
   border-color: #0079c1; }
   .btn-clear:hover {
     color: white;
@@ -5851,7 +5851,7 @@ input.filter-dropdown-input {
   box-sizing: border-box;
   position: relative;
   display: inline-block;
-  padding: 0.51667rem 1.55rem 0.51667rem 0.51667rem;
+  padding: 0.51667rem 0 0.51667rem 0.51667rem;
   margin-right: 0.25833rem;
   margin-top: 0.25833rem;
   color: #6e6e6e; }
@@ -5871,8 +5871,7 @@ input.filter-dropdown-input {
   .filter-dropdown-remove:after {
     font-size: 0.9375rem;
     line-height: 1.55rem;
-    position: absolute;
-    right: 0;
+    margin-left: 0.51667rem;
     opacity: 1;
     color: #959595; }
     @media screen and (max-width: 859px) {
@@ -6017,12 +6016,13 @@ input.filter-dropdown-input {
       top: 0;
       left: 0;
       height: 100%;
+      height: calc(100% - .3em);
       width: 0.75em;
-      padding: 0 .5em 0 0;
+      padding: .3em .5em 0 0;
       color: #959595;
       font-size: 1.2019rem;
       line-height: 1.55rem;
-      line-height: 2.325rem;
+      line-height: 1;
       text-align: right;
       border-right: 2px solid #cccccc; }
       .list-numbered > li:before b, .list-numbered > li:before strong {
