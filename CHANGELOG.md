@@ -3,6 +3,8 @@
 ### Fixed
 - `filter-dropdown-remove:after` no longer positioned absolutely
 - `list-numbered` number alignment in IE11 (#614)
+- `aria` helper will not crash if array passed as parameter contains null values.
+- `modal` will not pass arrays with null values to helpers.
 
 ### Modified
 - `btn-clear` now has white background instead of transparent in order to pass WCAG contrast on light grays.
