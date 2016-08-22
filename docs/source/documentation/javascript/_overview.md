@@ -38,23 +38,9 @@ window.onload = function () {
 };
 ```
 
-To only initialize some patterns, you can pass an array of patterns, and only those will be initialized:
-
-```js
-calcite.init(['modal', 'drawer']);
-```
-
-You can also initialize individual patterns by their own method, for example:
+You can initialize individual patterns by their own method, for example:
 
 ```
 calcite.tabs()
 ```
 
-Finally, an element can be passed to a pattern method, and only the patterns within that element will be initialized. Like this:
-
-```
-var tabs = document.querySelector('.my-tab-class')
-calcite.tabs(tabs)
-```
-
-This is helpful if you are using a different JavaScript framework and you need to rebind event listeners for a particular pattern or DOM node.
