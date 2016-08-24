@@ -1,3 +1,8 @@
+## Unreleased
+
+### Fixed
+- labels don't wrap lines (#660)
+
 ## 1.0.0-beta.31
 
 ### Fixed
