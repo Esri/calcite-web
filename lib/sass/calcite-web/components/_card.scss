@@ -13,23 +13,24 @@
   flex-direction: column;
   position: relative;
   background: white;
-  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0,0,0,.1);
+  box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 0 16px 0 rgba(0, 0, 0, 0.05);
 }
 
 @mixin card-image-wrap () {
   width: 100%;
   position: relative;
   margin-bottom: 0;
+  -webkit-box-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 @mixin card-shaped () {
   box-shadow: none;
   background: transparent;
-  border: none;
   .card-content {
-    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(0,0,0,.1);
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05);
     padding-top: 4rem;
   }
   .card-image-wrap {
@@ -64,9 +65,9 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-box-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 @mixin card-last {
@@ -85,6 +86,9 @@
   flex-direction: row;
   .card-content {
     display: block;
+    -webkit-box-flex: 1 1 75%;
+    -ms-flex: 1 1 75%;
+    flex: 1 1 75%;
   }
 }
 
