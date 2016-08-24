@@ -3,6 +3,7 @@
 ### Fixed
 - labels don't wrap lines (#660)
 - `label-yellow` passes WCAG AA contrast (#654)
+- `block-groups` should only style direct descendant `blocks` (#659)
 
 ## 1.0.0-beta.31
 
