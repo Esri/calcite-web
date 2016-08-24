@@ -2,6 +2,7 @@
 
 ### Fixed
 - labels don't wrap lines (#660)
+- `label-yellow` passes WCAG AA contrast (#654)
 
 ## 1.0.0-beta.31
 
