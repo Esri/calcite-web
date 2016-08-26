@@ -669,14 +669,14 @@
 
           <p>Block groups are designed for quickly creating gridded content, such as a tile pattern or image gallery. Block groups are percentage based, so they can subdivide columns. Block groups have the ability to break the regular grid system, and thus should be used sparingly and with thought.</p>
 <div class="block-group block-group-3-up">
-  <div class="panel block">Block</div>
-  <div class="panel block">Block</div>
-  <div class="panel block">Block</div>
+  <div class="block"><div class="panel">Block</div></div>
+  <div class="block"><div class="panel">Block</div></div>
+  <div class="block"><div class="panel">Block</div></div>
 </div>
 <pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block-group block-group-3-up"</span>&gt;
-  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"panel block"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;
-  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"panel block"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;
-  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"panel block"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block"</span>&gt;&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"panel"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block"</span>&gt;&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"panel"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block"</span>&gt;&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"panel"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
 &lt;/<span class="hljs-keyword">div</span>&gt;
 </code></pre>
 <p><a href="../../examples/grid/#block-groups">View the example</a></p>
@@ -704,16 +704,32 @@
 
           <p>Block groups have responsive <code>tablet-</code> and <code>phone-</code> prefix classes. These allow the flow of content across repeating rows of content to be easily tweaked across viewport widths in scenarios where the default <a href="#columns">column resizing</a> or <a href="#responsive-columns">responsive column classes</a> would be too verbose or cumbersome.</p>
 <div class="block-group block-group-4-up tablet-block-group-2-up phone-block-group-1-up">
-  <div class="block panel trailer-half">Block</div>
-  <div class="block panel trailer-half">Block</div>
-  <div class="block panel trailer-half">Block</div>
-  <div class="block panel trailer-half">Block</div>
+  <div class="block trailer-half">
+    <div class="panel">Block</div>
+  </div>
+  <div class="block trailer-half">
+    <div class="panel">Block</div>
+  </div>
+  <div class="block trailer-half">
+    <div class="panel">Block</div>
+  </div>
+  <div class="block trailer-half">
+    <div class="panel">Block</div>
+  </div>
 </div>
 <pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block-group block-group-4-up tablet-block-group-2-up phone-block-group-1-up"</span>&gt;
-  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block panel trailer-half"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;
-  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block panel trailer-half"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;
-  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block panel trailer-half"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;
-  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block panel trailer-half"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block trailer-half"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"panel"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block trailer-half"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"panel"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block trailer-half"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"panel"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block trailer-half"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"panel"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;/<span class="hljs-keyword">div</span>&gt;
 &lt;/<span class="hljs-keyword">div</span>&gt;
 </code></pre>
 <p><a href="../../examples/grid/#responsive-block-groups">View the example</a></p>
