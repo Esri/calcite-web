@@ -1,3 +1,12 @@
+## Unreleased
+
+### Fixed
+- card heights rendered incorrectly in IE10-11 (#662)
+- labels don't wrap lines (#660)
+- `label-yellow` passes WCAG AA contrast (#654)
+- `block-groups` should only style direct descendant `blocks` (#659)
+- links in `table-striped` rows now accessible (#655)
+
 ## 1.0.0-beta.31
 
 ### Fixed

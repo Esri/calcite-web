@@ -110,7 +110,10 @@
   @mixin table-striped() {
     tr {
       &:nth-child(even){
-          background-color: $off-white;
+        background-color: $off-white;
+        a {
+          color: $dark-blue;
+        }
         td {
           background-color: $off-white;
         }
