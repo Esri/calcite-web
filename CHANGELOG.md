@@ -1,10 +1,22 @@
 ## Unreleased
 
 ### Fixed
+- card heights rendered incorrectly in IE10-11 (#662)
+- labels don't wrap lines (#660)
+- `label-yellow` passes WCAG AA contrast (#654)
+- `block-groups` should only style direct descendant `blocks` (#659)
+- links in `table-striped` rows now accessible (#655)
+
+## 1.0.0-beta.31
+
+### Fixed
 - `filter-dropdown-remove:after` no longer positioned absolutely
+- `list-numbered` number alignment in IE11 (#614)
+- `aria` helper will not crash if array passed as parameter contains null values.
+- `modal` will not pass arrays with null values to helpers.
 
 ### Modified
-- `btn-clear` has bg white, rathe than transparent for ACAG on light grays.
+- `btn-clear` now has white background instead of transparent in order to pass WCAG contrast on light grays.
 
 ## 1.0.0-beta.30
 
