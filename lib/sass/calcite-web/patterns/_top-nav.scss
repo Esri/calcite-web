@@ -99,6 +99,20 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
     margin-top: 0.75*$baseline;
   }
 
+  @mixin top-nav-flex {
+    display: flex;
+  }
+
+  @mixin top-nav-flex-list {
+    flex-grow: 1;
+    flex-basis: 30%
+  }
+
+  @mixin top-nav-flex-title {
+    flex-grow: 2;
+    text-align: center;
+  }
+
   @mixin sign-in {
     @include right();
     padding-left: $baseline / 4;
@@ -116,5 +130,8 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
     .top-nav-title {@include top-nav-title();}
     .top-nav-list {@include top-nav-list();}
     .top-nav-link {@include top-nav-link();}
+    .top-nav-flex {@include top-nav-flex();}
+      .top-nav-flex-list {@include top-nav-flex-list();}
+      .top-nav-flex-title {@include top-nav-flex-title();}
   .sign-in {@include sign-in();}
 }
