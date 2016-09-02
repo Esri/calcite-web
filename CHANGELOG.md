@@ -1,5 +1,8 @@
 ## Unreleased
 
+### Added
+- Copy to clipboard JS
+
 ### Fixed
 - card heights rendered incorrectly in IE10-11 (#662)
 - labels don't wrap lines (#660)
