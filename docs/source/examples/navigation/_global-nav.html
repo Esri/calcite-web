@@ -14,7 +14,10 @@
         </nav>
         <!-- user specific dropdowns -->
         <nav class="class-top-nav-list right" role="navigation" aria-labelledby="usernav">
-          <developers-search></developers-search>
+          <form method="GET" action="/search/" class="inline-block padding-leader-half">
+            <input type="search" placeholder="Search" name="q" style="margin-top: -1px;">
+            <button type="submit" class="hide">Search</button>
+          </form>
           <a class="top-nav-link icon-ui-user margin-left-1" href="#">Sign In</a>
           <a class="btn btn-clear margin-left-1" href="#">Sign Up</a>
         </nav>
