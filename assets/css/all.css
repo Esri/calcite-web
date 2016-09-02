@@ -5183,6 +5183,17 @@ input.input-group-input,
     -o-background-image: linear-gradient(to top, transparent 92%, #0079c1 93%, #0079c1 100%);
     background-image: linear-gradient(to top, transparent 92%, #0079c1 93%, #0079c1 100%); }
 
+.top-nav-flex {
+  display: flex; }
+
+.top-nav-flex-list {
+  flex-grow: 1;
+  flex-basis: 30%; }
+
+.top-nav-flex-title {
+  flex-grow: 2;
+  text-align: center; }
+
 .sign-in {
   float: right;
   padding-left: 0.3875rem;
@@ -6977,3 +6988,24 @@ html[dir="rtl"] .rtl-margin-right-0 {
     background-color: #a57946; }
   .color-sample.dark-brown {
     background-color: #8c5e2a; }
+
+.code-area {
+  letter-spacing: 0em;
+  font-family: "Consolas", "Andale Mono", "Lucida Console", "Monaco", "Courier New", Courier, monospace;
+  font-weight: 400;
+  font-style: normal;
+  padding: .25rem;
+  border-radius: 3px;
+  border: 1px solid #efefef;
+  color: #595959;
+  background-color: #f8f8f8;
+  white-space: pre;
+  font-size: 0.85em;
+  line-height: 1.4rem;
+  padding: 1rem;
+  display: block;
+  overflow: auto;
+  max-width: 100%;
+  margin-bottom: 1.55rem; }
+  .code-area b, .code-area strong {
+    font-weight: 400; }
