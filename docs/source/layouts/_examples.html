@@ -57,7 +57,9 @@
               <div class="modal-content column-12" role="dialog" aria-labelledby="modal" role="dialog">
                 <a class="js-modal-toggle icon-ui-close icon-flush font-size-1 right" href="#" aria-label="close-modal" ></a>
                 <h3 class='trailer-half'>{{example.title}}</h3>
-                <pre class="html-sample"><code  id="{{example.id}}-snippet">{{ code.sample() | replace("<", "&lt;")}}</code></pre>
+
+                <textarea rows="12" class="code-area" id="{{example.id}}-snippet" value="{{code.sample()}}"></textarea>
+
                 <div class="action-bar text-right">
                   <button class="btn btn-clear js-modal-toggle">Close</button>
                   <button class="btn js-copy-to-clipboard" data-clipboard-target="#{{example.id}}-snippet">Copy to Clipboard</button>
