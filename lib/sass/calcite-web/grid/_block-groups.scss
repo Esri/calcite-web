@@ -21,6 +21,7 @@ $full-gutter: $half-gutter * 2;
   @include box-sizing(border-box);
   margin-left: $half-gutter;
   margin-right: $half-gutter;
+  min-width: 0;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 0;
