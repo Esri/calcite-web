@@ -2,6 +2,7 @@
 
 ### Added
 - Copy to clipboard JS
+- Responsive trailer half, responsive leader half
 
 ### Fixed
 - card heights rendered incorrectly in IE10-11 (#662)
