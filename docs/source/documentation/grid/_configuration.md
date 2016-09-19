@@ -2,6 +2,7 @@ If you are using Calcite Web as a Sass library, you can customize the grid with 
 
 | Variable                    | Default              | Description                                       |
 | --------------------------- | ------------------   | ------------------------------------------------- |
+| `$prefix`                    | ''                | Prefix for all grid classes, used to avoid collisions.        |
 | `$small`                    | 480px                | Smallest (phone) breakpoint size in pixels        |
 | `$medium`                   | 860px                | Medium (tablet) breakpoint size in pixels         |
 | `$large`                    | 1450px               | Default (desktop) breakpoint size in pixels       |
