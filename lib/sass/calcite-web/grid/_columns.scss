@@ -233,7 +233,7 @@
 }
 
 @if $include-grid == true {
-  [class*="column-"] { @include column(); }
+  [class*="#{$prefix}column-"] { @include column(); }
 
   @media screen {
     .#{$prefix}grid-container {
