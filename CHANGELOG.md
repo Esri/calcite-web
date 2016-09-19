@@ -11,6 +11,7 @@
 - `block-groups` should only style direct descendant `blocks` (#659)
 - links in `table-striped` rows now accessible (#655)
 - Min width 0 on `block` helps overflow breakage.
+- Grid prefixing bug
 
 ## 1.0.0-beta.31
 
