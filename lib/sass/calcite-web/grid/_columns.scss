@@ -21,14 +21,17 @@
 //  ↳ http://esri.github.io/calcite-web/grid/#columns
 //  ↳ grid → _columns.md
 
-@mixin column()  {
+%column {
   @include box-sizing(border-box);
   width: $container-width;
   max-width: 100%;
   padding-left: $column-gutter / 2;
   padding-right: $column-gutter / 2;
   @include left();
-  [class*="column-"]:first-of-type {
+}
+
+@mixin column()  {
+  [class*="#{$prefix}column-"]:first-of-type {
     margin-left: -$column-gutter / 2;
     @if ($include-right-to-left) {
       html[dir="rtl"] & {
@@ -37,7 +40,7 @@
       }
     }
   }
-  [class*="column-"]:last-of-type {
+  [class*="#{$prefix}column-"]:last-of-type {
     margin-right: -$column-gutter / 2;
     @if ($include-right-to-left) {
       html[dir="rtl"] & {
@@ -233,6 +236,11 @@
 }
 
 @if $include-grid == true {
+  @for $n from 1 through $large-column-count {
+    .#{$prefix}column-#{$n} {
+      @extend %column;
+    }
+  }
   [class*="#{$prefix}column-"] { @include column(); }
 
   @media screen {
