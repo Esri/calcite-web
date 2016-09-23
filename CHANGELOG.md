@@ -13,6 +13,9 @@
 - Min width 0 on `block` helps overflow breakage.
 - Grid prefixing bug
 
+### Modified
+- Less padding for card-content
+
 ## 1.0.0-beta.31
 
 ### Fixed
