@@ -18,6 +18,10 @@
 @mixin responsive-leader-trailer() {
   @if $fold-grid == true {
     @media screen and (min-width: $large) {
+      .#{$large-class}-leader-half          { margin-top:        $baseline / 2; }
+      .#{$large-class}-trailer-half         { margin-bottom:     $baseline / 2; }
+      .#{$large-class}-padding-leader-half          { padding-top:        $baseline / 2; }
+      .#{$large-class}-padding-trailer-half         { padding-bottom:     $baseline / 2; }
       @for $i from 0 through $vertical-range {
         .#{$large-class}-leader-#{$i}          { margin-top:     $i * $baseline; }
         .#{$large-class}-trailer-#{$i}         { margin-bottom:  $i * $baseline; }
@@ -28,6 +32,10 @@
 
     // Medium
     @media screen and (max-width: $medium - 1) {
+      .#{$medium-class}-leader-half          { margin-top:        $baseline / 2; }
+      .#{$medium-class}-trailer-half         { margin-bottom:     $baseline / 2; }
+      .#{$medium-class}-padding-leader-half          { padding-top:        $baseline / 2; }
+      .#{$medium-class}-padding-trailer-half         { padding-bottom:     $baseline / 2; }
       @for $i from 0 through $vertical-range {
         .#{$medium-class}-leader-#{$i}          { margin-top:     $i * $baseline; }
         .#{$medium-class}-trailer-#{$i}         { margin-bottom:  $i * $baseline; }
@@ -38,6 +46,10 @@
 
     // Small
     @media screen and (max-width: $small - 1) {
+      .#{$small-class}-leader-half          { margin-top:        $baseline / 2; }
+      .#{$small-class}-trailer-half         { margin-bottom:     $baseline / 2; }
+      .#{$small-class}-padding-leader-half          { padding-top:        $baseline / 2; }
+      .#{$small-class}-padding-trailer-half         { padding-bottom:     $baseline / 2; }
       @for $i from 0 through $vertical-range {
         .#{$small-class}-leader-#{$i}          { margin-top:     $i * $baseline; }
         .#{$small-class}-trailer-#{$i}         { margin-bottom:  $i * $baseline; }

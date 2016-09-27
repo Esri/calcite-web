@@ -308,6 +308,31 @@ E.prototype = {
 var bus = new E();
 
 // Cool Helpers
+function clipboard() {
+  var copyBtns = findElements('.js-copy-to-clipboard');
+  bus.on('clipboard:bind', bindButtons);
+
+  function bindButtons(options) {
+    if (!options) {
+      copyBtns.forEach(function (btn) {
+        add$1(btn, 'click', copy);
+      });
+    } else {
+      add$1(options.node, 'click', copy);
+    }
+  }
+
+  function copy(e) {
+    e.preventDefault();
+    var target = e.target.getAttribute('data-clipboard-target');
+    document.querySelector(target).select();
+    document.execCommand('copy');
+  }
+
+  bus.emit('clipboard:bind');
+}
+
+// Cool Helpers
 // ┌───────────┐
 // │ Accordion │
 // └───────────┘
@@ -379,6 +404,7 @@ function closeAllDropdowns(options) {
   findElements('.js-dropdown-toggle').forEach(function (toggle) {
     toggle.setAttribute('aria-expanded', 'false');
   });
+  remove$1(document, 'keydown', seizeArrows);
 }
 
 function toggleDropdown(options) {
@@ -390,9 +416,16 @@ function toggleDropdown(options) {
     if (options.target) {
       options.target.setAttribute('aria-expanded', 'true');
     }
+    add$1(document, 'keydown', seizeArrows);
   }
   if (has(options.node, 'is-active')) {
     add$1(document.body, click(), closeAllDropdowns);
+  }
+}
+
+function seizeArrows(e) {
+  if (e.keyCode === 40 | e.keyCode === 38) {
+    e.preventDefault();
   }
 }
 
@@ -414,6 +447,56 @@ function bindDropdowns(options) {
   });
 }
 
+function dropdownIsOpen() {
+  var dropdown = document.querySelector('.js-dropdown.is-active');
+  if (dropdown) {
+    return dropdown;
+  } else {
+    return false;
+  }
+}
+
+function dropownFocusOn(options) {
+  var activeLink = document.activeElement;
+  var current = options.links.indexOf(activeLink);
+  if (current == -1) {
+    if (options.forward) {
+      current = 0;
+    } else {
+      current = options.links.length - 1;
+    }
+  } else {
+    if (options.forward) {
+      current += 1;
+      if (current == options.links.length) {
+        current = 0;
+      }
+    } else {
+      current -= 1;
+      if (current == -1) {
+        current = options.links.length - 1;
+      }
+    }
+  }
+  options.links[current].focus();
+}
+
+function arrowDown() {
+  var dropdown = dropdownIsOpen();
+  if (dropdown) {
+    var links = findElements('.dropdown-link', dropdown);
+    bus.emit('dropdown:focus', { links: links, forward: true });
+  }
+}
+
+function arrowUp() {
+  var dropdown = dropdownIsOpen();
+  if (dropdown) {
+    var links = findElements('.dropdown-link', dropdown);
+    bus.emit('dropdown:focus', { links: links, forward: false });
+  }
+}
+
 function toggleClick(e) {
   preventDefault(e);
   stopPropagation(e);
@@ -425,6 +508,9 @@ function addListeners() {
   bus.on('dropdown:toggle', toggleDropdown);
   bus.on('dropdown:close', closeAllDropdowns);
   bus.on('keyboard:escape', closeAllDropdowns);
+  bus.on('keyboard:arrow:down', arrowDown);
+  bus.on('keyboard:arrow:up', arrowUp);
+  bus.on('dropdown:focus', dropownFocusOn);
   listenersAdded = true;
 }
 
@@ -1211,7 +1297,7 @@ function isScrolling() {
 // └────────────────────┘
 // start up Calcite and attach all the patterns
 // optionally pass an array of patterns you'd like to watch
-var patterns = [accordion, dropdown, drawer, expander, filterDropdown, modal, search, selectNav, sticky, tabs, thirdNav];
+var patterns = [accordion, clipboard, dropdown, drawer, expander, filterDropdown, modal, search, selectNav, sticky, tabs, thirdNav];
 
 function init() {
   while (patterns.length) {

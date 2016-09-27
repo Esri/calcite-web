@@ -10,6 +10,7 @@
   border-radius: 3px;
   font-size: .85em;
   line-height: 1;
+  white-space: nowrap;
 }
 
   @mixin label-red() {
@@ -19,7 +20,7 @@
 
   @mixin label-yellow() {
     background-color: $light-yellow;
-    color: $dark-gray;
+    color: $off-black;
   }
 
   @mixin label-green() {
