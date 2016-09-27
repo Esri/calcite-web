@@ -12,6 +12,7 @@
 - links in `table-striped` rows now accessible (#655)
 - Min width 0 on `block` helps overflow breakage.
 - Grid prefixing bug
+- Proper keyboard navigation for dropdown components
 
 ### Modified
 - Less padding for card-content
