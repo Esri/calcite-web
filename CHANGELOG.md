@@ -1,6 +1,6 @@
 ## Unreleased
 
-### Added
+## 1.0.0-beta.32
 - Copy to clipboard JS
 - Responsive trailer half, responsive leader half
 
