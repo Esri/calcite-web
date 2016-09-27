@@ -308,31 +308,6 @@ E.prototype = {
 var bus = new E();
 
 // Cool Helpers
-function clipboard() {
-  var copyBtns = findElements('.js-copy-to-clipboard');
-  bus.on('clipboard:bind', bindButtons);
-
-  function bindButtons(options) {
-    if (!options) {
-      copyBtns.forEach(function (btn) {
-        add$1(btn, 'click', copy);
-      });
-    } else {
-      add$1(options.node, 'click', copy);
-    }
-  }
-
-  function copy(e) {
-    e.preventDefault();
-    var target = e.target.getAttribute('data-clipboard-target');
-    document.querySelector(target).select();
-    document.execCommand('copy');
-  }
-
-  bus.emit('clipboard:bind');
-}
-
-// Cool Helpers
 // ┌───────────┐
 // │ Accordion │
 // └───────────┘
@@ -1236,7 +1211,7 @@ function isScrolling() {
 // └────────────────────┘
 // start up Calcite and attach all the patterns
 // optionally pass an array of patterns you'd like to watch
-var patterns = [accordion, clipboard, dropdown, drawer, expander, filterDropdown, modal, search, selectNav, sticky, tabs, thirdNav];
+var patterns = [accordion, dropdown, drawer, expander, filterDropdown, modal, search, selectNav, sticky, tabs, thirdNav];
 
 function init() {
   while (patterns.length) {
