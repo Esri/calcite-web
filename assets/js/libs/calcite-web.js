@@ -459,7 +459,7 @@ function dropdownIsOpen() {
 function dropownFocusOn(options) {
   var activeLink = document.activeElement;
   var current = options.links.indexOf(activeLink);
-  if (current == -1) {
+  if (current === -1) {
     if (options.forward) {
       current = 0;
     } else {
@@ -468,12 +468,12 @@ function dropownFocusOn(options) {
   } else {
     if (options.forward) {
       current += 1;
-      if (current == options.links.length) {
+      if (current === options.links.length) {
         current = 0;
       }
     } else {
       current -= 1;
-      if (current == -1) {
+      if (current === -1) {
         current = options.links.length - 1;
       }
     }
