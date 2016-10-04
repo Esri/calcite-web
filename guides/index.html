@@ -73,6 +73,54 @@
     </div>
 
     <div class="wrapper">
+      <!--
+      ┌────────┐
+      │ Search │
+      -->
+      <div class="js-search search-overlay">
+        <div class="search-content column-24" role="dialog" aria-labelledby="search" role="dialog">
+          <form method="GET" action="../search/">
+            <label>
+              <span class="font-size-1">Search Calcite Web</span>
+              <input class="search-input js-search-input" type='search' placeholder='Search' name="q">
+            </label>
+            <label class="inline-block margin-right-2">
+              Language
+              <select name="language">
+                <option value="">All Languages</option>
+                <option value="">Android</option>
+                <option value="">iOS (Swift)</option>
+                <option value="">iOS (Objective C)</option>
+                <option value="">Java</option>
+                <option value="">JavaScript</option>
+                <option value="">Mac OS X (Swift)</option>
+                <option value="">Mac OS X (Objective C)</option>
+                <option value="">Qt (QML)</option>
+                <option value="">Qt (C++)</option>
+                <option value="">REST APIs</option>
+                <option value="">Web AppBuilder</option>
+                <option value="">.Net (Desktop)</option>
+                <option value="">.Net (Store)</option>
+                <option value="">.Net (Phone)</option>
+                <option value="">.Net (WPF)</option>
+                <option value="">.Net (UWP)</option>
+              </select>
+            </label>
+            <label class="inline-block margin-right-2">
+              Version
+              <select name="version">
+                <option value="">All Versions</option>
+                <option value="1.0.0">10.3</option>
+                <option value="2.0.0">10.4</option>
+                <option value="3.0.0">Quartz</option>
+              </select>
+            </label>
+            <div>
+              <button type="submit" class="btn btn-large">Search</button>
+            </div>
+          </form>
+        </div>
+      </div>
       <!-- Logged Out Pattern-->
       <header class="top-nav">
         <a class="skip-to-content" href="#skip-to-content">Skip To Content</a>
@@ -85,10 +133,9 @@
                 <a href="../examples" class="top-nav-link">Examples</a>
                 <a href="../guides" class="is-active top-nav-link">Guides</a>
               </nav>
-              <form method="GET" action="../search/" class="inline-block right site-search">
-                <input type='search' placeholder='Search' name="q" class="inline-block leader-half js-search-input">
-                <button type="submit" class="hide">Search</button>
-              </form>
+
+              <button class="icon-ui-search phone-hide search-top-nav link-dark-gray right js-search-toggle" href="#" aria-label="Search">Search</button>
+              <button class="icon-ui-search icon-ui-flush phone-show search-top-nav link-dark-gray right js-search-toggle" href="#" aria-label="Search"></button>
             </div>
 
             <div class="tablet-show">
@@ -97,7 +144,6 @@
           </div>
         </div>
       </header>
-
       <!-- Secondary Nav Pattern -->
       <!-- what -->
       
