@@ -1355,7 +1355,7 @@ function extend(plugin) {
 // └────────────┘
 // define all public api methods
 var calciteWeb = {
-  version: '1.0.0-beta.25',
+  version: '1.0.0-beta.34',
   click: click,
   addEvent: add$1,
   removeEvent: remove$1,
