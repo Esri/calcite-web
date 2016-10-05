@@ -1,1 +1,0 @@
-Site search is an expandable search input pattern that nests within the top nav pattern.
