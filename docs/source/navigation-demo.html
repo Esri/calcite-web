@@ -1,0 +1,217 @@
+---
+title: Calcite Web
+description: Quickly build beautiful, consistent websites with the Calcite Web Framework
+layout: layouts/_blank:content
+---
+<div class="drawer drawer-left js-drawer" data-drawer="left" tabindex="0">
+  <nav class="drawer-nav" role="navigation">
+    <aside class="side-nav">
+      <h2 class="side-nav-title">ArcGIS for Developers</h2>
+      <!-- <a href="/" class="side-nav-link">Dashboard</a> -->
+      <a href="/" class="side-nav-link">Plans</a>
+      <a href="/" class="side-nav-link">Community</a>
+      <a href="/" class="side-nav-link">Docs</a>
+    </aside>
+  </nav>
+</div>
+
+<div class="drawer drawer-right js-drawer" data-drawer="right" tabindex="0">
+  <nav class="drawer-nav" role="navigation">
+    <aside class="side-nav">
+      <h2 class="side-nav-title">
+        User Name
+        <br>
+        <small>username</small>
+      </h2>
+      <a href="/" class="side-nav-link">Dashboard</a>
+      <a href="/" class="side-nav-link">Account</a>
+      <a href="/" class="side-nav-link">Support</a>
+      <a href="/" class="side-nav-link">Feedback</a>
+      <a href="/" class="side-nav-link">Sign Out</a>
+    </aside>
+  </nav>
+</div>
+
+<div class="js-search search-overlay">
+  <div class="search-content column-24" role="dialog" aria-labelledby="search" role="dialog">
+    <form method="GET" action="{{relativePath}}search/">
+      <label>
+        <span class="font-size-1">Search ArcGIS for Developers</span>
+        <input class="search-input js-search-input" type='search' placeholder='Search' name="q">
+      </label>
+      <label class="inline-block margin-right-2">
+        Language
+        <select name="language">
+          <option value="">All Languages</option>
+          <option value="">Android</option>
+          <option value="">iOS (Swift)</option>
+          <option value="">iOS (Objective C)</option>
+          <option value="">Java</option>
+          <option value="">JavaScript</option>
+          <option value="">Mac OS X (Swift)</option>
+          <option value="">Mac OS X (Objective C)</option>
+          <option value="">Qt (QML)</option>
+          <option value="">Qt (C++)</option>
+          <option value="">REST APIs</option>
+          <option value="">Web AppBuilder</option>
+          <option value="">.Net (Desktop)</option>
+          <option value="">.Net (Store)</option>
+          <option value="">.Net (Phone)</option>
+          <option value="">.Net (WPF)</option>
+          <option value="">.Net (UWP)</option>
+        </select>
+      </label>
+      <label class="inline-block margin-right-2">
+        Version
+        <select name="version">
+          <option value="">All Versions</option>
+          <option value="1.0.0">10.3</option>
+          <option value="2.0.0">10.4</option>
+          <option value="3.0.0">Quartz</option>
+        </select>
+      </label>
+        <button type="submit" class="btn btn-large right leader-1">Search</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="wrapper">
+  <header class="top-nav fade-in">
+    <div class="grid-container">
+      <div class="column-24">
+        <div class="tablet-hide">
+          <a class="skip-to-content" href="#skip-to-content">Skip To Content</a>
+          <a href="#" class="top-nav-title">ArcGIS for Developers</a>
+          <nav class="top-nav-list" role="navigation" aria-labelledby="topnav">
+            <!-- <a class="top-nav-link" href="#">Dashboard</a> -->
+            <a class="top-nav-link" href="#">Plans</a>
+            <a class="top-nav-link" href="#">Community</a>
+            <a class="top-nav-link" href="#">Docs</a>
+          </nav>
+
+          <!--
+          <div class="dropdown js-dropdown right">
+            <a class="top-nav-link icon-ui-user margin-left-1 js-dropdown-toggle" tabindex="0" aria-haspopup="true" aria-expanded="false" href="#">User</a>
+            <nav class="dropdown-menu dropdown-right" role="menu">
+              <span class="dropdown-title">
+                User Name
+                <br>
+                <small>username</small>
+              </span>
+              <a href="#" class="dropdown-link" role="menu-item">Dashboard</a>
+              <a href="#" class="dropdown-link" role="menu-item">Account</a>
+              <a href="#" class="dropdown-link" role="menu-item">Support</a>
+              <a href="#" class="dropdown-link" role="menu-item">Feedback</a>
+              <a href="#" class="dropdown-link" role="menu-item">Sign Out</a>
+            </nav>
+          </div>
+          -->
+
+          <nav class="class-top-nav-list right" role="navigation" aria-labelledby="usernav">
+            <button class="icon-ui-search search-top-nav link-dark-gray js-search-toggle" href="#" aria-label="Search">Search</button>
+            <a class="top-nav-link icon-ui-user margin-left-1" href="#">Sign In</a>
+            <a class="btn btn-clear margin-left-1" href="#">Sign Up</a>
+          </nav>
+        </div>
+
+        <div class="tablet-show top-nav-flex">
+          <nav class="top-nav-flex-list" role="navigation" aria-labelledby="topnav">
+            <a href="/" class="icon-ui-menu top-nav-link js-drawer-toggle" data-drawer="left"><span class="phone-hide">Menu</span></a>
+          </nav>
+          <header class="top-nav-flex-title">
+            <a href="/" class="top-nav-link">ArcGIS <span class="phone-hide">for Developers</span></a>
+          </header>
+          <nav class="top-nav-flex-list text-right" role="navigation" aria-labelledby="usernav">
+            <button class="icon-ui-search phone-hide search-top-nav link-dark-gray js-search-toggle" href="#" aria-label="Search">Search</button>
+            <button class="icon-ui-search icon-ui-flush phone-show search-top-nav link-dark-gray js-search-toggle" href="#" aria-label="Search"></button>
+            <a class="top-nav-link icon-ui-user icon-ui-flush margin-left-1" href="#" aria-label="Sign In"><span class="margin-left-half phone-hide">Sign In</span></a>
+            <!-- <a class="top-nav-link icon-ui-user icon-ui-flush margin-left-1 js-drawer-toggle" data-drawer="right" href="#" aria-label="Sign In"><span class="margin-left-half phone-hide">Sign In</span></a> -->
+
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="skip-to-content" tabindex="0"></div>
+</div>
+
+<footer class="footer leader-3">
+  <div class="grid-container">
+    <nav class="column-8">
+      <h6 class="font-size-5"><strong>esri</strong></h6>
+      <ul class="list-plain font-size--2">
+        <li><strong>Talk With Us</strong></li>
+        <li><a class="link-off-black" href="#">Contact Sales</a></li>
+        <li><a class="link-off-black" href="#">Contact Support</a></li>
+      </ul>
+      <p class="leader-1 font-size--2"><strong>Follow Us</strong></span></p>
+      <section class="footer-social-nav">
+        <a class="icon-social-twitter" href="https://twitter.com/Esri/"></a>
+        <a class="icon-social-facebook" href="https://www.facebook.com/esrigis/"></a>
+        <a class="icon-social-youtube" href="https://www.youtube.com/esrigis/"></a>
+        <a class="icon-social-github" href="http://esri.github.com/"></a>
+        <a class="icon-social-linkedin" href="https://www.linkedin.com/company/5311"></a>
+        <a class="icon-social-contact" href="http://www.esri.com/about-esri/contact/"></a>
+      </section>
+    </nav>
+
+    <nav class="column-4 leader-1">
+      <h6 class="font-size--2"><strong>Arc<span>GIS</span></strong></h6>
+      <ul class="list-plain font-size--2">
+        <li><a class="link-off-black" href="#">About ArcGIS</a></li>
+        <li><a class="link-off-black" href="#">ArcGIS Desktop</a></li>
+        <li><a class="link-off-black" href="#">ArcGIS Server</a></li>
+        <li><a class="link-off-black" href="#">ArcGIS Online</a></li>
+        <li><a class="link-off-black" href="#">Apps</a></li>
+        <li><a class="link-off-black" href="#">How to Buy</a></li>
+      </ul>
+    </nav>
+    <nav class="column-4 leader-1">
+      <h6 class="font-size--2"><strong>Community</strong></h6>
+      <ul class="list-plain font-size--2">
+        <li><a class="link-off-black" href="#">Esri Community</a></li>
+        <li><a class="link-off-black" href="#">Events</a></li>
+        <li><a class="link-off-black" href="#">Education</a></li>
+        <li><a class="link-off-black" href="#">Early Adopters</a></li>
+        <li><a class="link-off-black" href="#">Developers</a></li>
+      </ul>
+    </nav>
+    <nav class="column-4 leader-1">
+      <h6 class="font-size--2"><strong>Understanding GIS</strong></h6>
+      <ul class="list-plain font-size--2">
+        <li><a class="link-off-black" href="#">What is GIS</a></li>
+        <li><a class="link-off-black" href="#">Training</a></li>
+        <li><a class="link-off-black" href="#">Events</a></li>
+        <li><a class="link-off-black" href="#">Insights</a></li>
+        <li><a class="link-off-black" href="#">Esri Press</a></li>
+      </ul>
+    </nav>
+    <nav class="column-4 leader-1">
+      <h6 class="font-size--2"><strong>Company</strong></h6>
+      <ul class="list-plain font-size--2">
+        <li><a class="link-off-black" href="#">About Esri</a></li>
+        <li><a class="link-off-black" href="#">Contact Us</a></li>
+        <li><a class="link-off-black" href="#">Careers</a></li>
+        <li><a class="link-off-black" href="#">Worldwide Distributors</a></li>
+        <li><a class="link-off-black" href="#">Partners</a></li>
+        <li><a class="link-off-black" href="#">Disaster Response Program</a></li>
+      </ul>
+    </nav>
+
+    <div class="column-24">
+      <hr>
+      <div class="column-8">
+        <p>United States (English) <span class="icon-ui-globe"></span></p>
+      </div>
+      <div class="column-16 font-size--2">
+        <a class="link-off-black margin-right-4" href="#">Privacy</a>
+        <a class="link-off-black margin-right-4" href="#">Legal</a>
+        <a class="link-off-black margin-right-4" href="#">Site Map</a>
+        <a class="link-off-black margin-right-4" href="#">Terms and Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
