@@ -1,3 +1,9 @@
+## Unreleased
+
+### Added
+- Search Component UI
+- Table no table modifier
+
 ## 1.0.0-beta.33
 
 ### Fixed
