@@ -358,6 +358,7 @@ components:
             - table-striped
             - table-plain
             - table-striped table-blue
+            - table-no-table
             - table-pricing
         - title: 'Skip to Content'
           link: skip
@@ -459,6 +460,9 @@ patterns:
           modifiers: true
         - title: 'Drawers'
           link: drawers
+          modifiers: false
+        - title: 'Search'
+          link: 'search'
           modifiers: false
         - title: 'Filter Dropdown'
           link: 'filter-dropdown'

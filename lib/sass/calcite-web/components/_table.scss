@@ -131,11 +131,39 @@
     }
   }
 
+@mixin table-no-table () {
+  width: auto;
+  background-color: transparent;
+  border-collapse: auto;
+  border-spacing: 0;
+  border: none;
+  text-align: left;
+  overflow: auto;
+  margin-bottom: 0;
 
+  thead, tbody {
+    @include font-size(0);
+    border: none;
+    background-color: transparent;
+    overflow: auto;
+    width: 100%;
+  }
+
+  th, td {
+    background-color: transparent;
+    border: none;
+  }
+
+  tr {
+    border: none;
+    text-align: left;
+  }
+}
 
 @if $include-tables == true {
   table {@include table();}
     .table-blue {@include table-blue();}
     .table-plain {@include table-plain();}
     .table-striped {@include table-striped();}
+    .table-no-table {@include table-no-table();}
 }

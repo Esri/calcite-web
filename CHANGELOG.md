@@ -1,3 +1,15 @@
+## Unreleased
+
+### Added
+- Search Component UI
+- Table no table modifier
+
+### Modified
+- Navigation structures updated
+
+### Fixed
+- Documented `icon-ui-flush`
+
 ## 1.0.0-beta.33
 
 ### Fixed

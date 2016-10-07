@@ -1,48 +1,81 @@
 Standard footer for ArcGIS and Esri properties. The footer in Calcite Web is 'sticky' by default. This means that if the page doesn't have sufficient height, the footer will still hug the bottom of the screen. For this to work properly, you must use a `div` with a class of `wrapper`. See the [basic HTML page]({{relativePath}}guides/quickstart/) for an example.
 
 ```
-<footer class="footer avenir-regular leader-3">
-  <div class="container">
-    <nav class="column-6">
-      <h6>Arc<span>GIS</span></h6>
-      <ul class="list-plain">
-        <li><a href="http://www.arcgis.com/about/">Home</a></li>
-        <li><a href="http://www.arcgis.com/about/features.html">Features</a></li>
-        <li><a href="http://www.arcgis.com/about/pricing.html">Pricing</a></li>
-      </ul>
-    </nav>
 
-    <nav class="column-6">
-      <h6>Arc<span>GIS</span> for Developers</h6>
-      <ul class="list-plain">
-        <li><a href="/en/">Home</a></li>
-        <li><a href="/en/features/">Features</a></li>
-        <li><a href="http://blogs.esri.com/esri/arcgis/category/developer/">Blog</a></li>
+<footer class="footer leader-3">
+  <div class="grid-container">
+    <nav class="column-8">
+      <h6 class="font-size-5"><strong>esri</strong></h6>
+      <ul class="list-plain font-size--2">
+        <li><strong>Talk With Us</strong></li>
+        <li><a class="link-off-black" href="#">Contact Sales</a></li>
+        <li><a class="link-off-black" href="#">Contact Support</a></li>
       </ul>
-    </nav>
-
-    <nav class="column-6">
-      <h6>About Esri</h6>
-      <ul class="list-plain">
-        <li><a href="http://www.esri.com/about-esri/">About Us</a></li>
-        <li><a href="http://www.esri.com/careers/">Careers</a></li>
-        <li><a href="http://blogs.esri.com/esri/esri-insider/">Insiders Blog</a></li>
-        <li><a href="http://www.esri.com/events/user-conference/index.html">User Conference</a></li>
-        <li><a href="http://www.esri.com/events/devsummit/index.html">Developer Summit</a></li>
-      </ul>
-    </nav>
-
-    <nav class="column-6 padding-leader-half">
-      <a class="esri-logo" href="http://esri.com"></a>
+      <p class="leader-1 font-size--2"><strong>Follow Us</strong></span></p>
       <section class="footer-social-nav">
-        <a class="icon-twitter" href="https://twitter.com/Esri/"></a>
-        <a class="icon-facebook" href="https://www.facebook.com/esrigis/"></a>
-        <a class="icon-github" href="http://esri.github.com/"></a>
-        <a class="icon-email" href="http://www.esri.com/about-esri/contact/"></a>
+        <a class="icon-social-twitter" href="https://twitter.com/Esri/"></a>
+        <a class="icon-social-facebook" href="https://www.facebook.com/esrigis/"></a>
+        <a class="icon-social-youtube" href="https://www.youtube.com/esrigis/"></a>
+        <a class="icon-social-github" href="http://esri.github.com/"></a>
+        <a class="icon-social-linkedin" href="https://www.linkedin.com/company/5311"></a>
+        <a class="icon-social-contact" href="http://www.esri.com/about-esri/contact/"></a>
       </section>
     </nav>
+
+    <nav class="column-4 leader-1">
+      <h6 class="font-size--2"><strong>Arc<span>GIS</span></strong></h6>
+      <ul class="list-plain font-size--2">
+        <li><a class="link-off-black" href="#">About ArcGIS</a></li>
+        <li><a class="link-off-black" href="#">ArcGIS Desktop</a></li>
+        <li><a class="link-off-black" href="#">ArcGIS Server</a></li>
+        <li><a class="link-off-black" href="#">ArcGIS Online</a></li>
+        <li><a class="link-off-black" href="#">Apps</a></li>
+        <li><a class="link-off-black" href="#">How to Buy</a></li>
+      </ul>
+    </nav>
+    <nav class="column-4 leader-1">
+      <h6 class="font-size--2"><strong>Community</strong></h6>
+      <ul class="list-plain font-size--2">
+        <li><a class="link-off-black" href="#">Esri Community</a></li>
+        <li><a class="link-off-black" href="#">Events</a></li>
+        <li><a class="link-off-black" href="#">Education</a></li>
+        <li><a class="link-off-black" href="#">Early Adopters</a></li>
+        <li><a class="link-off-black" href="#">Developers</a></li>
+      </ul>
+    </nav>
+    <nav class="column-4 leader-1">
+      <h6 class="font-size--2"><strong>Understanding GIS</strong></h6>
+      <ul class="list-plain font-size--2">
+        <li><a class="link-off-black" href="#">What is GIS</a></li>
+        <li><a class="link-off-black" href="#">Training</a></li>
+        <li><a class="link-off-black" href="#">Events</a></li>
+        <li><a class="link-off-black" href="#">Insights</a></li>
+        <li><a class="link-off-black" href="#">Esri Press</a></li>
+      </ul>
+    </nav>
+    <nav class="column-4 leader-1">
+      <h6 class="font-size--2"><strong>Company</strong></h6>
+      <ul class="list-plain font-size--2">
+        <li><a class="link-off-black" href="#">About Esri</a></li>
+        <li><a class="link-off-black" href="#">Contact Us</a></li>
+        <li><a class="link-off-black" href="#">Careers</a></li>
+        <li><a class="link-off-black" href="#">Worldwide Distributors</a></li>
+        <li><a class="link-off-black" href="#">Partners</a></li>
+        <li><a class="link-off-black" href="#">Disaster Response Program</a></li>
+      </ul>
+    </nav>
+
     <div class="column-24">
-       <p><small>Copyright © 2015 Esri. All rights reserved. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal">Legal</a></small></p>
+      <hr>
+      <div class="column-8">
+        <p>United States (English) <span class="icon-ui-globe"></span></p>
+      </div>
+      <div class="column-16 font-size--2">
+        <a class="link-off-black margin-right-4" href="#">Privacy</a>
+        <a class="link-off-black margin-right-4" href="#">Legal</a>
+        <a class="link-off-black margin-right-4" href="#">Site Map</a>
+        <a class="link-off-black margin-right-4" href="#">Terms and Conditions</a>
+      </div>
     </div>
   </div>
 </footer>

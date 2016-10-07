@@ -74,6 +74,7 @@ $include-app-switcher:           $generate-css    !default;
 // Javascript
 $include-tabs:                   $generate-css    !default;
 $include-modal:                  $generate-css    !default;
+$include-search:                 $generate-css    !default;
 $include-accordion:              $generate-css    !default;
 $include-drawers:                $generate-css    !default;
 $include-sticky:                 $generate-css    !default;
@@ -137,6 +138,7 @@ $include-filter-dropdown:        $generate-css    !default;
 @import "calcite-web/patterns/footer";
 @import "calcite-web/patterns/tabs";
 @import "calcite-web/patterns/modal";
+@import "calcite-web/patterns/search";
 @import "calcite-web/patterns/accordion";
 @import "calcite-web/patterns/drawers";
 @import "calcite-web/patterns/filter-dropdown";
