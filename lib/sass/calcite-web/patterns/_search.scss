@@ -20,7 +20,8 @@
 }
 
   @mixin search-top-nav() {
-    padding: .75*$baseline 0;
+    @include top-nav-link();
+    // padding: .75*$baseline 0;
     background-color: transparent;
     border: none;
     &:hover {
@@ -30,8 +31,10 @@
 
   @mixin search-content() {
     @include modal-content();
-    padding-top: 3*$baseline;
-    padding-bottom: 8*$baseline;
+    @include transform(translate3d(0, -20px, 0))
+    margin-top: 3*$baseline;
+    padding-top: 15vh;
+    vertical-align: top;
   }
 
   @mixin search-input () {
