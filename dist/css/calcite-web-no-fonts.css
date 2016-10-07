@@ -61,6 +61,9 @@ img {
 .overflow-auto {
   overflow: auto; }
 
+.overflow-hidden {
+  overflow: hidden; }
+
 .inline-block {
   display: inline-block; }
 
@@ -4163,6 +4166,35 @@ table {
   .table-striped.table-blue tr:nth-child(even) td {
     background-color: #d2e9f9; }
 
+.table-no-table {
+  width: auto;
+  background-color: transparent;
+  border-collapse: auto;
+  border-spacing: 0;
+  border: none;
+  text-align: left;
+  overflow: auto;
+  margin-bottom: 0; }
+  .table-no-table thead, .table-no-table tbody {
+    font-size: 1rem;
+    line-height: 1.55rem;
+    border: none;
+    background-color: transparent;
+    overflow: auto;
+    width: 100%; }
+    @media screen and (max-width: 859px) {
+      .table-no-table thead, .table-no-table tbody {
+        font-size: 1rem; } }
+    @media screen and (max-width: 479px) {
+      .table-no-table thead, .table-no-table tbody {
+        font-size: 1rem; } }
+  .table-no-table th, .table-no-table td {
+    background-color: transparent;
+    border: none; }
+  .table-no-table tr {
+    border: none;
+    text-align: left; }
+
 form {
   margin: 0;
   padding: 0; }
@@ -4893,10 +4925,12 @@ input.input-group-input,
   animation-duration: 0.5s; }
 
 .top-nav {
+  position: relative;
   font-weight: 400;
   font-style: normal;
   border-bottom: 1px solid #efefef;
-  background-color: white; }
+  background-color: white;
+  z-index: 100; }
   .top-nav b, .top-nav strong {
     font-weight: 500; }
   .top-nav .esri-logo {
@@ -5451,6 +5485,134 @@ body {
   transform: translate3d(0, 20px, 0); }
   html[dir="rtl"] .modal-content {
     float: none; }
+
+.search-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: hidden;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.75);
+  -webkit-transition: visibility 0ms linear 300ms, opacity 300ms cubic-bezier(0.215, 0.44, 0.42, 0.88);
+  transition: visibility 0ms linear 300ms, opacity 300ms cubic-bezier(0.215, 0.44, 0.42, 0.88);
+  z-index: 50;
+  position: absolute;
+  background: white; }
+  .search-overlay.is-active {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition-delay: 0ms;
+    transition-delay: 0ms; }
+    .search-overlay.is-active .modal-content {
+      visibility: visible;
+      opacity: 1;
+      -webkit-transition-delay: 0ms;
+      transition-delay: 0ms;
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
+  .search-overlay:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+    /* Adjusts for spacing */ }
+  .search-overlay.is-active {
+    opacity: 0.95; }
+    .search-overlay.is-active .search-content {
+      visibility: visible;
+      opacity: 1;
+      -webkit-transition-delay: 0ms;
+      transition-delay: 0ms;
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
+
+.search-content {
+  box-sizing: border-box;
+  max-height: 80vh;
+  z-index: 100;
+  float: none;
+  background: white;
+  padding: 1.55rem;
+  text-align: start;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: inline-block;
+  vertical-align: middle;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: -webkit- transform 300ms cubic-bezier(0.215, 0.44, 0.42, 0.88), visibility 0ms linear 300ms, opacity 300ms cubic-bezier(0.215, 0.44, 0.42, 0.88);
+  -moz-transition: -moz- transform 300ms cubic-bezier(0.215, 0.44, 0.42, 0.88), visibility 0ms linear 300ms, opacity 300ms cubic-bezier(0.215, 0.44, 0.42, 0.88);
+  -o-transition: -o- transform 300ms cubic-bezier(0.215, 0.44, 0.42, 0.88), visibility 0ms linear 300ms, opacity 300ms cubic-bezier(0.215, 0.44, 0.42, 0.88);
+  transition: transform 300ms cubic-bezier(0.215, 0.44, 0.42, 0.88), visibility 0ms linear 300ms, opacity 300ms cubic-bezier(0.215, 0.44, 0.42, 0.88);
+  -webkit-transform: translate3d(0, 20px, 0);
+  -moz-transform: translate3d(0, 20px, 0);
+  -ms-transform: translate3d(0, 20px, 0);
+  -o-transform: translate3d(0, 20px, 0);
+  transform: translate3d(0, 20px, 0);
+  -webkit-transform: translate3d(0, -20px, 0);
+  -moz-transform: translate3d(0, -20px, 0);
+  -ms-transform: translate3d(0, -20px, 0);
+  -o-transform: translate3d(0, -20px, 0);
+  transform: translate3d(0, -20px, 0);
+  margin-top: 4.65rem;
+  padding-top: 15vh;
+  vertical-align: top; }
+  html[dir="rtl"] .search-content {
+    float: none; }
+
+.search-top-nav {
+  font-size: 0.9375rem;
+  line-height: 1.55rem;
+  color: #4c4c4c;
+  padding: 1.1625rem 0;
+  line-height: 1.5rem;
+  display: inline-block;
+  vertical-align: top;
+  background-color: transparent;
+  border: none; }
+  @media screen and (max-width: 859px) {
+    .search-top-nav {
+      font-size: 0.9375rem; } }
+  @media screen and (max-width: 479px) {
+    .search-top-nav {
+      font-size: 0.9375rem; } }
+  .search-top-nav:hover, .search-top-nav:focus {
+    color: #0079c1;
+    background: url("../img/top-nav-ie9.gif") repeat-x top left transparent;
+    -webkit-background-image: linear-gradient(to top, transparent 92%, #0079c1 93%, #0079c1 100%);
+    -moz-background-image: linear-gradient(to top, transparent 92%, #0079c1 93%, #0079c1 100%);
+    -o-background-image: linear-gradient(to top, transparent 92%, #0079c1 93%, #0079c1 100%);
+    background-image: linear-gradient(to top, transparent 92%, #0079c1 93%, #0079c1 100%);
+    text-decoration: none; }
+  .search-top-nav:focus {
+    outline: none; }
+  .search-top-nav.is-active {
+    -webkit-background-image: linear-gradient(to top, transparent 92%, #0079c1 93%, #0079c1 100%);
+    -moz-background-image: linear-gradient(to top, transparent 92%, #0079c1 93%, #0079c1 100%);
+    -o-background-image: linear-gradient(to top, transparent 92%, #0079c1 93%, #0079c1 100%);
+    background-image: linear-gradient(to top, transparent 92%, #0079c1 93%, #0079c1 100%); }
+  .search-top-nav:hover {
+    background-color: transparent; }
+
+input[type="search"].search-input {
+  font-size: 2.82715rem;
+  height: 3.875rem;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom-color: #cccccc;
+  box-shadow: none; }
 
 .accordion {
   -webkit-box-sizing: border-box;

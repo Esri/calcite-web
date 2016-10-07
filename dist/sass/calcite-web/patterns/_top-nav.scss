@@ -6,10 +6,11 @@
 $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue 100%);
 
 @mixin top-nav {
+  position: relative;
   @include avenir-regular();
   border-bottom: 1px solid $lightest-gray;
   background-color: $white;
-
+  z-index: 100;
   .esri-logo {
     margin-top: 1rem;
   }

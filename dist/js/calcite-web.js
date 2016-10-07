@@ -924,24 +924,62 @@ function modal() {
 // └────────┘
 // Expanding search bar that lives in the top nav.
 function search() {
-  var searchForms = findElements('.js-site-search');
+  var toggles = findElements('.js-search-toggle');
+  var overlay = findElements('.js-search')[0];
 
-  function toggleForm(e) {
-    var searchContainer = closest('js-site-search', e.target);
-    var isOpen = has(searchContainer, 'is-active');
+  bus.on('search:bind', bindSearches);
+  bus.on('search:toggle', toggleSearch);
+  bus.on('keyboard:escape', closeSearch);
+  bus.on('search:focus', focusSearch);
 
-    if (isOpen) {
-      remove(searchContainer, 'is-active');
-      e.target.value = '';
+  function bindSearches(node) {
+    if (!node) {
+      toggles.forEach(function (toggle) {
+        add$1(toggle, click(), toggleClick);
+      });
     } else {
-      add(searchContainer, 'is-active');
+      add$1(node, click(), toggleClick);
     }
   }
 
-  searchForms.forEach(function (search) {
-    add$1(search, 'focusin', toggleForm);
-    add$1(search, 'focusout', toggleForm);
-  });
+  function toggleSearch(node) {
+    if (has(node, 'icon-ui-search')) {
+      remove(node, 'icon-ui-search');
+      add(node, 'icon-ui-close');
+    } else {
+      add(node, 'icon-ui-search');
+      remove(node, 'icon-ui-close');
+    }
+    toggle(overlay, 'is-active');
+    toggle(document.body, 'overflow-hidden');
+    bus.emit('search:focus');
+  }
+
+  function focusSearch() {
+    var input = document.querySelector('.js-search-input');
+    input.focus();
+  }
+
+  function closeSearch() {
+    remove(overlay, 'is-active');
+    remove(document.body, 'overflow-hidden');
+    var toggleNodes = nodeListToArray(toggles);
+    toggleNodes.forEach(removeCloseIcons);
+  }
+
+  function removeCloseIcons(toggle) {
+    if (has(toggle, 'icon-ui-close')) {
+      remove(toggle, 'icon-ui-close');
+      add(toggle, 'icon-ui-search');
+    }
+  }
+
+  function toggleClick(e) {
+    preventDefault(e);
+    bus.emit('search:toggle', e.target);
+  }
+
+  bus.emit('search:bind');
 }
 
 function selectNav() {
@@ -1317,7 +1355,7 @@ function extend(plugin) {
 // └────────────┘
 // define all public api methods
 var calciteWeb = {
-  version: '1.0.0-beta.25',
+  version: '1.0.0-beta.34',
   click: click,
   addEvent: add$1,
   removeEvent: remove$1,
