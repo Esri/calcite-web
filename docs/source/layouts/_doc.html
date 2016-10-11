@@ -80,13 +80,24 @@
 
           {% if page.title == 'Icon Font' %}
             <div class="block-group block-group-3-up">
-              {% for icon in data.font %}
-                <div class="block">
-                  <span class="font-size-5 icon-ui-{{icon}}" aria-label="{{icon}}"></span>
-                  <p class="trailer-1 leader-half"><code>icon-ui-{{icon}}</code></p>
-                </div>
-              {% endfor %}
+             {% for icon in data.font %}
+              <div class="card block trailer-1">
+                  <div class="card-content">
+                    <p class="text-center trailer-0 ">
+                      <a href="#" class="padding-leader-half tooltip tooltip-top" aria-label="Copy to Clipboard">
+                        <svg aria-hidden="true" class="icon icon-add-attachment" width="32" height="32" viewBox="0 0 32 32" version="1.1">
+                          <path fill="rgb(0, 0, 0)" d="M2 2v28h28v-28h-28zM26 26h-20v-20h20v20zM14 24h4v-6h6v-4h-6v-6h-4v6h-6v4h6z"></path>
+                        </svg>
+                      </a>
+                    </p>
+
+                  </div>
+<pre class="trailer-0 leader-0"><code>&lt;svg class="icon-add-attachment" aria-hidden="true"  width="32" height="32" viewBox="0 0 32 32" version="1.1">&lt;path fill="rgb(0, 0, 0)" d="M2 2v28h28v-28h-28zM26 26h-20v-20h20v20zM14 24h4v-6h6v-4h-6v-6h-4v6h-6v4h6z">&lt;/path>&lt;/svg></code></pre>
+              </div>
+
+            {% endfor %}
             </div>
+
           {% endif %}
 
           {% if page.title == 'Icon Font Colors' %}
