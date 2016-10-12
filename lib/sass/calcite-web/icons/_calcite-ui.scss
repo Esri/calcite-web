@@ -208,6 +208,15 @@
   }
 }
 
+@mixin svg-icon() {
+  fill: currentColor;
+}
+
 @if $include-icon-font == true {
   @include icon-font();
 }
+
+@if $include-svg-icon == true {
+  .svg-icon { @include svg-icon(); }
+}
+
