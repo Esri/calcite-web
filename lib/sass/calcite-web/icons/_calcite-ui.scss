@@ -210,6 +210,7 @@
 
 @mixin svg-icon() {
   fill: currentColor;
+  pointer-events: none;
 }
 
 @if $include-icon-font == true {
