@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
 
     <!-- Use title from page frontmatter -->
-    <title>Layouts | Esri Design Patterns</title>
+    <title>Testing Rebind of Calcite Web Events | Esri Design Patterns</title>
 
     <!-- Link to favicon -->
     <link rel="shortcut icon" href="../assets/img/favicon.ico">
@@ -73,6 +73,53 @@
     </div>
 
     <div class="wrapper">
+      <!--
+      ┌────────┐
+      │ Search │
+      -->
+      <div class="js-search search-overlay">
+        <div class="search-content column-24" role="dialog" aria-labelledby="search" role="dialog">
+          <form method="GET" action="../search/">
+            <label>
+              <span class="font-size-1">Search Calcite Web</span>
+              <input class="search-input js-search-input" type='search' placeholder='Search' name="q">
+            </label>
+            <label class="inline-block margin-right-2">
+              Language
+              <select name="language">
+                <option value="">All Languages</option>
+                <option value="">Android</option>
+                <option value="">iOS (Swift)</option>
+                <option value="">iOS (Objective C)</option>
+                <option value="">Java</option>
+                <option value="">JavaScript</option>
+                <option value="">Mac OS X (Swift)</option>
+                <option value="">Mac OS X (Objective C)</option>
+                <option value="">Qt (QML)</option>
+                <option value="">Qt (C++)</option>
+                <option value="">REST APIs</option>
+                <option value="">Web AppBuilder</option>
+                <option value="">.Net (Desktop)</option>
+                <option value="">.Net (Store)</option>
+                <option value="">.Net (Phone)</option>
+                <option value="">.Net (WPF)</option>
+                <option value="">.Net (UWP)</option>
+              </select>
+            </label>
+            <label class="inline-block margin-right-2">
+              Version
+              <select name="version">
+                <option value="">All Versions</option>
+                <option value="1.0.0">10.3</option>
+                <option value="2.0.0">10.4</option>
+                <option value="3.0.0">Quartz</option>
+              </select>
+            </label>
+              <button type="submit" class="btn btn-large right leader-1">Search</button>
+            </div>
+          </form>
+        </div>
+      </div>
       <!-- Logged Out Pattern-->
       <header class="top-nav">
         <a class="skip-to-content" href="#skip-to-content">Skip To Content</a>
@@ -81,14 +128,13 @@
             <div class="tablet-hide">
               <a href="../" class="top-nav-title">Calcite Web</a>
               <nav class="top-nav-list" role="navigation">
-                <a href="../documentation" class="is-active top-nav-link">Documentation</a>
+                <a href="../documentation" class="top-nav-link">Documentation</a>
                 <a href="../examples" class="top-nav-link">Examples</a>
                 <a href="../guides" class="top-nav-link">Guides</a>
               </nav>
-              <form method="GET" action="../search/" class="inline-block right site-search">
-                <input type='search' placeholder='Search' name="q" class="inline-block leader-half js-search-input">
-                <button type="submit" class="hide">Search</button>
-              </form>
+
+              <button class="icon-ui-search phone-hide search-top-nav link-dark-gray right js-search-toggle" href="#" aria-label="Search">Search</button>
+              <button class="icon-ui-search icon-ui-flush phone-show search-top-nav link-dark-gray right js-search-toggle" href="#" aria-label="Search"></button>
             </div>
 
             <div class="tablet-show">
@@ -97,123 +143,78 @@
           </div>
         </div>
       </header>
-
       <!-- Secondary Nav Pattern -->
       <!-- what -->
       
-  <header class="sub-nav" role="banner">
-    <div class="grid-container">
-      <div class="column-24">
-        <h1 class="sub-nav-title leader-1 text-white">Documentation</h1>
-        <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1 tablet-hide">Download Latest Release</a>
-        <nav class="sub-nav-list tablet-hide" role="navigation" aria-labelledby="subnav">
-          
-          
-          
-            
-          
-            <a class="sub-nav-link " href="../documentation/">Get Started</a>
-          
-          
-          
-            <a class="sub-nav-link " href="../documentation/type/">Type</a>
-          
-          
-          
-            <a class="sub-nav-link " href="../documentation/grid/">Grid</a>
-          
-          
-          
-            <a class="sub-nav-link " href="../documentation/icons/">Icons</a>
-          
-          
-          
-            <a class="sub-nav-link " href="../documentation/color/">Color</a>
-          
-          
-          
-            <a class="sub-nav-link " href="../documentation/components/">Components</a>
-          
-          
-          
-            <a class="sub-nav-link " href="../documentation/patterns/">Patterns</a>
-          
-          
-          
-            <a class="sub-nav-link " href="../documentation/sass/">Sass</a>
-          
-          
-          
-            <a class="sub-nav-link " href="../documentation/javascript/">JavaScript</a>
-          
-        </nav>
-
-        <select class="tablet-show select-full trailer-half js-select-nav">
-          
-          
-          
-            
-          
-            <option value="../documentation/" >Get Started</option>
-          
-          
-          
-            <option value="../documentation/type/" >Type</option>
-          
-          
-          
-            <option value="../documentation/grid/" >Grid</option>
-          
-          
-          
-            <option value="../documentation/icons/" >Icons</option>
-          
-          
-          
-            <option value="../documentation/color/" >Color</option>
-          
-          
-          
-            <option value="../documentation/components/" >Components</option>
-          
-          
-          
-            <option value="../documentation/patterns/" >Patterns</option>
-          
-          
-          
-            <option value="../documentation/sass/" >Sass</option>
-          
-          
-          
-            <option value="../documentation/javascript/" >JavaScript</option>
-          
-        </select>
-
-      </div>
-    </div>
-  </header>
-
 
       <!-- content of each page will go here -->
-      
-<div class="grid-container leader-1">
-  <div class="column-6 tablet-column-12">
-    <aside class="side-nav" aria-role="complementary">
-      
-    </aside>
-    <div class="js-sticky scroll-show tablet-hide" data-top="46">
-      <a href="#" class="btn btn-clear">Back to Top</a>
-    </div>
-  </div>
+      <button class="js-rebind">Rebind Events</button>
 
-  <a id="skip-to-content" tabindex="0"></a>
-  <main class="column-17 phone-column-6 tablet-column-12 pre-1 rtl-post-0 tablet-leader-1" role="main">
 
-    
-  </main>
+<aside class="js-accordion accordion"></aside>
+
+<div>
+  HEY THIS IS THE DROPDOWN
+  <aside class="js-dropdown-container"></aside>
 </div>
 
+<script>
+    var inner = [
+      '<div class="accordion-section is-active">',
+        '<h4 class="accordion-title ">Title of Section</h4>',
+        '<div class="accordion-content">',
+          '<p>Stuff!</p>',
+        '</div>',
+      '</div>',
+      '<div class="accordion-section">',
+        '<h4 class="accordion-title">Title of Second Section</h4>',
+        '<div class="accordion-content">',
+          '<p>Stuff!</p>',
+        '</div>',
+      '</div>',
+      '<div class="accordion-section">',
+        '<h4 class="accordion-title">Title of Third Section</h4>',
+        '<div class="accordion-content">',
+          '<p>Stuff!</p>',
+        '</div>',
+      '</div>'
+    ].join('')
+
+    var ddInner = [
+      '<div class="dropdown js-dropdown">',
+      '  <!-- extends side-nav -->',
+      '  <button class="btn btn-transparent dropdown-btn js-dropdown-toggle" tabindex="0" aria-haspopup="true" aria-expanded="false">Dropdown Select</button>',
+      '  <!-- extends side-nav -->',
+      '  <nav class="dropdown-menu " role="menu">',
+      '    <!-- extends side-nav-link -->',
+      '    <span class="dropdown-title">Some Options</span>',
+      '    <a href="#" class="dropdown-link" role="menu-item">Option 1 that has a really long text.</a>',
+      '    <a href="#" class="dropdown-link" role="menu-item">Option 2</a>',
+      '    <a href="#" class="dropdown-link" role="menu-item">Option 3</a>',
+      '    <span class="dropdown-title">More Options</span>',
+      '    <a href="#" class="dropdown-link" role="menu-item">Option 4</a>',
+      '    <a href="#" class="dropdown-link" role="menu-item">Option 5</a>',
+      '  </nav>',
+      '</div>'
+    ].join('')
+
+  var btn = document.querySelector('.js-rebind')
+  var container = document.querySelector('.js-accordion')
+  var ddcontainer = document.querySelector('.js-dropdown-container')
+
+  container.innerHTML = inner
+  ddcontainer.innerHTML = ddInner
+
+
+  btn.addEventListener('click', function (e) {
+    container.innerHTML = ''
+    container.innerHTML = inner;
+    ddcontainer.innerHTML = ''
+    ddcontainer.innerHTML = ddInner;
+    calcite.init();
+  })
+
+</script>
     </div>
 
     
@@ -224,9 +225,9 @@
           <nav class="column-6">
             <h6>Styleguides</h6>
             <ul class="list-plain">
-              <li><a href="../styleguides/javascript/">JavaScript</a></li>
-              <li><a href="../styleguides/css/">CSS</a></li>
-              <li><a href="../styleguides/html/">HTML</a></li>
+              <li><a href="../guides/javascript/">JavaScript</a></li>
+              <li><a href="../guides/css/">CSS</a></li>
+              <li><a href="../guides/html/">HTML</a></li>
             </ul>
           </nav>
 

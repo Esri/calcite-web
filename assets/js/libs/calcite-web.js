@@ -162,7 +162,8 @@ function toggleExpanded(domNode) {
 // └──────────────────────┘
 
 var boundEvents = {
-  dropdowns: []
+  dropdowns: [],
+  accordions: []
 };
 
 // returns standard interaction event, later will add touch support
@@ -343,51 +344,73 @@ function clipboard() {
 // Emitting a modal id toggle that modals state.
 // Emitting false or null closes all modals.
 
-function accordion() {
+function toggleClick(e) {
+  stopPropagation(e);
+  var parent = closest('accordion-section', target(e));
+  bus.emit('accordion:toggle', { node: parent });
+}
+
+function handleToggle(options) {
+  toggle(options.node, 'is-active');
+  toggleExpanded(options.node);
+}
+
+function checkKeyCode(e) {
+  if (e.keyCode === 13) {
+    toggleClick(e);
+  }
+}
+
+function bindAccordions(options) {
   var accordions = findElements('.js-accordion');
+  if (!options) {
+    accordions.forEach(function (accordion) {
+      setUpAccordion(accordion);
+    });
+  } else {
+    setUpAccordion(options.node);
+  }
+}
+
+function setUpAccordion(accordion) {
+  accordion.setAttribute('aria-live', 'polite');
+  accordion.setAttribute('role', 'tablist');
+  nodeListToArray(accordion.children).forEach(function (section) {
+    var sectionTitle = section.querySelector('.accordion-title');
+    sectionTitle.setAttribute('role', 'tab');
+    sectionTitle.setAttribute('tabindex', '0');
+    if (has(section, 'is-active')) {
+      section.setAttribute('aria-expanded', 'true');
+    }
+    // check if the event was already added
+    var eventExists = false;
+    boundEvents.accordions.forEach(function (e) {
+      if (e.target === sectionTitle && e.event === click() && e.fn === toggleClick) {
+        eventExists = true;
+      }
+    });
+    if (!eventExists) {
+      boundEvents.accordions.push({ target: sectionTitle, event: click(), fn: toggleClick });
+      boundEvents.accordions.push({ target: section, event: 'keyup', fn: checkKeyCode });
+      add$1(sectionTitle, click(), toggleClick);
+      add$1(section, 'keyup', checkKeyCode);
+    }
+  });
+}
+
+function addListeners() {
   bus.on('accordion:bind', bindAccordions);
   bus.on('accordion:toggle', handleToggle);
+  listenersAdded = true;
+}
 
-  function bindAccordions(options) {
-    if (!options) {
-      accordions.forEach(function (accordion) {
-        setUpAccordion(accordion);
-      });
-    } else {
-      setUpAccordion(options.node);
-    }
+var listenersAdded = false;
+
+function accordion() {
+  // only add the listeners if they haven't been added already
+  if (!listenersAdded) {
+    addListeners();
   }
-
-  function setUpAccordion(accordion) {
-    accordion.setAttribute('aria-live', 'polite');
-    accordion.setAttribute('role', 'tablist');
-    nodeListToArray(accordion.children).forEach(function (section) {
-      var sectionTitle = section.querySelector('.accordion-title');
-      sectionTitle.setAttribute('role', 'tab');
-      sectionTitle.setAttribute('tabindex', '0');
-      if (has(section, 'is-active')) {
-        section.setAttribute('aria-expanded', 'true');
-      }
-      add$1(sectionTitle, click(), toggleClick);
-      add$1(section, 'keyup', function (e) {
-        if (e.keyCode === 13) {
-          toggleClick(e);
-        }
-      });
-    });
-  }
-
-  function toggleClick(e) {
-    stopPropagation(e);
-    var parent = closest('accordion-section', target(e));
-    bus.emit('accordion:toggle', { node: parent });
-  }
-
-  function handleToggle(options) {
-    toggle(options.node, 'is-active');
-    toggleExpanded(options.node);
-  }
-
   bus.emit('accordion:bind');
 }
 
@@ -436,13 +459,13 @@ function bindDropdowns(options) {
     // check if the event was already added
     var eventExists = false;
     boundEvents.dropdowns.forEach(function (e) {
-      if (e.target === toggle && e.event === click() && e.fn === toggleClick) {
+      if (e.target === toggle && e.event === click() && e.fn === toggleClick$1) {
         eventExists = true;
       }
     });
     if (!eventExists) {
-      boundEvents.dropdowns.push({ target: toggle, event: click(), fn: toggleClick });
-      add$1(toggle, click(), toggleClick);
+      boundEvents.dropdowns.push({ target: toggle, event: click(), fn: toggleClick$1 });
+      add$1(toggle, click(), toggleClick$1);
     }
   });
 }
@@ -497,29 +520,29 @@ function arrowUp() {
   }
 }
 
-function toggleClick(e) {
+function toggleClick$1(e) {
   preventDefault(e);
   stopPropagation(e);
   var dropdown = closest('js-dropdown', e.target);
   bus.emit('dropdown:toggle', { node: dropdown, target: e.target });
 }
 
-function addListeners() {
+function addListeners$1() {
   bus.on('dropdown:toggle', toggleDropdown);
   bus.on('dropdown:close', closeAllDropdowns);
   bus.on('keyboard:escape', closeAllDropdowns);
   bus.on('keyboard:arrow:down', arrowDown);
   bus.on('keyboard:arrow:up', arrowUp);
   bus.on('dropdown:focus', dropownFocusOn);
-  listenersAdded = true;
+  listenersAdded$1 = true;
 }
 
-var listenersAdded = false;
+var listenersAdded$1 = false;
 
 function dropdown() {
   // only add the listeners if they haven't been added already
-  if (!listenersAdded) {
-    addListeners();
+  if (!listenersAdded$1) {
+    addListeners$1();
   }
   bindDropdowns();
 }
@@ -1338,9 +1361,9 @@ function isScrolling() {
 var patterns = [accordion, clipboard, dropdown, drawer, expander, filterDropdown, modal, search, selectNav, sticky, tabs, thirdNav];
 
 function init() {
-  while (patterns.length) {
-    patterns.shift().call();
-  }
+  patterns.forEach(function (pattern) {
+    pattern();
+  });
 }
 
 function extend(plugin) {
