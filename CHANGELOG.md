@@ -1,4 +1,4 @@
-## Unreleased
+## 1.0.0-beta.35
 
 ### Fixed
 - Rebinding of accordions now works in `calcite-web.js`
