@@ -79,28 +79,7 @@
           {% endif %}
 
           {% if page.title == 'Icon Font' %}
-            <div class="block-group block-group-3-up">
-             {% for icon in data.font %}
-              <div class="block trailer-1">
-                <div class="input-group">
-                  <span class="input-group-button">
-                    <svg aria-hidden="true" class="svg-icon svg-icon-add-attachment" width="32" height="32" viewBox="0 0 32 32" version="1.1"><path d="M2 2v28h28v-28h-28zM26 26h-20v-20h20v20zM14 24h4v-6h6v-4h-6v-6h-4v6h-6v4h6z"></path></svg>
-                  </span>
-
-                  <input id="{{icon}}-source" class="input-group-input" type="text" value='&lt;svg class="svg-icon svg-icon-add-attachment" aria-hidden="true"  width="32" height="32" viewBox="0 0 32 32" version="1.1">&lt;path d="M2 2v28h28v-28h-28zM26 26h-20v-20h20v20zM14 24h4v-6h6v-4h-6v-6h-4v6h-6v4h6z">&lt;/path>&lt;/svg>'>
-
-                  <span class="input-group-button">
-                    <button class="btn btn-clear font-size--1 tooltip js-copy-to-clipboard" data-clipboard-target="#{{icon}}-source" aria-label="Copy to Clipboard">
-                      <svg class="svg-icon svg-icon-duplicate" version="1.1" width="24" height="24" viewBox="0 0 32 32"><path d="M22.801 0h-12.801v6h-8v26h20v-6h8v-18.801l-7.199-7.199zM20 24v6h-16v-22h8v8h8v8zM20 14h-6v-6h0.621l5.379 5.381v0.619zM28 24h-6v-10.801l-7.199-7.199h-2.801v-4h8v8h8v14zM28 8h-6v-6h0.621l5.379 5.381v0.619zM6 26h12v2h-12v-2zM6 22h12v2h-12v-2zM6 18h12v2h-12v-2zM6 14h4v2h-4v-2z"></path></svg>
-                    </button>
-                  </span>
-
-                </div>
-                <code>.icon-ui-{{icon}}</code>
-              </div>
-            {% endfor %}
-            </div>
-
+            {% include 'layouts/_inline-icons' %}
           {% endif %}
 
           {% if page.title == 'Icon Font Colors' %}
