@@ -7,5 +7,6 @@ module.exports = function (acetate) {
   acetate.data('pkg', '../../package.json');
   acetate.data('icons', './data/icon-social.js');
   acetate.data('font', './data/icon-font.js');
+  acetate.data('svg', './data/svg-icon.js');
   acetate.data('repo', './data/repo.js');
 };
