@@ -78,6 +78,10 @@
             </div>
           {% endif %}
 
+          {% if page.title == 'User Interface Icons' %}
+            {% include 'layouts/_inline-icons' %}
+          {% endif %}
+
           {% if page.title == 'Icon Font' %}
             <div class="block-group block-group-3-up">
               {% for icon in data.font %}
