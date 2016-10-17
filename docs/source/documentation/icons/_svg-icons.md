@@ -1,0 +1,1 @@
+Inline SVG icons are fresh to death. They split black fire across the hot wire.

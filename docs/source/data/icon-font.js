@@ -4,9 +4,7 @@ var fs = require('fs');
 module.exports = function (callback) {
   return fs.readdir('lib/img/icons/ui', function (er, files) {
     files = files.map(function (filename) {
-      var name = path.basename(filename, '.svg');
-      var source = fs.readFileSync('lib/img/icons/ui/' + filename, 'utf8');
-      return {name: name, source: source}
+      return path.basename(filename, '.svg');
     });
     callback(er, files);
   });

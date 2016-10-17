@@ -1,9 +1,23 @@
+## 1.0.0-beta.36
+
+### Added
+- Inline SVGs
+- Inline SVG Colors
+
+### Modified
+- Changed all sample code docs to reflect new SVG usage
+
+### Breaking
+- Filter dropdown now expecting SVGs rather than icon fonts
+- Search now expecting SVGs rather than icon fonts
+
 ## 1.0.0-beta.35
 
 ### Fixed
 - Rebinding of accordions now works in `calcite-web.js`
 
 ## 1.0.0-beta.34
+
 
 ### Added
 - Search Component UI
