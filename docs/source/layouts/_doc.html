@@ -78,8 +78,19 @@
             </div>
           {% endif %}
 
-          {% if page.title == 'Icon Font' %}
+          {% if page.title == 'User Interface Icons' %}
             {% include 'layouts/_inline-icons' %}
+          {% endif %}
+
+          {% if page.title == 'Icon Font' %}
+            <div class="block-group block-group-3-up">
+              {% for icon in data.font %}
+                <div class="block">
+                  <span class="font-size-5 icon-ui-{{icon}}" aria-label="{{icon}}"></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-{{icon}}</code></p>
+                </div>
+              {% endfor %}
+            </div>
           {% endif %}
 
           {% if page.title == 'Icon Font Colors' %}
