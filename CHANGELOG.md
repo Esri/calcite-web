@@ -1,7 +1,8 @@
 ## Unreleased
 
 ### Added
-- Inline SVG documentation
+- Inline SVGs
+- Inline SVG Colors
 
 ## 1.0.0-beta.35
 

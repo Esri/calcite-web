@@ -28,6 +28,7 @@
     "sass": "npm-run-series sass:dist sass:docs",
     "prefont": "ncp lib/fonts docs/build/assets/fonts",
     "font": "ncp lib/fonts dist/fonts",
+    "icons": "./bin/clean-icons.sh",
     "js": "ncp docs/source/assets/js/ docs/build/assets/js/",
     "prestart": "npm-run-series acetate sass rollup imagemin font js",
     "pres3": "node bin/minify.js",

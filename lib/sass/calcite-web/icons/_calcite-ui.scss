@@ -218,6 +218,15 @@
 }
 
 @if $include-svg-icon == true {
-  .svg-icon { @include svg-icon(); }
+  .svg-icon            { @include svg-icon(); }
+  .svg-icon-yellow     { fill: #fad817;}
+  .svg-icon-green      { fill: $green;}
+  .svg-icon-blue       { fill: $blue;}
+  .svg-icon-light-blue { fill: $light-blue;}
+  .svg-icon-dark-blue  { fill: $dark-blue;}
+  .svg-icon-purple     { fill: $purple;}
+  .svg-icon-orange     { fill: $orange;}
+  .svg-icon-gray       { fill: $gray;}
+  .svg-icon-red        { fill: $red;}
 }
 
