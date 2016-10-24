@@ -118,37 +118,20 @@
   color: $darker-gray;
 }
 
-@mixin filter-dropdown-remove() {
-  .svg-icon {
-    color: $darker-gray;
-    float: right;
-    right: 9px;
-    top: 9px;
-  }
-  // @include right();
-  // right: 0;
-  // top: 1.3rem;
-  // &:after {
-  //   @include font-size(-1);
-  //   @extend %icon-font-styles;
-  //   @extend .icon-ui-close:before;
-  //   margin-left: $baseline/3;
-  //   @if ($include-right-to-left) {
-  //     html[dir="rtl"] & {
-  //       right: auto;
-  //       left: 0;
-  //       padding-left: $baseline/3;
-  //     }
-  //   }
-  //   opacity: 1;
-  //   color: $gray;
-  // }
 
-  // &:hover {
-  //   &:after {
-  //     color: $red;
-  //   }
-  // }
+@mixin filter-dropdown-remove() {
+  padding-right: $baseline;
+  .svg-icon {
+    margin-top: 6px;
+    float: right;
+    position: absolute;
+    color: $darker-gray;
+  }
+  &:hover {
+    .svg-icon {
+      color: $red;
+    }
+  }
 }
 
 
