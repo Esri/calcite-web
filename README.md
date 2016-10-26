@@ -15,7 +15,7 @@ There are two main ways to use Calcite Web: copying static files into your proje
 
 ## Static Files
 
-This is probably the easiest way. If you're looking to get up and running quickly, just [download the latest release](https://github.com/esri/calcite-web/releases) and move the zipped files to wherever you keep you assets. Be sure to use [the documentation site](http://esri.github.io/calcite-web/) to copy and paste patterns, components, and even a sample html boilerplate.
+This is probably the easiest way. If you're looking to get up and running quickly, just [download the latest release](https://github.com/esri/calcite-web/releases) and move the zipped files to wherever you keep your assets. Be sure to use [the documentation site](http://esri.github.io/calcite-web/) to copy and paste patterns, components, and even a sample html boilerplate.
 
 ## Ruby Gem
 
