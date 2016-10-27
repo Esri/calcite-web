@@ -43,11 +43,6 @@
       <nav class="drawer-nav" role="navigation">
         <aside class="side-nav">
           <h2 class="side-nav-title">Calcite Web</h2>
-          <div class="panel padding-trailer-half padding-leader-half">
-            <form method="GET" action="../search/">
-              <input type="search" placeholder="Search" name="q">
-            </form>
-          </div>
           <a href="../documentation/" class="side-nav-link">Documentation</a>
           <a href="../examples/" class="side-nav-link">Examples</a>
           <a href="../guides/" class="side-nav-link">Guides</a>
@@ -56,15 +51,9 @@
     </div>
 
     <div class="drawer drawer-right js-drawer" data-drawer="right">
-      <!-- <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerright"> -->
       <nav class="drawer-nav" role="navigation">
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
-          <div class="panel padding-trailer-half padding-leader-half">
-            <form method="GET" action="../search/" class="panel padding-leader-half">
-              <input type="search" placeholder="Search" name="q">
-            </form>
-          </div>
           <a href="../documentation/" class="side-nav-link">Documentation</a>
           <a href="../examples/" class="side-nav-link">Examples</a>
           <a href="../guides/" class="side-nav-link">Guides</a>
@@ -84,65 +73,67 @@
               <span class="font-size-1">Search Calcite Web</span>
               <input class="search-input js-search-input" type='search' placeholder='Search' name="q">
             </label>
-            <label class="inline-block margin-right-2">
-              Language
-              <select name="language">
-                <option value="">All Languages</option>
-                <option value="">Android</option>
-                <option value="">iOS (Swift)</option>
-                <option value="">iOS (Objective C)</option>
-                <option value="">Java</option>
-                <option value="">JavaScript</option>
-                <option value="">Mac OS X (Swift)</option>
-                <option value="">Mac OS X (Objective C)</option>
-                <option value="">Qt (QML)</option>
-                <option value="">Qt (C++)</option>
-                <option value="">REST APIs</option>
-                <option value="">Web AppBuilder</option>
-                <option value="">.Net (Desktop)</option>
-                <option value="">.Net (Store)</option>
-                <option value="">.Net (Phone)</option>
-                <option value="">.Net (WPF)</option>
-                <option value="">.Net (UWP)</option>
-              </select>
-            </label>
-            <label class="inline-block margin-right-2">
-              Version
-              <select name="version">
-                <option value="">All Versions</option>
-                <option value="1.0.0">10.3</option>
-                <option value="2.0.0">10.4</option>
-                <option value="3.0.0">Quartz</option>
-              </select>
-            </label>
-              <button type="submit" class="btn btn-large right leader-1">Search</button>
+            <button type="submit" class="btn btn-large right leader-1">Search</button>
             </div>
           </form>
         </div>
       </div>
-      <!-- Logged Out Pattern-->
+
+      <!-- Sample HTML -->
       <header class="top-nav">
-        <a class="skip-to-content" href="#skip-to-content">Skip To Content</a>
         <div class="grid-container">
           <div class="column-24">
+            <!-- desktop sized navigation -->
             <div class="tablet-hide">
+              <!-- logo / home -->
               <a href="../" class="top-nav-title">Calcite Web</a>
+              <!-- primary navigation sections -->
               <nav class="top-nav-list" role="navigation">
                 <a href="../documentation" class="top-nav-link">Documentation</a>
                 <a href="../examples" class="top-nav-link">Examples</a>
                 <a href="../guides" class="top-nav-link">Guides</a>
               </nav>
-
-              <button class="icon-ui-search phone-hide search-top-nav link-dark-gray right js-search-toggle" href="#" aria-label="Search">Search</button>
-              <button class="icon-ui-search icon-ui-flush phone-show search-top-nav link-dark-gray right js-search-toggle" href="#" aria-label="Search"></button>
+              <nav class="class-top-nav-list right" role="navigation" aria-labelledby="usernav">
+                <button class="search-top-nav link-dark-gray js-search-toggle" href="#" aria-label="Search">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 -4 32 36" class="svg-icon js-search-icon">
+                    <path d="M31.607 27.838l-6.133-6.137a1.336 1.336 0 0 0-1.887 0l-.035.035-2.533-2.533-.014.014c3.652-4.556 3.422-11.195-.803-15.42-4.529-4.527-11.875-4.531-16.404 0-4.531 4.531-4.529 11.875 0 16.406 4.205 4.204 10.811 4.455 15.365.848l.004.003-.033.033 2.541 2.54a1.33 1.33 0 0 0 .025 1.848l6.135 6.133a1.33 1.33 0 0 0 1.887 0l1.885-1.883a1.332 1.332 0 0 0 0-1.887zM17.811 17.809a8.213 8.213 0 0 1-11.619 0 8.217 8.217 0 0 1 0-11.622 8.219 8.219 0 0 1 11.619.004 8.216 8.216 0 0 1 0 11.618z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 -4 32 36" class="svg-icon js-close-icon hide">
+                    <path d="M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z"/>
+                  </svg>
+                </button>
+              </nav>
             </div>
 
-            <div class="tablet-show">
-              <a href="/" class="icon-ui-menu top-nav-title js-drawer-toggle" data-drawer="top-nav">Calcite Web</a>
+            <!-- tablet and mobile sized navigation -->
+            <div class="tablet-show top-nav-flex">
+              <!-- open primary navigation drawer -->
+              <nav class="top-nav-flex-list" role="navigation" aria-labelledby="topnav">
+                <a href="/" class="top-nav-link js-drawer-toggle" data-drawer="top-nav">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 -4 32 36" class="svg-icon"><path d="M28 3.5A2.5 2.5 0 0 1 25.5 6h-21A2.5 2.5 0 0 1 2 3.5v-1A2.5 2.5 0 0 1 4.5 0h21A2.5 2.5 0 0 1 28 2.5v1zm0 11a2.5 2.5 0 0 0-2.5-2.5h-21A2.5 2.5 0 0 0 2 14.5v1A2.5 2.5 0 0 0 4.5 18h21a2.5 2.5 0 0 0 2.5-2.5v-1zm0 12a2.5 2.5 0 0 0-2.5-2.5h-21A2.5 2.5 0 0 0 2 26.5v1A2.5 2.5 0 0 0 4.5 30h21a2.5 2.5 0 0 0 2.5-2.5v-1z"/></svg>
+                </a>
+              </nav>
+              <!-- logo / home -->
+              <header class="top-nav-flex-title">
+                <a href="/" class="top-nav-link">ArcGIS <span class="phone-hide">for Developers</span></a>
+              </header>
+              <nav class="top-nav-flex-list class-top-nav-list text-right" role="navigation" aria-labelledby="usernav">
+                <button class="search-top-nav link-dark-gray js-search-toggle" href="#" aria-label="Search">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 -4 32 36" class="svg-icon js-search-icon">
+                    <path d="M31.607 27.838l-6.133-6.137a1.336 1.336 0 0 0-1.887 0l-.035.035-2.533-2.533-.014.014c3.652-4.556 3.422-11.195-.803-15.42-4.529-4.527-11.875-4.531-16.404 0-4.531 4.531-4.529 11.875 0 16.406 4.205 4.204 10.811 4.455 15.365.848l.004.003-.033.033 2.541 2.54a1.33 1.33 0 0 0 .025 1.848l6.135 6.133a1.33 1.33 0 0 0 1.887 0l1.885-1.883a1.332 1.332 0 0 0 0-1.887zM17.811 17.809a8.213 8.213 0 0 1-11.619 0 8.217 8.217 0 0 1 0-11.622 8.219 8.219 0 0 1 11.619.004 8.216 8.216 0 0 1 0 11.618z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 -4 32 36" class="svg-icon js-close-icon hide">
+                    <path d="M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z"/>
+                  </svg>
+                </button>
+              </nav>
             </div>
           </div>
+
         </div>
       </header>
+
+
       <!-- Secondary Nav Pattern -->
       <!-- what -->
       
@@ -158,7 +149,6 @@
 
 <div class="grid-container leader-half">
   <div class="column-17">
-
     <div class="clearfix font-size--1">
       <p class="trailer-0 inline-block leader-half">
         Showing <span class="js-results-length">0</span> of <span class="js-results-length">0</span>
@@ -214,10 +204,10 @@
               <p>This is probably the easiest way, but you won't get any of the helpful Sass mixins. If you're looking to get up and running quickly, just <a href="https://github.com/ArcGIS/calcite-web/releases">download the latest release</a> and move the zipped files to wherever you keep your assets (CSS, JavaScript, images). Be sure to use <a href="http://esri.github.io/calcite-web/">the documentation site</a> to copy and paste patterns, components, and even a sample html boilerplate.</p>
 <p>You can also use a hosted version Calcite Web:</p>
 <pre><code><span class="hljs-comment">&lt;!-- In the head --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.35/css/calcite-web.min.css"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.36/css/calcite-web.min.css"</span>&gt;</span>
 
 <span class="hljs-comment">&lt;!-- Just before end of body --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.35/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-beta.36/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 </code></pre>
 
             </div>
@@ -236,7 +226,7 @@
             </h5>
             <div class="js-search-item-content hide">
               <p>To install Calcite-Web as a ruby gem, reference the gem from your <code>Gemfile</code>:</p>
-<pre><code>gem <span class="hljs-string">"calcite-web"</span>, :git =&gt; <span class="hljs-string">"https://github.com/Esri/calcite-web.git"</span>, :tag =&gt; <span class="hljs-string">"v1.0.0-beta.35"</span>
+<pre><code>gem <span class="hljs-string">"calcite-web"</span>, :git =&gt; <span class="hljs-string">"https://github.com/Esri/calcite-web.git"</span>, :tag =&gt; <span class="hljs-string">"v1.0.0-beta.36"</span>
 </code></pre>
 <p>This makes Calcite Web available as a Compass extension. To use Calcite Web, make sure you require the gem in your compass config file (usually found at <code>config/compass.rb</code>). An example config file might look like this:</p>
 <pre><code class="ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">'calcite-web'</span>
@@ -266,7 +256,7 @@ sass_dir = <span class="hljs-string">"sass"</span>
             </h5>
             <div class="js-search-item-content hide">
               <p>To install Calcite Web with npm, type:</p>
-<pre><code>npm <span class="hljs-keyword">install</span> --save-dev Esri/calcite-web<span class="hljs-comment">#v1.0.0-beta.35</span>
+<pre><code>npm <span class="hljs-keyword">install</span> --save-dev Esri/calcite-web<span class="hljs-comment">#v1.0.0-beta.36</span>
 </code></pre>
 <p>You must add the current version in order to get the <code>dist/</code> folder.</p>
 <p>Now, in your main <code>.scss</code> file, you can just require the framework:</p>
@@ -1209,15 +1199,84 @@ aligning grid columns when the Grid System is unable to determine which columns 
               </a>
             </h5>
             <div class="js-search-item-content hide">
-              <p>There are several sets of icons made available as part of Calcite Web. While they use two separate technologies (SVG vs. Icon Fonts) their API's are largely the same. To add an icon to a page, just add a class to an element, like this:</p>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon-ui-close"</span> <span class="hljs-attribute">aria-label</span>=<span class="hljs-value">"close icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-</code></pre>
-<p>This will automatically add the icon to the page. In the icon font, the icon will be added as a <code>:before</code> pseudo element in the same color and size as the text you're currently using. If the icon class is a social icon or a multi-colored icon from the Calcite set it will be added as a background image to the element. Social icons and Calcite icons have a specific size and color which can't be modified.</p>
+              <p>All Calcite Web icons are distributed as minified SVGs.</p>
 
             </div>
             <!-- populated on the client -->
             <div class="js-search-item-snippet font-size-0"></div>
             <a href="../documentation/icons/#overview" class="link-gray font-size--2">esri.github.io/documentation/icons/#overview</a>
+          </section>
+        
+          <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
+            <h5 class="trailer-half">
+              <a href="../documentation/icons/#svg-icons">
+                
+                  User Interface Icons
+                
+              </a>
+            </h5>
+            <div class="js-search-item-content hide">
+              <p>Inline SVG source code can be used to create crisp, high quality, very performant iconography within a web application. Copy and paste the SVG source into your project HTML, and adjust the sizing as needed.</p>
+<p>The color of the icons is set to match the text color of the parent node for seamless integration with typographic elements.</p>
+
+            </div>
+            <!-- populated on the client -->
+            <div class="js-search-item-snippet font-size-0"></div>
+            <a href="../documentation/icons/#svg-icons" class="link-gray font-size--2">esri.github.io/documentation/icons/#svg-icons</a>
+          </section>
+        
+          <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
+            <h5 class="trailer-half">
+              <a href="../documentation/icons/#svg-colors">
+                
+                  UI Icon Colors
+                
+              </a>
+            </h5>
+            <div class="js-search-item-content hide">
+              <p>Adding classes to the the <code>&lt;SVG&gt;</code> element changes the path fill for the icon. Using these classes, icons can be a different color than the inherited type color of their parent node.</p>
+<div class="block-group block-group-3-up">
+  <div class="block">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon svg-icon-light-blue">    <path d="M30.225 28.521L20 10.811V2h1c.55 0 1-.45 1-1s-.45-1-1-1H11c-.55 0-1 .45-1 1s.45 1 1 1h1v8.811L1.774 28.523A2.32 2.32 0 0 0 3.784 32h24.435a2.318 2.318 0 0 0 2.007-3.479zM7.849 22L14 11.346V2h4v2h-2v2h2v4h-2v2h2.378l2.309 4H16v2h5.841l2.309 4H7.849z"/></svg>
+    <p class="trailer-1 leader-half"><code>svg-icon-light-blue</code></p>
+  </div>
+  <div class="block">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon svg-icon-blue">    <path d="M30.225 28.521L20 10.811V2h1c.55 0 1-.45 1-1s-.45-1-1-1H11c-.55 0-1 .45-1 1s.45 1 1 1h1v8.811L1.774 28.523A2.32 2.32 0 0 0 3.784 32h24.435a2.318 2.318 0 0 0 2.007-3.479zM7.849 22L14 11.346V2h4v2h-2v2h2v4h-2v2h2.378l2.309 4H16v2h5.841l2.309 4H7.849z"/></svg>
+    <p class="trailer-1 leader-half"><code>svg-icon-blue</code></p>
+  </div>
+  <div class="block">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon svg-icon-dark-blue">    <path d="M30.225 28.521L20 10.811V2h1c.55 0 1-.45 1-1s-.45-1-1-1H11c-.55 0-1 .45-1 1s.45 1 1 1h1v8.811L1.774 28.523A2.32 2.32 0 0 0 3.784 32h24.435a2.318 2.318 0 0 0 2.007-3.479zM7.849 22L14 11.346V2h4v2h-2v2h2v4h-2v2h2.378l2.309 4H16v2h5.841l2.309 4H7.849z"/></svg>
+    <p class="trailer-1 leader-half"><code>svg-icon-dark-blue</code></p>
+  </div>
+  <div class="block">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon svg-icon-green">    <path d="M30.225 28.521L20 10.811V2h1c.55 0 1-.45 1-1s-.45-1-1-1H11c-.55 0-1 .45-1 1s.45 1 1 1h1v8.811L1.774 28.523A2.32 2.32 0 0 0 3.784 32h24.435a2.318 2.318 0 0 0 2.007-3.479zM7.849 22L14 11.346V2h4v2h-2v2h2v4h-2v2h2.378l2.309 4H16v2h5.841l2.309 4H7.849z"/></svg>
+    <p class="trailer-1 leader-half"><code>svg-icon-green</code></p>
+  </div>
+  <div class="block">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon svg-icon-yellow">    <path d="M30.225 28.521L20 10.811V2h1c.55 0 1-.45 1-1s-.45-1-1-1H11c-.55 0-1 .45-1 1s.45 1 1 1h1v8.811L1.774 28.523A2.32 2.32 0 0 0 3.784 32h24.435a2.318 2.318 0 0 0 2.007-3.479zM7.849 22L14 11.346V2h4v2h-2v2h2v4h-2v2h2.378l2.309 4H16v2h5.841l2.309 4H7.849z"/></svg>
+    <p class="trailer-1 leader-half"><code>svg-icon-yellow</code></p>
+  </div>
+  <div class="block">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon svg-icon-purple">    <path d="M30.225 28.521L20 10.811V2h1c.55 0 1-.45 1-1s-.45-1-1-1H11c-.55 0-1 .45-1 1s.45 1 1 1h1v8.811L1.774 28.523A2.32 2.32 0 0 0 3.784 32h24.435a2.318 2.318 0 0 0 2.007-3.479zM7.849 22L14 11.346V2h4v2h-2v2h2v4h-2v2h2.378l2.309 4H16v2h5.841l2.309 4H7.849z"/></svg>
+    <p class="trailer-1 leader-half"><code>svg-icon-purple</code></p>
+  </div>
+  <div class="block">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon svg-icon-orange">    <path d="M30.225 28.521L20 10.811V2h1c.55 0 1-.45 1-1s-.45-1-1-1H11c-.55 0-1 .45-1 1s.45 1 1 1h1v8.811L1.774 28.523A2.32 2.32 0 0 0 3.784 32h24.435a2.318 2.318 0 0 0 2.007-3.479zM7.849 22L14 11.346V2h4v2h-2v2h2v4h-2v2h2.378l2.309 4H16v2h5.841l2.309 4H7.849z"/></svg>
+    <p class="trailer-1 leader-half"><code>svg-icon-orange</code></p>
+  </div>
+  <div class="block">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon svg-icon-red">    <path d="M30.225 28.521L20 10.811V2h1c.55 0 1-.45 1-1s-.45-1-1-1H11c-.55 0-1 .45-1 1s.45 1 1 1h1v8.811L1.774 28.523A2.32 2.32 0 0 0 3.784 32h24.435a2.318 2.318 0 0 0 2.007-3.479zM7.849 22L14 11.346V2h4v2h-2v2h2v4h-2v2h2.378l2.309 4H16v2h5.841l2.309 4H7.849z"/></svg>
+    <p class="trailer-1 leader-half"><code>svg-icon-red</code></p>
+  </div>
+  <div class="block">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon svg-icon-gray">    <path d="M30.225 28.521L20 10.811V2h1c.55 0 1-.45 1-1s-.45-1-1-1H11c-.55 0-1 .45-1 1s.45 1 1 1h1v8.811L1.774 28.523A2.32 2.32 0 0 0 3.784 32h24.435a2.318 2.318 0 0 0 2.007-3.479zM7.849 22L14 11.346V2h4v2h-2v2h2v4h-2v2h2.378l2.309 4H16v2h5.841l2.309 4H7.849z"/></svg>
+    <p class="trailer-1 leader-half"><code>svg-icon-gray</code></p>
+  </div>
+</div>
+            </div>
+            <!-- populated on the client -->
+            <div class="js-search-item-snippet font-size-0"></div>
+            <a href="../documentation/icons/#svg-colors" class="link-gray font-size--2">esri.github.io/documentation/icons/#svg-colors</a>
           </section>
         
           <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
@@ -1249,7 +1308,10 @@ aligning grid columns when the Grid System is unable to determine which columns 
               </a>
             </h5>
             <div class="js-search-item-content hide">
-              <p>The monochromatic icon set is delivered as an icon font. By default, Calcite Web expects font files to be located at <code>../</code>. If your fonts are elsewhere, set the <code>$font-path</code> variable</p>
+              <div class="alert alert-red is-active trailer-1">
+ <h5 class="trailer-0">The icon font is deprecated, and will be removed in v1.0.0</h5>
+</div>
+<p>The monochromatic icon set is delivered as an icon font. By default, Calcite Web expects font files to be located at <code>../</code>. If your fonts are elsewhere, set the <code>$font-path</code> variable</p>
 <p>Icon fonts have several advantages such as the ability to quickly change their color, and the fact that icon fonts size themselves to be proportional to the text you place them with.</p>
 <p>Icons are designed to be used in conjuction with explanatory text. This means they have some padding baked in. To remove this padding, use the icon modifier class <code>.icon-ui-flush</code>.</p>
 

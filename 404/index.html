@@ -43,11 +43,6 @@
       <nav class="drawer-nav" role="navigation">
         <aside class="side-nav">
           <h2 class="side-nav-title">Calcite Web</h2>
-          <div class="panel padding-trailer-half padding-leader-half">
-            <form method="GET" action="../search/">
-              <input type="search" placeholder="Search" name="q">
-            </form>
-          </div>
           <a href="../documentation/" class="side-nav-link">Documentation</a>
           <a href="../examples/" class="side-nav-link">Examples</a>
           <a href="../guides/" class="side-nav-link">Guides</a>
@@ -56,15 +51,9 @@
     </div>
 
     <div class="drawer drawer-right js-drawer" data-drawer="right">
-      <!-- <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerright"> -->
       <nav class="drawer-nav" role="navigation">
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
-          <div class="panel padding-trailer-half padding-leader-half">
-            <form method="GET" action="../search/" class="panel padding-leader-half">
-              <input type="search" placeholder="Search" name="q">
-            </form>
-          </div>
           <a href="../documentation/" class="side-nav-link">Documentation</a>
           <a href="../examples/" class="side-nav-link">Examples</a>
           <a href="../guides/" class="side-nav-link">Guides</a>
@@ -84,65 +73,67 @@
               <span class="font-size-1">Search Calcite Web</span>
               <input class="search-input js-search-input" type='search' placeholder='Search' name="q">
             </label>
-            <label class="inline-block margin-right-2">
-              Language
-              <select name="language">
-                <option value="">All Languages</option>
-                <option value="">Android</option>
-                <option value="">iOS (Swift)</option>
-                <option value="">iOS (Objective C)</option>
-                <option value="">Java</option>
-                <option value="">JavaScript</option>
-                <option value="">Mac OS X (Swift)</option>
-                <option value="">Mac OS X (Objective C)</option>
-                <option value="">Qt (QML)</option>
-                <option value="">Qt (C++)</option>
-                <option value="">REST APIs</option>
-                <option value="">Web AppBuilder</option>
-                <option value="">.Net (Desktop)</option>
-                <option value="">.Net (Store)</option>
-                <option value="">.Net (Phone)</option>
-                <option value="">.Net (WPF)</option>
-                <option value="">.Net (UWP)</option>
-              </select>
-            </label>
-            <label class="inline-block margin-right-2">
-              Version
-              <select name="version">
-                <option value="">All Versions</option>
-                <option value="1.0.0">10.3</option>
-                <option value="2.0.0">10.4</option>
-                <option value="3.0.0">Quartz</option>
-              </select>
-            </label>
-              <button type="submit" class="btn btn-large right leader-1">Search</button>
+            <button type="submit" class="btn btn-large right leader-1">Search</button>
             </div>
           </form>
         </div>
       </div>
-      <!-- Logged Out Pattern-->
+
+      <!-- Sample HTML -->
       <header class="top-nav">
-        <a class="skip-to-content" href="#skip-to-content">Skip To Content</a>
         <div class="grid-container">
           <div class="column-24">
+            <!-- desktop sized navigation -->
             <div class="tablet-hide">
+              <!-- logo / home -->
               <a href="../" class="top-nav-title">Calcite Web</a>
+              <!-- primary navigation sections -->
               <nav class="top-nav-list" role="navigation">
                 <a href="../documentation" class="top-nav-link">Documentation</a>
                 <a href="../examples" class="top-nav-link">Examples</a>
                 <a href="../guides" class="top-nav-link">Guides</a>
               </nav>
-
-              <button class="icon-ui-search phone-hide search-top-nav link-dark-gray right js-search-toggle" href="#" aria-label="Search">Search</button>
-              <button class="icon-ui-search icon-ui-flush phone-show search-top-nav link-dark-gray right js-search-toggle" href="#" aria-label="Search"></button>
+              <nav class="class-top-nav-list right" role="navigation" aria-labelledby="usernav">
+                <button class="search-top-nav link-dark-gray js-search-toggle" href="#" aria-label="Search">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 -4 32 36" class="svg-icon js-search-icon">
+                    <path d="M31.607 27.838l-6.133-6.137a1.336 1.336 0 0 0-1.887 0l-.035.035-2.533-2.533-.014.014c3.652-4.556 3.422-11.195-.803-15.42-4.529-4.527-11.875-4.531-16.404 0-4.531 4.531-4.529 11.875 0 16.406 4.205 4.204 10.811 4.455 15.365.848l.004.003-.033.033 2.541 2.54a1.33 1.33 0 0 0 .025 1.848l6.135 6.133a1.33 1.33 0 0 0 1.887 0l1.885-1.883a1.332 1.332 0 0 0 0-1.887zM17.811 17.809a8.213 8.213 0 0 1-11.619 0 8.217 8.217 0 0 1 0-11.622 8.219 8.219 0 0 1 11.619.004 8.216 8.216 0 0 1 0 11.618z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 -4 32 36" class="svg-icon js-close-icon hide">
+                    <path d="M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z"/>
+                  </svg>
+                </button>
+              </nav>
             </div>
 
-            <div class="tablet-show">
-              <a href="/" class="icon-ui-menu top-nav-title js-drawer-toggle" data-drawer="top-nav">Calcite Web</a>
+            <!-- tablet and mobile sized navigation -->
+            <div class="tablet-show top-nav-flex">
+              <!-- open primary navigation drawer -->
+              <nav class="top-nav-flex-list" role="navigation" aria-labelledby="topnav">
+                <a href="/" class="top-nav-link js-drawer-toggle" data-drawer="top-nav">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 -4 32 36" class="svg-icon"><path d="M28 3.5A2.5 2.5 0 0 1 25.5 6h-21A2.5 2.5 0 0 1 2 3.5v-1A2.5 2.5 0 0 1 4.5 0h21A2.5 2.5 0 0 1 28 2.5v1zm0 11a2.5 2.5 0 0 0-2.5-2.5h-21A2.5 2.5 0 0 0 2 14.5v1A2.5 2.5 0 0 0 4.5 18h21a2.5 2.5 0 0 0 2.5-2.5v-1zm0 12a2.5 2.5 0 0 0-2.5-2.5h-21A2.5 2.5 0 0 0 2 26.5v1A2.5 2.5 0 0 0 4.5 30h21a2.5 2.5 0 0 0 2.5-2.5v-1z"/></svg>
+                </a>
+              </nav>
+              <!-- logo / home -->
+              <header class="top-nav-flex-title">
+                <a href="/" class="top-nav-link">ArcGIS <span class="phone-hide">for Developers</span></a>
+              </header>
+              <nav class="top-nav-flex-list class-top-nav-list text-right" role="navigation" aria-labelledby="usernav">
+                <button class="search-top-nav link-dark-gray js-search-toggle" href="#" aria-label="Search">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 -4 32 36" class="svg-icon js-search-icon">
+                    <path d="M31.607 27.838l-6.133-6.137a1.336 1.336 0 0 0-1.887 0l-.035.035-2.533-2.533-.014.014c3.652-4.556 3.422-11.195-.803-15.42-4.529-4.527-11.875-4.531-16.404 0-4.531 4.531-4.529 11.875 0 16.406 4.205 4.204 10.811 4.455 15.365.848l.004.003-.033.033 2.541 2.54a1.33 1.33 0 0 0 .025 1.848l6.135 6.133a1.33 1.33 0 0 0 1.887 0l1.885-1.883a1.332 1.332 0 0 0 0-1.887zM17.811 17.809a8.213 8.213 0 0 1-11.619 0 8.217 8.217 0 0 1 0-11.622 8.219 8.219 0 0 1 11.619.004 8.216 8.216 0 0 1 0 11.618z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 -4 32 36" class="svg-icon js-close-icon hide">
+                    <path d="M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z"/>
+                  </svg>
+                </button>
+              </nav>
             </div>
           </div>
+
         </div>
       </header>
+
+
       <!-- Secondary Nav Pattern -->
       <!-- what -->
       
