@@ -45,11 +45,27 @@
   background-color: $white;
 }
 
+@mixin filter-link-check() {
+  opacity: 0;
+  visibility: hidden;
+  margin-top: 6px;
+  position: absolute;
+  left: 9px
+}
+@mixin filter-link-close() {
+  opacity: 0;
+  visibility: hidden;
+  margin-top: 6px;
+  position: absolute;
+  right: 9px
+}
+
+
 @mixin filter-dropdown-link() {
   position: relative;
   display: block;
   @include box-sizing(border-box);
-  padding: $baseline/3 $baseline $baseline/3 .125rem;
+  padding: $baseline/3 $baseline;
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
       padding: $baseline/3 .125rem $baseline/3 $baseline;
@@ -61,59 +77,28 @@
   &:first-child {
     border-top: none;
   }
-  &:after {
-    @extend %icon-font-styles;
-    @extend .icon-ui-close:before;
-    position: absolute;
-    right: 0;
-    @if ($include-right-to-left) {
-      html[dir="rtl"] & {
-        right: auto;
-        left: 0;
-        padding-left: $baseline/3;
-      }
-    }
-    margin-top: $baseline/6;
-    opacity: 0;
-    color: $gray;
-  }
-
   &:hover {
     text-decoration: none;
     color: $dark-gray;
-
-    &:before {
+    .filter-link-check {
       opacity: 1;
-    }
-  }
-
-  &:before {
-    @extend %icon-font-styles;
-    @extend .icon-ui-check-mark:before;
-    opacity: 0;
-    padding: 0 $baseline/6;
-    color: $gray;
-    @if ($include-right-to-left) {
-      html[dir="rtl"] & {
-        float: right;
-        padding-top: $baseline/6;
-      }
+      visibility: visible;
     }
   }
 
   &.is-active {
-    &:before {
+    .filter-link-close {
       opacity: 1;
-      color: $green;
+      visibility: visible;
     }
-    &:after {
+    .filter-link-check {
+      fill: $green;
       opacity: 1;
+      visibility: visible;
     }
-
     &:hover {
-      &:after {
-        opacity: 1;
-        color: $red;
+      .filter-link-close {
+        fill: $red;
       }
     }
   }
@@ -131,29 +116,17 @@
   color: $darker-gray;
 }
 
-@mixin filter-dropdown-remove() {
-  @include right();
-  // ie 11 fix;
-  right: 0;
-  top: 1.3rem;
-  &:after {
-    @include font-size(-1);
-    @extend %icon-font-styles;
-    @extend .icon-ui-close:before;
-    margin-left: $baseline/3;
-    @if ($include-right-to-left) {
-      html[dir="rtl"] & {
-        right: auto;
-        left: 0;
-        padding-left: $baseline/3;
-      }
-    }
-    opacity: 1;
-    color: $gray;
-  }
 
+@mixin filter-dropdown-remove() {
+  padding-right: $baseline;
+  .svg-icon {
+    margin-top: 6px;
+    float: right;
+    position: absolute;
+    color: $darker-gray;
+  }
   &:hover {
-    &:after {
+    .svg-icon {
       color: $red;
     }
   }
@@ -168,6 +141,8 @@
   .filter-dropdown-list  { @include filter-dropdown-list(); }
   .filter-dropdown-inner-list  { @include filter-dropdown-inner-list(); }
   .filter-dropdown-link  { @include filter-dropdown-link(); }
+  .filter-link-close {@include filter-link-close();}
+  .filter-link-check {@include filter-link-check();}
   .filter-dropdown-active {@include filter-dropdown-active(); }
   .filter-dropdown-remove {@include filter-dropdown-remove(); }
   .is-hidden {@include hide(); }

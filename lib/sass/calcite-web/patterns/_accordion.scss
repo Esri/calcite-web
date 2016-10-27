@@ -8,12 +8,15 @@
   @include side-nav();
 }
   @mixin accordion-section() {
+    .svg-icon {
+      transform: rotate(-90deg);
+    }
     &.is-active {
       .accordion-content {
         display: block;
       }
-      .accordion-title:before {
-        @extend .icon-ui-down:before;
+      .svg-icon {
+        transform: rotate(0deg);
       }
     }
   }
@@ -21,12 +24,7 @@
   @mixin accordion-title() {
     @include side-nav-title();
     cursor: pointer;
-    @include transition(all, $transition);
-    &:before {
-      font-size: modular-scale(-3);
-      @extend %icon-font-styles;
-      @extend .icon-ui-right:before;
-    }
+    // @include transition(all, $transition);
     &:focus,
     &:hover {
       @include transition(all, $transition);
