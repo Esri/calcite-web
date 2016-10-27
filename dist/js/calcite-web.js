@@ -11,26 +11,26 @@
 
 // check if an element has a specific class
 function has(domNode, className) {
-  var elementClass = ' ' + domNode.className + ' ';
-  return elementClass.indexOf(' ' + className + ' ') !== -1;
+  return new RegExp('(\\s|^)' + className + '(\\s|$)').test(domNode.getAttribute('class'));
 }
 
 // add one or more classes to an element
 function add(domNode, classes) {
   classes.split(' ').forEach(function (c) {
     if (!has(domNode, c)) {
-      domNode.className += ' ' + c;
+      domNode.setAttribute('class', domNode.getAttribute('class') + ' ' + c);
     }
   });
 }
 
 // remove one or more classes from an element
 function remove(domNode, classes) {
-  var elementClass = ' ' + domNode.className + ' ';
   classes.split(' ').forEach(function (c) {
-    elementClass = elementClass.replace(' ' + c + ' ', ' ');
+    var removedClass = domNode.getAttribute('class').replace(new RegExp('(\\s|^)' + c + '(\\s|$)', 'g'), '$2');
+    if (has(domNode, c)) {
+      domNode.setAttribute('class', removedClass);
+    }
   });
-  domNode.className = elementClass.trim();
 }
 
 // if domNode has the class, remove it, else add it
@@ -833,7 +833,7 @@ function filterDropdown() {
 
     for (var i = 0; i < options.active.length; i++) {
       var item = options.active[i];
-      var template = '<span class="filter-dropdown-active">' + item.innerHTML + '<a class="filter-dropdown-remove" href="#" data-item-id=\'' + i + '\'></a></span>';
+      var template = '<span class="filter-dropdown-active">\n        ' + item.innerHTML + '\n        <a class="filter-dropdown-remove" href="#" data-item-id=\'' + i + '\'>\n          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 32 32" class="svg-icon"><path d="M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z"/></svg>\n        </a>\n      </span>';
       options.parent.insertAdjacentHTML('beforeend', template);
       var remove$$ = options.parent.querySelector('.filter-dropdown-remove[data-item-id="' + i + '"]');
       add$1(remove$$, click(), removeClick);
@@ -966,13 +966,10 @@ function search() {
   }
 
   function toggleSearch(node) {
-    if (has(node, 'icon-ui-search')) {
-      remove(node, 'icon-ui-search');
-      add(node, 'icon-ui-close');
-    } else {
-      add(node, 'icon-ui-search');
-      remove(node, 'icon-ui-close');
-    }
+    var openIcon = node.querySelector('.js-search-icon');
+    var closeIcon = node.querySelector('.js-close-icon');
+    toggle(openIcon, 'hide');
+    toggle(closeIcon, 'hide');
     toggle(overlay, 'is-active');
     toggle(document.body, 'overflow-hidden');
     bus.emit('search:focus');
@@ -987,14 +984,7 @@ function search() {
     remove(overlay, 'is-active');
     remove(document.body, 'overflow-hidden');
     var toggleNodes = nodeListToArray(toggles);
-    toggleNodes.forEach(removeCloseIcons);
-  }
-
-  function removeCloseIcons(toggle) {
-    if (has(toggle, 'icon-ui-close')) {
-      remove(toggle, 'icon-ui-close');
-      add(toggle, 'icon-ui-search');
-    }
+    toggleNodes.forEach(toggleSearch);
   }
 
   function toggleClick(e) {
@@ -1378,7 +1368,7 @@ function extend(plugin) {
 // └────────────┘
 // define all public api methods
 var calciteWeb = {
-  version: '1.0.0-beta.34',
+  version: '1.0.0-beta.36',
   click: click,
   addEvent: add$1,
   removeEvent: remove$1,
