@@ -31,7 +31,7 @@
 
   @mixin search-content() {
     @include modal-content();
-    @include transform(translate3d(0, -20px, 0))
+    @include transform(translate3d(0, -20px, 0));
     margin-top: 3*$baseline;
     padding-top: 15vh;
     vertical-align: top;
