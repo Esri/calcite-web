@@ -8,7 +8,7 @@ layout: layouts/_styleguide:text
 
 >All code in any code base should look like a single person typed it, no matter how many people contributed. - The Golden Rule
 
-Below is an effort to standardize the syntax used in all projects. The hope is to make these decisions easy, and keep codebases clean and sensible. This stylguide is a fork of [mdo's html and css guide](https://github.com/mdo/code-guide) with some minor adjustments.
+Below is an effort to standardize the syntax used in all projects. The hope is to make these decisions easy, and keep codebases clean and sensible. This styleguide is a fork of [mdo's html and css guide](https://github.com/mdo/code-guide) with some minor adjustments.
 
 ## General Guidelines
 
@@ -25,7 +25,7 @@ Below is an effort to standardize the syntax used in all projects. The hope is t
 - Quote attribute values in selectors, e.g., input[type="text"]
 - Avoid specifying units for zero values, e.g., ```margin: 0;``` instead of ```margin: 0px;```
 
-####Incorrect example:####
+#### Incorrect example: ####
 
 ```
 .selector, .selector-secondary, .selector[type=text] {
@@ -36,7 +36,7 @@ Below is an effort to standardize the syntax used in all projects. The hope is t
 }
 ```
 
-####Correct example:####
+#### Correct example: ####
 
 ```css
 .selector,
