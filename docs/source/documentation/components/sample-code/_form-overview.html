@@ -1,26 +1,32 @@
 <form action="" method="post">
 
   <label>
-    Name<span class="text-red">*</span>
+    Name
     <input type="text" id="name" required aria-required="true"/>
-    <span class="form-hint">
-      <span class="form-hint-text">Just type some letters</span>
-      <span class="form-hint-icon"></span>
-    </span>
+    <span class="font-size--2">Just type some letters</span>
   </label>
 
   <label>
-    E-mail<span class="text-red">*</span>
+    E-mail
     <input type="email" required aria-required="true"/>
-    <span class="form-hint">
-      <span class="form-hint-text">name@domain.tld</span>
-      <span class="form-hint-icon"></span>
-    </span>
+    <span class="font-size--2">name@domain.tld</span>
+  </label>
+
+  <label>
+    Password
+    <input type="text" id="name" required aria-required="true"/>
+    <span class="font-size--2">Pick a good one</span>
+  </label>
+  <label>
+    Repeat Password
+    <input type="text" id="name" required aria-required="true" disabled/>
+    <span class="font-size--2">Pick a good one</span>
   </label>
 
   <label>
     Address
     <input type="text"/>
+    <span class="font-size--2">Optional</span>
   </label>
 
   <label>
@@ -49,18 +55,21 @@
     </label>
   </fieldset>
 
-  <label>Gender
+  <label>
+    Gender
     <select name="tags" multiple>
       <option value="basemap">Male</option>
       <option value="esri_basemap">Female</option>
       <option value="vector">Other</option>
       <option value="hey">Your gender binaries cant hold me down</option>
     </select>
+    <span class="font-size--2">Optional</span>
   </label>
 
   <label>
     Message
     <textarea></textarea>
+    <span class="font-size--2">Optional</span>
   </label>
 
   <fieldset class="fieldset-radio">
