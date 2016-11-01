@@ -83,6 +83,8 @@ The primary goal of Calcite Web is create a unified visual language for all esri
 
 Calcite Web was built for developers. It is meant to be flexible enough that you can accomplish 80% of your website with the default patterns writing only html markup. If you use Calcite Web as a Sass library, you'll also get a set of very helpful mixins to help you make new patterns and components that fit in with the Calcite methodology and aesthetic.
 
+Since Calcite Web is primarily designed for Esri brand properties, it relies on Avenir Next as it's primary typeface. Avenir Next is not distributed with Calcite Web.
+
 ## Calcite Web as a Framework Dependency
 
 Calcite Web has the ability to exist exclusively as a Sass library, not generating a single line of CSS. Including the framework in this way may seem counter intuitive - the whole project would compile to an empty file - but allows for some powerful and meaningful applications. Using Calcite Web in this way allows for the creation of new frameworks or themes for any given structure that duplicates no stylistic code or decisions. This means that a project like Calcite for Dojo or Calcite for Bootstrap can each use different patterns of HTML markup to achieve components that are identical to their Calcite Web counterparts.
@@ -101,6 +103,18 @@ For example, a Bootstrap button would simply extend the existing Calcite Web but
 ## Calcite Web vs. Other Frameworks
 
 Calcite Web, while still a CSS Framework, has some profound  differences from projects like [Bootstrap](http://getbootstrap.com/) or [Foundation](http://foundation.zurb.com/). Where Bootstrap and Foundation both aim to provide a robust set of patterns and utilities for the general, third party developer, Calcite Web **only** concerns itself with Esri projects. Calcite Web is not designed for a developer who is not directly working for Esri on Esri products or properties. In other words, every project created with Calcite Web will look like an Esri-branded site.
+
+## Licensing
+
+Copyright 2016 Esri
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+> http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+A copy of the license is available in the repository's [LICENSE](./LICENSE) file.
 
 [](Esri Tags: Calcite CSS Sass Web Framework JavaScript)
 [](Esri Language: CSS)
