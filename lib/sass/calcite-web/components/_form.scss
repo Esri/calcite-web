@@ -151,6 +151,11 @@
     height: 1rem;
   }
 
+  input:disabled {
+    border-color: $lightest-gray;
+    background-color: $off-white;
+  }
+
   // ┌─────────┐
   // │ Selects │
   // └─────────┘
@@ -212,27 +217,69 @@
     }
   }
 
-  .input-error {
-    border-color: $red;
-    &:focus {
-      border-color: $blue;
+  .input-helper {
+    position: absolute;
+    z-index: 1000000;
+    display: none;
+    padding: $baseline/4 $baseline/2;
+    @include font-size(-2);
+    color: $white;
+    text-align: center;
+    word-wrap: break-word;
+    white-space: pre;
+    pointer-events: none;
+    background: $transparent-black;
+    border-radius: 3px;
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+    line-height: 1.5;
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 1000001;
+      display: none;
+      width: 0;
+      height: 0;
+      color: $transparent-black;
+      pointer-events: none;
+      border: 5px solid transparent;
+      top: auto;
+      left: $baseline;
+      top: -10px;
+      margin-right: -5px;
+      border-bottom-color: $transparent-black;
+    }
+    &.is-active {
+      display: inline-block;
+      &:before {
+        display: inline-block;
+      }
     }
   }
 
-  .input-warning {
-    border-color: $dark-yellow;
-    &:focus {
-      border-color: $blue;
+  .input-helper-error {
+    background-color: $dark-red;
+    &:before {
+      color: $dark-red;
+      border-bottom-color: $dark-red;
     }
   }
-
-  .input-success {
-    border-color: $green;
-    &:focus {
-      border-color: $blue;
+  .input-helper-warning {
+    background-color: $dark-yellow;
+    color: $off-black;
+    &:before {
+      color: $dark-yellow;
+      border-bottom-color: $dark-yellow;
     }
   }
-
+  .input-helper-success {
+    background-color: $green;
+    &:before {
+      color: $green;
+      border-bottom-color: $green;
+    }
+  }
 }
 
 @if $include-forms == true {
