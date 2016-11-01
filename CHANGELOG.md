@@ -1,3 +1,17 @@
+## 1.0.0
+
+### Added
+- Form Input helpers
+- Disabled input styles
+
+### Removed
+- Expander JavaScript Pattern
+- Icon Font
+
+### Breaking
+- Accordion icons must be added inline, no longer provided by CSS
+- Dropdown icons must be added inline, no longer provided by CSS
+
 ## 1.0.0-beta.36
 
 ### Added
