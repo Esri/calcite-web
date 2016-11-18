@@ -377,7 +377,10 @@ components:
           modifiers: true
         - title: 'Text Inputs'
           link: text-inputs
-          modifiers: true
+          modifiers:
+            - input-helper-error
+            - input-helper-warning
+            - input-helper-success
         - title: 'Input Groups'
           link: input-groups
           modifiers: true
