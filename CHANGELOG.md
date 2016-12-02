@@ -1,4 +1,4 @@
-## 1.0.0
+## 1.0.0-beta.37
 
 ### Added
 - Form Input helpers
