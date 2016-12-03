@@ -59,9 +59,6 @@
     vertical-align: baseline;
     margin: $baseline*.25 0 0 0;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
-    &[disabled] {
-      cursor: default;
-    }
     &:focus {
       border-color: $blue;
       box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075),0 0 5px rgba(81, 167, 232, 0.5);
@@ -151,11 +148,6 @@
     height: 1rem;
   }
 
-  input:disabled {
-    border-color: $lightest-gray;
-    background-color: $off-white;
-  }
-
   // ┌─────────┐
   // │ Selects │
   // └─────────┘
@@ -215,6 +207,12 @@
       background: transparent;
       color: $darkest-gray;
     }
+  }
+
+  /* Disabled Styles */
+  input:disabled, textarea:disabled, select:disabled {
+    opacity: .3;
+    cursor: default;
   }
 
   .input-helper {
