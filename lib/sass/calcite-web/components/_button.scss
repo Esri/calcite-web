@@ -153,5 +153,22 @@
   .btn-white       { @include btn-white();}
   .btn-red         { @include btn-red();}
   .btn-green       { @include btn-color($green, $dark-green);}
-  .btn:disabled, .btn-disabled, button[disabled] { @include btn-disabled(); }
+
+  .btn:disabled,
+  .btn-disabled,
+  button[disabled] {
+    @include btn-disabled();
+  }
+
+  button,
+  input[type='button'],
+  input[type='submit'] {
+    @include btn();
+  }
+
+  input[type='file']::-webkit-file-upload-button,
+  ::-ms-browse {
+    webkit-appearance: none;
+    @include btn();
+  }
 }

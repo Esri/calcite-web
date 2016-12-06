@@ -375,12 +375,14 @@ components:
         - title: 'Overview'
           link: form-overview
           modifiers: true
+        - title: 'Form Validation'
+          link: form-validation
+          modifiers: true
         - title: 'Text Inputs'
           link: text-inputs
           modifiers:
-            - input-helper-error
-            - input-helper-warning
-            - input-helper-success
+            - input-success
+            - input-error
         - title: 'Input Groups'
           link: input-groups
           modifiers: true
