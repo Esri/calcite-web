@@ -38,14 +38,14 @@
     margin: .25rem 0 0 0;
     padding: 0 $baseline / 5;
     @include box-sizing(border-box);
+    font-family: $avenir-family;
     font-size: modular-scale(-1);
     line-height: 1.25rem;
-    font-family: $avenir-family;
+    color: $off-black;
     vertical-align: baseline;
     outline: none;
     outline-offset: 0;
     background-color: $white;
-    color: $darkest-gray;
     border: 1px solid $light-gray;
     border-radius: 0;
     @include transition(border-color 150ms linear);
@@ -64,6 +64,13 @@
     height: auto;
     padding-top: $baseline / 5;
   }
+
+  // Set placeholder text to minimum 4.5/1 contrast (#703)
+  :placeholder                   { color: #767676;  }
+  :input-placeholder             { color: #767676;  }
+  ::-webkit-input-placeholder    { color: #767676;  }
+  ::-moz-placeholder             { color: #767676;  }
+  :-ms-input-placeholder         { color: #767676;  }
 
   // ┌─────────────────┐
   // │ Form Validation │
@@ -140,6 +147,7 @@
     margin-right: .125rem;
     margin-left: .125rem;
     line-height: 1.25rem;
+    box-shadow: none;
     &:focus {
       box-shadow: none;
       border: none;

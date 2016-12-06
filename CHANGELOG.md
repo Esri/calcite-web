@@ -1,16 +1,20 @@
 ## 1.0.0-beta.37
 
 ### Added
-- Form Input helpers
+- `input-success`, `input-error`, and `input-error-message` validation helpers
 - Disabled input styles
 
 ### Removed
 - Expander JavaScript Pattern
 - Icon Font
 
+### Modified
+- Placeholder text now passes 4.5/1 contrast requirement (#703)
+
 ### Breaking
 - Accordion icons must be added inline, no longer provided by CSS
 - Dropdown icons must be added inline, no longer provided by CSS
+- removed `placeholder` mixin
 
 ## 1.0.0-beta.36
 
