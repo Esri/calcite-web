@@ -1,2 +1,2 @@
-All text inputs are styled by default. They receive a 1px border, a CSS3 transition, and a very distinct `:focus` style which helps provide feedback to the user while they engage with a form. The size of the forms and buttons are calibrated to they can exist in-line to each other.
+Text inputs should be placed inside a `label` element. See the [form validation](#form-validation) for a more complete `input-error` example.
 

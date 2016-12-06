@@ -1,0 +1,3 @@
+Basic classes are also provided to style form fields after validation. In order to show that a field passes or fails your validation rules, you can use the `input-success` and `input-error` classes on the form field.
+
+In the case of form errors we recommend you also use the `input-error-message` in order to explain to the user what went wrong. `input-error-message` is hidden by default, so you must add the `is-active` class to it for it to show.
