@@ -1,89 +1,58 @@
 <form action="" method="post">
-
   <label>
-    Name
-    <input type="text" id="name" required aria-required="true"/>
-    <span class="font-size--2">Just type some letters</span>
+    Email
+    <input type="email" required placeholder="bob@example.com">
   </label>
 
   <label>
-    E-mail
-    <input type="email" required aria-required="true"/>
-    <span class="font-size--2">name@domain.tld</span>
+    Confirm Email
+    <input type="email" required disabled>
   </label>
-
-  <label>
-    Password
-    <input type="text" id="name" required aria-required="true"/>
-    <span class="font-size--2">Pick a good one</span>
-  </label>
-  <label>
-    Repeat Password
-    <input type="text" id="name" required aria-required="true" disabled/>
-    <span class="font-size--2">Pick a good one</span>
-  </label>
-
-  <label>
-    Address
-    <input type="text"/>
-    <span class="font-size--2">Optional</span>
-  </label>
-
-  <label>
-    Card Type
-    <select>
-      <option value="">VISA</option>
-      <option value="">Mastercard</option>
-    </select>
-  </label>
-
-  <label>
-    Credit Card Number
-    <input type=text pattern="[0-9]{13,16}">
-  </label>
-
-  <fieldset class="fieldset-checkbox">
-    <legend>Email Preferences</legend>
-    <label>
-      <input type="checkbox"> Weekly Newsletter
-    </label>
-    <label>
-      <input type="checkbox"> Weekly Newsletter
-    </label>
-    <label>
-      <input type="checkbox"> Weekly Newsletter
-    </label>
-  </fieldset>
 
   <label>
     Gender
-    <select name="tags" multiple>
-      <option value="basemap">Male</option>
-      <option value="esri_basemap">Female</option>
-      <option value="vector">Other</option>
-      <option value="hey">Your gender binaries cant hold me down</option>
+    <select name="gender" required>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
     </select>
-    <span class="font-size--2">Optional</span>
+  </label>
+
+  <label>
+    Birthday
+    <input type="date" placeholder="mm/dd/yyyy" required>
   </label>
 
   <label>
     Message
-    <textarea></textarea>
-    <span class="font-size--2">Optional</span>
+    <textarea placeholder="Briefly describe what isn't working, max 240 characters" rows="5" required></textarea>
   </label>
 
-  <fieldset class="fieldset-radio">
-    <legend>Subscribe to Newsletter</legend>
+  <fieldset class="fieldset-checkbox">
+    <legend>Email Preferences (optional)</legend>
     <label>
-      <input type="radio" name="subscribe" value="yeah">Please
+      <input type="checkbox"> Weekly Newsletter
     </label>
     <label>
-      <input type="radio" name="subscribe" value="nope" checked>No Way
+      <input type="checkbox"> Monthly Newsletter
+    </label>
+    <label>
+      <input type="checkbox"> All Emails
     </label>
   </fieldset>
 
-  <input type="submit" class="btn btn-clear">
+  <fieldset class="fieldset-radio">
+    <legend>How did you hear about us? (optional)</legend>
+    <label>
+      <input type="radio" name="source" value="friend">Friend
+    </label>
+    <label>
+      <input type="radio" name="source" value="event">Sponsored Event
+    </label>
+    <label>
+      <input type="radio" name="source" value="other">Other
+    </label>
+  </fieldset>
 
   <button type="submit">Submit</button>
-
 </form>

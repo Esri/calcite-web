@@ -1,0 +1,1 @@
+Selects can be made full-width by using the `select-full` class. Styles for multiple selects are also provided.
