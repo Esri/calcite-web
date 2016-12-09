@@ -107,25 +107,26 @@
 }
 
 @mixin tabs-translucent() {
-  .tab-title    {
-    background-clip: padding-box;
+  .tab-title {
     background-color: $transparent-white;
+    background-image: none;
     border: none;
+    border-top: 2px solid $transparent-white;
     color: $off-black;
     margin-right: 2px;
     margin-bottom: 3px;
-    transition: background, 0ms linear;
-    &:hover {
+    transition: none;
+    &:hover, &:focus {
       background-color: $opaque-white;
-      @include prefixer(background-image,linear-gradient(to top, transparent 94%, $blue 96%, $blue 100%), webkit moz o);
-      background-image:linear-gradient(to top, transparent 94%, $blue 96%, $blue 100%);
+      border-top-color: $blue;
+      background-image: none;
     }
     &.is-active {
+      background-image: none;
       background-color: $opaque-white;
+      border-top-color: $blue;
       border-bottom: 2px solid $opaque-white;
       margin-bottom: 0;
-      @include prefixer(background-image,linear-gradient(to top, transparent 94%, $blue 96%, $blue 100%), webkit moz o);
-      background-image:linear-gradient(to top, transparent 94%, $blue 96%, $blue 100%);
     }
   }
   .tab-contents {
@@ -140,16 +141,15 @@
   .tab-title    {
     background-color: $transparent-black;
     color: $white;
-    &:hover {
+    border-top: 2px solid $transparent-black;
+    &:hover, &:focus {
       background-color: $opaque-black;
-      @include prefixer(background-image,linear-gradient(to top, transparent 94%, $white 96%, $white 100%), webkit moz o);
-      background-image:linear-gradient(to top, transparent 94%, $white 96%, $white 100%);
+      border-top-color: $white;
     }
     &.is-active {
-      border-bottom: 2px solid $opaque-black;
       background-color: $opaque-black;
-      @include prefixer(background-image,linear-gradient(to top, transparent 94%, $white 96%, $white 100%), webkit moz o);
-      background-image:linear-gradient(to top, transparent 94%, $white 96%, $white 100%);
+      border-top-color: $white;
+      border-bottom: 2px solid transparent;
     }
   }
 
@@ -160,12 +160,12 @@
 }
 
 @if $include-tabs == true {
-  .tab-nav         { @include tab-nav()          ;}
-  .tab-title       { @include tab-title()        ;}
-  .tab-contents    { @include tab-contents()     ;}
-  .tab-section     { @include tab-section()      ;}
-  .tabs-gray       { @include tabs-gray()        ;}
-  .tabs-transparent{ @include tabs-transparent() ;}
+  .tab-nav         { @include tab-nav(); }
+  .tab-title       { @include tab-title(); }
+  .tab-contents    { @include tab-contents(); }
+  .tab-section     { @include tab-section(); }
+  .tabs-gray       { @include tabs-gray(); }
+  .tabs-transparent{ @include tabs-transparent(); }
   .tabs-translucent{ @include tabs-translucent();}
-  .tabs-dark       { @include tabs-translucent(); @include tabs-dark();}
+  .tabs-dark       { @include tabs-translucent(); @include tabs-dark(); }
 }
