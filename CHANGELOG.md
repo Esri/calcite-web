@@ -3,6 +3,7 @@
 ### Added
 - `input-success`, `input-error`, and `input-error-message` validation helpers
 - `input-search` helper for magnifying glass in search input
+- `input-minimal` helper for more subtle input
 - Disabled input styles
 
 ### Removed
