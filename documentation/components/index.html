@@ -74,7 +74,6 @@
               <input class="search-input js-search-input" type='search' placeholder='Search' name="q">
             </label>
             <button type="submit" class="btn btn-large right leader-1">Search</button>
-            </div>
           </form>
         </div>
       </div>
@@ -312,6 +311,10 @@
             
           
             
+              <a href="#form-validation" class="side-nav-link">Form Validation</a>
+            
+          
+            
               <a href="#text-inputs" class="side-nav-link">Text Inputs</a>
             
           
@@ -383,8 +386,6 @@
 
           
 
-          
-
         </section>
         <hr>
       
@@ -399,8 +400,6 @@
 <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-red btn-arrow"</span>&gt;</span>  Red Button with Arrow <span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
 </code></pre>
 
-
-          
 
           
 
@@ -498,8 +497,6 @@
           
 
           
-
-          
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
@@ -535,8 +532,6 @@
           <p>Labels are a way to call attention to a word. The <code>mark</code> element, a notification count, or an important indicator (like marking a technology as 'beta' or 'private') are all use cases for labels.</p>
 <p>Labels should be limited to one or two words and should only be used in situations where the content in the label is quite important. Labels are sized in <code>em</code> units, so they will scale up with whatever element they are inside.</p>
 
-
-          
 
           
 
@@ -595,8 +590,6 @@
 <p>Dropdowns are good for showing multiple options under a single call to action. For example, if you had a download button, and you needed the user to choose a format for the download, you could put several choices in a dropdown.</p>
 <p>Dropdowns differ from <code>select</code> elements in that they don't have a default state or a 'current' state. Instead, they offer a jumping off point for a series of related actions.</p>
 
-
-          
 
           
 
@@ -695,8 +688,6 @@
           
 
           
-
-          
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
@@ -730,8 +721,6 @@
           <p>Alerts are used to inform users of state changes, errors, or successful actions. Alerts are only visible if they have the <code>is-active</code> class. Without as <code>is-active</code> class, the alert will be set to <code>display: none;</code></p>
 <p>Calcite does not manage alert classes be default - you will have to write your own JavaScript handlers for this.</p>
 
-
-          
 
           
 
@@ -796,8 +785,6 @@
 
           <p>Panels are useful to draw attention or contain certain text on a page. They are simple containers, which can be used to help guide users through the visual hierarchy of your design. Adding borders and padding to any of the panels shown below allows for framing content as a call-out.</p>
 
-
-          
 
           
 
@@ -911,8 +898,6 @@
           
 
           
-
-          
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
@@ -1013,8 +998,6 @@
           
 
           
-
-          
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
@@ -1085,8 +1068,6 @@
           
 
           
-
-          
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
@@ -1136,8 +1117,6 @@
 
           <p>Tooltips use an <code>aria-label</code> attribute to provide contextual help on hover. Tooltips can apply to any element.</p>
 
-
-          
 
           
 
@@ -1228,8 +1207,6 @@
 </code></pre>
 <p>Tables that are too wide for the layout will be constrained and scroll horizontally. This is especially helpful for responsive designs which scale down to be smaller than the table's minimum width.</p>
 
-
-          
 
           
 
@@ -1470,8 +1447,6 @@
           
 
           
-
-          
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
@@ -1512,8 +1487,6 @@ ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">240</span>
 ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>-xsm.jpg
 </code></pre>
 
-
-          
 
           
 
@@ -1579,16 +1552,10 @@ ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>
         <section>
           
 
-          <p>The forms section provides basic styling of form elements in addition to a basic reset.</p>
-<p>Labels for form elements should describe what the field is, while placeholder text should describe the specifics about formatting or examples for the input text. Labels should <strong>not</strong> be followed by a semicolon.</p>
-<p>Required form fields should be labeled with two things:</p>
-<ol>
-<li>The <code>&lt;label&gt;</code> should include a red asterisk indicating visually that the field is required.</li>
-<li>The <code>&lt;input&gt;</code> element should have both the <code>required</code> and <code>aria-required=&quot;true&quot;</code> attributes.</li>
-</ol>
+          <p>Labels for form elements should describe what the field is. Labels should <strong>not</strong> be followed by a semicolon. Placeholder text should describe the specifics about formatting or examples for the input text. Placeholder text is optional, and should never be used to replace a label.</p>
+<p>Required form fields should be have the <code>required</code> attribute. While <em>optional</em> form fields should be clearly marked with &quot;(optional)&quot;.</p>
+<p>Try not to include too many optional fields, as it will make the form harder to comprehend and complete for the user.</p>
 
-
-          
 
           
 
@@ -1601,170 +1568,183 @@ ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
                 <form action="" method="post">
-
   <label>
-    Name<span class="text-red">*</span>
-    <input type="text" id="name" required aria-required="true"/>
-    <span class="form-hint">
-      <span class="form-hint-text">Just type some letters</span>
-      <span class="form-hint-icon"></span>
-    </span>
+    Email
+    <input type="email" required placeholder="bob@example.com">
   </label>
 
   <label>
-    E-mail<span class="text-red">*</span>
-    <input type="email" required aria-required="true"/>
-    <span class="form-hint">
-      <span class="form-hint-text">name@domain.tld</span>
-      <span class="form-hint-icon"></span>
-    </span>
+    Confirm Email
+    <input type="email" required disabled>
   </label>
 
   <label>
-    Address
-    <input type="text"/>
-  </label>
-
-  <label>
-    Card Type
-    <select>
-      <option value="">VISA</option>
-      <option value="">Mastercard</option>
+    Gender
+    <select name="gender" required>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
     </select>
   </label>
 
   <label>
-    Credit Card Number
-    <input type=text pattern="[0-9]{13,16}">
-  </label>
-
-  <fieldset class="fieldset-checkbox">
-    <legend>Email Preferences</legend>
-    <label>
-      <input type="checkbox"> Weekly Newsletter
-    </label>
-    <label>
-      <input type="checkbox"> Weekly Newsletter
-    </label>
-    <label>
-      <input type="checkbox"> Weekly Newsletter
-    </label>
-  </fieldset>
-
-  <label>Gender
-    <select name="tags" multiple>
-      <option value="basemap">Male</option>
-      <option value="esri_basemap">Female</option>
-      <option value="vector">Other</option>
-      <option value="hey">Your gender binaries cant hold me down</option>
-    </select>
+    Birthday
+    <input type="date" placeholder="mm/dd/yyyy" required>
   </label>
 
   <label>
     Message
-    <textarea></textarea>
+    <textarea placeholder="Briefly describe what isn't working, max 240 characters" rows="5" required></textarea>
   </label>
 
-  <fieldset class="fieldset-radio">
-    <legend>Subscribe to Newsletter</legend>
+  <fieldset class="fieldset-checkbox">
+    <legend>Email Preferences (optional)</legend>
     <label>
-      <input type="radio" name="subscribe" value="yeah">Please
+      <input type="checkbox"> Weekly Newsletter
     </label>
     <label>
-      <input type="radio" name="subscribe" value="nope" checked>No Way
+      <input type="checkbox"> Monthly Newsletter
+    </label>
+    <label>
+      <input type="checkbox"> All Emails
     </label>
   </fieldset>
 
-  <input type="submit" class="btn btn-clear">
+  <fieldset class="fieldset-radio">
+    <legend>How did you hear about us? (optional)</legend>
+    <label>
+      <input type="radio" name="source" value="friend">Friend
+    </label>
+    <label>
+      <input type="radio" name="source" value="event">Sponsored Event
+    </label>
+    <label>
+      <input type="radio" name="source" value="other">Other
+    </label>
+  </fieldset>
 
   <button type="submit">Submit</button>
-
 </form>
 
               </div>
               
             </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">action</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">method</span>=<span class="hljs-value">"post"</span>&gt;</span>
-
   <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
-    Name<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-red"</span>&gt;</span>*<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"name"</span> <span class="hljs-attribute">required</span> <span class="hljs-attribute">aria-required</span>=<span class="hljs-value">"true"</span>/&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-hint"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-hint-text"</span>&gt;</span>Just type some letters<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-hint-icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    Email
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"email"</span> <span class="hljs-attribute">required</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"bob@example.com"</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
-    E-mail<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-red"</span>&gt;</span>*<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"email"</span> <span class="hljs-attribute">required</span> <span class="hljs-attribute">aria-required</span>=<span class="hljs-value">"true"</span>/&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-hint"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-hint-text"</span>&gt;</span>name@domain.tld<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-hint-icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    Confirm Email
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"email"</span> <span class="hljs-attribute">required</span> <span class="hljs-attribute">disabled</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
-    Address
-    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span>/&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
-    Card Type
-    <span class="hljs-tag">&lt;<span class="hljs-title">select</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">""</span>&gt;</span>VISA<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">""</span>&gt;</span>Mastercard<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    Gender
+    <span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"gender"</span> <span class="hljs-attribute">required</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"male"</span>&gt;</span>Male<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"female"</span>&gt;</span>Female<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"other"</span>&gt;</span>Other<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
-    Credit Card Number
-    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">text</span> <span class="hljs-attribute">pattern</span>=<span class="hljs-value">"[0-9]{13,16}"</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fieldset-checkbox"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>Email Preferences<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span>&gt;</span> Weekly Newsletter
-    <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span>&gt;</span> Weekly Newsletter
-    <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span>&gt;</span> Weekly Newsletter
-    <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Gender
-    <span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"tags"</span> <span class="hljs-attribute">multiple</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"basemap"</span>&gt;</span>Male<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"esri_basemap"</span>&gt;</span>Female<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"vector"</span>&gt;</span>Other<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"hey"</span>&gt;</span>Your gender binaries cant hold me down<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
+    Birthday
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"date"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"mm/dd/yyyy"</span> <span class="hljs-attribute">required</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
     Message
-    <span class="hljs-tag">&lt;<span class="hljs-title">textarea</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">textarea</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">textarea</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"Briefly describe what isn't working, max 240 characters"</span> <span class="hljs-attribute">rows</span>=<span class="hljs-value">"5"</span> <span class="hljs-attribute">required</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">textarea</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fieldset-radio"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>Subscribe to Newsletter<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fieldset-checkbox"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>Email Preferences (optional)<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"subscribe"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"yeah"</span>&gt;</span>Please
+      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span>&gt;</span> Weekly Newsletter
     <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"subscribe"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"nope"</span> <span class="hljs-attribute">checked</span>&gt;</span>No Way
+      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span>&gt;</span> Monthly Newsletter
+    <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span>&gt;</span> All Emails
     <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"submit"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-clear"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fieldset-radio"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>How did you hear about us? (optional)<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"source"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"friend"</span>&gt;</span>Friend
+    <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"source"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"event"</span>&gt;</span>Sponsored Event
+    <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"source"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"other"</span>&gt;</span>Other
+    <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"submit"</span>&gt;</span>Submit<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
-
 <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
 
+</code></pre>
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+        <section>
+          
+            <h2 id="form-validation" tabindex="0">Form Validation</h2>
+          
+
+          <p>Basic classes are also provided to style form fields after validation. In order to show that a field passes or fails your validation rules, you can use the <code>input-success</code> and <code>input-error</code> classes on the form field.</p>
+<p>In the case of form errors we recommend you also use the <code>input-error-message</code> in order to explain to the user what went wrong. <code>input-error-message</code> is hidden by default, so you must add the <code>is-active</code> class to it for it to show.</p>
+
+
+          
+
+          
+
+          
+
+          
+            <h3 class="leader-2" tabindex="0">Modifiers</h3>
+            <div class="styleguide-modifiers">
+              <div class="styleguide-modifier-example">
+                <label>
+  First Name
+  <input type="text" class="input-success" value="Tom" required>
+</label>
+
+<label>
+  Password
+  <input type="text" required placeholder="At least 12 characters long" class="input-error">
+  <div class="input-error-message is-active">
+    Password does not meet minimum password requirements.
+  </div>
+</label>
+              </div>
+              
+            </div>
+<pre><code>&lt;<span class="hljs-keyword">label</span>&gt;
+  First Name
+  &lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"input-success"</span> value=<span class="hljs-string">"Tom"</span> required&gt;
+&lt;/<span class="hljs-keyword">label</span>&gt;
+
+&lt;<span class="hljs-keyword">label</span>&gt;
+  Password
+  &lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">"text"</span> required placeholder=<span class="hljs-string">"At least 12 characters long"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"input-error"</span>&gt;
+  &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"input-error-message is-active"</span>&gt;
+    Password does not meet minimum password requirements.
+  &lt;/div&gt;
+&lt;/<span class="hljs-keyword">label</span>&gt;
 </code></pre>
 
           
@@ -1781,10 +1761,8 @@ ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>
             <h2 id="text-inputs" tabindex="0">Text Inputs</h2>
           
 
-          <p>All text inputs are styled by default. They receive a 1px border, a CSS3 transition, and a very distinct <code>:focus</code> style which helps provide feedback to the user while they engage with a form. The size of the forms and buttons are calibrated to they can exist in-line to each other.</p>
+          <p>Text inputs should be placed inside a <code>label</code> element. See the <a href="#form-validation">form validation</a> for a more complete <code>input-error</code> example.</p>
 
-
-          
 
           
 
@@ -1797,17 +1775,53 @@ ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
                 <label>
-  Label Text <span class="font-size--2 right">Input Message</span>
-  <input type='text' placeholder='placeholder' class="modifier-class">
+  Label Text
+  <input type="text" placeholder="descriptive or sample text" class="modifier-class" required>
 </label>
 
               </div>
               
+                <div class="styleguide-modifier-example">
+                  <label>
+  Label Text
+  <input type="text" placeholder="descriptive or sample text" class="input-success" required>
+</label>
+
+                  <code class="modifier-name">.input-success</code>
+                </div>
+              
+                <div class="styleguide-modifier-example">
+                  <label>
+  Label Text
+  <input type="text" placeholder="descriptive or sample text" class="input-error" required>
+</label>
+
+                  <code class="modifier-name">.input-error</code>
+                </div>
+              
+                <div class="styleguide-modifier-example">
+                  <label>
+  Label Text
+  <input type="text" placeholder="descriptive or sample text" class="input-search" required>
+</label>
+
+                  <code class="modifier-name">.input-search</code>
+                </div>
+              
+                <div class="styleguide-modifier-example">
+                  <label>
+  Label Text
+  <input type="text" placeholder="descriptive or sample text" class="input-search input-minimal" required>
+</label>
+
+                  <code class="modifier-name">.input-search input-minimal</code>
+                </div>
+              
             </div>
-<pre><code>&lt;label&gt;
-  <span class="hljs-type">Label</span> <span class="hljs-type">Text</span> &lt;span <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"font-size--2 right"</span>&gt;<span class="hljs-type">Input</span> <span class="hljs-type">Message</span>&lt;/span&gt;
-  &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span>=</span><span class="hljs-symbol">'tex</span>t' placeholder=<span class="hljs-symbol">'placeholde</span>r' <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"modifier-class"</span>&gt;
-&lt;/label&gt;
+<pre><code>&lt;<span class="hljs-keyword">label</span>&gt;
+  <span class="hljs-keyword">Label</span> Text
+  &lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">"text"</span> placeholder=<span class="hljs-string">"descriptive or sample text"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"modifier-class"</span> required&gt;
+&lt;/<span class="hljs-keyword">label</span>&gt;
 
 </code></pre>
 
@@ -1827,8 +1841,6 @@ ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>
 
           <p>It is very common to have an input and a button attached to one another. The <code>input-group</code> component allows you to accomplish this with three classes.</p>
 
-
-          
 
           
 
@@ -1873,9 +1885,8 @@ ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>
             <h2 id="selects" tabindex="0">Selects</h2>
           
 
-          
+          <p>Selects can be made full-width by using the <code>select-full</code> class. Styles for multiple selects are also provided.</p>
 
-          
 
           
 
@@ -1897,6 +1908,19 @@ ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>
   </select>
 </label>
               </div>
+              
+                <div class="styleguide-modifier-example">
+                  <label>
+  Select Menu:
+  <select class="select-full">
+    <option value="">Menu 1</option>
+    <option value="">Menu 2</option>
+    <option value="">Menu 3</option>
+    <option value="">Menu 4</option>
+  </select>
+</label>
+                  <code class="modifier-name">.select-full</code>
+                </div>
               
             </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>
@@ -1926,8 +1950,6 @@ ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>
 
           <p>Checkboxes are aligned properly and given a focus state consistent with other form elements. Other than that they are left as is.</p>
 
-
-          
 
           
 
@@ -1978,8 +2000,6 @@ ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>
           
 
           
-
-          
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
@@ -2018,8 +2038,6 @@ ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>
           <p>Animation helper classes are used to provide character, visual richness, and tactile feedback for the user. Adding an <code>.animate-</code> class to any DOM node will animate that node. Using JavaScript to add <code>.animate-fade-in</code> to a DOM node when it enters the viewport will cause that node to fade in.</p>
 <p><strong>Note:</strong> The animations probably already happened if you scrolled here from further up the page. Refresh the page to seem them in action.</p>
 
-
-          
 
           
 
@@ -2112,8 +2130,6 @@ ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>
           
 
           
-
-          
             <h3 class="leader-2" tabindex="0">Modifiers</h3>
             <div class="styleguide-modifiers">
               <div class="styleguide-modifier-example">
@@ -2157,9 +2173,9 @@ ${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>
           <nav class="column-6">
             <h6>Styleguides</h6>
             <ul class="list-plain">
-              <li><a href="../../guides/javascript/">JavaScript</a></li>
-              <li><a href="../../guides/css/">CSS</a></li>
-              <li><a href="../../guides/html/">HTML</a></li>
+              <li><a href="../../guides/code/javascript/">JavaScript</a></li>
+              <li><a href="../../guides/code/css/">CSS</a></li>
+              <li><a href="../../guides/code/html/">HTML</a></li>
             </ul>
           </nav>
 

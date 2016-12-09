@@ -74,7 +74,6 @@
               <input class="search-input js-search-input" type='search' placeholder='Search' name="q">
             </label>
             <button type="submit" class="btn btn-large right leader-1">Search</button>
-            </div>
           </form>
         </div>
       </div>
@@ -175,7 +174,7 @@
 <blockquote>
 <p>All code in any code base should look like a single person typed it, no matter how many people contributed. - The Golden Rule</p>
 </blockquote>
-<p>Below is an effort to standardize the syntax used in all projects. The hope is to make these decisions easy, and keep codebases clean and sensible. This stylguide is a fork of <a href="https://github.com/mdo/code-guide">mdo's html and css guide</a> with some minor adjustments.</p>
+<p>Below is an effort to standardize the syntax used in all projects. The hope is to make these decisions easy, and keep codebases clean and sensible. This styleguide is a fork of <a href="https://github.com/mdo/code-guide">mdo's html and css guide</a> with some minor adjustments.</p>
 <h2>General Guidelines</h2>
 <ul>
 <li>Use soft-tabs with two spaces</li>
@@ -191,7 +190,7 @@
 <li>Quote attribute values in selectors, e.g., input[type=&quot;text&quot;]</li>
 <li>Avoid specifying units for zero values, e.g., <code>margin: 0;</code> instead of <code>margin: 0px;</code></li>
 </ul>
-<p>####Incorrect example:####</p>
+<h4>Incorrect example:</h4>
 <pre><code><span class="hljs-class">.selector</span>, <span class="hljs-class">.selector-secondary</span>, <span class="hljs-class">.selector</span><span class="hljs-attr_selector">[type=text]</span> <span class="hljs-rules">{
   <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"><span class="hljs-number">15px</span></span></span>;
   <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value"><span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-number">15px</span></span></span>;
@@ -199,7 +198,7 @@
   <span class="hljs-rule"><span class="hljs-attribute">box-shadow</span>:<span class="hljs-value"><span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">2px</span> <span class="hljs-hexcolor">#CCC</span>,inset <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-hexcolor">#FFFFFF</span>
 }
 </span></span></span></code></pre>
-<p>####Correct example:####</p>
+<h4>Correct example:</h4>
 <pre><code class="css"><span class="hljs-class">.selector</span>,
 <span class="hljs-class">.selector-secondary</span>,
 <span class="hljs-class">.selector</span><span class="hljs-attr_selector">[type="text"]</span> <span class="hljs-rules">{
@@ -387,9 +386,9 @@
           <nav class="column-6">
             <h6>Styleguides</h6>
             <ul class="list-plain">
-              <li><a href="../../../guides/javascript/">JavaScript</a></li>
-              <li><a href="../../../guides/css/">CSS</a></li>
-              <li><a href="../../../guides/html/">HTML</a></li>
+              <li><a href="../../../guides/code/javascript/">JavaScript</a></li>
+              <li><a href="../../../guides/code/css/">CSS</a></li>
+              <li><a href="../../../guides/code/html/">HTML</a></li>
             </ul>
           </nav>
 

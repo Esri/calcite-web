@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>  <html class="ie lt-ie9 ie8"> <![endif]-->
+<!--[if IE 9]>     <html class="ie ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+
+    <!-- Set encoding -->
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <!-- Use title from page frontmatter -->
+    <title>JS Styleguide | Esri Design Patterns</title>
+
+    <!-- Link to favicon -->
+    <link rel="shortcut icon" href="../../assets/img/favicon.ico">
+
+    <!-- stylesheets -->
+    
+      <link rel="stylesheet" href="../../assets/css/all.css">
+      <link rel="stylesheet" href="../../assets/css/extensions.css">
+      
+    
+
+    <!--[if IE]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!--
+    ┌─────────┐
+    │ Drawers │
+    └─────────┘
+     ↳ http://esri.github.io/calcite-web/patterns/#drawers
+     ↳ patterns → _drawers.md
+    -->
+    <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
+      <!-- <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerleft"> -->
+      <nav class="drawer-nav" role="navigation">
+        <aside class="side-nav">
+          <h2 class="side-nav-title">Calcite Web</h2>
+            <form method="GET" action="../../search/" class="panel padding-leader-half">
+              <input type="search" placeholder="Search" name="q">
+            </form>
+            
+              
+            
+              
+                <a href="../../type" class="side-nav-link">Type</a>
+              
+            
+              
+                <a href="../../grid" class="side-nav-link">Grid</a>
+              
+            
+              
+                <a href="../../icons" class="side-nav-link">Icons</a>
+              
+            
+              
+                <a href="../../color" class="side-nav-link">Color</a>
+              
+            
+              
+                <a href="../../components" class="side-nav-link">Components</a>
+              
+            
+              
+                <a href="../../patterns" class="side-nav-link">Patterns</a>
+              
+            
+              
+                <a href="../../sass" class="side-nav-link">Sass</a>
+              
+            
+              
+                <a href="../../javascript" class="side-nav-link">JavaScript</a>
+              
+            
+        </aside>
+      </nav>
+    </div>
+
+    <div class="drawer drawer-right js-drawer" data-drawer="right">
+      <!-- <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerright"> -->
+      <nav class="drawer-nav" role="navigation">
+        <aside class="side-nav">
+          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
+          <div class="panel padding-trailer-half padding-leader-half">
+            <form method="GET" action="../../search/" class="panel padding-leader-half">
+              <input type="search" placeholder="Search" name="q">
+            </form>
+          </div>
+          
+            
+          
+            
+              <a href="../../type" class="side-nav-link">Type</a>
+            
+          
+            
+              <a href="../../grid" class="side-nav-link">Grid</a>
+            
+          
+            
+              <a href="../../icons" class="side-nav-link">Icons</a>
+            
+          
+            
+              <a href="../../color" class="side-nav-link">Color</a>
+            
+          
+            
+              <a href="../../components" class="side-nav-link">Components</a>
+            
+          
+            
+              <a href="../../patterns" class="side-nav-link">Patterns</a>
+            
+          
+            
+              <a href="../../sass" class="side-nav-link">Sass</a>
+            
+          
+            
+              <a href="../../javascript" class="side-nav-link">JavaScript</a>
+            
+          
+        </aside>
+      </nav>
+    </div>
+
+    <div class="wrapper">
+      <!-- Logged Out Pattern-->
+      <header class="top-nav">
+        <a class="skip-to-content" href="#skip-to-content">Skip To Content</a>
+        <div class="grid-container">
+          <div class="column-24">
+            <div class="tablet-hide">
+              <a href="../../" class="top-nav-title">Calcite Web</a>
+              <nav class="top-nav-list" role="navigation">
+                <a href="../../documentation" class="top-nav-link">Documentation</a>
+                <a href="../../examples" class="top-nav-link">Examples</a>
+              </nav>
+              <form method="GET" action="../../search/" class="inline-block right site-search">
+                <input type='search' placeholder='Search' name="q" class="inline-block leader-half js-search-input">
+                <button type="submit" class="hide">Search</button>
+              </form>
+            </div>
+
+            <div class="tablet-show">
+              <a href="/" class="icon-ui-menu top-nav-title js-drawer-toggle" data-drawer="top-nav">Calcite Web</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Secondary Nav Pattern -->
+      <!-- what -->
+      
+<header class="sub-nav" role="banner">
+  <div class="grid-container">
+    <div class="column-24">
+      <h1 class="sub-nav-title text-white">Code Styleguides</h1>
+      <nav class="sub-nav-list">
+        <a class="sub-nav-link " href="../../styleguides/">Overview</a>
+        <a class="sub-nav-link " href="../../styleguides/html">HTML</a>
+        <a class="sub-nav-link " href="../../styleguides/css">CSS</a>
+        <a class="sub-nav-link is-active" href="../../styleguides/javascript">JavaScript</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+      <!-- content of each page will go here -->
+      
+<div class="grid-container leader-2">
+  <main class="column-17 content-face">
+    <h1>JavaScript Style Guide</h1>
+<p>This is a guide for writing consistent and aesthetically pleasing JavaScript. It is a fork of the <a href="https://github.com/felixge/node-style-guide/blob/master/Readme.md">Node Style Guide</a> by felixge.</p>
+<h2>Two Spaces for Indention</h2>
+<p>Use 2 spaces for indenting your code and swear an oath to never mix tabs and spaces - a special kind of hell is awaiting you otherwise.</p>
+<h2>Newlines</h2>
+<p>Use UNIX-style newlines (<code>\n</code>), and a newline character as the last character of a file. Windows-style newlines (<code>\r\n</code>) are forbidden inside any repository.</p>
+<h2>No Trailing Whitespace</h2>
+<p>Just like you brush your teeth after every meal, you clean up any trailing whitespace in your JS files before committing. Otherwise the rotten smell of careless neglect will eventually drive away contributors and/or co-workers.</p>
+<h2>Use Semicolons</h2>
+<p>According to <a href="http://news.ycombinator.com/item?id=1547647">scientific research</a>, the usage of semicolons is a core values of our community. Consider the points of <a href="http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding">the opposition</a>, but be a traditionalist when it comes to abusing error correction mechanisms for
+cheap syntactic pleasures.</p>
+<h2>80 Characters Per Line</h2>
+<p>Limit your lines to 80 characters. Yes, screens have gotten much bigger over the last few years, but your brain has not. Use the additional room for split screen, your editor supports that, right?</p>
+<h2>Use Single Quotes</h2>
+<p>Use single quotes, unless you are writing JSON.</p>
+<p><em>Right:</em></p>
+<pre><code class="js"><span class="hljs-keyword">var</span> foo = <span class="hljs-string">'bar'</span>;
+</code></pre>
+<p><em>Wrong:</em></p>
+<pre><code class="js"><span class="hljs-keyword">var</span> foo = <span class="hljs-string">"bar"</span>;
+</code></pre>
+<h2>Opening Braces Go on the Same Line</h2>
+<p>Your opening braces go on the same line as the statement.</p>
+<p><em>Right:</em></p>
+<pre><code class="js"><span class="hljs-keyword">if</span> (<span class="hljs-literal">true</span>) {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'winning'</span>);
+}
+</code></pre>
+<p><em>Wrong:</em></p>
+<pre><code class="js"><span class="hljs-keyword">if</span> (<span class="hljs-literal">true</span>)
+{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'losing'</span>);
+}
+</code></pre>
+<p>Also, notice the use of whitespace before and after the condition statement.</p>
+<h2>Declare One Variable per Var Statement</h2>
+<p>Declare one variable per var statement, it makes it easier to re-order the lines. Ignore <a href="http://javascript.crockford.com/code.html">Crockford</a> on this, and put those declarations wherever they make sense.</p>
+<p><em>Right:</em></p>
+<pre><code class="js"><span class="hljs-keyword">var</span> keys   = [<span class="hljs-string">'foo'</span>, <span class="hljs-string">'bar'</span>];
+<span class="hljs-keyword">var</span> values = [<span class="hljs-number">23</span>, <span class="hljs-number">42</span>];
+
+<span class="hljs-keyword">var</span> object = {};
+<span class="hljs-keyword">while</span> (items.length) {
+  <span class="hljs-keyword">var</span> key = keys.pop();
+  object[key] = values.pop();
+}
+</code></pre>
+<p><em>Wrong:</em></p>
+<pre><code class="js"><span class="hljs-keyword">var</span> keys = [<span class="hljs-string">'foo'</span>, <span class="hljs-string">'bar'</span>],
+    values = [<span class="hljs-number">23</span>, <span class="hljs-number">42</span>],
+    object = {},
+    key;
+
+<span class="hljs-keyword">while</span> (items.length) {
+  key = keys.pop();
+  object[key] = values.pop();
+}
+</code></pre>
+<h2>Use lowerCamelCase for Variables, Properties and Function Names</h2>
+<p>Variables, properties and function names should use <code>lowerCamelCase</code>.  They should also be descriptive. Single character variables and uncommon abbreviations should generally be avoided.</p>
+<p><em>Right:</em></p>
+<pre><code class="js"><span class="hljs-keyword">var</span> adminUser = db.query(<span class="hljs-string">'SELECT * FROM users ...'</span>);
+</code></pre>
+<p><em>Wrong:</em></p>
+<pre><code class="js"><span class="hljs-keyword">var</span> admin_user = db.query(<span class="hljs-string">'SELECT * FROM users ...'</span>);
+</code></pre>
+<h2>Use UpperCamelCase for Class Names</h2>
+<p>Class names should be capitalized using <code>UpperCamelCase</code>.</p>
+<p><em>Right:</em></p>
+<pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">BankAccount</span><span class="hljs-params">()</span> </span>{
+}
+</code></pre>
+<p><em>Wrong:</em></p>
+<pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bank_Account</span><span class="hljs-params">()</span> </span>{
+}
+</code></pre>
+<h2>Use UPPERCASE for Constants</h2>
+<p>Constants should be declared as regular variables or static class properties, using all uppercase letters.</p>
+<p>Node.js / V8 actually supports mozilla's <a href="https://developer.mozilla.org/en/JavaScript/Reference/Statements/const">const</a> extension, but unfortunately that cannot be applied to class members, nor is it part of any ECMA standard.</p>
+<p><em>Right:</em></p>
+<pre><code class="js"><span class="hljs-keyword">var</span> SECOND = <span class="hljs-number">1</span> * <span class="hljs-number">1000</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">File</span><span class="hljs-params">()</span> </span>{
+}
+File.FULL_PERMISSIONS = <span class="hljs-number">0777</span>;
+</code></pre>
+<p><em>Wrong:</em></p>
+<pre><code class="js"><span class="hljs-keyword">const</span> SECOND = <span class="hljs-number">1</span> * <span class="hljs-number">1000</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">File</span><span class="hljs-params">()</span> </span>{
+}
+File.fullPermissions = <span class="hljs-number">0777</span>;
+</code></pre>
+<h2>Object / Array Creation</h2>
+<p>Put <em>short</em> declarations on a single line. Only quote keys when your interpreter complains:</p>
+<p><em>Right:</em></p>
+<pre><code class="js"><span class="hljs-keyword">var</span> a = [<span class="hljs-string">'hello'</span>, <span class="hljs-string">'world'</span>];
+<span class="hljs-keyword">var</span> b = {
+  good: <span class="hljs-string">'code'</span>,
+  <span class="hljs-string">'is generally'</span>: <span class="hljs-string">'pretty'</span>
+};
+</code></pre>
+<p><em>Wrong:</em></p>
+<pre><code class="js"><span class="hljs-keyword">var</span> a = [
+  <span class="hljs-string">'hello'</span>, <span class="hljs-string">'world'</span>
+];
+<span class="hljs-keyword">var</span> b = {<span class="hljs-string">"good"</span>: <span class="hljs-string">'code'</span>
+        , is generally: <span class="hljs-string">'pretty'</span>
+        };
+</code></pre>
+<h2>Use the === Operator</h2>
+<p>Programming is not about remembering <a href="https://developer.mozilla.org/en/JavaScript/Reference/Operators/Comparison_Operators">stupid rules</a>. Use the triple equality operator as it will work just as expected.</p>
+<p><em>Right:</em></p>
+<pre><code class="js"><span class="hljs-keyword">var</span> a = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">if</span> (a === <span class="hljs-string">''</span>) {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'winning'</span>);
+}
+
+</code></pre>
+<p><em>Wrong:</em></p>
+<pre><code class="js"><span class="hljs-keyword">var</span> a = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">if</span> (a == <span class="hljs-string">''</span>) {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'losing'</span>);
+}
+</code></pre>
+<h2>Use Multi-line Ternary Operator</h2>
+<p>The ternary operator should not be used on a single line. Split it up into multiple lines instead.</p>
+<p><em>Right:</em></p>
+<pre><code class="js"><span class="hljs-keyword">var</span> foo = (a === b)
+  ? <span class="hljs-number">1</span>
+  : <span class="hljs-number">2</span>;
+</code></pre>
+<p><em>Wrong:</em></p>
+<pre><code class="js"><span class="hljs-keyword">var</span> foo = (a === b) ? <span class="hljs-number">1</span> : <span class="hljs-number">2</span>;
+</code></pre>
+<h2>Do Not Extend Built-in Prototypes</h2>
+<p>Do not extend the prototype of native JavaScript objects. Your future self will be forever grateful.</p>
+<p><em>Right:</em></p>
+<pre><code class="js"><span class="hljs-keyword">var</span> a = [];
+<span class="hljs-keyword">if</span> (!a.length) {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'winning'</span>);
+}
+</code></pre>
+<p><em>Wrong:</em></p>
+<pre><code class="js"><span class="hljs-built_in">Array</span>.prototype.empty = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-keyword">return</span> !<span class="hljs-keyword">this</span>.length;
+}
+
+<span class="hljs-keyword">var</span> a = [];
+<span class="hljs-keyword">if</span> (a.empty()) {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'losing'</span>);
+}
+</code></pre>
+<h2>Use Descriptive Conditions</h2>
+<p>Any non-trivial conditions should be assigned to a descriptively named variable or function:</p>
+<p><em>Right:</em></p>
+<pre><code class="js"><span class="hljs-keyword">var</span> isValidPassword = password.length &gt;= <span class="hljs-number">4</span> &amp;&amp; <span class="hljs-regexp">/^(?=.*\d).{4,}$/</span>.test(password);
+
+<span class="hljs-keyword">if</span> (isValidPassword) {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'winning'</span>);
+}
+</code></pre>
+<p><em>Wrong:</em></p>
+<pre><code class="js"><span class="hljs-keyword">if</span> (password.length &gt;= <span class="hljs-number">4</span> &amp;&amp; <span class="hljs-regexp">/^(?=.*\d).{4,}$/</span>.test(password)) {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'losing'</span>);
+}
+</code></pre>
+<h2>Write Small Functions</h2>
+<p>Keep your functions short. A good function fits on a slide that the people in the last row of a big room can comfortably read. So don't count on them having perfect vision and limit yourself to ~15 lines of code per function.</p>
+<h2>Return Early From Functions</h2>
+<p>To avoid deep nesting of if-statements, always return a function's value as early as possible.</p>
+<p><em>Right:</em></p>
+<pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isPercentage</span><span class="hljs-params">(val)</span> </span>{
+  <span class="hljs-keyword">if</span> (val &lt; <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+  }
+
+  <span class="hljs-keyword">if</span> (val &gt; <span class="hljs-number">100</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+  }
+
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+}
+</code></pre>
+<p><em>Wrong:</em></p>
+<pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isPercentage</span><span class="hljs-params">(val)</span> </span>{
+  <span class="hljs-keyword">if</span> (val &gt;= <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">if</span> (val &lt; <span class="hljs-number">100</span>) {
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    }
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+  }
+}
+</code></pre>
+<p>Or for this particular example it may also be fine to shorten things even further:</p>
+<pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isPercentage</span><span class="hljs-params">(val)</span> </span>{
+  <span class="hljs-keyword">var</span> isInRange = (val &gt;= <span class="hljs-number">0</span> &amp;&amp; val &lt;= <span class="hljs-number">100</span>);
+  <span class="hljs-keyword">return</span> isInRange;
+}
+</code></pre>
+<h2>Name Your Closures</h2>
+<p>Feel free to give your closures a name. It shows that you care about them, and will produce better stack traces, heap and cpu profiles.</p>
+<p><em>Right:</em></p>
+<pre><code class="js">req.on(<span class="hljs-string">'end'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onEnd</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'winning'</span>);
+});
+</code></pre>
+<p><em>Wrong:</em></p>
+<pre><code class="js">req.on(<span class="hljs-string">'end'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'losing'</span>);
+});
+</code></pre>
+<h2>No Nested Closures</h2>
+<p>Use closures, but don't nest them. Otherwise your code will become a mess.</p>
+<p><em>Right:</em></p>
+<pre><code class="js">setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+  client.connect(afterConnect);
+}, <span class="hljs-number">1000</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">afterConnect</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'winning'</span>);
+}
+</code></pre>
+<p><em>Wrong:</em></p>
+<pre><code class="js">setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+  client.connect(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'losing'</span>);
+  });
+}, <span class="hljs-number">1000</span>);
+</code></pre>
+<h2>Use Slashes for Comments</h2>
+<p>Use slashes for both single line and multi line comments. Try to write comments that explain higher level mechanisms or clarify difficult segments of your code. Don't use comments to restate trivial things.</p>
+<p><em>Right:</em></p>
+<pre><code class="js"><span class="hljs-comment">// 'ID_SOMETHING=VALUE' -&gt; ['ID_SOMETHING=VALUE'', 'SOMETHING', 'VALUE']</span>
+<span class="hljs-keyword">var</span> matches = item.match(<span class="hljs-regexp">/ID_([^\n]+)=([^\n]+)/</span>));
+
+<span class="hljs-comment">// This function has a nasty side effect where a failure to increment a</span>
+<span class="hljs-comment">// redis counter used for statistics will cause an exception. This needs</span>
+<span class="hljs-comment">// to be fixed in a later iteration.</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loadUser</span><span class="hljs-params">(id, cb)</span> </span>{
+  <span class="hljs-comment">// ...</span>
+}
+
+<span class="hljs-keyword">var</span> isSessionValid = (session.expires &lt; <span class="hljs-built_in">Date</span>.now());
+<span class="hljs-keyword">if</span> (isSessionValid) {
+  <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<p><em>Wrong:</em></p>
+<pre><code class="js"><span class="hljs-comment">// Execute a regex</span>
+<span class="hljs-keyword">var</span> matches = item.match(<span class="hljs-regexp">/ID_([^\n]+)=([^\n]+)/</span>));
+
+<span class="hljs-comment">// Usage: loadUser(5, function() { ... })</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loadUser</span><span class="hljs-params">(id, cb)</span> </span>{
+  <span class="hljs-comment">// ...</span>
+}
+
+<span class="hljs-comment">// Check if the session is valid</span>
+<span class="hljs-keyword">var</span> isSessionValid = (session.expires &lt; <span class="hljs-built_in">Date</span>.now());
+<span class="hljs-comment">// If the session is valid</span>
+<span class="hljs-keyword">if</span> (isSessionValid) {
+  <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<h2>Object.freeze, Object.preventExtensions, Object.seal, with, eval</h2>
+<p>Crazy shit that you will probably never need. Stay away from it.</p>
+<h2>Getters and Setters</h2>
+<p>Do not use setters, they cause more problems for people who try to use your software than they can solve.</p>
+<p>Feel free to use getters that are free from <a href="http://en.wikipedia.org/wiki/Side_effect_(computer_science)">side effects</a>, like providing a length property for a collection class.</p>
+
+  </main>
+</div>
+
+    </div>
+
+    
+
+    <!-- Footer Pattern -->
+    <footer class="footer leader-3 link-dark-gray" role="contentinfo">
+      <div class="grid-container">
+          <nav class="column-6">
+            <h6>Styleguides</h6>
+            <ul class="list-plain">
+              <li><a href="../../styleguides/javascript/">JavaScript</a></li>
+              <li><a href="../../styleguides/css/">CSS</a></li>
+              <li><a href="../../styleguides/html/">HTML</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <h6>Resources</h6>
+            <ul class="list-plain">
+              <li><a href="../../migration-guide/">Migration Guide</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/releases/">Releases</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/blob/master/CONTRIBUTING.md">Contributing</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/issues/">Issues</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/">GitHub</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <h6>About Esri</h6>
+            <ul class="list-plain">
+              <li><a href="http://www.esri.com/about-esri/">About Us</a></li>
+              <li><a href="http://www.esri.com/careers/">Careers</a></li>
+              <li><a href="http://blogs.esri.com/esri/esri-insider/">Insiders Blog</a></li>
+              <li><a href="http://www.esri.com/events/user-conference/index.html">User Conference</a></li>
+              <li><a href="http://www.esri.com/events/devsummit/index.html">Developer Summit</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <a class="esri-logo" href="http://esri.com" aria-label="Esri Home"></a>
+            <section class="footer-social-nav leader-1">
+              <a class="icon-social-twitter" aria-label="Esri on Twitter"  href="https://twitter.com/Esri/"></a>
+              <a class="icon-social-facebook" aria-label="Esri on Facebook"  href="https://www.facebook.com/esrigis/"></a>
+              <a class="icon-social-instagram" aria-label="Esri on Instagram"  href="https://instagram.com/esrigram/"></a>
+              <a class="icon-social-github" aria-label="Esri on GitHub"  href="http://esri.github.com/"></a>
+              <a class="icon-social-contact" aria-label="Contact Esri"  href="http://www.esri.com/about-esri/contact/"></a>
+            </section>
+          </nav>
+
+          <div class="column-24 leader-1">
+            <p><small>Copyright © 2015 Esri. All rights reserved. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal">Legal</a></small></p>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+    <script src="../../assets/js/libs/calcite-web.js"></script>
+    <script src="../../assets/js/libs/calcite-web-marketing.js"></script>
+
+    <script src="../../assets/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+
+    
+
+    
+
+  </body>
+</html>
