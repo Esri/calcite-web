@@ -82,7 +82,21 @@
     background-size: 1em;
     background-position: .25em center;
     background-repeat: no-repeat;
-    padding-left: 1.5em;
+    padding-left: 1.75em;
+  }
+
+  .input-minimal {
+    @include font-size(0);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom-color: $lighter-gray;
+    box-shadow: none;
+  }
+
+  .input-minimal:focus {
+    border-bottom-color: #999;
+    box-shadow: none;
   }
 
   // ┌─────────────────┐
