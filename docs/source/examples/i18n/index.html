@@ -17,9 +17,9 @@ Calcite Web is meant to be used by applications which are localized into hundred
 
 Most of the languages not covered by Avenir Next don't pose a real problem. We can simply allow them to render in the browser default, and they are distinct enough that users won't feel as though something is wrong.
 
-The exception to this is Vietnamese, which uses mostly standard Latin characters, but also glyphs from the Latin Extended Additional set which are missing. This causes the missing characters to be rendered in a different font. This looks like a bug to the user. For this reason, we set the font family for pages in Vietnamese to Lucide Grande. Simply set the `lang` attribute of the html document to `vi` (the ISO-639 code for Vietnamese).
+The exception to this is Vietnamese, which uses standard Latin characters in addition to glyphs from the Latin Extended Additional set which are missing. This causes the missing characters to be rendered in a different font. This looks like a bug to the user. For this reason, we set the font family for pages in Vietnamese to Lucide Grande. Simply set the `lang` attribute of the html document to `vi` (the ISO-639 code for Vietnamese).
 
-You can preview how different languages render below with a sample set of characters from each language. Notice that vietnamese will look slightly off, but add `vi` to the lang and everything will render in Lucide Grande.
+You can preview how different languages render below with a sample set of characters from each language. Notice that vietnamese will be rendered in Lucide Grande as it is wrapped in an element with `lang` set to `vi`.
 {% endmarkdown %}
     </div>
 
@@ -54,7 +54,7 @@ You can preview how different languages render below with a sample set of charac
 | sv | Swedish | Yxskaftbud, ge vår WC-zonmö IQ-hjälp |
 | th | Thai | เป็นมนุษย์สุดประเสริฐเลิศคุณค่า กว่าบรรดาฝูงสัตว์เดรัจฉาน จงฝ่าฟันพัฒนาวิชาการ อย่าล้างผลาญฤๅเข่นฆ่าบีฑาใคร |
 | tr | Turkish | Pijamalı hasta yağız şoföre çabucak güvendi |
-| vi | Vietnamese | Do bạch kim rất quý, sẽ để lắp vô xương |
+| vi | Vietnamese | <span lang="vi">Do bạch kim rất quý, sẽ để lắp vô xương</span> |
 | zh | Chinese | 視野無限廣，窗外有藍天 (traditional) 中国智造，慧及全球 (simplified) |
     {% endmarkdown %}
   </div>
