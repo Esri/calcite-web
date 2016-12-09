@@ -211,6 +211,11 @@
 @mixin svg-icon() {
   fill: currentColor;
   pointer-events: none;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  padding-right: .15em;
 }
 
 @if $include-icon-font == true {

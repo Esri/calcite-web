@@ -1,1 +1,1 @@
-A set of helper classes are available to simply change the color of an icon without affecting text within the same element.
+If you've included icons in your project with the icon font, a set of helper classes are available to simply change the color of an icon without affecting text within the same element.
