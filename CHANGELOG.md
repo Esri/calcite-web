@@ -10,6 +10,7 @@
 
 ### Modified
 - Placeholder text now passes 4.5/1 contrast requirement (#703)
+- All elements with `lang="vi"` will now render properly in Lucida Grande
 
 ### Breaking
 - Accordion icons must be added inline, no longer provided by CSS
