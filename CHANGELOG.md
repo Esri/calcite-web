@@ -14,6 +14,7 @@
 - `tabs-translucent` now works in IE9 (#708)
 - All elements with `lang="vi"` will now render properly in Lucida Grande
 - Blue active indicator for top nav is now below links (#716)
+- Modal's z-index is now higher than top-nav (#711)
 
 
 ### Breaking
