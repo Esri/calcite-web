@@ -3,8 +3,6 @@
 // └────────┘
 //  ↳ http://esri.github.io/calcite-web/patterns/#top-nav
 //  ↳ patterns → _top-nav.md
-$topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue 100%);
-
 @mixin top-nav {
   position: relative;
   @include avenir-regular();
@@ -25,8 +23,10 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
     @include font-size(1);
     @include left();
     margin-right: 1.5rem;
-    padding: 1.125rem 0;
+    padding-top: 1.125rem;
+    padding-bottom: calc(1.25rem - 4px);
     line-height: 1.5rem;
+    border-bottom: 4px solid transparent;
     color: $off-black;
     @if ($include-right-to-left) {
       html[dir="rtl"] & {
@@ -37,8 +37,7 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
     }
     &:hover {
       color: $blue;
-      @include prefixer(background-image, $topnav-link-overline, webkit moz o);
-      background-image: $topnav-link-overline;
+      border-bottom-color: $blue;
       text-decoration: none;
     }
   }
@@ -72,23 +71,22 @@ $topnav-link-overline: linear-gradient(to top, transparent 92%, $blue 93%, $blue
   @mixin top-nav-link {
     @include font-size(-1);
     color: $off-black;
-    padding: .75*$baseline 0;
+    padding-top: 1.1625rem;
+    padding-bottom: calc(1.1625rem - 4px);
+    border-bottom: 4px solid transparent;
     line-height: 1.5rem;
     display: inline-block;
     vertical-align: top;
     &:hover, &:focus {
       color: $blue;
-      background: url('#{$image-path}/top-nav-ie9.gif') repeat-x top left transparent;
-      @include prefixer(background-image, $topnav-link-overline, webkit moz o);
-      background-image: $topnav-link-overline;
+      border-bottom-color: $blue;
       text-decoration: none;
     }
     &:focus {
       outline: none;
     }
     &.is-active {
-      @include prefixer(background-image, $topnav-link-overline, webkit moz o);
-      background-image: $topnav-link-overline;
+      border-bottom-color: $blue;
     }
   }
 

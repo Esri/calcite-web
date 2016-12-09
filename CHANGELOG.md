@@ -11,8 +11,9 @@
 
 ### Modified
 - Placeholder text now passes 4.5/1 contrast requirement (#703)
-- `tabs-translucent` now works in IE9
+- `tabs-translucent` now works in IE9 (#708)
 - All elements with `lang="vi"` will now render properly in Lucida Grande
+- Blue active indicator for top nav is now below links (#716)
 
 
 ### Breaking
