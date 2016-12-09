@@ -2,11 +2,11 @@
 
 ### Added
 - `input-success`, `input-error`, and `input-error-message` validation helpers
+- `input-search` helper for magnifying glass in search input
 - Disabled input styles
 
 ### Removed
 - Expander JavaScript Pattern
-- Icon Font
 
 ### Modified
 - Placeholder text now passes 4.5/1 contrast requirement (#703)
