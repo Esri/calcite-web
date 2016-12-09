@@ -1,4 +1,4 @@
-Adding classes to the the `<SVG>` element changes the path fill for the icon. Using these classes, icons can be a different color than the inherited type color of their parent node.
+If you've added your icons as inline `<svg>` elements, you can add the following classes to change the fill color of the svg.
 
 <div class="block-group block-group-3-up">
   <div class="block">
