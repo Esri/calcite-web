@@ -1,3 +1,5 @@
-Inline SVG source code can be used to create crisp, high quality, very performant iconography within a web application. Copy and paste the SVG source into your project HTML, and adjust the sizing as needed.
+Calcite Web's interface icon set is available both as an icon font and as inline SVG files.
 
-The color of the icons is set to match the text color of the parent node for seamless integration with typographic elements.
+If you're using the icon font, just add the class `icon-ui-{name}` to an element. If you're using inline SVG, just copy and past the SVG code into your project.
+
+Icons have padding built into them so they can sit alongside text, to remove this padding, use the `icon-ui-flush` class.
