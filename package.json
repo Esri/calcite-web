@@ -9,7 +9,6 @@
     "precssStat": "npm run sass:dist",
     "cssStat": "cssstats dist/css/calcite-web.css dist/css/stats.json",
     "deploy": "gh-pages -d docs/build -o upstream",
-    "a11y": "a11y local.arcgis.com:8888",
     "gh-release": "gh-release",
     "releaseScript": "./bin/release.sh",
     "preacetate": "npm run cssStat",
@@ -90,7 +89,6 @@
     "url": "https://github.com/esri/calcite-web/issues"
   },
   "devDependencies": {
-    "a11y": "^0.3.0",
     "acetate": "^0.2.2",
     "acetate-cli": "0.0.3",
     "babel-preset-es2015-rollup": "^1.2.0",
