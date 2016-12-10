@@ -106,15 +106,15 @@
     @media screen and (min-width: $magic-number + 3) {
       @for $n from 0 through $large-column-count {
         .pre-#{$n}  {
-          margin-left: ($n / $large-column-count) * $container-width !important;
+          margin-left: ($n / $large-column-count) * $container-width - 1 !important;
           html[dir="rtl"] & {
-            margin-right: ($n / $large-column-count) * $container-width !important;
+            margin-right: ($n / $large-column-count) * $container-width - 1 !important;
           }
         }
         .post-#{$n} {
-          margin-right: ($n / $large-column-count) * $container-width !important;
+          margin-right: ($n / $large-column-count) * $container-width - 1 !important;
           html[dir="rtl"] & {
-            margin-left: ($n / $large-column-count) * $container-width !important;
+            margin-left: ($n / $large-column-count) * $container-width - 1 !important;
           }
         }
       }

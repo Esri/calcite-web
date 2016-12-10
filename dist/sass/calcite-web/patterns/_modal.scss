@@ -16,7 +16,7 @@
   visibility: hidden;
   background: $transparent-black;
   @include transition(visibility 0ms linear 300ms, opacity 300ms $easing-function);
-  z-index: 50;
+  z-index: 101;
   &.is-active {
     visibility: visible;
     opacity: 1;
@@ -40,7 +40,7 @@
   @mixin modal-content() {
     box-sizing: border-box;
     max-height: 80vh;
-    z-index: 100;
+    z-index: 102;
     float: none;
     @if ($include-right-to-left) {
       html[dir="rtl"] & {

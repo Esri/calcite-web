@@ -6,10 +6,11 @@
 
 @mixin search-overlay() {
   @include modal-overlay();
+  z-index: 99;
   position: absolute;
   background: $white;
   &.is-active {
-    opacity: 0.95;
+    opacity: 0.98;
     .search-content {
       visibility: visible;
       opacity: 1;
@@ -31,7 +32,7 @@
 
   @mixin search-content() {
     @include modal-content();
-    @include transform(translate3d(0, -20px, 0))
+    @include transform(translate3d(0, -20px, 0));
     margin-top: 3*$baseline;
     padding-top: 15vh;
     vertical-align: top;
