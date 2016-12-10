@@ -1,4 +1,4 @@
-## 1.0.0-beta.37
+## 1.0.0-rc.0
 
 ### Added
 - `input-success`, `input-error`, and `input-error-message` validation helpers
