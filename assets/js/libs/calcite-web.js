@@ -639,6 +639,35 @@ function drawer() {
 }
 
 // Cool Helpers
+// ┌───────────────────┐
+// │ Expanding Section │
+// └───────────────────┘
+// show and hide exanding nav located under topnav
+function expander() {
+  var toggles = findElements('.js-expand-toggle');
+  var sections = document.querySelectorAll('.js-expand');
+
+  toggles.forEach(function (toggle) {
+    add$1(toggle, click(), function (e) {
+      preventDefault(e);
+
+      var sectionId = toggle.getAttribute('data-expand');
+      var section = document.querySelector('.js-expand[data-expand="' + sectionId + '"]');
+      var isOpen = has(section, 'is-active');
+      var shouldClose = has(section, 'is-active');
+
+      toggleActive(sections, section);
+
+      if (isOpen && shouldClose) {
+        remove(section, 'is-active');
+      } else {
+        add(section, 'is-active');
+      }
+    });
+  });
+}
+
+// Cool Helpers
 // ┌─────────────────┐
 // │ Filter Dropdown │
 // └─────────────────┘
@@ -1319,7 +1348,7 @@ function isScrolling() {
 // └────────────────────┘
 // start up Calcite and attach all the patterns
 // optionally pass an array of patterns you'd like to watch
-var patterns = [accordion, clipboard, dropdown, drawer, filterDropdown, modal, search, selectNav, sticky, tabs, thirdNav];
+var patterns = [accordion, clipboard, dropdown, drawer, expander, filterDropdown, modal, search, selectNav, sticky, tabs, thirdNav];
 
 function init() {
   patterns.forEach(function (pattern) {
@@ -1339,7 +1368,7 @@ function extend(plugin) {
 // └────────────┘
 // define all public api methods
 var calciteWeb = {
-  version: '1.0.0',
+  version: '1.0.0-beta.36',
   click: click,
   addEvent: add$1,
   removeEvent: remove$1,
@@ -1363,6 +1392,7 @@ var calciteWeb = {
   accordion: accordion,
   dropdown: dropdown,
   drawers: drawer,
+  expander: expander,
   filterDropdown: filterDropdown,
   modal: modal,
   search: search,
