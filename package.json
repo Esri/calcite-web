@@ -14,7 +14,7 @@
     "prestat": "mkdirp dist/css/",
     "stat": "node-sass lib/sass/calcite-web.scss | cssstats > dist/css/stats.json",
     "acetate": "acetate build --input source --config docs/acetate.config.js",
-    "img": "ncp docs/source/assets/img/ docs/build/assets/img/ && ncp lib/img/ docs/build/assets/img/",
+    "img": "ncp lib/img/ docs/source/assets/img/ && ncp docs/source/assets/img/ docs/build/assets/img/",
     "img:dist": "ncp lib/img dist/img",
     "rollup": "rollup -c lib/js/rollup.config.js && rollup -c lib/js/rollup-marketing.config.js",
     "js": "ncp docs/source/assets/js/ docs/build/assets/js/",

@@ -1,13 +1,17 @@
+var svg = require('./source/data/svg-icon.js');
+var font = require('./source/data/icon-font.js');
+var icons = require('./source/data/icon-social.js');
+var repo = require('./source/data/repo.js');
+
 module.exports = function (acetate) {
   acetate.load('**/*.+(md|html)');
   acetate.layout('documentation/**/*', 'layouts/_doc');
   acetate.layout('examples/**/*', 'layouts/_examples');
-
   acetate.data('table_of_contents', 'table_of_contents.yml');
   acetate.data('stats', '../../dist/css/stats.json');
   acetate.data('pkg', '../../package.json');
-  acetate.data('icons', './data/icon-social.js');
-  acetate.data('font', './data/icon-font.js');
-  acetate.data('svg', './data/svg-icon.js');
-  acetate.data('repo', './data/repo.js');
+  acetate.data('icons', icons);
+  acetate.data('font', font);
+  acetate.data('svg', svg);
+  acetate.data('repo', repo);
 };
