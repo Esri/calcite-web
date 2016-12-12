@@ -12,7 +12,7 @@
           {% if sec.base == 'get-started' %}
             {% set slug = 'documentation/' %}
           {% endif %}
-            <a class="sub-nav-link {% if url == slug %}is-active{% endif %}" href="{{relativePath}}{{slug}}">{{ sec.title }}</a>
+            <a class="sub-nav-link {% if url == slug %}is-active{% endif %}" href="{{relativePath}}/{{slug}}">{{ sec.title }}</a>
           {% endfor %}
         </nav>
 
@@ -22,7 +22,7 @@
           {% if sec.base == 'get-started' %}
             {% set slug = 'documentation/' %}
           {% endif %}
-            <option value="{{relativePath}}{{slug}}" {% if url == slug %}selected{% endif %}>{{ sec.title }}</option>
+            <option value="{{relativePath}}/{{slug}}" {% if url == slug %}selected{% endif %}>{{ sec.title }}</option>
           {% endfor %}
         </select>
 

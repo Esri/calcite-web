@@ -28,7 +28,7 @@ require(['path/to/calcite-web.js'], function(calcite){
 
 ### Initializing
 
-To use `calcite-web.js` simply [include a reference to it in your html]({{relativePath}}guides/quickstart/) and then run the `calcite.init()` method. For example, say your JavaScript was located in a file called `script.js`. You can bind all the JavaScript patterns from `script.js` like this:
+To use `calcite-web.js` simply [include a reference to it in your html]({{relativePath}}/guides/quickstart/) and then run the `calcite.init()` method. For example, say your JavaScript was located in a file called `script.js`. You can bind all the JavaScript patterns from `script.js` like this:
 
 ```js
 // On document ready

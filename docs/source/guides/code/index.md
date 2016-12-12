@@ -8,9 +8,9 @@ A style guide helps to ensure that code is approachable and familiar to everybod
 
 Style guides are available for:
 
-1. [HTML]({{relativePath}}styleguides/html/)
-2. [CSS]({{relativePath}}styleguides/css/)
-2. [JS]({{relativePath}}styleguides/js/)
+1. [HTML]({{relativePath}}/styleguides/html/)
+2. [CSS]({{relativePath}}/styleguides/css/)
+2. [JS]({{relativePath}}/styleguides/js/)
 
 If you don't already have a style guide for your team, we recommend you adopt these rules. Teams work best when they're on the same page!
 

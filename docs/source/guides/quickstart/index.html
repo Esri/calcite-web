@@ -66,13 +66,13 @@ You can also load Calcite Web as an [npm module](../../documentation/#npm), a [r
 
 For the sake of this guide, let's say we want to create a web page that looks like this:
 
-![]({{relativePath}}assets/img/docs/sample-page.svg)
+![]({{relativePath}}/assets/img/docs/sample-page.svg)
 
 It's pretty simple. It has navigation at the top, a big banner with the title centered inside, then some navigation on the side, and a main section of content on the right which contains a four-up group of cards and some text.
 
 The first step is to figure out how to lay out this content and position it correctly. In order to do that we can just use the Calcite Web grid system. The grid system has 24 columns you can divide your content into. See if you can figure out the dimensions of all the layout components by looking at the grid below:
 
-![]({{relativePath}}assets/img/docs/sample-page-grid.svg)
+![]({{relativePath}}/assets/img/docs/sample-page-grid.svg)
 
 Looks like the top navigation takes up all 24 columns. The banner also goes accross the whole page.
 
@@ -280,17 +280,17 @@ After going through and putting all of these patterns inside out layout, we get 
 
 When you preview that in a browser, it should come out a little like this:
 
-![]({{relativePath}}assets/img/docs/quickstart-progress.png)
+![]({{relativePath}}/assets/img/docs/quickstart-progress.png)
 
 Not bad!
 
 ## 4. Tweak with Modifier Classes
 
-As you can see, there are a number of things that are currently different from our design. Some things are too cramped, and others aren't aligned properly. In order to quickly fix what's wrong, we'll use Calcite Web's built in [grid modifier classes]({{relativePath}}documentation/grid/#grid-helpers) and [type modifier classes]({{relativePath}}documentation/type/#composition-helpers).
+As you can see, there are a number of things that are currently different from our design. Some things are too cramped, and others aren't aligned properly. In order to quickly fix what's wrong, we'll use Calcite Web's built in [grid modifier classes]({{relativePath}}/documentation/grid/#grid-helpers) and [type modifier classes]({{relativePath}}/documentation/type/#composition-helpers).
 
 These are really powerful single-purpose classes that allow you to do things like change the font weight add space, change colors, or change display on different screen sizes.
 
-Let's fix the banner first. In the original design, we wanted our banner to be taller, with more space above and below the text. We can do this with the [leader and trailer classes]({{relativePath}}documentation/grid/#leader-and-trailer).
+Let's fix the banner first. In the original design, we wanted our banner to be taller, with more space above and below the text. We can do this with the [leader and trailer classes]({{relativePath}}/documentation/grid/#leader-and-trailer).
 
 ```html
 <div class="column-24 leader-5 trailer-5">
@@ -298,7 +298,7 @@ Let's fix the banner first. In the original design, we wanted our banner to be t
 </div>
 ```
 
-That adds five lines of spacing above and below the title. But there's still something wrong, our text isn't centered! To fix that we'll use one of our handy dandy [text modifier classes]({{relativePath}}documentation/type/#text-modifiers), namely `text-center`:
+That adds five lines of spacing above and below the title. But there's still something wrong, our text isn't centered! To fix that we'll use one of our handy dandy [text modifier classes]({{relativePath}}/documentation/type/#text-modifiers), namely `text-center`:
 
 ```html
 <h1 class="text-center">Banner Title</h1>
@@ -323,7 +323,7 @@ Lastly, let's take care of the footer as well. The headers don't look quite bold
 <h6 class="font-size--2 avenir-bold">Header 3</h6>
 ```
 
-Notice there is already a `font-size` class on the header. Using these [font-size modifiers]({{relativePath}}documentation/type/#text-size), you can make type larger or smaller. Just use any number from `font-size--3` to `font-size-6`. `font-size-0` is the default and you can go up and down from there.
+Notice there is already a `font-size` class on the header. Using these [font-size modifiers]({{relativePath}}/documentation/type/#text-size), you can make type larger or smaller. Just use any number from `font-size--3` to `font-size-6`. `font-size-0` is the default and you can go up and down from there.
 
 We also want the footer to have more space below it. We can do this with the `padding-trailer` classes. These work just like leader and trailer but they modify padding instead of margin:
 
@@ -331,7 +331,7 @@ We also want the footer to have more space below it. We can do this with the `pa
 <div class="footer padding-trailer-1" role="contentinfo">
 ```
 
-Finally, the text in the footer seems a bit too dark. To lighten it up, we can use the [text-color]({{relativePath}}documentation/type/#text-color) classes.
+Finally, the text in the footer seems a bit too dark. To lighten it up, we can use the [text-color]({{relativePath}}/documentation/type/#text-color) classes.
 
 ```html
 <div class="footer padding-trailer-1 text-darkest-gray" role="contentinfo">
@@ -349,7 +349,7 @@ The the links, we'll use the [link-color](documentation/type/#link-color) classe
 
 If you've been following along and you resize your browser, you'll notice that certain things look weird. Calcite Web tries to do as much as it can for you automatically, but guess how you can fix the stuff that's broken? That's right, more modifier classes!
 
-For example, the block group we're using for our cards looks pretty bad on mobile because there is no space for four cards anymore. To fix this, we can use the docs for [responsive block-groups]({{relativePath}}documentation/grid/#responsive-block-groups). Turns out we can control how many cards are in a row:
+For example, the block group we're using for our cards looks pretty bad on mobile because there is no space for four cards anymore. To fix this, we can use the docs for [responsive block-groups]({{relativePath}}/documentation/grid/#responsive-block-groups). Turns out we can control how many cards are in a row:
 
 ```html
 <div class="block-group block-group-4-up tablet-block-group-2-up">

@@ -32,4 +32,4 @@ Block groups have responsive `tablet-` and `phone-` prefix classes. These allow 
 </div>
 ```
 
-[View the example]({{relativePath}}examples/grid/#responsive-block-groups)
+[View the example]({{relativePath}}/examples/grid/#responsive-block-groups)
