@@ -10,7 +10,7 @@
     "start": "parallelshell 'rerun-script' 'live-server docs/build --port=8888 --no-browser'",
     "deploy": "gh-pages -d docs/build -o upstream",
     "dist": "npm-run-series stat sass:dist font:dist img:dist rollup:dist",
-    "release": "npm-run-series dist s3 releaseScript",
+    "release": "npm-run-series dist minify s3 releaseScript",
     "prestat": "mkdirp dist/css/",
     "stat": "node-sass lib/sass/calcite-web.scss | cssstats > dist/css/stats.json",
     "preacetate": "npm run stat",
@@ -36,7 +36,7 @@
     "prefont:dist": "mkdirp dist/fonts",
     "font:dist": "ncp lib/fonts dist/fonts",
     "icons": "svgo -f lib/img/icons/ui/",
-    "pres3": "node bin/minify.js",
+    "minify": "minify dist/css/ && minify dist/js/",
     "s3": "node bin/s3.js",
     "gh-release": "gh-release",
     "releaseScript": "./bin/release.sh"
