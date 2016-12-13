@@ -8,19 +8,19 @@
         <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1 tablet-hide">Download Latest Release</a>
         <nav class="sub-nav-list tablet-hide" role="navigation" aria-labelledby="subnav">
           {% for title, sec in data.table_of_contents %}
-          {% set slug = 'documentation/' + sec.base + '/' %}
-          {% if sec.base == 'get-started' %}
-            {% set slug = 'documentation/' %}
-          {% endif %}
+            {% set slug = '/documentation/' + sec.base + '/' %}
+            {% if sec.base == 'get-started' %}
+              {% set slug = '/documentation/' %}
+            {% endif %}
             <a class="sub-nav-link {% if url == slug %}is-active{% endif %}" href="{{relativePath}}{{slug}}">{{ sec.title }}</a>
           {% endfor %}
         </nav>
 
         <select class="tablet-show select-full trailer-half js-select-nav">
           {% for title, sec in data.table_of_contents %}
-          {% set slug = 'documentation/' + sec.base + '/' %}
+          {% set slug = '/documentation/' + sec.base + '/' %}
           {% if sec.base == 'get-started' %}
-            {% set slug = 'documentation/' %}
+            {% set slug = '/documentation/' %}
           {% endif %}
             <option value="{{relativePath}}{{slug}}" {% if url == slug %}selected{% endif %}>{{ sec.title }}</option>
           {% endfor %}

@@ -5,7 +5,7 @@
   {% for icon in data.svg %}
     <button class="block trailer-1 js-icon js-modal-toggle icon-preview-link" data-modal="{{icon.name}}">
       <div class="icon-preview">
-        <span class="font-size-5 icon-wrap">{{icon.source}}</span>
+        <span class="font-size-5 icon-wrap">{% include "assets/img/icons/ui/" + icon.name + ".svg" %}</span>
         <p class="font-size--3 text-center leader-half js-icon-name">{{icon.name}}</p>
       </div>
     </button>
@@ -16,13 +16,13 @@
   <div class="js-modal modal-overlay" data-modal="{{icon.name}}">
     <div class="modal-content column-12" role="dialog" aria-labelledby="modal" role="dialog">
       <div class="clearfix">
-        <span class="font-size-7 icon-wrap left padding-right-1">{{icon.source}}</span>
+        <span class="font-size-7 icon-wrap left padding-right-1">{% include "assets/img/icons/ui/" + icon.name + ".svg" %}</span>
         <div class="left">
           <h3 class='trailer-0'>{{icon.name}}</h3>
           <p class="font-size--1 leader-0 trailer-0">Icon font class: <code>icon-ui-{{icon.name}}</code></p>
         </div>
         <a class="js-modal-toggle font-size-2 right" href="#" aria-label="close modal">
-          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 32 32" class="svg-icon"><path d="M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z"/></svg>
+          {% include "assets/img/icons/ui/close.svg" %}
         </a>
       </div>
       <h5 class="font-size-0 leader-1 trailer-0">SVG Code:</h5>

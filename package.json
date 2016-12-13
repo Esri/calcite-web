@@ -5,60 +5,49 @@
   "private": true,
   "homepage": "https://github.com/esri/calcite-web",
   "scripts": {
-    "test": "semistandard | snazzy",
-    "precssStat": "npm run sass:dist",
-    "cssStat": "cssstats dist/css/calcite-web.css dist/css/stats.json",
+    "test": "semistandard",
+    "prestart": "npm-run-series stat acetate sass rollup img img:docs font js",
+    "start": "parallelshell 'rerun-script' 'live-server docs/build --port=8888 --no-browser'",
     "deploy": "gh-pages -d docs/build -o upstream",
-    "a11y": "a11y local.arcgis.com:8888",
-    "gh-release": "gh-release",
-    "releaseScript": "./bin/release.sh",
-    "preacetate": "npm run cssStat",
-    "acetate": "acetate build -i docs/source -o docs/build -c docs/acetate.conf.js",
-    "prerollup": "mkdirp dist/js && mkdirp docs/build/assets/js/libs",
-    "rollup": "node bin/rollup.js",
-    "postrollup": "ncp dist/js docs/build/assets/js/libs",
-    "imagemin:lib": "imagemin-newer lib/img/ docs/build/assets/img/",
-    "imagemin:docs": "imagemin-newer docs/source/assets/img/ docs/build/assets/img/",
-    "imagemin:dist": "imagemin-newer lib/img/ dist/img/",
-    "imagemin": "npm-run-series imagemin:docs imagemin:lib imagemin:dist",
-    "sass:dist": "node-sass lib/sass/ -o dist/css/",
-    "postsass:dist": "ncp lib/sass dist/sass",
-    "sass:docs": "node-sass docs/source/assets/css/ -o docs/build/assets/css/ --include-path lib/sass",
-    "presass": "mkdirp docs/source/assets/css",
-    "sass": "npm-run-series sass:dist sass:docs",
-    "prefont": "ncp lib/fonts docs/build/assets/fonts",
-    "font": "ncp lib/fonts dist/fonts",
-    "icons": "./bin/clean-icons.sh",
+    "dist": "npm-run-series stat sass:dist font:dist img:dist rollup js:dist minify",
+    "release": "npm-run-series dist s3 releaseScript",
+    "prestat": "mkdirp dist/css/",
+    "stat": "node-sass lib/sass/calcite-web.scss | cssstats > dist/css/stats.json",
+    "acetate": "acetate build --input source --config docs/acetate.config.js",
+    "img": "ncp lib/img/ docs/source/assets/img/ && ncp lib/img/ docs/build/assets/img/",
+    "img:docs": "ncp docs/source/assets/img/ docs/build/assets/img/",
+    "img:dist": "ncp lib/img dist/img",
+    "rollup": "rollup -c lib/js/rollup.config.js && rollup -c lib/js/rollup-marketing.config.js",
     "js": "ncp docs/source/assets/js/ docs/build/assets/js/",
-    "prestart": "npm-run-series acetate sass rollup imagemin font js",
-    "pres3": "node bin/minify.js",
+    "js:dist": "ncp docs/build/assets/js/libs/ dist/js/",
+    "sass": "node-sass docs/source/assets/css/ -q -o docs/build/assets/css/ --include-path lib/sass",
+    "sass:dist": "node-sass lib/sass/ -q -o dist/css/ && ncp lib/sass dist/sass",
+    "font": "ncp lib/fonts docs/build/assets/fonts",
+    "font:dist": "ncp lib/fonts dist/fonts",
+    "icons": "svgo -f lib/img/icons/ui/",
+    "minify": "minify dist/css/ && minify dist/js/",
     "s3": "node bin/s3.js",
-    "dist": "npm-run-series sass:dist rollup imagemin:dist font pres3",
-    "release": "npm-run-series sass:dist prestart s3 releaseScript deploy",
-    "start": "parallelshell 'rerun-script' 'live-server docs/build --port=8888 --no-browser' 'watchify docs/source/assets/js/all.js -o docs/build/assets/js/all.js'"
+    "gh-release": "gh-release",
+    "releaseScript": "./bin/release.sh"
   },
   "watches": {
     "js": "docs/source/assets/js/**/*",
     "rollup": "lib/js/**/*.js",
-    "imagemin": [
-      "lib/img/**/*",
-      "docs/source/assets/img/**/*"
-    ],
+    "img": "lib/img/**/*",
+    "img:docs": "docs/source/assets/img/docs/**/*",
     "sass": [
       "lib/sass/**/*",
       "docs/source/assets/css/**/*"
     ],
-    "acetate": "docs/source/**"
+    "acetate": [
+      "docs/source/**/*.{html,md,js,yml}",
+      "docs/source/assets/img/docs/**"
+    ]
   },
   "semistandard": {
     "ignore": [
       "bin/",
       "docs/"
-    ]
-  },
-  "babel": {
-    "presets": [
-      "es2015-rollup"
     ]
   },
   "main": "dist/js/calcite-web.js",
@@ -90,15 +79,14 @@
     "url": "https://github.com/esri/calcite-web/issues"
   },
   "devDependencies": {
-    "a11y": "^0.3.0",
-    "acetate": "^0.2.2",
-    "acetate-cli": "0.0.3",
+    "acetate": "^1.1.1",
+    "acetate-cli": "^1.0.1",
     "babel-preset-es2015-rollup": "^1.2.0",
+    "babel-plugin-transform-regenerator": "6.16.1",
     "cssstats-cli": "^1.0.0-beta.2",
     "gh-pages": "^0.11.0",
     "gh-release": "^2.0.1",
     "glob": "^7.0.5",
-    "imagemin-newer": "^1.0.2",
     "live-server": "^1.0.0",
     "minifier": "^0.8.0",
     "mkdirp": "^0.5.1",
@@ -108,12 +96,10 @@
     "parallelshell": "^2.0.0",
     "request": "^2.73.0",
     "rerun-script": "^0.6.0",
-    "rollup": "^0.34.1",
+    "rollup": "^0.36.4",
     "rollup-plugin-babel": "^2.6.1",
     "s3": "^4.4.0",
-    "semistandard": "*",
-    "snazzy": "^3.0.0",
-    "watchify": "^3.7.0"
+    "semistandard": "*"
   },
   "dependencies": {
     "clipboard": "^1.5.12",

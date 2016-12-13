@@ -15,14 +15,14 @@
     <title>{{title}} | Esri Design Patterns</title>
 
     <!-- Link to favicon -->
-    <link rel="shortcut icon" href="{{relativePath}}assets/img/favicon.ico">
+    <link rel="shortcut icon" href="{{relativePath}}/assets/img/favicon.ico">
 
     <!-- stylesheets -->
     {% block head %}
-      <link rel="stylesheet" href="{{relativePath}}assets/css/all.css">
-      <link rel="stylesheet" href="{{relativePath}}assets/css/extensions.css">
+      <link rel="stylesheet" href="{{relativePath}}/assets/css/all.css">
+      <link rel="stylesheet" href="{{relativePath}}/assets/css/extensions.css">
       {% for name in css %}
-        <link rel="stylesheet" href="{{relativePath}}assets/css/{{name}}.css">
+        <link rel="stylesheet" href="{{relativePath}}/assets/css/{{name}}.css">
       {% endfor %}
     {% endblock %}
 
@@ -45,9 +45,9 @@
       <nav class="drawer-nav" role="navigation">
         <aside class="side-nav">
           <h2 class="side-nav-title">Calcite Web</h2>
-          <a href="{{relativePath}}documentation/" class="side-nav-link">Documentation</a>
-          <a href="{{relativePath}}examples/" class="side-nav-link">Examples</a>
-          <a href="{{relativePath}}guides/" class="side-nav-link">Guides</a>
+          <a href="{{relativePath}}/documentation/" class="side-nav-link">Documentation</a>
+          <a href="{{relativePath}}/examples/" class="side-nav-link">Examples</a>
+          <a href="{{relativePath}}/guides/" class="side-nav-link">Guides</a>
         </aside>
       </nav>
     </div>
@@ -56,9 +56,9 @@
       <nav class="drawer-nav" role="navigation">
         <aside class="side-nav">
           <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
-          <a href="{{relativePath}}documentation/" class="side-nav-link">Documentation</a>
-          <a href="{{relativePath}}examples/" class="side-nav-link">Examples</a>
-          <a href="{{relativePath}}guides/" class="side-nav-link">Guides</a>
+          <a href="{{relativePath}}/documentation/" class="side-nav-link">Documentation</a>
+          <a href="{{relativePath}}/examples/" class="side-nav-link">Examples</a>
+          <a href="{{relativePath}}/guides/" class="side-nav-link">Guides</a>
         </aside>
       </nav>
     </div>
@@ -70,7 +70,7 @@
       -->
       <div class="js-search search-overlay">
         <div class="search-content column-24" role="dialog" aria-labelledby="search" role="dialog">
-          <form method="GET" action="{{relativePath}}search/">
+          <form method="GET" action="{{relativePath}}/search/">
             <label>
               <span class="font-size-1">Search Calcite Web</span>
               <input class="search-input js-search-input" type='search' placeholder='Search' name="q">
@@ -87,12 +87,12 @@
             <!-- desktop sized navigation -->
             <div class="tablet-hide">
               <!-- logo / home -->
-              <a href="{{relativePath}}" class="top-nav-title">Calcite Web</a>
+              <a href="{{relativePath}}/" class="top-nav-title">Calcite Web</a>
               <!-- primary navigation sections -->
               <nav class="top-nav-list" role="navigation">
-                <a href="{{relativePath}}documentation" class="{% if isDocumentation %}is-active {% endif %}top-nav-link">Documentation</a>
-                <a href="{{relativePath}}examples" class="{% if isExample %}is-active {% endif %}top-nav-link">Examples</a>
-                <a href="{{relativePath}}guides" class="{% if isGuide %}is-active {% endif %}top-nav-link">Guides</a>
+                <a href="{{relativePath}}/documentation" class="{% if isDocumentation %}is-active {% endif %}top-nav-link">Documentation</a>
+                <a href="{{relativePath}}/examples" class="{% if isExample %}is-active {% endif %}top-nav-link">Examples</a>
+                <a href="{{relativePath}}/guides" class="{% if isGuide %}is-active {% endif %}top-nav-link">Guides</a>
               </nav>
               <nav class="class-top-nav-list right" role="navigation" aria-labelledby="usernav">
                 <button class="search-top-nav link-dark-gray js-search-toggle" href="#" aria-label="Search">
@@ -151,16 +151,16 @@
           <nav class="column-6">
             <h6>Styleguides</h6>
             <ul class="list-plain">
-              <li><a href="{{relativePath}}guides/code/javascript/">JavaScript</a></li>
-              <li><a href="{{relativePath}}guides/code/css/">CSS</a></li>
-              <li><a href="{{relativePath}}guides/code/html/">HTML</a></li>
+              <li><a href="{{relativePath}}/guides/code/javascript/">JavaScript</a></li>
+              <li><a href="{{relativePath}}/guides/code/css/">CSS</a></li>
+              <li><a href="{{relativePath}}/guides/code/html/">HTML</a></li>
             </ul>
           </nav>
 
           <nav class="column-6">
             <h6>Resources</h6>
             <ul class="list-plain">
-              <li><a href="{{relativePath}}guides/migration-guide/">Migration Guide</a></li>
+              <li><a href="{{relativePath}}/guides/migration-guide/">Migration Guide</a></li>
               <li><a href="https://github.com/Esri/calcite-web/releases/">Releases</a></li>
               <li><a href="https://github.com/Esri/calcite-web/blob/master/CONTRIBUTING.md">Contributing</a></li>
               <li><a href="https://github.com/Esri/calcite-web/issues/">Issues</a></li>
@@ -198,16 +198,16 @@
       </div>
     </footer>
 
-    <script src="{{relativePath}}assets/js/libs/calcite-web.js"></script>
-    <script src="{{relativePath}}assets/js/libs/calcite-web-marketing.js"></script>
+    <script src="{{relativePath}}/assets/js/libs/calcite-web.js"></script>
+    <script src="{{relativePath}}/assets/js/libs/calcite-web-marketing.js"></script>
 
-    <script src="{{relativePath}}assets/js/all.js"></script>
+    <script src="{{relativePath}}/assets/js/all.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
 
     {% endblock %}
 
     {% for name in js %}
-      <script src="{{relativePath}}assets/js/{{name}}.js"></script>
+      <script src="{{relativePath}}/assets/js/{{name}}.js"></script>
     {% endfor %}
 
   </body>

@@ -16,6 +16,6 @@ By default, Calcite Web expects image files to be located at `../`. If your font
 
 Using this framework as a Sass library will give you the most power, but whatever your flavor, we have you covered.
 
-If you are migrating from Tailcoat, checkout the [migration guide]({{relativePath}}guides/migration-guide/).
+If you are migrating from Tailcoat, checkout the [migration guide]({{relativePath}}/guides/migration-guide/).
 
 Calcite Web is an open project, that anyone can use to make web apps. However, some of our resources are not. Using Calcite Web on any project that does not live at an Esri or ArcGIS domain will not have access to any of Esri's brand typefaces. You can load a version of the framework without typefaces by using `calcite-web-no-fonts.css`.

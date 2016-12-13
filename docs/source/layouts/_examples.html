@@ -7,14 +7,14 @@
         <h1 class="sub-nav-title leader-1 text-white">Examples</h1>
         <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1">Download Latest Release</a>
         <nav class="sub-nav-list" role="navigation" aria-labelledby="subnav">
-          <a class="sub-nav-link {% if active == 'overview' %}is-active{% endif %}" href="{{relativePath}}examples">Overview</a>
-          <a href="{{relativePath}}examples/core" class="sub-nav-link {% if active == 'core' %} is-active {% endif %}">Basic Pages</a>
-          <a href="{{relativePath}}examples/grid" class="sub-nav-link {% if active == 'grid' %} is-active {% endif %}">Grid</a>
-          <a href="{{relativePath}}examples/navigation" class="sub-nav-link {% if active == 'navigation' %} is-active {% endif %}">Navigation</a>
-          <a href="{{relativePath}}examples/marketing" class="sub-nav-link {% if active == 'marketing' %} is-active {% endif %}">Marketing</a>
-          <a href="{{relativePath}}examples/e-commerce" class="sub-nav-link {% if active == 'e-commerce' %} is-active {% endif %}">E-Commerce</a>
-          <a href="{{relativePath}}examples/apps" class="sub-nav-link {% if active == 'apps' %} is-active {% endif %}">Apps</a>
-          <a href="{{relativePath}}examples/i18n" class="sub-nav-link {% if active == 'i18n' %} is-active {% endif %}">i18n</a>
+          <a class="sub-nav-link {% if active == 'overview' %}is-active{% endif %}" href="{{relativePath}}/examples">Overview</a>
+          <a href="{{relativePath}}/examples/core" class="sub-nav-link {% if active == 'core' %} is-active {% endif %}">Basic Pages</a>
+          <a href="{{relativePath}}/examples/grid" class="sub-nav-link {% if active == 'grid' %} is-active {% endif %}">Grid</a>
+          <a href="{{relativePath}}/examples/navigation" class="sub-nav-link {% if active == 'navigation' %} is-active {% endif %}">Navigation</a>
+          <a href="{{relativePath}}/examples/marketing" class="sub-nav-link {% if active == 'marketing' %} is-active {% endif %}">Marketing</a>
+          <a href="{{relativePath}}/examples/e-commerce" class="sub-nav-link {% if active == 'e-commerce' %} is-active {% endif %}">E-Commerce</a>
+          <a href="{{relativePath}}/examples/apps" class="sub-nav-link {% if active == 'apps' %} is-active {% endif %}">Apps</a>
+          <a href="{{relativePath}}/examples/i18n" class="sub-nav-link {% if active == 'i18n' %} is-active {% endif %}">i18n</a>
         </nav>
       </div>
     </div>
@@ -22,12 +22,12 @@
 {% endblock %}
 
 {% block content %}
-  <header class="third-nav scroll-show js-sticky" data-top=0>
+  <header class="third-nav scroll-show js-sticky" data-top="0">
     <div class="third-nav-container">
       <div class="grid-container">
         <nav class="column-24" role="navigation" aria-labelledby="thirdnav breadcrumbs">
-          <a href="{{relativePath}}examples" class="third-nav-link crumb">Examples</a>
-          <a href="{{relativePath}}examples/{{active}}" class="third-nav-link crumb">{{active}}</a>
+          <a href="{{relativePath}}/examples" class="third-nav-link crumb">Examples</a>
+          <a href="{{relativePath}}/examples/{{active}}" class="third-nav-link crumb">{{active}}</a>
           <a class="icon-ui-up third-nav-link right" href="#">Back to Top</a>
         </nav>
       </div>
@@ -36,7 +36,7 @@
 
   <a id="skip-to-content" tabindex="0"></a>
 
-  {% block details %}{% endblock %}
+  {% block details %}asdfasdf{% endblock %}
 
   <div class="grid-container">
     <div class="column-24">

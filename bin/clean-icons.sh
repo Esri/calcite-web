@@ -1,1 +1,0 @@
-svgo -f lib/img/icons/ui/ --pretty --enable addClassesToSVGElement --config='{"plugins":[{"addClassesToSVGElement": {"className": "svg-icon"}}]}'

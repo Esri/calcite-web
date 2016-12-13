@@ -12,7 +12,7 @@ var months = [
   'October',
   'November',
   'December'
-]
+];
 
 module.exports = function getRelease (cb) {
   // https://developer.github.com/v3/repos/#get
