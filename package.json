@@ -8,7 +8,7 @@
     "test": "semistandard",
     "prestart": "npm-run-series stat acetate sass rollup img img:docs font js",
     "start": "parallelshell 'rerun-script' 'live-server docs/build --port=8888 --no-browser'",
-    "deploy": "gh-pages -d docs/build -o upstream",
+    "deploy": "npm run prestart && gh-pages -d docs/build -o upstream",
     "dist": "npm-run-series stat sass:dist font:dist img:dist rollup js:dist minify",
     "release": "npm-run-series dist s3 releaseScript",
     "prestat": "mkdirp dist/css/",
