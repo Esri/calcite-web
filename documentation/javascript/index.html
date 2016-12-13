@@ -143,42 +143,42 @@
         <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1 tablet-hide">Download Latest Release</a>
         <nav class="sub-nav-list tablet-hide" role="navigation" aria-labelledby="subnav">
           
-          
-          
             
-          
+            
+              
+            
             <a class="sub-nav-link " href="../../documentation/">Get Started</a>
           
-          
-          
+            
+            
             <a class="sub-nav-link " href="../../documentation/type/">Type</a>
           
-          
-          
+            
+            
             <a class="sub-nav-link " href="../../documentation/grid/">Grid</a>
           
-          
-          
+            
+            
             <a class="sub-nav-link " href="../../documentation/icons/">Icons</a>
           
-          
-          
+            
+            
             <a class="sub-nav-link " href="../../documentation/color/">Color</a>
           
-          
-          
+            
+            
             <a class="sub-nav-link " href="../../documentation/components/">Components</a>
           
-          
-          
+            
+            
             <a class="sub-nav-link " href="../../documentation/patterns/">Patterns</a>
           
-          
-          
+            
+            
             <a class="sub-nav-link " href="../../documentation/sass/">Sass</a>
           
-          
-          
+            
+            
             <a class="sub-nav-link is-active" href="../../documentation/javascript/">JavaScript</a>
           
         </nav>
@@ -294,20 +294,20 @@
 <pre><code class="js"><span class="hljs-keyword">var</span> calcite = <span class="hljs-built_in">require</span>(<span class="hljs-string">'calcite-web'</span>);
 </code></pre>
 <h4>AMD</h4>
-<pre><code class="js"><span class="hljs-built_in">require</span>([<span class="hljs-string">'path/to/calcite-web.js'</span>], <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(calcite)</span></span>{
+<pre><code class="js"><span class="hljs-built_in">require</span>([<span class="hljs-string">'path/to/calcite-web.js'</span>], <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">calcite</span>)</span>{
   <span class="hljs-comment">// use calcite</span>
 });
 </code></pre>
 <h3>Initializing</h3>
 <p>To use <code>calcite-web.js</code> simply <a href="../../guides/quickstart/">include a reference to it in your html</a> and then run the <code>calcite.init()</code> method. For example, say your JavaScript was located in a file called <code>script.js</code>. You can bind all the JavaScript patterns from <code>script.js</code> like this:</p>
 <pre><code class="js"><span class="hljs-comment">// On document ready</span>
-<span class="hljs-built_in">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+<span class="hljs-built_in">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
   <span class="hljs-comment">// Initialize all calcite.js patterns</span>
   calcite.init();
 };
 </code></pre>
 <p>You can initialize individual patterns by their own method, for example:</p>
-<pre><code>calcite.<span class="hljs-function"><span class="hljs-title">tabs</span><span class="hljs-params">()</span></span>
+<pre><code><span class="hljs-selector-tag">calcite</span><span class="hljs-selector-class">.tabs</span>()
 </code></pre>
 
 
@@ -489,8 +489,8 @@
 <p>Many of the filter dropdown channels emit and listen for the following Options Object:</p>
 <pre><code>{
   <span class="hljs-attribute">parent</span>: domNode,
-  <span class="hljs-attribute">id</span>: filterDropdownId,
-  <span class="hljs-attribute">item</span>: domNode
+  id: filterDropdownId,
+  item: domNode
 }
 </code></pre>
 <table>
@@ -630,8 +630,8 @@
 <h4>Tabs</h4>
 <p>Tab events emit and listen for an Options Object.</p>
 <pre><code>{
-  <span class="hljs-attribute">id</span>: tabId <span class="hljs-comment">// data-tab attribute</span>
-  <span class="hljs-attribute">active</span>: domNode
+  <span class="hljs-attribute">id</span>: tabId // data-tab attribute
+  active: domNode
 }
 </code></pre>
 <table>
@@ -773,7 +773,7 @@
 <pre><code class="js"><span class="hljs-keyword">var</span> click = calcite.click();
 <span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'body'</span>);
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> <span class="hljs-params">(event)</span> </span>{
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> (<span class="hljs-params">event</span>) </span>{
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'hola'</span>);
 };
 
@@ -784,7 +784,7 @@ calcite.addEvent(node, click, action); <span class="hljs-comment">// action will
 <pre><code class="js"><span class="hljs-keyword">var</span> click = calcite.click();
 <span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'body'</span>);
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> <span class="hljs-params">(event)</span> </span>{
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> (<span class="hljs-params">event</span>) </span>{
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'hola'</span>);
 };
 
@@ -796,7 +796,7 @@ calcite.removeEvent(node, event, action); <span class="hljs-comment">// action h
 <pre><code class="js"><span class="hljs-keyword">var</span> click = calcite.click();
 <span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'body'</span>);
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> <span class="hljs-params">(event)</span> </span>{
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> (<span class="hljs-params">event</span>) </span>{
   <span class="hljs-keyword">var</span> target = calcite.eventTarget(event);
   <span class="hljs-built_in">console</span>.log(target);
 };
@@ -809,7 +809,7 @@ calcite.addEvent(node, click, action);
 <pre><code class="js"><span class="hljs-keyword">var</span> click = calcite.click();
 <span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">'a'</span>)[<span class="hljs-number">0</span>];
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> <span class="hljs-params">(event)</span> </span>{
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> (<span class="hljs-params">event</span>) </span>{
   calcite.preventDefault(event);
 };
 
@@ -821,7 +821,7 @@ calcite.addEvent(node, click, action);
 <pre><code class="js"><span class="hljs-keyword">var</span> click = calcite.click();
 <span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">'a'</span>)[<span class="hljs-number">0</span>];
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> <span class="hljs-params">(event)</span> </span>{
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> (<span class="hljs-params">event</span>) </span>{
   calcite.stopPropagation(event);
 };
 
@@ -831,7 +831,7 @@ calcite.addEvent(node, click, action);
 <h2>Manipulation &amp; Traversal</h2>
 <h3>calcite.hasClass(node, class)</h3>
 <p>Checks if the <code>node</code> currently has the provided <code>class</code>. For example, given the following html:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"apple"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"test"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"apple"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"test"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
 <p>The <code>hasClass</code> utility can be used as follows:</p>
 <pre><code class="js"><span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'test'</span>);
@@ -858,7 +858,7 @@ calcite.toggleClass(node, <span class="hljs-string">'test'</span>); <span class=
 <p>Searches up the DOM tree to find the closest parent element with a given class.</p>
 <pre><code class="js"><span class="hljs-keyword">var</span> nodes = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.child-element'</span>);
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">clickHandler</span> <span class="hljs-params">(event)</span> </span>{
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">clickHandler</span> (<span class="hljs-params">event</span>) </span>{
   <span class="hljs-keyword">var</span> closestNode = calcite.closest(<span class="hljs-string">'parent-class'</span>, event.target);
 }
 

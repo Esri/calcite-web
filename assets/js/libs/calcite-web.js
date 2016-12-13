@@ -325,8 +325,8 @@ function clipboard() {
 
   function copy(e) {
     e.preventDefault();
-    var target = e.target.getAttribute('data-clipboard-target');
-    document.querySelector(target).select();
+    var target$$1 = e.target.getAttribute('data-clipboard-target');
+    document.querySelector(target$$1).select();
     document.execCommand('copy');
   }
 
@@ -424,8 +424,8 @@ function closeAllDropdowns(options) {
   findElements('.js-dropdown').forEach(function (dropdown) {
     remove(dropdown, 'is-active');
   });
-  findElements('.js-dropdown-toggle').forEach(function (toggle) {
-    toggle.setAttribute('aria-expanded', 'false');
+  findElements('.js-dropdown-toggle').forEach(function (toggle$$1) {
+    toggle$$1.setAttribute('aria-expanded', 'false');
   });
   remove$1(document, 'keydown', seizeArrows);
 }
@@ -455,17 +455,17 @@ function seizeArrows(e) {
 function bindDropdowns(options) {
   // attach the new events
   var toggles = findElements('.js-dropdown-toggle');
-  toggles.forEach(function (toggle) {
+  toggles.forEach(function (toggle$$1) {
     // check if the event was already added
     var eventExists = false;
     boundEvents.dropdowns.forEach(function (e) {
-      if (e.target === toggle && e.event === click() && e.fn === toggleClick$1) {
+      if (e.target === toggle$$1 && e.event === click() && e.fn === toggleClick$1) {
         eventExists = true;
       }
     });
     if (!eventExists) {
-      boundEvents.dropdowns.push({ target: toggle, event: click(), fn: toggleClick$1 });
-      add$1(toggle, click(), toggleClick$1);
+      boundEvents.dropdowns.push({ target: toggle$$1, event: click(), fn: toggleClick$1 });
+      add$1(toggle$$1, click(), toggleClick$1);
     }
   });
 }
@@ -615,8 +615,8 @@ function drawer() {
 
   function bindDrawers(options) {
     if (!options) {
-      toggles.forEach(function (toggle) {
-        add$1(toggle, click(), toggleClick);
+      toggles.forEach(function (toggle$$1) {
+        add$1(toggle$$1, click(), toggleClick);
       });
     } else {
       add$1(options.node, click(), toggleClick);
@@ -636,35 +636,6 @@ function drawer() {
   }
 
   bus.emit('drawer:bind');
-}
-
-// Cool Helpers
-// ┌───────────────────┐
-// │ Expanding Section │
-// └───────────────────┘
-// show and hide exanding nav located under topnav
-function expander() {
-  var toggles = findElements('.js-expand-toggle');
-  var sections = document.querySelectorAll('.js-expand');
-
-  toggles.forEach(function (toggle) {
-    add$1(toggle, click(), function (e) {
-      preventDefault(e);
-
-      var sectionId = toggle.getAttribute('data-expand');
-      var section = document.querySelector('.js-expand[data-expand="' + sectionId + '"]');
-      var isOpen = has(section, 'is-active');
-      var shouldClose = has(section, 'is-active');
-
-      toggleActive(sections, section);
-
-      if (isOpen && shouldClose) {
-        remove(section, 'is-active');
-      } else {
-        add(section, 'is-active');
-      }
-    });
-  });
 }
 
 // Cool Helpers
@@ -835,8 +806,8 @@ function filterDropdown() {
       var item = options.active[i];
       var template = '<span class="filter-dropdown-active">\n        ' + item.innerHTML + '\n        <a class="filter-dropdown-remove" href="#" data-item-id=\'' + i + '\'>\n          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 32 32" class="svg-icon"><path d="M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z"/></svg>\n        </a>\n      </span>';
       options.parent.insertAdjacentHTML('beforeend', template);
-      var remove$$ = options.parent.querySelector('.filter-dropdown-remove[data-item-id="' + i + '"]');
-      add$1(remove$$, click(), removeClick);
+      var remove$$1 = options.parent.querySelector('.filter-dropdown-remove[data-item-id="' + i + '"]');
+      add$1(remove$$1, click(), removeClick);
     }
   }
 
@@ -914,8 +885,8 @@ function modal() {
 
   function bindModals(node) {
     if (!node) {
-      toggles.forEach(function (toggle) {
-        add$1(toggle, click(), toggleClick);
+      toggles.forEach(function (toggle$$1) {
+        add$1(toggle$$1, click(), toggleClick);
       });
     } else {
       add$1(node, click(), toggleClick);
@@ -957,8 +928,8 @@ function search() {
 
   function bindSearches(node) {
     if (!node) {
-      toggles.forEach(function (toggle) {
-        add$1(toggle, click(), toggleClick);
+      toggles.forEach(function (toggle$$1) {
+        add$1(toggle$$1, click(), toggleClick);
       });
     } else {
       add$1(node, click(), toggleClick);
@@ -1289,25 +1260,25 @@ function thirdNav() {
 // import all interactive patterns
 // Object Assign Polyfill
 if (typeof Object.assign !== 'function') {
-  Object.assign = function (target) {
+  Object.assign = function (target$$1) {
     'use strict';
 
-    if (target == null) {
+    if (target$$1 == null) {
       throw new TypeError('Cannot convert undefined or null to object');
     }
 
-    target = Object(target);
+    target$$1 = Object(target$$1);
     for (var index = 1; index < arguments.length; index++) {
       var source = arguments[index];
       if (source != null) {
         for (var key in source) {
           if (Object.prototype.hasOwnProperty.call(source, key)) {
-            target[key] = source[key];
+            target$$1[key] = source[key];
           }
         }
       }
     }
-    return target;
+    return target$$1;
   };
 }
 
@@ -1348,7 +1319,7 @@ function isScrolling() {
 // └────────────────────┘
 // start up Calcite and attach all the patterns
 // optionally pass an array of patterns you'd like to watch
-var patterns = [accordion, clipboard, dropdown, drawer, expander, filterDropdown, modal, search, selectNav, sticky, tabs, thirdNav];
+var patterns = [accordion, clipboard, dropdown, drawer, filterDropdown, modal, search, selectNav, sticky, tabs, thirdNav];
 
 function init() {
   patterns.forEach(function (pattern) {
@@ -1368,7 +1339,7 @@ function extend(plugin) {
 // └────────────┘
 // define all public api methods
 var calciteWeb = {
-  version: '1.0.0-beta.36',
+  version: '1.0.0',
   click: click,
   addEvent: add$1,
   removeEvent: remove$1,
@@ -1392,7 +1363,6 @@ var calciteWeb = {
   accordion: accordion,
   dropdown: dropdown,
   drawers: drawer,
-  expander: expander,
   filterDropdown: filterDropdown,
   modal: modal,
   search: search,

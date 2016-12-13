@@ -191,22 +191,22 @@
 <li>Avoid specifying units for zero values, e.g., <code>margin: 0;</code> instead of <code>margin: 0px;</code></li>
 </ul>
 <h4>Incorrect example:</h4>
-<pre><code><span class="hljs-class">.selector</span>, <span class="hljs-class">.selector-secondary</span>, <span class="hljs-class">.selector</span><span class="hljs-attr_selector">[type=text]</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"><span class="hljs-number">15px</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value"><span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-number">15px</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"><span class="hljs-function">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.5</span>)</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">box-shadow</span>:<span class="hljs-value"><span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">2px</span> <span class="hljs-hexcolor">#CCC</span>,inset <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-hexcolor">#FFFFFF</span>
+<pre><code><span class="hljs-selector-class">.selector</span>, <span class="hljs-selector-class">.selector-secondary</span>, <span class="hljs-selector-class">.selector</span><span class="hljs-selector-attr">[type=text]</span> {
+  <span class="hljs-attribute">padding</span>:<span class="hljs-number">15px</span>;
+  <span class="hljs-attribute">margin</span>:<span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-number">15px</span>;
+  <span class="hljs-attribute">background-color</span>:<span class="hljs-built_in">rgba</span>(0, 0, 0, 0.5);
+  <span class="hljs-attribute">box-shadow</span>:<span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">2px</span> <span class="hljs-number">#CCC</span>,inset <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#FFFFFF</span>
 }
-</span></span></span></code></pre>
+</code></pre>
 <h4>Correct example:</h4>
-<pre><code class="css"><span class="hljs-class">.selector</span>,
-<span class="hljs-class">.selector-secondary</span>,
-<span class="hljs-class">.selector</span><span class="hljs-attr_selector">[type="text"]</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">15px</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value"> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">15px</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-function">rgba</span>(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,.<span class="hljs-number">5</span>)</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">box-shadow</span>:<span class="hljs-value"> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">2px</span> <span class="hljs-hexcolor">#ccc</span>, inset <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-hexcolor">#fff</span></span></span>;
-}</span>
+<pre><code class="css"><span class="hljs-selector-class">.selector</span>,
+<span class="hljs-selector-class">.selector-secondary</span>,
+<span class="hljs-selector-class">.selector</span><span class="hljs-selector-attr">[type="text"]</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">15px</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">15px</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(0,0,0,.5);
+  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">2px</span> <span class="hljs-number">#ccc</span>, inset <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#fff</span>;
+}
 </code></pre>
 <h3>Declaration order</h3>
 <p>Related declarations should be grouped together, placing positioning and box-model properties closest to the top, followed by typographic and visual properties.</p>
@@ -217,52 +217,52 @@
 <li>Typography <strong>&amp;</strong> Appearance</li>
 <li><strong>J</strong>azz (extras, transitions)</li>
 </ul>
-<pre><code class="css"><span class="hljs-class">.declaration-order</span> <span class="hljs-rules">{
+<pre><code class="css"><span class="hljs-selector-class">.declaration-order</span> {
   <span class="hljs-comment">/* - - - - Positioning - - - - */</span>
-  <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> absolute</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">top</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">right</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">bottom</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">z-index</span>:<span class="hljs-value"> <span class="hljs-number">100</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">display</span>:<span class="hljs-value"> block</span></span>;
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">z-index</span>: <span class="hljs-number">100</span>;
+  <span class="hljs-attribute">display</span>: block;
 
   <span class="hljs-comment">/* - - - - Box-model - - - - */</span>
-  <span class="hljs-rule"><span class="hljs-attribute">float</span>:<span class="hljs-value"> right</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">100px</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">100px</span></span></span>;
+  <span class="hljs-attribute">float</span>: right;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
 
   <span class="hljs-comment">/* - - - - Typography - - - - */</span>
-  <span class="hljs-rule"><span class="hljs-attribute">font-family</span>:<span class="hljs-value"> sans-serif</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">line-height</span>:<span class="hljs-value"> <span class="hljs-number">1.5</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#333</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">text-align</span>:<span class="hljs-value"> center</span></span>;
+  <span class="hljs-attribute">font-family</span>: sans-serif;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.5</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#333</span>;
+  <span class="hljs-attribute">text-align</span>: center;
 
   <span class="hljs-comment">/* - - - - Appearance - - - - */</span>
-  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#f5f5f5</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">border</span>:<span class="hljs-value"> <span class="hljs-number">1px</span> solid <span class="hljs-hexcolor">#e5e5e5</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">border-radius</span>:<span class="hljs-value"> <span class="hljs-number">3px</span></span></span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f5f5f5</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#e5e5e5</span>;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">3px</span>;
 
   <span class="hljs-comment">/* - - - - Jazz - - - - - - - */</span>
-  <span class="hljs-rule"><span class="hljs-attribute">animation</span>:<span class="hljs-value"> <span class="hljs-number">100ms</span> all linear</span></span>;
-}</span>
+  <span class="hljs-attribute">animation</span>: <span class="hljs-number">100ms</span> all linear;
+}
 </code></pre>
 <h3>Rules with single declarations</h3>
 <p>In instances where several rules are present with only one declaration each, consider removing new line breaks for readability and faster editing.</p>
-<pre><code class="css"><span class="hljs-class">.span1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">60px</span></span></span>; }</span>
-<span class="hljs-class">.span2</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">140px</span></span></span>; }</span>
-<span class="hljs-class">.span3</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">220px</span></span></span>; }</span>
+<pre><code class="css"><span class="hljs-selector-class">.span1</span> { <span class="hljs-attribute">width</span>: <span class="hljs-number">60px</span>; }
+<span class="hljs-selector-class">.span2</span> { <span class="hljs-attribute">width</span>: <span class="hljs-number">140px</span>; }
+<span class="hljs-selector-class">.span3</span> { <span class="hljs-attribute">width</span>: <span class="hljs-number">220px</span>; }
 
-<span class="hljs-class">.sprite</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">display</span>:<span class="hljs-value"> inline-block</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">16px</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">15px</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">background-image</span>:<span class="hljs-value"> <span class="hljs-function">url</span>(../img/sprite.png)</span></span>;
-}</span>
+<span class="hljs-selector-class">.sprite</span> {
+  <span class="hljs-attribute">display</span>: inline-block;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">15px</span>;
+  <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(../img/sprite.png);
+}
 
-<span class="hljs-class">.icon</span>           <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">background-position</span>:<span class="hljs-value"> <span class="hljs-number">0</span> <span class="hljs-number">0</span></span></span>; }</span>
-<span class="hljs-class">.icon-home</span>      <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">background-position</span>:<span class="hljs-value"> <span class="hljs-number">0</span> -<span class="hljs-number">20px</span></span></span>; }</span>
-<span class="hljs-class">.icon-account</span>   <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">background-position</span>:<span class="hljs-value"> <span class="hljs-number">0</span> -<span class="hljs-number">40px</span></span></span>; }</span>
+<span class="hljs-selector-class">.icon</span>           { <span class="hljs-attribute">background-position</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span>; }
+<span class="hljs-selector-class">.icon-home</span>      { <span class="hljs-attribute">background-position</span>: <span class="hljs-number">0</span> -<span class="hljs-number">20px</span>; }
+<span class="hljs-selector-class">.icon-account</span>   { <span class="hljs-attribute">background-position</span>: <span class="hljs-number">0</span> -<span class="hljs-number">40px</span>; }
 </code></pre>
 <h3>Human readable</h3>
 <p>Code is written and maintained by people. Ensure your code is descriptive, well commented, and approachable by others.</p>
@@ -330,49 +330,48 @@
 <li>If a property or set of properties is used over and over, make it an extendable class so it's easier to manage.</li>
 </ul>
 <h4>Bad Example:</h4>
-<pre><code class="scss"><span class="hljs-variable">$white</span><span class="hljs-value">: <span class="hljs-hexcolor">#fff</span> !default;</span>
+<pre><code class="scss"><span class="hljs-variable">$white</span>: <span class="hljs-number">#fff</span> !default;
 
-<span class="hljs-at_rule">@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> full-width</span> {</span>
-  <span class="hljs-attribute">width</span><span class="hljs-value">: <span class="hljs-number">100%</span>;</span>
+@<span class="hljs-keyword">mixin</span> full-width {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
 }
 
-<span class="hljs-class">.nav</span> {
-  <span class="hljs-attribute">color</span><span class="hljs-value">: <span class="hljs-hexcolor">#fff</span>;</span>
-  <span class="hljs-class">.nav-header</span> {
-    <span class="hljs-attribute">color</span><span class="hljs-value">: <span class="hljs-hexcolor">#fff</span>;</span>
-    <span class="hljs-tag">a</span><span class="hljs-class">.nav-link</span> {
-      <span class="hljs-class">.toggle-link</span> {
-        <span class="hljs-attribute">color</span><span class="hljs-value">: <span class="hljs-hexcolor">#fff</span>;</span>
-        <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> full-width</span>();</span>
+<span class="hljs-selector-class">.nav</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+  <span class="hljs-selector-class">.nav-header</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+    <span class="hljs-selector-tag">a</span><span class="hljs-selector-class">.nav-link</span> {
+      <span class="hljs-selector-class">.toggle-link</span> {
+        <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+        @<span class="hljs-keyword">include</span> full-width();
       }
     }
   }
 }
 </code></pre>
 <h4>Good Example:</h4>
-<pre><code class="scss"><span class="hljs-variable">$white</span><span class="hljs-value">: <span class="hljs-hexcolor">#fff</span> !default;</span>
+<pre><code class="scss"><span class="hljs-variable">$white</span>: <span class="hljs-number">#fff</span> !default;
 
 %white {
-  <span class="hljs-attribute">color</span><span class="hljs-value">: <span class="hljs-variable">$white</span>;</span>
+  <span class="hljs-attribute">color</span>: <span class="hljs-variable">$white</span>;
 }
 
 %full-<span class="hljs-attribute">width</span> {
-  <span class="hljs-attribute">width</span><span class="hljs-value">: <span class="hljs-number">100%</span>;</span>
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
 }
 
-<span class="hljs-class">.nav</span> {
-  <span class="hljs-at_rule">@<span class="hljs-keyword">extend</span> %white;</span>
+<span class="hljs-selector-class">.nav</span> {
+  @<span class="hljs-keyword">extend</span> %white;
 }
 
-<span class="hljs-class">.nav-header</span> {
-  <span class="hljs-at_rule">@<span class="hljs-keyword">extend</span> %white;</span>
-  <span class="hljs-class">.toggle-link</span> {
-    <span class="hljs-at_rule">@<span class="hljs-keyword">extend</span> %full-width;</span>
+<span class="hljs-selector-class">.nav-header</span> {
+  @<span class="hljs-keyword">extend</span> %white;
+  <span class="hljs-selector-class">.toggle-link</span> {
+    @<span class="hljs-keyword">extend</span> %full-width;
   }
 }
 </code></pre>
 <p>It's tempting to use indentation to organize your code, but remember, the generated css will have every selector above it, making it very bloated and way too specific. Although the above is more lines of sass, it is far more extendable and generates much less css.</p>
-
   </main>
 </div>
 

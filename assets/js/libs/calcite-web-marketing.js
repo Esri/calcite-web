@@ -33,6 +33,9 @@ function remove(domNode, classes) {
   });
 }
 
+// if domNode has the class, remove it, else add it
+
+
 // remove 'is-active' class from every element in an array
 function removeActive(array) {
   array = nodeListToArray(array);
@@ -48,6 +51,16 @@ function addActive(array) {
     add(item, 'is-active');
   });
 }
+
+// remove 'is-active' class from every element in an array, add to one element
+
+// ┌─────┐
+// │ DOM │
+// └─────┘
+// Handles dom nodes
+
+// returns closest element up the DOM tree matching a given class
+
 
 // turn a domNodeList into an array
 function nodeListToArray(domNodeList) {
@@ -65,6 +78,13 @@ function findElements(query, domNode) {
   return nodeListToArray(elements);
 }
 
+// ┌──────────────────────┐
+// │ DOM Event Management │
+// └──────────────────────┘
+
+// returns standard interaction event, later will add touch support
+
+
 // add a callback function to an event on a DOM node
 function add$1(domNode, e, fn) {
   if (domNode.addEventListener) {
@@ -73,6 +93,21 @@ function add$1(domNode, e, fn) {
     return domNode.attachEvent('on' + e, fn);
   }
 }
+
+// remove a specific function binding from a DOM node event
+
+
+// get the target element of an event
+
+
+// prevent default behavior of an event
+
+
+// stop and event from bubbling up the DOM tree
+
+
+// return a function that will only execute
+// once it is NOT called for delay milliseconds
 
 function E() {
   // Keep this empty so it's easier to inherit from
@@ -148,16 +183,16 @@ function switcher() {
 
   function bind(options) {
     if (!options) {
-      toggles.forEach(function (toggle) {
-        setUp(toggle);
+      toggles.forEach(function (toggle$$1) {
+        setUp(toggle$$1);
       });
     } else {
       setUp(options.node);
     }
   }
 
-  function setUp(toggle) {
-    add$1(toggle, 'click', toggleClick);
+  function setUp(toggle$$1) {
+    add$1(toggle$$1, 'click', toggleClick);
   }
 
   function toggleClick(e) {

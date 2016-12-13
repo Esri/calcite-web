@@ -143,42 +143,42 @@
         <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1 tablet-hide">Download Latest Release</a>
         <nav class="sub-nav-list tablet-hide" role="navigation" aria-labelledby="subnav">
           
-          
-          
             
-          
+            
+              
+            
             <a class="sub-nav-link " href="../../documentation/">Get Started</a>
           
-          
-          
+            
+            
             <a class="sub-nav-link " href="../../documentation/type/">Type</a>
           
-          
-          
+            
+            
             <a class="sub-nav-link is-active" href="../../documentation/grid/">Grid</a>
           
-          
-          
+            
+            
             <a class="sub-nav-link " href="../../documentation/icons/">Icons</a>
           
-          
-          
+            
+            
             <a class="sub-nav-link " href="../../documentation/color/">Color</a>
           
-          
-          
+            
+            
             <a class="sub-nav-link " href="../../documentation/components/">Components</a>
           
-          
-          
+            
+            
             <a class="sub-nav-link " href="../../documentation/patterns/">Patterns</a>
           
-          
-          
+            
+            
             <a class="sub-nav-link " href="../../documentation/sass/">Sass</a>
           
-          
-          
+            
+            
             <a class="sub-nav-link " href="../../documentation/javascript/">JavaScript</a>
           
         </nav>
@@ -287,11 +287,11 @@
             
           
             
-              <a href="#pre-and-post" class="side-nav-link">Pre & Post</a>
+              <a href="#pre-and-post" class="side-nav-link">Pre &amp; Post</a>
             
           
             
-              <a href="#leader-and-trailer" class="side-nav-link">Leader & Trailer</a>
+              <a href="#leader-and-trailer" class="side-nav-link">Leader &amp; Trailer</a>
             
           
             
@@ -299,15 +299,15 @@
             
           
             
-              <a href="#first-and-last" class="side-nav-link">First & Last</a>
+              <a href="#first-and-last" class="side-nav-link">First &amp; Last</a>
             
           
             
-              <a href="#show-and-hide" class="side-nav-link">Show & Hide</a>
+              <a href="#show-and-hide" class="side-nav-link">Show &amp; Hide</a>
             
           
             
-              <a href="#left-and-right" class="side-nav-link">Left & Right</a>
+              <a href="#left-and-right" class="side-nav-link">Left &amp; Right</a>
             
           
             
@@ -325,7 +325,7 @@
             
           
             
-              <a href="#scroll-show-and-hide" class="side-nav-link">Scroll Show & Hide</a>
+              <a href="#scroll-show-and-hide" class="side-nav-link">Scroll Show &amp; Hide</a>
             
           
             
@@ -497,8 +497,8 @@
 </tbody>
 </table>
 <p>You can override these values to create a custom, project-specific grid in your own project. For example, to use a 16 column grid instead of the default 24 columns, you would set the <code>$default-column-count</code> variable before importing the library:</p>
-<pre><code>$<span class="hljs-rule"><span class="hljs-attribute">default-column-count</span>:<span class="hljs-value"> <span class="hljs-number">16</span></span></span>;
-<span class="hljs-at_rule">@<span class="hljs-keyword">import</span> calcite-web</span>;
+<pre><code><span class="hljs-variable">$default-column-count</span>: <span class="hljs-number">16</span>;
+@<span class="hljs-keyword">import</span> calcite-web;
 </code></pre>
 
 
@@ -524,11 +524,11 @@
 
           <p>The <code>.grid-container</code> class is required to contain the grid. Using the  <a href="#columns">column</a> classes without them being nested in a containing <code>div</code> will cause unexpected results.</p>
 <p>The container class applies a max width to the content it contains and handles the column relationship with the viewport window, preventing collisions with scroll bars or other exciting bugs.</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-container"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-24"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">blockquote</span>&gt;</span>Contain the Columns<span class="hljs-tag">&lt;/<span class="hljs-title">blockquote</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"grid-container"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-24"</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span>&gt;</span>Contain the Columns<span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
 
 
@@ -566,15 +566,15 @@
     </div>
   </div>
 </div>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-17"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>column-17<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-8"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>column-8<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-9 tablet-first-column"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>column-9<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-17"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>column-17<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>column-8<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-9 tablet-first-column"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>column-9<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
 <p><a href="../../examples/grid/#columns">View the full example</a></p>
 
@@ -607,11 +607,11 @@
     <span class="phone-show">phone-column-3</span>
   </div>
 </div>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-8 tablet-column-2 phone-column-3"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tablet-hide"</span>&gt;</span>column-8<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tablet-only"</span>&gt;</span>tablet-column-2<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"phone-show"</span>&gt;</span>phone-column-3<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-8 tablet-column-2 phone-column-3"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tablet-hide"</span>&gt;</span>column-8<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tablet-only"</span>&gt;</span>tablet-column-2<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"phone-show"</span>&gt;</span>phone-column-3<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
 <p><a href="../../examples/grid/#responsive-columns">View the full example</a></p>
 
@@ -649,15 +649,15 @@
     </div>
   </div>
 </div>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-8"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>column-8<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-4"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>column-4<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-4"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>column-4<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-8"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>column-8<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>column-4<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-4"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>column-4<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
 <p><a href="../../examples/grid/#nested-columns">View the example</a></p>
 
@@ -713,10 +713,10 @@
   <div class="block"><div class="panel">Block</div></div>
   <div class="block"><div class="panel">Block</div></div>
 </div>
-<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block-group block-group-3-up"</span>&gt;
-  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block"</span>&gt;&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"panel"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
-  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block"</span>&gt;&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"panel"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
-  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block"</span>&gt;&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"panel"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"block-group block-group-3-up"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"block"</span>&gt;&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"panel"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"block"</span>&gt;&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"panel"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"block"</span>&gt;&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"panel"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
 &lt;/<span class="hljs-keyword">div</span>&gt;
 </code></pre>
 <p><a href="../../examples/grid/#block-groups">View the example</a></p>
@@ -757,18 +757,18 @@
     <div class="panel">Block</div>
   </div>
 </div>
-<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block-group block-group-4-up tablet-block-group-2-up phone-block-group-1-up"</span>&gt;
-  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block trailer-half"</span>&gt;
-    &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"panel"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;
+<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"block-group block-group-4-up tablet-block-group-2-up phone-block-group-1-up"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"block trailer-half"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"panel"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;
   &lt;/<span class="hljs-keyword">div</span>&gt;
-  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block trailer-half"</span>&gt;
-    &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"panel"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"block trailer-half"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"panel"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;
   &lt;/<span class="hljs-keyword">div</span>&gt;
-  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block trailer-half"</span>&gt;
-    &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"panel"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"block trailer-half"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"panel"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;
   &lt;/<span class="hljs-keyword">div</span>&gt;
-  &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"block trailer-half"</span>&gt;
-    &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"panel"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"block trailer-half"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"panel"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;
   &lt;/<span class="hljs-keyword">div</span>&gt;
 &lt;/<span class="hljs-keyword">div</span>&gt;
 </code></pre>
@@ -818,7 +818,7 @@
       
         <section>
           
-            <h2 id="pre-and-post" tabindex="0">Pre & Post</h2>
+            <h2 id="pre-and-post" tabindex="0">Pre &amp; Post</h2>
           
 
           <p>Pre and Post classes are used to move your columns laterally across the grid by defining how many columns they should be from their neighbors on either side.</p>
@@ -831,9 +831,9 @@
     <span>column-8 pre-2</span>
   </div>
 </div>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"column-8 pre-2"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>column-8 pre-2<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-8 pre-2"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>column-8 pre-2<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
 <p><a href="../../examples/grid/#pre-and-post">View the example</a></p>
 
@@ -855,7 +855,7 @@
       
         <section>
           
-            <h2 id="leader-and-trailer" tabindex="0">Leader & Trailer</h2>
+            <h2 id="leader-and-trailer" tabindex="0">Leader &amp; Trailer</h2>
           
 
           <p>The leader and trailer classes are designed for quick vertical adjustments with markup. The standard <code>leader-n</code> and <code>trailer-n</code> classes add top and bottom margin to the element, as multiples of the <code>$baseline</code> variable, or 1.5rem.</p>
@@ -863,7 +863,7 @@
 <p>Calcite Web provides a <code>$vertical-range</code> variable that sets the maximum value of <code>n</code> for the <code>leader-n</code> and <code>trailer-n</code> classes at 6.</p>
 <p>Leader and trailer classes also have additional responsive <code>tablet-</code> and <code>phone-</code> prefix classes. These allow you to add different amounts of space above and below an element at different screen sizes.</p>
 <p>For example, if you wanted an element to have 3 lines of margin above it on desktop, but that was too much on a phone, you could use responsive classes to specify that:</p>
-<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"leader-3 phone-leader-1"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+<pre><code>&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"leader-3 phone-leader-1"</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
 </code></pre>
 <p>These also apply to <code>padding-leader</code> and <code>padding-trailer</code></p>
 
@@ -1022,7 +1022,7 @@
                 </div>
               
             </div>
-<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"modifier-class panel"</span>&gt;modifier-<span class="hljs-type">class</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"modifier-class panel"</span>&gt;modifier-<span class="hljs-built_in">class</span>&lt;/<span class="hljs-keyword">div</span>&gt;
 </code></pre>
 
           
@@ -1219,7 +1219,7 @@
                 </div>
               
             </div>
-<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"modifier-class panel"</span>&gt;modifier-<span class="hljs-type">class</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"modifier-class panel"</span>&gt;modifier-<span class="hljs-built_in">class</span>&lt;/<span class="hljs-keyword">div</span>&gt;
 </code></pre>
 
           
@@ -1233,7 +1233,7 @@
       
         <section>
           
-            <h2 id="first-and-last" tabindex="0">First & Last</h2>
+            <h2 id="first-and-last" tabindex="0">First &amp; Last</h2>
           
 
           <p>The <code>first</code> and <code>last</code> classes are used for
@@ -1257,7 +1257,7 @@ aligning grid columns when the Grid System is unable to determine which columns 
       
         <section>
           
-            <h2 id="show-and-hide" tabindex="0">Show & Hide</h2>
+            <h2 id="show-and-hide" tabindex="0">Show &amp; Hide</h2>
           
 
           <p>These convenience classes are meant to help with quick responsive layout. Below are the classes and what breakpoints they are visible on:</p>
@@ -1328,13 +1328,13 @@ aligning grid columns when the Grid System is unable to determine which columns 
       
         <section>
           
-            <h2 id="left-and-right" tabindex="0">Left & Right</h2>
+            <h2 id="left-and-right" tabindex="0">Left &amp; Right</h2>
           
 
           <p>Use a class of <code>right</code> on html elements to float elements to the right. Use a class of <code>left</code> on html elements to float elements to the left.</p>
 <p>Left and right classes also have additional responsive <code>tablet-</code> and <code>phone-</code> prefix classes. These allow you to float an element right on a large screen, but float it left when the screen is smaller.</p>
 <p>For example, if you wanted an element to float right on desktop, but left on a phone, you could use responsive right and left classes to specify that:</p>
-<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"right phone-left"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+<pre><code>&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"right phone-left"</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
 </code></pre>
 
 
@@ -1402,7 +1402,7 @@ aligning grid columns when the Grid System is unable to determine which columns 
       
         <section>
           
-            <h2 id="scroll-show-and-hide" tabindex="0">Scroll Show & Hide</h2>
+            <h2 id="scroll-show-and-hide" tabindex="0">Scroll Show &amp; Hide</h2>
           
 
           <p>Some layouts call for elements to appear or disappear as the user scrolls down the page. An element with the <code>scroll-show</code> class will appear when it reaches a point specified by the <code>data-top=x</code> attribute, appearing when it comes within the given value of the top of the screen.</p>

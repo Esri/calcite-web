@@ -239,11 +239,11 @@ cheap syntactic pleasures.</p>
 <h2>Use UpperCamelCase for Class Names</h2>
 <p>Class names should be capitalized using <code>UpperCamelCase</code>.</p>
 <p><em>Right:</em></p>
-<pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">BankAccount</span><span class="hljs-params">()</span> </span>{
+<pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">BankAccount</span>(<span class="hljs-params"></span>) </span>{
 }
 </code></pre>
 <p><em>Wrong:</em></p>
-<pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bank_Account</span><span class="hljs-params">()</span> </span>{
+<pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bank_Account</span>(<span class="hljs-params"></span>) </span>{
 }
 </code></pre>
 <h2>Use UPPERCASE for Constants</h2>
@@ -252,14 +252,14 @@ cheap syntactic pleasures.</p>
 <p><em>Right:</em></p>
 <pre><code class="js"><span class="hljs-keyword">var</span> SECOND = <span class="hljs-number">1</span> * <span class="hljs-number">1000</span>;
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">File</span><span class="hljs-params">()</span> </span>{
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">File</span>(<span class="hljs-params"></span>) </span>{
 }
 File.FULL_PERMISSIONS = <span class="hljs-number">0777</span>;
 </code></pre>
 <p><em>Wrong:</em></p>
 <pre><code class="js"><span class="hljs-keyword">const</span> SECOND = <span class="hljs-number">1</span> * <span class="hljs-number">1000</span>;
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">File</span><span class="hljs-params">()</span> </span>{
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">File</span>(<span class="hljs-params"></span>) </span>{
 }
 File.fullPermissions = <span class="hljs-number">0777</span>;
 </code></pre>
@@ -268,7 +268,7 @@ File.fullPermissions = <span class="hljs-number">0777</span>;
 <p><em>Right:</em></p>
 <pre><code class="js"><span class="hljs-keyword">var</span> a = [<span class="hljs-string">'hello'</span>, <span class="hljs-string">'world'</span>];
 <span class="hljs-keyword">var</span> b = {
-  good: <span class="hljs-string">'code'</span>,
+  <span class="hljs-attr">good</span>: <span class="hljs-string">'code'</span>,
   <span class="hljs-string">'is generally'</span>: <span class="hljs-string">'pretty'</span>
 };
 </code></pre>
@@ -314,7 +314,7 @@ File.fullPermissions = <span class="hljs-number">0777</span>;
 }
 </code></pre>
 <p><em>Wrong:</em></p>
-<pre><code class="js"><span class="hljs-built_in">Array</span>.prototype.empty = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+<pre><code class="js"><span class="hljs-built_in">Array</span>.prototype.empty = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">return</span> !<span class="hljs-keyword">this</span>.length;
 }
 
@@ -342,7 +342,7 @@ File.fullPermissions = <span class="hljs-number">0777</span>;
 <h2>Return Early From Functions</h2>
 <p>To avoid deep nesting of if-statements, always return a function's value as early as possible.</p>
 <p><em>Right:</em></p>
-<pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isPercentage</span><span class="hljs-params">(val)</span> </span>{
+<pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isPercentage</span>(<span class="hljs-params">val</span>) </span>{
   <span class="hljs-keyword">if</span> (val &lt; <span class="hljs-number">0</span>) {
     <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
   }
@@ -355,7 +355,7 @@ File.fullPermissions = <span class="hljs-number">0777</span>;
 }
 </code></pre>
 <p><em>Wrong:</em></p>
-<pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isPercentage</span><span class="hljs-params">(val)</span> </span>{
+<pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isPercentage</span>(<span class="hljs-params">val</span>) </span>{
   <span class="hljs-keyword">if</span> (val &gt;= <span class="hljs-number">0</span>) {
     <span class="hljs-keyword">if</span> (val &lt; <span class="hljs-number">100</span>) {
       <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
@@ -368,7 +368,7 @@ File.fullPermissions = <span class="hljs-number">0777</span>;
 }
 </code></pre>
 <p>Or for this particular example it may also be fine to shorten things even further:</p>
-<pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isPercentage</span><span class="hljs-params">(val)</span> </span>{
+<pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isPercentage</span>(<span class="hljs-params">val</span>) </span>{
   <span class="hljs-keyword">var</span> isInRange = (val &gt;= <span class="hljs-number">0</span> &amp;&amp; val &lt;= <span class="hljs-number">100</span>);
   <span class="hljs-keyword">return</span> isInRange;
 }
@@ -376,29 +376,29 @@ File.fullPermissions = <span class="hljs-number">0777</span>;
 <h2>Name Your Closures</h2>
 <p>Feel free to give your closures a name. It shows that you care about them, and will produce better stack traces, heap and cpu profiles.</p>
 <p><em>Right:</em></p>
-<pre><code class="js">req.on(<span class="hljs-string">'end'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onEnd</span><span class="hljs-params">()</span> </span>{
+<pre><code class="js">req.on(<span class="hljs-string">'end'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onEnd</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'winning'</span>);
 });
 </code></pre>
 <p><em>Wrong:</em></p>
-<pre><code class="js">req.on(<span class="hljs-string">'end'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+<pre><code class="js">req.on(<span class="hljs-string">'end'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'losing'</span>);
 });
 </code></pre>
 <h2>No Nested Closures</h2>
 <p>Use closures, but don't nest them. Otherwise your code will become a mess.</p>
 <p><em>Right:</em></p>
-<pre><code class="js">setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+<pre><code class="js">setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   client.connect(afterConnect);
 }, <span class="hljs-number">1000</span>);
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">afterConnect</span><span class="hljs-params">()</span> </span>{
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">afterConnect</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'winning'</span>);
 }
 </code></pre>
 <p><em>Wrong:</em></p>
-<pre><code class="js">setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
-  client.connect(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+<pre><code class="js">setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  client.connect(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'losing'</span>);
   });
 }, <span class="hljs-number">1000</span>);
@@ -412,7 +412,7 @@ File.fullPermissions = <span class="hljs-number">0777</span>;
 <span class="hljs-comment">// This function has a nasty side effect where a failure to increment a</span>
 <span class="hljs-comment">// redis counter used for statistics will cause an exception. This needs</span>
 <span class="hljs-comment">// to be fixed in a later iteration.</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loadUser</span><span class="hljs-params">(id, cb)</span> </span>{
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loadUser</span>(<span class="hljs-params">id, cb</span>) </span>{
   <span class="hljs-comment">// ...</span>
 }
 
@@ -426,7 +426,7 @@ File.fullPermissions = <span class="hljs-number">0777</span>;
 <span class="hljs-keyword">var</span> matches = item.match(<span class="hljs-regexp">/ID_([^\n]+)=([^\n]+)/</span>));
 
 <span class="hljs-comment">// Usage: loadUser(5, function() { ... })</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loadUser</span><span class="hljs-params">(id, cb)</span> </span>{
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loadUser</span>(<span class="hljs-params">id, cb</span>) </span>{
   <span class="hljs-comment">// ...</span>
 }
 
@@ -442,7 +442,6 @@ File.fullPermissions = <span class="hljs-number">0777</span>;
 <h2>Getters and Setters</h2>
 <p>Do not use setters, they cause more problems for people who try to use your software than they can solve.</p>
 <p>Feel free to use getters that are free from <a href="http://en.wikipedia.org/wiki/Side_effect_(computer_science)">side effects</a>, like providing a length property for a collection class.</p>
-
   </main>
 </div>
 
