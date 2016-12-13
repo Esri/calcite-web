@@ -14,6 +14,10 @@
     <!-- Use title from page frontmatter -->
     <title>{{title}} | Esri Design Patterns</title>
 
+    {% if relativePath == '' %}
+      {% set relativePath = '.' %}
+    {% endif %}
+
     <!-- Link to favicon -->
     <link rel="shortcut icon" href="{{relativePath}}/assets/img/favicon.ico">
 
