@@ -215,19 +215,9 @@
 
   figcaption {
     margin: $baseline/4 0;
-    padding-left: $baseline/2;
-    border-left: 3px solid $dark-gray;
     @include font-size(-2);
     font-style: italic;
     color: $dark-gray;
-    @if ($include-right-to-left) {
-      html[dir="rtl"] & {
-        padding-left: 0;
-        border-left: none;
-        padding-right: $baseline/2;
-        border-right: 3px solid $dark-gray;
-      }
-    }
   }
 
   table {
