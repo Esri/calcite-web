@@ -2,6 +2,8 @@
 
 ### Modified
 - `figcaption` elements no longer have a left border
+- breadcrumbs now pass WCAG 2.0 contrast requirements
+- fixed spacing between breadcrumbs (#726)
 
 ## 1.0.0-rc.0
 
