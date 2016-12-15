@@ -129,16 +129,18 @@
   @else if $n <= 2 {
     line-height: $baseline;
   }
-  @media screen and (max-width: $medium - 1) {
-    font-size: medium-modular-scale($n);
-  }
-  @media screen and (max-width: $small - 1) {
-    font-size: small-modular-scale($n);
-    @if $n > 7 {
-      line-height: 2*$baseline;
+  @if $n > 0 {
+    @media screen and (max-width: $medium - 1) {
+      font-size: medium-modular-scale($n);
     }
-    @else if $n <= 7 and $n > 4 {
-      line-height: 1.5*$baseline;
+    @media screen and (max-width: $small - 1) {
+      font-size: small-modular-scale($n);
+      @if $n > 7 {
+        line-height: 2*$baseline;
+      }
+      @else if $n <= 7 and $n > 4 {
+        line-height: 1.5*$baseline;
+      }
     }
   }
 }
