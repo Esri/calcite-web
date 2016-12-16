@@ -6,21 +6,20 @@
 
 @mixin breadcrumbs() {
   @include font-size(-2);
-  @include text-color($dark-gray);
+  @include text-color($darker-gray);
 }
 
   @mixin crumb() {
-    color: $dark-gray;
-    padding: 0 0.25rem 0 0.75rem;
-    background: url('#{$image-path}/forward-slash.svg') left center no-repeat transparent;
-    @if ($include-right-to-left) {
-      html[dir="rtl"] & {
-        padding: 0 0.75rem 0 0.25rem;
-        background: url('#{$image-path}/forward-slash.svg') right center no-repeat transparent;
-        white-space: nowrap;
-      }
-    }
+    color: $darker-gray;
     @include left();
+
+    &:before {
+      content: "/";
+      color: $darker-gray;
+      font-weight: 400;
+      display: inline-block;
+      padding: 0 .5rem;
+    }
 
     &.is-active {
       font-weight: 600;
@@ -29,22 +28,17 @@
     .breadcrumbs-white & {
       color: white;
       @include link-color($white, $lightest-gray);
-      background-image: url('#{$image-path}/forward-slash-white.svg');
+      &:before {
+        color: white;
+      }
     }
 
-    &:first-child {
-      background-image: none;
-      padding-left: 0;
-      @if ($include-right-to-left) {
-        html[dir="rtl"] & {
-          padding-right: 0;
-          background: none;
-        }
-      }
+    &:first-child:before {
+      display: none;
     }
   }
 
 @if $include-breadcrumbs == true {
-  .breadcrumbs {@include breadcrumbs();}
-    .crumb {@include crumb();}
+  .breadcrumbs { @include breadcrumbs(); }
+    .crumb { @include crumb(); }
 }

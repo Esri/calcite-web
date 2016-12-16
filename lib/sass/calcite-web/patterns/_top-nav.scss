@@ -24,9 +24,8 @@
     @include left();
     margin-right: 1.5rem;
     padding-top: 1.125rem;
-    padding-bottom: calc(1.25rem - 4px);
+    padding-bottom: 1.25rem;
     line-height: 1.5rem;
-    border-bottom: 4px solid transparent;
     color: $off-black;
     @if ($include-right-to-left) {
       html[dir="rtl"] & {
@@ -36,8 +35,6 @@
       }
     }
     &:hover {
-      color: $blue;
-      border-bottom-color: $blue;
       text-decoration: none;
     }
   }

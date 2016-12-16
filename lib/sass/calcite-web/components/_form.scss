@@ -60,6 +60,10 @@
     }
   }
 
+  input {
+    -webkit-appearance: none;
+  }
+
   textarea {
     height: auto;
     padding-top: $baseline / 5;
@@ -180,6 +184,12 @@
       border: none;
       outline: auto;
     }
+  }
+  input[type='checkbox'] {
+    -webkit-appearance: checkbox;
+  }
+  input[type='radio'] {
+    -webkit-appearance: radio;
   }
 
   .fieldset-radio, .fieldset-checkbox {

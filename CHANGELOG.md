@@ -1,3 +1,14 @@
+## 1.0.0-rc.1 (Unreleased)
+
+### Modified
+- `figcaption` elements no longer have a left border
+- breadcrumbs now pass WCAG 2.0 contrast requirements
+- fixed spacing between breadcrumbs (#726)
+- remove blue active state for top-nav-title (#729)
+
+### Fixed
+- inputs with a type `search` now display properly in Safari (#740)
+
 ## 1.0.0-rc.0
 
 ### Added
