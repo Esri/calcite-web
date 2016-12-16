@@ -16,9 +16,12 @@
     line-height: $baseline;
     color: $type-color;
 
+    -webkit-font-smoothing: subpixel-antialiased;
+
     -webkit-font-feature-settings: "kern";
        -moz-font-feature-settings: "kern";
             font-feature-settings: "kern";
+
     font-kerning: normal;
 
     text-rendering: optimizeLegibility;
