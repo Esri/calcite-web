@@ -6,6 +6,9 @@
 - fixed spacing between breadcrumbs (#726)
 - remove blue active state for top-nav-title (#729)
 
+### Fixed
+- inputs with a type `search` now display properly in Safari (#740)
+
 ## 1.0.0-rc.0
 
 ### Added
