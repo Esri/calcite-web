@@ -74,7 +74,7 @@ This is not required, but more of a "nice to have" feature. As users complete a 
 
 ![](../../../assets/img/docs/forms-error.svg)
 
-It's very important to show users what went wrong if there are errors processing and validating the form. Errors should be specific, and shown inline with the form field that caused the problem. Use the `input-error` and `input-error-message` classes to indicate the error in the form. Ensure that the error message is helpful and descriptive. For an example of form errors, see the [form validation](../../documentation/components/#form-validation) section of the Calcite Web documentation.
+It's very important to show users what went wrong if there are errors processing and validating the form. Errors should be specific, and shown inline with the form field that caused the problem. Use the `input-error` and `input-error-message` classes to indicate the error in the form. Ensure that the error message is helpful and descriptive. For an example of form errors, see the [form validation](../../../documentation/components/#form-validation) section of the Calcite Web documentation.
 
 
 
