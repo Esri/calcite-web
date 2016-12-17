@@ -3,6 +3,7 @@
 ### Removed
 - The leftover `large-` columns are gone. Sizes are now just the documented `normal`, `medium`, and `small`.
 - Leftover imports for Frutiger font removed
+- Ellipsis not added to loader text automatically (better for i18n)
 
 ### Modified
 - `figcaption` elements no longer have a left border
