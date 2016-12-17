@@ -1,5 +1,8 @@
 ## 1.0.0-rc.1 (Unreleased)
 
+### Removed
+- The leftover `large-` columns are gone. Sizes are now just the documented `normal`, `medium`, and `small`.
+
 ### Modified
 - `figcaption` elements no longer have a left border
 - breadcrumbs now pass WCAG 2.0 contrast requirements
