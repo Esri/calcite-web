@@ -63,7 +63,7 @@
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
       margin-left: 0;
-      margin-right: -$column-gutter / 2;
+      margin-right: -$column-gutter / 2 !important;
     }
   }
 }
@@ -73,7 +73,7 @@
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
       margin-right: 0;
-      margin-left: -$column-gutter / 2;
+      margin-left: -$column-gutter / 2 !important;
     }
   }
 }
@@ -124,7 +124,7 @@
         @if ($include-right-to-left) {
           html[dir="rtl"] & {
             margin-left: 0;
-            margin-right: -$column-gutter / 2;
+            margin-right: -$column-gutter / 2 !important;
           }
         }
       }
@@ -133,7 +133,7 @@
         @if ($include-right-to-left) {
           html[dir="rtl"] & {
             margin-right: 0;
-            margin-left: -$column-gutter / 2;
+            margin-left: -$column-gutter / 2 !important;
           }
         }
       }
@@ -176,7 +176,7 @@
         @if ($include-right-to-left) {
           html[dir="rtl"] & {
             margin-left: 0;
-            margin-right: -$column-gutter / 2;
+            margin-right: -$column-gutter / 2 !important;
           }
         }
       }
@@ -185,7 +185,7 @@
         @if ($include-right-to-left) {
           html[dir="rtl"] & {
             margin-right: 0;
-            margin-left: -$column-gutter / 2;
+            margin-left: -$column-gutter / 2 !important;
           }
         }
       }

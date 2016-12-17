@@ -11,6 +11,7 @@
 
 ### Fixed
 - inputs with a type `search` now display properly in Safari (#740)
+- `pre` and `post` should always work in right-to-left languages now (#731)
 
 ## 1.0.0-rc.0
 

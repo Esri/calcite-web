@@ -24,7 +24,10 @@
 }
 
 @mixin pre($n, $count: $large-column-count) {
-  margin-left: ($n / $count) * $max-width !important;
+  margin-left: ($n / $count) * $max-width;
+  [class*="#{$prefix}column-"] &[class*="#{$prefix}column-"]:first-of-type {
+    margin-left: ($n / $count) * $max-width;
+  }
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
       margin-right: ($n / $count) * $max-width !important;
@@ -35,7 +38,7 @@
 @mixin pre-calc($n, $count: $large-column-count) {
   $margin: ($n / $count) * $max-width;
   $clear: $column-gutter / 2;
-  margin-left: calc(#{$margin} - #{$clear}) !important;
+  margin-left: calc(#{$margin} - #{$clear});
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
       margin-right: calc(#{$margin} - #{$clear}) !important;
@@ -44,7 +47,10 @@
 }
 
 @mixin post($n, $count: $large-column-count) {
-  margin-right: ($n / $count) * $max-width !important;
+  margin-right: ($n / $count) * $max-width;
+  [class*="#{$prefix}column-"] &[class*="#{$prefix}column-"]:first-of-type {
+    margin-right: ($n / $count) * $max-width;
+  }
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
       margin-left: ($n / $count) * $max-width !important;
