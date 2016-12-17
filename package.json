@@ -20,7 +20,7 @@
     "rollup": "rollup -c lib/js/rollup.config.js && rollup -c lib/js/rollup-marketing.config.js",
     "js": "ncp docs/source/assets/js/ docs/build/assets/js/",
     "js:dist": "ncp docs/build/assets/js/libs/ dist/js/",
-    "sass": "node-sass docs/source/assets/css/ -q -o docs/build/assets/css/ --include-path lib/sass",
+    "sass": "node-sass docs/source/assets/css/ --source-map-embed -q -o docs/build/assets/css/ --include-path lib/sass",
     "sass:dist": "node-sass lib/sass/ -q -o dist/css/ && ncp lib/sass dist/sass",
     "font": "ncp lib/fonts docs/build/assets/fonts",
     "font:dist": "ncp lib/fonts dist/fonts",
