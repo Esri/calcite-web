@@ -2,6 +2,7 @@
 
 ### Removed
 - The leftover `large-` columns are gone. Sizes are now just the documented `normal`, `medium`, and `small`.
+- Leftover imports for Frutiger font removed
 
 ### Modified
 - `figcaption` elements no longer have a left border
