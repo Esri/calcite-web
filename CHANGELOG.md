@@ -1,4 +1,4 @@
-## 1.0.0-rc.1 (Unreleased)
+## 1.0.0-rc.1
 
 ### Breaking
 - The leftover `large-` columns are gone. Sizes are now just the documented `normal`, `medium`, and `small`.
