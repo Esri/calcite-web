@@ -13,7 +13,7 @@
     "dist": "npm-run-series stat sass:dist font:dist img:dist rollup js:dist minify",
     "release": "npm-run-series dist s3 releaseScript",
     "prestat": "npm run sass:dist",
-    "stat": "cssstats dist/css/calcite-web.min.css dist/css/stats.json",
+    "stat": "cssstats dist/css/calcite-web.css dist/css/stats.json",
     "acetate": "acetate build --input source --config docs/acetate.config.js",
     "img": "ncp lib/img/ docs/source/assets/img/ && ncp lib/img/ docs/build/assets/img/",
     "img:docs": "ncp docs/source/assets/img/ docs/build/assets/img/",
