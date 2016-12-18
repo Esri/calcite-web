@@ -1,0 +1,82 @@
+// ┌────────────┐
+// │ Animations │
+// └────────────┘
+//  ↳ http://esri.github.io/calcite-web/components/#animation
+//  ↳ component → _animation.md
+
+@mixin fade-in () {
+  opacity: 0;
+  @include animation(fade-in ease-in 1);
+  @include animation-fill-mode(forwards);
+  @include animation-duration(.75s);
+}
+
+@mixin fade-out () {
+  @include animation(fade-out ease-out 1);
+  @include animation-fill-mode(both);
+  @include animation-duration(.75s);
+}
+
+@mixin in-up () {
+  @include animation(in-up ease-out 1);
+  @include animation-fill-mode(both);
+  @include animation-duration(0.5s);
+}
+
+@mixin in-down () {
+  @include animation(in-down ease-out 1);
+  @include animation-fill-mode(both);
+  @include animation-duration(0.5s);
+}
+
+@mixin out-up () {
+  @include animation(out-up ease-in 1);
+  @include animation-fill-mode(both);
+  @include animation-duration(0.5s);
+}
+
+@mixin out-down () {
+  @include animation(out-down ease-in 1);
+  @include animation-fill-mode(both);
+  @include animation-duration(0.5s);
+}
+
+@if $include-animation == true {
+
+  @include keyframes (fade-in) {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @include keyframes (fade-out) {
+    0%   { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  @include keyframes (in-up) {
+    0%   { transform: translate3d(0, 100%, 0);}
+    100% { transform: translate3d(0, 0, 0); }
+  }
+
+  @include keyframes (in-down) {
+    0%   { transform: translate3d(0, -100%, 0);}
+    100% { transform: translate3d(0, 0, 0); }
+  }
+
+  @include keyframes (out-up) {
+    0%   { transform: translate3d(0, 0, 0);}
+    100% { transform: translate3d(0, 100%, 0); }
+  }
+
+  @include keyframes (out-down) {
+    0%   { transform: translate3d(0, 0, 0);}
+    100% { transform: translate3d(0, -100%, 0); }
+  }
+
+  .fade-in, .animate-fade-in {@include fade-in();}
+  .animate-fade-out { @include fade-out(); }
+  .animate-in-down  { @include in-down(); }
+  .animate-in-up    { @include in-up(); }
+  .animate-out-down { @include out-down(); }
+  .animate-out-up   { @include out-up(); }
+}

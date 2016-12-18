@@ -110,9 +110,7 @@ Pattern modules look like `_[pattern].scss`. Each file should contain only the r
 
 ### Dist
 
-The `/dist` directory is what gets delivered to the end user when the framework is downloaded or installed via package manager. Every file in the `/dist` is generated, and editing files in here is futile. Its not tracked by git, so any changes made in the `/dist` folder can not be checked in to source control. Any changes made to any file in this folder will be overwritten by the build process.
-
-We distribute the source files as Sass and ES6 JavaScript, and also compiled files that are usable directly in the browser as CSS and ES5 JavaScript. There is some serious tooling that automates this entire process.
+The `/dist` directory is what gets delivered to the end user when the framework is downloaded or installed via package manager. Every file in the `/dist` is generated, and editing files in here is futile. Any changes made to any file in this folder will be overwritten by the build process.
 
 ### Docs
 
@@ -170,7 +168,8 @@ The final number signifies patches such as fixing a pattern or component in a ce
 
 1. Change the version number in `package.json` to the desired version number.
 2. Write a description of the changes, additions, and bug fixes in `CHANGELOG.md`.
-3. Make sure `Esri/calcite-web` is up-to-date with your changes.
+3. Run `npm run dist` to make sure the dist files are updated.
+4. Make sure `Esri/calcite-web` is up-to-date with your changes (via Pull Request).
 5. Run `npm run release`. If prompted enter your GitHub credentials and your s3 access key/secret.
 
 # Updating the Documentation Site

@@ -1,0 +1,73 @@
+// ┌────────┐
+// │ Panels │
+// └────────┘
+//  ↳ http://esri.github.io/calcite-web/components/#panels
+//  ↳ components → _panels.md
+
+@mixin panel() {
+  @include clearfix();
+  background-color: $off-white;
+  border: 1px solid $lightest-gray;
+  padding: 0.66*$baseline;
+  code {
+    background-color: $white;
+  }
+}
+
+  @mixin panel-dark() {
+    background-color: $darkest-gray;
+    color: $white;
+    border: 1px solid $off-black;
+  }
+
+  @mixin panel-black() {
+    background-color: $black;
+    color: $white;
+    border: 1px solid $off-black;
+  }
+
+  @mixin panel-dark-blue() {
+    background-color: $Brand_Blue_250;
+    color: $white;
+    border: 1px solid $darker-blue;
+  }
+
+  @mixin panel-blue() {
+    background-color: $blue;
+    color: $white;
+    border: 1px solid $dark-blue;
+  }
+
+  @mixin panel-light-blue() {
+    color: $black;
+    background-color: $light-blue;
+    border: 1px solid $blue;
+  }
+
+  @mixin panel-white() {
+    background-color: $white;
+    border: 1px solid $lightest-gray;
+    code {
+      background-color: $off-white;
+    }
+  }
+
+  @mixin panel-no-border() {
+    border: none;
+  }
+
+  @mixin panel-no-padding() {
+    padding: 0;
+  }
+
+@if $include-panel == true {
+  .panel {@include panel();}
+    .panel-black {@include panel-black();}
+    .panel-dark {@include panel-dark();}
+    .panel-white {@include panel-white();}
+    .panel-dark-blue {@include panel-dark-blue();}
+    .panel-blue {@include panel-blue();}
+    .panel-light-blue {@include panel-light-blue();}
+    .panel-no-border {@include panel-no-border();}
+    .panel-no-padding {@include panel-no-padding();}
+}

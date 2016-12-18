@@ -1,0 +1,100 @@
+// ┌──────────────┐
+// │ Block Groups │
+// └──────────────┘
+//  ↳ http://esri.github.io/calcite-web/grid/#block-groups
+//  ↳ grid → _block-groups.md
+
+$half-gutter: 0.75 * $column-gutter;
+$full-gutter: $half-gutter * 2;
+
+@mixin block-group() {
+  margin-left: -$half-gutter;
+  margin-right: -$half-gutter;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@mixin block() {
+  @include box-sizing(border-box);
+  margin-left: $half-gutter;
+  margin-right: $half-gutter;
+  min-width: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 0;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+@mixin _block-grid ($prefix: "") {
+  .#{$prefix}block-group-1-up > .block {
+    -ms-flex-preferred-size: calc(100% - #{$full-gutter});
+                 flex-basis: calc(100% - #{$full-gutter});
+                 width: calc(100% - #{$full-gutter});
+  }
+  .#{$prefix}block-group-2-up > .block {
+    -ms-flex-preferred-size: calc(50% - #{$full-gutter});
+                 flex-basis: calc(50% - #{$full-gutter});
+                 width: calc(50% - #{$full-gutter});
+  }
+  .#{$prefix}block-group-3-up > .block {
+    -ms-flex-preferred-size: calc(33.33333% - #{$full-gutter});
+                 flex-basis: calc(33.33333% - #{$full-gutter});
+                 width: calc(33.33333% - #{$full-gutter});
+  }
+  .#{$prefix}block-group-4-up > .block {
+    -ms-flex-preferred-size: calc(25% - #{$full-gutter});
+                 flex-basis: calc(25% - #{$full-gutter});
+                 width: calc(25% - #{$full-gutter});
+  }
+  .#{$prefix}block-group-5-up > .block {
+    -ms-flex-preferred-size: calc(20% - #{$full-gutter});
+                 flex-basis: calc(20% - #{$full-gutter});
+                 width: calc(20% - #{$full-gutter});
+  }
+  .#{$prefix}block-group-6-up > .block {
+    -ms-flex-preferred-size: calc(16.66666% - #{$full-gutter});
+                 flex-basis: calc(16.66666% - #{$full-gutter});
+                 width: calc(16.66666% - #{$full-gutter});
+  }
+  .#{$prefix}block-group-7-up > .block {
+    -ms-flex-preferred-size: calc(14.28570% - #{$full-gutter});
+                 flex-basis: calc(14.28570% - #{$full-gutter});
+                 width: calc(14.28570% - #{$full-gutter});
+  }
+  .#{$prefix}block-group-8-up > .block {
+    -ms-flex-preferred-size: calc(12.5% - #{$full-gutter});
+                 flex-basis: calc(12.5% - #{$full-gutter});
+                 width: calc(12.5% - #{$full-gutter});
+  }
+}
+
+@if $block-grid == true {
+  .block-group {@include block-group();}
+  .block {@include block();}
+  @include _block-grid();
+}
+
+// ┌─────────────────────────┐
+// │ Responsive Block Groups │
+// └─────────────────────────┘
+//  ↳ http://esri.github.io/calcite-web/grid/#responsive-block-groups
+//  ↳ grid → _responsive-block-groups.md
+@if $block-grid == true {
+  @include respond-to($medium) {
+    @include _block-grid($medium-class + '-');
+  }
+
+  @include respond-to($small) {
+    @include _block-grid($small-class + '-');
+  }
+  .ie9 .block {
+    float: left;
+  }
+  .ie9 .block-group {
+    @include clearfix();
+  }
+}

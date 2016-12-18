@@ -1,0 +1,253 @@
+@mixin form() {
+
+  // ┌───────┐
+  // │ Forms │
+  // └───────┘
+  //  ↳ http://esri.github.io/calcite-web/components/#form-overview
+  //  ↳ components → _form-overview.md
+  form {
+    margin: 0;
+    padding: 0;
+  }
+
+  fieldset {
+    margin: 0 0 $baseline 0;
+    padding: 0;
+    border: none;
+    display: block;
+  }
+
+  label {
+    position: relative;
+    display: block;
+    margin: 0 0 $baseline 0;
+  }
+
+  legend {
+    position: relative;
+    display: block;
+    margin-bottom: .25rem;
+  }
+
+  input, select, textarea {
+    position: relative;
+    display: block;
+    height: 2.25rem;
+    width: 100%;
+    max-width: 100%;
+    margin: .25rem 0 0 0;
+    padding: 0 $baseline / 5;
+    @include box-sizing(border-box);
+    font-family: $avenir-family;
+    font-size: modular-scale(-1);
+    line-height: 1.25rem;
+    color: $off-black;
+    vertical-align: baseline;
+    outline: none;
+    outline-offset: 0;
+    background-color: $white;
+    border: 1px solid $light-gray;
+    border-radius: 0;
+    @include transition(border-color 150ms linear);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+    &:disabled {
+      opacity: .3;
+      cursor: default;
+    }
+    &:focus {
+      border-color: $blue;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(81, 167, 232, 0.5);
+    }
+  }
+
+  input {
+    -webkit-appearance: none;
+  }
+
+  textarea {
+    height: auto;
+    padding-top: $baseline / 5;
+  }
+
+  // Set placeholder text to minimum 4.5/1 contrast (#703)
+  :placeholder                   { color: #767676;  }
+  :input-placeholder             { color: #767676;  }
+  ::-webkit-input-placeholder    { color: #767676;  }
+  ::-moz-placeholder             { color: #767676;  }
+  :-ms-input-placeholder         { color: #767676;  }
+
+  // ┌─────────────┐
+  // │ Text Inputs │
+  // └─────────────┘
+  //  ↳ http://esri.github.io/calcite-web/components/#text-inputs
+  //  ↳ components → _text-inputs.md
+  .input-search {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMnB4IiBoZWlnaHQ9IjMycHgiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0iIzZENkU3MSI+ICAgIDxwYXRoIGQ9Ik0zMS42MDcgMjcuODM4bC02LjEzMy02LjEzN2ExLjMzNiAxLjMzNiAwIDAgMC0xLjg4NyAwbC0uMDM1LjAzNS0yLjUzMy0yLjUzMy0uMDE0LjAxNGMzLjY1Mi00LjU1NiAzLjQyMi0xMS4xOTUtLjgwMy0xNS40Mi00LjUyOS00LjUyNy0xMS44NzUtNC41MzEtMTYuNDA0IDAtNC41MzEgNC41MzEtNC41MjkgMTEuODc1IDAgMTYuNDA2IDQuMjA1IDQuMjA0IDEwLjgxMSA0LjQ1NSAxNS4zNjUuODQ4bC4wMDQuMDAzLS4wMzMuMDMzIDIuNTQxIDIuNTRhMS4zMyAxLjMzIDAgMCAwIC4wMjUgMS44NDhsNi4xMzUgNi4xMzNhMS4zMyAxLjMzIDAgMCAwIDEuODg3IDBsMS44ODUtMS44ODNhMS4zMzIgMS4zMzIgMCAwIDAgMC0xLjg4N3pNMTcuODExIDE3LjgwOWE4LjIxMyA4LjIxMyAwIDAgMS0xMS42MTkgMCA4LjIxNyA4LjIxNyAwIDAgMSAwLTExLjYyMiA4LjIxOSA4LjIxOSAwIDAgMSAxMS42MTkuMDA0IDguMjE2IDguMjE2IDAgMCAxIDAgMTEuNjE4eiIvPjwvc3ZnPg==');
+    background-size: 1em;
+    background-position: .25em center;
+    background-repeat: no-repeat;
+    padding-left: 1.75em;
+  }
+
+  .input-minimal {
+    @include font-size(0);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom-color: $lighter-gray;
+    box-shadow: none;
+  }
+
+  .input-minimal:focus {
+    border-bottom-color: #999;
+    box-shadow: none;
+  }
+
+  // ┌─────────────────┐
+  // │ Form Validation │
+  // └─────────────────┘
+  //  ↳ http://esri.github.io/calcite-web/components/#form-validation
+  //  ↳ components → _form-validation.md
+  .input-error {
+    border-color: $Calcite_Red_200;
+    padding-right: 24px;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjE2cHgiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeD0iMiIgeT0iMCI+PHBhdGggZmlsbD0iI2M4NmE0YSIgZD0iTTExLjIyNSwwSDQuNjQ4TDAsNC42NXY2LjU3Nmw0LjY0OCw0LjY0OWg2LjU3Nmw0LjY1LTQuNjQ5VjQuNjVMMTEuMjI1LDB6IE05LjA3MSwxMy42MDdINi44MDR2LTIuMjY5aDIuMjY4VjEzLjYwN3ogTTkuMDcxLDkuMDcxSDYuODA0VjMuNDAyaDIuMjY4VjkuMDcxeiIvPjwvc3ZnPg==');
+    background-position: right center;
+    background-repeat: no-repeat;
+    &:focus {
+      border-color: $Calcite_Red_200;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(200, 106, 75, 0.5);
+    }
+  }
+
+  .input-success {
+    padding-right: 24px;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIxNnB4IiB2aWV3Qm94PSIwIDAgMjQgMTYiPjxwb2x5Z29uIGZpbGw9IiM1QTkzNTkiIHBvaW50cz0iOC4xODgsMTEuMDgyIDQuMDU5LDYuOTUyIDIuMjU4LDguNzUyIDguMTg4LDE0LjY4MyAxOS43NTQsMy4xMTkgMTcuOTU0LDEuMzE3ICIvPjwvc3ZnPg==');
+    background-position: right center;
+    background-repeat: no-repeat;
+  }
+
+  .input-error-message {
+    @include font-size(-2);
+    padding: $baseline/4 $baseline/4;
+    @include text-color($transparent-black);
+    background-color: $Calcite_Red_100;
+    border: 1px solid $light-red;
+    position: relative;
+    display: none;
+    margin-top: .5rem;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 11px;
+      top: -15px;
+      width: 0;
+      height: 0;
+      pointer-events: none;
+      border: 8px solid transparent;
+      border-bottom-color: $Calcite_Red_100;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      left: 11px;
+      top: -16px;
+      width: 0;
+      height: 0;
+      pointer-events: none;
+      border: 8px solid transparent;
+      border-bottom-color: $light-red;
+    }
+    &.is-active, &.is-active:before, &.is-active:after {
+      display: inline-block;
+    }
+  }
+
+  // ┌────────────────────────────┐
+  // │ Checkboxes & Radio Buttons │
+  // └────────────────────────────┘
+  //  ↳ http://esri.github.io/calcite-web/components/#checkboxes
+  //  ↳ http://esri.github.io/calcite-web/components/#radio-buttons
+  //  ↳ components → _checkboxes.md
+  //  ↳ components → _radio-buttons.md
+  input[type='radio'], input[type='checkbox'] {
+    @include left();
+    width: 1rem;
+    height: 1rem;
+    margin-top: .135rem;
+    margin-right: .125rem;
+    margin-left: .125rem;
+    line-height: 1.25rem;
+    box-shadow: none;
+    &:focus {
+      box-shadow: none;
+      border: none;
+      outline: auto;
+    }
+  }
+  input[type='checkbox'] {
+    -webkit-appearance: checkbox;
+  }
+  input[type='radio'] {
+    -webkit-appearance: radio;
+  }
+
+  .fieldset-radio, .fieldset-checkbox {
+    label {
+      margin-bottom: .25rem;
+      font-size: modular-scale(-1);
+      line-height: 1.25rem;
+      color: $darkest-gray;
+      width: auto;
+    }
+  }
+
+  // ┌─────────┐
+  // │ Selects │
+  // └─────────┘
+  //  ↳ http://esri.github.io/calcite-web/components/#selects
+  //  ↳ components → _selects.md
+  select {
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTAwcHgiIGhlaWdodD0iMTAwcHgiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGZpbGw9IiM1OTU5NTkiIGQ9Ik03NS43NDksMzcuNDY2YzAuNDI1LDAuNDI1LDAuNTUyLDEuMDYzLDAuMzIyLDEuNjE4Qzc1Ljg0MSwzOS42MzksNzUuMzAxLDQwLDc0LjY5OSw0MGgtNDkuNA0KCQljLTAuNiwwLTEuMTQzLTAuMzYyLTEuMzcyLTAuOTE3Yy0wLjIzLTAuNTU1LTAuMTAzLTEuMTkzLDAuMzIyLTEuNjE4bDIzLjQ0LTIzLjQ0YzEuMjc2LTEuMjc2LDMuMzQzLTEuMjc2LDQuNjIsMEw3NS43NDksMzcuNDY2DQoJCUw3NS43NDksMzcuNDY2eiBNMjQuMjUsNjIuNTM0Yy0wLjQyNi0wLjQyNS0wLjU1My0xLjA2My0wLjMyMy0xLjYxOGMwLjIzLTAuNTU1LDAuNzctMC45MTYsMS4zNy0wLjkxNkg3NC43DQoJCWMwLjYwMiwwLDEuMTQzLDAuMzU5LDEuMzczLDAuOTE2YzAuMjMsMC41NTUsMC4xMDMsMS4xOTMtMC4zMjIsMS42MThMNTIuMzEsODUuOTc3Yy0xLjI3NSwxLjI3NS0zLjM0NCwxLjI3NC00LjYyLDBMMjQuMjUsNjIuNTM0eg0KCQkiLz4NCjwvZz4NCjwvc3ZnPg0K');
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: .9rem;
+    width: auto;
+    padding-right: $baseline;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    html[dir="rtl"] & {
+      background-position: center left;
+      padding-left: $baseline;
+      padding-right: $baseline / 5;
+    }
+  }
+
+  select[multiple] {
+    height: auto;
+    background-image: none;
+    padding: 0;
+  }
+
+  select[multiple] option {
+    padding: $baseline/5;
+  }
+
+  .select-full {
+    width: 100%;
+  }
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    select::-ms-expand {
+      display: none;
+    }
+    select:focus::-ms-value {
+      background: transparent;
+      color: $darkest-gray;
+    }
+  }
+}
+
+@if $include-forms == true {
+  @include form();
+}

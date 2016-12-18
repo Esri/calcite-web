@@ -1,0 +1,14 @@
+@if $include-i18n == true {
+  html[lang="vi"] , html.vi  {
+    body,
+    form,
+    select,
+    button,
+    input {
+      font-family: 'Lucida Grande', Arial, Verdana, Geneva, sans-serif;
+    }
+  }
+  [lang="vi"] {
+    font-family: 'Lucida Grande', Arial, Verdana, Geneva, sans-serif;
+  }
+}

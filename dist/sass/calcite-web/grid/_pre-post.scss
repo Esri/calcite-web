@@ -1,0 +1,173 @@
+// ┌──────────────┐
+// │ Pre and Post │
+// └──────────────┘
+//  ↳ http://esri.github.io/calcite-web/grid/#pre-and-post
+//  ↳ grid → _pre-and-post.md
+
+@mixin responsive-pre-post(){
+
+  @if $fold-grid == true {
+
+    // reset all the margins to clear left-to-right pre and post (#731)
+    @if ($include-right-to-left) {
+      @for $n from 0 through $default-column-count {
+        html[dir="rtl"] .#{$prefix}column-#{$n} {
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+    }
+
+    // Normal Columns
+    @media screen and (min-width: $medium) {
+      @for $n from 0 through $default-column-count {
+        .pre-#{$n} {
+          @include pre($n, $default-column-count);
+        }
+        .first-column.pre-#{$n} {
+          @include pre-calc($n, $default-column-count);
+        }
+        .post-#{$n} {
+          @include post($n, $default-column-count);
+        }
+      }
+
+      @if $include-right-to-left == true {
+        @for $n from 0 through $default-column-count {
+          .rtl-pre-#{$n} {
+            @include pre($n, $default-column-count);
+          }
+          .first-column.rtl-pre-#{$n} {
+            @include pre-calc($n, $default-column-count);
+          }
+          .rtl-post-#{$n} {
+            @include post($n, $default-column-count);
+          }
+        }
+      }
+    }
+
+
+    // Medium Columns
+    @media screen and (max-width: $medium - 1) {
+      @for $n from 0 through $medium-column-count {
+        .#{$medium-class}-pre-#{$n} {
+          @include pre($n, $medium-column-count);
+        }
+        .#{$medium-class}-first-column.#{$medium-class}-pre-#{$n} {
+          @include pre-calc($n, $medium-column-count);
+        }
+        .#{$medium-class}-post-#{$n} {
+          @include post($n, $medium-column-count);
+        }
+      }
+
+      @if $include-right-to-left == true {
+        @for $n from 0 through $medium-column-count {
+          .rtl-#{$medium-class}-pre-#{$n} {
+            @include pre($n, $medium-column-count);
+          }
+          .#{$medium-class}-first-column.rtl-#{$medium-class}-pre-#{$n} {
+            @include pre-calc($n, $medium-column-count);
+          }
+          .rtl-#{$medium-class}-post-#{$n} {
+            @include post($n, $medium-column-count);
+          }
+        }
+      }
+    }
+
+    // Small Columns
+    @media screen and (max-width: $small - 1) {
+      @for $n from 0 through $small-column-count {
+        .#{$small-class}-pre-#{$n} {
+          @include pre($n, $small-column-count);
+        }
+        .#{$small-class}-first-column.#{$small-class}-pre-#{$n} {
+          @include pre-calc($n, $small-column-count);
+        }
+        .#{$small-class}-post-#{$n} {
+          @include post($n, $small-column-count);
+        }
+      }
+
+      @if $include-right-to-left == true {
+        @for $n from 0 through $small-column-count {
+          .rtl-#{$small-class}-pre-#{$n} {
+            @include pre($n, $small-column-count);
+          }
+          .#{$small-class}-first-column.rtl-#{$small-class}-pre-#{$n} {
+            @include pre-calc($n, $small-column-count);
+          }
+          .rtl-#{$small-class}-post-#{$n} {
+            @include post($n, $small-column-count);
+          }
+        }
+      }
+    }
+
+    // Fixed Pre and Post
+    $remainder: 1 - $vw-ratio;
+    $margin-overflow: $container-width * $remainder;
+    $magic-number: $container-width + $margin-overflow;
+
+    @media screen and (min-width: $magic-number + 3) {
+      @for $n from 0 through $large-column-count {
+        .pre-#{$n}  {
+          margin-left: ($n / $large-column-count) * $container-width - 1;
+          html[dir="rtl"] & {
+            margin-right: ($n / $large-column-count) * $container-width - 1 !important;
+          }
+        }
+        .post-#{$n} {
+          margin-right: ($n / $large-column-count) * $container-width - 1;
+          html[dir="rtl"] & {
+            margin-left: ($n / $large-column-count) * $container-width - 1 !important;
+          }
+        }
+      }
+      @if $include-right-to-left == true {
+        @for $n from 0 through $large-column-count {
+          .rtl-pre-#{$n}  {
+            margin-left: ($n / $large-column-count) * $container-width;
+            html[dir="rtl"] & {
+              margin-right: ($n / $large-column-count) * $container-width;
+            }
+          }
+          .rtl-post-#{$n} {
+            margin-right: ($n / $large-column-count) * $container-width;
+            html[dir="rtl"] & {
+              margin-left: ($n / $large-column-count) * $container-width;
+            }
+          }
+        }
+      }
+    }
+
+  } @else {
+    .pre-#{$n} {
+      @include pre($n, $default-column-count);
+    }
+    .first-column.pre-#{$n} {
+      @include pre-calc($n, $default-column-count);
+    }
+    .post-#{$n} {
+      @include post($n, $default-column-count);
+    }
+    @if $include-right-to-left == true {
+      .rtl-pre-#{$n} {
+        @include pre($n, $default-column-count);
+      }
+      .first-column.rtl-pre-#{$n} {
+        @include pre-calc($n, $default-column-count);
+      }
+      .rtl-post-#{$n} {
+        @include post($n, $default-column-count);
+      }
+    }
+  }
+}
+
+@if $include-grid == true {
+  @include responsive-pre-post();
+}

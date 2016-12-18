@@ -1,0 +1,62 @@
+// ┌────────┐
+// │ Modals │
+// └────────┘
+//  ↳ http://esri.github.io/calcite-web/patterns/#modals
+//  ↳ patterns → _modals.md
+
+@mixin search-overlay() {
+  @include modal-overlay();
+  z-index: 99;
+  position: absolute;
+  background: $white;
+  &.is-active {
+    opacity: 0.98;
+    .search-content {
+      visibility: visible;
+      opacity: 1;
+      @include transition-delay(0ms);
+      @include transform(translate3d(0,0,0))
+    }
+  }
+}
+
+  @mixin search-top-nav() {
+    @include top-nav-link();
+    // padding: .75*$baseline 0;
+    background-color: transparent;
+    border: none;
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  @mixin search-content() {
+    @include modal-content();
+    @include transform(translate3d(0, -20px, 0));
+    margin-top: 3*$baseline;
+    padding-top: 15vh;
+    vertical-align: top;
+  }
+
+  @mixin search-input () {
+    font-size: modular-scale(6);
+    height: 2.5*$baseline;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom-color: #cccccc;
+    box-shadow: none;
+  }
+
+@if $include-search == true {
+  .search-overlay { @include search-overlay() ;}
+  .search-content { @include search-content() ;}
+  .search-top-nav { @include search-top-nav() ;}
+  .search-icon-open, .search-icon-close {
+    display: none;
+    .is-active {
+      display: block;
+    }
+  }
+  input[type="search"].search-input   { @include search-input() ;}
+}

@@ -1,0 +1,44 @@
+// ┌─────────────┐
+// │ Breadcrumbs │
+// └─────────────┘
+//  ↳ http://esri.github.io/calcite-web/components/#breadcrumbs
+//  ↳ components → _breadbrumbs.md
+
+@mixin breadcrumbs() {
+  @include font-size(-2);
+  @include text-color($darker-gray);
+}
+
+  @mixin crumb() {
+    color: $darker-gray;
+    @include left();
+
+    &:before {
+      content: "/";
+      color: $darker-gray;
+      font-weight: 400;
+      display: inline-block;
+      padding: 0 .5rem;
+    }
+
+    &.is-active {
+      font-weight: 600;
+    }
+
+    .breadcrumbs-white & {
+      color: white;
+      @include link-color($white, $lightest-gray);
+      &:before {
+        color: white;
+      }
+    }
+
+    &:first-child:before {
+      display: none;
+    }
+  }
+
+@if $include-breadcrumbs == true {
+  .breadcrumbs { @include breadcrumbs(); }
+    .crumb { @include crumb(); }
+}

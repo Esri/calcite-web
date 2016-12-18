@@ -1,0 +1,18 @@
+// ┌───────────────┐
+// │ Overflow Auto │
+// └───────────────┘
+@mixin overflow-auto() {
+  overflow: auto;
+}
+@mixin overflow-hidden() {
+  overflow: hidden;
+}
+
+%overflow-auto {
+  @include overflow-auto();
+}
+
+@if $include-utils == true {
+  .overflow-auto   {@include overflow-auto();}
+  .overflow-hidden {@include overflow-hidden();}
+}

@@ -11,9 +11,10 @@
     "deploy": "npm run prestart && gh-pages -d docs/build -o upstream",
     "predist": "rm -rf dist/",
     "dist": "npm-run-series stat sass:dist font:dist img:dist rollup js:dist minify",
-    "release": "npm-run-series dist s3 releaseScript",
-    "prestat": "npm run sass:dist",
-    "stat": "cssstats dist/css/calcite-web.css dist/css/stats.json",
+    "release": "npm-run-series s3 gh-release",
+    "prestat": "node-sass lib/sass/calcite-web.scss dist/css/temp.css",
+    "stat": "cssstats dist/css/temp.css dist/css/stats.json",
+    "poststat": "rm dist/css/temp.css",
     "acetate": "acetate build --input source --config docs/acetate.config.js",
     "img": "ncp lib/img/ docs/source/assets/img/ && ncp lib/img/ docs/build/assets/img/",
     "img:docs": "ncp docs/source/assets/img/ docs/build/assets/img/",
@@ -26,10 +27,9 @@
     "font": "ncp lib/fonts docs/build/assets/fonts",
     "font:dist": "ncp lib/fonts dist/fonts",
     "icons": "svgo -f lib/img/icons/ui/",
-    "minify": "minify dist/css/ && minify dist/js/",
+    "minify": "minify dist/css/",
     "s3": "node bin/s3.js",
-    "gh-release": "gh-release",
-    "releaseScript": "./bin/release.sh"
+    "gh-release": "gh-release"
   },
   "watches": {
     "js": "docs/source/assets/js/**/*",

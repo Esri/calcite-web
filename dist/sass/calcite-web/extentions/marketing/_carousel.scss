@@ -1,0 +1,32 @@
+$dot-size: 0.75em;
+
+.carousel-nav {
+  text-align: center;
+  position: relative;
+}
+
+.carousel-dot {
+  border: 2px solid $gray;
+  margin-left: $dot-size/3;
+  margin-right: $dot-size/3;
+  width: $dot-size;
+  height: $dot-size;
+  border-radius: $dot-size;
+  display: inline-block;
+  &.is-active {
+    background-color: $blue;
+    border-color: $blue;
+  }
+  &:hover {
+    text-decoration: none;
+    border-color: $blue;
+  }
+}
+
+.carousel-panel {
+  display: none;
+  &.is-active {
+    display: block;
+  }
+}
+
