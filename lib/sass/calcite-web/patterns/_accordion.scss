@@ -4,19 +4,25 @@
 //  ↳ http://esri.github.io/calcite-web/patterns/#accordion
 //  ↳ patterns → _accordion.md
 
-@mixin accordion(){
+@mixin accordion() {
   @include side-nav();
 }
   @mixin accordion-section() {
-    .svg-icon {
-      transform: rotate(-90deg);
-    }
     &.is-active {
+      // for developers who haven't moved to inline svg icons yet
+      @if $include-svg-icon == false {
+        .accordion-title:before {
+          @extend .icon-ui-down:before;
+        }
+      }
+      // using inline icons
+      @if $include-svg-icon == true {
+        .accordion-icon .svg-icon {
+          @include transform(rotate(0));
+        }
+      }
       .accordion-content {
         display: block;
-      }
-      .svg-icon {
-        transform: rotate(0deg);
       }
     }
   }
@@ -24,21 +30,34 @@
   @mixin accordion-title() {
     @include side-nav-title();
     cursor: pointer;
-    // @include transition(all, $transition);
+    // for developers who haven't moved to inline svg icons yet
+    @if $include-svg-icon == false {
+      &:before {
+        font-size: modular-scale(-3);
+        @extend %icon-font-styles;
+        @extend .icon-ui-right:before;
+      }
+    }
     &:focus,
     &:hover {
       @include transition(all, $transition);
       background-color: $Calcite_Gray_150;
+      outline: none;
     }
   }
+
   @mixin accordion-content() {
     display: none;
   }
 
+  @mixin accordion-icon() {
+    @include transform(rotate(-90deg));
+  }
 
 @if $include-accordion == true {
   .accordion {@include accordion();}
     .accordion-section {@include accordion-section();};
     .accordion-title {@include accordion-title();}
     .accordion-content {@include accordion-content();}
+    .accordion-icon .svg-icon {@include accordion-icon();}
 }

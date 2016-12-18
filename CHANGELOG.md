@@ -1,9 +1,10 @@
 ## 1.0.0-rc.1 (Unreleased)
 
-### Removed
+### Breaking
 - The leftover `large-` columns are gone. Sizes are now just the documented `normal`, `medium`, and `small`.
 - Leftover imports for Frutiger font removed
 - Ellipsis not added to loader text automatically (better for i18n)
+- Accordions with inline svg icons now require the `accordion-icon` class
 
 ### Modified
 - `figcaption` elements no longer have a left border
