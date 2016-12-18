@@ -205,10 +205,10 @@
               <p>This is probably the easiest way, but you won't get any of the helpful Sass mixins. If you're looking to get up and running quickly, just <a href="https://github.com/ArcGIS/calcite-web/releases">download the latest release</a> and move the zipped files to wherever you keep your assets (CSS, JavaScript, images). Be sure to use <a href="http://esri.github.io/calcite-web/">the documentation site</a> to copy and paste patterns, components, and even a sample html boilerplate.</p>
 <p>You can also use a hosted version Calcite Web:</p>
 <pre><code><span class="hljs-comment">&lt;!-- In the head --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.0/css/calcite-web.min.css"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.1/css/calcite-web.min.css"</span>&gt;</span>
 
 <span class="hljs-comment">&lt;!-- Just before end of body --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.0/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.1/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
 
             </div>
@@ -227,7 +227,7 @@
             </h5>
             <div class="js-search-item-content hide">
               <p>To install Calcite-Web as a ruby gem, reference the gem from your <code>Gemfile</code>:</p>
-<pre><code>gem <span class="hljs-string">"calcite-web"</span>, :<span class="hljs-function"><span class="hljs-params">git</span> =&gt;</span> <span class="hljs-string">"https://github.com/Esri/calcite-web.git"</span>, :<span class="hljs-function"><span class="hljs-params">tag</span> =&gt;</span> <span class="hljs-string">"v1.0.0-rc.0"</span>
+<pre><code>gem <span class="hljs-string">"calcite-web"</span>, :<span class="hljs-function"><span class="hljs-params">git</span> =&gt;</span> <span class="hljs-string">"https://github.com/Esri/calcite-web.git"</span>, :<span class="hljs-function"><span class="hljs-params">tag</span> =&gt;</span> <span class="hljs-string">"v1.0.0-rc.1"</span>
 </code></pre>
 <p>This makes Calcite Web available as a Compass extension. To use Calcite Web, make sure you require the gem in your compass config file (usually found at <code>config/compass.rb</code>). An example config file might look like this:</p>
 <pre><code class="ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">'calcite-web'</span>
@@ -257,7 +257,7 @@ sass_dir = <span class="hljs-string">"sass"</span>
             </h5>
             <div class="js-search-item-content hide">
               <p>To install Calcite Web with npm, type:</p>
-<pre><code>npm install --save-dev Esri/calcite-web#v1<span class="hljs-number">.0</span><span class="hljs-number">.0</span>-rc<span class="hljs-number">.0</span>
+<pre><code>npm install --save-dev Esri/calcite-web#v1<span class="hljs-number">.0</span><span class="hljs-number">.0</span>-rc<span class="hljs-number">.1</span>
 </code></pre>
 <p>You must add the current version in order to get the <code>dist/</code> folder.</p>
 <p>Now, in your main <code>.scss</code> file, you can just require the framework:</p>
@@ -1490,6 +1490,7 @@ aligning grid columns when the Grid System is unable to determine which columns 
 </blockquote>
 <p>Dropdowns are good for showing multiple options under a single call to action. For example, if you had a download button, and you needed the user to choose a format for the download, you could put several choices in a dropdown.</p>
 <p>Dropdowns differ from <code>select</code> elements in that they don't have a default state or a 'current' state. Instead, they offer a jumping off point for a series of related actions.</p>
+<p><strong>Note:</strong> Dropdowns recently started using inline svg icons rather than the icon font for the triangle on the right. If you'd prefer to continue using the icon font, just set the Sass variable <code>$include-svg-icon</code> to <code>false</code>.</p>
 
             </div>
             <!-- populated on the client -->
@@ -2193,6 +2194,7 @@ ${title}-<span class="hljs-number">160</span>-xsm<span class="hljs-selector-clas
             </h5>
             <div class="js-search-item-content hide">
               <p>The <code>js-accordion</code> class provides the JavaScript binding for the accordion pattern, which handles which pane of the accordion is active via the <code>is-active</code> class.</p>
+<p><strong>Note:</strong> Accordions have recently moved to using inline svg icons. If you're still using the icon font, simply set <code>$include-svg-icon</code> to <code>false</code> and omit the <code>accordion-icon</code> element.</p>
 
             </div>
             <!-- populated on the client -->
@@ -2255,53 +2257,6 @@ ${title}-<span class="hljs-number">160</span>-xsm<span class="hljs-selector-clas
             </h5>
             <div class="js-search-item-content hide">
               <p>The search pattern is a a UI for site-wide searches. The most regular use of the pattern is in the Top Navigation pattern.</p>
-<p><button class="icon-ui-search search-top-nav link-dark-gray js-search-toggle" href="#" aria-label="Search">Search</button></p>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"js-search search-overlay"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"search-content column-24"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"dialog"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"dialog"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"GET"</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"../search/"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"font-size-1"</span>&gt;</span>Search ArcGIS for Developers<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"search-input js-search-input"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">'search'</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">'Search'</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"q"</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"inline-block margin-right-2"</span>&gt;</span>
-        Language
-        <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"language"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span>&gt;</span>All Languages<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span>&gt;</span>Android<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span>&gt;</span>iOS (Swift)<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span>&gt;</span>iOS (Objective C)<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span>&gt;</span>Java<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span>&gt;</span>JavaScript<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span>&gt;</span>Mac OS X (Swift)<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span>&gt;</span>Mac OS X (Objective C)<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span>&gt;</span>Qt (QML)<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span>&gt;</span>Qt (C++)<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span>&gt;</span>REST APIs<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span>&gt;</span>Web AppBuilder<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span>&gt;</span>.Net (Desktop)<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span>&gt;</span>.Net (Store)<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span>&gt;</span>.Net (Phone)<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span>&gt;</span>.Net (WPF)<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span>&gt;</span>.Net (UWP)<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"inline-block margin-right-2"</span>&gt;</span>
-        Version
-        <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"version"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span>&gt;</span>All Versions<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1.0.0"</span>&gt;</span>10.3<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"2.0.0"</span>&gt;</span>10.4<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"3.0.0"</span>&gt;</span>Quartz<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-large right leader-1"</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-ui-search search-top-nav link-dark-gray js-search-toggle"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Search"</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-</code></pre>
 
             </div>
             <!-- populated on the client -->

@@ -1303,6 +1303,7 @@
           
 
           <p>The <code>js-accordion</code> class provides the JavaScript binding for the accordion pattern, which handles which pane of the accordion is active via the <code>is-active</code> class.</p>
+<p><strong>Note:</strong> Accordions have recently moved to using inline svg icons. If you're still using the icon font, simply set <code>$include-svg-icon</code> to <code>false</code> and omit the <code>accordion-icon</code> element.</p>
 
 
           
@@ -1318,7 +1319,9 @@
                 <aside class="js-accordion accordion">
   <div class="accordion-section is-active">
     <h4 class="accordion-title">
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 32 32" class="svg-icon"><path d="M28 9v5L16 26 4 14V9l12 12L28 9z"/></svg>
+      <span class="accordion-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 32 32" class="svg-icon"><path d="M28 9v5L16 26 4 14V9l12 12L28 9z"/></svg>
+      </span>
       Title of Section
     </h4>
     <div class="accordion-content">
@@ -1327,7 +1330,9 @@
   </div>
   <div class="accordion-section">
     <h4 class="accordion-title">
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 32 32" class="svg-icon"><path d="M28 9v5L16 26 4 14V9l12 12L28 9z"/></svg>
+      <span class="accordion-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 32 32" class="svg-icon"><path d="M28 9v5L16 26 4 14V9l12 12L28 9z"/></svg>
+      </span>
       Title of Second Section
     </h4>
     <div class="accordion-content">
@@ -1336,7 +1341,9 @@
   </div>
   <div class="accordion-section">
     <h4 class="accordion-title">
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 32 32" class="svg-icon"><path d="M28 9v5L16 26 4 14V9l12 12L28 9z"/></svg>
+      <span class="accordion-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 32 32" class="svg-icon"><path d="M28 9v5L16 26 4 14V9l12 12L28 9z"/></svg>
+      </span>
       Title of Third Section
     </h4>
     <div class="accordion-content">
@@ -1350,7 +1357,9 @@
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"js-accordion accordion"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-section is-active"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-title"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"14"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"14"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 32 32"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"svg-icon"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M28 9v5L16 26 4 14V9l12 12L28 9z"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-icon"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"14"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"14"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 32 32"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"svg-icon"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M28 9v5L16 26 4 14V9l12 12L28 9z"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
       Title of Section
     <span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-content"</span>&gt;</span>
@@ -1359,7 +1368,9 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-section"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-title"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"14"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"14"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 32 32"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"svg-icon"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M28 9v5L16 26 4 14V9l12 12L28 9z"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-icon"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"14"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"14"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 32 32"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"svg-icon"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M28 9v5L16 26 4 14V9l12 12L28 9z"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
       Title of Second Section
     <span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-content"</span>&gt;</span>
@@ -1368,7 +1379,9 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-section"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-title"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"14"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"14"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 32 32"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"svg-icon"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M28 9v5L16 26 4 14V9l12 12L28 9z"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-icon"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"14"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"14"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 32 32"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"svg-icon"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M28 9v5L16 26 4 14V9l12 12L28 9z"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
       Title of Third Section
     <span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"accordion-content"</span>&gt;</span>
@@ -1444,14 +1457,85 @@
           
 
           <p>The search pattern is a a UI for site-wide searches. The most regular use of the pattern is in the Top Navigation pattern.</p>
-<p><button class="icon-ui-search search-top-nav link-dark-gray js-search-toggle" href="#" aria-label="Search">Search</button></p>
+
+
+          
+
+          
+
+          
+
+          
+            <h3 class="leader-2" tabindex="0">Modifiers</h3>
+            <div class="styleguide-modifiers">
+              <div class="styleguide-modifier-example">
+                <div class="js-search search-overlay">
+  <div class="search-content column-24" role="dialog" aria-labelledby="search" role="dialog">
+    <form method="GET" action="../../search/">
+      <label>
+        <span class="font-size-1">Search Your Site</span>
+        <input class="search-input js-search-input" type='search' placeholder='Search' name="q">
+      </label>
+
+      <!-- a few options can also be defined by the user in the search popup, if desired -->
+      <label class="inline-block margin-right-2">
+        Language
+        <select name="language">
+          <option value="">All Languages</option>
+          <option value="">Android</option>
+          <option value="">iOS (Swift)</option>
+          <option value="">iOS (Objective C)</option>
+          <option value="">Java</option>
+          <option value="">JavaScript</option>
+          <option value="">Mac OS X (Swift)</option>
+          <option value="">Mac OS X (Objective C)</option>
+          <option value="">Qt (QML)</option>
+          <option value="">Qt (C++)</option>
+          <option value="">REST APIs</option>
+          <option value="">Web AppBuilder</option>
+          <option value="">.Net (Desktop)</option>
+          <option value="">.Net (Store)</option>
+          <option value="">.Net (Phone)</option>
+          <option value="">.Net (WPF)</option>
+          <option value="">.Net (UWP)</option>
+        </select>
+      </label>
+      <label class="inline-block margin-right-2">
+        Version
+        <select name="version">
+          <option value="">All Versions</option>
+          <option value="1.0.0">10.3</option>
+          <option value="2.0.0">10.4</option>
+          <option value="3.0.0">Quartz</option>
+        </select>
+      </label>
+      <!-- end options -->
+
+      <button type="submit" class="btn btn-large right leader-1">Search</button>
+    </form>
+  </div>
+</div>
+
+<button class="search-top-nav link-dark-gray js-search-toggle" href="#" aria-label="Search">
+  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 -4 32 36" class="svg-icon js-search-icon">
+    <path d="M31.607 27.838l-6.133-6.137a1.336 1.336 0 0 0-1.887 0l-.035.035-2.533-2.533-.014.014c3.652-4.556 3.422-11.195-.803-15.42-4.529-4.527-11.875-4.531-16.404 0-4.531 4.531-4.529 11.875 0 16.406 4.205 4.204 10.811 4.455 15.365.848l.004.003-.033.033 2.541 2.54a1.33 1.33 0 0 0 .025 1.848l6.135 6.133a1.33 1.33 0 0 0 1.887 0l1.885-1.883a1.332 1.332 0 0 0 0-1.887zM17.811 17.809a8.213 8.213 0 0 1-11.619 0 8.217 8.217 0 0 1 0-11.622 8.219 8.219 0 0 1 11.619.004 8.216 8.216 0 0 1 0 11.618z"></path>
+  </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 -4 32 36" class="svg-icon js-close-icon hide">
+    <path d="M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z"></path>
+  </svg>
+</button>
+              </div>
+              
+            </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"js-search search-overlay"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"search-content column-24"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"dialog"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"dialog"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"GET"</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"../../search/"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"font-size-1"</span>&gt;</span>Search ArcGIS for Developers<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"font-size-1"</span>&gt;</span>Search Your Site<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"search-input js-search-input"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">'search'</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">'Search'</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"q"</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+
+      <span class="hljs-comment">&lt;!-- a few options can also be defined by the user in the search popup, if desired --&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"inline-block margin-right-2"</span>&gt;</span>
         Language
         <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"language"</span>&gt;</span>
@@ -1483,21 +1567,22 @@
           <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"3.0.0"</span>&gt;</span>Quartz<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-large right leader-1"</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-comment">&lt;!-- end options --&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-large right leader-1"</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-ui-search search-top-nav link-dark-gray js-search-toggle"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Search"</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"search-top-nav link-dark-gray js-search-toggle"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Search"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"19"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"19"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 -4 32 36"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"svg-icon js-search-icon"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M31.607 27.838l-6.133-6.137a1.336 1.336 0 0 0-1.887 0l-.035.035-2.533-2.533-.014.014c3.652-4.556 3.422-11.195-.803-15.42-4.529-4.527-11.875-4.531-16.404 0-4.531 4.531-4.529 11.875 0 16.406 4.205 4.204 10.811 4.455 15.365.848l.004.003-.033.033 2.541 2.54a1.33 1.33 0 0 0 .025 1.848l6.135 6.133a1.33 1.33 0 0 0 1.887 0l1.885-1.883a1.332 1.332 0 0 0 0-1.887zM17.811 17.809a8.213 8.213 0 0 1-11.619 0 8.217 8.217 0 0 1 0-11.622 8.219 8.219 0 0 1 11.619.004 8.216 8.216 0 0 1 0 11.618z"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"19"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"19"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 -4 32 36"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"svg-icon js-close-icon hide"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 </code></pre>
-
-
-          
-
-          
-
-          
 
           
 

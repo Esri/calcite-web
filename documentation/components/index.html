@@ -591,6 +591,7 @@
 </blockquote>
 <p>Dropdowns are good for showing multiple options under a single call to action. For example, if you had a download button, and you needed the user to choose a format for the download, you could put several choices in a dropdown.</p>
 <p>Dropdowns differ from <code>select</code> elements in that they don't have a default state or a 'current' state. Instead, they offer a jumping off point for a series of related actions.</p>
+<p><strong>Note:</strong> Dropdowns recently started using inline svg icons rather than the icon font for the triangle on the right. If you'd prefer to continue using the icon font, just set the Sass variable <code>$include-svg-icon</code> to <code>false</code>.</p>
 
 
           
@@ -607,7 +608,7 @@
   <!-- extends side-nav -->
   <button class="btn btn-transparent dropdown-btn js-dropdown-toggle" tabindex="0" aria-haspopup="true" aria-expanded="false">
     Dropdown Select
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 -10 32 40" class="svg-icon"><path d="M28 9v5L16 26 4 14V9l12 12L28 9z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 32 32" class="svg-icon"><path d="M28 9v5L16 26 4 14V9l12 12L28 9z"/></svg>
   </button>
   <!-- extends side-nav -->
   <nav class="dropdown-menu modifier-class" role="menu">
@@ -628,7 +629,7 @@
   <!-- extends side-nav -->
   <button class="btn btn-transparent dropdown-btn js-dropdown-toggle" tabindex="0" aria-haspopup="true" aria-expanded="false">
     Dropdown Select
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 -10 32 40" class="svg-icon"><path d="M28 9v5L16 26 4 14V9l12 12L28 9z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 32 32" class="svg-icon"><path d="M28 9v5L16 26 4 14V9l12 12L28 9z"/></svg>
   </button>
   <!-- extends side-nav -->
   <nav class="dropdown-menu dropdown-right" role="menu">
@@ -650,7 +651,7 @@
   <span class="xml"><span class="hljs-comment">&lt;!-- extends side-nav --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-transparent dropdown-btn js-dropdown-toggle"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-haspopup</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>
     Dropdown Select
-    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"18"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"18"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 -10 32 40"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"svg-icon"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M28 9v5L16 26 4 14V9l12 12L28 9z"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"18"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"18"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 32 32"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"svg-icon"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M28 9v5L16 26 4 14V9l12 12L28 9z"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- extends side-nav --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-menu modifier-class"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"menu"</span>&gt;</span>
@@ -695,14 +696,14 @@
               <div class="styleguide-modifier-example">
                 <div class="loader is-active padding-leader-3 padding-trailer-3">
   <div class="loader-bars"></div>
-  <div class="loader-text">Loading</div>
+  <div class="loader-text">Loading...</div>
 </div>
               </div>
               
             </div>
 <pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"loader is-active padding-leader-3 padding-trailer-3"</span>&gt;
   &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"loader-bars"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
-  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"loader-text"</span>&gt;Loading&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"loader-text"</span>&gt;Loading...&lt;/<span class="hljs-keyword">div</span>&gt;
 &lt;/<span class="hljs-keyword">div</span>&gt;
 </code></pre>
 
