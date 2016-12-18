@@ -63,7 +63,7 @@
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
       margin-left: 0;
-      margin-right: -$column-gutter / 2;
+      margin-right: -$column-gutter / 2 !important;
     }
   }
 }
@@ -73,7 +73,7 @@
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
       margin-right: 0;
-      margin-left: -$column-gutter / 2;
+      margin-left: -$column-gutter / 2 !important;
     }
   }
 }
@@ -86,49 +86,18 @@
 
 @mixin responsive-column() {
 
+  @for $n from 1 through $default-column-count {
+    .#{$prefix}column-#{$n} {
+      width: ($n / $default-column-count) * $container-width;
+      max-width: ($n / $default-column-count) * $max-width;
+      > .#{$prefix}column-#{$n} {
+        margin-left: -($column-gutter/2);
+        margin-right: -$column-gutter / 2;
+      }
+    }
+  }
+
   @if $fold-grid == true {
-
-    // Extra Large Columns
-    @media screen and (min-width: $large) {
-      @for $n from 1 through $large-column-count {
-        .#{$prefix}column-#{$n} {
-          width: ($n / $large-column-count) * $container-width;
-          max-width: ($n / $large-column-count) * $max-width;
-          > .#{$prefix}column-#{$n} {
-            margin-left: -$column-gutter / 2;
-            margin-right: -$column-gutter / 2;
-          }
-        }
-      }
-      @for $n from 1 through $large-column-count {
-        .#{$prefix}#{$large-class}-column-#{$n}  {
-          width: ($n / $large-column-count) * $container-width;
-          max-width: ($n / $large-column-count) * $max-width;
-        }
-      }
-      .#{$prefix}#{$large-class}-first-column {
-        margin-left: -$column-gutter / 2;
-        margin-right: -$column-gutter / 2;
-      }
-      .#{$prefix}#{$large-class}-last-column {
-        margin-right: -$column-gutter / 2;
-        margin-left: -$column-gutter / 2;
-      }
-    }
-
-    // Large Columns
-    @media screen and (max-width: $large - 1) {
-      @for $n from 1 through $default-column-count {
-        .#{$prefix}column-#{$n} {
-          width: ($n / $default-column-count) * $container-width;
-          max-width: ($n / $default-column-count) * $max-width;
-          > .#{$prefix}column-#{$n} {
-            margin-left: -($column-gutter/2);
-            margin-right: -$column-gutter / 2;
-          }
-        }
-      }
-    }
 
     // Medium Columns
     @media screen and (max-width: $medium - 1) {
@@ -155,7 +124,7 @@
         @if ($include-right-to-left) {
           html[dir="rtl"] & {
             margin-left: 0;
-            margin-right: -$column-gutter / 2;
+            margin-right: -$column-gutter / 2 !important;
           }
         }
       }
@@ -164,7 +133,7 @@
         @if ($include-right-to-left) {
           html[dir="rtl"] & {
             margin-right: 0;
-            margin-left: -$column-gutter / 2;
+            margin-left: -$column-gutter / 2 !important;
           }
         }
       }
@@ -207,7 +176,7 @@
         @if ($include-right-to-left) {
           html[dir="rtl"] & {
             margin-left: 0;
-            margin-right: -$column-gutter / 2;
+            margin-right: -$column-gutter / 2 !important;
           }
         }
       }
@@ -216,19 +185,8 @@
         @if ($include-right-to-left) {
           html[dir="rtl"] & {
             margin-right: 0;
-            margin-left: -$column-gutter / 2;
+            margin-left: -$column-gutter / 2 !important;
           }
-        }
-      }
-    }
-  } @else {
-    @for $n from 1 through $default-column-count {
-      .#{$prefix}column-#{$n} {
-        width: ($n / $default-column-count) * $container-width;
-        max-width: ($n / $default-column-count) * $max-width;
-        > .#{$prefix}column-#{$n} {
-          margin-left: -($column-gutter/2);
-          margin-right: -$column-gutter / 2;
         }
       }
     }
@@ -241,6 +199,7 @@
       @extend %column;
     }
   }
+
   [class*="#{$prefix}column-"] { @include column(); }
 
   @media screen {

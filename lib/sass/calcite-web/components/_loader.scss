@@ -58,10 +58,6 @@ $loader-delay: 0.16s;
 @mixin loader-text() {
   text-align: center;
   padding-top: 4rem;
-  @include avenir-regular();
-  &:after {
-    content: "…";
-  }
 }
 
 @if $include-loader == true {
@@ -98,7 +94,7 @@ $loader-delay: 0.16s;
     .loader-bars {@include loader-bars();}
     .loader-text {@include loader-text();}
 
-   .ie9 {
+  .ie9 {
     .loader-bars {
       position: inherit;
       background-color: transparent;
@@ -120,5 +116,5 @@ $loader-delay: 0.16s;
     .loader-text {
       padding-top: 2rem;
     }
-   }
+  }
 }
