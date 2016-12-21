@@ -8,64 +8,65 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .hljs-template_comment,
 .hljs-diff .hljs-header,
 .hljs-javadoc {
-  color: #998;
+  color: $gray;
 }
 
-.hljs-keyword,
-.hljs-css .hljs-rule .hljs-keyword,
+
 .hljs-winutils,
 .hljs-javascript .hljs-title,
 .hljs-nginx .hljs-title,
 .hljs-subst,
 .hljs-request,
 .hljs-status {
-  color: #333;
+  color: $black;
 }
 
 .hljs-number,
 .hljs-hexcolor,
 .hljs-ruby .hljs-constant {
-  color: #099;
+  color: $blue;
 }
 
-.hljs-string,
 .hljs-tag .hljs-value,
 .hljs-phpdoc,
 .hljs-tex .hljs-formula {
-  color: #d14
+  color: $orange;
+}
+
+.hljs-string {
+  color: $dark-green;
 }
 
 .hljs-title,
 .hljs-id {
-  color: #900;
+  color: $purple;
 }
 
 .hljs-class .hljs-title,
 .hljs-haskell .hljs-type,
 .hljs-vhdl .hljs-literal,
 .hljs-tex .hljs-command {
-  color: #458;
+  color: $darker-blue;
 }
 
 .hljs-tag,
 .hljs-tag .hljs-title,
 .hljs-rules .hljs-property,
 .hljs-django .hljs-tag .hljs-keyword {
-  color: #000080;
+  color: $dark-blue;
 }
 
 .hljs-attribute,
-.hljs-variable,
 .hljs-lisp .hljs-body {
-  color: #008080
+  color: $black;
 }
 
-.hljs-regexp {
-  color: #009926
+.hljs-regexp, .hljs-variable {
+  color: $orange;
 }
 
 .hljs-class {
-  color: #458;
+  color: $brown;
 }
 
 .hljs-symbol,
@@ -73,13 +74,13 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .hljs-lisp .hljs-keyword,
 .hljs-tex .hljs-special,
 .hljs-prompt {
-  color: #990073
+  color: $darker-gray;
 }
 
 .hljs-built_in,
 .hljs-lisp .hljs-title,
 .hljs-clojure .hljs-built_in {
-  color: #0086b3
+  color: $darkest-gray;
 }
 
 .hljs-preprocessor,
@@ -87,9 +88,9 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .hljs-doctype,
 .hljs-shebang,
 .hljs-cdata {
-  color: #999;
+  color: $gray;
 }
 
 .hljs-chunk {
-  color: #aaa
+  color: $gray;
 }
