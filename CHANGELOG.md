@@ -1,3 +1,9 @@
+## 1.0.0-rc.2
+
+### Fixed
+- added upper limit to normal pre and post media query (#745)
+- fixed first columns inside columns with a `pre` in large sizes
+
 ## 1.0.0-rc.1
 
 ### Breaking
