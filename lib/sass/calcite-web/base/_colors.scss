@@ -155,7 +155,7 @@ $Calcite_Vibrant_Brown_200:   #ffbc6b !default;
 //  ↳ http://esri.github.io/calcite-web/color/#grayscale
 //  ↳ color → _grayscale.md
 
-$white:                       hsl(0, 0, 100) !default;
+$white:                       #ffffff !default;
 $off-white:                   $Calcite_Gray_100 !default;
 $lightest-gray:               $Calcite_Gray_200 !default;
 $lighter-gray:                $Calcite_Gray_350 !default;
@@ -169,9 +169,13 @@ $black:                       $Calcite_Gray_700 !default;
 
 $transparent-white:           rgba(255, 255, 255, 0.7) !default;
 $opaque-white:                rgba(255, 255, 255, 0.8) !default;
+$transparent-off-white:       rgba(0, 0, 0, 0.1) !default;
+
+$transparent-darker-gray:     rgba(0, 0, 0, 0.30) !default;
 $transparent-off-black:       rgba(0, 0, 0, 0.45) !default;
 $transparent-black:           rgba(0, 0, 0, 0.75) !default;
 $opaque-black:                rgba(0, 0, 0, 0.85) !default;
+
 
 // ┌───────────┐
 // │ UI Colors │

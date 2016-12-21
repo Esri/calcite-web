@@ -5,3 +5,9 @@ An extensive set of color variables are set up inside of config. Color names are
   color: $gray;
 }
 ```
+
+There is also a dark theme which you can import using:
+
+```
+@import "calcite-web-dark";
+```

@@ -148,12 +148,17 @@ $Calcite_Vibrant_Brown_100:      #673d10;
 $Calcite_Vibrant_Brown_150:      #995d18;
 $Calcite_Vibrant_Brown_200:      #df8c39;
 
-$white:                       hsl(0, 0, 0);
-
-$transparent-white:           rgba(0, 0, 0, 0.75);
+$white:                       #000000;
 $opaque-white:                rgba(0, 0, 0, 0.85);
+$transparent-white:           rgba(0, 0, 0, 0.75);
+$transparent-off-white:       rgba(255, 255, 255, 0.1);
+$transparent-darker-gray:     rgba(255, 255, 255, 0.30);
 $transparent-off-black:       rgba(255, 255, 255, 0.45);
 $transparent-black:           rgba(255, 255, 255, 0.7);
 $opaque-black:                rgba(255, 255, 255, 0.8);
+$box-shadow:                  0 0 16px 0 rgba(255, 255, 255, 0.05);
+
+$darker-blue:                 #d1ebfa;
+
 
 @import "calcite-web";
