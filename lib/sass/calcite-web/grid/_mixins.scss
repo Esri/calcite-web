@@ -39,6 +39,9 @@
   $margin: ($n / $count) * $max-width;
   $clear: $column-gutter / 2;
   margin-left: calc(#{$margin} - #{$clear});
+  [class*="#{$prefix}column-"] &[class*="#{$prefix}column-"]:first-of-type {
+    margin-left: calc(#{$margin} - #{$clear});
+  }
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
       margin-right: calc(#{$margin} - #{$clear}) !important;
