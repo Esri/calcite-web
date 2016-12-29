@@ -10,11 +10,22 @@ js:
 <header class="sub-nav" role="banner">
   <div class="grid-container">
     <div class="column-24">
-      <h1 class="sub-nav-title text-white">Search</h1>
+      <h1 class="sub-nav-title text-white" id="search">Search</h1>
     </div>
   </div>
 </header>
-
+<div class="panel">
+  <div class="grid-container">
+    <form method="GET" action="./" class="column-12">
+      <div class="input-group leader-0">
+        <input class="js-sub-nav-search input-group-input input-search" type="search" placeholder="search term" aria-labelledby="search" name="q">
+        <span class="input-group-button">
+          <button type="submit" class="btn">Search</button>
+        </span>
+      </div>
+    </form>
+  </div>
+</div>
 <div class="grid-container leader-half">
   <div class="column-17">
     <div class="clearfix font-size--1">

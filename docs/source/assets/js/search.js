@@ -10,8 +10,15 @@
     return domNode.textContent.indexOf(term) > -1;
   }
 
+  function encode (string) {
+    return string.replace(/[\u00A0-\u9999<>\&]/gim, function (i) {
+      return '&#'+i.charCodeAt(0)+';';
+    });
+  }
+
   // Add term to the top search bar
-  document.querySelector('.js-search-input').value = q
+  document.querySelector('.js-sub-nav-search').value = q;
+  document.querySelector('.js-search-toggle').classList.add('hide');
 
   // Hide all content and only show them if they match search query
   var items = toArray(document.querySelectorAll('.js-search-item'))
@@ -35,7 +42,8 @@
       return containsTerm(child, q);
     })
     .map(function (child) {
-      var highlighted = child.textContent.replace(regex, '<b>' + q + '</b>');
+      var encoded = encode(child.textContent);
+      var highlighted = encoded.replace(regex, '<span class="label label-yellow">' + q + '</span>');
       var position = highlighted.indexOf(q);
       // if index of character - 100 is not the beginning, add ellipsis
       var ellipsis = position - 100 > 0 ? '&hellip;' : '';
