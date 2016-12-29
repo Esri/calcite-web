@@ -7,7 +7,7 @@ gem "calcite-web", :git => "https://github.com/Esri/calcite-web.git", :tag => "v
 This makes Calcite Web available as a Compass extension. To use Calcite Web, make sure you require the gem in your compass config file (usually found at `config/compass.rb`). An example config file might look like this:
 
 ```ruby
-require 'calcite-web'
+require "calcite-web"
 
 css_dir = "stylesheets"
 sass_dir = "sass"

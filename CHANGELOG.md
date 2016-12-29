@@ -1,8 +1,9 @@
-## 1.0.0-rc.2
+## 1.0.0-rc.2 (unreleased)
 
 ### Fixed
 - added upper limit to normal pre and post media query (#745)
 - fixed first columns inside columns with a `pre` in large sizes
+- `search-input` on mobile safari now properly aligned (#747)
 
 ## 1.0.0-rc.1
 
