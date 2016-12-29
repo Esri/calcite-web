@@ -1,14 +1,15 @@
 // ┌────────┐
-// │ Modals │
+// │ Search │
 // └────────┘
-//  ↳ http://esri.github.io/calcite-web/patterns/#modals
-//  ↳ patterns → _modals.md
+//  ↳ http://esri.github.io/calcite-web/patterns/#search
+//  ↳ patterns → _search.md
 
 @mixin search-overlay() {
   @include modal-overlay();
   z-index: 99;
-  position: absolute;
   background: $white;
+  padding: $baseline * 3 0 $baseline 0;
+  overflow: auto;
   &.is-active {
     opacity: 0.98;
     .search-content {
@@ -22,7 +23,7 @@
 
   @mixin search-top-nav() {
     @include top-nav-link();
-    // padding: .75*$baseline 0;
+    @include font-size(0);
     background-color: transparent;
     border: none;
     &:hover {
@@ -31,21 +32,32 @@
   }
 
   @mixin search-content() {
-    @include modal-content();
+    text-align: left;
+    width: $container-width;
+    max-width: $vw-ratio * 100vw;
+    @include box-sizing(border-box);
+    padding: 0 $column-gutter/2;
     @include transform(translate3d(0, -20px, 0));
-    margin-top: 3*$baseline;
-    padding-top: 15vh;
-    vertical-align: top;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: $baseline * 2;
+    opacity: 0;
+    visibility: hidden;
+    @include transition-prefixed(transform 300ms $easing-function, visibility 0ms linear 300ms, opacity 300ms $easing-function);
+    @include transform(translate3d(0, 20px, 0));
   }
 
   @mixin search-input () {
+    @include input-minimal();
+    @include input-search();
+    margin-top: .25em;
+    height: auto;
+    padding-left: 1em;
+    background-size: .45em;
     font-size: modular-scale(6);
-    height: 2.5*$baseline;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom-color: #cccccc;
-    box-shadow: none;
+    line-height: 1.25;
   }
 
 @if $include-search == true {
@@ -58,5 +70,5 @@
       display: block;
     }
   }
-  input[type="search"].search-input   { @include search-input() ;}
+  .search-input { @include search-input() ;}
 }
