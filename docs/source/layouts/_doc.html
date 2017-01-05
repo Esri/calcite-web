@@ -34,7 +34,7 @@
 {% block content %}
 <div class="grid-container leader-1">
   <div class="column-6 tablet-column-12">
-    <aside class="side-nav" aria-role="complementary">
+    <aside class="side-nav tablet-hide" aria-role="complementary">
       {% for group in data.table_of_contents[section].navigation %}
         <h4 class="side-nav-title">{{ group.group }}</h4>
         <!-- <nav aria-role="navigation" aria-labelledby="sidenav"> -->
@@ -49,6 +49,22 @@
         </nav>
       {% endfor %}
     </aside>
+    <label class="tablet-show">
+      Jump to section:
+      <select class="select-full js-select-nav">
+        {% for group in data.table_of_contents[section].navigation %}
+        <optgroup label="{{ group.group }}">
+          {% for page in group.pages %}
+            {% if page.title == 'Overview' %}
+              <option value="#{{group.group | replace(" ", "-") | lower}}">{{page.title}}</option>
+            {% else %}
+              <option value="#{{page.link}}">{{page.title}}</option>
+            {% endif %}
+          {% endfor %}
+        </optgroup>
+        {% endfor %}
+      </select>
+    </label>
     <div class="js-sticky scroll-show tablet-hide" data-top="46">
       <a href="#" class="btn btn-clear">Back to Top</a>
     </div>
