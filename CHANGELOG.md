@@ -11,6 +11,7 @@
 - fixed elements inside accordions triggering close event (#774)
 - fix alignment of shorter loader-text (#771)
 - added right-to-left styles for dropdown-right modifier (#770)
+- fix strange escape key behavior in search js (#763)
 
 ### Breaking
 - Raw `<button>` elements no longer styled by default, use the `btn` class.
