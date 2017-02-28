@@ -4,6 +4,7 @@
 - added upper limit to normal pre and post media query (#745)
 - fixed first columns inside columns with a `pre` in large sizes
 - `search-input` on mobile safari now properly aligned (#747)
+- added right-to-left styles for tabs (#776)
 
 ## 1.0.0-rc.1
 
