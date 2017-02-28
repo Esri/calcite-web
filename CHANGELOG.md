@@ -6,6 +6,7 @@
 - `search-input` on mobile safari now properly aligned (#747)
 - added right-to-left styles for tabs (#776)
 - fixed elements inside accordions triggering close event (#774)
+- fix alignment of shorter loader-text (#771)
 
 ## 1.0.0-rc.1
 
