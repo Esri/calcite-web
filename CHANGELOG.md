@@ -7,6 +7,7 @@
 - added right-to-left styles for tabs (#776)
 - fixed elements inside accordions triggering close event (#774)
 - fix alignment of shorter loader-text (#771)
+- added right-to-left styles for dropdown-right modifier (#770)
 
 ## 1.0.0-rc.1
 
