@@ -9,6 +9,9 @@
 - fix alignment of shorter loader-text (#771)
 - added right-to-left styles for dropdown-right modifier (#770)
 
+### Breaking
+- Raw `<button>` elements no longer styled by default, use the `btn` class.
+
 ## 1.0.0-rc.1
 
 ### Breaking
