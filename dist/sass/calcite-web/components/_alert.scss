@@ -50,10 +50,16 @@
     }
   }
 
+  @mixin alert-full() {
+    max-width: none;
+  }
+
+
 @if $include-alerts == true {
   .alert {@include alert();}
     .alert-red {@include alert-red();}
     .alert-yellow {@include alert-yellow();}
     .alert-green {@include alert-green();}
     .alert-close {@include alert-close();}
+    .alert-full {@include alert-full();}
 }

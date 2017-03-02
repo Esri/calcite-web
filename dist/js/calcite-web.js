@@ -356,7 +356,7 @@ function handleToggle(options) {
 }
 
 function checkKeyCode(e) {
-  if (e.keyCode === 13) {
+  if (e.keyCode === 13 && has(target(e), 'accordion-title')) {
     toggleClick(e);
   }
 }
@@ -952,10 +952,16 @@ function search() {
   }
 
   function closeSearch() {
-    remove(overlay, 'is-active');
-    remove(document.body, 'overflow-hidden');
-    var toggleNodes = nodeListToArray(toggles);
-    toggleNodes.forEach(toggleSearch);
+    if (has(overlay, 'is-active')) {
+      remove(overlay, 'is-active');
+      remove(document.body, 'overflow-hidden');
+      var toggleNodes = nodeListToArray(toggles);
+      toggleNodes.forEach(toggleSearch);
+      var input = document.querySelector('.js-search-input');
+      if (input) {
+        input.blur();
+      }
+    }
   }
 
   function toggleClick(e) {
