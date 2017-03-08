@@ -3,6 +3,9 @@
 ### Added
 - JS lib now allows for named ES6 exports with `import {drawer} from 'calcite-web/es6'` (#736)
 
+### Fixed
+- Fixed missing styles for `<input type="file">` (#761)
+
 ### Breaking
 - :warning: Removed JavaScript-based responsive third-nav pattern. Third nav now simply scrolls horizontally when it's container overflows (#748)
 
