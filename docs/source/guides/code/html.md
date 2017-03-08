@@ -49,7 +49,7 @@ Correct example:
 
 ### Pragmatism over semantics
 
-Strive to maintain HTML standards and semantics, but don't sacrifice pragmatism. Use the least amount of markup with the fewest intricies whenever possible.
+Strive to maintain HTML standards and semantics, but don't sacrifice pragmatism. Use the least amount of markup with the fewest intricacies whenever possible.
 
 ### Attribute order
 
