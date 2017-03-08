@@ -1,3 +1,8 @@
+## 1.0.0-rc.3
+
+### Added
+- JS lib now allows for named ES6 exports with `import {drawer} from 'calcite-web/es6'` (#736)
+
 ## 1.0.0-rc.2
 
 ### Added
