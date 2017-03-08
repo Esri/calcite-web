@@ -142,36 +142,38 @@ var closest = dom.closest;
 var nodeListToArray = dom.nodeListToArray;
 var findElements = dom.findElements;
 
-export {version as version};
-export {click};
-export {addEvent as addEvent};
-export {removeEvent as removeEvent};
-export {eventTarget as eventTarget};
-export {preventDefault as preventDefault};
-export {stopPropagation as stopPropagation};
-export {throttle as throttle};
-export {hasClass as hasClass};
-export {addClass as addClass};
-export {removeClass as removeClass};
-export {toggleClass as toggleClass};
-export {removeActive as removeActive};
-export {addActive as addActive};
-export {toggleActive as toggleActive};
-export {toggleAriaHidden as toggleAriaHidden};
-export {toggleAriaExpanded as toggleAriaExpanded};
-export {closest as closest};
-export {nodeListToArray as nodeListToArray};
-export {findElements as findElements};
-export {bus as bus};
-export {accordion as accordion};
-export {dropdown as dropdown};
-export {drawer as drawer};
-export {filterDropdown as filterDropdown};
-export {modal as modal};
-export {search as search};
-export {selectNav as selectNav};
-export {sticky as sticky};
-export {tabs as tabs};
-export {thirdNav as thirdNav};
-export {extend as extend};
-export {init as init};
+export {
+  version,
+  click,
+  addEvent,
+  removeEvent,
+  eventTarget,
+  preventDefault,
+  stopPropagation,
+  throttle,
+  hasClass,
+  addClass,
+  removeClass,
+  toggleClass,
+  removeActive,
+  addActive,
+  toggleActive,
+  toggleAriaHidden,
+  toggleAriaExpanded,
+  closest,
+  nodeListToArray,
+  findElements,
+  bus,
+  accordion,
+  dropdown,
+  drawer,
+  filterDropdown,
+  modal,
+  search,
+  selectNav,
+  sticky,
+  tabs,
+  thirdNav,
+  extend,
+  init
+};
