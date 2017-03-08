@@ -2,17 +2,24 @@ Calcite Web can be imported using ES6 modules, CommonJS, AMD, or just a plain II
 
 ### ES6 Module
 
-If your bundler supports the ES6 module syntax (Rollup, Webpack 2) you can import calcite as an ES6 module with named exports:
+If your bundler supports the ES6 module syntax you can import calcite as an ES6 module with named exports:
 
 ```js
 import * as calcite from 'calcite-web/es6';
 calcite.init();
 ```
 
-Or, just import what you need:
+If your bundler uses the `module` field in `package.json` (Rollup, Webpack 2) leave off the `es6`:
 
 ```js
-import {drawer} from 'calcite-web/es6';
+import * as calcite from 'calcite-web';
+calcite.init();
+```
+
+With named imports you can also just import what you need:
+
+```js
+import {drawer} from 'calcite-web';
 drawer(); // initialize only instances of the drawer pattern
 ```
 
