@@ -3,6 +3,9 @@
 ### Added
 - JS lib now allows for named ES6 exports with `import {drawer} from 'calcite-web/es6'` (#736)
 
+### Breaking
+- :warning: Removed JavaScript-based responsive third-nav pattern. Third nav now simply scrolls horizontally when it's container overflows (#748)
+
 ## 1.0.0-rc.2
 
 ### Added

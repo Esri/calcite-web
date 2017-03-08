@@ -29,7 +29,6 @@ import search from './lib/js/patterns/search';
 import selectNav from './lib/js/patterns/select-nav';
 import sticky from './lib/js/patterns/sticky';
 import tabs from './lib/js/patterns/tabs';
-import thirdNav from './lib/js/patterns/third-nav';
 
 // ┌──────────────────────┐
 // │ Emit Keyboard Events │
@@ -78,8 +77,7 @@ var patterns = [
   search,
   selectNav,
   sticky,
-  tabs,
-  thirdNav
+  tabs
 ];
 
 function init () {
@@ -173,7 +171,6 @@ export {
   selectNav,
   sticky,
   tabs,
-  thirdNav,
   extend,
   init
 };
