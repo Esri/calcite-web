@@ -111,24 +111,41 @@ grid:
           link: configuration
         - title: 'Container'
           link: container
+          classes:
+            - grid-container
         - title: 'Columns'
           link: columns
+          classes:
+            - column-n
         - title: 'Responsive Columns'
           link: responsive-columns
+          classes:
+            - tablet-column-n
+            - phone-column-n
         - title: 'Nested Columns'
           link: nested-columns
         - title: 'Rows'
           link: rows
         - title: 'Block Groups'
           link: block-groups
+          classes:
+            - block-group
+            - block-group-n-up
+            - block
         - title: 'Responsive Block Groups'
           link: responsive-block-groups
+          classes:
+            - tablet-block-group-n-up
+            - phone-block-group-n-up
     - group: 'Grid Helpers'
       pages:
         - title: 'Overview'
           link: 'helpers-overview'
         - title: 'Pre & Post'
           link: pre-and-post
+          classes:
+            - pre-n
+            - post-n
         - title: 'Leader & Trailer'
           link: leader-and-trailer
           modifiers:
@@ -205,20 +222,43 @@ grid:
             - margin-right-4
         - title: 'First & Last'
           link: first-and-last
+          classes:
+            - first-column
+            - tablet-first-column
+            - phone-first-column
+            - last-column
+            - tablet-last-column
+            - phone-last-column
         - title: 'Show & Hide'
           link: show-and-hide
+          classes:
+            - tablet-show
+            - tablet-hide
+            - phone-show
+            - phone-hide
+            - visually-hidden
+            - visually-hidden-focusable
         - title: 'Left & Right'
           link: left-and-right
+          classes:
+            - left
+            - right
         - title: 'Inline Block'
           link: inline-block
+          classes:
+            - inline-block
     - group: 'Interactive Layout Helpers'
       pages:
         - title: 'Overview'
           link: interactive-layout-helpers
         - title: 'Scroll Show & Hide'
           link: scroll-show-and-hide
+          classes:
+            - scroll-show
         - title: 'Scroll Sticky'
           link: scroll-sticky
+          classes:
+            - js-sticky
 
 icons:
   title: 'Icons'
@@ -230,12 +270,47 @@ icons:
           link: overview
         - title: 'User Interface Icons'
           link: svg-icons
+          classes:
+            - icon-ui-flush
         - title: 'UI Icon Colors'
           link: svg-colors
+          classes:
+            - svg-icon-light-blue
+            - svg-icon-blue
+            - svg-icon-dark-blue
+            - svg-icon-green
+            - svg-icon-yellow
+            - svg-icon-purple
+            - svg-icon-orange
+            - svg-icon-red
+            - svg-icon-gray
         - title: 'Icon Font Colors'
           link: icon-font-colors
+          classes:
+            - icon-ui-light-blue
+            - icon-ui-blue
+            - icon-ui-dark-blue
+            - icon-ui-green
+            - icon-ui-yellow
+            - icon-ui-purple
+            - icon-ui-orange
+            - icon-ui-red
+            - icon-ui-gray
         - title: 'Social Icons'
           link: social-icons
+          classes:
+            - icon-social-contact
+            - icon-social-facebook
+            - icon-social-geonet
+            - icon-social-github
+            - icon-social-google-plus
+            - icon-social-instagram
+            - icon-social-linkedin
+            - icon-social-pinterest
+            - icon-social-rss
+            - icon-social-share
+            - icon-social-twitter
+            - icon-social-youtube
 
 color:
   title: 'Color'
@@ -299,6 +374,8 @@ components:
           link: overview
         - title: 'Buttons'
           link: buttons
+          classes:
+            - btn
           modifiers:
             - btn-transparent
             - btn-clear
@@ -313,9 +390,13 @@ components:
             - btn-green
         - title: 'Button Groups'
           link: button-groups
+          classes:
+            - btn-grouped
           modifiers: true
         - title: 'Labels'
           link: label
+          classes:
+            - label
           modifiers:
             - label-blue
             - label-green
@@ -323,13 +404,19 @@ components:
             - label-red
         - title: 'Dropdowns'
           link: dropdowns
+          classes:
+            - dropdown
           modifiers:
             - dropdown-right
         - title: 'Loader'
           link: loader
+          classes:
+            - loader
           modifiers: true
         - title: 'Alerts'
           link: alerts
+          classes:
+            - alert
           modifiers:
             - alert-red
             - alert-yellow
@@ -337,6 +424,8 @@ components:
             - alert-full
         - title: 'Panels'
           link: panels
+          classes:
+            - panel
           modifiers:
             - panel-no-border
             - panel-no-padding
@@ -348,22 +437,36 @@ components:
             - panel-dark-blue
         - title: 'Cards'
           link: card
+          classes:
+            - card
+            - card-shaped
+            - card-bar-color
           modifiers: true
         - title: 'Wide Cards'
           link: card-wide
+          classes:
+            - card-wide
           modifiers: true
         - title: 'Breadcrumbs'
           link: breadcrumbs
+          classes:
+            - breadcrumbs
+            - crumb
           modifiers:
             - breadcrumbs-white
         - title: 'Tooltips'
           link: tooltips
+          classes:
+            - tooltip
+            - tooltip-multiline
           modifiers:
             - tooltip-left
             - tooltip-right
             - tooltip-top
         - title: 'Tables'
           link: tables
+          classes:
+            - overflow-auto
           modifiers:
             - table-blue
             - table-striped
@@ -372,6 +475,8 @@ components:
             - table-no-table
         - title: 'Skip to Content'
           link: skip
+          classes:
+            - skip-to-content
           modifiers: true
         - title: 'Responsive Images'
           link: images
@@ -393,6 +498,10 @@ components:
             - input-search input-minimal
         - title: 'Input Groups'
           link: input-groups
+          classes:
+            - input-group
+            - input-group-input
+            - input-group-button
           modifiers: true
         - title: 'Selects'
           link: selects
@@ -400,9 +509,13 @@ components:
             - select-full
         - title: 'Checkboxes'
           link: checkboxes
+          classes:
+            - fieldset-checkbox
           modifiers: true
         - title: 'Radio Buttons'
           link: radio-buttons
+          classes:
+            - fieldset-radio
           modifiers: true
     - group: 'Animation'
       pages:
@@ -419,6 +532,8 @@ components:
       pages:
         - title: 'Esri Logo'
           link: esri-logo
+          classes:
+            - esri-logo
           modifiers:
             - 'esri-logo-reverse'
             - 'esri-logo-condensed'
@@ -545,3 +660,7 @@ javascript:
           link: utility-functions
         - title: 'DOM Utilities'
           link: dom-utilities
+
+quick-reference:
+  title: 'Quick Reference'
+  base: quick-reference
