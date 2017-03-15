@@ -2,6 +2,7 @@
 
 ### Added
 - JS lib now allows for named ES6 exports with `import {drawer} from 'calcite-web/es6'` (#736)
+- Quarter variants for `leader` and `trailer` (#785)
 
 ## 1.0.0-rc.2
 
