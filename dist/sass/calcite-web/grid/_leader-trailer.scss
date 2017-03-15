@@ -5,9 +5,13 @@
 //  ↳ grid → _leader-and-trailer.md
 
 @mixin leader-half()  { margin-top:    0.5 * $baseline; }
+@mixin leader-quarter()  { margin-top:    0.25 * $baseline; }
 @mixin trailer-half() { margin-bottom: 0.5 * $baseline; }
+@mixin trailer-quarter() { margin-bottom: 0.25 * $baseline; }
 @mixin padding-leader-half()  { padding-top:    0.5 * $baseline; }
+@mixin padding-leader-quarter()  { padding-top:    0.25 * $baseline; }
 @mixin padding-trailer-half() { padding-bottom: 0.5 * $baseline; }
+@mixin padding-trailer-quarter() { padding-bottom: 0.25 * $baseline; }
 
 @mixin leader($n)          { margin-top:     $n * $baseline; }
 @mixin trailer($n)         { margin-bottom:  $n * $baseline; }
@@ -19,9 +23,13 @@
   @if $fold-grid == true {
     @media screen and (min-width: $large) {
       .#{$large-class}-leader-half          { margin-top:        $baseline / 2; }
+      .#{$large-class}-leader-quarter          { margin-top:        $baseline / 4; }
       .#{$large-class}-trailer-half         { margin-bottom:     $baseline / 2; }
+      .#{$large-class}-trailer-quarter         { margin-bottom:     $baseline / 4; }
       .#{$large-class}-padding-leader-half          { padding-top:        $baseline / 2; }
+      .#{$large-class}-padding-leader-quarter          { padding-top:        $baseline / 4; }
       .#{$large-class}-padding-trailer-half         { padding-bottom:     $baseline / 2; }
+      .#{$large-class}-padding-trailer-quarter         { padding-bottom:     $baseline / 4; }
       @for $i from 0 through $vertical-range {
         .#{$large-class}-leader-#{$i}          { margin-top:     $i * $baseline; }
         .#{$large-class}-trailer-#{$i}         { margin-bottom:  $i * $baseline; }
@@ -33,9 +41,13 @@
     // Medium
     @media screen and (max-width: $medium - 1) {
       .#{$medium-class}-leader-half          { margin-top:        $baseline / 2; }
+      .#{$medium-class}-leader-quarter          { margin-top:        $baseline / 4; }
       .#{$medium-class}-trailer-half         { margin-bottom:     $baseline / 2; }
+      .#{$medium-class}-trailer-quarter         { margin-bottom:     $baseline / 4; }
       .#{$medium-class}-padding-leader-half          { padding-top:        $baseline / 2; }
+      .#{$medium-class}-padding-leader-quarter          { padding-top:        $baseline / 4; }
       .#{$medium-class}-padding-trailer-half         { padding-bottom:     $baseline / 2; }
+      .#{$medium-class}-padding-trailer-quarter         { padding-bottom:     $baseline / 4; }
       @for $i from 0 through $vertical-range {
         .#{$medium-class}-leader-#{$i}          { margin-top:     $i * $baseline; }
         .#{$medium-class}-trailer-#{$i}         { margin-bottom:  $i * $baseline; }
@@ -47,9 +59,13 @@
     // Small
     @media screen and (max-width: $small - 1) {
       .#{$small-class}-leader-half          { margin-top:        $baseline / 2; }
+      .#{$small-class}-leader-quarter          { margin-top:        $baseline / 4; }
       .#{$small-class}-trailer-half         { margin-bottom:     $baseline / 2; }
+      .#{$small-class}-trailer-quarter         { margin-bottom:     $baseline / 4; }
       .#{$small-class}-padding-leader-half          { padding-top:        $baseline / 2; }
+      .#{$small-class}-padding-leader-quarter          { padding-top:        $baseline / 4; }
       .#{$small-class}-padding-trailer-half         { padding-bottom:     $baseline / 2; }
+      .#{$small-class}-padding-trailer-quarter         { padding-bottom:     $baseline / 4; }
       @for $i from 0 through $vertical-range {
         .#{$small-class}-leader-#{$i}          { margin-top:     $i * $baseline; }
         .#{$small-class}-trailer-#{$i}         { margin-bottom:  $i * $baseline; }
@@ -63,9 +79,13 @@
 @if $include-grid == true or $include-leader-trailer == true {
 
   .leader-half  { @include leader-half(); }
+  .leader-quarter  { @include leader-quarter(); }
   .trailer-half { @include trailer-half(); }
+  .trailer-quarter { @include trailer-quarter(); }
   .padding-leader-half  { @include padding-leader-half(); }
+  .padding-leader-quarter  { @include padding-leader-quarter(); }
   .padding-trailer-half { @include padding-trailer-half(); }
+  .padding-trailer-quarter { @include padding-trailer-quarter(); }
 
   @for $i from 0 through $vertical-range {
     .leader-#{$i}          { @include leader($i)          ;}
