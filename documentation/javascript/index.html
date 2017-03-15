@@ -48,6 +48,7 @@
           <a href="../../documentation/" class="side-nav-link">Documentation</a>
           <a href="../../examples/" class="side-nav-link">Examples</a>
           <a href="../../guides/" class="side-nav-link">Guides</a>
+          <a href="../../quick-reference/" class="side-nav-link">Quick Reference</a>
         </aside>
       </nav>
     </div>
@@ -59,6 +60,7 @@
           <a href="../../documentation/" class="side-nav-link">Documentation</a>
           <a href="../../examples/" class="side-nav-link">Examples</a>
           <a href="../../guides/" class="side-nav-link">Guides</a>
+          <a href="../../quick-reference/" class="side-nav-link">Quick Reference</a>
         </aside>
       </nav>
     </div>
@@ -93,6 +95,7 @@
                 <a href="../../documentation" class="is-active top-nav-link">Documentation</a>
                 <a href="../../examples" class="top-nav-link">Examples</a>
                 <a href="../../guides" class="top-nav-link">Guides</a>
+                <a href="../../quick-reference" class="top-nav-link">Quick Reference</a>
               </nav>
               <nav class="class-top-nav-list right" role="navigation" aria-labelledby="usernav">
                 <button class="search-top-nav link-dark-gray js-search-toggle" href="#" aria-label="Search">
@@ -183,6 +186,10 @@
             
             <a class="sub-nav-link is-active" href="../../documentation/javascript/">JavaScript</a>
           
+            
+            
+            <a class="sub-nav-link " href="../../documentation/quick-reference/">Quick Reference</a>
+          
         </nav>
 
         <select class="tablet-show select-full trailer-half js-select-nav">
@@ -225,6 +232,10 @@
           
             <option value="../../documentation/javascript/" selected>JavaScript</option>
           
+          
+          
+            <option value="../../documentation/quick-reference/" >Quick Reference</option>
+          
         </select>
 
       </div>
@@ -244,6 +255,10 @@
           
             
               <a href="#interactive-patterns" class="side-nav-link">Overview</a>
+            
+          
+            
+              <a href="#importing" class="side-nav-link">Import calcite-web.js</a>
             
           
             
@@ -275,6 +290,10 @@
           
             
               <option value="#interactive-patterns">Overview</option>
+            
+          
+            
+              <option value="#importing">Import calcite-web.js</option>
             
           
             
@@ -311,7 +330,7 @@
         <section>
           
 
-          <p>Calcite Web includes a small JavaScript library. <code>calcite-web.js</code> is a lightweight and dependency-free library made to enable interactive behaviors for certain <a href="../patterns/">patterns</a> and <a href="../components">components</a>.</p>
+          <p>Calcite Web includes a small (5KB gzipped) JavaScript library. <code>calcite-web.js</code> is a lightweight and dependency-free library made to enable interactive behaviors for certain <a href="../patterns/">patterns</a> and <a href="../components">components</a>.</p>
 <p>Currently, the following components and patterns rely on <code>calcite-web.js</code>:</p>
 <ul>
 <li><a href="../components/#dropdowns">Dropdowns</a></li>
@@ -320,26 +339,62 @@
 <li><a href="../patterns/#accordions">Accordions</a></li>
 <li><a href="../patterns/#drawers">Drawers</a></li>
 </ul>
-<h3>Loading Calcite as a Module</h3>
-<p>If you don't use a module loader (you probably should...), Calcite will be available as <code>window.calcite</code>. If you do, both flavors of module loaders are also covered below.</p>
-<h4>CommonJS</h4>
+
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </section>
+        <hr>
+      
+        <section>
+          
+            <h2 id="importing" tabindex="0">Import calcite-web.js</h2>
+          
+
+          <p>Calcite Web can be imported using ES6 modules, CommonJS, AMD, or just a plain IIFE.</p>
+<h3>ES6 Module</h3>
+<p>If your bundler supports the ES6 module syntax (Rollup, Webpack 2) you can import calcite as an ES6 module with named exports:</p>
+<pre><code class="js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> calcite <span class="hljs-keyword">from</span> <span class="hljs-string">'calcite-web/es6'</span>;
+calcite.init();
+</code></pre>
+<p>Or, just import what you need:</p>
+<pre><code class="js"><span class="hljs-keyword">import</span> {drawer} <span class="hljs-keyword">from</span> <span class="hljs-string">'calcite-web/es6'</span>;
+drawer(); <span class="hljs-comment">// initialize only instances of the drawer pattern</span>
+</code></pre>
+<p>This is a great way to cut down on the size of your build!</p>
+<h3>CommonJS</h3>
 <pre><code class="js"><span class="hljs-keyword">var</span> calcite = <span class="hljs-built_in">require</span>(<span class="hljs-string">'calcite-web'</span>);
+calcite.init();
 </code></pre>
 <h4>AMD</h4>
 <pre><code class="js"><span class="hljs-built_in">require</span>([<span class="hljs-string">'path/to/calcite-web.js'</span>], <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">calcite</span>)</span>{
   <span class="hljs-comment">// use calcite</span>
+  calcite.init();
 });
 </code></pre>
-<h3>Initializing</h3>
-<p>To use <code>calcite-web.js</code> simply <a href="../../guides/quickstart/">include a reference to it in your html</a> and then run the <code>calcite.init()</code> method. For example, say your JavaScript was located in a file called <code>script.js</code>. You can bind all the JavaScript patterns from <code>script.js</code> like this:</p>
-<pre><code class="js"><span class="hljs-comment">// On document ready</span>
-<span class="hljs-built_in">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-  <span class="hljs-comment">// Initialize all calcite.js patterns</span>
-  calcite.init();
-};
+<h4>IIFE</h4>
+<p>If <code>calcite-web.js</code> is used on a page with no module syntax, it will just attach itself to <code>window.calcite</code>. Here is an example which initializes Calcite from a hosted file on S3:</p>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  ...
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.2/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="undefined">
+     calcite.init()
+  </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 </code></pre>
-<p>You can initialize individual patterns by their own method, for example:</p>
-<pre><code><span class="hljs-selector-tag">calcite</span><span class="hljs-selector-class">.tabs</span>()
+<h3>Initializing</h3>
+<p>While all of the examples above use the main <code>init()</code> method, you can also initialize individual patterns. For example, initialize only instances of the tab pattern like this:</p>
+<pre><code>calcite.tabs()<span class="hljs-comment">;</span>
 </code></pre>
 
 
