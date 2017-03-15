@@ -1,0 +1,55 @@
+@import "calcite-web/imports";
+
+.class {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.class-name {
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+}
+
+.class-name {
+ white-space: nowrap;
+}
+
+.class-name-wrapper {
+  @include margin-gutter-right-third();
+
+  display: inline;
+
+  background-color: $off-white;
+  border: 1px solid $lightest-gray;
+}
+
+
+.icon-class {
+  position: relative;
+  padding-left: $baseline * 0.75;
+
+  &.icon-class-social {
+    display: block;
+    min-height: $baseline;
+    padding-left: $baseline * 1.25;
+
+    .class-name-wrapper { min-height: $baseline; }
+  }
+
+  .class-name-wrapper {
+    display: inline-block;
+
+    line-height: 1;
+  }
+
+  .class-name { white-space: normal; }
+}
+
+.icon-wrap {
+  position: absolute;
+  left: 0;
+}
