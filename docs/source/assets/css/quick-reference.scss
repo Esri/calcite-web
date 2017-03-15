@@ -14,19 +14,13 @@
   user-select: all;
 }
 
-.class-name {
- white-space: nowrap;
-}
+.class-name { white-space: nowrap; }
 
 .class-name-wrapper {
-  @include margin-gutter-right-third();
+  @include margin-gutter-right-quarter();
 
-  display: inline;
-
-  background-color: $off-white;
-  border: 1px solid $lightest-gray;
+  display: inline-block;
 }
-
 
 .icon-class {
   position: relative;
@@ -36,17 +30,20 @@
     display: block;
     min-height: $baseline;
     padding-left: $baseline * 1.25;
-
-    .class-name-wrapper { min-height: $baseline; }
   }
 
   .class-name-wrapper {
-    display: inline-block;
+    //@include trailer-quarter();
 
+    white-space: nowrap;
     line-height: 1;
   }
 
-  .class-name { white-space: normal; }
+  .class-name {
+    display: inline;
+
+    white-space: normal;
+  }
 }
 
 .icon-wrap {
