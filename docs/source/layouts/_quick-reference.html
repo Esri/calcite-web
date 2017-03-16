@@ -20,7 +20,7 @@
     <div class="block-group block-group-4-up tablet-block-group-2-up phone-block-group-1-up">
 
     {% for title, sec in data.table_of_contents %}
-      {% if ( title !== 'get-started' and title !== 'quick-reference' and title !== 'color' and title !== 'patterns' and title !== 'sass' and title !== 'javascript' ) %}
+      {% if ( title !== 'get-started' and title !== 'color' and title !== 'patterns' and title !== 'sass' and title !== 'javascript' ) %}
 
       <section class="quickref-section block">
         <h4 class="text-rule trailer-1" id="{{sec.title | replace(" ", "-") | lower}}" tabindex="0"><a href="{{relativePath}}/documentation/{{sec.base}}" class="link-darker-gray">{{sec.title}}</a></h4>
