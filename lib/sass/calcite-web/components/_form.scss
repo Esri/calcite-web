@@ -174,6 +174,31 @@
     }
   }
 
+  input[type="file"] {
+    height: auto;
+  }
+
+  input[type="file"]::-webkit-file-upload-button {
+    @include btn();
+    @include btn-clear();
+    @include btn-small();
+    font-family: $avenir-family;
+    margin: .5em 0;
+  }
+
+  ::-ms-value {
+    border: none;
+    background-color: white;
+  }
+
+  ::-ms-browse {
+    @include btn();
+    @include btn-clear();
+    @include btn-small();
+    font-family: $avenir-family;
+    margin: .5em 0;
+  }
+
   // ┌────────────────────────────┐
   // │ Checkboxes & Radio Buttons │
   // └────────────────────────────┘
@@ -190,6 +215,7 @@
     margin-left: .125rem;
     line-height: 1.25rem;
     box-shadow: none;
+    box-sizing: content-box;
     &:focus {
       box-shadow: none;
       border: none;
@@ -201,6 +227,10 @@
   }
   input[type='radio'] {
     -webkit-appearance: radio;
+  }
+
+  .ie9 input[type='checkbox'], .ie9 input[type='radio'] {
+    border: none;
   }
 
   .fieldset-radio, .fieldset-checkbox {
@@ -246,6 +276,11 @@
 
   .select-full {
     width: 100%;
+  }
+
+  .ie9 select {
+    padding-right: 0;
+    padding-left: 0;
   }
 
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
