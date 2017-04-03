@@ -800,8 +800,8 @@ function filterDropdown () {
       var item = options.active[i];
       var template = "<span class=\"filter-dropdown-active\">\n        " + (item.innerHTML) + "\n        <a class=\"filter-dropdown-remove\" href=\"#\" data-item-id='" + i + "'>\n          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"14\" height=\"14\" viewBox=\"0 0 32 32\" class=\"svg-icon\"><path d=\"M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z\"/></svg>\n        </a>\n      </span>";
       options.parent.insertAdjacentHTML('beforeend', template);
-      var remove$$1 = options.parent.querySelector((".filter-dropdown-remove[data-item-id=\"" + i + "\"]"));
-      add$1(remove$$1, click$1(), removeClick);
+      var removeLink = options.parent.querySelector((".filter-dropdown-remove[data-item-id=\"" + i + "\"]"));
+      add$1(removeLink, click$1(), removeClick);
     }
   }
 
@@ -1209,41 +1209,6 @@ function tabs () {
   bus.emit('tabs:bind');
 }
 
-// Cool Helpers
-// ┌───────────┐
-// │ Third Nav │
-// └───────────┘
-// sticks things to the window
-
-function thirdNav () {
-  var nav = findElements$1('.js-nav-overflow')[0];
-  var leftBtn = findElements$1('.js-overflow-left')[0];
-  var rightBtn = findElements$1('.js-overflow-right')[0];
-
-  function scroll (distance) {
-    nav.scrollLeft += distance;
-  }
-
-  function resize () {
-    remove(leftBtn, 'is-active');
-    remove(rightBtn, 'is-active');
-    if (nav.scrollLeft > 0) { add(leftBtn, 'is-active'); }
-    if (nav.scrollLeft + nav.clientWidth + 5 < nav.scrollWidth) { add(rightBtn, 'is-active'); }
-  }
-
-  if (nav) {
-    if (leftBtn) {
-      add$1(leftBtn, click$1(), scroll.bind(null, -40));
-    }
-    if (rightBtn) {
-      add$1(rightBtn, click$1(), scroll.bind(null, 40));
-    }
-    add$1(nav, 'scroll', resize);
-    add$1(window, 'resize', resize);
-    resize();
-  }
-}
-
 // ┌─────────┐
 // │ Helpers │
 // └─────────┘
@@ -1305,8 +1270,7 @@ var patterns = [
   search,
   selectNav,
   sticky,
-  tabs,
-  thirdNav
+  tabs
 ];
 
 function init () {
@@ -1409,7 +1373,6 @@ var calciteWeb = {
   selectNav: selectNav,
   sticky: sticky,
   tabs: tabs,
-  thirdNav: thirdNav,
   extend: extend,
   init: init
 };

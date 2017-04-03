@@ -219,10 +219,10 @@
               <p>This is probably the easiest way, but you won't get any of the helpful Sass mixins. If you're looking to get up and running quickly, just <a href="https://github.com/ArcGIS/calcite-web/releases">download the latest release</a> and move the zipped files to wherever you keep your assets (CSS, JavaScript, images). Be sure to use <a href="http://esri.github.io/calcite-web/">the documentation site</a> to copy and paste patterns, components, and even a sample html boilerplate.</p>
 <p>You can also use a hosted version Calcite Web:</p>
 <pre><code><span class="hljs-comment">&lt;!-- In the head --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.2/css/calcite-web.min.css"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.3/css/calcite-web.min.css"</span>&gt;</span>
 
 <span class="hljs-comment">&lt;!-- Just before end of body --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.2/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.3/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
 
             </div>
@@ -241,7 +241,7 @@
             </h5>
             <div class="js-search-item-content hide">
               <p>To install Calcite-Web as a ruby gem, reference the gem from your <code>Gemfile</code>:</p>
-<pre><code>gem <span class="hljs-string">"calcite-web"</span>, :<span class="hljs-function"><span class="hljs-params">git</span> =&gt;</span> <span class="hljs-string">"https://github.com/Esri/calcite-web.git"</span>, :<span class="hljs-function"><span class="hljs-params">tag</span> =&gt;</span> <span class="hljs-string">"v1.0.0-rc.2"</span>
+<pre><code>gem <span class="hljs-string">"calcite-web"</span>, :<span class="hljs-function"><span class="hljs-params">git</span> =&gt;</span> <span class="hljs-string">"https://github.com/Esri/calcite-web.git"</span>, :<span class="hljs-function"><span class="hljs-params">tag</span> =&gt;</span> <span class="hljs-string">"v1.0.0-rc.3"</span>
 </code></pre>
 <p>This makes Calcite Web available as a Compass extension. To use Calcite Web, make sure you require the gem in your compass config file (usually found at <code>config/compass.rb</code>). An example config file might look like this:</p>
 <pre><code class="ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">"calcite-web"</span>
@@ -271,7 +271,7 @@ sass_dir = <span class="hljs-string">"sass"</span>
             </h5>
             <div class="js-search-item-content hide">
               <p>To install Calcite Web with npm, type:</p>
-<pre><code>npm install --save-dev Esri/calcite-web#v1<span class="hljs-number">.0</span><span class="hljs-number">.0</span>-rc<span class="hljs-number">.2</span>
+<pre><code>npm install --save-dev Esri/calcite-web#v1<span class="hljs-number">.0</span><span class="hljs-number">.0</span>-rc<span class="hljs-number">.3</span>
 </code></pre>
 <p>You must add the current version in order to get the <code>dist/</code> folder.</p>
 <p>Now, in your main <code>.scss</code> file, you can just require the framework:</p>
@@ -2003,8 +2003,6 @@ ${title}-<span class="hljs-number">160</span>-xsm<span class="hljs-selector-clas
             </h5>
             <div class="js-search-item-content hide">
               <p>Tertiary navigation is necessary only when the information architecture of the site requires three levels of hierarchy within pages. A breadcrumb component can also be used in this pattern.</p>
-<p>The third nav has a set of of Javascript bindings responsible for responsive behavior when the content of the third nav is greater than it's container.</p>
-<p>Only a single third nav can be on a page.</p>
 
             </div>
             <!-- populated on the client -->
@@ -2931,12 +2929,16 @@ Setting the max width of an article to a large multiple of the text size is a wa
             <div class="js-search-item-content hide">
               <p>Calcite Web can be imported using ES6 modules, CommonJS, AMD, or just a plain IIFE.</p>
 <h3>ES6 Module</h3>
-<p>If your bundler supports the ES6 module syntax (Rollup, Webpack 2) you can import calcite as an ES6 module with named exports:</p>
+<p>If your bundler supports the ES6 module syntax you can import calcite as an ES6 module with named exports:</p>
 <pre><code class="js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> calcite <span class="hljs-keyword">from</span> <span class="hljs-string">'calcite-web/es6'</span>;
 calcite.init();
 </code></pre>
-<p>Or, just import what you need:</p>
-<pre><code class="js"><span class="hljs-keyword">import</span> {drawer} <span class="hljs-keyword">from</span> <span class="hljs-string">'calcite-web/es6'</span>;
+<p>If your bundler uses the <code>module</code> field in <code>package.json</code> (Rollup, Webpack 2) leave off the <code>es6</code>:</p>
+<pre><code class="js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> calcite <span class="hljs-keyword">from</span> <span class="hljs-string">'calcite-web'</span>;
+calcite.init();
+</code></pre>
+<p>With named imports you can also just import what you need:</p>
+<pre><code class="js"><span class="hljs-keyword">import</span> {drawer} <span class="hljs-keyword">from</span> <span class="hljs-string">'calcite-web'</span>;
 drawer(); <span class="hljs-comment">// initialize only instances of the drawer pattern</span>
 </code></pre>
 <p>This is a great way to cut down on the size of your build!</p>
@@ -2954,7 +2956,7 @@ calcite.init();
 <p>If <code>calcite-web.js</code> is used on a page with no module syntax, it will just attach itself to <code>window.calcite</code>. Here is an example which initializes Calcite from a hosted file on S3:</p>
 <pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
   ...
-  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.2/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.3/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="undefined">
      calcite.init()
   </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>

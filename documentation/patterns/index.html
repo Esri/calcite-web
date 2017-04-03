@@ -863,8 +863,6 @@
           
 
           <p>Tertiary navigation is necessary only when the information architecture of the site requires three levels of hierarchy within pages. A breadcrumb component can also be used in this pattern.</p>
-<p>The third nav has a set of of Javascript bindings responsible for responsive behavior when the content of the third nav is greater than it's container.</p>
-<p>Only a single third nav can be on a page.</p>
 
 
           
@@ -879,9 +877,8 @@
               <div class="styleguide-modifier-example">
                 <header class="third-nav">
   <div class="third-nav-container">
-    <a href="#" class="icon-ui-left js-overflow-left nav-overflow-left"></a>
     <div class="grid-container">
-      <nav class="column-24 js-nav-overflow" role="navigation" aria-labelledby="thirdnav">
+      <nav class="column-24" role="navigation" aria-labelledby="thirdnav">
         <a class="third-nav-link is-active" href="#">Alpine</a>
         <a class="third-nav-link" href="#">Coastal</a>
         <a class="third-nav-link" href="#">Wetland</a>
@@ -889,7 +886,6 @@
         <a class="third-nav-link" href="#">Praire</a>
       </nav>
     </div>
-    <a href="#" class="icon-ui-right js-overflow-right nav-overflow-right"></a>
   </div>
 </header>
               </div>
@@ -897,9 +893,8 @@
             </div>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"third-nav"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"third-nav-container"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-ui-left js-overflow-left nav-overflow-left"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"grid-container"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-24 js-nav-overflow"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"navigation"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"thirdnav"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-24"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"navigation"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"thirdnav"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"third-nav-link is-active"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Alpine<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"third-nav-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Coastal<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"third-nav-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Wetland<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
@@ -907,7 +902,6 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"third-nav-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Praire<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-ui-right js-overflow-right nav-overflow-right"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 </code></pre>
