@@ -1,7 +1,7 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-  typeof define === 'function' && define.amd ? define(factory) :
-  (global.calciteMarketing = factory());
+	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+	typeof define === 'function' && define.amd ? define(factory) :
+	(global.calciteMarketing = factory());
 }(this, (function () { 'use strict';
 
 // Cool Helpers
@@ -10,12 +10,12 @@
 // └────────────────────┘
 
 // check if an element has a specific class
-function has(domNode, className) {
+function has (domNode, className) {
   return new RegExp('(\\s|^)' + className + '(\\s|$)').test(domNode.getAttribute('class'));
 }
 
 // add one or more classes to an element
-function add(domNode, classes) {
+function add (domNode, classes) {
   classes.split(' ').forEach(function (c) {
     if (!has(domNode, c)) {
       domNode.setAttribute('class', domNode.getAttribute('class') + ' ' + c);
@@ -24,7 +24,7 @@ function add(domNode, classes) {
 }
 
 // remove one or more classes from an element
-function remove(domNode, classes) {
+function remove (domNode, classes) {
   classes.split(' ').forEach(function (c) {
     var removedClass = domNode.getAttribute('class').replace(new RegExp('(\\s|^)' + c + '(\\s|$)', 'g'), '$2');
     if (has(domNode, c)) {
@@ -37,7 +37,7 @@ function remove(domNode, classes) {
 
 
 // remove 'is-active' class from every element in an array
-function removeActive(array) {
+function removeActive (array) {
   array = nodeListToArray(array);
   array.forEach(function (item) {
     remove(item, 'is-active');
@@ -45,7 +45,7 @@ function removeActive(array) {
 }
 
 // add 'is-active' class from every element in an array
-function addActive(array) {
+function addActive (array) {
   array = nodeListToArray(array);
   array.forEach(function (item) {
     add(item, 'is-active');
@@ -63,7 +63,7 @@ function addActive(array) {
 
 
 // turn a domNodeList into an array
-function nodeListToArray(domNodeList) {
+function nodeListToArray (domNodeList) {
   if (Array.isArray(domNodeList)) {
     return domNodeList;
   } else {
@@ -72,7 +72,7 @@ function nodeListToArray(domNodeList) {
 }
 
 // Finds all the elements inside a node, or the document and returns them as an array
-function findElements(query, domNode) {
+function findElements (query, domNode) {
   var context = domNode || document;
   var elements = context.querySelectorAll(query);
   return nodeListToArray(elements);
@@ -86,7 +86,7 @@ function findElements(query, domNode) {
 
 
 // add a callback function to an event on a DOM node
-function add$1(domNode, e, fn) {
+function add$1 (domNode, e, fn) {
   if (domNode.addEventListener) {
     return domNode.addEventListener(e, fn, false);
   } else if (domNode.attachEvent) {
@@ -109,13 +109,13 @@ function add$1(domNode, e, fn) {
 // return a function that will only execute
 // once it is NOT called for delay milliseconds
 
-function E() {
+function E () {
   // Keep this empty so it's easier to inherit from
   // (via https://github.com/lipsmack from https://github.com/scottcorgan/tiny-emitter/issues/3)
 }
 
 E.prototype = {
-  on: function on(name, callback, ctx) {
+  on: function (name, callback, ctx) {
     var e = this.e || (this.e = {});
 
     (e[name] || (e[name] = [])).push({
@@ -126,9 +126,9 @@ E.prototype = {
     return this;
   },
 
-  once: function once(name, callback, ctx) {
+  once: function (name, callback, ctx) {
     var self = this;
-    function listener() {
+    function listener () {
       self.off(name, listener);
       callback.apply(ctx, arguments);
     }
@@ -137,7 +137,7 @@ E.prototype = {
     return this.on(name, listener, ctx);
   },
 
-  emit: function emit(name) {
+  emit: function (name) {
     var data = [].slice.call(arguments, 1);
     var evtArr = ((this.e || (this.e = {}))[name] || []).slice();
     var i = 0;
@@ -150,7 +150,7 @@ E.prototype = {
     return this;
   },
 
-  off: function off(name, callback) {
+  off: function (name, callback) {
     var e = this.e || (this.e = {});
     var evts = e[name];
     var liveEvents = [];
@@ -167,7 +167,9 @@ E.prototype = {
     // Suggested by https://github.com/lazd
     // Ref: https://github.com/scottcorgan/tiny-emitter/commit/c6ebfaa9bc973b33d110a84a307742b7cf94c953#commitcomment-5024910
 
-    liveEvents.length ? e[name] = liveEvents : delete e[name];
+    (liveEvents.length)
+      ? e[name] = liveEvents
+      : delete e[name];
     return this;
   }
 };
@@ -175,13 +177,13 @@ E.prototype = {
 var bus = new E();
 
 // Cool Helpers
-function switcher() {
+function switcher () {
   var toggles = findElements('.js-view-toggle');
 
   bus.on('switcher:bind', bind);
   bus.on('switcher:toggle', handleToggle);
 
-  function bind(options) {
+  function bind (options) {
     if (!options) {
       toggles.forEach(function (toggle$$1) {
         setUp(toggle$$1);
@@ -191,11 +193,11 @@ function switcher() {
     }
   }
 
-  function setUp(toggle$$1) {
+  function setUp (toggle$$1) {
     add$1(toggle$$1, 'click', toggleClick);
   }
 
-  function toggleClick(e) {
+  function toggleClick (e) {
     e.preventDefault();
     var options = {
       set: e.target.getAttribute('data-set'),
@@ -205,11 +207,11 @@ function switcher() {
     bus.emit('switcher:toggle', options);
   }
 
-  function handleToggle(options) {
-    var viewSet = findElements('.js-view[data-set=' + options.set + ']');
-    var viewTarget = findElements('.js-view[data-set=' + options.set + '][data-view=' + options.target + ']');
-    var toggleSet = findElements('.js-view-toggle[data-set=' + options.set + ']');
-    var toggleTarget = findElements('.js-view-toggle[data-set=' + options.set + '][data-view=' + options.target + ']');
+  function handleToggle (options) {
+    var viewSet = findElements((".js-view[data-set=" + (options.set) + "]"));
+    var viewTarget = findElements((".js-view[data-set=" + (options.set) + "][data-view=" + (options.target) + "]"));
+    var toggleSet = findElements((".js-view-toggle[data-set=" + (options.set) + "]"));
+    var toggleTarget = findElements((".js-view-toggle[data-set=" + (options.set) + "][data-view=" + (options.target) + "]"));
     removeActive(viewSet);
     removeActive(toggleSet);
     addActive(viewTarget);
