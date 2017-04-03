@@ -7,6 +7,7 @@
 ### Fixed
 - Missing styles for `<input type="file">` (#761)
 - Cards with long words overflowing card-content (#778)
+- Fixed issue with `calcite-web.js` breaking the closure compiler
 
 ### Breaking
 - :warning: Removed JavaScript-based responsive third-nav pattern. Third nav now simply scrolls horizontally when it's container overflows (#748)
