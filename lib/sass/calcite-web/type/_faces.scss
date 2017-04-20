@@ -5,6 +5,7 @@
 //  ↳ type → _avenir-regular.md
 
 @mixin avenir-light() {
+  font-family: 'Avenir Next W05 Light','Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: 300; font-style: normal;
   b, strong {font-weight: 500;}
 }
@@ -15,31 +16,37 @@
 }
 
 @mixin avenir-regular() {
+  font-family: 'Avenir Next W06 Regular','Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: 400; font-style: normal;
   b, strong {font-weight: 500;}
 }
 
 @mixin avenir-italic() {
+  font-family: 'AvenirNextLTW02-Italic','Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: 400; font-style: italic;
   b, strong {font-weight: 500;}
 }
 
 @mixin avenir-demi() {
+  font-family: 'Avenir Next W05 Demi','Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: 500; font-style: normal;
   b, strong {font-weight: 600;}
 }
 
 @mixin avenir-demi-italic() {
+  font-family: 'AvenirNextLTW02-DemiIta','Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: 500; font-style: italic;
   b, strong {font-weight: 600;}
 }
 
 @mixin avenir-bold() {
+  font-family: 'Avenir Next W05 Bold','Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: 600; font-style: normal;
   b, strong {font-weight: 600;}
 }
 
 @mixin avenir-bold-italic() {
+  font-family: 'Avenir Next W05 Bold Italic','Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: 600; font-style: italic;
   b, strong {font-weight: 600;}
 }
@@ -75,5 +82,4 @@
 
   .code-face, .code-face .block {@include code-face();}
   .code-italic, .code-italic .block {@include code-italic();}
-
 }
