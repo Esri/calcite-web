@@ -1,3 +1,8 @@
+## 1.0.0-rc.4
+
+### Fixed
+- Updated fonts to use new declarations from monotype
+
 ## 1.0.0-rc.3
 
 ### Added
