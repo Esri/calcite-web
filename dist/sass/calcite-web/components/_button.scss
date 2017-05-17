@@ -160,12 +160,6 @@
     @include btn-disabled();
   }
 
-  button,
-  input[type='button'],
-  input[type='submit'] {
-    @include btn();
-  }
-
   input[type='file']::-webkit-file-upload-button,
   ::-ms-browse {
     webkit-appearance: none;

@@ -1,9 +1,39 @@
-## 1.0.0-rc.2 (unreleased)
+## 1.0.0-rc.4
+
+### Fixed
+- Updated fonts to use new declarations from monotype
+
+## 1.0.0-rc.3
+
+### Added
+- JS lib now allows for named ES6 exports with `import {drawer} from 'calcite-web/es6'` (#736)
+- Quarter variants for `leader` and `trailer` (#785)
+
+### Fixed
+- Missing styles for `<input type="file">` (#761)
+- Cards with long words overflowing card-content (#778)
+- Fixed issue with `calcite-web.js` breaking the closure compiler
+
+### Breaking
+- :warning: Removed JavaScript-based responsive third-nav pattern. Third nav now simply scrolls horizontally when it's container overflows (#748)
+
+## 1.0.0-rc.2
+
+### Added
+- `alert-full` modifier for full-width alerts
 
 ### Fixed
 - added upper limit to normal pre and post media query (#745)
 - fixed first columns inside columns with a `pre` in large sizes
 - `search-input` on mobile safari now properly aligned (#747)
+- added right-to-left styles for tabs (#776)
+- fixed elements inside accordions triggering close event (#774)
+- fix alignment of shorter loader-text (#771)
+- added right-to-left styles for dropdown-right modifier (#770)
+- fix strange escape key behavior in search js (#763)
+
+### Breaking
+- Raw `<button>` elements no longer styled by default, use the `btn` class.
 
 ## 1.0.0-rc.1
 

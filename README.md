@@ -116,8 +116,3 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 A copy of the license is available in the repository's [LICENSE](./LICENSE) file.
 
-[](Esri Tags: Calcite CSS Sass Web Framework JavaScript)
-[](Esri Language: CSS)
-
-
-

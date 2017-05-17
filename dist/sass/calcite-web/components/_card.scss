@@ -12,8 +12,8 @@
   -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
-  background: white;
-  box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 0 16px 0 rgba(0, 0, 0, 0.05);
+  background: $white;
+  box-shadow: 0 0 0 1px $transparent-off-white, $box-shadow;
 }
 
 @mixin card-image-wrap () {
@@ -29,8 +29,8 @@
   box-shadow: none;
   background: transparent;
   .card-content {
-    border: 1px solid rgba(0,0,0,.1);
-    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid $transparent-off-white;
+    box-shadow: $box-shadow;
     padding-top: 4rem;
   }
   .card-image-wrap {
@@ -42,7 +42,7 @@
 
 
 @mixin card-image-caption () {
-  background: rgba(255, 255, 255, .8);
+  background: $opaque-white;
   width: 100%;
   box-sizing: border-box;
   position: absolute;
@@ -68,6 +68,7 @@
   -webkit-box-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  word-wrap: break-word;
 }
 
 @mixin card-last {

@@ -1,13 +1,13 @@
 {
   "name": "calcite-web",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0-rc.4",
   "description": "SASS & CSS Framework for Esri websites",
   "private": true,
   "homepage": "https://github.com/esri/calcite-web",
   "scripts": {
     "test": "semistandard",
     "prestart": "npm-run-series stat acetate sass rollup img img:docs font js",
-    "start": "parallelshell 'rerun-script' 'live-server docs/build --port=8888 --no-browser'",
+    "start": "parallelshell \"rerun-script\" \"live-server docs/build --port=8888 --no-browser\"",
     "deploy": "npm run prestart && gh-pages -d docs/build -o upstream",
     "predist": "rm -rf dist/",
     "dist": "npm-run-series stat sass:dist font:dist img:dist rollup js:dist minify",
@@ -53,7 +53,8 @@
     ]
   },
   "main": "dist/js/calcite-web.js",
-  "js-next:main": "dist/js/source/calcite-web.js",
+  "js-next:main": "es6.js",
+  "module": "es6.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/esri/calcite-web.git"
@@ -74,7 +75,9 @@
     }
   ],
   "files": [
-    "dist/"
+    "dist/",
+    "es6.js",
+    "lib/js/"
   ],
   "license": "Apache 2.0",
   "bugs": {
@@ -83,29 +86,21 @@
   "devDependencies": {
     "acetate": "^1.3.2",
     "acetate-cli": "^1.0.1",
-    "babel-preset-es2015-rollup": "^1.2.0",
-    "babel-plugin-transform-regenerator": "6.16.1",
     "cssstats-cli": "^1.0.0-beta.2",
     "gh-pages": "^0.11.0",
     "gh-release": "^2.0.1",
     "glob": "^7.0.5",
     "live-server": "^1.0.0",
     "minifier": "^0.8.0",
-    "mkdirp": "^0.5.1",
     "ncp": "^2.0.0",
     "node-sass": "^3.8.0",
     "npm-run-series": "^1.0.0",
     "parallelshell": "^2.0.0",
     "request": "^2.73.0",
     "rerun-script": "^0.6.0",
-    "rollup": "^0.36.4",
-    "rollup-plugin-babel": "^2.6.1",
+    "rollup": "^0.41.4",
+    "rollup-plugin-buble": "^0.15.0",
     "s3": "^4.4.0",
     "semistandard": "*"
-  },
-  "dependencies": {
-    "clipboard": "^1.5.12",
-    "guid": "0.0.12",
-    "tiny-emitter": "^1.0.2"
   }
 }

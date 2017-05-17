@@ -39,7 +39,7 @@ $loader-delay: 0.16s;
   text-indent: -9999em;
   margin: auto;
   position: absolute;
-  right: 50%;
+  right: calc(50% - #{$loader-width / 2});
   font-size: 11px;
   -webkit-animation-delay: $loader-delay;
   animation-delay: $loader-delay;

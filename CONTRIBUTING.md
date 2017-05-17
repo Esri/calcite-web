@@ -1,168 +1,82 @@
-# Contributing
+# Contributing to Calcite web
 
-Calcite Web is open to all types of contributions from across Esri. Things you can do to contribute include:
+You want to contribute? Nice! Below are some guidelines for ensuring that your contribution makes sense for everybody.
 
-1. Report a bug ([open an issue](https://github.com/Esri/calcite-web/issues/new))
-2. Suggest a new pattern or component ([open an issue](https://github.com/Esri/calcite-web/issues/new))
-3. Fork the repository and fix one of the [open issues](https://github.com/Esri/calcite-web/issues)
-4. Report problems with the [documentation](http://esri.github.io/calcite-web/).
+## Reporting Issues
 
-### Install Dependencies
+Found a problem? Want a new feature?
 
-1. Visit [nodejs.org](http://nodejs.org/) to install Node.
-2. In the Calcite Web project repository, `npm install` to install development dependencies.
-3. `npm start` to run a development server for Calcite Web
+- See if your issue or idea has [already been reported](issues).
+- Provide detailed reproduction instructions as well as what behavior is expected.
 
-#### Working with the Icon Font
+## Submitting Pull Requests
 
-Changing the icon font requires further dependencies - Python and Fontforge.
+Pull requests are the greatest contributions, so be sure they are focused in scope.
 
-1. [Install Python](https://www.python.org/downloads/)
-2. `brew install ttfautohint fontforge --with-python`
-3. `npm run font`
-
-### Fork the Repository
-
-All the code for Calcite Web lives [on GitHub](https://github.com/esri/calcite-web). We use the [fork and pull model](https://help.github.com/articles/using-pull-requests/) to manage contribution.
-
-1. Fork the repository so you have your own copy (`your-username/calcite-web`)
-2. Clone the repo locally with `git clone https://github.com/your-username/calcite-web`
-3. Move into the clone repo:  `cd calcite-web`
-4. Install project dependencies: `npm install`
-
-You should also add `Esri/calcite-web` as a remote at this point. We generally call this remote branch 'upstream':
-
-```
-git remote add upstream https://github.com/Esri/calcite-web
+1. To begin, [fork this project](fork), clone your fork, and add our upstream.
+```bash
+# Clone your fork of the repo into the current directory
+git clone https://github.com/<your-user>/calcite-web
+# Navigate to the newly cloned directory
+cd calcite-web
+# Assign the original repo to a remote called "upstream"
+git remote add upstream https://github.com/esri/calcite-web
+# Install the tools necessary for development
+npm install
 ```
 
-## Structures
-
-Making additions and edits to Calcite Web is a process with a number of structural requirements, designed to keep the codebase clean, DRY,  and self-documenting. The overall project structure has a number of facets that need to be understood before getting started. The following directory structure highlights some of the key structures:
-
+2. Create a branch for your feature or fix:
+```bash
+# Move into a new branch for a feature
+git checkout -b feature/thing
 ```
-/calcite-web
-    📄 CHANGELOG.md
-    /lib
-        /js
-            📄 calcite-web.js
-            📄 calcite-web-[extension].js
-            /helpers
-            /patterns
-        /sass
-            📄 calcite-web.scss
-            📄 calcite-web-[extension].scss
-            /calcite-web
-                /components
-                /patterns
-                /extensions
-    /dist
-    /docs
-        /source
-            📄 table_of_contents.yml
-            /documentation
-                /components
-                /patterns
-                    📄 _[pattern].md
-                    /sample-code
-                        📄 _[pattern].html
-        /build
+```bash
+# Move into a new branch for a fix
+git checkout -b fix/something
 ```
 
+3. Start up a local development server:
+```bash
+# Use the start script to run the default dev environment
+npm start
+```
 
-### Changelog
+4. Be sure your code follows our practices.
+```bash
+# Test current code
+npm run test
+```
 
-The Changelog is an important document, both for developers working together to improve Calcite Web and developers who need to manage updating their projects to newer versions of the framework. Being as clear as possible to what progress you’ve made in the Changeling is essential — particularly if you remove or alter the functionality of any part of the framework.
+5. Push your branch up to your fork:
+```bash
+# Push a feature branch
+git push origin feature/thing
+```
+```bash
+# Push a fix branch
+git push origin fix/something
+```
 
-Keep this updated with either the current version number, to the  `Unreleased` header. Make sure you add to the Changelog before you open a pull request.
+6. Now [open a pull request](https://help.github.com/articles/using-pull-requests/) with a clear title and description.
 
-### Lib
+## Adding a Component
 
-The source code for the framework itself lives in this directory. All of the final library deliverables are in here.
+Adding a component to Calcite Web requires a few steps:
 
-### Lib / js
-
-This is where all the source code for the Javascript library is kept. This includes the Calcite Web Core `calcite-web.js`, along with any JavaScript files that may be needed to power any extensions, such as `calcite-web-marketing.js`. These files are written in ES6 to take advantage of the module system.
-
-The `/helpers` directory contains a number of ES6 modules that enable common behavior needed across the library - class and dom manipulation, the event bus, and aria handling functions. The `/patterns` directory contains modules that enable UI behavior of the discreet patterns.
-
-### Lib / sass
-
-All the core CSS for the framework is in this folder, written as  SASS. Sass is primary used to enable a module system, similar to our implementation of ES6 for JavaScript.
-
-The `calcite-web.scss` file contains the core framework in it’s entirety, and is by itself just a pile of default variables and references to the modules that make up the actual representational codebase.
-
-Extensions and custom builds live next to this file. An extension like `calcite-web-marketing.scss` references the modules that are required for adding new UI patterns to a project without duplicating any core core, while builds like `calcite-web-no-fonts.scss` are intended to be used in replace of the core framework. Extensions make the framework larger, custom builds make the framework smaller.
-
-#### Lib / sass / components
-
-There are a number of folders in the `/sass` directory which cover the entire framework, but the `/components` and `/patterns` are the ones that hold the most UI pattern content.
-
-Component modules look like `_[component].scss`. Each file should contain only the representation code necessary for a single, specific and discrete UI component.
-
-The term `component` is meant to be small, singular dom nodes or UI patterns that are incredibly flexible and have very little opinion about their surrounding markup.
-
-#### Lib / sass / patterns
-
-Patterns are more involved than components, and require significantly more markup to achieve. Patterns can be composed entirely out of smaller components, with no markup of their own. More complicated UI elements like modals and tabs are considered patterns, and need significant JavaScript to make functional and accessible.
-
-Pattern modules look like `_[pattern].scss`. Each file should contain only the representation code necessary for a single, specific and discrete UI component.
-
-### Dist
-
-The `/dist` directory is what gets delivered to the end user when the framework is downloaded or installed via package manager. Every file in the `/dist` is generated, and editing files in here is futile. Any changes made to any file in this folder will be overwritten by the build process.
-
-### Docs
-
-The website that creates the [Calcite Web Framework site](http://esri.github.io/calcite-web/) lives in here. This includes all the documentation of patterns, components, the JavaScript library, sample code, guides, and usage examples.
-
-#### Docs / build
-
-Like `/dist`, `/build` is a generated, untracked folder full of compiled files ready to host on GitHub Pages, and no files in here should be directly edited.
-
-#### Docs / source
-
-The source files for the Documentation site live in here. There are a number of things to note:
-
-- The `table_of_contents.yml` file contains a complete listing of the entire framework, with logical divisions, lists of patterns and components, and variations for each.
-
-- The `/documentation` folder contains the markdown and html required to render the doc for each segment in the framework. Each item in the table of contents needs both a markdown file for written documentation, and a sample code html file for rendering and copy-pasting.
-
-- The `/examples` folder contains larger sets of sample html for both complex page layouts for the core framework, and the large UI patterns enabled by the extensions. The extensions are not documented anywhere other than this `/examples` folder, and should therefor be restricted to very specific and comprehensive UI patterns.
-
-## Development
-
-To run a development environment, just type `npm start`. You should have a copy of the documentation site live at [localhost:8888](http://localhost:8888). As you develop features and fix bugs, be sure to write notes in `CHANGELOG.md`.
-
-### Accessibility
-
-WCAAG and 508 compliance is very important in Calcite Web. You must follow all standards! Follow these [aria standards.](https://www.w3.org/TR/wai-aria-practices/#aria_ex)
-
-### How We Use GitHub
-
-All the code for Calcite Web lives [on GitHub](https://github.com/esri/calcite-web). We use the [fork and pull model](https://help.github.com/articles/using-pull-requests/) to manage contribution. To contribute, you should:
-
-1. Commit your changes.
-2. Note your changes in `CHANGELOG.md`
-3. Make sure your copy is up to date: `git pull upstream master`
-4. Push your changes to your fork: `/your-username/calcite-web`
-5. Open a pull-request from your fork (`/your-username/calcite-web`) to the 'upstream' fork (`/Esri/calcite-web`).
-
-# Releasing a New Version
-
-Calcite-Web uses SemVer (Semantic Versioning) for its releases. This means that version numbers are basically formatted like `MAJOR.MINOR.PATCH`. If you're well acquainted with SemVer you should skip to 'Bumping the Version' below.
-
-#### Major
-
-Breaking changes are signified with a new **first** number. For example, moving from 1.0.0 to 2.0.0 implies breaking changes.
-
-#### Minor
-
-New components, new helper classes, or substantial visual changes to existing components and patterns are *minor releases*. These are signified by the second number changing. So from 1.1.2 to 1.2.0 there are minor changes.
-
-#### Patches
-
-The final number signifies patches such as fixing a pattern or component in a certain browser, or fixing an existing bug. Small changes to the documentation site and the tooling around the Calcite-Web library are also considered patches.
+1. In `docs/source/documentation/components/` add a markdown file titled `_[your component name].md` which describes your component.
+2. In `docs/source/documentation/components/sample-code/` add an html file containing the markup for your component. Title it `_[your component name].html`.
+3. Add an entry in the components section of `docs/source/table_of_contents.yml` formatted like this:
+```
+        - title: 'Tooltips' # Human readable headline
+          link: tooltips    # Name used for .md and .html files
+          modifiers:        # List of modifier classes
+            - tooltip-left  # If you don't need modifier classes
+            - tooltip-right # just use `modifiers: true`
+            - tooltip-top
+```
+4. Run a local server (`npm start`) and develop your component
+5. Add an entry in the `CHANGELOG` describing your new component.
+6. Open a pull request!
 
 ## Bumping the Version
 

@@ -57,7 +57,7 @@
     opacity: 0;
     visibility: hidden;
     @include transition-prefixed(transform 300ms $easing-function, visibility 0ms linear 300ms, opacity 300ms $easing-function);
-    @include transform(translate3d(0, 20px, 0))
+    @include transform(translate3d(0, 20px, 0));
   }
 
 @if $include-modal == true {

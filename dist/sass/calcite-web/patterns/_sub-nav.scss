@@ -28,14 +28,14 @@ $subnav-link-underline: linear-gradient(to top, transparent 94%, $white 96%, $wh
     margin: 0 .25em 0 0;
     @include left();
     font-family: $avenir-family;
-    color: $lightest-gray;
+    color: $off-white;
     @include font-size(-1);
     background-color: $transparent-off-black;
     box-sizing: border-box;
     @include transition(background-color $transition, color 150ms $transition);
 
     &:hover, &:focus {
-      background-color: rgba(0, 0, 0, .3);
+      background-color: $transparent-darker-gray;
       color: $white;
       text-decoration: none;
       @include prefixer(background-image, $subnav-link-underline, webkit moz o);

@@ -19,11 +19,8 @@
   text-overflow: ellipsis;
   background-color: $off-white;
   border: 1px solid $lighter-gray;
-  border-left: none;
+  margin-right: -1px;
   cursor: pointer;
-  &:first-child {
-    border-left: 1px solid $lighter-gray;
-  }
   &:focus {
     outline: none;
   }
@@ -38,6 +35,13 @@
     background-color: $white;
     &:hover {
       background-color: $white;
+    }
+  }
+  @if ($include-right-to-left) {
+    html[dir="rtl"] & {
+      float: right;
+      margin-right: 0;
+      margin-left: -1px;
     }
   }
 }

@@ -39,7 +39,7 @@ $loader-delay: 0.16s;
   text-indent: -9999em;
   margin: auto;
   position: absolute;
-  right: 50%;
+  right: calc(50% - #{$loader-width / 2});
   font-size: 11px;
   -webkit-animation-delay: $loader-delay;
   animation-delay: $loader-delay;
@@ -98,7 +98,7 @@ $loader-delay: 0.16s;
     .loader-bars {
       position: inherit;
       background-color: transparent;
-      background-image: url('../img/loader-ie9.gif');
+      background-image: url('#{$image-path}/img/loader-ie9.gif');
       background-position: center top;
       animation: none;
       -webkit-animation-delay: none;
