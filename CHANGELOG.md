@@ -1,3 +1,8 @@
+## 1.0.0-rc.5
+
+### Fixed
+- Made the calcite-web-dark constants as !default
+
 ## 1.0.0-rc.4
 
 ### Fixed
