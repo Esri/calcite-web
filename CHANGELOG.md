@@ -1,3 +1,8 @@
+## 1.0.0-rc.6
+
+###Fixed
+- Fixed Modal content not being left aligned in I.E. and Edge browsers text-align:start is not supported in I.E. changed it to text-algin:left
+
 ## 1.0.0-rc.5
 
 ### Fixed

@@ -5828,7 +5828,7 @@ body {
   float: none;
   background: #000000;
   padding: 1.55rem;
-  text-align: start;
+  text-align: left;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   display: inline-block;
@@ -5845,7 +5845,8 @@ body {
   -o-transform: translate3d(0, 20px, 0);
   transform: translate3d(0, 20px, 0); }
   html[dir="rtl"] .modal-content {
-    float: none; }
+    float: none;
+    text-align: right; }
 
 .search-overlay {
   position: fixed;
