@@ -1,7 +1,10 @@
 ## 1.0.0-rc.6
 
-###Fixed
+### Fixed
 - Fixed Modal content not being left aligned in I.E. and Edge browsers text-align:start is not supported in I.E. changed it to text-algin:left
+
+### Modified
+- Simplified font-stack for Avenir and monospace
 
 ## 1.0.0-rc.5
 
