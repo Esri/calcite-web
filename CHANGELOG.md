@@ -1,5 +1,12 @@
 ## 1.0.0-rc.6
 
+### Added
+- new icons (not added to font yet):
+  - calendar
+  - grid
+  - sort-ascending
+  - sort-descending
+
 ### Fixed
 - Fixed Modal content not being left aligned in I.E. and Edge browsers text-align:start is not supported in I.E. changed it to text-algin:left
 
