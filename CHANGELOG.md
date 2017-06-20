@@ -1,3 +1,8 @@
+## 1.0.0-rc.7
+
+### Breaking
+- :warning: No longer support IE9 (this impacts only block groups, radio inputs, selects, drawers, and the loader)
+
 ## 1.0.0-rc.6
 
 ### Added

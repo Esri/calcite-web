@@ -107,27 +107,4 @@ $opacity-transition: opacity 200ms linear;
       }
     }
   }
-
-  .ie9 {
-    .drawer {
-      &.is-active {
-        &.drawer-left .drawer-nav {
-          -ms-transform:translate($drawer-width,0);
-          @if ($include-right-to-left) {
-            html[dir="rtl"] & {
-              -ms-transform:translate(-$drawer-width,0);
-            }
-          }
-        }
-        &.drawer-right .drawer-nav {
-          -ms-transform:translate(-$drawer-width,0);
-          @if ($include-right-to-left) {
-            html[dir="rtl"] & {
-              -ms-transform:translate($drawer-width,0);
-            }
-          }
-        }
-      }
-    }
-  }
 }
