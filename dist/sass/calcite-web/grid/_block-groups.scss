@@ -1,7 +1,7 @@
 // ┌──────────────┐
 // │ Block Groups │
 // └──────────────┘
-//  ↳ http://esri.github.io/calcite-web/grid/#block-groups
+//  ↳ http://esri.github.io/calcite-web/documentation/grid/#block-groups
 //  ↳ grid → _block-groups.md
 
 $half-gutter: 0.75 * $column-gutter;
@@ -81,7 +81,7 @@ $full-gutter: $half-gutter * 2;
 // ┌─────────────────────────┐
 // │ Responsive Block Groups │
 // └─────────────────────────┘
-//  ↳ http://esri.github.io/calcite-web/grid/#responsive-block-groups
+//  ↳ http://esri.github.io/calcite-web/documentation/grid/#responsive-block-groups
 //  ↳ grid → _responsive-block-groups.md
 @if $block-grid == true {
   @include respond-to($medium) {
