@@ -1,0 +1,696 @@
+---
+title: "Calcite Web: Deep Dive"
+description: An overview of the design and implementation of Calcite Web
+layout: layouts/_presentation:content
+---
+
+<div class="slide js-slide">
+  <div class="slide-content text-center">
+    <h1 class="trailer-half">Calcite Web: Deep Dive</h1>
+    <p class="trailer-0 font-size-1">An overview of the design and implementation of Calcite Web</h3>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h2>Design Characteristics of Calcite Web</h2>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h3 class="font-size-4">Flat (Mostly)</h3>
+    <p class="font-size-1">No embossing, no crazy drop shadows, no skeuomorphism</p>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <p><button class="btn">Button</button> <button class="btn btn-clear">Clear Button</button></p>
+    <p><a href="#" class="tooltip" aria-label="this is tooltip text">Tooltip</a></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Table Header 1</th>
+          <th>Table Header 2</th>
+          <th>Table Header 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+         <td>a</td>
+         <td>b</td>
+         <td>c</td>
+        </tr>
+        <tr>
+         <td>x</td>
+         <td>y</td>
+         <td>z</td>
+        </tr>
+      </tbody>
+    </table>
+    <label>
+      Input:
+      <input type="text" placeholder="placeholder text">
+    </label>
+    <label>
+      Select Menu:
+      <select>
+        <option value="">Menu 1</option>
+        <option value="">Menu 2</option>
+        <option value="">Menu 3</option>
+        <option value="">Menu 4</option>
+      </select>
+    </label>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h3 class="font-size-4">Neutral Colors</h3>
+    <p class="font-size-1">Most UI elements are accomplished in grayscale</p>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <div class="top-nav clearfix">
+      <a href="#" class="top-nav-title">Top Navigation</a>
+      <nav class="top-nav-list" role="navigation" aria-labelledby="topnav">
+        <a class="top-nav-link" href="#">Link 1</a>
+        <a class="top-nav-link" href="#">Link 2</a>
+        <a class="top-nav-link" href="#">Link 3</a>
+      </nav>
+    </div>
+    <aside class="side-nav leader-2" aria-role="complementary">
+      <h4 class="side-nav-title">Sidenav Title</h4>
+      <nav role="navigation" aria-labelledby="sidenav">
+        <a href="#" class="side-nav-link">Agricultural</a>
+        <a href="#" class="side-nav-link">Transition</a>
+        <a href="#" class="side-nav-link">Perpetual</a>
+        <a href="#" class="side-nav-link">Cultural</a>
+      </nav>
+    </aside>
+    <div class="js-tab-group leader-2">
+      <nav class="tab-nav">
+        <a class="tab-title is-active js-tab">Tab 1</a>
+        <a class="tab-title js-tab">Tab 2</a>
+        <a class="tab-title js-tab">Tab 3</a>
+      </nav>
+      <section class="tab-contents">
+        <article class="tab-section js-tab-section is-active">
+          <p>Tab 1 section</p>
+        </article>
+        <article class="tab-section js-tab-section">
+          <p>Tab 2 section</p>
+        </article>
+        <article class="tab-section js-tab-section">
+          <p>Tab 3 section</p>
+        </article>
+      </section>
+    </div>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h3 class="font-size-4">Meaningful Color</h3>
+    <p class="font-size-1">Color must be used with purpose.</p>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h3 class="font-size-4">How can color be used?</h3>
+    <ol class="font-size-1">
+      <li>Show state</li>
+      <li>Encourage Action</li>
+      <li>Explain success and failure</li>
+    </ol>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h4 class="font-size-4">1. Show State</h4>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <div class="top-nav clearfix">
+      <a href="#" class="top-nav-title">Top Navigation</a>
+      <nav class="top-nav-list" role="navigation" aria-labelledby="topnav">
+        <a class="top-nav-link" href="#">Link 1</a>
+        <a class="top-nav-link" href="#">Link 2</a>
+        <a class="top-nav-link is-active" href="#">Link 3</a>
+      </nav>
+    </div>
+    <aside class="side-nav leader-2" aria-role="complementary">
+      <h4 class="side-nav-title">Side Navigation</h4>
+      <nav role="navigation" aria-labelledby="sidenav">
+        <a href="#" class="side-nav-link is-active">Agricultural</a>
+        <a href="#" class="side-nav-link">Transition</a>
+        <a href="#" class="side-nav-link">Perpetual</a>
+      </nav>
+    </aside>
+    <h5 class="leader-2 trailer-half">Pagination</h5>
+    <div class="text-center trailer-1 leader-1">
+      <a href="#" class="btn btn-transparent btn-disabled">Previous</a>
+      <a href="#" class="btn">1</a>
+      <a href="#" class="btn btn-transparent">2</a>
+      <a href="#" class="btn btn-transparent">3</a>
+      <span class="avenir-light text-light-gray">...</span>
+      <a href="#" class="btn btn-transparent">20</a>
+      <a href="#" class="btn btn-transparent btn-arrow">Next</a>
+    </div>
+    <h5 class="trailer-half leader-2">Focus States</h5>
+    <label>
+      Text Input
+      <input type="text" placeholder="placeholder">
+    </label>
+    <label>
+      Select
+      <select>
+        <option value="">Option</option>
+      </select>
+    </label>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h4 class="font-size-4">2. Encourage Action</h4>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="column-8">
+    <h5 class="trailer-half leader-2">Buttons and Links</h5>
+    <a class="btn" href="#">Button</a><a class="btn btn-clear margin-left-1" href="#">Clear Button</a><a href="#" class="inline-block margin-left-1">Also Links</a>
+    <label class="leader-2">
+      File type Input
+      <input type="file">
+    </label>
+    <label class="leader-2">
+      Input Groups
+      <div class="input-group">
+        <input class="input-group-input" type="text" placeholder="placeholder text">
+        <span class="input-group-button">
+          <button class="btn">Action</button>
+        </span>
+      </div>
+    </label>
+    <div class="card card-bar-blue leader-2">
+      <div class="card-content">
+        <h4>Card with Colored Bar</h4>
+        <p class="font-size--1 card-last">Blue is used to call attention to the card itself (with a colored bar), and also to encourage action with the button below.</p>
+        <a href="#" class="btn btn-clear btn-fill leader-1">Card Action</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h4 class="font-size-4">3. Explain Success and Failure</h4>
+    <p class="font-size-1">Red and green are generally used to indicate error and success, respectively</p>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h3 class="trailer-quarter">Inputs</h3>
+    <label>
+      Input Success
+      <input type="text" class="input-success" value="Tom" required>
+    </label>
+    <label>
+      Input Failure
+      <input type="text" required placeholder="placeholder" class="input-error">
+      <div class="input-error-message is-active">
+        Input does not meet minimum requirements.
+      </div>
+    </label>
+    <h3 class="trailer-quarter leader-2">Alerts</h3>
+    <div class="alert alert-green is-active">
+      Successful message
+      <a href="#" class="alert-close link-off-black"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon"><path d="M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z"/></svg></a>
+    </div>
+    <div class="alert alert-red leader-half is-active">
+      Error message
+      <a href="#" class="alert-close link-off-black"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon"><path d="M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z"/></svg></a>
+    </div>
+    <h3 class="trailer-quarter leader-2">Labels</h3>
+    <p><span class="label">standard label</span><span class="label label-red margin-left-half">error label</span><span class="label label-green margin-left-half">success label</span>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h4 class="font-size-4">Simple, "With the Grain"</h4>
+    <p class="font-size-1">Try to keep it simple and go "with the grain" of the web.</p>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <form action="" method="post">
+      <label>
+        Email
+        <input type="email" required placeholder="bob@example.com">
+      </label>
+
+      <label>
+        Gender
+        <select name="gender" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </label>
+
+      <label>
+        Birthday
+        <input type="date" placeholder="mm/dd/yyyy" required>
+      </label>
+
+      <fieldset class="fieldset-checkbox">
+        <legend>Email Preferences (optional)</legend>
+        <label>
+          <input type="checkbox"> Weekly Newsletter
+        </label>
+        <label>
+          <input type="checkbox"> Monthly Newsletter
+        </label>
+        <label>
+          <input type="checkbox"> All Emails
+        </label>
+      </fieldset>
+
+      <fieldset class="fieldset-radio">
+        <legend>How did you hear about us? (optional)</legend>
+        <label>
+          <input type="radio" name="source" value="friend">Friend
+        </label>
+        <label>
+          <input type="radio" name="source" value="event">Sponsored Event
+        </label>
+        <label>
+          <input type="radio" name="source" value="other">Other
+        </label>
+      </fieldset>
+
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h4 class="font-size-4">Straight Lines, Square Corners</h4>
+    <p class="font-size-1">Generally UI elements don't have a border radius</p>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h4 class="font-size-4">Open</h4>
+    <p class="font-size-1">Use ample white space to make designs welcoming.</p>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h3 class="trailer-1"><span class="text-red font-size-3"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon"><path d="M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z"/></svg></span> Bad</h3>
+    <p class="trailer-0 leader-0">This is a paragraph that has the margin intentionally set to 0 in order to demonstrate how un-Calcified it looks.</p>
+    <a href="#" class="btn padding-left-0 padding-right-0 padding-leader-0 padding-trailer-0">Text in button with no padding</a>
+    <h3 class="trailer-1 leader-3"><span class="font-size-3"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon"><path fill="#5a9359" d="M11.927 22l-6.882-6.883-3 3L11.927 28 31.204 8.728l-3.001-3.001z"/></svg></span> Good</h3>
+    <p>This is the standard paragraph styles. As you can see, it has quite a bit of margin built in so that content has room to breath.</p>
+    <a href="#" class="btn">Normal Button</a>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h4 class="font-size-4">Type Scale</h4>
+    <p class="font-size-1">A double-stranded modular scale allows for flexibility without craziness</p>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <table class="table-no-table">
+      <thead>
+        <tr>
+          <th>Size</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="label">-2</span></td><td><span class="font-size--2">Hamburgefontsiv</span></td></tr>
+        <tr><td><span class="label">-1</span></td><td><span class="font-size--1">Hamburgefontsiv</span></td></tr>
+        <tr><td><span class="label label-blue">0</span></td><td><span class="font-size-0">Hamburgefontsiv</span></td></tr>
+        <tr><td><span class="label">1</span></td><td><span class="font-size-1">Hamburgefontsiv</span></td></tr>
+        <tr><td><span class="label">2</span></td><td><span class="font-size-2">Hamburgefontsiv</span></td></tr>
+        <tr><td><span class="label">3</span></td><td><span class="font-size-3">Hamburgefontsiv</span></td></tr>
+        <tr><td><span class="label">4</span></td><td><span class="font-size-4">Hamburgefontsiv</span></td></tr>
+        <tr><td><span class="label">5</span></td><td><span class="font-size-5">Hamburgefontsiv</span></td></tr>
+        <tr><td><span class="label">6</span></td><td><span class="font-size-6">Hamburgefontsiv</span></td></tr>
+        <tr><td><span class="label">7</span></td><td><span class="font-size-7">Hamburgefontsiv</span></td></tr>
+        <tr><td><span class="label">8</span></td><td><span class="font-size-8">Hamburgefontsiv</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h4 class="font-size-4">Rational Grid</h4>
+    <p class="font-size-1">Flexible, responsive grid based on viewport widths</p>
+  </div>
+</div>
+
+<div class="slide slide-block js-slide">
+  <div class="grid-container leader-2">
+    <div class="column-24">
+      <h3 class="phone-show">Phone</h3>
+      <h3 class="tablet-only">Tablet</h3>
+      <h3 class="tablet-hide">Desktop</h3>
+    </div>
+  </div>
+  <div class="grid-container trailer-2">
+    <div class="column-24 leader-1"><div class="panel panel-blue">24</div></div>
+    <div class="column-12 leader-1"><div class="panel panel-blue">12</div></div>
+    <div class="column-12 leader-1"><div class="panel panel-blue">12</div></div>
+    <div class="column-8  leader-1"><div class="panel panel-blue">8</div></div>
+    <div class="column-8  leader-1"><div class="panel panel-blue">8</div></div>
+    <div class="column-8  leader-1"><div class="panel panel-blue">8</div></div>
+    <div class="column-6  leader-1"><div class="panel panel-blue">6</div></div>
+    <div class="column-6  leader-1"><div class="panel panel-blue">6</div></div>
+    <div class="column-6  leader-1"><div class="panel panel-blue">6</div></div>
+    <div class="column-6  leader-1"><div class="panel panel-blue">6</div></div>
+    <div class="column-4  leader-1"><div class="panel panel-blue">4</div></div>
+    <div class="column-4  leader-1"><div class="panel panel-blue">4</div></div>
+    <div class="column-4  leader-1"><div class="panel panel-blue">4</div></div>
+    <div class="column-4  leader-1"><div class="panel panel-blue">4</div></div>
+    <div class="column-4  leader-1"><div class="panel panel-blue">4</div></div>
+    <div class="column-4  leader-1"><div class="panel panel-blue">4</div></div>
+    <div class="column-2  leader-1"><div class="panel panel-blue">2</div></div>
+    <div class="column-2  leader-1"><div class="panel panel-blue">2</div></div>
+    <div class="column-2  leader-1"><div class="panel panel-blue">2</div></div>
+    <div class="column-2  leader-1"><div class="panel panel-blue">2</div></div>
+    <div class="column-2  leader-1"><div class="panel panel-blue">2</div></div>
+    <div class="column-2  leader-1"><div class="panel panel-blue">2</div></div>
+    <div class="column-2  leader-1"><div class="panel panel-blue">2</div></div>
+    <div class="column-2  leader-1"><div class="panel panel-blue">2</div></div>
+    <div class="column-2  leader-1"><div class="panel panel-blue">2</div></div>
+    <div class="column-2  leader-1"><div class="panel panel-blue">2</div></div>
+    <div class="column-2  leader-1"><div class="panel panel-blue">2</div></div>
+    <div class="column-2  leader-1"><div class="panel panel-blue">2</div></div>
+
+    <div class="column-1  leader-1"><div class="panel panel-blue panel-no-padding text-center">1</div></div>
+    <div class="column-1  leader-1"><div class="panel panel-blue panel-no-padding text-center">1</div></div>
+    <div class="column-1  leader-1"><div class="panel panel-blue panel-no-padding text-center">1</div></div>
+    <div class="column-1  leader-1"><div class="panel panel-blue panel-no-padding text-center">1</div></div>
+    <div class="column-1  leader-1"><div class="panel panel-blue panel-no-padding text-center">1</div></div>
+    <div class="column-1  leader-1"><div class="panel panel-blue panel-no-padding text-center">1</div></div>
+    <div class="column-1  leader-1"><div class="panel panel-blue panel-no-padding text-center">1</div></div>
+    <div class="column-1  leader-1"><div class="panel panel-blue panel-no-padding text-center">1</div></div>
+    <div class="column-1  leader-1"><div class="panel panel-blue panel-no-padding text-center">1</div></div>
+    <div class="column-1  leader-1"><div class="panel panel-blue panel-no-padding text-center">1</div></div>
+    <div class="column-1  leader-1"><div class="panel panel-blue panel-no-padding text-center">1</div></div>
+    <div class="column-1  leader-1"><div class="panel panel-blue panel-no-padding text-center">1</div></div>
+    <div class="column-1  leader-1"><div class="panel panel-blue panel-no-padding text-center">1</div></div>
+    <div class="column-1  leader-1"><div class="panel panel-blue panel-no-padding text-center">1</div></div>
+    <div class="column-1  leader-1"><div class="panel panel-blue panel-no-padding text-center">1</div></div>
+    <div class="column-1  leader-1"><div class="panel panel-blue panel-no-padding text-center">1</div></div>
+    <div class="column-1  leader-1"><div class="panel panel-blue panel-no-padding text-center">1</div></div>
+    <div class="column-1  leader-1"><div class="panel panel-blue panel-no-padding text-center">1</div></div>
+    <div class="column-1  leader-1"><div class="panel panel-blue panel-no-padding text-center">1</div></div>
+    <div class="column-1  leader-1"><div class="panel panel-blue panel-no-padding text-center">1</div></div>
+    <div class="column-1  leader-1"><div class="panel panel-blue panel-no-padding text-center">1</div></div>
+    <div class="column-1  leader-1"><div class="panel panel-blue panel-no-padding text-center">1</div></div>
+    <div class="column-1  leader-1"><div class="panel panel-blue panel-no-padding text-center">1</div></div>
+    <div class="column-1  leader-1"><div class="panel panel-blue panel-no-padding text-center">1</div></div>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h4 class="font-size-4">Subtle Animation</h4>
+    <p class="font-size-1">Used sparingly, to help users understand moments of transition</p>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h3>Modal</h3>
+    <button class="btn js-modal-toggle" data-modal="modal">Open Modal</button>
+    <div class="js-modal modal-overlay modifier-class" data-modal="modal">
+      <div class="modal-content column-12" role="dialog" aria-label="modal" role="dialog">
+        <a class="js-modal-toggle right" href="#" aria-label="close-modal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 32 32" class="svg-icon"><path d="M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z"/></svg>
+        </a>
+        <h3 class='trailer-half'>Modal!</h3>
+        <p>Notice the animation while the modal is animating in. This helps the user understand what's happening by pointingthe way to the new screen.</p>
+        <div class="text-right">
+          <button class="btn js-modal-toggle">Got It</button>
+          <button class="btn btn-clear js-modal-toggle">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <h3 class="leader-3">Loader</h3>
+    <div class="loader is-active padding-leader-1 padding-trailer-1">
+      <div class="loader-bars"></div>
+      <div class="loader-text">Loading...</div>
+    </div>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h2 class="font-size-4">&lt;/design&gt;</h2>
+    <p class="font-size-1">Questions?</p>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h2 class="font-size-4">Basic CSS Rules</h2>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h3 class="font-size-4">1. Use low-specificity selectors</h3>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+<pre class="font-size-2"><code class="css"><span class="hljs-class">.sidebar</span> <span class="hljs-rules">{}</span>               <span class="hljs-comment">/* less specific */</span>
+<span class="hljs-id">#page</span> <span class="hljs-class">.sidebar</span> <span class="hljs-tag">div</span> &gt; <span class="hljs-tag">a</span> <span class="hljs-rules">{}</span> <span class="hljs-comment">/* waaay more specific */</span>
+</code></pre>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h3 class="font-size-4">2. Only Use Classes</h3>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+<pre class="font-size-2"><code class="css"><span class="hljs-id">#banner</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> blue</span></span>;
+}</span>
+
+<span class="hljs-id">#banner</span> <span class="hljs-tag">h1</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> white</span></span>;
+}</span>
+</code></pre>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+<pre class="font-size-2"><code class="css"><span class="hljs-class">.banner</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> blue</span></span>;
+}</span>
+
+<span class="hljs-class">.banner-title</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> white</span></span>;
+}</span>
+</code></pre>
+  </div>
+</div>
+
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h3 class="font-size-4">3. Namespace Classes</h3>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+<pre class="font-size-2"><code class="css"><span class="hljs-class">.btn</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> .<span class="hljs-number">25em</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> blue</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> white</span></span>;
+}</span>
+
+<span class="hljs-class">.btn</span><span class="hljs-class">.red</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> red</span></span>;
+}</span>
+</code></pre>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+<pre class="font-size-2"><code class="css"><span class="hljs-class">.btn</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> .<span class="hljs-number">25em</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> blue</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> white</span></span>;
+}</span>
+
+<span class="hljs-class">.btn-red</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> red</span></span>;
+}</span>
+</code></pre>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h3 class="font-size-4">4. JavaScript hooks should use the <code>js-</code> prefix</h3>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+<pre class="font-size-2"><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn"</span>&gt;</span>Click Me!<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+</code></pre>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+<pre class="font-size-2"><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn js-btn"</span>&gt;</span>Click Me!<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+</code></pre>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h2 class="font-size-4">Basic Sass Rules</h2>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h2 class="font-size-4">1. Everything can be turned off</h2>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h2 class="font-size-4">2. Everything can be called as a mixin</h2>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h2 class="font-size-4">3. Only use colors from the brand palette</h2>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h2 class="font-size-4">Basic Accessibility Rules</h2>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h3 class="font-size-4">1. Ensure Sufficient Contrast</h3>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h3 class="font-size-4">2. Use Semantic Markup</h3>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+<pre class="font-size-2"><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn js-btn"</span>&gt;</span>Click Me!<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+</code></pre>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+<pre class="font-size-2"><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn js-btn"</span>&gt;</span>Click Me!<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+</code></pre>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h3 class="font-size-4">3. Make sure focus states work</h3>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h4 class="font-size-6 text-red">NEVER DO THIS</h4>
+<pre class="font-size-2"><code class="html"><span class="hljs-class">.my-cool-element:focus</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">outline</span>:<span class="hljs-value"> none</span></span>;
+}</span>
+</code></pre>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h3 class="font-size-4">3. Use Correct Aria Roles (when needed)</h3>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h4 class="font-size-4">List of Roles:</h4>
+    <a class="font-size-2" href="https://www.w3.org/TR/2009/WD-wai-aria-20090224/#roles">w3.org/TR/2009/WD-wai-aria-20090224/#roles</a>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h2 class="font-size-4">Localization</h2>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h3 class="font-size-4">1. Right to Left</h3>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h3 class="font-size-4">2. Character Support for Most Languages</h3>
+  </div>
+</div>
+
+<div class="slide js-slide">
+  <div class="slide-content">
+    <h2 class="font-size-4">Done!</h2>
+    <p class="font-size-1">Questions?</p>
+  </div>
+</div>
