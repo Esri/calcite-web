@@ -234,4 +234,10 @@
   }
 
   @include responsive-column();
+
+  .center-column {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    float: none;
+  }
 }

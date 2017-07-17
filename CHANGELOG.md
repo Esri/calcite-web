@@ -1,5 +1,8 @@
 ## 1.0.0-rc.7
 
+### Added
+- `center-column` class for centering columns
+
 ### Breaking
 - :warning: No longer support IE9 (this impacts only block groups, radio inputs, selects, drawers, and the loader)
 
