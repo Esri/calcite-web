@@ -1,7 +1,10 @@
 ## 1.0.0-rc.7
 
 ### Added
-- `center-column` class for centering columns
+- `center-column` class for centering columns (#783)
+
+### Modified
+- make background color of social icons more accessible (#823)
 
 ### Breaking
 - :warning: No longer support IE9 (this impacts only block groups, radio inputs, selects, drawers, and the loader)
