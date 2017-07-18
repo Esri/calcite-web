@@ -236,8 +236,8 @@
   @include responsive-column();
 
   .center-column {
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin-left: auto !important; // !important needed to override first column margin (line 34)
+    margin-right: auto !important; // !important needed to override last column margin (line 43)
     float: none;
   }
 }
