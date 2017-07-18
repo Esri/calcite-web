@@ -11,12 +11,12 @@
 }
 
 @mixin input-minimal {
+  background-color: transparent;
   border-top: none;
   border-right: none;
   border-left: none;
   border-bottom-color: $lighter-gray;
   box-shadow: none;
-  background-color: transparent;
   &:focus {
     border-bottom-color: #999;
     box-shadow: none;
