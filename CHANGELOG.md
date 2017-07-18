@@ -10,6 +10,7 @@
 - update instagram icon (#812)
 - `input-minimal` now has a transparent background (#804)
 - content shouldn't scroll behind modal when open (#766)
+- revert to using fonts.com service (#819)
 
 ### Breaking
 - :warning: No longer support IE9 (this impacts only block groups, radio inputs, selects, drawers, and the loader)
