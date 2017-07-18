@@ -5,6 +5,7 @@
 
 ### Modified
 - make background color of social icons more accessible (#823)
+- use `font-family: inherit` instead of family name where possible (#824)
 
 ### Breaking
 - :warning: No longer support IE9 (this impacts only block groups, radio inputs, selects, drawers, and the loader)

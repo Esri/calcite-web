@@ -62,7 +62,7 @@
     margin: .25rem 0 0 0;
     padding: 0 $baseline / 5;
     @include box-sizing(border-box);
-    font-family: $avenir-family;
+    font-family: inherit;
     font-size: modular-scale(-1);
     line-height: 1.25rem;
     color: $off-black;
@@ -182,7 +182,7 @@
     @include btn();
     @include btn-clear();
     @include btn-small();
-    font-family: $avenir-family;
+    font-family: inherit;
     margin: .5em 0;
   }
 
@@ -195,7 +195,7 @@
     @include btn();
     @include btn-clear();
     @include btn-small();
-    font-family: $avenir-family;
+    font-family: inherit;
     margin: .5em 0;
   }
 
