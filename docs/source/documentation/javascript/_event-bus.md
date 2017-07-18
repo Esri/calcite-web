@@ -2,6 +2,20 @@ The event bus is used to help interactive patterns communicate with each other a
 
 Along with a set of common bus events, each pattern has a set of channels that it emits on and listens for. These events can be emitted or listened for by the larger application.
 
+You can trigger or react to events by using the `on` and `emit` methods on the bus:
+
+```
+// assuming calcite-web.js is available as calcite
+
+// do something when a drawer opens
+calcite.bus.on('drawer:open', function (options) {
+  console.log(options.id) // => "top-nav"
+})
+
+// open a drawer (must pass data-drawer name as "id")
+calcite.bus.emit('drawer:open', {id: "top-nav"})
+```
+
 ### Common Event Channels
 
 | Event | Description | Emits |
@@ -47,7 +61,7 @@ Along with a set of common bus events, each pattern has a set of channels that i
 
 #### Filter Dropdown
 
-Many of the filter dropdown channels emit and listen for the following Options Object:
+Many of the filter dropdown channels emit and listen for the following options object:
 
 ```
 {
