@@ -4,6 +4,8 @@ By default, large screens hold 24 columns, medium tablet-sized screens hold 12, 
 
 On large screens, 3 columns out of 24 is proportionally a small piece of screen real estate. On Phones, the Grid will leave the element at 3 columns wide -- proportionally more real estate, as 3/6 columns is more significant than 3/24.
 
+To center a single column inside a grid container, you can use the helper class `center-column`.
+
 <div class="grid-example clearfix">
   <div class="column-17">
     <span>column-17</span>

@@ -91,10 +91,4 @@ $full-gutter: $half-gutter * 2;
   @include respond-to($small) {
     @include _block-grid($small-class + '-');
   }
-  .ie9 .block {
-    float: left;
-  }
-  .ie9 .block-group {
-    @include clearfix();
-  }
 }

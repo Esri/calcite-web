@@ -11,6 +11,7 @@
 }
 
 @mixin input-minimal {
+  background-color: transparent;
   border-top: none;
   border-right: none;
   border-left: none;
@@ -62,7 +63,7 @@
     margin: .25rem 0 0 0;
     padding: 0 $baseline / 5;
     @include box-sizing(border-box);
-    font-family: $avenir-family;
+    font-family: inherit;
     font-size: modular-scale(-1);
     line-height: 1.25rem;
     color: $off-black;
@@ -182,7 +183,7 @@
     @include btn();
     @include btn-clear();
     @include btn-small();
-    font-family: $avenir-family;
+    font-family: inherit;
     margin: .5em 0;
   }
 
@@ -195,7 +196,7 @@
     @include btn();
     @include btn-clear();
     @include btn-small();
-    font-family: $avenir-family;
+    font-family: inherit;
     margin: .5em 0;
   }
 
@@ -227,10 +228,6 @@
   }
   input[type='radio'] {
     -webkit-appearance: radio;
-  }
-
-  .ie9 input[type='checkbox'], .ie9 input[type='radio'] {
-    border: none;
   }
 
   .fieldset-radio, .fieldset-checkbox {
@@ -276,11 +273,6 @@
 
   .select-full {
     width: 100%;
-  }
-
-  .ie9 select {
-    padding-right: 0;
-    padding-left: 0;
   }
 
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {

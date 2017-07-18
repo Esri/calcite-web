@@ -1,3 +1,18 @@
+## 1.0.0-rc.7
+
+### Added
+- `center-column` class for centering columns (#783)
+
+### Modified
+- make background color of social icons more accessible (#823)
+- use `font-family: inherit` instead of family name where possible (#824)
+- card captions should use the `<figcaption>` element (#827)
+- update instagram icon (#812)
+- `input-minimal` now has a transparent background (#804)
+
+### Breaking
+- :warning: No longer support IE9 (this impacts only block groups, radio inputs, selects, drawers, and the loader)
+
 ## 1.0.0-rc.6
 
 ### Added
