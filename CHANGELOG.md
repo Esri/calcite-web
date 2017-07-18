@@ -11,6 +11,7 @@
 - `input-minimal` now has a transparent background (#804)
 - content shouldn't scroll behind modal when open (#766)
 - revert to using fonts.com service (#819)
+- fix inputs in dark theme (#829)
 
 ### Breaking
 - :warning: No longer support IE9 (this impacts only block groups, radio inputs, selects, drawers, and the loader)
