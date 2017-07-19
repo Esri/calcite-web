@@ -217,12 +217,12 @@
             </h5>
             <div class="js-search-item-content hide">
               <p>This is probably the easiest way, but you won't get any of the helpful Sass mixins. If you're looking to get up and running quickly, just <a href="https://github.com/ArcGIS/calcite-web/releases">download the latest release</a> and move the zipped files to wherever you keep your assets (CSS, JavaScript, images). Be sure to use <a href="http://esri.github.io/calcite-web/">the documentation site</a> to copy and paste patterns, components, and even a sample html boilerplate.</p>
-<p>You can also use a hosted version Calcite Web:</p>
+<p>You can also use a hosted version of Calcite Web:</p>
 <pre><code><span class="hljs-comment">&lt;!-- In the head --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.6/css/calcite-web.min.css"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.7/css/calcite-web.min.css"</span>&gt;</span>
 
 <span class="hljs-comment">&lt;!-- Just before end of body --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.6/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.7/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
 
             </div>
@@ -241,7 +241,7 @@
             </h5>
             <div class="js-search-item-content hide">
               <p>To install Calcite-Web as a ruby gem, reference the gem from your <code>Gemfile</code>:</p>
-<pre><code>gem <span class="hljs-string">"calcite-web"</span>, :<span class="hljs-function"><span class="hljs-params">git</span> =&gt;</span> <span class="hljs-string">"https://github.com/Esri/calcite-web.git"</span>, :<span class="hljs-function"><span class="hljs-params">tag</span> =&gt;</span> <span class="hljs-string">"v1.0.0-rc.6"</span>
+<pre><code>gem <span class="hljs-string">"calcite-web"</span>, :<span class="hljs-function"><span class="hljs-params">git</span> =&gt;</span> <span class="hljs-string">"https://github.com/Esri/calcite-web.git"</span>, :<span class="hljs-function"><span class="hljs-params">tag</span> =&gt;</span> <span class="hljs-string">"v1.0.0-rc.7"</span>
 </code></pre>
 <p>This makes Calcite Web available as a Compass extension. To use Calcite Web, make sure you require the gem in your compass config file (usually found at <code>config/compass.rb</code>). An example config file might look like this:</p>
 <pre><code class="ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">"calcite-web"</span>
@@ -271,7 +271,7 @@ sass_dir = <span class="hljs-string">"sass"</span>
             </h5>
             <div class="js-search-item-content hide">
               <p>To install Calcite Web with npm, type:</p>
-<pre><code>npm install --save-dev Esri/calcite-web#v1<span class="hljs-number">.0</span><span class="hljs-number">.0</span>-rc<span class="hljs-number">.6</span>
+<pre><code>npm install --save-dev Esri/calcite-web#v1<span class="hljs-number">.0</span><span class="hljs-number">.0</span>-rc<span class="hljs-number">.7</span>
 </code></pre>
 <p>You must add the current version in order to get the <code>dist/</code> folder.</p>
 <p>Now, in your main <code>.scss</code> file, you can just require the framework:</p>
@@ -733,6 +733,7 @@ sass_dir = <span class="hljs-string">"sass"</span>
               <p>A column is a constant unit of measurement. The width of a column is dynamic, but always between a fixed range. Columns will never get too large or too small. As the viewport gets smaller the Calcite Grid System will simply put less columns on the page.</p>
 <p>By default, large screens hold 24 columns, medium tablet-sized screens hold 12, and phone-sized screens hold 6. The grid will fold columns at these breakpoints. That means an element that is 3 columns wide will always be 3 columns wide, no matter how big or small the screen.</p>
 <p>On large screens, 3 columns out of 24 is proportionally a small piece of screen real estate. On Phones, the Grid will leave the element at 3 columns wide -- proportionally more real estate, as 3/6 columns is more significant than 3/24.</p>
+<p>To center a single column inside a grid container, you can use the helper class <code>center-column</code>.</p>
 <div class="grid-example clearfix">
   <div class="column-17">
     <span>column-17</span>
@@ -1191,6 +1192,11 @@ aligning grid columns when the Grid System is unable to determine which columns 
             </h5>
             <div class="js-search-item-content hide">
               <p>Elements that become position fixed as they reach a certain position in the viewport are refered to as 'sticky'. The <code>js-sticky</code> class takes an <code>data-top=x</code> attribute that defines the point from the top of the window the sticky element will stick.</p>
+<p>For example, the following <code>&lt;div&gt;</code> will become fixed when it is 46 pixels from the top of the viewport:</p>
+<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"js-sticky"</span> data-top=<span class="hljs-string">"46"</span>&gt;
+  &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"btn btn-clear"</span>&gt;Back <span class="hljs-keyword">to</span> Top&lt;/a&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
 
             </div>
             <!-- populated on the client -->
@@ -2911,6 +2917,7 @@ Setting the max width of an article to a large multiple of the text size is a wa
 <li><a href="../patterns/#accordions">Accordions</a></li>
 <li><a href="../patterns/#drawers">Drawers</a></li>
 </ul>
+<p>The JavaScript library also includes helpers for &quot;sticky&quot; positioning and scroll events. You can read more about these in the <a href="../grid/#interactive-layout-helpers">interactive layout helpers</a> section of the documentation.</p>
 
             </div>
             <!-- populated on the client -->
@@ -2956,7 +2963,7 @@ calcite.init();
 <p>If <code>calcite-web.js</code> is used on a page with no module syntax, it will just attach itself to <code>window.calcite</code>. Here is an example which initializes Calcite from a hosted file on S3:</p>
 <pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
   ...
-  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.6/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.7/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="undefined">
      calcite.init()
   </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
@@ -2984,6 +2991,17 @@ calcite.init();
             <div class="js-search-item-content hide">
               <p>The event bus is used to help interactive patterns communicate with each other and the rest of your application.</p>
 <p>Along with a set of common bus events, each pattern has a set of channels that it emits on and listens for. These events can be emitted or listened for by the larger application.</p>
+<p>You can trigger or react to events by using the <code>on</code> and <code>emit</code> methods on the bus:</p>
+<pre><code><span class="hljs-comment">// assuming calcite-web.js is available as calcite</span>
+
+<span class="hljs-comment">// do something when a drawer opens</span>
+calcite<span class="hljs-selector-class">.bus</span><span class="hljs-selector-class">.on</span>(<span class="hljs-string">'drawer:open'</span>, function (options) {
+  console.log(options.id) <span class="hljs-comment">// =&gt; "top-nav"</span>
+})
+
+<span class="hljs-comment">// open a drawer (must pass data-drawer name as "id")</span>
+calcite<span class="hljs-selector-class">.bus</span><span class="hljs-selector-class">.emit</span>(<span class="hljs-string">'drawer:open'</span>, {id: <span class="hljs-string">"top-nav"</span>})
+</code></pre>
 <h3>Common Event Channels</h3>
 <table>
 <thead>
@@ -3137,7 +3155,7 @@ calcite.init();
 </tbody>
 </table>
 <h4>Filter Dropdown</h4>
-<p>Many of the filter dropdown channels emit and listen for the following Options Object:</p>
+<p>Many of the filter dropdown channels emit and listen for the following options object:</p>
 <pre><code>{
   <span class="hljs-attribute">parent</span>: domNode,
   id: filterDropdownId,

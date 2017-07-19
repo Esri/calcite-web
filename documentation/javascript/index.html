@@ -331,6 +331,7 @@
 <li><a href="../patterns/#accordions">Accordions</a></li>
 <li><a href="../patterns/#drawers">Drawers</a></li>
 </ul>
+<p>The JavaScript library also includes helpers for &quot;sticky&quot; positioning and scroll events. You can read more about these in the <a href="../grid/#interactive-layout-helpers">interactive layout helpers</a> section of the documentation.</p>
 
 
           
@@ -382,7 +383,7 @@ calcite.init();
 <p>If <code>calcite-web.js</code> is used on a page with no module syntax, it will just attach itself to <code>window.calcite</code>. Here is an example which initializes Calcite from a hosted file on S3:</p>
 <pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
   ...
-  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.6/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.7/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="undefined">
      calcite.init()
   </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
@@ -416,6 +417,17 @@ calcite.init();
 
           <p>The event bus is used to help interactive patterns communicate with each other and the rest of your application.</p>
 <p>Along with a set of common bus events, each pattern has a set of channels that it emits on and listens for. These events can be emitted or listened for by the larger application.</p>
+<p>You can trigger or react to events by using the <code>on</code> and <code>emit</code> methods on the bus:</p>
+<pre><code><span class="hljs-comment">// assuming calcite-web.js is available as calcite</span>
+
+<span class="hljs-comment">// do something when a drawer opens</span>
+calcite<span class="hljs-selector-class">.bus</span><span class="hljs-selector-class">.on</span>(<span class="hljs-string">'drawer:open'</span>, function (options) {
+  console.log(options.id) <span class="hljs-comment">// =&gt; "top-nav"</span>
+})
+
+<span class="hljs-comment">// open a drawer (must pass data-drawer name as "id")</span>
+calcite<span class="hljs-selector-class">.bus</span><span class="hljs-selector-class">.emit</span>(<span class="hljs-string">'drawer:open'</span>, {id: <span class="hljs-string">"top-nav"</span>})
+</code></pre>
 <h3>Common Event Channels</h3>
 <table>
 <thead>
@@ -569,7 +581,7 @@ calcite.init();
 </tbody>
 </table>
 <h4>Filter Dropdown</h4>
-<p>Many of the filter dropdown channels emit and listen for the following Options Object:</p>
+<p>Many of the filter dropdown channels emit and listen for the following options object:</p>
 <pre><code>{
   <span class="hljs-attribute">parent</span>: domNode,
   id: filterDropdownId,
