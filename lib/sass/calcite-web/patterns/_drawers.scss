@@ -63,11 +63,11 @@ $opacity-transition: opacity 200ms linear;
   @include transition-prefixed($transform-transition);
   @include transform(translate3d($drawer-width,0,0));
 }
+
 @mixin drawer-right-is-active() {
   @include transition-prefixed($transform-transition);
   @include transform(translate3d(-$drawer-width,0,0));
 }
-
 
 @if $include-drawers == true {
   .drawer { @include drawer();}
@@ -107,4 +107,5 @@ $opacity-transition: opacity 200ms linear;
       }
     }
   }
+  .drawer-no-overflow { overflow: hidden; }
 }

@@ -189,7 +189,7 @@
 
   ::-ms-value {
     border: none;
-    background-color: white;
+    background-color: transparent;
   }
 
   ::-ms-browse {
@@ -220,7 +220,8 @@
     &:focus {
       box-shadow: none;
       border: none;
-      outline: auto;
+      outline: 1px dotted; // IE, FF, and Edge browsers don't understand 'auto', so set backup
+      outline: auto -webkit-focus-ring-color;
     }
   }
   input[type='checkbox'] {

@@ -19,22 +19,9 @@ $include-calcite-icons: false;
   background: url('../img/docs/banner.svg') no-repeat center center $off-white;
 }
 
-.text-gradient {
-  background-size: 100% 100%;
-  background-image: linear-gradient(110deg, #005e95 10%, #9bc19c 90%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-}
-
 .huge-text {
-  font-size: 5vw;
+  font-size: calc(4vw + 16px);
   line-height: 1.25;
-}
-
-.site-search {
-  margin-top: .25rem;
 }
 
 // Sub-Nav test Classes
