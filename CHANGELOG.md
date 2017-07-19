@@ -12,6 +12,7 @@
 - content shouldn't scroll behind modal when open (#766)
 - revert to using fonts.com service (#819)
 - fix inputs in dark theme (#829)
+- fix multiline tooltips in Edge (#773)
 
 ### Breaking
 - :warning: No longer support IE9 (this impacts only block groups, radio inputs, selects, drawers, and the loader)
