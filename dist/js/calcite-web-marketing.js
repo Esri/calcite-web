@@ -18,7 +18,8 @@ function has (domNode, className) {
 function add (domNode, classes) {
   classes.split(' ').forEach(function (c) {
     if (!has(domNode, c)) {
-      domNode.setAttribute('class', domNode.getAttribute('class') + ' ' + c);
+      var existingClass = domNode.getAttribute('class') || '';
+      domNode.setAttribute('class', existingClass + ' ' + c);
     }
   });
 }

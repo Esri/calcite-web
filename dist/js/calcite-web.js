@@ -18,7 +18,8 @@ function has (domNode, className) {
 function add (domNode, classes) {
   classes.split(' ').forEach(function (c) {
     if (!has(domNode, c)) {
-      domNode.setAttribute('class', domNode.getAttribute('class') + ' ' + c);
+      var existingClass = domNode.getAttribute('class') || '';
+      domNode.setAttribute('class', existingClass + ' ' + c);
     }
   });
 }
@@ -835,6 +836,7 @@ function filterDropdown () {
 
 function modal () {
   // Cool nodes
+  var html = document.documentElement;
   var wrapper = document.querySelector('.wrapper');
   var footer = document.querySelector('.footer');
   var toggles = findElements$1('.js-modal-toggle');
@@ -864,11 +866,15 @@ function modal () {
     modal.removeAttribute('tabindex');
     add$1(document, 'focusin', fenceModal);
     add(modal, 'is-active');
+    add(html, 'drawer-no-overflow');
     hide(dependentNodes());
     modal.focus();
   }
 
   function closeModal (modalId) {
+    if (has(html, 'drawer-no-overflow')) {
+      remove(html, 'drawer-no-overflow');
+    }
     if (!modalId) { return removeActive$1(modals); }
     var modal = document.querySelector((".js-modal[data-modal=\"" + modalId + "\"]"));
     remove(modal, 'is-active');

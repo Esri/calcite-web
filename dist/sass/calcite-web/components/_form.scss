@@ -11,6 +11,7 @@
 }
 
 @mixin input-minimal {
+  background-color: transparent;
   border-top: none;
   border-right: none;
   border-left: none;
@@ -62,7 +63,7 @@
     margin: .25rem 0 0 0;
     padding: 0 $baseline / 5;
     @include box-sizing(border-box);
-    font-family: $avenir-family;
+    font-family: inherit;
     font-size: modular-scale(-1);
     line-height: 1.25rem;
     color: $off-black;
@@ -182,20 +183,20 @@
     @include btn();
     @include btn-clear();
     @include btn-small();
-    font-family: $avenir-family;
+    font-family: inherit;
     margin: .5em 0;
   }
 
   ::-ms-value {
     border: none;
-    background-color: white;
+    background-color: transparent;
   }
 
   ::-ms-browse {
     @include btn();
     @include btn-clear();
     @include btn-small();
-    font-family: $avenir-family;
+    font-family: inherit;
     margin: .5em 0;
   }
 
@@ -219,7 +220,8 @@
     &:focus {
       box-shadow: none;
       border: none;
-      outline: auto;
+      outline: 1px dotted; // IE, FF, and Edge browsers don't understand 'auto', so set backup
+      outline: auto -webkit-focus-ring-color;
     }
   }
   input[type='checkbox'] {
@@ -227,10 +229,6 @@
   }
   input[type='radio'] {
     -webkit-appearance: radio;
-  }
-
-  .ie9 input[type='checkbox'], .ie9 input[type='radio'] {
-    border: none;
   }
 
   .fieldset-radio, .fieldset-checkbox {
@@ -276,11 +274,6 @@
 
   .select-full {
     width: 100%;
-  }
-
-  .ie9 select {
-    padding-right: 0;
-    padding-left: 0;
   }
 
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {

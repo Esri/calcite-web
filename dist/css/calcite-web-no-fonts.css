@@ -594,6 +594,11 @@ img {
       margin-right: 0;
       margin-left: -0.5rem !important; } }
 
+.center-column {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  float: none; }
+
 html[dir="rtl"] .column-0 {
   margin-left: 0;
   margin-right: 0; }
@@ -2972,14 +2977,6 @@ html[dir="rtl"] .column-24 {
     flex-basis: calc(12.5% - 1.5rem);
     width: calc(12.5% - 1.5rem); } }
 
-.ie9 .block {
-  float: left; }
-
-.ie9 .block-group:after {
-  content: '';
-  display: table;
-  clear: both; }
-
 .is-sticky {
   position: fixed;
   z-index: 10; }
@@ -3062,7 +3059,7 @@ body {
   font-size: 1rem;
   line-height: 1.55rem;
   letter-spacing: 0em;
-  font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+  font-family: "Avenir Next W01", "Avenir Next W00", "Avenir Next", "Avenir", "Helvetica Neue", sans-serif;
   line-height: 1.55rem;
   color: #4c4c4c;
   background-color: #ffffff;
@@ -3086,7 +3083,7 @@ select,
 button,
 input {
   letter-spacing: 0em;
-  font-family: "Avenir Next", "Helvetica Neue", sans-serif; }
+  font-family: inherit; }
 
 h1,
 h2,
@@ -3317,15 +3314,7 @@ figcaption {
 table {
   margin-bottom: 1.55rem; }
 
-html[lang="vi"] body,
-html[lang="vi"] form,
-html[lang="vi"] select,
-html[lang="vi"] button,
-html[lang="vi"] input, html.vi body,
-html.vi form,
-html.vi select,
-html.vi button,
-html.vi input {
+html[lang="vi"] body, html.vi body {
   font-family: 'Lucida Grande', Arial, Verdana, Geneva, sans-serif; }
 
 [lang="vi"] {
@@ -3836,7 +3825,7 @@ html.vi input {
   color: #de2900; }
 
 [class*="icon-social-"] {
-  background-color: #b2b2b2;
+  background-color: rgba(0, 0, 0, 0.45);
   width: 30px;
   height: 30px;
   display: inline-block;
@@ -3875,7 +3864,7 @@ html.vi input {
 .icon-social-instagram {
   background-image: url("../img/icons/social/instagram.svg") !important; }
   .icon-social-instagram:hover {
-    background-color: #1B6FB1 !important; }
+    background-color: #DA3075 !important; }
 
 .icon-social-linkedin {
   background-image: url("../img/icons/social/linkedin.svg") !important; }
@@ -4334,6 +4323,7 @@ input[type='file']::-webkit-file-upload-button,
     border-right-color: transparent; }
 
 .tooltip-multiline:after {
+  width: 22em;
   width: -moz-max-content;
   width: -webkit-max-content;
   max-width: 250px;
@@ -4598,7 +4588,7 @@ input, select, textarea {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+  font-family: inherit;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #4c4c4c;
@@ -4641,6 +4631,7 @@ textarea {
   color: #767676; }
 
 .input-minimal {
+  background-color: transparent;
   border-top: none;
   border-right: none;
   border-left: none;
@@ -4725,7 +4716,7 @@ input[type="file"]::-webkit-file-upload-button {
   font-size: 0.875rem;
   line-height: 1.55rem;
   padding: 0.2325rem 0.675rem;
-  font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+  font-family: inherit;
   margin: .5em 0; }
   input[type="file"]::-webkit-file-upload-button:hover {
     text-decoration: none;
@@ -4738,7 +4729,7 @@ input[type="file"]::-webkit-file-upload-button {
 
 ::-ms-value {
   border: none;
-  background-color: white; }
+  background-color: transparent; }
 
 ::-ms-browse {
   position: relative;
@@ -4763,7 +4754,7 @@ input[type="file"]::-webkit-file-upload-button {
   font-size: 0.875rem;
   line-height: 1.55rem;
   padding: 0.2325rem 0.675rem;
-  font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+  font-family: inherit;
   margin: .5em 0; }
   ::-ms-browse:hover {
     text-decoration: none;
@@ -4789,16 +4780,14 @@ input[type='radio'], input[type='checkbox'] {
   input[type='radio']:focus, input[type='checkbox']:focus {
     box-shadow: none;
     border: none;
-    outline: auto; }
+    outline: 1px dotted;
+    outline: auto -webkit-focus-ring-color; }
 
 input[type='checkbox'] {
   -webkit-appearance: checkbox; }
 
 input[type='radio'] {
   -webkit-appearance: radio; }
-
-.ie9 input[type='checkbox'], .ie9 input[type='radio'] {
-  border: none; }
 
 .fieldset-radio label, .fieldset-checkbox label {
   margin-bottom: .25rem;
@@ -4831,10 +4820,6 @@ select[multiple] option {
 
 .select-full {
   width: 100%; }
-
-.ie9 select {
-  padding-right: 0;
-  padding-left: 0; }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   select::-ms-expand {
@@ -4924,26 +4909,6 @@ input.input-group-input,
   text-align: center;
   padding-top: 4rem; }
 
-.ie9 .loader-bars {
-  position: inherit;
-  background-color: transparent;
-  background-image: url("../img/img/loader-ie9.gif");
-  background-position: center top;
-  animation: none;
-  -webkit-animation-delay: none;
-  -webkit-animation: none;
-  width: 64px;
-  height: 64px; }
-  .ie9 .loader-bars:before, .ie9 .loader-bars:after {
-    background: none;
-    animation: none;
-    -webkit-animation: none;
-    width: 0px;
-    height: 0px; }
-
-.ie9 .loader-text {
-  padding-top: 2rem; }
-
 .skip-to-content {
   opacity: 0;
   float: left;
@@ -4986,6 +4951,9 @@ input.input-group-input,
 
 .card-image-caption {
   background: rgba(255, 255, 255, 0.8);
+  color: #4c4c4c;
+  font-style: normal;
+  margin: 0;
   width: 100%;
   box-sizing: border-box;
   position: absolute;
@@ -5402,7 +5370,7 @@ input.input-group-input,
   padding: .25em .75em;
   margin: 0 .25em 0 0;
   float: left;
-  font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+  font-family: "Avenir Next W01", "Avenir Next W00", "Avenir Next", "Avenir", "Helvetica Neue", sans-serif;
   color: #f8f8f8;
   font-size: 0.9375rem;
   line-height: 1.55rem;
@@ -5865,6 +5833,7 @@ body {
     display: block; }
 
 .search-input {
+  background-color: transparent;
   border-top: none;
   border-right: none;
   border-left: none;
@@ -6055,15 +6024,8 @@ body {
     -o-transform: translate3d(280px, 0, 0);
     transform: translate3d(280px, 0, 0); }
 
-.ie9 .drawer.is-active.drawer-left .drawer-nav {
-  -ms-transform: translate(280px, 0); }
-  html[dir="rtl"] .ie9 .drawer.is-active.drawer-left .drawer-nav {
-    -ms-transform: translate(-280px, 0); }
-
-.ie9 .drawer.is-active.drawer-right .drawer-nav {
-  -ms-transform: translate(-280px, 0); }
-  html[dir="rtl"] .ie9 .drawer.is-active.drawer-right .drawer-nav {
-    -ms-transform: translate(280px, 0); }
+.drawer-no-overflow {
+  overflow: hidden; }
 
 input.filter-dropdown-input {
   margin: 1%;
