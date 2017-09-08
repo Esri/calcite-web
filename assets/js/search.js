@@ -43,7 +43,7 @@
     })
     .map(function (child) {
       var encoded = encode(child.textContent);
-      var highlighted = encoded.replace(regex, '<span class="label label-yellow">' + q + '</span>');
+      var highlighted = encoded.replace(regex, '<mark>' + q + '</mark>');
       var position = highlighted.indexOf(q);
       // if index of character - 100 is not the beginning, add ellipsis
       var ellipsis = position - 100 > 0 ? '&hellip;' : '';

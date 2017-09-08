@@ -1568,14 +1568,14 @@
 
           <p>Creating a number of file sizes for bitmap assets can be very useful for reducing load times on small screens - especially phones and tablets. While this image markup is not enforced or unique to Calcite Web (there is no code in the framework that enables this), the following examples should be used as a standard when implementing responsive images.</p>
 <p>A full range of images widths are listed below.</p>
-<pre><code>${title}<span class="hljs-selector-class">.jpg</span>
-${title}-<span class="hljs-number">1920</span>-xlg<span class="hljs-selector-class">.jpg</span>
-${title}-<span class="hljs-number">960</span>-lg<span class="hljs-selector-class">.jpg</span>
-${title}-<span class="hljs-number">640</span>-bmd<span class="hljs-selector-class">.jpg</span>
-${title}-<span class="hljs-number">480</span>-md<span class="hljs-selector-class">.jpg</span>
-${title}-<span class="hljs-number">320</span>-smd<span class="hljs-selector-class">.jpg</span>
-${title}-<span class="hljs-number">240</span>-sm<span class="hljs-selector-class">.jpg</span>
-${title}-<span class="hljs-number">160</span>-xsm<span class="hljs-selector-class">.jpg</span>
+<pre><code><span class="hljs-meta">$</span><span class="bash">{title}.jpg</span>
+<span class="hljs-meta">$</span><span class="bash">{title}-1920-xlg.jpg</span>
+<span class="hljs-meta">$</span><span class="bash">{title}-960-lg.jpg</span>
+<span class="hljs-meta">$</span><span class="bash">{title}-640-bmd.jpg</span>
+<span class="hljs-meta">$</span><span class="bash">{title}-480-md.jpg</span>
+<span class="hljs-meta">$</span><span class="bash">{title}-320-smd.jpg</span>
+<span class="hljs-meta">$</span><span class="bash">{title}-240-sm.jpg</span>
+<span class="hljs-meta">$</span><span class="bash">{title}-160-xsm.jpg</span>
 </code></pre>
 
 
@@ -1609,23 +1609,23 @@ ${title}-<span class="hljs-number">160</span>-xsm<span class="hljs-selector-clas
               </div>
               
             </div>
-<pre><code>&lt;img srcset=<span class="hljs-comment">"../../assets/img/docs/image-1920-xlg.jpg 192w,</span>
-             ../../assets/img/docs/image-<span class="hljs-number">960</span>-<span class="hljs-keyword">lg</span>.jpg   <span class="hljs-number">960</span><span class="hljs-keyword">w</span>,
-             ../../assets/img/docs/image-<span class="hljs-number">480</span>-md.jpg   <span class="hljs-number">480</span><span class="hljs-keyword">w</span><span class="hljs-comment">"</span>
-     src=<span class="hljs-string">"../../assets/img/docs/image.jpg"</span>
-     alt=<span class="hljs-string">"24 column or fulscreen image."</span>&gt;
+<pre><code>&lt;img <span class="hljs-attribute">srcset</span>=<span class="hljs-string">"../../assets/img/docs/image-1920-xlg.jpg 192w,
+             ../../assets/img/docs/image-960-lg.jpg   960w,
+             ../../assets/img/docs/image-480-md.jpg   480w"</span>
+     <span class="hljs-attribute">src</span>=<span class="hljs-string">"../../assets/img/docs/image.jpg"</span>
+     <span class="hljs-attribute">alt</span>=<span class="hljs-string">"24 column or fulscreen image."</span>&gt;
 
-&lt;img srcset=<span class="hljs-comment">"../../assets/img/docs/image-960-lg.jpg   960w,</span>
-             ../../assets/img/docs/image-<span class="hljs-number">480</span>-md.jpg   <span class="hljs-number">480</span><span class="hljs-keyword">w</span>,
-             ../../assets/img/docs/image-<span class="hljs-number">240</span>-<span class="hljs-keyword">sm</span>.jpg   <span class="hljs-number">240</span><span class="hljs-keyword">w</span><span class="hljs-comment">"</span>
-     src=<span class="hljs-string">"../../assets/img/docs/image.jpg"</span>
-     alt=<span class="hljs-string">"12 column or two up image."</span>&gt;
+&lt;img <span class="hljs-attribute">srcset</span>=<span class="hljs-string">"../../assets/img/docs/image-960-lg.jpg   960w,
+             ../../assets/img/docs/image-480-md.jpg   480w,
+             ../../assets/img/docs/image-240-sm.jpg   240w"</span>
+     <span class="hljs-attribute">src</span>=<span class="hljs-string">"../../assets/img/docs/image.jpg"</span>
+     <span class="hljs-attribute">alt</span>=<span class="hljs-string">"12 column or two up image."</span>&gt;
 
-&lt;img srcset=<span class="hljs-comment">"../../assets/img/docs/image-640-bmd.jpg  640w,</span>
-             ../../assets/img/docs/image-<span class="hljs-number">320</span>-smd.jpg  <span class="hljs-number">320</span><span class="hljs-keyword">w</span>,
-             ../../assets/img/docs/image-<span class="hljs-number">160</span>-xsm.jpg  <span class="hljs-number">160</span><span class="hljs-keyword">w</span><span class="hljs-comment">"</span>
-     src=<span class="hljs-string">"../../assets/img/docs/image.jpg"</span>
-     alt=<span class="hljs-string">"8 column or three up image"</span>&gt;
+&lt;img <span class="hljs-attribute">srcset</span>=<span class="hljs-string">"../../assets/img/docs/image-640-bmd.jpg  640w,
+             ../../assets/img/docs/image-320-smd.jpg  320w,
+             ../../assets/img/docs/image-160-xsm.jpg  160w"</span>
+     <span class="hljs-attribute">src</span>=<span class="hljs-string">"../../assets/img/docs/image.jpg"</span>
+     <span class="hljs-attribute">alt</span>=<span class="hljs-string">"8 column or three up image"</span>&gt;
 </code></pre>
 
           

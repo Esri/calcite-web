@@ -538,19 +538,19 @@ $include-<span class="hljs-keyword">filter</span>-dropdown:        $generate-css
             <h2 id="example" tabindex="0">Example</h2>
           
 
-          <pre><code>// <span class="hljs-literal">custom</span>-build.scss
-<span class="hljs-variable">$generate</span>-css: <span class="hljs-literal">false</span><span class="hljs-comment">;</span>
-<span class="hljs-variable">$include</span>-type: <span class="hljs-literal">true</span><span class="hljs-comment">;</span>
-<span class="hljs-variable">$include</span>-grid: <span class="hljs-literal">true</span><span class="hljs-comment">;</span>
-<span class="hljs-variable">$fold</span>-grid:  <span class="hljs-literal">true</span><span class="hljs-comment">;</span>
-<span class="hljs-variable">$block</span>-grid: <span class="hljs-literal">true</span><span class="hljs-comment">;</span>
-<span class="hljs-variable">$include</span>-leader-trailer: <span class="hljs-literal">true</span><span class="hljs-comment">;</span>
-<span class="hljs-variable">$include</span>-gutter: <span class="hljs-literal">true</span><span class="hljs-comment">;</span>
-<span class="hljs-variable">$include</span>-<span class="hljs-literal">left</span>-<span class="hljs-literal">right</span>: <span class="hljs-literal">true</span><span class="hljs-comment">;</span>
-<span class="hljs-variable">$include</span>-<span class="hljs-literal">show</span>-<span class="hljs-literal">hide</span>: <span class="hljs-literal">true</span><span class="hljs-comment">;</span>
-<span class="hljs-variable">$include</span>-sticky: <span class="hljs-literal">true</span><span class="hljs-comment">;</span>
+          <pre><code>// custom-build.scss
+<span class="hljs-meta">$</span><span class="bash">generate-css: <span class="hljs-literal">false</span>;</span>
+<span class="hljs-meta">$</span><span class="bash">include-type: <span class="hljs-literal">true</span>;</span>
+<span class="hljs-meta">$</span><span class="bash">include-grid: <span class="hljs-literal">true</span>;</span>
+<span class="hljs-meta">$</span><span class="bash">fold-grid:  <span class="hljs-literal">true</span>;</span>
+<span class="hljs-meta">$</span><span class="bash">block-grid: <span class="hljs-literal">true</span>;</span>
+<span class="hljs-meta">$</span><span class="bash">include-leader-trailer: <span class="hljs-literal">true</span>;</span>
+<span class="hljs-meta">$</span><span class="bash">include-gutter: <span class="hljs-literal">true</span>;</span>
+<span class="hljs-meta">$</span><span class="bash">include-left-right: <span class="hljs-literal">true</span>;</span>
+<span class="hljs-meta">$</span><span class="bash">include-show-hide: <span class="hljs-literal">true</span>;</span>
+<span class="hljs-meta">$</span><span class="bash">include-sticky: <span class="hljs-literal">true</span>;</span>
 
-@import <span class="hljs-string">'calcite-web'</span>
+@import 'calcite-web'
 </code></pre>
 <p>The above sass will import the framework, import the type styles, and build css that provides access to the type helpers and grid system. Notice that the variable declarations are <em>before</em> the import.</p>
 
