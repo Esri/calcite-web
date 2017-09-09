@@ -1,6 +1,7 @@
 var svg = require('./source/data/svg-icon.js');
 var font = require('./source/data/icon-font.js');
 var icons = require('./source/data/icon-social.js');
+var colors = require('./source/data/colors.js');
 var repo = require('./source/data/repo.js');
 
 module.exports = function (acetate) {
@@ -10,6 +11,7 @@ module.exports = function (acetate) {
   acetate.data('table_of_contents', 'table_of_contents.yml');
   acetate.data('stats', 'data/stats.json');
   acetate.data('pkg', '../../package.json');
+  acetate.data('colors', colors);
   acetate.data('icons', icons);
   acetate.data('font', font);
   acetate.data('svg', svg);
