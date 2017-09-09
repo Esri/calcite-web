@@ -43,7 +43,12 @@ js:
         {% for section in group.pages %}
           <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
             <h5 class="trailer-half">
-              <a href="{{relativePath}}/documentation/{{data.table_of_contents[pageName].base}}/#{{section.link}}">
+
+              {% set pageUrl = data.table_of_contents[pageName].base + "/" %}
+              {% if pageName == "get-started" %}
+                {% set pageUrl = "" %}
+              {% endif %}
+              <a href="{{relativePath}}/documentation/{{pageUrl}}#{{section.link}}">
                 {% if section.title == "Overview" %}
                   {{section.title}} ({{page.title}})
                 {% else %}
@@ -56,7 +61,7 @@ js:
             </div>
             <!-- populated on the client -->
             <div class="js-search-item-snippet font-size-0"></div>
-            <a href="{{relativePath}}/documentation/{{data.table_of_contents[pageName].base}}/#{{section.link}}" class="link-gray font-size--2">esri.github.io/documentation/{{data.table_of_contents[pageName].base}}/#{{section.link}}</a>
+            <a href="{{relativePath}}/documentation/{{data.table_of_contents[pageName].base}}/#{{section.link}}" class="link-gray font-size--2">esri.github.io/calcite-web/documentation/{{data.table_of_contents[pageName].base}}/#{{section.link}}</a>
           </section>
         {% endfor %}
       {% endfor %}
