@@ -6,7 +6,7 @@
   "homepage": "https://github.com/esri/calcite-web",
   "scripts": {
     "test": "semistandard",
-    "prestart": "npm-run-series stat acetate sass rollup img img:docs font js",
+    "prestart": "npm-run-series stat sass rollup img img:docs font js acetate",
     "start": "parallelshell \"rerun-script\" \"live-server docs/build --port=8888 --no-browser\"",
     "deploy": "npm run prestart && gh-pages -d docs/build -o upstream",
     "predist": "rm -rf dist/",
