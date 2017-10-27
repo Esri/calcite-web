@@ -1,3 +1,8 @@
+## 1.0.0-rc.8
+
+### Fixes
+- fix rounded buttons in newest chrome
+
 ## 1.0.0-rc.7
 
 ### Added
