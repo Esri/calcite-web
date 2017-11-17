@@ -4,6 +4,8 @@ Controls specific aspects and behaviors across the UI.
 $transition: 150ms linear;
 $box-shadow: 0 0 16px 0 rgba(0,0,0,0.05) !default;
 $drawer-width: 280px !default;
+$easing-function: cubic-bezier(0.215, 0.440, 0.420, 0.880) !default;
+$namespace-tables: true !default;
 ```
 
 `$transition` is a speed and easing function used throughout the framework for motion effects.
@@ -11,3 +13,7 @@ $drawer-width: 280px !default;
 `$box-shadow` ensures consistent box shadow effects for adding depths to elements.
 
 `$drawer-width` controls the width of the hidden left and right drawers.
+
+`$easing-function` should be documented here.
+
+`$namespace-tables` scopes `<table>` styles to the `.table` class. To mimic the behavior of previous versions (where we automatically style raw `table` elements), set this to `false`.

@@ -1,10 +1,10 @@
-Tables have been styled by default. No extra classes are required, although there are some modifier classes available for specific flavors.
+Tables have not been styled by default. To style your tables, you must add the `table` class. If you'd like to style `<table>` elements without a class, you can set the `$namespace-tables` Sass variable to `false`. For more information on setting Sass variables see the [custom build documentation](../sass/#custom-build).
 
 By default, a large table will break your layout horizontally. You can solve this problem by wrapping a table in a `<div>` with the `.overflow-auto` helper class:
 
 ```
 <div class="overflow-auto">
-  <table>...</table>
+  <table class="table">...</table>
 </div>
 ```
 
