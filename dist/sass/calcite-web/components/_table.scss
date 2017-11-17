@@ -161,9 +161,14 @@
 }
 
 @if $include-tables == true {
-  table {@include table();}
-    .table-blue {@include table-blue();}
-    .table-plain {@include table-plain();}
-    .table-striped {@include table-striped();}
-    .table-no-table {@include table-no-table();}
+  @if $prefix-tables {
+    .table {@include table();}
+  } @else {
+    table {@include table();}
+  }
+  
+  .table-blue {@include table-blue();}
+  .table-plain {@include table-plain();}
+  .table-striped {@include table-striped();}
+  .table-no-table {@include table-no-table();}
 }

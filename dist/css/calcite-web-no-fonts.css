@@ -4442,7 +4442,7 @@ input[type='file']::-webkit-file-upload-button,
 .panel-no-padding {
   padding: 0; }
 
-table {
+.table {
   width: 100%;
   background-color: #ffffff;
   border-collapse: collapse;
@@ -4452,36 +4452,36 @@ table {
   overflow: auto;
   font-size: 0.875rem;
   line-height: 1.55rem; }
-  html[dir="rtl"] table {
+  html[dir="rtl"] .table {
     text-align: right; }
-  table > thead {
+  .table > thead {
     background-color: #efefef;
     border-bottom: 1px solid #cccccc;
     font-weight: 400;
     font-style: normal;
     font-size: 1rem;
     line-height: 1.55rem; }
-    table > thead b, table > thead strong {
+    .table > thead b, .table > thead strong {
       font-weight: 500; }
-  table > tbody {
+  .table > tbody {
     overflow: auto;
     width: 100%; }
-  table > tfoot {
+  .table > tfoot {
     background-color: #efefef;
     border-top: 1px solid #cccccc; }
-  table th, table td {
+  .table th, .table td {
     font-weight: 300;
     border-left: 1px solid #cccccc;
     border-right: 1px solid #cccccc;
     padding: 0.51667rem; }
-    html[dir="rtl"] table th, html[dir="rtl"] table td {
+    html[dir="rtl"] .table th, html[dir="rtl"] .table td {
       text-align: right; }
-  table tr {
+  .table tr {
     border-bottom: 1px solid #cccccc;
     text-align: left; }
-    table tr:last-child {
+    .table tr:last-child {
       border-bottom: none; }
-  table caption {
+  .table caption {
     color: #959595;
     caption-side: bottom;
     line-height: 1.55rem;
