@@ -1190,6 +1190,9 @@ function tabs () {
 
   function getOptions (e) {
     var tab = e.target;
+    if (!has(tab, 'tab-title')) {
+      tab = e.currentTarget;
+    }
     var group = closest$1('js-tab-group', tab);
     var id = groupId(group);
     return {
