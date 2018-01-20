@@ -20,8 +20,9 @@
   @include font-size(-1);
   &:hover {
     text-decoration: none;
-    background-color: $dark-blue;
     color: $white;
+    background-color: $dark-blue;
+    border-color: $dark-blue;
   }
 }
 
@@ -60,6 +61,7 @@
       &:hover {
         color: $white;
         background: $dark-gray;
+        border-color: $dark-gray;
       }
     }
 
@@ -70,6 +72,7 @@
       &:hover {
         color: $gray;
         background: $white;
+        border-color: $white;
       }
     }
 
@@ -80,6 +83,7 @@
     &:hover {
       color: $off-black;
       background: $lightest-gray;
+      border-color: $lightest-gray;
     }
   }
 
@@ -138,6 +142,7 @@
     border-color: $value;
     &:hover {
       background-color: $hover-value;
+      border-color: $hover-value;
     }
   }
 
