@@ -1,3 +1,8 @@
+## 1.0.0
+
+### Fixes
+- make button border colors match background on hover (#840)
+
 ## 1.0.0-rc.8
 
 ### Fixes
