@@ -372,8 +372,10 @@ components:
       pages:
         - title: 'Overview'
           link: overview
+          status: false
         - title: 'Buttons'
           link: buttons
+          status: 'complete'
           classes:
             - btn
           modifiers:
@@ -390,11 +392,13 @@ components:
             - btn-green
         - title: 'Button Groups'
           link: button-groups
+          status: complete
           classes:
             - btn-grouped
           modifiers: true
         - title: 'Labels'
           link: label
+          status: 'complete'
           classes:
             - label
           modifiers:
@@ -404,17 +408,20 @@ components:
             - label-red
         - title: 'Dropdowns'
           link: dropdowns
+          status: 'complete'
           classes:
             - dropdown
           modifiers:
             - dropdown-right
         - title: 'Loader'
           link: loader
+          status: 'complete'
           classes:
             - loader
           modifiers: true
         - title: 'Alerts'
           link: alerts
+          status: 'complete'
           classes:
             - alert
           modifiers:
@@ -424,6 +431,7 @@ components:
             - alert-full
         - title: 'Panels'
           link: panels
+          status: 'complete'
           classes:
             - panel
           modifiers:
@@ -437,6 +445,7 @@ components:
             - panel-dark-blue
         - title: 'Cards'
           link: card
+          status: 'complete'
           classes:
             - card
             - card-shaped
@@ -444,11 +453,13 @@ components:
           modifiers: true
         - title: 'Wide Cards'
           link: card-wide
+          status: 'complete'
           classes:
             - card-wide
           modifiers: true
         - title: 'Breadcrumbs'
           link: breadcrumbs
+          status: 'complete'
           classes:
             - breadcrumbs
             - crumb
@@ -456,6 +467,7 @@ components:
             - breadcrumbs-white
         - title: 'Tooltips'
           link: tooltips
+          status: 'complete'
           classes:
             - tooltip
             - tooltip-multiline
@@ -465,6 +477,7 @@ components:
             - tooltip-top
         - title: 'Tables'
           link: tables
+          status: 'complete'
           classes:
             - overflow-auto
           modifiers:
@@ -475,22 +488,27 @@ components:
             - table-no-table
         - title: 'Skip to Content'
           link: skip
+          status: 'complete'
           classes:
             - skip-to-content
           modifiers: true
         - title: 'Responsive Images'
           link: images
+          status: 'complete'
           modifiers: true
     - group: 'Forms'
       pages:
         - title: 'Overview'
           link: form-overview
+          status: false
           modifiers: true
         - title: 'Form Validation'
           link: form-validation
+          status: 'complete'
           modifiers: true
         - title: 'Text Inputs'
           link: text-inputs
+          status: 'complete'
           modifiers:
             - input-success
             - input-error
@@ -498,6 +516,7 @@ components:
             - input-search input-minimal
         - title: 'Input Groups'
           link: input-groups
+          status: 'complete'
           classes:
             - input-group
             - input-group-input
@@ -505,15 +524,18 @@ components:
           modifiers: true
         - title: 'Selects'
           link: selects
+          status: 'complete'
           modifiers:
             - select-full
         - title: 'Checkboxes'
           link: checkboxes
+          status: 'complete'
           classes:
             - fieldset-checkbox
           modifiers: true
         - title: 'Radio Buttons'
           link: radio-buttons
+          status: 'complete'
           classes:
             - fieldset-radio
           modifiers: true
@@ -521,6 +543,7 @@ components:
       pages:
         - title: 'Overview'
           link: animation
+          status: false
           modifiers:
             - animate-fade-in
             - animate-fade-out
@@ -532,11 +555,24 @@ components:
       pages:
         - title: 'Esri Logo'
           link: esri-logo
+          status: 'complete'
           classes:
             - esri-logo
           modifiers:
             - 'esri-logo-reverse'
             - 'esri-logo-condensed'
+    - group: 'Proposed'
+      hidden: true
+      pages:
+        - title: 'Range Slider'
+          hidden: true
+          status: 'inprogress'
+        - title: 'Toggle Switch'
+          hidden: true
+          status: 'proposed'
+        - title: 'Example'
+          hidden: true
+          status: 'unplanned'
 patterns:
   title: 'Patterns'
   base: patterns
