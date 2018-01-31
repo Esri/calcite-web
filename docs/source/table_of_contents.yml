@@ -395,7 +395,7 @@ components:
           status: complete
           classes:
             - btn-grouped
-          modifiers: true
+          modifiers: false
         - title: 'Labels'
           link: label
           status: 'complete'
@@ -418,7 +418,7 @@ components:
           status: 'complete'
           classes:
             - loader
-          modifiers: true
+          modifiers: false
         - title: 'Alerts'
           link: alerts
           status: 'complete'
@@ -450,13 +450,13 @@ components:
             - card
             - card-shaped
             - card-bar-color
-          modifiers: true
+          modifiers: false
         - title: 'Wide Cards'
           link: card-wide
           status: 'complete'
           classes:
             - card-wide
-          modifiers: true
+          modifiers: false
         - title: 'Breadcrumbs'
           link: breadcrumbs
           status: 'complete'
@@ -491,21 +491,21 @@ components:
           status: 'complete'
           classes:
             - skip-to-content
-          modifiers: true
+          modifiers: false
         - title: 'Responsive Images'
           link: images
           status: 'complete'
-          modifiers: true
+          modifiers: false
     - group: 'Forms'
       pages:
         - title: 'Overview'
           link: form-overview
           status: false
-          modifiers: true
+          modifiers: false
         - title: 'Form Validation'
           link: form-validation
           status: 'complete'
-          modifiers: true
+          modifiers: false
         - title: 'Text Inputs'
           link: text-inputs
           status: 'complete'
@@ -521,7 +521,7 @@ components:
             - input-group
             - input-group-input
             - input-group-button
-          modifiers: true
+          modifiers: false
         - title: 'Selects'
           link: selects
           status: 'complete'
@@ -532,13 +532,13 @@ components:
           status: 'complete'
           classes:
             - fieldset-checkbox
-          modifiers: true
+          modifiers: false
         - title: 'Radio Buttons'
           link: radio-buttons
           status: 'complete'
           classes:
             - fieldset-radio
-          modifiers: true
+          modifiers: false
     - group: 'Animation'
       pages:
         - title: 'Overview'
@@ -583,40 +583,40 @@ patterns:
           link: overview
         - title: 'Top Nav'
           link: top-nav
-          modifiers: true
+          modifiers: false
         - title: 'User Sign In'
           link: user-sign-in
-          modifiers: true
+          modifiers: false
         - title: 'User Nav'
           link: user-nav
-          modifiers: true
+          modifiers: false
         - title: 'Sub Nav'
           link: sub-nav
-          modifiers: true
+          modifiers: false
         - title: 'Responsive Sub Nav'
           link: responsive-sub-nav
-          modifiers: true
+          modifiers: false
         - title: 'Hero'
           link: hero
-          modifiers: true
+          modifiers: false
         - title: 'Third Nav'
           link: third-nav
-          modifiers: true
+          modifiers: false
         - title: 'Side Nav'
           link: side-nav
-          modifiers: true
+          modifiers: false
         - title: 'Footer'
           link: footer
         - title: 'Pagination'
           link: pagination
-          modifiers: true
+          modifiers: false
     - group: 'Interactive Patterns'
       pages:
         - title: 'Overview'
           link: 'interactive-overview'
         - title: 'Modals'
           link: modals
-          modifiers: true
+          modifiers: false
         - title: 'Tabs'
           link: tabs
           modifiers:
@@ -626,16 +626,16 @@ patterns:
             - 'tabs-dark'
         - title: 'Accordions'
           link: accordions
-          modifiers: true
+          modifiers: false
         - title: 'Drawers'
           link: drawers
           modifiers: false
         - title: 'Search'
           link: 'search'
-          modifiers: true
+          modifiers: false
         - title: 'Filter Dropdown'
           link: 'filter-dropdown'
-          modifiers: true
+          modifiers: false
 sass:
   title: 'Sass'
   base: sass

@@ -42,17 +42,17 @@ $include-calcite-icons: false;
   .styleguide-modifier-example {
     min-height: 2rem;
     padding: .5em;
-    border-bottom: 1px solid $lightest-gray;
-    border-left: 1px solid $lightest-gray;
-    border-right: 1px solid $lightest-gray;
+    border: 1px solid $lightest-gray;
     position: relative;
     clear: both;
     &:last-child {
-      border-bottom: none;
+      border-radius: 0 0 3px 3px;
+    }
+    &:not(:last-of-type) {
+      border-bottom-width:0px;
     }
     &:first-child {
-      border-top: 1px solid $lightest-gray;
-      border-radius: 6px 6px 0 0;
+      border-radius: 3px 3px 0 0;
       .modifier-name {
         border-radius: 0 3px 0 3px;
       }
@@ -76,9 +76,13 @@ $include-calcite-icons: false;
 .styleguide-modifiers + pre {
   margin-top: 0;
   code {
+    border-top-width:0px;
     border-radius: 0 0 3px 3px;
+    max-height:300px;
   }
 }
+
+
 
 // Grid Test Classes
 .grid-example [class*="column-"],
@@ -92,7 +96,6 @@ $include-calcite-icons: false;
     font-family: monospace;
     padding-top: 2em;
     padding-bottom: 2em;
-
     text-align: center;
   }
 }
@@ -216,3 +219,9 @@ mark {
   background-color: $lightest-blue;
 }
 
+.docs-link-icon {
+  height: 16px;
+  width: auto;
+  margin-left: $baseline * 0.25;
+  vertical-align: middle;
+}
