@@ -71,7 +71,7 @@ Adding a component to Calcite Web requires a few steps:
           link: tooltips    # Name used for .md and .html files
           status: ['complete','inprogress','proposed','unplanned',false] # this will set the component status, false will hide from status table
           hidden: [true] # set 'hidden: true' to hide components from appearing in documentation. Useful for showing in progress components on the status table
-          modifiers:        # List of modifier classes. If a component consists solely of the base with no modifiers, set 'modifiers: false in order' to display the component
+          modifiers:        # List of modifier classes. If a component consists solely of the base with no modifiers, set 'modifiers: false' in order to display the component
             - tooltip-left
             - tooltip-right
             - tooltip-top
