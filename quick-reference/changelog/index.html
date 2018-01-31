@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>  <html class="ie lt-ie9 ie8"> <![endif]-->
+<!--[if IE 9]>     <html class="ie ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+
+    <!-- Set encoding -->
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <!-- Use title from page frontmatter -->
+    <title>Calcite Web | Esri Design Patterns</title>
+
+    
+
+    <!-- Link to favicon -->
+    <link rel="shortcut icon" href="../../assets/img/favicon.ico">
+
+    <!-- stylesheets -->
+    
+      <link rel="stylesheet" href="../../assets/css/all.css">
+      <link rel="stylesheet" href="../../assets/css/extensions.css">
+      
+        <link rel="stylesheet" href="../../assets/css/quick-reference.css">
+      
+    
+
+    <!--[if IE]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!--
+    ┌─────────┐
+    │ Drawers │
+    └─────────┘
+     ↳ http://esri.github.io/calcite-web/patterns/#drawers
+     ↳ patterns → _drawers.md
+    -->
+    <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
+      <!-- <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerleft"> -->
+      <nav class="drawer-nav" role="navigation">
+        <aside class="side-nav">
+          <h2 class="side-nav-title">Calcite Web</h2>
+          <a href="../../documentation/" class="side-nav-link">Documentation</a>
+          <a href="../../examples/" class="side-nav-link">Examples</a>
+          <a href="../../guides/" class="side-nav-link">Guides</a>
+          <a href="../../quick-reference/" class="side-nav-link">Quick Reference</a>
+        </aside>
+      </nav>
+    </div>
+
+    <div class="drawer drawer-right js-drawer" data-drawer="right">
+      <nav class="drawer-nav" role="navigation">
+        <aside class="side-nav">
+          <h2 class="side-nav-title padding-leader-half padding-trailer-half text-large">Calcite Web</h2>
+          <a href="../../documentation/" class="side-nav-link">Documentation</a>
+          <a href="../../examples/" class="side-nav-link">Examples</a>
+          <a href="../../guides/" class="side-nav-link">Guides</a>
+          <a href="../../quick-reference/" class="side-nav-link">Quick Reference</a>
+        </aside>
+      </nav>
+    </div>
+
+    <div class="wrapper">
+      <!--
+      ┌────────┐
+      │ Search │
+      -->
+      <div class="js-search search-overlay">
+        <div class="search-content" role="dialog" aria-labelledby="search" role="dialog">
+          <form method="GET" action="../../search/">
+            <label>
+              Search Calcite Web
+              <input class="search-input js-search-input" type="search" placeholder='Search' name="q" autocomplete="off">
+            </label>
+            <button type="submit" class="btn btn-large right">Search</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Sample HTML -->
+      <header class="top-nav">
+        <div class="grid-container">
+          <div class="column-24">
+            <!-- desktop sized navigation -->
+            <div class="tablet-hide">
+              <!-- logo / home -->
+              <a href="../../" class="top-nav-title">Calcite Web</a>
+              <!-- primary navigation sections -->
+              <nav class="top-nav-list" role="navigation">
+                <a href="../../documentation" class="top-nav-link">Documentation</a>
+                <a href="../../examples" class="top-nav-link">Examples</a>
+                <a href="../../guides" class="top-nav-link">Guides</a>
+                <a href="../../quick-reference" class="is-active top-nav-link">Quick Reference</a>
+              </nav>
+              <nav class="class-top-nav-list right" role="navigation" aria-labelledby="usernav">
+                <button class="search-top-nav link-dark-gray js-search-toggle" href="#" aria-label="Search">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon js-search-icon">
+                    <path d="M31.607 27.838l-6.133-6.137a1.336 1.336 0 0 0-1.887 0l-.035.035-2.533-2.533-.014.014c3.652-4.556 3.422-11.195-.803-15.42-4.529-4.527-11.875-4.531-16.404 0-4.531 4.531-4.529 11.875 0 16.406 4.205 4.204 10.811 4.455 15.365.848l.004.003-.033.033 2.541 2.54a1.33 1.33 0 0 0 .025 1.848l6.135 6.133a1.33 1.33 0 0 0 1.887 0l1.885-1.883a1.332 1.332 0 0 0 0-1.887zM17.811 17.809a8.213 8.213 0 0 1-11.619 0 8.217 8.217 0 0 1 0-11.622 8.219 8.219 0 0 1 11.619.004 8.216 8.216 0 0 1 0 11.618z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon js-close-icon hide">
+                    <path d="M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z"/>
+                  </svg>
+                </button>
+              </nav>
+            </div>
+
+            <!-- tablet and mobile sized navigation -->
+            <div class="tablet-show top-nav-flex">
+              <!-- open primary navigation drawer -->
+              <nav class="top-nav-flex-list" role="navigation" aria-labelledby="topnav">
+                <a href="/" class="top-nav-link js-drawer-toggle" data-drawer="top-nav">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 -4 32 36" class="svg-icon"><path d="M28 3.5A2.5 2.5 0 0 1 25.5 6h-21A2.5 2.5 0 0 1 2 3.5v-1A2.5 2.5 0 0 1 4.5 0h21A2.5 2.5 0 0 1 28 2.5v1zm0 11a2.5 2.5 0 0 0-2.5-2.5h-21A2.5 2.5 0 0 0 2 14.5v1A2.5 2.5 0 0 0 4.5 18h21a2.5 2.5 0 0 0 2.5-2.5v-1zm0 12a2.5 2.5 0 0 0-2.5-2.5h-21A2.5 2.5 0 0 0 2 26.5v1A2.5 2.5 0 0 0 4.5 30h21a2.5 2.5 0 0 0 2.5-2.5v-1z"/></svg>
+                </a>
+              </nav>
+              <!-- logo / home -->
+              <header class="top-nav-flex-title">
+                <a href="/" class="top-nav-link">Calcite Web</span></a>
+              </header>
+              <nav class="top-nav-flex-list class-top-nav-list text-right" role="navigation" aria-labelledby="usernav">
+                <button class="search-top-nav link-dark-gray js-search-toggle" href="#" aria-label="Search">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 -4 32 36" class="svg-icon js-search-icon">
+                    <path d="M31.607 27.838l-6.133-6.137a1.336 1.336 0 0 0-1.887 0l-.035.035-2.533-2.533-.014.014c3.652-4.556 3.422-11.195-.803-15.42-4.529-4.527-11.875-4.531-16.404 0-4.531 4.531-4.529 11.875 0 16.406 4.205 4.204 10.811 4.455 15.365.848l.004.003-.033.033 2.541 2.54a1.33 1.33 0 0 0 .025 1.848l6.135 6.133a1.33 1.33 0 0 0 1.887 0l1.885-1.883a1.332 1.332 0 0 0 0-1.887zM17.811 17.809a8.213 8.213 0 0 1-11.619 0 8.217 8.217 0 0 1 0-11.622 8.219 8.219 0 0 1 11.619.004 8.216 8.216 0 0 1 0 11.618z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 -4 32 36" class="svg-icon js-close-icon hide">
+                    <path d="M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z"/>
+                  </svg>
+                </button>
+              </nav>
+            </div>
+          </div>
+
+        </div>
+      </header>
+
+
+      <!-- Secondary Nav Pattern -->
+      <!-- what -->
+      
+
+<header class="sub-nav" role="banner">
+  <div class="grid-container">
+    <div class="column-24">
+      <h1 class="sub-nav-title text-white leader-1">Quick Reference</h1>
+      <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1 tablet-hide" title="Download Latest Release" target="blank">Download Latest Release</a>
+      <nav class="sub-nav-list">
+        <a class="sub-nav-link " href="../../quick-reference/">Component Status</a>
+        <a class="sub-nav-link " href="../../quick-reference/class-sheet/">Class Sheet</a>
+        <a class="sub-nav-link is-active" href="../../quick-reference/changelog/">Changelog</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+      <!-- content of each page will go here -->
+      
+<div class="grid-container leader-1">
+  <main class="column-24 tablet-leader-1" role="main">
+    <div class="column-9 post-1 tablet-column-12">
+      <h2>Changelog</h2>
+      A comprehensive overview of changes and fixes made to Calcite Web. This documentation is auto-generated from our Changelog.
+      <hr>
+
+      You can <a target="blank" href="https://github.com/Esri/calcite-web/blob/master/CHANGELOG.md">view the original CHANGELOG.md on Github</a>
+      <div class="js-sticky scroll-show tablet-hide" data-top="46">
+        <a href="#" class="btn btn-clear">Back to Top</a>
+      </div>
+    </div>
+    <div class="column-14 tablet-first-column tablet-leader-2">
+      <h4 class="trailer-1"><a target="blank" href="https://github.com/Esri/calcite-web/releases" title="Download Latest Release on GitHub">Latest Release
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon quick-reference-link"><path d="M26 30H2V6h14V4H0v28h28V18h-2zM21 8C12.715 8 6 14.717 6 23c0 .336.029.668.051 1h4A11.464 11.464 0 0 1 10 23c0-6.065 4.936-11 11-11h3.004l-6 6h4L30 10l-7.996-8h-4l6 6H21z"/></svg>
+      </a></h4>
+            <div class="panel panel-no-border card card-bar-blue trailer-quarter">
+      <div class="changelog-styled">
+        <h2>1.0.0</h2>
+<h3>Fixes</h3>
+<ul>
+<li>make button border colors match background on hover (#840)</li>
+</ul>
+<h2>1.0.0-rc.8</h2>
+<h3>Fixes</h3>
+<ul>
+<li>fix rounded buttons in newest chrome</li>
+</ul>
+<h2>1.0.0-rc.7</h2>
+<h3>Added</h3>
+<ul>
+<li><code>center-column</code> class for centering columns (#783)</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>make background color of social icons more accessible (#823)</li>
+<li>use <code>font-family: inherit</code> instead of family name where possible (#824)</li>
+<li>card captions should use the <code>&lt;figcaption&gt;</code> element (#827)</li>
+<li>update instagram icon (#812)</li>
+<li><code>input-minimal</code> now has a transparent background (#804)</li>
+<li>content shouldn't scroll behind modal when open (#766)</li>
+<li>revert to using <a href="http://fonts.com">fonts.com</a> service (#819)</li>
+<li>fix inputs in dark theme (#829)</li>
+<li>fix multiline tooltips in Edge (#773)</li>
+<li>fix focus state of checkboxes in firefox (#802)</li>
+</ul>
+<h3>Breaking</h3>
+<ul>
+<li>:warning: No longer support IE9 (this impacts only block groups, radio inputs, selects, drawers, and the loader)</li>
+</ul>
+<h2>1.0.0-rc.6</h2>
+<h3>Added</h3>
+<ul>
+<li>new icons (not added to font yet):
+<ul>
+<li>calendar</li>
+<li>grid</li>
+<li>sort-ascending</li>
+<li>sort-descending</li>
+</ul>
+</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Fixed Modal content not being left aligned in I.E. and Edge browsers text-align:start is not supported in I.E. changed it to text-algin:left</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>Simplified font-stack for Avenir and monospace</li>
+</ul>
+<h2>1.0.0-rc.5</h2>
+<h3>Fixed</h3>
+<ul>
+<li>Made the calcite-web-dark constants as !default</li>
+</ul>
+<h2>1.0.0-rc.4</h2>
+<h3>Fixed</h3>
+<ul>
+<li>Updated fonts to use new declarations from monotype</li>
+</ul>
+<h2>1.0.0-rc.3</h2>
+<h3>Added</h3>
+<ul>
+<li>JS lib now allows for named ES6 exports with <code>import {drawer} from 'calcite-web/es6'</code> (#736)</li>
+<li>Quarter variants for <code>leader</code> and <code>trailer</code> (#785)</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Missing styles for <code>&lt;input type=&quot;file&quot;&gt;</code> (#761)</li>
+<li>Cards with long words overflowing card-content (#778)</li>
+<li>Fixed issue with <code>calcite-web.js</code> breaking the closure compiler</li>
+</ul>
+<h3>Breaking</h3>
+<ul>
+<li>:warning: Removed JavaScript-based responsive third-nav pattern. Third nav now simply scrolls horizontally when it's container overflows (#748)</li>
+</ul>
+<h2>1.0.0-rc.2</h2>
+<h3>Added</h3>
+<ul>
+<li><code>alert-full</code> modifier for full-width alerts</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>added upper limit to normal pre and post media query (#745)</li>
+<li>fixed first columns inside columns with a <code>pre</code> in large sizes</li>
+<li><code>search-input</code> on mobile safari now properly aligned (#747)</li>
+<li>added right-to-left styles for tabs (#776)</li>
+<li>fixed elements inside accordions triggering close event (#774)</li>
+<li>fix alignment of shorter loader-text (#771)</li>
+<li>added right-to-left styles for dropdown-right modifier (#770)</li>
+<li>fix strange escape key behavior in search js (#763)</li>
+</ul>
+<h3>Breaking</h3>
+<ul>
+<li>Raw <code>&lt;button&gt;</code> elements no longer styled by default, use the <code>btn</code> class.</li>
+</ul>
+<h2>1.0.0-rc.1</h2>
+<h3>Breaking</h3>
+<ul>
+<li>The leftover <code>large-</code> columns are gone. Sizes are now just the documented <code>normal</code>, <code>medium</code>, and <code>small</code>.</li>
+<li>Leftover imports for Frutiger font removed</li>
+<li>Ellipsis not added to loader text automatically (better for i18n)</li>
+<li>Accordions with inline svg icons now require the <code>accordion-icon</code> class</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li><code>figcaption</code> elements no longer have a left border</li>
+<li>breadcrumbs now pass WCAG 2.0 contrast requirements</li>
+<li>fixed spacing between breadcrumbs (#726)</li>
+<li>remove blue active state for top-nav-title (#729)</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>inputs with a type <code>search</code> now display properly in Safari (#740)</li>
+<li><code>pre</code> and <code>post</code> should always work in right-to-left languages now (#731)</li>
+</ul>
+<h2>1.0.0-rc.0</h2>
+<h3>Added</h3>
+<ul>
+<li><code>input-success</code>, <code>input-error</code>, and <code>input-error-message</code> validation helpers</li>
+<li><code>input-search</code> helper for magnifying glass in search input</li>
+<li><code>input-minimal</code> helper for more subtle input</li>
+<li>Disabled input styles</li>
+</ul>
+<h3>Removed</h3>
+<ul>
+<li>Expander JavaScript Pattern</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>Placeholder text now passes 4.5/1 contrast requirement (#703)</li>
+<li><code>tabs-translucent</code> now works in IE9 (#708)</li>
+<li>All elements with <code>lang=&quot;vi&quot;</code> will now render properly in Lucida Grande</li>
+<li>Blue active indicator for top nav is now below links (#716)</li>
+<li>Modal's z-index is now higher than top-nav (#711)</li>
+</ul>
+<h3>Breaking</h3>
+<ul>
+<li>Accordion icons must be added inline, no longer provided by CSS</li>
+<li>Dropdown icons must be added inline, no longer provided by CSS</li>
+<li>removed <code>placeholder</code> mixin</li>
+</ul>
+<h2>1.0.0-beta.36</h2>
+<h3>Added</h3>
+<ul>
+<li>Inline SVGs</li>
+<li>Inline SVG Colors</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>Changed all sample code docs to reflect new SVG usage</li>
+</ul>
+<h3>Breaking</h3>
+<ul>
+<li>Filter dropdown now expecting SVGs rather than icon fonts</li>
+<li>Search now expecting SVGs rather than icon fonts</li>
+</ul>
+<h2>1.0.0-beta.35</h2>
+<h3>Fixed</h3>
+<ul>
+<li>Rebinding of accordions now works in <code>calcite-web.js</code></li>
+</ul>
+<h2>1.0.0-beta.34</h2>
+<h3>Added</h3>
+<ul>
+<li>Search Component UI</li>
+<li>Table no table modifier</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>Navigation structures updated</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Documented <code>icon-ui-flush</code></li>
+</ul>
+<h2>1.0.0-beta.33</h2>
+<h3>Fixed</h3>
+<ul>
+<li>Build errors</li>
+</ul>
+<h2>1.0.0-beta.32</h2>
+<h3></h3>
+<ul>
+<li>Copy to clipboard JS</li>
+<li>Responsive trailer half, responsive leader half</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>card heights rendered incorrectly in IE10-11 (#662)</li>
+<li>labels don't wrap lines (#660)</li>
+<li><code>label-yellow</code> passes WCAG AA contrast (#654)</li>
+<li><code>block-groups</code> should only style direct descendant <code>blocks</code> (#659)</li>
+<li>links in <code>table-striped</code> rows now accessible (#655)</li>
+<li>Min width 0 on <code>block</code> helps overflow breakage.</li>
+<li>Grid prefixing bug</li>
+<li>Proper keyboard navigation for dropdown components</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>Less padding for card-content</li>
+</ul>
+<h2>1.0.0-beta.31</h2>
+<h3>Fixed</h3>
+<ul>
+<li><code>filter-dropdown-remove:after</code> no longer positioned absolutely</li>
+<li><code>list-numbered</code> number alignment in IE11 (#614)</li>
+<li><code>aria</code> helper will not crash if array passed as parameter contains null values.</li>
+<li><code>modal</code> will not pass arrays with null values to helpers.</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li><code>btn-clear</code> now has white background instead of transparent in order to pass WCAG contrast on light grays.</li>
+</ul>
+<h2>1.0.0-beta.30</h2>
+<h3>Removed</h3>
+<ul>
+<li>removed <code>esri-icon</code> classes to prevent collisions with JS API</li>
+</ul>
+<h2>1.0.0-beta.29</h2>
+<h3>Fixed</h3>
+<ul>
+<li>RTL for SideNav Active States</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>Margin and list styles</li>
+<li>Odd-numbered black behavior in Block Groups</li>
+</ul>
+<h2>1.0.0-beta.28</h2>
+<h3>Fixed</h3>
+<ul>
+<li>fix for ie11 fix for filter dropdown</li>
+</ul>
+<h2>1.0.0-beta.27</h2>
+<h3>Fixed</h3>
+<ul>
+<li>ie11 fix for filter dropdown</li>
+<li>ie11 fix for <code>Object.assign()</code></li>
+</ul>
+<h2>1.0.0-beta.26</h2>
+<h3>Fixed</h3>
+<ul>
+<li>Release tooling, now includes Dist</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>Moved several patterns to <code>@include</code> rather than <code>@extend()</code></li>
+</ul>
+<h2>1.0.0-beta.25</h2>
+<h3>Added</h3>
+<ul>
+<li>Marketing Extension</li>
+<li>E-commerce Extension</li>
+<li>Lots of Doc Examples</li>
+<li><code>icon-ui-yellow</code></li>
+<li><code>card-wide</code> for cards in landscape orientation</li>
+<li>calcite Sass and JS extensions</li>
+<li><code>calcite.extend(obj)</code> function</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>changes to card markup. (<code>card-body =&gt; card-content</code>)</li>
+<li>cards implemented with flex-box</li>
+<li><code>panel-white</code> text now more accessible</li>
+<li>headers are focusable</li>
+<li>panels no longer style columns</li>
+<li>translucent tab issue with larger text and hover effects</li>
+</ul>
+<h3>Removed</h3>
+<ul>
+<li>Panels no longer force anchor color</li>
+<li>gutter-n classes. use padding-n instead.</li>
+<li>form hinting</li>
+<li><code>.link-color-foo a</code> selected</li>
+<li>app switcher pattern</li>
+<li>btn-arrow</li>
+<li>naive check for <code>column pre-n:first-child</code> use explicit <code>.first-column</code></li>
+<li>pricing table</li>
+</ul>
+<h2>1.0.0.0-beta.24</h2>
+<h3>Removed</h3>
+<ul>
+<li>.link-purple</li>
+<li>.link-orange</li>
+<li>.link-brown</li>
+<li>.link-gray</li>
+<li>.text-purple</li>
+<li>.text-orange</li>
+<li>.text-brown</li>
+<li>.text-gray</li>
+<li>supernav</li>
+<li>site search</li>
+<li>search bar</li>
+<li>toolbar</li>
+<li>action bar</li>
+<li>expanding nav</li>
+<li>badges</li>
+</ul>
+<h2>1.0.0-beta.23</h2>
+<h3>Added</h3>
+<ul>
+<li><code>translucent-tab</code> pattern added</li>
+<li><code>$opaque-white</code> color</li>
+<li><code>$transparent-white</code> color</li>
+<li><code>$opaque-black</code> color</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>translucent tab wiggle on active change</li>
+<li>checkboxes and radio buttons left alignment in IE10</li>
+<li><code>user-nav</code> pattern in IE10 (#591)</li>
+<li><code>dropdown-btn</code> in IE10</li>
+<li><code>backgound</code> changed to <code>background</code> in tab transition</li>
+</ul>
+<h2>1.0.0-beta.22</h2>
+<h3>Modified</h3>
+<ul>
+<li>don't clear focus styles in firefox for inputs + buttons</li>
+</ul>
+<h2>1.0.0-beta.21</h2>
+<h3>Added</h3>
+<ul>
+<li><code>table-pricing</code> adjusts headers on tables.</li>
+<li>rebuild webfont</li>
+</ul>
+<h2>1.0.0-beta.20</h2>
+<h3>Modified</h3>
+<ul>
+<li>More clear focus state for dropdown links</li>
+<li>Make dropdown <code>:hover</code> and <code>is-active</code> state consistent with side nav</li>
+<li>red buttons are now outlined instead of solid red</li>
+</ul>
+<h2>1.0.0-beta.19</h2>
+<h3>Fixed</h3>
+<ul>
+<li>card caption bug</li>
+</ul>
+<h2>1.0.0-beta.18</h2>
+<h3>Added</h3>
+<ul>
+<li><code>.shaped-card</code></li>
+<li><code>.card-bar-color</code></li>
+<li><code>.btn-half</code></li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Tab transparent transition trubs</li>
+<li>combo third nav w/ overflow and sticky fix</li>
+<li>select toggle arrow on wrong side in right to left</li>
+</ul>
+<h3>Removed</h3>
+<ul>
+<li>Deleted selectors for <code>esri-icon-*</code></li>
+</ul>
+<h2>1.0.0-beta.17</h2>
+<h3>Removed</h3>
+<ul>
+<li>all language specific type declarations (except for vietnamese)</li>
+<li>unfix fix for #532</li>
+</ul>
+<h2>1.0.0-beta.16</h2>
+<h3>Added</h3>
+<ul>
+<li>Arrow key bus emitters, space bar bus emitter</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>renamed <code>icon-ui-Compass</code> to <code>icon-ui-compass</code></li>
+<li>drawer sliding moves wrapper with it</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li><code>calcite.dropdown()</code> now only adds click events once</li>
+<li>drawer aria roles fixed</li>
+<li><code>btn-arrow</code> should point other direction in right-to-left</li>
+<li>Icon padding on wrong side in right-to-left</li>
+<li><code>icon-ui-compass</code> casing fixed</li>
+<li><code>dropdown-btn</code> arrow should be on other side in right-to-left</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>dropdown menus are not constrained in width</li>
+</ul>
+<h2>1.0.0-beta.15</h2>
+<h3>Modified</h3>
+<ul>
+<li>cursor: not-allowed on disabled buttons</li>
+<li>pointer events: none on disabled buttons</li>
+<li>Radios and chekboxes bigger</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li>'select-full' for 100% wide selects</li>
+<li>Responsive subnav docs</li>
+<li><code>js-select-nav</code> functionality</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Third nav arrow absolute position</li>
+<li>dont <code>extend</code> mixins thats not right</li>
+<li>clicking inside drawer no longer closes drawer</li>
+</ul>
+<h3>Removed</h3>
+<ul>
+<li><code>btn-clear-disabled</code></li>
+<li>custom focus state on checkboxes and radios</li>
+</ul>
+<h2>1.0.0-beta.14</h2>
+<h3>Added</h3>
+<ul>
+<li><code>animate-in-up</code>, <code>animate-in-down</code></li>
+<li><code>animate-out-up</code>, <code>animate-out-down</code>, animate-fade-out`</li>
+</ul>
+<h2>1.0.0-beta.13</h2>
+<h3>Modified</h3>
+<ul>
+<li>Namespace fieldset checkbox labels.</li>
+<li>Always style fieldsets.</li>
+</ul>
+<h2>1.0.0-beta.12</h2>
+<h3>Modified</h3>
+<ul>
+<li>small visual update to multiple select elements</li>
+<li>Removed all external dependencies.</li>
+<li>Documented animation as unique component, prepared to expand this list out.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>using <code>gutter-left-n</code> and <code>gutter-right-n</code> on the same element will no longer break.</li>
+<li>Additional RTL on default type styles.</li>
+<li>RTL support for action bars.</li>
+<li>RTL support for table cells.</li>
+<li>RTL mysterious text wrapping bugs.</li>
+<li>RTL on screens larger than 1450px get proper pixel value for pre and post.</li>
+<li>Explicit RTL pre and post classes resolve grid issues in RTL when <code>pre-n</code> and <code>post-n</code> exist on the same element.</li>
+<li>Opening a dropdown closes all other dropdowns on the page.</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li>App Switcher pattern</li>
+<li>Fancy form validation styles</li>
+<li>Documentation and samples for responsive images</li>
+<li>Documentation for common grid structures.</li>
+<li><code>rtl-gutter-</code>, <code>rtl-margin-gutter-</code> left and right mixins</li>
+<li><code>rtl-margin-gutter-left-0</code>, <code>rtl-margin-gutter-right-0</code>, <code>rtl-gutter-left-0</code>, <code>rtl-gutter-right-0</code> classes.</li>
+<li><code>.radio</code> and <code>.checkbox</code> classes for styling radio and checkbox fieldsets.</li>
+<li>Card styles.</li>
+</ul>
+<h3>Removed</h3>
+<ul>
+<li>Default label styling for fieldsets</li>
+</ul>
+<h2>1.0.0-beta.11</h2>
+<h3>Fixed</h3>
+<ul>
+<li>Removing a sticky node from the dom no longer spouts console errors like a fountain</li>
+<li>Simplified <code>toggleActive</code> class, always removes active from array, adds to el.</li>
+<li><code>dropdown</code> menu shouldn't have restricted height, and the <code>max-height</code> of <code>filter-dropdown</code> should be a bit taller</li>
+</ul>
+<h2>1.0.0-beta.9</h2>
+<h3>Added</h3>
+<ul>
+<li>Responsive type scale</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>Default type scale has a wider range of sizes</li>
+<li><code>text-left</code> and <code>text-right</code> use supported values for ie, use checks to support rtl.</li>
+<li><code>sub-nav-title</code> smaller to adjust for new type scales.</li>
+<li>Type config moved further up the import stack</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Monospace type rendering probs in block groups and textareas.</li>
+<li>Block groups declare avenir as font family.</li>
+</ul>
+<h3>Removed</h3>
+<ul>
+<li>Frutiger and Kepler type styles and families</li>
+</ul>
+<h2>1.0.0-beta.8</h2>
+<h3>Modified</h3>
+<ul>
+<li>Small visual style updates to <code>filter-dropdown</code> pattern</li>
+<li>Visual improvements to <code>loader</code> component</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li><code>textarea</code> elements now cannot overlap other elements</li>
+<li><code>select</code> elements display properly in Firefox</li>
+</ul>
+<h2>1.0.0-beta.7</h2>
+<h3>Fixed</h3>
+<ul>
+<li><code>calcite-web.js</code> can now be loaded by the Dojo AMD loader</li>
+</ul>
+<h2>1.0.0-beta.6</h2>
+<h3>Added</h3>
+<ul>
+<li>Created an event bus for interactive js patterns.</li>
+<li>Reintroduced filter dropdown pattern</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>Accordion icons</li>
+</ul>
+<h2>1.0.0-beta.5</h2>
+<h3>Added</h3>
+<ul>
+<li>Distribute a css file that doesn't call <a href="http://fonts.com">fonts.com</a> for Avenir Next</li>
+</ul>
+<h2>1.0.0-beta.4</h2>
+<h3>Added</h3>
+<ul>
+<li><code>calcite.init()</code> now removes any existing events so they're not bound twice</li>
+</ul>
+<h2>1.0.0-beta.3</h2>
+<h3>Fixed</h3>
+<ul>
+<li>remove reference to missing <code>column-base()</code> mixin</li>
+<li>remove Sass debug in <code>_columns.scss</code></li>
+</ul>
+<h2>1.0.0-beta.2</h2>
+<h3>Modified</h3>
+<ul>
+<li>Don't extend <code>%column-base</code> inside media query (#463)</li>
+</ul>
+<h2>1.0.0-beta.1</h2>
+<h3>Modified</h3>
+<ul>
+<li>Iconography change for accordions</li>
+<li>Opacity used for disabled state in buttons</li>
+<li>Don't use wild-card selector in column-base styles</li>
+<li>Selects now have white background</li>
+</ul>
+<h2>1.0.0-beta</h2>
+<h3>Added</h3>
+<ul>
+<li><code>margin-left</code>, <code>padding-left</code>, <code>margin-right</code>, and <code>padding-right</code> alias classes for gutters.</li>
+<li><code>margin-gutter()</code> mixins for margin-left/right support.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Removed underlines on <code>:hover</code> for icons inside of links</li>
+<li>Zero margin on <code>p:empty</code></li>
+<li>Style <code>&lt;select multiple&gt;</code></li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>Changes hover and active on side nav to subtle blue backgrounds</li>
+<li>Darkened sidenav link color to meeet WCAGAA with the new active state background.</li>
+<li>Bottom margin on <code>&lt;figure&gt;</code> set to 1 baseline from 2.</li>
+</ul>
+<h3>Removed</h3>
+<ul>
+<li><strong>BREAKING</strong> Removed automatic button style inheritance for <code>input[type='button']</code>. Using the <code>.btn</code> class is now required.</li>
+</ul>
+<h2>0.15.1</h2>
+<h3>Fixed</h3>
+<ul>
+<li>Greater specificity for input group inputs</li>
+</ul>
+<h2>0.15.0</h2>
+<h3>Added</h3>
+<ul>
+<li><code>esri-icon-light-blue</code></li>
+<li><code>icon-ui-light-blue</code></li>
+<li><code>esri-icon-dark-blue</code></li>
+<li><code>icon-ui-dark-blue</code></li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Set vietnamese to Helvetica</li>
+<li>Set max width on selects</li>
+<li>Dont override focus on input type submit</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>Default behavior is now always 24 columns with a width defined by <code>$container-width</code>. Default is 1450px, but can be set to 960px for a 960 grid.</li>
+<li>Clicking on modal overlay no longer closes modal</li>
+<li>Slightly less padding on panels</li>
+</ul>
+<h3>Removed</h3>
+<ul>
+<li>Filter dropdown pattern</li>
+</ul>
+<h2>0.14.6</h2>
+<h3>Fixed</h3>
+<ul>
+<li>Hard pixel values blend with grid system</li>
+</ul>
+<h2>0.14.5</h2>
+<h3>Modified</h3>
+<ul>
+<li>Base tool chain for generating icon font and documentation switched to Fontforge (python).</li>
+<li>Variableify Avenir Next font imports</li>
+<li>Document include variables for custom build</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li><code>dropdown-title</code></li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Sticky elements will now recalculate their height correctly when elements change</li>
+</ul>
+<h2>0.14.4</h2>
+<h3>Fixed</h3>
+<ul>
+<li>fix weird bug in Chrome for Windows on elements with <code>scroll: auto</code> (<a href="https://github.com/ArcGIS/arcgis-for-developers/issues/3082#issuecomment-149293246">https://github.com/ArcGIS/arcgis-for-developers/issues/3082#issuecomment-149293246</a>)</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>Hover state for side nav link</li>
+<li>Panel links vibrant blue</li>
+<li><code>is-active</code> state on side nav links reverted</li>
+<li>Better size and positioning for arrows on dropdowns</li>
+<li>icons should inherit line height, not declare it</li>
+</ul>
+<h2>0.14.3</h2>
+<h3>Fixed</h3>
+<ul>
+<li><code>overflow: auto</code> removed from tab sections, which caused a bug on pre's when zoomed in.</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li><code>&lt;code&gt;</code> in <code>.panel</code> background white</li>
+<li>Default body weight set to regular from light</li>
+<li>Update <a href="http://fonts.com">fonts.com</a> to allow access to *.cybertech.com</li>
+</ul>
+<h2>0.14.2</h2>
+<h3>Fixed</h3>
+<ul>
+<li>Resolved breaking change in icons</li>
+</ul>
+<h2>0.14.1</h2>
+<h3>Fixed</h3>
+<ul>
+<li>Alignment of items in top nav with top of page</li>
+<li>Filter dropdowns work inside modals</li>
+<li>Syntax bug in small last column right to left support</li>
+<li>Ruby gem uses /dist instead of /lib</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>Made user image in top nav smaller and with less padding</li>
+<li>Changes font name for icon font</li>
+<li>Pre and Code line heights, sizes</li>
+<li>Pre and Code blocks inside tabs</li>
+<li>Nested lists dont need margin bottom</li>
+<li>Updated Google Plus social icon</li>
+<li>A hair of padding top added to <code>&lt;textarea&gt;</code> to match text input</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>No clear button doesnt destroy app</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li><code>alert-yellow</code></li>
+</ul>
+<h2>0.14.0</h2>
+<h3>Fixed</h3>
+<ul>
+<li><code>.top-nav-link</code> <code>:hover</code> and <code>.is-active</code> state fallback for IE8 &amp; 9</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>Changed build process for icon fonts</li>
+<li>Changed unicode mapping for icon glyphs</li>
+</ul>
+<h2>0.13.3</h2>
+<h3>Modified</h3>
+<ul>
+<li>Pixel perfect search submit button</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Fix nested media query bug for ie in the grid</li>
+</ul>
+<h2>0.13.2</h2>
+<h3>Added</h3>
+<ul>
+<li><code>.btn-clear-disabled</code></li>
+<li><code>.icon-ui-small</code> modifier to make icons about 3/4 existing size</li>
+<li><code>.icon-ui-flush</code> modifier to remove any padding</li>
+<li>Minimal <code>&lt;dl&gt;</code> styles</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li><code>.panel-light-blue</code> is now slightly darker with light text</li>
+<li><code>.nav-bar-title</code> is now slightly larger with less right margin</li>
+<li>Search icon baked into search-submit button, padding cleared</li>
+<li>Transparent button underlines like links</li>
+<li>Links hover darker</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Line height has been fixed for <code>h2</code>'s and <code>h4</code>'s with multiple lines</li>
+<li>Text alignment helpers support rtl</li>
+<li>Modal supports rtl properly</li>
+</ul>
+<h2>0.13.1</h2>
+<h3>Modified</h3>
+<ul>
+<li>Filter dropdown item close button unique and solitary entity.</li>
+<li>Dropdown button down arrow positioned absolute to work with <code>text-ellipsis</code></li>
+<li>Slight change to user navigation example markup</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Browser bugs for filter dropdown</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li><code>.btn-clear-disabled</code></li>
+<li>Right to left support</li>
+<li>Polyfill for <code>focusin</code> events</li>
+<li>Polyfill for <code>strinc.includes()</code></li>
+<li>Some cool new icons</li>
+<li>Codeblocks inside tab styles other than <code>tabs-gray</code> are now styled normally.</li>
+<li>Make import variables more granular</li>
+</ul>
+<h2>0.13.0</h2>
+<h3>Fixed</h3>
+<ul>
+<li><code>include</code> rather than <code>extend</code> clearfix in column base and grid container. Fixes error of invalid sass in ruby.</li>
+<li>Include column base in the <code>column</code> mixin rather than extend a class that doesn't exist.</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>Dark blue hover slightly desaturated.</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li><code>.filter-dropdown</code> interactive pattern.</li>
+</ul>
+<h2>0.12.1</h2>
+<h3>Added</h3>
+<ul>
+<li>Panel Black</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Surpise! Blue and Red really accessible now.</li>
+</ul>
+<h2>0.12.0</h2>
+<h3>Fixed</h3>
+<ul>
+<li>Bug where long dropdowns wrapped just the arrow to the next line</li>
+<li>Cursor should be pointer on side nav</li>
+<li>Bug where hovering on a third nav caused text to flicker strangely</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>Top nav links get same style on <code>:hover</code> and <code>:focus</code>, remove default outline</li>
+<li>Buttons are one step lighter, get darker on hover</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li><code>.label</code> component for calling out text</li>
+<li>Grid columns turn themselves off for printing</li>
+</ul>
+<h2>0.11.7</h2>
+<h3>Fixed</h3>
+<ul>
+<li>Accordion binds to specified class, not section siblings.</li>
+</ul>
+<h2>0.11.6</h2>
+<h3>Modified</h3>
+<ul>
+<li>Dropdown button gets <code>cursor: pointer</code></li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li>Optional prefix for grid system</li>
+<li>No <code>text-indent</code> on third nav</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Don't set fixed height on <code>textarea</code> elements</li>
+<li>Check for elements before binding to elements.</li>
+</ul>
+<h2>0.11.5</h2>
+<h3>Fixed</h3>
+<ul>
+<li>add icon_names for social icons to API (#328)</li>
+</ul>
+<h2>0.11.4</h2>
+<h3>Removed</h3>
+<ul>
+<li>Unicode Sass variables</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Correct user-nav pattern</li>
+<li>Set height on buttons in input groups</li>
+<li>Fix form elements in ie9, ie10, firefox, and safari (#270)</li>
+<li>Small fix to tooltips ie9, ie10, firefox, and safari</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>All patterns that used unicode characters now use icons from ui font</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li><code>fade-in</code> class for fading in elements on page load</li>
+<li>Responsive Javascript for the third nav.</li>
+</ul>
+<h2>0.11.3</h2>
+<h3>Fixed</h3>
+<ul>
+<li>Sticky elements show up twice (#314)</li>
+<li>JavaScript patterns bind in sticky elements (#315)</li>
+</ul>
+<h2>0.11.2</h2>
+<h3>Removed</h3>
+<ul>
+<li>Bin script for calcite icons</li>
+<li><code>column-base</code> now has no margin</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Responsive <code>pre</code> and <code>post</code> apply to correct screen sizes</li>
+<li>Columns with medium but no small column render properly</li>
+<li>Breadcrumb separator no longer gets underlined</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li><code>column</code>, <code>pre</code>, and <code>post</code> at standard size apply at large size</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li><code>breadcrumbs-white</code> modifier for light-on-dark breadcrumbs</li>
+</ul>
+<h2>0.11.1</h2>
+<h3>Removed</h3>
+<ul>
+<li>No dependency on patterns-color repo (variables are added by hand)</li>
+<li>Carousel configuration</li>
+<li>No calcite icon scss</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>Codeblocks inside tabs are automatically formatted correctly</li>
+<li>Minor changes to <code>pre &gt; code</code> elements (slightly smaller type size)</li>
+<li>Vertical align <code>input-group-input</code></li>
+<li>Cool plus and minuses on accordions</li>
+<li>Simplified expanding nav</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Leader and trailer classes were being imported twice</li>
+<li>Only bind close click on accordion section title</li>
+<li>Init <code>sticky</code> first so other patterns bind to duplicated nodes</li>
+</ul>
+<h2>0.11.0</h2>
+<h3>Removed</h3>
+<ul>
+<li>Calcite color icons are not a thing we're including. Removing the doc space for this.</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li>Set <code>video</code> to 100% max width</li>
+<li>Document hero subnav.</li>
+<li>Loader bar container div relative</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li><code>.panel</code> uses <code>$off-white</code> instead of <code>$lightest-gray</code></li>
+<li>Add proper icons to accordion</li>
+<li>Overflow-x scroll and no-wrap on third-nav</li>
+<li>Expanding nav and search pattern</li>
+</ul>
+<h2>0.10.5</h2>
+<h3>Added</h3>
+<ul>
+<li><code>.link-light-blue</code></li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Style links inside of panels</li>
+<li>Pre and Post scoping properly</li>
+</ul>
+<h2>0.10.4</h2>
+<h3>Fixed</h3>
+<ul>
+<li><code>.esri-logo</code> uses <code>$image-path</code> instead of hard-coded location</li>
+</ul>
+<h2>0.10.3</h2>
+<h3>Fixed</h3>
+<ul>
+<li>Columns collapse properly without a max-width</li>
+<li>Minor documentation fixes</li>
+<li>Sticky.js no longer relies on scroll, solving window resize bugs</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li>Multiple languages for type treatments</li>
+<li>Cyrillic font face declarations</li>
+<li>More intentional responsive design for subnav pattern</li>
+</ul>
+<h3>Removed</h3>
+<ul>
+<li>Removed the <code>max-width</code> declaration in the <code>column</code> and <code>column-width</code> mixins</li>
+</ul>
+<h2>0.10.2</h2>
+<h3>Modified</h3>
+<ul>
+<li>Tabs get same style on hover and focus</li>
+<li><code>inline</code> helper class is now named <code>inline-block</code></li>
+<li>Links now have <code>text-decoration: underline</code> on hover instead of cool background hack</li>
+<li>Updated footer with legal copyright information</li>
+<li>List style type disc rather than circle</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li><code>list-plain</code> for plain unordered lists (no bullets)</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Fix bug with columns inside panels</li>
+</ul>
+<h2>0.10.1</h2>
+<h3>Modified</h3>
+<ul>
+<li>Fix Bugs</li>
+</ul>
+<h2>0.10.0</h2>
+<h3>Modified</h3>
+<ul>
+<li>No button borders except on hover</li>
+<li>Darken button colors for accessibility.</li>
+<li>Top Nav finalized</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li><code>btn-white</code></li>
+<li><code>placeholder</code> mixin</li>
+<li>Site Search pattern</li>
+</ul>
+<h3>Removed</h3>
+<ul>
+<li><code>btn-orange</code></li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Clicking a dropdown button when the dropdown is open closes the dropdown</li>
+<li>Ie9 Shim for <code>&lt;main&gt;</code></li>
+<li>Ie9 Shim for <code>&lt;input&gt;</code> line height</li>
+<li>Ie9 Shim for <code>.tooltip</code> line height</li>
+<li>Prefixerize transform property in tooltips</li>
+<li>Resizing window recalculates and rebind stickies</li>
+</ul>
+<h2>0.9.2</h2>
+<h3>Modified</h3>
+<ul>
+<li>Sample code for form input include text for accessibility.</li>
+<li>Minor doc fixes</li>
+<li>Tab hover moved to above element</li>
+<li>Top nav active state above element</li>
+<li>Top nav hover blue</li>
+<li>Top nav font size one step down scale</li>
+</ul>
+<h2>0.9.1</h2>
+<h3>Modified</h3>
+<ul>
+<li>Accordion meets accessibility requirements</li>
+<li>Tabs meet accessibility requirements</li>
+<li>Tab hover has blue bar above</li>
+</ul>
+<h2>0.9.0</h2>
+<h3>Added</h3>
+<ul>
+<li>Documentation and structural patterns have proper <code>aria-role</code> and other required attributes</li>
+<li>Grid documentation for large columns</li>
+<li>Updated type documentation</li>
+<li>Skip to Content component</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li><code>imports</code> is now accessed at <code>calcite-web/imports</code></li>
+<li>Links darker blue, with underline on hover</li>
+<li>Alert text color transparent black</li>
+<li>Icon font setting font family on <code>:before</code></li>
+<li>Modal meets accessibility requirements</li>
+<li>Drawer meets accessibility requirements</li>
+<li>Dropdown meets accessibility requirements</li>
+<li>Icon font standardized, more icons added</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li><code>$generate-css: false</code> now generates no CSS</li>
+</ul>
+<h2>0.8.0</h2>
+<h3>Modified</h3>
+<ul>
+<li>Removed margin-top on <code>sub-nav-list</code></li>
+<li>Fix accordion hover</li>
+<li>Side-nav and accordion borders fixed in all states</li>
+<li>Tighten up sub-nav vertically</li>
+<li>Panels have padding and border by default</li>
+<li>Improve panel colors</li>
+<li>Improve vertical-spacing of sub-nav</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li>Automatically remove margin-bottom on the last element in a panel</li>
+<li><code>panel-no-border</code> and <code>panel-no-padding</code> classes for panels</li>
+<li>Add <code>is-active</code> state for side navigation</li>
+</ul>
+<h2>0.7.0</h2>
+<ul>
+<li>General documentation improvements/updates</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li><code>input-group</code> component</li>
+<li><code>action-bar</code> component</li>
+</ul>
+<h2>0.6.1</h2>
+<h3>Added</h3>
+<ul>
+<li>Badges</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>Icon font has baked-in padding right</li>
+</ul>
+<h2>0.6.0</h2>
+<h3>Fixed</h3>
+<ul>
+<li>Modals not blurry</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li><code>.text-rule</code> color is now the same as <code>&lt;hr&gt;</code></li>
+<li><code>&lt;hr&gt;</code> elements now have slightly less margin top and bottom</li>
+<li><code>sub-nav-title</code> is no longer floated left (enables larger banner-like subnavs)</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li>Styled list items by default</li>
+</ul>
+<h3>Removed</h3>
+<ul>
+<li><code>.bulleted-list</code> removed as bulleted lists are default</li>
+</ul>
+<h2>0.5.2</h2>
+<h3>Added</h3>
+<ul>
+<li><code>calcite-web/scss/imports</code> for all sass with no css</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>Inputs have small inset box-shadow</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Fonts now included in dist</li>
+</ul>
+<h3>Improvements</h3>
+<ul>
+<li>Focus states for form controls now consistent</li>
+</ul>
+<h2>0.5.1</h2>
+<h3>Added</h3>
+<ul>
+<li><code>.grid-full</code> for opt-in to 26 column system</li>
+<li>Block groups to 8 up</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>Default grid behavior centers column-24 on large screen sizes</li>
+<li>Changed edge padding back to .04vw from 0.01.vw</li>
+</ul>
+<h2>0.5.0</h2>
+<h3>Added</h3>
+<ul>
+<li>First version of icon font</li>
+<li><code>$font-path</code> variable for configuration of font folder</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>Updated Patterns Color dependency to v0.1.1</li>
+<li>Calcite color icons now referenced with <code>icon-calcite-</code> and <code>icon-calcite-large</code> icon classes</li>
+</ul>
+<h3>Removed</h3>
+<ul>
+<li>Removed vecticons in favor of icon font</li>
+</ul>
+<h2>0.4.0</h2>
+<h3>Added</h3>
+<ul>
+<li>Social media icons</li>
+<li><code>$image-path</code> variable for configuration of image folder</li>
+<li><code>calcite.toggleClass()</code> exposed on public calcite-web.js api</li>
+</ul>
+<h3>Breaking Changes</h3>
+<ul>
+<li>Removed <code>calcite.getAttr()</code> as <code>Element.getAttribute()</code> support is IE8+</li>
+</ul>
+<h2>0.3.1</h2>
+<h3>Improvements</h3>
+<ul>
+<li><code>calcite-web.js</code> patterns can be passed a specific dom node as context when they are initialized.</li>
+<li>Updated JavaScript documentation</li>
+<li>Proper registration as CommonJS module</li>
+</ul>
+<h2>0.3.0</h2>
+<h3>Improvements</h3>
+<ul>
+<li>Removed ~ 230 LOC from calcite-web.js</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Fixed interpolation of variables in the <code>keyframes</code> mixin</li>
+<li>Fixed modals always closing on any click if open</li>
+<li>Document modals properly</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>Increase large breakpoint to 1450px</li>
+<li>Add <code>extra-large-leader-n</code>
+<ul>
+<li>Trailer</li>
+<li>Padding-leader</li>
+<li>Padding-trailer</li>
+</ul>
+</li>
+<li>Add <code>extra-large-column-n</code> to 36 columns</li>
+<li>Remove <code>container-max</code> and <code>container-min</code></li>
+<li><code>extra-large-hide</code> and <code>-only</code></li>
+</ul>
+<h3>Removed</h3>
+<ul>
+<li>Remove carousel pattern (will be its own project)</li>
+</ul>
+<h2>0.2.3</h2>
+<h3>Modified</h3>
+<ul>
+<li>Pair Avenir Demi with Avenir Light for default strong
+behavior</li>
+<li>Clicking in drawer while drawer is open will not close drawer</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Fix dropdowns in IE9</li>
+</ul>
+<h2>0.2.2</h2>
+<h3>Fixed</h3>
+<ul>
+<li>Set avenir face on buttons</li>
+<li>Use <code>https</code> for font imports</li>
+<li>Table rows now have the same <code>font-weight</code> as the body</li>
+<li>Selects have more right padding</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li>Tailcoat migration guide</li>
+<li>Code style guides (CSS, HTML, JS)</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>Wrap navigation patterns in a <code>column-24</code></li>
+<li>Fix typography documentation</li>
+</ul>
+<h2>0.2.1</h2>
+<h3>Modified</h3>
+<ul>
+<li><code>.footer</code> has default <code>padding-top</code></li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Fix tooling for deploy and s3</li>
+<li>Fix problem with font loading</li>
+</ul>
+<h2>0.2.0</h2>
+<h3>Modified</h3>
+<ul>
+<li>Tooltips use <code>aria-label</code> for tooltip text</li>
+<li>Modify tooltip styles</li>
+<li>Multi-line tooltips</li>
+<li>Custom <code>select</code> style</li>
+</ul>
+<h3>Removed</h3>
+<ul>
+<li><code>label.required</code></li>
+</ul>
+<h2>0.1.2</h2>
+<h3>Added</h3>
+<ul>
+<li><code>files</code> key in <code>package.json</code></li>
+</ul>
+<h2>0.1.1</h2>
+<h3>Added</h3>
+<ul>
+<li>Color dependency copied out of <code>node_modules</code> and into <code>dist</code> on release.</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li><code>.block</code> extends new default typeface.</li>
+</ul>
+<h2>0.1.0</h2>
+<h3>Modified</h3>
+<ul>
+<li><code>.container</code> class now <code>.grid-container</code></li>
+<li>Alerts now are colored better, higher z-index, and subtle drop shadow</li>
+<li>Sass now rendered with <a href="https://github.com/sindresorhus/grunt-sass">grunt-sass</a></li>
+<li>Panels work with columns</li>
+<li>Avenir Next Light is default body typeface</li>
+<li>Avenir no longer variablized</li>
+<li><code>header-face</code> =&gt; <code>avenir-regular</code></li>
+<li><code>body-face</code> =&gt; <code>content-face</code></li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li>Third nav hover state</li>
+<li><code>label.required</code></li>
+<li><code>.input-warning</code></li>
+<li><code>.input-success</code></li>
+<li><code>.table-blue.table-striped</code></li>
+<li>Additional panel options</li>
+<li>IE9 bugfixes
+<ul>
+<li><code>.gif</code> fallback for loader component</li>
+<li><code>transform2d</code> for drawers, modals</li>
+</ul>
+</li>
+</ul>
+<h2>0.0.10</h2>
+<h3>Modified</h3>
+<ul>
+<li>Change bold styles on body from Frutiger 65 to Frutiger 55</li>
+</ul>
+<h2>0.0.9</h2>
+<p>Animations, bug fixes, and general cleanup.</p>
+<h3>Modified</h3>
+<ul>
+<li>Clicking accordion sections toggles only that accordion
+section</li>
+<li>Expanding nav now animates and takes up full screen</li>
+<li>Changed location of the <code>js-dropdown</code> class</li>
+<li>Visual changes to user dropdown</li>
+<li>Finessed default type styles for raw markdown</li>
+<li>Modals are more in line with best-practices</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li>Blockquote styles</li>
+<li>Sticky footer</li>
+<li>Sub Nav documentation</li>
+<li>Assets uploaded to s3 on release</li>
+<li>Deploy script works from grunt</li>
+</ul>
+<h2>0.0.8</h2>
+<p>Sample page layouts, typography.</p>
+<h3>Added</h3>
+<ul>
+<li>Added <code>esri-logo-condensed</code> class</li>
+<li>Blog layout</li>
+<li>Homepage layout</li>
+<li>Documentation layout</li>
+<li>Api reference layout</li>
+<li><code>.font-size-x</code></li>
+<li><code>.gutter-left-x</code> and <code>.gutter-right-x</code></li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>Esri logo modified to fit in navigation better</li>
+<li>Removed <code>preventDefault</code> from <code>bindDrawer()</code> function.</li>
+<li>Small accordion and tab padding tweaks</li>
+</ul>
+<h2>0.0.7</h2>
+<p>JavaScript, documentation, and more patterns.</p>
+<h3>Added</h3>
+<ul>
+<li>Sticky scroll</li>
+<li>Sticky show</li>
+<li>JavScript for interactive patterns</li>
+<li>Invisible class</li>
+<li>Carousel pattern</li>
+<li><code>transition-prefixed()</code> mixin</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>Minor padding right compression on .top-nav-title</li>
+<li>User nav now a real thing</li>
+<li>Move from Sass to LibSass</li>
+<li>Make default body size larger</li>
+<li>Minor adjustments on font-size at values less than 0</li>
+<li>Alpha counters on nested <code>ol</code></li>
+<li>ITC Charter to Kepler</li>
+<li>Major rework of documentation tech stack</li>
+</ul>
+<h3>Removed</h3>
+<ul>
+<li>Color Map</li>
+</ul>
+<h2>0.0.6</h2>
+<p>More documentation, new JavaScript components, working icon tooling prototype.</p>
+<h3>Added</h3>
+<ul>
+<li>Inline helper class</li>
+<li>Drawers</li>
+<li>Expanding nav</li>
+<li>Search bar component</li>
+<li>User login component</li>
+<li>Esri logo component</li>
+<li>Button group support for all button styles</li>
+<li><code>.sign-in</code> class for sign in + sign out buttons in top nav</li>
+<li>Modals</li>
+<li>Dropdowns</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>Disabled button style to look less clickable</li>
+<li>Tweak form styles</li>
+<li>Tighten panel padding</li>
+<li>Nav patterns now responsive</li>
+</ul>
+<h2>0.0.5</h2>
+<p>Forms, table improvements, type changes, in progress icon tooling, more documentation.</p>
+<h3>Added</h3>
+<ul>
+<li>Inputs</li>
+<li>Selects</li>
+<li>Radio Buttons</li>
+<li>Checkboxes</li>
+<li>Labels</li>
+<li>Legends</li>
+<li><code>overflow-auto</code> - Helper class can wrap elements that break layout</li>
+<li><code>input-error</code> - Outlines an input in red for user feedback</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>Nav patterns &amp; Buttons no longer default to <code>.header-light</code> on retina.</li>
+<li>Buttons have a one pixel stroke</li>
+<li>Change header font of tables to Avenir Next</li>
+<li>Changed body font to Frutiger Light</li>
+<li>Make tables more compact</li>
+<li>Javascript namespace changed from <code>C</code> to <code>calcite</code></li>
+<li>Renamed <code>dom.makeArray()</code> function to <code>dom.nodeListToArray</code></li>
+<li>Added <code>arr</code> and <code>browser</code> subsets to <code>calcite</code> functions</li>
+<li>Moved <code>isTouch()</code> from <code>dom</code> to <code>browser</code></li>
+<li>Moved <code>indexOf</code> from <code>dom</code> to <code>arr</code></li>
+<li>Fixed <code>hr</code> border</li>
+<li>Added some usage examples to JS doc</li>
+<li>Copy editing</li>
+</ul>
+<h2>0.0.4</h2>
+<p>Documentation and small style additions.</p>
+<h3>Added</h3>
+<ul>
+<li>Favicon</li>
+<li><code>img</code> tags now get max width of 100%</li>
+<li>Typography documentation</li>
+</ul>
+<h2>0.0.3</h2>
+<p>Additional styles, beginning documentation site.</p>
+<h3>Modified</h3>
+<ul>
+<li>Change color of border-bottom on third-nav</li>
+<li>Fixed font weight on active third nav link</li>
+<li>Adding structure for documentation</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li><code>&lt;code&gt;</code> styles for code blocks and inline code</li>
+</ul>
+<h2>0.0.2</h2>
+<p>Lots of foundational styles.</p>
+<h3>Modified</h3>
+<ul>
+<li>Type adjustments</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li>Alerts</li>
+<li>Pagination</li>
+<li>Tables</li>
+<li>Tabs</li>
+<li>Modal</li>
+<li>Accordion</li>
+<li>Block Grid</li>
+<li>Code Styles</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+<li>Type Helpers Cascade Properly</li>
+<li>Leader-Trailer Helpers Cascade Properly</li>
+<li>Grid troubles</li>
+</ul>
+<h2>0.0.1</h2>
+<p>Begin foundational sass for the framework.</p>
+<h3>Modified</h3>
+<ul>
+<li>New grayscale color values</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li>Colors</li>
+<li>Type Styles</li>
+<li>Grid</li>
+<li>Sass Utils</li>
+<li>Breadcrumbs</li>
+</ul>
+<h2>0.0.0</h2>
+<h3>Added</h3>
+<ul>
+<li>Documentation Site</li>
+<li>KSS Parser</li>
+<li>CSS Reset</li>
+<li>Grunt Workflows</li>
+</ul>
+
+      </div>
+    </div>
+    </main>
+  </div>
+  
+    </div>
+
+    
+
+    <!-- Footer Pattern -->
+    <footer class="footer leader-3 link-dark-gray" role="contentinfo">
+      <div class="grid-container">
+          <nav class="column-6">
+            <h6>Styleguides</h6>
+            <ul class="list-plain">
+              <li><a href="../../guides/code/javascript/">JavaScript</a></li>
+              <li><a href="../../guides/code/css/">CSS</a></li>
+              <li><a href="../../guides/code/html/">HTML</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <h6>Resources</h6>
+            <ul class="list-plain">
+              <li><a href="../../guides/migration-guide/">Migration Guide</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/releases/">Releases</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/blob/master/CONTRIBUTING.md">Contributing</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/issues/">Issues</a></li>
+              <li><a href="https://github.com/Esri/calcite-web/">GitHub</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <h6>Presentations</h6>
+            <ul class="list-plain">
+              <li><a href="../../presentations/calcite-web-primer/">Calcite Web: A Primer</a></li>
+              <li><a href="../../presentations/calcite-web-deep-dive/">Calcite Web: Deep Dive</a></li>
+            </ul>
+          </nav>
+
+          <nav class="column-6">
+            <a class="esri-logo" href="http://esri.com" aria-label="Esri Home"></a>
+            <section class="footer-social-nav leader-1">
+              <a class="icon-social-twitter" aria-label="Esri on Twitter"  href="https://twitter.com/Esri/"></a>
+              <a class="icon-social-facebook" aria-label="Esri on Facebook"  href="https://www.facebook.com/esrigis/"></a>
+              <a class="icon-social-instagram" aria-label="Esri on Instagram"  href="https://instagram.com/esrigram/"></a>
+              <a class="icon-social-github" aria-label="Esri on GitHub"  href="http://esri.github.com/"></a>
+              <a class="icon-social-contact" aria-label="Contact Esri"  href="http://www.esri.com/about-esri/contact/"></a>
+            </section>
+          </nav>
+
+          <div class="column-24 leader-1">
+            <p><small>Copyright © 2018 Esri. All rights reserved. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal">Legal</a></small></p>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+    <script src="../../assets/js/libs/calcite-web.js"></script>
+    <script src="../../assets/js/libs/calcite-web-marketing.js"></script>
+
+    <script src="../../assets/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+
+    
+
+    
+      <script src="../../assets/js/quick-reference.js"></script>
+    
+
+  </body>
+</html>

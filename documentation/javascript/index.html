@@ -144,8 +144,8 @@
   <header class="sub-nav" role="banner">
     <div class="grid-container">
       <div class="column-24">
-        <h1 class="sub-nav-title leader-1 text-white">Documentation</h1>
-        <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1 tablet-hide">Download Latest Release</a>
+   <h1 class="sub-nav-title text-white leader-1">Documentation</h1>
+      <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1 tablet-hide" title="Download Latest Release" target="blank">Download Latest Release</a>
         <nav class="sub-nav-list tablet-hide" role="navigation" aria-labelledby="subnav">
           
             
@@ -187,49 +187,47 @@
             <a class="sub-nav-link is-active" href="../../documentation/javascript/">JavaScript</a>
           
         </nav>
-
         <select class="tablet-show select-full trailer-half js-select-nav">
           
-          
-          
             
-          
+            
+              
+            
             <option value="../../documentation/" >Get Started</option>
           
-          
-          
+            
+            
             <option value="../../documentation/type/" >Type</option>
           
-          
-          
+            
+            
             <option value="../../documentation/grid/" >Grid</option>
           
-          
-          
+            
+            
             <option value="../../documentation/icons/" >Icons</option>
           
-          
-          
+            
+            
             <option value="../../documentation/color/" >Color</option>
           
-          
-          
+            
+            
             <option value="../../documentation/components/" >Components</option>
           
-          
-          
+            
+            
             <option value="../../documentation/patterns/" >Patterns</option>
           
-          
-          
+            
+            
             <option value="../../documentation/sass/" >Sass</option>
           
-          
-          
+            
+            
             <option value="../../documentation/javascript/" selected>JavaScript</option>
           
         </select>
-
       </div>
     </div>
   </header>
@@ -237,92 +235,104 @@
 
       <!-- content of each page will go here -->
       
-<div class="grid-container leader-1">
-  <div class="column-6 tablet-column-12">
-    <aside class="side-nav tablet-hide" aria-role="complementary">
-      
-        <h4 class="side-nav-title">Interactive Patterns</h4>
-        <!-- <nav aria-role="navigation" aria-labelledby="sidenav"> -->
-        <nav aria-role="navigation">
-          
-            
-              <a href="#interactive-patterns" class="side-nav-link">Overview</a>
-            
-          
-            
-              <a href="#importing" class="side-nav-link">Import calcite-web.js</a>
-            
-          
-            
-              <a href="#event-bus" class="side-nav-link">Event Bus</a>
-            
-          
-        </nav>
-      
-        <h4 class="side-nav-title">Utility Functions</h4>
-        <!-- <nav aria-role="navigation" aria-labelledby="sidenav"> -->
-        <nav aria-role="navigation">
-          
-            
-              <a href="#utility-functions" class="side-nav-link">Overview</a>
-            
-          
-            
-              <a href="#dom-utilities" class="side-nav-link">DOM Utilities</a>
-            
-          
-        </nav>
-      
-    </aside>
-    <label class="tablet-show">
-      Jump to section:
-      <select class="select-full js-select-nav">
+  <div class="grid-container leader-1">
+    <div class="column-6 tablet-column-12">
+      <aside class="side-nav tablet-hide" aria-role="complementary">
         
-        <optgroup label="Interactive Patterns">
           
-            
-              <option value="#interactive-patterns">Overview</option>
-            
+            <h4 class="side-nav-title">Interactive Patterns</h4>
+            <!-- <nav aria-role="navigation" aria-labelledby="sidenav"> -->
+            <nav aria-role="navigation">
+              
+                
+                  <a href="#interactive-patterns" class="side-nav-link">Overview</a>
+                
+              
+                
+                  <a href="#importing" class="side-nav-link">Import calcite-web.js</a>
+                
+              
+                
+                  <a href="#event-bus" class="side-nav-link">Event Bus</a>
+                
+              
+            </nav>
           
-            
-              <option value="#importing">Import calcite-web.js</option>
-            
-          
-            
-              <option value="#event-bus">Event Bus</option>
-            
-          
-        </optgroup>
         
-        <optgroup label="Utility Functions">
           
-            
-              <option value="#utility-functions">Overview</option>
-            
+            <h4 class="side-nav-title">Utility Functions</h4>
+            <!-- <nav aria-role="navigation" aria-labelledby="sidenav"> -->
+            <nav aria-role="navigation">
+              
+                
+                  <a href="#utility-functions" class="side-nav-link">Overview</a>
+                
+              
+                
+                  <a href="#dom-utilities" class="side-nav-link">DOM Utilities</a>
+                
+              
+            </nav>
           
-            
-              <option value="#dom-utilities">DOM Utilities</option>
-            
-          
-        </optgroup>
         
-      </select>
-    </label>
-    <div class="js-sticky scroll-show tablet-hide" data-top="46">
-      <a href="#" class="btn btn-clear">Back to Top</a>
+      </aside>
+      <label class="tablet-show">
+        Jump to section:
+        <select class="select-full js-select-nav">
+          
+            
+              <optgroup label="Interactive Patterns">
+                
+                  
+                    <option value="#interactive-patterns">Overview</option>
+                  
+                
+                  
+                    <option value="#importing">Import calcite-web.js</option>
+                  
+                
+                  
+                    <option value="#event-bus">Event Bus</option>
+                  
+                
+              </optgroup>
+            
+          
+            
+              <optgroup label="Utility Functions">
+                
+                  
+                    <option value="#utility-functions">Overview</option>
+                  
+                
+                  
+                    <option value="#dom-utilities">DOM Utilities</option>
+                  
+                
+              </optgroup>
+            
+          
+        </select>
+      </label>
+      <div class="js-sticky scroll-show tablet-hide" data-top="46">
+        <a href="#" class="btn btn-clear">Back to Top</a>
+      </div>
     </div>
-  </div>
 
-  <a id="skip-to-content" tabindex="0"></a>
-  <main class="column-17 phone-column-6 tablet-column-12 pre-1 rtl-post-0 tablet-leader-1" role="main">
-
-    
-      <h1 class="text-rule" id="interactive-patterns" tabindex="0">Interactive Patterns</h1>
+    <a id="skip-to-content" tabindex="0"></a>
+    <main class="column-17 phone-column-6 tablet-column-12 pre-1 rtl-post-0 tablet-leader-1" role="main">
       
-        <section>
-          
 
-          <p>Calcite Web includes a small (5KB gzipped) JavaScript library. <code>calcite-web.js</code> is a lightweight and dependency-free library made to enable interactive behaviors for certain <a href="../patterns/">patterns</a> and <a href="../components">components</a>.</p>
+        
+          <h1 class="text-rule" id="interactive-patterns" tabindex="0">Interactive Patterns</h1>
+        
+
+        
+
+          
+            <section>
+              
+            <p>Calcite Web includes a small (5KB gzipped) JavaScript library. <code>calcite-web.js</code> is a lightweight and dependency-free library made to enable interactive behaviors for certain <a href="../patterns/">patterns</a> and <a href="../components">components</a>.</p>
 <p>Currently, the following components and patterns rely on <code>calcite-web.js</code>:</p>
 <ul>
 <li><a href="../components/#dropdowns">Dropdowns</a></li>
@@ -333,28 +343,22 @@
 </ul>
 <p>The JavaScript library also includes helpers for &quot;sticky&quot; positioning and scroll events. You can read more about these in the <a href="../grid/#interactive-layout-helpers">interactive layout helpers</a> section of the documentation.</p>
 
-
+            
+            
+            
+            
           
-
           
-
-          
-
-          
-
-          
-
-          
-
         </section>
-        <hr>
       
-        <section>
-          
-            <h2 id="importing" tabindex="0">Import calcite-web.js</h2>
-          
+    
 
-          <p>Calcite Web can be imported using ES6 modules, CommonJS, AMD, or just a plain IIFE.</p>
+          
+            <section>
+              
+                <h2 id="importing" tabindex="0">Import calcite-web.js</h2>
+              
+            <p>Calcite Web can be imported using ES6 modules, CommonJS, AMD, or just a plain IIFE.</p>
 <h3>ES6 Module</h3>
 <p>If your bundler supports the ES6 module syntax you can import calcite as an ES6 module with named exports:</p>
 <pre><code class="js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> calcite <span class="hljs-keyword">from</span> <span class="hljs-string">'calcite-web/es6'</span>;
@@ -394,28 +398,22 @@ calcite.init();
 <pre><code>calcite.tabs()<span class="hljs-comment">;</span>
 </code></pre>
 
-
+            
+            
+            
+            
           
-
           
-
-          
-
-          
-
-          
-
-          
-
         </section>
-        <hr>
       
-        <section>
-          
-            <h2 id="event-bus" tabindex="0">Event Bus</h2>
-          
+    
 
-          <p>The event bus is used to help interactive patterns communicate with each other and the rest of your application.</p>
+          
+            <section>
+              
+                <h2 id="event-bus" tabindex="0">Event Bus</h2>
+              
+            <p>The event bus is used to help interactive patterns communicate with each other and the rest of your application.</p>
 <p>Along with a set of common bus events, each pattern has a set of channels that it emits on and listens for. These events can be emitted or listened for by the larger application.</p>
 <p>You can trigger or react to events by using the <code>on</code> and <code>emit</code> methods on the bus:</p>
 <pre><code><span class="hljs-comment">// assuming calcite-web.js is available as calcite</span>
@@ -754,29 +752,27 @@ calcite<span class="hljs-selector-class">.bus</span><span class="hljs-selector-c
 </tbody>
 </table>
 
-
+            
+            
+            
+            
           
-
           
-
-          
-
-          
-
-          
-
-          
-
         </section>
-        <hr>
       
     
-      <h1 class="text-rule" id="utility-functions" tabindex="0">Utility Functions</h1>
-      
-        <section>
-          
+  
 
-          <p><code>calcite-web.js</code> also has methods for <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">DOM</a> traversal and manipulation. If the needs of a project are not too complex it can be used in place of jQuery, Dojo, or other large frameworks.</p>
+        
+          <h1 class="text-rule" id="utility-functions" tabindex="0">Utility Functions</h1>
+        
+
+        
+
+          
+            <section>
+              
+            <p><code>calcite-web.js</code> also has methods for <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">DOM</a> traversal and manipulation. If the needs of a project are not too complex it can be used in place of jQuery, Dojo, or other large frameworks.</p>
 <table>
 <thead>
 <tr>
@@ -836,28 +832,22 @@ calcite<span class="hljs-selector-class">.bus</span><span class="hljs-selector-c
 </tbody>
 </table>
 
-
+            
+            
+            
+            
           
-
           
-
-          
-
-          
-
-          
-
-          
-
         </section>
-        <hr>
       
-        <section>
-          
-            <h2 id="dom-utilities" tabindex="0">DOM Utilities</h2>
-          
+    
 
-          <p>The following functions allow for basic DOM manipulation and traversal. These helpers are used by JavaScript dependent patterns, and can be included in any custom JavaScript in Calcite Web projects.</p>
+          
+            <section>
+              
+                <h2 id="dom-utilities" tabindex="0">DOM Utilities</h2>
+              
+            <p>The following functions allow for basic DOM manipulation and traversal. These helpers are used by JavaScript dependent patterns, and can be included in any custom JavaScript in Calcite Web projects.</p>
 <h2>Events</h2>
 <h3>calcite.click()</h3>
 <p>Returns interaction event for the current browser environment. Currently only returns <code>'click'</code>. Will be more useful when touch support is added.</p>
@@ -967,24 +957,17 @@ calcite.toggleClass(node, <span class="hljs-string">'test'</span>); <span class=
 <span class="hljs-keyword">var</span> nodeArray = calcite.nodeListToArray(nodes);
 </code></pre>
 
-
+            
+            
+            
+            
           
-
           
-
-          
-
-          
-
-          
-
-          
-
         </section>
-        <hr>
       
     
-  </main>
+  
+</main>
 </div>
 
     </div>
@@ -1034,7 +1017,7 @@ calcite.toggleClass(node, <span class="hljs-string">'test'</span>); <span class=
           </nav>
 
           <div class="column-24 leader-1">
-            <p><small>Copyright © 2015 Esri. All rights reserved. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal">Legal</a></small></p>
+            <p><small>Copyright © 2018 Esri. All rights reserved. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal">Legal</a></small></p>
           </div>
         </div>
 
