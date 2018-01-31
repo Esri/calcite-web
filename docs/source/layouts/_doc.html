@@ -15,150 +15,151 @@
             <a class="sub-nav-link {% if url == slug %}is-active{% endif %}" href="{{relativePath}}{{slug}}">{{ sec.title }}</a>
           {% endfor %}
         </nav>
-
         <select class="tablet-show select-full trailer-half js-select-nav">
           {% for title, sec in data.table_of_contents %}
-          {% set slug = '/documentation/' + sec.base + '/' %}
-          {% if sec.base == 'get-started' %}
-            {% set slug = '/documentation/' %}
-          {% endif %}
+            {% set slug = '/documentation/' + sec.base + '/' %}
+            {% if sec.base == 'get-started' %}
+              {% set slug = '/documentation/' %}
+            {% endif %}
             <option value="{{relativePath}}{{slug}}" {% if url == slug %}selected{% endif %}>{{ sec.title }}</option>
           {% endfor %}
         </select>
-
       </div>
     </div>
   </header>
 {% endblock %}
 
 {% block content %}
-<div class="grid-container leader-1">
-  <div class="column-6 tablet-column-12">
-    <aside class="side-nav tablet-hide" aria-role="complementary">
-      {% for group in data.table_of_contents[section].navigation %}
-        <h4 class="side-nav-title">{{ group.group }}</h4>
-        <!-- <nav aria-role="navigation" aria-labelledby="sidenav"> -->
-        <nav aria-role="navigation">
-          {% for page in group.pages %}
-            {% if page.title == 'Overview' %}
-              <a href="#{{group.group | replace(" ", "-") | lower}}" class="side-nav-link">{{page.title}}</a>
-            {% else %}
-              <a href="#{{page.link}}" class="side-nav-link">{{page.title}}</a>
-            {% endif %}
-          {% endfor %}
-        </nav>
-      {% endfor %}
-    </aside>
-    <label class="tablet-show">
-      Jump to section:
-      <select class="select-full js-select-nav">
+  <div class="grid-container leader-1">
+    <div class="column-6 tablet-column-12">
+      <aside class="side-nav tablet-hide" aria-role="complementary">
         {% for group in data.table_of_contents[section].navigation %}
-        <optgroup label="{{ group.group }}">
-          {% for page in group.pages %}
-            {% if page.title == 'Overview' %}
-              <option value="#{{group.group | replace(" ", "-") | lower}}">{{page.title}}</option>
-            {% else %}
-              <option value="#{{page.link}}">{{page.title}}</option>
+          {% if group.hidden != true %}
+            <h4 class="side-nav-title">{{ group.group }}</h4>
+            <!-- <nav aria-role="navigation" aria-labelledby="sidenav"> -->
+            <nav aria-role="navigation">
+              {% for page in group.pages %}
+                {% if page.title == 'Overview' %}
+                  <a href="#{{group.group | replace(" ", "-") | lower}}" class="side-nav-link">{{page.title}}</a>
+                {% else %}
+                  <a href="#{{page.link}}" class="side-nav-link">{{page.title}}</a>
+                {% endif %}
+              {% endfor %}
+            </nav>
+          {% endif %}
+        {% endfor %}
+      </aside>
+      <label class="tablet-show">
+        Jump to section:
+        <select class="select-full js-select-nav">
+          {% for group in data.table_of_contents[section].navigation %}
+            {% if group.hidden != true %}
+              <optgroup label="{{ group.group }}">
+                {% for page in group.pages %}
+                  {% if page.title == 'Overview' %}
+                    <option value="#{{group.group | replace(" ", "-") | lower}}">{{page.title}}</option>
+                  {% else %}
+                    <option value="#{{page.link}}">{{page.title}}</option>
+                  {% endif %}
+                {% endfor %}
+              </optgroup>
             {% endif %}
           {% endfor %}
-        </optgroup>
-        {% endfor %}
-      </select>
-    </label>
-    <div class="js-sticky scroll-show tablet-hide" data-top="46">
-      <a href="#" class="btn btn-clear">Back to Top</a>
+        </select>
+      </label>
+      <div class="js-sticky scroll-show tablet-hide" data-top="46">
+        <a href="#" class="btn btn-clear">Back to Top</a>
+      </div>
     </div>
-  </div>
 
-  <a id="skip-to-content" tabindex="0"></a>
-  <main class="column-17 phone-column-6 tablet-column-12 pre-1 rtl-post-0 tablet-leader-1" role="main">
+    <a id="skip-to-content" tabindex="0"></a>
+    <main class="column-17 phone-column-6 tablet-column-12 pre-1 rtl-post-0 tablet-leader-1" role="main">
+      {% for group in data.table_of_contents[section].navigation %}
 
-    {% for group in data.table_of_contents[section].navigation %}
-      <h1 class="text-rule" id="{{group.group | replace(" ", "-") | lower}}" tabindex="0">{{group.group}}</h1>
-      {% for page in group.pages %}
-        <section>
-          {% if page.title != 'Overview' %}
-            <h2 id="{{page.link}}" tabindex="0">{{page.title}}</h2>
-          {% endif %}
+        {% if group.hidden != true %}
+          <h1 class="text-rule" id="{{group.group | replace(" ", "-") | lower}}" tabindex="0">{{group.group}}</h1>
+        {% endif %}
 
-          {% markdown %}{% include 'documentation/' + data.table_of_contents[section].base + '/_' + page.link %}{% endmarkdown %}
+        {% for page in group.pages %}
 
-          {% if page.title == 'Social Icons' %}
-            <div class="block-group block-group-3-up">
-              {% for icon in data.icons %}
+          {% if page.hidden != true %}
+            <section>
+              {% if page.title != 'Overview' %}
+                <h2 id="{{page.link}}" tabindex="0">{{page.title}}</h2>
+              {% endif %}
+            {% markdown %}{% include 'documentation/' + data.table_of_contents[section].base + '/_' + page.link %}{% endmarkdown %}
+            {% if page.title == 'Social Icons' %}
+              <div class="block-group block-group-3-up">
+                {% for icon in data.icons %}
+                  <div class="block">
+                    <a href="" class="icon-social-{{icon}}" aria-label="{{icon}}"></a>
+                    <p class="trailer-1 leader-half"><code>.icon-social-{{icon}}</code></p>
+                  </div>
+                {% endfor %}
+              </div>
+            {% endif %}
+            {% if page.title == 'User Interface Icons' %}
+              {% include 'layouts/_inline-icons' %}
+            {% endif %}
+            {% if page.title == 'Icon Font Colors' %}
+              <div class="block-group block-group-3-up">
                 <div class="block">
-                  <a href="" class="icon-social-{{icon}}" aria-label="{{icon}}"></a>
-                  <p class="trailer-1 leader-half"><code>.icon-social-{{icon}}</code></p>
+                  <span class="font-size-5 icon-ui-check-mark icon-ui-green" aria-label="check-mark "></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-green</code></p>
                 </div>
-              {% endfor %}
-            </div>
-          {% endif %}
-
-          {% if page.title == 'User Interface Icons' %}
-            {% include 'layouts/_inline-icons' %}
-          {% endif %}
-
-          {% if page.title == 'Icon Font Colors' %}
-            <div class="block-group block-group-3-up">
-              <div class="block">
-                <span class="font-size-5 icon-ui-check-mark icon-ui-green" aria-label="check-mark "></span>
-                <p class="trailer-1 leader-half"><code>icon-ui-green</code></p>
+                <div class="block">
+                  <span class="font-size-5 icon-ui-check-mark icon-ui-light-blue" aria-label="check-mark "></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-light-blue</code></p>
+                </div>
+                <div class="block">
+                  <span class="font-size-5 icon-ui-check-mark icon-ui-blue" aria-label="check-mark "></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-blue</code></p>
+                </div>
+                <div class="block">
+                  <span class="font-size-5 icon-ui-check-mark icon-ui-dark-blue" aria-label="check-mark "></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-dark-blue</code></p>
+                </div>
+                <div class="block">
+                  <span class="font-size-5 icon-ui-check-mark icon-ui-purple" aria-label="check-mark "></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-purple</code></p>
+                </div>
+                <div class="block">
+                  <span class="font-size-5 icon-ui-check-mark icon-ui-orange" aria-label="check-mark "></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-orange</code></p>
+                </div>
+                <div class="block">
+                  <span class="font-size-5 icon-ui-check-mark icon-ui-gray" aria-label="check-mark "></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-gray</code></p>
+                </div>
+                <div class="block">
+                  <span class="font-size-5 icon-ui-check-mark icon-ui-red" aria-label="check-mark "></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-red</code></p>
+                </div>
+                <div class="block">
+                  <span class="font-size-5 icon-ui-check-mark icon-ui-yellow" aria-label="check-mark "></span>
+                  <p class="trailer-1 leader-half"><code>icon-ui-yellow</code></p>
+                </div>
               </div>
-              <div class="block">
-                <span class="font-size-5 icon-ui-check-mark icon-ui-light-blue" aria-label="check-mark "></span>
-                <p class="trailer-1 leader-half"><code>icon-ui-light-blue</code></p>
-              </div>
-              <div class="block">
-                <span class="font-size-5 icon-ui-check-mark icon-ui-blue" aria-label="check-mark "></span>
-                <p class="trailer-1 leader-half"><code>icon-ui-blue</code></p>
-              </div>
-              <div class="block">
-                <span class="font-size-5 icon-ui-check-mark icon-ui-dark-blue" aria-label="check-mark "></span>
-                <p class="trailer-1 leader-half"><code>icon-ui-dark-blue</code></p>
-              </div>
-              <div class="block">
-                <span class="font-size-5 icon-ui-check-mark icon-ui-purple" aria-label="check-mark "></span>
-                <p class="trailer-1 leader-half"><code>icon-ui-purple</code></p>
-              </div>
-              <div class="block">
-                <span class="font-size-5 icon-ui-check-mark icon-ui-orange" aria-label="check-mark "></span>
-                <p class="trailer-1 leader-half"><code>icon-ui-orange</code></p>
-              </div>
-              <div class="block">
-                <span class="font-size-5 icon-ui-check-mark icon-ui-gray" aria-label="check-mark "></span>
-                <p class="trailer-1 leader-half"><code>icon-ui-gray</code></p>
-              </div>
-              <div class="block">
-                <span class="font-size-5 icon-ui-check-mark icon-ui-red" aria-label="check-mark "></span>
-                <p class="trailer-1 leader-half"><code>icon-ui-red</code></p>
-              </div>
-              <div class="block">
-                <span class="font-size-5 icon-ui-check-mark icon-ui-yellow" aria-label="check-mark "></span>
-                <p class="trailer-1 leader-half"><code>icon-ui-yellow</code></p>
-              </div>
-            </div>
-          {% endif %}
-
-          {% if page.modifiers %}
-            <h3 class="leader-2" tabindex="0">Modifiers</h3>
-            <div class="styleguide-modifiers">
-              <div class="styleguide-modifier-example">
-                {% include 'documentation/' + data.table_of_contents[section].base + '/sample-code/_' + page.link %}
-              </div>
-              {% for modifier in page.modifiers %}
+            {% endif %}
+            {% if page.modifiers %}
+              <h3 class="leader-2" tabindex="0">Modifiers</h3>
+              <div class="styleguide-modifiers">
                 <div class="styleguide-modifier-example">
                   {% include 'documentation/' + data.table_of_contents[section].base + '/sample-code/_' + page.link %}
-                  <code class="modifier-name">.{{ modifier }}</code>
                 </div>
-              {% endfor %}
-            </div>
+                {% for modifier in page.modifiers %}
+                  <div class="styleguide-modifier-example">
+                    {% include 'documentation/' + data.table_of_contents[section].base + '/sample-code/_' + page.link %}
+                    <code class="modifier-name">.{{ modifier }}</code>
+                  </div>
+                {% endfor %}
+              </div>
 {% markdown %}
 ```
 {% set modifier = "modifier-class" %}{% include 'documentation/' + data.table_of_contents[section].base + '/sample-code/_' + page.link %}
 ```
 {% endmarkdown %}
           {% endif %}
-
           {% if page.colors %}
             <div class="block-group block-group-4-up tablet-block-group-2-up phone-block-group-1-up">
               {% for color in page.colors %}
@@ -169,11 +170,9 @@
                     <p class="trailer-0 font-size--2"><code>{{data.colors["$" + color]}}</code></p>
                   </div>
                 </div>
-
               {% endfor %}
             </div>
           {% endif %}
-
           {% if page.variables %}
             <div class="block-group block-group-5-up">
               {% for variable in page.variables %}
@@ -184,11 +183,10 @@
               {% endfor %}
             </div>
           {% endif %}
-
         </section>
-        <hr>
-      {% endfor %}
+      {% endif %}
     {% endfor %}
-  </main>
+  {% endfor %}
+</main>
 </div>
 {% endblock %}
