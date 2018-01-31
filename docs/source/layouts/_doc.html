@@ -143,7 +143,7 @@
         {% endif %}
         {% if page.modifiers or page.modifiers == false %}
 
-        <h4 class="leader-0 darker-gray" tabindex="0">Base</h4>
+        <h4 class="leader-0 text-darkest-gray" tabindex="0">Base</h4>
         <div class="styleguide-modifiers">
           <div class="styleguide-modifier-example">
             {% include 'documentation/' + data.table_of_contents[section].base + '/sample-code/_' + page.link %}
@@ -157,7 +157,7 @@
 {% endmarkdown %}
 
           {% if page.modifiers != false %}
-            <h4 class="leader-0 text-darker-gray" tabindex="0">Modifiers</h4>
+            <h4 class="leader-0 text-darkest-gray" tabindex="0">Modifiers</h4>
                <div class="styleguide-modifiers">
           {% for modifier in page.modifiers %}
           <div class="styleguide-modifier-example">
