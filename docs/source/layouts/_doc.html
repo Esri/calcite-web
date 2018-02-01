@@ -81,7 +81,6 @@
       {% endif %}
 
       {% for page in group.pages %}
-
       {% if page.hidden != true %}
       <section>
         {% if page.title != 'Overview' %}
@@ -159,7 +158,7 @@
 
         {% if page.modifiers != false %}
         <h4 class="leader-0 text-darkest-gray" tabindex="0">Modifiers</h4>
-        <div class="styleguide-modifiers">
+        <div class="styleguide-modifiers trailer-1">
           {% for modifier in page.modifiers %}
           <div class="styleguide-modifier-example">
             {% include 'documentation/' + data.table_of_contents[section].base + '/sample-code/_' + page.link %}
