@@ -1,4 +1,4 @@
-## 1.0.0
+## [Unreleased][unreleased]
 
 ### Fixes
 - make button border colors match background on hover (#840)
@@ -1304,3 +1304,6 @@ Begin foundational sass for the framework.
 - KSS Parser
 - CSS Reset
 - Grunt Workflows
+
+[unreleased]: https://github.com/esri/calcite-web/compare/v1.0.0-rc.8...HEAD
+[1.0.0-rc.8]: https://github.com/esri/calcite-web/compare/v1.0.0-rc.7...v1.0.0-rc.8
