@@ -3,6 +3,9 @@
 ### Fixes
 - make button border colors match background on hover (#840)
 
+### Modified
+- remove fonts.com and use self-hosted fonts from esri CDN
+
 ## 1.0.0-rc.8
 
 ### Fixes
