@@ -9,7 +9,6 @@ $range-border: 1px solid transparent;
 $range-track-bgcolor: $Calcite_Gray_300;
 $range-track-hover-bgcolor: $Calcite_Gray_350;
 $range-track-progress-bgcolor: $Brand_Blue_200;
-
 $range-thumb-height: 18px;
 $range-thumb-width: 18px;
 $range-thumb-border: 3px solid $Calcite_Gray_350;
@@ -17,11 +16,7 @@ $range-thumb-bgcolor: $white;
 
 $thumb-border-small: 4px solid $Brand_Blue_200;
 $thumb-border-medium: 6px solid $Brand_Blue_200;
-
-$thumb-shadow-small: 0 0 0 1px $white;
-$thumb-shadow-medium: 0 0 0 2px $white;
-$thumb-shadow-large: 0 0 0 4px $white;
-
+$thumb-shadow-active: 0 0 0 2px $white;
 $thumb-bg-inactive: $white;
 $thumb-bg-hover: $Brand_Blue_200;
 $thumb-bg-active: $Calcite_Blue_a250;
@@ -60,45 +55,40 @@ $thumb-bg-active: $Calcite_Blue_a250;
 @mixin thumb-hover-style {
   background-color: $thumb-bg-hover;
   border: $thumb-border-medium;
-  box-shadow: $thumb-shadow-medium;
 }
 // direct focus on thumb
 @mixin thumb-focus-style {
   background-color:  $thumb-bg-active;
   border: $thumb-border-small;
-  box-shadow: $thumb-shadow-large;
+  box-shadow: $thumb-shadow-active;
 }
 // range hovered and hovering over thumb
 @mixin range-hover-thumb-style {
   background-color: $thumb-bg-inactive;
   border: $thumb-border-small;
-  box-shadow: $thumb-shadow-small;
 }
 // range focused but not hovering over thumb
 @mixin range-focus-thumb-style {
   background-color: $thumb-bg-hover;
   border: $thumb-border-medium;
-  box-shadow: $thumb-shadow-medium;
   outline: none;
 }
 // range focused while thumb is focused but not hovered
 @mixin range-focus-thumb-hover-style {
   background-color: $thumb-bg-active;
   border: $thumb-border-small;
-  box-shadow: $thumb-shadow-medium;
 }
 // range focused while thumb is focused and hovered
 @mixin thumb-focus-hover-style {
   background-color: $thumb-bg-active;
   border: $thumb-border-small;
-  box-shadow: $thumb-shadow-large;
+  box-shadow: $thumb-shadow-active;
 }
 
 // base range styles
-
-  input[type="range"] {
-    @include range-style;
-    &:hover {
+input[type="range"] {
+  @include range-style;
+  &:hover {
     // webkit
     &::-webkit-slider-runnable-track { background-color: $range-track-hover-bgcolor; }
     &::-webkit-slider-thumb { @include range-hover-thumb-style; }
@@ -165,7 +155,5 @@ input[type="range"]:focus::-ms-thumb {
   outline-style: dashed;
 }
 
-
 @if $include-sliders == true {
-
 }
