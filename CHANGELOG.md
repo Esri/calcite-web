@@ -1,12 +1,16 @@
-## 1.0.0
+## [Unreleased][unreleased]
 
 ### Fixes
 - make button border colors match background on hover (#840)
+- Large improvements to the display of several languages including Arabic, Hindi, Georgian, Vietnamese, Hebrew, and Thai
+- Vietnamese now renders in SST instead of Verdana (#865)
 
 ### Modified
 - remove fonts.com and use self-hosted fonts from esri CDN
+- declare demi-bold as `700` so browser defaults render
+- make headings `400` instead of `300`
 
-## 1.0.0-rc.8
+## [1.0.0-rc.8]
 
 ### Fixes
 - fix rounded buttons in newest chrome
@@ -1307,3 +1311,6 @@ Begin foundational sass for the framework.
 - KSS Parser
 - CSS Reset
 - Grunt Workflows
+
+[unreleased]: https://github.com/esri/calcite-web/compare/v1.0.0-rc.8...HEAD
+[1.0.0-rc.8]: https://github.com/esri/calcite-web/compare/v1.0.0-rc.7...v1.0.0-rc.8
