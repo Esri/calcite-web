@@ -2,6 +2,7 @@
 
 ### Fixes
 - make button border colors match background on hover (#840)
+- remove some `!important` rules (#877)
 
 ## [1.0.0-rc.8]
 
