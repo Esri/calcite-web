@@ -3,6 +3,10 @@
 ### Fixes
 - make button border colors match background on hover (#840)
 - remove some `!important` rules (#877)
+- `margin-left/right` and `padding-left/right` now work in rtl (#805)
+
+### Removed
+- no more `rtl-` classes as they are not needed and are an anti-pattern
 
 ## [1.0.0-rc.8]
 
