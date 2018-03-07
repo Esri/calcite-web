@@ -8,6 +8,9 @@
 ### Removed
 - no more `rtl-` classes as they are not needed and are an anti-pattern
 
+### Added
+- `link-dark-blue` helper class (#855)
+
 ## [1.0.0-rc.8]
 
 ### Fixes
