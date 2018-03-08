@@ -2,6 +2,7 @@
 
 ### Fixes
 - make button border colors match background on hover (#840)
+- make modal js syntax more consistent (#862)
 
 ## [1.0.0-rc.8]
 
