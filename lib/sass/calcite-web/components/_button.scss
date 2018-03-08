@@ -146,6 +146,25 @@
     }
   }
 
+%btn-link {
+  -webkit-appearance: none;
+  @include font-size(0);
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  outline: none;
+  color: $blue;
+  background: transparent;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin btn-link() {
+  @extend %btn-link;
+}
+
+
 @if $include-button == true {
   .btn             { @include btn();}
   .btn-transparent { @include btn-transparent();}
@@ -159,6 +178,7 @@
   .btn-white       { @include btn-white();}
   .btn-red         { @include btn-red();}
   .btn-green       { @include btn-color($green, $dark-green);}
+  .btn-link        { @include btn-link(); }
 
   .btn:disabled,
   .btn-disabled,

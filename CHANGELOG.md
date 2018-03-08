@@ -5,11 +5,17 @@
 - remove some `!important` rules (#877)
 - `margin-left/right` and `padding-left/right` now work in rtl (#805)
 
+### Modified
+- update several patterns to use buttons instead of anchors
+- style `dropdown-link` so it can be a `button` element
+- update `top-nav-link` so it can be a `button` element
+
 ### Removed
 - no more `rtl-` classes as they are not needed and are an anti-pattern
 
 ### Added
 - `link-dark-blue` helper class (#855)
+- `btn-link` helper class (#846)
 
 ## [1.0.0-rc.8]
 
