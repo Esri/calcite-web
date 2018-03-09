@@ -89,7 +89,7 @@ Many of the filter dropdown channels emit and listen for the following options o
 | --- | --- | --- | --- |
 | modal:bind | Binds dom to event listeners | n/a | `bindModals()` |
 | modal:open | Opens a modal specified by data-modal attribute | `{id: modalid}` |  `openModal()` |
-| modal:close | Closes all modals or closes a modal specified by data-modal attribute | n/a; `{id: modalid}` | `closeModal()` |
+| modal:close | Closes open modal | n/a | `closeModal()` |
 | keyboard:escape | Closes all modals | n/a | `closeModal()` |
 
 #### Sticky
