@@ -3,6 +3,8 @@
 ### Fixes
 - remove some `!important` rules (#877)
 - `margin-left/right` and `padding-left/right` now work in rtl (#805)
+- Fix drawer pattern on Safari, allow for `position: sticky` (#863)
+- Fix fencing of focus in modals (#793)
 - make modal js syntax more consistent (#862)
 
 ### Modified
