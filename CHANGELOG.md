@@ -1,9 +1,9 @@
 ## [Unreleased][unreleased]
 
 ### Fixes
-- make button border colors match background on hover (#840)
 - remove some `!important` rules (#877)
 - `margin-left/right` and `padding-left/right` now work in rtl (#805)
+- make modal js syntax more consistent (#862)
 
 ### Modified
 - update several patterns to use buttons instead of anchors
@@ -14,6 +14,7 @@
 - make headings `400` instead of `300`
 - Large improvements to the display of several languages including Arabic, Hindi, Georgian, Vietnamese, Hebrew, and Thai
 - Vietnamese now renders in SST instead of Verdana (#865)
+- make button border colors match background on hover (#840)
 
 ### Removed
 - no more `rtl-` classes as they are not needed and are an anti-pattern

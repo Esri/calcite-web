@@ -20,8 +20,8 @@ calcite.bus.emit('drawer:open', {id: "top-nav"})
 
 | Event | Description | Emits |
 | --- | --- | --- |
-| keyboard:return | The `return` key was pressed. | n/a |
-| keyboard:escape | The `escape` key was pressed. | n/a |
+| keyboard:return | The `return` key was pressed | n/a |
+| keyboard:escape | The `escape` key was pressed | n/a |
 | keyboard:space | The `space` key was pressed      | n/a |
 | keyboard:arrow:up | The `↑` key was pressed   | n/a |
 | keyboard:arrow:down | The `↓` key was pressed | n/a |
@@ -43,8 +43,8 @@ calcite.bus.emit('drawer:open', {id: "top-nav"})
 | Event | Description | Emits | Function |
 | --- | --- | --- | --- |
 | drawer:bind | Binds dom to event listeners | n/a | `bindDrawers()` |
-| drawer:open | Opens a specified drawer data-drawer attribute | `{id: drawerid}` | `openDrawer()` |
-| drawer:close | Closes a specified drawer by data-drawer attribute | `{id: drawerid}` | `closeDrawer()` |
+| drawer:open | Opens a drawer specified by data-drawer attribute | `{id: drawerid}` | `openDrawer()` |
+| drawer:close | Closes a drawer specified by data-drawer attribute | `{id: drawerid}` | `closeDrawer()` |
 | keyboard:escape | Closes all drawers on escape | n/a | `closeDrawer()` |
 
 
@@ -80,7 +80,7 @@ Many of the filter dropdown channels emit and listen for the following options o
 | filterDropdown:active:clear | Clear all active items from the dropdown | Options Object | `clearActive()` |
 | filterDropdown:toggle | Toggle a dropdown open and closed | Options Object | `toggleDropdown()` |
 | filterDropdown:open | Open a specific dropdown | Options Object | `openList()` |
-| filterDropdown:close | Closes all dropdowns | n/a. | `closeList()` |
+| filterDropdown:close | Closes all dropdowns | n/a | `closeList()` |
 | keyboard:escape | Closes all dropdowns | n/a | `closeList()` |
 
 #### Modal
@@ -88,8 +88,8 @@ Many of the filter dropdown channels emit and listen for the following options o
 | Event | Description | Emits | Function |
 | --- | --- | --- | --- |
 | modal:bind | Binds dom to event listeners | n/a | `bindModals()` |
-| modal:open | Opens a specific modal | `{id: modalId }` |  `openModal()` |
-| modal:close | Closes all modals | n/a | `closeModal()` |
+| modal:open | Opens a modal specified by data-modal attribute | `{id: modalid}` |  `openModal()` |
+| modal:close | Closes open modal | n/a | `closeModal()` |
 | keyboard:escape | Closes all modals | n/a | `closeModal()` |
 
 #### Sticky
