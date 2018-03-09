@@ -4,6 +4,7 @@
 - make button border colors match background on hover (#840)
 - remove some `!important` rules (#877)
 - `margin-left/right` and `padding-left/right` now work in rtl (#805)
+- Fix drawer pattern on Safari, allow for `position: sticky` (#863)
 
 ### Modified
 - update several patterns to use buttons instead of anchors
