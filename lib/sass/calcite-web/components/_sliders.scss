@@ -146,14 +146,21 @@ input[type="range"]::-moz-range-track { @include track-style; }
 // input[type="range"]::-moz-range-progress { background-color: $track-progress-bgcolor; }
 
 // ie styles
-input[type="range"]::-ms-track { @include track-style; }
+input[type="range"]::-ms-track {
+  @include track-style;
+  height:4px;
+  border:0px solid transparent;
+  color: transparent;
+}
 input[type="range"]::-ms-fill-upper { background-color: $track-bgcolor; }
+input[type="range"]::-ms-fill-lower { background-color: $track-bgcolor; }
 // don't include progress for now
 // input[type="range"]::-ms-fill-lower { background-color: $track-progress-bgcolor; }
 input[type="range"]::-ms-thumb {
   @include thumb-style;
   height: 12px;
   width: 12px;
+  margin-top:-3px;
   &:hover { @include thumb-hover-style; }
   &:focus, &:active {
     @include thumb-focus-style;
