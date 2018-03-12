@@ -1,4 +1,4 @@
-// ┌─────────┐
+// ┌──────────┐
 // │ Sliders │
 // └─────────┘
 //  ↳ http: //esri.github.io/calcite-web/documentation/components/#sliders
@@ -6,18 +6,20 @@
 
 // variables
 $range-border: 1px solid transparent;
-$range-track-bgcolor: $Calcite_Gray_300;
-$range-track-hover-bgcolor: $Calcite_Gray_350;
-$range-track-progress-bgcolor: $Brand_Blue_200;
-$range-thumb-height: 18px;
-$range-thumb-width: 18px;
-$range-thumb-border: 3px solid $Calcite_Gray_350;
-$range-thumb-bgcolor: $white;
+$track-bgcolor: $Calcite_Gray_300;
+$track-hover-bgcolor: $Calcite_Gray_350;
+// don't include progress for now
+// $track-progress-bgcolor: $Brand_Blue_200;
 
-$thumb-border-small: 4px solid $Brand_Blue_200;
-$thumb-border-medium: 6px solid $Brand_Blue_200;
+$thumb-height: 18px;
+$thumb-width: 18px;
+
+$thumb-border: 3px solid;
+$thumb-border-color: $Calcite_Gray_350;
+$thumb-border-hover-color: $Brand_Blue_200;
 $thumb-shadow-active: 0 0 0 2px $white;
-$thumb-bg-inactive: $white;
+
+$thumb-bg-default: $white;
 $thumb-bg-hover: $Brand_Blue_200;
 $thumb-bg-active: $Calcite_Blue_a250;
 
@@ -30,58 +32,60 @@ $thumb-bg-active: $Calcite_Blue_a250;
   z-index: 1;
   @include transition(all 0.25s ease);
 }
-@mixin range-track-style {
+@mixin track-style {
   width: 100%;
   height: 4px;
-  border-radius: 1px;
+  border-radius: 0;
   z-index: 2;
-  background-color: $range-track-bgcolor;
+  background-color: $track-bgcolor;
   @include transition(all 0.25s ease);
 }
-@mixin range-thumb-style {
-  height: $range-thumb-height;
-  width: $range-thumb-width;
-  border-radius: 50%;
+@mixin thumb-style {
+  height: $thumb-height;
+  width: $thumb-width;
+  border-radius: 50px;
   margin-top: -7px;
   cursor: pointer;
-  background-color: $range-thumb-bgcolor;
-  border: $range-thumb-border;
+  background-color: $thumb-bg-default;
+  border: $thumb-border;
+  border-color: $thumb-border-color;
   z-index: 3;
   -webkit-appearance: none;
   @include transition(all 0.25s ease);
 }
 
+
 // direct hover over thumb
 @mixin thumb-hover-style {
   background-color: $thumb-bg-hover;
-  border: $thumb-border-medium;
+  border-color: $thumb-border-hover-color;
 }
 // direct focus on thumb
 @mixin thumb-focus-style {
   background-color:  $thumb-bg-active;
-  border: $thumb-border-small;
+  border-color: $thumb-border-hover-color;
   box-shadow: $thumb-shadow-active;
 }
 // range hovered and hovering over thumb
 @mixin range-hover-thumb-style {
-  background-color: $thumb-bg-inactive;
-  border: $thumb-border-small;
+  background-color: $thumb-bg-default;
+  border-color: $thumb-border-hover-color;
 }
 // range focused but not hovering over thumb
 @mixin range-focus-thumb-style {
   background-color: $thumb-bg-hover;
-  border: $thumb-border-medium;
+  border-color: $thumb-border-hover-color;
   outline: none;
 }
 // range focused while thumb is focused but not hovered
 @mixin range-focus-thumb-hover-style {
   background-color: $thumb-bg-active;
-  border: $thumb-border-small;
+  border-color: $thumb-border-hover-color;
 }
 // range focused while thumb is focused and hovered
 @mixin thumb-focus-hover-style {
   background-color: $thumb-bg-active;
-  border: $thumb-border-small;
+  border-color: $thumb-border-hover-color;
   box-shadow: $thumb-shadow-active;
 }
 
@@ -90,26 +94,26 @@ input[type="range"] {
   @include range-style;
   &:hover {
     // webkit
-    &::-webkit-slider-runnable-track { background-color: $range-track-hover-bgcolor; }
+    &::-webkit-slider-runnable-track { background-color: $track-hover-bgcolor; }
     &::-webkit-slider-thumb { @include range-hover-thumb-style; }
     // ff
-    &::-moz-range-track { background-color: $range-track-hover-bgcolor; }
-    &::-moz-range-thumb { @include range-hover-thumb-style; }
+    &::-moz-track { background-color: $track-hover-bgcolor; }
+    &::-moz-thumb { @include range-hover-thumb-style; }
     // ie
-    &::-ms-track { background-color: $range-track-hover-bgcolor; }
+    &::-ms-track { background-color: $track-hover-bgcolor; }
     &::-ms-thumb { @include range-hover-thumb-style; }
   }
   &:focus, &:active {
     // webkit
-    &::-webkit-slider-runnable-track { background-color: $range-track-hover-bgcolor; }
+    &::-webkit-slider-runnable-track { background-color: $track-hover-bgcolor; }
     &::-webkit-slider-thumb { @include range-focus-thumb-style; }
     &::-webkit-slider-thumb:hover { @include range-focus-thumb-hover-style; }
     // ff
-    &::-moz-range-track { background-color: $range-track-hover-bgcolor; }
-    &::-moz-range-thumb { @include range-focus-thumb-style; }
-    &::-moz-range-thumb:hover { @include range-focus-thumb-hover-style; }
+    &::-moz-track { background-color: $track-hover-bgcolor; }
+    &::-moz-thumb { @include range-focus-thumb-style; }
+    &::-moz-thumb:hover { @include range-focus-thumb-hover-style; }
     // ie
-    &::-ms-track { background-color: $range-track-hover-bgcolor; }
+    &::-ms-track { background-color: $track-hover-bgcolor; }
     &::-ms-thumb { @include range-focus-thumb-style; }
     &::-ms-thumb:hover { @include range-focus-thumb-hover-style; }
   }
@@ -117,33 +121,37 @@ input[type="range"] {
 
 // webkit styles
 input[type="range"]::-webkit-slider-thumb {
-  @include range-thumb-style;
+  @include thumb-style;
   &:hover { @include thumb-hover-style; }
   &:focus, &:active {
     @include thumb-focus-style;
     &:hover { @include thumb-focus-hover-style; }
   }
 }
-input[type="range"]::-webkit-slider-runnable-track { @include range-track-style; }
+input[type="range"]::-webkit-slider-runnable-track { @include track-style; }
 
 // ff styles
 input[type="range"]::-moz-range-thumb {
-  @include range-thumb-style;
+  @include thumb-style;
+  height: 12px;
+  width: 12px;
   &:hover { @include thumb-hover-style; }
   &:focus, &:active {
     @include thumb-focus-style;
     &:hover { @include thumb-focus-hover-style; }
   }
 }
-input[type="range"]::-moz-range-track { @include range-track-style; }
-input[type="range"]::-moz-range-progress { background-color: $range-track-progress-bgcolor; }
+input[type="range"]::-moz-range-track { @include track-style; }
+// don't include progress for now
+// input[type="range"]::-moz-range-progress { background-color: $track-progress-bgcolor; }
 
 // ie styles
-input[type="range"]::-ms-track { @include range-track-style; }
-input[type="range"]::-ms-fill-upper { background-color: $range-track-bgcolor; }
-input[type="range"]::-ms-fill-lower { background-color: $range-track-progress-bgcolor; }
+input[type="range"]::-ms-track { @include track-style; }
+input[type="range"]::-ms-fill-upper { background-color: $track-bgcolor; }
+// don't include progress for now
+// input[type="range"]::-ms-fill-lower { background-color: $track-progress-bgcolor; }
 input[type="range"]::-ms-thumb {
-  @include range-thumb-style;
+  @include thumb-style;
   &:hover { @include thumb-hover-style; }
   &:focus, &:active {
     @include thumb-focus-style;
