@@ -97,8 +97,8 @@ input[type="range"] {
     &::-webkit-slider-runnable-track { background-color: $track-hover-bgcolor; }
     &::-webkit-slider-thumb { @include range-hover-thumb-style; }
     // ff
-    &::-moz-track { background-color: $track-hover-bgcolor; }
-    &::-moz-thumb { @include range-hover-thumb-style; }
+    &::-moz-range-track { background-color: $track-hover-bgcolor; }
+    &::-moz-range-thumb { @include range-hover-thumb-style; }
     // ie
     &::-ms-track { background-color: $track-hover-bgcolor; }
     &::-ms-thumb { @include range-hover-thumb-style; }
@@ -109,9 +109,9 @@ input[type="range"] {
     &::-webkit-slider-thumb { @include range-focus-thumb-style; }
     &::-webkit-slider-thumb:hover { @include range-focus-thumb-hover-style; }
     // ff
-    &::-moz-track { background-color: $track-hover-bgcolor; }
-    &::-moz-thumb { @include range-focus-thumb-style; }
-    &::-moz-thumb:hover { @include range-focus-thumb-hover-style; }
+    &::-moz-range-track { background-color: $track-hover-bgcolor; }
+    &::-moz-range-thumb { @include range-focus-thumb-style; }
+    &::-moz-range-thumb:hover { @include range-focus-thumb-hover-style; }
     // ie
     &::-ms-track { background-color: $track-hover-bgcolor; }
     &::-ms-thumb { @include range-focus-thumb-style; }
@@ -152,6 +152,8 @@ input[type="range"]::-ms-fill-upper { background-color: $track-bgcolor; }
 // input[type="range"]::-ms-fill-lower { background-color: $track-progress-bgcolor; }
 input[type="range"]::-ms-thumb {
   @include thumb-style;
+  height: 12px;
+  width: 12px;
   &:hover { @include thumb-hover-style; }
   &:focus, &:active {
     @include thumb-focus-style;
