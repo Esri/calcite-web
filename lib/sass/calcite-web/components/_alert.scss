@@ -40,11 +40,15 @@
   }
 
   @mixin alert-close() {
+    @extend %btn-link;
+    color: currentColor;
     position: absolute;
-    right: $baseline/2;
+    html:not([dir="rtl"]) & {
+      right: $baseline/2;
+    }
+
     @if ($include-right-to-left) {
       html[dir="rtl"] & {
-        right: auto;
         left: $baseline/2;
       }
     }

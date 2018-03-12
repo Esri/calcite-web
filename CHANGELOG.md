@@ -1,9 +1,31 @@
-## 1.0.0
+## [Unreleased][unreleased]
 
 ### Fixes
+- remove some `!important` rules (#877)
+- `margin-left/right` and `padding-left/right` now work in rtl (#805)
+- Fix drawer pattern on Safari, allow for `position: sticky` (#863)
+- Fix fencing of focus in modals (#793)
+- make modal js syntax more consistent (#862)
+
+### Modified
+- update several patterns to use buttons instead of anchors
+- style `dropdown-link` so it can be a `button` element
+- update `top-nav-link` so it can be a `button` element
+- remove fonts.com and use self-hosted fonts from esri CDN
+- declare demi-bold as `700` so browser defaults render
+- make headings `400` instead of `300`
+- Large improvements to the display of several languages including Arabic, Hindi, Georgian, Vietnamese, Hebrew, and Thai
+- Vietnamese now renders in SST instead of Verdana (#865)
 - make button border colors match background on hover (#840)
 
-## 1.0.0-rc.8
+### Removed
+- no more `rtl-` classes as they are not needed and are an anti-pattern
+
+### Added
+- `link-dark-blue` helper class (#855)
+- `btn-link` helper class (#846)
+
+## [1.0.0-rc.8]
 
 ### Fixes
 - fix rounded buttons in newest chrome
@@ -1304,3 +1326,6 @@ Begin foundational sass for the framework.
 - KSS Parser
 - CSS Reset
 - Grunt Workflows
+
+[unreleased]: https://github.com/esri/calcite-web/compare/v1.0.0-rc.8...HEAD
+[1.0.0-rc.8]: https://github.com/esri/calcite-web/compare/v1.0.0-rc.7...v1.0.0-rc.8
