@@ -267,6 +267,24 @@
       }
     }
   }
+  // rtl spacing
+  html[dir="rtl"] {
+    & input[type='radio'], & input[type='checkbox'] {
+      margin-right: .125rem;
+      margin-left: .5rem;
+    }
+    @supports (-ms-ime-align: auto) {
+      input[type='radio'], input[type='checkbox'] {
+        margin-left: .5rem;
+      }
+    }
+    // special style for iOS checked
+    @supports (-webkit-overflow-scrolling: touch) {
+      input[type='radio'], input[type='checkbox'] {
+        margin-left: 0;
+      }
+    }
+  }
 
   .fieldset-radio, .fieldset-checkbox {
     label {
