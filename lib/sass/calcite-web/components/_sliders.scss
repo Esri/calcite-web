@@ -10,15 +10,12 @@ $track-bgcolor: $Calcite_Gray_300;
 $track-hover-bgcolor: $Calcite_Gray_350;
 $track-active-bgcolor: $Calcite_Gray_400;
 // $track-progress-bgcolor: $Brand_Blue_200;
-
 $thumb-height: 18px;
 $thumb-width: 18px;
-
 $thumb-border: 3px solid;
 $thumb-border-color: $Calcite_Gray_350;
 $thumb-border-hover-color: $Brand_Blue_200;
 $thumb-shadow-active: 0 0 0 2px $white;
-
 $thumb-bg-default: $white;
 $thumb-bg-hover: $Brand_Blue_200;
 $thumb-bg-active: $Calcite_Blue_a250;
@@ -32,7 +29,6 @@ $thumb-bg-active: $Calcite_Blue_a250;
   z-index: 1;
   cursor: pointer;
   @include transition(all 0.25s ease);
-
 }
 @mixin track-style {
   width: 100%;
@@ -55,8 +51,6 @@ $thumb-bg-active: $Calcite_Blue_a250;
   -webkit-appearance: none;
   @include transition(all 0.25s ease);
 }
-
-
 // direct hover over thumb
 @mixin thumb-hover-style {
   background-color: $thumb-bg-hover;
@@ -91,95 +85,94 @@ $thumb-bg-active: $Calcite_Blue_a250;
   box-shadow: $thumb-shadow-active;
 }
 
-// base range styles
-input[type="range"] {
-  @include transition(all 0.25s ease);
-  @include range-style;
-  &:hover {
-    // webkit
-    &::-webkit-slider-runnable-track { background-color: $track-hover-bgcolor; }
-    &::-webkit-slider-thumb { @include range-hover-thumb-style; }
-    // ff
-    &::-moz-range-track { background-color: $track-hover-bgcolor; }
-    &::-moz-range-thumb { @include range-hover-thumb-style; }
-    // ie
-    &::-ms-fill-upper { background-color: $track-hover-bgcolor }
-    &::-ms-fill-lower { background-color: $track-hover-bgcolor }
-    &::-ms-thumb { @include range-hover-thumb-style; }
-  }
-  &:focus, &:active {
-    // webkit
-    &::-webkit-slider-runnable-track { background-color: $track-hover-bgcolor; }
-    &::-webkit-slider-thumb { @include range-focus-thumb-style; }
-    &::-webkit-slider-thumb:hover { @include range-focus-thumb-hover-style; }
-    // ff
-    &::-moz-range-track { background-color: $track-hover-bgcolor; }
-    &::-moz-range-thumb { @include range-focus-thumb-style; }
-    &::-moz-range-thumb:hover { @include range-focus-thumb-hover-style; }
-    // ie
-    &::-ms-fill-upper { background-color: $track-hover-bgcolor }
-    &::-ms-fill-lower { background-color: $track-hover-bgcolor }
-    &::-ms-thumb { @include range-focus-thumb-style; }
-    &::-ms-thumb:hover { @include range-focus-thumb-hover-style; }
-  }
-}
-
-// webkit styles
-input[type="range"]::-webkit-slider-runnable-track { @include track-style; }
-input[type="range"]::-webkit-slider-thumb {
-  @include thumb-style;
-  &:hover { @include thumb-hover-style; }
-  &:focus, &:active {
-    @include thumb-focus-style;
-    &:hover { @include thumb-focus-hover-style; }
-  }
-}
-// make tap target larger on touch devices
-@supports (-webkit-overflow-scrolling: touch) {
-  input[type="range"]::-webkit-slider-thumb {
-    height:22px;
-    width:22px;
-    margin-top:-10px;
-  }
-}
-// ff styles
-input[type="range"]::-moz-range-track { @include track-style; }
-input[type="range"]::-moz-range-thumb {
-  @include thumb-style;
-  height: 12px;
-  width: 12px;
-  &:hover { @include thumb-hover-style; }
-  &:focus, &:active {
-    @include thumb-focus-style;
-    &:hover { @include thumb-focus-hover-style; }
-  }
-}
-
-// ie styles
-input[type="range"]::-ms-fill-upper { background-color: $track-bgcolor; }
-input[type="range"]::-ms-fill-lower { background-color: $track-bgcolor; }
-input[type="range"]::-ms-track {
-  @include track-style;
-  height:4px;
-  border:0px solid transparent;
-  color: transparent;
-
-}
-input[type="range"]::-ms-thumb {
-  @include thumb-style;
-  height: 12px;
-  width: 12px;
-  margin-top:-2px;
-  &:hover { @include thumb-hover-style; }
-  &:focus, &:active {
-    @include thumb-focus-style;
-    &:hover { @include thumb-focus-hover-style; }
-  }
-}
-
-// don't include progress for now
-// input[type="range"]::-moz-range-progress { background-color: $track-progress-bgcolor; }
-// input[type="range"]::-ms-fill-lower { background-color: $track-progress-bgcolor; }
-
 @if $include-sliders == true {
+  // base range styles
+  input[type="range"] {
+    @include transition(all 0.25s ease);
+    @include range-style;
+    &:hover {
+      // webkit
+      &::-webkit-slider-runnable-track { background-color: $track-hover-bgcolor; }
+      &::-webkit-slider-thumb { @include range-hover-thumb-style; }
+      // ff
+      &::-moz-range-track { background-color: $track-hover-bgcolor; }
+      &::-moz-range-thumb { @include range-hover-thumb-style; }
+      // ie
+      &::-ms-fill-upper { background-color: $track-hover-bgcolor }
+      &::-ms-fill-lower { background-color: $track-hover-bgcolor }
+      &::-ms-thumb { @include range-hover-thumb-style; }
+    }
+    &:focus, &:active {
+      // webkit
+      &::-webkit-slider-runnable-track { background-color: $track-hover-bgcolor; }
+      &::-webkit-slider-thumb { @include range-focus-thumb-style; }
+      &::-webkit-slider-thumb:hover { @include range-focus-thumb-hover-style; }
+      // ff
+      &::-moz-range-track { background-color: $track-hover-bgcolor; }
+      &::-moz-range-thumb { @include range-focus-thumb-style; }
+      &::-moz-range-thumb:hover { @include range-focus-thumb-hover-style; }
+      // ie
+      &::-ms-fill-upper { background-color: $track-hover-bgcolor }
+      &::-ms-fill-lower { background-color: $track-hover-bgcolor }
+      &::-ms-thumb { @include range-focus-thumb-style; }
+      &::-ms-thumb:hover { @include range-focus-thumb-hover-style; }
+    }
+  }
+
+  // webkit styles
+  input[type="range"]::-webkit-slider-runnable-track { @include track-style; }
+  input[type="range"]::-webkit-slider-thumb {
+    @include thumb-style;
+    &:hover { @include thumb-hover-style; }
+    &:focus, &:active {
+      @include thumb-focus-style;
+      &:hover { @include thumb-focus-hover-style; }
+    }
+  }
+  // make tap target larger on touch devices
+  @supports (-webkit-overflow-scrolling: touch) {
+    input[type="range"]::-webkit-slider-thumb {
+      height: 22px;
+      width: 22px;
+      margin-top: -10px;
+    }
+  }
+
+  // ff styles
+  input[type="range"]::-moz-range-track { @include track-style; }
+  input[type="range"]::-moz-range-thumb {
+    @include thumb-style;
+    height: 12px;
+    width: 12px;
+    &:hover { @include thumb-hover-style; }
+    &:focus, &:active {
+      @include thumb-focus-style;
+      &:hover { @include thumb-focus-hover-style; }
+    }
+  }
+
+  // ie styles
+  input[type="range"]::-ms-fill-upper { background-color: $track-bgcolor; }
+  input[type="range"]::-ms-fill-lower { background-color: $track-bgcolor; }
+  input[type="range"]::-ms-track {
+    @include track-style;
+    height: 4px;
+    border: 0px solid transparent;
+    color: transparent;
+  }
+
+  input[type="range"]::-ms-thumb {
+    @include thumb-style;
+    height: 12px;
+    width: 12px;
+    margin-top: -2px;
+    &:hover { @include thumb-hover-style; }
+    &:focus, &:active {
+      @include thumb-focus-style;
+      &:hover { @include thumb-focus-hover-style; }
+    }
+  }
+  // don't include progress for now
+  // input[type="range"]::-moz-range-progress { background-color: $track-progress-bgcolor; }
+  // input[type="range"]::-ms-fill-lower { background-color: $track-progress-bgcolor; }
 }
