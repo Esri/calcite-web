@@ -524,6 +524,11 @@ components:
           status: 'complete'
           modifiers:
             - select-full
+        - title: 'Switches'
+          link: switch
+          status: 'complete'
+          classes:
+            - toggle
         - title: 'Checkboxes'
           link: checkboxes
           status: 'complete'
@@ -564,9 +569,6 @@ components:
         - title: 'Range Slider'
           hidden: true
           status: 'inprogress'
-        - title: 'Toggle Switch'
-          hidden: true
-          status: 'proposed'
         - title: 'Example'
           hidden: true
           status: 'unplanned'

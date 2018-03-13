@@ -3,3 +3,99 @@
 // └────────┘
 //  ↳ http://esri.github.io/calcite-web/documentation/components/#switch
 //  ↳ components → _switch.md
+/* Prominent on/off switch component */
+.toggle {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+}
+
+.toggle-input {
+  opacity: 0;
+  position: absolute;
+}
+
+.toggle-label {
+  width: calc(100% - 3rem);
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 2rem;
+  height: 1.25rem;
+  background: white;
+  box-shadow: inset 0 0 0 0.0625rem #ccc;
+  border-radius: 0.65rem;
+  vertical-align: -0.3rem;
+  transition: all 0.40s cubic-bezier(.17,.67,.43,.98);
+  margin-top: 0.15em;
+}
+
+.toggle:active .toggle-input + .toggle-switch,
+.toggle-input + .toggle-switch:active {
+    box-shadow: inset 0 0 0 0.73rem #ccc;
+}
+
+.toggle-switch:after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 1.175rem;
+  height: 1.175rem;
+  border-radius: 0.75rem;
+  top: 0.025rem;
+  left: 0.025rem;
+  background: white;
+  box-shadow: inset 0 0 0 1px #ccc, 0 0 0.05rem rgba(0,0,0,0.05), 0 0.1rem 0.2rem rgba(0,0,0,0.2);
+  transition: all 0.25s ease-out;
+}
+
+.toggle:active .toggle-input + .toggle-switch:after,
+.toggle-input + .toggle-switch:active:after {
+    width: 1.15rem;
+}
+
+.toggle-input:checked + .toggle-switch {
+    box-shadow: inset 0 0 0 0.73rem #0079c2;
+}
+
+.toggle-input:checked + .toggle-switch:after {
+    left: 0.775rem;
+}
+
+.toggle:active .toggle-input:checked + .toggle-switch:after,
+.toggle-input:checked + .toggle-switch:active:after {
+    left: 0.4375rem;
+}
+
+.esriRtl .toggle-switch:after {
+  left: auto;
+  right: 0.025rem;
+}
+
+.esriRtl .toggle-input:checked + .toggle-switch:after {
+    left: auto;
+    right: 0.775rem;
+}
+
+.esriRtl .toggle:active .toggle-input:checked + .toggle-switch:after,
+.esriRtl .toggle-input:checked + .toggle-switch:active:after {
+    left: auto;
+    right: 0.4375rem;
+}
+
+/* focus styles for accessibility */
+.toggle-input:focus + .toggle-switch {
+  box-shadow: inset 0 0 0 0.0625rem #ddd, 0 0 1px 2px #bbb;
+}
+
+.toggle-input:checked:focus + .toggle-switch {
+  box-shadow: inset 0 0 0 0.73rem #0079c2, 0 0 1px 2px #bbb;
+}
