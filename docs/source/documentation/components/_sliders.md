@@ -1,5 +1,3 @@
-This is our plain slider. More functionality may come in the form of a sliders.js helper, in the future.
+Browser defaults for input ranges vary wildly - this is a basic input slider component.
 
-All four major browsers render sliders differently. We've done our best to ensure a consistent display, however some browsers have support for elements not allowed in others. For example, Edge and Firefox natively allow for a progress pseudo: element, which we've styled here. Chrome and Safari allow the appending of datalists and options as tick marks, which we've allowed to display here but do not enforce styles upon.
-
-We recommend placing your range inside a label to ensure property highlighting and click / hover functionality.
+While FF and Edge natively support progress, Webkit doesn’t yet. For consistency we’ve made all browsers behave in this way. We are planning to add some basic js helpers for input ranges and hope to include an opt-in cross-browser progress class. Similarly, we don't support dataticks at this point because of their inconsistent adoption. IE natively displays slider value, and we've left that function for now. In the JS functionality update, we'll add consistent tooltip displays across browsers. on iOS devices we make the touch area for the slider larger to accomodate tapping - iOS natively does not handle tap-to-move anywhere but the handle thumb so we try to make it better here.
