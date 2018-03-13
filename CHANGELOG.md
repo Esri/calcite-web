@@ -6,6 +6,7 @@
 - Fix drawer pattern on Safari, allow for `position: sticky` (#863)
 - Fix fencing of focus in modals (#793)
 - make modal js syntax more consistent (#862)
+- fix for iOS checkbox rendering (#861)
 
 ### Modified
 - update several patterns to use buttons instead of anchors
@@ -17,6 +18,8 @@
 - Large improvements to the display of several languages including Arabic, Hindi, Georgian, Vietnamese, Hebrew, and Thai
 - Vietnamese now renders in SST instead of Verdana (#865)
 - make button border colors match background on hover (#840)
+- update style of file upload button in FF and iOS (#886)
+- fix alignment of checkboxes and radio buttons across browsers
 
 ### Removed
 - no more `rtl-` classes as they are not needed and are an anti-pattern
@@ -24,6 +27,7 @@
 ### Added
 - `link-dark-blue` helper class (#855)
 - `btn-link` helper class (#846)
+- added range slider input component (#838)
 
 ## [1.0.0-rc.8]
 
