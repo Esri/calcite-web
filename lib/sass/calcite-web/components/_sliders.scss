@@ -8,7 +8,7 @@
 $range-border: 1px solid transparent;
 $track-bgcolor: $Calcite_Gray_300;
 $track-hover-bgcolor: $Calcite_Gray_350;
-// don't include progress for now
+$track-active-bgcolor: $Calcite_Gray_400;
 // $track-progress-bgcolor: $Brand_Blue_200;
 
 $thumb-height: 18px;
@@ -103,7 +103,8 @@ input[type="range"] {
     &::-moz-range-track { background-color: $track-hover-bgcolor; }
     &::-moz-range-thumb { @include range-hover-thumb-style; }
     // ie
-    &::-ms-track { background-color: $track-hover-bgcolor; }
+    &::-ms-fill-upper { background-color: $track-hover-bgcolor }
+    &::-ms-fill-lower { background-color: $track-hover-bgcolor }
     &::-ms-thumb { @include range-hover-thumb-style; }
   }
   &:focus, &:active {
@@ -116,7 +117,8 @@ input[type="range"] {
     &::-moz-range-thumb { @include range-focus-thumb-style; }
     &::-moz-range-thumb:hover { @include range-focus-thumb-hover-style; }
     // ie
-    &::-ms-track { background-color: $track-hover-bgcolor; }
+    &::-ms-fill-upper { background-color: $track-hover-bgcolor }
+    &::-ms-fill-lower { background-color: $track-hover-bgcolor }
     &::-ms-thumb { @include range-focus-thumb-style; }
     &::-ms-thumb:hover { @include range-focus-thumb-hover-style; }
   }
@@ -161,6 +163,7 @@ input[type="range"]::-ms-track {
   height:4px;
   border:0px solid transparent;
   color: transparent;
+
 }
 input[type="range"]::-ms-thumb {
   @include thumb-style;
@@ -172,11 +175,6 @@ input[type="range"]::-ms-thumb {
     @include thumb-focus-style;
     &:hover { @include thumb-focus-hover-style; }
   }
-}
-input[type="range"]:focus::-ms-thumb {
-  outline-width: 1px;
-  outline-color:auto;
-  outline-style: solid;
 }
 
 // don't include progress for now

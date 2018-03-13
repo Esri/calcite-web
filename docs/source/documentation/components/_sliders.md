@@ -1,3 +1,1 @@
-Browser defaults for input ranges vary wildly - this is a basic input slider component.
-
-While FF and Edge natively support progress, Webkit doesn’t yet. For consistency we’ve made all browsers behave in this way. We are planning to add some basic js helpers for input ranges and hope to include an opt-in cross-browser progress class. Similarly, we don't support dataticks at this point because of their inconsistent adoption. IE natively displays slider value, and we've left that function for now. In the JS functionality update, we'll add consistent tooltip displays across browsers. on iOS devices we make the touch area for the slider larger to accomodate tapping - iOS natively does not handle tap-to-move anywhere but the handle thumb so we try to make it better here.
+This is a simple range slider input component to provide consistent cross-browser styles. In the future we hope to add more functionality via opt-in js classes.
