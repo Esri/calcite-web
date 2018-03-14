@@ -1,10 +1,37 @@
 // ┌────────┐
 // │ Switch │
 // └────────┘
-//  ↳ http://esri.github.io/calcite-web/documentation/components/#switch
+//  ↳ http: //esri.github.io/calcite-web/documentation/components/#switch
 //  ↳ components → _switch.md
-/* Prominent on/off switch component */
-.toggle {
+// variables
+$switch-width: 2.5rem;
+$switch-height: 1.25rem;
+$switch-bg: $Calcite_Gray_150;
+$switch-border-color: $Calcite_Gray_250;
+$switch-hover-bg: $Calcite_Gray_200;
+$switch-hover-border-color: $Calcite_Gray_300;
+$switch-checked-bg: $Calcite_Blue_250;
+$switch-checked-border-color: $Calcite_Blue_a250;
+$handle-width: 1.25em;
+$handle-height: 1.25rem;
+$handle-edge-distance: -.1rem;
+$handle-active-edge-distance: 0.1rem;
+$handle-bg: $white;
+$handle-border-color: $Calcite_Gray_350;
+$handle-shadow: 0 1px 1px 0px rgba($darkest-gray,0.1);
+$handle-hover-bg: $off-white;
+$handle-hover-border-color: $Brand_Blue_200;
+$handle-hover-shadow: 0 1px 2px 0px rgba($darkest-gray,0.2);
+$handle-checked-bg: $white;
+$handle-checked-border-color: $Brand_Blue_200;
+$handle-checked-shadow: 0 2px 1px 0px rgba($darkest-gray,0.2);
+$handle-active-shadow: 0 3px 1px 0px rgba($darkest-gray,0.3);
+$switch-destructive-checked-bg: $Calcite_Red_200;
+$switch-destructive-checked-border-color: $Calcite_Red_a250;
+$handle-destructive-hover-border-color: $Calcite_Red_200;
+$handle-destructive-checked-border-color: $Calcite_Red_a250;
+
+.filter-toggle {
   display: block;
   position: relative;
   cursor: pointer;
@@ -16,86 +43,122 @@
   tap-highlight-color: transparent;
 }
 
-.toggle-input {
+.filter-toggle-input {
   opacity: 0;
   position: absolute;
 }
 
-.toggle-label {
-  width: calc(100% - 3rem);
+// spacing for text
+.filter-toggle-label {
+  width: calc((100% - 3rem) - .5rem);
 }
 
-.toggle-switch {
+// track
+.filter-toggle-switch {
   position: relative;
   display: inline-block;
-  width: 2rem;
-  height: 1.25rem;
-  background: white;
-  box-shadow: inset 0 0 0 0.0625rem #ccc;
-  border-radius: 0.65rem;
-  vertical-align: -0.3rem;
-  transition: all 0.40s cubic-bezier(.17,.67,.43,.98);
-  margin-top: 0.15em;
+  width: $switch-width;
+  height: $switch-height;
+  background-color: $switch-bg;
+  border: 1px solid $switch-border-color;
+  border-radius: 100px;
+  @include transition(all 0.25s ease);
 }
 
-.toggle:active .toggle-input + .toggle-switch,
-.toggle-input + .toggle-switch:active {
-    box-shadow: inset 0 0 0 0.73rem #ccc;
-}
-
-.toggle-switch:after {
+// handle
+.filter-toggle-switch:after {
   position: absolute;
   display: block;
   content: '';
-  width: 1.175rem;
-  height: 1.175rem;
-  border-radius: 0.75rem;
-  top: 0.025rem;
-  left: 0.025rem;
-  background: white;
-  box-shadow: inset 0 0 0 1px #ccc, 0 0 0.05rem rgba(0,0,0,0.05), 0 0.1rem 0.2rem rgba(0,0,0,0.2);
-  transition: all 0.25s ease-out;
+  width: $handle-width;
+  height: $handle-height;
+  border-radius: 100px;
+  top: -.1rem;
+  left: $handle-edge-distance;
+  background-color: $handle-bg;
+  border: 2px solid $handle-border-color;
+  @include transition(all 0.25s ease);
+  box-shadow: $handle-shadow;
 }
 
-.toggle:active .toggle-input + .toggle-switch:after,
-.toggle-input + .toggle-switch:active:after {
-    width: 1.15rem;
+// hover styles
+.filter-toggle-input:hover + .filter-toggle-switch {
+  border-color: $switch-hover-border-color;
+  background-color: $switch-hover-bg;
+  &:after {
+    background-color: $handle-hover-bg;
+    border-color: $handle-hover-border-color;
+    box-shadow: $handle-hover-shadow;
+  }
 }
 
-.toggle-input:checked + .toggle-switch {
-    box-shadow: inset 0 0 0 0.73rem #0079c2;
+// active / press styles
+.filter-toggle-input:active + .filter-toggle-switch:after {
+  left: $handle-active-edge-distance;
+  box-shadow: $handle-active-shadow;
+}
+.filter-toggle-input:checked:active + .filter-toggle-switch:after {
+  right: $handle-active-edge-distance;
+  box-shadow: $handle-active-shadow;
 }
 
-.toggle-input:checked + .toggle-switch:after {
-    left: 0.775rem;
+// checked styles
+.filter-toggle-input:checked + .filter-toggle-switch {
+  border-color: $switch-checked-border-color;
+  background-color: $switch-checked-bg;
+  left: $handle-active-edge-distance;
+  &:after {
+    right: $handle-edge-distance;
+    left: initial;
+    background-color: $handle-checked-bg;
+    border-color: $handle-checked-border-color;
+    box-shadow: $handle-checked-shadow;
+  }
 }
 
-.toggle:active .toggle-input:checked + .toggle-switch:after,
-.toggle-input:checked + .toggle-switch:active:after {
-    left: 0.4375rem;
+// destructive hover styles
+.filter-toggle-destructive .filter-toggle-input:hover + .filter-toggle-switch:after {
+  border-color: $handle-destructive-hover-border-color;
+}
+// destructive checked styles
+.filter-toggle-destructive .filter-toggle-input:checked + .filter-toggle-switch {
+  background-color: $switch-destructive-checked-bg;
+  border-color: $switch-destructive-checked-border-color;
+  &:after {
+    border-color: $handle-destructive-checked-border-color;
+  }
 }
 
-.esriRtl .toggle-switch:after {
-  left: auto;
-  right: 0.025rem;
+// rtl
+html[dir="rtl"] .filter-toggle-switch:after {
+  left: initial;
+  right: $handle-edge-distance;
+}
+html[dir="rtl"] .filter-toggle-input:checked + .filter-toggle-switch:after {
+  right: initial;
+  left: $handle-edge-distance;
+}
+html[dir="rtl"] .filter-toggle-input:active + .filter-toggle-switch:after {
+  right: $handle-active-edge-distance;
+}
+html[dir="rtl"] .filter-toggle-input:checked:active + .filter-toggle-switch:after {
+  left: $handle-active-edge-distance;
+  right:initial;
 }
 
-.esriRtl .toggle-input:checked + .toggle-switch:after {
-    left: auto;
-    right: 0.775rem;
+// focus styles for accessibility
+.filter-toggle-input:focus + .filter-toggle-switch {
+  box-shadow:0 0 3px 2px rgba($Calcite_Gray_300,0.8);
+}
+.filter-toggle-input:checked:focus + .filter-toggle-switch {
+  box-shadow:0 0 3px 2px rgba($Calcite_Blue_200,0.8);
+}
+.filter-toggle-destructive .filter-toggle-input:checked:focus + .filter-toggle-switch {
+  box-shadow:0 0 3px 2px rgba($Calcite_Red_200,0.8);
 }
 
-.esriRtl .toggle:active .toggle-input:checked + .toggle-switch:after,
-.esriRtl .toggle-input:checked + .toggle-switch:active:after {
-    left: auto;
-    right: 0.4375rem;
-}
-
-/* focus styles for accessibility */
-.toggle-input:focus + .toggle-switch {
-  box-shadow: inset 0 0 0 0.0625rem #ddd, 0 0 1px 2px #bbb;
-}
-
-.toggle-input:checked:focus + .toggle-switch {
-  box-shadow: inset 0 0 0 0.73rem #0079c2, 0 0 1px 2px #bbb;
+@if $include-switches == true {
+// .toggle { @include toggle();  }
+// .toggle-image-wrap { @include toggle-image-wrap();  }
+// .toggle-image { @include toggle-image();  }
 }

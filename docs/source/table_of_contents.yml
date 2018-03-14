@@ -528,7 +528,9 @@ components:
           link: switch
           status: 'complete'
           classes:
-            - toggle
+            - filter-toggle
+            - filter-toggle-destructive
+          modifiers: false
         - title: 'Checkboxes'
           link: checkboxes
           status: 'complete'
@@ -566,7 +568,7 @@ components:
     - group: 'Proposed'
       hidden: true
       pages:
-        - title: 'Range Slider'
+        - title: 'Example'
           hidden: true
           status: 'inprogress'
         - title: 'Example'
