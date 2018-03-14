@@ -1,1 +1,1 @@
-Switch Docs
+Switch toggles are helpful components for communicating boolean inputs to users. We've provided support for both left- and right- aligned copy, as well as a destructive warning class for actions like deletion and other potentially harmful actions. RTL will swap the orientation of the handle within the track.
