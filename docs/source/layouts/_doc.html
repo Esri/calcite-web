@@ -141,8 +141,13 @@
         </div>
         {% endif %}
 
-        {% if page.modifiers or page.modifiers == false %}
+        {% if page.modifiers or page.modifiers == true %}
+        {% if page.title !== 'Overview' %}
         <h4 class="leader-0 text-darkest-gray" tabindex="0">Base</h4>
+        {% endif %}
+        {% endif %}
+
+        {% if page.modifiers or page.modifiers == false %}
         <div class="styleguide-modifiers">
           <div class="styleguide-modifier-example">
             {% include 'documentation/' + data.table_of_contents[section].base + '/sample-code/_' + page.link %}
