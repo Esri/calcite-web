@@ -7,13 +7,13 @@
 $switch-width: 2.5rem;
 $switch-height: 1.3rem;
 $switch-bg: $Calcite_Gray_150;
-$switch-border-color: $Calcite_Gray_250;
+$switch-border-color: $Calcite_Gray_300;
 $switch-hover-bg: $Calcite_Gray_200;
 $switch-hover-border-color: $Calcite_Gray_300;
-$switch-checked-bg: $Calcite_Blue_250;
+$switch-checked-bg: $Calcite_Blue_200;
 $switch-checked-border-color: $Calcite_Blue_a250;
-$handle-width: 1.3em;
-$handle-height: 1.3rem;
+$handle-width: 1.2em;
+$handle-height: 1.2rem;
 $handle-top-distance: -.12rem;
 $handle-edge-distance: -.15rem;
 $handle-active-edge-distance: 0.05rem;
@@ -22,7 +22,7 @@ $handle-border-color: $Calcite_Gray_350;
 $handle-shadow: 0 1px 1px 0px rgba($darkest-gray,0.1);
 $handle-hover-border-color: $Brand_Blue_200;
 $handle-hover-shadow: 0 1px 2px 0px rgba($darkest-gray,0.2);
-$handle-checked-border-color: $Brand_Blue_200;
+$handle-checked-border-color: $Calcite_Blue_a250;
 $handle-checked-shadow: 0 2px 1px 0px rgba($darkest-gray,0.2);
 $handle-active-shadow: 0 3px 1px 0px rgba($darkest-gray,0.2);
 $switch-destructive-checked-bg: $Calcite_Red_200;
@@ -96,7 +96,7 @@ $handle-destructive-checked-border-color: $Calcite_Red_a250;
   top: $handle-top-distance;
   left: $handle-edge-distance;
   background-color: $handle-bg;
-  border: 2px solid $handle-border-color;
+  border: 3px solid $handle-border-color;
   @include transition(all 0.25s ease);
   box-shadow: $handle-shadow;
 }
@@ -161,9 +161,9 @@ html[dir="rtl"] .filter-toggle-input:checked:active + .filter-toggle-switch:afte
 }
 
 // focus styles for accessibility
-.filter-toggle-input:focus + .filter-toggle-switch { box-shadow:0 0 3px 2px rgba($Calcite_Gray_300,0.8); }
-.filter-toggle-input:checked:focus + .filter-toggle-switch { box-shadow:0 0 3px 2px rgba($Calcite_Blue_200,0.8); }
-.filter-toggle-destructive .filter-toggle-input:checked:focus + .filter-toggle-switch { box-shadow:0 0 3px 2px rgba($Calcite_Red_200,0.8); }
+.filter-toggle-input:focus + .filter-toggle-switch { box-shadow:0 0 3px 2px rgba($Calcite_Gray_350,0.9); }
+.filter-toggle-input:checked:focus + .filter-toggle-switch { box-shadow:0 0 3px 2px rgba($Calcite_Blue_200,0.9); }
+.filter-toggle-destructive .filter-toggle-input:checked:focus + .filter-toggle-switch { box-shadow:0 0 3px 2px rgba($Calcite_Red_200,0.9); }
 
 @if $include-switches == true {
 // .toggle { @include toggle();  }
