@@ -61,6 +61,7 @@ $include-logo:                   $generate-css    !default;
 $include-card:                   $generate-css    !default;
 $include-animation:              $generate-css    !default;
 $include-sliders:                $generate-css    !default;
+$include-switches:               $generate-css    !default;
 
 // Patterns
 $include-footer:                 $generate-css    !default;
@@ -130,6 +131,7 @@ $include-filter-dropdown:        $generate-css    !default;
 @import "calcite-web/components/card";
 @import "calcite-web/components/animation";
 @import "calcite-web/components/sliders";
+@import "calcite-web/components/switch";
 
 // Patterns
 // complete interfaces: header, footer, banner...

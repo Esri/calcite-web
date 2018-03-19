@@ -524,10 +524,13 @@ components:
           status: 'complete'
           modifiers:
             - select-full
-        - title: 'Sliders'
-          link: sliders
-          status: 'inprogress'
-          modifiers: false
+        - title: 'Switches'
+          link: switch
+          status: 'complete'
+          classes:
+            - filter-toggle
+          modifiers:
+            - filter-toggle-destructive
         - title: 'Checkboxes'
           link: checkboxes
           status: 'complete'
@@ -565,12 +568,9 @@ components:
     - group: 'Proposed'
       hidden: true
       pages:
-        - title: 'Range Slider'
+        - title: 'Example'
           hidden: true
           status: 'inprogress'
-        - title: 'Toggle Switch'
-          hidden: true
-          status: 'proposed'
         - title: 'Example'
           hidden: true
           status: 'unplanned'
