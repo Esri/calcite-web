@@ -30,6 +30,7 @@ $switch-destructive-checked-border-color: $Calcite_Red_150;
 $handle-destructive-hover-border-color: $Calcite_Red_200;
 $handle-destructive-checked-border-color: $Calcite_Red_a200;
 
+// hide our input
 .filter-toggle {
   display: block;
   position: relative;
@@ -41,37 +42,19 @@ $handle-destructive-checked-border-color: $Calcite_Red_a200;
   -webkit-tap-highlight-color: transparent;
   tap-highlight-color: transparent;
 }
-
 .filter-toggle-input {
   opacity: 0;
   position: absolute;
   vertical-align: middle;
 }
 
-// spacing for text
+// spacing for label
 .filter-toggle-label {
   width: calc((100% - 3rem) - .5rem);
   padding: 0 .1rem;
   vertical-align: middle;
 }
-// alignment fixes for edge
-@supports (-ms-ime-align: auto) {
-  .filter-toggle-switch {
-    top: .5rem;
-  }
-}
-// alignment fixes for ff
-@supports (-moz-appearance:none) {
-  .filter-toggle-switch {
-    top: .1rem;
-  }
-}
-// alignment fixes for ios
-@supports (-webkit-overflow-scrolling: touch) {
-  .filter-toggle-switch {
-    top: .15rem;
-  }
-}
+
 // track
 .filter-toggle-switch {
   position: relative;
@@ -85,6 +68,12 @@ $handle-destructive-checked-border-color: $Calcite_Red_a200;
   border: 1px solid $switch-border-color;
   @include transition(all 0.25s ease);
 }
+// alignment fixes for edge
+@supports (-ms-ime-align: auto) { .filter-toggle-switch { top: .5rem; }}
+// alignment fixes for ff
+@supports (-moz-appearance:none) { .filter-toggle-switch { top: .1rem; }}
+// alignment fixes for ios
+@supports (-webkit-overflow-scrolling: touch) { .filter-toggle-switch { top: .15rem; }}
 
 // handle
 .filter-toggle-switch:after {
@@ -111,18 +100,15 @@ $handle-destructive-checked-border-color: $Calcite_Red_a200;
     box-shadow: $handle-hover-shadow;
   }
 }
-
 // active / press styles
 .filter-toggle-input:active + .filter-toggle-switch:after {
   border-color: $handle-checked-border-color;
-
   box-shadow: $handle-active-shadow;
 }
 .filter-toggle-input:checked:active + .filter-toggle-switch:after {
   border-color: $handle-checked-border-color;
   box-shadow: $handle-active-shadow;
 }
-
 // checked styles
 .filter-toggle-input:checked + .filter-toggle-switch {
   border-color: $switch-checked-border-color;
@@ -137,22 +123,23 @@ $handle-destructive-checked-border-color: $Calcite_Red_a200;
 
 // destructive hover styles
 .filter-toggle-destructive .filter-toggle-input:hover + .filter-toggle-switch:after { border-color: $handle-destructive-hover-border-color; }
+// destructive active styles
+.filter-toggle-destructive .filter-toggle-input:active + .filter-toggle-switch:after { border-color: $handle-destructive-checked-border-color; }
+.filter-toggle-destructive .filter-toggle-input:checked:active + .filter-toggle-switch:after { border-color: $handle-destructive-checked-border-color; }
 // destructive checked styles
 .filter-toggle-destructive .filter-toggle-input:checked + .filter-toggle-switch {
   background-color: $switch-destructive-checked-bg;
   border-color: $switch-destructive-checked-border-color;
   &:after { border-color: $handle-destructive-checked-border-color; }
 }
-.filter-toggle-destructive .filter-toggle-input:active + .filter-toggle-switch:after { border-color: $handle-destructive-checked-border-color; }
-.filter-toggle-destructive .filter-toggle-input:checked:active + .filter-toggle-switch:after { border-color: $handle-destructive-checked-border-color; }
 // rtl
 html[dir="rtl"] .filter-toggle-switch:after {
-  left: auto;
   right: $handle-edge-distance;
+  left: auto;
 }
 html[dir="rtl"] .filter-toggle-input:checked + .filter-toggle-switch:after {
-  right: auto;
   left: $handle-edge-distance;
+  right: auto;
 }
 html[dir="rtl"] .filter-toggle-input:active + .filter-toggle-switch:after {
   right: $handle-active-edge-distance;
@@ -163,9 +150,26 @@ html[dir="rtl"] .filter-toggle-input:checked:active + .filter-toggle-switch:afte
 }
 
 // focus styles for accessibility
-.filter-toggle-input:focus + .filter-toggle-switch { box-shadow:0 0 4px 1px rgba($Calcite_Gray_350,0.8); }
-.filter-toggle-input:checked:focus + .filter-toggle-switch { box-shadow:0 0 4px 1px rgba($Calcite_Blue_200,0.8); }
-.filter-toggle-destructive .filter-toggle-input:checked:focus + .filter-toggle-switch { box-shadow:0 0 4px 1px rgba($Calcite_Red_200,0.8); }
+.filter-toggle-input:focus + .filter-toggle-switch {
+
+  box-shadow:0 0 4px 1px rgba($Calcite_Gray_350,0.8);
+  &:after {
+    border-color: $handle-hover-border-color;
+  }
+}
+.filter-toggle-input:checked:focus + .filter-toggle-switch {
+
+  box-shadow:0 0 4px 1px rgba($Calcite_Blue_200,0.8);
+  &:after {
+    border-color: $handle-hover-border-color;
+  }
+}
+.filter-toggle-destructive .filter-toggle-input:focus + .filter-toggle-switch:after {
+    border-color: $handle-destructive-hover-border-color;
+}
+.filter-toggle-destructive .filter-toggle-input:checked:focus + .filter-toggle-switch {
+  box-shadow:0 0 4px 1px rgba($Calcite_Red_200,0.8);
+}
 
 @if $include-switches == true {
 // .toggle { @include toggle();  }
