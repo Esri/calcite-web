@@ -20,6 +20,8 @@
 - make button border colors match background on hover (#840)
 - update style of file upload button in FF and iOS (#886)
 - fix alignment of checkboxes and radio buttons across browsers
+- Cleaned up display of base / modifier classes in docs
+- Improved RTL styling for component examples in docs
 
 ### Removed
 - no more `rtl-` classes as they are not needed and are an anti-pattern
@@ -28,6 +30,7 @@
 - `link-dark-blue` helper class (#855)
 - `btn-link` helper class (#846)
 - added range slider input component (#838)
+- added toggle switch component (#837)
 
 ## [1.0.0-rc.8]
 

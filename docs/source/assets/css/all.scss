@@ -66,6 +66,13 @@ $include-calcite-icons: false;
       padding-left: 3px;
       padding-right: 3px;
       z-index: 1;
+      @if ($include-right-to-left) {
+        html[dir="rtl"] & {
+          right:auto;
+          left:-1px;
+          border-radius: 0 0 3px 0;
+        }
+      }
     }
     .alert {
       z-index: 0;
@@ -223,4 +230,10 @@ mark {
   max-width: 40px;
   margin-left: $baseline * 0.25;
   vertical-align: middle;
+  @if ($include-right-to-left) {
+    html[dir="rtl"] & {
+      margin-left: 0;
+      margin-right: $baseline * 0.25;
+    }
+  }
 }
