@@ -1,0 +1,239 @@
+$include-content-family: true;
+$include-secondary-family: true;
+
+// Icons
+$include-calcite-icons: false;
+
+
+// Turn these on to test 960px grid
+// $container-width: 960px;
+
+// Use this to test dark theme
+// @import "calcite-web-dark";
+
+@import "calcite-web";
+@import "github";
+
+// Splashy banner stuff
+.bg-banner {
+  background: url('../img/docs/banner.svg') no-repeat center center $off-white;
+}
+
+.huge-text {
+  font-size: calc(4vw + 16px);
+  line-height: 1.25;
+}
+
+// Sub-Nav test Classes
+.sub-nav {
+  background-color: $darker-blue;
+}
+
+// Type Specimen Classes
+.type-sample {
+  @include font-size(10);
+  line-height: 1.15em;
+}
+
+// Modifier Classes
+.styleguide-modifiers {
+  @include clearfix();
+  background: $white;
+  .styleguide-modifier-example {
+    min-height: 2rem;
+    padding: .5em;
+    border: 1px solid $lightest-gray;
+    position: relative;
+    clear: both;
+    &:last-child {
+      border-radius: 0 0 3px 3px;
+    }
+    &:not(:last-of-type) {
+      border-bottom-width:0px;
+    }
+    &:first-child {
+      border-radius: 3px 3px 0 0;
+      .modifier-name {
+        border-radius: 0 3px 0 3px;
+      }
+    }
+    .modifier-name {
+      border-radius: 0 0 0 3px;
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      @include font-size(-3);
+      padding-left: 3px;
+      padding-right: 3px;
+      z-index: 1;
+      @if ($include-right-to-left) {
+        html[dir="rtl"] & {
+          right: auto;
+          left: -1px;
+          border-radius: 0 0 3px 0;
+        }
+      }
+    }
+    .alert {
+      z-index: 0;
+    }
+  }
+}
+
+.styleguide-modifiers + pre {
+  margin-top: 0;
+  code {
+    border-top-width: 0px;
+    border-radius: 0 0 3px 3px;
+    max-height: 300px;
+  }
+}
+
+// Grid Test Classes
+.grid-example [class*="column-"],
+.grid-example .block, {
+  margin-top: 1em;
+  span {
+    width: 100%;
+    display: block;
+    color: $white;
+    background-color: rgba($blue, 0.6);
+    font-family: monospace;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: center;
+  }
+}
+
+.html-sample {
+  max-height: 45vh;
+  overflow: scroll;
+}
+
+.nested-demo [class*="column-"] {
+  [class*="column-"] {
+    span {
+      background-color: rgba($blue, 0.4);
+    }
+    [class*="column-"] {
+      span {
+        background-color: rgba($blue, 0.2);
+      }
+      [class*="column-"] {
+        span {
+          background-color: rgba($blue, 0.1);
+        }
+      }
+    }
+  }
+}
+
+// Color Sample Classes
+
+.color-sample {
+  width: 100%;
+  height: 5*$baseline;
+  padding-top: .5rem;
+  &.white { background-color: $white; }
+  &.off-white { background-color: $off-white; }
+  &.lightest-gray { background-color: $lightest-gray; }
+  &.lighter-gray { background-color: $lighter-gray; }
+  &.light-gray { background-color: $light-gray; }
+  &.gray { background-color: $gray; }
+  &.dark-gray { background-color: $dark-gray; }
+  &.darker-gray { background-color: $darker-gray; }
+  &.darkest-gray { background-color: $darkest-gray; }
+  &.off-black { background-color: $off-black; }
+  &.black { background-color: $black; }
+  &.transparent-off-black { background-color: $transparent-off-black; }
+  &.transparent-black { background-color: $transparent-black; }
+  &.lightest-blue { background-color: $lightest-blue; }
+  &.lighter-blue { background-color: $lighter-blue; }
+  &.light-blue { background-color: $light-blue; }
+  &.blue { background-color: $blue; }
+  &.dark-blue { background-color: $dark-blue; }
+  &.light-green { background-color: $light-green; }
+  &.green { background-color: $green; }
+  &.dark-green { background-color: $dark-green; }
+  &.light-red { background-color: $light-red; }
+  &.red { background-color: $red; }
+  &.dark-red { background-color: $dark-red; }
+  &.light-orange { background-color: $light-orange; }
+  &.orange { background-color: $orange; }
+  &.dark-orange { background-color: $dark-orange; }
+  &.light-yellow { background-color: $light-yellow; }
+  &.yellow { background-color: $yellow; }
+  &.dark-yellow { background-color: $dark-yellow; }
+  &.light-purple { background-color: $light-purple; }
+  &.purple { background-color: $purple; }
+  &.dark-purple { background-color: $dark-purple; }
+  &.light-brown { background-color: $light-brown; }
+  &.brown { background-color: $brown; }
+  &.dark-brown { background-color: $dark-brown; }
+}
+
+.code-area {
+  @include code-face();
+  padding: .25rem;
+  border-radius: 3px;
+  border: 1px solid $lightest-gray;
+  color: $darkest-gray;
+  background-color: $off-white;
+  white-space: pre;
+  font-size: 0.85em;
+  line-height: 1.4rem;
+  padding: 1rem;
+  display: block;
+  overflow: auto;
+  max-width: 100%;
+}
+
+.icon-preview-link {
+  background-color: white;
+  color: $off-black;
+  padding-top: $baseline;
+  border: 1px solid $white;
+  cursor: pointer;
+  text-align: center;
+  white-space: normal;
+}
+
+.icon-preview-link:hover, .icon-preview-link:focus {
+  background-color: $off-white;
+  border: 1px solid $lightest-gray;
+  outline: none;
+  color: $off-black;
+}
+
+.icon-preview {
+  pointer-events: none;
+}
+
+.icon-wrap {
+  pointer-events: none;
+  display: block;
+}
+
+.icon-preview svg {
+  display: block;
+  margin: 0 auto;
+  pointer-events: none;
+}
+
+mark {
+  background-color: $lightest-blue;
+}
+
+.docs-link-icon {
+  height: 16px;
+  width: auto;
+  max-width: 40px;
+  margin-left: $baseline * 0.25;
+  vertical-align: middle;
+  @if ($include-right-to-left) {
+    html[dir="rtl"] & {
+      margin-left: 0;
+      margin-right: $baseline * 0.25;
+    }
+  }
+}
