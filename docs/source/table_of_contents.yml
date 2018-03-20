@@ -524,13 +524,19 @@ components:
           status: 'complete'
           modifiers:
             - select-full
-        - title: 'Switches'
-          link: switch
+        - title: 'Sliders'
+          link: sliders
           status: 'complete'
           classes:
-            - filter-toggle
           modifiers:
-            - filter-toggle-destructive
+            - false
+        - title: 'Switches'
+          link: switches
+          status: 'complete'
+          classes:
+            - toggle-switch
+          modifiers:
+            - toggle-switch-destructive
         - title: 'Checkboxes'
           link: checkboxes
           status: 'complete'

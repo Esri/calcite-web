@@ -28,6 +28,7 @@
 - `link-dark-blue` helper class (#855)
 - `btn-link` helper class (#846)
 - added range slider input component (#838)
+- added toggle switch component (#837)
 
 ## [1.0.0-rc.8]
 

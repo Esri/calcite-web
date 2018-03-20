@@ -3,12 +3,10 @@
     Email
     <input type="email" required placeholder="bob@example.com">
   </label>
-
   <label>
     Confirm Email
     <input type="email" required disabled>
   </label>
-
   <label>
     Gender
     <select name="gender" required>
@@ -17,72 +15,65 @@
       <option value="other">Other</option>
     </select>
   </label>
-
   <label>
     Birthday
     <input type="date" placeholder="mm/dd/yyyy" required>
   </label>
-
   <label>
     Message
     <textarea placeholder="Briefly describe what isn't working, max 240 characters" rows="5" required></textarea>
   </label>
-
   <label>
-   How many do you want?
-   <input type="range" min="0" max="100" value="50" step="1" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
- </label>
-
- <label>
-   How many do you need?
-   <input type="range" min="0" max="100" value="25" step="25" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25">
- </label>
-
-<label class="filter-toggle {{ modifier }} clearfix">
-  <span class="filter-toggle-label right font-size--1 inline-block">Enable Two-Factor Authentication</span>
-  <input type="checkbox" class="filter-toggle-input" checked>
-  <span class="filter-toggle-switch left"></span>
+    How many do you want?
+    <input type="range" min="0" max="100" value="50" step="1" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+  </label>
+  <label>
+    How many do you need?
+    <input type="range" min="0" max="100" value="25" step="25" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25">
+  </label>
+<label class="toggle-switch">
+  <input type="checkbox" class="toggle-switch-input">
+  <span class="toggle-switch-track toggle-switch-inline"></span>
+  <span class="toggle-switch-label font-size--1">Inline example</span>
 </label>
-<label class="filter-toggle filter-toggle-destructive clearfix">
-  <span class="filter-toggle-label right font-size--1 inline-block">Are you sure you want to delete your account? It cannot be recovered.</span>
-  <input type="checkbox" class="filter-toggle-input">
-  <span class="filter-toggle-switch left"></span>
+<label class="toggle-switch toggle-switch-destructive clearfix">
+  <span class="toggle-switch-label right font-size--1">Confirm account deletion. You cannot recover deleted accounts.</span>
+  <input type="checkbox" class="toggle-switch-input">
+  <span class="toggle-switch-track left"></span>
 </label>
-<label class="filter-toggle {{ modifier }} clearfix">
-  <span class="filter-toggle-label left font-size--1 inline-block">I'd like to receive email notifications about this product</span>
-  <input type="checkbox" class="filter-toggle-input">
-  <span class="filter-toggle-switch right"></span>
-</label>
-<fieldset class="fieldset-checkbox">
-  <legend>Email Preferences (optional)</legend>
-  <label>
-    <input type="checkbox"> Weekly Newsletter
-  </label>
-  <label>
-    <input type="checkbox"> Monthly Newsletter
-  </label>
-  <label>
-    <input type="checkbox"> All Emails
-  </label>
-</fieldset>
-
-<fieldset class="fieldset-radio">
-  <legend>How did you hear about us? (optional)</legend>
-  <label>
-    <input type="radio" name="source" value="friend">Friend
-  </label>
-  <label>
-    <input type="radio" name="source" value="event">Sponsored Event
-  </label>
-  <label>
-    <input type="radio" name="source" value="other">Other
-  </label>
-</fieldset>
-
-<label>
-  Upload profile photo
-  <input type="file">
+<label class="toggle-switch clearfix">
+  <span class="toggle-switch-label left font-size--1">Enable Two-Factor Authentication</span>
+  <input type="checkbox" class="toggle-switch-input" checked>
+  <span class="toggle-switch-track right"></span>
 </label>
 
-<button type="submit" class="btn">Submit</button>
+  <fieldset class="fieldset-checkbox">
+    <legend>Email Preferences (optional)</legend>
+    <label>
+      <input type="checkbox"> Weekly Newsletter
+    </label>
+    <label>
+      <input type="checkbox"> Monthly Newsletter
+    </label>
+    <label>
+      <input type="checkbox"> All Emails
+    </label>
+  </fieldset>
+  <fieldset class="fieldset-radio">
+    <legend>How did you hear about us? (optional)</legend>
+    <label>
+      <input type="radio" name="source" value="friend">Friend
+    </label>
+    <label>
+      <input type="radio" name="source" value="event">Sponsored Event
+    </label>
+    <label>
+      <input type="radio" name="source" value="other">Other
+    </label>
+  </fieldset>
+  <label>
+    Upload profile photo
+    <input type="file">
+  </label>
+  <button type="submit" class="btn">Submit</button>
 </form>
