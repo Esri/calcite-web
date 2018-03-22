@@ -1,4 +1,4 @@
-## [Unreleased][unreleased]
+## [1.0.0-rc.9][1.0.0-rc.9]
 
 ### Fixes
 - remove some `!important` rules (#877)
@@ -1332,5 +1332,6 @@ Begin foundational sass for the framework.
 - CSS Reset
 - Grunt Workflows
 
-[unreleased]: https://github.com/esri/calcite-web/compare/v1.0.0-rc.8...HEAD
+[unreleased]: https://github.com/esri/calcite-web/compare/v1.0.0-rc.9...HEAD
 [1.0.0-rc.8]: https://github.com/esri/calcite-web/compare/v1.0.0-rc.7...v1.0.0-rc.8
+[1.0.0-rc.9]: https://github.com/esri/calcite-web/compare/v1.0.0-rc.8...v1.0.0-rc.9
