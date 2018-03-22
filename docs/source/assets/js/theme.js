@@ -5,11 +5,7 @@
   var themeLightStylesheet = document.getElementById('calcite-theme-light');
   var themeDarkAnimationClass = 'theme-dark-fade-in';
   var themeLightAnimationClass = 'theme-light-fade-in';
-  var themeToggleEls = document.getElementsByClassName('docs-theme-toggle');
-  var themeToggles = [];
-
-  // ie array wrangling
-  for (var i = 0; i < themeToggleEls.length; i++) { themeToggles.push(themeToggleEls[i]); }
+  var themeToggles = Array.prototype.slice.call(document.querySelectorAll('.docs-theme-toggle'));
 
   document.addEventListener('DOMContentLoaded', setThemeOnLoad);
   themeToggles.forEach(function (el) { return el.addEventListener('click', changeTheme); });
