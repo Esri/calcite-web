@@ -70,7 +70,7 @@
     border: 1px solid $lightest-gray;
     color: $darkest-gray;
     background-color: $off-white;
-    white-space: pre;
+    white-space: initial;
     font-size: 0.85em;
     line-height: 1.4rem;
   }
@@ -86,6 +86,7 @@
       display: block;
       overflow: auto;
       word-wrap: normal;
+      white-space: pre;
       font-size: 0.85em;
       position: relative;
     }
