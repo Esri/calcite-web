@@ -1,4 +1,4 @@
-// Calcite Web Docs Theme Toggle
+// Calcite docs theme switcher
 (function () {
   var localStorageItem = 'calciteWebTheme';
   var themeDarkStylesheet = document.getElementById('calcite-theme-dark');
@@ -6,55 +6,44 @@
   var themeDarkAnimationClass = 'theme-dark-fade-in';
   var themeLightAnimationClass = 'theme-light-fade-in';
   var themeToggleEls = document.getElementsByClassName('docs-theme-toggle');
-  var themeToggles = Array.from(themeToggleEls);
+  var themeToggles = [];
+
+  // ie array wrangling
+  for (var i = 0; i < themeToggleEls.length; i++) { themeToggles.push(themeToggleEls[i]); }
 
   document.addEventListener('DOMContentLoaded', setThemeOnLoad);
-  themeToggles.forEach(el => el.addEventListener('click', changeTheme));
+  themeToggles.forEach(function (el) { return el.addEventListener('click', changeTheme); });
 
+  // set disabled attribute on load here as well as in markup for ff
   function setThemeOnLoad() {
-    // we need to set disabled attribute here as well as in markup for ff
-    if (localStorage.getItem(localStorageItem) == 'dark') {
-      console.log("page load im dark");
+    if (localStorage.getItem(localStorageItem) === 'dark') {
       themeDarkStylesheet.disabled = false;
       themeLightStylesheet.disabled = true;
-      themeToggles.forEach(el => el.setAttribute('checked', true));
-    }
-    else {
-      console.log("page load im light");
+      themeToggles.forEach(function (el) { return el.checked = true });
+    } else {
       themeLightStylesheet.disabled = false;
       themeDarkStylesheet.disabled = true;
+      themeToggles.forEach(function (el) { return el.checked = false });
     }
   }
 
-  function changeTheme(el) {
-    if (localStorage.getItem(localStorageItem) == 'dark') {
+  function changeTheme() {
+    if (localStorage.getItem(localStorageItem) === 'dark' || localStorage.getItem(localStorageItem) === null) {
       localStorage.setItem(localStorageItem, 'light');
-      var currentTheme = localStorage.getItem(localStorageItem);
       themeLightStylesheet.disabled = false;
       themeDarkStylesheet.disabled = true;
       document.body.classList.remove(themeDarkAnimationClass);
       document.body.classList.add(themeLightAnimationClass);
-      themeToggles.forEach(el => el.setAttribute('checked', false));
-      setTimeout(function () {
-        document.body.classList.remove(themeLightAnimationClass);
-      }, 2000);
-      console.log(currentTheme);
-    }
-    else {
+      themeToggles.forEach(function (el) { return el.checked = false });
+      setTimeout(function () { document.body.classList.remove(themeLightAnimationClass); }, 2000);
+    } else {
       localStorage.setItem(localStorageItem, 'dark');
-      var currentTheme = localStorage.getItem(localStorageItem);
       themeDarkStylesheet.disabled = false;
       themeLightStylesheet.disabled = true;
       document.body.classList.remove(themeLightAnimationClass);
       document.body.classList.add(themeDarkAnimationClass);
-      themeToggles.forEach(el => el.setAttribute('checked', true));
-      setTimeout(function () {
-        themeLightStylesheet.disabled = true;
-      }, 10);
-      setTimeout(function () {
-        document.body.classList.remove(themeDarkAnimationClass);
-      }, 2000);
-      console.log(currentTheme);
+      themeToggles.forEach(function (el) { return el.checked = true });
+      setTimeout(function () { document.body.classList.remove(themeDarkAnimationClass); }, 2000);
     }
   }
 })();

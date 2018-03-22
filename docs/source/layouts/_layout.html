@@ -23,9 +23,9 @@
 
   <!-- stylesheets -->
   {% block head %}
-  <link rel="stylesheet" href="{{relativePath}}/assets/css/all.css" id="calcite-theme-light" name="theme-light">
-  <link rel="stylesheet" href="{{relativePath}}/assets/css/dark.css" id="calcite-theme-dark" name="theme-dark" disabled>
   <link rel="stylesheet" href="{{relativePath}}/assets/css/extensions.css">
+  <link rel="stylesheet" href="{{relativePath}}/assets/css/all.css" id="calcite-theme-light" name="theme-light" title="theme-light">
+  <link rel="stylesheet" href="{{relativePath}}/assets/css/dark.css" id="calcite-theme-dark" name="theme-dark" title="theme-dark" disabled>
   {% for name in css %}
   <link rel="stylesheet" href="{{relativePath}}/assets/css/{{name}}.css">
   {% endfor %}
@@ -56,8 +56,8 @@
           <a class="side-nav-link">
             <label class="toggle-switch leader-0 trailer-0">
               <input type="checkbox" class="toggle-switch-input docs-theme-toggle">
-              <span class="toggle-switch-track toggle-switch-inline"></span>
-              <span class="toggle-switch-label font-size--1">Daaark</span>
+              <span class="toggle-switch-track margin-right-half"></span>
+              <span class="toggle-switch-label font-size--2">Dark Mode</span>
             </label>
           </a>
         </aside>
@@ -75,8 +75,8 @@
           <a class="side-nav-link">
             <label class="toggle-switch leader-0 trailer-0">
               <input type="checkbox" class="toggle-switch-input docs-theme-toggle">
-              <span class="toggle-switch-track toggle-switch-inline"></span>
-              <span class="toggle-switch-label font-size--1">Daaark</span>
+              <span class="toggle-switch-track margin-right-half"></span>
+              <span class="toggle-switch-label font-size--2">Dark Mode</span>
             </label>
           </a>
         </aside>
@@ -116,11 +116,11 @@
               <a href="{{relativePath}}/quick-reference" class="{% if isQuickRef %}is-active {% endif %}top-nav-link">Quick Reference</a>
             </nav>
             <nav class="class-top-nav-list right" role="navigation" aria-labelledby="usernav">
-              <a class="top-nav-link padding-leader-1 padding-trailer-half">
-                <label class="toggle-switch leader-0 trailer-0">
+              <a class="top-nav-link padding-leader-0 padding-trailer-0 trailer-0 margin-right-1">
+                <label class="toggle-switch trailer-0 docs-toggle-spacer">
                   <input type="checkbox" class="toggle-switch-input docs-theme-toggle">
-                  <span class="toggle-switch-track toggle-switch-inline"></span>
-                  <span class="toggle-switch-label font-size--1">Daaark</span>
+                  <span class="toggle-switch-track margin-right-half"></span>
+                  <span class="toggle-switch-labe">Dark Mode</span>
                 </label>
               </a>
               <button class="search-top-nav link-dark-gray js-search-toggle" href="#" aria-label="Search">

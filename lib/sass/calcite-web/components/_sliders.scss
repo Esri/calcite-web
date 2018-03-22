@@ -7,17 +7,17 @@
 // variables
 $range-border: 1px solid transparent;
 $track-bgcolor: $Calcite_Gray_350;
-$track-height: 3px;
+$track-height: 2px;
 $track-hover-bgcolor: $Calcite_Gray_400;
 $track-active-bgcolor: $Calcite_Gray_450;
 // $track-progress-bgcolor: $Brand_Blue_200;
 $thumb-height: 18px;
 $thumb-width: 18px;
-$thumb-border: 3px solid;
-$thumb-border-color: $Calcite_Gray_400;
+$thumb-border: 2px solid;
+$thumb-border-color: $Calcite_Gray_450;
 $thumb-border-hover-color: $Brand_Blue_200;
-$thumb-shadow-hover: 0 0 4px 2px rgba($Calcite_Gray_350, 0.8);
-$thumb-shadow-active: 0 0 4px 2px rgba($Calcite_Blue_250, 0.8);
+$thumb-shadow-hover: 0 0 4px 1px rgba($Calcite_Gray_350, 0.9);
+$thumb-shadow-active: 0 0 4px 1px rgba($Calcite_Blue_250, 0.9);
 $thumb-bg-default: $white;
 $thumb-bg-hover: $Brand_Blue_200;
 $thumb-bg-active: $Calcite_Blue_a250;
@@ -143,13 +143,12 @@ $thumb-bg-active: $Calcite_Blue_a250;
       margin-top: -9px;
     }
   }
-
   // ff styles
   input[type="range"]::-moz-range-track { @include track-style; }
   input[type="range"]::-moz-range-thumb {
     @include thumb-style;
-    height: 13px;
-    width: 13px;
+    height: 14px;
+    width: 14px;
     &:hover { @include thumb-hover-style; }
     &:focus, &:active {
       @include thumb-focus-style;
@@ -169,8 +168,8 @@ $thumb-bg-active: $Calcite_Blue_a250;
 
   input[type="range"]::-ms-thumb {
     @include thumb-style;
-    height: 12px;
-    width: 12px;
+    height: 14px;
+    width: 14px;
     margin-top: 0px;
     &:hover { @include thumb-hover-style; }
     &:focus, &:active {

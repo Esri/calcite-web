@@ -4,33 +4,33 @@
 //  ↳ http: //esri.github.io/calcite-web/documentation/components/#switches
 //  ↳ components → _switches.md
 // variables
-$switch-width: 2.5rem;
-$switch-height: 1.25rem;
+$switch-width: 36px;
+$switch-height: 20px;
 $switch-bg: $Calcite_Gray_150;
 $switch-border-color: $Calcite_Gray_350;
-$switch-hover-bg: $Calcite_Gray_200;
+$switch-hover-bg: $Calcite_Gray_250;
 $switch-hover-border-color: $Calcite_Gray_350;
-$switch-checked-bg: $Calcite_Blue_100;
-$switch-checked-border-color: $Calcite_Blue_200;
-$switch-focus-shadow: 0 0 4px 1px rgba($Calcite_Gray_350,0.8);
-$switch-focus-checked-shadow: 0 0 4px 1px rgba($Calcite_Blue_200,0.8);
-$switch-focus-destructive-checked-shadow: 0 0 4px 1px rgba($Calcite_Red_200,0.8);
-$handle-size: 13px;
-$handle-top-distance: 1px;
-$handle-edge-distance: 2px;
-$handle-active-edge-distance: 4px;
+$switch-checked-bg: $blue;
+$switch-checked-border-color: $dark-blue;
+$switch-focus-shadow: 0 0 4px 2px rgba($Calcite_Gray_350,0.9);
+$switch-focus-checked-shadow: 0 0 4px 2px rgba($Calcite_Blue_200,0.9);
+$switch-focus-destructive-checked-shadow: 0 0 4px 2px rgba($Calcite_Red_200,0.9);
+$handle-size: 18px;
+$handle-top-distance: -1px;
+$handle-edge-distance: -1px;
+$handle-active-edge-distance: 1px;
 $handle-bg: $white;
-$handle-border-color: $Calcite_Gray_400;
-$handle-shadow: 0 1px 1px 0px rgba($darkest-gray,0.1);
+$handle-border-color: $Calcite_Gray_450;
+$handle-shadow: 0 1px 1px 0px rgba($darkest-gray,0.2);
 $handle-hover-border-color: $Calcite_Blue_a200;
 $handle-hover-shadow: 0 1px 2px 0px rgba($darkest-gray,0.2);
-$handle-checked-border-color: $Calcite_Blue_a250;
+$handle-checked-border-color: $dark-blue;
 $handle-checked-shadow: 0 2px 1px 0px rgba($darkest-gray,0.2);
 $handle-active-shadow: 0 3px 1px 0px rgba($darkest-gray,0.2);
-$switch-destructive-checked-bg: $Calcite_Red_100;
-$switch-destructive-checked-border-color: $Calcite_Red_150;
+$switch-destructive-checked-bg: $Calcite_Red_a200;
+$switch-destructive-checked-border-color: $Calcite_Red_a250;
 $handle-destructive-hover-border-color: $Calcite_Red_a200;
-$handle-destructive-checked-border-color: $Calcite_Red_a200;
+$handle-destructive-checked-border-color: $Calcite_Red_a250;
 
 // our containing block element
 @mixin toggle-switch {
@@ -48,8 +48,8 @@ $handle-destructive-checked-border-color: $Calcite_Red_a200;
 
 // spacing for label
 @mixin toggle-switch-label {
-  width: calc((100% - 3rem) - .5rem);
-  padding: 0 .1rem;
+  width: calc((100% - 3em) - .5em);
+  padding: 0 .1em;
   vertical-align: top;
 }
 
@@ -60,20 +60,11 @@ $handle-destructive-checked-border-color: $Calcite_Red_a200;
   vertical-align: top;
   width: $switch-width;
   height: $switch-height;
-  top: .05rem;
+  top: .05em;
   background-color: $switch-bg;
   border-radius: 30px;
   border: 1px solid $switch-border-color;
   @include transition(all 0.25s ease);
-  &.toggle-switch-inline {
-    margin-right: .5rem;
-  }
-  @if ($include-right-to-left) {
-    html[dir="rtl"] &.toggle-switch-inline {
-      margin-left: .5rem;
-      margin-right: 0;
-    }
-  }
   // handle
   &:after {
     position: absolute;
@@ -85,7 +76,7 @@ $handle-destructive-checked-border-color: $Calcite_Red_a200;
     left: $handle-edge-distance;
     background-color: $handle-bg;
     border-radius: 30px;
-    border: 3px solid $handle-border-color;
+    border: 2px solid $handle-border-color;
     box-shadow: $handle-shadow;
     @include transition(all 0.25s ease);
     @if ($include-right-to-left) {
@@ -96,11 +87,11 @@ $handle-destructive-checked-border-color: $Calcite_Red_a200;
     }
   }
   // alignment fixes for edge
-  @supports (-ms-ime-align: auto) { & { top: .3rem; }}
+  @supports (-ms-ime-align: auto) { & { top: .4em; }}
   // alignment fixes for ff
-  @supports (-moz-appearance:none) { & { top: .1rem; }}
+  @supports (-moz-appearance:none) { & { top: .1em; }}
   // alignment fixes for ios
-  @supports (-webkit-overflow-scrolling: touch) { & { top: .15rem; }}
+  @supports (-webkit-overflow-scrolling: touch) { & { top: .15em; }}
 }
 
 @mixin toggle-switch-input {
