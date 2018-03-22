@@ -59,16 +59,6 @@ $opacity-transition: opacity 200ms linear;
   @include transition-prefixed($transform-transition);
 }
 
-@mixin drawer-left-is-active() {
-  @include transition-prefixed($transform-transition);
-  @include transform(translate3d($drawer-width,0,0));
-}
-
-@mixin drawer-right-is-active() {
-  @include transition-prefixed($transform-transition);
-  @include transform(translate3d(-$drawer-width,0,0));
-}
-
 @if $include-drawers == true {
   .drawer { @include drawer();}
   .drawer-nav { @include drawer-nav();}
@@ -85,25 +75,6 @@ $opacity-transition: opacity 200ms linear;
     @if ($include-right-to-left) {
       html[dir="rtl"] & {
         left: -$drawer-width;
-      }
-    }
-  }
-  .wrapper {
-    @include transition-prefixed($transform-transition);
-  }
-  .drawer-left-is-active {
-    @include drawer-left-is-active();
-    @if ($include-right-to-left) {
-      html[dir="rtl"] & {
-        @include drawer-right-is-active();
-      }
-    }
-  }
-  .drawer-right-is-active {
-    @include drawer-right-is-active();
-    @if ($include-right-to-left) {
-      html[dir="rtl"] & {
-        @include drawer-left-is-active();
       }
     }
   }

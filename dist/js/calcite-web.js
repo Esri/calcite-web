@@ -1,10 +1,60 @@
+/*!
+ * Calcite Web - Calcite Design Components in CSS, JS and HTML
+ * @version v1.0.0-rc.9
+ * @license Apache-2.0
+ * @copyright 2018 Esri
+ * @link https://github.com/Esri/calcite-web
+ */
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
 	typeof define === 'function' && define.amd ? define(factory) :
 	(global.calcite = factory());
 }(this, (function () { 'use strict';
 
+// ┌─────┐
+// │ DOM │
+// └─────┘
+// Handles dom nodes
+
+// returns closest element up the DOM tree matching a given class
+function closest (className, context) {
+  var current;
+  for (current = context; current; current = current.parentNode) {
+    var hasClass = new RegExp('(\\s|^)' + className + '(\\s|$)').test(current.getAttribute('class'));
+    if (current.nodeType === 1 && hasClass) {
+      break;
+    }
+  }
+  return current;
+}
+
+// turn a domNodeList into an array
+function nodeListToArray (domNodeList) {
+  if (Array.isArray(domNodeList)) {
+    return domNodeList;
+  } else {
+    return Array.prototype.slice.call(domNodeList);
+  }
+}
+
+// Finds all the elements inside a node, or the document and returns them as an array
+function findElements (query, domNode) {
+  var context = domNode || document;
+  var elements = context.querySelectorAll(query);
+  return nodeListToArray(elements);
+}
+
+function filterArray (value, array) {
+  var results = array.filter(function (item) {
+    var val = value.toLowerCase();
+    var t = item.innerHTML.toLowerCase();
+    return t.indexOf(val) !== -1;
+  });
+  return results;
+}
+
 // Cool Helpers
+
 // ┌────────────────────┐
 // │ Class Manipulation │
 // └────────────────────┘
@@ -27,7 +77,7 @@ function add (domNode, classes) {
 // remove one or more classes from an element
 function remove (domNode, classes) {
   classes.split(' ').forEach(function (c) {
-    var removedClass = domNode.getAttribute('class').replace(new RegExp('(\\s|^)' + c + '(\\s|$)', 'g'), '$2');
+    var removedClass = (domNode.getAttribute('class') || '').replace(new RegExp('(\\s|^)' + c + '(\\s|$)', 'g'), '$2');
     if (has(domNode, c)) {
       domNode.setAttribute('class', removedClass);
     }
@@ -44,66 +94,25 @@ function toggle (domNode, className) {
 }
 
 // remove 'is-active' class from every element in an array
-function removeActive$1 (array) {
-  array = nodeListToArray$1(array);
+function removeActive (array) {
+  array = nodeListToArray(array);
   array.forEach(function (item) {
     remove(item, 'is-active');
   });
 }
 
 // add 'is-active' class from every element in an array
-function addActive$1 (array) {
-  array = nodeListToArray$1(array);
+function addActive (array) {
+  array = nodeListToArray(array);
   array.forEach(function (item) {
     add(item, 'is-active');
   });
 }
 
 // remove 'is-active' class from every element in an array, add to one element
-function toggleActive$1 (array, el) {
-  removeActive$1(array);
+function toggleActive (array, el) {
+  removeActive(array);
   add(el, 'is-active');
-}
-
-// ┌─────┐
-// │ DOM │
-// └─────┘
-// Handles dom nodes
-
-// returns closest element up the DOM tree matching a given class
-function closest$1 (className, context) {
-  var current;
-  for (current = context; current; current = current.parentNode) {
-    if (current.nodeType === 1 && has(current, className)) {
-      break;
-    }
-  }
-  return current;
-}
-
-// turn a domNodeList into an array
-function nodeListToArray$1 (domNodeList) {
-  if (Array.isArray(domNodeList)) {
-    return domNodeList;
-  } else {
-    return Array.prototype.slice.call(domNodeList);
-  }
-}
-
-// Finds all the elements inside a node, or the document and returns them as an array
-function findElements$1 (query, domNode) {
-  var context = domNode || document;
-  var elements = context.querySelectorAll(query);
-  return nodeListToArray$1(elements);
-}
-
-function filterArray (value, array) {
-  var results = array.filter(function (item) {
-    var val = value.toLowerCase();
-    var t = item.innerHTML.toLowerCase();
-    return t.indexOf(val) !== -1;
-  });
-  return results;
 }
 
 // ┌────────────────┐
@@ -168,7 +177,7 @@ var boundEvents = {
 };
 
 // returns standard interaction event, later will add touch support
-function click$1 () {
+function click () {
   return 'click';
 }
 
@@ -196,7 +205,7 @@ function target (e) {
 }
 
 // prevent default behavior of an event
-function preventDefault$1 (e) {
+function preventDefault (e) {
   if (e.preventDefault) {
     return e.preventDefault();
   } else if (e.returnValue) {
@@ -205,7 +214,7 @@ function preventDefault$1 (e) {
 }
 
 // stop and event from bubbling up the DOM tree
-function stopPropagation$1 (e) {
+function stopPropagation (e) {
   e = e || window.event;
   if (e.stopPropagation) {
     return e.stopPropagation();
@@ -217,7 +226,7 @@ function stopPropagation$1 (e) {
 
 // return a function that will only execute
 // once it is NOT called for delay milliseconds
-function throttle$1 (fn, time, context) {
+function throttle (fn, time, context) {
   var lock, args, wrapperFn, later;
 
   later = function () {
@@ -312,8 +321,9 @@ E.prototype = {
 var bus = new E();
 
 // Cool Helpers
+
 function clipboard () {
-  var copyBtns = findElements$1('.js-copy-to-clipboard');
+  var copyBtns = findElements('.js-copy-to-clipboard');
   bus.on('clipboard:bind', bindButtons);
 
   function bindButtons (options) {
@@ -348,8 +358,8 @@ function clipboard () {
 // Emitting false or null closes all modals.
 
 function toggleClick (e) {
-  stopPropagation$1(e);
-  var parent = closest$1('accordion-section', target(e));
+  stopPropagation(e);
+  var parent = closest('accordion-section', target(e));
   bus.emit('accordion:toggle', {node: parent});
 }
 
@@ -365,7 +375,7 @@ function checkKeyCode (e) {
 }
 
 function bindAccordions (options) {
-  var accordions = findElements$1('.js-accordion');
+  var accordions = findElements('.js-accordion');
   if (!options) {
     accordions.forEach(function (accordion) {
       setUpAccordion(accordion);
@@ -378,7 +388,7 @@ function bindAccordions (options) {
 function setUpAccordion (accordion) {
   accordion.setAttribute('aria-live', 'polite');
   accordion.setAttribute('role', 'tablist');
-  nodeListToArray$1(accordion.children).forEach(function (section) {
+  nodeListToArray(accordion.children).forEach(function (section) {
     var sectionTitle = section.querySelector('.accordion-title');
     sectionTitle.setAttribute('role', 'tab');
     sectionTitle.setAttribute('tabindex', '0');
@@ -388,14 +398,14 @@ function setUpAccordion (accordion) {
     // check if the event was already added
     var eventExists = false;
     boundEvents.accordions.forEach(function (e) {
-      if (e.target === sectionTitle && e.event === click$1() && e.fn === toggleClick) {
+      if (e.target === sectionTitle && e.event === click() && e.fn === toggleClick) {
         eventExists = true;
       }
     });
     if (!eventExists) {
-      boundEvents.accordions.push({target: sectionTitle, event: click$1(), fn: toggleClick});
+      boundEvents.accordions.push({target: sectionTitle, event: click(), fn: toggleClick});
       boundEvents.accordions.push({target: section, event: 'keyup', fn: checkKeyCode});
-      add$1(sectionTitle, click$1(), toggleClick);
+      add$1(sectionTitle, click(), toggleClick);
       add$1(section, 'keyup', checkKeyCode);
     }
   });
@@ -418,16 +428,17 @@ function accordion () {
 }
 
 // Cool Helpers
+
 // ┌──────────┐
 // │ Dropdown │
 // └──────────┘
 // show and hide dropdown menus
 function closeAllDropdowns (options) {
-  remove$1(document.body, click$1(), closeAllDropdowns);
-  findElements$1('.js-dropdown').forEach(function (dropdown) {
+  remove$1(document.body, click(), closeAllDropdowns);
+  findElements('.js-dropdown').forEach(function (dropdown) {
     remove(dropdown, 'is-active');
   });
-  findElements$1('.js-dropdown-toggle').forEach(function (toggle$$1) {
+  findElements('.js-dropdown-toggle').forEach(function (toggle$$1) {
     toggle$$1.setAttribute('aria-expanded', 'false');
   });
   remove$1(document, 'keydown', seizeArrows);
@@ -445,7 +456,7 @@ function toggleDropdown (options) {
     add$1(document, 'keydown', seizeArrows);
   }
   if (has(options.node, 'is-active')) {
-    add$1(document.body, click$1(), closeAllDropdowns);
+    add$1(document.body, click(), closeAllDropdowns);
   }
 }
 
@@ -457,18 +468,18 @@ function seizeArrows (e) {
 
 function bindDropdowns (options) {
   // attach the new events
-  var toggles = findElements$1('.js-dropdown-toggle');
+  var toggles = findElements('.js-dropdown-toggle');
   toggles.forEach(function (toggle$$1) {
     // check if the event was already added
     var eventExists = false;
     boundEvents.dropdowns.forEach(function (e) {
-      if (e.target === toggle$$1 && e.event === click$1() && e.fn === toggleClick$1) {
+      if (e.target === toggle$$1 && e.event === click() && e.fn === toggleClick$1) {
         eventExists = true;
       }
     });
     if (!eventExists) {
-      boundEvents.dropdowns.push({target: toggle$$1, event: click$1(), fn: toggleClick$1});
-      add$1(toggle$$1, click$1(), toggleClick$1);
+      boundEvents.dropdowns.push({target: toggle$$1, event: click(), fn: toggleClick$1});
+      add$1(toggle$$1, click(), toggleClick$1);
     }
   });
 }
@@ -510,7 +521,7 @@ function dropownFocusOn (options) {
 function arrowDown () {
   var dropdown = dropdownIsOpen();
   if (dropdown) {
-    var links = findElements$1('.dropdown-link', dropdown);
+    var links = findElements('.dropdown-link', dropdown);
     bus.emit('dropdown:focus', {links: links, forward: true});
   }
 }
@@ -518,15 +529,15 @@ function arrowDown () {
 function arrowUp () {
   var dropdown = dropdownIsOpen();
   if (dropdown) {
-    var links = findElements$1('.dropdown-link', dropdown);
+    var links = findElements('.dropdown-link', dropdown);
     bus.emit('dropdown:focus', {links: links, forward: false});
   }
 }
 
 function toggleClick$1 (e) {
-  preventDefault$1(e);
-  stopPropagation$1(e);
-  var dropdown = closest$1('js-dropdown', e.target);
+  preventDefault(e);
+  stopPropagation(e);
+  var dropdown = closest('js-dropdown', e.target);
   bus.emit('dropdown:toggle', {node: dropdown, target: e.target});
 }
 
@@ -551,6 +562,7 @@ function dropdown () {
 }
 
 // Cool Helpers
+
 // ┌────────┐
 // │ Drawer │
 // └────────┘
@@ -558,8 +570,8 @@ function dropdown () {
 function drawer () {
   var wrapper = document.querySelector('.wrapper');
   var footer = document.querySelector('.footer');
-  var toggles = findElements$1('.js-drawer-toggle');
-  var drawers = findElements$1('.js-drawer');
+  var toggles = findElements('.js-drawer-toggle');
+  var drawers = findElements('.js-drawer');
   var lastOn;
 
   // Bus events
@@ -571,20 +583,13 @@ function drawer () {
   function openDrawer (options) {
     bus.emit('drawer:close');
     var drawer = document.querySelector((".js-drawer[data-drawer=\"" + (options.id) + "\"]"));
-    var right = has(drawer, 'drawer-right');
-    var left = has(drawer, 'drawer-left');
 
     drawer.setAttribute('tabindex', 0);
     add(drawer, 'is-active');
-
-    if (right) {
-      add(wrapper, 'drawer-right-is-active');
-    } else if (left) {
-      add(wrapper, 'drawer-left-is-active');
-    }
+    add(document.documentElement, 'drawer-no-overflow');
 
     hide([wrapper, footer]);
-    add$1(drawer, click$1(), closeClick);
+    add$1(drawer, click(), closeClick);
     add$1(document, 'focusin', fenceDrawer);
   }
 
@@ -599,15 +604,14 @@ function drawer () {
       drawer.removeAttribute('tabindex');
       remove(drawer, 'is-active');
     }
-    remove(wrapper, 'drawer-left-is-active');
-    remove(wrapper, 'drawer-right-is-active');
     show([wrapper, footer]);
     remove$1(document, 'focusin', fenceDrawer);
+    remove(document.documentElement, 'drawer-no-overflow');
     if (lastOn) { lastOn.focus(); }
   }
 
   function fenceDrawer (e) {
-    if (!closest$1('js-drawer', e.target)) {
+    if (!closest('js-drawer', e.target)) {
       drawers.forEach(function (drawer) {
         if (has(drawer, 'is-active')) {
           drawer.focus();
@@ -619,10 +623,10 @@ function drawer () {
   function bindDrawers (options) {
     if (!options) {
       toggles.forEach(function (toggle$$1) {
-        add$1(toggle$$1, click$1(), toggleClick);
+        add$1(toggle$$1, click(), toggleClick);
       });
     } else {
-      add$1(options.node, click$1(), toggleClick);
+      add$1(options.node, click(), toggleClick);
     }
   }
 
@@ -633,7 +637,7 @@ function drawer () {
   }
 
   function toggleClick (e) {
-    preventDefault$1(e);
+    preventDefault(e);
     var drawerId = e.target.getAttribute('data-drawer');
     bus.emit('drawer:open', {id: drawerId});
   }
@@ -642,6 +646,7 @@ function drawer () {
 }
 
 // Cool Helpers
+
 // ┌─────────────────┐
 // │ Filter Dropdown │
 // └─────────────────┘
@@ -660,7 +665,7 @@ function filterDropdown () {
   bus.on('keyboard:escape', closeList);
 
   function bindFilterDropdowns () {
-    var dropdowns = findElements$1('.js-filter-dropdown');
+    var dropdowns = findElements('.js-filter-dropdown');
     dropdowns.forEach(function (dropdown) {
       var dropdownId = dropdown.getAttribute('data-filter-dropdown');
       var input = dropdown.querySelector('.filter-dropdown-input');
@@ -670,24 +675,24 @@ function filterDropdown () {
       for (var i = 0; i < opens.length; i++) {
         var open = opens[i];
         open.setAttribute('data-id', dropdownId);
-        add$1(open, click$1(), toggleClick);
+        add$1(open, click(), toggleClick);
       }
       var closes = dropdown.querySelectorAll('.js-filter-dropdown-close');
       for (var i$1 = 0; i$1 < closes.length; i$1++) {
         var close = closes[i$1];
         close.setAttribute('data-id', dropdownId);
-        add$1(close, click$1(), toggleClick);
+        add$1(close, click(), toggleClick);
       }
 
       var items = dropdown.querySelectorAll('.filter-dropdown-link');
       for (var i$2 = 0; i$2 < items.length; i$2++) {
         var item = items[i$2];
         item.setAttribute('data-item-id', i$2);
-        add$1(item, click$1(), itemClick);
+        add$1(item, click(), itemClick);
       }
 
       add$1(input, 'keyup', function (e) {
-        var itemsArray = nodeListToArray$1(items);
+        var itemsArray = nodeListToArray(items);
         itemsArray.forEach(function (item) {
           add(item, 'hide');
         });
@@ -700,7 +705,7 @@ function filterDropdown () {
   }
 
   function getOptions (e) {
-    var parent = closest$1('js-filter-dropdown', e.target);
+    var parent = closest('js-filter-dropdown', e.target);
     return {
       parent: parent,
       id: parent.getAttribute('data-filter-dropdown'),
@@ -709,14 +714,14 @@ function filterDropdown () {
   }
 
   function inputFocus (e) {
-    stopPropagation$1(e);
+    stopPropagation(e);
     var options = getOptions(e);
     bus.emit('filterDropdown:input:focus', options);
   }
 
   function itemClick (e) {
-    preventDefault$1(e);
-    stopPropagation$1(e);
+    preventDefault(e);
+    stopPropagation(e);
     var options = getOptions(e);
     bus.emit('filterDropdown:select', options);
   }
@@ -761,18 +766,18 @@ function filterDropdown () {
     var list = options.parent.querySelector('.filter-dropdown-list');
     add(list, 'is-active');
 
-    var closes = findElements$1('.js-filter-dropdown-close', options.parent);
-    var opens = findElements$1('.js-filter-dropdown-open', options.parent);
+    var closes = findElements('.js-filter-dropdown-close', options.parent);
+    var opens = findElements('.js-filter-dropdown-open', options.parent);
     opens.forEach(function (el) { return remove(el, 'is-active'); });
     closes.forEach(function (el) { return add(el, 'is-active'); });
   }
 
   function closeList (e) {
     var lists = document.querySelectorAll('.filter-dropdown-list');
-    removeActive$1(lists);
+    removeActive(lists);
 
-    var opens = findElements$1('.js-filter-dropdown-open');
-    var closes = findElements$1('.js-filter-dropdown-close');
+    var opens = findElements('.js-filter-dropdown-open');
+    var closes = findElements('.js-filter-dropdown-close');
     opens.forEach(function (el) { return add(el, 'is-active'); });
     closes.forEach(function (el) { return remove(el, 'is-active'); });
   }
@@ -802,7 +807,7 @@ function filterDropdown () {
       var template = "<span class=\"filter-dropdown-active\">\n        " + (item.innerHTML) + "\n        <a class=\"filter-dropdown-remove\" href=\"#\" data-item-id='" + i + "'>\n          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"14\" height=\"14\" viewBox=\"0 0 32 32\" class=\"svg-icon\"><path d=\"M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z\"/></svg>\n        </a>\n      </span>";
       options.parent.insertAdjacentHTML('beforeend', template);
       var removeLink = options.parent.querySelector((".filter-dropdown-remove[data-item-id=\"" + i + "\"]"));
-      add$1(removeLink, click$1(), removeClick);
+      add$1(removeLink, click(), removeClick);
     }
   }
 
@@ -824,6 +829,7 @@ function filterDropdown () {
 }
 
 // Cool Helpers
+
 // ┌───────┐
 // │ Modal │
 // └───────┘
@@ -835,12 +841,12 @@ function filterDropdown () {
 // Emitting false or null closes all modals.
 
 function modal () {
-  // Cool nodes
   var html = document.documentElement;
   var wrapper = document.querySelector('.wrapper');
   var footer = document.querySelector('.footer');
-  var toggles = findElements$1('.js-modal-toggle');
-  var modals = findElements$1('.js-modal');
+  var toggles = findElements('.js-modal-toggle');
+  var modals = findElements('.js-modal');
+  var firstFocusableElement, lastFocusableElement;
 
   // Bus events
   bus.on('modal:open', openModal);
@@ -861,65 +867,80 @@ function modal () {
 
   function openModal (modalId) {
     bus.emit('modal:close');
-    if (!modalId) { return; }
-    var modal = document.querySelector((".js-modal[data-modal=\"" + modalId + "\"]"));
+    if (!modalId || !modalId.id) { return; }
+    var modal = document.querySelector((".js-modal[data-modal=\"" + (modalId.id) + "\"]"));
     modal.removeAttribute('tabindex');
-    add$1(document, 'focusin', fenceModal);
+    add$1(document, 'keydown', fenceModal);
     add(modal, 'is-active');
     add(html, 'drawer-no-overflow');
     hide(dependentNodes());
-    modal.focus();
+    var interactiveQuery = 'button, [href], input, select, textarea, [tabindex]';
+    var focusableElements = findElements(interactiveQuery, modal).filter(function (el) {
+      return !el.disabled && el.tabIndex !== -1 && el.offsetHeight > 0;
+    });
+    firstFocusableElement = focusableElements.shift();
+    lastFocusableElement = focusableElements.pop();
+    firstFocusableElement && firstFocusableElement.focus();
   }
 
   function closeModal (modalId) {
     if (has(html, 'drawer-no-overflow')) {
       remove(html, 'drawer-no-overflow');
     }
-    if (!modalId) { return removeActive$1(modals); }
-    var modal = document.querySelector((".js-modal[data-modal=\"" + modalId + "\"]"));
+    if (!modalId) { return removeActive(modals); }
+    var modal = document.querySelector((".js-modal[data-modal=\"" + (modalId.id) + "\"]"));
     remove(modal, 'is-active');
     modal.setAttribute('tabindex', 0);
-    remove$1(document, 'focusin', fenceModal);
+    remove$1(document, 'keydown', fenceModal);
     show(dependentNodes());
   }
 
   function bindModals (node) {
     if (!node) {
       toggles.forEach(function (toggle$$1) {
-        add$1(toggle$$1, click$1(), toggleClick);
+        add$1(toggle$$1, click(), toggleClick);
       });
     } else {
-      add$1(node, click$1(), toggleClick);
+      add$1(node, click(), toggleClick);
     }
   }
 
   function fenceModal (e) {
-    if (!closest$1('js-modal', e.target)) {
-      modals.forEach(function (modal) {
-        if (has(modal, 'is-active')) {
-          modal.focus();
-        }
-      });
+    var isTabPressed = (e.key === 'Tab' || e.keyCode === 9);
+    if (!isTabPressed) {
+      return;
+    }
+    if (e.shiftKey) {
+      if (document.activeElement === firstFocusableElement) {
+        lastFocusableElement && lastFocusableElement.focus();
+        e.preventDefault();
+      }
+    } else {
+      if (document.activeElement === lastFocusableElement) {
+        firstFocusableElement && firstFocusableElement.focus();
+        e.preventDefault();
+      }
     }
   }
 
   function toggleClick (e) {
-    preventDefault$1(e);
-    var modalId = e.target.dataset.modal;
-    bus.emit('modal:open', modalId);
+    preventDefault(e);
+    var modalId = e.target.getAttribute('data-modal');
+    bus.emit('modal:open', {id: modalId});
   }
 
   bus.emit('modal:bind');
 }
 
 // Cool Helpers
+
 // ┌────────┐
 // │ Search │
 // └────────┘
 // Expanding search bar that lives in the top nav.
 function search () {
-  var toggles = findElements$1('.js-search-toggle');
-  var overlay = findElements$1('.js-search')[0];
+  var toggles = findElements('.js-search-toggle');
+  var overlay = findElements('.js-search')[0];
 
   bus.on('search:bind', bindSearches);
   bus.on('search:toggle', toggleSearch);
@@ -929,10 +950,10 @@ function search () {
   function bindSearches (node) {
     if (!node) {
       toggles.forEach(function (toggle$$1) {
-        add$1(toggle$$1, click$1(), toggleClick);
+        add$1(toggle$$1, click(), toggleClick);
       });
     } else {
-      add$1(node, click$1(), toggleClick);
+      add$1(node, click(), toggleClick);
     }
   }
 
@@ -955,7 +976,7 @@ function search () {
     if (has(overlay, 'is-active')) {
       remove(overlay, 'is-active');
       remove(document.body, 'overflow-hidden');
-      var toggleNodes = nodeListToArray$1(toggles);
+      var toggleNodes = nodeListToArray(toggles);
       toggleNodes.forEach(toggleSearch);
       var input = document.querySelector('.js-search-input');
       if (input) {
@@ -965,7 +986,7 @@ function search () {
   }
 
   function toggleClick (e) {
-    preventDefault$1(e);
+    preventDefault(e);
     bus.emit('search:toggle', e.target);
   }
 
@@ -975,7 +996,7 @@ function search () {
 function selectNav () {
   bus.on('selectnav:bind', bindSelects);
 
-  var selects = findElements$1('.js-select-nav');
+  var selects = findElements('.js-select-nav');
 
   function bindSelects () {
     selects.forEach(function (select) {
@@ -1044,7 +1065,7 @@ function sticky () {
   bus.on('sticky:stick', stickItem);
   bus.on('sticky:unstick', unstickItem);
 
-  var elements = findElements$1('.js-sticky');
+  var elements = findElements('.js-sticky');
   var stickies = elements.map(function (el) {
     var offset = el.offsetTop;
     var dataTop = el.getAttribute('data-top') || 0;
@@ -1111,6 +1132,7 @@ function sticky () {
 }
 
 // Cool Helpers
+
 // ┌──────┐
 // │ Tabs │
 // └──────┘
@@ -1120,9 +1142,9 @@ function tabs () {
   bus.on('tabs:active', setTab);
 
   function bindTabs () {
-    var tabs = findElements$1('.js-tab');
-    var tabGroups = findElements$1('.js-tab-group');
-    var tabSections = findElements$1('.js-tab-section');
+    var tabs = findElements('.js-tab');
+    var tabGroups = findElements('.js-tab-group');
+    var tabSections = findElements('.js-tab-section');
 
     // set max width for each tab
     tabGroups.forEach(function (tab) {
@@ -1140,7 +1162,7 @@ function tabs () {
       tab.setAttribute('aria-expanded', 'false');
       tab.setAttribute('role', 'tab');
       tab.setAttribute('tabindex', '0');
-      add$1(tab, click$1(), clickTab);
+      add$1(tab, click(), clickTab);
       add$1(tab, 'keyup', enterTab);
     });
 
@@ -1168,10 +1190,10 @@ function tabs () {
 
   function setTab (options) {
     var group = options.parent;
-    var tabs = nodeListToArray$1(group.querySelectorAll('.js-tab'));
+    var tabs = nodeListToArray(group.querySelectorAll('.js-tab'));
     var activeTab = options.active;
 
-    var sections = nodeListToArray$1(group.querySelectorAll('.js-tab-section'));
+    var sections = nodeListToArray(group.querySelectorAll('.js-tab-section'));
     var index = tabs.indexOf(activeTab);
     var activeSection = sections[index];
 
@@ -1179,13 +1201,13 @@ function tabs () {
       t.setAttribute('aria-expanded', false);
     });
     activeTab.setAttribute('aria-expanded', true);
-    toggleActive$1(tabs, activeTab);
+    toggleActive(tabs, activeTab);
 
     sections.forEach(function (s) {
       s.setAttribute('aria-expanded', false);
     });
     activeSection.setAttribute('aria-expanded', true);
-    toggleActive$1(sections, activeSection);
+    toggleActive(sections, activeSection);
   }
 
   function getOptions (e) {
@@ -1193,7 +1215,7 @@ function tabs () {
     if (!has(tab, 'tab-title')) {
       tab = e.currentTarget;
     }
-    var group = closest$1('js-tab-group', tab);
+    var group = closest('js-tab-group', tab);
     var id = groupId(group);
     return {
       parent: group,
@@ -1219,19 +1241,7 @@ function tabs () {
 }
 
 // ┌─────────┐
-// │ Helpers │
-// └─────────┘
-// utilities for working with dom, and removing browser inconsistencies
-// with support back to IE9+
-// ┌─────┐
-// │ Bus │
-// └─────┘
-// all event passing takes place over a bus
-// this is just an instance of tinyEmitter
-// ┌─────────────────┐
-// │ Import Patterns │
-// └─────────────────┘
-// import all interactive patterns
+
 // ┌──────────────────────┐
 // │ Emit Keyboard Events │
 // └──────────────────────┘
@@ -1259,7 +1269,7 @@ function translateKeypress (e) {
 // │ Emit Scroll Events │
 // └────────────────────┘
 // throttled for performance
-add$1(window, 'scroll', throttle$1(isScrolling, 100));
+add$1(window, 'scroll', throttle(isScrolling, 100));
 function isScrolling () {
   bus.emit('scrolling:at', window.pageYOffset);
 }
@@ -1292,7 +1302,6 @@ function extend (plugin) {
   // Object Assign Polyfill
   if (typeof Object.assign !== 'function') {
     Object.assign = function (target$$1) {
-      'use strict';
       var arguments$1 = arguments;
 
       if (target$$1 == null) {
@@ -1324,54 +1333,49 @@ function extend (plugin) {
 // └────────────┘
 // define all public api methods
 var version = '1.0.0';
-var click$$1 = click$1;
+var click$1 = click;
 var addEvent = add$1;
 var removeEvent = remove$1;
 var eventTarget = target;
-var preventDefault$$1 = preventDefault$1;
-var stopPropagation$$1 = stopPropagation$1;
-var throttle$$1 = throttle$1;
+var preventDefault$1 = preventDefault;
+var stopPropagation$1 = stopPropagation;
+var throttle$1 = throttle;
 var hasClass = has;
 var addClass = add;
 var removeClass = remove;
 var toggleClass = toggle;
-var removeActive$$1 = removeActive$1;
-var addActive$$1 = addActive$1;
-var toggleActive$$1 = toggleActive$1;
+var removeActive$1 = removeActive;
+var addActive$1 = addActive;
+var toggleActive$1 = toggleActive;
 var toggleAriaHidden = toggleHidden;
 var toggleAriaExpanded = toggleExpanded;
-var closest$$1 = closest$1;
-var nodeListToArray$$1 = nodeListToArray$1;
-var findElements$$1 = findElements$1;
+var closest$1 = closest;
+var nodeListToArray$1 = nodeListToArray;
+var findElements$1 = findElements;
 
 // ┌────────┐
-// │ Bundle │
-// └────────┘
-// This file imports all the named ES6 exports
-// and attaches them to the same object (calcite).
-// For more information about using the bundle vs. using individual
-// ES6 modules, see esri.github.io/documentation/javascript/#importing
+
 var calciteWeb = {
   version: version,
-  click: click$$1,
+  click: click$1,
   addEvent: addEvent,
   removeEvent: removeEvent,
   eventTarget: eventTarget,
-  preventDefault: preventDefault$$1,
-  stopPropagation: stopPropagation$$1,
-  throttle: throttle$$1,
+  preventDefault: preventDefault$1,
+  stopPropagation: stopPropagation$1,
+  throttle: throttle$1,
   hasClass: hasClass,
   addClass: addClass,
   removeClass: removeClass,
   toggleClass: toggleClass,
-  removeActive: removeActive$$1,
-  addActive: addActive$$1,
-  toggleActive: toggleActive$$1,
+  removeActive: removeActive$1,
+  addActive: addActive$1,
+  toggleActive: toggleActive$1,
   toggleAriaHidden: toggleAriaHidden,
   toggleAriaExpanded: toggleAriaExpanded,
-  closest: closest$$1,
-  nodeListToArray: nodeListToArray$$1,
-  findElements: findElements$$1,
+  closest: closest$1,
+  nodeListToArray: nodeListToArray$1,
+  findElements: findElements$1,
   bus: bus,
   accordion: accordion,
   dropdown: dropdown,

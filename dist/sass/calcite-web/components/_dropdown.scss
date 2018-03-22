@@ -20,9 +20,14 @@
     @include font-size(-2);
     color: $darker-gray;
     background-color: $white;
+    border-bottom: none;
+    text-align: left;
+    border-left: none;
+    border-right: none;
     border-top: 1px solid $lightest-gray;
     white-space: nowrap;
     cursor: pointer;
+    width: 100%;
     &:hover {
       background-color: $off-white;
       text-decoration: none;
@@ -31,6 +36,15 @@
     &.is-active, &:focus {
       text-indent: -3px;
       border-left: 3px solid $blue;
+    }
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        text-align: right;
+      }
+      html[dir="rtl"] &.is-active, html[dir="rtl"] &:focus {
+        border-left: none;
+        border-right: 3px solid $blue;
+      }
     }
   }
 
