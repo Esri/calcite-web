@@ -2,30 +2,30 @@
 <!--[if lt IE 9]>  <html class="ie lt-ie9 ie8"> <![endif]-->
 <!--[if IE 9]>     <html class="ie ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
-  <head>
+<head>
 
-    <!-- Set encoding -->
-    <meta charset="utf-8">
+  <!-- Set encoding -->
+  <meta charset="utf-8">
 
-    <!-- Always force latest IE rendering engine or request Chrome Frame -->
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
+  <!-- Always force latest IE rendering engine or request Chrome Frame -->
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
 
-    <!-- Use title from page frontmatter -->
-    <title>Search Calcite Web | Esri Design Patterns</title>
+  <!-- Use title from page frontmatter -->
+  <title>Search Calcite Web | Esri Design Patterns</title>
 
-    
+  
 
-    <!-- Link to favicon -->
-    <link rel="shortcut icon" href="../assets/img/favicon.ico">
+  <!-- Link to favicon -->
+  <link rel="shortcut icon" href="../assets/img/favicon.ico">
 
-    <!-- stylesheets -->
-    
-      <link rel="stylesheet" href="../assets/css/all.css">
-      <link rel="stylesheet" href="../assets/css/extensions.css">
-      
-    
-
+  <!-- stylesheets -->
+  
+  <link rel="stylesheet" href="../assets/css/extensions.css">
+  <link rel="stylesheet" href="../assets/css/all.css" id="calcite-theme-light" name="theme-light" title="theme-light">
+  <link rel="stylesheet" href="../assets/css/dark.css" id="calcite-theme-dark" name="theme-dark" title="theme-dark" disabled>
+  
+  
     <!--[if IE]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
@@ -39,9 +39,8 @@
     └─────────┘
      ↳ http://esri.github.io/calcite-web/patterns/#drawers
      ↳ patterns → _drawers.md
-    -->
-    <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
-      <!-- <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerleft"> -->
+   -->
+   <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
       <nav class="drawer-nav" role="navigation">
         <aside class="side-nav">
           <h2 class="side-nav-title">Calcite Web</h2>
@@ -49,6 +48,13 @@
           <a href="../examples/" class="side-nav-link">Examples</a>
           <a href="../guides/" class="side-nav-link">Guides</a>
           <a href="../quick-reference/" class="side-nav-link">Quick Reference</a>
+          <a class="side-nav-link">
+            <label class="toggle-switch leader-0 trailer-0">
+              <input type="checkbox" class="toggle-switch-input docs-theme-toggle">
+              <span class="toggle-switch-track margin-right-half"></span>
+              <span class="toggle-switch-label font-size--2">Dark Theme</span>
+            </label>
+          </a>
         </aside>
       </nav>
     </div>
@@ -61,6 +67,13 @@
           <a href="../examples/" class="side-nav-link">Examples</a>
           <a href="../guides/" class="side-nav-link">Guides</a>
           <a href="../quick-reference/" class="side-nav-link">Quick Reference</a>
+          <a class="side-nav-link">
+            <label class="toggle-switch leader-0 trailer-0">
+              <input type="checkbox" class="toggle-switch-input docs-theme-toggle">
+              <span class="toggle-switch-track margin-right-half"></span>
+              <span class="toggle-switch-label font-size--2">Dark Theme</span>
+            </label>
+          </a>
         </aside>
       </nav>
     </div>
@@ -69,81 +82,87 @@
       <!--
       ┌────────┐
       │ Search │
-      -->
-      <div class="js-search search-overlay">
-        <div class="search-content" role="dialog" aria-labelledby="search" role="dialog">
-          <form method="GET" action="../search/">
-            <label>
-              Search Calcite Web
-              <input class="search-input js-search-input" type="search" placeholder='Search' name="q" autocomplete="off">
-            </label>
-            <button type="submit" class="btn btn-large right">Search</button>
-          </form>
-        </div>
+    -->
+    <div class="js-search search-overlay">
+      <div class="search-content" role="dialog" aria-labelledby="search" role="dialog">
+        <form method="GET" action="../search/">
+          <label>
+            Search Calcite Web
+            <input class="search-input js-search-input" type="search" placeholder='Search' name="q" autocomplete="off">
+          </label>
+          <button type="submit" class="btn btn-large right">Search</button>
+        </form>
       </div>
+    </div>
 
-      <!-- Sample HTML -->
-      <header class="top-nav">
-        <div class="grid-container">
-          <div class="column-24">
-            <!-- desktop sized navigation -->
-            <div class="tablet-hide">
-              <!-- logo / home -->
-              <a href="../" class="top-nav-title">Calcite Web</a>
-              <!-- primary navigation sections -->
-              <nav class="top-nav-list" role="navigation">
-                <a href="../documentation" class="top-nav-link">Documentation</a>
-                <a href="../examples" class="top-nav-link">Examples</a>
-                <a href="../guides" class="top-nav-link">Guides</a>
-                <a href="../quick-reference" class="top-nav-link">Quick Reference</a>
-              </nav>
-              <nav class="class-top-nav-list right" role="navigation" aria-labelledby="usernav">
-                <button class="search-top-nav link-dark-gray js-search-toggle" href="#" aria-label="Search">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon js-search-icon">
-                    <path d="M31.607 27.838l-6.133-6.137a1.336 1.336 0 0 0-1.887 0l-.035.035-2.533-2.533-.014.014c3.652-4.556 3.422-11.195-.803-15.42-4.529-4.527-11.875-4.531-16.404 0-4.531 4.531-4.529 11.875 0 16.406 4.205 4.204 10.811 4.455 15.365.848l.004.003-.033.033 2.541 2.54a1.33 1.33 0 0 0 .025 1.848l6.135 6.133a1.33 1.33 0 0 0 1.887 0l1.885-1.883a1.332 1.332 0 0 0 0-1.887zM17.811 17.809a8.213 8.213 0 0 1-11.619 0 8.217 8.217 0 0 1 0-11.622 8.219 8.219 0 0 1 11.619.004 8.216 8.216 0 0 1 0 11.618z"/>
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon js-close-icon hide">
-                    <path d="M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z"/>
-                  </svg>
-                </button>
-              </nav>
-            </div>
-
-            <!-- tablet and mobile sized navigation -->
-            <div class="tablet-show top-nav-flex">
-              <!-- open primary navigation drawer -->
-              <nav class="top-nav-flex-list" role="navigation" aria-labelledby="topnav">
-                <a href="/" class="top-nav-link js-drawer-toggle" data-drawer="top-nav">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 -4 32 36" class="svg-icon"><path d="M28 3.5A2.5 2.5 0 0 1 25.5 6h-21A2.5 2.5 0 0 1 2 3.5v-1A2.5 2.5 0 0 1 4.5 0h21A2.5 2.5 0 0 1 28 2.5v1zm0 11a2.5 2.5 0 0 0-2.5-2.5h-21A2.5 2.5 0 0 0 2 14.5v1A2.5 2.5 0 0 0 4.5 18h21a2.5 2.5 0 0 0 2.5-2.5v-1zm0 12a2.5 2.5 0 0 0-2.5-2.5h-21A2.5 2.5 0 0 0 2 26.5v1A2.5 2.5 0 0 0 4.5 30h21a2.5 2.5 0 0 0 2.5-2.5v-1z"/></svg>
-                </a>
-              </nav>
-              <!-- logo / home -->
-              <header class="top-nav-flex-title">
-                <a href="/" class="top-nav-link">Calcite Web</span></a>
-              </header>
-              <nav class="top-nav-flex-list class-top-nav-list text-right" role="navigation" aria-labelledby="usernav">
-                <button class="search-top-nav link-dark-gray js-search-toggle" href="#" aria-label="Search">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 -4 32 36" class="svg-icon js-search-icon">
-                    <path d="M31.607 27.838l-6.133-6.137a1.336 1.336 0 0 0-1.887 0l-.035.035-2.533-2.533-.014.014c3.652-4.556 3.422-11.195-.803-15.42-4.529-4.527-11.875-4.531-16.404 0-4.531 4.531-4.529 11.875 0 16.406 4.205 4.204 10.811 4.455 15.365.848l.004.003-.033.033 2.541 2.54a1.33 1.33 0 0 0 .025 1.848l6.135 6.133a1.33 1.33 0 0 0 1.887 0l1.885-1.883a1.332 1.332 0 0 0 0-1.887zM17.811 17.809a8.213 8.213 0 0 1-11.619 0 8.217 8.217 0 0 1 0-11.622 8.219 8.219 0 0 1 11.619.004 8.216 8.216 0 0 1 0 11.618z"/>
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 -4 32 36" class="svg-icon js-close-icon hide">
-                    <path d="M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z"/>
-                  </svg>
-                </button>
-              </nav>
-            </div>
+    <!-- Sample HTML -->
+    <header class="top-nav">
+      <div class="grid-container">
+        <div class="column-24">
+          <!-- desktop sized navigation -->
+          <div class="tablet-hide">
+            <!-- logo / home -->
+            <a href="../" class="top-nav-title">Calcite Web</a>
+            <!-- primary navigation sections -->
+            <nav class="top-nav-list" role="navigation">
+              <a href="../documentation" class="top-nav-link">Documentation</a>
+              <a href="../examples" class="top-nav-link">Examples</a>
+              <a href="../guides" class="top-nav-link">Guides</a>
+              <a href="../quick-reference" class="top-nav-link">Quick Reference</a>
+            </nav>
+            <nav class="class-top-nav-list right" role="navigation" aria-labelledby="usernav">
+              <a class="top-nav-link padding-leader-0 padding-trailer-0 trailer-0 margin-right-1">
+                <label class="toggle-switch trailer-0 docs-toggle-spacer">
+                  <input type="checkbox" class="toggle-switch-input docs-theme-toggle">
+                  <span class="toggle-switch-track margin-right-half"></span>
+                  <span class="toggle-switch-labe">Dark Theme</span>
+                </label>
+              </a>
+              <button class="search-top-nav link-dark-gray js-search-toggle" href="#" aria-label="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon js-search-icon">
+                  <path d="M31.607 27.838l-6.133-6.137a1.336 1.336 0 0 0-1.887 0l-.035.035-2.533-2.533-.014.014c3.652-4.556 3.422-11.195-.803-15.42-4.529-4.527-11.875-4.531-16.404 0-4.531 4.531-4.529 11.875 0 16.406 4.205 4.204 10.811 4.455 15.365.848l.004.003-.033.033 2.541 2.54a1.33 1.33 0 0 0 .025 1.848l6.135 6.133a1.33 1.33 0 0 0 1.887 0l1.885-1.883a1.332 1.332 0 0 0 0-1.887zM17.811 17.809a8.213 8.213 0 0 1-11.619 0 8.217 8.217 0 0 1 0-11.622 8.219 8.219 0 0 1 11.619.004 8.216 8.216 0 0 1 0 11.618z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon js-close-icon hide">
+                  <path d="M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z"/>
+                </svg>
+              </button>
+            </nav>
           </div>
 
+          <!-- tablet and mobile sized navigation -->
+          <div class="tablet-show top-nav-flex">
+            <!-- open primary navigation drawer -->
+            <nav class="top-nav-flex-list" role="navigation" aria-labelledby="topnav">
+              <a href="/" class="top-nav-link js-drawer-toggle" data-drawer="top-nav">
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 -4 32 36" class="svg-icon"><path d="M28 3.5A2.5 2.5 0 0 1 25.5 6h-21A2.5 2.5 0 0 1 2 3.5v-1A2.5 2.5 0 0 1 4.5 0h21A2.5 2.5 0 0 1 28 2.5v1zm0 11a2.5 2.5 0 0 0-2.5-2.5h-21A2.5 2.5 0 0 0 2 14.5v1A2.5 2.5 0 0 0 4.5 18h21a2.5 2.5 0 0 0 2.5-2.5v-1zm0 12a2.5 2.5 0 0 0-2.5-2.5h-21A2.5 2.5 0 0 0 2 26.5v1A2.5 2.5 0 0 0 4.5 30h21a2.5 2.5 0 0 0 2.5-2.5v-1z"/></svg>
+              </a>
+            </nav>
+            <!-- logo / home -->
+            <header class="top-nav-flex-title">
+              <a href="/" class="top-nav-link">Calcite Web</span></a>
+            </header>
+            <nav class="top-nav-flex-list class-top-nav-list text-right" role="navigation" aria-labelledby="usernav">
+              <button class="search-top-nav link-dark-gray js-search-toggle" href="#" aria-label="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 -4 32 36" class="svg-icon js-search-icon">
+                  <path d="M31.607 27.838l-6.133-6.137a1.336 1.336 0 0 0-1.887 0l-.035.035-2.533-2.533-.014.014c3.652-4.556 3.422-11.195-.803-15.42-4.529-4.527-11.875-4.531-16.404 0-4.531 4.531-4.529 11.875 0 16.406 4.205 4.204 10.811 4.455 15.365.848l.004.003-.033.033 2.541 2.54a1.33 1.33 0 0 0 .025 1.848l6.135 6.133a1.33 1.33 0 0 0 1.887 0l1.885-1.883a1.332 1.332 0 0 0 0-1.887zM17.811 17.809a8.213 8.213 0 0 1-11.619 0 8.217 8.217 0 0 1 0-11.622 8.219 8.219 0 0 1 11.619.004 8.216 8.216 0 0 1 0 11.618z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 -4 32 36" class="svg-icon js-close-icon hide">
+                  <path d="M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z"/>
+                </svg>
+              </button>
+            </nav>
+          </div>
         </div>
-      </header>
+      </div>
+    </header>
 
 
-      <!-- Secondary Nav Pattern -->
-      <!-- what -->
-      
+    <!-- Secondary Nav Pattern -->
+    <!-- what -->
+    
 
-      <!-- content of each page will go here -->
-      <header class="sub-nav" role="banner">
+    <!-- content of each page will go here -->
+    <header class="sub-nav" role="banner">
   <div class="grid-container">
     <div class="column-24">
       <h1 class="sub-nav-title text-white" id="search">Search</h1>
@@ -228,10 +247,10 @@
           <p>This is probably the easiest way, but you won't get any of the helpful Sass mixins. If you're looking to get up and running quickly, just <a href="https://github.com/ArcGIS/calcite-web/releases">download the latest release</a> and move the zipped files to wherever you keep your assets (CSS, JavaScript, images). Be sure to use <a href="http://esri.github.io/calcite-web/">the documentation site</a> to copy and paste patterns, components, and even a sample html boilerplate.</p>
 <p>You can also use a hosted version of Calcite Web:</p>
 <pre><code><span class="hljs-comment">&lt;!-- In the head --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.8/css/calcite-web.min.css"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.9/css/calcite-web.min.css"</span>&gt;</span>
 
 <span class="hljs-comment">&lt;!-- Just before end of body --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.8/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.9/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
 
         </div>
@@ -254,7 +273,7 @@
         </h5>
         <div class="js-search-item-content hide">
           <p>To install Calcite-Web as a ruby gem, reference the gem from your <code>Gemfile</code>:</p>
-<pre><code>gem <span class="hljs-string">"calcite-web"</span>, :<span class="hljs-function"><span class="hljs-params">git</span> =&gt;</span> <span class="hljs-string">"https://github.com/Esri/calcite-web.git"</span>, :<span class="hljs-function"><span class="hljs-params">tag</span> =&gt;</span> <span class="hljs-string">"v1.0.0-rc.8"</span>
+<pre><code>gem <span class="hljs-string">"calcite-web"</span>, :<span class="hljs-function"><span class="hljs-params">git</span> =&gt;</span> <span class="hljs-string">"https://github.com/Esri/calcite-web.git"</span>, :<span class="hljs-function"><span class="hljs-params">tag</span> =&gt;</span> <span class="hljs-string">"v1.0.0-rc.9"</span>
 </code></pre>
 <p>This makes Calcite Web available as a Compass extension. To use Calcite Web, make sure you require the gem in your compass config file (usually found at <code>config/compass.rb</code>). An example config file might look like this:</p>
 <pre><code class="ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">"calcite-web"</span>
@@ -288,7 +307,7 @@ sass_dir = <span class="hljs-string">"sass"</span>
         </h5>
         <div class="js-search-item-content hide">
           <p>To install Calcite Web with npm, type:</p>
-<pre><code>npm install --save-dev Esri/calcite-web#v1<span class="hljs-number">.0</span><span class="hljs-number">.0</span>-rc<span class="hljs-number">.8</span>
+<pre><code>npm install --save-dev Esri/calcite-web#v1<span class="hljs-number">.0</span><span class="hljs-number">.0</span>-rc<span class="hljs-number">.9</span>
 </code></pre>
 <p>You must add the current version in order to get the <code>dist/</code> folder.</p>
 <p>Now, in your main <code>.scss</code> file, you can just require the framework:</p>
@@ -318,15 +337,17 @@ sass_dir = <span class="hljs-string">"sass"</span>
           </a>
         </h5>
         <div class="js-search-item-content hide">
-          <p>The Calcite Type System uses a combination of mixins and helper classes to achieve a clear visual style, focusing primarily on simplifying typesetting processes. Using the mixins and classes properly will ensure that all properties are consistent, beautiful, and robust.</p>
-<h3>Typefaces</h3>
-<p>The typographic palette for Calcite Web differs slightly from the official Esri branding document. All typefaces are examined in detail below.</p>
-<p>Calcite Web provides a set of weights for each typeface. These are used by either using the helper class in html, or writing sass to include the mixin, or extending the helper class. The available weights for each face are below. Proper care has been taken to ensure that all type systems used by Calcite avoid faux-bold and faux-italics styled by the browser.</p>
-<p>By default, Calcite Web expects font files to be located at <code>../</code>. If your fonts are elsewhere, set the <code>$font-path</code> variable</p>
+          <p>Calcite Web primarily uses Avenir Next, but also provides a system monospace stack. All font-weights and faces can be set either with <a href="#avenir">helper classes</a> or <a href="../sass/#font-families">Sass mixins</a>.</p>
+<h3>Internationalization</h3>
+<p>Almost every major language is styled for you, automatically. In most latin-based languages, everything can be rendered in Avenir Next. Some languages, however, use characters that aren't included in Avenir Next. For each of these languages, Calcite Web will load a font that maintains a similar look and feel.</p>
+<p>Non-latin character sets are pulled in only when needed, so if your application is in English, the browser will only load the files it needs for displaying English. This is accomplished by using the <code>unicode-range</code> property in the <code>@font-face</code> declaration. To learn more about internationalization and to see all of the languages that Calcite Web supports, check out the <a href="../../examples/i18n/">i18n example page</a>.</p>
+<h3>Use Behind a Firewall</h3>
+<p>Fonts in Calcite Web are loaded from the Esri CDN, but if you are working on an Esri product that will be deployed behind a firewall, you can also host the files yourself, locally.</p>
+<p>For more instructions on setting up locally-hosted fonts, view the <a href="https://github.com/ArcGIS/calcite-fonts">Calcite Fonts</a> project. <em>Note:</em> due to license restrictions these files can only be made available for Esri product teams.</p>
 <h3>Vertical Rhythm</h3>
 <p>Vertical rhythm is maintained in the Calcite Web Type System by the use of the <code>$baseline</code> variable. <code>$baseline</code> sets a standard and regular leading in relation to the body copy – 1.5rem. This variable is used for any measurement on the vertical axis in the page, including the <a href="../grid/#leader-and-trailer">leader and trailer grid helper classes</a> and padding for <a href="../components/#buttons">components like buttons</a> which use standard measurements like <code>3/$baseline</code> and <code>2/$baseline</code>.</p>
 <h3>Proportional Scales</h3>
-<p>Text sizes are defined by a simple <a href="http://alistapart.com/article/more-meaningful-typography">modular scale</a>. The scale is defined by two base sizes for type - body at 1rem and small at 0.95rem - and extrapolates a series of larger type sizes based on a single ratio; 1.25, or a major third interval. All type sizes are <a href="http://snook.ca/archives/html_and_css/font-size-with-rem">set in rems</a>, which have <a href="http://caniuse.com/#feat=rem">more than acceptable browser support</a>. Rems are used for type sizing and all vertical measurements, defined either by the <code>$baseline</code> variable or the <a href="../sass/#modular-scale">modular scale</a> and <a href="../sass/#font-size">font size</a> mixins. This prevents odd sizing issues with nested content, unpredictable results with scaling, and provides a solid anchor for determining sizes.</p>
+<p>Text sizes are defined by a <a href="http://alistapart.com/article/more-meaningful-typography">modular scale</a>. The scale is defined by two base sizes for type - body at 1rem and small at 0.95rem - and extrapolates a series of larger type sizes based on a single ratio; 1.25, or a major third interval. All type sizes are <a href="http://snook.ca/archives/html_and_css/font-size-with-rem">set in rems</a>, which have <a href="http://caniuse.com/#feat=rem">more than acceptable browser support</a>. Rems are used for type sizing and all vertical measurements, defined either by the <code>$baseline</code> variable or the <a href="../sass/#modular-scale">modular scale</a> and <a href="../sass/#font-size">font size</a> mixins. This prevents odd sizing issues with nested content, unpredictable results with scaling, and provides a solid anchor for determining sizes.</p>
 
         </div>
         <!-- populated on the client -->
@@ -1039,8 +1060,6 @@ $initHighlight([<span class="hljs-string">"class1"</span>, <span class="hljs-str
           <p>Pre and Post classes are used to move your columns laterally across the grid by defining how many columns they should be from their neighbors on either side.</p>
 <p>Pre and Post classes do not responsively fold. This prevents a <code>pre-5</code> from pushing content off the edge of the screen on phone sizes. Responsive <code>tablet-</code> and <code>phone-</code> classes are exposed for defining pre and post behavior on breakpoints.</p>
 <p>Pre and post helpers are available from <code>.pre-1</code> and <code>.post-1</code> to <code>.pre-24</code> and <code>.post-24</code>.</p>
-<p><strong>Note:</strong> While a single DOM element <em>can</em> have both pre and post helpers, putting both on a single node can cause problems when switching a layout for right to left languages.</p>
-<p>If problems occur in a layout, use the <code>rtl-</code> prefix to explicitly assign <code>pre</code> and <code>post</code> classes to the right to left layout.</p>
 <div class="grid-example clearfix">
   <div class="column-8 pre-2">
     <span>column-8 pre-2</span>
@@ -1090,15 +1109,13 @@ $initHighlight([<span class="hljs-string">"class1"</span>, <span class="hljs-str
           
           <a href="../documentation/grid/#gutter">
             
-            Gutter
+            Horizontal Spacing
             
           </a>
         </h5>
         <div class="js-search-item-content hide">
-          <p>Adds padding the the left or right of an element. For example, <code>&lt;div class=&quot;padding-left-3&quot;&gt;</code> will receive three units of padding on its left side.</p>
+          <p>These helper classes add margin or padding the the left or right of an element. For example, <code>&lt;div class=&quot;padding-left-3&quot;&gt;</code> will receive three units of padding on its left side.</p>
 <p>Responsive <code>tablet-</code> and <code>phone-</code> classes are exposed for defining gutter and gutter behavior on breakpoints.</p>
-<p><strong>Note:</strong> While a single DOM element <em>can</em> have both padding-left and padding-right helpers, putting both on a single node can cause problems when switching a layout for right to left languages.</p>
-<p>If problems occur in a layout, use the <code>rtl-</code> prefix to explicitly assign <code>padding</code> classes to the right to left layout.</p>
 
         </div>
         <!-- populated on the client -->
@@ -1581,6 +1598,9 @@ aligning grid columns when the Grid System is unable to determine which columns 
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn"</span>&gt;</span>  Button <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-red btn-arrow"</span>&gt;</span>  Red Button with Arrow <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 </code></pre>
+<h4>Button Links</h4>
+<p>Sometimes, the proper semantic element is a button, but you would rather the element look more like a link. In these instances, Calcite Web provides an additional class <code>btn-link</code> which styles a button element as if it were a simple anchor:</p>
+<p><button class="btn-link">This is a button</button></p>
 
         </div>
         <!-- populated on the client -->
@@ -1702,7 +1722,7 @@ aligning grid columns when the Grid System is unable to determine which columns 
         </h5>
         <div class="js-search-item-content hide">
           <p>Panels are useful to draw attention or contain certain text on a page. They are simple containers, which can be used to help guide users through the visual hierarchy of your design.</p>
-<p>If you use a dark or blue panel color, be sure to use the <a href="../type/#link-color">link modifier classes</a> to style links in an appropriate color.</p>
+<p><em>Note:</em> be sure to use the <a href="../type/#link-color">link modifier classes</a> to style links within a panel so that they pass WCAG 2.0 accessibility color contrast. For standard light-gray panels, use <code>link-dark-blue</code>.</p>
 
         </div>
         <!-- populated on the client -->
@@ -1960,6 +1980,44 @@ aligning grid columns when the Grid System is unable to determine which columns 
         <!-- populated on the client -->
         <div class="js-search-item-snippet font-size-0"></div>
         <a href="../documentation/components/#selects" class="link-gray font-size--2">esri.github.io/calcite-web/documentation/components/#selects</a>
+      </section>
+      
+      <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
+        <h5 class="trailer-half">
+          
+          
+          <a href="../documentation/components/#sliders">
+            
+            Sliders
+            
+          </a>
+        </h5>
+        <div class="js-search-item-content hide">
+          <p>This is a simple range slider input component to provide consistent cross-browser styles. In the future we hope to add more functionality via opt-in js classes.</p>
+
+        </div>
+        <!-- populated on the client -->
+        <div class="js-search-item-snippet font-size-0"></div>
+        <a href="../documentation/components/#sliders" class="link-gray font-size--2">esri.github.io/calcite-web/documentation/components/#sliders</a>
+      </section>
+      
+      <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
+        <h5 class="trailer-half">
+          
+          
+          <a href="../documentation/components/#switches">
+            
+            Switches
+            
+          </a>
+        </h5>
+        <div class="js-search-item-content hide">
+          <p>In addition to inline display, we also provide support for both left- and right- aligned copy through use of Calcite helper classes. We provide a warning style for destructive actions, such as deleting items or accounts. Enabling RTL will swap the orientation of the handle within the track as well as the layout of the label and switch.</p>
+
+        </div>
+        <!-- populated on the client -->
+        <div class="js-search-item-snippet font-size-0"></div>
+        <a href="../documentation/components/#switches" class="link-gray font-size--2">esri.github.io/calcite-web/documentation/components/#switches</a>
       </section>
       
       <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
@@ -2445,8 +2503,8 @@ aligning grid columns when the Grid System is unable to determine which columns 
         </h5>
         <div class="js-search-item-content hide">
           <p>The off-canvas &quot;drawer&quot; pattern is used primarily for top-level mobile navigation.</p>
-<p><a href="#" class="btn js-drawer-toggle" data-drawer="top-nav">Open Left Drawer</a></p>
-<p><a href="#" class="btn js-drawer-toggle" data-drawer="right">Open Right Drawer</a></p>
+<p><button class="btn js-drawer-toggle" data-drawer="top-nav">Open Left Drawer</button></p>
+<p><button class="btn js-drawer-toggle" data-drawer="right">Open Right Drawer</button></p>
 <pre><code> <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- Drawer --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"drawer drawer-left js-drawer is-active"</span> <span class="hljs-attr">data-drawer</span>=<span class="hljs-string">"top-nav"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"0"</span>&gt;</span>
@@ -2773,6 +2831,32 @@ $include-<span class="hljs-keyword">filter</span>-dropdown:        $generate-css
         <!-- populated on the client -->
         <div class="js-search-item-snippet font-size-0"></div>
         <a href="../documentation/sass/#type-composition" class="link-gray font-size--2">esri.github.io/calcite-web/documentation/sass/#type-composition</a>
+      </section>
+      
+      <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
+        <h5 class="trailer-half">
+          
+          
+          <a href="../documentation/sass/#font-families">
+            
+            Font Family
+            
+          </a>
+        </h5>
+        <div class="js-search-item-content hide">
+          <p>You can set the font family and weight via the following Sass mixins:</p>
+<pre><code>@<span class="hljs-meta"><span class="hljs-meta-keyword">include</span> avenir-light();</span>   <span class="hljs-comment">// font-weight: 300</span>
+@<span class="hljs-meta"><span class="hljs-meta-keyword">include</span> avenir-regular();</span> <span class="hljs-comment">// font-weight: 400</span>
+@<span class="hljs-meta"><span class="hljs-meta-keyword">include</span> avenir-italic();</span>  <span class="hljs-comment">// font-style: italic</span>
+@<span class="hljs-meta"><span class="hljs-meta-keyword">include</span> avenir-bold();</span>    <span class="hljs-comment">// font-weight: 700</span>
+@<span class="hljs-meta"><span class="hljs-meta-keyword">include</span> code-face();</span>      <span class="hljs-comment">// font-family: $code-family</span>
+</code></pre>
+<p>When changing between styles of Avenir Next, you can also simply set the <code>font-weight</code> and <code>font-style</code> properties in CSS and the correct font will also be rendered. The corresponding CSS property values have been noted as comments in the list above.</p>
+
+        </div>
+        <!-- populated on the client -->
+        <div class="js-search-item-snippet font-size-0"></div>
+        <a href="../documentation/sass/#font-families" class="link-gray font-size--2">esri.github.io/calcite-web/documentation/sass/#font-families</a>
       </section>
       
       <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
@@ -3222,7 +3306,7 @@ calcite.init();
 <p>If <code>calcite-web.js</code> is used on a page with no module syntax, it will just attach itself to <code>window.calcite</code>. Here is an example which initializes Calcite from a hosted file on S3:</p>
 <pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
   ...
-  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.8/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.9/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="undefined">
      calcite.init()
   </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
@@ -3275,12 +3359,12 @@ calcite<span class="hljs-selector-class">.bus</span><span class="hljs-selector-c
 <tbody>
 <tr>
 <td>keyboard:return</td>
-<td>The <code>return</code> key was pressed.</td>
+<td>The <code>return</code> key was pressed</td>
 <td>n/a</td>
 </tr>
 <tr>
 <td>keyboard:escape</td>
-<td>The <code>escape</code> key was pressed.</td>
+<td>The <code>escape</code> key was pressed</td>
 <td>n/a</td>
 </tr>
 <tr>
@@ -3360,13 +3444,13 @@ calcite<span class="hljs-selector-class">.bus</span><span class="hljs-selector-c
 </tr>
 <tr>
 <td>drawer:open</td>
-<td>Opens a specified drawer data-drawer attribute</td>
+<td>Opens a drawer specified by data-drawer attribute</td>
 <td><code>{id: drawerid}</code></td>
 <td><code>openDrawer()</code></td>
 </tr>
 <tr>
 <td>drawer:close</td>
-<td>Closes a specified drawer by data-drawer attribute</td>
+<td>Closes a drawer specified by data-drawer attribute</td>
 <td><code>{id: drawerid}</code></td>
 <td><code>closeDrawer()</code></td>
 </tr>
@@ -3478,7 +3562,7 @@ calcite<span class="hljs-selector-class">.bus</span><span class="hljs-selector-c
 <tr>
 <td>filterDropdown:close</td>
 <td>Closes all dropdowns</td>
-<td>n/a.</td>
+<td>n/a</td>
 <td><code>closeList()</code></td>
 </tr>
 <tr>
@@ -3508,13 +3592,13 @@ calcite<span class="hljs-selector-class">.bus</span><span class="hljs-selector-c
 </tr>
 <tr>
 <td>modal:open</td>
-<td>Opens a specific modal</td>
-<td><code>{id: modalId }</code></td>
+<td>Opens a modal specified by data-modal attribute</td>
+<td><code>{id: modalid}</code></td>
 <td><code>openModal()</code></td>
 </tr>
 <tr>
 <td>modal:close</td>
-<td>Closes all modals</td>
+<td>Closes open modal</td>
 <td>n/a</td>
 <td><code>closeModal()</code></td>
 </tr>
@@ -3815,71 +3899,71 @@ calcite.toggleClass(node, <span class="hljs-string">'test'</span>); <span class=
 
   </div>
 </div>
+  </div>
+
+  
+
+  <!-- Footer Pattern -->
+  <footer class="footer leader-3 link-dark-gray" role="contentinfo">
+    <div class="grid-container">
+      <nav class="column-6">
+        <h6>Styleguides</h6>
+        <ul class="list-plain">
+          <li><a href="../guides/code/javascript/">JavaScript</a></li>
+          <li><a href="../guides/code/css/">CSS</a></li>
+          <li><a href="../guides/code/html/">HTML</a></li>
+        </ul>
+      </nav>
+
+      <nav class="column-6">
+        <h6>Resources</h6>
+        <ul class="list-plain">
+          <li><a href="../guides/migration-guide/">Migration Guide</a></li>
+          <li><a href="https://github.com/Esri/calcite-web/releases/">Releases</a></li>
+          <li><a href="https://github.com/Esri/calcite-web/blob/master/CONTRIBUTING.md">Contributing</a></li>
+          <li><a href="https://github.com/Esri/calcite-web/issues/">Issues</a></li>
+          <li><a href="https://github.com/Esri/calcite-web/">GitHub</a></li>
+        </ul>
+      </nav>
+
+      <nav class="column-6">
+        <h6>Presentations</h6>
+        <ul class="list-plain">
+          <li><a href="../presentations/calcite-web-primer/">Calcite Web: A Primer</a></li>
+          <li><a href="../presentations/calcite-web-deep-dive/">Calcite Web: Deep Dive</a></li>
+        </ul>
+      </nav>
+
+      <nav class="column-6">
+        <a class="esri-logo" href="http://esri.com" aria-label="Esri Home"></a>
+        <section class="footer-social-nav leader-1">
+          <a class="icon-social-twitter" aria-label="Esri on Twitter"  href="https://twitter.com/Esri/"></a>
+          <a class="icon-social-facebook" aria-label="Esri on Facebook"  href="https://www.facebook.com/esrigis/"></a>
+          <a class="icon-social-instagram" aria-label="Esri on Instagram"  href="https://instagram.com/esrigram/"></a>
+          <a class="icon-social-github" aria-label="Esri on GitHub"  href="http://esri.github.com/"></a>
+          <a class="icon-social-contact" aria-label="Contact Esri"  href="http://www.esri.com/about-esri/contact/"></a>
+        </section>
+      </nav>
+
+      <div class="column-24 leader-1">
+        <p><small>Copyright © 2018 Esri. All rights reserved. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal">Legal</a></small></p>
+      </div>
     </div>
 
-    
+  </div>
+</footer>
 
-    <!-- Footer Pattern -->
-    <footer class="footer leader-3 link-dark-gray" role="contentinfo">
-      <div class="grid-container">
-          <nav class="column-6">
-            <h6>Styleguides</h6>
-            <ul class="list-plain">
-              <li><a href="../guides/code/javascript/">JavaScript</a></li>
-              <li><a href="../guides/code/css/">CSS</a></li>
-              <li><a href="../guides/code/html/">HTML</a></li>
-            </ul>
-          </nav>
+<script src="../assets/js/theme.js"></script>
+<script src="../assets/js/libs/calcite-web.js"></script>
+<script src="../assets/js/libs/calcite-web-marketing.js"></script>
+<script src="../assets/js/all.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
 
-          <nav class="column-6">
-            <h6>Resources</h6>
-            <ul class="list-plain">
-              <li><a href="../guides/migration-guide/">Migration Guide</a></li>
-              <li><a href="https://github.com/Esri/calcite-web/releases/">Releases</a></li>
-              <li><a href="https://github.com/Esri/calcite-web/blob/master/CONTRIBUTING.md">Contributing</a></li>
-              <li><a href="https://github.com/Esri/calcite-web/issues/">Issues</a></li>
-              <li><a href="https://github.com/Esri/calcite-web/">GitHub</a></li>
-            </ul>
-          </nav>
 
-          <nav class="column-6">
-            <h6>Presentations</h6>
-            <ul class="list-plain">
-              <li><a href="../presentations/calcite-web-primer/">Calcite Web: A Primer</a></li>
-              <li><a href="../presentations/calcite-web-deep-dive/">Calcite Web: Deep Dive</a></li>
-            </ul>
-          </nav>
 
-          <nav class="column-6">
-            <a class="esri-logo" href="http://esri.com" aria-label="Esri Home"></a>
-            <section class="footer-social-nav leader-1">
-              <a class="icon-social-twitter" aria-label="Esri on Twitter"  href="https://twitter.com/Esri/"></a>
-              <a class="icon-social-facebook" aria-label="Esri on Facebook"  href="https://www.facebook.com/esrigis/"></a>
-              <a class="icon-social-instagram" aria-label="Esri on Instagram"  href="https://instagram.com/esrigram/"></a>
-              <a class="icon-social-github" aria-label="Esri on GitHub"  href="http://esri.github.com/"></a>
-              <a class="icon-social-contact" aria-label="Contact Esri"  href="http://www.esri.com/about-esri/contact/"></a>
-            </section>
-          </nav>
 
-          <div class="column-24 leader-1">
-            <p><small>Copyright © 2018 Esri. All rights reserved. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal">Legal</a></small></p>
-          </div>
-        </div>
+<script src="../assets/js/search.js"></script>
 
-      </div>
-    </footer>
 
-    <script src="../assets/js/libs/calcite-web.js"></script>
-    <script src="../assets/js/libs/calcite-web-marketing.js"></script>
-
-    <script src="../assets/js/all.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
-
-    
-
-    
-      <script src="../assets/js/search.js"></script>
-    
-
-  </body>
+</body>
 </html>

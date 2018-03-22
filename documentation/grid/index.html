@@ -2,30 +2,30 @@
 <!--[if lt IE 9]>  <html class="ie lt-ie9 ie8"> <![endif]-->
 <!--[if IE 9]>     <html class="ie ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
-  <head>
+<head>
 
-    <!-- Set encoding -->
-    <meta charset="utf-8">
+  <!-- Set encoding -->
+  <meta charset="utf-8">
 
-    <!-- Always force latest IE rendering engine or request Chrome Frame -->
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
+  <!-- Always force latest IE rendering engine or request Chrome Frame -->
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
 
-    <!-- Use title from page frontmatter -->
-    <title>Calcite Web | Esri Design Patterns</title>
+  <!-- Use title from page frontmatter -->
+  <title>Calcite Web | Esri Design Patterns</title>
 
-    
+  
 
-    <!-- Link to favicon -->
-    <link rel="shortcut icon" href="../../assets/img/favicon.ico">
+  <!-- Link to favicon -->
+  <link rel="shortcut icon" href="../../assets/img/favicon.ico">
 
-    <!-- stylesheets -->
-    
-      <link rel="stylesheet" href="../../assets/css/all.css">
-      <link rel="stylesheet" href="../../assets/css/extensions.css">
-      
-    
-
+  <!-- stylesheets -->
+  
+  <link rel="stylesheet" href="../../assets/css/extensions.css">
+  <link rel="stylesheet" href="../../assets/css/all.css" id="calcite-theme-light" name="theme-light" title="theme-light">
+  <link rel="stylesheet" href="../../assets/css/dark.css" id="calcite-theme-dark" name="theme-dark" title="theme-dark" disabled>
+  
+  
     <!--[if IE]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
@@ -39,9 +39,8 @@
     └─────────┘
      ↳ http://esri.github.io/calcite-web/patterns/#drawers
      ↳ patterns → _drawers.md
-    -->
-    <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
-      <!-- <nav class="drawer-nav" role="navigation" aria-labelledby="topnavdrawerleft"> -->
+   -->
+   <div class="drawer drawer-left js-drawer" data-drawer="top-nav">
       <nav class="drawer-nav" role="navigation">
         <aside class="side-nav">
           <h2 class="side-nav-title">Calcite Web</h2>
@@ -49,6 +48,13 @@
           <a href="../../examples/" class="side-nav-link">Examples</a>
           <a href="../../guides/" class="side-nav-link">Guides</a>
           <a href="../../quick-reference/" class="side-nav-link">Quick Reference</a>
+          <a class="side-nav-link">
+            <label class="toggle-switch leader-0 trailer-0">
+              <input type="checkbox" class="toggle-switch-input docs-theme-toggle">
+              <span class="toggle-switch-track margin-right-half"></span>
+              <span class="toggle-switch-label font-size--2">Dark Theme</span>
+            </label>
+          </a>
         </aside>
       </nav>
     </div>
@@ -61,6 +67,13 @@
           <a href="../../examples/" class="side-nav-link">Examples</a>
           <a href="../../guides/" class="side-nav-link">Guides</a>
           <a href="../../quick-reference/" class="side-nav-link">Quick Reference</a>
+          <a class="side-nav-link">
+            <label class="toggle-switch leader-0 trailer-0">
+              <input type="checkbox" class="toggle-switch-input docs-theme-toggle">
+              <span class="toggle-switch-track margin-right-half"></span>
+              <span class="toggle-switch-label font-size--2">Dark Theme</span>
+            </label>
+          </a>
         </aside>
       </nav>
     </div>
@@ -69,78 +82,84 @@
       <!--
       ┌────────┐
       │ Search │
-      -->
-      <div class="js-search search-overlay">
-        <div class="search-content" role="dialog" aria-labelledby="search" role="dialog">
-          <form method="GET" action="../../search/">
-            <label>
-              Search Calcite Web
-              <input class="search-input js-search-input" type="search" placeholder='Search' name="q" autocomplete="off">
-            </label>
-            <button type="submit" class="btn btn-large right">Search</button>
-          </form>
-        </div>
+    -->
+    <div class="js-search search-overlay">
+      <div class="search-content" role="dialog" aria-labelledby="search" role="dialog">
+        <form method="GET" action="../../search/">
+          <label>
+            Search Calcite Web
+            <input class="search-input js-search-input" type="search" placeholder='Search' name="q" autocomplete="off">
+          </label>
+          <button type="submit" class="btn btn-large right">Search</button>
+        </form>
       </div>
+    </div>
 
-      <!-- Sample HTML -->
-      <header class="top-nav">
-        <div class="grid-container">
-          <div class="column-24">
-            <!-- desktop sized navigation -->
-            <div class="tablet-hide">
-              <!-- logo / home -->
-              <a href="../../" class="top-nav-title">Calcite Web</a>
-              <!-- primary navigation sections -->
-              <nav class="top-nav-list" role="navigation">
-                <a href="../../documentation" class="is-active top-nav-link">Documentation</a>
-                <a href="../../examples" class="top-nav-link">Examples</a>
-                <a href="../../guides" class="top-nav-link">Guides</a>
-                <a href="../../quick-reference" class="top-nav-link">Quick Reference</a>
-              </nav>
-              <nav class="class-top-nav-list right" role="navigation" aria-labelledby="usernav">
-                <button class="search-top-nav link-dark-gray js-search-toggle" href="#" aria-label="Search">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon js-search-icon">
-                    <path d="M31.607 27.838l-6.133-6.137a1.336 1.336 0 0 0-1.887 0l-.035.035-2.533-2.533-.014.014c3.652-4.556 3.422-11.195-.803-15.42-4.529-4.527-11.875-4.531-16.404 0-4.531 4.531-4.529 11.875 0 16.406 4.205 4.204 10.811 4.455 15.365.848l.004.003-.033.033 2.541 2.54a1.33 1.33 0 0 0 .025 1.848l6.135 6.133a1.33 1.33 0 0 0 1.887 0l1.885-1.883a1.332 1.332 0 0 0 0-1.887zM17.811 17.809a8.213 8.213 0 0 1-11.619 0 8.217 8.217 0 0 1 0-11.622 8.219 8.219 0 0 1 11.619.004 8.216 8.216 0 0 1 0 11.618z"/>
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon js-close-icon hide">
-                    <path d="M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z"/>
-                  </svg>
-                </button>
-              </nav>
-            </div>
-
-            <!-- tablet and mobile sized navigation -->
-            <div class="tablet-show top-nav-flex">
-              <!-- open primary navigation drawer -->
-              <nav class="top-nav-flex-list" role="navigation" aria-labelledby="topnav">
-                <a href="/" class="top-nav-link js-drawer-toggle" data-drawer="top-nav">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 -4 32 36" class="svg-icon"><path d="M28 3.5A2.5 2.5 0 0 1 25.5 6h-21A2.5 2.5 0 0 1 2 3.5v-1A2.5 2.5 0 0 1 4.5 0h21A2.5 2.5 0 0 1 28 2.5v1zm0 11a2.5 2.5 0 0 0-2.5-2.5h-21A2.5 2.5 0 0 0 2 14.5v1A2.5 2.5 0 0 0 4.5 18h21a2.5 2.5 0 0 0 2.5-2.5v-1zm0 12a2.5 2.5 0 0 0-2.5-2.5h-21A2.5 2.5 0 0 0 2 26.5v1A2.5 2.5 0 0 0 4.5 30h21a2.5 2.5 0 0 0 2.5-2.5v-1z"/></svg>
-                </a>
-              </nav>
-              <!-- logo / home -->
-              <header class="top-nav-flex-title">
-                <a href="/" class="top-nav-link">Calcite Web</span></a>
-              </header>
-              <nav class="top-nav-flex-list class-top-nav-list text-right" role="navigation" aria-labelledby="usernav">
-                <button class="search-top-nav link-dark-gray js-search-toggle" href="#" aria-label="Search">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 -4 32 36" class="svg-icon js-search-icon">
-                    <path d="M31.607 27.838l-6.133-6.137a1.336 1.336 0 0 0-1.887 0l-.035.035-2.533-2.533-.014.014c3.652-4.556 3.422-11.195-.803-15.42-4.529-4.527-11.875-4.531-16.404 0-4.531 4.531-4.529 11.875 0 16.406 4.205 4.204 10.811 4.455 15.365.848l.004.003-.033.033 2.541 2.54a1.33 1.33 0 0 0 .025 1.848l6.135 6.133a1.33 1.33 0 0 0 1.887 0l1.885-1.883a1.332 1.332 0 0 0 0-1.887zM17.811 17.809a8.213 8.213 0 0 1-11.619 0 8.217 8.217 0 0 1 0-11.622 8.219 8.219 0 0 1 11.619.004 8.216 8.216 0 0 1 0 11.618z"/>
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 -4 32 36" class="svg-icon js-close-icon hide">
-                    <path d="M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z"/>
-                  </svg>
-                </button>
-              </nav>
-            </div>
+    <!-- Sample HTML -->
+    <header class="top-nav">
+      <div class="grid-container">
+        <div class="column-24">
+          <!-- desktop sized navigation -->
+          <div class="tablet-hide">
+            <!-- logo / home -->
+            <a href="../../" class="top-nav-title">Calcite Web</a>
+            <!-- primary navigation sections -->
+            <nav class="top-nav-list" role="navigation">
+              <a href="../../documentation" class="is-active top-nav-link">Documentation</a>
+              <a href="../../examples" class="top-nav-link">Examples</a>
+              <a href="../../guides" class="top-nav-link">Guides</a>
+              <a href="../../quick-reference" class="top-nav-link">Quick Reference</a>
+            </nav>
+            <nav class="class-top-nav-list right" role="navigation" aria-labelledby="usernav">
+              <a class="top-nav-link padding-leader-0 padding-trailer-0 trailer-0 margin-right-1">
+                <label class="toggle-switch trailer-0 docs-toggle-spacer">
+                  <input type="checkbox" class="toggle-switch-input docs-theme-toggle">
+                  <span class="toggle-switch-track margin-right-half"></span>
+                  <span class="toggle-switch-labe">Dark Theme</span>
+                </label>
+              </a>
+              <button class="search-top-nav link-dark-gray js-search-toggle" href="#" aria-label="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon js-search-icon">
+                  <path d="M31.607 27.838l-6.133-6.137a1.336 1.336 0 0 0-1.887 0l-.035.035-2.533-2.533-.014.014c3.652-4.556 3.422-11.195-.803-15.42-4.529-4.527-11.875-4.531-16.404 0-4.531 4.531-4.529 11.875 0 16.406 4.205 4.204 10.811 4.455 15.365.848l.004.003-.033.033 2.541 2.54a1.33 1.33 0 0 0 .025 1.848l6.135 6.133a1.33 1.33 0 0 0 1.887 0l1.885-1.883a1.332 1.332 0 0 0 0-1.887zM17.811 17.809a8.213 8.213 0 0 1-11.619 0 8.217 8.217 0 0 1 0-11.622 8.219 8.219 0 0 1 11.619.004 8.216 8.216 0 0 1 0 11.618z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon js-close-icon hide">
+                  <path d="M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z"/>
+                </svg>
+              </button>
+            </nav>
           </div>
 
+          <!-- tablet and mobile sized navigation -->
+          <div class="tablet-show top-nav-flex">
+            <!-- open primary navigation drawer -->
+            <nav class="top-nav-flex-list" role="navigation" aria-labelledby="topnav">
+              <a href="/" class="top-nav-link js-drawer-toggle" data-drawer="top-nav">
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 -4 32 36" class="svg-icon"><path d="M28 3.5A2.5 2.5 0 0 1 25.5 6h-21A2.5 2.5 0 0 1 2 3.5v-1A2.5 2.5 0 0 1 4.5 0h21A2.5 2.5 0 0 1 28 2.5v1zm0 11a2.5 2.5 0 0 0-2.5-2.5h-21A2.5 2.5 0 0 0 2 14.5v1A2.5 2.5 0 0 0 4.5 18h21a2.5 2.5 0 0 0 2.5-2.5v-1zm0 12a2.5 2.5 0 0 0-2.5-2.5h-21A2.5 2.5 0 0 0 2 26.5v1A2.5 2.5 0 0 0 4.5 30h21a2.5 2.5 0 0 0 2.5-2.5v-1z"/></svg>
+              </a>
+            </nav>
+            <!-- logo / home -->
+            <header class="top-nav-flex-title">
+              <a href="/" class="top-nav-link">Calcite Web</span></a>
+            </header>
+            <nav class="top-nav-flex-list class-top-nav-list text-right" role="navigation" aria-labelledby="usernav">
+              <button class="search-top-nav link-dark-gray js-search-toggle" href="#" aria-label="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 -4 32 36" class="svg-icon js-search-icon">
+                  <path d="M31.607 27.838l-6.133-6.137a1.336 1.336 0 0 0-1.887 0l-.035.035-2.533-2.533-.014.014c3.652-4.556 3.422-11.195-.803-15.42-4.529-4.527-11.875-4.531-16.404 0-4.531 4.531-4.529 11.875 0 16.406 4.205 4.204 10.811 4.455 15.365.848l.004.003-.033.033 2.541 2.54a1.33 1.33 0 0 0 .025 1.848l6.135 6.133a1.33 1.33 0 0 0 1.887 0l1.885-1.883a1.332 1.332 0 0 0 0-1.887zM17.811 17.809a8.213 8.213 0 0 1-11.619 0 8.217 8.217 0 0 1 0-11.622 8.219 8.219 0 0 1 11.619.004 8.216 8.216 0 0 1 0 11.618z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 -4 32 36" class="svg-icon js-close-icon hide">
+                  <path d="M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z"/>
+                </svg>
+              </button>
+            </nav>
+          </div>
         </div>
-      </header>
+      </div>
+    </header>
 
 
-      <!-- Secondary Nav Pattern -->
-      <!-- what -->
-      
+    <!-- Secondary Nav Pattern -->
+    <!-- what -->
+    
 <header class="sub-nav" role="banner">
   <div class="grid-container">
     <div class="column-24">
@@ -233,8 +252,8 @@
 </header>
 
 
-      <!-- content of each page will go here -->
-      
+    <!-- content of each page will go here -->
+    
 <div class="grid-container leader-1">
   <div class="column-6 tablet-column-12">
     <aside class="side-nav tablet-hide" aria-role="complementary">
@@ -301,7 +320,7 @@
           
           
           
-          <a href="#gutter" class="side-nav-link">Gutter</a>
+          <a href="#gutter" class="side-nav-link">Horizontal Spacing</a>
           
           
           
@@ -406,7 +425,7 @@
             
             
             
-            <option value="#gutter">Gutter</option>
+            <option value="#gutter">Horizontal Spacing</option>
             
             
             
@@ -454,7 +473,7 @@
     </div>
 
     <a id="skip-to-content" tabindex="0"></a>
-    <main class="column-17 phone-column-6 tablet-column-12 pre-1 rtl-post-0 tablet-leader-1" role="main">
+    <main class="column-17 phone-column-6 tablet-column-12 pre-1 tablet-leader-1" role="main">
       
 
       
@@ -501,6 +520,8 @@
 
         
         
+        
+
         
 
         
@@ -622,6 +643,8 @@
         
 
         
+
+        
       </section>
       
       
@@ -641,6 +664,8 @@
 
         
         
+        
+
         
 
         
@@ -692,6 +717,8 @@
         
 
         
+
+        
       </section>
       
       
@@ -718,6 +745,8 @@
 
         
         
+        
+
         
 
         
@@ -767,6 +796,8 @@
         
 
         
+
+        
       </section>
       
       
@@ -781,6 +812,8 @@
 
         
         
+        
+
         
 
         
@@ -812,6 +845,8 @@
 
         
         
+        
+
         
 
         
@@ -868,6 +903,8 @@
         
 
         
+
+        
       </section>
       
       
@@ -894,6 +931,8 @@
         
 
         
+
+        
       </section>
       
       
@@ -905,8 +944,6 @@
 <p>Pre and Post classes are used to move your columns laterally across the grid by defining how many columns they should be from their neighbors on either side.</p>
 <p>Pre and Post classes do not responsively fold. This prevents a <code>pre-5</code> from pushing content off the edge of the screen on phone sizes. Responsive <code>tablet-</code> and <code>phone-</code> classes are exposed for defining pre and post behavior on breakpoints.</p>
 <p>Pre and post helpers are available from <code>.pre-1</code> and <code>.post-1</code> to <code>.pre-24</code> and <code>.post-24</code>.</p>
-<p><strong>Note:</strong> While a single DOM element <em>can</em> have both pre and post helpers, putting both on a single node can cause problems when switching a layout for right to left languages.</p>
-<p>If problems occur in a layout, use the <code>rtl-</code> prefix to explicitly assign <code>pre</code> and <code>post</code> classes to the right to left layout.</p>
 <div class="grid-example clearfix">
   <div class="column-8 pre-2">
     <span>column-8 pre-2</span>
@@ -920,6 +957,8 @@
 
         
         
+        
+
         
 
         
@@ -949,7 +988,12 @@
         
 
         
+        
         <h4 class="leader-0 text-darkest-gray" tabindex="0">Base</h4>
+        
+        
+
+        
         <div class="styleguide-modifiers">
           <div class="styleguide-modifier-example">
             <div class=" panel"></div>
@@ -1158,19 +1202,22 @@
       
       <section>
         
-        <h2 id="gutter" class="leader-2" tabindex="0"><a href="#gutter" title="gutter Documentation" class="link-off-black">Gutter<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="docs-link-icon"><path d="M28.633 17.945l-4.118-4.426c.076 1.131-.034 2.262-.355 3.241l2.83 2.827a5.281 5.281 0 0 1 0 7.459 5.223 5.223 0 0 1-3.723 1.54 5.227 5.227 0 0 1-3.728-1.542l-5.459-5.459a5.276 5.276 0 0 1 0-7.452c.607-.609 1.361-1.048 2.1-1.229a1.833 1.833 0 0 0-.279-.414l-1.344-1.461c-.845.404-1.54.881-2.12 1.461a7.554 7.554 0 0 0-2.223 5.371c0 2.027.791 3.934 2.223 5.366l5.459 5.459a7.544 7.544 0 0 0 5.371 2.225 7.55 7.55 0 0 0 5.366-2.223c2.962-2.962 2.962-7.782 0-10.745zM8.711 3.497a5.23 5.23 0 0 1 3.726 1.54l5.459 5.457a5.279 5.279 0 0 1 0 7.454c-.605.605-1.356 1.043-2.105 1.222.086.154.166.301.287.421l1.422 1.422c.808-.394 1.476-.862 2.039-1.422 2.96-2.962 2.96-7.777 0-10.74L14.08 3.394c-1.434-1.435-3.342-2.225-5.369-2.225s-3.934.791-5.369 2.225C1.908 4.828 1.117 6.736 1.117 8.763s.791 3.934 2.225 5.369L7.46 18.56c-.076-1.131.034-2.262.355-3.239l-2.83-2.833c-.994-.991-1.542-2.316-1.542-3.726s.548-2.732 1.542-3.726a5.23 5.23 0 0 1 3.726-1.54z"/></svg></a></h2>
+        <h2 id="gutter" class="leader-2" tabindex="0"><a href="#gutter" title="gutter Documentation" class="link-off-black">Horizontal Spacing<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="docs-link-icon"><path d="M28.633 17.945l-4.118-4.426c.076 1.131-.034 2.262-.355 3.241l2.83 2.827a5.281 5.281 0 0 1 0 7.459 5.223 5.223 0 0 1-3.723 1.54 5.227 5.227 0 0 1-3.728-1.542l-5.459-5.459a5.276 5.276 0 0 1 0-7.452c.607-.609 1.361-1.048 2.1-1.229a1.833 1.833 0 0 0-.279-.414l-1.344-1.461c-.845.404-1.54.881-2.12 1.461a7.554 7.554 0 0 0-2.223 5.371c0 2.027.791 3.934 2.223 5.366l5.459 5.459a7.544 7.544 0 0 0 5.371 2.225 7.55 7.55 0 0 0 5.366-2.223c2.962-2.962 2.962-7.782 0-10.745zM8.711 3.497a5.23 5.23 0 0 1 3.726 1.54l5.459 5.457a5.279 5.279 0 0 1 0 7.454c-.605.605-1.356 1.043-2.105 1.222.086.154.166.301.287.421l1.422 1.422c.808-.394 1.476-.862 2.039-1.422 2.96-2.962 2.96-7.777 0-10.74L14.08 3.394c-1.434-1.435-3.342-2.225-5.369-2.225s-3.934.791-5.369 2.225C1.908 4.828 1.117 6.736 1.117 8.763s.791 3.934 2.225 5.369L7.46 18.56c-.076-1.131.034-2.262.355-3.239l-2.83-2.833c-.994-.991-1.542-2.316-1.542-3.726s.548-2.732 1.542-3.726a5.23 5.23 0 0 1 3.726-1.54z"/></svg></a></h2>
         
-<p>Adds padding the the left or right of an element. For example, <code>&lt;div class=&quot;padding-left-3&quot;&gt;</code> will receive three units of padding on its left side.</p>
+<p>These helper classes add margin or padding the the left or right of an element. For example, <code>&lt;div class=&quot;padding-left-3&quot;&gt;</code> will receive three units of padding on its left side.</p>
 <p>Responsive <code>tablet-</code> and <code>phone-</code> classes are exposed for defining gutter and gutter behavior on breakpoints.</p>
-<p><strong>Note:</strong> While a single DOM element <em>can</em> have both padding-left and padding-right helpers, putting both on a single node can cause problems when switching a layout for right to left languages.</p>
-<p>If problems occur in a layout, use the <code>rtl-</code> prefix to explicitly assign <code>padding</code> classes to the right to left layout.</p>
 
         
         
         
 
+        
         
         <h4 class="leader-0 text-darkest-gray" tabindex="0">Base</h4>
+        
+        
+
+        
         <div class="styleguide-modifiers">
           <div class="styleguide-modifier-example">
             <div class="modifier-class panel">modifier-class</div>
@@ -1185,16 +1232,6 @@
         
         <h4 class="leader-0 text-darkest-gray" tabindex="0">Modifiers</h4>
         <div class="styleguide-modifiers trailer-1">
-          
-          <div class="styleguide-modifier-example">
-            <div class="rtl-padding-left-0 panel">rtl-padding-left-0</div>
-            <code class="modifier-name">.rtl-padding-left-0</code>
-          </div>
-          
-          <div class="styleguide-modifier-example">
-            <div class="rtl-padding-right-0 panel">rtl-padding-right-0</div>
-            <code class="modifier-name">.rtl-padding-right-0</code>
-          </div>
           
           <div class="styleguide-modifier-example">
             <div class="padding-left-quarter panel">padding-left-quarter</div>
@@ -1264,16 +1301,6 @@
           <div class="styleguide-modifier-example">
             <div class="padding-right-4 panel">padding-right-4</div>
             <code class="modifier-name">.padding-right-4</code>
-          </div>
-          
-          <div class="styleguide-modifier-example">
-            <div class="rtl-margin-left-0 panel">rtl-margin-left-0</div>
-            <code class="modifier-name">.rtl-margin-left-0</code>
-          </div>
-          
-          <div class="styleguide-modifier-example">
-            <div class="rtl-margin-right-0 panel">rtl-margin-right-0</div>
-            <code class="modifier-name">.rtl-margin-right-0</code>
           </div>
           
           <div class="styleguide-modifier-example">
@@ -1373,6 +1400,8 @@ aligning grid columns when the Grid System is unable to determine which columns 
         
 
         
+
+        
       </section>
       
       
@@ -1440,6 +1469,8 @@ aligning grid columns when the Grid System is unable to determine which columns 
         
 
         
+
+        
       </section>
       
       
@@ -1463,6 +1494,8 @@ aligning grid columns when the Grid System is unable to determine which columns 
         
 
         
+
+        
       </section>
       
       
@@ -1475,6 +1508,8 @@ aligning grid columns when the Grid System is unable to determine which columns 
 
         
         
+        
+
         
 
         
@@ -1506,6 +1541,8 @@ aligning grid columns when the Grid System is unable to determine which columns 
         
 
         
+
+        
       </section>
       
       
@@ -1518,6 +1555,8 @@ aligning grid columns when the Grid System is unable to determine which columns 
 
         
         
+        
+
         
 
         
@@ -1549,6 +1588,8 @@ aligning grid columns when the Grid System is unable to determine which columns 
         
 
         
+
+        
       </section>
       
       
@@ -1556,69 +1597,69 @@ aligning grid columns when the Grid System is unable to determine which columns 
     </main>
   </div>
   
+  </div>
+
+  
+
+  <!-- Footer Pattern -->
+  <footer class="footer leader-3 link-dark-gray" role="contentinfo">
+    <div class="grid-container">
+      <nav class="column-6">
+        <h6>Styleguides</h6>
+        <ul class="list-plain">
+          <li><a href="../../guides/code/javascript/">JavaScript</a></li>
+          <li><a href="../../guides/code/css/">CSS</a></li>
+          <li><a href="../../guides/code/html/">HTML</a></li>
+        </ul>
+      </nav>
+
+      <nav class="column-6">
+        <h6>Resources</h6>
+        <ul class="list-plain">
+          <li><a href="../../guides/migration-guide/">Migration Guide</a></li>
+          <li><a href="https://github.com/Esri/calcite-web/releases/">Releases</a></li>
+          <li><a href="https://github.com/Esri/calcite-web/blob/master/CONTRIBUTING.md">Contributing</a></li>
+          <li><a href="https://github.com/Esri/calcite-web/issues/">Issues</a></li>
+          <li><a href="https://github.com/Esri/calcite-web/">GitHub</a></li>
+        </ul>
+      </nav>
+
+      <nav class="column-6">
+        <h6>Presentations</h6>
+        <ul class="list-plain">
+          <li><a href="../../presentations/calcite-web-primer/">Calcite Web: A Primer</a></li>
+          <li><a href="../../presentations/calcite-web-deep-dive/">Calcite Web: Deep Dive</a></li>
+        </ul>
+      </nav>
+
+      <nav class="column-6">
+        <a class="esri-logo" href="http://esri.com" aria-label="Esri Home"></a>
+        <section class="footer-social-nav leader-1">
+          <a class="icon-social-twitter" aria-label="Esri on Twitter"  href="https://twitter.com/Esri/"></a>
+          <a class="icon-social-facebook" aria-label="Esri on Facebook"  href="https://www.facebook.com/esrigis/"></a>
+          <a class="icon-social-instagram" aria-label="Esri on Instagram"  href="https://instagram.com/esrigram/"></a>
+          <a class="icon-social-github" aria-label="Esri on GitHub"  href="http://esri.github.com/"></a>
+          <a class="icon-social-contact" aria-label="Contact Esri"  href="http://www.esri.com/about-esri/contact/"></a>
+        </section>
+      </nav>
+
+      <div class="column-24 leader-1">
+        <p><small>Copyright © 2018 Esri. All rights reserved. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal">Legal</a></small></p>
+      </div>
     </div>
 
-    
+  </div>
+</footer>
 
-    <!-- Footer Pattern -->
-    <footer class="footer leader-3 link-dark-gray" role="contentinfo">
-      <div class="grid-container">
-          <nav class="column-6">
-            <h6>Styleguides</h6>
-            <ul class="list-plain">
-              <li><a href="../../guides/code/javascript/">JavaScript</a></li>
-              <li><a href="../../guides/code/css/">CSS</a></li>
-              <li><a href="../../guides/code/html/">HTML</a></li>
-            </ul>
-          </nav>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/libs/calcite-web.js"></script>
+<script src="../../assets/js/libs/calcite-web-marketing.js"></script>
+<script src="../../assets/js/all.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
 
-          <nav class="column-6">
-            <h6>Resources</h6>
-            <ul class="list-plain">
-              <li><a href="../../guides/migration-guide/">Migration Guide</a></li>
-              <li><a href="https://github.com/Esri/calcite-web/releases/">Releases</a></li>
-              <li><a href="https://github.com/Esri/calcite-web/blob/master/CONTRIBUTING.md">Contributing</a></li>
-              <li><a href="https://github.com/Esri/calcite-web/issues/">Issues</a></li>
-              <li><a href="https://github.com/Esri/calcite-web/">GitHub</a></li>
-            </ul>
-          </nav>
 
-          <nav class="column-6">
-            <h6>Presentations</h6>
-            <ul class="list-plain">
-              <li><a href="../../presentations/calcite-web-primer/">Calcite Web: A Primer</a></li>
-              <li><a href="../../presentations/calcite-web-deep-dive/">Calcite Web: Deep Dive</a></li>
-            </ul>
-          </nav>
 
-          <nav class="column-6">
-            <a class="esri-logo" href="http://esri.com" aria-label="Esri Home"></a>
-            <section class="footer-social-nav leader-1">
-              <a class="icon-social-twitter" aria-label="Esri on Twitter"  href="https://twitter.com/Esri/"></a>
-              <a class="icon-social-facebook" aria-label="Esri on Facebook"  href="https://www.facebook.com/esrigis/"></a>
-              <a class="icon-social-instagram" aria-label="Esri on Instagram"  href="https://instagram.com/esrigram/"></a>
-              <a class="icon-social-github" aria-label="Esri on GitHub"  href="http://esri.github.com/"></a>
-              <a class="icon-social-contact" aria-label="Contact Esri"  href="http://www.esri.com/about-esri/contact/"></a>
-            </section>
-          </nav>
 
-          <div class="column-24 leader-1">
-            <p><small>Copyright © 2018 Esri. All rights reserved. | <a href="http://www.esri.com/legal/privacy">Privacy</a> | <a href="http://www.esri.com/legal">Legal</a></small></p>
-          </div>
-        </div>
 
-      </div>
-    </footer>
-
-    <script src="../../assets/js/libs/calcite-web.js"></script>
-    <script src="../../assets/js/libs/calcite-web-marketing.js"></script>
-
-    <script src="../../assets/js/all.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
-
-    
-
-    
-
-  </body>
+</body>
 </html>
