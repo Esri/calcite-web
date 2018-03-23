@@ -3309,19 +3309,6 @@ html[lang="vi"] body, html.vi body {
   margin-bottom: -0.125rem;
   margin-top: -0.135rem; }
 
-.btn-link, .alert-close {
-  -webkit-appearance: none;
-  font-size: 1rem;
-  line-height: 1.55rem;
-  cursor: pointer;
-  padding: 0;
-  border: none;
-  outline: none;
-  color: #2493f2;
-  background: transparent; }
-  .btn-link:hover, .alert-close:hover {
-    text-decoration: underline; }
-
 .btn {
   position: relative;
   display: inline-block;
@@ -3381,7 +3368,7 @@ html[lang="vi"] body, html.vi body {
 .btn-large {
   font-size: 1rem;
   line-height: 1.55rem;
-  padding: .5rem 1rem .5rem; }
+  padding: 0.5rem 1rem 0.5rem; }
 
 .btn-fill {
   width: 100%;
@@ -3430,14 +3417,27 @@ html[lang="vi"] body, html.vi body {
     background-color: #67c966;
     border-color: #67c966; }
 
+.btn-link {
+  -webkit-appearance: none;
+  font-size: 1rem;
+  line-height: 1.55rem;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  outline: none;
+  color: #2493f2;
+  background: transparent; }
+  .btn-link:hover {
+    text-decoration: underline; }
+
 .btn:disabled,
 .btn-disabled,
 button[disabled] {
   cursor: not-allowed;
   pointer-events: none;
-  opacity: .3; }
+  opacity: 0.3; }
 
-input[type='file']::-webkit-file-upload-button,
+input[type="file"]::-webkit-file-upload-button,
 ::-ms-browse {
   webkit-appearance: none;
   position: relative;
@@ -3457,7 +3457,7 @@ input[type='file']::-webkit-file-upload-button,
   white-space: nowrap;
   font-size: 0.9375rem;
   line-height: 1.55rem; }
-  input[type='file']::-webkit-file-upload-button:hover,
+  input[type="file"]::-webkit-file-upload-button:hover,
   ::-ms-browse:hover {
     text-decoration: none;
     color: #000000;
@@ -3803,8 +3803,19 @@ input[type='file']::-webkit-file-upload-button,
   border-color: #386f38; }
 
 .alert-close {
+  -webkit-appearance: none;
+  font-size: 1rem;
+  line-height: 1.55rem;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  outline: none;
+  color: #2493f2;
+  background: transparent;
   color: currentColor;
   position: absolute; }
+  .alert-close:hover {
+    text-decoration: underline; }
   html:not([dir="rtl"]) .alert-close {
     right: 0.775rem; }
   html[dir="rtl"] .alert-close {

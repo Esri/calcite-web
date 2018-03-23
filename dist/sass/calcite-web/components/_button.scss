@@ -7,7 +7,7 @@
 @mixin btn() {
   position: relative;
   display: inline-block;
-  padding: $baseline/5 .9rem;
+  padding: $baseline/5 0.9rem;
   width: auto;
   color: $white;
   border: 1px solid $blue;
@@ -26,127 +26,127 @@
   }
 }
 
-  @mixin btn-disabled() {
-    cursor: not-allowed;
-    pointer-events: none;
-    opacity: .3;
-  }
+@mixin btn-disabled() {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.3;
+}
 
-  @mixin btn-transparent() {
+@mixin btn-transparent() {
+  background: none;
+  color: $link-color;
+  border: none;
+  &:hover {
+    color: $link-hover;
     background: none;
-    color: $link-color;
-    border: none;
-    &:hover {
-      color: $link-hover;
-      background: none;
-      text-decoration: underline;
-    }
+    text-decoration: underline;
   }
+}
 
-  @mixin btn-clear() {
-    color: $blue;
-    background: $white;
-    border-color: $blue;
-    &:hover {
-      color: $white;
-      background: $dark-blue;
-      border-color: $dark-blue;
-    }
+@mixin btn-clear() {
+  color: $blue;
+  background: $white;
+  border-color: $blue;
+  &:hover {
+    color: $white;
+    background: $dark-blue;
+    border-color: $dark-blue;
   }
+}
 
-    @mixin btn-clear-gray() {
-      background: none;
-      color: $gray;
-      border-color: $gray;
-      &:hover {
-        color: $white;
-        background: $dark-gray;
-        border-color: $dark-gray;
-      }
-    }
+@mixin btn-clear-gray() {
+  background: none;
+  color: $gray;
+  border-color: $gray;
+  &:hover {
+    color: $white;
+    background: $dark-gray;
+    border-color: $dark-gray;
+  }
+}
 
-    @mixin btn-clear-white() {
-      background: none;
-      color: $white;
-      border: 1px solid $white;
-      &:hover {
-        color: $gray;
-        background: $white;
-        border-color: $white;
-      }
-    }
-
-  @mixin btn-white() {
+@mixin btn-clear-white() {
+  background: none;
+  color: $white;
+  border: 1px solid $white;
+  &:hover {
+    color: $gray;
     background: $white;
+    border-color: $white;
+  }
+}
+
+@mixin btn-white() {
+  background: $white;
+  color: $off-black;
+  border: 1px solid $white;
+  &:hover {
     color: $off-black;
-    border: 1px solid $white;
-    &:hover {
-      color: $off-black;
-      background: $lightest-gray;
-      border-color: $lightest-gray;
-    }
+    background: $lightest-gray;
+    border-color: $lightest-gray;
   }
+}
 
-  @mixin btn-small() {
-    @include font-size(-2);
-    padding: $baseline/5*.75 .9rem*.75;
-  }
+@mixin btn-small() {
+  @include font-size(-2);
+  padding: $baseline/5 * 0.75 0.9rem * 0.75;
+}
 
-  @mixin btn-large() {
-    @include font-size(0);
-    padding: .5rem 1rem .5rem;
-  }
+@mixin btn-large() {
+  @include font-size(0);
+  padding: 0.5rem 1rem 0.5rem;
+}
 
-  @mixin btn-fill() {
-    width: 100%;
-    text-align: center;
-  }
+@mixin btn-fill() {
+  width: 100%;
+  text-align: center;
+}
 
-  @mixin btn-half() {
-    width: 50%;
-    text-align: center;
-  }
+@mixin btn-half() {
+  width: 50%;
+  text-align: center;
+}
 
-  @mixin btn-grouped() {
-    @include left();
-    & + .btn-grouped {
-      margin-left: 1px;
-      @if ($include-right-to-left) {
-        html[dir="rtl"] & {
-          margin-left: 0;
-          margin-right: 1px;
-        }
+@mixin btn-grouped() {
+  @include left();
+  & + .btn-grouped {
+    margin-left: 1px;
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        margin-left: 0;
+        margin-right: 1px;
       }
     }
-    &:last-of-type {
-      float: none;
-    }
-    &.btn-half {
-      margin-left: 0;
-    }
   }
-
-  @mixin btn-red() {
-    color: $red;
-    background: transparent;
-    border-color: $red;
-    &:hover {
-      color: $white;
-      background: $dark-red;
-      border-color: $dark-red;
-    }
+  &:last-of-type {
+    float: none;
   }
-
-  @mixin btn-color($value, $hover-value) {
-    background-color: $value;
-    border-color: $value;
-    &:hover {
-      background-color: $hover-value;
-      border-color: $hover-value;
-    }
+  &.btn-half {
+    margin-left: 0;
   }
+}
 
-%btn-link {
+@mixin btn-red() {
+  color: $red;
+  background: transparent;
+  border-color: $red;
+  &:hover {
+    color: $white;
+    background: $dark-red;
+    border-color: $dark-red;
+  }
+}
+
+@mixin btn-color($value, $hover-value) {
+  background-color: $value;
+  border-color: $value;
+  &:hover {
+    background-color: $hover-value;
+    border-color: $hover-value;
+  }
+}
+
+@mixin btn-link() {
   -webkit-appearance: none;
   @include font-size(0);
   cursor: pointer;
@@ -160,25 +160,46 @@
   }
 }
 
-@mixin btn-link() {
-  @extend %btn-link;
-}
-
-
 @if $include-button == true {
-  .btn             { @include btn();}
-  .btn-transparent { @include btn-transparent();}
-  .btn-clear       { @include btn-clear();}
-  .btn-clear-white { @include btn-clear-white();}
-  .btn-small       { @include btn-small();}
-  .btn-large       { @include btn-large();}
-  .btn-fill        { @include btn-fill();}
-  .btn-half        { @include btn-half();}
-  .btn-grouped     { @include btn-grouped();}
-  .btn-white       { @include btn-white();}
-  .btn-red         { @include btn-red();}
-  .btn-green       { @include btn-color($green, $dark-green);}
-  .btn-link        { @include btn-link(); }
+  .btn {
+    @include btn();
+  }
+  .btn-transparent {
+    @include btn-transparent();
+  }
+  .btn-clear {
+    @include btn-clear();
+  }
+  .btn-clear-white {
+    @include btn-clear-white();
+  }
+  .btn-small {
+    @include btn-small();
+  }
+  .btn-large {
+    @include btn-large();
+  }
+  .btn-fill {
+    @include btn-fill();
+  }
+  .btn-half {
+    @include btn-half();
+  }
+  .btn-grouped {
+    @include btn-grouped();
+  }
+  .btn-white {
+    @include btn-white();
+  }
+  .btn-red {
+    @include btn-red();
+  }
+  .btn-green {
+    @include btn-color($green, $dark-green);
+  }
+  .btn-link {
+    @include btn-link();
+  }
 
   .btn:disabled,
   .btn-disabled,
@@ -186,7 +207,7 @@
     @include btn-disabled();
   }
 
-  input[type='file']::-webkit-file-upload-button,
+  input[type="file"]::-webkit-file-upload-button,
   ::-ms-browse {
     webkit-appearance: none;
     @include btn();
