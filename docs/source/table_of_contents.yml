@@ -81,6 +81,7 @@ type:
             - link-green
             - link-blue
             - link-light-blue
+            - link-dark-blue
             - link-white
             - link-light-gray
             - link-dark-gray
@@ -185,11 +186,9 @@ grid:
             - padding-trailer-4
             - padding-trailer-5
             - padding-trailer-6
-        - title: 'Gutter'
+        - title: 'Horizontal Spacing'
           link: gutter
           modifiers:
-            - rtl-padding-left-0
-            - rtl-padding-right-0
             - padding-left-quarter
             - padding-right-quarter
             - padding-left-third
@@ -204,8 +203,6 @@ grid:
             - padding-right-2
             - padding-right-3
             - padding-right-4
-            - rtl-margin-left-0
-            - rtl-margin-right-0
             - margin-left-quarter
             - margin-right-quarter
             - margin-left-third
@@ -372,8 +369,10 @@ components:
       pages:
         - title: 'Overview'
           link: overview
+          status: false
         - title: 'Buttons'
           link: buttons
+          status: 'complete'
           classes:
             - btn
           modifiers:
@@ -390,11 +389,13 @@ components:
             - btn-green
         - title: 'Button Groups'
           link: button-groups
+          status: complete
           classes:
             - btn-grouped
-          modifiers: true
+          modifiers: false
         - title: 'Labels'
           link: label
+          status: 'complete'
           classes:
             - label
           modifiers:
@@ -404,17 +405,20 @@ components:
             - label-red
         - title: 'Dropdowns'
           link: dropdowns
+          status: 'complete'
           classes:
             - dropdown
           modifiers:
             - dropdown-right
         - title: 'Loader'
           link: loader
+          status: 'complete'
           classes:
             - loader
-          modifiers: true
+          modifiers: false
         - title: 'Alerts'
           link: alerts
+          status: 'complete'
           classes:
             - alert
           modifiers:
@@ -424,6 +428,7 @@ components:
             - alert-full
         - title: 'Panels'
           link: panels
+          status: 'complete'
           classes:
             - panel
           modifiers:
@@ -437,18 +442,21 @@ components:
             - panel-dark-blue
         - title: 'Cards'
           link: card
+          status: 'complete'
           classes:
             - card
             - card-shaped
             - card-bar-color
-          modifiers: true
+          modifiers: false
         - title: 'Wide Cards'
           link: card-wide
+          status: 'complete'
           classes:
             - card-wide
-          modifiers: true
+          modifiers: false
         - title: 'Breadcrumbs'
           link: breadcrumbs
+          status: 'complete'
           classes:
             - breadcrumbs
             - crumb
@@ -456,6 +464,7 @@ components:
             - breadcrumbs-white
         - title: 'Tooltips'
           link: tooltips
+          status: 'complete'
           classes:
             - tooltip
             - tooltip-multiline
@@ -465,6 +474,7 @@ components:
             - tooltip-top
         - title: 'Tables'
           link: tables
+          status: 'complete'
           classes:
             - overflow-auto
           modifiers:
@@ -475,22 +485,27 @@ components:
             - table-no-table
         - title: 'Skip to Content'
           link: skip
+          status: 'complete'
           classes:
             - skip-to-content
-          modifiers: true
+          modifiers: false
         - title: 'Responsive Images'
           link: images
-          modifiers: true
+          status: 'complete'
+          modifiers: false
     - group: 'Forms'
       pages:
         - title: 'Overview'
           link: form-overview
-          modifiers: true
+          status: false
+          modifiers: false
         - title: 'Form Validation'
           link: form-validation
-          modifiers: true
+          status: 'complete'
+          modifiers: false
         - title: 'Text Inputs'
           link: text-inputs
+          status: 'complete'
           modifiers:
             - input-success
             - input-error
@@ -498,29 +513,45 @@ components:
             - input-search input-minimal
         - title: 'Input Groups'
           link: input-groups
+          status: 'complete'
           classes:
             - input-group
             - input-group-input
             - input-group-button
-          modifiers: true
+          modifiers: false
         - title: 'Selects'
           link: selects
+          status: 'complete'
           modifiers:
             - select-full
+        - title: 'Sliders'
+          link: sliders
+          status: 'complete'
+          modifiers: false
+        - title: 'Switches'
+          link: switches
+          status: 'complete'
+          classes:
+            - toggle-switch
+          modifiers:
+            - toggle-switch-destructive
         - title: 'Checkboxes'
           link: checkboxes
+          status: 'complete'
           classes:
             - fieldset-checkbox
-          modifiers: true
+          modifiers: false
         - title: 'Radio Buttons'
           link: radio-buttons
+          status: 'complete'
           classes:
             - fieldset-radio
-          modifiers: true
+          modifiers: false
     - group: 'Animation'
       pages:
         - title: 'Overview'
           link: animation
+          status: false
           modifiers:
             - animate-fade-in
             - animate-fade-out
@@ -532,11 +563,21 @@ components:
       pages:
         - title: 'Esri Logo'
           link: esri-logo
+          status: 'complete'
           classes:
             - esri-logo
           modifiers:
             - 'esri-logo-reverse'
             - 'esri-logo-condensed'
+    - group: 'Proposed'
+      hidden: true
+      pages:
+        - title: 'Example'
+          hidden: true
+          status: 'inprogress'
+        - title: 'Example'
+          hidden: true
+          status: 'unplanned'
 patterns:
   title: 'Patterns'
   base: patterns
@@ -547,40 +588,40 @@ patterns:
           link: overview
         - title: 'Top Nav'
           link: top-nav
-          modifiers: true
+          modifiers: false
         - title: 'User Sign In'
           link: user-sign-in
-          modifiers: true
+          modifiers: false
         - title: 'User Nav'
           link: user-nav
-          modifiers: true
+          modifiers: false
         - title: 'Sub Nav'
           link: sub-nav
-          modifiers: true
+          modifiers: false
         - title: 'Responsive Sub Nav'
           link: responsive-sub-nav
-          modifiers: true
+          modifiers: false
         - title: 'Hero'
           link: hero
-          modifiers: true
+          modifiers: false
         - title: 'Third Nav'
           link: third-nav
-          modifiers: true
+          modifiers: false
         - title: 'Side Nav'
           link: side-nav
-          modifiers: true
+          modifiers: false
         - title: 'Footer'
           link: footer
         - title: 'Pagination'
           link: pagination
-          modifiers: true
+          modifiers: false
     - group: 'Interactive Patterns'
       pages:
         - title: 'Overview'
           link: 'interactive-overview'
         - title: 'Modals'
           link: modals
-          modifiers: true
+          modifiers: false
         - title: 'Tabs'
           link: tabs
           modifiers:
@@ -590,16 +631,16 @@ patterns:
             - 'tabs-dark'
         - title: 'Accordions'
           link: accordions
-          modifiers: true
+          modifiers: false
         - title: 'Drawers'
           link: drawers
           modifiers: false
         - title: 'Search'
           link: 'search'
-          modifiers: true
+          modifiers: false
         - title: 'Filter Dropdown'
           link: 'filter-dropdown'
-          modifiers: true
+          modifiers: false
 sass:
   title: 'Sass'
   base: sass
@@ -627,6 +668,8 @@ sass:
       pages:
         - title: 'Overview'
           link: type-composition
+        - title: 'Font Family'
+          link: font-families
         - title: 'Font Size'
           link: font-size
         - title: 'Modular Scale'

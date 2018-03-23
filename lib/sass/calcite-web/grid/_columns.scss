@@ -32,19 +32,21 @@
 
 @mixin column()  {
   [class*="#{$prefix}column-"]:first-of-type {
-    margin-left: -$column-gutter / 2;
+    html:not([dir="rtl"]) & {
+      margin-left: -$column-gutter / 2;
+    }
     @if ($include-right-to-left) {
       html[dir="rtl"] & {
-        margin-left: 0;
         margin-right: -$column-gutter / 2;
       }
     }
   }
   [class*="#{$prefix}column-"]:last-of-type {
-    margin-right: -$column-gutter / 2;
+    html:not([dir="rtl"]) & {
+      margin-right: -$column-gutter / 2;
+    }
     @if ($include-right-to-left) {
       html[dir="rtl"] & {
-        margin-right: 0;
         margin-left: -$column-gutter / 2;
       }
     }
@@ -59,21 +61,23 @@
 //  ↳ grid → _first-and-last.md
 
 @mixin first-column() {
-  margin-left: -($column-gutter/2);
+  html:not([dir="rtl"]) & {
+    margin-left: -($column-gutter/2);
+  }
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
-      margin-left: 0;
-      margin-right: -$column-gutter / 2 !important;
+      margin-right: -$column-gutter / 2;
     }
   }
 }
 
 @mixin last-column() {
-  margin-right: -($column-gutter / 2);
+  html:not([dir="rtl"]) & {
+    margin-right: -($column-gutter / 2);
+  }
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
-      margin-right: 0;
-      margin-left: -$column-gutter / 2 !important;
+      margin-left: -$column-gutter / 2;
     }
   }
 }
@@ -120,20 +124,22 @@
         }
       }
       .#{$prefix}#{$medium-class}-first-column {
-        margin-left: -($column-gutter / 2);
+        html:not([dir="rtl"]) & {
+          margin-left: -($column-gutter / 2);
+        }
         @if ($include-right-to-left) {
           html[dir="rtl"] & {
-            margin-left: 0;
-            margin-right: -$column-gutter / 2 !important;
+            margin-right: -$column-gutter / 2;
           }
         }
       }
       .#{$prefix}#{$medium-class}-last-column {
-        margin-right: -($column-gutter / 2);
+        html:not([dir="rtl"]) & {
+          margin-right: -($column-gutter / 2);
+        }
         @if ($include-right-to-left) {
           html[dir="rtl"] & {
-            margin-right: 0;
-            margin-left: -$column-gutter / 2 !important;
+            margin-left: -$column-gutter / 2;
           }
         }
       }
@@ -176,7 +182,7 @@
         @if ($include-right-to-left) {
           html[dir="rtl"] & {
             margin-left: 0;
-            margin-right: -$column-gutter / 2 !important;
+            margin-right: -$column-gutter / 2;
           }
         }
       }
@@ -185,7 +191,7 @@
         @if ($include-right-to-left) {
           html[dir="rtl"] & {
             margin-right: 0;
-            margin-left: -$column-gutter / 2 !important;
+            margin-left: -$column-gutter / 2;
           }
         }
       }

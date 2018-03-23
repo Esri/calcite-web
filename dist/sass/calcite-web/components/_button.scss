@@ -20,8 +20,9 @@
   @include font-size(-1);
   &:hover {
     text-decoration: none;
-    background-color: $dark-blue;
     color: $white;
+    background-color: $dark-blue;
+    border-color: $dark-blue;
   }
 }
 
@@ -60,6 +61,7 @@
       &:hover {
         color: $white;
         background: $dark-gray;
+        border-color: $dark-gray;
       }
     }
 
@@ -70,6 +72,7 @@
       &:hover {
         color: $gray;
         background: $white;
+        border-color: $white;
       }
     }
 
@@ -80,6 +83,7 @@
     &:hover {
       color: $off-black;
       background: $lightest-gray;
+      border-color: $lightest-gray;
     }
   }
 
@@ -138,8 +142,28 @@
     border-color: $value;
     &:hover {
       background-color: $hover-value;
+      border-color: $hover-value;
     }
   }
+
+%btn-link {
+  -webkit-appearance: none;
+  @include font-size(0);
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  outline: none;
+  color: $blue;
+  background: transparent;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin btn-link() {
+  @extend %btn-link;
+}
+
 
 @if $include-button == true {
   .btn             { @include btn();}
@@ -154,6 +178,7 @@
   .btn-white       { @include btn-white();}
   .btn-red         { @include btn-red();}
   .btn-green       { @include btn-color($green, $dark-green);}
+  .btn-link        { @include btn-link(); }
 
   .btn:disabled,
   .btn-disabled,

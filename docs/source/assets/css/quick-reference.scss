@@ -14,11 +14,12 @@
   user-select: all;
 }
 
-.class-name { white-space: nowrap; }
+.class-name {
+  white-space: nowrap;
+}
 
 .class-name-wrapper {
   @include margin-gutter-right-quarter();
-
   display: inline-block;
 }
 
@@ -34,19 +35,40 @@
 
   .class-name-wrapper {
     //@include trailer-quarter();
-
     white-space: nowrap;
     line-height: 1;
   }
 
   .class-name {
     display: inline;
-
     white-space: normal;
   }
+
 }
 
 .icon-wrap {
   position: absolute;
   left: 0;
 }
+
+.changelog-styled {
+  padding: 10px;
+
+  h2:not(:first-of-type) {
+    color: $darker-gray;
+  }
+
+  h2:nth-of-type(2) {
+    border-top: 1px solid $lighter-gray;
+    margin-top: $baseline * 2;
+    padding-top: $baseline * 2;
+  }
+
+  h2:not(:first-of-type) ~ * {
+    color: $darker-gray;
+    font-style: italic;
+  }
+
+}
+
+

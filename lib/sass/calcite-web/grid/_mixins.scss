@@ -24,13 +24,18 @@
 }
 
 @mixin pre($n, $count: $large-column-count) {
-  margin-left: ($n / $count) * $max-width;
-  [class*="#{$prefix}column-"] &[class*="#{$prefix}column-"]:first-of-type {
+  html:not([dir="rtl"]) & {
+     margin-left: ($n / $count) * $max-width;
+  }
+  html:not([dir="rtl"]) [class*="#{$prefix}column-"] &[class*="#{$prefix}column-"]:first-of-type {
     margin-left: ($n / $count) * $max-width;
   }
   @if ($include-right-to-left) {
+    html[dir="rtl"] [class*="#{$prefix}column-"] &[class*="#{$prefix}column-"]:first-of-type {
+      margin-right: ($n / $count) * $max-width;
+    }
     html[dir="rtl"] & {
-      margin-right: ($n / $count) * $max-width !important;
+      margin-right: ($n / $count) * $max-width;
     }
   }
 }
@@ -38,25 +43,35 @@
 @mixin pre-calc($n, $count: $large-column-count) {
   $margin: ($n / $count) * $max-width;
   $clear: $column-gutter / 2;
-  margin-left: calc(#{$margin} - #{$clear});
-  [class*="#{$prefix}column-"] &[class*="#{$prefix}column-"]:first-of-type {
+  html:not([dir="rtl"]) & {
+    margin-left: calc(#{$margin} - #{$clear});
+  }
+  html:not([dir="rtl"]) [class*="#{$prefix}column-"] &[class*="#{$prefix}column-"]:first-of-type {
     margin-left: calc(#{$margin} - #{$clear});
   }
   @if ($include-right-to-left) {
+    html[dir="rtl"] [class*="#{$prefix}column-"] &[class*="#{$prefix}column-"]:first-of-type {
+      margin-right: calc(#{$margin} - #{$clear});
+    }
     html[dir="rtl"] & {
-      margin-right: calc(#{$margin} - #{$clear}) !important;
+      margin-right: calc(#{$margin} - #{$clear});
     }
   }
 }
 
 @mixin post($n, $count: $large-column-count) {
-  margin-right: ($n / $count) * $max-width;
-  [class*="#{$prefix}column-"] &[class*="#{$prefix}column-"]:first-of-type {
+  html:not([dir="rtl"]) & {
+    margin-right: ($n / $count) * $max-width;
+  }
+  html:not([dir="rtl"]) [class*="#{$prefix}column-"] &[class*="#{$prefix}column-"]:first-of-type {
     margin-right: ($n / $count) * $max-width;
   }
   @if ($include-right-to-left) {
+    html[dir="rtl"] [class*="#{$prefix}column-"] &[class*="#{$prefix}column-"]:first-of-type {
+      margin-right: ($n / $count) * $max-width;
+    }
     html[dir="rtl"] & {
-      margin-left: ($n / $count) * $max-width !important;
+      margin-left: ($n / $count) * $max-width;
     }
   }
 }

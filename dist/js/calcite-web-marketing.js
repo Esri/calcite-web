@@ -1,67 +1,17 @@
+/*!
+ * Calcite Web - Calcite Design Components in CSS, JS and HTML
+ * @version v1.0.0-rc.9
+ * @license Apache-2.0
+ * @copyright 2018 Esri
+ * @link https://github.com/Esri/calcite-web
+ */
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
 	typeof define === 'function' && define.amd ? define(factory) :
 	(global.calciteMarketing = factory());
 }(this, (function () { 'use strict';
 
-// Cool Helpers
-// ┌────────────────────┐
-// │ Class Manipulation │
-// └────────────────────┘
-
-// check if an element has a specific class
-function has (domNode, className) {
-  return new RegExp('(\\s|^)' + className + '(\\s|$)').test(domNode.getAttribute('class'));
-}
-
-// add one or more classes to an element
-function add (domNode, classes) {
-  classes.split(' ').forEach(function (c) {
-    if (!has(domNode, c)) {
-      var existingClass = domNode.getAttribute('class') || '';
-      domNode.setAttribute('class', existingClass + ' ' + c);
-    }
-  });
-}
-
-// remove one or more classes from an element
-function remove (domNode, classes) {
-  classes.split(' ').forEach(function (c) {
-    var removedClass = domNode.getAttribute('class').replace(new RegExp('(\\s|^)' + c + '(\\s|$)', 'g'), '$2');
-    if (has(domNode, c)) {
-      domNode.setAttribute('class', removedClass);
-    }
-  });
-}
-
-// if domNode has the class, remove it, else add it
-
-
-// remove 'is-active' class from every element in an array
-function removeActive (array) {
-  array = nodeListToArray(array);
-  array.forEach(function (item) {
-    remove(item, 'is-active');
-  });
-}
-
-// add 'is-active' class from every element in an array
-function addActive (array) {
-  array = nodeListToArray(array);
-  array.forEach(function (item) {
-    add(item, 'is-active');
-  });
-}
-
-// remove 'is-active' class from every element in an array, add to one element
-
 // ┌─────┐
-// │ DOM │
-// └─────┘
-// Handles dom nodes
-
-// returns closest element up the DOM tree matching a given class
-
 
 // turn a domNodeList into an array
 function nodeListToArray (domNodeList) {
@@ -80,14 +30,9 @@ function findElements (query, domNode) {
 }
 
 // ┌──────────────────────┐
-// │ DOM Event Management │
-// └──────────────────────┘
-
-// returns standard interaction event, later will add touch support
-
 
 // add a callback function to an event on a DOM node
-function add$1 (domNode, e, fn) {
+function add (domNode, e, fn) {
   if (domNode.addEventListener) {
     return domNode.addEventListener(e, fn, false);
   } else if (domNode.attachEvent) {
@@ -95,20 +40,52 @@ function add$1 (domNode, e, fn) {
   }
 }
 
-// remove a specific function binding from a DOM node event
+// Cool Helpers
 
+// ┌────────────────────┐
+// │ Class Manipulation │
+// └────────────────────┘
 
-// get the target element of an event
+// check if an element has a specific class
+function has (domNode, className) {
+  return new RegExp('(\\s|^)' + className + '(\\s|$)').test(domNode.getAttribute('class'));
+}
 
+// add one or more classes to an element
+function add$1 (domNode, classes) {
+  classes.split(' ').forEach(function (c) {
+    if (!has(domNode, c)) {
+      var existingClass = domNode.getAttribute('class') || '';
+      domNode.setAttribute('class', existingClass + ' ' + c);
+    }
+  });
+}
 
-// prevent default behavior of an event
+// remove one or more classes from an element
+function remove$1 (domNode, classes) {
+  classes.split(' ').forEach(function (c) {
+    var removedClass = (domNode.getAttribute('class') || '').replace(new RegExp('(\\s|^)' + c + '(\\s|$)', 'g'), '$2');
+    if (has(domNode, c)) {
+      domNode.setAttribute('class', removedClass);
+    }
+  });
+}
 
+// remove 'is-active' class from every element in an array
+function removeActive (array) {
+  array = nodeListToArray(array);
+  array.forEach(function (item) {
+    remove$1(item, 'is-active');
+  });
+}
 
-// stop and event from bubbling up the DOM tree
-
-
-// return a function that will only execute
-// once it is NOT called for delay milliseconds
+// add 'is-active' class from every element in an array
+function addActive (array) {
+  array = nodeListToArray(array);
+  array.forEach(function (item) {
+    add$1(item, 'is-active');
+  });
+}
 
 function E () {
   // Keep this empty so it's easier to inherit from
@@ -178,6 +155,7 @@ E.prototype = {
 var bus = new E();
 
 // Cool Helpers
+
 function switcher () {
   var toggles = findElements('.js-view-toggle');
 
@@ -195,7 +173,7 @@ function switcher () {
   }
 
   function setUp (toggle$$1) {
-    add$1(toggle$$1, 'click', toggleClick);
+    add(toggle$$1, 'click', toggleClick);
   }
 
   function toggleClick (e) {

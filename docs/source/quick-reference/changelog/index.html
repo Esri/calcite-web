@@ -1,0 +1,34 @@
+---
+title: Calcite Web
+description: Quickly build beautiful, consistent websites with the Calcite Web Framework
+layout: layouts/_quick-reference
+section: quick-reference
+css:
+- quick-reference
+---
+{% block content %}
+<div class="grid-container leader-1">
+  <main class="column-24 tablet-leader-1" role="main">
+    <div class="column-9 post-1 tablet-column-12">
+      <h2>Changelog</h2>
+      A comprehensive overview of changes and fixes made to Calcite Web. This documentation is auto-generated from our Changelog.
+      <hr>
+
+      You can <a target="blank" href="https://github.com/Esri/calcite-web/blob/master/CHANGELOG.md">view the original CHANGELOG.md on Github</a>
+      <div class="js-sticky scroll-show tablet-hide" data-top="46">
+        <a href="#" class="btn btn-clear">Back to Top</a>
+      </div>
+    </div>
+    <div class="column-14 tablet-first-column tablet-leader-2">
+      <h4 class="trailer-1"><a target="blank" href="https://github.com/Esri/calcite-web/releases" title="Download Latest Release on GitHub">Latest Release
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon docs-link-icon"><path d="M26 30H2V6h14V4H0v28h28V18h-2zM21 8C12.715 8 6 14.717 6 23c0 .336.029.668.051 1h4A11.464 11.464 0 0 1 10 23c0-6.065 4.936-11 11-11h3.004l-6 6h4L30 10l-7.996-8h-4l6 6H21z"/></svg>
+      </a></h4>
+            <div class="panel panel-no-border card card-bar-blue trailer-quarter">
+      <div class="changelog-styled">
+        {% markdown %}{% include '../../CHANGELOG.md' %}{% endmarkdown %}
+      </div>
+    </div>
+    </main>
+  </div>
+  {% endblock %}
+

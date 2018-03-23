@@ -1,6 +1,6 @@
 {
   "name": "calcite-web",
-  "version": "1.0.0-rc.8",
+  "version": "1.0.0-rc.9",
   "description": "SASS & CSS Framework for Esri websites",
   "private": true,
   "homepage": "https://github.com/esri/calcite-web",
@@ -19,7 +19,7 @@
     "img": "ncp lib/img/ docs/source/assets/img/ && ncp lib/img/ docs/build/assets/img/",
     "img:docs": "ncp docs/source/assets/img/ docs/build/assets/img/",
     "img:dist": "ncp lib/img dist/img",
-    "rollup": "rollup -c lib/js/rollup.config.js && rollup -c lib/js/rollup-marketing.config.js",
+    "rollup": "rollup -c lib/js/rollup.config.js",
     "js": "ncp docs/source/assets/js/ docs/build/assets/js/",
     "js:dist": "ncp docs/build/assets/js/libs/ dist/js/",
     "sass": "node-sass docs/source/assets/css/ --source-map-embed -q -o docs/build/assets/css/ --include-path lib/sass",
@@ -27,7 +27,7 @@
     "font": "ncp lib/fonts docs/build/assets/fonts",
     "font:dist": "ncp lib/fonts dist/fonts",
     "icons": "svgo -f lib/img/icons/ui/",
-    "minify": "minify dist/css/",
+    "minify": "node bin/minify.js",
     "s3": "node bin/s3.js",
     "gh-release": "gh-release"
   },
@@ -95,13 +95,15 @@
     "ncp": "^2.0.0",
     "node-sass": "^4.5.3",
     "npm-run-series": "^1.0.0",
-    "parallelshell": "^2.0.0",
+    "parallelshell": "^3.0.0",
     "request": "^2.73.0",
     "rerun-script": "^0.6.0",
-    "rollup": "^0.41.4",
+    "rollup": "^0.56.5",
+    "rollup-plugin-babel-minify": "^4.0.0",
     "rollup-plugin-buble": "^0.15.0",
     "s3": "^4.4.0",
     "scss-to-json": "^1.1.0",
-    "semistandard": "*"
+    "semistandard": "*",
+    "sqwish": "^0.2.2"
   }
 }
