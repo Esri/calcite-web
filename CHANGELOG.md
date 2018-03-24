@@ -1,3 +1,8 @@
+## [Unreleased][unreleased]
+
+### Fixes
+- Fix rounding error on certain column widths (#742)
+
 ## [1.0.0-rc.9][1.0.0-rc.9]
 
 ### Fixes
