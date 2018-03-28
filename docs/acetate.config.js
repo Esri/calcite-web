@@ -3,6 +3,8 @@ var font = require('./source/data/icon-font.js');
 var icons = require('./source/data/icon-social.js');
 var colors = require('./source/data/colors.js');
 var repo = require('./source/data/repo.js');
+var MarkdownIt = require('markdown-it');
+var hljs = require('highlight.js');
 
 module.exports = function (acetate) {
   acetate.load('**/*.+(md|html)');
@@ -16,4 +18,15 @@ module.exports = function (acetate) {
   acetate.data('font', font);
   acetate.data('svg', svg);
   acetate.data('repo', repo);
+  acetate.renderer.markdown = new MarkdownIt({
+    html: true,
+    linkify: true,
+    langPrefix: '',
+    highlight: function (code, lang) {
+      if (lang === 'text' || lang === 'plain') {
+        return code;
+      }
+      return (lang) ? '<pre><code class="' + lang + '" tabindex="0">' + hljs.highlight(lang, code).value + '</code></pre>' : '<pre><code tabindex="0">' + hljs.highlightAuto(code).value + '</code></pre>';
+    }
+  });
 };
