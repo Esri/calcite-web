@@ -185,7 +185,7 @@
 <p>This guide will walk you through creating your first page with Calcite Web. We'll go over getting a basic HTML page, stubbing out a layout, adding patterns, and making everything work on mobile.</p>
 <h2>1. Basic HTML Page</h2>
 <p>To get started creating a page in Calcite Web we'll start with, well, the page!</p>
-<pre><code class="html"><span class="hljs-meta">&lt;!doctype html&gt;</span>
+<pre><code class="html" tabindex="0"><span class="hljs-meta">&lt;!doctype html&gt;</span>
 <span class="hljs-comment">&lt;!--[if lt IE 9]&gt;  &lt;html class="ie lt-ie9 ie8"&gt; &lt;![endif]--&gt;</span>
 <span class="hljs-comment">&lt;!--[if IE 9]&gt;     &lt;html class="ie ie9"&gt; &lt;![endif]--&gt;</span>
 <span class="hljs-comment">&lt;!--[if !IE]&gt;&lt;!--&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span> <span class="hljs-comment">&lt;!--&lt;![endif]--&gt;</span>
@@ -238,7 +238,7 @@
 <p>Looks like the top navigation takes up all 24 columns. The banner also goes accross the whole page.</p>
 <p>The left hand side of the main content section looks like it takes up four columns while the right hand side takes up nineteen. It also looks like they have one column of space in between them. The cards don't line up with the grid, so let's worry about them later.</p>
 <p>The footer is made up of four different sections. Most of the sections look like they are five columns with one column of space between them. So adding the markup to the basic page we had before might look something like this:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"wrapper"</span>&gt;</span>
+<pre><code class="html" tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"wrapper"</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- top navigation --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"grid-container"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-24"</span>&gt;</span>
@@ -293,12 +293,12 @@
 <li>Finally, the footer should be a <a href="../../examples/navigation/#footer">footer pattern</a></li>
 </ol>
 <p>After going through and putting all of these patterns inside out layout, we get something like the following:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"wrapper"</span>&gt;</span>
+<pre><code class="html" tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"wrapper"</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- top navigation --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"top-nav"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"grid-container"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-24"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"top-nav-title"</span>&gt;</span>Site Title<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"topnav"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"top-nav-title"</span>&gt;</span>Site Title<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"top-nav-list"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"navigation"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"topnav"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"top-nav-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Link 1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"top-nav-link is-active"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Link 2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
@@ -324,8 +324,8 @@
 
     <span class="hljs-comment">&lt;!-- side navigation --&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-4"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"side-nav"</span> <span class="hljs-attr">aria-role</span>=<span class="hljs-string">"complementary"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"side-nav-title"</span>&gt;</span>Sidenav Group<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"side-nav"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"sidenav"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"side-nav-title"</span>&gt;</span>Sidenav Group<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"navigation"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"sidenav"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"side-nav-link"</span>&gt;</span>Side Nav Link 1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"side-nav-link"</span>&gt;</span>Side Nav Link 2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
@@ -344,7 +344,7 @@
             <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../assets/img/docs/bridge3.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Bridge Club, 1954"</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-content"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Card with Image<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Card with Image<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"font-size--1"</span>&gt;</span>Cards can have full-bleed images with optional captions.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -353,7 +353,7 @@
             <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../assets/img/docs/bridge3.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Bridge Club, 1954"</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-content"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Card with Image<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Card with Image<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"font-size--1"</span>&gt;</span>Cards can have full-bleed images with optional captions.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -362,7 +362,7 @@
             <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../assets/img/docs/bridge3.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Bridge Club, 1954"</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-content"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Card with Image<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Card with Image<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"font-size--1"</span>&gt;</span>Cards can have full-bleed images with optional captions.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -371,7 +371,7 @@
             <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../assets/img/docs/bridge3.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Bridge Club, 1954"</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-content"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Card with Image<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Card with Image<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"font-size--1"</span>&gt;</span>Cards can have full-bleed images with optional captions.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -390,7 +390,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"grid-container"</span>&gt;</span>
     <span class="hljs-comment">&lt;!-- footer section 1 --&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-5 pre-2"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">h6</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"font-size--2"</span>&gt;</span>Header 2<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"font-size--2"</span>&gt;</span>Header 1<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list-plain font-size--2"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"link-off-black"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Link 1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"link-off-black"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Link 2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
@@ -400,7 +400,7 @@
 
     <span class="hljs-comment">&lt;!-- footer section 2 --&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-5 pre-1"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">h6</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"font-size--2"</span>&gt;</span>Header 2<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"font-size--2"</span>&gt;</span>Header 2<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list-plain font-size--2"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"link-off-black"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Link 1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"link-off-black"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Link 2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
@@ -410,7 +410,7 @@
 
     <span class="hljs-comment">&lt;!-- footer section 3 --&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-5 pre-1"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">h6</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"font-size--2"</span>&gt;</span>Header 3<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"font-size--2"</span>&gt;</span>Header 3<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list-plain font-size--2"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"link-off-black"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Link 1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"link-off-black"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Link 2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
@@ -420,7 +420,7 @@
 
     <span class="hljs-comment">&lt;!-- footer section 4 --&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-4 pre-1"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">h6</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"font-size--2"</span>&gt;</span>Header 4<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"font-size--2"</span>&gt;</span>Header 4<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list-plain font-size--2"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"link-off-black"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Link 1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"link-off-black"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Link 2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
@@ -429,6 +429,7 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
 <p>When you preview that in a browser, it should come out a little like this:</p>
 <p><img src="../../assets/img/docs/quickstart-progress.png" alt=""></p>
@@ -437,41 +438,41 @@
 <p>As you can see, there are a number of things that are currently different from our design. Some things are too cramped, and others aren't aligned properly. In order to quickly fix what's wrong, we'll use Calcite Web's built in <a href="../../documentation/grid/#grid-helpers">grid modifier classes</a> and <a href="../../documentation/type/#composition-helpers">type modifier classes</a>.</p>
 <p>These are really powerful single-purpose classes that allow you to do things like change the font weight add space, change colors, or change display on different screen sizes.</p>
 <p>Let's fix the banner first. In the original design, we wanted our banner to be taller, with more space above and below the text. We can do this with the <a href="../../documentation/grid/#leader-and-trailer">leader and trailer classes</a>.</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-24 leader-5 trailer-5"</span>&gt;</span>
+<pre><code class="html" tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-24 leader-5 trailer-5"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Banner Title<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
 <p>That adds five lines of spacing above and below the title. But there's still something wrong, our text isn't centered! To fix that we'll use one of our handy dandy <a href="../../documentation/type/#text-modifiers">text modifier classes</a>, namely <code>text-center</code>:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>Banner Title<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<pre><code class="html" tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center"</span>&gt;</span>Banner Title<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 </code></pre>
 <p>There's also no space below the banner, so let's add some space with our <code>trailer</code> class on the dark blue panel as well:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"panel panel-dark-blue trailer-2"</span>&gt;</span>
+<pre><code class="html" tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"panel panel-dark-blue trailer-2"</span>&gt;</span>
 </code></pre>
 <p>Looks like the text content needs a bit of space above it as well. We could add it below the cards, or as a leader on the <code>h2</code>:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"leader-1"</span>&gt;</span>Text Content<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<pre><code class="html" tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"leader-1"</span>&gt;</span>Text Content<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 </code></pre>
 <p>Lastly, let's take care of the footer as well. The headers don't look quite bold enough. Adding the <code>avenir-bold</code> class will make them a little stronger:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">h6</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"font-size--2 avenir-bold"</span>&gt;</span>Header 3<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+<pre><code class="html" tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">h6</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"font-size--2 avenir-bold"</span>&gt;</span>Header 3<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
 </code></pre>
 <p>Notice there is already a <code>font-size</code> class on the header. Using these <a href="../../documentation/type/#text-size">font-size modifiers</a>, you can make type larger or smaller. Just use any number from <code>font-size--3</code> to <code>font-size-6</code>. <code>font-size-0</code> is the default and you can go up and down from there.</p>
 <p>We also want the footer to have more space below it. We can do this with the <code>padding-trailer</code> classes. These work just like leader and trailer but they modify padding instead of margin:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"footer padding-trailer-1"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"contentinfo"</span>&gt;</span>
+<pre><code class="html" tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"footer padding-trailer-1"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"contentinfo"</span>&gt;</span>
 </code></pre>
 <p>Finally, the text in the footer seems a bit too dark. To lighten it up, we can use the <a href="../../documentation/type/#text-color">text-color</a> classes.</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"footer padding-trailer-1 text-darkest-gray"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"contentinfo"</span>&gt;</span>
+<pre><code class="html" tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"footer padding-trailer-1 text-darkest-gray"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"contentinfo"</span>&gt;</span>
 </code></pre>
 <p>For the links, we'll use the <a href="documentation/type/#link-color">link-color</a> classes:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"link-darker-gray"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Link 1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<pre><code class="html" tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"link-darker-gray"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Link 1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"link-darker-gray"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Link 2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"link-darker-gray"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Link 3<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 </code></pre>
 <h2>5. Making it Mobile</h2>
 <p>If you've been following along and you resize your browser, you'll notice that certain things look weird. Calcite Web tries to do as much as it can for you automatically, but guess how you can fix the stuff that's broken? That's right, more modifier classes!</p>
 <p>For example, the block group we're using for our cards looks pretty bad on mobile because there is no space for four cards anymore. To fix this, we can use the docs for <a href="../../documentation/grid/#responsive-block-groups">responsive block-groups</a>. Turns out we can control how many cards are in a row:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block-group block-group-4-up tablet-block-group-2-up"</span>&gt;</span>
+<pre><code class="html" tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block-group block-group-4-up tablet-block-group-2-up"</span>&gt;</span>
 </code></pre>
 <p>Now from the tablet size down there will only be two cards in a row. We can also add space with <code>tablet-leader-</code> and <code>tablet-trailer</code> classes. Let's add space above the cards on tablet:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card block tablet-leader-1"</span>&gt;</span>
+<pre><code class="html" tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card block tablet-leader-1"</span>&gt;</span>
 </code></pre>
 <h2>6. Wrapping Up</h2>
 <p>You can check out the final result <a href="./demo/">here</a>. It looks pretty close to the original design, and all without writing a single line of CSS. Calcite Web helps you make pages that are fast, accessible, responsive, and work in a variety of languages. Be sure to read more of the docs and start building!</p>

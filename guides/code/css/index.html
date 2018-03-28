@@ -213,7 +213,7 @@
 <li>Avoid specifying units for zero values, e.g., <code>margin: 0;</code> instead of <code>margin: 0px;</code></li>
 </ul>
 <h4>Incorrect example:</h4>
-<pre><code><span class="hljs-selector-class">.selector</span>, <span class="hljs-selector-class">.selector-secondary</span>, <span class="hljs-selector-class">.selector</span><span class="hljs-selector-attr">[type=text]</span> {
+<pre><code tabindex="0"><span class="hljs-selector-class">.selector</span>, <span class="hljs-selector-class">.selector-secondary</span>, <span class="hljs-selector-class">.selector</span><span class="hljs-selector-attr">[type=text]</span> {
   <span class="hljs-attribute">padding</span>:<span class="hljs-number">15px</span>;
   <span class="hljs-attribute">margin</span>:<span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-number">15px</span>;
   <span class="hljs-attribute">background-color</span>:<span class="hljs-built_in">rgba</span>(0, 0, 0, 0.5);
@@ -221,7 +221,7 @@
 }
 </code></pre>
 <h4>Correct example:</h4>
-<pre><code class="css"><span class="hljs-selector-class">.selector</span>,
+<pre><code class="css" tabindex="0"><span class="hljs-selector-class">.selector</span>,
 <span class="hljs-selector-class">.selector-secondary</span>,
 <span class="hljs-selector-class">.selector</span><span class="hljs-selector-attr">[type="text"]</span> {
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">15px</span>;
@@ -239,7 +239,7 @@
 <li>Typography <strong>&amp;</strong> Appearance</li>
 <li><strong>J</strong>azz (extras, transitions)</li>
 </ul>
-<pre><code class="css"><span class="hljs-selector-class">.declaration-order</span> {
+<pre><code class="css" tabindex="0"><span class="hljs-selector-class">.declaration-order</span> {
   <span class="hljs-comment">/* - - - - Positioning - - - - */</span>
   <span class="hljs-attribute">position</span>: absolute;
   <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
@@ -271,7 +271,7 @@
 </code></pre>
 <h3>Rules with single declarations</h3>
 <p>In instances where several rules are present with only one declaration each, consider removing new line breaks for readability and faster editing.</p>
-<pre><code class="css"><span class="hljs-selector-class">.span1</span> { <span class="hljs-attribute">width</span>: <span class="hljs-number">60px</span>; }
+<pre><code class="css" tabindex="0"><span class="hljs-selector-class">.span1</span> { <span class="hljs-attribute">width</span>: <span class="hljs-number">60px</span>; }
 <span class="hljs-selector-class">.span2</span> { <span class="hljs-attribute">width</span>: <span class="hljs-number">140px</span>; }
 <span class="hljs-selector-class">.span3</span> { <span class="hljs-attribute">width</span>: <span class="hljs-number">220px</span>; }
 
@@ -291,13 +291,13 @@
 <h3>Comments</h3>
 <p>Great code comments convey context or purpose and should not just reiterate a component or class name.</p>
 <p>Bad example:</p>
-<pre><code class="css">/* Modal header */
+<pre><code class="css" tabindex="0">/* Modal header */
 .modal-header {
   ...
 }
 </code></pre>
 <p>Good example:</p>
-<pre><code class="css">/* Wrapping element for .modal-title and .modal-close */
+<pre><code class="css" tabindex="0">/* Wrapping element for .modal-title and .modal-close */
 .modal-header {
   ...
 }
@@ -311,13 +311,13 @@
 <li>Prefix classes based on the closest parent component's base class</li>
 </ul>
 <p>Bad example:</p>
-<pre><code class="css">.m { ... }
+<pre><code class="css" tabindex="0">.m { ... }
 .modal_close { ... }
 .openButton { ...}
 .header { ... }
 </code></pre>
 <p>Good example:</p>
-<pre><code class="css">.modal { ... }
+<pre><code class="css" tabindex="0">.modal { ... }
 .modal-close { ... }
 .open-button { ... }
 .modal-header { ... }
@@ -329,12 +329,12 @@
 <li>Scope classes to the closest parent when necessary (e.g., when not using prefixed classes)</li>
 </ul>
 <p>Bad example:</p>
-<pre><code class="css">span { ... }
+<pre><code class="css" tabindex="0">span { ... }
 .page-container #stream .stream-item .tweet .tweet-header .username { ... }
 .avatar { ... }
 </code></pre>
 <p>Good example:</p>
-<pre><code class="css">.avatar { ... }
+<pre><code class="css" tabindex="0">.avatar { ... }
 .tweet-header .username { ... }
 .tweet .avatar { ... }
 </code></pre>
@@ -352,7 +352,7 @@
 <li>If a property or set of properties is used over and over, make it an extendable class so it's easier to manage.</li>
 </ul>
 <h4>Bad Example:</h4>
-<pre><code class="scss"><span class="hljs-variable">$white</span>: <span class="hljs-number">#fff</span> !default;
+<pre><code class="scss" tabindex="0"><span class="hljs-variable">$white</span>: <span class="hljs-number">#fff</span> !default;
 
 @<span class="hljs-keyword">mixin</span> full-width {
   <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
@@ -372,7 +372,7 @@
 }
 </code></pre>
 <h4>Good Example:</h4>
-<pre><code class="scss"><span class="hljs-variable">$white</span>: <span class="hljs-number">#fff</span> !default;
+<pre><code class="scss" tabindex="0"><span class="hljs-variable">$white</span>: <span class="hljs-number">#fff</span> !default;
 
 %white {
   <span class="hljs-attribute">color</span>: <span class="hljs-variable">$white</span>;

@@ -246,7 +246,7 @@
         <div class="js-search-item-content hide">
           <p>This is probably the easiest way, but you won't get any of the helpful Sass mixins. If you're looking to get up and running quickly, just <a href="https://github.com/ArcGIS/calcite-web/releases">download the latest release</a> and move the zipped files to wherever you keep your assets (CSS, JavaScript, images). Be sure to use <a href="http://esri.github.io/calcite-web/">the documentation site</a> to copy and paste patterns, components, and even a sample html boilerplate.</p>
 <p>You can also use a hosted version of Calcite Web:</p>
-<pre><code><span class="hljs-comment">&lt;!-- In the head --&gt;</span>
+<pre><code tabindex="0"><span class="hljs-comment">&lt;!-- In the head --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.9/css/calcite-web.min.css"</span>&gt;</span>
 
 <span class="hljs-comment">&lt;!-- Just before end of body --&gt;</span>
@@ -273,16 +273,16 @@
         </h5>
         <div class="js-search-item-content hide">
           <p>To install Calcite-Web as a ruby gem, reference the gem from your <code>Gemfile</code>:</p>
-<pre><code>gem <span class="hljs-string">"calcite-web"</span>, :<span class="hljs-function"><span class="hljs-params">git</span> =&gt;</span> <span class="hljs-string">"https://github.com/Esri/calcite-web.git"</span>, :<span class="hljs-function"><span class="hljs-params">tag</span> =&gt;</span> <span class="hljs-string">"v1.0.0-rc.9"</span>
+<pre><code tabindex="0">gem <span class="hljs-string">"calcite-web"</span>, :<span class="hljs-function"><span class="hljs-params">git</span> =&gt;</span> <span class="hljs-string">"https://github.com/Esri/calcite-web.git"</span>, :<span class="hljs-function"><span class="hljs-params">tag</span> =&gt;</span> <span class="hljs-string">"v1.0.0-rc.9"</span>
 </code></pre>
 <p>This makes Calcite Web available as a Compass extension. To use Calcite Web, make sure you require the gem in your compass config file (usually found at <code>config/compass.rb</code>). An example config file might look like this:</p>
-<pre><code class="ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">"calcite-web"</span>
+<pre><code class="ruby" tabindex="0"><span class="hljs-keyword">require</span> <span class="hljs-string">"calcite-web"</span>
 
 css_dir = <span class="hljs-string">"stylesheets"</span>
 sass_dir = <span class="hljs-string">"sass"</span>
 </code></pre>
 <p>Then in your project's sass files, just import it:</p>
-<pre><code>@<span class="hljs-keyword">import</span> <span class="hljs-string">"calcite-web"</span>;
+<pre><code tabindex="0">@<span class="hljs-keyword">import</span> <span class="hljs-string">"calcite-web"</span>;
 </code></pre>
 <p>That will give you everything including Sass utilities. You will also need to copy over the JavaScript and image assets to your static folder <a href="./#static-files">(see above)</a>.</p>
 <p>Calcite Web has a built in library of mixins that cover everything from animation to font-size. To be sure you're building your site in the easiest way (and the most visually consistent way) read up on everything that's available on the <a href="./sass">Sass Page</a>.</p>
@@ -307,11 +307,11 @@ sass_dir = <span class="hljs-string">"sass"</span>
         </h5>
         <div class="js-search-item-content hide">
           <p>To install Calcite Web with npm, type:</p>
-<pre><code>npm install --save-dev Esri/calcite-web#v1<span class="hljs-number">.0</span><span class="hljs-number">.0</span>-rc<span class="hljs-number">.9</span>
+<pre><code tabindex="0">npm install --save-dev Esri/calcite-web#v1<span class="hljs-number">.0</span><span class="hljs-number">.0</span>-rc<span class="hljs-number">.9</span>
 </code></pre>
 <p>You must add the current version in order to get the <code>dist/</code> folder.</p>
 <p>Now, in your main <code>.scss</code> file, you can just require the framework:</p>
-<pre><code>@<span class="hljs-keyword">import</span> <span class="hljs-string">"node_modules/calcite-web/dist/sass/calcite-web"</span>;
+<pre><code tabindex="0">@<span class="hljs-keyword">import</span> <span class="hljs-string">"node_modules/calcite-web/dist/sass/calcite-web"</span>;
 </code></pre>
 
         </div>
@@ -392,7 +392,7 @@ sass_dir = <span class="hljs-string">"sass"</span>
           <p>Rather than load a specific font for code blocks, Calcite Web is designed to use a system font. For users that have Consolas installed, it is the preferred face for code blocks. Designed by Microsoft's Lucas DeGroot, <a href="http://www.fonts.com/font/microsoft-corporation/consolas">Consolas</a> is a clean, readable, and simple monospace face for documenting code blocks.</p>
 <h3>Consolas</h3>
 <h2 class="code-face type-sample"> Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</h2>
-<pre><code class="js"><span class="hljs-comment">// Example JavaScript rendered in Consolas</span>
+<pre><code class="js" tabindex="0"><span class="hljs-comment">// Example JavaScript rendered in Consolas</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">$initHighlight</span> (<span class="hljs-params">classes</span>) </span>{
   <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span> / <span class="hljs-number">2</span>; i &lt; classes.length; i++) {
     <span class="hljs-keyword">if</span> (checkCondition(classes[i]) === <span class="hljs-literal">undefined</span>) {
@@ -765,7 +765,7 @@ $initHighlight([<span class="hljs-string">"class1"</span>, <span class="hljs-str
 </tbody>
 </table>
 <p>You can override these values to create a custom, project-specific grid in your own project. For example, to use a 16 column grid instead of the default 24 columns, you would set the <code>$default-column-count</code> variable before importing the library:</p>
-<pre><code><span class="hljs-variable">$default-column-count</span>: <span class="hljs-number">16</span>;
+<pre><code tabindex="0"><span class="hljs-variable">$default-column-count</span>: <span class="hljs-number">16</span>;
 @<span class="hljs-keyword">import</span> calcite-web;
 </code></pre>
 
@@ -788,7 +788,7 @@ $initHighlight([<span class="hljs-string">"class1"</span>, <span class="hljs-str
         <div class="js-search-item-content hide">
           <p>The <code>.grid-container</code> class is required to contain the grid. Using the  <a href="#columns">column</a> classes without them being nested in a containing <code>div</code> will cause unexpected results.</p>
 <p>The container class applies a max width to the content it contains and handles the column relationship with the viewport window, preventing collisions with scroll bars or other exciting bugs.</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"grid-container"</span>&gt;</span>
+<pre><code class="html" tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"grid-container"</span>&gt;</span>
 	<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-24"</span>&gt;</span>
 		<span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span>&gt;</span>Contain the Columns<span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
 	<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -827,7 +827,7 @@ $initHighlight([<span class="hljs-string">"class1"</span>, <span class="hljs-str
     </div>
   </div>
 </div>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-17"</span>&gt;</span>
+<pre><code tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-17"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>column-17<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-8"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>column-8<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
@@ -864,7 +864,7 @@ $initHighlight([<span class="hljs-string">"class1"</span>, <span class="hljs-str
     <span class="phone-show">phone-column-3</span>
   </div>
 </div>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-8 tablet-column-2 phone-column-3"</span>&gt;</span>
+<pre><code tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-8 tablet-column-2 phone-column-3"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tablet-hide"</span>&gt;</span>column-8<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tablet-only"</span>&gt;</span>tablet-column-2<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"phone-show"</span>&gt;</span>phone-column-3<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
@@ -902,7 +902,7 @@ $initHighlight([<span class="hljs-string">"class1"</span>, <span class="hljs-str
     </div>
   </div>
 </div>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-8"</span>&gt;</span>
+<pre><code tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-8"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>column-8<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-4"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>column-4<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
@@ -958,7 +958,7 @@ $initHighlight([<span class="hljs-string">"class1"</span>, <span class="hljs-str
   <div class="block"><div class="panel">Block</div></div>
   <div class="block"><div class="panel">Block</div></div>
 </div>
-<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"block-group block-group-3-up"</span>&gt;
+<pre><code tabindex="0">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"block-group block-group-3-up"</span>&gt;
   &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"block"</span>&gt;&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"panel"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
   &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"block"</span>&gt;&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"panel"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
   &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"block"</span>&gt;&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"panel"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
@@ -998,7 +998,7 @@ $initHighlight([<span class="hljs-string">"class1"</span>, <span class="hljs-str
     <div class="panel">Block</div>
   </div>
 </div>
-<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"block-group block-group-4-up tablet-block-group-2-up phone-block-group-1-up"</span>&gt;
+<pre><code tabindex="0">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"block-group block-group-4-up tablet-block-group-2-up phone-block-group-1-up"</span>&gt;
   &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"block trailer-half"</span>&gt;
     &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"panel"</span>&gt;Block&lt;/<span class="hljs-keyword">div</span>&gt;
   &lt;/<span class="hljs-keyword">div</span>&gt;
@@ -1065,7 +1065,7 @@ $initHighlight([<span class="hljs-string">"class1"</span>, <span class="hljs-str
     <span>column-8 pre-2</span>
   </div>
 </div>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-8 pre-2"</span>&gt;</span>
+<pre><code tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-8 pre-2"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>column-8 pre-2<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
@@ -1093,7 +1093,7 @@ $initHighlight([<span class="hljs-string">"class1"</span>, <span class="hljs-str
 <p>Calcite Web provides a <code>$vertical-range</code> variable that sets the maximum value of <code>n</code> for the <code>leader-n</code> and <code>trailer-n</code> classes at 6.</p>
 <p>Leader and trailer classes also have additional responsive <code>tablet-</code> and <code>phone-</code> prefix classes. These allow you to add different amounts of space above and below an element at different screen sizes.</p>
 <p>For example, if you wanted an element to have 3 lines of margin above it on desktop, but that was too much on a phone, you could use responsive classes to specify that:</p>
-<pre><code>&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"leader-3 phone-leader-1"</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+<pre><code tabindex="0">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"leader-3 phone-leader-1"</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
 </code></pre>
 <p>These also apply to <code>padding-leader</code> and <code>padding-trailer</code></p>
 
@@ -1224,7 +1224,7 @@ aligning grid columns when the Grid System is unable to determine which columns 
           <p>Use a class of <code>right</code> on html elements to float elements to the right. Use a class of <code>left</code> on html elements to float elements to the left.</p>
 <p>Left and right classes also have additional responsive <code>tablet-</code> and <code>phone-</code> prefix classes. These allow you to float an element right on a large screen, but float it left when the screen is smaller.</p>
 <p>For example, if you wanted an element to float right on desktop, but left on a phone, you could use responsive right and left classes to specify that:</p>
-<pre><code>&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"right phone-left"</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+<pre><code tabindex="0">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"right phone-left"</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
 </code></pre>
 
         </div>
@@ -1307,7 +1307,7 @@ aligning grid columns when the Grid System is unable to determine which columns 
         <div class="js-search-item-content hide">
           <p>Elements that become position fixed as they reach a certain position in the viewport are refered to as 'sticky'. The <code>js-sticky</code> class takes an <code>data-top=x</code> attribute that defines the point from the top of the window the sticky element will stick.</p>
 <p>For example, the following <code>&lt;div&gt;</code> will become fixed when it is 46 pixels from the top of the viewport:</p>
-<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"js-sticky"</span> data-top=<span class="hljs-string">"46"</span>&gt;
+<pre><code tabindex="0">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"js-sticky"</span> data-top=<span class="hljs-string">"46"</span>&gt;
   &lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"btn btn-clear"</span>&gt;Back <span class="hljs-keyword">to</span> Top&lt;/a&gt;
 &lt;/<span class="hljs-keyword">div</span>&gt;
 </code></pre>
@@ -1451,7 +1451,7 @@ aligning grid columns when the Grid System is unable to determine which columns 
         </h5>
         <div class="js-search-item-content hide">
           <p>A set of social icons are provided as part of calcite-web. Just use the <code>icon-social-X</code> class on an element. It is suggested you add an aria-label to help the visually impaired understand what the element with the icon represents as they won't be able to see the Facebook logo, for example:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-social-facebook"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Facebook"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<pre><code class="html" tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-social-facebook"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Facebook"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 </code></pre>
 <p>Below are the current social icons. More sizes are planned. For now only 30x30 pixel square icons are available.</p>
 
@@ -1479,12 +1479,12 @@ aligning grid columns when the Grid System is unable to determine which columns 
         </h5>
         <div class="js-search-item-content hide">
           <p>An extensive set of color variables are set up inside of config. Color names are generally semantic and simple, making them very easy to remember. Color variables are references like any other Sass variable:</p>
-<pre><code class="scss"><span class="hljs-selector-class">.element-to-style</span>{
+<pre><code class="scss" tabindex="0"><span class="hljs-selector-class">.element-to-style</span>{
   <span class="hljs-attribute">color</span>: <span class="hljs-variable">$gray</span>;
 }
 </code></pre>
 <p>There is also a dark theme which you can import using:</p>
-<pre><code>@<span class="hljs-keyword">import</span> <span class="hljs-string">"calcite-web-dark"</span>;
+<pre><code tabindex="0">@<span class="hljs-keyword">import</span> <span class="hljs-string">"calcite-web-dark"</span>;
 </code></pre>
 
         </div>
@@ -1545,7 +1545,7 @@ aligning grid columns when the Grid System is unable to determine which columns 
         </h5>
         <div class="js-search-item-content hide">
           <p>Three basic colors are set for color in typography. It's not recommended to change these values, but they are provided for your reference.</p>
-<pre><code class="scss"><span class="hljs-variable">$type-color</span>: <span class="hljs-variable">$off-black</span>;
+<pre><code class="scss" tabindex="0"><span class="hljs-variable">$type-color</span>: <span class="hljs-variable">$off-black</span>;
 <span class="hljs-variable">$link-color</span>: <span class="hljs-variable">$blue</span>;
 <span class="hljs-variable">$link-hover</span>: <span class="hljs-variable">$light-blue</span>;
 </code></pre>
@@ -1594,7 +1594,7 @@ aligning grid columns when the Grid System is unable to determine which columns 
         </h5>
         <div class="js-search-item-content hide">
           <p>Buttons are created by adding a class of <code>btn</code> to either a <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> element. <code>btn-{color}</code> classes can be mixed with <code>btn-{style}</code> classes.</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn"</span>&gt;</span> Button <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<pre><code class="html" tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn"</span>&gt;</span> Button <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn"</span>&gt;</span>  Button <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-red btn-arrow"</span>&gt;</span>  Red Button with Arrow <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 </code></pre>
@@ -1702,7 +1702,7 @@ aligning grid columns when the Grid System is unable to determine which columns 
         </h5>
         <div class="js-search-item-content hide">
           <p>Alerts are used to inform users of state changes, errors, or successful actions. Alerts are only visible if they have the <code>is-active</code> class. Without as <code>is-active</code> class, the alert will be set to <code>display: none;</code></p>
-<p>Calcite does not manage alert classes be default - you will have to write your own JavaScript handlers for this.</p>
+<p>Calcite does not manage alert classes by default - you will have to write your own JavaScript handlers for this.</p>
 
         </div>
         <!-- populated on the client -->
@@ -1820,7 +1820,7 @@ aligning grid columns when the Grid System is unable to determine which columns 
         <div class="js-search-item-content hide">
           <p>Tables have been styled by default. No extra classes are required, although there are some modifier classes available for specific flavors.</p>
 <p>By default, a large table will break your layout horizontally. You can solve this problem by wrapping a table in a <code>&lt;div&gt;</code> with the <code>.overflow-auto</code> helper class:</p>
-<pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"overflow-auto"</span>&gt;</span>
+<pre><code tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"overflow-auto"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
@@ -1864,7 +1864,7 @@ aligning grid columns when the Grid System is unable to determine which columns 
         <div class="js-search-item-content hide">
           <p>Creating a number of file sizes for bitmap assets can be very useful for reducing load times on small screens - especially phones and tablets. While this image markup is not enforced or unique to Calcite Web (there is no code in the framework that enables this), the following examples should be used as a standard when implementing responsive images.</p>
 <p>A full range of images widths are listed below.</p>
-<pre><code><span class="hljs-meta">$</span><span class="bash">{title}.jpg</span>
+<pre><code tabindex="0"><span class="hljs-meta">$</span><span class="bash">{title}.jpg</span>
 <span class="hljs-meta">$</span><span class="bash">{title}-1920-xlg.jpg</span>
 <span class="hljs-meta">$</span><span class="bash">{title}-960-lg.jpg</span>
 <span class="hljs-meta">$</span><span class="bash">{title}-640-bmd.jpg</span>
@@ -2300,7 +2300,7 @@ aligning grid columns when the Grid System is unable to determine which columns 
         </h5>
         <div class="js-search-item-content hide">
           <p>Standard footer for ArcGIS and Esri properties. The footer in Calcite Web is 'sticky' by default. This means that if the page doesn't have sufficient height, the footer will still hug the bottom of the screen. For this to work properly, you must use a <code>div</code> with a class of <code>wrapper</code>. See the <a href="../guides/quickstart/">basic HTML page</a> for an example.</p>
-<pre><code>
+<pre><code tabindex="0">
 <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"footer leader-3"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"grid-container"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"column-8"</span>&gt;</span>
@@ -2505,7 +2505,7 @@ aligning grid columns when the Grid System is unable to determine which columns 
           <p>The off-canvas &quot;drawer&quot; pattern is used primarily for top-level mobile navigation.</p>
 <p><button class="btn js-drawer-toggle" data-drawer="top-nav">Open Left Drawer</button></p>
 <p><button class="btn js-drawer-toggle" data-drawer="right">Open Right Drawer</button></p>
-<pre><code> <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+<pre><code tabindex="0"> <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- Drawer --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"drawer drawer-left js-drawer is-active"</span> <span class="hljs-attr">data-drawer</span>=<span class="hljs-string">"top-nav"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"0"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"drawer-nav"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"navigation"</span>&gt;</span>
@@ -2621,7 +2621,7 @@ aligning grid columns when the Grid System is unable to determine which columns 
           <p>By default, using the Calcite Web sass files will build css  for the complete framework. This build can be customized, or entirely turned off for sass-only applications.</p>
 <p>Setting the <code>$generate-css</code> variable to false in your sass files will prevent any css from being generated, while exposing all the underlying sass styles of the framework. Setting specific variables like <code>$include-alerts</code> to false will preclude only that components css from being built.</p>
 <p>Additionally, font imports are controlled this way. By default, Calcite Web requests Avenir Next from a cdn. You can import <code>calcite-web-no-fonts.scss</code> if you don't want the fonts.</p>
-<pre><code><span class="hljs-comment">// Sass Output</span>
+<pre><code tabindex="0"><span class="hljs-comment">// Sass Output</span>
 $include-colors:                 true    !<span class="hljs-keyword">default</span>;
 $generate-css:                   true    !<span class="hljs-keyword">default</span>;
 
@@ -2712,7 +2712,7 @@ $include-<span class="hljs-keyword">filter</span>-dropdown:        $generate-css
           </a>
         </h5>
         <div class="js-search-item-content hide">
-          <pre><code>// custom-build.scss
+          <pre><code tabindex="0">// custom-build.scss
 <span class="hljs-meta">$</span><span class="bash">generate-css: <span class="hljs-literal">false</span>;</span>
 <span class="hljs-meta">$</span><span class="bash">include-type: <span class="hljs-literal">true</span>;</span>
 <span class="hljs-meta">$</span><span class="bash">include-grid: <span class="hljs-literal">true</span>;</span>
@@ -2771,7 +2771,7 @@ $include-<span class="hljs-keyword">filter</span>-dropdown:        $generate-css
         </h5>
         <div class="js-search-item-content hide">
           <p>Calcite Web comes with several variables representing the default screen sizes.</p>
-<pre><code class="scss"><span class="hljs-comment">// Breakpoints</span>
+<pre><code class="scss" tabindex="0"><span class="hljs-comment">// Breakpoints</span>
 <span class="hljs-variable">$small</span>:  <span class="hljs-number">480px</span>  !default;
 <span class="hljs-variable">$medium</span>: <span class="hljs-number">860px</span>  !default;
 <span class="hljs-variable">$large</span>:  <span class="hljs-number">1280px</span> !default;
@@ -2796,7 +2796,7 @@ $include-<span class="hljs-keyword">filter</span>-dropdown:        $generate-css
         </h5>
         <div class="js-search-item-content hide">
           <p>Controls specific aspects and behaviors across the UI.</p>
-<pre><code class="scss"><span class="hljs-variable">$transition</span>: <span class="hljs-number">150ms</span> linear;
+<pre><code class="scss" tabindex="0"><span class="hljs-variable">$transition</span>: <span class="hljs-number">150ms</span> linear;
 <span class="hljs-variable">$box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16px</span> <span class="hljs-number">0</span> rgba(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0.05</span>) !default;
 <span class="hljs-variable">$drawer-width</span>: <span class="hljs-number">280px</span> !default;
 </code></pre>
@@ -2845,7 +2845,7 @@ $include-<span class="hljs-keyword">filter</span>-dropdown:        $generate-css
         </h5>
         <div class="js-search-item-content hide">
           <p>You can set the font family and weight via the following Sass mixins:</p>
-<pre><code>@<span class="hljs-meta"><span class="hljs-meta-keyword">include</span> avenir-light();</span>   <span class="hljs-comment">// font-weight: 300</span>
+<pre><code tabindex="0">@<span class="hljs-meta"><span class="hljs-meta-keyword">include</span> avenir-light();</span>   <span class="hljs-comment">// font-weight: 300</span>
 @<span class="hljs-meta"><span class="hljs-meta-keyword">include</span> avenir-regular();</span> <span class="hljs-comment">// font-weight: 400</span>
 @<span class="hljs-meta"><span class="hljs-meta-keyword">include</span> avenir-italic();</span>  <span class="hljs-comment">// font-style: italic</span>
 @<span class="hljs-meta"><span class="hljs-meta-keyword">include</span> avenir-bold();</span>    <span class="hljs-comment">// font-weight: 700</span>
@@ -3013,12 +3013,12 @@ Setting the max width of an article to a large multiple of the text size is a wa
           <p>Utility mixins are used to construct complicated behaviors for <a href="../components">components</a> and <a href="../patterns">patterns</a>, provide baseline functionality for doc elements, and take care of browser prefixing.</p>
 <p>Most utility mixins are borrowed from <a href="http://bourbon.io/">Bourbon</a>. If mixins share a name, then they share the same code base.</p>
 <p>Use the utility mixins inside the selector you wish to apply the styles to, passing the arguments in if required. For example, to apply a clearfix to an element with the class <code>.my-div</code>, the use the following Sass:</p>
-<pre><code class="scss"><span class="hljs-selector-class">.my-div</span> {
+<pre><code class="scss" tabindex="0"><span class="hljs-selector-class">.my-div</span> {
   @<span class="hljs-keyword">include</span> clearfix();
 }
 </code></pre>
 <p>If the mixin accepts arguments, pass them into the parenthesis:</p>
-<pre><code class="scss"><span class="hljs-selector-class">.my-div</span> {
+<pre><code class="scss" tabindex="0"><span class="hljs-selector-class">.my-div</span> {
   @<span class="hljs-keyword">include</span> box-sizing(border-box);
 }
 </code></pre>
@@ -3123,12 +3123,12 @@ Setting the max width of an article to a large multiple of the text size is a wa
 </table>
 <h4>Animation</h4>
 <p>The animation mixin allows you to declare cross-browser animations. The mixin accepts</p>
-<pre><code class="scss">box:hover {
+<pre><code class="scss" tabindex="0">box:hover {
   @<span class="hljs-keyword">include</span> animation(scale 1.0s ease-in, slide 2.0s ease);
 }
 </code></pre>
 <p>Or, use individual animation mixins:</p>
-<pre><code class="scss">box:hover {
+<pre><code class="scss" tabindex="0">box:hover {
   @<span class="hljs-keyword">include</span> animation-name(scale, slide);
   @<span class="hljs-keyword">include</span> animation-duration(<span class="hljs-number">2s</span>);
   @<span class="hljs-keyword">include</span> animation-timing-function(ease);
@@ -3137,91 +3137,91 @@ Setting the max width of an article to a large multiple of the text size is a wa
 </code></pre>
 <h4>Appearance</h4>
 <p>The <code>appearance</code> CSS property is used to display an element using a platform-native styling based on the operating system's theme. For example, to remove browser specific styling for a ui element, use:</p>
-<pre><code class="scss">@<span class="hljs-keyword">include</span> appearance(none);
+<pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> appearance(none);
 </code></pre>
 <h4>Box-Sizing</h4>
 <p>Set the <code>box-sizing</code> property for all browsers (with browser prefixes):</p>
-<pre><code class="scss">@<span class="hljs-keyword">include</span> box-sizing(border-box);
+<pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> box-sizing(border-box);
 </code></pre>
 <p>Valid values are <code>content-box</code>, <code>border-box</code>, and <code>inherit</code>.</p>
 <h4>Box-Shadow</h4>
 <p>Set the <code>box-shadow</code> property for all browsers (with browser prefixes):</p>
-<pre><code class="scss">@<span class="hljs-keyword">include</span> box-shadow(border-box);
+<pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> box-shadow(border-box);
 </code></pre>
 <h4>Calc</h4>
 <p>Shorthand for setting a property to use a <code>calc</code> value. Pass the property you'd like to set, then the value you'd like to use:</p>
-<pre><code class="scss">@<span class="hljs-keyword">include</span> calc(width, <span class="hljs-string">'100px - 10%'</span>);
+<pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> calc(width, <span class="hljs-string">'100px - 10%'</span>);
 </code></pre>
 <h4>Clearfix</h4>
 <p>Applies the framework-standard clear for floated elements:</p>
-<pre><code class="scss">@<span class="hljs-keyword">include</span> clearfix();
+<pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> clearfix();
 </code></pre>
 <h4>Keyframes</h4>
 <p>For creating animations, you can use the <code>keyframes</code> mixin. This mixin accepts an animation name. Then inside the mixin, write your animation as a content block:</p>
-<pre><code class="scss">@<span class="hljs-keyword">include</span> keyframes(ANIMATION_NAME){
+<pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> keyframes(ANIMATION_NAME){
   0%   { <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ffccf2</span>; }
   100% { <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ccffff</span>; }
 };
 </code></pre>
 <p>Now you can use the <a href="#animation">animation mixin</a> as a named animation like this:</p>
-<pre><code><span class="hljs-selector-class">.animation-class</span> {
+<pre><code tabindex="0"><span class="hljs-selector-class">.animation-class</span> {
   <span class="hljs-variable">@include</span> animation( <span class="hljs-variable">@include</span> animation(ANIMATION_NAME <span class="hljs-number">200ms</span> ease-in);)
 }
 </code></pre>
 <h4>Placeholder</h4>
 <p>Wraps the wide array of input placeholder selectors across browsers.</p>
-<pre><code>@<span class="hljs-keyword">include</span> placeholder(<span class="hljs-string">'color'</span>, <span class="hljs-variable">$dark-blue</span>);
+<pre><code tabindex="0">@<span class="hljs-keyword">include</span> placeholder(<span class="hljs-string">'color'</span>, <span class="hljs-variable">$dark-blue</span>);
 </code></pre>
 <h4>Prefixer</h4>
 <p>This is one of the most flexible mixins in the library. Use it to add browser prefixes to a property:</p>
-<pre><code class="scss">@<span class="hljs-keyword">include</span> prefixer(margin-end, 5%, webkit moz spec);
+<pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> prefixer(margin-end, 5%, webkit moz spec);
 </code></pre>
 <p>In this way you can prefix any property. Adding the <code>spec</code> as the last argument will also output the property <em>without</em> a prefix.</p>
 <h4>Respond To</h4>
 <p>The <code>respond-to</code> mixin adds media queries for use in responsive design. The mixin accepts three arguments: maximum size, minimum size, and type (screen, print, etc). You can pass just the first out of convenience. This mixin works well with the <a href="../sass#breakpoints">breakpoint variables</a>:</p>
-<pre><code class="scss"><span class="hljs-selector-class">.my-div</span> {
+<pre><code class="scss" tabindex="0"><span class="hljs-selector-class">.my-div</span> {
   @<span class="hljs-keyword">include</span> respond-to(<span class="hljs-variable">$small</span>){
     <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span>;
   }
 }
 </code></pre>
 <p>This will compile to the following css:</p>
-<pre><code class="css">@<span class="hljs-keyword">media</span> screen and (max-width: <span class="hljs-number">480px</span>) {
+<pre><code class="css" tabindex="0">@<span class="hljs-keyword">media</span> screen and (max-width: <span class="hljs-number">480px</span>) {
   <span class="hljs-selector-class">.my-div</span> {
     <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span>;
   }
 }
 </code></pre>
 <p>You can assemble more complicated media queries by using both min and max:</p>
-<pre><code><span class="hljs-symbol">@include</span> respond-<span class="hljs-keyword">to</span>($large, $medium) { ... }
+<pre><code tabindex="0"><span class="hljs-symbol">@include</span> respond-<span class="hljs-keyword">to</span>($large, $medium) { ... }
 </code></pre>
 <p>This will add styles that only appear <em>between</em> the <code>$medium</code> and <code>$large</code> screen sizes.</p>
 <h4>Transform</h4>
 <p>The CSS transform property lets you modify the coordinate space of the CSS visual formatting model. Using it, elements can be translated, rotated, scaled, and skewed according to the values set. <code>transform</code>, <code>transform-origin</code>, and <code>transform-style</code> all add the necessary browser prefixes for interacting with their respective transform properties.</p>
-<pre><code class="scss">@<span class="hljs-keyword">include</span> transform(translateY(<span class="hljs-number">50px</span>));
+<pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> transform(translateY(<span class="hljs-number">50px</span>));
 @<span class="hljs-keyword">include</span> transform(scale(<span class="hljs-number">0.9</span>) rotate(-<span class="hljs-number">3deg</span>));
 @<span class="hljs-keyword">include</span> transform-origin(center top);
 @<span class="hljs-keyword">include</span> transform-style(preserve-<span class="hljs-number">3</span>d);
 </code></pre>
 <h4>Transition</h4>
 <p>This mixin provides a shorthand syntax and supports multiple transitions.</p>
-<pre><code class="scss">@<span class="hljs-keyword">include</span> transition(all 2.0s ease-in-out);
+<pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> transition(all 2.0s ease-in-out);
 @<span class="hljs-keyword">include</span> transition(opacity 1.0s ease-in 0s, width 2.0s ease-in 2s);
 </code></pre>
 <p>Or you can use the individual transition properties:</p>
-<pre><code>@<span class="hljs-meta"><span class="hljs-meta-keyword">include</span> transition-property(transform);</span>
+<pre><code tabindex="0">@<span class="hljs-meta"><span class="hljs-meta-keyword">include</span> transition-property(transform);</span>
 @<span class="hljs-meta"><span class="hljs-meta-keyword">include</span> transition-duration(1.0s);</span>
 @<span class="hljs-meta"><span class="hljs-meta-keyword">include</span> transition-timing-function(ease-in);</span>
 @<span class="hljs-meta"><span class="hljs-meta-keyword">include</span> transition-delay(0.5s);</span>
 </code></pre>
 <h4>Transition Prefixed</h4>
 <p>To transition vendor-prefixed properties, e.g. <code>-webkit-transform</code> and <code>-moz-transform</code>, there is an additional convinience <code>transition-prefixed()</code> mixin:</p>
-<pre><code>@include transition-prefixed(transform3d(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>) <span class="hljs-number">200</span>ms linear);
+<pre><code tabindex="0">@include transition-prefixed(transform3d(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>) <span class="hljs-number">200</span>ms linear);
 </code></pre>
 <p>This will generate vendor prefixed properties <em>and</em> values.</p>
 <h4>Visibility</h4>
 <p>The visibility mixins change the <code>visibility</code> property. This is useful for removing and adding elements at certain breakpoints or with certain class names. No arguments are passed. Invisible sets <code>visibility: hidden</code> on the object, leaving in the in document flow, but removing it from view. <code>hide()</code> will completely remove the item with <code>display:none</code>.</p>
-<pre><code class="scss">@<span class="hljs-keyword">include</span> hide();
+<pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> hide();
 @<span class="hljs-keyword">include</span> invisible();
 @<span class="hljs-keyword">include</span> visible();
 </code></pre>
@@ -3280,31 +3280,31 @@ Setting the max width of an article to a large multiple of the text size is a wa
           <p>Calcite Web can be imported using ES6 modules, CommonJS, AMD, or just a plain IIFE.</p>
 <h3>ES6 Module</h3>
 <p>If your bundler supports the ES6 module syntax you can import calcite as an ES6 module with named exports:</p>
-<pre><code class="js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> calcite <span class="hljs-keyword">from</span> <span class="hljs-string">'calcite-web/es6'</span>;
+<pre><code class="js" tabindex="0"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> calcite <span class="hljs-keyword">from</span> <span class="hljs-string">'calcite-web/es6'</span>;
 calcite.init();
 </code></pre>
 <p>If your bundler uses the <code>module</code> field in <code>package.json</code> (Rollup, Webpack 2) leave off the <code>es6</code>:</p>
-<pre><code class="js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> calcite <span class="hljs-keyword">from</span> <span class="hljs-string">'calcite-web'</span>;
+<pre><code class="js" tabindex="0"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> calcite <span class="hljs-keyword">from</span> <span class="hljs-string">'calcite-web'</span>;
 calcite.init();
 </code></pre>
 <p>With named imports you can also just import what you need:</p>
-<pre><code class="js"><span class="hljs-keyword">import</span> {drawer} <span class="hljs-keyword">from</span> <span class="hljs-string">'calcite-web'</span>;
+<pre><code class="js" tabindex="0"><span class="hljs-keyword">import</span> {drawer} <span class="hljs-keyword">from</span> <span class="hljs-string">'calcite-web'</span>;
 drawer(); <span class="hljs-comment">// initialize only instances of the drawer pattern</span>
 </code></pre>
 <p>This is a great way to cut down on the size of your build!</p>
 <h3>CommonJS</h3>
-<pre><code class="js"><span class="hljs-keyword">var</span> calcite = <span class="hljs-built_in">require</span>(<span class="hljs-string">'calcite-web'</span>);
+<pre><code class="js" tabindex="0"><span class="hljs-keyword">var</span> calcite = <span class="hljs-built_in">require</span>(<span class="hljs-string">'calcite-web'</span>);
 calcite.init();
 </code></pre>
 <h4>AMD</h4>
-<pre><code class="js"><span class="hljs-built_in">require</span>([<span class="hljs-string">'path/to/calcite-web.js'</span>], <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">calcite</span>)</span>{
+<pre><code class="js" tabindex="0"><span class="hljs-built_in">require</span>([<span class="hljs-string">'path/to/calcite-web.js'</span>], <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">calcite</span>)</span>{
   <span class="hljs-comment">// use calcite</span>
   calcite.init();
 });
 </code></pre>
 <h4>IIFE</h4>
 <p>If <code>calcite-web.js</code> is used on a page with no module syntax, it will just attach itself to <code>window.calcite</code>. Here is an example which initializes Calcite from a hosted file on S3:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+<pre><code class="html" tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
   ...
   <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.9/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="undefined">
@@ -3314,7 +3314,7 @@ calcite.init();
 </code></pre>
 <h3>Initializing</h3>
 <p>While all of the examples above use the main <code>init()</code> method, you can also initialize individual patterns. For example, initialize only instances of the tab pattern like this:</p>
-<pre><code>calcite.tabs()<span class="hljs-comment">;</span>
+<pre><code tabindex="0">calcite.tabs()<span class="hljs-comment">;</span>
 </code></pre>
 
         </div>
@@ -3337,7 +3337,7 @@ calcite.init();
           <p>The event bus is used to help interactive patterns communicate with each other and the rest of your application.</p>
 <p>Along with a set of common bus events, each pattern has a set of channels that it emits on and listens for. These events can be emitted or listened for by the larger application.</p>
 <p>You can trigger or react to events by using the <code>on</code> and <code>emit</code> methods on the bus:</p>
-<pre><code><span class="hljs-comment">// assuming calcite-web.js is available as calcite</span>
+<pre><code tabindex="0"><span class="hljs-comment">// assuming calcite-web.js is available as calcite</span>
 
 <span class="hljs-comment">// do something when a drawer opens</span>
 calcite<span class="hljs-selector-class">.bus</span><span class="hljs-selector-class">.on</span>(<span class="hljs-string">'drawer:open'</span>, function (options) {
@@ -3501,7 +3501,7 @@ calcite<span class="hljs-selector-class">.bus</span><span class="hljs-selector-c
 </table>
 <h4>Filter Dropdown</h4>
 <p>Many of the filter dropdown channels emit and listen for the following options object:</p>
-<pre><code>{
+<pre><code tabindex="0">{
   <span class="hljs-attribute">parent</span>: domNode,
   id: filterDropdownId,
   item: domNode
@@ -3643,7 +3643,7 @@ calcite<span class="hljs-selector-class">.bus</span><span class="hljs-selector-c
 </table>
 <h4>Tabs</h4>
 <p>Tab events emit and listen for an Options Object.</p>
-<pre><code>{
+<pre><code tabindex="0">{
   <span class="hljs-attribute">id</span>: tabId // data-tab attribute
   active: domNode
 }
@@ -3775,11 +3775,11 @@ calcite<span class="hljs-selector-class">.bus</span><span class="hljs-selector-c
 <h2>Events</h2>
 <h3>calcite.click()</h3>
 <p>Returns interaction event for the current browser environment. Currently only returns <code>'click'</code>. Will be more useful when touch support is added.</p>
-<pre><code class="js"><span class="hljs-keyword">var</span> click = calcite.click(); <span class="hljs-comment">// =&gt; 'click'</span>
+<pre><code class="js" tabindex="0"><span class="hljs-keyword">var</span> click = calcite.click(); <span class="hljs-comment">// =&gt; 'click'</span>
 </code></pre>
 <h3>calcite.addEvent(domNode, event, fn)</h3>
 <p>Adds a callback function to an event on an element.</p>
-<pre><code class="js"><span class="hljs-keyword">var</span> click = calcite.click();
+<pre><code class="js" tabindex="0"><span class="hljs-keyword">var</span> click = calcite.click();
 <span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'body'</span>);
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> (<span class="hljs-params">event</span>) </span>{
@@ -3790,7 +3790,7 @@ calcite.addEvent(node, click, action); <span class="hljs-comment">// action will
 </code></pre>
 <h3>calcite.removeEvent(domNode, event, fn)</h3>
 <p>Removes a callback function from an event on an element.</p>
-<pre><code class="js"><span class="hljs-keyword">var</span> click = calcite.click();
+<pre><code class="js" tabindex="0"><span class="hljs-keyword">var</span> click = calcite.click();
 <span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'body'</span>);
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> (<span class="hljs-params">event</span>) </span>{
@@ -3802,7 +3802,7 @@ calcite.removeEvent(node, event, action); <span class="hljs-comment">// action h
 </code></pre>
 <h3>calcite.eventTarget(event)</h3>
 <p>Returns the target DOM node of an event.</p>
-<pre><code class="js"><span class="hljs-keyword">var</span> click = calcite.click();
+<pre><code class="js" tabindex="0"><span class="hljs-keyword">var</span> click = calcite.click();
 <span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'body'</span>);
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> (<span class="hljs-params">event</span>) </span>{
@@ -3815,7 +3815,7 @@ calcite.addEvent(node, click, action);
 <p>Clicking the body will now log the contents of the <code>&lt;body&gt;</code> DOM node.</p>
 <h3>calcite.preventDefault(event)</h3>
 <p>Prevents default behavior of an event.</p>
-<pre><code class="js"><span class="hljs-keyword">var</span> click = calcite.click();
+<pre><code class="js" tabindex="0"><span class="hljs-keyword">var</span> click = calcite.click();
 <span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">'a'</span>)[<span class="hljs-number">0</span>];
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> (<span class="hljs-params">event</span>) </span>{
@@ -3827,7 +3827,7 @@ calcite.addEvent(node, click, action);
 <p>This will prevent the first <code>&lt;a&gt;</code> DOM node in the document from performing its default behavior (sending the user to the link in its <code>href</code> attribute).</p>
 <h3>calcite.stopPropagation(event)</h3>
 <p>Stops an event from bubbling up the DOM tree. This is useful if events have been bound to both a parent DOM node and a child DOM node.</p>
-<pre><code class="js"><span class="hljs-keyword">var</span> click = calcite.click();
+<pre><code class="js" tabindex="0"><span class="hljs-keyword">var</span> click = calcite.click();
 <span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">'a'</span>)[<span class="hljs-number">0</span>];
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span> (<span class="hljs-params">event</span>) </span>{
@@ -3840,32 +3840,32 @@ calcite.addEvent(node, click, action);
 <h2>Manipulation &amp; Traversal</h2>
 <h3>calcite.hasClass(node, class)</h3>
 <p>Checks if the <code>node</code> currently has the provided <code>class</code>. For example, given the following html:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"apple"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"test"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<pre><code class="html" tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"apple"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"test"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
 <p>The <code>hasClass</code> utility can be used as follows:</p>
-<pre><code class="js"><span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'test'</span>);
+<pre><code class="js" tabindex="0"><span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'test'</span>);
 <span class="hljs-keyword">var</span> isApple = calcite.hasClass(node, <span class="hljs-string">'apple'</span>);
 <span class="hljs-built_in">console</span>.log(isApple); <span class="hljs-comment">// true</span>
 </code></pre>
 <h3>calcite.addClass(domNode, classes)</h3>
 <p>Adds one or more classes to a given element. Multiple classes should be passed as a space-separated string, like this:</p>
-<pre><code class="js"><span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'test'</span>);
+<pre><code class="js" tabindex="0"><span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'test'</span>);
 calcite.addClass(node, <span class="hljs-string">'apples bananas oranges'</span>);
 </code></pre>
 <h3>calcite.removeClass(domNode, classes)</h3>
 <p>Removes one or more classes from an element. Like <code>addClass</code>, multiple classes should be separated with a space and passed as a single string:</p>
-<pre><code class="js"><span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'test'</span>);
+<pre><code class="js" tabindex="0"><span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'test'</span>);
 calcite.removeClass(node, <span class="hljs-string">'apples bananas oranges'</span>);
 </code></pre>
 <h3>calcite.toggleClass(domNode, className)</h3>
 <p>Adds the class to the element if it doesn't have the class, otherwise, remove it:</p>
-<pre><code class="js"><span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.test'</span>);
+<pre><code class="js" tabindex="0"><span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.test'</span>);
 calcite.toggleClass(node, <span class="hljs-string">'test'</span>); <span class="hljs-comment">// remove test class</span>
 calcite.toggleClass(node, <span class="hljs-string">'test'</span>); <span class="hljs-comment">// add test class</span>
 </code></pre>
 <h3>calcite.closest(class, element)</h3>
 <p>Searches up the DOM tree to find the closest parent element with a given class.</p>
-<pre><code class="js"><span class="hljs-keyword">var</span> nodes = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.child-element'</span>);
+<pre><code class="js" tabindex="0"><span class="hljs-keyword">var</span> nodes = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.child-element'</span>);
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">clickHandler</span> (<span class="hljs-params">event</span>) </span>{
   <span class="hljs-keyword">var</span> closestNode = calcite.closest(<span class="hljs-string">'parent-class'</span>, event.target);
@@ -3877,7 +3877,7 @@ calcite.toggleClass(node, <span class="hljs-string">'test'</span>); <span class=
 </code></pre>
 <h3>calcite.nodeListToArray(domNodeList)</h3>
 <p>Turn a node list (usually returned from a query) into an array.</p>
-<pre><code class="js"><span class="hljs-keyword">var</span> nodes = <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">'a'</span>);
+<pre><code class="js" tabindex="0"><span class="hljs-keyword">var</span> nodes = <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">'a'</span>);
 <span class="hljs-keyword">var</span> nodeArray = calcite.nodeListToArray(nodes);
 </code></pre>
 

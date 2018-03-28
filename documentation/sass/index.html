@@ -493,7 +493,7 @@
 <p>By default, using the Calcite Web sass files will build css  for the complete framework. This build can be customized, or entirely turned off for sass-only applications.</p>
 <p>Setting the <code>$generate-css</code> variable to false in your sass files will prevent any css from being generated, while exposing all the underlying sass styles of the framework. Setting specific variables like <code>$include-alerts</code> to false will preclude only that components css from being built.</p>
 <p>Additionally, font imports are controlled this way. By default, Calcite Web requests Avenir Next from a cdn. You can import <code>calcite-web-no-fonts.scss</code> if you don't want the fonts.</p>
-<pre><code><span class="hljs-comment">// Sass Output</span>
+<pre><code tabindex="0"><span class="hljs-comment">// Sass Output</span>
 $include-colors:                 true    !<span class="hljs-keyword">default</span>;
 $generate-css:                   true    !<span class="hljs-keyword">default</span>;
 
@@ -586,7 +586,7 @@ $include-<span class="hljs-keyword">filter</span>-dropdown:        $generate-css
         
         <h2 id="example" class="leader-2" tabindex="0"><a href="#example" title="example Documentation" class="link-off-black">Example<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="docs-link-icon"><path d="M28.633 17.945l-4.118-4.426c.076 1.131-.034 2.262-.355 3.241l2.83 2.827a5.281 5.281 0 0 1 0 7.459 5.223 5.223 0 0 1-3.723 1.54 5.227 5.227 0 0 1-3.728-1.542l-5.459-5.459a5.276 5.276 0 0 1 0-7.452c.607-.609 1.361-1.048 2.1-1.229a1.833 1.833 0 0 0-.279-.414l-1.344-1.461c-.845.404-1.54.881-2.12 1.461a7.554 7.554 0 0 0-2.223 5.371c0 2.027.791 3.934 2.223 5.366l5.459 5.459a7.544 7.544 0 0 0 5.371 2.225 7.55 7.55 0 0 0 5.366-2.223c2.962-2.962 2.962-7.782 0-10.745zM8.711 3.497a5.23 5.23 0 0 1 3.726 1.54l5.459 5.457a5.279 5.279 0 0 1 0 7.454c-.605.605-1.356 1.043-2.105 1.222.086.154.166.301.287.421l1.422 1.422c.808-.394 1.476-.862 2.039-1.422 2.96-2.962 2.96-7.777 0-10.74L14.08 3.394c-1.434-1.435-3.342-2.225-5.369-2.225s-3.934.791-5.369 2.225C1.908 4.828 1.117 6.736 1.117 8.763s.791 3.934 2.225 5.369L7.46 18.56c-.076-1.131.034-2.262.355-3.239l-2.83-2.833c-.994-.991-1.542-2.316-1.542-3.726s.548-2.732 1.542-3.726a5.23 5.23 0 0 1 3.726-1.54z"/></svg></a></h2>
         
-<pre><code>// custom-build.scss
+<pre><code tabindex="0">// custom-build.scss
 <span class="hljs-meta">$</span><span class="bash">generate-css: <span class="hljs-literal">false</span>;</span>
 <span class="hljs-meta">$</span><span class="bash">include-type: <span class="hljs-literal">true</span>;</span>
 <span class="hljs-meta">$</span><span class="bash">include-grid: <span class="hljs-literal">true</span>;</span>
@@ -650,7 +650,7 @@ $include-<span class="hljs-keyword">filter</span>-dropdown:        $generate-css
         <h2 id="breakpoints" class="leader-2" tabindex="0"><a href="#breakpoints" title="breakpoints Documentation" class="link-off-black">Breakpoints<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="docs-link-icon"><path d="M28.633 17.945l-4.118-4.426c.076 1.131-.034 2.262-.355 3.241l2.83 2.827a5.281 5.281 0 0 1 0 7.459 5.223 5.223 0 0 1-3.723 1.54 5.227 5.227 0 0 1-3.728-1.542l-5.459-5.459a5.276 5.276 0 0 1 0-7.452c.607-.609 1.361-1.048 2.1-1.229a1.833 1.833 0 0 0-.279-.414l-1.344-1.461c-.845.404-1.54.881-2.12 1.461a7.554 7.554 0 0 0-2.223 5.371c0 2.027.791 3.934 2.223 5.366l5.459 5.459a7.544 7.544 0 0 0 5.371 2.225 7.55 7.55 0 0 0 5.366-2.223c2.962-2.962 2.962-7.782 0-10.745zM8.711 3.497a5.23 5.23 0 0 1 3.726 1.54l5.459 5.457a5.279 5.279 0 0 1 0 7.454c-.605.605-1.356 1.043-2.105 1.222.086.154.166.301.287.421l1.422 1.422c.808-.394 1.476-.862 2.039-1.422 2.96-2.962 2.96-7.777 0-10.74L14.08 3.394c-1.434-1.435-3.342-2.225-5.369-2.225s-3.934.791-5.369 2.225C1.908 4.828 1.117 6.736 1.117 8.763s.791 3.934 2.225 5.369L7.46 18.56c-.076-1.131.034-2.262.355-3.239l-2.83-2.833c-.994-.991-1.542-2.316-1.542-3.726s.548-2.732 1.542-3.726a5.23 5.23 0 0 1 3.726-1.54z"/></svg></a></h2>
         
 <p>Calcite Web comes with several variables representing the default screen sizes.</p>
-<pre><code class="scss"><span class="hljs-comment">// Breakpoints</span>
+<pre><code class="scss" tabindex="0"><span class="hljs-comment">// Breakpoints</span>
 <span class="hljs-variable">$small</span>:  <span class="hljs-number">480px</span>  !default;
 <span class="hljs-variable">$medium</span>: <span class="hljs-number">860px</span>  !default;
 <span class="hljs-variable">$large</span>:  <span class="hljs-number">1280px</span> !default;
@@ -677,7 +677,7 @@ $include-<span class="hljs-keyword">filter</span>-dropdown:        $generate-css
         <h2 id="ui-variables" class="leader-2" tabindex="0"><a href="#ui-variables" title="ui-variables Documentation" class="link-off-black">UI Variables<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="docs-link-icon"><path d="M28.633 17.945l-4.118-4.426c.076 1.131-.034 2.262-.355 3.241l2.83 2.827a5.281 5.281 0 0 1 0 7.459 5.223 5.223 0 0 1-3.723 1.54 5.227 5.227 0 0 1-3.728-1.542l-5.459-5.459a5.276 5.276 0 0 1 0-7.452c.607-.609 1.361-1.048 2.1-1.229a1.833 1.833 0 0 0-.279-.414l-1.344-1.461c-.845.404-1.54.881-2.12 1.461a7.554 7.554 0 0 0-2.223 5.371c0 2.027.791 3.934 2.223 5.366l5.459 5.459a7.544 7.544 0 0 0 5.371 2.225 7.55 7.55 0 0 0 5.366-2.223c2.962-2.962 2.962-7.782 0-10.745zM8.711 3.497a5.23 5.23 0 0 1 3.726 1.54l5.459 5.457a5.279 5.279 0 0 1 0 7.454c-.605.605-1.356 1.043-2.105 1.222.086.154.166.301.287.421l1.422 1.422c.808-.394 1.476-.862 2.039-1.422 2.96-2.962 2.96-7.777 0-10.74L14.08 3.394c-1.434-1.435-3.342-2.225-5.369-2.225s-3.934.791-5.369 2.225C1.908 4.828 1.117 6.736 1.117 8.763s.791 3.934 2.225 5.369L7.46 18.56c-.076-1.131.034-2.262.355-3.239l-2.83-2.833c-.994-.991-1.542-2.316-1.542-3.726s.548-2.732 1.542-3.726a5.23 5.23 0 0 1 3.726-1.54z"/></svg></a></h2>
         
 <p>Controls specific aspects and behaviors across the UI.</p>
-<pre><code class="scss"><span class="hljs-variable">$transition</span>: <span class="hljs-number">150ms</span> linear;
+<pre><code class="scss" tabindex="0"><span class="hljs-variable">$transition</span>: <span class="hljs-number">150ms</span> linear;
 <span class="hljs-variable">$box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16px</span> <span class="hljs-number">0</span> rgba(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0.05</span>) !default;
 <span class="hljs-variable">$drawer-width</span>: <span class="hljs-number">280px</span> !default;
 </code></pre>
@@ -731,7 +731,7 @@ $include-<span class="hljs-keyword">filter</span>-dropdown:        $generate-css
         <h2 id="font-families" class="leader-2" tabindex="0"><a href="#font-families" title="font-families Documentation" class="link-off-black">Font Family<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="docs-link-icon"><path d="M28.633 17.945l-4.118-4.426c.076 1.131-.034 2.262-.355 3.241l2.83 2.827a5.281 5.281 0 0 1 0 7.459 5.223 5.223 0 0 1-3.723 1.54 5.227 5.227 0 0 1-3.728-1.542l-5.459-5.459a5.276 5.276 0 0 1 0-7.452c.607-.609 1.361-1.048 2.1-1.229a1.833 1.833 0 0 0-.279-.414l-1.344-1.461c-.845.404-1.54.881-2.12 1.461a7.554 7.554 0 0 0-2.223 5.371c0 2.027.791 3.934 2.223 5.366l5.459 5.459a7.544 7.544 0 0 0 5.371 2.225 7.55 7.55 0 0 0 5.366-2.223c2.962-2.962 2.962-7.782 0-10.745zM8.711 3.497a5.23 5.23 0 0 1 3.726 1.54l5.459 5.457a5.279 5.279 0 0 1 0 7.454c-.605.605-1.356 1.043-2.105 1.222.086.154.166.301.287.421l1.422 1.422c.808-.394 1.476-.862 2.039-1.422 2.96-2.962 2.96-7.777 0-10.74L14.08 3.394c-1.434-1.435-3.342-2.225-5.369-2.225s-3.934.791-5.369 2.225C1.908 4.828 1.117 6.736 1.117 8.763s.791 3.934 2.225 5.369L7.46 18.56c-.076-1.131.034-2.262.355-3.239l-2.83-2.833c-.994-.991-1.542-2.316-1.542-3.726s.548-2.732 1.542-3.726a5.23 5.23 0 0 1 3.726-1.54z"/></svg></a></h2>
         
 <p>You can set the font family and weight via the following Sass mixins:</p>
-<pre><code>@<span class="hljs-meta"><span class="hljs-meta-keyword">include</span> avenir-light();</span>   <span class="hljs-comment">// font-weight: 300</span>
+<pre><code tabindex="0">@<span class="hljs-meta"><span class="hljs-meta-keyword">include</span> avenir-light();</span>   <span class="hljs-comment">// font-weight: 300</span>
 @<span class="hljs-meta"><span class="hljs-meta-keyword">include</span> avenir-regular();</span> <span class="hljs-comment">// font-weight: 400</span>
 @<span class="hljs-meta"><span class="hljs-meta-keyword">include</span> avenir-italic();</span>  <span class="hljs-comment">// font-style: italic</span>
 @<span class="hljs-meta"><span class="hljs-meta-keyword">include</span> avenir-bold();</span>    <span class="hljs-comment">// font-weight: 700</span>
@@ -914,12 +914,12 @@ Setting the max width of an article to a large multiple of the text size is a wa
 <p>Utility mixins are used to construct complicated behaviors for <a href="../components">components</a> and <a href="../patterns">patterns</a>, provide baseline functionality for doc elements, and take care of browser prefixing.</p>
 <p>Most utility mixins are borrowed from <a href="http://bourbon.io/">Bourbon</a>. If mixins share a name, then they share the same code base.</p>
 <p>Use the utility mixins inside the selector you wish to apply the styles to, passing the arguments in if required. For example, to apply a clearfix to an element with the class <code>.my-div</code>, the use the following Sass:</p>
-<pre><code class="scss"><span class="hljs-selector-class">.my-div</span> {
+<pre><code class="scss" tabindex="0"><span class="hljs-selector-class">.my-div</span> {
   @<span class="hljs-keyword">include</span> clearfix();
 }
 </code></pre>
 <p>If the mixin accepts arguments, pass them into the parenthesis:</p>
-<pre><code class="scss"><span class="hljs-selector-class">.my-div</span> {
+<pre><code class="scss" tabindex="0"><span class="hljs-selector-class">.my-div</span> {
   @<span class="hljs-keyword">include</span> box-sizing(border-box);
 }
 </code></pre>
@@ -1024,12 +1024,12 @@ Setting the max width of an article to a large multiple of the text size is a wa
 </table>
 <h4>Animation</h4>
 <p>The animation mixin allows you to declare cross-browser animations. The mixin accepts</p>
-<pre><code class="scss">box:hover {
+<pre><code class="scss" tabindex="0">box:hover {
   @<span class="hljs-keyword">include</span> animation(scale 1.0s ease-in, slide 2.0s ease);
 }
 </code></pre>
 <p>Or, use individual animation mixins:</p>
-<pre><code class="scss">box:hover {
+<pre><code class="scss" tabindex="0">box:hover {
   @<span class="hljs-keyword">include</span> animation-name(scale, slide);
   @<span class="hljs-keyword">include</span> animation-duration(<span class="hljs-number">2s</span>);
   @<span class="hljs-keyword">include</span> animation-timing-function(ease);
@@ -1038,91 +1038,91 @@ Setting the max width of an article to a large multiple of the text size is a wa
 </code></pre>
 <h4>Appearance</h4>
 <p>The <code>appearance</code> CSS property is used to display an element using a platform-native styling based on the operating system's theme. For example, to remove browser specific styling for a ui element, use:</p>
-<pre><code class="scss">@<span class="hljs-keyword">include</span> appearance(none);
+<pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> appearance(none);
 </code></pre>
 <h4>Box-Sizing</h4>
 <p>Set the <code>box-sizing</code> property for all browsers (with browser prefixes):</p>
-<pre><code class="scss">@<span class="hljs-keyword">include</span> box-sizing(border-box);
+<pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> box-sizing(border-box);
 </code></pre>
 <p>Valid values are <code>content-box</code>, <code>border-box</code>, and <code>inherit</code>.</p>
 <h4>Box-Shadow</h4>
 <p>Set the <code>box-shadow</code> property for all browsers (with browser prefixes):</p>
-<pre><code class="scss">@<span class="hljs-keyword">include</span> box-shadow(border-box);
+<pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> box-shadow(border-box);
 </code></pre>
 <h4>Calc</h4>
 <p>Shorthand for setting a property to use a <code>calc</code> value. Pass the property you'd like to set, then the value you'd like to use:</p>
-<pre><code class="scss">@<span class="hljs-keyword">include</span> calc(width, <span class="hljs-string">'100px - 10%'</span>);
+<pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> calc(width, <span class="hljs-string">'100px - 10%'</span>);
 </code></pre>
 <h4>Clearfix</h4>
 <p>Applies the framework-standard clear for floated elements:</p>
-<pre><code class="scss">@<span class="hljs-keyword">include</span> clearfix();
+<pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> clearfix();
 </code></pre>
 <h4>Keyframes</h4>
 <p>For creating animations, you can use the <code>keyframes</code> mixin. This mixin accepts an animation name. Then inside the mixin, write your animation as a content block:</p>
-<pre><code class="scss">@<span class="hljs-keyword">include</span> keyframes(ANIMATION_NAME){
+<pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> keyframes(ANIMATION_NAME){
   0%   { <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ffccf2</span>; }
   100% { <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ccffff</span>; }
 };
 </code></pre>
 <p>Now you can use the <a href="#animation">animation mixin</a> as a named animation like this:</p>
-<pre><code><span class="hljs-selector-class">.animation-class</span> {
+<pre><code tabindex="0"><span class="hljs-selector-class">.animation-class</span> {
   <span class="hljs-variable">@include</span> animation( <span class="hljs-variable">@include</span> animation(ANIMATION_NAME <span class="hljs-number">200ms</span> ease-in);)
 }
 </code></pre>
 <h4>Placeholder</h4>
 <p>Wraps the wide array of input placeholder selectors across browsers.</p>
-<pre><code>@<span class="hljs-keyword">include</span> placeholder(<span class="hljs-string">'color'</span>, <span class="hljs-variable">$dark-blue</span>);
+<pre><code tabindex="0">@<span class="hljs-keyword">include</span> placeholder(<span class="hljs-string">'color'</span>, <span class="hljs-variable">$dark-blue</span>);
 </code></pre>
 <h4>Prefixer</h4>
 <p>This is one of the most flexible mixins in the library. Use it to add browser prefixes to a property:</p>
-<pre><code class="scss">@<span class="hljs-keyword">include</span> prefixer(margin-end, 5%, webkit moz spec);
+<pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> prefixer(margin-end, 5%, webkit moz spec);
 </code></pre>
 <p>In this way you can prefix any property. Adding the <code>spec</code> as the last argument will also output the property <em>without</em> a prefix.</p>
 <h4>Respond To</h4>
 <p>The <code>respond-to</code> mixin adds media queries for use in responsive design. The mixin accepts three arguments: maximum size, minimum size, and type (screen, print, etc). You can pass just the first out of convenience. This mixin works well with the <a href="../sass#breakpoints">breakpoint variables</a>:</p>
-<pre><code class="scss"><span class="hljs-selector-class">.my-div</span> {
+<pre><code class="scss" tabindex="0"><span class="hljs-selector-class">.my-div</span> {
   @<span class="hljs-keyword">include</span> respond-to(<span class="hljs-variable">$small</span>){
     <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span>;
   }
 }
 </code></pre>
 <p>This will compile to the following css:</p>
-<pre><code class="css">@<span class="hljs-keyword">media</span> screen and (max-width: <span class="hljs-number">480px</span>) {
+<pre><code class="css" tabindex="0">@<span class="hljs-keyword">media</span> screen and (max-width: <span class="hljs-number">480px</span>) {
   <span class="hljs-selector-class">.my-div</span> {
     <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span>;
   }
 }
 </code></pre>
 <p>You can assemble more complicated media queries by using both min and max:</p>
-<pre><code><span class="hljs-symbol">@include</span> respond-<span class="hljs-keyword">to</span>($large, $medium) { ... }
+<pre><code tabindex="0"><span class="hljs-symbol">@include</span> respond-<span class="hljs-keyword">to</span>($large, $medium) { ... }
 </code></pre>
 <p>This will add styles that only appear <em>between</em> the <code>$medium</code> and <code>$large</code> screen sizes.</p>
 <h4>Transform</h4>
 <p>The CSS transform property lets you modify the coordinate space of the CSS visual formatting model. Using it, elements can be translated, rotated, scaled, and skewed according to the values set. <code>transform</code>, <code>transform-origin</code>, and <code>transform-style</code> all add the necessary browser prefixes for interacting with their respective transform properties.</p>
-<pre><code class="scss">@<span class="hljs-keyword">include</span> transform(translateY(<span class="hljs-number">50px</span>));
+<pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> transform(translateY(<span class="hljs-number">50px</span>));
 @<span class="hljs-keyword">include</span> transform(scale(<span class="hljs-number">0.9</span>) rotate(-<span class="hljs-number">3deg</span>));
 @<span class="hljs-keyword">include</span> transform-origin(center top);
 @<span class="hljs-keyword">include</span> transform-style(preserve-<span class="hljs-number">3</span>d);
 </code></pre>
 <h4>Transition</h4>
 <p>This mixin provides a shorthand syntax and supports multiple transitions.</p>
-<pre><code class="scss">@<span class="hljs-keyword">include</span> transition(all 2.0s ease-in-out);
+<pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> transition(all 2.0s ease-in-out);
 @<span class="hljs-keyword">include</span> transition(opacity 1.0s ease-in 0s, width 2.0s ease-in 2s);
 </code></pre>
 <p>Or you can use the individual transition properties:</p>
-<pre><code>@<span class="hljs-meta"><span class="hljs-meta-keyword">include</span> transition-property(transform);</span>
+<pre><code tabindex="0">@<span class="hljs-meta"><span class="hljs-meta-keyword">include</span> transition-property(transform);</span>
 @<span class="hljs-meta"><span class="hljs-meta-keyword">include</span> transition-duration(1.0s);</span>
 @<span class="hljs-meta"><span class="hljs-meta-keyword">include</span> transition-timing-function(ease-in);</span>
 @<span class="hljs-meta"><span class="hljs-meta-keyword">include</span> transition-delay(0.5s);</span>
 </code></pre>
 <h4>Transition Prefixed</h4>
 <p>To transition vendor-prefixed properties, e.g. <code>-webkit-transform</code> and <code>-moz-transform</code>, there is an additional convinience <code>transition-prefixed()</code> mixin:</p>
-<pre><code>@include transition-prefixed(transform3d(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>) <span class="hljs-number">200</span>ms linear);
+<pre><code tabindex="0">@include transition-prefixed(transform3d(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>) <span class="hljs-number">200</span>ms linear);
 </code></pre>
 <p>This will generate vendor prefixed properties <em>and</em> values.</p>
 <h4>Visibility</h4>
 <p>The visibility mixins change the <code>visibility</code> property. This is useful for removing and adding elements at certain breakpoints or with certain class names. No arguments are passed. Invisible sets <code>visibility: hidden</code> on the object, leaving in the in document flow, but removing it from view. <code>hide()</code> will completely remove the item with <code>display:none</code>.</p>
-<pre><code class="scss">@<span class="hljs-keyword">include</span> hide();
+<pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> hide();
 @<span class="hljs-keyword">include</span> invisible();
 @<span class="hljs-keyword">include</span> visible();
 </code></pre>
