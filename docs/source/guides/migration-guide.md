@@ -179,7 +179,7 @@ Below is a summary of what has changed.
 6. Feature Block Removed (replace with column layouts or [cards](../documentation/components/#card))
 7. Sidebar Navigation is now [Side Nav](../documentation/patterns/#side-nav) and uses different markup
 8. Footer uses mostly other components and modifier classes, now, so markup is fairly different
-9. Sticky footer removed as footer is now sticky be default
+9. Sticky footer removed as footer is now sticky by default
 
 ### Javascript
 1. Modal markup has updated, and the toggles now must use `js-modal` classes with data attributes, see [modals](../documentation/patterns/#modals)
