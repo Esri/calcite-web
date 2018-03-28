@@ -2,6 +2,7 @@
 
 ### Fixes
 - Fix rounding error on certain column widths (#742)
+- Pre and post were broken for large screen size
 
 ## [1.0.0-rc.9][1.0.0-rc.9]
 

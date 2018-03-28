@@ -60,7 +60,7 @@
     @media screen and (min-width: $magic-number + 3) {
       @for $n from 0 through $large-column-count {
         .pre-#{$n}  {
-          html:not([dir="rtl"]) {
+          html:not([dir="rtl"]) & {
             margin-left: ($n / $large-column-count) * $container-width - 1;
           }
           html[dir="rtl"] & {
@@ -68,7 +68,7 @@
           }
         }
         .post-#{$n} {
-          html:not([dir="rtl"]) {
+          html:not([dir="rtl"]) & {
             margin-right: ($n / $large-column-count) * $container-width - 1;
           }
           html[dir="rtl"] & {
