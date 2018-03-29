@@ -4,9 +4,10 @@
 - Fix rounding error on certain column widths (#742)
 - Fix `pre` and `post missing on large screen size
 - Fix `pre` on first nested column at largest size (#806)
+- Use unitless line-height (#847)
 
 ### Breaking
-- Font size changed to `16px` (was 17px)
+- Font size changed from `17px` to `16px` (#889)
 
 ## [1.0.0-rc.9][1.0.0-rc.9]
 
