@@ -5,6 +5,9 @@
 - Fix `pre` and `post missing on large screen size
 - Fix `pre` on first nested column at largest size (#806)
 
+### Breaking
+- Font size changed to `16px` (was 17px)
+
 ## [1.0.0-rc.9][1.0.0-rc.9]
 
 ### Fixes
