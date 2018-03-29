@@ -2,7 +2,8 @@
 
 ### Fixes
 - Fix rounding error on certain column widths (#742)
-- Pre and post were broken for large screen size
+- Fix `pre` and `post missing on large screen size
+- Fix `pre` on first nested column at largest size (#806)
 
 ## [1.0.0-rc.9][1.0.0-rc.9]
 
