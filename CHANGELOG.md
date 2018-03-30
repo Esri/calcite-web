@@ -5,7 +5,10 @@
 - Fix `pre` and `post` missing on large screen size
 - Fix `pre` on first nested column at largest size (#806)
 - Use unitless line-height (#847)
-- icon classes should have `vertical-align: middle`
+
+### Modified
+- icon classes now have `vertical-align: middle`
+- small tweaks to `label` and `code` sizing
 
 ### Breaking
 - Font size changed from `17px` to `16px` (#889)
