@@ -2,9 +2,10 @@
 
 ### Fixes
 - Fix rounding error on certain column widths (#742)
-- Fix `pre` and `post missing on large screen size
+- Fix `pre` and `post` missing on large screen size
 - Fix `pre` on first nested column at largest size (#806)
 - Use unitless line-height (#847)
+- icon classes should have `vertical-align: middle`
 
 ### Breaking
 - Font size changed from `17px` to `16px` (#889)
