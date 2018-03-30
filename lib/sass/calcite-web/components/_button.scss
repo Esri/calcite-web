@@ -7,7 +7,7 @@
 @mixin btn() {
   position: relative;
   display: inline-block;
-  padding: $baseline/5 0.9rem;
+  padding: $baseline/4 1rem;
   width: auto;
   color: $white;
   border: 1px solid $blue;
@@ -89,12 +89,12 @@
 
 @mixin btn-small() {
   @include font-size(-2);
-  padding: $baseline/5 * 0.75 0.9rem * 0.75;
+  padding: $baseline/4 * 0.75 1rem * 0.75;
 }
 
 @mixin btn-large() {
   @include font-size(0);
-  padding: 0.5rem 1rem 0.5rem;
+  padding: 0.5rem 1rem;
 }
 
 @mixin btn-fill() {
