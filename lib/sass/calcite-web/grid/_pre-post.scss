@@ -5,12 +5,11 @@
 //  ↳ grid → _pre-and-post.md
 
 @mixin responsive-pre-post(){
-  $remainder: 1 - $vw-ratio;
-  $margin-overflow: $container-width * $remainder;
-  $magic-number: $container-width + $margin-overflow;
+  // point where container width is exactly $vw-ratio (.96) of screen width
+  $container-plus-buffer: $container-width / $vw-ratio;
   @if $fold-grid == true {
     // Normal Columns
-    @media screen and (min-width: $medium) and (max-width: $magic-number + 2) {
+    @media screen and (min-width: $medium) and (max-width: $container-plus-buffer) {
       @for $n from 0 through $default-column-count {
         .pre-#{$n} {
           @include pre($n, $default-column-count);
@@ -58,7 +57,7 @@
     }
 
     // Fixed Pre and Post
-    @media screen and (min-width: $magic-number + 3) {
+    @media screen and (min-width: $container-plus-buffer + 1) {
       @for $n from 0 through $large-column-count {
         $fixed-pre: ($n / $large-column-count) * $container-width - 1;
         $clear: $column-gutter / 2;
