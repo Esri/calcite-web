@@ -12,6 +12,7 @@
 
 ### Breaking
 - Font size changed from `17px` to `16px` (#889)
+- List styles now closer to browser defaults (#866)
 
 ## [1.0.0-rc.9][1.0.0-rc.9]
 
