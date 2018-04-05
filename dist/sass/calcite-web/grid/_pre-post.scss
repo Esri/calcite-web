@@ -5,13 +5,11 @@
 //  ↳ grid → _pre-and-post.md
 
 @mixin responsive-pre-post(){
-  $remainder: 1 - $vw-ratio;
-  $margin-overflow: $container-width * $remainder;
-  $magic-number: $container-width + $margin-overflow;
-
+  // point where container width is exactly $vw-ratio (.96) of screen width
+  $container-plus-buffer: $container-width / $vw-ratio;
   @if $fold-grid == true {
     // Normal Columns
-    @media screen and (min-width: $medium) and (max-width: $magic-number + 2) {
+    @media screen and (min-width: $medium) and (max-width: $container-plus-buffer) {
       @for $n from 0 through $default-column-count {
         .pre-#{$n} {
           @include pre($n, $default-column-count);
@@ -22,9 +20,11 @@
         .post-#{$n} {
           @include post($n, $default-column-count);
         }
+        [class*="#{$prefix}column-"] [class*="#{$prefix}column-"].pre-#{$n}:first-of-type  {
+          @include pre-calc($n, $default-column-count);
+        }
       }
     }
-
 
     // Medium Columns
     @media screen and (max-width: $medium - 1) {
@@ -57,22 +57,41 @@
     }
 
     // Fixed Pre and Post
-    @media screen and (min-width: $magic-number + 3) {
+    @media screen and (min-width: $container-plus-buffer + 1) {
       @for $n from 0 through $large-column-count {
-        .pre-#{$n}  {
-          html:not([dir="rtl"]) {
-            margin-left: ($n / $large-column-count) * $container-width - 1;
+        $fixed-pre: ($n / $large-column-count) * $container-width - 1;
+        $clear: $column-gutter / 2;
+        .pre-#{$n} {
+          html:not([dir="rtl"]) & {
+            margin-left: $fixed-pre;
           }
           html[dir="rtl"] & {
-            margin-right: ($n / $large-column-count) * $container-width - 1;
+            margin-right: $fixed-pre;
           }
         }
         .post-#{$n} {
-          html:not([dir="rtl"]) {
-            margin-right: ($n / $large-column-count) * $container-width - 1;
+          html:not([dir="rtl"]) & {
+            margin-right: $fixed-pre;
           }
           html[dir="rtl"] & {
-            margin-left: ($n / $large-column-count) * $container-width - 1;
+            margin-left: $fixed-pre;
+          }
+        }
+        [class*="#{$prefix}column-"] [class*="#{$prefix}column-"].pre-#{$n}:first-of-type  {
+          html:not([dir="rtl"]) & {
+            margin-left: calc(#{$fixed-pre} - #{$clear});
+
+          }
+          html[dir="rtl"] & {
+            margin-right: calc(#{$fixed-pre} - #{$clear});
+          }
+        }
+        [class*="#{$prefix}column-"] [class*="#{$prefix}column-"].post-#{$n}:last-of-type {
+          html:not([dir="rtl"]) & {
+            margin-right: calc(#{$fixed-pre} - #{$clear});
+          }
+          html[dir="rtl"] & {
+            margin-left: calc(#{$fixed-pre} - #{$clear});
           }
         }
       }

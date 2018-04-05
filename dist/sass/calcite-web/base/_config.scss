@@ -7,6 +7,7 @@ $transition:               150ms linear                !default;
 $box-shadow:               0 0 16px 0 rgba(0,0,0,.05)  !default;
 $drawer-width:             280px                       !default;
 $easing-function:          cubic-bezier(0.215, 0.440, 0.420, 0.880) !default;
+$namespace-tables:         true                        !default;
 
 // ┌─────────────┐
 // │ TYPE COLORS │
@@ -22,7 +23,7 @@ $link-hover:               $dark-blue                  !default;
 //  ↳ sass → _breakpoints.md
 $small:                    480px                       !default;
 $medium:                   860px                       !default;
-$large:                    1450px                      !default;
+$large:                    1440px                      !default;
 
 // ┌────────────────────┐
 // │ Grid Configuration │
@@ -31,8 +32,8 @@ $large:                    1450px                      !default;
 //  ↳ grid → _configuration.md
 $prefix:                   ""                          !default;
 
-$vw-ratio:                 0.95;
-$container-width:          1450px                      !default;
+$vw-ratio:                 0.96;
+$container-width:          1440px                      !default;
 $max-width:                $vw-ratio * 100vw           !default;
 $column-gutter:            1rem                        !default;
 
@@ -59,4 +60,5 @@ $small-column-count:       6                           !default;
 // Rhythm
 $horizontal-range:         4                           !default;
 $vertical-range:           6                           !default;
-$baseline:                 1.55rem                     !default;
+$baseline-ratio:           1.5                         !default;
+$baseline:                 $baseline-ratio * 1rem      !default;

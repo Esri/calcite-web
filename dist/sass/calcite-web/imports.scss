@@ -1,2 +1,74 @@
-$generate-css: false;
+// Language Helpers
+$include-right-to-left:          false;
+
+// Grid Output
+$include-reset:                  false;
+$include-utils:                  false;
+
+$include-grid:                   false;
+  $fold-grid:                    false;
+  $block-grid:                   false;
+
+// Grid Utilities Output
+$include-leader-trailer:         false;
+$include-gutter:                 false;
+$include-left-right:             false;
+$include-show-hide:              false;
+$include-sticky:                 false;
+
+// Type Output
+$include-type:                   false;
+  $include-primary-family:       false;
+  $include-code-family:          false;
+  $include-i18n:                 false;
+  $include-type-defaults:        false;
+  $include-type-helpers:         false;
+
+// Icons
+$include-icons:                  false;
+  $include-calcite-icons:        false;
+  $include-social-icons:         false;
+  $include-icon-font:            false;
+  $include-svg-icon:             false;
+
+// Components
+$include-alerts:                 false;
+$include-badges:                 false;
+$include-labels:                 false;
+$include-tables:                 false;
+$include-panel:                  false;
+$include-button:                 false;
+$include-dropdowns:              false;
+$include-breadcrumbs:            false;
+$include-tooltip:                false;
+$include-forms:                  false;
+$include-input-groups:           false;
+$include-loader:                 false;
+$include-skip-to-content:        false;
+$include-logo:                   false;
+$include-card:                   false;
+$include-animation:              false;
+$include-sliders:                false;
+$include-switches:               false;
+
+// Patterns
+$include-footer:                 false;
+$include-sticky-footer:          false;
+$include-pagination:             false;
+$include-side-nav:               false;
+$include-sub-nav:                false;
+$include-third-nav:              false;
+$include-top-nav:                false;
+$include-user-nav:               false;
+$include-app-switcher:           false;
+
+// Javascript
+$include-tabs:                   false;
+$include-modal:                  false;
+$include-search:                 false;
+$include-accordion:              false;
+$include-drawers:                false;
+$include-sticky:                 false;
+$include-filter-dropdown:        false;
+
 @import '../calcite-web';

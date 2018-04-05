@@ -118,16 +118,19 @@
 @mixin font-size($n) {
   font-size: modular-scale($n);
   @if $n > 7 {
-    line-height: 2.5*$baseline;
+    line-height: $baseline-ratio*.85;
   }
-  @else if $n <= 7 and $n > 4 {
-    line-height: 2*$baseline;
+  @else if $n <= 7 and $n > 5 {
+   line-height: $baseline-ratio*.875;
   }
-  @else if $n <= 4 and $n > 2 {
-    line-height: 1.5*$baseline;
+  @else if $n <= 5 and $n > 3 {
+    line-height: $baseline-ratio*.9;
+  }
+  @else if $n <= 3 and $n > 2 {
+    line-height: $baseline-ratio*.925;
   }
   @else if $n <= 2 {
-    line-height: $baseline;
+    line-height: $baseline-ratio;
   }
   @if $n > 0 {
     @media screen and (max-width: $medium - 1) {
@@ -135,12 +138,6 @@
     }
     @media screen and (max-width: $small - 1) {
       font-size: small-modular-scale($n);
-      @if $n > 7 {
-        line-height: 2*$baseline;
-      }
-      @else if $n <= 7 and $n > 4 {
-        line-height: 1.5*$baseline;
-      }
     }
   }
 }
