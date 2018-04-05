@@ -111,13 +111,13 @@
               <a href="../../quick-reference" class="top-nav-link">Quick Reference</a>
             </nav>
             <nav class="class-top-nav-list right" role="navigation" aria-labelledby="usernav">
-              <a class="top-nav-link padding-leader-0 padding-trailer-0 trailer-0 margin-right-1">
+              <span class="margin-right-1 inline-block">
                 <label class="toggle-switch trailer-0 docs-toggle-spacer">
                   <input type="checkbox" class="toggle-switch-input docs-theme-toggle">
                   <span class="toggle-switch-track margin-right-half"></span>
                   <span class="toggle-switch-labe">Dark Theme</span>
                 </label>
-              </a>
+              </span>
               <button class="search-top-nav link-dark-gray js-search-toggle" href="#" aria-label="Search">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon js-search-icon">
                   <path d="M31.607 27.838l-6.133-6.137a1.336 1.336 0 0 0-1.887 0l-.035.035-2.533-2.533-.014.014c3.652-4.556 3.422-11.195-.803-15.42-4.529-4.527-11.875-4.531-16.404 0-4.531 4.531-4.529 11.875 0 16.406 4.205 4.204 10.811 4.455 15.365.848l.004.003-.033.033 2.541 2.54a1.33 1.33 0 0 0 .025 1.848l6.135 6.133a1.33 1.33 0 0 0 1.887 0l1.885-1.883a1.332 1.332 0 0 0 0-1.887zM17.811 17.809a8.213 8.213 0 0 1-11.619 0 8.217 8.217 0 0 1 0-11.622 8.219 8.219 0 0 1 11.619.004 8.216 8.216 0 0 1 0 11.618z"/>
@@ -680,10 +680,14 @@ $include-<span class="hljs-keyword">filter</span>-dropdown:        $generate-css
 <pre><code class="scss" tabindex="0"><span class="hljs-variable">$transition</span>: <span class="hljs-number">150ms</span> linear;
 <span class="hljs-variable">$box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16px</span> <span class="hljs-number">0</span> rgba(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0.05</span>) !default;
 <span class="hljs-variable">$drawer-width</span>: <span class="hljs-number">280px</span> !default;
+<span class="hljs-variable">$easing-function</span>: cubic-bezier(<span class="hljs-number">0.215</span>, <span class="hljs-number">0.440</span>, <span class="hljs-number">0.420</span>, <span class="hljs-number">0.880</span>) !default;
+<span class="hljs-variable">$namespace-tables</span>: true !default;
 </code></pre>
 <p><code>$transition</code> is a speed and easing function used throughout the framework for motion effects.</p>
 <p><code>$box-shadow</code> ensures consistent box shadow effects for adding depths to elements.</p>
 <p><code>$drawer-width</code> controls the width of the hidden left and right drawers.</p>
+<p><code>$easing-function</code> is a default timing function used by moving elements like modals. If you'd like to change how modals move in, you can tweak this variable (or use a browser-supplied funciton like <code>linear</code>)</p>
+<p><code>$namespace-tables</code> scopes <code>&lt;table&gt;</code> styles to the <code>.table</code> class. To mimic the behavior of previous versions (where we automatically style raw <code>table</code> elements), set this to <code>false</code>.</p>
 
         
         
@@ -850,8 +854,7 @@ Setting the max width of an article to a large multiple of the text size is a wa
         
 <p>Word spacing is - well - the space between words.  The <code>word-spacing($n)</code> mixin accepts an integer, and applies letterspacing to the element as fractions of 1/1000 of an em. If you're familiar with word-spacing in design programs like Adobe InDesign, the <code>word-spacing</code> mixin will immidiately feel fairly natural.</p>
 <p>While you can pass any integer to the mixin, below is a list of values you can pass to the <code>word-spacing</code> mixin to achieve well known typographic defaults:</p>
-<table>
-<thead>
+<table class="table"><thead>
 <tr>
 <th>Value</th>
 <th>Number</th>
@@ -924,8 +927,7 @@ Setting the max width of an article to a large multiple of the text size is a wa
 }
 </code></pre>
 <h4>Quick Reference</h4>
-<table>
-<thead>
+<table class="table"><thead>
 <tr>
 <th>Mixin</th>
 <th>Arguments</th>

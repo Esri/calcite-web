@@ -111,13 +111,13 @@
               <a href="../quick-reference" class="top-nav-link">Quick Reference</a>
             </nav>
             <nav class="class-top-nav-list right" role="navigation" aria-labelledby="usernav">
-              <a class="top-nav-link padding-leader-0 padding-trailer-0 trailer-0 margin-right-1">
+              <span class="margin-right-1 inline-block">
                 <label class="toggle-switch trailer-0 docs-toggle-spacer">
                   <input type="checkbox" class="toggle-switch-input docs-theme-toggle">
                   <span class="toggle-switch-track margin-right-half"></span>
                   <span class="toggle-switch-labe">Dark Theme</span>
                 </label>
-              </a>
+              </span>
               <button class="search-top-nav link-dark-gray js-search-toggle" href="#" aria-label="Search">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon js-search-icon">
                   <path d="M31.607 27.838l-6.133-6.137a1.336 1.336 0 0 0-1.887 0l-.035.035-2.533-2.533-.014.014c3.652-4.556 3.422-11.195-.803-15.42-4.529-4.527-11.875-4.531-16.404 0-4.531 4.531-4.529 11.875 0 16.406 4.205 4.204 10.811 4.455 15.365.848l.004.003-.033.033 2.541 2.54a1.33 1.33 0 0 0 .025 1.848l6.135 6.133a1.33 1.33 0 0 0 1.887 0l1.885-1.883a1.332 1.332 0 0 0 0-1.887zM17.811 17.809a8.213 8.213 0 0 1-11.619 0 8.217 8.217 0 0 1 0-11.622 8.219 8.219 0 0 1 11.619.004 8.216 8.216 0 0 1 0 11.618z"/>
@@ -247,10 +247,10 @@
           <p>This is probably the easiest way, but you won't get any of the helpful Sass mixins. If you're looking to get up and running quickly, just <a href="https://github.com/ArcGIS/calcite-web/releases">download the latest release</a> and move the zipped files to wherever you keep your assets (CSS, JavaScript, images). Be sure to use <a href="http://esri.github.io/calcite-web/">the documentation site</a> to copy and paste patterns, components, and even a sample html boilerplate.</p>
 <p>You can also use a hosted version of Calcite Web:</p>
 <pre><code tabindex="0"><span class="hljs-comment">&lt;!-- In the head --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.9/css/calcite-web.min.css"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0/css/calcite-web.min.css"</span>&gt;</span>
 
 <span class="hljs-comment">&lt;!-- Just before end of body --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.9/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
 
         </div>
@@ -273,7 +273,7 @@
         </h5>
         <div class="js-search-item-content hide">
           <p>To install Calcite-Web as a ruby gem, reference the gem from your <code>Gemfile</code>:</p>
-<pre><code tabindex="0">gem <span class="hljs-string">"calcite-web"</span>, :<span class="hljs-function"><span class="hljs-params">git</span> =&gt;</span> <span class="hljs-string">"https://github.com/Esri/calcite-web.git"</span>, :<span class="hljs-function"><span class="hljs-params">tag</span> =&gt;</span> <span class="hljs-string">"v1.0.0-rc.9"</span>
+<pre><code tabindex="0">gem <span class="hljs-string">"calcite-web"</span>, :<span class="hljs-function"><span class="hljs-params">git</span> =&gt;</span> <span class="hljs-string">"https://github.com/Esri/calcite-web.git"</span>, :<span class="hljs-function"><span class="hljs-params">tag</span> =&gt;</span> <span class="hljs-string">"v1.0.0"</span>
 </code></pre>
 <p>This makes Calcite Web available as a Compass extension. To use Calcite Web, make sure you require the gem in your compass config file (usually found at <code>config/compass.rb</code>). An example config file might look like this:</p>
 <pre><code class="ruby" tabindex="0"><span class="hljs-keyword">require</span> <span class="hljs-string">"calcite-web"</span>
@@ -307,7 +307,7 @@ sass_dir = <span class="hljs-string">"sass"</span>
         </h5>
         <div class="js-search-item-content hide">
           <p>To install Calcite Web with npm, type:</p>
-<pre><code tabindex="0">npm install --save-dev Esri/calcite-web#v1<span class="hljs-number">.0</span><span class="hljs-number">.0</span>-rc<span class="hljs-number">.9</span>
+<pre><code tabindex="0">npm <span class="hljs-keyword">install</span> --save-dev Esri/calcite-web<span class="hljs-comment">#v1.0.0</span>
 </code></pre>
 <p>You must add the current version in order to get the <code>dist/</code> folder.</p>
 <p>Now, in your main <code>.scss</code> file, you can just require the framework:</p>
@@ -628,8 +628,7 @@ $initHighlight([<span class="hljs-string">"class1"</span>, <span class="hljs-str
 </ol>
 <p>These two principles mean that a column becomes a standard unit of measurement, creating a constant and abstracted grid system that stands behind the content of a page rather than within it.</p>
 <h3>The Grid</h3>
-<table>
-<thead>
+<table class="table"><thead>
 <tr>
 <th>Max Width</th>
 <th>Breakpoint</th>
@@ -673,8 +672,7 @@ $initHighlight([<span class="hljs-string">"class1"</span>, <span class="hljs-str
         </h5>
         <div class="js-search-item-content hide">
           <p>If you are using Calcite Web as a Sass library, you can customize the grid with Sass variables. Below are the different settings you have access to and their default values:</p>
-<table>
-<thead>
+<table class="table"><thead>
 <tr>
 <th>Variable</th>
 <th>Default</th>
@@ -1155,8 +1153,7 @@ aligning grid columns when the Grid System is unable to determine which columns 
         </h5>
         <div class="js-search-item-content hide">
           <p>These convenience classes are meant to help with quick responsive layout. Below are the classes and what breakpoints they are visible on:</p>
-<table>
-<thead>
+<table class="table"><thead>
 <tr>
 <th>Helper Class</th>
 <th>Visible on Phone</th>
@@ -1818,11 +1815,11 @@ aligning grid columns when the Grid System is unable to determine which columns 
           </a>
         </h5>
         <div class="js-search-item-content hide">
-          <p>Tables have been styled by default. No extra classes are required, although there are some modifier classes available for specific flavors.</p>
+          <p>Tables have not been styled by default. To style your tables, you must add the <code>table</code> class. If you'd like to style <code>&lt;table&gt;</code> elements without a class, you can set the <code>$namespace-tables</code> Sass variable to <code>false</code>. For more information on setting Sass variables see the <a href="../sass/#custom-build">custom build documentation</a>.</p>
 <p>By default, a large table will break your layout horizontally. You can solve this problem by wrapping a table in a <code>&lt;div&gt;</code> with the <code>.overflow-auto</code> helper class:</p>
-<pre><code tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"overflow-auto"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<pre><code tabindex="0">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"overflow-auto"</span>&gt;
+  &lt;table <span class="hljs-built_in">class</span>=<span class="hljs-string">"table"</span>&gt;...&lt;/table&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
 </code></pre>
 <p>Tables that are too wide for the layout will be constrained and scroll horizontally. This is especially helpful for responsive designs which scale down to be smaller than the table's minimum width.</p>
 
@@ -2799,10 +2796,14 @@ $include-<span class="hljs-keyword">filter</span>-dropdown:        $generate-css
 <pre><code class="scss" tabindex="0"><span class="hljs-variable">$transition</span>: <span class="hljs-number">150ms</span> linear;
 <span class="hljs-variable">$box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16px</span> <span class="hljs-number">0</span> rgba(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0.05</span>) !default;
 <span class="hljs-variable">$drawer-width</span>: <span class="hljs-number">280px</span> !default;
+<span class="hljs-variable">$easing-function</span>: cubic-bezier(<span class="hljs-number">0.215</span>, <span class="hljs-number">0.440</span>, <span class="hljs-number">0.420</span>, <span class="hljs-number">0.880</span>) !default;
+<span class="hljs-variable">$namespace-tables</span>: true !default;
 </code></pre>
 <p><code>$transition</code> is a speed and easing function used throughout the framework for motion effects.</p>
 <p><code>$box-shadow</code> ensures consistent box shadow effects for adding depths to elements.</p>
 <p><code>$drawer-width</code> controls the width of the hidden left and right drawers.</p>
+<p><code>$easing-function</code> is a default timing function used by moving elements like modals. If you'd like to change how modals move in, you can tweak this variable (or use a browser-supplied funciton like <code>linear</code>)</p>
+<p><code>$namespace-tables</code> scopes <code>&lt;table&gt;</code> styles to the <code>.table</code> class. To mimic the behavior of previous versions (where we automatically style raw <code>table</code> elements), set this to <code>false</code>.</p>
 
         </div>
         <!-- populated on the client -->
@@ -2954,8 +2955,7 @@ Setting the max width of an article to a large multiple of the text size is a wa
         <div class="js-search-item-content hide">
           <p>Word spacing is - well - the space between words.  The <code>word-spacing($n)</code> mixin accepts an integer, and applies letterspacing to the element as fractions of 1/1000 of an em. If you're familiar with word-spacing in design programs like Adobe InDesign, the <code>word-spacing</code> mixin will immidiately feel fairly natural.</p>
 <p>While you can pass any integer to the mixin, below is a list of values you can pass to the <code>word-spacing</code> mixin to achieve well known typographic defaults:</p>
-<table>
-<thead>
+<table class="table"><thead>
 <tr>
 <th>Value</th>
 <th>Number</th>
@@ -3023,8 +3023,7 @@ Setting the max width of an article to a large multiple of the text size is a wa
 }
 </code></pre>
 <h4>Quick Reference</h4>
-<table>
-<thead>
+<table class="table"><thead>
 <tr>
 <th>Mixin</th>
 <th>Arguments</th>
@@ -3306,7 +3305,7 @@ calcite.init();
 <p>If <code>calcite-web.js</code> is used on a page with no module syntax, it will just attach itself to <code>window.calcite</code>. Here is an example which initializes Calcite from a hosted file on S3:</p>
 <pre><code class="html" tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
   ...
-  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.9/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="undefined">
      calcite.init()
   </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
@@ -3348,8 +3347,7 @@ calcite<span class="hljs-selector-class">.bus</span><span class="hljs-selector-c
 calcite<span class="hljs-selector-class">.bus</span><span class="hljs-selector-class">.emit</span>(<span class="hljs-string">'drawer:open'</span>, {id: <span class="hljs-string">"top-nav"</span>})
 </code></pre>
 <h3>Common Event Channels</h3>
-<table>
-<thead>
+<table class="table"><thead>
 <tr>
 <th>Event</th>
 <th>Description</th>
@@ -3401,8 +3399,7 @@ calcite<span class="hljs-selector-class">.bus</span><span class="hljs-selector-c
 </table>
 <h3>Pattern-Specific Event Channels</h3>
 <h4>Accordions</h4>
-<table>
-<thead>
+<table class="table"><thead>
 <tr>
 <th>Event</th>
 <th>Description</th>
@@ -3426,8 +3423,7 @@ calcite<span class="hljs-selector-class">.bus</span><span class="hljs-selector-c
 </tbody>
 </table>
 <h4>Drawers</h4>
-<table>
-<thead>
+<table class="table"><thead>
 <tr>
 <th>Event</th>
 <th>Description</th>
@@ -3463,8 +3459,7 @@ calcite<span class="hljs-selector-class">.bus</span><span class="hljs-selector-c
 </tbody>
 </table>
 <h4>Dropdown</h4>
-<table>
-<thead>
+<table class="table"><thead>
 <tr>
 <th>Event</th>
 <th>Description</th>
@@ -3507,8 +3502,7 @@ calcite<span class="hljs-selector-class">.bus</span><span class="hljs-selector-c
   item: domNode
 }
 </code></pre>
-<table>
-<thead>
+<table class="table"><thead>
 <tr>
 <th>Event</th>
 <th>Description</th>
@@ -3574,8 +3568,7 @@ calcite<span class="hljs-selector-class">.bus</span><span class="hljs-selector-c
 </tbody>
 </table>
 <h4>Modal</h4>
-<table>
-<thead>
+<table class="table"><thead>
 <tr>
 <th>Event</th>
 <th>Description</th>
@@ -3611,8 +3604,7 @@ calcite<span class="hljs-selector-class">.bus</span><span class="hljs-selector-c
 </tbody>
 </table>
 <h4>Sticky</h4>
-<table>
-<thead>
+<table class="table"><thead>
 <tr>
 <th>Event</th>
 <th>Description</th>
@@ -3648,8 +3640,7 @@ calcite<span class="hljs-selector-class">.bus</span><span class="hljs-selector-c
   active: domNode
 }
 </code></pre>
-<table>
-<thead>
+<table class="table"><thead>
 <tr>
 <th>Event</th>
 <th>Description</th>
@@ -3695,8 +3686,7 @@ calcite<span class="hljs-selector-class">.bus</span><span class="hljs-selector-c
         </h5>
         <div class="js-search-item-content hide">
           <p><code>calcite-web.js</code> also has methods for <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">DOM</a> traversal and manipulation. If the needs of a project are not too complex it can be used in place of jQuery, Dojo, or other large frameworks.</p>
-<table>
-<thead>
+<table class="table"><thead>
 <tr>
 <th>function</th>
 <th>action</th>

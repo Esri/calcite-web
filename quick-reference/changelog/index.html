@@ -113,13 +113,13 @@
               <a href="../../quick-reference" class="is-active top-nav-link">Quick Reference</a>
             </nav>
             <nav class="class-top-nav-list right" role="navigation" aria-labelledby="usernav">
-              <a class="top-nav-link padding-leader-0 padding-trailer-0 trailer-0 margin-right-1">
+              <span class="margin-right-1 inline-block">
                 <label class="toggle-switch trailer-0 docs-toggle-spacer">
                   <input type="checkbox" class="toggle-switch-input docs-theme-toggle">
                   <span class="toggle-switch-track margin-right-half"></span>
                   <span class="toggle-switch-labe">Dark Theme</span>
                 </label>
-              </a>
+              </span>
               <button class="search-top-nav link-dark-gray js-search-toggle" href="#" aria-label="Search">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon js-search-icon">
                   <path d="M31.607 27.838l-6.133-6.137a1.336 1.336 0 0 0-1.887 0l-.035.035-2.533-2.533-.014.014c3.652-4.556 3.422-11.195-.803-15.42-4.529-4.527-11.875-4.531-16.404 0-4.531 4.531-4.529 11.875 0 16.406 4.205 4.204 10.811 4.455 15.365.848l.004.003-.033.033 2.541 2.54a1.33 1.33 0 0 0 .025 1.848l6.135 6.133a1.33 1.33 0 0 0 1.887 0l1.885-1.883a1.332 1.332 0 0 0 0-1.887zM17.811 17.809a8.213 8.213 0 0 1-11.619 0 8.217 8.217 0 0 1 0-11.622 8.219 8.219 0 0 1 11.619.004 8.216 8.216 0 0 1 0 11.618z"/>
@@ -198,10 +198,25 @@
       </a></h4>
             <div class="panel panel-no-border card card-bar-blue trailer-quarter">
       <div class="changelog-styled">
-        <h2><a href="https://github.com/esri/calcite-web/compare/v1.0.0-rc.9...HEAD">Unreleased</a></h2>
+        <h2><a href="https://github.com/esri/calcite-web/compare/v1.0.0-rc.9...v1.0.0">1.0.0</a></h2>
 <h3>Fixes</h3>
 <ul>
 <li>Fix rounding error on certain column widths (#742)</li>
+<li>Fix <code>pre</code> and <code>post</code> missing on large screen size</li>
+<li>Fix <code>pre</code> on first nested column at largest size (#806)</li>
+<li>Use unitless line-height (#847)</li>
+</ul>
+<h3>Modified</h3>
+<ul>
+<li>icon classes now have <code>vertical-align: middle</code></li>
+<li>small tweaks to <code>label</code> and <code>code</code> sizing</li>
+</ul>
+<h3>Breaking</h3>
+<ul>
+<li>:warning: Font size changed from <code>17px</code> to <code>16px</code> (#889)</li>
+<li>:warning: Grid container size default is now 1440px instead of 1450px (#826)</li>
+<li>:warning: List styles now closer to browser defaults (#866)</li>
+<li>:warning: Tables must now use the <code>table</code> class to get styles (#852)</li>
 </ul>
 <h2><a href="https://github.com/esri/calcite-web/compare/v1.0.0-rc.8...v1.0.0-rc.9">1.0.0-rc.9</a></h2>
 <h3>Fixes</h3>
