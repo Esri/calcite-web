@@ -14,6 +14,6 @@ $namespace-tables: true !default;
 
 `$drawer-width` controls the width of the hidden left and right drawers.
 
-`$easing-function` should be documented here.
+`$easing-function` is a default timing function used by moving elements like modals. If you'd like to change how modals move in, you can tweak this variable (or use a browser-supplied funciton like `linear`)
 
 `$namespace-tables` scopes `<table>` styles to the `.table` class. To mimic the behavior of previous versions (where we automatically style raw `table` elements), set this to `false`.
