@@ -11,9 +11,10 @@
 - small tweaks to `label` and `code` sizing
 
 ### Breaking
-- Font size changed from `17px` to `16px` (#889)
-- Grid container size default is now 1440px instead of 1450px (#826)
-- List styles now closer to browser defaults (#866)
+- :warning: Font size changed from `17px` to `16px` (#889)
+- :warning: Grid container size default is now 1440px instead of 1450px (#826)
+- :warning: List styles now closer to browser defaults (#866)
+- :warning: Tables must now use the `table` class to get styles (#852)
 
 ## [1.0.0-rc.9][1.0.0-rc.9]
 

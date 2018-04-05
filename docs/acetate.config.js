@@ -18,7 +18,7 @@ module.exports = function (acetate) {
   acetate.data('font', font);
   acetate.data('svg', svg);
   acetate.data('repo', repo);
-  acetate.renderer.markdown = new MarkdownIt({
+  var customMarkdown = new MarkdownIt({
     html: true,
     linkify: true,
     langPrefix: '',
@@ -29,4 +29,6 @@ module.exports = function (acetate) {
       return (lang) ? '<pre><code class="' + lang + '" tabindex="0">' + hljs.highlight(lang, code).value + '</code></pre>' : '<pre><code tabindex="0">' + hljs.highlightAuto(code).value + '</code></pre>';
     }
   });
+  customMarkdown.renderer.rules.table_open = () => '<table class="table">';
+  acetate.renderer.markdown = customMarkdown;
 };
