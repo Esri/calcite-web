@@ -13,6 +13,7 @@
 ### Breaking
 - Font size changed from `17px` to `16px` (#889)
 - Grid container size default is now 1440px instead of 1450px (#826)
+- List styles now closer to browser defaults (#866)
 
 ## [1.0.0-rc.9][1.0.0-rc.9]
 
