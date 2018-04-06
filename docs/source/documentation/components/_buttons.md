@@ -8,6 +8,9 @@ Buttons are created by adding a class of `btn` to either a `<button>` or `<a>` e
 
 #### Button Links
 
-Sometimes, the proper semantic element is a button, but you would rather the element look more like a link. In these instances, Calcite Web provides an additional class `btn-link` which styles a button element as if it were a simple anchor:
+Sometimes, the proper semantic element is a button, but you would rather the element look more like a link. In these instances, Calcite Web provides an alternate class `btn-link` which styles a button element as if it were a simple anchor:
 
 <button class="btn-link">This is a button</button>
+```html
+<button class="btn-link">This is a button</button>
+```
