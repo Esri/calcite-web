@@ -1,3 +1,8 @@
+## [Unreleased][unreleased]
+
+### Fixes
+- fix baseline in Edge (#929)
+
 ## [1.0.0][1.0.0]
 
 ### Fixes
@@ -1350,6 +1355,7 @@ Begin foundational sass for the framework.
 - CSS Reset
 - Grunt Workflows
 
+[unreleased]: https://github.com/esri/calcite-web/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/esri/calcite-web/compare/v1.0.0-rc.9...v1.0.0
 [1.0.0-rc.8]: https://github.com/esri/calcite-web/compare/v1.0.0-rc.7...v1.0.0-rc.8
 [1.0.0-rc.9]: https://github.com/esri/calcite-web/compare/v1.0.0-rc.8...v1.0.0-rc.9
