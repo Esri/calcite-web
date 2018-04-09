@@ -1,3 +1,8 @@
+## [Unreleased][unreleased]
+
+### Fixes
+- remove unused grid configuration variables (#836)
+
 ## [1.0.1][1.0.1]
 
 ### Fixes
@@ -1356,6 +1361,7 @@ Begin foundational sass for the framework.
 - CSS Reset
 - Grunt Workflows
 
+[unreleased]: https://github.com/esri/calcite-web/compare/v1.0.1...HEAD
 [1.0.1]: https://github.com/esri/calcite-web/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/esri/calcite-web/compare/v1.0.0-rc.9...v1.0.0
 [1.0.0-rc.8]: https://github.com/esri/calcite-web/compare/v1.0.0-rc.7...v1.0.0-rc.8
