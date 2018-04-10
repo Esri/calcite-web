@@ -53,8 +53,8 @@
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     display: inline-block;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
     opacity: 0;
     visibility: hidden;
     @include transition-prefixed(transform 300ms $easing-function, visibility 0ms linear 300ms, opacity 300ms $easing-function);
