@@ -2,6 +2,7 @@
 
 ### Fixes
 - remove unused grid configuration variables (#836)
+- fixed modal/overlay positioning in Edge (#932)
 
 ## [1.0.1][1.0.1]
 
