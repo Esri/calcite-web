@@ -295,42 +295,36 @@
     unicode-range: U+0900-097F;
   }
 
-  // ┌───────┐
-  // │ Thai  │
-  // └───────┘
-  // Thai
-    @font-face{
-      font-family: "Avenir Next";
-      src: url("#{$cdn-fonts-path}46947883-147e-48dd-97c2-5a8ca675b998.woff2") format("woff2"),
-           url("#{$cdn-fonts-path}390cea11-2b11-47ac-b3e8-43ded6ae89ee.woff") format("woff");
-      font-weight: 300;
-      font-style: normal;
-      unicode-range: U+0E00-0E7F;
-    }
-    @font-face{
-      font-family: "Avenir Next";
-      src: url("#{$cdn-fonts-path}d824d78b-aab0-44e3-8c56-6c3dcf551952.woff2") format("woff2"),
-           url("#{$cdn-fonts-path}394a711e-3459-44f3-85c7-e99c01e4b55c.woff") format("woff");
-      font-weight: 400;
-      font-style: normal;
-      unicode-range: U+0E00-0E7F;
-    }
-    @font-face{
-      font-family: "Avenir Next";
-      src: url("#{$cdn-fonts-path}9c1ab088-0cb0-402f-9cea-170f0fea14a8.woff2") format("woff2"),
-           url("#{$cdn-fonts-path}bb93c563-55f6-494f-8e1e-448538d95df1.woff") format("woff");
-      font-weight: 400;
-      font-style: italic;
-      unicode-range: U+0E00-0E7F;
-    }
-    @font-face{
-      font-family: "Avenir Next";
-      src: url("#{$cdn-fonts-path}15e2e15a-2f36-4a01-b529-677d575bf76d.woff2") format("woff2"),
-           url("#{$cdn-fonts-path}97b330aa-d7fa-4f85-830f-b11a5041b157.woff") format("woff");
-      font-weight: 700;
-      font-style: normal;
-      unicode-range: U+0E00-0E7F;
-    }
+  // The current font files used for Thai make the baseline incorrect in Edge.
+  // Until we can get updated files, allow browser to fall back to system fonts in Thai (same as <rc.8).
+  // // ┌───────┐
+  // // │ Thai  │
+  // // └───────┘
+  // // Thai
+  // @font-face{
+  //   font-family: "Avenir Next";
+  //   src: url("../fonts/avenir-next/8a65abc7-6463-4895-b3e6-5e203b80b7e2.woff2") format("woff2"),
+  //        url("../fonts/avenir-next/89370128-6a74-471d-ba04-fa0b59bc8ed3.woff") format("woff");
+  //   font-weight: 300;
+  //   font-style: normal;
+  //   unicode-range: U+0E00-0E7F;
+  // }
+  // @font-face{
+  //   font-family: "Avenir Next";
+  //   src: url("../fonts/avenir-next/dd7b7d4e-21ab-4ac0-b26a-d032c992f3c5.woff2") format("woff2"),
+  //        url("../fonts/avenir-next/ae454969-59fb-4d42-aecb-dea30459bc7e.woff") format("woff");
+  //   font-weight: 400;
+  //   font-style: normal;
+  //   unicode-range: U+0E00-0E7F;
+  // }
+  // @font-face{
+  //   font-family: "Avenir Next";
+  //   src: url("../fonts/avenir-next/75e2f3b1-1402-4916-8392-4db9ababea7b.woff2") format("woff2"),
+  //        url("../fonts/avenir-next/c744f2a2-d6a9-4c18-b0ec-f17376acde3e.woff") format("woff");
+  //   font-weight: 700;
+  //   font-style: normal;
+  //   unicode-range: U+0E00-0E7F;
+  // }
 
   // ┌────────────┐
   // │ Vietnamese │

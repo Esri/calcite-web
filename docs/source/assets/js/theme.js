@@ -1,45 +1,28 @@
 // Calcite docs theme switcher
 (function () {
   var localStorageItem = 'calciteWebTheme';
-  var themeDarkStylesheet = document.getElementById('calcite-theme-dark');
-  var themeLightStylesheet = document.getElementById('calcite-theme-light');
-  var themeDarkAnimationClass = 'theme-dark-fade-in';
-  var themeLightAnimationClass = 'theme-light-fade-in';
-  var themeToggles = Array.prototype.slice.call(document.querySelectorAll('.docs-theme-toggle'));
+  var toggles = Array.prototype.slice.call(document.querySelectorAll('.js-theme-toggle'));
 
-  document.addEventListener('DOMContentLoaded', setThemeOnLoad);
-  themeToggles.forEach(function (el) { return el.addEventListener('click', changeTheme); });
+  toggles.forEach(function (el) { return el.addEventListener('change', setTheme); });
+  document.addEventListener('DOMContentLoaded', setTheme);
 
-  // set disabled attribute on load here as well as in markup for ff
-  function setThemeOnLoad() {
-    if (localStorage.getItem(localStorageItem) === 'dark') {
-      themeDarkStylesheet.disabled = false;
-      themeLightStylesheet.disabled = true;
-      themeToggles.forEach(function (el) { return el.checked = true });
-    } else {
-      themeLightStylesheet.disabled = false;
-      themeDarkStylesheet.disabled = true;
-      themeToggles.forEach(function (el) { return el.checked = false });
+  function setTheme (e) {
+    var theme = localStorage.getItem(localStorageItem) || 'light';
+    var isChange = e.type === 'change';
+    if (isChange) {
+      theme = theme === 'light' ? 'dark' : 'light';
     }
-  }
-
-  function changeTheme() {
-    if (localStorage.getItem(localStorageItem) === 'dark' || localStorage.getItem(localStorageItem) === null) {
-      localStorage.setItem(localStorageItem, 'light');
-      themeLightStylesheet.disabled = false;
-      themeDarkStylesheet.disabled = true;
-      document.body.classList.remove(themeDarkAnimationClass);
-      document.body.classList.add(themeLightAnimationClass);
-      themeToggles.forEach(function (el) { return el.checked = false });
-      setTimeout(function () { document.body.classList.remove(themeLightAnimationClass); }, 2000);
-    } else {
-      localStorage.setItem(localStorageItem, 'dark');
-      themeDarkStylesheet.disabled = false;
-      themeLightStylesheet.disabled = true;
-      document.body.classList.remove(themeLightAnimationClass);
-      document.body.classList.add(themeDarkAnimationClass);
-      themeToggles.forEach(function (el) { return el.checked = true });
-      setTimeout(function () { document.body.classList.remove(themeDarkAnimationClass); }, 2000);
+    var isDark = theme === 'dark';
+    var animationTheme = 'theme-' + theme + '-fade-in';
+    localStorage.setItem(localStorageItem, theme);
+    toggles.forEach(function (el) { return el.checked = isDark });
+    document.getElementById('calcite-theme-dark').disabled = !isDark;
+    document.getElementById('calcite-theme-light').disabled = isDark;
+    document.body.classList.remove('theme-light-fade-in');
+    document.body.classList.remove('theme-dark-fade-in');
+    if (isChange) {
+      document.body.classList.add(animationTheme);
+      setTimeout(function () { document.body.classList.remove(animationTheme); }, 2000);
     }
   }
 })();
