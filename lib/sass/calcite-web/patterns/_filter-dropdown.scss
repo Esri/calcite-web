@@ -68,6 +68,7 @@
   right: 10px;
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
+      right: auto;
       right: initial;
       left: 10px;
     }
@@ -119,26 +120,31 @@
   @include box-sizing(border-box);
   position: relative;
   display: inline-block;
-  padding: $baseline/3 $baseline/5 $baseline/3 $baseline/2;
+  padding: $baseline/3 $baseline/5 $baseline/4.5 $baseline/2;
   margin-right: $baseline/6;
   margin-top: $baseline/6;
   color: $darker-gray;
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
-     padding: $baseline/3 $baseline/2 $baseline/3 $baseline/5;
+     padding: $baseline/3 $baseline/2 $baseline/4.5 $baseline/5;
    }
  }
 }
 
 @mixin filter-dropdown-remove() {
-  padding: $baseline/5 $baseline/4;
-  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
   .svg-icon {
+    display: block;
+    padding: $baseline/5 $baseline/4;
+    cursor: pointer;
     position: relative;
-    margin-top: -2px;
     color: $darker-gray;
   }
   &:hover {
+    text-decoration: none;
     & .svg-icon {
       color: $red;
     }

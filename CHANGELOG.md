@@ -3,6 +3,7 @@
 ### Fixes
 - remove unused grid configuration variables (#836)
 - fixed modal/overlay positioning in Edge (#932)
+- fixed filter dropdown rtl display and alignment  (#941)
 
 ## [1.0.1][1.0.1]
 
