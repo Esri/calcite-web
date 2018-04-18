@@ -148,7 +148,7 @@
         {% endif %}
 
         {% if page.modifiers or page.modifiers == false %}
-        <div class="styleguide-modifiers">
+        <div class="styleguide-modifiers {% if page.doc_classes %}{% for doc_class in page.doc_classes %}{{ doc_class }} {% endfor %}{% endif %}">
           <div class="styleguide-modifier-example">
             {% include 'documentation/' + data.table_of_contents[section].base + '/sample-code/_' + page.link %}
             {% if page.classes %} <code class="modifier-name">.{{ page.classes }}</code>{% endif %}
@@ -163,7 +163,7 @@
 
         {% if page.modifiers != false %}
         <h4 class="leader-0 text-darkest-gray" tabindex="0">Modifiers</h4>
-        <div class="styleguide-modifiers trailer-1">
+        <div class="styleguide-modifiers trailer-1 {% if page.doc_classes %}{% for doc_class in page.doc_classes %}{{ doc_class }} {% endfor %}{% endif %}">
           {% for modifier in page.modifiers %}
           <div class="styleguide-modifier-example">
             {% include 'documentation/' + data.table_of_contents[section].base + '/sample-code/_' + page.link %}

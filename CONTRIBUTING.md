@@ -75,6 +75,8 @@ Adding a component to Calcite Web requires a few steps:
             - tooltip-left
             - tooltip-right
             - tooltip-top
+          doc_classes:
+            - example-modifier-class # Accepts a list of class names for styling documentation examples
 ```
 4. Run a local server (`npm start`) and develop your component
 5. Add an entry in the `CHANGELOG` describing your new component.

@@ -39,6 +39,10 @@ $include-calcite-icons: false;
   @include clearfix();
   background: $white;
   overflow-x: scroll;
+  &.styleguide-modifiers-overflow-visible {
+    overflow-y: visible;
+    overflow-x: visible;
+  }
   .styleguide-modifier-example {
     min-height: 2rem;
     padding: .5em;
