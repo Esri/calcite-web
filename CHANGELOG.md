@@ -4,6 +4,7 @@
 - remove unused grid configuration variables (#836)
 - fixed modal/overlay positioning in Edge (#932)
 - fixed filter dropdown rtl display and alignment  (#941)
+- fixed scroll bar positioning on modal open  (#945)
 
 ## [1.0.1][1.0.1]
 
