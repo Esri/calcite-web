@@ -1,110 +1,94 @@
 ---
-title: Calcite Web
+title: Quick Reference
 description: Quickly build beautiful, consistent websites with the Calcite Web Framework
-layout: layouts/_quick-reference
+layout: layouts/_layout
 section: quick-reference
+js:
+  - quick-reference
 css:
-- quick-reference
+  - quick-reference
 ---
 {% block content %}
-<div class="grid-container leader-1">
-  <main class="column-24 tablet-leader-1" role="main">
-    <div class="column-9 post-1 tablet-column-12">
-      <h2>Component Status</h2>
-      This is meant to serve as an "at-a-glance" overview of Calcite Web components. This will be updated with more functionality in the future but for now it should provide a brief overview of the status and availability of components.
-      <h3 class="leader-1 trailer-quarter">Taxonomy</h3>
-      <table class="table overflow-auto table-no-table">
+  <header class="sub-nav" role="banner">
+    <div class="grid-container">
+        <div class="column-11 post-1">
+          <h1 class="sub-nav-title text-white leader-1">Quick Reference</h1>
+        </div>
+        <div class="column-12">
+          <input type="search" class="input-search font-size-0 trailer-1 leader-1 js-class-filter" placeholder="filter classes by name" aria-label="filter classes">
+        </div>
+    </div>
+  </header>
+  <div class="grid-container leader-1">
+    <a id="skip-to-content" tabindex="0"></a>
+    <main class="tablet-leader-1">
+      {% for title, sec in data.table_of_contents %}
+      {% if ( title !== 'get-started' and title !== 'color' and title !== 'patterns' and title !== 'sass' and title !== 'javascript' ) %}
+      {% set columnClass = 'column-5' %}
+      {% if title == 'icons' %}
+        {% set columnClass = 'column-9' %}
+      {% elif title == 'type' %}
+        {% set columnClass = 'column-5' %}
+      {% elif title == 'grid' %}
+        {% set columnClass = 'column-5' %}
+      {% endif %}
+      <section class="{{columnClass}}">
+        <h4 class="text-rule trailer-1" id="{{sec.title | replace(" ", "-") | lower}}" tabindex="0"><a href="{{relativePath}}/documentation/{{sec.base}}" class="link-darkest-gray">{{sec.title}}</a></h4>
 
-        <tbody>
-          <tr>
-            <td><mark class="label label-green">Complete</mark></td>
-            <td>Complete, documented, and ready to use.</td>
-          </tr>
-          <tr>
-            <td><mark class="label label-yellow">In Progress</mark></td>
-            <td>Actively in development.</td>
-          </tr>
-          <tr>
-            <td><mark class="label label-blue">Proposed</mark></td>
-            <td>Proposed and may be chosen to develop.</td>
-          </tr>
-          <tr>
-            <td><mark class="label">Unplanned</mark></td>
-            <td>An intentional choice was made not to build this.</td>
-          </tr>
-        </tbody>
-      </table>
-      <hr>
-      Want to see a component added to Calcite Web? <a target="blank" href="https://github.com/Esri/calcite-web/issues" title="Submit and issue on Github">Submit an issue on Github</a>.
-    </div>
-    <div class="column-14 tablet-first-column tablet-leader-2">
-      <div class="panel panel-no-border card card-bar-blue trailer-quarter">
-      <table class="table overflow-auto table-plain trailer-0">
-        <thead>
-          <tr>
-            <th><h6 class="avenir-demi text-darkest-gray trailer-quarter">Component</h6></th>
-            <th><h6 class="avenir-demi text-darkest-gray trailer-quarter">Status</h6></th>
-            <th><h6 class="avenir-demi text-darkest-gray trailer-quarter">Code</h6></th>
-            <th><h6 class="avenir-demi text-darkest-gray trailer-quarter">Docs</h6></th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for title, sec in data.table_of_contents %}
-          {% if ( title == 'components' ) %}
-          {% for navigation in sec.navigation %}
-          {% for page in navigation.pages %}
-          {% if page.status != false %}
-          <tr>
-            <td>
-              <h6 class="trailer-0 js-category-name " id="{{page.title | replace(" ", "-") | lower}}" tabindex="0">
-                {% if page.hidden != true %}
-                <a href="{{relativePath}}/documentation/{{sec.base}}/#{{ page.link }}" class="link-off-black" title="View {{page.title}} Component">{{page.title}}</a>
-                {% else %}
-                {{page.title}}
-                {% endif %}
-              </h6>
-            </td>
-            <td>
-              {% if ( page.status == 'complete' ) %}
-              <mark class="label label-green">Complete</mark>
-              {% elseif ( page.status == 'inprogress' ) %}
-              <mark class="label label-yellow">In Progress</mark>
-              {% elseif ( page.status == 'proposed' ) %}
-              <mark class="label label-blue">Proposed</mark>
-              {% elseif ( page.status == 'unplanned' ) %}
-              <mark class="label">Unplanned</mark>
-              {% else %}
-              <mark class="label">Unplanned</mark>
-              {% endif %}
-            </td>
-            <td>
-              {% if page.hidden != true %}
-              <a href="{{relativePath}}/documentation/{{sec.base}}/#{{ page.link }}" class="link-off-black" title="View {{page.title}} Component">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon"><path fill="#5a9359" d="M11.927 22l-6.882-6.883-3 3L11.927 28 31.204 8.728l-3.001-3.001z"/></svg>
-              </a>
-              {% else %}
-              No
-              {% endif %}
-            </td>
-            <td>
-              {% if page.hidden != true %}
-              <a href="{{relativePath}}/documentation/{{sec.base}}/#{{ page.link }}" class="link-off-black" title="View {{page.title}} Component">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg-icon"><path fill="#5a9359" d="M11.927 22l-6.882-6.883-3 3L11.927 28 31.204 8.728l-3.001-3.001z"/></svg>
-              </a>
-              {% else %}
-              No
-              {% endif %}
-            </td>
-          </tr>
-          {% endif %}
-          {% endfor %}
-          {% endfor %}
-          {% endif %}
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
-    </div>
-  </main>
-</div>
+        {% for navigation in sec.navigation %}
+        {% for page in navigation.pages %}
+        {% if ( page.classes or (page.modifiers.length > 0) ) and ( page.title !== 'UI Icon Colors' and page.title !== 'Icon Font Colors')%}
+
+        <div class="quick-ref-page js-class">
+          <h5 class="trailer-0 js-category-name " id="{{page.title | replace(" ", "-") | lower}}" tabindex="0"><a href="{{relativePath}}/documentation/{{sec.base}}/#{{ page.link }}" class="link-darkest-gray">{{page.title}}</a></h5>
+          <ul class="list-plain font-size--2 trailer-1">
+
+            {% if title !== 'icons' %}
+            {% for class in page.classes %}
+
+            <li class="js-class"><code>.<span class="class-name js-class-name">{{ class }}</span></code></li>
+
+            {% endfor %}
+
+            {% for modifier in page.modifiers %}
+
+            <li class="js-class"><code>.<span class="class-name js-class-name">{{ modifier }}</span></code></li>
+
+            {% endfor %}
+            {% else %}
+            {% if page.title == 'User Interface Icons' and data.svg %}
+            {% for icon in data.svg %}
+
+            <li class="js-class">
+              <span class="font-size--1">{% include "assets/img/icons/ui/" + icon.name + ".svg" %}</span>
+              <code>.<span class="class-name js-class-name">icon-ui-{{icon.name}}</span></code>
+            </li>
+            {% endfor %}
+            {% elif page.title == 'Social Icons' and data.icons %}
+            {% for icon in data.icons %}
+
+            <li class="js-class">
+              <span class="icon-class-social icon-social-{{icon}}"></span>
+              <code>.<span class="class-name js-class-name">icon-social-{{icon}}</span></code>
+            </li>
+
+            {% endfor %}
+            {% endif %}
+            {% endif %}
+
+          </ul>
+        </div>
+
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+
+      </section>
+
+      {% endif %}
+      {% endfor %}
+
+    </main>
+  </div>
 {% endblock %}
+

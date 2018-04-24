@@ -47,8 +47,12 @@
                 icon: [
                   'M42.73 25.072a4.253 4.253 0 0 0-2.809 1.287 2.723 2.723 0 0 1-1.603.862 1.34 1.34 0 0 1-1.418-1.318V11.1H25.124a1.34 1.34 0 0 1-1.318-1.417 2.731 2.731 0 0 1 .862-1.605 4.247 4.247 0 0 0 1.287-2.808 4.216 4.216 0 0 0-4.21-4.211h-.434a4.216 4.216 0 0 0-4.21 4.21 4.247 4.247 0 0 0 1.286 2.81 2.731 2.731 0 0 1 .862 1.604 1.34 1.34 0 0 1-1.318 1.417H3.101v9.803a2.122 2.122 0 0 0 2.217 2.118 3.376 3.376 0 0 0 2.116-1.046 3.51 3.51 0 0 1 2.296-1.102 3.414 3.414 0 0 1 3.411 3.41v.434a3.414 3.414 0 0 1-3.41 3.41 3.51 3.51 0 0 1-2.297-1.102 3.376 3.376 0 0 0-2.116-1.046A2.122 2.122 0 0 0 3.1 28.097V44.9h17.831a2.122 2.122 0 0 0 2.118-2.22 3.378 3.378 0 0 0-1.047-2.115 3.56 3.56 0 0 1-1.102-2.297c0-1.6 1.147-2.41 3.41-2.41h.435c2.263 0 3.41.81 3.41 2.41a3.56 3.56 0 0 1-1.102 2.297 3.378 3.378 0 0 0-1.047 2.116 2.122 2.122 0 0 0 2.118 2.218l8.776.001V33.097a1.34 1.34 0 0 1 1.418-1.318 2.723 2.723 0 0 1 1.603.862 4.253 4.253 0 0 0 2.81 1.287c2.07 0 3.21-1.496 3.21-4.211v-.434c0-2.715-1.14-4.21-3.21-4.21zm2.411 4.645c0 2.262-.81 3.41-2.41 3.41a3.51 3.51 0 0 1-2.297-1.102 3.376 3.376 0 0 0-2.116-1.046 2.122 2.122 0 0 0-2.218 2.118V44.1l-7.976-.001a1.34 1.34 0 0 1-1.318-1.418 2.726 2.726 0 0 1 .861-1.603 4.25 4.25 0 0 0 1.288-2.81c0-2.07-1.495-3.211-4.21-3.211h-.434c-2.716 0-4.21 1.14-4.21 3.21a4.25 4.25 0 0 0 1.287 2.811 2.726 2.726 0 0 1 .861 1.603 1.34 1.34 0 0 1-1.318 1.418H3.9V28.098a1.34 1.34 0 0 1 1.418-1.318 2.723 2.723 0 0 1 1.603.862 4.253 4.253 0 0 0 2.81 1.287 4.216 4.216 0 0 0 4.21-4.211v-.434a4.216 4.216 0 0 0-4.21-4.21 4.253 4.253 0 0 0-2.81 1.286 2.723 2.723 0 0 1-1.603.862A1.34 1.34 0 0 1 3.9 20.903V11.9H17.93a2.122 2.122 0 0 0 2.118-2.217 3.376 3.376 0 0 0-1.047-2.117A3.511 3.511 0 0 1 17.9 5.27a3.414 3.414 0 0 1 3.41-3.41h.435a3.414 3.414 0 0 1 3.41 3.41 3.511 3.511 0 0 1-1.102 2.296 3.376 3.376 0 0 0-1.047 2.117 2.122 2.122 0 0 0 2.118 2.217H36.1v14.003a2.122 2.122 0 0 0 2.218 2.118 3.376 3.376 0 0 0 2.116-1.046 3.51 3.51 0 0 1 2.296-1.102c1.6 0 2.411 1.148 2.411 3.41z'
                 ]
+              },
+              {
+                label: 'Grid',
+                href: ROOT + 'grid/'
               }
-              ],
+            ],
             tiles: [
               {
                 label: 'Quickstart',
@@ -330,6 +334,44 @@
 
   esriGlobalNav.create({headerElm: '.esri-header-barrier', footerElm: '.esri-footer-barrier', menuData});
 
+  var localStorageItem = 'calciteWebTheme';
+  var toggle = document.createElement('span');
+  var theme = localStorage.getItem(localStorageItem) || 'light';
+  var checked = theme === 'dark' ? 'checked' : '';
+  toggle.innerHTML = [
+    '<label class="toggle-switch trailer-0 margin-left-1 margin-right-1 leader-quarter">',
+    '  <input type="checkbox" class="toggle-switch-input js-theme-toggle"' + checked + ' aria-label="toggle dark theme">',
+    '  <span class="toggle-switch-track margin-right-half"></span>',
+    '  <span class="toggle-switch-label">',
+    '    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 18 18">',
+    '      <path fill="currentColor" d="M8.155 1.39a10.043 10.043 0 0 0-1.085 8.872 10.042 10.042 0 0 0 6.446 6.191 8.11 8.11 0 0 1-2.9.547 8.015 8.015 0 0 1-7.535-5.318C1.603 7.527 3.78 2.943 7.934 1.465c.073-.027.147-.051.221-.075M10.616 0A8.998 8.998 0 0 0 2.14 12.017 9 9 0 0 0 10.616 18c1.002 0 2.02-.168 3.018-.524a8.962 8.962 0 0 0 2.75-1.567A9.002 9.002 0 0 1 10.721 0h-.105z"/>',
+    '    </svg>',
+    '  </span>',
+    '</label>'
+  ].join('');
+  document.querySelector('.esri-header').appendChild(toggle);
+
+  document.querySelector('.js-theme-toggle').addEventListener('change', setTheme);
+  document.addEventListener('DOMContentLoaded', setTheme);
+
+  function setTheme (e) {
+    var theme = localStorage.getItem(localStorageItem) || 'light';
+    var isChange = e.type === 'change';
+    if (isChange) {
+      theme = theme === 'light' ? 'dark' : 'light';
+    }
+    var isDark = theme === 'dark';
+    var animationTheme = 'theme-' + theme + '-fade-in';
+    localStorage.setItem(localStorageItem, theme);
+    document.getElementById('calcite-theme-dark').disabled = !isDark;
+    document.getElementById('calcite-theme-light').disabled = isDark;
+    document.body.classList.remove('theme-light-fade-in');
+    document.body.classList.remove('theme-dark-fade-in');
+    if (isChange) {
+      document.body.classList.add(animationTheme);
+      setTimeout(function () { document.body.classList.remove(animationTheme); }, 2000);
+    }
+  }
 })();
 
 

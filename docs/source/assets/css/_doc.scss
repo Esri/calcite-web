@@ -15,7 +15,8 @@ $include-calcite-icons: false;
 
 // Splashy banner stuff
 .bg-banner {
-  background: url("../img/docs/topo-map.svg"),linear-gradient(110deg, $blue 10%, $dark-blue 90%);
+  background: url("../img/docs/topo-map.svg"), linear-gradient(110deg, $blue 10%, $dark-blue 90%);
+  background-position: center;
 }
 
 .banner-logo {
@@ -31,6 +32,10 @@ $include-calcite-icons: false;
 .esri-header-menus-sublist--wide {
   margin: 0;
   padding: 0;
+}
+
+.esri-header .leader-quarter {
+  @include leader(.25);
 }
 
 @media screen and (max-width: $small) {
