@@ -79,7 +79,11 @@
                 ]
               }
             ]
-          }
+          },
+          {
+            label: 'Quick Reference',
+            href: ROOT + 'quick-reference/'
+          },
         ]
       ],
       search: {
