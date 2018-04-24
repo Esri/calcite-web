@@ -549,6 +549,11 @@ components:
           classes:
             - fieldset-radio
           modifiers: false
+        - title: 'Radio Group'
+          link: radio-group
+          status: 'proposed'
+          modifiers: false
+          hidden: true
     - group: 'Animation'
       pages:
         - title: 'Overview'
@@ -571,15 +576,6 @@ components:
           modifiers:
             - 'esri-logo-reverse'
             - 'esri-logo-condensed'
-    - group: 'Proposed'
-      hidden: true
-      pages:
-        - title: 'Example'
-          hidden: true
-          status: 'inprogress'
-        - title: 'Example'
-          hidden: true
-          status: 'unplanned'
 patterns:
   title: 'Patterns'
   base: patterns

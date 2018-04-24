@@ -25,7 +25,19 @@ $include-calcite-icons: false;
 
 .esri-header-menus-subitem--wide {
   margin-top: 0;
-  width: 50%;
+  width: 25%;
+}
+
+.esri-header-menus-sublist--wide {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: $small) {
+  .esri-header-menus-subitem--wide {
+    margin-top: 0;
+    width: 50%;
+  }
 }
 
 .huge-text {
