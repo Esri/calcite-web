@@ -15,12 +15,54 @@ $include-calcite-icons: false;
 
 // Splashy banner stuff
 .bg-banner {
-  background: url('../img/docs/banner.svg') no-repeat center center $off-white;
+  background: url("../img/docs/topo-map.svg"),linear-gradient(110deg, $blue 10%, $dark-blue 90%);
+}
+
+.banner-logo {
+  margin: 0 auto $baseline auto;
+  display: block;
+}
+
+.esri-header-menus-subitem--wide {
+  margin-top: 0;
+  width: 50%;
 }
 
 .huge-text {
   font-size: calc(4vw + 16px);
   line-height: 1.25;
+}
+
+.package-overlap {
+  margin-top: -4.5rem;
+}
+
+.display-block {
+  display: block;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-1 {
+  -webkit-flex: 1 1 auto;
+  -moz-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  -o-flex: 1 1 auto;
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+.flex-0 {
+  -webkit-flex: 0 0 auto;
+  -moz-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  -o-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 // Sub-Nav test Classes

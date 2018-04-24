@@ -18,7 +18,6 @@
 
   // Add term to the top search bar
   document.querySelector('.js-sub-nav-search').value = q;
-  document.querySelector('.js-search-toggle').classList.add('hide');
 
   // Hide all content and only show them if they match search query
   var items = toArray(document.querySelectorAll('.js-search-item'))
