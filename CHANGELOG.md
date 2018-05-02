@@ -5,6 +5,7 @@
 - fixed modal/overlay positioning in Edge (#932)
 - fixed filter dropdown rtl display and alignment  (#941)
 - fixed scroll bar positioning on modal open  (#945)
+- added RTL support for accordion caret icons (#950)
 
 ## [1.0.1][1.0.1]
 
