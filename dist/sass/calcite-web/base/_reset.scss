@@ -7,7 +7,7 @@
   // Always show vertical scroll bars, standardize type size
   html {
     overflow-y: scroll;
-    height: 100%;
+    min-height: 100%;
     font-size: 100%;
     -webkit-text-size-adjust: 100%;
        -moz-text-size-adjust: 100%;
@@ -16,7 +16,7 @@
 
   // Make body full height
   body {
-    min-height: 100%;
+    min-height: 100vh;
     margin: 0;
   }
 
