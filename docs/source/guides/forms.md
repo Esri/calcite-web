@@ -1,10 +1,8 @@
 ---
-title: Forms Best Practices
-description: Guidelines for great design decisions.
-layout: layouts/_designguide:text
+title: Forms
+description: Guidelines for using form controls on the web
+layout: layouts/_guide:text
 ---
-
-# Forms Best Practices
 
 Forms are an integral part of designing for the web. Making your forms functional, accessible, and beautiful will help the people using your software to be more productive.
 

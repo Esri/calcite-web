@@ -4,7 +4,7 @@
 <header class="sub-nav" role="banner">
   <div class="grid-container">
     <div class="column-24">
-      <h1 class="sub-nav-title text-white leader-4 trailer-1 font-size-6">{{title}}</h1>
+      <h1 class="sub-nav-title text-white leader-2 trailer-1 font-size-6">{{title}}</h1>
     </div>
   </div>
 </header>
@@ -15,5 +15,12 @@
   <main class="column-17">
     {% block text %}{% endblock %}
   </main>
+</div>
+<div class="panel panel-no-padding panel-no-border leader-2">
+  <div class="grid-container padding-leader-4 padding-trailer-3">
+    <div class="column-24">
+      {% include "layouts/_guides-grid.html" %}
+    </div>
+  </div>
 </div>
 {% endblock %}
