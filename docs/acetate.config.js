@@ -30,5 +30,5 @@ module.exports = function (acetate) {
     }
   });
   customMarkdown.renderer.rules.table_open = () => '<table class="table">';
-  acetate.renderer.markdown = customMarkdown;
+  acetate.markdown = customMarkdown;
 };

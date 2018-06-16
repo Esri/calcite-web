@@ -10,6 +10,12 @@
   right: 0;
   bottom: 0;
   left: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
   overflow-y: hidden;
   text-align: center;
   opacity: 0;
@@ -27,13 +33,6 @@
       @include transition-delay(0ms);
       @include transform(translate3d(0,0,0))
     }
-  }
-  &:before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-    margin-right: -0.25em; /* Adjusts for spacing */
   }
 }
 
@@ -54,7 +53,8 @@
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     display: inline-block;
-    vertical-align: middle;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
     opacity: 0;
     visibility: hidden;
     @include transition-prefixed(transform 300ms $easing-function, visibility 0ms linear 300ms, opacity 300ms $easing-function);

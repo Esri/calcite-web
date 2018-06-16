@@ -1,20 +1,20 @@
 /*!
  * Calcite Web - Calcite Design Components in CSS, JS and HTML
- * @version v1.0.0
+ * @version v1.0.2
  * @license Apache-2.0
  * @copyright 2018 Esri
  * @link https://github.com/Esri/calcite-web
  */
 html {
   overflow-y: scroll;
-  height: 100%;
+  min-height: 100%;
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
 body {
-  min-height: 100%;
+  min-height: 100vh;
   margin: 0; }
 
 article,
@@ -5567,6 +5567,12 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
   overflow-y: hidden;
   text-align: center;
   opacity: 0;
@@ -5590,13 +5596,6 @@ body {
       -ms-transform: translate3d(0, 0, 0);
       -o-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0); }
-  .modal-overlay:before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-    margin-right: -0.25em;
-    /* Adjusts for spacing */ }
 
 .modal-content {
   box-sizing: border-box;
@@ -5609,7 +5608,8 @@ body {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   display: inline-block;
-  vertical-align: middle;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: -webkit- transform 300ms cubic-bezier(0.215, 0.44, 0.42, 0.88), visibility 0ms linear 300ms, opacity 300ms cubic-bezier(0.215, 0.44, 0.42, 0.88);
@@ -5631,6 +5631,12 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
   overflow-y: hidden;
   text-align: center;
   opacity: 0;
@@ -5658,13 +5664,6 @@ body {
       -ms-transform: translate3d(0, 0, 0);
       -o-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0); }
-  .search-overlay:before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-    margin-right: -0.25em;
-    /* Adjusts for spacing */ }
   .search-overlay.is-active {
     opacity: 0.98; }
     .search-overlay.is-active .search-content {
@@ -5692,9 +5691,6 @@ body {
   -o-transform: translate3d(0, -20px, 0);
   transform: translate3d(0, -20px, 0);
   display: inline-block;
-  vertical-align: middle;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 3rem;
   opacity: 0;
   visibility: hidden;
@@ -5802,6 +5798,12 @@ body {
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg); }
+  html[dir="rtl"] .accordion-icon .svg-icon {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg); }
 
 .drawer {
   position: fixed;
@@ -5939,13 +5941,11 @@ input.filter-dropdown-input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 2.25rem;
   font-size: 0.875rem;
   line-height: 1.5;
   color: #6e6e6e;
   border-top: 1px solid #efefef; }
-  html[dir="rtl"] .filter-dropdown-link {
-    padding: 0.5rem 0.125rem 0.5rem 1.5rem; }
   .filter-dropdown-link:first-child {
     border-top: none; }
   .filter-dropdown-link:hover {
@@ -5954,29 +5954,38 @@ input.filter-dropdown-input {
     .filter-dropdown-link:hover .filter-link-check {
       opacity: 1;
       visibility: visible; }
-  .filter-dropdown-link.is-active .filter-link-close {
-    opacity: 1;
-    visibility: visible; }
-  .filter-dropdown-link.is-active .filter-link-check {
-    fill: #5a9359;
-    opacity: 1;
-    visibility: visible; }
-  .filter-dropdown-link.is-active:hover .filter-link-close {
-    fill: #de2900; }
+  .filter-dropdown-link.is-active {
+    color: #4c4c4c; }
+    .filter-dropdown-link.is-active .filter-link-close {
+      opacity: 1;
+      visibility: visible; }
+    .filter-dropdown-link.is-active .filter-link-check {
+      fill: #5a9359;
+      opacity: 1;
+      visibility: visible; }
+    .filter-dropdown-link.is-active:hover .filter-link-close {
+      fill: #de2900; }
 
 .filter-link-close {
   opacity: 0;
   visibility: hidden;
-  margin-top: 6px;
+  margin-top: 4px;
   position: absolute;
-  right: 9px; }
+  right: 10px; }
+  html[dir="rtl"] .filter-link-close {
+    right: auto;
+    right: initial;
+    left: 10px; }
 
 .filter-link-check {
   opacity: 0;
   visibility: hidden;
-  margin-top: 6px;
+  margin-top: 3px;
   position: absolute;
-  left: 9px; }
+  left: 10px; }
+  html[dir="rtl"] .filter-link-check {
+    left: initial;
+    right: 10px; }
 
 .filter-dropdown-active {
   background-color: #efefef;
@@ -5991,20 +6000,28 @@ input.filter-dropdown-input {
   box-sizing: border-box;
   position: relative;
   display: inline-block;
-  padding: 0.5rem 0 0.5rem 0.5rem;
+  padding: 0.5rem 0.3rem 0.33333rem 0.75rem;
   margin-right: 0.25rem;
   margin-top: 0.25rem;
   color: #6e6e6e; }
+  html[dir="rtl"] .filter-dropdown-active {
+    padding: 0.5rem 0.75rem 0.33333rem 0.3rem; }
 
 .filter-dropdown-remove {
-  padding-right: 1.5rem; }
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -1px; }
   .filter-dropdown-remove .svg-icon {
-    margin-top: 6px;
-    float: right;
-    position: absolute;
+    display: block;
+    padding: 0.3rem 0.375rem;
+    cursor: pointer;
+    position: relative;
     color: #6e6e6e; }
-  .filter-dropdown-remove:hover .svg-icon {
-    color: #de2900; }
+  .filter-dropdown-remove:hover {
+    text-decoration: none; }
+    .filter-dropdown-remove:hover .svg-icon {
+      color: #de2900; }
 
 .is-hidden {
   display: none !important; }
