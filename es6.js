@@ -119,7 +119,7 @@ function extend (plugin) {
 // │ Public API │
 // └────────────┘
 // define all public api methods
-var version = '1.0.0';
+var version = '1.0.2';
 var click = event.click;
 var addEvent = event.add;
 var removeEvent = event.remove;

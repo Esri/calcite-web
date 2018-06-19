@@ -1,0 +1,35 @@
+---
+title: Color
+description: Guidelines for using Calcite Web's color system
+layout: layouts/_guide
+---
+{% block content %}
+<div class="grid-container leader-2">
+  <div class="column-16">
+{% markdown %}
+
+## Use color to show state
+
+## Use color to encourage action
+
+## Use color to indicate success and failure
+
+{% endmarkdown %}
+  </div>
+</div>
+
+<div class="grid-container padding-leader-2" id="contrast-finder">
+  <h2>Use sufficient contrast</h2>
+  <!-- TODO: show all colors here. When a color is clicked, show a badge indicating accessiblity status of all other swatches. (AA, AAA) -->
+  <!-- or: show sets of colors that have enough contrast together -->
+</div>
+
+<div class="panel panel-no-padding panel-no-border">
+  <div class="grid-container padding-leader-4 padding-trailer-4">
+    <div class="column-24">
+      <h1 class="trailer-2">Guides</h1>
+      {% include "layouts/_guides-grid.html" %}
+    </div>
+  </div>
+</div>
+{% endblock %}

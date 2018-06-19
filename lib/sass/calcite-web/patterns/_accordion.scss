@@ -52,6 +52,11 @@
 
   @mixin accordion-icon() {
     @include transform(rotate(-90deg));
+      @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        @include transform(rotate(90deg));
+      }
+    }
   }
 
 @if $include-accordion == true {
