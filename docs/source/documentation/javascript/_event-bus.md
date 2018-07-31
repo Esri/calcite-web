@@ -76,7 +76,7 @@ Many of the filter dropdown channels emit and listen for the following options o
 | filterDropdown:bind | Binds the dom to event listeners | n/a | `bindFilterDropdowns()` |
 | filterDropdown:select | An item in the dropdown list has been selected. | Options Object | `toggleItem()`, `emitActive()` |
 | filterDropdown:select:remove | Removes a specific selection from the list of active items. | Options Object | `removeItem()` |
-| filterDropdown:active | Emits all the currently selected items from the componenet. | Options Object. Replaces `item` with `active` Array of items. | `drawActive()` |
+| filterDropdown:active | Emits all the currently selected items from the component. | Options Object. Replaces `item` with `active` Array of items. | `drawActive()` |
 | filterDropdown:active:clear | Clear all active items from the dropdown | Options Object | `clearActive()` |
 | filterDropdown:toggle | Toggle a dropdown open and closed | Options Object | `toggleDropdown()` |
 | filterDropdown:open | Open a specific dropdown | Options Object | `openList()` |
