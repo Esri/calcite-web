@@ -46,20 +46,20 @@ css:
             {% if title !== 'icons' %}
             {% for class in page.classes %}
 
-            <li class="js-class"><code>.<span class="class-name js-class-name">{{ class }}</span></code></li>
+            <li class="leader-half js-class"><code>.<span class="class-name js-class-name">{{ class }}</span></code></li>
 
             {% endfor %}
 
             {% for modifier in page.modifiers %}
 
-            <li class="js-class"><code>.<span class="class-name js-class-name">{{ modifier }}</span></code></li>
+            <li class="leader-half js-class"><code>.<span class="class-name js-class-name">{{ modifier }}</span></code></li>
 
             {% endfor %}
             {% else %}
             {% if page.title == 'User Interface Icons' and data.svg %}
             {% for icon in data.svg %}
 
-            <li class="js-class">
+            <li class="leader-half js-class">
               <span class="font-size--1">{% include "assets/img/icons/ui/" + icon.name + ".svg" %}</span>
               <code>.<span class="class-name js-class-name">icon-ui-{{icon.name}}</span></code>
             </li>
@@ -67,7 +67,7 @@ css:
             {% elif page.title == 'Social Icons' and data.icons %}
             {% for icon in data.icons %}
 
-            <li class="js-class">
+            <li class="leader-half js-class">
               <span class="icon-class-social icon-social-{{icon}}"></span>
               <code>.<span class="class-name js-class-name">icon-social-{{icon}}</span></code>
             </li>
