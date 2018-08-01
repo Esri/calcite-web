@@ -1,0 +1,106 @@
+@import "./language.pcss";
+@import "./footer--media.pcss";
+
+/* Global Footer Language */
+/* ========================================================================== */
+
+.esri-footer-language {
+	@media (--gfoot-s) {
+		margin-block-end: 12px;
+		margin-inline-start: 20px;
+	}
+
+	@media (--gfoot-m) {
+		margin: logical 12px 24px 6px 30px;
+	}
+
+	@media (--gfoot-l) {
+		margin-block: 12px 6px;
+		margin-inline-start: 24px;
+		width: calc(25% - 24px);
+	}
+}
+
+.esri-footer-language-control {
+	@apply --unset-button;
+
+	background-image: url("../../shared/shared.svg#c-globe" param(--fill var(--mono-100)));
+	background-position: calc(100% - 12px) 50%;
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	border-style: none;
+	color: #ffffff #0079c1;
+	display: inline-block;
+	font-size: 16px / 18px;
+	font-weight: 300;
+	padding: 11px 20px;
+	padding-inline-end: 40px;
+	white-space: nowrap;
+
+	@nest [dir="rtl"] & {
+		background-position: 12px 50%;
+		padding-inline: 40px 20px;
+	}
+
+	&:hover, &:focus {
+		background-color: #005e95;
+	}
+}
+
+/* Global Footer Language: Dialog Barrier */
+/* ========================================================================== */
+
+.esri-footer-language-dialog-barrier {
+	inset: 0;
+	position: fixed;
+
+	&[aria-expanded="false"] {
+		display: none;
+	}
+}
+
+.esri-footer-language-dialog-cancel-canvas {
+	@apply --normalize-button;
+	@apply --unset-button;
+
+	background-color: color(var(--mono-0) a(50%));
+	inset: 0;
+	position: fixed;
+	size: 100%;
+	z-index: 99;
+}
+
+/* Global Footer Language: Dialog */
+/* ========================================================================== */
+
+.esri-footer-language-dialog {
+	@apply --g-language-styles;
+
+	position: fixed;
+	z-index: 100;
+
+	@media (width > 580px) {
+		inset-start: calc(50% - var(--g-language-height) / 2) calc(50% - var(--g-language-width) / 2);
+		size: var(--g-language-width) var(--g-language-height);
+	}
+
+	@media (width <= 580px) {
+		inset-block-end: 0;
+	}
+}
+
+.esri-footer-language-dialog-message {
+	@apply --g-language-message-styles;
+}
+
+.esri-footer-language-dialog-choice {
+	@apply --g-language-choice-styles;
+}
+
+.esri-footer-language-dialog-submit {
+	@apply --g-language-submit-styles;
+}
+
+.esri-footer-language-dialog-close {
+	@apply --g-language-close-styles;
+}

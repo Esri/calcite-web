@@ -22,8 +22,8 @@
   <!-- stylesheets -->
   
   <link rel="stylesheet" href="../assets/css/extensions.css">
-  <link rel="stylesheet" href="../assets/css/all.css" id="calcite-theme-light" name="theme-light" title="theme-light">
-  <link rel="stylesheet" href="../assets/css/dark.css" id="calcite-theme-dark" name="theme-dark" title="theme-dark" disabled>
+  <link rel="stylesheet" href="../assets/css/all.css" id="calcite-theme-light" title="theme-light">
+  <link rel="stylesheet" href="../assets/css/dark.css" id="calcite-theme-dark" title="theme-dark" disabled>
   
   
     <!--[if IE]>
@@ -50,7 +50,7 @@
           <a href="../quick-reference/" class="side-nav-link">Quick Reference</a>
           <a class="side-nav-link">
             <label class="toggle-switch leader-0 trailer-0">
-              <input type="checkbox" class="toggle-switch-input docs-theme-toggle">
+              <input type="checkbox" class="toggle-switch-input js-theme-toggle">
               <span class="toggle-switch-track margin-right-half"></span>
               <span class="toggle-switch-label font-size--2">Dark Theme</span>
             </label>
@@ -69,7 +69,7 @@
           <a href="../quick-reference/" class="side-nav-link">Quick Reference</a>
           <a class="side-nav-link">
             <label class="toggle-switch leader-0 trailer-0">
-              <input type="checkbox" class="toggle-switch-input docs-theme-toggle">
+              <input type="checkbox" class="toggle-switch-input js-theme-toggle">
               <span class="toggle-switch-track margin-right-half"></span>
               <span class="toggle-switch-label font-size--2">Dark Theme</span>
             </label>
@@ -113,7 +113,7 @@
             <nav class="class-top-nav-list right" role="navigation" aria-labelledby="usernav">
               <span class="margin-right-1 inline-block">
                 <label class="toggle-switch trailer-0 docs-toggle-spacer">
-                  <input type="checkbox" class="toggle-switch-input docs-theme-toggle">
+                  <input type="checkbox" class="toggle-switch-input js-theme-toggle">
                   <span class="toggle-switch-track margin-right-half"></span>
                   <span class="toggle-switch-labe">Dark Theme</span>
                 </label>
@@ -247,10 +247,10 @@
           <p>This is probably the easiest way, but you won't get any of the helpful Sass mixins. If you're looking to get up and running quickly, just <a href="https://github.com/ArcGIS/calcite-web/releases">download the latest release</a> and move the zipped files to wherever you keep your assets (CSS, JavaScript, images). Be sure to use <a href="http://esri.github.io/calcite-web/">the documentation site</a> to copy and paste patterns, components, and even a sample html boilerplate.</p>
 <p>You can also use a hosted version of Calcite Web:</p>
 <pre><code tabindex="0"><span class="hljs-comment">&lt;!-- In the head --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.1/css/calcite-web.min.css"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.2/css/calcite-web.min.css"</span>&gt;</span>
 
 <span class="hljs-comment">&lt;!-- Just before end of body --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.1/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.2/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
 
         </div>
@@ -273,7 +273,7 @@
         </h5>
         <div class="js-search-item-content hide">
           <p>To install Calcite-Web as a ruby gem, reference the gem from your <code>Gemfile</code>:</p>
-<pre><code tabindex="0">gem <span class="hljs-string">"calcite-web"</span>, :<span class="hljs-function"><span class="hljs-params">git</span> =&gt;</span> <span class="hljs-string">"https://github.com/Esri/calcite-web.git"</span>, :<span class="hljs-function"><span class="hljs-params">tag</span> =&gt;</span> <span class="hljs-string">"v1.0.1"</span>
+<pre><code tabindex="0">gem <span class="hljs-string">"calcite-web"</span>, :<span class="hljs-function"><span class="hljs-params">git</span> =&gt;</span> <span class="hljs-string">"https://github.com/Esri/calcite-web.git"</span>, :<span class="hljs-function"><span class="hljs-params">tag</span> =&gt;</span> <span class="hljs-string">"v1.0.2"</span>
 </code></pre>
 <p>This makes Calcite Web available as a Compass extension. To use Calcite Web, make sure you require the gem in your compass config file (usually found at <code>config/compass.rb</code>). An example config file might look like this:</p>
 <pre><code class="ruby" tabindex="0"><span class="hljs-keyword">require</span> <span class="hljs-string">"calcite-web"</span>
@@ -307,7 +307,7 @@ sass_dir = <span class="hljs-string">"sass"</span>
         </h5>
         <div class="js-search-item-content hide">
           <p>To install Calcite Web with npm, type:</p>
-<pre><code tabindex="0">npm <span class="hljs-keyword">install</span> --save-dev Esri/calcite-web<span class="hljs-comment">#v1.0.1</span>
+<pre><code tabindex="0">npm <span class="hljs-keyword">install</span> --save-dev Esri/calcite-web<span class="hljs-comment">#v1.0.2</span>
 </code></pre>
 <p>You must add the current version in order to get the <code>dist/</code> folder.</p>
 <p>Now, in your main <code>.scss</code> file, you can just require the framework:</p>
@@ -711,19 +711,9 @@ $initHighlight([<span class="hljs-string">"class1"</span>, <span class="hljs-str
 <td>Space between columns</td>
 </tr>
 <tr>
-<td><code>$ie8-support</code></td>
-<td>false</td>
-<td>Whether you'd like to support Internet Explorer 8</td>
-</tr>
-<tr>
 <td><code>$container-width</code></td>
 <td>1450px</td>
 <td>Max size of <code>grid-container</code> element in pixels</td>
-</tr>
-<tr>
-<td><code>$column-gutter-fallback</code></td>
-<td>20px</td>
-<td>Fallback for space between columns for IE8</td>
 </tr>
 <tr>
 <td><code>$container-width-fallback</code></td>
@@ -1681,7 +1671,7 @@ aligning grid columns when the Grid System is unable to determine which columns 
           </a>
         </h5>
         <div class="js-search-item-content hide">
-          <p>The loader element is a placeholder while content is being retreived or rendered. By default, the loader is set to <code>display: none;</code> and requires an <code>is-active</code> class to display.</p>
+          <p>The loader element is a placeholder while content is being retrieved or rendered. By default, the loader is set to <code>display: none;</code> and requires an <code>is-active</code> class to display.</p>
 
         </div>
         <!-- populated on the client -->
@@ -3307,7 +3297,7 @@ calcite.init();
 <p>If <code>calcite-web.js</code> is used on a page with no module syntax, it will just attach itself to <code>window.calcite</code>. Here is an example which initializes Calcite from a hosted file on S3:</p>
 <pre><code class="html" tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
   ...
-  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.1/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.2/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="undefined">
      calcite.init()
   </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
@@ -3533,7 +3523,7 @@ calcite<span class="hljs-selector-class">.bus</span><span class="hljs-selector-c
 </tr>
 <tr>
 <td>filterDropdown:active</td>
-<td>Emits all the currently selected items from the componenet.</td>
+<td>Emits all the currently selected items from the component.</td>
 <td>Options Object. Replaces <code>item</code> with <code>active</code> Array of items.</td>
 <td><code>drawActive()</code></td>
 </tr>

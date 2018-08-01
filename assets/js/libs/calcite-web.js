@@ -1,6 +1,6 @@
 /*!
  * Calcite Web - Calcite Design Components in CSS, JS and HTML
- * @version v1.0.1
+ * @version v1.0.2
  * @license Apache-2.0
  * @copyright 2018 Esri
  * @link https://github.com/Esri/calcite-web
@@ -173,7 +173,8 @@ function toggleExpanded (domNode) {
 
 var boundEvents = {
   dropdowns: [],
-  accordions: []
+  accordions: [],
+  modals: []
 };
 
 // returns standard interaction event, later will add touch support
@@ -795,7 +796,7 @@ function filterDropdown () {
   function drawActive (options) {
     bus.emit('filterDropdown:active:clear', options);
 
-    var placeholder = options.parent.querySelector('.js-flilter-dropdown-no-filters');
+    var placeholder = options.parent.querySelector('.js-filter-dropdown-no-filters');
     if (options.active.length > 0) {
       add(placeholder, 'hide');
     } else {
@@ -841,7 +842,7 @@ function filterDropdown () {
 // Emitting false or null closes all modals.
 
 function modal () {
-  var html = document.documentElement;
+  var body = document.body;
   var wrapper = document.querySelector('.wrapper');
   var footer = document.querySelector('.footer');
   var toggles = findElements('.js-modal-toggle');
@@ -872,7 +873,7 @@ function modal () {
     modal.removeAttribute('tabindex');
     add$1(document, 'keydown', fenceModal);
     add(modal, 'is-active');
-    add(html, 'drawer-no-overflow');
+    add(body, 'drawer-no-overflow');
     hide(dependentNodes());
     var interactiveQuery = 'button, [href], input, select, textarea, [tabindex]';
     var focusableElements = findElements(interactiveQuery, modal).filter(function (el) {
@@ -884,8 +885,8 @@ function modal () {
   }
 
   function closeModal (modalId) {
-    if (has(html, 'drawer-no-overflow')) {
-      remove(html, 'drawer-no-overflow');
+    if (has(body, 'drawer-no-overflow')) {
+      remove(body, 'drawer-no-overflow');
     }
     if (!modalId) { return removeActive(modals); }
     var modal = document.querySelector((".js-modal[data-modal=\"" + (modalId.id) + "\"]"));
@@ -898,10 +899,20 @@ function modal () {
   function bindModals (node) {
     if (!node) {
       toggles.forEach(function (toggle$$1) {
-        add$1(toggle$$1, click(), toggleClick);
+        var eventExists = false;
+        boundEvents.modals.forEach(function (e) {
+          if (e.target === toggle$$1 && e.event === click() && e.fn === toggleClick$2) {
+            eventExists = true;
+          }
+        });
+
+        if (!eventExists) {
+          boundEvents.modals.push({target: toggle$$1, event: click(), fn: toggleClick$2});
+          add$1(toggle$$1, click(), toggleClick$2);
+        }
       });
     } else {
-      add$1(node, click(), toggleClick);
+      add$1(node, click(), toggleClick$2);
     }
   }
 
@@ -923,13 +934,13 @@ function modal () {
     }
   }
 
-  function toggleClick (e) {
-    preventDefault(e);
-    var modalId = e.target.getAttribute('data-modal');
-    bus.emit('modal:open', {id: modalId});
-  }
-
   bus.emit('modal:bind');
+}
+
+function toggleClick$2 (e) {
+  preventDefault(e);
+  var modalId = e.target.getAttribute('data-modal');
+  bus.emit('modal:open', {id: modalId});
 }
 
 // Cool Helpers
@@ -1332,7 +1343,7 @@ function extend (plugin) {
 // │ Public API │
 // └────────────┘
 // define all public api methods
-var version = '1.0.0';
+var version = '1.0.2';
 var click$1 = click;
 var addEvent = add$1;
 var removeEvent = remove$1;
