@@ -1,0 +1,33 @@
+<h3 id="color-finder" class="padding-leader-1">Color Finder</h3>
+
+<p id="color-instructions">To find an accessible color combination, select a color swatch below.</p>
+
+{% set palettes = data.table_of_contents.color.navigation[0].pages %}
+
+<div class="column-24 trailer-3">
+  {% for palette in palettes %}
+    {% if palette.colors %}
+      <div class="visually-hidden js-contrast-notification" aria-live="polite" id="contrast-notification"></div>
+      <div class="block-group block-group-5-up tablet-block-group-3-up phone-block-group-2-up" aria-role="radiogroup" aria-label="swatch picker">
+          {% for color in palette.colors %}
+            {% set value = data.colors["$" + color] %}
+            {% if value.charAt(0) == "#" %}
+              <button class="color-swatch card block trailer-1 js-swatch" data-hex="{{value}}" data-color="{{color}}" aria-label="find colors with sufficient contrast to {{color}}" tabindex="-1" role="radio" aria-checked="false">
+                <div class="color-sample {{ color }}" aria-hidden="true">
+                  <span aria-hidden="true" class="color-swatch-text inline-block padding-trailer-half padding-left-1 font-size-3 js-swatch-text" style="opacity: 0">
+                    A
+                    <span class="font-size-1">A</span>
+                </div>
+                <div class="card-content">
+                  <p class="font-size-0 trailer-quarter">{{ color }}</p>
+                  <p class="trailer-0 font-size--2 clearfix">
+                    <code class="left">{{value}}</code>   <span class="label label-blue inline-block right hide js-swatch-rating">{{value}}</span></code>
+                  </p>
+                </div>
+              </button>
+            {% endif %}
+          {% endfor %}
+        </div>
+    {% endif %}
+  {% endfor %}
+</div>
