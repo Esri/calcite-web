@@ -1,0 +1,43 @@
+---
+title: Accessibility
+description: Simple accessibility pointers for creating inclusive web experiences
+layout: layouts/_guide:text
+js:
+  - contrast
+---
+
+{% markdown %}
+Building interfaces and experiences that are accessible to people with a diverse range of hearing, movement, sight, and cognitive abilities is a core concern of Calcite Web. To that end all of our components are designed to be WCAG 2.0 AA compliant.
+
+As a designer or a developer using Calcite Web, there are several things you can do to ensure that the experiences you build with Calcite Web will work for everybody.
+
+<h2 class="leader-3">1. Ensure Sufficient Contrast</h2>
+
+If text is set using two colors that don't have enough contrast, users who have impaired vision may not be able to read or understand the interface. To pass the WCAG 2.0 AA requirement guidelines, you should aim to have a color contrast of at least 4.5:1.
+
+{% endmarkdown %}
+
+{% include "guides/_color-finder.html" %}
+
+{% markdown %}
+
+<h2 class="leader-3">2. Use Semantic Markup</h2>
+
+```
+<a href="#" class="btn js-btn">Click Me!</a>
+```
+
+```
+<button class="btn js-btn">Click Me!</button>
+```
+
+<h2 class="leader-3">3. Provide Focus States</h2>
+
+```
+.my-cool-element:focus {
+  outline: none;
+}
+```
+
+<h2 class="leader-3">4. Use Correct Aria Roles (when needed)</h2>
+{% endmarkdown %}
