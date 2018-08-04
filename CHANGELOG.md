@@ -4,6 +4,7 @@
 - fix diacritical marks in Hebrew (#966)
 - allow override of `$vw-ratio` variable (#960)
 - use `$dark-green` for green labels to pass WCAG 2.0 AA requirements (#969)
+- fix modal toggles when toggle has child element (#953)
 
 ## [1.0.2][1.0.2]
 
