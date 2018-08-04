@@ -1,3 +1,8 @@
+## [1.0.3][1.0.3]
+
+### Fixes
+- fix diacritical marks in Hebrew (#966)
+
 ## [1.0.2][1.0.2]
 
 ### Fixes
@@ -1366,6 +1371,7 @@ Begin foundational sass for the framework.
 - CSS Reset
 - Grunt Workflows
 
+[1.0.3]: https://github.com/esri/calcite-web/compare/v1.0.3...v1.0.3
 [1.0.2]: https://github.com/esri/calcite-web/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/esri/calcite-web/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/esri/calcite-web/compare/v1.0.0-rc.9...v1.0.0
