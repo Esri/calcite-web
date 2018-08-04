@@ -2,6 +2,7 @@
 
 ### Fixes
 - fix diacritical marks in Hebrew (#966)
+- allow override of `$vw-ratio` variable (#960)
 
 ## [1.0.2][1.0.2]
 
