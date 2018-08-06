@@ -1,4 +1,4 @@
-## [1.0.3][1.0.3]
+## [1.0.3]
 
 ### Fixes
 - fix diacritical marks in Hebrew (#966)
@@ -6,7 +6,7 @@
 - use `$dark-green` for green labels to pass WCAG 2.0 AA requirements (#969)
 - fix modal toggles when toggle has child element (#953)
 
-## [1.0.2][1.0.2]
+## [1.0.2]
 
 ### Fixes
 - remove unused grid configuration variables (#836)
@@ -16,13 +16,13 @@
 - added RTL support for accordion caret icons (#950)
 - fixed rebinding of modal events (#956)
 
-## [1.0.1][1.0.1]
+## [1.0.1]
 
 ### Fixes
 - fix baseline in Edge (#929)
 - remove `border-collapse: auto` from `table-no-table` class
 
-## [1.0.0][1.0.0]
+## [1.0.0]
 
 ### Fixes
 - Fix rounding error on certain column widths (#742)
@@ -40,7 +40,7 @@
 - :warning: List styles now closer to browser defaults (#866)
 - :warning: Tables must now use the `table` class to get styles (#852)
 
-## [1.0.0-rc.9][1.0.0-rc.9]
+## [1.0.0-rc.9]
 
 ### Fixes
 - remove some `!important` rules (#877)
@@ -1374,7 +1374,7 @@ Begin foundational sass for the framework.
 - CSS Reset
 - Grunt Workflows
 
-[1.0.3]: https://github.com/esri/calcite-web/compare/v1.0.3...v1.0.3
+[1.0.3]: https://github.com/esri/calcite-web/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/esri/calcite-web/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/esri/calcite-web/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/esri/calcite-web/compare/v1.0.0-rc.9...v1.0.0
