@@ -1,0 +1,188 @@
+:root {
+	/* Colors
+	/* ====================================================================== */
+
+	--mono-0: #000000;
+	--mono-20: #323232;
+	--mono-35: #595959;
+	--mono-80: #cccccc;
+	--mono-88: #e0e0e0;
+	--mono-91: #e9e9e9;
+	--mono-97: #f8f8f8;
+	--mono-100: #ffffff;
+	--blue: #0079c1;
+	--blue-dark: #005e95;
+
+	/* Sizing
+	/* ====================================================================== */
+
+	--header-width-m: 320px;
+	--header-height-s: 50px;
+	--header-height-l: 56px;
+	--footer-social-size: 36px;
+	--footer-social-gutter: 7px;
+
+	/* Transitions
+	/* ====================================================================== */
+
+	--smooth-speed: 400ms;
+	--fast-speed: 250ms;
+
+	/* Normalize Property Sets
+	/* ====================================================================== */
+
+	--normalize-button: {
+		-webkit-appearance: button; /* stylelint-disable-line property-no-vendor-prefix */
+		margin: 0;
+		overflow: visible;
+		text-transform: none;
+
+		&::-moz-focus-inner {
+			border-style: none;
+			padding: 0;
+		}
+
+		&:-moz-focusring {
+			outline: 1px dotted ButtonText;
+		}
+	};
+
+	--normalize-input-type-search: {
+		-webkit-appearance: textfield; /* stylelint-disable-line property-no-vendor-prefix */
+		margin: 0;
+		outline-offset: -2px;
+		overflow: visible;
+		box-shadow: none;
+
+		&::-ms-clear {
+			display: none;
+		}
+
+		&::-webkit-search-cancel-button,
+		&::-webkit-search-decoration {
+			-webkit-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
+		}
+
+		&:focus {
+			border-color: transparent;
+			box-shadow: none;
+		}
+	};
+
+	/* Unset Property Sets
+	/* ====================================================================== */
+
+	--unset-a: {
+		color: inherit;
+		text-decoration: none;
+		&:hover {
+			text-decoration: none;
+		}
+	};
+
+	--unset-h: {
+		font-size: inherit;
+		font-weight: inherit;
+		margin: 0 *;
+	};
+
+	--unset-l: {
+		list-style-type: none;
+		margin: 0 *;
+		padding: * 0;
+	};
+
+	--unset-p: {
+		margin: 0 *;
+	};
+
+	--unset-input-text: {
+		background-color: transparent;
+		border-width: 0;
+		font-family: inherit;
+		font-size: inherit;
+		font-style: inherit;
+		font-weight: inherit;
+		padding: 0;
+	};
+
+	--unset-button: {
+		background-color: transparent;
+		border-width: 0;
+		color: inherit;
+		font-family: inherit;
+		font-size: inherit;
+		font-style: inherit;
+		font-weight: inherit;
+		padding: 0;
+	};
+
+	/* Custom Property Sets
+	/* ====================================================================== */
+
+	--menu-link-styles: {
+		&:hover {
+			box-shadow: inset 0 -3px 0 0 color(var(--blue) a(50%));
+			color: var(--mono-0);
+			fill: currentColor;
+		}
+
+		&:matches(:active, [aria-expanded="true"]) {
+			box-shadow: inset 0 -3px 0 0 var(--blue);
+			color: var(--mono-0);
+			fill: currentColor;
+		}
+	};
+
+	--submenu-styles: {
+		box-shadow: inset 0 0 0 1px var(--mono-88);
+		position: absolute 100% * *;
+		transition: opacity var(--fast-speed) ease-in-out;
+
+		&:not([aria-expanded="true"]) {
+			clip: rect(0, 0, 0, 0);
+			opacity: 0;
+			visibility: hidden;
+		}
+	};
+
+	--footer-link-styles: {
+		position: relative;
+
+		&::after {
+			content: url("../shared.svg#c-arrow-right" param(--fill var(--blue)));
+			inset-block-start: calc(50% - 5px);
+			line-height: 10px;
+			margin-inline-start: -.25em;
+			opacity: 0;
+			position: absolute;
+			size: 10px;
+			transition: margin-left 300ms, margin-right 300ms, opacity 300ms;
+
+			&:dir(rtl) {
+				transform: scale(-1);
+			}
+		}
+
+		&:hover, &:focus {
+			&::after {
+				margin-inline-start: .25em;
+				opacity: 1;
+			}
+		}
+	};
+}
+
+/* Breakpoints
+/* ========================================================================== */
+
+@custom-media --width-l  (width >= 1024px);
+@custom-media --width-ml (width >= 768px);
+@custom-media --width-m  (width >= 768px) and (width < 1024px);
+@custom-media --width-sm (width < 1024px);
+@custom-media --width-s  (width < 768px);
+
+/* Selectors
+/* ========================================================================== */
+
+@custom-selector :--enter :focus, :hover;

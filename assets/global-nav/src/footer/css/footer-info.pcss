@@ -1,0 +1,66 @@
+@import "./footer--media.pcss";
+
+/* Global Footer Info */
+/* ========================================================================== */
+
+.esri-footer-info {
+	@media (--gfoot-s) {
+		padding-inline: 20px 15px;
+	}
+
+	@media (--gfoot-m) {
+		flex-grow: 1;
+	}
+
+	@media (--gfoot-l) {
+		flex-grow: 1;
+	}
+}
+
+.esri-footer-info-list {
+	@apply --unset-l;
+
+	@media (--gfoot-m) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	@media (--gfoot-l) {
+		display: flex;
+	}
+}
+
+.esri-footer-info-item {
+	@media (--gfoot-s) {
+		display: inline-block;
+		white-space: nowrap;
+	}
+
+	@media (--gfoot-l) {
+		width: 20%;
+	}
+}
+
+.esri-footer-info-link {
+	@apply --unset-a;
+	@apply --footer-link-styles;
+
+	display: inline-block;
+	font-size: 14px / 16px;
+	font-weight: 300;
+	padding-block: 4px;
+	transition: font-size 300ms;
+	white-space: nowrap;
+
+	&:hover, &:focus {
+		color: #0079c1;
+	}
+
+	@media (--gfoot-s) {
+		margin-inline-end: 30px;
+	}
+
+	@media (--gfoot-m) {
+		margin-inline-end: 35px;
+	}
+}

@@ -1,0 +1,87 @@
+@import "../../shared/css/shared.pcss";
+
+/* Global Language: Custom Properties
+/* ========================================================================== */
+
+:root {
+	--g-language-width: 580px;
+	--g-language-height: 220px;
+	--g-language-inline-padding: 50px;
+	--g-language-block-padding: 40px;
+	--g-language-close-size: 24px;
+}
+
+/* Global Language: Custom Property Sets
+/* ========================================================================== */
+
+:root {
+	--g-language-styles: {
+		color: var(--mono-0) var(--mono-100);
+		padding: var(--g-language-block-padding) var(--g-language-inline-padding);
+		position: relative;
+
+		&, & * {
+			box-sizing: border-box;
+		}
+	};
+
+	--g-language-close-styles: {
+		@apply --normalize-button;
+		@apply --unset-button;
+
+		inset-block-start: calc(var(--g-language-block-padding) - var(--g-language-close-size) / 2);
+		inset-inline-end: calc(var(--g-language-inline-padding) - var(--g-language-close-size) / 2);
+		position: absolute;
+		size: var(--g-language-close-size);
+
+		&::after {
+			content: url("../../shared/shared.svg#c-close" param(--fill var(--blue)));
+		}
+	};
+
+	--g-language-message-styles: {
+		font-size: 20px / 30px;
+	};
+
+	--g-language-choice-styles: {
+		border-radius: 0;
+		border-style: none;
+		box-shadow: inset 0 0 0 1px var(--blue);
+		font-size: 12px;
+		padding-inline: 16px;
+
+		@media (width <= 580px) {
+			size: 100% 34px;
+		}
+
+		@media (width > 580px) {
+			size: 272px 34px;
+		}
+	};
+
+	--g-language-submit-styles: {
+		@apply --normalize-button;
+		@apply --unset-button;
+
+		color: var(--mono-100) var(--blue);
+		font-size: 12px;
+
+		@media (width <= 580px) {
+			margin-block-start: 5px;
+			size: 100% 34px;
+		}
+
+		@media (width > 580px) {
+			margin-inline-start: 8px;
+			size: 130px 34px;
+
+			@nest [dir="rtl"] & {
+				margin-inline: 0 8px;
+			}
+		}
+
+		&:hover, &:focus {
+			background-color: color(var(--blue) b(50%));
+		}
+	};
+}
