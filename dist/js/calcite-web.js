@@ -1,6 +1,6 @@
 /*!
  * Calcite Web - Calcite Design Components in CSS, JS and HTML
- * @version v1.0.2
+ * @version v1.0.3
  * @license Apache-2.0
  * @copyright 2018 Esri
  * @link https://github.com/Esri/calcite-web
@@ -939,7 +939,8 @@ function modal () {
 
 function toggleClick$2 (e) {
   preventDefault(e);
-  var modalId = e.target.getAttribute('data-modal');
+  var toggle$$1 = closest('js-modal-toggle', e.target);
+  var modalId = toggle$$1.getAttribute('data-modal');
   bus.emit('modal:open', {id: modalId});
 }
 
@@ -1343,7 +1344,7 @@ function extend (plugin) {
 // │ Public API │
 // └────────────┘
 // define all public api methods
-var version = '1.0.2';
+var version = '1.0.3';
 var click$1 = click;
 var addEvent = add$1;
 var removeEvent = remove$1;
