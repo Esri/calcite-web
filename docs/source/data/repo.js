@@ -1,4 +1,4 @@
-var request = require('request');
+
 var months = [
   'January',
   'February',
@@ -14,18 +14,11 @@ var months = [
   'December'
 ];
 
-module.exports = function getRelease (cb) {
-  // https://developer.github.com/v3/repos/#get
-  return request({
-    method: 'GET',
-    url: 'https://api.github.com/repos/Esri/calcite-web',
-    json: true,
-    headers: {
-      'User-Agent': 'request'
-    }
-  }, function (err, resp, body) {
-    var date = new Date(body.pushed_at);
-    body.pushed_at = months[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear();
-    return cb(err, body);
+
+module.exports = function (cb) {
+  require('child_process').exec('git log --pretty=format:"%ad" -n 1', function(err, stdout) {
+    var date = new Date(stdout.trim());
+    var pushed_at = `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+    return cb(err, {pushed_at});
   });
-};
+}
