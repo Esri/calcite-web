@@ -1,3 +1,8 @@
+## [1.0.4]
+
+### Fixes
+- Fix `.toggle-switch-input` cascade (#977)
+
 ## [1.0.3]
 
 ### Fixes
