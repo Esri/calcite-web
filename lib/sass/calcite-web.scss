@@ -40,8 +40,6 @@ $include-type:                   $generate-css    !default;
 $include-icons:                  $generate-css    !default;
   $include-calcite-icons:        $generate-css    !default;
   $include-social-icons:         $generate-css    !default;
-  $include-icon-font:            $generate-css    !default;
-  $include-svg-icon:             $generate-css    !default;
 
 // Components
 $include-alerts:                 $generate-css    !default;
@@ -110,7 +108,6 @@ $include-filter-dropdown:        $generate-css    !default;
 // Icons
 // Icon font, social icons, and calcite icons
 @import "calcite-web/icons/calcite-ui";
-@import "calcite-web/icons/icon-colors";
 @import "calcite-web/icons/social";
 
 // Components

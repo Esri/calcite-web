@@ -1,0 +1,1 @@
+Several helper classes are provided to accomplish several common use cases like setting color and positioning before or after text. The base `svg-icon` class vertically aligns and disables pointer events on the icon. This class is meant to be used in tandem with the other modifiers.

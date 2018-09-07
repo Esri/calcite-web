@@ -266,12 +266,12 @@ icons:
         - title: 'Overview'
           link: overview
         - title: 'User Interface Icons'
-          link: svg-icons
-          classes:
-            - icon-ui-flush
-        - title: 'UI Icon Colors'
-          link: svg-colors
-          classes:
+          link: ui
+        - title: 'Icon Helpers'
+          link: helpers
+          modifiers:
+            - svg-icon-before
+            - svg-icon-after
             - svg-icon-light-blue
             - svg-icon-blue
             - svg-icon-dark-blue
@@ -281,20 +281,8 @@ icons:
             - svg-icon-orange
             - svg-icon-red
             - svg-icon-gray
-        - title: 'Icon Font Colors'
-          link: icon-font-colors
-          classes:
-            - icon-ui-light-blue
-            - icon-ui-blue
-            - icon-ui-dark-blue
-            - icon-ui-green
-            - icon-ui-yellow
-            - icon-ui-purple
-            - icon-ui-orange
-            - icon-ui-red
-            - icon-ui-gray
         - title: 'Social Icons'
-          link: social-icons
+          link: social
           classes:
             - icon-social-contact
             - icon-social-facebook

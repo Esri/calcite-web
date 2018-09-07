@@ -329,14 +329,8 @@ mark {
   height: 16px;
   width: auto;
   max-width: 40px;
-  margin-left: $baseline * 0.25;
+  margin: 0 $baseline * 0.25;
   vertical-align: middle;
-  @if ($include-right-to-left) {
-    html[dir="rtl"] & {
-      margin-left: 0;
-      margin-right: $baseline * 0.25;
-    }
-  }
 }
 
 .docs-toggle-spacer {
