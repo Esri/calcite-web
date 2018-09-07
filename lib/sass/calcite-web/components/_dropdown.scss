@@ -55,35 +55,8 @@
   }
 
   @mixin dropdown-btn {
-    // for developers who haven't moved to inline svg icons yet
-    @if $include-svg-icon == false {
-      padding-right: 1.5rem;
-      cursor: pointer;
-      position: relative;
-      &:after {
-        @include font-size(-2);
-        @extend %icon-font-after;
-        @extend .icon-ui-down:before;
-        position: absolute;
-        right: .35rem;
-      }
-      @if ($include-right-to-left) {
-        html[dir="rtl"] &:after {
-          right: auto;
-          left: .35rem;
-          padding-left: 0;
-        }
-
-        html[dir="rtl"] & {
-          padding-left: 1.5rem;
-          padding-right: 0.9rem;
-        }
-      }
-    // for inline svg, the code is much easier
-    } else {
-      cursor: pointer;
-      position: relative;
-    }
+    cursor: pointer;
+    position: relative;
   }
 
 

@@ -1,3 +1,21 @@
+## [2.0.0]
+
+### Added
+
+#### Icons
+- All icons in the [calcite-ui-icons](https://github.com/esri/calcite-ui-icons/) set are now available in two syles and three sizes
+- `svg-icon-before` and `svg-icon-after` classes for spacing icons from text
+
+### Breaking
+
+#### Icons
+- :warning: removed icon font
+- :warning: removed icon font color helper classes
+- :warning: removed all icon svgs (use calcite-ui-icons dependency)
+- :warning: removed `icon-flush`. Default doesn't apply padding, so no need now.
+- :warning: `svg-icon` class no longer sets size of icon, use `width` and `height` attributes
+- `dropdown` and `accordion` components must use SVG (no icon font)
+
 ## [1.0.3]
 
 ### Fixes

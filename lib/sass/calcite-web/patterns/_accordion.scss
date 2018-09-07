@@ -9,17 +9,8 @@
 }
   @mixin accordion-section() {
     &.is-active {
-      // for developers who haven't moved to inline svg icons yet
-      @if $include-svg-icon == false {
-        .accordion-title:before {
-          @extend .icon-ui-down:before;
-        }
-      }
-      // using inline icons
-      @if $include-svg-icon == true {
-        .accordion-icon .svg-icon {
-          @include transform(rotate(0));
-        }
+      .accordion-icon {
+        @include transform(rotate(0));
       }
       .accordion-content {
         display: block;
@@ -30,14 +21,6 @@
   @mixin accordion-title() {
     @include side-nav-title();
     cursor: pointer;
-    // for developers who haven't moved to inline svg icons yet
-    @if $include-svg-icon == false {
-      &:before {
-        font-size: modular-scale(-3);
-        @extend %icon-font-styles;
-        @extend .icon-ui-right:before;
-      }
-    }
     &:focus,
     &:hover {
       @include transition(all, $transition);
