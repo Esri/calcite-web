@@ -3,5 +3,3 @@ A set of social icons are provided as part of calcite-web. Just use the `icon-so
 ```html
 <span class="icon-social-facebook" aria-label="Facebook"></span>
 ```
-
-Below are the current social icons. More sizes are planned. For now only 30x30 pixel square icons are available.
