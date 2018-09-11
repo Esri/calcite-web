@@ -20,7 +20,7 @@
     "sass": "node-sass docs/source/assets/css/ --include-path lib/sass -q --source-map-embed -o docs/build/assets/css/",
     "sass:watch": "npm run sass -- -w",
     "sass:dist": "node-sass lib/sass/ -q -o dist/css/",
-    "minify": "node bin/minify.js",
+    "minify": "node bin/minify.js"
   },
   "semistandard": {
     "ignore": [
