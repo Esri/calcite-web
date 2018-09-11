@@ -1,8 +1,8 @@
-let path = require('path');
-let fs = require('fs');
-let sqwish = require('sqwish');
-let pkg = require('../package.json');
-let banner = `/*!
+const path = require('path');
+const fs = require('fs-extra');
+const sqwish = require('sqwish');
+const pkg = require('../package.json');
+const banner = `/*!
  * Calcite Web - Calcite Design Components in CSS, JS and HTML
  * @version v${pkg.version}
  * @license Apache-2.0
@@ -11,6 +11,12 @@ let banner = `/*!
  */
 `;
 
+// copy over assets
+fs.copySync('lib/sass/', 'dist/sass/');
+fs.copySync('lib/img/', 'dist/img/');
+fs.copySync('docs/build/assets/js/libs/', 'dist/js/');
+
+// minify and add a banner to all css files
 fs.readdir('./dist/css/', function (er, files) {
   files.filter(filename => filename.indexOf('.css') > -1 && filename.indexOf('.min.css') === -1)
   .forEach(filename => {
