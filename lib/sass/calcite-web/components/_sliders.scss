@@ -6,21 +6,20 @@
 
 // variables
 $range-border: 1px solid transparent;
-$track-bgcolor: $Calcite_Gray_350;
+$track-bgcolor: $lighter-gray;
 $track-height: 2px;
-$track-hover-bgcolor: $Calcite_Gray_400;
-$track-active-bgcolor: $Calcite_Gray_450;
-// $track-progress-bgcolor: $Brand_Blue_200;
+$track-hover-bgcolor: $light-gray;
+$track-active-bgcolor: $gray;
 $thumb-height: 18px;
 $thumb-width: 18px;
 $thumb-border: 2px solid;
-$thumb-border-color: $Calcite_Gray_450;
-$thumb-border-hover-color: $Brand_Blue_200;
-$thumb-shadow-hover: 0 0 4px 1px rgba($Calcite_Gray_350, 0.9);
-$thumb-shadow-active: 0 0 4px 1px rgba($Calcite_Blue_250, 0.9);
+$thumb-border-color: $gray;
+$thumb-border-hover-color: $blue;
+$thumb-shadow-hover: 0 0 4px 1px rgba($lighter-gray, 0.9);
+$thumb-shadow-active: 0 0 4px 1px rgba($dark-blue, 0.9);
 $thumb-bg-default: $white;
-$thumb-bg-hover: $Brand_Blue_200;
-$thumb-bg-active: $Calcite_Blue_a250;
+$thumb-bg-hover: $blue;
+$thumb-bg-active: $darker-blue;
 
 // mixins
 @mixin range-style {

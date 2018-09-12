@@ -6,14 +6,16 @@
   "homepage": "https://github.com/esri/calcite-web",
   "scripts": {
     "test": "semistandard",
-    "start": "run-p sass *:watch",
-    "deploy": "run-s rollup sass acetate gh-pages",
+    "start": "run-p copy sass *:watch",
+    "deploy": "run-s rollup copy sass acetate gh-pages",
     "predist": "rimraf dist/",
-    "dist": "run-s sass:dist rollup minify",
+    "dist": "run-s copy sass:dist rollup minify copy:dist",
     "prerelease": "node bin/s3.js",
     "release": "gh-release",
     "acetate": "node bin/server.js",
     "acetate:watch": "node bin/server.js --watch",
+    "copy": "node bin/copy.js",
+    "copy:dist": "node bin/copy.js --dist",
     "gh-pages": "gh-pages -d docs/build -o upstream",
     "rollup": "rollup -c lib/js/rollup.config.js",
     "rollup:watch": "rollup -c lib/js/rollup.config.js -w",
@@ -81,6 +83,7 @@
     "sqwish": "^0.2.2"
   },
   "dependencies": {
+    "@esri/calcite-colors": "^1.0.0",
     "@esri/calcite-ui-icons": "^1.2.0"
   }
 }

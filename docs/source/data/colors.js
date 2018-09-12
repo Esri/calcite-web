@@ -1,6 +1,4 @@
-var scssToJson = require('scss-to-json');
-var path = require('path');
-var colors = scssToJson('lib/sass/calcite-web/base/_colors.scss');
+var colors = require('@esri/calcite-colors');
 
 Object.keys(colors).forEach(key => {
   // convert three digit hex codes to six digits
