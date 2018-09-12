@@ -4,9 +4,6 @@ const build = require('acetate/lib/modes/builder');
 const path = require('path');
 const fs = require('fs-extra');
 
-// copy over global-nav assets
-fs.copySync('node_modules/esri-global-nav/', 'docs/build/assets/global-nav/');
-
 var acetateOptions = {
   root: 'docs/',
   config: 'acetate.config.js',
@@ -33,8 +30,6 @@ if (process.argv[2] && process.argv[2] === '--watch') {
     }
   });
 } else {
-  fs.copySync('lib/img', 'docs/build/assets/img/');
-  fs.copySync('docs/source/assets/', 'docs/build/assets/');
   acetateOptions.log = 'info';
   var builder = build(new Acetate(acetateOptions));
 }
