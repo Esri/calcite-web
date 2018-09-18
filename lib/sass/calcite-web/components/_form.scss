@@ -95,11 +95,11 @@
   }
 
   // Set placeholder text to minimum 4.5/1 contrast (#703)
-  :placeholder                   { color: #767676;  }
-  :input-placeholder             { color: #767676;  }
-  ::-webkit-input-placeholder    { color: #767676;  }
-  ::-moz-placeholder             { color: #767676;  }
-  :-ms-input-placeholder         { color: #767676;  }
+  :placeholder                   { color: $blk-130;  }
+  :input-placeholder             { color: $blk-130;  }
+  ::-webkit-input-placeholder    { color: $blk-130;  }
+  ::-moz-placeholder             { color: $blk-130;  }
+  :-ms-input-placeholder         { color: $blk-130;  }
 
   // ┌─────────────┐
   // │ Text Inputs │
@@ -121,13 +121,13 @@
   //  ↳ http://esri.github.io/calcite-web/documentation/components/#form-validation
   //  ↳ components → _form-validation.md
   .input-error {
-    border-color: $Calcite_Red_200;
+    border-color: $red;
     padding-right: 24px;
     background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjE2cHgiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeD0iMiIgeT0iMCI+PHBhdGggZmlsbD0iI2M4NmE0YSIgZD0iTTExLjIyNSwwSDQuNjQ4TDAsNC42NXY2LjU3Nmw0LjY0OCw0LjY0OWg2LjU3Nmw0LjY1LTQuNjQ5VjQuNjVMMTEuMjI1LDB6IE05LjA3MSwxMy42MDdINi44MDR2LTIuMjY5aDIuMjY4VjEzLjYwN3ogTTkuMDcxLDkuMDcxSDYuODA0VjMuNDAyaDIuMjY4VjkuMDcxeiIvPjwvc3ZnPg==');
     background-position: right center;
     background-repeat: no-repeat;
     &:focus {
-      border-color: $Calcite_Red_200;
+      border-color: $red;
       box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(200, 106, 75, 0.5);
     }
   }
@@ -143,7 +143,7 @@
     @include font-size(-2);
     padding: $baseline/4 $baseline/4;
     @include text-color($transparent-black);
-    background-color: $Calcite_Red_100;
+    background-color: $lightest-red;
     border: 1px solid $light-red;
     position: relative;
     display: none;
@@ -157,7 +157,7 @@
       height: 0;
       pointer-events: none;
       border: 8px solid transparent;
-      border-bottom-color: $Calcite_Red_100;
+      border-bottom-color: $lightest-red;
     }
     &:before {
       content: "";
@@ -262,8 +262,8 @@
       margin-top: .1rem;
       margin-right: 0;
       &:checked {
-        background-color:$Calcite_Blue_250;
-        border-color:$Calcite_Blue_a250;
+        background-color: $dark-blue;
+        border-color: $darker-blue;
       }
     }
   }

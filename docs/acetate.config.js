@@ -3,6 +3,7 @@ var icons = require('./source/data/icons.js');
 var socialIcons = require('./source/data/icon-social.js');
 var colors = require('./source/data/colors.js');
 var repo = require('./source/data/repo.js');
+var stats = require('./source/data/stats.js');
 var MarkdownIt = require('markdown-it');
 var hljs = require('highlight.js');
 
@@ -22,8 +23,8 @@ module.exports = function (acetate) {
    * Load site data
    */
   acetate.data('table_of_contents', 'table_of_contents.yml');
-  acetate.data('stats', 'data/stats.json');
   acetate.data('pkg', '../../package.json');
+  acetate.data('stats', stats);
   acetate.data('icons', icons);
   acetate.data('socialIcons', socialIcons);
   acetate.data('colors', colors);

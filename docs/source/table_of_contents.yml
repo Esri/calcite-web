@@ -305,50 +305,48 @@ color:
       pages:
         - title: 'Overview'
           link: overview
-        - title: 'Grayscale'
-          link: grayscale
-          colors:
-            - white
-            - off-white
-            - lightest-gray
-            - lighter-gray
-            - light-gray
-            - gray
-            - dark-gray
-            - darker-gray
-            - darkest-gray
-            - off-black
-            - transparent-black
-            - black
         - title: 'UI Colors'
           link: ui-colors
-          colors:
-            - lightest-blue
-            - lighter-blue
-            - light-blue
-            - blue
-            - dark-blue
-            - light-green
-            - green
-            - dark-green
-            - light-red
-            - red
-            - dark-red
-            - light-orange
-            - orange
-            - dark-orange
-            - light-yellow
-            - yellow
-            - dark-yellow
-            - light-purple
-            - purple
-            - dark-purple
-            - light-brown
-            - brown
-            - dark-brown
+          palettes:
+            - title: Grayscale
+              colors:
+                - white
+                - off-white
+                - lightest-gray
+                - lighter-gray
+                - light-gray
+                - gray
+                - dark-gray
+                - darker-gray
+                - darkest-gray
+                - off-black
+                - black
+            - title: Blue
+              colors:
+                - lightest-blue
+                - lighter-blue
+                - light-blue
+                - blue
+                - dark-blue
+                - darker-blue
+            - title: Green
+              colors:
+                - lightest-green
+                - lighter-green
+                - light-green
+                - green
+                - dark-green
+                - darker-green
+            - title: Red
+              colors:
+                - lightest-red
+                - lighter-red
+                - light-red
+                - red
+                - dark-red
+                - darker-red
         - title: 'Type Colors'
           link: type-colors
-
 components:
   title: 'Components'
   base: components
