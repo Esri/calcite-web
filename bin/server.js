@@ -5,10 +5,9 @@ const path = require('path');
 const fs = require('fs-extra');
 
 var acetateOptions = {
-  root: 'docs/',
-  config: 'acetate.config.js',
-  sourceDir: 'source',
-  outDir: 'build',
+  config: 'docs/acetate.config.js',
+  sourceDir: 'docs/source',
+  outDir: 'docs/build',
   log: 'error'
 };
 
