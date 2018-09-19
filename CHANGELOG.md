@@ -1,4 +1,4 @@
-## [1.0.4]
+## [1.1.0]
 
 ### Added
 - `overflow-scroll` class for forcing scroll bars
@@ -1389,6 +1389,7 @@ Begin foundational sass for the framework.
 - CSS Reset
 - Grunt Workflows
 
+[1.1.0]: https://github.com/esri/calcite-web/compare/v1.0.3...v1.1.0
 [1.0.3]: https://github.com/esri/calcite-web/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/esri/calcite-web/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/esri/calcite-web/compare/v1.0.0...v1.0.1
