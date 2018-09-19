@@ -6,6 +6,7 @@
 
 ### Updates
 - use new search icon for search field (#979)
+- Fix `.toggle-switch-input` cascade (#977)
 
 ## [1.0.3]
 
