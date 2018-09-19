@@ -6,6 +6,7 @@
 ### Fixes
 - improve keyboard accessibility of tabs pattern (#981)
 - improve aria markup of accordion pattern (#978)
+- don't allow scroll of content behind drawer or modal
 
 ### Updates
 - use new search icon for search field (#979)
