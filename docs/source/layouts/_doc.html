@@ -138,24 +138,22 @@
         {% endif %}
 
         {% if page.palettes %}
-        <div class="column-17 first-column leader-2">
+
           {% for palette in page.palettes %}
-            <div class="column-7 post-1">
-              <h4>{{palette.title}}</h4>
-              <div class="block-group block-group-1-up">
-                {% for color in palette.colors %}
-                  <div class="card block trailer-0">
-                    <div class="color-sample {{ color }}"></div>
-<!--                     <div class="card-content">
-                      <p class="trailer-0 font-size-0">{{ color }}</p>
-                      <p class="trailer-0 font-size--2"><code>{{data.colors["$" + color]}}</code></p>
-                    </div> -->
+            <h4 class="leader-2">{{palette.title}}</h4>
+            <div class="block-group block-group-3-up">
+              {% for color in palette.colors %}
+                <div class="card block trailer-1">
+                  <div class="color-sample {{ color }}"></div>
+                  <div class="card-content">
+                    <p class="trailer-0 font-size-0">
+                      {{ color }} <span class="right font-size--2"><code>{{data.colors[color]}}</code></span>
+                    </p>
                   </div>
-                {% endfor %}
-              </div>
+                </div>
+              {% endfor %}
             </div>
           {% endfor %}
-          </div>
         {% endif %}
 
         {% if page.variables %}
