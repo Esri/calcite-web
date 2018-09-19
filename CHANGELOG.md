@@ -1,3 +1,10 @@
+## [1.0.4]
+
+### Fixes
+
+### Updates
+- use new search icon for search field (#979)
+
 ## [1.0.3]
 
 ### Fixes
