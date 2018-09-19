@@ -7,6 +7,7 @@
 ### Updates
 - use new search icon for search field (#979)
 - Fix `.toggle-switch-input` cascade (#977)
+- `html` element now uses `overflow:auto` instead of forcing a scroll bar (#980)
 
 ## [1.0.3]
 
