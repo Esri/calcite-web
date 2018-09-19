@@ -2,6 +2,7 @@
 
 ### Fixes
 - improve keyboard accessibility of tabs pattern (#981)
+- improve aria markup of accordion pattern (#978)
 
 ### Updates
 - use new search icon for search field (#979)
