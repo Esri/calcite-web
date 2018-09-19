@@ -1,6 +1,7 @@
 ## [1.0.4]
 
 ### Fixes
+- improve keyboard accessibility of tabs pattern (#981)
 
 ### Updates
 - use new search icon for search field (#979)
