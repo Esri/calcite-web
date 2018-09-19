@@ -1,5 +1,8 @@
 ## [1.0.4]
 
+### Added
+- `overflow-scroll` class for forcing scroll bars
+
 ### Fixes
 - improve keyboard accessibility of tabs pattern (#981)
 - improve aria markup of accordion pattern (#978)
