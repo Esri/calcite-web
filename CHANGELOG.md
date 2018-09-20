@@ -1,7 +1,17 @@
-## [1.0.4]
+## [1.1.0]
+
+### Added
+- `overflow-scroll` class for forcing scroll bars
 
 ### Fixes
+- improve keyboard accessibility of tabs pattern (#981)
+- improve aria markup of accordion pattern (#978)
+- don't allow scroll of content behind drawer or modal
+
+### Updates
+- use new search icon for search field (#979)
 - Fix `.toggle-switch-input` cascade (#977)
+- `html` element now uses `overflow:auto` instead of forcing a scroll bar (#980)
 
 ## [1.0.3]
 
@@ -1379,6 +1389,7 @@ Begin foundational sass for the framework.
 - CSS Reset
 - Grunt Workflows
 
+[1.1.0]: https://github.com/esri/calcite-web/compare/v1.0.3...v1.1.0
 [1.0.3]: https://github.com/esri/calcite-web/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/esri/calcite-web/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/esri/calcite-web/compare/v1.0.0...v1.0.1
