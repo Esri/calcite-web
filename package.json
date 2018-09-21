@@ -6,6 +6,7 @@
   "homepage": "https://github.com/esri/calcite-web",
   "scripts": {
     "test": "semistandard",
+    "prestart": "rimraf docs/build",
     "start": "run-p copy sass *:watch",
     "deploy": "run-s rollup copy sass acetate gh-pages",
     "predist": "rimraf dist/",
