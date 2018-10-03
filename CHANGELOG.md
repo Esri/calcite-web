@@ -1,3 +1,8 @@
+## Unreleased
+
+### Added
+- `radio-group` component (#762)
+
 ## [1.1.0]
 
 ### Added
