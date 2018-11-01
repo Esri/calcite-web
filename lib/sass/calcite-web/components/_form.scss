@@ -138,6 +138,14 @@
     background-position: right center;
     background-repeat: no-repeat;
   }
+  
+  .input-error, .input-success {
+    html[dir="rtl"] & {
+      padding-left: 24px;
+      padding-right: $baseline / 5;
+      background-position: left center;
+    }
+  }
 
   .input-error-message {
     @include font-size(-2);
@@ -169,6 +177,12 @@
       pointer-events: none;
       border: 8px solid transparent;
       border-bottom-color: $light-red;
+    }
+    &:after, &:before {
+      html[dir="rtl"] & {
+        left: unset;
+        right: 11px;
+      }
     }
     &.is-active, &.is-active:before, &.is-active:after {
       display: inline-block;
