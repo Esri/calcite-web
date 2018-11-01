@@ -2,6 +2,7 @@
 
 ### Added
 - `radio-group` component (#762)
+-  Improve handling of input validation for RTL (#990)
 
 ## [1.1.0]
 
