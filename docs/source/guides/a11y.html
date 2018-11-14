@@ -23,17 +23,54 @@ If text is set using two colors that don't have enough contrast, users who have 
 
 <h2 class="leader-3">2. Skip to Content</h2>
 
+A skip to content link should be used at the beginning of a page to allow users to bypass site navigation and immediately go to the primary content of the page. Calcite Web provides a helper class for links like this named `skip-to-content`. Simply create an anchor, and make the `href` point to an element located where your content starts. For example, use the following element as the first in your document:
+
+```
+<a class="skip-to-content" href="#skip-to-content">Skip To Content</a>
+```
+
+Then, wrapping the main content of the page, use an element with a `tabindex` of `0` and an `id` of whatever you linked to with the skip to content element:
+
+```
+<div id="skip-to-content" tabindex="0"></div>
+```
+
 <h2 class="leader-3">3. Use Semantic Markup</h2>
+
+An important step towards building accessible experiences is using semantic markup. Many accessibility errors are simply the result of using wrong element for the job. For example, many developers will use a link instead of a button:
+
+
+<div class="column-16 trailer-2">
+  <div class="column-8">
+    <span class="label label-red">Incorrect:</span>
 
 ```
 <a href="#" class="btn js-btn">Click Me!</a>
 ```
 
+  </div>
+  <div class="column-8">
+    <span class="label label-green">Correct:</span>
+
 ```
 <button class="btn js-btn">Click Me!</button>
 ```
 
+  </div>
+</div>
+
+If you need to style a button to look like a link, [use the `btn-link` class](../documentation/components/#button-links).
+
+For a more in-depth overview of how to write html in an accessible way, check out [Writing HTML with accessibility in mind](https://medium.com/alistapart/writing-html-with-accessibility-in-mind-a62026493412). Make sure you're familiar with HTML5 tags like `aside`, `figure`, `article`, `footer`, `nav`, `header`, and the more modern `input` types like `search`. MDN has a fairly good intro on the [WAI-ARIA basics
+](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) page.
+
 <h2 class="leader-3">4. Provide Focus States</h2>
+
+It's very important that as a web developer you avoid hiding the browser's focus state. Turning off the default browser focus outline will make it very hard for people using keyboard navigation to know where they are in the document. If you do want to remove the default `focus` style from the browser, make sure you provide a custom style with sufficient perceptible change that is easy for users to see and interpret.
+
+<div class="column-16 trailer-2">
+  <div class="column-8">
+    <span class="label label-red">Incorrect:</span>
 
 ```
 .my-cool-element:focus {
@@ -41,5 +78,88 @@ If text is set using two colors that don't have enough contrast, users who have 
 }
 ```
 
+  </div>
+  <div class="column-8">
+    <span class="label label-green">Correct:</span>
+
+```
+/* leave the browser default */
+.my-cool-element:focus {}
+
+/* or create a custom style  */
+.my-cool-element:focus {
+  outline: none;
+  border-color: $blue;
+  box-shadow: 0 0 2px 0 rgba(0,121,193,1);
+}
+```
+
+  </div>
+</div>
+
+
 <h2 class="leader-3">5. Use Correct Aria Roles (when needed)</h2>
+
+Aria roles, especially the Landmark roles, are very important for users navigating sites using assistive technologies like screen readers. They help users understand the different areas of your experience and infer meaning about what they do.
+
+To that end, it's important that we use the correct html tags and ARIA roles. Many times, using the correct HTML5 tag is enough to infer meaning, but sometimes you will need to add an additional `role` attribute.
+
+<div class="column-19 trailer-2 leader-2">
+  <div class="column-8">
+    <span class="label label-red">Incorrect:</span>
+
+```
+<!-- top navigation -->
+<div class="top-navigation">...</div>
+
+<!-- side nav -->
+<div class="side-nav">...</div>
+
+<!-- main content -->
+<div class="main-content">...</div>
+
+<!-- supplemental content -->
+<div class="side-bar">...</div>
+
+<!-- footer -->
+<div class="footer">...</div>
+```
+
+  </div>
+  <div class="column-11">
+    <span class="label label-green">Correct:</span>
+
+```
+<!-- top navigation -->
+<header>...</header> <!-- or role="banner" -->
+
+<!-- side nav -->
+<nav class="side-nav">...</nav>  <!-- or role="navigation" -->
+
+<!-- main content -->
+<main class="main-content">...</main> <!-- or role="main" -->
+
+<!-- supplemental content -->
+<aside class="side-bar">...</aside> <!-- or role="complementary" -->
+
+<!-- footer -->
+<footer>...</footer> <!-- or role="contentinfo" -->
+```
+
+  </div>
+</div>
+
+
+This example is obviously very bare bones, but it demonstrates the key idea: _by using semantic html tags or aria roles, you help users understand your content_.
+
+For a full list of aria roles, check out [Using ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques) on MDN.
+
+<h2 class="leader-3">6. Use an Auditing Tool</h2>
+
+There are many other small things that need to be done to make sure your site is accessible like `alt` tags for images, proper labels, avoiding repetitive links, descriptive link text, and more. The best way to make sure all of these smaller things get done correctly is to use an auditing tool. There are several great solutions for checking accessibility, many of which are now built into the development tools you already use.
+
+If you're a Chrome user, you can use Lighthouse (from the "Audits" tab) or install something more robust like the [Axe chrome extension](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd). Axe also provides an [extension for Firefox](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/).
+
+You could also use continuous integration tools in conjunction with something like [a11y](https://www.npmjs.com/package/a11y) to check your work every time you push. By making accessibility auditing part of your everyday workflow, you'll help to ensure the experiences you build will work for _everybody_.
+
 {% endmarkdown %}

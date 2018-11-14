@@ -2,6 +2,7 @@ const fs = require('fs-extra');
 
 fs.copySync('node_modules/@esri/calcite-colors/colors.scss', 'lib/sass/calcite-web/base/_calcite-colors.scss');
 fs.copySync('node_modules/@esri/calcite-ui-icons/', 'lib/img/calcite-ui-icons');
+fs.copySync('node_modules/@esri/calcite-ui-icons/docs/icons.json', 'docs/build/assets/js/icons.json');
 
 if (process.argv[2] && process.argv[2] === '--dist') {
   fs.copySync('lib/sass/', 'dist/sass/');

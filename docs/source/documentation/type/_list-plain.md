@@ -1,1 +1,1 @@
-Provides a way to clear the styles for lists. For example, we use this pattern in the footer to clear the typical list styles for a clean, left aligned appearance.
+Provides a way to clear the styles for lists. Useful as a reset when building out a custom component that will be marked up as a list, but not styled as one.

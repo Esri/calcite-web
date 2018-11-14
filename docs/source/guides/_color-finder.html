@@ -2,15 +2,15 @@
 
 <p id="color-instructions">To find an accessible color combination, select a color swatch below.</p>
 
-{% set palettes = data.table_of_contents.color.navigation[0].pages %}
+{% set palettes = data.table_of_contents.color.navigation[0].pages[1].palettes %}
 
 <div class="column-24 trailer-3">
   {% for palette in palettes %}
     {% if palette.colors %}
       <div class="visually-hidden js-contrast-notification" aria-live="polite" id="contrast-notification"></div>
-      <div class="block-group block-group-5-up tablet-block-group-3-up phone-block-group-2-up" aria-role="radiogroup" aria-label="swatch picker">
+      <div class="block-group block-group-6-up tablet-block-group-3-up phone-block-group-2-up" aria-role="radiogroup" aria-label="swatch picker">
           {% for color in palette.colors %}
-            {% set value = data.colors["$" + color] %}
+            {% set value = data.colors[color] %}
             {% if value.charAt(0) == "#" %}
               <button class="color-swatch card block trailer-1 js-swatch" data-hex="{{value}}" data-color="{{color}}" aria-label="find colors with sufficient contrast to {{color}}" tabindex="-1" role="radio" aria-checked="false">
                 <div class="color-sample {{ color }}" aria-hidden="true">
