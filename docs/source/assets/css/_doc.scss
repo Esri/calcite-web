@@ -331,3 +331,32 @@ mark {
   padding-top: $baseline * .8;
   padding-bottom: $baseline * .55;
 }
+
+.icon-select * {
+  pointer-events: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.icon-select {
+  border: 1px solid $lightest-gray;
+  background-color: $white;
+  color: $black;
+  transition: all 100ms linear;
+}
+
+.icon-select:hover, .icon-select:focus {
+  border: 1px solid $blue;
+  color: $black;
+  text-decoration: none;
+  background-color: $white;
+}
+
+.icon-select--name {
+  word-wrap: break-word;
+  text-align: center;
+  margin-top: .5rem;
+  white-space: normal;
+  font-size: 12px;
+  display: block;
+}

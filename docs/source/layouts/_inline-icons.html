@@ -1,61 +1,63 @@
+<div class="column-17 leader-2 trailer-2">
 
-<input type="search" class="input-minimal input-search font-size-1 trailer-1 leader-2 js-icon-filter" placeholder="filter icons by name">
+  <div class="column-13 post-1">
+    <label class="trailer-0">
+      <input type="search" class="js-search input-search input-minimal font-size-1 leader-quarter" placeholder="Search icons" aria-label="Search icons">
+    </label>
+  </div>
 
-<div class="block-group block-group-5-up">
-  {% for icon in data.icons %}
-    <button class="block trailer-1 js-icon js-modal-toggle icon-preview-link" data-modal="{{icon.name}}">
-      <div class="icon-preview">
-        {% icon icon.name, size=32 %}
-        <p class="font-size--3 text-center leader-half js-icon-name">{{icon.name}}</p>
-      </div>
-    </button>
-  {% endfor %}
-</div>
+  <div class="column-3 last-column">
+    <label class="toggle-switch right inline-block leader-half trailer-half">
+      <input type="checkbox" class="toggle-switch-input js-filled">
+      <span class="toggle-switch-track margin-right-1"></span>
+      <span class="toggle-switch-label font-size--1">Filled</span>
+    </label>
+  </div>
 
-{% for icon in data.icons %}
-  <div class="js-modal modal-overlay" data-modal="{{icon.name}}">
-    <div class="modal-content column-12" aria-labelledby="modal" role="dialog">
-      <div class="clearfix trailer-half">
-        <h3 class="trailer-0 left">{{icon.name}}</h3>
-        <a class="js-modal-toggle font-size-2 right" href="#" aria-label="close modal">
-          {% icon 'x', size=24 %}
-        </a>
-      </div>
+  <div class="js-app-content column-17 leader-1">
+    <div class="js-loader loader is-active padding-leader-6 leader-3 padding-trailer-3">
+      <div class="loader-bars"></div>
+      <div class="loader-text">Loading icons...</div>
+    </div>
+    <div class="js-icons block-group block-group-6-up tablet-block-group-4-up phone-block-group-2-up"></div>
+  </div>
 
+  <div class="js-modal modal-overlay" data-modal="iconDetail">
+    <div class="modal-content column-12" role="dialog">
+      <button class="js-modal-toggle right btn-link leader-quarter" aria-label="Close icon detail view">{% icon 'x', size=24, classes='text-darkest-gray' %}</button>
+      <h2 class='trailer-half js-detail-name'></h2>
       <div class="block-group block-group-2-up leader-half">
         <div class="block">
           <h3 class="font-size-1 trailer-0">Aliases</h3>
-          <p class="js-detail-aliases leader-quarter">
-            {% for alias in icon.alias %}
-              <span class="label inline-block margin-right-quarter trailer-quarter">{{alias}}</span>
-            {% endfor %}
-          </p>
+          <p class="js-detail-aliases leader-quarter"></p>
         </div>
         <div class="block">
           <h3 class="font-size-1 trailer-0">Category</h3>
-          <p class="font-size-2">{{icon.category}}</p>
+          <p class="js-detail-category font-size-2"></p>
         </div>
       </div>
 
-      <h4>Sizes</h4>
-      <div class="tabs-translucent js-tab-group">
-        <nav class="tab-nav">
-          <a class="tab-title padding-leader-1 padding-trailer-half btn-fill margin-right-0 margin-left-0 is-active js-tab"><span class="label label-blue">32</span><span class="display-block leader-half">{% icon icon.name, size=32 %}</span></a>
-          <a class="tab-title padding-leader-1 padding-trailer-half btn-fill margin-right-0 margin-left-0 js-tab"><span class="label label-blue">24</span><span class="display-block leader-half">{% icon icon.name, size=24 %}</span></a>
-          <a class="tab-title padding-leader-1 padding-trailer-half btn-fill margin-right-0 margin-left-0 js-tab"><span class="label label-blue">16</span><span class="display-block leader-half">{% icon icon.name, size=16 %}</span></a>
-        </nav>
-        <section class="tab-contents">
-          <article class="tab-section js-tab-section is-active">
-            <pre><code>{% icon icon.name, size=32, escape=true %}</code></pre>
-          </article>
-          <article class="tab-section js-tab-section">
-            <pre><code>{% icon icon.name, size=24, escape=true %}</code></pre>
-          </article>
-          <article class="tab-section js-tab-section">
-            <pre><code>{% icon icon.name, size=16, escape=true %}</code></pre>
-          </article>
-        </section>
+      <h3 class="font-size-1">Sizes</h3>
+      <div class="block-group block-group-3-up">
+        <a class="js-link-16 block padding-leader-1 padding-trailer-2 icon-select btn btn-transparent" href="#" target="_blank">
+          <div class="text-center trailer-1">
+            <span class="label label-blue">16</span>
+          </div>
+          <div class="js-detail-16 text-center"></div>
+        </a>
+        <a class="js-link-24 block padding-leader-1 padding-trailer-2 icon-select btn btn-transparent" href="#" target="_blank">
+          <div class="text-center trailer-1">
+            <span class="label label-blue">24</span>
+          </div>
+          <div class="js-detail-24 text-center"></div>
+        </a>
+        <a class="js-link-32 block padding-leader-1 padding-trailer-2 icon-select btn btn-transparent" href="#" target="_blank">
+          <div class="text-center trailer-1">
+            <span class="label label-blue">32</span>
+          </div>
+          <div class="js-detail-32 text-center"></div>
+        </a>
       </div>
     </div>
   </div>
-{% endfor %}
+</div>
