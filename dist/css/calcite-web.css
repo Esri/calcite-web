@@ -1,12 +1,12 @@
 /*!
  * Calcite Web - Calcite Design Components in CSS, JS and HTML
- * @version v1.0.3
+ * @version v1.1.0
  * @license Apache-2.0
  * @copyright 2018 Esri
  * @link https://github.com/Esri/calcite-web
  */
 html {
-  overflow-y: scroll;
+  overflow-y: auto;
   min-height: 100%;
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
@@ -66,6 +66,9 @@ img {
 
 .overflow-hidden {
   overflow: hidden; }
+
+.overflow-scroll {
+  overflow: scroll; }
 
 .inline-block {
   display: inline-block; }
@@ -4329,8 +4332,8 @@ input[type="file"]::-webkit-file-upload-button,
     text-align: left; }
 
 .input-search, .search-input {
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMnB4IiBoZWlnaHQ9IjMycHgiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0iIzZENkU3MSI+ICAgIDxwYXRoIGQ9Ik0zMS42MDcgMjcuODM4bC02LjEzMy02LjEzN2ExLjMzNiAxLjMzNiAwIDAgMC0xLjg4NyAwbC0uMDM1LjAzNS0yLjUzMy0yLjUzMy0uMDE0LjAxNGMzLjY1Mi00LjU1NiAzLjQyMi0xMS4xOTUtLjgwMy0xNS40Mi00LjUyOS00LjUyNy0xMS44NzUtNC41MzEtMTYuNDA0IDAtNC41MzEgNC41MzEtNC41MjkgMTEuODc1IDAgMTYuNDA2IDQuMjA1IDQuMjA0IDEwLjgxMSA0LjQ1NSAxNS4zNjUuODQ4bC4wMDQuMDAzLS4wMzMuMDMzIDIuNTQxIDIuNTRhMS4zMyAxLjMzIDAgMCAwIC4wMjUgMS44NDhsNi4xMzUgNi4xMzNhMS4zMyAxLjMzIDAgMCAwIDEuODg3IDBsMS44ODUtMS44ODNhMS4zMzIgMS4zMzIgMCAwIDAgMC0xLjg4N3pNMTcuODExIDE3LjgwOWE4LjIxMyA4LjIxMyAwIDAgMS0xMS42MTkgMCA4LjIxNyA4LjIxNyAwIDAgMSAwLTExLjYyMiA4LjIxOSA4LjIxOSAwIDAgMSAxMS42MTkuMDA0IDguMjE2IDguMjE2IDAgMCAxIDAgMTEuNjE4eiIvPjwvc3ZnPg==");
-  background-size: .875em;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0iIzZlNmU2ZSI+PHBhdGggZD0iTTE0LjY1IDEzLjc0TDkuNzMyIDguODIzQTUuMzg3IDUuMzg3IDAgMSAwIDUuNSAxMC45MDRhNS4zNTggNS4zNTggMCAwIDAgMy4yODgtMS4xNDJsNC45MiA0Ljkyek01LjUgOS4yNWEzLjc1IDMuNzUgMCAxIDEgMy43NS0zLjc1MSAzLjc1MiAzLjc1MiAwIDAgMS0zLjc1IDMuNzV6Ii8+PC9zdmc+Cg==");
+  background-size: 1.06667em;
   background-position: .25em center;
   background-repeat: no-repeat;
   padding-left: 1.5em; }
@@ -5250,54 +5253,57 @@ input[type="range"]::-ms-thumb {
   -webkit-tap-highlight-color: transparent;
   tap-highlight-color: transparent; }
 
-.toggle-switch-input {
-  opacity: 0;
-  height: 0;
-  width: 0;
-  margin: 0;
-  position: absolute; }
-  .toggle-switch-input:hover + .toggle-switch-track {
+.toggle-switch-input[type] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+  .toggle-switch-input[type]:hover + .toggle-switch-track {
     border-color: #cccccc;
     background-color: #e7e7e7; }
-    .toggle-switch-input:hover + .toggle-switch-track:after {
+    .toggle-switch-input[type]:hover + .toggle-switch-track:after {
       border-color: #3b8fc4;
       box-shadow: 0 1px 2px 0px rgba(89, 89, 89, 0.2); }
-  .toggle-switch-input:active + .toggle-switch-track {
+  .toggle-switch-input[type]:active + .toggle-switch-track {
     box-shadow: 0 0 4px 2px rgba(204, 204, 204, 0.9); }
-    .toggle-switch-input:active + .toggle-switch-track:after {
+    .toggle-switch-input[type]:active + .toggle-switch-track:after {
       left: 1px;
       border-color: #005e95;
       box-shadow: 0 3px 1px 0px rgba(89, 89, 89, 0.2); }
-      html[dir="rtl"] .toggle-switch-input:active + .toggle-switch-track:after {
+      html[dir="rtl"] .toggle-switch-input[type]:active + .toggle-switch-track:after {
         right: 1px;
         left: auto; }
-  .toggle-switch-input:checked + .toggle-switch-track {
+  .toggle-switch-input[type]:checked + .toggle-switch-track {
     border-color: #005e95;
     background-color: #0079c1; }
-    .toggle-switch-input:checked + .toggle-switch-track:after {
+    .toggle-switch-input[type]:checked + .toggle-switch-track:after {
       right: -1px;
       left: auto;
       border-color: #005e95;
       box-shadow: 0 2px 1px 0px rgba(89, 89, 89, 0.2); }
-      html[dir="rtl"] .toggle-switch-input:checked + .toggle-switch-track:after {
+      html[dir="rtl"] .toggle-switch-input[type]:checked + .toggle-switch-track:after {
         left: -1px;
         right: auto; }
-  .toggle-switch-input:checked:active + .toggle-switch-track {
+  .toggle-switch-input[type]:checked:active + .toggle-switch-track {
     box-shadow: 0 0 4px 2px rgba(108, 180, 226, 0.9); }
-    .toggle-switch-input:checked:active + .toggle-switch-track:after {
+    .toggle-switch-input[type]:checked:active + .toggle-switch-track:after {
       right: 1px;
       border-color: #005e95;
       box-shadow: 0 3px 1px 0px rgba(89, 89, 89, 0.2); }
-      html[dir="rtl"] .toggle-switch-input:checked:active + .toggle-switch-track:after {
+      html[dir="rtl"] .toggle-switch-input[type]:checked:active + .toggle-switch-track:after {
         left: 1px;
         right: auto; }
-  .toggle-switch-input:focus + .toggle-switch-track {
+  .toggle-switch-input[type]:focus + .toggle-switch-track {
     box-shadow: 0 0 4px 2px rgba(204, 204, 204, 0.9); }
-    .toggle-switch-input:focus + .toggle-switch-track:after {
+    .toggle-switch-input[type]:focus + .toggle-switch-track:after {
       border-color: #3b8fc4; }
-  .toggle-switch-input:checked:focus + .toggle-switch-track {
+  .toggle-switch-input[type]:checked:focus + .toggle-switch-track {
     box-shadow: 0 0 4px 2px rgba(108, 180, 226, 0.9); }
-    .toggle-switch-input:checked:focus + .toggle-switch-track:after {
+    .toggle-switch-input[type]:checked:focus + .toggle-switch-track:after {
       border-color: #005e95; }
 
 .toggle-switch-label {
