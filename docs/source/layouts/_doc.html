@@ -31,7 +31,7 @@
 {% block content %}
 <div class="grid-container leader-1 trailer-3">
   <div class="column-6 tablet-column-12">
-    <aside class="side-nav tablet-hide" aria-role="complementary">
+    <aside class="side-nav tablet-hide leader-half" aria-role="complementary">
       {% for group in data.table_of_contents[section].navigation %}
       {% if group.hidden != true %}
       <h4 class="side-nav-title">{{ group.group }}</h4>
