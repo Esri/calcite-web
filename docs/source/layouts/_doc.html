@@ -81,7 +81,7 @@
 
       {% for page in group.pages %}
       {% if page.hidden != true %}
-      <section>
+      <section class="clearfix">
         {% if page.title != 'Overview' %}
         <h2 id="{{page.link}}" class="leader-2" tabindex="0">
           <a href="#{{page.link}}" title="{{page.link}} Documentation" class="link-off-black">
