@@ -124,17 +124,25 @@
 ```
 {% endmarkdown %}
 
-        {% if page.modifiers != false %}
-        <h4 class="leader-0 text-darkest-gray" tabindex="0">Modifiers</h4>
-        <div class="styleguide-modifiers trailer-1 {% if page.doc_classes %}{% for doc_class in page.doc_classes %}{{ doc_class }} {% endfor %}{% endif %}">
-          {% for modifier in page.modifiers %}
-          <div class="styleguide-modifier-example">
-            {% include 'documentation/' + data.table_of_contents[section].base + '/sample-code/_' + page.link %}
-            <code class="modifier-name">.{{ modifier }}</code>
+          {% if page.modifiers != false %}
+          <h4 class="leader-0 text-darkest-gray" tabindex="0">Modifiers</h4>
+          <div class="styleguide-modifiers trailer-1 {% if page.doc_classes %}{% for doc_class in page.doc_classes %}{{ doc_class }} {% endfor %}{% endif %}">
+            {% for modifier in page.modifiers %}
+            <div class="styleguide-modifier-example">
+              {% include 'documentation/' + data.table_of_contents[section].base + '/sample-code/_' + page.link %}
+              <code class="modifier-name">.{{ modifier }}</code>
+            </div>
+            {% endfor %}
+            {% if page["modifiers-dark"] != false %}
+              {% for modifier in page["modifiers-dark"] %}
+              <div class="styleguide-modifier-example styleguide-modifier-example-dark">
+                {% include 'documentation/' + data.table_of_contents[section].base + '/sample-code/_' + page.link %}
+                <code class="modifier-name">.{{ modifier }}</code>
+              </div>
+              {% endfor %}
+            {% endif %}
           </div>
-          {% endfor %}
-        </div>
-        {% endif %}
+          {% endif %}
         {% endif %}
 
         {% if page.palettes %}

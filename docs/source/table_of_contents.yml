@@ -364,15 +364,16 @@ components:
           modifiers:
             - btn-transparent
             - btn-clear
-            - btn-clear-white
             - btn-small
             - btn-large
             - btn-fill
             - btn-half
             - btn-disabled
-            - btn-white
             - btn-red
             - btn-green
+          modifiers-dark:
+            - btn-white
+            - btn-clear-white
         - title: 'Button Groups'
           link: button-groups
           status: complete
@@ -448,7 +449,8 @@ components:
           classes:
             - breadcrumbs
             - crumb
-          modifiers:
+          modifiers: true
+          modifiers-dark:
             - breadcrumbs-white
         - title: 'Tooltips'
           link: tooltips
@@ -613,6 +615,7 @@ patterns:
             - 'tabs-gray'
             - 'tabs-transparent'
             - 'tabs-translucent'
+          modifiers-dark:
             - 'tabs-dark'
         - title: 'Accordions'
           link: accordions
