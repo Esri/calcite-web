@@ -12,5 +12,6 @@ There is also a dark theme which you can import using:
 @import "calcite-web-dark";
 ```
 
-<div class="panel panel-blue leader-2 inline-block">
-  <span class="margin-right-half icon-ui-idea"> To find accessible color combinations that pass WCAG 2.0 AA guidelines, try the</span> <a href="{{relativePath}}/guides/a11y#color-finder" class="btn btn-white margin-left-">Color Finder</a></div>
+<div class="panel panel-white leader-1 trailer-1 inline-block">
+{% icon 'article', size=24, classes="svg-icon margin-right-half" %} To find out more about color usage and guidelines, read the guide: <a href="{{relativePath}}/guides/color/" class="btn btn-clear margin-left-half">Color guide{% icon 'launch', size=16, classes="svg-icon svg-icon-after" %}</a>
+</div>

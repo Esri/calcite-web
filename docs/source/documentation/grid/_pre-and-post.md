@@ -15,4 +15,3 @@ Pre and post helpers are available from `.pre-1` and `.post-1` to `.pre-24` and 
   <span>column-8 pre-2</span>
 </div>
 ```
-[View the example]({{relativePath}}/examples/grid/#pre-and-post)

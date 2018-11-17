@@ -32,7 +32,7 @@
 <div class="grid-container leader-1 trailer-3">
   <div class="column-6 tablet-column-12">
     <aside class="side-nav tablet-hide leader-half" aria-role="complementary">
-      {% for group in data.table_of_contents[section].navigation %}
+    {% for group in data.table_of_contents[section].navigation %}
       {% if group.hidden != true %}
       <h4 class="side-nav-title">{{ group.group }}</h4>
       <!-- <nav aria-role="navigation" aria-labelledby="sidenav"> -->
@@ -45,36 +45,36 @@
           {% endif %}
           {% endfor %}
         </nav>
-        {% endif %}
-        {% endfor %}
-      </aside>
-      <label class="tablet-show">
-        Jump to section:
-        <select class="select-full js-select-nav">
-          {% for group in data.table_of_contents[section].navigation %}
-          {% if group.hidden != true %}
-          <optgroup label="{{ group.group }}">
-            {% for page in group.pages %}
-            {% if page.title == 'Overview' %}
-            <option value="#{{group.group | replace(" ", "-") | lower}}">{{page.title}}</option>
-            {% else %}
-            <option value="#{{page.link}}">{{page.title}}</option>
-            {% endif %}
-            {% endfor %}
-          </optgroup>
+      {% endif %}
+    {% endfor %}
+    </aside>
+    <label class="tablet-show">
+      Jump to section:
+      <select class="select-full js-select-nav">
+        {% for group in data.table_of_contents[section].navigation %}
+        {% if group.hidden != true %}
+        <optgroup label="{{ group.group }}">
+          {% for page in group.pages %}
+          {% if page.title == 'Overview' %}
+          <option value="#{{group.group | replace(" ", "-") | lower}}">{{page.title}}</option>
+          {% else %}
+          <option value="#{{page.link}}">{{page.title}}</option>
           {% endif %}
           {% endfor %}
-        </select>
-      </label>
-      <div class="js-sticky scroll-show tablet-hide" data-top="46">
-        <a href="#" class="btn btn-clear">Back to Top</a>
-      </div>
+        </optgroup>
+        {% endif %}
+        {% endfor %}
+      </select>
+    </label>
+    <div class="js-sticky scroll-show tablet-hide" data-top="46">
+      <a href="#" class="btn btn-clear">Back to Top</a>
     </div>
+  </div>
 
-    <a id="skip-to-content" tabindex="0"></a>
-    <main class="column-17 phone-column-6 tablet-column-12 pre-1 tablet-leader-1" role="main">
-      {% for group in data.table_of_contents[section].navigation %}
-
+  <a id="skip-to-content" tabindex="0"></a>
+  <main class="column-17 phone-column-6 tablet-column-12 pre-1 tablet-leader-1" role="main">
+    {% for group in data.table_of_contents[section].navigation %}
+      <div class="trailer-3">
       {% if group.hidden != true %}
       <h1 class="text-rule" id="{{group.group | replace(" ", "-") | lower}}" tabindex="0">{{group.group}}</h1>
       {% endif %}
@@ -83,7 +83,7 @@
       {% if page.hidden != true %}
       <section class="clearfix">
         {% if page.title != 'Overview' %}
-        <h2 id="{{page.link}}" class="leader-2" tabindex="0">
+        <h2 id="{{page.link}}" class="leader-1" tabindex="0">
           <a href="#{{page.link}}" title="{{page.link}} Documentation" class="link-off-black">
             {{page.title}} {% icon 'link', classes='docs-link-icon' %}
           </a>
@@ -104,29 +104,29 @@
         {% include 'layouts/_inline-icons' %}
         {% endif %}
 
-        {% if page.modifiers or page.modifiers == true %}
+        {% if (page.modifiers or page.modifiers == true) and page.noBase != true %}
         {% if page.title !== 'Overview' %}
         <h4 class="leader-0 text-darkest-gray" tabindex="0">Base</h4>
         {% endif %}
         {% endif %}
 
         {% if page.modifiers or page.modifiers == false %}
-        <div class="styleguide-modifiers {% if page.doc_classes %}{% for doc_class in page.doc_classes %}{{ doc_class }} {% endfor %}{% endif %}">
-          <div class="styleguide-modifier-example">
-            {% include 'documentation/' + data.table_of_contents[section].base + '/sample-code/_' + page.link %}
-            {% if page.classes %} <code class="modifier-name">.{{ page.classes }}</code>{% endif %}
+          {% if page.noBase != true %}
+          <div class="styleguide-modifiers {% if page.doc_classes %}{% for doc_class in page.doc_classes %}{{ doc_class }} {% endfor %}{% endif %}">
+            <div class="styleguide-modifier-example">
+              {% include 'documentation/' + data.table_of_contents[section].base + '/sample-code/_' + page.link %}
+              {% if page.classes %} <code class="modifier-name">.{{ page.classes }}</code>{% endif %}
+            </div>
           </div>
-        </div>
-
 {% markdown %}
 ```
 {% set modifier = "modifier-class" %}{% include 'documentation/' + data.table_of_contents[section].base + '/sample-code/_' + page.link %}
 ```
 {% endmarkdown %}
-
+          {% endif %}
           {% if page.modifiers != false %}
           <h4 class="leader-0 text-darkest-gray" tabindex="0">Modifiers</h4>
-          <div class="styleguide-modifiers trailer-1 {% if page.doc_classes %}{% for doc_class in page.doc_classes %}{{ doc_class }} {% endfor %}{% endif %}">
+          <div class="styleguide-modifiers trailer-2 {% if page.doc_classes %}{% for doc_class in page.doc_classes %}{{ doc_class }} {% endfor %}{% endif %}">
             {% for modifier in page.modifiers %}
             <div class="styleguide-modifier-example">
               {% include 'documentation/' + data.table_of_contents[section].base + '/sample-code/_' + page.link %}
@@ -177,7 +177,8 @@
       </section>
       {% endif %}
       {% endfor %}
-      {% endfor %}
+    </div>
+    {% endfor %}
     </main>
   </div>
   {% endblock %}

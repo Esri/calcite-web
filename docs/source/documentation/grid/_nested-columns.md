@@ -25,6 +25,3 @@ Column-folding behavior is almost entirely automatic. The only exception is gutt
   </div>
 </div>
 ```
-
-
-[View the example]({{relativePath}}/examples/grid/#nested-columns)

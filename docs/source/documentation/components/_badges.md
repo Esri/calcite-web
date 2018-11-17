@@ -1,1 +1,0 @@
-Badges are inline components that combine a link, a panel, and perhaps an action.
