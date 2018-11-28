@@ -11,7 +11,7 @@ $include-calcite-icons: false;
 // Use this to test dark theme
 // @import "calcite-web-dark";
 
-@import "github";
+@import "code";
 
 // Splashy banner stuff
 .bg-banner {
@@ -114,7 +114,7 @@ $include-calcite-icons: false;
 .styleguide-modifiers {
   @include clearfix();
   background: $white;
-  overflow-x: scroll;
+  overflow-x: auto;
   &.styleguide-modifiers-overflow-visible {
     overflow-y: visible;
     overflow-x: visible;
@@ -125,6 +125,7 @@ $include-calcite-icons: false;
     border: 1px solid $lightest-gray;
     position: relative;
     clear: both;
+    overflow: visible;
     &:last-child {
       border-radius: 0 0 3px 3px;
     }
@@ -182,8 +183,8 @@ $include-calcite-icons: false;
     color: $white;
     background-color: rgba($blue, 0.6);
     font-family: monospace;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: .5em;
+    padding-bottom: .5em;
     text-align: center;
   }
 }
@@ -285,6 +286,10 @@ $include-calcite-icons: false;
 
 .color-swatch-inactive {
   opacity: 0.2;
+}
+
+pre code {
+  background-color: white;
 }
 
 .code-area {
