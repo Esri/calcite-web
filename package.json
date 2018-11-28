@@ -5,6 +5,8 @@
   "private": true,
   "homepage": "https://github.com/esri/calcite-web",
   "scripts": {
+    "prea11y": "run-s rollup copy sass acetate",
+    "a11y": "a11y docs/build/index.html",
     "test": "semistandard",
     "prestart": "rimraf docs/build",
     "start": "run-p copy sass *:watch",
@@ -64,6 +66,7 @@
     "url": "https://github.com/esri/calcite-web/issues"
   },
   "devDependencies": {
+    "a11y": "^0.5.1",
     "acetate": "^2.0.2",
     "acetate-cli": "^1.0.1",
     "cssstats": "^3.2.0",
