@@ -5,233 +5,159 @@ layout: layouts/_guide
 ---
 
 {% block content %}
-<div class="panel panel-no-padding panel-no-border">
 
-  <div class="grid-container padding-leader-3">
-    <h2 id="columns" class="column-24">Columns</h2>
+<div class="grid-container leader-2">
+  <div class="column-16">
 
-    <div class="grid-example clearfix">
-      <div class="column-24 trailer-5">
-        <div class="column-1"><span>1</span></div>
-        <div class="column-4 pre-4 post-6"><span>4 pre-4 post-6</span></div>
-        <div class="column-9"><span>column-9</span></div>
-      </div>
-    </div>
+{% markdown %}
 
-    <div class="grid-example clearfix trailer-2 leader-1">
-      <div class="column-1"><span>1</span></div>
-      <div class="column-23"><span>column-23</span></div>
-      <div class="column-2"><span>2</span></div>
-      <div class="column-22"><span>column-22</span></div>
-      <div class="column-3"><span>3</span></div>
-      <div class="column-21"><span>column-21</span></div>
-      <div class="column-4"><span>4</span></div>
-      <div class="column-20"><span>column-20</span></div>
-      <div class="column-5"><span>column-5</span></div>
-      <div class="column-19"><span>column-19</span></div>
-      <div class="column-6"><span>column-6</span></div>
-      <div class="column-18"><span>column-18</span></div>
-      <div class="column-7"><span>column-7</span></div>
-      <div class="column-17"><span>column-17</span></div>
-      <div class="column-8"><span>column-8</span></div>
-      <div class="column-16"><span>column-16</span></div>
-      <div class="column-9"><span>column-9</span></div>
-      <div class="column-15"><span>column-15</span></div>
-      <div class="column-10"><span>column-10</span></div>
-      <div class="column-14"><span>column-14</span></div>
-      <div class="column-11"><span>column-11</span></div>
-      <div class="column-13"><span>column-13</span></div>
-      <div class="column-12"><span>column-12</span></div>
-      <div class="column-12"><span>column-12</span></div>
-    </div>
+Calcite Web's grid is a float-based grid system that utilizes viewport width to determine sizing. The grid can be [configured with SASS](../../documentation/grid/#configuration) and is by default responsive. This makes creating layouts that work across multiple screen sizes much easier and less time consuming. Read on for some quick pointers on constructing layouts with the Calcite Web grid classes.
 
-    <h2 id="center-column" class="column-24 leader-3">Center Column</h2>
+## 1. Always use a grid container
 
-    <div class="grid-example clearfix">
-      <div class="column-24 trailer-3">
-       <div class="column-10 center-column"><span>column-8 center-column</span></div>
-     </div>
+All grid layouts should be wrapped in an element with the [`grid-container` class](../../documentation/grid/#container). The grid container will take care of setting the max width, centering the layout, clearing the floats, and compensates for screen realestate taken up by scroll bars.
 
-    <h2 id="nested-columns" class="padding-leader-2 column-24">Nested Columns</h2>
+<div class="column-16 trailer-2">
+  <div class="column-8">
+    <span class="label label-red">Incorrect:</span>
 
-    <div class="grid-example clearfix trailer-2 nested-demo">
-      <div class="column-18 tablet-column-8">
-        <span class="tablet-hide">column-18</span>
-        <span class="tablet-show">tablet-column-8</span>
-        <div class="column-3 pre-1 tablet-column-4">
-          <span class="tablet-hide">column-3</span>
-          <span class="tablet-show">tablet-column-4</span>
-          <div class="column-1 tablet-column-4">
-            <span class="tablet-hide">1</span>
-            <span class="tablet-show">tablet-column-4</span>
-          </div>
-          <div class="column-1 tablet-column-4 tablet-first-column">
-            <span class="tablet-hide">1</span>
-            <span class="tablet-show">tablet-column-4</span>
-          </div>
-          <div class="column-1 tablet-column-4 tablet-first-column">
-            <span class="tablet-hide">1</span>
-            <span class="tablet-show">tablet-column-4</span>
-          </div>
-        </div>
-        <div class="column-2 tablet-column-4 tablet-last-column phone-first-column">
-          <span class="tablet-hide">2</span>
-          <span class="tablet-show">tablet-column-4</span>
-        </div>
-        <div class="column-10 tablet-column-8 tablet-first-column">
-          <span class="tablet-hide">10</span><span class="tablet-show">tablet-column-8</span>
-          <div class="column-5 tablet-column-4">
-            <span class="tablet-hide">column-5</span>
-            <span class="tablet-show">tablet-column-4</span>
-          </div>
-          <div class="column-5 tablet-column-4 phone-first-column">
-            <span class="tablet-hide">column-5</span>
-            <span class="tablet-show">tablet-column-4</span>
-            <div class="column-1 pre-1 tablet-column-4 phone-first-column">
-              <span class="tablet-hide">1</span>
-              <span class="tablet-show">tablet-column-4</span>
-            </div>
-            <div class="column-3 tablet-column-4 tablet-first-column phone-first-column">
-              <span class="tablet-hide">column-3</span>
-              <span class="tablet-show">tablet-column-4</span>
-            </div>
-          </div>
-        </div>
-        <div class="column-1 tablet-column-4 tablet-first-column">
-          <span class="tablet-hide">1</span>
-          <span class="tablet-show">tablet-column-4</span>
-        </div>
-        <div class="column-1 tablet-column-5 tablet-first-column">
-          <span class="tablet-hide">1</span>
-          <span class="tablet-show">tablet-column-5</span>
-        </div>
-      </div>
-      <div class="column-6 tablet-column-4">
-        <span class="tablet-hide">column-6</span>
-        <span class="tablet-show">tablet-column-4</span>
-        <div class="column-6 tablet-column-4">
-          <span class="tablet-hide">column-6</span>
-          <span class="tablet-show">tablet-column-4</span>
-          <div class="column-4 tablet-column-2">
-            <span class="tablet-hide">column-4</span>
-            <span class="tablet-show">tablet-column-2</span>
-          </div>
-          <div class="column-2 tablet-column-2">
-            <span class="tablet-hide">2</span>
-            <span class="tablet-show">tablet-column-2</span>
-          </div>
-        </div>
-        <div class="column-4 tablet-column-4 column-first tablet-first-column">
-          <span class="tablet-hide first-column">column-4</span>
-          <span class="tablet-show">tablet-column-4</span>
-        </div>
-      </div>
-    </div>
+```html
+<div class="column-12"></div>
+<div class="column-12"></div>
+```
 
-    <h2 id="responsive-columns" class="padding-leader-2 column-24">Responsive Columns</h2>
+  </div>
+  <div class="column-8">
+    <span class="label label-green">Correct:</span>
 
-    <div class="grid-example clearfix">
-      <div class="column-24"><span>24</span></div>
-      <div class="column-1"><span>1</span></div>
-      <div class="column-1"><span>1</span></div>
-      <div class="column-1"><span>1</span></div>
-      <div class="column-1"><span>1</span></div>
-      <div class="column-1"><span>1</span></div>
-      <div class="column-1"><span>1</span></div>
-      <div class="column-1"><span>1</span></div>
-      <div class="column-1"><span>1</span></div>
-      <div class="column-1"><span>1</span></div>
-      <div class="column-1"><span>1</span></div>
-      <div class="column-1"><span>1</span></div>
-      <div class="column-1"><span>1</span></div>
-      <div class="column-1"><span>1</span></div>
-      <div class="column-1"><span>1</span></div>
-      <div class="column-1"><span>1</span></div>
-      <div class="column-1"><span>1</span></div>
-      <div class="column-1"><span>1</span></div>
-      <div class="column-1"><span>1</span></div>
-      <div class="column-1"><span>1</span></div>
-      <div class="column-1"><span>1</span></div>
-      <div class="column-1"><span>1</span></div>
-      <div class="column-1"><span>1</span></div>
-      <div class="column-1"><span>1</span></div>
-      <div class="column-1"><span>1</span></div>
-    </div>
+```html
+<div class="grid-container">
+  <div class="column-12"></div>
+  <div class="column-12"></div>
+</div>
+```
 
-    <h2 id="pre-and-post" class="padding-leader-2 column-24">Pre and Post</h2>
+  </div>
+</div>
 
-    <div class="grid-example clearfix trailer-2 leader-1">
-      <div class="column-1">
-        <span>col</span>
-      </div>
-      <div class="column-2 pre-21 tablet-pre-9 phone-pre-3">
-        <span>pre-21</span>
-      </div>
-    </div>
-    <div class="grid-example clearfix trailer-2 leader-1">
-      <div class="column-2 post-21 tablet-post-9 phone-post-3">
-        <span>post-21</span>
-      </div>
-      <div class="column-1">
-        <span>col</span>
-      </div>
-    </div>
+## 2. Size elements with column classes
 
-    <h2 class="padding-leader-2 column-24" id="rows">Rows</h2>
+The `column-*` classes are the main mechanism provided by Calcite Web to size elements horizontally. The grid by default is twenty-four columns on desktop, twelve on tablet, and size on mobile. Using the [responsive column classes](../../documentation/grid/#responsive-columns) you can specify different sizes for different viewports.
 
-    <div class="grid-example clearfix">
+Columns can also be nested inside one another. In certain instances you may need to use the [first and last classes](../../documentation/grid/#first-and-last) to fix the left-hand alignment of a nested column.
+
+### Examples
+
+  </div>
+</div>
+
+{% include "guides/grid/_columns.html" %}
+
+
+## 3. Space elements with pre- and post-
+
+[Pre and post classes](../../documentation/grid/#pre-and-post) allow you to space elements by horizontally by multiple column widths. There are also a set of responsive classes allowing custom layouts for tablet or phone.
+
+There is also a `center-column` class if you need to quickly center a column inside a container.
+
+### Examples
+
+{% include "guides/grid/_pre-and-post.html" %}
+
+{% endmarkdown %}
+
+  </div>
+</div>
+
+<div class="grid-container padding-leader-3">
+
+
+
+  <h2 id="responsive-columns" class="padding-leader-2 column-24">Responsive Columns</h2>
+
+  <div class="grid-example clearfix">
+    <div class="column-24"><span>24</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+    <div class="column-1"><span>1</span></div>
+  </div>
+
+  <h2 class="padding-leader-2 column-24" id="rows">Rows</h2>
+
+  <div class="grid-example clearfix">
+    <div class="column-2"><span>column-2 With a lot of content, so it pushes down.</span></div>
+    <div class="column-22"><span>column-22</span></div>
+    <div class="column-4"><span>column-4</span></div>
+    <div class="column-4"><span>column-4</span></div>
+    <div class="column-4"><span>column-4</span></div>
+  </div>
+  <div class="grid-example clearfix">
+    <div class="column-24">
       <div class="column-2"><span>column-2 With a lot of content, so it pushes down.</span></div>
-      <div class="column-22"><span>column-22</span></div>
-      <div class="column-4"><span>column-4</span></div>
-      <div class="column-4"><span>column-4</span></div>
-      <div class="column-4"><span>column-4</span></div>
+      <div class="column-22 tablet-first-column"><span>column-22</span></div>
     </div>
-    <div class="grid-example clearfix">
-      <div class="column-24">
-        <div class="column-2"><span>column-2 With a lot of content, so it pushes down.</span></div>
-        <div class="column-22 tablet-first-column"><span>column-22</span></div>
-      </div>
-      <div class="column-4"><span>column-4</span></div>
-      <div class="column-4"><span>column-4</span></div>
-      <div class="column-4"><span>column-4</span></div>
-    </div>
+    <div class="column-4"><span>column-4</span></div>
+    <div class="column-4"><span>column-4</span></div>
+    <div class="column-4"><span>column-4</span></div>
+  </div>
 
-    <h2 id="block-groups" class="padding-leader-2 column-24">Block Groups</h2>
+  <h2 id="block-groups" class="padding-leader-2 column-24">Block Groups</h2>
 
-    <div class="grid-example clearfix trailer-2 leader-1 column-24">
-      <div class="block-group block-group-4-up">
-        <div class="block"><span>block-group-4-up</span></div>
-        <div class="block"><span>block-group-4-up</span></div>
-        <div class="block"><span>block-group-4-up</span></div>
-        <div class="block"><span>block-group-4-up</span></div>
-        <div class="block"><span>block-group-4-up</span></div>
-        <div class="block"><span>block-group-4-up</span></div>
-        <div class="block"><span>block-group-4-up</span></div>
-        <div class="block"><span>block-group-4-up</span></div>
-      </div>
-    </div>
-
-    <h2 id="responsive-block-groups" class="padding-leader-2 column-24">Responsive Block Groups</h2>
-
-    <div class="grid-example clearfix trailer-2 leader-1 column-24">
-      <div class="block-group block-group-4-up tablet-block-group-2-up phone-block-group-1-up">
-        <div class="block"><span>block</span></div>
-        <div class="block"><span>block</span></div>
-        <div class="block"><span>block</span></div>
-        <div class="block"><span>block</span></div>
-        <div class="block"><span>block</span></div>
-        <div class="block"><span>block</span></div>
-        <div class="block"><span>block</span></div>
-        <div class="block"><span>block</span></div>
-      </div>
+  <div class="grid-example clearfix trailer-2 leader-1 column-24">
+    <div class="block-group block-group-4-up">
+      <div class="block"><span>block-group-4-up</span></div>
+      <div class="block"><span>block-group-4-up</span></div>
+      <div class="block"><span>block-group-4-up</span></div>
+      <div class="block"><span>block-group-4-up</span></div>
+      <div class="block"><span>block-group-4-up</span></div>
+      <div class="block"><span>block-group-4-up</span></div>
+      <div class="block"><span>block-group-4-up</span></div>
+      <div class="block"><span>block-group-4-up</span></div>
     </div>
   </div>
 
-  <div class="grid-container padding-leader-4 padding-trailer-4">
-    <div class="column-24">
-      <h1 class="trailer-2">Guides</h1>
-      {% include "layouts/_guides-grid.html" %}
+  <h2 id="responsive-block-groups" class="padding-leader-2 column-24">Responsive Block Groups</h2>
+
+  <div class="grid-example clearfix trailer-2 leader-1 column-24">
+    <div class="block-group block-group-4-up tablet-block-group-2-up phone-block-group-1-up">
+      <div class="block"><span>block</span></div>
+      <div class="block"><span>block</span></div>
+      <div class="block"><span>block</span></div>
+      <div class="block"><span>block</span></div>
+      <div class="block"><span>block</span></div>
+      <div class="block"><span>block</span></div>
+      <div class="block"><span>block</span></div>
+      <div class="block"><span>block</span></div>
     </div>
   </div>
 </div>
+
+<div class="grid-container padding-leader-4 padding-trailer-4">
+  <div class="column-24">
+    <h1 class="trailer-2">Guides</h1>
+    {% include "layouts/_guides-grid.html" %}
+  </div>
+</div>
+
 {% endblock %}
