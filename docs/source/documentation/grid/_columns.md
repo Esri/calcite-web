@@ -18,7 +18,7 @@ To center a single column inside a grid container, you can use the helper class 
   </div>
 </div>
 
-```
+```html
 <div class="column-17">
   <span>column-17</span>
   <div class="column-8">

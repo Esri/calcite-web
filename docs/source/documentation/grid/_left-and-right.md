@@ -4,6 +4,6 @@ Left and right classes also have additional responsive `tablet-` and `phone-` pr
 
 For example, if you wanted an element to float right on desktop, but left on a phone, you could use responsive right and left classes to specify that:
 
-```
+```html
 <div class="right phone-left"></div>
 ```

@@ -2,7 +2,7 @@ Elements that become position fixed as they reach a certain position in the view
 
 For example, the following `<div>` will become fixed when it is 46 pixels from the top of the viewport:
 
-```
+```html
 <div class="js-sticky" data-top="46">
   <a href="#" class="btn btn-clear">Back to Top</a>
 </div>

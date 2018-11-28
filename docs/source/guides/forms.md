@@ -33,7 +33,7 @@ The only exception to this might be a search form with *one* input. If there is 
 
 ## Put text inputs inside labels
 
-```
+```html
 <label>
   Email
   <input type="text" placeholder="name@example.com">

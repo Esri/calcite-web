@@ -2,7 +2,7 @@ This is probably the easiest way, but you won't get any of the helpful Sass mixi
 
 You can also use a hosted version of Calcite Web:
 
-```
+```html
 <!-- In the head -->
 <link rel="stylesheet" href="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/{{data.pkg.version}}/css/calcite-web.min.css">
 

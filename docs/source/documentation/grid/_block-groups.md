@@ -6,7 +6,7 @@ Block groups are designed for quickly creating gridded content, such as a tile p
   <div class="block"><div class="panel">Block</div></div>
 </div>
 
-```
+```html
 <div class="block-group block-group-3-up">
   <div class="block"><div class="panel">Block</div></div>
   <div class="block"><div class="panel">Block</div></div>

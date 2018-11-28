@@ -8,7 +8,7 @@ The width of elements can be explicitly defined for breakpoints where columns wo
   </div>
 </div>
 
-```
+```html
 <div class="column-8 tablet-column-2 phone-column-3">
   <span class="tablet-hide">column-8</span>
   <span class="tablet-only">tablet-column-2</span>
