@@ -1,8 +1,10 @@
 Calcite Web is a CSS framework built with [Sass](http://sass-lang.com/). A dependency-free JavaScript library for use with interactive patterns like tabs and modals is also included.
 
-Calcite Web is a web adaptation of Calcite, the desktop framework developed for ArcGIS Pro. The idea is to have designs be consistent, but also embrace the characteristics that make each medium unique.
-
 Calcite Web was built *for* developers. It is meant to be flexible enough that you can accomplish 80% of your website with the default patterns. If you use Calcite Web as a Sass library, you'll also get a set of very helpful mixins to help you make new patterns and components that fit in with the Calcite methodology and aesthetic.
+
+<div class="panel panel-white leader-1 trailer-2 inline-block">
+{% icon 'article', size=24, classes="svg-icon margin-right-half" %} First time using Calcite Web? Check out the guide: <a href="{{relativePath}}/guides/quickstart/" class="btn btn-clear margin-left-half">Quickstart guide{% icon 'launch', size=16, classes="svg-icon svg-icon-after" %}</a>
+</div>
 
 ## Using Calcite Web
 
