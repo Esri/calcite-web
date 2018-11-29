@@ -1,18 +1,46 @@
-.hljs-comment {
+.prism-comment {
   color: $dark-gray;
 }
 
-.hljs-attr,
-.hljs-attribute {
+// html
+.prism-tag {
+  color: $green;
+}
+
+.prism-attr-name {
   color: $h-vv-050;
 }
 
-.hljs-selector-class,
-.hljs-name {
+.prism-attr-value {
   color: $blue;
 }
 
-.hljs-selector-pseudo,
-.hljs-string {
+// sass
+.prism-variable {
   color: $green;
 }
+
+.prism-keyword {
+  color: $blue;
+}
+
+.prism-string {
+  color: $green;
+}
+
+.prism-boolean {
+  color: $h-vv-050;
+}
+
+.prism-property, .prism-property .prism-variable {
+  color: $h-gb-080;
+}
+
+.prism-selector {
+  color: $orange;
+}
+
+.prism-function {
+  color: $h-vv-050;
+}
+

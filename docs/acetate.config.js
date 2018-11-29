@@ -5,7 +5,10 @@ var colors = require('./source/data/colors.js');
 var repo = require('./source/data/repo.js');
 var stats = require('./source/data/stats.js');
 var MarkdownIt = require('markdown-it');
-var hljs = require('highlight.js');
+var prism = require('prismjs');
+var loadLanguages = require('prismjs/components/');
+loadLanguages(['scss', 'bash', 'ruby']);
+prism.hooks.add('wrap', env => env.classes = env.classes.map(c => c.indexOf('prism-') === 0 ? c : 'prism-' + c));
 
 module.exports = function (acetate) {
   /**
@@ -37,11 +40,11 @@ module.exports = function (acetate) {
     linkify: true,
     langPrefix: '',
     highlight: function (code, lang) {
-      if (lang === 'text' || lang === 'plain') {
-        return code;
+      if (lang === 'html' || !lang || !prism.languages[lang]) {
+        lang = 'markup';
       }
-      var highlightWithLang = lang ? hljs.highlight(lang, code) : hljs.highlightAuto(code);
-      return `<pre><code class="${lang}" tabindex="0">${highlightWithLang.value}</code></pre>`;
+      var html = prism.highlight(code, prism.languages[lang], lang);
+      return `<pre><code class="${lang}" tabindex="0">${html}</code></pre>`;
     }
   });
   customMarkdown.renderer.rules.table_open = () => '<table class="table">';

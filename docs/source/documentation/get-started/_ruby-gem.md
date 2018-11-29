@@ -1,6 +1,6 @@
 To install Calcite-Web as a ruby gem, reference the gem from your `Gemfile`:
 
-```
+```ruby
 gem "calcite-web", :git => "https://github.com/Esri/calcite-web.git", :tag => "v{{data.pkg.version}}"
 ```
 
@@ -15,7 +15,7 @@ sass_dir = "sass"
 
 Then in your project's sass files, just import it:
 
-```
+```scss
 @import "calcite-web";
 ```
 

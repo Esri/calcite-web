@@ -20,8 +20,8 @@ If you are using Calcite Web as a Sass library, you can customize the grid with 
 
 You can override these values to create a custom, project-specific grid in your own project. For example, to use a 16 column grid instead of the default 24 columns, you would set the `$default-column-count` variable before importing the library:
 
-```
+```scss
 $default-column-count: 16;
-@import calcite-web;
+@import "calcite-web";
 ```
 

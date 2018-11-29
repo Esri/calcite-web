@@ -50,7 +50,7 @@ If the mixin accepts arguments, pass them into the parenthesis:
 The animation mixin allows you to declare cross-browser animations. The mixin accepts
 
 ```scss
-box:hover {
+.example:hover {
   @include animation(scale 1.0s ease-in, slide 2.0s ease);
 }
 ```
@@ -58,7 +58,7 @@ box:hover {
 Or, use individual animation mixins:
 
 ```scss
-box:hover {
+.example:hover {
   @include animation-name(scale, slide);
   @include animation-duration(2s);
   @include animation-timing-function(ease);
@@ -121,7 +121,7 @@ For creating animations, you can use the `keyframes` mixin. This mixin accepts a
 
 Now you can use the [animation mixin](#animation) as a named animation like this:
 
-```
+```scss
 .animation-class {
   @include animation( @include animation(ANIMATION_NAME 200ms ease-in);)
 }
@@ -132,7 +132,7 @@ Now you can use the [animation mixin](#animation) as a named animation like this
 
 Wraps the wide array of input placeholder selectors across browsers.
 
-```
+```scss
 @include placeholder('color', $dark-blue);
 ```
 
@@ -170,7 +170,7 @@ This will compile to the following css:
 
 You can assemble more complicated media queries by using both min and max:
 
-```
+```scss
 @include respond-to($large, $medium) { ... }
 ```
 
@@ -198,7 +198,7 @@ This mixin provides a shorthand syntax and supports multiple transitions.
 
 Or you can use the individual transition properties:
 
-```
+```scss
 @include transition-property(transform);
 @include transition-duration(1.0s);
 @include transition-timing-function(ease-in);
@@ -209,7 +209,7 @@ Or you can use the individual transition properties:
 
 To transition vendor-prefixed properties, e.g. `-webkit-transform` and `-moz-transform`, there is an additional convinience `transition-prefixed()` mixin:
 
-```
+```scss
 @include transition-prefixed(transform3d(0,0,0) 200ms linear);
 ```
 

@@ -1,6 +1,6 @@
 You can set the font family and weight via the following Sass mixins:
 
-```
+```scss
 @include avenir-light();   // font-weight: 300
 @include avenir-regular(); // font-weight: 400
 @include avenir-italic();  // font-style: italic

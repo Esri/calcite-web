@@ -27,7 +27,7 @@ Below is an effort to standardize the syntax used in all projects. The hope is t
 
 #### Incorrect example: ####
 
-```
+```css
 .selector, .selector-secondary, .selector[type=text] {
   padding:15px;
   margin:0px 0px 15px;
