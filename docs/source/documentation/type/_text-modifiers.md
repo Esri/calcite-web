@@ -1,1 +1,1 @@
-Build in classes that allow for quick customization and composition for a wide range of use cases.
+The following modifier classes allow for quick customization of type style. Combined with size and color classes many designs can be accomplished without adding any CSS to your codebase.

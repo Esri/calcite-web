@@ -15,13 +15,28 @@ $include-calcite-icons: false;
 
 // Splashy banner stuff
 .bg-banner {
-  background: url("../img/docs/topo-map.svg"), linear-gradient(110deg, $blue 10%, $dark-blue 90%);
+  background: url("../img/docs/topo.svg"), linear-gradient(110deg, $off-white 10%, $white 90%);
   background-position: center;
+  background-size: contain;
+  color: $black;
+}
+
+.banner-title {
+  font-size: 5.5rem;
 }
 
 .banner-logo {
   margin: 0 auto $baseline auto;
   display: block;
+}
+
+.esri-header-brand-link:hover {
+  text-decoration: none;
+}
+
+.esri-header-brand-text {
+  vertical-align: top;
+  line-height: 1.6;
 }
 
 .esri-header-menus-subitem--wide {
@@ -84,7 +99,9 @@ $include-calcite-icons: false;
 
 // Sub-Nav test Classes
 .sub-nav {
-  background-color: $darker-blue;
+  background: url("../img/docs/topo-white.svg") $darker-blue;
+  background-size: 1000px;
+  background-repeat: repeat-x;
 }
 
 // Type Specimen Classes
@@ -140,6 +157,9 @@ $include-calcite-icons: false;
     .alert {
       z-index: 0;
     }
+  }
+  .styleguide-modifier-example-dark {
+    background-color: $black;
   }
 }
 

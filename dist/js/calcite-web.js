@@ -1,6 +1,6 @@
 /*!
  * Calcite Web - Calcite Design Components in CSS, JS and HTML
- * @version v1.0.3
+ * @version v1.1.0
  * @license Apache-2.0
  * @copyright 2018 Esri
  * @link https://github.com/Esri/calcite-web
@@ -347,6 +347,49 @@ function clipboard () {
   bus.emit('clipboard:bind');
 }
 
+var validator = new RegExp('^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$', 'i');
+
+function gen (count) {
+  var out = '';
+  for (var i = 0; i < count; i++) {
+    out += (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+  }
+  return out;
+}
+
+function Guid (guid) {
+  if (!guid) { throw new TypeError('Invalid argument `value` has no value.'); }
+  this.value = Guid.EMPTY;
+  if (guid && guid instanceof Guid) {
+    this.value = guid.toString();
+  } else if (guid && Object.prototype.toString.call(guid) === '[object String]' && Guid.isGuid(guid)) {
+    this.value = guid;
+  }
+  this.equals = function (other) {
+    return Guid.isGuid(other) && this.value === other;
+  };
+  this.isEmpty = function () {
+    return this.value === Guid.EMPTY;
+  };
+  this.toString = function () {
+    return this.value;
+  };
+  this.toJSON = function () {
+    return this.value;
+  };
+}
+
+Guid.EMPTY = '00000000-0000-0000-0000-000000000000';
+Guid.isGuid = function (value) {
+  return value && (value instanceof Guid || validator.test(value.toString()));
+};
+Guid.create = function () {
+  return new Guid([gen(2), gen(1), gen(1), gen(1), gen(3)].join('-'));
+};
+Guid.raw = function () {
+  return [gen(2), gen(1), gen(1), gen(1), gen(3)].join('-');
+};
+
 // Cool Helpers
 // ┌───────────┐
 // │ Accordion │
@@ -366,7 +409,8 @@ function toggleClick (e) {
 
 function handleToggle (options) {
   toggle(options.node, 'is-active');
-  toggleExpanded(options.node);
+  var sectionTitle = options.node.querySelector('.accordion-title');
+  toggleExpanded(sectionTitle);
 }
 
 function checkKeyCode (e) {
@@ -391,10 +435,14 @@ function setUpAccordion (accordion) {
   accordion.setAttribute('role', 'tablist');
   nodeListToArray(accordion.children).forEach(function (section) {
     var sectionTitle = section.querySelector('.accordion-title');
+    var sectionContent = section.querySelector('.accordion-content');
+    var id = sectionContent.id || Guid.raw();
+    sectionContent.id = id;
     sectionTitle.setAttribute('role', 'tab');
     sectionTitle.setAttribute('tabindex', '0');
+    sectionTitle.setAttribute('aria-controls', id);
     if (has(section, 'is-active')) {
-      section.setAttribute('aria-expanded', 'true');
+      sectionTitle.setAttribute('aria-expanded', 'true');
     }
     // check if the event was already added
     var eventExists = false;
@@ -569,11 +617,12 @@ function dropdown () {
 // └────────┘
 // show and hide drawers
 function drawer () {
+  var html = document.documentElement;
+  var body = document.body;
   var wrapper = document.querySelector('.wrapper');
   var footer = document.querySelector('.footer');
   var toggles = findElements('.js-drawer-toggle');
   var drawers = findElements('.js-drawer');
-  var lastOn;
 
   // Bus events
   bus.on('drawer:open', openDrawer);
@@ -582,12 +631,17 @@ function drawer () {
   bus.on('drawer:bind', bindDrawers);
 
   function openDrawer (options) {
-    bus.emit('drawer:close');
+    bus.emit('drawer:close', {fromOpen: true});
     var drawer = document.querySelector((".js-drawer[data-drawer=\"" + (options.id) + "\"]"));
 
     drawer.setAttribute('tabindex', 0);
     add(drawer, 'is-active');
-    add(document.documentElement, 'drawer-no-overflow');
+    add(html, 'overflow-hidden');
+
+    // if there is a scrollbar, set scroll on body so scroll width remains
+    if (html.offsetHeight > html.clientHeight) {
+      add(body, 'overflow-scroll');
+    }
 
     hide([wrapper, footer]);
     add$1(drawer, click(), closeClick);
@@ -595,20 +649,28 @@ function drawer () {
   }
 
   function closeDrawer (options) {
-    if (!options) {
+    if (!options || options.all) {
       drawers.forEach(function (drawer) {
         drawer.removeAttribute('tabindex');
         remove(drawer, 'is-active');
       });
     } else {
       var drawer = document.querySelector((".js-drawer[data-drawer=\"" + (options.id) + "\"]"));
-      drawer.removeAttribute('tabindex');
-      remove(drawer, 'is-active');
+      if (drawer) {
+        drawer.removeAttribute('tabindex');
+        remove(drawer, 'is-active');
+      }
     }
     show([wrapper, footer]);
     remove$1(document, 'focusin', fenceDrawer);
     remove(document.documentElement, 'drawer-no-overflow');
-    if (lastOn) { lastOn.focus(); }
+
+    if (options && !options.fromOpen) {
+      setTimeout(function () {
+        remove(html, 'overflow-hidden');
+        remove(body, 'overflow-scroll');
+      }, 300);
+    }
   }
 
   function fenceDrawer (e) {
@@ -633,7 +695,7 @@ function drawer () {
 
   function closeClick (e) {
     if (has(e.target, 'js-drawer')) {
-      bus.emit('drawer:close');
+      bus.emit('drawer:close', {fromOpen: false, all: true});
     }
   }
 
@@ -842,6 +904,7 @@ function filterDropdown () {
 // Emitting false or null closes all modals.
 
 function modal () {
+  var html = document.documentElement;
   var body = document.body;
   var wrapper = document.querySelector('.wrapper');
   var footer = document.querySelector('.footer');
@@ -866,14 +929,18 @@ function modal () {
     return nodes;
   }
 
-  function openModal (modalId) {
-    bus.emit('modal:close');
-    if (!modalId || !modalId.id) { return; }
-    var modal = document.querySelector((".js-modal[data-modal=\"" + (modalId.id) + "\"]"));
+  function openModal (options) {
+    bus.emit('modal:close', {fromOpen: true});
+    if (!options || !options.id) { return; }
+    var modal = document.querySelector((".js-modal[data-modal=\"" + (options.id) + "\"]"));
     modal.removeAttribute('tabindex');
     add$1(document, 'keydown', fenceModal);
     add(modal, 'is-active');
-    add(body, 'drawer-no-overflow');
+    add(html, 'overflow-hidden');
+    // if there is a scrollbar, set scroll on body so scroll width remains
+    if (html.offsetHeight > html.clientHeight) {
+      add(body, 'overflow-scroll');
+    }
     hide(dependentNodes());
     var interactiveQuery = 'button, [href], input, select, textarea, [tabindex]';
     var focusableElements = findElements(interactiveQuery, modal).filter(function (el) {
@@ -884,16 +951,24 @@ function modal () {
     firstFocusableElement && firstFocusableElement.focus();
   }
 
-  function closeModal (modalId) {
-    if (has(body, 'drawer-no-overflow')) {
-      remove(body, 'drawer-no-overflow');
+  function closeModal (options) {
+    if (!options || !options.id) {
+      removeActive(modals);
+    } else {
+      var modal = document.querySelector((".js-modal[data-modal=\"" + (options.id) + "\"]"));
+      remove(modal, 'is-active');
+      modal.setAttribute('tabindex', 0);
+      remove$1(document, 'keydown', fenceModal);
+      show(dependentNodes());
     }
-    if (!modalId) { return removeActive(modals); }
-    var modal = document.querySelector((".js-modal[data-modal=\"" + (modalId.id) + "\"]"));
-    remove(modal, 'is-active');
-    modal.setAttribute('tabindex', 0);
-    remove$1(document, 'keydown', fenceModal);
-    show(dependentNodes());
+
+    // delay swapping the overflow classes to avoid modal moving into space vacated by scroll bar
+    if (!options || !options.fromOpen) {
+      setTimeout(function () {
+        remove(html, 'overflow-hidden');
+        remove(body, 'overflow-scroll');
+      }, 300);
+    }
   }
 
   function bindModals (node) {
@@ -941,7 +1016,12 @@ function toggleClick$2 (e) {
   preventDefault(e);
   var toggle$$1 = closest('js-modal-toggle', e.target);
   var modalId = toggle$$1.getAttribute('data-modal');
-  bus.emit('modal:open', {id: modalId});
+  var modal = document.querySelector((".js-modal[data-modal=\"" + modalId + "\"]"));
+  if (modal && !has(modal, 'is-active')) {
+    bus.emit('modal:open', {id: modalId});
+  } else {
+    bus.emit('modal:close');
+  }
 }
 
 // Cool Helpers
@@ -1022,49 +1102,6 @@ function selectNav () {
 
   bus.emit('selectnav:bind');
 }
-
-var validator = new RegExp('^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$', 'i');
-
-function gen (count) {
-  var out = '';
-  for (var i = 0; i < count; i++) {
-    out += (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
-  }
-  return out;
-}
-
-function Guid (guid) {
-  if (!guid) { throw new TypeError('Invalid argument `value` has no value.'); }
-  this.value = Guid.EMPTY;
-  if (guid && guid instanceof Guid) {
-    this.value = guid.toString();
-  } else if (guid && Object.prototype.toString.call(guid) === '[object String]' && Guid.isGuid(guid)) {
-    this.value = guid;
-  }
-  this.equals = function (other) {
-    return Guid.isGuid(other) && this.value === other;
-  };
-  this.isEmpty = function () {
-    return this.value === Guid.EMPTY;
-  };
-  this.toString = function () {
-    return this.value;
-  };
-  this.toJSON = function () {
-    return this.value;
-  };
-}
-
-Guid.EMPTY = '00000000-0000-0000-0000-000000000000';
-Guid.isGuid = function (value) {
-  return value && (value instanceof Guid || validator.test(value.toString()));
-};
-Guid.create = function () {
-  return new Guid([gen(2), gen(1), gen(1), gen(1), gen(3)].join('-'));
-};
-Guid.raw = function () {
-  return [gen(2), gen(1), gen(1), gen(1), gen(3)].join('-');
-};
 
 // Cool Helpers
 // ┌────────┐
@@ -1175,7 +1212,7 @@ function tabs () {
       tab.setAttribute('role', 'tab');
       tab.setAttribute('tabindex', '0');
       add$1(tab, click(), clickTab);
-      add$1(tab, 'keyup', enterTab);
+      add$1(tab, 'keydown', enterTab);
     });
 
     tabSections.forEach(function (section) {
@@ -1220,11 +1257,12 @@ function tabs () {
     });
     activeSection.setAttribute('aria-expanded', true);
     toggleActive(sections, activeSection);
+    activeTab.focus();
   }
 
   function getOptions (e) {
     var tab = e.target;
-    if (!has(tab, 'tab-title')) {
+    if (!has(tab, 'js-tab')) {
       tab = e.currentTarget;
     }
     var group = closest('js-tab-group', tab);
@@ -1244,8 +1282,20 @@ function tabs () {
 
   function enterTab (e) {
     var options = getOptions(e);
-    if (e.keycode === 13) {
+    if (e.keyCode === 13 || e.keyCode === 32) {
+      e.preventDefault();
       bus.emit('tabs:active', options);
+    }
+
+    if (e.keyCode === 39 || e.keyCode === 37) {
+      var tabs = nodeListToArray(options.parent.querySelectorAll('.js-tab'));
+      var currentIndex = tabs.indexOf(document.activeElement);
+      if (currentIndex > -1 && has(document.activeElement, 'js-tab')) {
+        var nextTab = tabs[currentIndex + 1] || tabs[0];
+        var previousTab = tabs[currentIndex - 1] || tabs[tabs.length - 1];
+        var tab = e.keyCode === 39 ? nextTab : previousTab;
+        tab.focus();
+      }
     }
   }
 
@@ -1344,7 +1394,7 @@ function extend (plugin) {
 // │ Public API │
 // └────────────┘
 // define all public api methods
-var version = '1.0.3';
+var version = '1.1.0';
 var click$1 = click;
 var addEvent = add$1;
 var removeEvent = remove$1;

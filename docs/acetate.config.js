@@ -17,7 +17,6 @@ module.exports = function (acetate) {
    * Set default layouts
    */
   acetate.layout('documentation/**/*', 'layouts/_doc');
-  acetate.layout('examples/**/*', 'layouts/_examples');
 
   /**
    * Load site data

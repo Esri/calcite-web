@@ -13,5 +13,3 @@ Block groups are designed for quickly creating gridded content, such as a tile p
   <div class="block"><div class="panel">Block</div></div>
 </div>
 ```
-
-[View the example]({{relativePath}}/examples/grid/#block-groups)

@@ -29,5 +29,3 @@ To center a single column inside a grid container, you can use the helper class 
   </div>
 </div>
 ```
-
-[View the full example]({{relativePath}}/examples/grid/#columns)

@@ -15,5 +15,3 @@ The width of elements can be explicitly defined for breakpoints where columns wo
   <span class="phone-show">phone-column-3</span>
 </div>
 ```
-
-[View the full example]({{relativePath}}/examples/grid/#responsive-columns)

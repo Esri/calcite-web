@@ -16,10 +16,26 @@
 - :warning: `svg-icon` class no longer sets size of icon, use `width` and `height` attributes
 - `dropdown` and `accordion` components must use SVG (no icon font)
 
-## [1.0.4]
+## [1.2.0]
+
+### Added
+- `radio-group` component (#762)
+-  Improve handling of input validation for RTL (#990)
+
+## [1.1.0]
+
+### Added
+- `overflow-scroll` class for forcing scroll bars
 
 ### Fixes
+- improve keyboard accessibility of tabs pattern (#981)
+- improve aria markup of accordion pattern (#978)
+- don't allow scroll of content behind drawer or modal
+
+### Updates
+- use new search icon for search field (#979)
 - Fix `.toggle-switch-input` cascade (#977)
+- `html` element now uses `overflow:auto` instead of forcing a scroll bar (#980)
 
 ## [1.0.3]
 
@@ -1120,9 +1136,9 @@
 ### Modified
 - Increase large breakpoint to 1450px
 - Add `extra-large-leader-n`
-	- Trailer
-	- Padding-leader
-	- Padding-trailer
+  - Trailer
+  - Padding-leader
+  - Padding-trailer
 - Add `extra-large-column-n` to 36 columns
 - Remove `container-max` and `container-min`
 - `extra-large-hide` and `-only`
@@ -1209,8 +1225,8 @@ behavior
 - `.table-blue.table-striped`
 - Additional panel options
 - IE9 bugfixes
-	- `.gif` fallback for loader component
-	- `transform2d` for drawers, modals
+  - `.gif` fallback for loader component
+  - `transform2d` for drawers, modals
 
 
 ## 0.0.10
@@ -1397,6 +1413,8 @@ Begin foundational sass for the framework.
 - CSS Reset
 - Grunt Workflows
 
+[1.2.0]: https://github.com/esri/calcite-web/compare/v1.1.0...v1.2.0
+[1.1.0]: https://github.com/esri/calcite-web/compare/v1.0.3...v1.1.0
 [1.0.3]: https://github.com/esri/calcite-web/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/esri/calcite-web/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/esri/calcite-web/compare/v1.0.0...v1.0.1

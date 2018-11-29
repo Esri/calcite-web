@@ -4,9 +4,9 @@
 
 @mixin reset() {
 
-  // Always show vertical scroll bars, standardize type size
+  // standardize type size
   html {
-    overflow-y: scroll;
+    overflow-y: auto;
     min-height: 100%;
     font-size: 100%;
     -webkit-text-size-adjust: 100%;

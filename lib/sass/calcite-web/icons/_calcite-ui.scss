@@ -9,25 +9,25 @@
   pointer-events: none;
   display: inline-block;
   vertical-align: middle;
-  margin-top: -.2em;
+  margin-top: -.25em;
 }
 
 @mixin svg-icon-before () {
-  padding-right: .15em;
+  padding-right: .25em;
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
       padding-right: 0;
-      padding-left: .15em;
+      padding-left: .25em;
     }
   }
 }
 
 @mixin svg-icon-after () {
-  padding-left: .15em;
+  padding-left: .25em;
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
       padding-left: 0;
-      padding-right: .15em;
+      padding-right: .25em;
     }
   }
 }
@@ -36,7 +36,7 @@
   .svg-icon            { @include svg-icon(); }
   .svg-icon-before     { @include svg-icon-before(); }
   .svg-icon-after      { @include svg-icon-after(); }
-  .svg-icon-yellow     { fill: #fad817; }
+  .svg-icon-yellow     { fill: $yellow; }
   .svg-icon-green      { fill: $green; }
   .svg-icon-blue       { fill: $blue; }
   .svg-icon-light-blue { fill: $light-blue; }

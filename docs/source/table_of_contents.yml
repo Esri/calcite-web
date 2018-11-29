@@ -21,8 +21,9 @@ type:
       pages:
         - title: 'Overview'
           link: overview
-        - title: 'Avenir'
+        - title: 'Avenir Next'
           link: avenir
+          noBase: true
           modifiers:
             - avenir-light
             - avenir-regular
@@ -31,6 +32,7 @@ type:
             - avenir-bold
         - title: 'Code Face'
           link: code-face
+          noBase: true
           modifiers:
             - code-face
     - group: 'Composition Helpers'
@@ -39,6 +41,7 @@ type:
           link: composition-helpers
         - title: 'Text modifiers'
           link: text-modifiers
+          noBase: true
           modifiers:
             - text-light
             - text-ellipsis
@@ -49,6 +52,7 @@ type:
             - text-right
         - title: 'Sizes'
           link: text-size
+          noBase: true
           modifiers:
             - font-size--3
             - font-size--2
@@ -64,18 +68,21 @@ type:
             - font-size-8
         - title: 'Color'
           link: text-color
+          noBase: true
           modifiers:
             - text-red
             - text-green
             - text-blue
-            - text-white
-            - text-light-gray
             - text-dark-gray
             - text-darker-gray
             - text-darkest-gray
             - text-off-black
+          modifiers-dark:
+            - text-white
+            - text-light-gray
         - title: 'Link Color'
           link: link-color
+          noBase: true
           modifiers:
             - link-red
             - link-green
@@ -96,10 +103,6 @@ type:
           link: list-plain
           modifiers:
             - list-plain
-    - group: 'Defaults'
-      pages:
-        - title: 'Overview'
-          link: type-defaults
 grid:
   title: 'Grid'
   base: grid
@@ -364,15 +367,16 @@ components:
           modifiers:
             - btn-transparent
             - btn-clear
-            - btn-clear-white
             - btn-small
             - btn-large
             - btn-fill
             - btn-half
             - btn-disabled
-            - btn-white
             - btn-red
             - btn-green
+          modifiers-dark:
+            - btn-white
+            - btn-clear-white
         - title: 'Button Groups'
           link: button-groups
           status: complete
@@ -448,7 +452,8 @@ components:
           classes:
             - breadcrumbs
             - crumb
-          modifiers:
+          modifiers: true
+          modifiers-dark:
             - breadcrumbs-white
         - title: 'Tooltips'
           link: tooltips
@@ -537,9 +542,10 @@ components:
           modifiers: false
         - title: 'Radio Group'
           link: radio-group
-          status: 'proposed'
+          status: 'complete'
+          classes:
+            - radio-group
           modifiers: false
-          hidden: true
     - group: 'Animation'
       pages:
         - title: 'Overview'
@@ -612,6 +618,7 @@ patterns:
             - 'tabs-gray'
             - 'tabs-transparent'
             - 'tabs-translucent'
+          modifiers-dark:
             - 'tabs-dark'
         - title: 'Accordions'
           link: accordions
