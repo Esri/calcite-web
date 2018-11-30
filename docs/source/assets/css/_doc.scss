@@ -181,7 +181,7 @@ $include-calcite-icons: false;
     width: 100%;
     display: block;
     color: $white;
-    background-color: rgba($blue, 0.6);
+    background-color: $transparent-black;
     font-family: monospace;
     padding-top: .5em;
     padding-bottom: .5em;
@@ -192,24 +192,6 @@ $include-calcite-icons: false;
 .html-sample {
   max-height: 45vh;
   overflow: scroll;
-}
-
-.nested-demo [class*="column-"] {
-  [class*="column-"] {
-    span {
-      background-color: rgba($blue, 0.4);
-    }
-    [class*="column-"] {
-      span {
-        background-color: rgba($blue, 0.2);
-      }
-      [class*="column-"] {
-        span {
-          background-color: rgba($blue, 0.1);
-        }
-      }
-    }
-  }
 }
 
 // Color Sample Classes
