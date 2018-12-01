@@ -63,20 +63,14 @@ $include-sliders:                $generate-css    !default;
 $include-switches:               $generate-css    !default;
 
 // Patterns
-$include-footer:                 $generate-css    !default;
-$include-sticky-footer:          $generate-css    !default;
 $include-pagination:             $generate-css    !default;
 $include-side-nav:               $generate-css    !default;
 $include-sub-nav:                $generate-css    !default;
 $include-third-nav:              $generate-css    !default;
-$include-top-nav:                $generate-css    !default;
-$include-user-nav:               $generate-css    !default;
-$include-app-switcher:           $generate-css    !default;
 
 // Javascript
 $include-tabs:                   $generate-css    !default;
 $include-modal:                  $generate-css    !default;
-$include-search:                 $generate-css    !default;
 $include-accordion:              $generate-css    !default;
 $include-drawers:                $generate-css    !default;
 $include-sticky:                 $generate-css    !default;
@@ -134,15 +128,11 @@ $include-filter-dropdown:        $generate-css    !default;
 
 // Patterns
 // complete interfaces: header, footer, banner...
-@import "calcite-web/patterns/top-nav";
-@import "calcite-web/patterns/user-nav";
 @import "calcite-web/patterns/sub-nav";
 @import "calcite-web/patterns/third-nav";
 @import "calcite-web/patterns/side-nav";
-@import "calcite-web/patterns/footer";
 @import "calcite-web/patterns/tabs";
 @import "calcite-web/patterns/modal";
-@import "calcite-web/patterns/search";
 @import "calcite-web/patterns/accordion";
 @import "calcite-web/patterns/drawers";
 @import "calcite-web/patterns/filter-dropdown";
