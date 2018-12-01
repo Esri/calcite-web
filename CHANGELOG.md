@@ -8,13 +8,16 @@
 
 ### Breaking
 
+#### Patterns
+Several patterns were removed which are now replaced by the [global-nav component](https://github.com/esri/global-nav):
+
+- :warning: Top Nav
+- :warning: User Nav
+- :warning: User Sign In
+- :warning: Footer
+- :warning: Search
+
 #### Icons
-- :warning: removed several patterns which are now replaced by the [global-nav component](https://github.com/esri/global-nav):
-  - Top Nav
-  - User Nav
-  - User Sign In
-  - Footer
-  - Search
 - :warning: removed icon font
 - :warning: removed icon font color helper classes
 - :warning: removed all icon svgs (use calcite-ui-icons dependency)
