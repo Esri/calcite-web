@@ -8,7 +8,7 @@ Leader and trailer classes also have additional responsive `tablet-` and `phone-
 
 For example, if you wanted an element to have 3 lines of margin above it on desktop, but that was too much on a phone, you could use responsive classes to specify that:
 
-```
+```html
 <div class="leader-3 phone-leader-1"></div>
 ```
 

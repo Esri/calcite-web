@@ -7,8 +7,8 @@
 <div class="column-24 trailer-3">
   {% for palette in palettes %}
     {% if palette.colors %}
-      <div class="visually-hidden js-contrast-notification" aria-live="polite" id="contrast-notification"></div>
-      <div class="block-group block-group-6-up tablet-block-group-3-up phone-block-group-2-up" aria-role="radiogroup" aria-label="swatch picker">
+      <div class="visually-hidden js-contrast-notification" aria-live="polite"></div>
+      <div class="block-group block-group-6-up tablet-block-group-3-up phone-block-group-2-up" role="radiogroup" aria-label="swatch picker">
           {% for color in palette.colors %}
             {% set value = data.colors[color] %}
             {% if value.charAt(0) == "#" %}

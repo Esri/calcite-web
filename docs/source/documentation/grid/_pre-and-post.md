@@ -10,7 +10,7 @@ Pre and post helpers are available from `.pre-1` and `.post-1` to `.pre-24` and 
   </div>
 </div>
 
-```
+```html
 <div class="column-8 pre-2">
   <span>column-8 pre-2</span>
 </div>

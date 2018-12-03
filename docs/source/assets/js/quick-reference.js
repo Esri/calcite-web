@@ -4,7 +4,7 @@
   }
 
   function containsTerm (domNode, term) {
-    return domNode.textContent.indexOf(term) > -1;
+    return domNode.innerHTML.toLowerCase().indexOf(term.toLowerCase()) > -1;
   }
 
   function filterClasses (e) {
@@ -19,6 +19,7 @@
     })
     .map(function (item) {
       item.classList.remove('hide');
+      item.parentNode.parentNode.classList.remove('hide')
       return item;
     });
   }

@@ -4,7 +4,7 @@ Setting the `$generate-css` variable to false in your sass files will prevent an
 
 Additionally, font imports are controlled this way. By default, Calcite Web requests Avenir Next from a cdn. You can import `calcite-web-no-fonts.scss` if you don't want the fonts.
 
-```
+```scss
 // Sass Output
 $include-colors:                 true    !default;
 $generate-css:                   true    !default;
@@ -39,7 +39,6 @@ $include-type:                   $generate-css    !default;
 $include-icons:                  $generate-css    !default;
   $include-calcite-icons:        $generate-css    !default;
   $include-social-icons:         $generate-css    !default;
-  $include-icon-font:            $generate-css    !default;
 
 // Components
 $include-alerts:                 $generate-css    !default;
@@ -60,15 +59,10 @@ $include-card:                   $generate-css    !default;
 $include-animation:              $generate-css    !default;
 
 // Patterns
-$include-footer:                 $generate-css    !default;
-$include-sticky-footer:          $generate-css    !default;
 $include-pagination:             $generate-css    !default;
 $include-side-nav:               $generate-css    !default;
 $include-sub-nav:                $generate-css    !default;
 $include-third-nav:              $generate-css    !default;
-$include-top-nav:                $generate-css    !default;
-$include-user-nav:               $generate-css    !default;
-$include-app-switcher:           $generate-css    !default;
 
 // Javascript
 $include-tabs:                   $generate-css    !default;

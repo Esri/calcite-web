@@ -15,7 +15,7 @@ Block groups have responsive `tablet-` and `phone-` prefix classes. These allow 
   </div>
 </div>
 
-```
+```html
 <div class="block-group block-group-4-up tablet-block-group-2-up phone-block-group-1-up">
   <div class="block trailer-half">
     <div class="panel">Block</div>

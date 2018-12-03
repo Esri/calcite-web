@@ -59,6 +59,6 @@ If `calcite-web.js` is used on a page with no module syntax, it will just attach
 
 While all of the examples above use the main `init()` method, you can also initialize individual patterns. For example, initialize only instances of the tab pattern like this:
 
-```
+```js
 calcite.tabs();
 ```

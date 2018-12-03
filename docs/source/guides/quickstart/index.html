@@ -15,29 +15,19 @@ To get started creating a page in Calcite Web we'll start with, well, the page!
 
 ```html
 <!doctype html>
-<!--[if lt IE 9]>  <html class="ie lt-ie9 ie8"> <![endif]-->
-<!--[if IE 9]>     <html class="ie ie9"> <![endif]-->
-<!--[if !IE]><!--> <html> <!--<![endif]-->
+<html>
   <head>
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="viewport" content="width=device-width">
     <title>Your Title</title>
     <link rel="shortcut icon" href="/img/favicon.ico">
     <!-- get calcite-web css from the cdn (use latest version) -->
     <link rel="stylesheet" href="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/{{data.pkg.version}}/css/calcite-web.min.css">
-    <!--[if lt IE 9]>
-      <script src="/assets/javascripts/libs/selectivizr.js"></script>
-      <script src="/assets/javascripts/libs/html5shiv.js"></script>
-    <![endif]-->
   </head>
   <body>
     <div class="wrapper">
-      <!-- header -->
       <!-- content of page -->
-    </div>
-    <div class="footer" role="contentinfo">
-      <!-- content of footer -->
     </div>
 
     <!-- get calcite-web js from the cdn (use latest version) -->
@@ -53,10 +43,9 @@ To get started creating a page in Calcite Web we'll start with, well, the page!
 
 The above page does a lot of things:
 
-1. General HTML boilerplate (`meta`, `title`, conditional IE classes, `head` and `body` tags)
+1. General HTML boilerplate (`meta`, `title`, `head` and `body` tags)
 2. Load the current version of Calcite Web's CSS and JS from the CDN
-3. Set up basic page containers (for sticky footers/drawers if they are used in the future)
-4. Initialize interactive patterns which rely on `calcite-web.js`
+3. Initialize interactive patterns which rely on `calcite-web.js`
 
 You can also load Calcite Web as an [npm module](../../documentation/#npm), a [ruby gem]((../../documentation/#ruby-gem)), or [reference it locally](../../documentation/#static-files).
 
@@ -72,23 +61,21 @@ The first step is to figure out how to lay out this content and position it corr
 
 ![]({{relativePath}}/assets/img/docs/sample-page-grid.svg)
 
-Looks like the top navigation takes up all 24 columns. The banner also goes accross the whole page.
-
 The left hand side of the main content section looks like it takes up four columns while the right hand side takes up nineteen. It also looks like they have one column of space in between them. The cards don't line up with the grid, so let's worry about them later.
 
 The footer is made up of four different sections. Most of the sections look like they are five columns with one column of space between them. So adding the markup to the basic page we had before might look something like this:
 
 ```html
 <div class="wrapper">
-  <!-- top navigation -->
-  <div class="grid-container">
-    <div class="column-24">
-      <!-- links for top navigation go in here -->
-    </div>
-  </div>
+
+  <!-- skip to content -->
+
+
+  <!-- top navigation, see below -->
+  <div></div>
 
   <!-- banner -->
-  <div class="grid-container">
+  <div class="grid-container" role="banner">
     <div class="column-24">
       <!-- title needs to go in here, but be white and centered -->
     </div>
@@ -98,61 +85,38 @@ The footer is made up of four different sections. Most of the sections look like
   <div class="grid-container">
 
     <!-- side navigation -->
-    <div class="column-4"></div>
+    <nav class="column-4"></nav>
 
     <!-- main content list -->
-    <div class="column-19 pre-1">
+    <main class="column-19 pre-1" id="">
       <!-- cards ??? -->
-    </div>
+    </main>
 
   </div>
 </div>
 
-<div class="footer" role="contentinfo">
-  <div class="grid-container">
-    <!-- footer section 1 -->
-    <div class="column-5 pre-2"></div>
-
-    <!-- footer section 2 -->
-    <div class="column-5 pre-1"></div>
-
-    <!-- footer section 3 -->
-    <div class="column-5 pre-1"></div>
-
-    <!-- footer section 4 -->
-    <div class="column-4 pre-1"></div>
-  </div>
-</div>
+<!-- footer, see below -->
+<div></div>
 ```
 
-## 3. Adding Patterns
+## 3. Use the global-nav component for header and footer
+
+
+
+## 4. Adding Calcite Web patterns
 
 Now we can copy and paste markup from Calcite Web [design patterns](../../documentation/patterns/) to flesh out the design. Most of the items in the wireframe have an existing pattern that works well for their use case.
 
-1. The highest level of navigation can be done with the Global Navigation component.
-2. The banner is really just a dark blue background color and white text. This can be done with a [dark blue panel component](../../documentation/components/#panels)
-3. The side navigation should be a [side-nav pattern](../../documentation/patterns/#side-nav)
-4. The cards can be done with the [card component](../../documentation/components/#card)
-5. Finally, the footer should be a [footer pattern](../../examples/navigation/#footer)
+1. The banner is really just a dark blue background color and white text. This can be done with a [dark blue panel component](../../documentation/components/#panels)
+2. The side navigation should be a [side-nav pattern](../../documentation/patterns/#side-nav)
+3. The cards can be done with the [card component](../../documentation/components/#card)
 
 After going through and putting all of these patterns inside out layout, we get something like the following:
 
 ```html
 <div class="wrapper">
   <!-- top navigation -->
-  <header class="top-nav">
-    <div class="grid-container">
-      <div class="column-24">
-        <a id="topnav" href="#" class="top-nav-title">Site Title</a>
-        <nav class="top-nav-list" role="navigation" aria-labelledby="topnav">
-          <a class="top-nav-link" href="#">Link 1</a>
-          <a class="top-nav-link is-active" href="#">Link 2</a>
-          <a class="top-nav-link" href="#">Link 3</a>
-          <a class="top-nav-link" href="#">Link 4</a>
-        </nav>
-      </div>
-    </div>
-  </header>
+  <!-- TODO -->
 
   <!-- banner -->
   <div class="panel panel-dark-blue">
@@ -283,11 +247,11 @@ When you preview that in a browser, it should come out a little like this:
 
 Not bad!
 
-## 4. Tweak with Modifier Classes
+## 5. Tweak with modifier classes
 
 As you can see, there are a number of things that are currently different from our design. Some things are too cramped, and others aren't aligned properly. In order to quickly fix what's wrong, we'll use Calcite Web's built in [grid modifier classes]({{relativePath}}/documentation/grid/#grid-helpers) and [type modifier classes]({{relativePath}}/documentation/type/#composition-helpers).
 
-These are really powerful single-purpose classes that allow you to do things like change the font weight add space, change colors, or change display on different screen sizes.
+These are really powerful single-purpose classes that allow you to do things like change the font weight, add space, change colors, or change display on different screen sizes.
 
 Let's fix the banner first. In the original design, we wanted our banner to be taller, with more space above and below the text. We can do this with the [leader and trailer classes]({{relativePath}}/documentation/grid/#leader-and-trailer).
 
@@ -309,42 +273,14 @@ There's also no space below the banner, so let's add some space with our `traile
 <div class="panel panel-dark-blue trailer-2">
 ```
 
-Looks like the text content needs a bit of space above it as well. We could add it below the cards, or as a leader on the `h2`:
+Lastly, looks like the text content needs a bit of space above it as well. We could add it below the cards, or as a leader on the `h2`:
 
 
 ```html
 <h2 class="leader-1">Text Content</h2>
 ```
 
-Lastly, let's take care of the footer as well. The headers don't look quite bold enough. Adding the `avenir-bold` class will make them a little stronger:
-
-```html
-<h6 class="font-size--2 avenir-bold">Header 3</h6>
-```
-
-Notice there is already a `font-size` class on the header. Using these [font-size modifiers]({{relativePath}}/documentation/type/#text-size), you can make type larger or smaller. Just use any number from `font-size--3` to `font-size-6`. `font-size-0` is the default and you can go up and down from there.
-
-We also want the footer to have more space below it. We can do this with the `padding-trailer` classes. These work just like leader and trailer but they modify padding instead of margin:
-
-```html
-<div class="footer padding-trailer-1" role="contentinfo">
-```
-
-Finally, the text in the footer seems a bit too dark. To lighten it up, we can use the [text-color]({{relativePath}}/documentation/type/#text-color) classes.
-
-```html
-<div class="footer padding-trailer-1 text-darkest-gray" role="contentinfo">
-```
-
-For the links, we'll use the [link-color](documentation/type/#link-color) classes:
-
-```html
-<a class="link-darker-gray" href="#">Link 1</a>
-<a class="link-darker-gray" href="#">Link 2</a>
-<a class="link-darker-gray" href="#">Link 3</a>
-```
-
-## 5. Making it Mobile
+## 6. Making it mobile
 
 If you've been following along and you resize your browser, you'll notice that certain things look weird. Calcite Web tries to do as much as it can for you automatically, but guess how you can fix the stuff that's broken? That's right, more modifier classes!
 

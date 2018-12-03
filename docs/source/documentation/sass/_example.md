@@ -1,4 +1,4 @@
-```
+```scss
 // custom-build.scss
 $generate-css: false;
 $include-type: true;

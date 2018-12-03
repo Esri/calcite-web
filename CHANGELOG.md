@@ -8,6 +8,15 @@
 
 ### Breaking
 
+#### Patterns
+Several patterns were removed which are now replaced by the [global-nav component](https://github.com/esri/global-nav):
+
+- :warning: Top Nav
+- :warning: User Nav
+- :warning: User Sign In
+- :warning: Footer
+- :warning: Search
+
 #### Icons
 - :warning: removed icon font
 - :warning: removed icon font color helper classes

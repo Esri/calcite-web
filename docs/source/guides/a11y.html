@@ -25,13 +25,13 @@ If text is set using two colors that don't have enough contrast, users who have 
 
 A skip to content link should be used at the beginning of a page to allow users to bypass site navigation and immediately go to the primary content of the page. Calcite Web provides a helper class for links like this named `skip-to-content`. Simply create an anchor, and make the `href` point to an element located where your content starts. For example, use the following element as the first in your document:
 
-```
+```html
 <a class="skip-to-content" href="#skip-to-content">Skip To Content</a>
 ```
 
 Then, wrapping the main content of the page, use an element with a `tabindex` of `0` and an `id` of whatever you linked to with the skip to content element:
 
-```
+```html
 <div id="skip-to-content" tabindex="0"></div>
 ```
 
@@ -44,7 +44,7 @@ An important step towards building accessible experiences is using semantic mark
   <div class="column-8">
     <span class="label label-red">Incorrect:</span>
 
-```
+```html
 <a href="#" class="btn js-btn">Click Me!</a>
 ```
 
@@ -52,7 +52,7 @@ An important step towards building accessible experiences is using semantic mark
   <div class="column-8">
     <span class="label label-green">Correct:</span>
 
-```
+```html
 <button class="btn js-btn">Click Me!</button>
 ```
 
@@ -72,7 +72,7 @@ It's very important that as a web developer you avoid hiding the browser's focus
   <div class="column-8">
     <span class="label label-red">Incorrect:</span>
 
-```
+```css
 .my-cool-element:focus {
   outline: none;
 }
@@ -82,7 +82,7 @@ It's very important that as a web developer you avoid hiding the browser's focus
   <div class="column-8">
     <span class="label label-green">Correct:</span>
 
-```
+```css
 /* leave the browser default */
 .my-cool-element:focus {}
 
@@ -108,7 +108,7 @@ To that end, it's important that we use the correct html tags and ARIA roles. Ma
   <div class="column-8">
     <span class="label label-red">Incorrect:</span>
 
-```
+```html
 <!-- top navigation -->
 <div class="top-navigation">...</div>
 
@@ -129,7 +129,7 @@ To that end, it's important that we use the correct html tags and ARIA roles. Ma
   <div class="column-11">
     <span class="label label-green">Correct:</span>
 
-```
+```html
 <!-- top navigation -->
 <header>...</header> <!-- or role="banner" -->
 

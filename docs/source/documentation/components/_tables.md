@@ -2,7 +2,7 @@ Tables have not been styled by default. To style your tables, you must add the `
 
 By default, a large table will break your layout horizontally. You can solve this problem by wrapping a table in a `<div>` with the `.overflow-auto` helper class:
 
-```
+```html
 <div class="overflow-auto">
   <table class="table">...</table>
 </div>

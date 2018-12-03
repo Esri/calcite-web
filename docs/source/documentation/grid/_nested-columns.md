@@ -14,7 +14,7 @@ Column-folding behavior is almost entirely automatic. The only exception is gutt
   </div>
 </div>
 
-```
+```html
 <div class="column-8">
   <span>column-8</span>
   <div class="column-4">

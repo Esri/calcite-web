@@ -4,8 +4,8 @@ The container class applies a max width to the content it contains and handles t
 
 ```html
 <div class="grid-container">
-	<div class="column-24">
-		<blockquote>Contain the Columns</blockquote>
-	</div>
+  <div class="column-24">
+    <blockquote>Contain the Columns</blockquote>
+  </div>
 </div>
 ```

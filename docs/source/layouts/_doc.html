@@ -4,7 +4,7 @@
 <header class="sub-nav" role="banner">
   <div class="grid-container">
     <div class="column-24">
-     <h1 class="sub-nav-title text-white leader-1">Documentation</h1>
+     <h1 class="sub-nav-title text-white leader-1" id="subnav">Documentation</h1>
      <nav class="sub-nav-list tablet-hide" role="navigation" aria-labelledby="subnav">
       {% for title, sec in data.table_of_contents %}
       {% set slug = '/documentation/' + sec.base + '/' %}
@@ -14,7 +14,7 @@
       <a class="sub-nav-link {% if url == slug %}is-active{% endif %}" href="{{relativePath}}{{slug}}">{{ sec.title }}</a>
       {% endfor %}
     </nav>
-    <select class="tablet-show select-full trailer-half js-select-nav">
+    <select class="tablet-show select-full trailer-half js-select-nav"aria-labelledby="subnav">
       {% for title, sec in data.table_of_contents %}
       {% set slug = '/documentation/' + sec.base + '/' %}
       {% if sec.base == 'get-started' %}
@@ -31,20 +31,20 @@
 {% block content %}
 <div class="grid-container leader-1 trailer-3">
   <div class="column-6 tablet-column-12">
-    <aside class="side-nav tablet-hide leader-half" aria-role="complementary">
+    <aside class="side-nav tablet-hide leader-half">
     {% for group in data.table_of_contents[section].navigation %}
       {% if group.hidden != true %}
-      <h4 class="side-nav-title">{{ group.group }}</h4>
-      <!-- <nav aria-role="navigation" aria-labelledby="sidenav"> -->
-        <nav aria-role="navigation">
-          {% for page in group.pages %}
-          {% if page.title == 'Overview' %}
-          <a href="#{{group.group | replace(" ", "-") | lower}}" class="side-nav-link">{{page.title}}</a>
-          {% else %}
-          <a href="#{{page.link}}" class="side-nav-link">{{page.title}}</a>
-          {% endif %}
-          {% endfor %}
-        </nav>
+      {% set groupId = group.group | replace(" ", "-") | lower %}
+      <h4 class="side-nav-title" id="{{groupId}}-title">{{ group.group }}</h4>
+      <nav aria-labelledby="{{groupId}}-title">
+        {% for page in group.pages %}
+        {% if page.title == 'Overview' %}
+        <a href="#{{group.group | replace(" ", "-") | lower}}" class="side-nav-link">{{page.title}}</a>
+        {% else %}
+        <a href="#{{page.link}}" class="side-nav-link">{{page.title}}</a>
+        {% endif %}
+        {% endfor %}
+      </nav>
       {% endif %}
     {% endfor %}
     </aside>
@@ -119,7 +119,7 @@
             </div>
           </div>
 {% markdown %}
-```
+```html
 {% set modifier = "modifier-class" %}{% include 'documentation/' + data.table_of_contents[section].base + '/sample-code/_' + page.link %}
 ```
 {% endmarkdown %}

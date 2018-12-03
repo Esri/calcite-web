@@ -4,7 +4,7 @@ Along with a set of common bus events, each pattern has a set of channels that i
 
 You can trigger or react to events by using the `on` and `emit` methods on the bus:
 
-```
+```js
 // assuming calcite-web.js is available as calcite
 
 // do something when a drawer opens
@@ -63,7 +63,7 @@ calcite.bus.emit('drawer:open', {id: "top-nav"})
 
 Many of the filter dropdown channels emit and listen for the following options object:
 
-```
+```js
 {
   parent: domNode,
   id: filterDropdownId,
@@ -104,7 +104,7 @@ Many of the filter dropdown channels emit and listen for the following options o
 
 Tab events emit and listen for an Options Object.
 
-```
+```js
 {
   id: tabId // data-tab attribute
   active: domNode

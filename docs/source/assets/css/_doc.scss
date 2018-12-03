@@ -11,7 +11,7 @@ $include-calcite-icons: false;
 // Use this to test dark theme
 // @import "calcite-web-dark";
 
-@import "github";
+@import "code";
 
 // Splashy banner stuff
 .bg-banner {
@@ -114,7 +114,7 @@ $include-calcite-icons: false;
 .styleguide-modifiers {
   @include clearfix();
   background: $white;
-  overflow-x: scroll;
+  overflow-x: auto;
   &.styleguide-modifiers-overflow-visible {
     overflow-y: visible;
     overflow-x: visible;
@@ -125,6 +125,7 @@ $include-calcite-icons: false;
     border: 1px solid $lightest-gray;
     position: relative;
     clear: both;
+    overflow: visible;
     &:last-child {
       border-radius: 0 0 3px 3px;
     }
@@ -180,10 +181,10 @@ $include-calcite-icons: false;
     width: 100%;
     display: block;
     color: $white;
-    background-color: rgba($blue, 0.6);
+    background-color: $transparent-black;
     font-family: monospace;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: .5em;
+    padding-bottom: .5em;
     text-align: center;
   }
 }
@@ -191,24 +192,6 @@ $include-calcite-icons: false;
 .html-sample {
   max-height: 45vh;
   overflow: scroll;
-}
-
-.nested-demo [class*="column-"] {
-  [class*="column-"] {
-    span {
-      background-color: rgba($blue, 0.4);
-    }
-    [class*="column-"] {
-      span {
-        background-color: rgba($blue, 0.2);
-      }
-      [class*="column-"] {
-        span {
-          background-color: rgba($blue, 0.1);
-        }
-      }
-    }
-  }
 }
 
 // Color Sample Classes
@@ -285,6 +268,10 @@ $include-calcite-icons: false;
 
 .color-swatch-inactive {
   opacity: 0.2;
+}
+
+pre code {
+  background-color: white;
 }
 
 .code-area {
