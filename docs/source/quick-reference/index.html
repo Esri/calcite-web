@@ -23,15 +23,7 @@ css:
     <main class="tablet-leader-1" id="skip-to-content">
       {% for title, sec in data.table_of_contents %}
         {% if ( title !== 'get-started' and title !== 'color' and title !== 'patterns' and title !== 'sass' and title !== 'javascript' ) %}
-          {% set columnClass = 'column-5' %}
-          {% if title == 'icons' %}
-            {% set columnClass = 'column-9' %}
-          {% elif title == 'type' %}
-            {% set columnClass = 'column-5' %}
-          {% elif title == 'grid' %}
-            {% set columnClass = 'column-5' %}
-          {% endif %}
-          <section class="{{columnClass}}">
+          <section class="column-6">
             <h4 class="text-rule trailer-1"><a href="{{relativePath}}/documentation/{{sec.base}}" class="link-darkest-gray">{{sec.title}}</a></h4>
             {% for navigation in sec.navigation %}
               {% for page in navigation.pages %}
