@@ -11,9 +11,9 @@ layout: layouts/_guide
 
 {% markdown %}
 
-Calcite Web's grid is a float-based grid system that utilizes viewport width to determine sizing. The grid can be [configured with SASS](../../documentation/grid/#configuration) and is by default responsive. This makes creating layouts that work across multiple screen sizes much easier and less time consuming. Read on for some quick pointers on constructing layouts with the Calcite Web grid classes.
+Calcite Web's grid is a float-based grid system that utilizes viewport width to determine sizing. The grid can be [configured with SASS](../../documentation/grid/#configuration) and is by default responsive. Read on for some quick pointers on constructing layouts with the Calcite Web grid classes.
 
-## 1. Always use a grid container
+<h2 class="leader-3"> 1. Always use a grid container</h2>
 
 All grid layouts should be wrapped in an element with the [`grid-container` class](../../documentation/grid/#container). The grid container will take care of setting the max width, centering the layout, clearing the floats, and compensates for screen realestate taken up by scroll bars.
 
@@ -42,74 +42,60 @@ All grid layouts should be wrapped in an element with the [`grid-container` clas
 
 ## 2. Size elements with column classes
 
-The `column-*` classes are the main mechanism provided by Calcite Web to size elements horizontally. The grid by default is twenty-four columns on desktop, twelve on tablet, and size on mobile. Using the [responsive column classes](../../documentation/grid/#responsive-columns) you can specify different sizes for different viewports.
+The `column-*` classes are the main mechanism provided by Calcite Web to size elements horizontally. The grid by default is twenty-four columns on desktop, twelve on tablet, and size on mobile (see below for more on responsive classes).
 
 Columns can also be nested inside one another. In certain instances you may need to use the [first and last classes](../../documentation/grid/#first-and-last) to fix the left-hand alignment of a nested column.
-
-### Examples
-
   </div>
+
+<div class="grid-example clearfix trailer-3">
+  {% include "guides/grid/_columns.html" %}
 </div>
 
-{% include "guides/grid/_columns.html" %}
+<div class="grid-container leader-2">
+  <div class="column-16">
 
+## 3. Use the phone and tablet classes for responsive designs
 
-## 3. Space elements with pre- and post-
+The column classes will automatically resize themselves on phone and tablet, but these defaults are just guesses, and many times you'll need to specify layouts for specific device form factors.  Using the [responsive column classes](../../documentation/grid/#responsive-columns) you can specify different sizes for different viewports. Change your window size to see the below examples adapt to your viewport.
+  </div>
 
-[Pre and post classes](../../documentation/grid/#pre-and-post) allow you to space elements by horizontally by multiple column widths. There are also a set of responsive classes allowing custom layouts for tablet or phone.
-
-There is also a `center-column` class if you need to quickly center a column inside a container.
-
-### Examples
-
-{% include "guides/grid/_pre-and-post.html" %}
+<div class="grid-example clearfix trailer-3">
+  {% include "guides/grid/_responsive-columns.html" %}
+</div>
+  <div class="column-24">
+    <div class="column-16">
 
 ## 4. Space elements with pre- and post-
 
-[Pre and post classes](../../documentation/grid/#pre-and-post) allow you to space elements by horizontally by multiple column widths. There are also a set of responsive classes allowing custom layouts for tablet or phone.
+[Pre and post classes](../../documentation/grid/#pre-and-post) allow you to space elements horizontally by multiple column widths. There are also a set of responsive classes allowing custom layouts for tablet or phone.
 
 There is also a `center-column` class if you need to quickly center a column inside a container.
 
 ### Examples
 
-{% include "guides/grid/_pre-and-post.html" %}
-
-{% endmarkdown %}
-
   </div>
 </div>
 
-<div class="grid-container padding-leader-3">
+<div class="grid-example clearfix trailer-3">
+  {% include "guides/grid/_pre-and-post.html" %}
+</div>
+
+<div class="column-24">
+<div class="column-16">
+
+## 5. Use block-group to create gridded layouts
+
+[Block-groups](../../documentation/grid/#block-groups) are meant for situations where you'd like a regular gridded layout with a known number of columns. They use an `inline-block` based grid that is _not_ based on viewport-width. This means you can use them inside any containing element, no matter the size. To create a block group, add the `block-group` and `block-group-X-up` classes to the containing element as well as the `block` class to each child item. For example, to create a block group with four columns, you could use:
+
+{% endmarkdown %}
+</div>
+</div>
+
+<div class="column-18 grid-example">
+{% include "guides/grid/_block-group.html" %}
+</div>
 
 
-  <h2 id="block-groups" class="padding-leader-2 column-24">Block Groups</h2>
-
-  <div class="grid-example clearfix trailer-2 leader-1 column-24">
-    <div class="block-group block-group-4-up">
-      <div class="block"><span>block-group-4-up</span></div>
-      <div class="block"><span>block-group-4-up</span></div>
-      <div class="block"><span>block-group-4-up</span></div>
-      <div class="block"><span>block-group-4-up</span></div>
-      <div class="block"><span>block-group-4-up</span></div>
-      <div class="block"><span>block-group-4-up</span></div>
-      <div class="block"><span>block-group-4-up</span></div>
-      <div class="block"><span>block-group-4-up</span></div>
-    </div>
-  </div>
-
-  <h2 id="responsive-block-groups" class="padding-leader-2 column-24">Responsive Block Groups</h2>
-
-  <div class="grid-example clearfix trailer-2 leader-1 column-24">
-    <div class="block-group block-group-4-up tablet-block-group-2-up phone-block-group-1-up">
-      <div class="block"><span>block</span></div>
-      <div class="block"><span>block</span></div>
-      <div class="block"><span>block</span></div>
-      <div class="block"><span>block</span></div>
-      <div class="block"><span>block</span></div>
-      <div class="block"><span>block</span></div>
-      <div class="block"><span>block</span></div>
-      <div class="block"><span>block</span></div>
-    </div>
   </div>
 </div>
 
