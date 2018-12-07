@@ -1,5 +1,9 @@
 Calcite Web primarily uses Avenir Next, but also provides a system monospace stack. All font-weights and faces can be set either with [helper classes](#avenir) or [Sass mixins](../sass/#font-families).
 
+### Licensing
+
+Calcite Web provides Esri's fonts automatically as part of the framework. However, if you are a developer outside Esri, you may not have a license to use these fonts. To find out if you can use these fonts, please check 2.2 section C of Esri's [master agreement](https://www.esri.com/en-us/legal/terms/full-master-agreement/mla-e204-e300-english).
+
 ### Internationalization
 
 Almost every major language is styled for you, automatically. In most latin-based languages, everything can be rendered in Avenir Next. Some languages, however, use characters that aren't included in Avenir Next. For each of these languages, Calcite Web will load a font that maintains a similar look and feel.
