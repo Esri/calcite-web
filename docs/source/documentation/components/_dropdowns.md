@@ -4,4 +4,4 @@ Dropdowns are good for showing multiple options under a single call to action. F
 
 Dropdowns differ from `select` elements in that they don't have a default state or a 'current' state. Instead, they offer a jumping off point for a series of related actions.
 
-**Note:** Dropdowns recently started using inline svg icons rather than the icon font for the triangle on the right. If you'd prefer to continue using the icon font, just set the Sass variable `$include-svg-icon` to `false`.
+**Note:** Be sure to give the elements inside your dropdown the role of `menuitem` to ensure they're accessible to screen readers.
