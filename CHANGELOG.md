@@ -4,6 +4,11 @@
 - `radio-group` component (#762)
 -  Improve handling of input validation for RTL (#990)
 
+### Fixed
+- Error thrown from `calcite-web.js` when not using search UI (#992)
+- Ensure skip to content link is accessible and visible (#995)
+- Fix accessibility issues in dropdowns (#989)
+
 ## [1.1.0]
 
 ### Added
