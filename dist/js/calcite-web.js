@@ -1,6 +1,6 @@
 /*!
  * Calcite Web - Calcite Design Components in CSS, JS and HTML
- * @version v1.1.0
+ * @version v1.2.0
  * @license Apache-2.0
  * @copyright 2018 Esri
  * @link https://github.com/Esri/calcite-web
@@ -20,7 +20,8 @@
 function closest (className, context) {
   var current;
   for (current = context; current; current = current.parentNode) {
-    var hasClass = new RegExp('(\\s|^)' + className + '(\\s|$)').test(current.getAttribute('class'));
+    var currentClass = (current && current.getAttribute && current.getAttribute('class')) || '';
+    var hasClass = new RegExp('(\\s|^)' + className + '(\\s|$)').test(currentClass);
     if (current.nodeType === 1 && hasClass) {
       break;
     }
@@ -491,6 +492,14 @@ function closeAllDropdowns (options) {
     toggle$$1.setAttribute('aria-expanded', 'false');
   });
   remove$1(document, 'keydown', seizeArrows);
+  remove$1(document.body, 'focusin', checkFocus);
+}
+
+function checkFocus (e) {
+  // if the new focus element is outside the dropdown, close the dropdown
+  if (e.target && !closest('js-dropdown', e.target)) {
+    bus.emit('dropdown:close');
+  }
 }
 
 function toggleDropdown (options) {
@@ -506,6 +515,7 @@ function toggleDropdown (options) {
   }
   if (has(options.node, 'is-active')) {
     add$1(document.body, click(), closeAllDropdowns);
+    add$1(document.body, 'focusin', checkFocus);
   }
 }
 
@@ -1065,7 +1075,7 @@ function search () {
   }
 
   function closeSearch () {
-    if (has(overlay, 'is-active')) {
+    if (overlay && has(overlay, 'is-active')) {
       remove(overlay, 'is-active');
       remove(document.body, 'overflow-hidden');
       var toggleNodes = nodeListToArray(toggles);
@@ -1394,7 +1404,7 @@ function extend (plugin) {
 // │ Public API │
 // └────────────┘
 // define all public api methods
-var version = '1.1.0';
+var version = '1.2.0';
 var click$1 = click;
 var addEvent = add$1;
 var removeEvent = remove$1;

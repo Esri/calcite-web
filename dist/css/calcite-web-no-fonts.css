@@ -1,6 +1,6 @@
 /*!
  * Calcite Web - Calcite Design Components in CSS, JS and HTML
- * @version v1.1.0
+ * @version v1.2.0
  * @license Apache-2.0
  * @copyright 2018 Esri
  * @link https://github.com/Esri/calcite-web
@@ -4214,6 +4214,11 @@ textarea {
   background-position: right center;
   background-repeat: no-repeat; }
 
+html[dir="rtl"] .input-error, html[dir="rtl"] .input-success {
+  padding-left: 24px;
+  padding-right: 0.3rem;
+  background-position: left center; }
+
 .input-error-message {
   font-size: 0.875rem;
   line-height: 1.5;
@@ -4244,6 +4249,9 @@ textarea {
     pointer-events: none;
     border: 8px solid transparent;
     border-bottom-color: #e4a793; }
+  html[dir="rtl"] .input-error-message:after, html[dir="rtl"] .input-error-message:before {
+    left: unset;
+    right: 11px; }
   .input-error-message.is-active, .input-error-message.is-active:before, .input-error-message.is-active:after {
     display: inline-block; }
 
@@ -4448,6 +4456,59 @@ input.input-group-input,
   width: 100%;
   vertical-align: middle; }
 
+.radio-group {
+  border: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  font-size: 0.9375rem;
+  line-height: 1.5; }
+  .radio-group:after {
+    content: '';
+    display: table;
+    clear: both; }
+
+.radio-group-title {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0; }
+
+.radio-group-input {
+  opacity: 0;
+  position: absolute; }
+  .radio-group-input:checked + .radio-group-label {
+    background-color: #d2e9f9;
+    border: 1px solid #0079c1;
+    margin-right: 0;
+    margin-left: 0; }
+  .radio-group-input:checked + .radio-group-label + .radio-group-input + .radio-group-label {
+    border-left: none; }
+    html[dir="rtl"] .radio-group-input:checked + .radio-group-label + .radio-group-input + .radio-group-label {
+      border-right: none;
+      border-left: 1px solid #cccccc; }
+
+.radio-group-label {
+  display: inline-block;
+  float: left;
+  background-color: #ffffff;
+  color: #323232;
+  cursor: pointer;
+  text-align: center;
+  text-shadow: none;
+  padding: 0.5rem 1rem;
+  line-height: 1.25;
+  margin-top: .25rem;
+  margin-right: -1px;
+  margin-bottom: 0;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+  height: 2.25rem;
+  -webkit-transition: background 0.1s ease-in-out, border-color 0.1s ease-in-out;
+  transition: background 0.1s ease-in-out, border-color 0.1s ease-in-out; }
+  html[dir="rtl"] .radio-group-label {
+    float: right;
+    margin-left: -1px;
+    margin-right: 0; }
+
 .loader-bars:before, .loader-bars:after, .loader-bars {
   background: #0079c1;
   -webkit-animation: load 0.8s infinite ease-in-out;
@@ -4513,17 +4574,16 @@ input.input-group-input,
   opacity: 0;
   float: left;
   pointer-events: none;
-  margin: 0 0 0 1rem;
+  margin: 4px;
+  padding: 1rem;
   position: absolute;
-  z-index: 10;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #ffffff;
   -webkit-transition: 150ms linear;
   transition: 150ms linear; }
   .skip-to-content:focus {
     opacity: 1;
-    -webkit-transition: 150ms linear;
-    transition: 150ms linear;
-    background-color: #ffffff; }
+    z-index: 999; }
 
 .card {
   display: -webkit-box;

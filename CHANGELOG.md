@@ -1,4 +1,4 @@
-## Unreleased
+## [1.2.0]
 
 ### Added
 - `radio-group` component (#762)
@@ -1400,6 +1400,7 @@ Begin foundational sass for the framework.
 - CSS Reset
 - Grunt Workflows
 
+[1.2.0]: https://github.com/esri/calcite-web/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/esri/calcite-web/compare/v1.0.3...v1.1.0
 [1.0.3]: https://github.com/esri/calcite-web/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/esri/calcite-web/compare/v1.0.1...v1.0.2
