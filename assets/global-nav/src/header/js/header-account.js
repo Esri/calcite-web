@@ -167,16 +167,16 @@ export default () => {
 			$controlIdText.nodeValue = $contentInfoIdText.nodeValue = detail.user.id;
 			$contentInfoGroupText.nodeValue = detail.user.group;
 
-			$renderSvgOrImg({imgDef: detail.user.image, imgClass: `${prefix}-image`, $targetElm: $controlImage});
-			$renderSvgOrImg({imgDef: detail.user.image, imgClass: `${prefix}-content-image`, $targetElm: $contentImage});
+			$renderSvgOrImg({imgDef: detail.user.image, alt: detail.user.name, imgClass: `${prefix}-image`, $targetElm: $controlImage});
+			$renderSvgOrImg({imgDef: detail.user.image, alt: detail.user.name, imgClass: `${prefix}-content-image`, $targetElm: $contentImage});
 
 			// Update the content menu
 			$replaceAll($contentMenu,
 				...detail.menus.map(
 					(item) => $('li', {class: `${prefix}-content-item`},
-						$('a', {class: `${prefix}-content-link`, href: item.href},
-							item.label
-						)
+						item.newContext ?
+							$('a', {class: `${prefix}-content-link`, href: item.href, target: "_blank", rel: 'noopener'}, item.label) :
+							$('a', {class: `${prefix}-content-link`, href: item.href}, item.label)
 					)
 				)
 			);

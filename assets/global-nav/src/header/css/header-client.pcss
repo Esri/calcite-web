@@ -11,16 +11,19 @@
 		box-shadow: inset 1px 0 0 0 var(--mono-88);
 		height: 100%;
 		width: 1px;
-
-		@nest :dir(rtl) & {
-			width: 0;
-		}
 	}
+}
+
+.esri-header-lineBreak-hidden {
+	display: none;
 }
 
 .esri-header-client {
 	display: flex;
 	flex-grow: 0;
+	flex-shrink: 0;
+	min-width: 0;
+	max-width: 260px;
 
 	@media (--width-s) {
 		display: none;

@@ -1,30 +1,25 @@
 {
-  "_args": [
-    [
-      "github:Esri/global-nav#v1.0.6",
-      "/Users/paulcpederson/Documents/Projects/calcite-web"
-    ]
-  ],
-  "_development": true,
-  "_from": "github:Esri/global-nav#v1.0.6",
-  "_id": "esri-global-nav@github:Esri/global-nav#18e981c5f1b66c6281585013262e0a476a6800e9",
+  "_from": "github:Esri/global-nav#v1.1.2",
+  "_id": "esri-global-nav@1.1.2",
   "_inBundle": false,
   "_integrity": "",
   "_location": "/esri-global-nav",
   "_phantomChildren": {},
   "_requested": {
     "type": "git",
-    "raw": "github:Esri/global-nav#v1.0.6",
-    "rawSpec": "github:Esri/global-nav#v1.0.6",
-    "saveSpec": "github:Esri/global-nav#v1.0.6",
+    "raw": "esri-global-nav@github:Esri/global-nav#v1.1.2",
+    "name": "esri-global-nav",
+    "escapedName": "esri-global-nav",
+    "rawSpec": "github:Esri/global-nav#v1.1.2",
+    "saveSpec": "github:Esri/global-nav#v1.1.2",
     "fetchSpec": null,
-    "gitCommittish": "v1.0.6"
+    "gitCommittish": "v1.1.2"
   },
   "_requiredBy": [
     "#DEV:/"
   ],
-  "_resolved": "github:Esri/global-nav#18e981c5f1b66c6281585013262e0a476a6800e9",
-  "_spec": "github:Esri/global-nav#v1.0.6",
+  "_resolved": "github:Esri/global-nav#3a4934c74f2792dca8bcd7a054f234c68254a765",
+  "_spec": "esri-global-nav@github:Esri/global-nav#v1.1.2",
   "_where": "/Users/paulcpederson/Documents/Projects/calcite-web",
   "author": {
     "name": "Esri Web Applications",
@@ -33,7 +28,11 @@
   "bugs": {
     "url": "https://github.com/Esri/global-nav/issues"
   },
-  "dependencies": {},
+  "bundleDependencies": false,
+  "dependencies": {
+    "sortablejs": "^1.7.0"
+  },
+  "deprecated": false,
   "description": "A centralized microapp for navigation",
   "devDependencies": {
     "autoprefixer": "^7.1.4",
@@ -48,6 +47,7 @@
     "gh-pages": "^1.0.0",
     "gh-release": "^3.1.1",
     "gulp": "^3.9.1",
+    "gulp-banner": "^0.1.3",
     "gulp-cssnano": "^2.1.2",
     "gulp-eslint": "^4.0.0",
     "gulp-ext": "^1.0.0",
@@ -133,5 +133,5 @@
     "extends": "stylelint-config-dev",
     "rules": {}
   },
-  "version": "1.0.6"
+  "version": "1.1.2"
 }

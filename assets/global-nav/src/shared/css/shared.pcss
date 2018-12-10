@@ -5,20 +5,28 @@
 	--mono-0: #000000;
 	--mono-20: #323232;
 	--mono-35: #595959;
+	--mono-40: #6e6e6e;
+	--mono-45: #707070;
+	--mono-55: #828282;
+	--mono-68: #adadad;
 	--mono-80: #cccccc;
+	--mono-87: #dddddd;
 	--mono-88: #e0e0e0;
 	--mono-91: #e9e9e9;
+	--mono-93: #eeeeee;
+	--mono-94: #efefef;
 	--mono-97: #f8f8f8;
 	--mono-100: #ffffff;
 	--blue: #0079c1;
 	--blue-dark: #005e95;
+	--red: #de2900;
+	--red-dark: #ab3c16;
 
 	/* Sizing
 	/* ====================================================================== */
 
 	--header-width-m: 320px;
-	--header-height-s: 50px;
-	--header-height-l: 56px;
+	--header-height: 56px;
 	--footer-social-size: 36px;
 	--footer-social-gutter: 7px;
 
@@ -27,6 +35,7 @@
 
 	--smooth-speed: 400ms;
 	--fast-speed: 250ms;
+	--instant-speed: 100ms;
 
 	/* Normalize Property Sets
 	/* ====================================================================== */
@@ -121,6 +130,8 @@
 	/* ====================================================================== */
 
 	--menu-link-styles: {
+		display: block;
+		cursor: pointer;
 		&:hover {
 			box-shadow: inset 0 -3px 0 0 color(var(--blue) a(50%));
 			color: var(--mono-0);
@@ -131,6 +142,10 @@
 			box-shadow: inset 0 -3px 0 0 var(--blue);
 			color: var(--mono-0);
 			fill: currentColor;
+		}
+
+		&.-is-active {
+			box-shadow: inset 0 -3px 0 0 var(--blue);
 		}
 	};
 
@@ -151,16 +166,17 @@
 
 		&::after {
 			content: url("../shared.svg#c-arrow-right" param(--fill var(--blue)));
-			inset-block-start: calc(50% - 5px);
+			inset-block-start: calc(50% - 8px);
 			line-height: 10px;
 			margin-inline-start: -.25em;
 			opacity: 0;
 			position: absolute;
-			size: 10px;
+			size: 16px;
 			transition: margin-left 300ms, margin-right 300ms, opacity 300ms;
 
 			&:dir(rtl) {
 				transform: scale(-1);
+				left: -13px;
 			}
 		}
 
@@ -171,6 +187,13 @@
 			}
 		}
 	};
+
+	--menu-icon-styles: {
+		display: block;
+		fill: currentColor;
+		margin: 16px;
+		size: 24px;
+	}
 }
 
 /* Breakpoints

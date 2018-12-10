@@ -14,12 +14,14 @@ const babel_preset_env = require('babel-preset-env');
 const source = require('vinyl-source-stream');
 const sourcemaps = require('gulp-sourcemaps');
 const size = require('gulp-size');
-
+const add_banner = require('gulp-banner');
+const banner = require('./banner');
 const pkg = require('../package.json');
 
 function compileJs() {
 	compileJsFile({rootJs: `./${pkg.main}`, saveAs: `${pkg.gulp_config.build_name}.js`});
 	compileJsFile({rootJs: `./${pkg.gulp_config.src_path}/demo.js`, saveAs: 'demo.js'});
+	compileJsFile({rootJs: `./${pkg.gulp_config.src_path}/home.js`, saveAs: 'home.js'});
 	compileJsFile({rootJs: `./${pkg.gulp_config.src_path}/app-mode-demo.js`, saveAs: 'app-mode-demo.js'});
 }
 
@@ -59,6 +61,9 @@ function compileJsFile({rootJs, saveAs}) {
 	})).pipe(
 		buffer()
 	).pipe(
+		add_banner(banner)
+	)
+	.pipe(
 		sourcemaps.init({
 			loadMaps: true
 		})

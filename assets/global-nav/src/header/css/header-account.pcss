@@ -4,6 +4,8 @@
 /* ========================================================================== */
 
 .esri-header-account {
+	width: 100%;
+
 	@media (--width-s) {
 		background-color: var(--mono-100);
 		box-shadow: inset 0 1px 0 0 var(--mono-88);
@@ -35,9 +37,10 @@
 
 		&::after {
 			content: url("../../shared/shared.svg#c-chevron-right" param(--fill #595959));
-			inset-block-start: calc(50% - 12px / 2);
+			inset-block-start: calc(50% - 16px / 2);
 			inset-inline-end: 20px;
-			size: 12px;
+			position: absolute;
+			size: 16px;
 			transition: left 250ms, opacity 250ms, right 250ms;
 
 			@nest :dir(rtl) & {
@@ -77,10 +80,10 @@
 
 		&::after {
 			content: url("../../shared/shared.svg#c-chevron-right" param(--fill #595959));
-			inset-block-start: calc(50% - 12px / 2);
+			inset-block-start: calc(50% - 16px / 2);
 			inset-inline-end: 20px;
 			position: absolute;
-			size: 12px;
+			size: 16px;
 			transition: left 250ms, opacity 250ms, right 250ms;
 
 			@nest :dir(rtl) & {
@@ -100,7 +103,13 @@
 	@media (--width-ml) {
 		@apply --menu-link-styles;
 
-		padding-block: calc((var(--header-height-l) - 36px) / 2);
+		padding-block: calc((var(--header-height) - 36px) / 2);
+	}
+
+	@media (--width-m) {
+		padding-top: 12px;
+		padding-bottom: 12px;
+		padding-inline: 12px 13px;
 	}
 }
 
@@ -109,6 +118,17 @@
 	inset-start: calc(50% - 32px / 2) 12px;
 	position: absolute;
 	size: 32px;
+	@media (--width-m) {
+		position: static;
+		display: block;
+	}
+}
+
+.esri-header-account-control .esri-header-account-name,
+.esri-header-account-control .esri-header-account-id {
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .esri-header-account-name,
@@ -116,6 +136,9 @@
 	display: block;
 	user-select: text;
 	white-space: nowrap;
+	@media (--width-m) {
+		display: none;
+	}
 }
 
 .esri-header-account-name {
@@ -138,24 +161,22 @@
 	background-color: var(--mono-97);
 
 	@media (--width-s) {
-		box-shadow: inset 0 1px 0 0 var(--mono-88), 0 0 20px 0 color(var(--mono-0) a(30%));
+		background: #f8f8f8;
+		box-shadow: inset 0 1px 0 0 var(--mono-88);
 		display: flex;
 		flex-direction: column;
 		inset-start: 0;
-		max-height: 200vh;
-		max-height: calc(2 * var(--esri-vh));
-		min-height: 100vh;
-		min-height: var(--esri-vh);
+		min-height: calc(var(--esri-vh) - var(--header-height));
+		overflow: auto;
 		position: absolute;
+		transform: translate3D(0, 0, 0);
 		transition: transform var(--smooth-speed) ease-in-out;
-		width: calc(100vw - 50px);
-		width: calc(var(--esri-vw) - 50px);
+		width: calc(100%);
 		z-index: 1;
 	}
 
 	@media (--width-ml) {
 		@apply --submenu-styles;
-
 		display: flex;
 		flex-wrap: wrap;
 		inset-inline-end: 0;
@@ -165,16 +186,13 @@
 
 	&[aria-hidden="true"] {
 		@media (--width-s) {
-			max-height: 0;
 			overflow: hidden;
-			transform: translateX(100vw);
-			transform: translateX(var(--esri-vw));
-			transition: max-height 0s var(--smooth-speed), transform var(--smooth-speed) ease-in-out, visibility 0s var(--smooth-speed);
+			transform: translate3D(320px, 0, 0);
+			transition: transform var(--smooth-speed) ease-in-out, visibility 0s var(--smooth-speed);
 			visibility: hidden;
 
 			@nest :dir(rtl) & {
-				transform: translateX(-100vw);
-				transform: translateX(calc(-1 * var(--esri-vw)));
+				transform: translate3D(0, 0, -320px);
 			}
 		}
 	}
@@ -185,7 +203,8 @@
 	@apply --unset-button;
 
 	background-color: var(--mono-100);
-	box-shadow: inset 0 -1px 0 var(--mono-88);
+	margin-top: 1px;
+	border-bottom: 1px solid var(--mono-88);
 	font-size: 20px / 24px;
 	padding: 20px 10px;
 	position: relative;
@@ -202,7 +221,7 @@
 
 	&::before {
 		content: url("../../shared/shared.svg#c-chevron-left");
-		inset-start: calc(50% - 16px / 2) 24px;
+		inset-start: calc(50% - 22px / 2) 24px;
 		position: absolute;
 		size: 16px;
 		transition: left var(--smooth-speed) ease-in-out, right var(--smooth-speed) ease-in-out;
@@ -256,9 +275,8 @@
 .esri-header-account-content-id {
 	font-size: 13px / calc(15 / 13);
 	margin-block-end: 5px;
-	overflow: hidden;
 	padding-inline: 10px;
-	text-overflow: ellipsis;
+	word-wrap: break-word;
 }
 
 .esri-header-account-content-group {
@@ -273,6 +291,7 @@
 
 	@media (--width-s) {
 		text-align: center;
+		margin-bottom: 24px;
 	}
 
 	@media (--width-ml) {
@@ -353,6 +372,7 @@
 	font-size: 17px / 20px;
 	padding: 15px;
 	transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+	height: 100%;
 
 	@media (--width-s) {
 		margin-inline: auto;

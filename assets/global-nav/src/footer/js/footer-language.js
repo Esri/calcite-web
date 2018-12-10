@@ -1,7 +1,8 @@
 /* Global Footer: Tooling
 /* ========================================================================== */
 
-import {$assign as $, $dispatch} from '../../shared/js/shared';
+import {$assign as $, $dispatch, $renderSvgOrImg} from '../../shared/js/shared';
+import {$close} from '../../shared/js/iconPaths';
 
 import languageDialog from './language';
 
@@ -26,10 +27,13 @@ export default (data, prefix) => {
 	const $languageDialog = languageDialog(data);
 
 	// Language Dialog Close Button
-	const $languageDialogClose = $('button', {
-		class: `${prefix}-language-dialog-close`, id: 'dialog-description',
-		ariaLabel: data.closeLabel
-	});
+	const $languageDialogClose = $('button',
+		{
+			class: `${prefix}-language-dialog-close`, id: 'dialog-description',
+			ariaLabel: data.closeLabel
+		},
+		$renderSvgOrImg({imgDef: $close.md, imgClass: `${prefix}-language-dialog-close-image`})
+	);
 
 	$languageDialogClose.addEventListener('click', closeDialog);
 
@@ -60,18 +64,15 @@ export default (data, prefix) => {
 		});
 	}
 
-	// ...
 	const $canvas = $('div', {
 		class: `${prefix}-language-dialog-barrier`,
 		aria: {expanded: false}
 	}, $languageDialog, $cancelCanvas);
 
-	// ...
 	$control.addEventListener('click', () => {
 		$dispatch($control, 'footer:click:language', data);
 	});
 
-	// ...
 	$barrier.addEventListener('footer:update:language', ({detail}) => {
 		$control.innerHTML = detail.buttonLabel;
 

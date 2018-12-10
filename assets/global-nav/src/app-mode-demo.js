@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				brandText: 'Mapping Dashboard',
 				image: './img/dashboard-icon_24.svg',
 				href: 'https://www.esri.com/',
-				width: 80,
+				width: 30,
 				height: 30,
 				topStripe : '#e8912e'
 			},
@@ -84,9 +84,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			search: {
 				hide: true,
 				label: 'Search',
-				image: [
-					'M15.61 14.531l8.132 8.133-1.078 1.078-8.156-8.18-.188.188c-.844.672-1.773 1.164-2.789 1.476s-2.04.446-3.07.399a8.513 8.513 0 0 1-5.648-2.508c-.86-.859-1.5-1.824-1.922-2.894s-.633-2.16-.633-3.27.211-2.199.633-3.27 1.062-2.027 1.922-2.87c.843-.86 1.8-1.5 2.87-1.922s2.16-.633 3.27-.633 2.2.211 3.27.633 2.035 1.062 2.894 1.922a8.406 8.406 0 0 1 1.805 2.648 8.61 8.61 0 0 1 .293 6.094 8.626 8.626 0 0 1-1.512 2.812l-.14.141.046.023zm-6.704 1.594c.797 0 1.574-.13 2.332-.387a7.404 7.404 0 0 0 2.098-1.113l1.242-1.265a7.209 7.209 0 0 0 1.547-4.864 7.071 7.071 0 0 0-2.086-4.629c-.672-.687-1.445-1.21-2.32-1.57s-1.797-.539-2.766-.539-1.89.18-2.765.54-1.649.882-2.32 1.57c-.704.703-1.231 1.496-1.583 2.378s-.527 1.785-.527 2.707.176 1.825.527 2.707.88 1.676 1.582 2.38a7.049 7.049 0 0 0 2.309 1.546 7.06 7.06 0 0 0 2.73.539z'
-				],
 				dialog: {
 					action: 'https://pages.codehub.esri.com/marketing/esri-search-page/',
 					label: 'Esri',
@@ -95,33 +92,126 @@ document.addEventListener("DOMContentLoaded", () => {
 					'queryLabel': 'Search Esri.com'
 				}
 			},
+			notifications: {
+				label: 'Notifications',
+				dismissAllLabel: 'Dismiss all',
+				dismissLabel: 'Dismiss notification',
+				clearAllLabel: 'Mark all as read',
+				emptyMessage: {
+					image: {
+						path: ['M15.5 1A14.5 14.5 0 1 0 30 15.5 14.5 14.5 0 0 0 15.5 1zm0 28.1a13.6 13.6 0 1 1 13.6-13.6 13.615 13.615 0 0 1-13.6 13.6zM8.581 17.276l.637-.636 3.288 3.098 10.073-9.92.637.637-10.71 10.556z'],
+						viewBox: '0 0 32 32'
+					},
+					text: "You're up to date!"
+				},
+				messages: [
+					{
+						text: 'You accepted the invitation to join the <a href="#">Basemap Gallery</a>.',
+						date: 'Yesterday',
+						id: '131049582194'
+					},
+					{
+						text: 'You were invited to join the <a href="#">Public Analysis group</a>.',
+						date: '2 days ago',
+						id: '131049582197'
+					},
+					{
+						text: 'You accepted the invitation to join the <a href="#">Basemap Gallery</a>.',
+						date: '3 days ago',
+						id: '131049582194'
+					},
+					{
+						text: 'You were invited to join the <a href="#">Public Analysis group</a>.',
+						date: '3 days ago',
+						id: '131049582197'
+					},
+					{
+						text: 'You accepted the invitation to join the <a href="#">Basemap Gallery</a>.',
+						date: '4 days ago',
+						id: '131049582194'
+					},
+					{
+						text: 'You were invited to join the <a href="#">Public Analysis group</a>.',
+						date: '5 days ago',
+						id: '131049582197'
+					},
+					{
+						text: 'You accepted the invitation to join the <a href="#">Basemap Gallery</a>.',
+						date: '5 days ago',
+						id: '131049582194'
+					},
+					{
+						text: 'You were invited to join the <a href="#">Public Analysis group</a>.',
+						date: '1 week ago',
+						id: '131049582197'
+					},
+					{
+						text: 'You requested to join the <a href="#">Basemap Gallery</a> group.',
+						date: '2 weeks ago',
+						id: '131049582199'
+					}
+				]
+			},
 			apps: {
 				label: 'Applications',
-				image: {
-					path: './img/gnav-app-switcher-icon.svg',
-					width: 24,
-					height: 24
+				disableDragAndDrop: false,
+				displayIntro: true,
+				ieVersion: null,
+				text: {
+					clear: "Clear",
+					confirm: "Got it.",
+					dragAppsHere: "Drag apps here that you don't use very often.",
+					intro: "Drag and drop your favorite apps in any order to customize your app launcher",
+					removed: "This app is no longer available.",
+					removedMessage: "Removed app",
+					showMore: "Show More"
 				},
-				icons: [
+				primary: [
 					{
 						abbr: "APP",
 						image: "http://www.arcgis.com/home/js/arcgisonline/sharing/dijit/css/images/app-icons/appstudio.png",
 						label: "AppStudio for ArcGIS",
-						url: "//appstudiodev.arcgis.com/apps.html"
+						url: "//appstudiodev.arcgis.com/apps.html",
+						canAccess: true,
+						itemId: "131049582192"
 					},
 					{
 						abbr: "Studio",
 						placeHolderIcon: "http://www.arcgis.com/home/js/arcgisonline/sharing/dijit/css/images/app-icons/svg-app-icon.svg",
 						image: null,
 						label: "Studio for ArcGIS",
-						url: "//appstudiodev.arcgis.com/apps.html"
+						url: "//appstudiodev.arcgis.com/apps.html",
+						canAccess: true,
+						itemId: "131049582193"
 					},
 					{
 						abbr: "Test",
 						placeHolderIcon: "http://www.arcgis.com/home/js/arcgisonline/sharing/dijit/css/images/app-icons/svg-app-circle.svg",
 						image: null,
 						label: "Test App",
-						url: "//appstudiodev.arcgis.com/apps.html"
+						url: "//appstudiodev.arcgis.com/apps.html",
+						canAccess: true,
+						isNew: true,
+						itemId: "131049582194"
+					}
+				],
+				secondary: [
+					{
+						abbr: "APP",
+						image: "http://www.arcgis.com/home/js/arcgisonline/sharing/dijit/css/images/app-icons/appstudio.png",
+						label: "AppStudio for ArcGIS",
+						url: "//appstudiodev.arcgis.com/apps.html",
+						canAccess: true,
+						itemId: "131049582195"
+					},
+					{
+						abbr: "Studio",
+						placeHolderIcon: "http://www.arcgis.com/home/js/arcgisonline/sharing/dijit/css/images/app-icons/svg-app-icon.svg",
+						image: null,
+						label: "Studio for ArcGIS",
+						url: "//appstudiodev.arcgis.com/apps.html",
+						canAccess: false,
+						itemId: "131049582196"
 					}
 				]
 			},

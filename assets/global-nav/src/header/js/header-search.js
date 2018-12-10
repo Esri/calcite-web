@@ -1,4 +1,5 @@
 import {$assign as $, $dispatch, $replaceAll, $renderSvgOrImg} from '../../shared/js/shared';
+import {$close, $search} from '../../shared/js/iconPaths';
 import esriSearch from '../../search/js/search';
 
 const prefix = 'esri-header-search';
@@ -48,7 +49,7 @@ export default () => {
 	$target.addEventListener('header:update:search', ({detail}) => {
 		if (!detail.hide) {
 			$($control, {aria: {label: detail.label}});
-			$renderSvgOrImg({imgDef: detail.image, imgClass: `${prefix}-image`, id: `${prefix}-image`, $targetElm: $control});
+			$renderSvgOrImg({imgDef: $search.md, imgClass: `${prefix}-image`, id: `${prefix}-image`, $targetElm: $control});
 
 			if (detail.dialog) {
 				detail.dialog.prefix = 'esri-header-search-dialog';

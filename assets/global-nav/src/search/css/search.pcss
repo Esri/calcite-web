@@ -4,15 +4,6 @@
 /* ========================================================================== */
 
 :root {
-	--g-search-color: #323232;
-	--g-search-label-color: #828282;
-	--g-search-label-filled-color: #6e6e6e;
-	--g-search-active-color: #0079c1;
-	--g-search-search-color: #595959;
-	--g-search-enter-color: #005e95;
-	--g-search-underline-color: #cccccc;
-	--g-search-underline-highlight-color: #0079c1;
-	--g-search-cancel-enter-color: #000000;
 	--g-search-text-size-s: 28px;
 	--g-search-text-size-l: 60px;
 	--g-search-height-s: 50px;
@@ -59,7 +50,7 @@
 	/* ====================================================================== */
 
 	--g-search-form-styles: {
-		box-shadow: inset 0 -1px 0 0 var(--g-search-underline-color);
+		box-shadow: inset 0 -1px 0 0 var(--mono-80);
 		position: relative;
 
 		@media (--g-search-s) {
@@ -81,7 +72,7 @@
 
 		background-color: transparent;
 		border-width: 0;
-		color: var(--g-search-color);
+		color: var(--mono-20);
 		font-family: inherit;
 		font-weight: inherit;
 		padding: 0;
@@ -105,7 +96,7 @@
 		@apply --g-search-measure-size-styles;
 		@apply --g-search-text-styles;
 
-		box-shadow: inset 0 -1px 0 0 var(--g-search-underline-highlight-color);
+		box-shadow: inset 0 -1px 0 0 var(--blue);
 		transition: width var(--g-search-measure-speed);
 		user-select: none;
 	};
@@ -124,13 +115,13 @@
 		@apply --g-search-text-styles;
 		@apply --g-search-size-styles;
 
-		color: var(--g-search-label-color);
+		color: var(--mono-55);
 		overflow: hidden;
 		white-space: nowrap;
 
 		&[data-filled] {
 			animation: esri-search-filled-label 300ms;
-			color: var(--g-search-label-filled-color);
+			color: var(--mono-40);
 			inset-block-start: calc(-1 * var(--g-search-label-height) + 3px);
 			position: absolute;
 
@@ -159,7 +150,7 @@
 		position: absolute;
 
 		&::before {
-			content: url("../../shared/shared.svg#c-search" param(--fill var(--g-search-search-color)));
+			content: url("../../shared/shared.svg#c-search" param(--fill var(--mono-35)));
 			display: block;
 
 			@media (--g-search-s) {
@@ -175,12 +166,12 @@
 
 		&[data-filled] {
 			&::before {
-				content: url("../../shared/shared.svg#c-search" param(--fill var(--g-search-active-color)));
+				content: url("../../shared/shared.svg#c-search" param(--fill var(--blue)));
 			}
 
 			&:hover, &:focus {
 				&::before {
-					content: url("../../shared/shared.svg#c-search" param(--fill var(--g-search-enter-color)));
+					content: url("../../shared/shared.svg#c-search" param(--fill var(--blue-dark)));
 				}
 			}
 		}
@@ -194,8 +185,9 @@
 
 		background-color: transparent;
 		border-width: 0;
-		color: var(--g-search-search-color);
+		color: var(--mono-35);
 		cursor: pointer;
+		font-family: inherit;
 		font-size: 14px / 20px;
 		inset-end: -45px 0;
 		padding: 0;
@@ -210,7 +202,7 @@
 		}
 
 		& span {
-			background-image: linear-gradient(90deg, var(--g-search-cancel-enter-color) 50%, transparent 50%);
+			background-image: linear-gradient(90deg, var(--mono-0) 50%, transparent 50%);
 			background-repeat: no-repeat;
 			background-size: 200% 1px;
 			display: block;
@@ -228,7 +220,7 @@
 		}
 
 		&:hover, &:focus {
-			color: var(--g-search-cancel-enter-color);
+			color: var(--mono-0);
 
 			& span {
 				background-position: 0 100%;

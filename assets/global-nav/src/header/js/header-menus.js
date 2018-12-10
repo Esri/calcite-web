@@ -1,4 +1,5 @@
 import {$assign as $, $dispatch, $replaceAll, $renderSvgOrImg} from '../../shared/js/shared';
+import {$hamburger} from '../../shared/js/iconPaths';
 
 const prefix = 'esri-header-menus';
 
@@ -9,8 +10,9 @@ export default ({variant = 'desktop'}) => {
 	if (variant === 'mobile') {
 		const $toggle = $('button', {
 			class: `${prefix}-toggle`, id: `${prefix}-${variant}-toggle`,
-			aria: {controls: `${prefix}-content`, expanded: false, haspopup: true, labelledby: 'esri-header-brand'}
+			aria: {controls: `${prefix}-content-${variant}`, expanded: false, haspopup: true, labelledby: 'esri-header-brand'}
 		});
+		$renderSvgOrImg({imgDef: $hamburger.md, imgClass: `${prefix}-image`, id: `${prefix}-image`, $targetElm: $toggle});
 
 		$toggle.addEventListener('click', (event) => {
 			$dispatch($toggle, 'header:menu:toggle', {
@@ -32,6 +34,7 @@ export default ({variant = 'desktop'}) => {
 
 	const $content = $('div', {
 		class: `${prefix}-content`,
+		id: `${prefix}-content-${variant}`,
 		aria: {hidden: true, expanded: false}
 	});
 
@@ -45,6 +48,9 @@ export default ({variant = 'desktop'}) => {
 	/* ====================================================================== */
 
 	$target.addEventListener('header:update:menus', ({detail}) => {
+		if (detail.noBrand) {
+			$target.classList.add("-no-brand");
+		}
 		$replaceAll(
 			$content,
 			...detail.map(
@@ -68,7 +74,7 @@ export default ({variant = 'desktop'}) => {
 
 							const $subcontrol = $('a',
 								{
-									class: `${prefix}-link ${item.hideLabelInDesktop ? '-hide-label' : ''}`, id: `${prefix}-link-${uuid}-${suuid}`,
+									class: `${prefix}-link ${item.hideLabelInDesktop ? '-hide-label' : ''} ${item.active ? '-is-active' : ''}`, id: `${prefix}-link-${variant}-${uuid}-${suuid}`,
 									href: item.href || 'javascript:;' // eslint-disable-line no-script-url
 								},
 								$linkIcon,
@@ -108,7 +114,7 @@ export default ({variant = 'desktop'}) => {
 										$('ul',
 											{
 												class: `${prefix}-sublist`,
-												role: 'navigation', aria: {labelledby: `${prefix}-${variant}-link-${uuid}-${suuid}`}
+												role: 'navigation', aria: {labelledby: `${prefix}-link-${variant}-${uuid}-${suuid}`}
 											},
 											/* Global Navigation: Menus: Sublink
 											/* ============================== */
@@ -150,7 +156,7 @@ export default ({variant = 'desktop'}) => {
 										$('ul',
 											{
 												class: `${prefix}-sublist--featured`,
-												role: 'navigation', aria: {labelledby: `${prefix}-link-${uuid}-${suuid}`},
+												role: 'navigation', aria: {labelledby: `${prefix}-link-${variant}-${uuid}-${suuid}`},
 												data: {filled: `${item.tiles.slice(0, 4).length}`}
 											},
 											/* Global Navigation: Menus: Sublink
@@ -195,7 +201,7 @@ export default ({variant = 'desktop'}) => {
 									$subcontent
 								);
 
-								$subcontrol.addEventListener('click', () => {
+								$subcontrol.addEventListener('click', (e) => {
 									$dispatch($subcontrol, 'header:menu:toggle', {
 										control: $subcontrol,
 										content: $subcontent,
@@ -227,7 +233,7 @@ export default ({variant = 'desktop'}) => {
 		if (detail && detail.indexOf(true) > -1) {
 			document.querySelector('.esri-header-menus-toggle').classList.add('-visible');
 			document.getElementById('esri-header-brand').classList.add('-fit-burger');
-			document.getElementById('esri-header-menus-mobile').classList.add('-always-visible');
+			document.getElementById('esri-header-menus-mobile').classList.add('-always-hamburger');
 
 			const menus = [].slice.call($target.querySelectorAll('.esri-header-menus-menu'));
 			detail.forEach((collapse, i) => {

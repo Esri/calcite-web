@@ -3,7 +3,6 @@ const glob = require('glob-promise');
 const path = require('path');
 const util = require('util');
 const svgson = util.promisify(require('svgson'));
-const keywords = require('../docs/keywords.json');
 const version = require('../package.json').version;
 
 /**
@@ -74,6 +73,7 @@ module.exports = function generatePathFile () {
     .then(files => files.map(formatSVG))
     .then(files => {
       let icons = {};
+      let keywords = JSON.parse(fs.readFileSync('docs/keywords.json', 'utf-8'));
       files.forEach(file => {
         icons[file.variant] = icons[file.variant] || keywords[file.variant] || {alias: [], category: ""};
         let icon = icons[file.variant];

@@ -11,17 +11,32 @@ $include-calcite-icons: false;
 // Use this to test dark theme
 // @import "calcite-web-dark";
 
-@import "github";
+@import "code";
 
 // Splashy banner stuff
 .bg-banner {
-  background: url("../img/docs/topo-map.svg"), linear-gradient(110deg, $blue 10%, $dark-blue 90%);
+  background: url("../img/docs/topo.svg"), linear-gradient(110deg, $off-white 10%, $white 90%);
   background-position: center;
+  background-size: contain;
+  color: $black;
+}
+
+.banner-title {
+  font-size: 5.5rem;
 }
 
 .banner-logo {
   margin: 0 auto $baseline auto;
   display: block;
+}
+
+.esri-header-brand-link:hover {
+  text-decoration: none;
+}
+
+.esri-header-brand-text {
+  vertical-align: top;
+  line-height: 1.6;
 }
 
 .esri-header-menus-subitem--wide {
@@ -84,7 +99,9 @@ $include-calcite-icons: false;
 
 // Sub-Nav test Classes
 .sub-nav {
-  background-color: $darker-blue;
+  background: url("../img/docs/topo-white.svg") $darker-blue;
+  background-size: 1000px;
+  background-repeat: repeat-x;
 }
 
 // Type Specimen Classes
@@ -97,7 +114,7 @@ $include-calcite-icons: false;
 .styleguide-modifiers {
   @include clearfix();
   background: $white;
-  overflow-x: scroll;
+  overflow-x: auto;
   &.styleguide-modifiers-overflow-visible {
     overflow-y: visible;
     overflow-x: visible;
@@ -108,6 +125,7 @@ $include-calcite-icons: false;
     border: 1px solid $lightest-gray;
     position: relative;
     clear: both;
+    overflow: visible;
     &:last-child {
       border-radius: 0 0 3px 3px;
     }
@@ -141,6 +159,9 @@ $include-calcite-icons: false;
       z-index: 0;
     }
   }
+  .styleguide-modifier-example-dark {
+    background-color: $black;
+  }
 }
 
 .styleguide-modifiers + pre {
@@ -159,11 +180,12 @@ $include-calcite-icons: false;
   span {
     width: 100%;
     display: block;
-    color: $white;
-    background-color: rgba($blue, 0.6);
-    font-family: monospace;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    color: $dark-gray;
+    background-color: $off-white;
+    font-family: $code-family;
+    @include font-size(-1);
+    padding-top: .5em;
+    padding-bottom: .5em;
     text-align: center;
   }
 }
@@ -171,24 +193,6 @@ $include-calcite-icons: false;
 .html-sample {
   max-height: 45vh;
   overflow: scroll;
-}
-
-.nested-demo [class*="column-"] {
-  [class*="column-"] {
-    span {
-      background-color: rgba($blue, 0.4);
-    }
-    [class*="column-"] {
-      span {
-        background-color: rgba($blue, 0.2);
-      }
-      [class*="column-"] {
-        span {
-          background-color: rgba($blue, 0.1);
-        }
-      }
-    }
-  }
 }
 
 // Color Sample Classes
@@ -267,6 +271,10 @@ $include-calcite-icons: false;
   opacity: 0.2;
 }
 
+pre code {
+  background-color: white;
+}
+
 .code-area {
   @include code-face();
   padding: .25rem;
@@ -330,4 +338,33 @@ mark {
 .docs-toggle-spacer {
   padding-top: $baseline * .8;
   padding-bottom: $baseline * .55;
+}
+
+.icon-select * {
+  pointer-events: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.icon-select {
+  border: 1px solid $lightest-gray;
+  background-color: $white;
+  color: $black;
+  transition: all 100ms linear;
+}
+
+.icon-select:hover, .icon-select:focus {
+  border: 1px solid $blue;
+  color: $black;
+  text-decoration: none;
+  background-color: $white;
+}
+
+.icon-select--name {
+  word-wrap: break-word;
+  text-align: center;
+  margin-top: .5rem;
+  white-space: normal;
+  font-size: 12px;
+  display: block;
 }

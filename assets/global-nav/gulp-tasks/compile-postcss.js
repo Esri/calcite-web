@@ -4,7 +4,8 @@ const sourcemaps = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
 const cssnano = require('gulp-cssnano');
 const ext = require('gulp-ext');
-
+const add_banner = require('gulp-banner');
+const banner = require('./banner');
 const pkg = require('../package.json');
 
 function compilePostCss() {
@@ -46,6 +47,7 @@ function compilePostCss() {
 		]))
 		.pipe(cssnano())
 		.pipe(ext.replace('css','pcss'))
+		.pipe(add_banner(banner))
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest(pkg.gulp_config.build_path))
 }

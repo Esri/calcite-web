@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
 	<title>App Mode Navigation</title>
 	<link rel="stylesheet" href="./esri-global-nav.css">
 	<link rel="stylesheet" href="./demo.css">
@@ -11,15 +12,20 @@
 <div class="esri-header-barrier"></div>
 <main>
 	<h1>App Mode Navigation</h1>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla ipsa iste aut quis sed, deserunt recusandae, iure labore, facilis alias velit porro ad maxime. Deserunt perferendis corrupti natus, consectetur quibusdam.</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla ipsa iste aut quis sed, deserunt recusandae, iure labore, facilis alias velit porro ad maxime. Deserunt perferendis corrupti natus, consectetur quibusdam.</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla ipsa iste aut quis sed, deserunt recusandae, iure labore, facilis alias velit porro ad maxime. Deserunt perferendis corrupti natus, consectetur quibusdam.</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla ipsa iste aut quis sed, deserunt recusandae, iure labore, facilis alias velit porro ad maxime. Deserunt perferendis corrupti natus, consectetur quibusdam.</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla ipsa iste aut quis sed, deserunt recusandae, iure labore, facilis alias velit porro ad maxime. Deserunt perferendis corrupti natus, consectetur quibusdam.</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla ipsa iste aut quis sed, deserunt recusandae, iure labore, facilis alias velit porro ad maxime. Deserunt perferendis corrupti natus, consectetur quibusdam.</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla ipsa iste aut quis sed, deserunt recusandae, iure labore, facilis alias velit porro ad maxime. Deserunt perferendis corrupti natus, consectetur quibusdam.</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla ipsa iste aut quis sed, deserunt recusandae, iure labore, facilis alias velit porro ad maxime. Deserunt perferendis corrupti natus, consectetur quibusdam.</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla ipsa iste aut quis sed, deserunt recusandae, iure labore, facilis alias velit porro ad maxime. Deserunt perferendis corrupti natus, consectetur quibusdam.</p>
+	<hr>
+	<button class="js-rtl-toggle">Toggle Right to Left</button>
+	<hr>
+	<p>App mode is intended for use in SaaS applications. This mode is great for single-page applications and products. It is very similar to web mode, but has a couple differences:</p>
+	<ul>
+		<li>Main menu items float right</li>
+		<li>Slightly shorter and more compact</li>
+		<li>Branded stripe across the top</p>
+	</ul>
+	<p>The branded stripe and logo area should reflect your product's branding. If you don't have a logo and brand color for your particular SaaS application, the Creative Lab can help you and your team get one.</p>
+	<p>The main menu items fold into the left hamburger menu on smaller screens.</p>
+	<p>If you only have an icon/logo instead of a logotype, your product name can be added using the <code>brandText</code> property in the <code>brand</code> area of the header options object.</p>
+	<p>To report bugs, please <a href="https://github.com/esri/global-nav/issues/new">open an issue</a>.</p>
+	<p>To learn more about this demo, you can view the full JavaScript source <a href="https://github.com/Esri/global-nav/blob/master/src/app-mode-demo.js">on GitHub</a>.</p>
 </main>
 <div class="esri-footer-barrier"></div>
 
@@ -28,9 +34,14 @@
 <script src="./app-mode-demo.js"></script>
 
 <script>
-	if(window.location.href.indexOf('?dir=rtl') > -1){
+	if (window.location.href.indexOf('?dir=rtl') > -1){
 		document.dir = 'rtl';
 	}
+	document.querySelector('.js-rtl-toggle').addEventListener('click', function () {
+		var dir = document.dir === 'rtl' ? 'ltr' : 'rtl';
+		document.dir = dir;
+		document.location.search = '?dir=' + dir;
+	});
 </script>
 
 </body>

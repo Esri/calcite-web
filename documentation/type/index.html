@@ -33,6 +33,7 @@
   </head>
 
   <body>
+    <a href="#skip-to-content" class="skip-to-content">Skip to content</a>
     <!--
     ┌─────────┐
     │ Drawers │
@@ -413,6 +414,8 @@
       <section>
         
 <p>Calcite Web primarily uses Avenir Next, but also provides a system monospace stack. All font-weights and faces can be set either with <a href="#avenir">helper classes</a> or <a href="../sass/#font-families">Sass mixins</a>.</p>
+<h3>Licensing</h3>
+<p>Calcite Web provides Esri's fonts automatically as part of the framework. However, if you are a developer outside Esri, you may not have a license to use these fonts. To find out if you can use these fonts, please check 2.2 section C of Esri's <a href="https://www.esri.com/en-us/legal/terms/full-master-agreement/mla-e204-e300-english">master agreement</a>.</p>
 <h3>Internationalization</h3>
 <p>Almost every major language is styled for you, automatically. In most latin-based languages, everything can be rendered in Avenir Next. Some languages, however, use characters that aren't included in Avenir Next. For each of these languages, Calcite Web will load a font that maintains a similar look and feel.</p>
 <p>Non-latin character sets are pulled in only when needed, so if your application is in English, the browser will only load the files it needs for displaying English. This is accomplished by using the <code>unicode-range</code> property in the <code>@font-face</code> declaration. To learn more about internationalization and to see all of the languages that Calcite Web supports, check out the <a href="../../examples/i18n/">i18n example page</a>.</p>

@@ -31,6 +31,10 @@
         $btn.setAttribute('data-modal', 'iconDetail');
         $btn.setAttribute('aria-label', 'View details of icon: ' + detail.name);
         $btn.appendChild(getSVG(paths, 32));
+        var $name = document.createElement('span');
+        $name.innerHTML = detail.name;
+        $name.classList.add('icon-select--name');
+        $btn.appendChild($name);
         $iconContainer.appendChild($btn);
         $btn.addEventListener("click", showDetail);
         $icons.push($btn);
@@ -89,7 +93,7 @@
     var $svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     $svg.setAttribute('width', size);
     $svg.setAttribute('height', size);
-    paths.forEach(function (path) {
+    (paths || []).forEach(function (path) {
       var $path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
       $path.setAttribute('d', path);
       $svg.appendChild($path);

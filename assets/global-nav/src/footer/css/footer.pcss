@@ -5,13 +5,13 @@
 /* ========================================================================== */
 
 .esri-footer {
-	background-color: #f8f8f8;
+	background-color: var(--mono-97);
 	cursor: default;
 	display: flex;
 	flex-wrap: wrap;
 	user-select: none;
 	position: relative;
-	z-index: auto;	
+	z-index: auto;
 
 	&, & * {
 		box-sizing: border-box;
@@ -41,7 +41,7 @@
 		padding-inline: calc(50% - 1424px / 2);
 		&.skinny-footer{
 			height: 85px;
-			box-shadow: inset 0 1px 0 0 #cccccc;
+			box-shadow: inset 0 1px 0 0 var(--mono-80);
 		}
 	}
 
@@ -65,7 +65,7 @@
 		&.skinny-footer{
 			height: 85px;
 			margin-bottom: 0;
-		}		
+		}
 	}
 
 	@media (--gfoot-l) {
@@ -73,7 +73,7 @@
 		&.skinny-footer{
 			height: 85px;
 			margin-bottom: 0;
-		}		
+		}
 	}
 }
 
@@ -127,7 +127,7 @@
 }
 
 .esri-footer-section--3 {
-	box-shadow: inset 0 1px 0 0 #cccccc;
+	box-shadow: inset 0 1px 0 0 var(--mono-80);
 	flex-basis: 100%;
 	transition: height 300ms;
 

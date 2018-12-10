@@ -2,29 +2,35 @@
 
 /* Global Header
 /* ========================================================================== */
+.esri-header-wrap {
+	background: var(--mono-100);
+	box-shadow: 0 1px 0 0 var(--mono-88);
+	position: relative;
+	z-index: 101;
+}
 
 .esri-header {
 	align-items: center;
-	box-shadow: 0 1px 0 0 var(--mono-88);
 	color: var(--mono-35) var(--mono-100);
 	cursor: default;
 	display: flex;
 	justify-content: space-between;
-	position: relative;
 	user-select: none;
-	z-index: 100;
-
-	@media (--width-s) {
-		height: var(--header-height-s);
-	}
-
-	@media (--width-ml) {
-		height: var(--header-height-l);
-	}
-
+	height: var(--header-height);
 	&.-web {
-		@media (width > 1440px) {
-			padding-inline: calc(50% - 1440px / 2);
+		width: 1440px;
+		max-width: 96vw;
+		margin: 0 auto;
+
+		&.-always-hamburger {
+			width: 100%;
+			max-width: 100vw;
+		}
+
+		@media (--width-sm) {
+			padding-left: 0;
+			padding-right: 0;
+			max-width: 100%;
 		}
 	}
 
@@ -59,14 +65,7 @@
 	-webkit-tap-highlight-color: transparent;
 	transition: opacity var(--fast-speed) ease-in-out, visibility 0ms var(--fast-speed);
 	z-index: -1;
-
-	@media (--width-s) {
-		inset-block-start: var(--header-height-s);
-	}
-
-	@media (--width-ml) {
-		inset-block-start: var(--header-height-l);
-	}
+	inset-block-start: var(--header-height);
 
 	&[data-open="false"] {
 		opacity: 0;
@@ -83,32 +82,20 @@
 	}
 
 	&[data-state="search"] {
-		background-color: color(#f8f8f8 a(98%));
+		background-color: color(var(--mono-97) a(98%));
 		box-shadow: inset 0 1px 0 0 var(--mono-88);
 	}
 }
 
 .-app .esri-header-canvas {
-	@media (--width-s) {
-		inset-block-start: calc(var(--header-height-s) + 3px);
-	}
-
-	@media (--width-ml) {
-		inset-block-start: calc(var(--header-height-l) + 3px);
-	}
+		inset-block-start: calc(var(--header-height) + 3px);
 }
 
 /* Global Header: Barrier
 /* ========================================================================== */
 
 .esri-header-barrier {
-	@media (--width-s) {
-		height: var(--header-height-s);
-	}
-
-	@media (--width-ml) {
-		height: var(--header-height-l);
-	}
+	height: var(--header-height);
 }
 
 /* Global Header: "Is Open" (used to fix scrolling when the menu is open)

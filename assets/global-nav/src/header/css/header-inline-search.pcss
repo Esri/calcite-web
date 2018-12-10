@@ -1,0 +1,321 @@
+@import "../../shared/css/shared.pcss";
+
+/* Global Header Search
+/* ========================================================================== */
+
+.esri-header-inlineSearch {
+	&[aria-expanded="true"] {
+		width: 100%;
+	}
+}
+
+.esri-header-inlineSearch a {
+	text-decoration: none;
+}
+
+.esri-header-inlineSearch-control {
+	@apply --normalize-button;
+	@apply --unset-button;
+	@apply --menu-link-styles;
+
+	cursor: pointer;
+	display: block;
+
+	&[aria-expanded="true"] {
+		display: none;
+	}
+}
+
+.esri-header-search-control-hidden {
+	display: none;
+}
+
+.esri-header-inlineSearch-image {
+	@apply --menu-icon-styles;
+	display: block;
+	margin: 16px;
+	size: 24px;
+}
+
+.esri-header-inlineSearch-lineBreak {
+	position: absolute;
+	top: 0;
+}
+
+.esri-header-inlineSearch-lineBreak.lineBreak-right {
+	right: 0;
+
+	@nest :dir(rtl) & {
+		right: unset;
+		left: 0;
+	}
+}
+
+/* Global Header Search: Content
+/* ========================================================================== */
+
+.esri-header-inlineSearch-content {
+	inset-block-end: 0;
+	inset-inline: 0;
+	padding-block: 150px 20px;
+	position: absolute;
+
+	&[aria-expanded="false"] {
+		opacity: 0;
+		right: 0;
+		visibility: hidden;
+		width: 0;
+	}
+
+	&[aria-expanded="true"] {
+		animation: slide-to-the-left .3s ease-in-out;
+		box-shadow: inset 0 -3px 0 0 var(--blue);
+		height: 55px;
+		margin: 0 0 0 10px;
+		opacity: 1;
+		padding-block: 14px 0;
+		position: relative;
+		width: calc(100% - 10px);
+
+		@nest :dir(rtl) & {
+			animation: slide-to-the-right .3s ease-in-out;
+			margin: 0 10px 0 0;
+
+			@media (--width-s) {
+				margin: 0;
+			}
+		}
+
+		@media (--width-s) {
+			margin: 0;
+			width: 100%;
+		}
+	}
+}
+
+@keyframes slide-to-the-left {
+	0% {
+		left: 90%;
+		margin: 0;
+		width: 10%;
+	}
+
+	100% {
+		left: 0;
+		margin: 0;
+		width: 100%;
+	}
+}
+
+@keyframes slide-to-the-right {
+	0% {
+		margin: 0;
+		right: 90%;
+		width: 10%;
+	}
+
+	100% {
+		margin: 0;
+		right: 0;
+		width: 100%;
+	}
+}
+
+/* Global Header Search: Input
+/* ========================================================================== */
+
+.esri-header-inlineSearch-input {
+	@apply --normalize-button;
+	@apply --unset-button;
+
+	border-width: 0;
+	box-shadow: unset;
+	color: var(--mono-35);
+	display: unset;
+	font-size: 16px;
+	font-weight: unset;
+	margin: 5px 0;
+	padding: 0 30px 0 9px;
+	width: 100%;
+}
+
+.esri-header-inlineSearch-input::placeholder {
+	opacity: .7;
+}
+
+.esri-header-inlineSearch-input:focus {
+	border-color: var(--mono-87);
+	box-shadow: none;
+}
+
+.esri-header-inlineSearch-input::-ms-clear {
+	width: 0;
+	height: 0;
+}
+
+/* Global Header Search: Close Button
+/* ========================================================================== */
+
+.esri-header-inlineSearch-close-button {
+	background: transparent;
+	border: 0;
+	bottom: 28px;
+	cursor: pointer;
+	float: right;
+	height: 100%;
+	margin: 0 10px 0 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 100;
+
+	@nest :dir(rtl) & {
+		float: left;
+		left: 0;
+		right: auto;
+	}
+}
+
+.esri-header-inlineSearch-dismiss-icon {
+	@apply --menu-icon-styles;
+	margin: 0;
+	height: 21px;
+	width: 21px;
+}
+
+/* Global Header Search: Suggestions Dropdown
+/* ========================================================================== */
+
+.esri-header-inlineSearch-suggestions {
+	background: var(--mono-97);
+	float: left;
+	font-size: 15px;
+	position: absolute;
+	top: 56px;
+	width: 100%;
+}
+
+.esri-header-inlineSearch-suggestions hr {
+	border: 1px solid var(--mono-91);
+	margin: 1rem 0;
+}
+
+.esri-header-inlineSearch-suggestions-bottom-padding {
+	margin-top: 18px;
+}
+
+.esri-header-inlineSearch-suggestions-footer{
+	background: #429cd2;
+	padding: 0 22px;
+	text-decoration: none;
+}
+
+/* Global Header Search: Suggestion
+/* ========================================================================== */
+
+.esri-header-inlineSearch-suggestion {
+	list-style: none;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.esri-header-inlineSearch-suggestion a {
+	display: flex;
+	align-items: center;
+}
+
+.esri-header-inlineSearch-suggestion a,
+.esri-header-inlineSearch-suggestion a:visited {
+	color: var(--mono-35);
+}
+
+.esri-header-inlineSearch-suggestion a:hover .esri-header-inlineSearch-suggestion-secondary-text,
+.esri-header-inlineSearch-suggestion a:focus .esri-header-inlineSearch-suggestion-secondary-text,
+.esri-header-inlineSearch-suggestion a:hover,
+.esri-header-inlineSearch-suggestion a:focus {
+	color: var(--mono-0);
+	text-decoration: none;
+	outline-width: 8px;
+}
+
+.esri-header-inlineSearch-suggestion-text {
+	line-height: 22px;
+}
+
+.esri-header-inlineSearch-suggestion-secondary-text {
+	color: #6e6e6e;
+	font-size: 0.8125rem;
+}
+
+.esri-header-inlineSearch-suggestion strong {
+	font-weight: 600;
+}
+
+.esri-header-inlineSearch-suggestion-icon {
+	margin: 0 16px 0 0;
+	position: relative;
+
+	@nest :dir(rtl) & {
+		margin: 0 0 0 16px;
+	}
+}
+
+.esri-header-inlineSearch-suggestion-icon-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.inactive .esri-header-inlineSearch-suggestion-icon-wrapper {
+	float: left;
+
+	@nest :dir(rtl) & {
+		float: right;
+	}
+}
+
+.esri-header-inlineSearch-suggestion-header {
+	margin-bottom: 0;
+	margin-top: 16px;
+}
+
+.esri-header-inlineSearch-suggestion-section {
+	padding: 0 22px;
+}
+
+.esri-header-inlineSearch-suggestion-section ul {
+	margin: 0px 0px 14px 0px;
+	padding: 0;
+
+	@nest :dir(rtl) & {
+		margin-right: 0;
+	}
+}
+
+.esri-header-inlineSearch-suggestion-list li {
+	margin: 10px 0;
+}
+
+.esri-header-inlineSearch-suggestion-footer,
+.esri-header-inlineSearch-suggestion-footer:visited {
+	color: #3ba1de;
+	font-size: 14px;
+}
+
+.esri-header-inlineSearch-suggestion-footer:hover,
+.esri-header-inlineSearch-suggestion-footer:focus {
+	color: #0079c1;
+	text-decoration: none;
+}
+
+/* Global Header Search: Simple Suggestions
+/* ========================================================================== */
+.esri-header-inlineSearch-simple-suggestion-section,
+.esri-header-inlineSearch-simple-suggestion-list {
+	padding: 0 6px;
+}
+
+.esri-header-inlineSearch-simple-suggestion-list li {
+	padding: 0;
+}

@@ -1,32 +1,27 @@
 {
-  "_args": [
-    [
-      "@esri/calcite-ui-icons@1.2.0",
-      "/Users/paulcpederson/Documents/Projects/calcite-web"
-    ]
-  ],
-  "_from": "@esri/calcite-ui-icons@1.2.0",
-  "_id": "@esri/calcite-ui-icons@1.2.0",
+  "_from": "@esri/calcite-ui-icons@^1.2.0",
+  "_id": "@esri/calcite-ui-icons@1.4.0",
   "_inBundle": false,
-  "_integrity": "sha512-rHL709Dmf0FczGyiDvo12V/lW22WhHV+f9WtjXvVEfUnyXGt7POXW56a+QBbK69cMkmB1VvywzBjD2V4XQCA1g==",
+  "_integrity": "sha512-CgjGDzKHqymBbpZdxsI+/7Ufs17kuyYKmGZVz0EH2i9nm8IPLV1RD3VpfMZY+hIOzNkOs5UlvMHYOXI5O+9lWQ==",
   "_location": "/@esri/calcite-ui-icons",
   "_phantomChildren": {},
   "_requested": {
-    "type": "version",
+    "type": "range",
     "registry": true,
-    "raw": "@esri/calcite-ui-icons@1.2.0",
+    "raw": "@esri/calcite-ui-icons@^1.2.0",
     "name": "@esri/calcite-ui-icons",
     "escapedName": "@esri%2fcalcite-ui-icons",
     "scope": "@esri",
-    "rawSpec": "1.2.0",
+    "rawSpec": "^1.2.0",
     "saveSpec": null,
-    "fetchSpec": "1.2.0"
+    "fetchSpec": "^1.2.0"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@esri/calcite-ui-icons/-/calcite-ui-icons-1.2.0.tgz",
-  "_spec": "1.2.0",
+  "_resolved": "https://registry.npmjs.org/@esri/calcite-ui-icons/-/calcite-ui-icons-1.4.0.tgz",
+  "_shasum": "75e9b926195de013b3c0e07e7537eab5e622f596",
+  "_spec": "@esri/calcite-ui-icons@^1.2.0",
   "_where": "/Users/paulcpederson/Documents/Projects/calcite-web",
   "bin": {
     "spriter": "bin/spriter.js"
@@ -34,6 +29,7 @@
   "bugs": {
     "url": "https://github.com/Esri/calcite-ui-icons/issues"
   },
+  "bundleDependencies": false,
   "contributors": [
     {
       "name": "Julio Ochoa",
@@ -52,11 +48,13 @@
       "email": "<kseitz@esri.com"
     }
   ],
+  "deprecated": false,
   "description": "A collection of UI SVG icons created by Esri for applications.",
   "devDependencies": {
+    "browser-sync": "^2.24.7",
+    "debounce": "^1.2.0",
     "fs-extra": "^7.0.0",
     "glob-promise": "^3.4.0",
-    "http-server": "^0.11.1",
     "imagemin": "^5.3.1",
     "imagemin-svgo": "^6.0.0",
     "promise": "~8.0.1",
@@ -86,11 +84,10 @@
     "buildsprite-24-f": "svgstore -o sprite-24-f.svg icons/*-24-f.svg",
     "buildsprite-32": "svgstore -o sprite-32.svg icons/*-32.svg",
     "buildsprite-32-f": "svgstore -o sprite-32-f.svg icons/*-32-f.svg",
-    "imageminsvgo": "node bin/imagemin-svgo.js",
-    "optimize": "npm run imageminsvgo",
-    "server": "http-server docs/",
+    "optimize": "node bin/cli.js",
+    "server": "node bin/server.js",
     "spriter": "node bin/spriter.js",
     "start": "npm run buildsprite-16-f && npm run buildsprite-24-f && npm run buildsprite-32-f && npm run buildsprite-16 && npm run buildsprite-24 && npm run buildsprite-32 && npm run optimize"
   },
-  "version": "1.2.0"
+  "version": "1.4.0"
 }

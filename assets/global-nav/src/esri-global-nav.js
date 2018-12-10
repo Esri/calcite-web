@@ -1,3 +1,4 @@
+import * as Polyfills from './shared/js/polyfills';
 import createHeader from './header/js/header';
 import createFooter from './footer/js/footer';
 

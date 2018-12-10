@@ -4,28 +4,37 @@
 /* ========================================================================== */
 
 .esri-header-brand {
+	@apply --unset-a;
 	align-items: center;
-	display: inline-flex;
+	display: flex;
+	flex: 0 0 auto;
 	height: 100%;
 	text-decoration: none;
-	color: #595959;
+	color: var(--mono-35);
 
 	&.-fit-burger{
 		position: relative;
 	}
 
+	&:empty {
+		display: none;
+	}
+
 	@media (--width-s) {
-		margin-inline: auto;
+		margin-inline-end: auto;
 		padding-inline: 12px;
+		padding-inline-start: 6px;
 	}
 
 	@media (--width-m) {
 		margin-inline-end: auto;
-		padding-inline: 12px;
+		padding-inline-end: 12px;
+		padding-inline-start: 6px;
 	}
 
 	@media (--width-l) {
-		padding-inline: 24px;
+		padding-inline-start: 8px;
+		padding-inline-end: 12px;
 	}
 }
 
@@ -43,6 +52,20 @@
 	}
 }
 
+.distributor-image {
+	display: inline;
+	padding-bottom: 0px;
+	position: relative;
+	vertical-align: text-top;
+}
+
+.distributor-image-border {
+	display: inline;
+	border-right: solid 1px var(--mono-88);
+	height: 56px;
+	margin-inline-end: 10px;
+}
+
 /* Global Header Brand: Text
 /* ========================================================================== */
 
@@ -50,4 +73,13 @@
 	font-size: 18px;
 	font-weight: 400;
 	color: var(--mono-20);
+
+	&.-has-image {
+		margin-inline-start: 12px;
+	}
+}
+
+.esri-header-brand-link,
+.esri-header-brand-link:hover {
+	text-decoration: none;
 }
