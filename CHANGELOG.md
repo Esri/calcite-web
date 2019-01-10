@@ -1,3 +1,8 @@
+## [1.2.1]
+
+### Added
+-  New mixins for RTL support: border-left, border-right, border-left-color, border-right-color, position-left, position-right 
+
 ## [1.2.0]
 
 ### Added

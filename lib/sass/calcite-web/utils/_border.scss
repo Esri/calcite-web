@@ -1,21 +1,21 @@
-@mixin border-left($width, $style, $color) {
-  border-left: $width $style $color;
+@mixin border-left($style) {
+  border-left: $style;
 
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
       border-left: none;
-      border-right: $width $style $color;
+      border-right: $style;
     }
   }
 }
 
-@mixin border-right($width, $style, $color) {
-  border-right: $width $style $color;
+@mixin border-right($style) {
+  border-right: $style;
 
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
       border-right: none;
-      border-left: $width $style $color;
+      border-left: $style;
     }
   }
 }
