@@ -106,13 +106,7 @@
     @include avenir-regular();
     @include gutter-left(1);
     color: $darker-gray;
-    border-left: 3px solid $lighter-gray;
-    @if ($include-right-to-left) {
-      html[dir="rtl"] & {
-        border-left: none;
-        border-right: 3px solid $lighter-gray;
-      }
-    }
+    @include border-left(3px solid $lighter-gray);
   }
 
   blockquote,

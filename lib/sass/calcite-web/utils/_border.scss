@@ -1,0 +1,43 @@
+@mixin border-left($width, $style, $color) {
+  border-left: $width $style $color;
+
+  @if ($include-right-to-left) {
+    html[dir="rtl"] & {
+      border-left: none;
+      border-right: $width $style $color;
+    }
+  }
+}
+
+@mixin border-right($width, $style, $color) {
+  border-right: $width $style $color;
+
+  @if ($include-right-to-left) {
+    html[dir="rtl"] & {
+      border-right: none;
+      border-left: $width $style $color;
+    }
+  }
+}
+
+@mixin border-left-color($color) {
+  border-left-color: $color;
+
+  @if ($include-right-to-left) {
+    html[dir="rtl"] & {
+      border-left-color: transparent;
+      border-right-color: $color;
+    }
+  }
+}
+
+@mixin border-right-color($color) {
+  border-right-color: $color;
+
+  @if ($include-right-to-left) {
+    html[dir="rtl"] & {
+      border-right-color: transparent;
+      border-left-color: $color;
+    }
+  }
+}

@@ -100,12 +100,10 @@
   .tooltip-left {
     &:after {
       top: auto;
-      right: 100%;
+      @include position-right(100%);
       margin-right: 5px;
       @if ($include-right-to-left) {
         html[dir="rtl"] & {
-          right: auto;
-          left: 100%;
           margin-right: 0;
           margin-left: 5px;
         }
@@ -118,16 +116,12 @@
     &:before {
       top: 50%;
       bottom: 50%;
-      left: -5px;
+      @include position-left(-5px);
       margin-top: -5px;
-      border-left-color: $transparent-black;
+      @include border-left-color($transparent-black);
       @if ($include-right-to-left) {
         html[dir="rtl"] & {
-          left: auto;
-          right: -5px;
           margin-right: 0;
-          border-left-color: transparent;
-          border-right-color: $transparent-black;
         }
       }
       border-bottom: 5px solid transparent;
@@ -137,14 +131,11 @@
   .tooltip-right {
     &:after {
       top: auto;
-      right: auto;
       bottom: 50%;
-      left: 100%;
+      @include position-left(100%);
       margin-left: 5px;
       @if ($include-right-to-left) {
         html[dir="rtl"] & {
-          left: auto;
-          right: 100%;
           margin-left: 0;
           margin-right: 5px;
         }
@@ -154,19 +145,11 @@
 
     &:before {
       top: 50%;
-      right: -5px;
+      @include position-right(-5px);
       bottom: 50%;
       margin-top: -5px;
       margin-right: 0;
-      border-right-color: $transparent-black;
-      @if ($include-right-to-left) {
-        html[dir="rtl"] & {
-          left: -5px;
-          right: auto;
-          border-left-color: $transparent-black;
-          border-right-color: transparent;
-        }
-      }
+      @include border-right-color($transparent-black);
       border-bottom: 5px solid transparent;
     }
   }
