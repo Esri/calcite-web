@@ -41,15 +41,14 @@
     max-height: 80vh;
     z-index: 102;
     float: none;
+    @include text-left();
     @if ($include-right-to-left) {
       html[dir="rtl"] & {
         float: none;
-        text-align: right;
       }
     }
     background: $white;
     padding: $baseline;
-    text-align: left;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     display: inline-block;

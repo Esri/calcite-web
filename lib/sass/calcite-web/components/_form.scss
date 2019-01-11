@@ -159,7 +159,6 @@
     &:after {
       content: "";
       position: absolute;
-      left: 11px;
       top: -15px;
       width: 0;
       height: 0;
@@ -170,7 +169,6 @@
     &:before {
       content: "";
       position: absolute;
-      left: 11px;
       top: -16px;
       width: 0;
       height: 0;
@@ -179,10 +177,7 @@
       border-bottom-color: $light-red;
     }
     &:after, &:before {
-      html[dir="rtl"] & {
-        left: unset;
-        right: 11px;
-      }
+      @include position-left(11px);
     }
     &.is-active, &.is-active:before, &.is-active:after {
       display: inline-block;

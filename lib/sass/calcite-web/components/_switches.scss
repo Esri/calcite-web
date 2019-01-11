@@ -73,18 +73,12 @@ $handle-destructive-checked-border-color: $Calcite_Red_a250;
     width: $handle-size;
     height: $handle-size;
     top: $handle-top-distance;
-    left: $handle-edge-distance;
+    @include position-left($handle-edge-distance);
     background-color: $handle-bg;
     border-radius: 30px;
     border: 2px solid $handle-border-color;
     box-shadow: $handle-shadow;
     @include transition(all 0.25s ease);
-    @if ($include-right-to-left) {
-      html[dir="rtl"] & {
-        right: $handle-edge-distance;
-        left: auto;
-      }
-    }
   }
   // alignment fixes for edge
   @supports (-ms-ime-align: auto) { & { top: .4em; }}
@@ -110,15 +104,9 @@ $handle-destructive-checked-border-color: $Calcite_Red_a250;
   &:active + .toggle-switch-track {
     box-shadow: $switch-focus-shadow;
     &:after {
-      left: $handle-active-edge-distance;
+      @include position-left($handle-active-edge-distance);
       border-color: $handle-checked-border-color;
       box-shadow: $handle-active-shadow;
-      @if ($include-right-to-left) {
-        html[dir="rtl"] & {
-          right: $handle-active-edge-distance;
-          left: auto;
-        }
-      }
     }
   }
   // checked
@@ -126,31 +114,18 @@ $handle-destructive-checked-border-color: $Calcite_Red_a250;
     border-color: $switch-checked-border-color;
     background-color: $switch-checked-bg;
     &:after {
-      right: $handle-edge-distance;
-      left: auto;
+      @include position-right($handle-edge-distance);
       border-color: $handle-checked-border-color;
       box-shadow: $handle-checked-shadow;
-      @if ($include-right-to-left) {
-        html[dir="rtl"] & {
-          left: $handle-edge-distance;
-          right: auto;
-        }
-      }
     }
   }
   // checked and active
   &:checked:active + .toggle-switch-track {
     box-shadow: $switch-focus-checked-shadow;
     &:after {
-      right: $handle-active-edge-distance;
+      @include position-right($handle-active-edge-distance);
       border-color: $handle-checked-border-color;
       box-shadow: $handle-active-shadow;
-      @if ($include-right-to-left) {
-        html[dir="rtl"] & {
-         left: $handle-active-edge-distance;
-         right: auto;
-       }
-     }
    }
  }
   // unchecked focus
