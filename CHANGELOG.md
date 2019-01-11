@@ -1,7 +1,7 @@
 ## [1.2.1]
 
 ### Added
--  New mixins for RTL support: border-left, border-right, border-left-color, border-right-color, position-left, position-right 
+-  New mixins for RTL support: border-left, border-right, border-left-color, border-right-color, position-left, position-right
 
 ## [1.2.0]
 
@@ -1405,6 +1405,7 @@ Begin foundational sass for the framework.
 - CSS Reset
 - Grunt Workflows
 
+[1.2.1]: https://github.com/esri/calcite-web/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/esri/calcite-web/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/esri/calcite-web/compare/v1.0.3...v1.1.0
 [1.0.3]: https://github.com/esri/calcite-web/compare/v1.0.2...v1.0.3

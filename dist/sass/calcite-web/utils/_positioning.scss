@@ -1,0 +1,21 @@
+@mixin position-left($left) {
+  left: $left;
+
+  @if ($include-right-to-left) {
+    html[dir="rtl"] & {
+      left: auto;
+      right: $left;
+    }
+  }
+}
+
+@mixin position-right($right) {
+  right: $right;
+
+  @if ($include-right-to-left) {
+    html[dir="rtl"] & {
+      right: auto;
+      left: $right;
+    }
+  }
+}
