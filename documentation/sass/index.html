@@ -944,6 +944,10 @@ Setting the max width of an article to a large multiple of the text size is a wa
 <td><code>$animations...</code></td>
 </tr>
 <tr>
+<td><a href="#border"><code>border-*</code></a></td>
+<td><code>$style</code></td>
+</tr>
+<tr>
 <td><a href="#box-sizing"><code>box-sizing</code></a></td>
 <td><code>$box</code></td>
 </tr>
@@ -966,6 +970,10 @@ Setting the max width of an article to a large multiple of the text size is a wa
 <tr>
 <td><a href="#placeholder"><code>placeholder</code></a></td>
 <td><code>$property</code>,  <code>$attr</code></td>
+</tr>
+<tr>
+<td><a href="#position"><code>position-*</code></a></td>
+<td><code>$value</code></td>
 </tr>
 <tr>
 <td><a href="#prefixer"><code>prefixer</code></a></td>
@@ -1025,7 +1033,7 @@ Setting the max width of an article to a large multiple of the text size is a wa
 </tr>
 </tbody>
 </table>
-<h4>Animation</h4>
+<h4 id="animation">Animation</h4>
 <p>The animation mixin allows you to declare cross-browser animations. The mixin accepts</p>
 <pre><code class="scss" tabindex="0">box:hover {
   @<span class="hljs-keyword">include</span> animation(scale 1.0s ease-in, slide 2.0s ease);
@@ -1039,28 +1047,38 @@ Setting the max width of an article to a large multiple of the text size is a wa
   @<span class="hljs-keyword">include</span> animation-iteration-count(infinite);
 }
 </code></pre>
-<h4>Appearance</h4>
+<h4 id="appearance">Appearance</h4>
 <p>The <code>appearance</code> CSS property is used to display an element using a platform-native styling based on the operating system's theme. For example, to remove browser specific styling for a ui element, use:</p>
 <pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> appearance(none);
 </code></pre>
-<h4>Box-Sizing</h4>
+<h4 id="border">Border</h4>
+<p>For adding borders that flip in right to left languages, use the <code>border-</code> mixins:</p>
+<pre><code class="scss" tabindex="0"><span class="hljs-comment">// set all in one argument</span>
+@<span class="hljs-keyword">include</span> border-right(<span class="hljs-number">1px</span> solid <span class="hljs-variable">$blue</span>);
+@<span class="hljs-keyword">include</span> border-left(none);
+
+<span class="hljs-comment">// set just the color</span>
+@<span class="hljs-keyword">include</span> border-color-right(<span class="hljs-variable">$blue</span>);
+@<span class="hljs-keyword">include</span> border-color-left(<span class="hljs-variable">$off-white</span>);
+</code></pre>
+<h4 id="box-sizing">Box-Sizing</h4>
 <p>Set the <code>box-sizing</code> property for all browsers (with browser prefixes):</p>
 <pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> box-sizing(border-box);
 </code></pre>
 <p>Valid values are <code>content-box</code>, <code>border-box</code>, and <code>inherit</code>.</p>
-<h4>Box-Shadow</h4>
+<h4 id="box-shadow">Box-Shadow</h4>
 <p>Set the <code>box-shadow</code> property for all browsers (with browser prefixes):</p>
 <pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> box-shadow(border-box);
 </code></pre>
-<h4>Calc</h4>
+<h4 id="calc">Calc</h4>
 <p>Shorthand for setting a property to use a <code>calc</code> value. Pass the property you'd like to set, then the value you'd like to use:</p>
 <pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> calc(width, <span class="hljs-string">'100px - 10%'</span>);
 </code></pre>
-<h4>Clearfix</h4>
+<h4 id="clearfix">Clearfix</h4>
 <p>Applies the framework-standard clear for floated elements:</p>
 <pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> clearfix();
 </code></pre>
-<h4>Keyframes</h4>
+<h4 id="keyframes">Keyframes</h4>
 <p>For creating animations, you can use the <code>keyframes</code> mixin. This mixin accepts an animation name. Then inside the mixin, write your animation as a content block:</p>
 <pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> keyframes(ANIMATION_NAME){
   0%   { <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ffccf2</span>; }
@@ -1072,16 +1090,21 @@ Setting the max width of an article to a large multiple of the text size is a wa
   <span class="hljs-variable">@include</span> animation( <span class="hljs-variable">@include</span> animation(ANIMATION_NAME <span class="hljs-number">200ms</span> ease-in);)
 }
 </code></pre>
-<h4>Placeholder</h4>
+<h4 id="placeholder">Placeholder</h4>
 <p>Wraps the wide array of input placeholder selectors across browsers.</p>
-<pre><code tabindex="0">@<span class="hljs-keyword">include</span> placeholder(<span class="hljs-string">'color'</span>, <span class="hljs-variable">$dark-blue</span>);
+<pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> placeholder(<span class="hljs-string">'color'</span>, <span class="hljs-variable">$dark-blue</span>);
 </code></pre>
-<h4>Prefixer</h4>
+<h4 id="position">Position</h4>
+<p>Set <code>right</code> and <code>left</code> properties (automatically flips in right-to-left languages).</p>
+<pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> position-right(<span class="hljs-number">4px</span>);
+@<span class="hljs-keyword">include</span> position-left(<span class="hljs-number">0</span>);
+</code></pre>
+<h4 id="prefixer">Prefixer</h4>
 <p>This is one of the most flexible mixins in the library. Use it to add browser prefixes to a property:</p>
 <pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> prefixer(margin-end, 5%, webkit moz spec);
 </code></pre>
 <p>In this way you can prefix any property. Adding the <code>spec</code> as the last argument will also output the property <em>without</em> a prefix.</p>
-<h4>Respond To</h4>
+<h4 id="respond-to">Respond To</h4>
 <p>The <code>respond-to</code> mixin adds media queries for use in responsive design. The mixin accepts three arguments: maximum size, minimum size, and type (screen, print, etc). You can pass just the first out of convenience. This mixin works well with the <a href="../sass#breakpoints">breakpoint variables</a>:</p>
 <pre><code class="scss" tabindex="0"><span class="hljs-selector-class">.my-div</span> {
   @<span class="hljs-keyword">include</span> respond-to(<span class="hljs-variable">$small</span>){
@@ -1100,14 +1123,14 @@ Setting the max width of an article to a large multiple of the text size is a wa
 <pre><code tabindex="0"><span class="hljs-symbol">@include</span> respond-<span class="hljs-keyword">to</span>($large, $medium) { ... }
 </code></pre>
 <p>This will add styles that only appear <em>between</em> the <code>$medium</code> and <code>$large</code> screen sizes.</p>
-<h4>Transform</h4>
+<h4 id="transform">Transform</h4>
 <p>The CSS transform property lets you modify the coordinate space of the CSS visual formatting model. Using it, elements can be translated, rotated, scaled, and skewed according to the values set. <code>transform</code>, <code>transform-origin</code>, and <code>transform-style</code> all add the necessary browser prefixes for interacting with their respective transform properties.</p>
 <pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> transform(translateY(<span class="hljs-number">50px</span>));
 @<span class="hljs-keyword">include</span> transform(scale(<span class="hljs-number">0.9</span>) rotate(-<span class="hljs-number">3deg</span>));
 @<span class="hljs-keyword">include</span> transform-origin(center top);
 @<span class="hljs-keyword">include</span> transform-style(preserve-<span class="hljs-number">3</span>d);
 </code></pre>
-<h4>Transition</h4>
+<h4 id="transition">Transition</h4>
 <p>This mixin provides a shorthand syntax and supports multiple transitions.</p>
 <pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> transition(all 2.0s ease-in-out);
 @<span class="hljs-keyword">include</span> transition(opacity 1.0s ease-in 0s, width 2.0s ease-in 2s);
@@ -1118,12 +1141,12 @@ Setting the max width of an article to a large multiple of the text size is a wa
 @<span class="hljs-meta"><span class="hljs-meta-keyword">include</span> transition-timing-function(ease-in);</span>
 @<span class="hljs-meta"><span class="hljs-meta-keyword">include</span> transition-delay(0.5s);</span>
 </code></pre>
-<h4>Transition Prefixed</h4>
+<h4 id="transition-prefixed">Transition Prefixed</h4>
 <p>To transition vendor-prefixed properties, e.g. <code>-webkit-transform</code> and <code>-moz-transform</code>, there is an additional convinience <code>transition-prefixed()</code> mixin:</p>
 <pre><code tabindex="0">@include transition-prefixed(transform3d(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>) <span class="hljs-number">200</span>ms linear);
 </code></pre>
 <p>This will generate vendor prefixed properties <em>and</em> values.</p>
-<h4>Visibility</h4>
+<h4 id="visibility">Visibility</h4>
 <p>The visibility mixins change the <code>visibility</code> property. This is useful for removing and adding elements at certain breakpoints or with certain class names. No arguments are passed. Invisible sets <code>visibility: hidden</code> on the object, leaving in the in document flow, but removing it from view. <code>hide()</code> will completely remove the item with <code>display:none</code>.</p>
 <pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> hide();
 @<span class="hljs-keyword">include</span> invisible();
