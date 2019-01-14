@@ -2901,6 +2901,28 @@ $include-<span class="hljs-keyword">filter</span>-dropdown:        $generate-css
         <h5 class="trailer-half">
           
           
+          <a href="../documentation/sass/#text-alignment">
+            
+            Text Alignment
+            
+          </a>
+        </h5>
+        <div class="js-search-item-content hide">
+          <p>The <code>text-right</code> and <code>text-left</code> mixins are useful to set text alignment. These mixins will automatically reverse in right to left languages.</p>
+<pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> text-right();
+@<span class="hljs-keyword">include</span> text-left();
+</code></pre>
+
+        </div>
+        <!-- populated on the client -->
+        <div class="js-search-item-snippet font-size-0"></div>
+        <a href="../documentation/sass/#text-alignment" class="link-gray font-size--2">esri.github.io/calcite-web/documentation/sass/#text-alignment</a>
+      </section>
+      
+      <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
+        <h5 class="trailer-half">
+          
+          
           <a href="../documentation/sass/#modular-scale">
             
             Modular Scale
@@ -3008,6 +3030,123 @@ Setting the max width of an article to a large multiple of the text size is a wa
         <!-- populated on the client -->
         <div class="js-search-item-snippet font-size-0"></div>
         <a href="../documentation/sass/#word-spacing" class="link-gray font-size--2">esri.github.io/calcite-web/documentation/sass/#word-spacing</a>
+      </section>
+      
+      
+      
+      
+      
+      <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
+        <h5 class="trailer-half">
+          
+          
+          <a href="../documentation/sass/#layout">
+            
+            Overview (Sass)
+            
+          </a>
+        </h5>
+        <div class="js-search-item-content hide">
+          <p>Calcite web has several mixins to help add space to your designs. Read on to learn how you can use mixins apply margin and padding to each side of an element.</p>
+
+        </div>
+        <!-- populated on the client -->
+        <div class="js-search-item-snippet font-size-0"></div>
+        <a href="../documentation/sass/#layout" class="link-gray font-size--2">esri.github.io/calcite-web/documentation/sass/#layout</a>
+      </section>
+      
+      <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
+        <h5 class="trailer-half">
+          
+          
+          <a href="../documentation/sass/#leader-and-trailer">
+            
+            Leader and trailer
+            
+          </a>
+        </h5>
+        <div class="js-search-item-content hide">
+          <p>To add space above and below content, you can use the <code>leader</code> and <code>trailer</code> mixins. These mixins utilize the <code>$baseline</code> unit, and will scale with your base type size and baseline.</p>
+<pre><code class="scss" tabindex="0">@<span class="hljs-keyword">include</span> leader(<span class="hljs-number">3</span>);         <span class="hljs-comment">// add three units of margin above element</span>
+@<span class="hljs-keyword">include</span> leader-half();
+@<span class="hljs-keyword">include</span> leader-quarter();
+@<span class="hljs-keyword">include</span> trailer(<span class="hljs-number">2</span>);        <span class="hljs-comment">// add two units of margin below element</span>
+@<span class="hljs-keyword">include</span> trailer-half();
+@<span class="hljs-keyword">include</span> trailer-quarter();
+</code></pre>
+
+        </div>
+        <!-- populated on the client -->
+        <div class="js-search-item-snippet font-size-0"></div>
+        <a href="../documentation/sass/#leader-and-trailer" class="link-gray font-size--2">esri.github.io/calcite-web/documentation/sass/#leader-and-trailer</a>
+      </section>
+      
+      <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
+        <h5 class="trailer-half">
+          
+          
+          <a href="../documentation/sass/#padding-leader-and-trailer">
+            
+            Padding leader and trailer
+            
+          </a>
+        </h5>
+        <div class="js-search-item-content hide">
+          <p>If you'd prefer this space be added using padding instead of margin, use the <code>padding-leader</code> mixins:</p>
+<pre><code class="scss" tabindex="0"><span class="hljs-comment">// pass the amount of space you'd like to the mixin:</span>
+@<span class="hljs-keyword">include</span> padding-leader(<span class="hljs-number">2</span>);
+@<span class="hljs-keyword">include</span> padding-trailer(<span class="hljs-number">6</span>);
+
+<span class="hljs-comment">// for smaller amounts, use the following with no argument passed in</span>
+@<span class="hljs-keyword">include</span> padding-leader-half();
+@<span class="hljs-keyword">include</span> padding-leader-quarter();
+@<span class="hljs-keyword">include</span> padding-trailer-half();
+@<span class="hljs-keyword">include</span> padding-trailer-quarter();
+</code></pre>
+
+        </div>
+        <!-- populated on the client -->
+        <div class="js-search-item-snippet font-size-0"></div>
+        <a href="../documentation/sass/#padding-leader-and-trailer" class="link-gray font-size--2">esri.github.io/calcite-web/documentation/sass/#padding-leader-and-trailer</a>
+      </section>
+      
+      <section class="js-search-item padding-trailer-1 padding-leader-1 hide" data-rank="0">
+        <h5 class="trailer-half">
+          
+          
+          <a href="../documentation/sass/#gutter">
+            
+            Gutter
+            
+          </a>
+        </h5>
+        <div class="js-search-item-content hide">
+          <p>To add space on either the right or left side, use the <code>gutter</code> mixins:</p>
+<pre><code class="scss" tabindex="0"><span class="hljs-comment">// add space in increments of 1 $baseline</span>
+@<span class="hljs-keyword">include</span> gutter-left(<span class="hljs-variable">$n</span>);
+@<span class="hljs-keyword">include</span> margin-gutter-left(<span class="hljs-variable">$n</span>);
+@<span class="hljs-keyword">include</span> gutter-right(<span class="hljs-variable">$n</span>);
+@<span class="hljs-keyword">include</span> margin-gutter-right(<span class="hljs-variable">$n</span>);
+
+<span class="hljs-comment">// common fractional gutters (call without arguments)</span>
+@<span class="hljs-keyword">include</span> gutter-left-quarter();
+@<span class="hljs-keyword">include</span> margin-gutter-left-quarter();
+@<span class="hljs-keyword">include</span> gutter-right-quarter();
+@<span class="hljs-keyword">include</span> margin-gutter-right-quarter();
+@<span class="hljs-keyword">include</span> gutter-left-third();
+@<span class="hljs-keyword">include</span> margin-gutter-left-third();
+@<span class="hljs-keyword">include</span> gutter-right-third();
+@<span class="hljs-keyword">include</span> margin-gutter-right-third();
+@<span class="hljs-keyword">include</span> gutter-left-half();
+@<span class="hljs-keyword">include</span> margin-gutter-left-half();
+@<span class="hljs-keyword">include</span> gutter-right-half();
+@<span class="hljs-keyword">include</span> margin-gutter-right-half();
+</code></pre>
+
+        </div>
+        <!-- populated on the client -->
+        <div class="js-search-item-snippet font-size-0"></div>
+        <a href="../documentation/sass/#gutter" class="link-gray font-size--2">esri.github.io/calcite-web/documentation/sass/#gutter</a>
       </section>
       
       
