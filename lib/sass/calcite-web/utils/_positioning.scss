@@ -1,9 +1,10 @@
 @mixin position-left($left) {
   left: $left;
+  right: unset;
 
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
-      left: auto;
+      left: unset;
       right: $left;
     }
   }
@@ -11,10 +12,11 @@
 
 @mixin position-right($right) {
   right: $right;
+  left: unset;
 
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
-      right: auto;
+      right: unset;
       left: $right;
     }
   }
