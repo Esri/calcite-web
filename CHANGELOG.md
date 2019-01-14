@@ -1,3 +1,9 @@
+## [1.2.2]
+
+### Fixes
+-  Updates positioning mixins to unset directional values in RTL
+
+
 ## [1.2.1]
 
 ### Added
