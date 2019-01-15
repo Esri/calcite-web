@@ -18,4 +18,4 @@ Hide helpers are very similar to show helpers. A responsive hide class will hide
 
 #### Visual Hiding Helpers
 
-Sometimes it is desireable for accessibility reasons to hide something visually but leave it accessable to screenreaders. You can use the `visually-hidden` class to achive this. If you want your hidden element to remain focusable my the keyboard add `visually-hidden-focusable` in addition to `visually-hidden`.
+Sometimes it is desirable for accessibility reasons to hide something visually but leave it accessible to screenreaders. You can use the `visually-hidden` class to achive this. If you want your hidden element to remain focusable by the keyboard add `visually-hidden-focusable` in addition to `visually-hidden`.
