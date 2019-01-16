@@ -115,6 +115,7 @@ $handle-destructive-checked-border-color: $Calcite_Red_a250;
     background-color: $switch-checked-bg;
     &:after {
       @include position-right($handle-edge-distance);
+      left: auto; // Important despite using the position-right mixin
       border-color: $handle-checked-border-color;
       box-shadow: $handle-checked-shadow;
     }
