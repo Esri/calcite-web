@@ -4,7 +4,7 @@
 
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
-      left: unset;
+      left: auto;
       right: $left;
     }
   }
@@ -16,7 +16,7 @@
 
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
-      right: unset;
+      right: auto;
       left: $right;
     }
   }
