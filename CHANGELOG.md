@@ -2,6 +2,7 @@
 
 ### Fixes
 -  Updates positioning mixins to unset directional values in RTL
+-  Updates checkbox and radio alignment in Edge
 
 
 ## [1.2.1]
