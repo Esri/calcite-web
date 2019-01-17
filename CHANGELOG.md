@@ -1,7 +1,8 @@
 ## [1.2.2]
 
 ### Fixes
--  Updates positioning mixins to unset directional values in RTL
+-  Fixes for switch and radio group
+-  Updates positioning mixin
 -  Updates checkbox and radio alignment in Edge
 
 

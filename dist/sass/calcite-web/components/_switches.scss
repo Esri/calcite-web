@@ -81,9 +81,9 @@ $handle-destructive-checked-border-color: $Calcite_Red_a250;
     @include transition(all 0.25s ease);
   }
   // alignment fixes for edge
-  @supports (-ms-ime-align: auto) { & { top: .4em; }}
+  @supports (-ms-ime-align: auto) { & { top: .1em; }}
   // alignment fixes for ff
-  @supports (-moz-appearance:none) { & { top: .1em; }}
+  @supports (-moz-appearance: none) { & { top: .1em; }}
   // alignment fixes for ios
   @supports (-webkit-overflow-scrolling: touch) { & { top: .15em; }}
 }
