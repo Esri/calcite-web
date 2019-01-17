@@ -147,6 +147,13 @@ $include-calcite-icons: false;
       padding-left: 3px;
       padding-right: 3px;
       z-index: 1;
+      background-color: $white;
+      color: $off-black;
+      opacity: 0.94;
+      transition: opacity .15s ease-in-out;
+      &:hover {
+        opacity: 1.0;
+      }
       @if ($include-right-to-left) {
         html[dir="rtl"] & {
           right: auto;
@@ -160,7 +167,8 @@ $include-calcite-icons: false;
     }
   }
   .styleguide-modifier-example-dark {
-    background-color: $black;
+    background-color: $off-black;
+    border-color: $darkest-gray;
   }
 }
 
