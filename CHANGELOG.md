@@ -1,8 +1,9 @@
 ## [1.2.2]
 
 ### Fixes
--  Updates positioning mixins to unset directional values in RTL
--  Updates checkbox and radio alignment in Edge
+- Fixes for switch and radio group
+- Updates positioning mixin
+- Updates checkbox and radio alignment in Edge
 
 
 ## [1.2.1]
@@ -1412,6 +1413,7 @@ Begin foundational sass for the framework.
 - CSS Reset
 - Grunt Workflows
 
+[1.2.2]: https://github.com/esri/calcite-web/compare/v1.2.1...v1.2.2
 [1.2.1]: https://github.com/esri/calcite-web/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/esri/calcite-web/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/esri/calcite-web/compare/v1.0.3...v1.1.0

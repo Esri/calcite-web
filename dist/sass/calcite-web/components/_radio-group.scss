@@ -27,6 +27,7 @@
   }
 
   &:checked + .radio-group-label + .radio-group-input + .radio-group-label {
+    border-left: none;
     @include border-right(1px solid $lighter-gray);
   }
 }
