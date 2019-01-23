@@ -1,3 +1,8 @@
+## Unreleased
+
+### Fixes
+- fix dropdown arrow keys with hidden elements (#1050)
+
 ## [1.2.2]
 
 ### Fixes
