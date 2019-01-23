@@ -1,3 +1,21 @@
+## [1.2.3]
+
+### Fixes
+- fix dropdown arrow keys with hidden elements (#1050)
+
+## [1.2.2]
+
+### Fixes
+- Fixes for switch and radio group
+- Updates positioning mixin
+- Updates checkbox and radio alignment in Edge
+
+
+## [1.2.1]
+
+### Added
+-  New mixins for RTL support: border-left, border-right, border-left-color, border-right-color, position-left, position-right
+
 ## [1.2.0]
 
 ### Added
@@ -1400,6 +1418,9 @@ Begin foundational sass for the framework.
 - CSS Reset
 - Grunt Workflows
 
+[1.2.3]: https://github.com/esri/calcite-web/compare/v1.2.2...v1.2.3
+[1.2.2]: https://github.com/esri/calcite-web/compare/v1.2.1...v1.2.2
+[1.2.1]: https://github.com/esri/calcite-web/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/esri/calcite-web/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/esri/calcite-web/compare/v1.0.3...v1.1.0
 [1.0.3]: https://github.com/esri/calcite-web/compare/v1.0.2...v1.0.3

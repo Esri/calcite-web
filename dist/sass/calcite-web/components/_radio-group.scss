@@ -28,12 +28,7 @@
 
   &:checked + .radio-group-label + .radio-group-input + .radio-group-label {
     border-left: none;
-    @if ($include-right-to-left) {
-      html[dir="rtl"] & {
-        border-right: none;
-        border-left: 1px solid $lighter-gray;
-      }
-    }
+    @include border-right(1px solid $lighter-gray);
   }
 }
 

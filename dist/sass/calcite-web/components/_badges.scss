@@ -19,13 +19,7 @@
     @include left();
     padding: $baseline/8 $baseline/4;
     border: 1px solid $lighter-gray;
-    border-left: none;
-    @if ($include-right-to-left) {
-      html[dir="rtl"] & {
-        border-left: 1px solid $lighter-gray;
-        border-right: none;
-      }
-    }
+    @include border-right(1px solid $lighter-gray);
   }
 
   @mixin badge-blue() {

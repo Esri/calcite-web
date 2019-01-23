@@ -51,13 +51,7 @@
   visibility: hidden;
   margin-top: 3px;
   position: absolute;
-  left: 10px;
-  @if ($include-right-to-left) {
-    html[dir="rtl"] & {
-      left: initial;
-      right: 10px;
-    }
-  }
+  @include position-left(10px);
 }
 
 @mixin filter-link-close() {
@@ -65,14 +59,7 @@
   visibility: hidden;
   margin-top: 4px;
   position: absolute;
-  right: 10px;
-  @if ($include-right-to-left) {
-    html[dir="rtl"] & {
-      right: auto;
-      right: initial;
-      left: 10px;
-    }
-  }
+  @include position-right(10px);
 }
 
 @mixin filter-dropdown-link() {

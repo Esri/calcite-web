@@ -44,15 +44,7 @@
 
   color: currentColor;
   position: absolute;
-  html:not([dir="rtl"]) & {
-    right: $baseline/2;
-  }
-
-  @if ($include-right-to-left) {
-    html[dir="rtl"] & {
-      left: $baseline/2;
-    }
-  }
+  @include position-right($baseline/2);
 }
 
 @mixin alert-full() {

@@ -21,7 +21,7 @@
     color: $darker-gray;
     background-color: $white;
     border-bottom: none;
-    text-align: left;
+    @include text-left();
     border-left: none;
     border-right: none;
     border-top: 1px solid $lightest-gray;
@@ -35,16 +35,7 @@
     }
     &.is-active, &:focus {
       text-indent: -3px;
-      border-left: 3px solid $blue;
-    }
-    @if ($include-right-to-left) {
-      html[dir="rtl"] & {
-        text-align: right;
-      }
-      html[dir="rtl"] &.is-active, html[dir="rtl"] &:focus {
-        border-left: none;
-        border-right: 3px solid $blue;
-      }
+      @include border-left(3px solid $blue);
     }
   }
 
@@ -65,12 +56,10 @@
         @extend %icon-font-after;
         @extend .icon-ui-down:before;
         position: absolute;
-        right: .35rem;
+        @include position-right(.35rem);
       }
       @if ($include-right-to-left) {
         html[dir="rtl"] &:after {
-          right: auto;
-          left: .35rem;
           padding-left: 0;
         }
 
@@ -96,13 +85,7 @@
     display: none;
     overflow: auto;
     &.dropdown-right {
-      right: 0;
-      @if ($include-right-to-left) {
-        html[dir="rtl"] & {
-          right: auto;
-          left: 0;
-        }
-      }
+      @include position-right(0);
     }
   }
 
