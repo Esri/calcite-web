@@ -1,6 +1,6 @@
 /*!
  * Calcite Web - Calcite Design Components in CSS, JS and HTML
- * @version v1.2.2
+ * @version v1.2.3
  * @license Apache-2.0
  * @copyright 2018 Esri
  * @link https://github.com/Esri/calcite-web
@@ -580,7 +580,8 @@ function dropownFocusOn (options) {
 function arrowDown () {
   var dropdown = dropdownIsOpen();
   if (dropdown) {
-    var links = findElements('.dropdown-link', dropdown);
+    var links = findElements('.dropdown-link', dropdown)
+      .filter(function (link) { return link.offsetParent !== null; });
     bus.emit('dropdown:focus', {links: links, forward: true});
   }
 }
@@ -588,7 +589,8 @@ function arrowDown () {
 function arrowUp () {
   var dropdown = dropdownIsOpen();
   if (dropdown) {
-    var links = findElements('.dropdown-link', dropdown);
+    var links = findElements('.dropdown-link', dropdown)
+      .filter(function (link) { return link.offsetParent !== null; });
     bus.emit('dropdown:focus', {links: links, forward: false});
   }
 }
@@ -1404,7 +1406,7 @@ function extend (plugin) {
 // │ Public API │
 // └────────────┘
 // define all public api methods
-var version = '1.2.0';
+var version = '1.2.3';
 var click$1 = click;
 var addEvent = add$1;
 var removeEvent = remove$1;
