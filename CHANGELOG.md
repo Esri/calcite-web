@@ -1,3 +1,8 @@
+## [1.2.3]
+
+### Fixes
+- fix dropdown arrow keys with hidden elements (#1050)
+
 ## [1.2.2]
 
 ### Fixes
@@ -1413,6 +1418,7 @@ Begin foundational sass for the framework.
 - CSS Reset
 - Grunt Workflows
 
+[1.2.3]: https://github.com/esri/calcite-web/compare/v1.2.2...v1.2.3
 [1.2.2]: https://github.com/esri/calcite-web/compare/v1.2.1...v1.2.2
 [1.2.1]: https://github.com/esri/calcite-web/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/esri/calcite-web/compare/v1.1.0...v1.2.0
