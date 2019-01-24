@@ -2,6 +2,7 @@
 
 ### Fixes
 - fix dropdown arrow keys with hidden elements (#1050)
+- fix terminology in documentation: forms (#1053)
 
 ## [1.2.2]
 
