@@ -7,6 +7,7 @@
 - `svg-icon-before` and `svg-icon-after` classes for spacing icons from text
 
 ### Breaking
+- :warning: Removed Button Groups
 
 #### Patterns
 Several patterns were removed which are now replaced by the [global-nav component](https://github.com/esri/global-nav):
