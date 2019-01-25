@@ -107,25 +107,6 @@
   text-align: center;
 }
 
-@mixin btn-grouped() {
-  @include left();
-  & + .btn-grouped {
-    margin-left: 1px;
-    @if ($include-right-to-left) {
-      html[dir="rtl"] & {
-        margin-left: 0;
-        margin-right: 1px;
-      }
-    }
-  }
-  &:last-of-type {
-    float: none;
-  }
-  &.btn-half {
-    margin-left: 0;
-  }
-}
-
 @mixin btn-red() {
   color: $red;
   background: transparent;
@@ -184,9 +165,6 @@
   }
   .btn-half {
     @include btn-half();
-  }
-  .btn-grouped {
-    @include btn-grouped();
   }
   .btn-white {
     @include btn-white();
