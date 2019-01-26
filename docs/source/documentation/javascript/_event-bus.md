@@ -7,15 +7,6 @@ You can trigger or react to events by using the `on` and `emit` methods on the b
 ```js
 // assuming calcite-web.js is available as calcite
 
-// do something when a drawer opens
-calcite.bus.on('drawer:open', function (options) {
-  console.log(options.id) // => "top-nav"
-})
-
-// open a drawer (must pass data-drawer name as "id")
-calcite.bus.emit('drawer:open', {id: "top-nav"})
-```
-
 ### Common Event Channels
 
 | Event | Description | Emits |
@@ -37,17 +28,6 @@ calcite.bus.emit('drawer:open', {id: "top-nav"})
 | --- | --- | --- | --- |
 | accordion:bind | Binds Dom nodes on the page to their listeners | n/a | `bindToggles()` |
 | accordion:toggle | Toggles an accordion section open and closed. | `{node: domNode}` | `handleToggle()` |
-
-#### Drawers
-
-| Event | Description | Emits | Function |
-| --- | --- | --- | --- |
-| drawer:bind | Binds dom to event listeners | n/a | `bindDrawers()` |
-| drawer:open | Opens a drawer specified by data-drawer attribute | `{id: drawerid}` | `openDrawer()` |
-| drawer:close | Closes a drawer specified by data-drawer attribute | `{id: drawerid}` | `closeDrawer()` |
-| keyboard:escape | Closes all drawers on escape | n/a | `closeDrawer()` |
-
-
 
 #### Dropdown
 
