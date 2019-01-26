@@ -8,6 +8,7 @@
 
 ### Breaking
 - :warning: Removed Button Groups
+- :warning: Removed Branding section under patterns
 
 #### Patterns
 Several patterns were removed which are now replaced by the [global-nav component](https://github.com/esri/global-nav):
