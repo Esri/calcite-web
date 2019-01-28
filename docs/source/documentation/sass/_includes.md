@@ -68,7 +68,6 @@ $include-third-nav:              $generate-css    !default;
 $include-tabs:                   $generate-css    !default;
 $include-modal:                  $generate-css    !default;
 $include-accordion:              $generate-css    !default;
-$include-drawers:                $generate-css    !default;
 $include-sticky:                 $generate-css    !default;
 $include-filter-dropdown:        $generate-css    !default;
 ```
