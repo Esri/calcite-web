@@ -1,3 +1,8 @@
+## Unreleased
+
+### Fixes
+- fix Arabic text in Microsoft Edge
+
 ## [1.2.3]
 
 ### Fixes
