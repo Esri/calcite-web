@@ -6,6 +6,5 @@ Currently, the following components and patterns rely on `calcite-web.js`:
 - [Modals](../patterns/#modals)
 - [Tabs](../patterns/#tabs)
 - [Accordions](../patterns/#accordions)
-- [Drawers](../patterns/#drawers)
 
 The JavaScript library also includes helpers for "sticky" positioning and scroll events. You can read more about these in the [interactive layout helpers](../grid/#interactive-layout-helpers) section of the documentation.

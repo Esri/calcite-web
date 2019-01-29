@@ -16,13 +16,6 @@ import * as calcite from 'calcite-web';
 calcite.init();
 ```
 
-With named imports you can also just import what you need:
-
-```js
-import {drawer} from 'calcite-web';
-drawer(); // initialize only instances of the drawer pattern
-```
-
 This is a great way to cut down on the size of your build!
 
 ### CommonJS

@@ -22,7 +22,6 @@ import bus from './lib/js/helpers/bus';
 // import all interactive patterns
 import accordion from './lib/js/patterns/accordion';
 import dropdown from './lib/js/patterns/dropdown';
-import drawer from './lib/js/patterns/drawers';
 import filterDropdown from './lib/js/patterns/filter-dropdown';
 import modal from './lib/js/patterns/modal';
 import search from './lib/js/patterns/search';
@@ -71,7 +70,6 @@ var patterns = [
   accordion,
   clipboard,
   dropdown,
-  drawer,
   filterDropdown,
   modal,
   search,
@@ -164,7 +162,6 @@ export {
   bus,
   accordion,
   dropdown,
-  drawer,
   filterDropdown,
   modal,
   search,
