@@ -16,7 +16,6 @@
 - Updates positioning mixin
 - Updates checkbox and radio alignment in Edge
 
-
 ## [1.2.1]
 
 ### Added
