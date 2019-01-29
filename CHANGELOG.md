@@ -2,6 +2,7 @@
 
 ### Fixes
 - fix Arabic text in Microsoft Edge
+- restore outline to `btn-link` class (#1052)
 
 ## [1.2.3]
 
