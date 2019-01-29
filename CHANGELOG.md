@@ -8,6 +8,7 @@
 
 ### Breaking
 - :warning: Removed Button Groups
+- :warning: Removed Branding section under patterns
 - :warning: Removed Drawers
 
 #### Patterns
