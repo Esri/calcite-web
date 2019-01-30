@@ -1,6 +1,6 @@
 /*!
  * Calcite Web - Calcite Design Components in CSS, JS and HTML
- * @version v1.2.3
+ * @version v1.2.4
  * @license Apache-2.0
  * @copyright 2018 Esri
  * @link https://github.com/Esri/calcite-web
@@ -1406,7 +1406,7 @@ function extend (plugin) {
 // │ Public API │
 // └────────────┘
 // define all public api methods
-var version = '1.2.3';
+var version = '1.2.4';
 var click$1 = click;
 var addEvent = add$1;
 var removeEvent = remove$1;
