@@ -199,7 +199,8 @@
   // Arabic, Arabic Presentation Forms A, Arabic Presentation Forms B
   @font-face {
     font-family: "Avenir Next";
-    src: url("#{$cdn-fonts-path}2a1ae9a5-b6b5-405c-b660-bbdf1b356952.woff2") format("woff2"),
+    src: local("Segoe UI Light"),
+         url("#{$cdn-fonts-path}2a1ae9a5-b6b5-405c-b660-bbdf1b356952.woff2") format("woff2"),
          url("#{$cdn-fonts-path}a8aeea1b-1a9d-45b7-8ad9-7c71824599e2.woff") format("woff");
     font-weight: 300;
     font-style: normal;
@@ -208,7 +209,8 @@
 
   @font-face {
     font-family: "Avenir Next";
-    src: url("#{$cdn-fonts-path}6ea5fa46-5311-450b-8744-288a30c55348.woff2") format("woff2"),
+    src: local("Segoe UI"),
+         url("#{$cdn-fonts-path}6ea5fa46-5311-450b-8744-288a30c55348.woff2") format("woff2"),
          url("#{$cdn-fonts-path}d9e4040d-32ff-4a1c-ac04-927a781da1f5.woff") format("woff");
     font-weight: 400;
     font-style: normal;
@@ -217,7 +219,8 @@
 
   @font-face {
     font-family: "Avenir Next";
-    src: url("#{$cdn-fonts-path}97694c53-4e94-4f9e-969b-a148adfcdcfd.woff2") format("woff2"),
+    src: local("Segoe UI Bold"),
+         url("#{$cdn-fonts-path}97694c53-4e94-4f9e-969b-a148adfcdcfd.woff2") format("woff2"),
          url("#{$cdn-fonts-path}8b01637a-f445-4f10-92ea-b84a355f7690.woff") format("woff");
     font-weight: 700;
     font-style: normal;
