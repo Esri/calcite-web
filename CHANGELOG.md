@@ -1,3 +1,9 @@
+## [1.2.4]
+
+### Fixes
+- fix Arabic text in Microsoft Edge
+- restore outline to `btn-link` class (#1052)
+
 ## [1.2.3]
 
 ### Fixes
@@ -1417,6 +1423,7 @@ Begin foundational sass for the framework.
 - CSS Reset
 - Grunt Workflows
 
+[1.2.4]: https://github.com/esri/calcite-web/compare/v1.2.3...v1.2.4
 [1.2.3]: https://github.com/esri/calcite-web/compare/v1.2.2...v1.2.3
 [1.2.2]: https://github.com/esri/calcite-web/compare/v1.2.1...v1.2.2
 [1.2.1]: https://github.com/esri/calcite-web/compare/v1.2.0...v1.2.1

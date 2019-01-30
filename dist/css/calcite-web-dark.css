@@ -1,6 +1,6 @@
 /*!
  * Calcite Web - Calcite Design Components in CSS, JS and HTML
- * @version v1.2.3
+ * @version v1.2.4
  * @license Apache-2.0
  * @copyright 2018 Esri
  * @link https://github.com/Esri/calcite-web
@@ -2687,21 +2687,21 @@ html[dir="rtl"] [class*="column-"] [class*="column-"]:last-of-type {
 
 @font-face {
   font-family: "Avenir Next";
-  src: url("https://webapps-cdn.esri.com/CDN/fonts/v1.0.1/2a1ae9a5-b6b5-405c-b660-bbdf1b356952.woff2") format("woff2"), url("https://webapps-cdn.esri.com/CDN/fonts/v1.0.1/a8aeea1b-1a9d-45b7-8ad9-7c71824599e2.woff") format("woff");
+  src: local("Segoe UI Light"), url("https://webapps-cdn.esri.com/CDN/fonts/v1.0.1/2a1ae9a5-b6b5-405c-b660-bbdf1b356952.woff2") format("woff2"), url("https://webapps-cdn.esri.com/CDN/fonts/v1.0.1/a8aeea1b-1a9d-45b7-8ad9-7c71824599e2.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   unicode-range: U+0600-06FF, U+FB50-FDFF, U+FE70-FEFF; }
 
 @font-face {
   font-family: "Avenir Next";
-  src: url("https://webapps-cdn.esri.com/CDN/fonts/v1.0.1/6ea5fa46-5311-450b-8744-288a30c55348.woff2") format("woff2"), url("https://webapps-cdn.esri.com/CDN/fonts/v1.0.1/d9e4040d-32ff-4a1c-ac04-927a781da1f5.woff") format("woff");
+  src: local("Segoe UI"), url("https://webapps-cdn.esri.com/CDN/fonts/v1.0.1/6ea5fa46-5311-450b-8744-288a30c55348.woff2") format("woff2"), url("https://webapps-cdn.esri.com/CDN/fonts/v1.0.1/d9e4040d-32ff-4a1c-ac04-927a781da1f5.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   unicode-range: U+0600-06FF, U+FB50-FDFF, U+FE70-FEFF; }
 
 @font-face {
   font-family: "Avenir Next";
-  src: url("https://webapps-cdn.esri.com/CDN/fonts/v1.0.1/97694c53-4e94-4f9e-969b-a148adfcdcfd.woff2") format("woff2"), url("https://webapps-cdn.esri.com/CDN/fonts/v1.0.1/8b01637a-f445-4f10-92ea-b84a355f7690.woff") format("woff");
+  src: local("Segoe UI Bold"), url("https://webapps-cdn.esri.com/CDN/fonts/v1.0.1/97694c53-4e94-4f9e-969b-a148adfcdcfd.woff2") format("woff2"), url("https://webapps-cdn.esri.com/CDN/fonts/v1.0.1/8b01637a-f445-4f10-92ea-b84a355f7690.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   unicode-range: U+0600-06FF, U+FB50-FDFF, U+FE70-FEFF; }
@@ -3777,7 +3777,6 @@ html[lang="vi"] body, html.vi body {
   cursor: pointer;
   padding: 0;
   border: none;
-  outline: none;
   color: #2493f2;
   background: transparent; }
   .btn-link:hover {
@@ -4170,7 +4169,6 @@ input[type="file"]::-webkit-file-upload-button,
   cursor: pointer;
   padding: 0;
   border: none;
-  outline: none;
   color: #2493f2;
   background: transparent;
   color: currentColor;
