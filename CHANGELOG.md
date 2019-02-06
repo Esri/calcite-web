@@ -1,6 +1,7 @@
 ## [2.0.0]
 
 ### Added
+- Table: table-minimal
 
 #### Icons
 - All icons in the [calcite-ui-icons](https://github.com/esri/calcite-ui-icons/) set are now available in two syles and three sizes

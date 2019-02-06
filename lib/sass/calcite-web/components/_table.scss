@@ -107,6 +107,22 @@
     }
   }
 
+  @mixin table-minimal() {
+    border: none;
+
+    > thead {
+      border-bottom: 2px solid $blue;
+      background: none;
+    }
+    > tfoot, th, td {
+      border: none;
+    }
+
+    tr {
+      border-bottom: 1px solid $lightest-gray;
+    }
+  }
+
   @mixin table-striped() {
     tr {
       &:nth-child(even){
@@ -168,6 +184,7 @@
 
   .table-blue {@include table-blue();}
   .table-plain {@include table-plain();}
+  .table-minimal {@include table-minimal();}
   .table-striped {@include table-striped();}
   .table-no-table {@include table-no-table();}
 }
