@@ -4,6 +4,11 @@
   background-position: .25em center;
   background-repeat: no-repeat;
   padding-left: 1.5em;
+  html[dir="rtl"] & {
+    background-position: right .25em center;
+    padding-right: 1.5em;
+    padding-left: $baseline / 5;
+  }
 }
 
 @mixin input-search {
@@ -138,7 +143,7 @@
     background-position: right center;
     background-repeat: no-repeat;
   }
-  
+
   .input-error, .input-success {
     html[dir="rtl"] & {
       padding-left: 24px;

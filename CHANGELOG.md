@@ -3,6 +3,7 @@
 ### Fixes
 - remove `nowrap` for buttons to fix responsive designs (#1063)
 - open/close accordions with space bar (#1062)
+- fix RTL styles for input-search (#1061)
 
 ## [1.2.4]
 
