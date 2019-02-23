@@ -1,7 +1,8 @@
 ## [Unreleased]
 
 ### Fixes
-- remove `nowrap` for buttons to fix responsive designs
+- remove `nowrap` for buttons to fix responsive designs (#1063)
+- open/close accordions with space bar (#1062)
 
 ## [1.2.4]
 
