@@ -1,3 +1,8 @@
+## [Unreleased]
+
+### Fixes
+- remove `nowrap` for buttons to fix responsive designs
+
 ## [1.2.4]
 
 ### Fixes
@@ -1423,6 +1428,7 @@ Begin foundational sass for the framework.
 - CSS Reset
 - Grunt Workflows
 
+[Unreleased]: https://github.com/esri/calcite-web/compare/v1.2.4...master
 [1.2.4]: https://github.com/esri/calcite-web/compare/v1.2.3...v1.2.4
 [1.2.3]: https://github.com/esri/calcite-web/compare/v1.2.2...v1.2.3
 [1.2.2]: https://github.com/esri/calcite-web/compare/v1.2.1...v1.2.2
