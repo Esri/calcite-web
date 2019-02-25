@@ -1,6 +1,7 @@
 ## [Unreleased]
 
 ### Fixes
+- update web font CDN link for more permament fix to Arabic type
 - remove `nowrap` for buttons to fix responsive designs (#1063)
 - open/close accordions with space bar (#1062)
 - fix RTL styles for input-search (#1061)
