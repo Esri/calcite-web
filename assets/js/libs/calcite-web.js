@@ -1,6 +1,6 @@
 /*!
  * Calcite Web - Calcite Design Components in CSS, JS and HTML
- * @version v1.2.4
+ * @version v1.2.5
  * @license Apache-2.0
  * @copyright 2018 Esri
  * @link https://github.com/Esri/calcite-web
@@ -415,7 +415,9 @@ function handleToggle (options) {
 }
 
 function checkKeyCode (e) {
-  if (e.keyCode === 13 && has(target(e), 'accordion-title')) {
+  if ((e.keyCode === 13 || e.keyCode === 32) && has(target(e), 'accordion-title')) {
+    preventDefault(e);
+    stopPropagation(e);
     toggleClick(e);
   }
 }
@@ -454,9 +456,9 @@ function setUpAccordion (accordion) {
     });
     if (!eventExists) {
       boundEvents.accordions.push({target: sectionTitle, event: click(), fn: toggleClick});
-      boundEvents.accordions.push({target: section, event: 'keyup', fn: checkKeyCode});
+      boundEvents.accordions.push({target: section, event: 'keydown', fn: checkKeyCode});
       add$1(sectionTitle, click(), toggleClick);
-      add$1(section, 'keyup', checkKeyCode);
+      add$1(section, 'keydown', checkKeyCode);
     }
   });
 }
@@ -1406,7 +1408,7 @@ function extend (plugin) {
 // │ Public API │
 // └────────────┘
 // define all public api methods
-var version = '1.2.4';
+var version = '1.2.5';
 var click$1 = click;
 var addEvent = add$1;
 var removeEvent = remove$1;

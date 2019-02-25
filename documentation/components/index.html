@@ -2538,7 +2538,7 @@
       <section>
         
 <p>Animation helper classes are used to provide character, visual richness, and tactile feedback for the user. Adding an <code>.animate-</code> class to any DOM node will animate that node. Using JavaScript to add <code>.animate-fade-in</code> to a DOM node when it enters the viewport will cause that node to fade in.</p>
-<p><strong>Note:</strong> The animations probably already happened if you scrolled here from further up the page. Refresh the page to see them in action.</p>
+<p><button class="btn js-replay-animations">Replay Animations</button></p>
 
         
         
@@ -2551,14 +2551,14 @@
         
         <div class="styleguide-modifiers ">
           <div class="styleguide-modifier-example">
-            <div class="">
+            <div class=" js-animation">
   <h3>Wakko packs away the snacks, while Bill Clinton plays the sax.</h3>
 </div>
             
           </div>
         </div>
 
-<pre><code tabindex="0">&lt;<span class="hljs-keyword">div</span> class=<span class="hljs-string">"modifier-class"</span>&gt;
+<pre><code tabindex="0">&lt;<span class="hljs-keyword">div</span> class=<span class="hljs-string">"modifier-class js-animation"</span>&gt;
   &lt;h3&gt;Wakko packs away <span class="hljs-keyword">the</span> snacks, <span class="hljs-keyword">while</span> Bill Clinton plays <span class="hljs-keyword">the</span> sax.&lt;/h3&gt;
 &lt;/<span class="hljs-keyword">div</span>&gt;
 </code></pre>
@@ -2569,42 +2569,42 @@
         <div class="styleguide-modifiers trailer-1 ">
           
           <div class="styleguide-modifier-example">
-            <div class="animate-fade-in">
+            <div class="animate-fade-in js-animation">
   <h3>Wakko packs away the snacks, while Bill Clinton plays the sax.</h3>
 </div>
             <code class="modifier-name">.animate-fade-in</code>
           </div>
           
           <div class="styleguide-modifier-example">
-            <div class="animate-fade-out">
+            <div class="animate-fade-out js-animation">
   <h3>Wakko packs away the snacks, while Bill Clinton plays the sax.</h3>
 </div>
             <code class="modifier-name">.animate-fade-out</code>
           </div>
           
           <div class="styleguide-modifier-example">
-            <div class="animate-in-down">
+            <div class="animate-in-down js-animation">
   <h3>Wakko packs away the snacks, while Bill Clinton plays the sax.</h3>
 </div>
             <code class="modifier-name">.animate-in-down</code>
           </div>
           
           <div class="styleguide-modifier-example">
-            <div class="animate-in-up">
+            <div class="animate-in-up js-animation">
   <h3>Wakko packs away the snacks, while Bill Clinton plays the sax.</h3>
 </div>
             <code class="modifier-name">.animate-in-up</code>
           </div>
           
           <div class="styleguide-modifier-example">
-            <div class="animate-out-down">
+            <div class="animate-out-down js-animation">
   <h3>Wakko packs away the snacks, while Bill Clinton plays the sax.</h3>
 </div>
             <code class="modifier-name">.animate-out-down</code>
           </div>
           
           <div class="styleguide-modifier-example">
-            <div class="animate-out-up">
+            <div class="animate-out-up js-animation">
   <h3>Wakko packs away the snacks, while Bill Clinton plays the sax.</h3>
 </div>
             <code class="modifier-name">.animate-out-up</code>
@@ -2756,6 +2756,8 @@
 
 
 
+
+<script src="../../assets/js/animation.js"></script>
 
 
 </body>
