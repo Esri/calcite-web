@@ -1,12 +1,16 @@
 ## [2.0.0]
 
 ### Added
+- Table: table-minimal
 
 #### Icons
 - All icons in the [calcite-ui-icons](https://github.com/esri/calcite-ui-icons/) set are now available in two syles and three sizes
 - `svg-icon-before` and `svg-icon-after` classes for spacing icons from text
 
 ### Breaking
+- :warning: Removed Button Groups
+- :warning: Removed Branding section under patterns
+- :warning: Removed Drawers
 
 #### Patterns
 Several patterns were removed which are now replaced by the [global-nav component](https://github.com/esri/global-nav):

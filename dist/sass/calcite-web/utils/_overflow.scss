@@ -17,7 +17,7 @@
   @include overflow-auto();
 }
 
-@if $include-utils == true or $include-drawers == true or $include-modal == true {
+@if $include-utils == true or $include-modal == true {
   .overflow-auto   {@include overflow-auto();}
   .overflow-hidden {@include overflow-hidden();}
   .overflow-scroll {@include overflow-scroll();}

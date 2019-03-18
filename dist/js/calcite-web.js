@@ -612,104 +612,6 @@ function dropdown () {
 
 // Cool Helpers
 
-// ┌────────┐
-// │ Drawer │
-// └────────┘
-// show and hide drawers
-function drawer () {
-  var html = document.documentElement;
-  var body = document.body;
-  var wrapper = document.querySelector('.wrapper');
-  var footer = document.querySelector('.footer');
-  var toggles = findElements('.js-drawer-toggle');
-  var drawers = findElements('.js-drawer');
-
-  // Bus events
-  bus.on('drawer:open', openDrawer);
-  bus.on('keyboard:escape', closeDrawer);
-  bus.on('drawer:close', closeDrawer);
-  bus.on('drawer:bind', bindDrawers);
-
-  function openDrawer (options) {
-    bus.emit('drawer:close', {fromOpen: true});
-    var drawer = document.querySelector((".js-drawer[data-drawer=\"" + (options.id) + "\"]"));
-
-    drawer.setAttribute('tabindex', 0);
-    add(drawer, 'is-active');
-    add(html, 'overflow-hidden');
-
-    // if there is a scrollbar, set scroll on body so scroll width remains
-    if (html.offsetHeight > html.clientHeight) {
-      add(body, 'overflow-scroll');
-    }
-
-    hide([wrapper, footer]);
-    add$1(drawer, click(), closeClick);
-    add$1(document, 'focusin', fenceDrawer);
-  }
-
-  function closeDrawer (options) {
-    if (!options || options.all) {
-      drawers.forEach(function (drawer) {
-        drawer.removeAttribute('tabindex');
-        remove(drawer, 'is-active');
-      });
-    } else {
-      var drawer = document.querySelector((".js-drawer[data-drawer=\"" + (options.id) + "\"]"));
-      if (drawer) {
-        drawer.removeAttribute('tabindex');
-        remove(drawer, 'is-active');
-      }
-    }
-    show([wrapper, footer]);
-    remove$1(document, 'focusin', fenceDrawer);
-    remove(document.documentElement, 'drawer-no-overflow');
-
-    if (options && !options.fromOpen) {
-      setTimeout(function () {
-        remove(html, 'overflow-hidden');
-        remove(body, 'overflow-scroll');
-      }, 300);
-    }
-  }
-
-  function fenceDrawer (e) {
-    if (!closest('js-drawer', e.target)) {
-      drawers.forEach(function (drawer) {
-        if (has(drawer, 'is-active')) {
-          drawer.focus();
-        }
-      });
-    }
-  }
-
-  function bindDrawers (options) {
-    if (!options) {
-      toggles.forEach(function (toggle$$1) {
-        add$1(toggle$$1, click(), toggleClick);
-      });
-    } else {
-      add$1(options.node, click(), toggleClick);
-    }
-  }
-
-  function closeClick (e) {
-    if (has(e.target, 'js-drawer')) {
-      bus.emit('drawer:close', {fromOpen: false, all: true});
-    }
-  }
-
-  function toggleClick (e) {
-    preventDefault(e);
-    var drawerId = e.target.getAttribute('data-drawer');
-    bus.emit('drawer:open', {id: drawerId});
-  }
-
-  bus.emit('drawer:bind');
-}
-
-// Cool Helpers
-
 // ┌─────────────────┐
 // │ Filter Dropdown │
 // └─────────────────┘
@@ -1345,7 +1247,6 @@ var patterns = [
   accordion,
   clipboard,
   dropdown,
-  drawer,
   filterDropdown,
   modal,
   search,
@@ -1441,7 +1342,6 @@ var calciteWeb = {
   bus: bus,
   accordion: accordion,
   dropdown: dropdown,
-  drawer: drawer,
   filterDropdown: filterDropdown,
   modal: modal,
   search: search,

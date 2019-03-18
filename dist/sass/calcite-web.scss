@@ -79,7 +79,6 @@ $include-tabs:                   $generate-css    !default;
 $include-modal:                  $generate-css    !default;
 $include-search:                 $generate-css    !default;
 $include-accordion:              $generate-css    !default;
-$include-drawers:                $generate-css    !default;
 $include-sticky:                 $generate-css    !default;
 $include-filter-dropdown:        $generate-css    !default;
 
@@ -115,7 +114,6 @@ $include-filter-dropdown:        $generate-css    !default;
 
 // Components
 // small pieces: buttons, icons, tables...
-@import "calcite-web/components/esri-logo";
 @import "calcite-web/components/button";
 @import "calcite-web/components/label";
 @import "calcite-web/components/dropdown";
@@ -145,7 +143,6 @@ $include-filter-dropdown:        $generate-css    !default;
 @import "calcite-web/patterns/modal";
 @import "calcite-web/patterns/search";
 @import "calcite-web/patterns/accordion";
-@import "calcite-web/patterns/drawers";
 @import "calcite-web/patterns/filter-dropdown";
 
 // Modifiers

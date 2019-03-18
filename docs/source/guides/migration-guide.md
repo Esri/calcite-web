@@ -120,10 +120,6 @@ Below is a list of things that will need to be changed to migrate to Calcite Web
 1. `success`, `delete`, `cancel`, `gray`, `orange` classes all removed
 2. Modifier classes formatted `btn-X` instead of `X`
 
-##### Button Groups
-1. Button groups are now just three buttons next to each other
-2. All buttons must have the `btn-grouped` class
-
 ##### Tooltips
 1. Tooltip markup has been greatly simplified. Just add an `aria-label` and the `tooltip` class to the element you'd like to have a tooltip
 
@@ -185,7 +181,6 @@ Below is a summary of what has changed.
 1. Modal markup has updated, and the toggles now must use `js-modal` classes with data attributes, see [modals](../documentation/patterns/#modals)
 2. Must use `js-` classes for interactivity. Modifier classes are prefixed. See [tabs](../documentation/patterns/#tabs)
 3. [Accordion markup](../documentation/patterns/#accordions) is sustantially different (plus the above changes).
-4. [Drawer](../documentation/patterns/#drawers) direction goes onto the `drawer` and not the `drawer-nav`, uses `side-nav` classes, `is-active, and `js-` classes
 5. Dropdowns and click dropdowns are now the same thing, just [dropdowns](../documentation/components/#dropdowns)
 6. Site Dropdown removed due to very poor user testing
 7. Responsive Nav Bar removed
