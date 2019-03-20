@@ -5,11 +5,11 @@
 //  ↳ patterns → _accordion.md
 
 @mixin accordion() {
-  @include side-nav();
 }
+
   @mixin accordion-section() {
     &.is-active {
-      .accordion-icon {
+      .accordion-icon svg {
         @include transform(rotate(0));
       }
       .accordion-content {
@@ -19,25 +19,48 @@
   }
 
   @mixin accordion-title() {
-    @include side-nav-title();
+    @include font-size(0);
+    border: 1px solid $light-gray;
+    margin: -1px 0 0 0;
+    color: $dark-gray;
+    padding: $baseline/2;
     cursor: pointer;
     &:focus,
     &:hover {
       @include transition(all, $transition);
-      background-color: $blk-010;
-      outline: none;
+      border-color: $dark-gray;
+      color: $off-black;
+      position: relative;
+    }
+    &:active {
+      color: $blue;
     }
   }
 
   @mixin accordion-content() {
     display: none;
+    padding: $baseline/2 0;
+    color: $off-black;
   }
 
   @mixin accordion-icon() {
     @include transform(rotate(-90deg));
-      @if ($include-right-to-left) {
+    @if ($include-right-to-left) {
       html[dir="rtl"] & {
-        @include transform(rotate(90deg));
+        svg {
+          @include transform(rotate(90deg));
+        }
+      }
+    }
+  }
+
+  @mixin accordion-no-border {
+    .accordion-title {
+      border: none;
+      border-bottom: 1px solid $light-gray;
+      margin-top: 0;
+      &:hover {
+        border-bottom-color: $dark-gray;
       }
     }
   }
@@ -48,4 +71,5 @@
     .accordion-title {@include accordion-title();}
     .accordion-content {@include accordion-content();}
     .accordion-icon .svg-icon {@include accordion-icon();}
+    .accordion-no-border {@include accordion-no-border();};
 }
