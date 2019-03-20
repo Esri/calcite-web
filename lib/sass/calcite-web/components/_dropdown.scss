@@ -26,7 +26,7 @@
     overflow: visible;
     &:before {
       content: "•";
-      color: $blue;
+      color: $gray;
       position: absolute;
       left: 10px;
       opacity: 0;
@@ -37,13 +37,13 @@
       text-decoration: none;
       &:before {
         opacity: 1;
-        color: $gray;
       }
     }
     &.is-active {
       font-weight: 600;
       &:before {
         opacity: 1;
+        color: $blue;
       }
       &:hover:before, &:focus:before {
         color: $blue;
