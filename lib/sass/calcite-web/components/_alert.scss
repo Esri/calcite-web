@@ -39,6 +39,8 @@
 @mixin alert-content() {
   @include alert-element-base;
   flex: 1 1 auto;
+  min-width: 0;
+  word-wrap: break-word;
   &:first-child {
     padding-left: $baseline;
     html[dir="rtl"] & {
