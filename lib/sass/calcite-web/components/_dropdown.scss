@@ -24,16 +24,6 @@
     cursor: pointer;
     background-color: transparent;
     overflow: visible;
-
-    @if ($include-right-to-left) {
-      html[dir="rtl"] & {
-        text-align: right;
-      }
-      html[dir="rtl"] &:before {
-        left: unset;
-        right: .6rem;
-      }
-    }
   }
 
   @mixin dropdown-title() {

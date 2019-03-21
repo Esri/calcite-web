@@ -4,10 +4,6 @@
 //  ↳ http://esri.github.io/calcite-web/documentation/sass/#active-link-dot
 //  ↳ components → _utility-mixins.md
 
-@mixin box-sizing ($box) {
-  @include prefixer(box-sizing, $box, webkit moz spec);
-}
-
 @mixin active-link-dot () {
   &:before {
     content: "•";
@@ -29,6 +25,15 @@
     &:before {
       opacity: 1;
       color: $blue;
+    }
+  }
+  @if ($include-right-to-left) {
+    html[dir="rtl"] & {
+      text-align: right;
+    }
+    html[dir="rtl"] &:before {
+      left: unset;
+      right: .6rem;
     }
   }
 }
