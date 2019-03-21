@@ -77,9 +77,6 @@
     }
   }
 
-  @mixin dropdown-btn {
-  }
-
   @mixin dropdown-menu {
     position: absolute;
     min-width: 12.5rem;
@@ -101,7 +98,6 @@
 
 @if $include-dropdowns == true {
   .dropdown { @include dropdown(); }
-  .dropdown-btn { @include dropdown-btn(); }
   .dropdown-menu { @include dropdown-menu(); }
   .dropdown-title {@include dropdown-title();}
   .dropdown-link { @include dropdown-link();}
