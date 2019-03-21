@@ -1,0 +1,34 @@
+// ┌─────────────────┐
+// │ Active Link Dot │
+// └─────────────────┘
+//  ↳ http://esri.github.io/calcite-web/documentation/sass/#active-link-dot
+//  ↳ components → _utility-mixins.md
+
+@mixin box-sizing ($box) {
+  @include prefixer(box-sizing, $box, webkit moz spec);
+}
+
+@mixin active-link-dot () {
+  &:before {
+    content: "•";
+    color: $gray;
+    position: absolute;
+    left: .6rem;
+    opacity: 0;
+  }
+  &:hover, &:focus {
+    background-color: $off-white;
+    color: $darker-gray;
+    text-decoration: none;
+    &:before {
+      opacity: 1;
+    }
+  }
+  &.is-active {
+    font-weight: 600;
+    &:before {
+      opacity: 1;
+      color: $blue;
+    }
+  }
+}
