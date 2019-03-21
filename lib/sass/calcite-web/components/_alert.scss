@@ -6,52 +6,78 @@
 
 @mixin alert() {
   @include font-size(-1);
-  padding: $baseline/2 $baseline/2;
   @include text-color($transparent-black);
-  background-color: $lightest-blue;
-  position: relative;
   display: none;
+  position: relative;
+  border-top: 3px solid;
   z-index: 100;
   max-width: 40em;
-  border: 1px solid $blue;
-  @include box-shadow($box-shadow);
-  @include link-color($off-black, $black);
+  border-radius: 2px 2px 0 0;
+  box-shadow: 0 0 12px 0 rgba($black, 0.15);
   &.is-active {
-    display: block;
-  }
-  a:hover {
-    color: $transparent-black;
+    display: flex;
   }
 }
 
-@mixin alert-red() {
-  background-color: $lightest-red;
-  border-color: $light-red;
+@mixin alert-element-base() {
+  padding: $baseline/2 $baseline/2;
+  flex: 0 0 auto;
+  & * {
+    position: relative;
+  }
+  & svg {
+    vertical-align: top;
+    height: 1.25rem;
+    width: 1.25rem;
+  }
 }
 
-@mixin alert-yellow() {
-  background-color: $lightest-yellow;
-  border-color: $yellow;
+@mixin alert-icon() {
+  @include alert-element-base;
+  display: flex;
+  align-items: center;
 }
 
-@mixin alert-green() {
-  background-color: $lightest-green;
-  border-color: $light-green;
+@mixin alert-content() {
+  @include alert-element-base;
+  flex: 1 1 auto;
+  & a {
+    font-size: inherit;
+  }
+  &:first-child {
+    padding-left: $baseline;
+    html[dir="rtl"] & {
+      padding-left: initial;
+      padding-right: $baseline;
+    }
+  }
 }
 
 @mixin alert-close() {
-  @include btn-link;
-
-  color: currentColor;
-  position: absolute;
-  html:not([dir="rtl"]) & {
-    right: $baseline/2;
+  @include alert-element-base;
+  @include transition(all .15s ease-in-out);
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  & svg {
+    @include transition(all .15s ease-in-out);
+    fill: $darker-gray;
   }
+  &:hover, &:focus {
+    background-color: $off-white;
+  }
+  &:active {
+    background-color: $lightest-gray;
+  }
+}
 
-  @if ($include-right-to-left) {
-    html[dir="rtl"] & {
-      left: $baseline/2;
-    }
+@mixin alert-color($color) {
+  border-top-color: $color;
+  & .alert-icon svg {
+    fill: $color;
   }
 }
 
@@ -59,23 +85,34 @@
   max-width: none;
 }
 
-@if $include-alerts == true {
+@if $include-alerts==true {
   .alert {
     @include alert();
-  }
-  .alert-red {
-    @include alert-red();
-  }
-  .alert-yellow {
-    @include alert-yellow();
-  }
-  .alert-green {
-    @include alert-green();
   }
   .alert-close {
     @include alert-close();
   }
+  .alert-content {
+    @include alert-content();
+  }
+  .alert-icon {
+    @include alert-icon();
+  }
   .alert-full {
     @include alert-full();
+  }
+
+  $alertColors: 
+  '' $blue,
+  '-red' $red,
+  '-yellow' $yellow,
+  '-green' $green;
+
+  @each $alertColor in $alertColors {
+    $name: nth($alertColor, 1);
+    $color: nth($alertColor, 2);
+    .alert#{$name} {
+      @include alert-color($color);
+    }
   }
 }
