@@ -16,13 +16,13 @@ It's recommended to pair a status icon with your alert. Pairing an alert status 
 
 <div class="alert alert-red is-active">
 <div class="alert-icon">
-  {% icon 'check-circle', size=24 %}
+  {% icon 'exclamation-mark-triangle', style='filled' %}
 </div>
 <div class="alert-content">
   You don't have enough credits for that.
 </div>
 <button class="alert-close" aria-label="Close">
-  {% icon 'x', size=24 %}
+  {% icon 'x' %}
 </button>
 </div>
 &nbsp;
@@ -36,20 +36,20 @@ Sometimes it can be useful to provide a follow-up action or contextual link to a
   <a class="btn-link">Get more credits.</a>
 </div>
 <button class="alert-close" aria-label="Close">
-  {% icon 'x', size=24 %}
+  {% icon 'x' %}
 </button>
 </div>
 &nbsp;
 
 <div class="alert alert-green is-active">
 <div class="alert-icon">
-  {% icon 'check-circle', size=24 %}
+  {% icon 'check-circle', style='filled' %}
 </div>
 <div class="alert-content">
    You successfully invited 4 members to the feature layer  <a class="btn-link">2019 Franchise Location Sales Map</a>
 </div>
 <button class="alert-close" aria-label="Close">
-  {% icon 'x', size=24 %}
+  {% icon 'x' %}
 </button>
 </div>
 &nbsp;
@@ -57,9 +57,9 @@ Sometimes it can be useful to provide a follow-up action or contextual link to a
 #### Auto-dismissal
 It's recommended to use an explicit close button. If you decide to auto-dismiss alerts, ensure the duration of the alert's visibility is long enough for a user to read it. Don't place any follow-up actions in an auto-dismissable alert.
 
-<div class="alert alert-red is-active">
+<div class="alert alert-yellow is-active">
 <div class="alert-icon">
-  {% icon 'exclamation-mark-triangle', size=24 %}
+  {% icon 'exclamation-mark-triangle', style='filled' %}
 </div>
 <div class="alert-content">
   You don't have enough credits for that.
