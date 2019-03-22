@@ -8,6 +8,7 @@
   position: relative;
   display: inline-block;
   &.is-active .dropdown-menu {
+    visibility: visible;
     opacity: 1;
   }
 }
@@ -46,12 +47,13 @@
     position: absolute;
     min-width: 12.5rem;
     @include box-shadow($box-shadow);
-    transition: $transition;
     border: 1px solid $lightest-gray;
     background: $white;
     z-index: 1000;
     overflow: auto;
+    visibility: hidden;
     opacity: 0;
+    transition: $transition;
     &.dropdown-right {
       right: 0;
       @if ($include-right-to-left) {
