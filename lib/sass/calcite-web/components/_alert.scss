@@ -43,9 +43,11 @@
   word-wrap: break-word;
   &:first-child {
     padding-left: $baseline;
-    html[dir="rtl"] & {
-      padding-left: initial;
-      padding-right: $baseline;
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        padding-left: initial;
+        padding-right: $baseline;
+      }
     }
   }
 }
