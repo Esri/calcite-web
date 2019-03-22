@@ -51,9 +51,9 @@
     background: $white;
     z-index: 1000;
     overflow: auto;
-    visibility: hidden;
     opacity: 0;
-    transition: $transition;
+    visibility: hidden;
+    @include transition(visibility 0ms linear 300ms, opacity 300ms $easing-function);
     &.dropdown-right {
       right: 0;
       @if ($include-right-to-left) {
