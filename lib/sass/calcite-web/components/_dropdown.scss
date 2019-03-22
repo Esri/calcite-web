@@ -10,60 +10,74 @@
   &.is-active .dropdown-menu {
     visibility: visible;
     opacity: 1;
+    -webkit-transition-delay: 0ms;
+    transition-delay: 0ms;
+    transform: translate3d(0, 0, 0);
   }
 }
 
-  @mixin dropdown-link() {
-    @include box-sizing(border-box);
-    @include font-size(-2);
-    @include active-link-dot();
-    position: relative;
-    padding: $baseline/3 $baseline/1;
-    display: block;
-    color: $darker-gray;
-    font-weight: inherit;
-    cursor: pointer;
-    background-color: transparent;
-    overflow: visible;
+@mixin dropdown-link() {
+  @include box-sizing(border-box);
+  @include font-size(-2);
+  @include active-link-dot();
+  position: relative;
+  padding: $baseline/3 $baseline/1;
+  display: block;
+  color: $darker-gray;
+  font-weight: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  overflow: visible;
+  &:first-child {
+    border-top:1px solid transparent;
+    &.is-active {
+      border-top:1px solid $red;
+    }
   }
+  
+}
 
-  @mixin dropdown-title() {
-    @include font-size(-2);
-    padding: .3rem 1.5rem .6rem 1.5rem;
-    display: block;
-    font-weight: 600;
-    cursor: auto;
-    border-bottom: 1px solid $lightest-gray;
-    margin: $baseline/3 $baseline/1.5 -1px $baseline/1.5;
-    padding-left: 0;
+@mixin dropdown-title() {
+  @include font-size(-2);
+  padding: .3rem 1.5rem .6rem 1.5rem;
+  display: block;
+  font-weight: 600;
+  cursor: auto;
+  border-bottom: 1px solid $lightest-gray;
+  margin: $baseline/3 $baseline/1.5 -1px $baseline/1.5;
+  padding-left: 0;
+  @if ($include-right-to-left) {
+    html[dir="rtl"] & {
+      padding-right: 0;
+    }
+  }
+}
+
+@mixin dropdown-menu {
+  visibility: hidden;
+  display: block;
+  position: absolute;
+  width: auto;
+  position: absolute;
+  min-width: 12.5rem;
+  @include box-shadow($box-shadow);
+  border: 1px solid $lightest-gray;
+  background: $white;
+  z-index: 1000;
+  overflow: auto;
+  opacity: 0;
+  transition: transform 200ms cubic-bezier(0.215, 0.44, 0.42, 0.88), visibility 0ms linear 200ms, opacity 200ms cubic-bezier(0.215, 0.44, 0.42, 0.88);
+  transform: translate3d(0, -10px, 0);
+  &.dropdown-right {
+    right: 0;
     @if ($include-right-to-left) {
       html[dir="rtl"] & {
-        padding-right: 0;
+        right: auto;
+        left: 0;
       }
     }
   }
-
-  @mixin dropdown-menu {
-    position: absolute;
-    min-width: 12.5rem;
-    @include box-shadow($box-shadow);
-    border: 1px solid $lightest-gray;
-    background: $white;
-    z-index: 1000;
-    overflow: auto;
-    opacity: 0;
-    visibility: hidden;
-    @include transition(visibility 0ms linear 300ms, opacity 300ms $easing-function);
-    &.dropdown-right {
-      right: 0;
-      @if ($include-right-to-left) {
-        html[dir="rtl"] & {
-          right: auto;
-          left: 0;
-        }
-      }
-    }
-  }
+}
 
 @if $include-dropdowns == true {
   .dropdown { @include dropdown(); }
