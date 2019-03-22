@@ -5,32 +5,29 @@
 //  ↳ components → _utility-mixins.md
 
 @mixin active-link-dot () {
+  position: relative;
+
   &:before {
-    content: "•";
-    color: $gray;
+    content: '';
+    display: block;
     position: absolute;
+    height: .4rem;
+    width: .4rem;
+    border-radius: 50%;
+    background-color: $gray;
     left: .6rem;
     opacity: 0;
+    transition: all .15s ease-in-out;
   }
-  &:hover, &:focus {
-    background-color: $off-white;
-    color: $darker-gray;
-    text-decoration: none;
-    &:before {
-      opacity: 1;
-    }
+
+  &:hover:before,
+  &:focus:before,
+  &.is-active:before {
+    opacity: 1;
+    background-color: $blue;
   }
-  &.is-active {
-    font-weight: 600;
-    &:before {
-      opacity: 1;
-      color: $blue;
-    }
-  }
+
   @if ($include-right-to-left) {
-    html[dir="rtl"] & {
-      text-align: right;
-    }
     html[dir="rtl"] &:before {
       left: unset;
       right: .6rem;
