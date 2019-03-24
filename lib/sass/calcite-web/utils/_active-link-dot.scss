@@ -16,13 +16,17 @@
     border-radius: 50%;
     background-color: $gray;
     left: .6rem;
+    top: 1rem;
     opacity: 0;
     transition: all .15s ease-in-out;
   }
 
   &:hover:before,
-  &:focus:before,
-  &.is-active:before {
+  &:focus:before {
+    opacity: 1;
+    background-color: $light-gray;
+  }
+  &.is-active:before, &:active:before {
     opacity: 1;
     background-color: $blue;
   }
