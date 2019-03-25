@@ -11,6 +11,10 @@
 - :warning: Removed Button Groups
 - :warning: Removed Branding section under patterns
 - :warning: Removed Drawers
+- :warning: `tabs-transparent`, `tabs-translucent`, `tabs-gray` classes have been removed.
+
+#### Updates
+- Tabs styling has been updated
 
 #### Patterns
 Several patterns were removed which are now replaced by the [global-nav component](https://github.com/esri/global-nav):
