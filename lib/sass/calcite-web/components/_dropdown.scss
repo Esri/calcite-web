@@ -45,7 +45,7 @@
 
 @mixin dropdown-element-base() {
   @include font-size(-2);
-  @include transition(color 0.15s ease-in-out, background-color 0.15s ease-in-out);
+  @include transition(all 0.15s ease-in-out);
   display: block;
   color: $darker-gray;
   background-color: transparent;
