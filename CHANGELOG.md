@@ -12,6 +12,9 @@
 - :warning: Removed Branding section under patterns
 - :warning: Removed Drawers
 
+### Updates
+- Styling of side nav has been updated
+
 #### Patterns
 Several patterns were removed which are now replaced by the [global-nav component](https://github.com/esri/global-nav):
 
