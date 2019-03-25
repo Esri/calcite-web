@@ -4,8 +4,8 @@
 - Table: table-minimal
 - Accordions: accordion-no-border
 
-### UI Updates
-- Accordions
+### Updates
+- Accordions styling has been updated (#1015)
 
 #### Icons
 - All icons in the [calcite-ui-icons](https://github.com/esri/calcite-ui-icons/) set are now available in two syles and three sizes
