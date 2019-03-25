@@ -7,82 +7,97 @@
 @mixin dropdown {
   position: relative;
   display: inline-block;
+  
   &.is-active .dropdown-menu {
-    display: block;
+    @include transition-delay(0ms);
+    @include transform(translate3d(0, .25rem, 0));
+    opacity: 1;
+    visibility: visible;
   }
 }
 
-  @mixin dropdown-link() {
-    position: relative;
-    display: block;
-    @include box-sizing(border-box);
-    padding: $baseline/3;
-    @include font-size(-2);
-    color: $darker-gray;
-    background-color: $white;
-    border-bottom: none;
-    text-align: left;
-    border-left: none;
-    border-right: none;
-    border-top: 1px solid $lightest-gray;
-    white-space: nowrap;
-    cursor: pointer;
-    width: 100%;
-    &:hover {
-      background-color: $off-white;
-      text-decoration: none;
-      color: $darker-gray;
-    }
-    &.is-active, &:focus {
-      text-indent: -3px;
-      border-left: 3px solid $blue;
-    }
+@mixin dropdown-menu {
+  @include transition(transform 250ms $easing-function, visibility 0ms linear 250ms, opacity 250ms $easing-function);
+  @include transform(translate3d(0, -.5rem, 0));
+  visibility: hidden;
+  opacity: 0;
+  display: block;
+  position: absolute;
+  z-index: 200;
+  overflow: auto;
+  width: auto;
+  min-width: 12.5rem;
+  max-width: 100%;
+  background: $white;
+  border: 1px solid $lighter-gray;
+  box-shadow: 0 0 12px 0 rgba($black, 0.15);
+
+  &.dropdown-right {
+    right: 0;
     @if ($include-right-to-left) {
       html[dir="rtl"] & {
-        text-align: right;
-      }
-      html[dir="rtl"] &.is-active, html[dir="rtl"] &:focus {
-        border-left: none;
-        border-right: 3px solid $blue;
+        right: auto;
+        left: 0;
       }
     }
   }
+}
 
-  @mixin dropdown-title() {
-    @include dropdown-link();
+@mixin dropdown-element-base() {
+  @include font-size(-2);
+  @include transition(color 0.15s ease-in-out, background-color 0.15s ease-in-out);
+  display: block;
+  color: $darker-gray;
+  background-color: transparent;
+}
+
+@mixin dropdown-title() {
+  @include dropdown-element-base();
+  margin: 0 $baseline -1px $baseline;
+  padding: $baseline/2 0;
+  border-bottom: 1px solid $lightest-gray;
+  font-weight: 600;
+  word-wrap: break-word;
+  cursor: default;
+
+  + .dropdown-link {
+    border-top: 1px solid transparent;
+    &:hover, &:active, &:focus {
+      border-top: 1px solid $lightest-gray;
+    }
+  }
+}
+
+@mixin dropdown-link() {
+  @include dropdown-element-base();
+  @include active-link-dot();
+  padding: $baseline/3 $baseline/1;
+  cursor: pointer;
+ 
+  &.is-active {
+    font-weight: 600;
+  }
+  &:hover, &:focus, &:active {
     background-color: $off-white;
-    cursor: auto;
+    color: $darkest-gray;
+    text-decoration: none;
   }
-
-  @mixin dropdown-btn {
-    cursor: pointer;
-    position: relative;
+  &:active {
+    background-color: $lightest-gray;
   }
+}
 
-
-  @mixin dropdown-menu {
-    position: absolute;
-    min-width: 200px;
-    @include box-shadow($box-shadow);
-    @extend .side-nav;
-    z-index: 1000;
-    display: none;
-    overflow: auto;
-    &.dropdown-right {
-      right: 0;
-      @if ($include-right-to-left) {
-        html[dir="rtl"] & {
-          right: auto;
-          left: 0;
-        }
-      }
-    }
+@if $include-dropdowns==true {
+  .dropdown {
+    @include dropdown();
   }
-
-@if $include-dropdowns == true {
-  .dropdown { @include dropdown(); }
-  .dropdown-btn { @include dropdown-btn(); }
-  .dropdown-menu { @include dropdown-menu(); }
-  .dropdown-title {@include dropdown-title();}
-  .dropdown-link { @include dropdown-link();}
+  .dropdown-menu {
+    @include dropdown-menu();
+  }
+  .dropdown-title {
+    @include dropdown-title();
+  }
+  .dropdown-link {
+    @include dropdown-link();
+  }
 }
