@@ -2,6 +2,10 @@
 
 ### Added
 - Table: table-minimal
+- Accordions: accordion-no-border
+
+### UI Updates
+- Accordions
 
 #### Icons
 - All icons in the [calcite-ui-icons](https://github.com/esri/calcite-ui-icons/) set are now available in two syles and three sizes
