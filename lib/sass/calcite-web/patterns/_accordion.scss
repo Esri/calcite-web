@@ -8,6 +8,17 @@
 }
 
   @mixin accordion-section() {
+    border: 1px solid $light-gray;
+    margin: -1px 0 0 0;
+    color: $dark-gray;
+    padding: $baseline/2;
+    @include transition(all .15s ease-in-out);
+    &:focus,
+    &:hover {
+      border-color: $dark-gray;
+      color: $off-black;
+      position: relative;
+    }
     &.is-active {
       .accordion-icon svg {
         @include transform(rotate(0));
@@ -19,19 +30,9 @@
   }
 
   @mixin accordion-title() {
-    @include font-size(0);
-    border: 1px solid $light-gray;
-    margin: -1px 0 0 0;
-    color: $dark-gray;
-    padding: $baseline/2;
     cursor: pointer;
-    &:focus,
-    &:hover {
-      @include transition(all, $transition);
-      border-color: $dark-gray;
-      color: $off-black;
-      position: relative;
-    }
+    @include font-size(0);
+    margin: 0;
     &:active {
       color: $blue;
     }
@@ -55,7 +56,7 @@
   }
 
   @mixin accordion-no-border {
-    .accordion-title {
+    .accordion-section {
       border: none;
       border-bottom: 1px solid $light-gray;
       margin-top: 0;
@@ -66,10 +67,9 @@
   }
 
 @if $include-accordion == true {
-  .accordion {@include accordion();}
-    .accordion-section {@include accordion-section();};
-    .accordion-title {@include accordion-title();}
-    .accordion-content {@include accordion-content();}
-    .accordion-icon .svg-icon {@include accordion-icon();}
-    .accordion-no-border {@include accordion-no-border();};
+  .accordion-section {@include accordion-section();};
+  .accordion-title {@include accordion-title();}
+  .accordion-content {@include accordion-content();}
+  .accordion-icon .svg-icon {@include accordion-icon();}
+  .accordion-no-border {@include accordion-no-border();};
 }
