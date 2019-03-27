@@ -19,20 +19,23 @@
       position: relative;
     }
     &.is-active {
-      .accordion-icon svg {
+      .accordion-icon {
         @include transform(rotate(0));
       }
       .accordion-content {
         display: block;
+      }
+      .accordion-title {
+        color: $black;
       }
     }
   }
 
   @mixin accordion-title() {
     cursor: pointer;
-    @include font-size(0);
+    @include font-size(-1);
     margin: 0;
-    padding: $baseline/2;
+    padding: $baseline/2 $baseline/4;
     &:active {
       color: $black;
     }
@@ -45,12 +48,15 @@
   }
 
   @mixin accordion-icon() {
+    padding: 0 $baseline/8;
+    display: inline-block;
+    width: 16px;
+    vertical-align: -3px;
+    fill: currentColor;
     @include transform(rotate(-90deg));
     @if ($include-right-to-left) {
       html[dir="rtl"] & {
-        svg {
-          @include transform(rotate(90deg));
-        }
+        @include transform(rotate(90deg));
       }
     }
   }
@@ -70,6 +76,6 @@
   .accordion-section {@include accordion-section();};
   .accordion-title {@include accordion-title();}
   .accordion-content {@include accordion-content();}
-  .accordion-icon .svg-icon {@include accordion-icon();}
+  .accordion-icon {@include accordion-icon();}
   .accordion-no-border {@include accordion-no-border();};
 }
