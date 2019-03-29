@@ -8,15 +8,15 @@
 }
 
   @mixin accordion-section() {
-    border: 1px solid $light-gray;
+    border: 1px solid $dark-gray;
     margin: -1px 0 0 0;
     color: $dark-gray;
     @include transition(all .15s ease-in-out);
+    position: relative;
     &:focus,
     &:hover {
-      border-color: $dark-gray;
-      color: $off-black;
-      position: relative;
+      color: $darker-gray;
+      border-color: $darker-gray;
     }
     &.is-active {
       .accordion-icon {
