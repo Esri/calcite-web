@@ -13,6 +13,7 @@
   z-index: 100;
   max-width: 40em;
   border-radius: 2px 2px 0 0;
+  background-color: $white;
   box-shadow: 0 0 12px 0 rgba($black, 0.15);
   &.is-active {
     display: flex;
@@ -56,7 +57,7 @@
   @include alert-element-base;
   @include transition(all .15s ease-in-out);
   -webkit-appearance: none;
-  background: none;
+  background-color: transparent;
   border: none;
   outline: none;
   cursor: pointer;
