@@ -14,6 +14,7 @@
 - :warning: Removed Button Groups
 - :warning: Removed Branding section under patterns
 - :warning: Removed Drawers
+- :warning: DOM structure of Alerts has changed (#1023)
 - :warning: Removed Third-nav
 
 #### Patterns
