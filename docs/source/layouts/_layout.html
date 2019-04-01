@@ -12,7 +12,11 @@
   <meta name="description" content="{{description}}">
 
   <!-- Use title from page frontmatter -->
-  <title>{{title}} | Esri Design Patterns</title>
+  {% if title == 'Calcite Web' %}
+  <title>Calcite Web</title>
+  {% else %}
+  <title>{{title}} | Calcite Web</title>
+  {% endif %}
 
   {% if relativePath == '' %}
     {% set relativePath = '.' %}
