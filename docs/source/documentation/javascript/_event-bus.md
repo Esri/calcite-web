@@ -5,7 +5,14 @@ Along with a set of common bus events, each pattern has a set of channels that i
 You can trigger or react to events by using the `on` and `emit` methods on the bus:
 
 ```js
-// assuming calcite-web.js is available as calcite
+// do something when a modal opens
+calcite.bus.on('modal:open', function (options) {
+  console.log(options.id) // => "my_modal"
+})
+
+// open a modal (must pass data-modal name as "id")
+calcite.bus.emit('modal:open', {id: "my_modal"})
+```
 
 ### Common Event Channels
 
@@ -18,7 +25,7 @@ You can trigger or react to events by using the `on` and `emit` methods on the b
 | keyboard:arrow:down | The `↓` key was pressed | n/a |
 | keyboard:arrow:left | The `←` key was pressed | n/a |
 | keyboard:arrow:right | The `→` key was pressed | n/a |
-| scrolling:at | The page is scrolling | ScrollYOffset |
+| scrolling:at | The page is scrolling | `ScrollYOffset` |
 
 ### Pattern-Specific Event Channels
 
