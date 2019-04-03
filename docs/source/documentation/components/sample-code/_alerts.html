@@ -1,6 +1,11 @@
 <div class="alert {{modifier}} is-active">
-  Something Happened!
+  <div class="alert-icon">
+    {% icon 'circle-filled', style='filled' %}
+  </div>
+  <div class="alert-content">
+    Something happened that you may want to know about.
+  </div>
   <button class="alert-close" aria-label="Close">
-    {% icon 'x', size=24, classes="svg-icon" %}
+    {% icon 'x' %}
   </button>
 </div>

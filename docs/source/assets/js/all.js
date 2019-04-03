@@ -333,7 +333,7 @@
     }
   };
 
-  esriGlobalNav.create({headerElm: '.esri-header-barrier', footerElm: '.esri-footer-barrier', menuData});
+  esriGlobalNav.create({headerElm: '.esri-header-barrier', footerElm: '.esri-footer-barrier', menuData: menuData});
 })();
 
 

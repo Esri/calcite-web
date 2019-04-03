@@ -38,6 +38,8 @@ Most languages will be rendered in the main brand typeface, Avenir Next. Some la
 
 <span class="text-red">*</span>_You must set the `lang` attribute of the html document to `vi` (the ISO-639 code for Vietnamese) to render Vietnamese correctly_.
 
+Non-Latin character sets are pulled in only when needed, so if your application is in English, the browser will only load the files it needs for displaying English. This is accomplished by using the `unicode-range` property in the `@font-face` declaration.
+
 {% endmarkdown %}
     </div>
     <div class="column-20">
