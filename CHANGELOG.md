@@ -2,6 +2,10 @@
 
 ### Added
 - Table: table-minimal
+- Accordions: accordion-no-border
+
+### Updates
+- Accordions styling has been updated (#1015)
 
 ### Updates
 - Dropdown styling has been updated (#1021)

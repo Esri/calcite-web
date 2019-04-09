@@ -5,47 +5,78 @@
 //  ↳ patterns → _accordion.md
 
 @mixin accordion() {
-  @include side-nav();
 }
+
   @mixin accordion-section() {
+    border: 1px solid $light-gray;
+    margin: -1px 0 0 0;
+    color: $dark-gray;
+    @include transition(all .15s ease-in-out);
+    &:focus,
+    &:hover {
+      position: relative;
+      color: $darker-gray;
+      border-color: $darker-gray;
+    }
     &.is-active {
       .accordion-icon {
         @include transform(rotate(0));
       }
       .accordion-content {
         display: block;
+        margin-bottom: $baseline/1.4;
+      }
+      .accordion-title {
+        color: $black;
       }
     }
   }
 
   @mixin accordion-title() {
-    @include side-nav-title();
     cursor: pointer;
-    &:focus,
-    &:hover {
-      @include transition(all, $transition);
-      background-color: $blk-010;
-      outline: none;
+    @include font-size(-1);
+    margin: 0;
+    padding: $baseline/2 $baseline/4;
+    &:active {
+      color: $black;
     }
   }
 
   @mixin accordion-content() {
     display: none;
+    padding: $baseline/2 $baseline*1.4;
+    color: $off-black;
   }
 
   @mixin accordion-icon() {
+    padding: 0 $baseline/8;
+    display: inline-block;
+    width: 16px;
+    vertical-align: -3px;
+    fill: currentColor;
     @include transform(rotate(-90deg));
-      @if ($include-right-to-left) {
+    @if ($include-right-to-left) {
       html[dir="rtl"] & {
         @include transform(rotate(90deg));
       }
     }
   }
 
+  @mixin accordion-no-border {
+    .accordion-section {
+      border: transparent;
+      border-bottom: 1px solid $light-gray;
+      margin-top: 0;
+      &:hover {
+        border-bottom-color: $dark-gray;
+      }
+    }
+  }
+
 @if $include-accordion == true {
-  .accordion {@include accordion();}
-    .accordion-section {@include accordion-section();};
-    .accordion-title {@include accordion-title();}
-    .accordion-content {@include accordion-content();}
-    .accordion-icon .svg-icon {@include accordion-icon();}
+  .accordion-section {@include accordion-section();};
+  .accordion-title {@include accordion-title();}
+  .accordion-content {@include accordion-content();}
+  .accordion-icon {@include accordion-icon();}
+  .accordion-no-border {@include accordion-no-border();};
 }
