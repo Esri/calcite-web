@@ -6,12 +6,12 @@
 
 @mixin sub-nav() {
   background: $blue;
-  height: 75px;
+  height: 70px;
 }
 
 @mixin sub-nav-title() {
   @include font-size(2);
-  margin: $baseline*.9 0 0 $baseline;
+  margin: $baseline*.8 0 0 $baseline;
   float: left;
   display: inline;
   text-overflow: ellipsis;
@@ -26,7 +26,7 @@
 }
 
 @mixin sub-nav-link() {
-  padding: $baseline;
+  padding: $baseline*.9 $baseline;
   @include left();
   font-family: $avenir-family;
   color: $white;
