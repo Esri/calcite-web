@@ -4,79 +4,85 @@
 //  ↳ http://esri.github.io/calcite-web/documentation/patterns/#accordion
 //  ↳ patterns → _accordion.md
 
-@mixin accordion() {
-}
-
-  @mixin accordion-section() {
-    border: 1px solid $light-gray;
-    margin: -1px 0 0 0;
-    color: $dark-gray;
-    @include transition(all .15s ease-in-out);
-    &:focus,
-    &:hover {
-      position: relative;
-      color: $darker-gray;
-      border-color: $darker-gray;
-    }
-    &.is-active {
-      .accordion-icon {
-        @include transform(rotate(0));
-      }
-      .accordion-content {
-        display: block;
-        margin-bottom: $baseline/1.4;
-      }
-      .accordion-title {
-        color: $black;
-      }
-    }
+@mixin accordion-section() {
+  border: 1px solid $light-gray;
+  margin: -1px 0 0 0;
+  color: $dark-gray;
+  @include transition(all .15s ease-in-out);
+  &:focus,
+  &:hover {
+    position: relative;
+    color: $darker-gray;
+    border-color: $darker-gray;
   }
-
-  @mixin accordion-title() {
-    cursor: pointer;
-    @include font-size(-1);
-    margin: 0;
-    padding: $baseline/2 $baseline/4;
-    &:active {
+  &.is-active {
+    .accordion-icon {
+      @include transform(rotate(0));
+    }
+    .accordion-content {
+      display: block;
+    }
+    .accordion-title {
       color: $black;
     }
   }
+}
 
-  @mixin accordion-content() {
-    display: none;
-    padding: $baseline/2 $baseline*1.4;
-    color: $off-black;
+@mixin accordion-title() {
+  cursor: pointer;
+  display: flex;
+  margin: 0;
+  padding: $baseline/2 $baseline/2 $baseline/2 $baseline/4;
+  @include font-size(-1);
+  &:active {
+    color: $black;
   }
-
-  @mixin accordion-icon() {
-    padding: 0 $baseline/8;
-    display: inline-block;
-    width: 16px;
-    vertical-align: -3px;
-    fill: currentColor;
-    @include transform(rotate(-90deg));
-    @if ($include-right-to-left) {
-      html[dir="rtl"] & {
-        @include transform(rotate(90deg));
-      }
+  @if ($include-right-to-left) {
+    html[dir="rtl"] & {
+      padding: $baseline/2 $baseline/4 $baseline/2 $baseline/2;
     }
   }
+}
 
-  @mixin accordion-no-border {
-    .accordion-section {
-      border: transparent;
-      border-bottom: 1px solid $light-gray;
-      margin-top: 0;
-      &:hover {
-        border-bottom-color: $dark-gray;
-      }
+@mixin accordion-content() {
+  display: none;
+  padding: $baseline/2 $baseline*1.4 $baseline/1.4;
+  color: $off-black;
+}
+
+@mixin accordion-icon() {
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  margin-right: 12px;
+  position: relative;
+  top: 3px;
+  @include transform(rotate(-90deg));
+  @if ($include-right-to-left) {
+    html[dir="rtl"] & {
+      margin-right: initial;
+      margin-left: 12px;
+      @include transform(rotate(90deg));
     }
   }
+}
+
+@mixin accordion-no-border {
+  .accordion-section {
+    border: transparent;
+    border-bottom: 1px solid $light-gray;
+    margin-top: 0;
+    &:hover {
+      border-bottom-color: $dark-gray;
+    }
+  }
+}
 
 @if $include-accordion == true {
-  .accordion-section {@include accordion-section();};
-  .accordion-title {@include accordion-title();}
-  .accordion-content {@include accordion-content();}
-  .accordion-icon {@include accordion-icon();}
-  .accordion-no-border {@include accordion-no-border();};
+  .accordion-section { @include accordion-section(); }
+  .accordion-title { @include accordion-title(); }
+  .accordion-content { @include accordion-content(); }
+  .accordion-icon { @include accordion-icon(); }
+  .accordion-no-border { @include accordion-no-border(); }
 }
