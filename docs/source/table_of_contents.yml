@@ -577,14 +577,13 @@ patterns:
         - title: 'Tabs'
           link: tabs
           modifiers:
-            - 'tabs-gray'
-            - 'tabs-transparent'
-            - 'tabs-translucent'
+            - 'tabs'
           modifiers-dark:
             - 'tabs-dark'
         - title: 'Accordions'
           link: accordions
-          modifiers: false
+          modifiers:
+            - 'accordion-no-border'
         - title: 'Filter Dropdown'
           link: 'filter-dropdown'
           modifiers: false

@@ -2,9 +2,14 @@
 
 ### Added
 - Table: table-minimal
+- Accordions: accordion-no-border
+
+### Updates
+- Accordions styling has been updated - now uses Flexbox for positioning (#1015)
 
 ### Updates
 - Dropdown styling has been updated (#1021)
+- Tabs styling has been updated
 
 #### Icons
 - All icons in the [calcite-ui-icons](https://github.com/esri/calcite-ui-icons/) set are now available in two syles and three sizes
