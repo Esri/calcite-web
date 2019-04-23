@@ -88,9 +88,10 @@
   .tab-contents {
     @include tab-contents-base();
   }
+
   
   $tabStyles: 
-  '' $lightest-gray $light-gray $off-black $blue,
+  ''$darkest-gray $lightest-gray $light-gray $off-black $blue,
   '-dark'$lightest-gray $darker-gray $gray $off-white $white;
 
   @each $tabStyle in $tabStyles {
