@@ -8,7 +8,7 @@
   display: flex;
 }
 
-@mixin tab-title($color, $border-hover, $color-active, $border-active) {
+@mixin tab-title-base {
   @include box-sizing(border-box);
   @include font-size(-2);
   padding: $baseline/3 0;
@@ -18,19 +18,11 @@
   text-overflow: ellipsis;
   border-bottom: 3px solid transparent;
   cursor: pointer;
-  color: $color;
   @include transition(all .15s ease-in-out);
 
   &:active, &:hover, &:focus {
     outline: none;
     text-decoration: none;
-    color: $color-active;
-    border-bottom-color: $border-hover;
-  }
-
-  &.is-active {
-    color: $color-active;
-    border-bottom-color: $border-active;
   }
 
   &:not(:last-child) {
@@ -54,8 +46,23 @@
   }
 }
 
-@mixin tab-contents($border) {
+@mixin tab-title-modifier($color, $border-hover, $color-active, $border-active) {
+  color: $color;
+  &:active, &:hover, &:focus {
+    color: $color-active;
+    border-bottom-color: $border-hover;
+  }
+  &.is-active {
+    color: $color-active;
+    border-bottom-color: $border-active;
+  }
+}
+
+@mixin tab-contents-base {
   @include box-sizing(border-box);
+}
+
+@mixin tab-contents-modifier($border) {
   border-top: 1px solid $border;
 }
 
@@ -75,8 +82,15 @@
   .tab-section {
     @include tab-section();
   }
+  .tab-title {
+    @include tab-title-base();
+  }
+  .tab-contents {
+    @include tab-contents-base();
+  }
+  
   $tabStyles: 
-  ''$darkest-gray $lightest-gray $light-gray $off-black $blue,
+  '' $lightest-gray $light-gray $off-black $blue,
   '-dark'$lightest-gray $darker-gray $gray $off-white $white;
 
   @each $tabStyle in $tabStyles {
@@ -88,10 +102,10 @@
     $border-active: nth($tabStyle, 6);
 
     .tabs#{$name} .tab-title {
-      @include tab-title($color, $border-hover, $color-active, $border-active);
+      @include tab-title-modifier($color, $border-hover, $color-active, $border-active);
     }
     .tabs#{$name} .tab-contents {
-      @include tab-contents($border);
+      @include tab-contents-modifier($border);
     }
   }
 }
