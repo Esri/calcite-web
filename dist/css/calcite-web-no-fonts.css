@@ -1,6 +1,6 @@
 /*!
  * Calcite Web - Calcite Design Components in CSS, JS and HTML
- * @version v1.2.3
+ * @version v1.2.5
  * @license Apache-2.0
  * @copyright 2018 Esri
  * @link https://github.com/Esri/calcite-web
@@ -3420,7 +3420,6 @@ html[lang="vi"] body, html.vi body {
   -webkit-transition: all 0.05s linear;
   transition: all 0.05s linear;
   cursor: pointer;
-  white-space: nowrap;
   font-size: 0.9375rem;
   line-height: 1.5; }
   .btn:hover {
@@ -3520,7 +3519,6 @@ html[lang="vi"] body, html.vi body {
   cursor: pointer;
   padding: 0;
   border: none;
-  outline: none;
   color: #0079c1;
   background: transparent; }
   .btn-link:hover {
@@ -3550,7 +3548,6 @@ input[type="file"]::-webkit-file-upload-button,
   -webkit-transition: all 0.05s linear;
   transition: all 0.05s linear;
   cursor: pointer;
-  white-space: nowrap;
   font-size: 0.9375rem;
   line-height: 1.5; }
   input[type="file"]::-webkit-file-upload-button:hover,
@@ -3885,7 +3882,6 @@ input[type="file"]::-webkit-file-upload-button,
   cursor: pointer;
   padding: 0;
   border: none;
-  outline: none;
   color: #0079c1;
   background: transparent;
   color: currentColor;
@@ -4063,6 +4059,10 @@ input[type="file"]::-webkit-file-upload-button,
   background-position: .25em center;
   background-repeat: no-repeat;
   padding-left: 1.5em; }
+  html[dir="rtl"] .input-search {
+    background-position: right .25em center;
+    padding-right: 1.5em;
+    padding-left: 0.3rem; }
 
 form {
   margin: 0;
@@ -4231,7 +4231,6 @@ input[type="file"]::-webkit-file-upload-button {
   -webkit-transition: all 0.05s linear;
   transition: all 0.05s linear;
   cursor: pointer;
-  white-space: nowrap;
   font-size: 0.9375rem;
   line-height: 1.5;
   color: #0079c1;
@@ -4272,7 +4271,6 @@ input[type="file"]::-webkit-file-upload-button {
   -webkit-transition: all 0.05s linear;
   transition: all 0.05s linear;
   cursor: pointer;
-  white-space: nowrap;
   font-size: 0.9375rem;
   line-height: 1.5;
   color: #0079c1;

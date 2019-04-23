@@ -1,3 +1,17 @@
+## [1.2.5]
+
+### Fixes
+- update web font CDN link for more permament fix to Arabic type
+- remove `nowrap` for buttons to fix responsive designs (#1063)
+- open/close accordions with space bar (#1062)
+- fix RTL styles for input-search (#1061)
+
+## [1.2.4]
+
+### Fixes
+- fix Arabic text in Microsoft Edge
+- restore outline to `btn-link` class (#1052)
+
 ## [1.2.3]
 
 ### Fixes
@@ -9,7 +23,6 @@
 - Fixes for switch and radio group
 - Updates positioning mixin
 - Updates checkbox and radio alignment in Edge
-
 
 ## [1.2.1]
 
@@ -1418,6 +1431,11 @@ Begin foundational sass for the framework.
 - CSS Reset
 - Grunt Workflows
 
+<<<<<<< HEAD
+=======
+[1.2.5]: https://github.com/esri/calcite-web/compare/v1.2.4...v1.2.5
+[1.2.4]: https://github.com/esri/calcite-web/compare/v1.2.3...v1.2.4
+>>>>>>> v1.2.5
 [1.2.3]: https://github.com/esri/calcite-web/compare/v1.2.2...v1.2.3
 [1.2.2]: https://github.com/esri/calcite-web/compare/v1.2.1...v1.2.2
 [1.2.1]: https://github.com/esri/calcite-web/compare/v1.2.0...v1.2.1

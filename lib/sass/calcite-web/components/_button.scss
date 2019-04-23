@@ -16,7 +16,6 @@
   @include box-sizing(border-box);
   @include transition(all 0.05s linear);
   cursor: pointer;
-  white-space: nowrap;
   @include font-size(-1);
   &:hover {
     text-decoration: none;
@@ -152,7 +151,6 @@
   cursor: pointer;
   padding: 0;
   border: none;
-  outline: none;
   color: $blue;
   background: transparent;
   &:hover {
