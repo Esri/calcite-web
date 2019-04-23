@@ -561,9 +561,6 @@ patterns:
         - title: 'Hero'
           link: hero
           modifiers: false
-        - title: 'Third Nav'
-          link: third-nav
-          modifiers: false
         - title: 'Side Nav'
           link: side-nav
           modifiers: false
@@ -585,7 +582,8 @@ patterns:
             - 'tabs-dark'
         - title: 'Accordions'
           link: accordions
-          modifiers: false
+          modifiers:
+            - 'accordion-no-border'
         - title: 'Filter Dropdown'
           link: 'filter-dropdown'
           modifiers: false
