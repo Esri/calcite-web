@@ -1,0 +1,45 @@
+// ┌────────────┐
+// │ Pagination │
+// └────────────┘
+//  ↳ http://esri.github.io/calcite-web/documentation/patterns/#pagination
+//  ↳ patterns → _pagination.md
+
+@mixin pagination() {
+  padding: $baseline;
+  display: flex;
+  align-items: center;
+}
+
+@mixin pagination-item() {
+  color: $dark-gray;
+  padding: $baseline*.5 $baseline*.75;
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    background: $off-white;
+  }
+  &.is-active {
+    color: $black;
+    border-bottom: 2px solid $blue;
+  }
+}
+
+@mixin pagination-item-disabled() {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+@mixin pagination-arrow() {
+  svg {
+    top: 2px;
+    position: relative;
+  }
+}
+
+@if $include-pagination == true {
+  .pagination { @include pagination(); }
+  .pagination-item { @include pagination-item(); }
+  .pagination-item-disabled { @include pagination-item-disabled(); }
+  .pagination-arrow { @include pagination-arrow(); }
+}
