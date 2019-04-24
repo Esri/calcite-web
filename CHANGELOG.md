@@ -2,6 +2,14 @@
 
 ### Added
 - Table: table-minimal
+- Accordions: accordion-no-border
+
+### Updates
+- Accordions styling has been updated - now uses Flexbox for positioning (#1015)
+
+### Updates
+- Dropdown styling has been updated (#1021)
+- Tabs styling has been updated
 
 #### Icons
 - All icons in the [calcite-ui-icons](https://github.com/esri/calcite-ui-icons/) set are now available in two syles and three sizes
@@ -11,7 +19,8 @@
 - :warning: Removed Button Groups
 - :warning: Removed Branding section under patterns
 - :warning: Removed Drawers
-- :warning: Removed Third nav
+- :warning: DOM structure of Alerts has changed (#1023)
+- :warning: Removed Third-nav
 
 #### Patterns
 Several patterns were removed which are now replaced by the [global-nav component](https://github.com/esri/global-nav):
@@ -29,6 +38,7 @@ Several patterns were removed which are now replaced by the [global-nav componen
 - :warning: removed `icon-flush`. Default doesn't apply padding, so no need now.
 - :warning: `svg-icon` class no longer sets size of icon, use `width` and `height` attributes
 - `dropdown` and `accordion` components must use SVG (no icon font)
+
 
 ## [1.2.0]
 

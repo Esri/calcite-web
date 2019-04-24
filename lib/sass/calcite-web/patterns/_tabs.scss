@@ -4,173 +4,108 @@
 //  ↳ http://esri.github.io/calcite-web/documentation/patterns/#tabs
 //  ↳ patterns → _tabs.md
 
-@mixin tab-nav(){
-  @include clearfix();
+@mixin tab-nav() {
+  display: flex;
 }
 
-@mixin tab-title() {
+@mixin tab-title-base {
   @include box-sizing(border-box);
   @include font-size(-2);
-  @include transition(background, $transition);
-  padding: $baseline/4 $baseline/2;
-  float: left;
+  padding: $baseline/3 0;
+  flex: 0 1 auto;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  background-color: $off-white;
-  border: 1px solid $lighter-gray;
-  margin-right: -1px;
+  border-bottom: 3px solid transparent;
   cursor: pointer;
-  color: $off-black;
-  &:focus {
+  @include transition(all .15s ease-in-out);
+
+  &:active, &:hover, &:focus {
     outline: none;
-  }
-  &:hover, &:focus {
-    background-color: mix($white, $off-white);
     text-decoration: none;
-    @include prefixer(background-image,linear-gradient(to top, transparent 94%, $blue 96%, $blue 100%), webkit moz o);
-    background-image:linear-gradient(to top, transparent 94%, $blue 96%, $blue 100%);
   }
-  &.is-active {
-    border-bottom: 1px solid $white;
-    background-color: $white;
-    &:hover {
-      background-color: $white;
+
+  &:not(:last-child) {
+    margin-right: 1.25rem;
+
+    @if ($include-right-to-left) {
+      html[dir="rtl"] & {
+        margin-right: initial;
+        margin-left: 1.25rem;
+      }
     }
-  }
-  @if ($include-right-to-left) {
-    html[dir="rtl"] & {
-      float: right;
-      margin-right: 0;
-      margin-left: -1px;
+
+    @media screen and (max-width: $small) {
+      margin-right: 0.75rem;
+      @if ($include-right-to-left) {
+        html[dir="rtl"] & {
+          margin-left: 0.75rem;
+        }
+      }
     }
   }
 }
 
-@mixin tab-contents() {
+@mixin tab-title-modifier($color, $border-hover, $color-active, $border-active) {
+  color: $color;
+  &:active, &:hover, &:focus {
+    color: $color-active;
+    border-bottom-color: $border-hover;
+  }
+  &.is-active {
+    color: $color-active;
+    border-bottom-color: $border-active;
+  }
+}
+
+@mixin tab-contents-base {
   @include box-sizing(border-box);
-  border: 1px solid $lighter-gray;
-  margin-top: -1px;
+}
+
+@mixin tab-contents-modifier($border) {
+  border-top: 1px solid $border;
 }
 
 @mixin tab-section() {
   @include box-sizing(border-box);
-  background-color: $white;
   display: none;
-  padding: $baseline/2;
+
   &.is-active {
     display: block;
   }
-  pre {
-    margin: 0;
-  }
 }
 
-@mixin tabs-gray() {
-  .tab-title    {
-    background-color: $white;
-    &.is-active {
-      background-color: $off-white;
-      border-bottom: 1px solid $off-white;
-    }
+@if $include-tabs==true {
+  .tab-nav {
+    @include tab-nav();
   }
-  .tab-section  {
-    background-color: $off-white;
+  .tab-section {
+    @include tab-section();
   }
-  pre code {
-    padding: 0;
-    border: none;
-    background-color: transparent;
-  }
-}
-
-@mixin tabs-transparent() {
-  .tab-title    {
-    background-color: transparent;
-    border: 1px solid transparent;
-    border-bottom: 1px solid $lighter-gray;
-    &:hover {
-      border-bottom: 1px solid $lighter-gray;
-    }
-    &.is-active {
-      @include transition(backround, $transition);
-      background-color: transparent;
-      border: 1px solid $lighter-gray;
-      border-bottom: 1px solid $white;
-    }
-  }
-  .tab-contents {
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-  }
-  .tab-section  {
-    background-color: transparent;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-@mixin tabs-translucent() {
   .tab-title {
-    background-color: $transparent-white;
-    background-image: none;
-    border: none;
-    border-top: 2px solid $transparent-white;
-    color: $off-black;
-    margin-right: 2px;
-    margin-bottom: 3px;
-    transition: none;
-    &:hover, &:focus {
-      background-color: $opaque-white;
-      border-top-color: $blue;
-      background-image: none;
-    }
-    &.is-active {
-      background-image: none;
-      background-color: $opaque-white;
-      border-top-color: $blue;
-      border-bottom: 2px solid $opaque-white;
-      margin-bottom: 0;
-    }
+    @include tab-title-base();
   }
   .tab-contents {
-    border: none;
+    @include tab-contents-base();
   }
-  .tab-section  {
-    background-color: $opaque-white;
-  }
-}
+  
+  $tabStyles: 
+  '' $darkest-gray $lightest-gray $light-gray $off-black $blue,
+  '-dark' $lightest-gray $darker-gray $gray $off-white $white;
 
-@mixin tabs-dark() {
-  .tab-title    {
-    background-color: $transparent-black;
-    color: $white;
-    border-top: 2px solid $transparent-black;
-    &:hover, &:focus {
-      background-color: $opaque-black;
-      border-top-color: $white;
+  @each $tabStyle in $tabStyles {
+    $name: nth($tabStyle, 1);
+    $color: nth($tabStyle, 2);
+    $border: nth($tabStyle, 3);
+    $border-hover: nth($tabStyle, 4);
+    $color-active: nth($tabStyle, 5);
+    $border-active: nth($tabStyle, 6);
+
+    .tabs#{$name} .tab-title {
+      @include tab-title-modifier($color, $border-hover, $color-active, $border-active);
     }
-    &.is-active {
-      background-color: $opaque-black;
-      border-top-color: $white;
-      border-bottom: 2px solid transparent;
+    .tabs#{$name} .tab-contents {
+      @include tab-contents-modifier($border);
     }
   }
-
-  .tab-section  {
-    background-color: $opaque-black;
-    color: $white;
-  }
-}
-
-@if $include-tabs == true {
-  .tab-nav         { @include tab-nav(); }
-  .tab-title       { @include tab-title(); }
-  .tab-contents    { @include tab-contents(); }
-  .tab-section     { @include tab-section(); }
-  .tabs-gray       { @include tabs-gray(); }
-  .tabs-transparent{ @include tabs-transparent(); }
-  .tabs-translucent{ @include tabs-translucent();}
-  .tabs-dark       { @include tabs-translucent(); @include tabs-dark(); }
 }
