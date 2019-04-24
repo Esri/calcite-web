@@ -24,6 +24,12 @@
   }
 }
 
+@mixin pagination-item-disabled() {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
 @mixin pagination-arrow() {
   svg {
     top: 2px;
@@ -34,5 +40,6 @@
 @if $include-pagination == true {
   .pagination { @include pagination(); }
   .pagination-item { @include pagination-item(); }
+  .pagination-item-disabled { @include pagination-item-disabled(); }
   .pagination-arrow { @include pagination-arrow(); }
 }
