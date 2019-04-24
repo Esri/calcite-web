@@ -62,7 +62,6 @@ $include-animation:              $generate-css    !default;
 $include-pagination:             $generate-css    !default;
 $include-side-nav:               $generate-css    !default;
 $include-sub-nav:                $generate-css    !default;
-$include-third-nav:              $generate-css    !default;
 
 // Javascript
 $include-tabs:                   $generate-css    !default;
