@@ -8,11 +8,6 @@
   padding: $baseline;
   display: flex;
   align-items: center;
-
-  svg {
-    top: 2px;
-    position: relative;
-  }
 }
 
 @mixin pagination-item() {
@@ -29,7 +24,15 @@
   }
 }
 
+@mixin pagination-arrow() {
+  svg {
+    top: 2px;
+    position: relative;
+  }
+}
+
 @if $include-pagination == true {
   .pagination { @include pagination(); }
   .pagination-item { @include pagination-item(); }
+  .pagination-arrow { @include pagination-arrow(); }
 }
