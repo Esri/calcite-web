@@ -6,7 +6,6 @@
 
 @mixin sub-nav() {
   background: $blue;
-  height: 70px;
 }
 
 @mixin sub-nav-container() {
@@ -33,7 +32,7 @@
 }
 
 @mixin sub-nav-link() {
-  padding: $baseline*.86 $baseline;
+  padding: $baseline*.75 $baseline;
   font-family: $avenir-family;
   color: $white;
   background-color: transparent;
