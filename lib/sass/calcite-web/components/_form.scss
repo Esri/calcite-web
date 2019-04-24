@@ -328,7 +328,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     html[dir="rtl"] & {
-      background-position: center left;
+      background-position: center left $baseline*.5;
       padding-left: $baseline*2;
       padding-right: $baseline*.5;
     }
