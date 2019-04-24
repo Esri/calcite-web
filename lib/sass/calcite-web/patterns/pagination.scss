@@ -35,6 +35,11 @@
     top: 2px;
     position: relative;
   }
+  @if ($include-right-to-left) {
+    html[dir="rtl"] & {
+      transform: rotate(180deg);
+    }
+  }
 }
 
 @if $include-pagination == true {
