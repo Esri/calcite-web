@@ -15,7 +15,7 @@
   }
 }
 
-@mixin item() {
+@mixin pagination-item() {
   color: $dark-gray;
   padding: $baseline*.5 $baseline*.75;
   &:focus,
@@ -31,5 +31,5 @@
 
 @if $include-pagination == true {
   .pagination { @include pagination(); }
-  .item { @include item(); }
+  .pagination-item { @include pagination-item(); }
 }
