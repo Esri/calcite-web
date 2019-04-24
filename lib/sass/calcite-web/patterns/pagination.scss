@@ -37,7 +37,7 @@
   }
   @if ($include-right-to-left) {
     html[dir="rtl"] & {
-      transform: rotate(180deg);
+      @include transform(rotate(180deg));
     }
   }
 }
