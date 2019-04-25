@@ -4,13 +4,13 @@
 //  ↳ http://esri.github.io/calcite-web/documentation/sass/#active-link-dot
 //  ↳ components → _utility-mixins.md
 
-@mixin active-link-dot () {
+@mixin active-link-dot ($offset-value) {
   position: relative;
 
   &:before {
     content: "\2022";
     position: absolute;
-    left: 1rem;
+    left: $offset-value;
     opacity: 0;
     color: $gray;
     @include transition(all 0.15s ease-in-out);
@@ -25,7 +25,7 @@
   @if ($include-right-to-left) {
     html[dir="rtl"] &:before {
       left: unset;
-      right: 1rem;
+      right: $offset-value;
     }
   }
 }
