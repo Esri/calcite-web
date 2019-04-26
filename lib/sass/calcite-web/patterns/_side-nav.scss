@@ -6,51 +6,44 @@
 
 @mixin side-nav() {
   @include box-sizing(border-box);
-  padding: 0;
-  border: 1px solid $lightest-gray;
-  border-top: none;
-  @include avenir-regular();
-  background-color: $white;
 }
 
-  @mixin side-nav-title() {
-    margin: 0;
-    padding: $baseline/3;
-    @include avenir-regular();
-    @include font-size(-1);
-    background-color: $off-white;
-    border-top: 1px solid $lightest-gray;
+@mixin side-nav-element-base() {
+  @include transition(all 0.15s ease-in-out);
+  display: block;
+  color: $dark-gray;
+}
+
+@mixin side-nav-title() {
+  @include side-nav-element-base();
+  @include font-size(0);
+  margin: 0 0 -1px 0;
+  padding: $baseline/2 0;
+  border-bottom: 1px solid $lightest-gray;
+  font-weight: 600;
+  word-wrap: break-word;
+  cursor: default;
+}
+
+@mixin side-nav-link() {
+  @include side-nav-element-base();
+  @include font-size(-2);
+  @include active-link-dot(0);
+  padding: $baseline/3 $baseline/1.25;
+  cursor: pointer;
+ 
+  &.is-active {
+    color: $black;
   }
 
-  @mixin side-nav-link() {
-    position: relative;
-    display: block;
-    @include box-sizing(border-box);
-    padding: $baseline/3;
-    @include font-size(-2);
+  &:hover, &:focus, &:active {
     color: $darkest-gray;
-    background-color: $white;
-    border-top: 1px solid $lightest-gray;
-    cursor: pointer;
-    &:hover {
-      background-color: $off-white;
-      text-decoration: none;
-      color: $off-black;
-    }
-    &.is-active {
-      text-indent: -3px;
-      border-left: 3px solid $blue;
-      @if ($include-right-to-left) {
-        html[dir="rtl"] & {
-          border-left: none;
-          border-right: 3px solid $blue;
-        }
-      }
-    }
+    text-decoration: none;
   }
+}
 
 @if $include-side-nav == true {
-  .side-nav {@include side-nav();}
-    .side-nav-title {@include side-nav-title();}
-    .side-nav-link {@include side-nav-link();}
+    .side-nav { @include side-nav(); }
+    .side-nav-title { @include side-nav-title(); }
+    .side-nav-link { @include side-nav-link(); }
 }

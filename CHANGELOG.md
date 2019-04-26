@@ -22,6 +22,9 @@
 - :warning: DOM structure of Alerts has changed (#1023)
 - :warning: Removed Third-nav
 
+### Updates
+- Styling of side nav has been updated
+
 #### Patterns
 Several patterns were removed which are now replaced by the [global-nav component](https://github.com/esri/global-nav):
 
