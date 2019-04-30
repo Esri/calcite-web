@@ -31,7 +31,7 @@
 {% block content %}
 <div class="grid-container leader-1 trailer-3">
   <div class="column-6 tablet-column-12">
-    <aside class="side-nav tablet-hide leader-half">
+    <aside class="side-nav tablet-hide">
     {% for group in data.table_of_contents[section].navigation %}
       {% if group.hidden != true %}
       {% set groupId = group.group | replace(" ", "-") | lower %}
