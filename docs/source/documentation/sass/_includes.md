@@ -62,7 +62,6 @@ $include-side-nav:               $generate-css    !default;
 $include-sub-nav:                $generate-css    !default;
 
 // Javascript
-$include-tabs:                   $generate-css    !default;
 $include-modal:                  $generate-css    !default;
 $include-accordion:              $generate-css    !default;
 $include-sticky:                 $generate-css    !default;

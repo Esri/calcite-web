@@ -86,20 +86,3 @@ Many of the filter dropdown channels emit and listen for the following options o
 | sticky:stick | Dom Node to stick in place | Dom Node | `stickItem()` |
 | sticky:unstick | Dom Node to unstick and return to normal | Dom Node | `unstickItem()` |
 | scrolling:at | Current offset y position on scroll | `OffsetY` Number | `scrollHandler()` |
-
-#### Tabs
-
-Tab events emit and listen for an Options Object.
-
-```js
-{
-  id: tabId // data-tab attribute
-  active: domNode
-}
-```
-
-| Event | Description | Emits | Function |
-| --- | --- | --- | --- |
-| tabs:bind | Binds dom to event listeners | n/a | `bindTabs()` |
-| tabs:active | A tab to set as active | Options Object | `setTab()` |
-
