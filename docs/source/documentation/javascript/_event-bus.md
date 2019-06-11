@@ -29,13 +29,6 @@ calcite.bus.emit('modal:open', {id: "my_modal"})
 
 ### Pattern-Specific Event Channels
 
-#### Accordions
-
-| Event | Description | Emits | Function |
-| --- | --- | --- | --- |
-| accordion:bind | Binds Dom nodes on the page to their listeners | n/a | `bindToggles()` |
-| accordion:toggle | Toggles an accordion section open and closed. | `{node: domNode}` | `handleToggle()` |
-
 #### Dropdown
 
 | Event | Description | Emits | Function |

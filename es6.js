@@ -20,7 +20,6 @@ import bus from './lib/js/helpers/bus';
 // │ Import Patterns │
 // └─────────────────┘
 // import all interactive patterns
-import accordion from './lib/js/patterns/accordion';
 import dropdown from './lib/js/patterns/dropdown';
 import filterDropdown from './lib/js/patterns/filter-dropdown';
 import modal from './lib/js/patterns/modal';
@@ -67,7 +66,6 @@ function isScrolling () {
 // start up Calcite and attach all the patterns
 // optionally pass an array of patterns you'd like to watch
 var patterns = [
-  accordion,
   clipboard,
   dropdown,
   filterDropdown,
@@ -160,7 +158,6 @@ export {
   nodeListToArray,
   findElements,
   bus,
-  accordion,
   dropdown,
   filterDropdown,
   modal,

@@ -173,7 +173,6 @@ function toggleExpanded (domNode) {
 
 var boundEvents = {
   dropdowns: [],
-  accordions: [],
   modals: []
 };
 
@@ -389,94 +388,6 @@ Guid.create = function () {
 Guid.raw = function () {
   return [gen(2), gen(1), gen(1), gen(1), gen(3)].join('-');
 };
-
-// Cool Helpers
-// ┌───────────┐
-// │ Accordion │
-// └───────────┘
-// collapsible accordion list
-// Listens to a 'accordion:bind' Obj.node = DOMNode
-// Emits and listens on the 'accordion:open' channel. Obj.node = DOMNode
-// Emits and listens to on the 'accorion:close' channel. Obj.node = DOMNode
-// Emitting a modal id toggle that modals state.
-// Emitting false or null closes all modals.
-
-function toggleClick (e) {
-  stopPropagation(e);
-  var parent = closest('accordion-section', target(e));
-  bus.emit('accordion:toggle', {node: parent});
-}
-
-function handleToggle (options) {
-  toggle(options.node, 'is-active');
-  var sectionTitle = options.node.querySelector('.accordion-title');
-  toggleExpanded(sectionTitle);
-}
-
-function checkKeyCode (e) {
-  if (e.keyCode === 13 && has(target(e), 'accordion-title')) {
-    toggleClick(e);
-  }
-}
-
-function bindAccordions (options) {
-  var accordions = findElements('.js-accordion');
-  if (!options) {
-    accordions.forEach(function (accordion) {
-      setUpAccordion(accordion);
-    });
-  } else {
-    setUpAccordion(options.node);
-  }
-}
-
-function setUpAccordion (accordion) {
-  accordion.setAttribute('aria-live', 'polite');
-  accordion.setAttribute('role', 'tablist');
-  nodeListToArray(accordion.children).forEach(function (section) {
-    var sectionTitle = section.querySelector('.accordion-title');
-    var sectionContent = section.querySelector('.accordion-content');
-    var id = sectionContent.id || Guid.raw();
-    sectionContent.id = id;
-    sectionTitle.setAttribute('role', 'tab');
-    sectionTitle.setAttribute('tabindex', '0');
-    sectionTitle.setAttribute('aria-controls', id);
-    if (has(section, 'is-active')) {
-      sectionTitle.setAttribute('aria-expanded', 'true');
-    }
-    // check if the event was already added
-    var eventExists = false;
-    boundEvents.accordions.forEach(function (e) {
-      if (e.target === sectionTitle && e.event === click() && e.fn === toggleClick) {
-        eventExists = true;
-      }
-    });
-    if (!eventExists) {
-      boundEvents.accordions.push({target: sectionTitle, event: click(), fn: toggleClick});
-      boundEvents.accordions.push({target: section, event: 'keyup', fn: checkKeyCode});
-      add$1(sectionTitle, click(), toggleClick);
-      add$1(section, 'keyup', checkKeyCode);
-    }
-  });
-}
-
-function addListeners () {
-  bus.on('accordion:bind', bindAccordions);
-  bus.on('accordion:toggle', handleToggle);
-  listenersAdded = true;
-}
-
-var listenersAdded = false;
-
-function accordion () {
-  // only add the listeners if they haven't been added already
-  if (!listenersAdded) {
-    addListeners();
-  }
-  bus.emit('accordion:bind');
-}
-
-// Cool Helpers
 
 // ┌──────────┐
 // │ Dropdown │
@@ -1244,7 +1155,6 @@ function isScrolling () {
 // start up Calcite and attach all the patterns
 // optionally pass an array of patterns you'd like to watch
 var patterns = [
-  accordion,
   clipboard,
   dropdown,
   filterDropdown,
@@ -1340,7 +1250,6 @@ var calciteWeb = {
   nodeListToArray: nodeListToArray$1,
   findElements: findElements$1,
   bus: bus,
-  accordion: accordion,
   dropdown: dropdown,
   filterDropdown: filterDropdown,
   modal: modal,

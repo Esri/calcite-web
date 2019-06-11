@@ -57,7 +57,6 @@ Calcite Web follows a few rules when naming css selectors:
 2. No nested tag selectors (`.footer a`)
 3. Namespaced classes (`.btn-red` not `.red`)
 4. Keep selectors as shallow as possible (`.footer-link` not `.footer a.link`)
-5. Classes that are for JavaScript functionality are prefixed with `js-` (`js-accordion` not `accordion`)
 
 These guidelines help to avoid unintended naming clashes and over-specific or unwieldy selectors. Most of what needs to change from Tailcoat to Calcite Web will be small changes in selector convention, so it's important to understand that these changes are worth it as they will drastically reduce the probability of visual bugs and regressions down the road.
 
