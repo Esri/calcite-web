@@ -27,7 +27,6 @@ import modal from './lib/js/patterns/modal';
 import search from './lib/js/patterns/search';
 import selectNav from './lib/js/patterns/select-nav';
 import sticky from './lib/js/patterns/sticky';
-import tabs from './lib/js/patterns/tabs';
 
 // ┌──────────────────────┐
 // │ Emit Keyboard Events │
@@ -74,8 +73,7 @@ var patterns = [
   modal,
   search,
   selectNav,
-  sticky,
-  tabs
+  sticky
 ];
 
 function init () {
@@ -167,7 +165,6 @@ export {
   search,
   selectNav,
   sticky,
-  tabs,
   extend,
   init
 };
