@@ -55,7 +55,6 @@ $include-input-groups:           $generate-css    !default;
 $include-loader:                 $generate-css    !default;
 $include-skip-to-content:        $generate-css    !default;
 $include-logo:                   $generate-css    !default;
-$include-card:                   $generate-css    !default;
 $include-animation:              $generate-css    !default;
 
 // Patterns
