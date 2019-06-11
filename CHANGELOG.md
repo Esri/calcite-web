@@ -21,6 +21,7 @@
 - :warning: Removed Drawers
 - :warning: DOM structure of Alerts has changed (#1023)
 - :warning: Removed Third-nav
+- :warning: Removed alerts – alerts moved over to [calcite-components](https://github.com/arcgis/calcite-components)
 
 ### Updates
 - Styling of side nav has been updated
