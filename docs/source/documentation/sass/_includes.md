@@ -47,7 +47,6 @@ $include-labels:                 $generate-css    !default;
 $include-tables:                 $generate-css    !default;
 $include-panel:                  $generate-css    !default;
 $include-button:                 $generate-css    !default;
-$include-dropdowns:              $generate-css    !default;
 $include-breadcrumbs:            $generate-css    !default;
 $include-tooltip:                $generate-css    !default;
 $include-forms:                  $generate-css    !default;
@@ -68,5 +67,4 @@ $include-tabs:                   $generate-css    !default;
 $include-modal:                  $generate-css    !default;
 $include-accordion:              $generate-css    !default;
 $include-sticky:                 $generate-css    !default;
-$include-filter-dropdown:        $generate-css    !default;
 ```

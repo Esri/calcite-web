@@ -21,8 +21,6 @@ import bus from './lib/js/helpers/bus';
 // └─────────────────┘
 // import all interactive patterns
 import accordion from './lib/js/patterns/accordion';
-import dropdown from './lib/js/patterns/dropdown';
-import filterDropdown from './lib/js/patterns/filter-dropdown';
 import modal from './lib/js/patterns/modal';
 import search from './lib/js/patterns/search';
 import selectNav from './lib/js/patterns/select-nav';
@@ -69,8 +67,6 @@ function isScrolling () {
 var patterns = [
   accordion,
   clipboard,
-  dropdown,
-  filterDropdown,
   modal,
   search,
   selectNav,
@@ -161,8 +157,6 @@ export {
   findElements,
   bus,
   accordion,
-  dropdown,
-  filterDropdown,
   modal,
   search,
   selectNav,

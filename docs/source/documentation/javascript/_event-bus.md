@@ -36,40 +36,6 @@ calcite.bus.emit('modal:open', {id: "my_modal"})
 | accordion:bind | Binds Dom nodes on the page to their listeners | n/a | `bindToggles()` |
 | accordion:toggle | Toggles an accordion section open and closed. | `{node: domNode}` | `handleToggle()` |
 
-#### Dropdown
-
-| Event | Description | Emits | Function |
-| --- | --- | --- | --- |
-| dropdown:bind | Binds dom to event listeners | n/a | `bindDropdowns()` |
-| dropdown:toggle | Toggles a dropdown open and closed | `{node: domNode}` | `toggleDropdown()` |
-| dropdown:close | Closes all the dropdowns | n/a | `closeAllDropdowns()` |
-| keyboard:escape | Closes all the dropdowns when the escape key is pressed. | n/a | `closeAllDropdowns()` |
-
-
-#### Filter Dropdown
-
-Many of the filter dropdown channels emit and listen for the following options object:
-
-```js
-{
-  parent: domNode,
-  id: filterDropdownId,
-  item: domNode
-}
-```
-
-| Event | Description | Emits | Function |
-| --- | --- | --- | --- |
-| filterDropdown:bind | Binds the dom to event listeners | n/a | `bindFilterDropdowns()` |
-| filterDropdown:select | An item in the dropdown list has been selected. | Options Object | `toggleItem()`, `emitActive()` |
-| filterDropdown:select:remove | Removes a specific selection from the list of active items. | Options Object | `removeItem()` |
-| filterDropdown:active | Emits all the currently selected items from the component. | Options Object. Replaces `item` with `active` Array of items. | `drawActive()` |
-| filterDropdown:active:clear | Clear all active items from the dropdown | Options Object | `clearActive()` |
-| filterDropdown:toggle | Toggle a dropdown open and closed | Options Object | `toggleDropdown()` |
-| filterDropdown:open | Open a specific dropdown | Options Object | `openList()` |
-| filterDropdown:close | Closes all dropdowns | n/a | `closeList()` |
-| keyboard:escape | Closes all dropdowns | n/a | `closeList()` |
-
 #### Modal
 
 | Event | Description | Emits | Function |

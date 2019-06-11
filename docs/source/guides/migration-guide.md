@@ -123,10 +123,6 @@ Below is a list of things that will need to be changed to migrate to Calcite Web
 ##### Tooltips
 1. Tooltip markup has been greatly simplified. Just add an `aria-label` and the `tooltip` class to the element you'd like to have a tooltip
 
-##### Dropdowns
-1. Dropdowns now happen on click and require JavaScript
-2. Classes and markup have both changed (see [dropdown documentation](../documentation/components/#dropdowns))
-
 ##### Alerts
 1. Icons named after colors not conditions (ie. `success` => `alert-green`)
 2. Markup is different
@@ -181,9 +177,7 @@ Below is a summary of what has changed.
 1. Modal markup has updated, and the toggles now must use `js-modal` classes with data attributes, see [modals](../documentation/patterns/#modals)
 2. Must use `js-` classes for interactivity. Modifier classes are prefixed. See [tabs](../documentation/patterns/#tabs)
 3. [Accordion markup](../documentation/patterns/#accordions) is sustantially different (plus the above changes).
-5. Dropdowns and click dropdowns are now the same thing, just [dropdowns](../documentation/components/#dropdowns)
-6. Site Dropdown removed due to very poor user testing
-7. Responsive Nav Bar removed
+4. Responsive Nav Bar removed
 
 ## Conclusion
 
