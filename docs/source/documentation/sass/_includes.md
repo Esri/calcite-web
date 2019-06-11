@@ -1,6 +1,6 @@
 By default, using the Calcite Web sass files will build css  for the complete framework. This build can be customized, or entirely turned off for sass-only applications.
 
-Setting the `$generate-css` variable to false in your sass files will prevent any css from being generated, while exposing all the underlying sass styles of the framework. Setting specific variables like `$include-alerts` to false will preclude only that components css from being built.
+Setting the `$generate-css` variable to false in your sass files will prevent any css from being generated, while exposing all the underlying sass styles of the framework. Setting specific variables like `$include-labels` to false will preclude only that components css from being built.
 
 Additionally, font imports are controlled this way. By default, Calcite Web requests Avenir Next from a cdn. You can import `calcite-web-no-fonts.scss` if you don't want the fonts.
 
@@ -41,7 +41,6 @@ $include-icons:                  $generate-css    !default;
   $include-social-icons:         $generate-css    !default;
 
 // Components
-$include-alerts:                 $generate-css    !default;
 $include-badges:                 $generate-css    !default;
 $include-labels:                 $generate-css    !default;
 $include-tables:                 $generate-css    !default;
