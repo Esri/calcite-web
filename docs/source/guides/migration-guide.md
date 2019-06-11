@@ -126,11 +126,6 @@ Below is a list of things that will need to be changed to migrate to Calcite Web
 1. Dropdowns now happen on click and require JavaScript
 2. Classes and markup have both changed (see [dropdown documentation](../documentation/components/#dropdowns))
 
-##### Alerts
-1. Icons named after colors not conditions (ie. `success` => `alert-green`)
-2. Markup is different
-3. Alerts are meant to fade in, must add the `is-active` class to see them.
-
 ##### Breadcrumbs
 1. Breadcrumbs are now a `nav` element with anchors inside
 2. Anchors must have `breadcrumb` class
@@ -178,7 +173,6 @@ Below is a summary of what has changed.
 
 ### Javascript
 1. Modal markup has updated, and the toggles now must use `js-modal` classes with data attributes, see [modals](../documentation/patterns/#modals)
-2. Must use `js-` classes for interactivity. Modifier classes are prefixed. See [tabs](../documentation/patterns/#tabs)
 3. [Accordion markup](../documentation/patterns/#accordions) is sustantially different (plus the above changes).
 5. Dropdowns and click dropdowns are now the same thing, just [dropdowns](../documentation/components/#dropdowns)
 6. Site Dropdown removed due to very poor user testing
