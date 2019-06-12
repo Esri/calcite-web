@@ -1,1 +1,0 @@
-In addition to inline display, we also provide support for both left- and right- aligned copy through use of Calcite helper classes. We provide a warning style for destructive actions, such as deleting items or accounts. Enabling RTL will swap the orientation of the handle within the track as well as the layout of the label and switch.
