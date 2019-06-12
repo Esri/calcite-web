@@ -134,11 +134,6 @@ Below is a list of things that will need to be changed to migrate to Calcite Web
 ##### Pagination
 Pagination as a defined pattern, but there are no special classes for it anymore. It's just made up of other components. See the [pagination documentation](../documentation/patterns/#pagination).
 
-##### Loader
-1. Loader requires one less `div`
-2. `loading-word` => `loader-text`
-3. Hidden by default, must add `is-active` class to see it
-
 ##### Panels
 1. `primary` => `panel-light-blue`
 2. `compact`, `drop-shadow` removed

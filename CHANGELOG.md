@@ -24,6 +24,7 @@
 - :warning: Removed tabs – tabs moved over to [calcite-components](https://github.com/arcgis/calcite-components)
 - :warning: Removed cards – cards moved over to [calcite-components](https://github.com/arcgis/calcite-components)
 - :warning: Removed alerts – alerts moved over to [calcite-components](https://github.com/arcgis/calcite-components)
+- :warning: Removed loader – loader moved over to [calcite-components](https://github.com/arcgis/calcite-components)
 
 ### Updates
 - Styling of side nav has been updated

@@ -51,7 +51,6 @@ $include-breadcrumbs:            $generate-css    !default;
 $include-tooltip:                $generate-css    !default;
 $include-forms:                  $generate-css    !default;
 $include-input-groups:           $generate-css    !default;
-$include-loader:                 $generate-css    !default;
 $include-skip-to-content:        $generate-css    !default;
 $include-logo:                   $generate-css    !default;
 $include-animation:              $generate-css    !default;
