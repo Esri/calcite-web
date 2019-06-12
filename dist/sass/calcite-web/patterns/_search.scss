@@ -5,7 +5,6 @@
 //  ↳ patterns → _search.md
 
 @mixin search-overlay() {
-  @include modal-overlay();
   z-index: 99;
   background: $white;
   padding: $baseline * 3 0 $baseline 0;

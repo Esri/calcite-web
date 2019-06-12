@@ -173,8 +173,7 @@ function toggleExpanded (domNode) {
 
 var boundEvents = {
   dropdowns: [],
-  accordions: [],
-  modals: []
+  accordions: []
 };
 
 // returns standard interaction event, later will add touch support
@@ -398,8 +397,6 @@ Guid.raw = function () {
 // Listens to a 'accordion:bind' Obj.node = DOMNode
 // Emits and listens on the 'accordion:open' channel. Obj.node = DOMNode
 // Emits and listens to on the 'accorion:close' channel. Obj.node = DOMNode
-// Emitting a modal id toggle that modals state.
-// Emitting false or null closes all modals.
 
 function toggleClick (e) {
   stopPropagation(e);
@@ -795,139 +792,6 @@ function filterDropdown () {
 
 // Cool Helpers
 
-// ┌───────┐
-// │ Modal │
-// └───────┘
-// show and hide modal dialogues
-// Listens to a 'modal:bind' optionally takes a node
-// Emits and listens on the 'modal:open' channel. Takes a data-modal attr
-// Emits and listens to on the 'modal:close' channel. Optionally takes a data-modal
-// Emitting a modal id toggle that modals state.
-// Emitting false or null closes all modals.
-
-function modal () {
-  var html = document.documentElement;
-  var body = document.body;
-  var wrapper = document.querySelector('.wrapper');
-  var footer = document.querySelector('.footer');
-  var toggles = findElements('.js-modal-toggle');
-  var modals = findElements('.js-modal');
-  var firstFocusableElement, lastFocusableElement;
-
-  // Bus events
-  bus.on('modal:open', openModal);
-  bus.on('keyboard:escape', closeModal);
-  bus.on('modal:close', closeModal);
-  bus.on('modal:bind', bindModals);
-
-  function dependentNodes () {
-    var nodes = [];
-    if (wrapper) {
-      nodes.push(wrapper);
-    }
-    if (footer) {
-      nodes.push(footer);
-    }
-    return nodes;
-  }
-
-  function openModal (options) {
-    bus.emit('modal:close', {fromOpen: true});
-    if (!options || !options.id) { return; }
-    var modal = document.querySelector((".js-modal[data-modal=\"" + (options.id) + "\"]"));
-    modal.removeAttribute('tabindex');
-    add$1(document, 'keydown', fenceModal);
-    add(modal, 'is-active');
-    add(html, 'overflow-hidden');
-    // if there is a scrollbar, set scroll on body so scroll width remains
-    if (html.offsetHeight > html.clientHeight) {
-      add(body, 'overflow-scroll');
-    }
-    hide(dependentNodes());
-    var interactiveQuery = 'button, [href], input, select, textarea, [tabindex]';
-    var focusableElements = findElements(interactiveQuery, modal).filter(function (el) {
-      return !el.disabled && el.tabIndex !== -1 && el.offsetHeight > 0;
-    });
-    firstFocusableElement = focusableElements.shift();
-    lastFocusableElement = focusableElements.pop();
-    firstFocusableElement && firstFocusableElement.focus();
-  }
-
-  function closeModal (options) {
-    if (!options || !options.id) {
-      removeActive(modals);
-    } else {
-      var modal = document.querySelector((".js-modal[data-modal=\"" + (options.id) + "\"]"));
-      remove(modal, 'is-active');
-      modal.setAttribute('tabindex', 0);
-      remove$1(document, 'keydown', fenceModal);
-      show(dependentNodes());
-    }
-
-    // delay swapping the overflow classes to avoid modal moving into space vacated by scroll bar
-    if (!options || !options.fromOpen) {
-      setTimeout(function () {
-        remove(html, 'overflow-hidden');
-        remove(body, 'overflow-scroll');
-      }, 300);
-    }
-  }
-
-  function bindModals (node) {
-    if (!node) {
-      toggles.forEach(function (toggle$$1) {
-        var eventExists = false;
-        boundEvents.modals.forEach(function (e) {
-          if (e.target === toggle$$1 && e.event === click() && e.fn === toggleClick$2) {
-            eventExists = true;
-          }
-        });
-
-        if (!eventExists) {
-          boundEvents.modals.push({target: toggle$$1, event: click(), fn: toggleClick$2});
-          add$1(toggle$$1, click(), toggleClick$2);
-        }
-      });
-    } else {
-      add$1(node, click(), toggleClick$2);
-    }
-  }
-
-  function fenceModal (e) {
-    var isTabPressed = (e.key === 'Tab' || e.keyCode === 9);
-    if (!isTabPressed) {
-      return;
-    }
-    if (e.shiftKey) {
-      if (document.activeElement === firstFocusableElement) {
-        lastFocusableElement && lastFocusableElement.focus();
-        e.preventDefault();
-      }
-    } else {
-      if (document.activeElement === lastFocusableElement) {
-        firstFocusableElement && firstFocusableElement.focus();
-        e.preventDefault();
-      }
-    }
-  }
-
-  bus.emit('modal:bind');
-}
-
-function toggleClick$2 (e) {
-  preventDefault(e);
-  var toggle$$1 = closest('js-modal-toggle', e.target);
-  var modalId = toggle$$1.getAttribute('data-modal');
-  var modal = document.querySelector((".js-modal[data-modal=\"" + modalId + "\"]"));
-  if (modal && !has(modal, 'is-active')) {
-    bus.emit('modal:open', {id: modalId});
-  } else {
-    bus.emit('modal:close');
-  }
-}
-
-// Cool Helpers
-
 // ┌────────┐
 // │ Search │
 // └────────┘
@@ -1124,7 +988,6 @@ var patterns = [
   clipboard,
   dropdown,
   filterDropdown,
-  modal,
   search,
   selectNav,
   sticky
@@ -1218,7 +1081,6 @@ var calciteWeb = {
   accordion: accordion,
   dropdown: dropdown,
   filterDropdown: filterDropdown,
-  modal: modal,
   search: search,
   selectNav: selectNav,
   sticky: sticky,

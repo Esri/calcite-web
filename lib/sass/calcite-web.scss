@@ -66,7 +66,6 @@ $include-side-nav:               $generate-css    !default;
 $include-sub-nav:                $generate-css    !default;
 
 // Javascript
-$include-modal:                  $generate-css    !default;
 $include-accordion:              $generate-css    !default;
 $include-sticky:                 $generate-css    !default;
 $include-filter-dropdown:        $generate-css    !default;
@@ -122,7 +121,6 @@ $include-filter-dropdown:        $generate-css    !default;
 // complete interfaces: header, footer, banner...
 @import "calcite-web/patterns/sub-nav";
 @import "calcite-web/patterns/side-nav";
-@import "calcite-web/patterns/modal";
 @import "calcite-web/patterns/accordion";
 @import "calcite-web/patterns/filter-dropdown";
 @import "calcite-web/patterns/pagination";
