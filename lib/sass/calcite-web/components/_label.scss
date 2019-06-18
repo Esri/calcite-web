@@ -5,37 +5,40 @@
 //  ↳ components → _label.md
 
 @mixin label() {
-  background-color: $lightest-gray;
-  padding: .25em .5em;
-  border-radius: 3px;
-  font-size: .875em;
+  border: 1px solid $gray;
+  color: $darker-gray;
+  background: transparent;
+  padding: .35rem .75rem;
+  border-radius: 100px;
+  font-size: .75em;
+  font-weight: 700;
   white-space: nowrap;
 }
 
   @mixin label-red() {
-    background-color: $red;
-    color: $white;
+    border-color: $red;
+    color: $dark-red;
   }
 
   @mixin label-yellow() {
-    background-color: $light-yellow;
-    color: $off-black;
+    border-color: $darker-yellow;
+    color: $h-yy-090;
   }
 
   @mixin label-green() {
-    background-color: $green;
-    color: $white;
+    border-color: $green;
+    color: $dark-green;
   }
 
   @mixin label-blue() {
-    background-color: $blue;
-    color: $white;
+    border-color: $blue;
+    color: $dark-blue;
   }
 
 @if $include-labels == true {
   .label {@include label();}
-    .label-red {@include label-red();}
-    .label-yellow {@include label-yellow();}
-    .label-green {@include label-green();}
-    .label-blue {@include label-blue();}
+  .label-red {@include label-red();}
+  .label-yellow {@include label-yellow();}
+  .label-green {@include label-green();}
+  .label-blue {@include label-blue();}
 }
