@@ -5,9 +5,8 @@
 //  ↳ components → _label.md
 
 @mixin label() {
-  border: 1px solid $gray;
+  background-color: $blk-020;
   color: $darker-gray;
-  background: transparent;
   padding: .35rem .75rem;
   border-radius: 100px;
   font-size: .75em;
@@ -16,22 +15,22 @@
 }
 
   @mixin label-red() {
-    border-color: $red;
+    background-color: $m-rr-010;
     color: $dark-red;
   }
 
   @mixin label-yellow() {
-    border-color: $darker-yellow;
+    background-color: $m-yy-010;
     color: $h-yy-090;
   }
 
   @mixin label-green() {
-    border-color: $green;
-    color: $dark-green;
+    background-color: $m-gg-010;
+    color: $darker-green;
   }
 
   @mixin label-blue() {
-    border-color: $blue;
+    background-color: $m-bb-010;
     color: $dark-blue;
   }
 
