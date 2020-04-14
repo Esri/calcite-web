@@ -1,3 +1,9 @@
+## [1.3.0]
+
+### Added
+- `500` weight now available from calcite-fonts
+- CDN fonts now have tracking url enabled
+
 ## [1.2.5]
 
 ### Fixes
@@ -1431,6 +1437,7 @@ Begin foundational sass for the framework.
 - CSS Reset
 - Grunt Workflows
 
+[1.3.0]: https://github.com/esri/calcite-web/compare/v1.2.5...v1.3.0
 [1.2.5]: https://github.com/esri/calcite-web/compare/v1.2.4...v1.2.5
 [1.2.4]: https://github.com/esri/calcite-web/compare/v1.2.3...v1.2.4
 [1.2.3]: https://github.com/esri/calcite-web/compare/v1.2.2...v1.2.3
