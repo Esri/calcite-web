@@ -1,3 +1,10 @@
+# DEPRECATED
+
+- All components have been rebuilt as web-components here: [calcite-components](https://github.com/Esri/calcite-components)
+    - colors moved to individual repository: [calcite-colors](https://github.com/Esri/calcite-colors)
+    - icons moved to individual repository: [calcite-ui-icons](https://github.com/Esri/calcite-ui-icons)
+    - Tokens, mixins, and other Sass utilities moved to individual repository: [calcite-base](https://github.com/Esri/calcite-base)
+
 # Calcite Web
 
 [![github releases][github-img]][github-url] [![Travis](https://img.shields.io/travis/Esri/calcite-web.svg?style=flat-square)](https://travis-ci.org/Esri/calcite-web) [![semistandard][semistandard-img]][semistandard-url]
