@@ -1,3 +1,5 @@
+### This project is deprecated and is not recommended for future development. It will be replaced with a newer version. Coming soon!
+
 # Calcite Web
 
 [![github releases][github-img]][github-url] [![Travis](https://img.shields.io/travis/Esri/calcite-web.svg?style=flat-square)](https://travis-ci.org/Esri/calcite-web) [![semistandard][semistandard-img]][semistandard-url]
