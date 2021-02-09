@@ -105,9 +105,9 @@ function toggleExpanded (domNode) {
   if (!domNode) {
     return;
   }
-  var isExpanded = domNode.getAttribute('aria-expanded');
-  if (isExpanded) {
-    domNode.removeAttribute('aria-expanded');
+  var expanded = domNode.getAttribute('aria-expanded');
+  if (expanded === 'true') {
+    domNode.setAttribute('aria-expanded', 'false');
   } else {
     domNode.setAttribute('aria-expanded', 'true');
   }
@@ -365,9 +365,7 @@ function setUpAccordion (accordion) {
     sectionTitle.setAttribute('role', 'tab');
     sectionTitle.setAttribute('tabindex', '0');
     sectionTitle.setAttribute('aria-controls', id);
-    if (has(section, 'is-active')) {
-      sectionTitle.setAttribute('aria-expanded', 'true');
-    }
+    sectionTitle.setAttribute('aria-expanded', has(section, 'is-active') ? 'true' : 'false');
     // check if the event was already added
     var eventExists = false;
     boundEvents.accordions.forEach(function (e) {
