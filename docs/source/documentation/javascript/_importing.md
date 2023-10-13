@@ -43,12 +43,12 @@ require(['path/to/calcite-web.js'], function(calcite){
 
 #### IIFE
 
-If `calcite-web.js` is used on a page with no module syntax, it will just attach itself to `window.calcite`. Here is an example which initializes Calcite from a hosted file on S3:
+If `calcite-web.js` is used on a page with no module syntax, it will just attach itself to `window.calcite`. Here is an example which initializes Calcite from a self-hosted CDN location:
 
 ```html
 <body>
   ...
-  <script src="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/{{data.pkg.version}}/js/calcite-web.min.js"></script>
+  <script src="https://<self-hosted-url>/files/calcite-web/{{data.pkg.version}}/js/calcite-web.min.js"></script>
   <script>
      calcite.init()
   </script>
