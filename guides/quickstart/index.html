@@ -98,6 +98,13 @@
 
     <!-- Sample HTML -->
     <header class="top-nav">
+      <!-- deprecation message -->
+      <div class="alert is-active deprecation-message">
+        <span class="deprecation-heading">Calcite Web is deprecated.</span>
+        <p class="deprecation-description">This project is no longer maintained and is not recommended for future
+          development. Visit the <a href="https://github.com/Esri/calcite-web">Calcite Web GitHub repository</a> for more
+          information.</p>
+      </div>
       <div class="grid-container">
         <div class="column-24">
           <!-- desktop sized navigation -->
@@ -165,7 +172,7 @@
   <div class="grid-container">
     <div class="column-24">
       <h1 class="sub-nav-title text-white leader-1">Guides</h1>
-      <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1 tablet-hide" title="Download Latest Release" target="blank">Download Latest Release</a>
+      <a href="https://github.com/Esri/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1 tablet-hide" title="Download Latest Release" target="blank">Download Latest Release</a>
       <nav class="sub-nav-list">
         <a class="sub-nav-link " href="../../guides/">Overview</a>
         <a class="sub-nav-link is-active" href="../../guides/quickstart/">Quickstart</a>
@@ -186,7 +193,7 @@
 <p>This guide will walk you through creating your first page with Calcite Web. We'll go over getting a basic HTML page, stubbing out a layout, adding patterns, and making everything work on mobile.</p>
 <h2>1. Basic HTML Page</h2>
 <p>To get started creating a page in Calcite Web we'll start with, well, the page!</p>
-<pre><code class="html" tabindex="0"><span class="hljs-meta">&lt;!doctype html&gt;</span>
+<pre><code class="html" tabindex="0"><span class="hljs-meta">&lt;!doctype <span class="hljs-meta-keyword">html</span>&gt;</span>
 <span class="hljs-comment">&lt;!--[if lt IE 9]&gt;  &lt;html class="ie lt-ie9 ie8"&gt; &lt;![endif]--&gt;</span>
 <span class="hljs-comment">&lt;!--[if IE 9]&gt;     &lt;html class="ie ie9"&gt; &lt;![endif]--&gt;</span>
 <span class="hljs-comment">&lt;!--[if !IE]&gt;&lt;!--&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span> <span class="hljs-comment">&lt;!--&lt;![endif]--&gt;</span>
@@ -196,8 +203,8 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, user-scalable=no"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Your Title<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"shortcut icon"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/img/favicon.ico"</span>&gt;</span>
-    <span class="hljs-comment">&lt;!-- get calcite-web css from the cdn (use latest version) --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.2.5/css/calcite-web.min.css"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- reference self-hosted calcite-web css --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://&lt;self-hosted-url&gt;/files/calcite-web/1.2.5/css/calcite-web.min.css"</span>&gt;</span>
     <span class="hljs-comment">&lt;!--[if lt IE 9]&gt;
       &lt;script src="/assets/javascripts/libs/selectivizr.js"&gt;&lt;/script&gt;
       &lt;script src="/assets/javascripts/libs/html5shiv.js"&gt;&lt;/script&gt;
@@ -212,20 +219,20 @@
       <span class="hljs-comment">&lt;!-- content of footer --&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-    <span class="hljs-comment">&lt;!-- get calcite-web js from the cdn (use latest version) --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.2.5/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- reference self-hosted calcite-web js --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://&lt;self-hosted-url&gt;/files/calcite-web/1.2.5/js/calcite-web.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
     <span class="hljs-comment">&lt;!-- interactive patterns need to be initialized --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="undefined">
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span>
        calcite.init()
-    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
 <p>The above page does a lot of things:</p>
 <ol>
 <li>General HTML boilerplate (<code>meta</code>, <code>title</code>, conditional IE classes, <code>head</code> and <code>body</code> tags)</li>
-<li>Load the current version of Calcite Web's CSS and JS from the CDN</li>
+<li>Load the current version of Calcite Web's CSS and JS from a self-hosted CDN</li>
 <li>Set up basic page containers (for sticky footers/drawers if they are used in the future)</li>
 <li>Initialize interactive patterns which rely on <code>calcite-web.js</code></li>
 </ol>

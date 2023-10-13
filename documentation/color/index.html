@@ -98,6 +98,13 @@
 
     <!-- Sample HTML -->
     <header class="top-nav">
+      <!-- deprecation message -->
+      <div class="alert is-active deprecation-message">
+        <span class="deprecation-heading">Calcite Web is deprecated.</span>
+        <p class="deprecation-description">This project is no longer maintained and is not recommended for future
+          development. Visit the <a href="https://github.com/Esri/calcite-web">Calcite Web GitHub repository</a> for more
+          information.</p>
+      </div>
       <div class="grid-container">
         <div class="column-24">
           <!-- desktop sized navigation -->
@@ -165,7 +172,7 @@
   <div class="grid-container">
     <div class="column-24">
      <h1 class="sub-nav-title text-white leader-1">Documentation</h1>
-     <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1 tablet-hide" title="Download Latest Release" target="blank">Download Latest Release</a>
+     <a href="https://github.com/Esri/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1 tablet-hide" title="Download Latest Release" target="blank">Download Latest Release</a>
      <nav class="sub-nav-list tablet-hide" role="navigation" aria-labelledby="subnav">
       
       
@@ -335,7 +342,7 @@
 }
 </code></pre>
 <p>There is also a dark theme which you can import using:</p>
-<pre><code tabindex="0">@<span class="hljs-keyword">import</span> <span class="hljs-string">"calcite-web-dark"</span>;
+<pre><code tabindex="0"><span class="hljs-keyword">@import</span> <span class="hljs-string">"calcite-web-dark"</span>;
 </code></pre>
 
         

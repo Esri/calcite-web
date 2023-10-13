@@ -98,6 +98,13 @@
 
     <!-- Sample HTML -->
     <header class="top-nav">
+      <!-- deprecation message -->
+      <div class="alert is-active deprecation-message">
+        <span class="deprecation-heading">Calcite Web is deprecated.</span>
+        <p class="deprecation-description">This project is no longer maintained and is not recommended for future
+          development. Visit the <a href="https://github.com/Esri/calcite-web">Calcite Web GitHub repository</a> for more
+          information.</p>
+      </div>
       <div class="grid-container">
         <div class="column-24">
           <!-- desktop sized navigation -->
@@ -165,7 +172,7 @@
   <div class="grid-container">
     <div class="column-24">
      <h1 class="sub-nav-title text-white leader-1">Documentation</h1>
-     <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1 tablet-hide" title="Download Latest Release" target="blank">Download Latest Release</a>
+     <a href="https://github.com/Esri/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1 tablet-hide" title="Download Latest Release" target="blank">Download Latest Release</a>
      <nav class="sub-nav-list tablet-hide" role="navigation" aria-labelledby="subnav">
       
       
@@ -399,8 +406,6 @@
         </nav>
         
         
-      
-        
       </aside>
       <label class="tablet-show">
         Jump to section:
@@ -536,8 +541,6 @@
             
             
           </optgroup>
-          
-          
           
           
         </select>
@@ -835,8 +838,8 @@
           </div>
         </div>
 
-<pre><code tabindex="0">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"dropdown js-dropdown"</span>&gt;
-  <span class="xml"><span class="hljs-comment">&lt;!-- extends side-nav --&gt;</span>
+<pre><code tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown js-dropdown"</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- extends side-nav --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-transparent dropdown-btn js-dropdown-toggle"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-haspopup</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">"false"</span>&gt;</span>
     Dropdown Select
     <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"18"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"18"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 32 32"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"svg-icon"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M28 9v5L16 26 4 14V9l12 12L28 9z"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
@@ -853,7 +856,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-link"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"menuitem"</span>&gt;</span>Option 5<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-</span></code></pre>
+</code></pre>
 
 
         
@@ -965,14 +968,14 @@
           </div>
         </div>
 
-<pre><code tabindex="0">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"alert modifier-class is-active"</span>&gt;
-  Something Happened!
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert-close"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"32"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"32"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 32 32"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"svg-icon"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M18.404 16l9.9 9.9-2.404 2.404-9.9-9.9-9.9 9.9L3.696 25.9l9.9-9.9-9.9-9.898L6.1 3.698l9.9 9.899 9.9-9.9 2.404 2.406-9.9 9.898z"</span>/&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+<pre><code tabindex="0"><span class="hljs-string">&lt;div</span> <span class="hljs-string">class="alert</span> <span class="hljs-string">modifier-class</span> <span class="hljs-string">is-active"&gt;</span>
+  <span class="hljs-string">Something</span> <span class="hljs-string">Happened!</span>
+  <span class="hljs-string">&lt;button</span> <span class="hljs-string">class="alert-close"&gt;</span>
+    <span class="hljs-string">&lt;svg</span> <span class="hljs-string">xmlns="http://www.w3.org/2000/svg"</span> <span class="hljs-string">width="32"</span> <span class="hljs-string">height="32"</span> <span class="hljs-string">viewBox="0</span> <span class="hljs-number">0</span> <span class="hljs-number">32</span> <span class="hljs-number">32</span><span class="hljs-string">" class="</span><span class="hljs-string">svg-icon"&gt;</span>
+      <span class="hljs-string">&lt;path</span> <span class="hljs-string">d="M18.404</span> <span class="hljs-string">16l9.9</span> <span class="hljs-number">9.9</span><span class="hljs-number">-2.404</span> <span class="hljs-number">2.404</span><span class="hljs-number">-9.9</span><span class="hljs-number">-9.9</span><span class="hljs-number">-9.9</span> <span class="hljs-number">9.</span><span class="hljs-string">9L3.696</span> <span class="hljs-number">25.</span><span class="hljs-string">9l9.9-9.9-9.9-9.898L6.1</span> <span class="hljs-number">3.</span><span class="hljs-string">698l9.9</span> <span class="hljs-number">9.899</span> <span class="hljs-number">9.9</span><span class="hljs-number">-9.9</span> <span class="hljs-number">2.404</span> <span class="hljs-number">2.406</span><span class="hljs-number">-9.9</span> <span class="hljs-number">9.</span><span class="hljs-string">898z"/&gt;</span>
+    <span class="hljs-string">&lt;/svg&gt;</span>
+  <span class="hljs-string">&lt;/button&gt;</span>
+<span class="hljs-string">&lt;/div&gt;</span>
 </code></pre>
 
 
@@ -1067,10 +1070,10 @@
           </div>
         </div>
 
-<pre><code tabindex="0">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"panel modifier-class"</span>&gt;
-  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"trailer-half"</span>&gt;</span>This is a panel.<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span></span>
-  &lt;p <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"trailer-0"</span>&gt;Panels set &lt;code&gt;background-color&lt;<span class="hljs-regexp">/code&gt; and frame content.&lt;/</span>p&gt;
-<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+<pre><code tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"panel modifier-class"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"trailer-half"</span>&gt;</span>This is a panel.<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"trailer-0"</span>&gt;</span>Panels set <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>background-color<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> and frame content.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
 
 
@@ -1732,14 +1735,14 @@
         
 <p>Creating a number of file sizes for bitmap assets can be very useful for reducing load times on small screens - especially phones and tablets. While this image markup is not enforced or unique to Calcite Web (there is no code in the framework that enables this), the following examples should be used as a standard when implementing responsive images.</p>
 <p>A full range of images widths are listed below.</p>
-<pre><code tabindex="0"><span class="hljs-meta">$</span><span class="bash">{title}.jpg</span>
-<span class="hljs-meta">$</span><span class="bash">{title}-1920-xlg.jpg</span>
-<span class="hljs-meta">$</span><span class="bash">{title}-960-lg.jpg</span>
-<span class="hljs-meta">$</span><span class="bash">{title}-640-bmd.jpg</span>
-<span class="hljs-meta">$</span><span class="bash">{title}-480-md.jpg</span>
-<span class="hljs-meta">$</span><span class="bash">{title}-320-smd.jpg</span>
-<span class="hljs-meta">$</span><span class="bash">{title}-240-sm.jpg</span>
-<span class="hljs-meta">$</span><span class="bash">{title}-160-xsm.jpg</span>
+<pre><code tabindex="0">${<span class="hljs-built_in">title</span>}.jpg
+${<span class="hljs-built_in">title</span>}-<span class="hljs-number">1920</span>-xlg.jpg
+${<span class="hljs-built_in">title</span>}-<span class="hljs-number">960</span>-lg.jpg
+${<span class="hljs-built_in">title</span>}-<span class="hljs-number">640</span>-bmd.jpg
+${<span class="hljs-built_in">title</span>}-<span class="hljs-number">480</span>-<span class="hljs-built_in">md</span>.jpg
+${<span class="hljs-built_in">title</span>}-<span class="hljs-number">320</span>-smd.jpg
+${<span class="hljs-built_in">title</span>}-<span class="hljs-number">240</span>-sm.jpg
+${<span class="hljs-built_in">title</span>}-<span class="hljs-number">160</span>-xsm.jpg
 </code></pre>
 
         
@@ -2031,18 +2034,18 @@
           </div>
         </div>
 
-<pre><code tabindex="0">&lt;<span class="hljs-keyword">label</span>&gt;
-  First Name
-  &lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"input-success"</span> value=<span class="hljs-string">"Tom"</span> required&gt;
-&lt;/<span class="hljs-keyword">label</span>&gt;
+<pre><code tabindex="0">&lt;label&gt;
+  First <span class="hljs-type">Name</span>
+  &lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>="text" <span class="hljs-keyword">class</span>="input-success" <span class="hljs-keyword">value</span>="Tom" required&gt;
+&lt;/label&gt;
 
-&lt;<span class="hljs-keyword">label</span>&gt;
-  Password
-  &lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">"text"</span> required placeholder=<span class="hljs-string">"At least 12 characters long"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"input-error"</span>&gt;
-  &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"input-error-message is-active"</span>&gt;
-    Password does not meet minimum password requirements.
+&lt;label&gt;
+  <span class="hljs-keyword">Password</span>
+  &lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>="text" required placeholder="At least 12 characters long" <span class="hljs-keyword">class</span>="input-error"&gt;
+  &lt;div <span class="hljs-keyword">class</span>="input-error-message is-active"&gt;
+    <span class="hljs-keyword">Password</span> does <span class="hljs-keyword">not</span> meet minimum <span class="hljs-keyword">password</span> requirements.
   &lt;/div&gt;
-&lt;/<span class="hljs-keyword">label</span>&gt;
+&lt;/label&gt;
 </code></pre>
 
 
@@ -2411,12 +2414,12 @@
           </div>
         </div>
 
-<pre><code tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fieldset-checkbox"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>Checkbox Label:<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>&gt;</span>Check Box 1<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<pre><code tabindex="0">&lt;fieldset <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"fieldset-checkbox"</span>&gt;
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>Checkbox Label:<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span></span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>&gt;</span>Check Box 1<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>&gt;</span>Check Box 2<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
-</code></pre>
+</span></code></pre>
 
 
         
@@ -2653,7 +2656,7 @@
           </div>
         </div>
 
-<pre><code tabindex="0">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"esri-logo modifier-class"</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+<pre><code tabindex="0">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"esri-logo modifier-class"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
 </code></pre>
 
 
@@ -2679,15 +2682,6 @@
 
         
       </section>
-      
-      
-      
-
-      
-
-      
-      
-      
       
       
       

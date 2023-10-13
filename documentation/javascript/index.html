@@ -98,6 +98,13 @@
 
     <!-- Sample HTML -->
     <header class="top-nav">
+      <!-- deprecation message -->
+      <div class="alert is-active deprecation-message">
+        <span class="deprecation-heading">Calcite Web is deprecated.</span>
+        <p class="deprecation-description">This project is no longer maintained and is not recommended for future
+          development. Visit the <a href="https://github.com/Esri/calcite-web">Calcite Web GitHub repository</a> for more
+          information.</p>
+      </div>
       <div class="grid-container">
         <div class="column-24">
           <!-- desktop sized navigation -->
@@ -165,7 +172,7 @@
   <div class="grid-container">
     <div class="column-24">
      <h1 class="sub-nav-title text-white leader-1">Documentation</h1>
-     <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1 tablet-hide" title="Download Latest Release" target="blank">Download Latest Release</a>
+     <a href="https://github.com/Esri/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1 tablet-hide" title="Download Latest Release" target="blank">Download Latest Release</a>
      <nav class="sub-nav-list tablet-hide" role="navigation" aria-labelledby="subnav">
       
       
@@ -407,13 +414,13 @@ calcite.init();
 });
 </code></pre>
 <h4>IIFE</h4>
-<p>If <code>calcite-web.js</code> is used on a page with no module syntax, it will just attach itself to <code>window.calcite</code>. Here is an example which initializes Calcite from a hosted file on S3:</p>
+<p>If <code>calcite-web.js</code> is used on a page with no module syntax, it will just attach itself to <code>window.calcite</code>. Here is an example which initializes Calcite from a self-hosted CDN location:</p>
 <pre><code class="html" tabindex="0"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
   ...
-  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.2.5/js/calcite-web.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="undefined">
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://&lt;self-hosted-url&gt;/files/calcite-web/1.2.5/js/calcite-web.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span>
      calcite.init()
-  </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 </code></pre>
 <h3>Initializing</h3>
@@ -443,15 +450,15 @@ calcite.init();
 <p>The event bus is used to help interactive patterns communicate with each other and the rest of your application.</p>
 <p>Along with a set of common bus events, each pattern has a set of channels that it emits on and listens for. These events can be emitted or listened for by the larger application.</p>
 <p>You can trigger or react to events by using the <code>on</code> and <code>emit</code> methods on the bus:</p>
-<pre><code tabindex="0"><span class="hljs-comment">// assuming calcite-web.js is available as calcite</span>
+<pre><code tabindex="0">// assuming calcite-web.js <span class="hljs-keyword">is</span> available <span class="hljs-keyword">as</span> calcite
 
-<span class="hljs-comment">// do something when a drawer opens</span>
-calcite<span class="hljs-selector-class">.bus</span><span class="hljs-selector-class">.on</span>(<span class="hljs-string">'drawer:open'</span>, function (options) {
-  console.log(options.id) <span class="hljs-comment">// =&gt; "top-nav"</span>
+// <span class="hljs-keyword">do</span> something <span class="hljs-keyword">when</span> a drawer opens
+calcite.bus.<span class="hljs-keyword">on</span>(<span class="hljs-string">'drawer:open'</span>, <span class="hljs-keyword">function</span> (<span class="hljs-keyword">options</span>) {
+  console.log(<span class="hljs-keyword">options</span>.id) // =&gt; "top-nav"
 })
 
-<span class="hljs-comment">// open a drawer (must pass data-drawer name as "id")</span>
-calcite<span class="hljs-selector-class">.bus</span><span class="hljs-selector-class">.emit</span>(<span class="hljs-string">'drawer:open'</span>, {id: <span class="hljs-string">"top-nav"</span>})
+// <span class="hljs-keyword">open</span> a drawer (must pass data-drawer <span class="hljs-type">name</span> <span class="hljs-keyword">as</span> "id")
+calcite.bus.emit(<span class="hljs-string">'drawer:open'</span>, {id: "top-nav"})
 </code></pre>
 <h3>Common Event Channels</h3>
 <table class="table"><thead>

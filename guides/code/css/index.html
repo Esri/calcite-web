@@ -98,6 +98,13 @@
 
     <!-- Sample HTML -->
     <header class="top-nav">
+      <!-- deprecation message -->
+      <div class="alert is-active deprecation-message">
+        <span class="deprecation-heading">Calcite Web is deprecated.</span>
+        <p class="deprecation-description">This project is no longer maintained and is not recommended for future
+          development. Visit the <a href="https://github.com/Esri/calcite-web">Calcite Web GitHub repository</a> for more
+          information.</p>
+      </div>
       <div class="grid-container">
         <div class="column-24">
           <!-- desktop sized navigation -->
@@ -165,7 +172,7 @@
   <div class="grid-container">
     <div class="column-24">
       <h1 class="sub-nav-title text-white leader-1">Guides</h1>
-      <a href="https://github.com/ArcGIS/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1 tablet-hide" title="Download Latest Release" target="blank">Download Latest Release</a>
+      <a href="https://github.com/Esri/calcite-web/releases" class="btn btn-white icon-ui-download right leader-1 trailer-1 tablet-hide" title="Download Latest Release" target="blank">Download Latest Release</a>
       <nav class="sub-nav-list">
         <a class="sub-nav-link " href="../../../guides/">Overview</a>
         <a class="sub-nav-link " href="../../../guides/quickstart/">Quickstart</a>
@@ -217,17 +224,17 @@
 <pre><code tabindex="0"><span class="hljs-selector-class">.selector</span>, <span class="hljs-selector-class">.selector-secondary</span>, <span class="hljs-selector-class">.selector</span><span class="hljs-selector-attr">[type=text]</span> {
   <span class="hljs-attribute">padding</span>:<span class="hljs-number">15px</span>;
   <span class="hljs-attribute">margin</span>:<span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-number">15px</span>;
-  <span class="hljs-attribute">background-color</span>:<span class="hljs-built_in">rgba</span>(0, 0, 0, 0.5);
+  <span class="hljs-attribute">background-color</span>:<span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.5</span>);
   <span class="hljs-attribute">box-shadow</span>:<span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">2px</span> <span class="hljs-number">#CCC</span>,inset <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#FFFFFF</span>
 }
 </code></pre>
 <h4>Correct example:</h4>
 <pre><code class="css" tabindex="0"><span class="hljs-selector-class">.selector</span>,
 <span class="hljs-selector-class">.selector-secondary</span>,
-<span class="hljs-selector-class">.selector</span><span class="hljs-selector-attr">[type="text"]</span> {
+<span class="hljs-selector-class">.selector</span><span class="hljs-selector-attr">[type=<span class="hljs-string">"text"</span>]</span> {
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">15px</span>;
   <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">15px</span>;
-  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(0,0,0,.5);
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,.<span class="hljs-number">5</span>);
   <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">2px</span> <span class="hljs-number">#ccc</span>, inset <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#fff</span>;
 }
 </code></pre>
@@ -355,7 +362,7 @@
 <h4>Bad Example:</h4>
 <pre><code class="scss" tabindex="0"><span class="hljs-variable">$white</span>: <span class="hljs-number">#fff</span> !default;
 
-@<span class="hljs-keyword">mixin</span> full-width {
+<span class="hljs-keyword">@mixin</span> full-width {
   <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
 }
 
@@ -366,7 +373,7 @@
     <span class="hljs-selector-tag">a</span><span class="hljs-selector-class">.nav-link</span> {
       <span class="hljs-selector-class">.toggle-link</span> {
         <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
-        @<span class="hljs-keyword">include</span> full-width();
+        <span class="hljs-keyword">@include</span> full-width();
       }
     }
   }
@@ -384,13 +391,13 @@
 }
 
 <span class="hljs-selector-class">.nav</span> {
-  @<span class="hljs-keyword">extend</span> %white;
+  <span class="hljs-keyword">@extend</span> %white;
 }
 
 <span class="hljs-selector-class">.nav-header</span> {
-  @<span class="hljs-keyword">extend</span> %white;
+  <span class="hljs-keyword">@extend</span> %white;
   <span class="hljs-selector-class">.toggle-link</span> {
-    @<span class="hljs-keyword">extend</span> %full-width;
+    <span class="hljs-keyword">@extend</span> %full-width;
   }
 }
 </code></pre>
