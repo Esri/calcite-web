@@ -10,7 +10,7 @@ There are three ways to use Calcite Web:
 
 - (a) copying static files into your project
 - (b) installing via a package manager
-- (c) loading files from the cdn
+- (c) loading files from a self-hosted cdn
 
 By default, Calcite Web expects image files to be located at `../`. If your fonts are elsewhere, set the `$font-path` variable
 

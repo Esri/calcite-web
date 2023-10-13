@@ -48,7 +48,7 @@ If `calcite-web.js` is used on a page with no module syntax, it will just attach
 ```html
 <body>
   ...
-  <script src="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/{{data.pkg.version}}/js/calcite-web.min.js"></script>
+  <script src="https://<self-hosted-s3-bucket-url>/files/calcite-web/{{data.pkg.version}}/js/calcite-web.min.js"></script>
   <script>
      calcite.init()
   </script>
