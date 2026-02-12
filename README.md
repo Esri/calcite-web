@@ -1,5 +1,5 @@
 ### Calcite Web is deprecated and is not recommended for future development.
-Please visit the [Calcite Design System GitHub respository](https://github.com/Esri/calcite-design-system).
+Please visit the [Calcite Design System GitHub repository](https://github.com/Esri/calcite-design-system).
 
 # Calcite Web
 
